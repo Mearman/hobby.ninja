@@ -817,21 +817,89 @@ nx e2e webapp-e2e        # Run E2E tests
 
 ### 1. Configure GitHub Actions
 ```yaml
-# .github/workflows/deploy.yml
-name: Deploy to GitHub Pages
+# .github/workflows/ci.yml
+name: CI Pipeline
 
 on:
   push:
+    branches: [main, develop]
+  pull_request:
     branches: [main]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests
+        run: npm run test:unit --coverage
+
+      - name: Integration tests
+        run: npm run test:integration
+
+      - name: Build
+        run: npm run build
+
+      - name: E2E tests
+        run: npm run test:e2e
+
+  update-dataset:
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update Gunpla dataset
+        run: npm run cli:update --non-interactive
+
+      - name: Validate dataset
+        run: npm run cli:validate --check-duplicates
+
+      - name: Commit updated data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add apps/webapp/public/data/
+          git commit -m "auto: update Gunpla dataset [skip ci]" || exit 0
+          git push
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [test, update-dataset]
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
           cache: 'npm'
 
       - name: Install dependencies
@@ -841,12 +909,61 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v3
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          target_branch: gh-pages
-          build_dir: dist/apps/webapp
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/apps/webapp
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+
+# .github/workflows/data-update.yml (scheduled)
+name: Scheduled Data Update
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'  # Every Monday at 2 AM UTC
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update Gunpla dataset
+        run: npm run cli:update --non-interactive --force-refresh
+
+      - name: Validate and test
+        run: |
+          npm run cli:validate --check-duplicates
+          npm run test:unit -- --testPathPattern=data
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "auto: scheduled Gunpla dataset update"
+          title: "Scheduled Gunpla Dataset Update"
+          body: |
+            Automated update of Gunpla dataset from official sources.
+
+            Changes:
+            - Updated kit information from Bandai
+            - Refreshed pricing data
+            - Added new releases
+            - Removed discontinued items
+
+            This PR was created automatically by the scheduled data update workflow.
+          branch: automated-data-update
+          delete-branch: true
 ```
 
 ### 2. Update Repository Settings
