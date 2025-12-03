@@ -697,6 +697,149 @@ interface CacheConfig {
 }
 
 /**
+ * Security monitoring and event tracking
+ */
+interface SecurityEvent {
+  /** Unique event identifier */
+  id: string;
+  /** Event type and category */
+  type: 'xss_attempt' | 'injection_attempt' | 'rate_limit_exceeded' | 'unauthorized_access' | 'data_breach';
+  /** Event severity level */
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  /** Timestamp when event occurred */
+  timestamp: Date;
+  /** Source IP or user identifier */
+  source: string;
+  /** Target resource or endpoint */
+  target: string;
+  /** Event details and context */
+  details: Record<string, unknown>;
+  /** Whether event was blocked */
+  blocked: boolean;
+}
+
+/**
+ * Performance metrics tracking
+ */
+interface PerformanceMetrics {
+  /** Core Web Vitals */
+  webVitals: {
+    /** Largest Contentful Paint */
+    lcp: number;
+    /** First Input Delay */
+    fid: number;
+    /** Cumulative Layout Shift */
+    cls: number;
+    /** Time to First Byte */
+    ttfb: number;
+  };
+  /** Application-specific metrics */
+  application: {
+    /** Bundle size in bytes */
+    bundleSize: number;
+    /** Number of network requests */
+    requestCount: number;
+    /** Total load time in milliseconds */
+    loadTime: number;
+    /** JavaScript execution time */
+    jsExecutionTime: number;
+  };
+  /** User experience metrics */
+  userExperience: {
+    /** Error rate percentage */
+    errorRate: number;
+    /** Session duration in minutes */
+    sessionDuration: number;
+    /** Bounce rate percentage */
+    bounceRate: number;
+    /** Pages per session */
+    pagesPerSession: number;
+  };
+}
+
+/**
+ * CLI monitoring and analytics
+ */
+interface CLIMetrics {
+  /** Execution statistics */
+  execution: {
+    /** Total number of operations */
+    totalOperations: number;
+    /** Success rate percentage */
+    successRate: number;
+    /** Average execution time in milliseconds */
+    averageExecutionTime: number;
+    /** Total data processed in MB */
+    totalDataProcessed: number;
+  };
+  /** Error analysis */
+  errors: {
+    /** Number of network errors */
+    networkErrors: number;
+    /** Number of parsing errors */
+    parsingErrors: number;
+    /** Number of validation errors */
+    validationErrors: number;
+    /** Most common error types */
+    commonErrors: Array<{
+      type: string;
+      count: number;
+      lastOccurred: Date;
+    }>;
+  };
+  /** Resource utilization */
+  resources: {
+    /** Peak memory usage in MB */
+    peakMemoryUsage: number;
+    /** CPU usage percentage */
+    cpuUsage: number;
+    /** Disk space used for cache in MB */
+    cacheDiskUsage: number;
+    /** Network bandwidth usage in MB */
+    networkUsage: number;
+  };
+}
+
+/**
+ * Application health check status
+ */
+interface HealthCheck {
+  /** Overall health status */
+  status: 'healthy' | 'degraded' | 'unhealthy';
+  /** Timestamp of last health check */
+  timestamp: Date;
+  /** Individual component health */
+  components: {
+    /** Database connectivity and performance */
+    database: {
+      status: 'healthy' | 'degraded' | 'unhealthy';
+      responseTime: number;
+      errorCount: number;
+    };
+    /** Cache performance and availability */
+    cache: {
+      status: 'healthy' | 'degraded' | 'unhealthy';
+      hitRate: number;
+      size: number;
+      errorCount: number;
+    };
+    /** External API availability */
+    externalAPIs: {
+      status: 'healthy' | 'degraded' | 'unhealthy';
+      responseTime: number;
+      availability: number;
+    };
+    /** Storage system health */
+    storage: {
+      status: 'healthy' | 'degraded' | 'unhealthy';
+      availableSpace: number;
+      usedSpace: number;
+      errorRate: number;
+    };
+  };
+}
+
+/**
  * Test configuration by test type
  */
 const TEST_CONFIGURATIONS: Record<TestTypeDefinition['id'], VitestTestConfig | PlaywrightTestConfig> = {

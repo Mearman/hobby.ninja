@@ -1036,6 +1036,192 @@ npx nx run cli:cache-stats --format=table
 6. **Add Analytics**: Implement tracking and monitoring
 7. **Configure CI/CD**: Set up automated testing and deployment
 8. **Data Management**: Use CLI to keep Gunpla dataset current
+9. **Security**: Implement CSP headers and security monitoring
+10. **Monitoring**: Set up performance tracking and health checks
+
+## Security Implementation
+
+### Content Security Policy (CSP)
+
+```typescript
+// src/security/csp.ts
+export const CSP_DIRECTIVES = {
+  'default-src': ["'self'"],
+  'script-src': ["'self'", "'unsafe-inline'"], // Development only
+  'style-src': ["'self'", "'unsafe-inline'"], // For Mantine styles
+  'img-src': ["'self'", 'data:', 'https:'],
+  'font-src': ["'self'", 'data:', 'https:'],
+  'connect-src': ["'self'"],
+  'frame-ancestors': ["'none'"],
+  'base-uri': ["'self'"],
+  'form-action': ["'self'"]
+};
+
+export function setCSPHeaders() {
+  const cspString = Object.entries(CSP_DIRECTIVES)
+    .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)
+    .join('; ');
+
+  // Apply to document headers
+  const meta = document.createElement('meta');
+  meta.httpEquiv = 'Content-Security-Policy';
+  meta.content = cspString;
+  document.head.appendChild(meta);
+}
+```
+
+### Security Monitoring
+
+```typescript
+// src/security/monitoring.ts
+export class SecurityMonitor {
+  private events: SecurityEvent[] = [];
+
+  logEvent(event: Omit<SecurityEvent, 'id' | 'timestamp'>) {
+    const securityEvent: SecurityEvent = {
+      id: this.generateEventId(),
+      timestamp: new Date(),
+      ...event
+    };
+
+    this.events.push(securityEvent);
+    this.handleSecurityEvent(securityEvent);
+  }
+
+  detectXSS(input: string): boolean {
+    const xssPatterns = [
+      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
+      /javascript:/gi,
+      /on\w+\s*=/gi
+    ];
+
+    return xssPatterns.some(pattern => pattern.test(input));
+  }
+
+  private handleSecurityEvent(event: SecurityEvent) {
+    if (event.severity === 'high' || event.severity === 'critical') {
+      // Block suspicious activity
+      this.blockActivity(event);
+      // Report to monitoring service
+      this.reportEvent(event);
+    }
+  }
+}
+```
+
+## Performance Monitoring
+
+### Web Vitals Tracking
+
+```typescript
+// src/monitoring/performance.ts
+export class PerformanceMonitor {
+  private metrics: PerformanceMetrics = {
+    webVitals: { lcp: 0, fid: 0, cls: 0, ttfb: 0 },
+    application: { bundleSize: 0, requestCount: 0, loadTime: 0, jsExecutionTime: 0 },
+    userExperience: { errorRate: 0, sessionDuration: 0, bounceRate: 0, pagesPerSession: 0 }
+  };
+
+  trackWebVitals() {
+    // Largest Contentful Paint
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      this.metrics.webVitals.lcp = lastEntry.startTime;
+    }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // First Input Delay
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        this.metrics.webVitals.fid = entry.processingStart - entry.startTime;
+      });
+    }).observe({ entryTypes: ['first-input'] });
+
+    // Cumulative Layout Shift
+    let clsValue = 0;
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+        }
+      });
+      this.metrics.webVitals.cls = clsValue;
+    }).observe({ entryTypes: ['layout-shift'] });
+  }
+
+  reportMetrics() {
+    // Send metrics to analytics service
+    console.log('Performance Metrics:', this.metrics);
+  }
+}
+```
+
+### Health Check Implementation
+
+```typescript
+// src/monitoring/health.ts
+export class HealthChecker {
+  async performHealthCheck(): Promise<HealthCheck> {
+    const healthCheck: HealthCheck = {
+      status: 'healthy',
+      timestamp: new Date(),
+      components: {
+        database: await this.checkDatabase(),
+        cache: await this.checkCache(),
+        externalAPIs: await this.checkExternalAPIs(),
+        storage: await this.checkStorage()
+      }
+    };
+
+    // Determine overall status
+    const componentStatuses = Object.values(healthCheck.components);
+    const hasUnhealthy = componentStatuses.some(c => c.status === 'unhealthy');
+    const hasDegraded = componentStatuses.some(c => c.status === 'degraded');
+
+    if (hasUnhealthy) {
+      healthCheck.status = 'unhealthy';
+    } else if (hasDegraded) {
+      healthCheck.status = 'degraded';
+    }
+
+    return healthCheck;
+  }
+
+  private async checkDatabase() {
+    try {
+      // Test IndexedDB connectivity
+      const responseTime = await this.measureIndexedDBOperation();
+      return {
+        status: 'healthy',
+        responseTime,
+        errorCount: 0
+      };
+    } catch (error) {
+      return {
+        status: 'unhealthy',
+        responseTime: -1,
+        errorCount: 1
+      };
+    }
+  }
+
+  private async checkCache() {
+    // Check cache performance and hit rates
+    const startTime = performance.now();
+    // Perform cache check operation
+    const responseTime = performance.now() - startTime;
+
+    return {
+      status: 'healthy',
+      hitRate: 0.85, // Example value
+      size: 50, // MB
+      errorCount: 0
+    };
+  }
+}
+```
 
 ## Troubleshooting
 
@@ -1044,6 +1230,25 @@ npx nx run cli:cache-stats --format=table
 - **Routing not working**: Ensure hash routing is configured properly
 - **Styles not loading**: Verify Mantine CSS imports
 - **Tests failing**: Check test configuration and dependencies
+- **Security errors**: Review CSP headers and security policies
+- **Performance issues**: Check bundle size and optimize imports
+- **Monitoring alerts**: Verify health checks and metrics collection
+
+### Security Best Practices
+- Never commit sensitive data or API keys
+- Use environment variables for configuration
+- Regular security audits with npm audit
+- Monitor for security events and respond quickly
+- Keep dependencies updated
+- Review code for security vulnerabilities
+
+### Performance Optimization
+- Implement code splitting for large applications
+- Optimize images and assets
+- Use lazy loading for non-critical components
+- Monitor Core Web Vitals
+- Implement proper caching strategies
+- Regular performance audits
 
 ### Get Help
 - Check [Nx Documentation](https://nx.dev/)

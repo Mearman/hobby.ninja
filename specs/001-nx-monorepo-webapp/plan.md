@@ -215,3 +215,72 @@ ios/ or android/
 | Per-SKU JSON Files | Optimizes GitHub Pages loading; enables efficient caching | Single large JSON file rejected due to poor loading performance |
 | Dual Storage (JSON + IndexedDB) | Static hosting for dataset + dynamic user data | Everything in IndexedDB rejected due to complexity and initial load performance |
 | Advanced CLI with Caching | Reduces development iteration time; respects rate limits | Direct scraping without cache rejected due to development inefficiency |
+
+## Security & Monitoring Strategy
+
+### Web Application Security
+
+**Content Security Policy (CSP)**:
+- **Strict CSP Headers**: Prevent XSS attacks with restrictive content policies
+- **Trusted Domains**: Whitelist external resources (CDNs, APIs)
+- **Inline Script Restrictions**: Disallow inline JavaScript except for development
+- **Frame Protection**: Clickjacking protection with X-Frame-Options
+
+**Data Protection**:
+- **Input Validation**: Zod schemas for all user inputs and API responses
+- **Output Encoding**: Prevent injection attacks in rendered content
+- **Secure Storage**: Sensitive data encryption in IndexedDB
+- **API Rate Limiting**: Prevent abuse with client-side rate limiting
+
+**Dependency Security**:
+- **Automated Scanning**: npm audit integration in CI/CD pipeline
+- **Vulnerability Monitoring**: GitHub Dependabot for security alerts
+- **License Compliance**: Check for restrictive or problematic licenses
+- **Supply Chain Security**: Verify integrity of third-party packages
+
+### Observability & Monitoring
+
+**Performance Monitoring**:
+- **Web Vitals**: Core Web Vitals tracking (LCP, FID, CLS)
+- **Error Tracking**: Comprehensive error logging and reporting
+- **Performance Metrics**: Bundle size, loading times, API response times
+- **User Analytics**: Privacy-focused usage statistics
+
+**CLI Monitoring**:
+- **Execution Metrics**: Track scraping success rates and performance
+- **Error Analysis**: Categorize and analyze scraping failures
+- **Resource Usage**: Monitor memory and CPU usage during operations
+- **Data Quality Metrics**: Validate scraped data completeness and accuracy
+
+**Application Health**:
+- **Health Endpoints**: Basic health checks for application status
+- **Database Health**: IndexedDB integrity and performance monitoring
+- **Cache Health**: Cache hit rates and storage usage analytics
+- **Error Budgets**: Track error rates against SLOs
+
+### Privacy & Compliance
+
+**User Data Privacy**:
+- **Data Minimization**: Collect only necessary user data
+- **Local Storage**: Keep user data local to respect privacy
+- **Data Export**: Allow users to export their data
+- **Data Deletion**: Provide clear data removal options
+
+**Legal Compliance**:
+- **Cookie Policy**: Transparent cookie usage and consent
+- **Privacy Policy**: Clear data handling and storage policies
+- **Terms of Service**: Define usage terms and limitations
+- **GDPR Considerations**: Privacy-first design principles
+
+### Development Security
+
+**Code Security**:
+- **Secrets Management**: Never commit sensitive data or API keys
+- **Environment Variables**: Secure configuration management
+- **Code Reviews**: Security-focused code review checklist
+- **Security Testing**: Automated security testing in CI/CD
+
+**Build Security**:
+- **Source Verification**: Verify package integrity during installation
+- **Build Integrity**: Ensure tamper-proof build process
+- **Deployment Security**: Secure deployment pipeline with access controls
