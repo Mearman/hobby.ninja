@@ -638,6 +638,65 @@ interface PlaywrightTestConfig {
 }
 
 /**
+ * CLI error handling and retry configuration
+ */
+interface CLIErrorHandling {
+  /** Maximum number of retry attempts for failed requests */
+  maxRetries: number;
+  /** Initial delay in milliseconds for exponential backoff */
+  initialDelay: number;
+  /** Maximum delay in milliseconds */
+  maxDelay: number;
+  /** Circuit breaker threshold after which to stop retrying */
+  circuitBreakerThreshold: number;
+  /** Rate limiting delay between requests in milliseconds */
+  rateLimitDelay: number;
+  /** Timeout for individual requests in milliseconds */
+  requestTimeout: number;
+}
+
+/**
+ * CLI execution result with error tracking
+ */
+interface CLIExecutionResult {
+  /** Whether the operation was successful */
+  success: boolean;
+  /** Number of items processed successfully */
+  processedCount: number;
+  /** Number of items that failed */
+  failedCount: number;
+  /** Array of failed items with error details */
+  errors: Array<{
+    item: string;
+    error: string;
+    retryCount: number;
+    timestamp: Date;
+  }>;
+  /** Execution duration in milliseconds */
+  duration: number;
+  /** Checkpoint data for resuming execution */
+  checkpoint?: {
+    lastProcessedItem: string;
+    processedItems: string[];
+    timestamp: Date;
+  };
+}
+
+/**
+ * Cache management configuration
+ */
+interface CacheConfig {
+  /** Maximum age of cached content in hours */
+  maxAge: number;
+  /** Whether to compress cached content */
+  compress: boolean;
+  /** Maximum cache size in MB */
+  maxSize: number;
+  /** Cache cleanup policy */
+  cleanupPolicy: 'lru' | 'fifo' | 'size-based';
+}
+
+/**
  * Test configuration by test type
  */
 const TEST_CONFIGURATIONS: Record<TestTypeDefinition['id'], VitestTestConfig | PlaywrightTestConfig> = {

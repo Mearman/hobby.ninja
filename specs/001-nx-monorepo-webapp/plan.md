@@ -169,11 +169,49 @@ ios/ or android/
 - Automated changelog generation
 - Better team collaboration
 
+## Advanced CLI Features
+
+### Robust Error Handling & Recovery
+
+**Retry Mechanisms**:
+- **Exponential Backoff**: Retry failed requests with increasing delays
+- **Circuit Breaker**: Stop retrying after consecutive failures to prevent blacklisting
+- **Rate Limiting**: Respect robots.txt and implement polite scraping intervals
+- **User-Agent Rotation**: Rotate user agents to avoid detection
+- **Proxy Support**: Optional proxy configuration for geographic restrictions
+
+**Error Recovery Strategies**:
+- **Partial Success Recovery**: Continue processing other items when individual requests fail
+- **Checkpoint System**: Save progress to resume from last successful batch
+- **Fallback Data Sources**: Alternative scrapers when primary source fails
+- **Data Validation**: Post-scrape validation to ensure data integrity
+- **Graceful Degradation**: Continue with reduced functionality when non-critical features fail
+
+### Advanced Caching Strategies
+
+**Smart Cache Management**:
+- **Content-Based Cache Keys**: Cache based on content hash, not just URL
+- **Conditional Requests**: Use ETags and Last-Modified headers
+- **Cache Invalidation**: Smart invalidation when source data changes
+- **Compressed Cache**: Compress cached HTML to save disk space
+- **Cache Analytics**: Track cache hit rates and optimize accordingly
+
+### Performance Optimization
+
+**Concurrent Processing**:
+- **Worker Pool**: Configure number of concurrent requests
+- **Request Batching**: Group similar requests for efficiency
+- **Memory Management**: Stream processing for large datasets
+- **Progress Tracking**: Real-time progress reporting for long operations
+- **Resource Monitoring**: Track memory and CPU usage during scraping
+
 ## Complexity Tracking
 
-> **Fill ONLY if Constitution Check has violations that must be justified**
+> **Justification for architectural decisions**
 
-| Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
-| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |
+| Component | Complexity Reason | Simpler Alternative Rejected |
+|-----------|-------------------|-----------------------------|
+| 3-Package Structure (types, utils, CLI) | Clear separation of concerns; enables independent testing and deployment | Single monolithic package rejected due to maintainability concerns |
+| Per-SKU JSON Files | Optimizes GitHub Pages loading; enables efficient caching | Single large JSON file rejected due to poor loading performance |
+| Dual Storage (JSON + IndexedDB) | Static hosting for dataset + dynamic user data | Everything in IndexedDB rejected due to complexity and initial load performance |
+| Advanced CLI with Caching | Reduces development iteration time; respects rate limits | Direct scraping without cache rejected due to development inefficiency |

@@ -855,6 +855,60 @@ jobs:
 3. Branch: gh-pages / (root)
 4. Save
 
+## CLI Usage Examples
+
+### Data Scraping Commands
+
+```bash
+# Development Mode - Interactive with verbose output
+npx nx run cli:dev --interactive
+
+# Scrape specific data sources
+npx nx run cli:scrape --source=bandai --limit=100
+npx nx run cli:scrape --source=gundam-info --limit=50
+
+# Parse cached data (development mode)
+npx nx run cli:parse --cached --regenerate-indexes
+
+# Export data to webapp
+npx nx run cli:export --format=json --destination=apps/webapp/public/data
+
+# Full dataset update (CI mode)
+npx nx run cli:update --non-interactive --force-refresh
+```
+
+### Advanced CLI Features
+
+```bash
+# Configure retry and rate limiting
+npx nx run cli:scrape --max-retries=3 --rate-limit=1000
+
+# Use proxy for geographic restrictions
+npx nx run cli:scrape --proxy=http://proxy.example.com:8080
+
+# Resume from checkpoint
+npx nx run cli:update --resume-from-checkpoint
+
+# Enable detailed logging
+npx nx run cli:scrape --verbose --log-level=debug
+
+# Validate data integrity
+npx nx run cli:validate --check-duplicates --verify-sku-format
+```
+
+### Cache Management
+
+```bash
+# Clear cache for specific source
+npx nx run cli:cache-clear --source=bandai
+
+# Compress old cache files
+npx nx run cli:cache-compress --max-age=72h
+
+# Analyze cache usage
+npx nx run cli:cache-stats --format=table
+```
+
 ## Next Steps
 
 1. **Create Components**: Build your UI components using Mantine
@@ -864,6 +918,7 @@ jobs:
 5. **Customize Theme**: Configure Mantine theme to match your brand
 6. **Add Analytics**: Implement tracking and monitoring
 7. **Configure CI/CD**: Set up automated testing and deployment
+8. **Data Management**: Use CLI to keep Gunpla dataset current
 
 ## Troubleshooting
 
