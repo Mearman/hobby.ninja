@@ -19,12 +19,12 @@ Initialize an Nx monorepo containing a React 19 webapp with TypeScript strict mo
 
 **Language/Version**: TypeScript 5.x (latest stable)
 **Primary Dependencies**: React 19, Nx (latest), TanStack Router (latest), Mantine UI (latest), Dexie (latest), Vanilla Extract CSS (latest)
-**Storage**: IndexedDB via Dexie (client-side), JSON files in public/data directory (static)
+**Storage**: IndexedDB via Dexie (client-side user data), JSON files in public/data directory (main dataset static)
 **Testing**: Vitest (unit/integration), Playwright (e2e), ESLint (linting)
 **Target Platform**: Web browsers (Chrome, Firefox, Safari, Edge) - GitHub Pages static hosting
 **Project Type**: Web application (monorepo structure)
 **Performance Goals**: <2s hot reload, <10s dev server start, efficient data loading with per-SKU JSON files
-**Constraints**: GitHub Pages static hosting, hash routing requirement, offline-capable with IndexedDB
+**Constraints**: GitHub Pages static hosting, hash routing requirement, user data stored in IndexedDB
 **Scale/Scope**: Single-page application with potential 1000+ Gunpla kits, modular package structure
 
 ## Constitution Check
@@ -54,7 +54,8 @@ Initialize an Nx monorepo containing a React 19 webapp with TypeScript strict mo
 - ✅ React 19 + TypeScript strict mode configuration confirmed
 - ✅ TanStack Router hash routing compatible with GitHub Pages
 - ✅ Mantine + Vanilla Extract CSS integration designed
-- ✅ Dexie IndexedDB strategy appropriate for client-side data
+- ✅ Dexie IndexedDB strategy appropriate for user-specific data
+- ✅ Static JSON files approach optimal for main Gunpla dataset
 
 **Package Structure Validation**:
 - ✅ Types package provides centralized TypeScript interfaces
@@ -69,10 +70,12 @@ Initialize an Nx monorepo containing a React 19 webapp with TypeScript strict mo
 - ✅ Zod integration for runtime type safety
 
 **Data Architecture Validation**:
-- ✅ Per-SKU JSON files optimize for GitHub Pages hosting
-- ✅ Index files enable efficient data discovery
-- ✅ Bandai SKU canonical identification system
+- ✅ Per-SKU JSON files optimize for GitHub Pages hosting (main dataset)
+- ✅ Index files enable efficient data discovery and querying
+- ✅ Bandai SKU canonical identification system implemented
 - ✅ Page caching reduces development iteration time
+- ✅ IndexedDB reserved for user data (preferences, collections, personal data)
+- ✅ Clear separation between static dataset and dynamic user data
 
 ## Project Structure
 
