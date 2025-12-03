@@ -39,6 +39,98 @@ interface NxProjectConfig {
 }
 ```
 
+### User Data Types (for @workspace/types package)
+
+```typescript
+/**
+ * User preference settings stored in IndexedDB
+ */
+interface UserSettings {
+  /** Theme preference */
+  theme: 'light' | 'dark' | 'auto';
+  /** Default language */
+  language: string;
+  /** Items per page in lists */
+  itemsPerPage: number;
+  /** Show discontinued kits */
+  showDiscontinued: boolean;
+  /** Default sort order */
+  defaultSort: 'name' | 'release_date' | 'grade' | 'price';
+  /** Enable notifications */
+  notifications: boolean;
+}
+
+/**
+ * User's personal Gunpla collection entry
+ */
+interface CollectionEntry {
+  /** Unique identifier */
+  id: string;
+  /** Bandai SKU reference */
+  sku: string;
+  /** Quantity owned */
+  quantity: number;
+  /** Condition of the kit */
+  condition: 'new' | 'used' | 'damaged' | 'box_only';
+  /** When the kit was purchased */
+  purchaseDate?: Date;
+  /** Purchase price in local currency */
+  purchasePrice?: number;
+  /** User notes about the kit */
+  notes?: string;
+  /** When added to collection */
+  addedAt: Date;
+  /** Last updated timestamp */
+  updatedAt: Date;
+}
+
+/**
+ * User wishlist entry
+ */
+interface WishlistEntry {
+  /** Unique identifier */
+  id: string;
+  /** Bandai SKU reference */
+  sku: string;
+  /** Priority level for purchasing */
+  priority: 'low' | 'medium' | 'high';
+  /** Target price */
+  targetPrice?: number;
+  /** User notes */
+  notes?: string;
+  /** When added to wishlist */
+  addedAt: Date;
+}
+
+/**
+ * Build progress log entry
+ */
+interface BuildLog {
+  /** Unique identifier */
+  id: string;
+  /** Bandai SKU reference */
+  sku: string;
+  /** Build title */
+  title: string;
+  /** Current build status */
+  status: 'planning' | 'in_progress' | 'completed' | 'on_hold';
+  /** Progress percentage (0-100) */
+  progress: number;
+  /** When build was started */
+  startDate?: Date;
+  /** When build was completed */
+  completedDate?: Date;
+  /** Detailed build notes */
+  notes: string;
+  /** Build progress images */
+  images: string[];
+  /** When log was created */
+  createdAt: Date;
+  /** Last updated timestamp */
+  updatedAt: Date;
+}
+```
+
 ### Development Environment
 
 ```typescript
@@ -148,7 +240,7 @@ Since this is a template initialization, the actual webapp will implement its ow
 ### Client-side Storage Schema
 
 ```typescript
-// Example application database schema (to be implemented by the actual webapp)
+// Gunpla Webapp User Database Schema (IndexedDB via Dexie)
 interface AppDatabase {
   // User preferences and settings
   settings: {
@@ -157,16 +249,51 @@ interface AppDatabase {
     updatedAt: Date;
   };
 
-  // Local cache data
+  // User's personal Gunpla collection
+  userCollection: {
+    id: string;
+    sku: string; // Bandai SKU
+    quantity: number;
+    condition: 'new' | 'used' | 'damaged' | 'box_only';
+    purchaseDate?: Date;
+    purchasePrice?: number;
+    notes?: string;
+    addedAt: Date;
+    updatedAt: Date;
+  };
+
+  // User's wishlist
+  wishlist: {
+    id: string;
+    sku: string; // Bandai SKU
+    priority: 'low' | 'medium' | 'high';
+    notes?: string;
+    addedAt: Date;
+  };
+
+  // Build logs and progress tracking
+  buildLogs: {
+    id: string;
+    sku: string; // Bandai SKU
+    title: string;
+    status: 'planning' | 'in_progress' | 'completed' | 'on_hold';
+    progress: number; // 0-100
+    startDate?: Date;
+    completedDate?: Date;
+    notes: string;
+    images: string[]; // Base64 or image URLs
+    createdAt: Date;
+    updatedAt: Date;
+  };
+
+  // Local cache of frequently accessed data
   cache: {
     id: string;
     data: unknown;
     expiresAt: Date;
     createdAt: Date;
+    tags: string[];
   };
-
-  // Application-specific data (to be defined by the webapp)
-  // entities: { ... }
 }
 ```
 
