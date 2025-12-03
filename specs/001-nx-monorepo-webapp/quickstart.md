@@ -1038,6 +1038,242 @@ npx nx run cli:cache-stats --format=table
 8. **Data Management**: Use CLI to keep Gunpla dataset current
 9. **Security**: Implement CSP headers and security monitoring
 10. **Monitoring**: Set up performance tracking and health checks
+11. **PWA Features**: Implement offline capabilities and app installation
+12. **Accessibility**: Ensure WCAG 2.1 AA compliance and inclusive design
+
+## Progressive Web App Implementation
+
+### Service Worker Setup
+
+```typescript
+// public/sw.ts - Service Worker
+const CACHE_NAME = 'gunpla-app-v1';
+const OFFLINE_URL = '/offline.html';
+
+// Assets to cache immediately
+const PRECACHE_ASSETS = [
+  '/',
+  '/offline.html',
+  '/manifest.json',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png'
+];
+
+// Install event - precache critical assets
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(PRECACHE_ASSETS))
+  );
+});
+
+// Fetch event - implement network-first caching
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        return response || fetch(event.request);
+      })
+      .catch(() => {
+        // Network error - try cache or offline page
+        if (event.request.destination === 'document') {
+          return caches.match(OFFLINE_URL);
+        }
+      })
+  );
+});
+```
+
+### Web App Manifest
+
+```json
+// public/manifest.json
+{
+  "name": "Gunpla Collection Manager",
+  "short_name": "Gunpla",
+  "description": "Manage your Gunpla collection with offline capabilities",
+  "theme_color": "#1971c2",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "My Collection",
+      "short_name": "Collection",
+      "description": "View your Gunpla collection",
+      "url": "/collection",
+      "icons": [{ "src": "/icons/collection-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Wishlist",
+      "short_name": "Wishlist",
+      "description": "Manage your wishlist",
+      "url": "/wishlist",
+      "icons": [{ "src": "/icons/wishlist-96x96.png", "sizes": "96x96" }]
+    }
+  ]
+}
+```
+
+## Accessibility Implementation
+
+### Semantic HTML Structure
+
+```typescript
+// src/components/Layout/AppLayout.tsx
+export function AppLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="app">
+      {/* Skip links for keyboard navigation */}
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+
+      {/* Main navigation */}
+      <header role="banner">
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="/collection">Collection</a></li>
+            <li><a href="/wishlist">Wishlist</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      {/* Main content area */}
+      <main id="main-content" role="main" aria-label="Main content">
+        {children}
+      </main>
+
+      {/* Footer */}
+      <footer role="contentinfo">
+        <p>&copy; 2024 Gunpla Collection Manager</p>
+      </footer>
+    </div>
+  );
+}
+```
+
+### ARIA Accessibility Features
+
+```typescript
+// src/hooks/useAccessibility.ts
+export function useAccessibility() {
+  const [announcements, setAnnouncements] = useState<string[]>([]);
+
+  const announceToScreenReader = (message: string) => {
+    setAnnouncements(prev => [...prev, message]);
+
+    // Clear announcement after it's read
+    setTimeout(() => {
+      setAnnouncements(prev => prev.slice(1));
+    }, 1000);
+  };
+
+  const handleFocusManagement = (containerRef: RefObject<HTMLElement>) => {
+    useEffect(() => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Tab') {
+          const focusableElements = container.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          );
+
+          const firstElement = focusableElements[0] as HTMLElement;
+          const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+          if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+          } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+          }
+        }
+      };
+
+      container.addEventListener('keydown', handleKeyDown);
+      return () => container.removeEventListener('keydown', handleKeyDown);
+    }, [containerRef]);
+  };
+
+  return { announceToScreenReader, handleFocusManagement };
+}
+```
+
+### Color Contrast and Theme Support
+
+```typescript
+// src/styles/accessibility.css
+:root {
+  /* Light theme colors */
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --background: #ffffff;
+  --surface: #f5f5f5;
+  --border: #e0e0e0;
+  --focus-ring: #1971c2;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --background: #ffffff;
+    --surface: #ffffff;
+    --border: #000000;
+    --focus-ring: #000000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* High contrast focus indicators */
+@media (prefers-contrast: high) {
+  .focus-visible {
+    outline: 3px solid #000000;
+    background-color: #ffff00;
+  }
+}
+```
 
 ## Security Implementation
 

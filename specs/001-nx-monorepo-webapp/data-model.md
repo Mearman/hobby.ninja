@@ -840,6 +840,160 @@ interface HealthCheck {
 }
 
 /**
+ * Progressive Web App configuration
+ */
+interface PWAConfig {
+  /** Service worker configuration */
+  serviceWorker: {
+    /** Cache strategy for different resource types */
+    cacheStrategy: 'networkFirst' | 'cacheFirst' | 'staleWhileRevalidate';
+    /** Resources to precache on install */
+    precacheResources: string[];
+    /** Cache expiration settings in hours */
+    cacheExpiration: Record<string, number>;
+    /** Background sync configuration */
+    backgroundSync: boolean;
+  };
+  /** Web app manifest configuration */
+  manifest: {
+    /** Application name */
+    name: string;
+    /** Short name for home screen */
+    shortName: string;
+    /** Application description */
+    description: string;
+    /** Theme color */
+    themeColor: string;
+    /** Background color */
+    backgroundColor: string;
+    /** Display mode */
+    display: 'fullscreen' | 'standalone' | 'minimal-ui' | 'browser';
+    /** Orientation preference */
+    orientation: 'any' | 'natural' | 'landscape' | 'portrait';
+    /** Start URL */
+    startUrl: string;
+    /** Application scope */
+    scope: string;
+    /** Icons for different sizes */
+    icons: Array<{
+      src: string;
+      sizes: string;
+      type: string;
+      purpose?: 'any' | 'maskable' | 'monochrome';
+    }>;
+  };
+}
+
+/**
+ * Accessibility configuration
+ */
+interface AccessibilityConfig {
+  /** WCAG compliance level */
+  wcagLevel: 'AA' | 'AAA';
+  /** Screen reader announcements */
+  announcements: {
+    /** Live regions for dynamic content */
+    liveRegions: string[];
+    /** ARIA live politeness levels */
+    politeness: 'polite' | 'assertive' | 'off';
+  };
+  /** Keyboard navigation settings */
+  keyboardNavigation: {
+    /** Skip links for main content areas */
+    skipLinks: Array<{
+      href: string;
+      text: string;
+      target: string;
+    }>;
+    /** Focus trap selectors */
+    focusTraps: string[];
+    /** Custom keyboard shortcuts */
+    shortcuts: Array<{
+      key: string;
+      description: string;
+      action: () => void;
+    }>;
+  };
+  /** Color contrast settings */
+  colorContrast: {
+    /** Minimum contrast ratios */
+    minimumRatios: {
+      normalText: number;
+      largeText: number;
+      graphicalObjects: number;
+    };
+    /** High contrast theme availability */
+    highContrastTheme: boolean;
+  };
+  /** Motion preferences */
+  motion: {
+    /** Respect reduced motion preference */
+    respectReducedMotion: boolean;
+    /** Custom animation timing functions */
+    animationTiming: {
+      fast: string;
+      normal: string;
+      slow: string;
+    };
+  };
+}
+
+/**
+ * Service worker cache entry
+ */
+interface CacheEntry {
+  /** Cache entry URL */
+  url: string;
+  /** Cache entry timestamp */
+  timestamp: Date;
+  /** Cache expiration date */
+  expiresAt: Date;
+  /** Response type */
+  type: 'document' | 'stylesheet' | 'script' | 'image' | 'font' | 'data';
+  /** Response size in bytes */
+  size: number;
+  /** ETag header for validation */
+  etag?: string;
+  /** Last modified timestamp */
+  lastModified?: Date;
+}
+
+/**
+ * Performance budget configuration
+ */
+interface PerformanceBudget {
+  /** Bundle size limits in KB */
+  bundleSize: {
+    /** Maximum JavaScript bundle size */
+    javascript: number;
+    /** Maximum CSS bundle size */
+    css: number;
+    /** Maximum image bundle size */
+    images: number;
+    /** Maximum total bundle size */
+    total: number;
+  };
+  /** Loading performance targets */
+  loading: {
+    /** Maximum First Contentful Paint in milliseconds */
+    fcp: number;
+    /** Maximum Largest Contentful Paint in milliseconds */
+    lcp: number;
+    /** Maximum Time to Interactive in milliseconds */
+    tti: number;
+    /** Maximum Cumulative Layout Shift */
+    cls: number;
+  };
+  /** Resource limits */
+  resources: {
+    /** Maximum number of requests */
+    maxRequests: number;
+    /** Maximum number of domains */
+    maxDomains: number;
+  };
+}
+
+/**
  * Test configuration by test type
  */
 const TEST_CONFIGURATIONS: Record<TestTypeDefinition['id'], VitestTestConfig | PlaywrightTestConfig> = {
