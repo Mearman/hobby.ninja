@@ -95,6 +95,11 @@ Developers have access to comprehensive testing, linting, and development tools 
 31. **Given** the CLI in CI mode, **When** running automated updates, **Then** non-interactive execution with proper error handling and logging is provided
 32. **Given** the CI integration, **When** examining workflow files, **Then** GitHub Actions or similar CI/CD is configured for automatic dataset updates
 33. **Given** the existing archive projects, **When** examining implementation approaches, **Then** patterns and solutions from ../archive/ are evaluated for inspiration while implementing modern best practices
+34. **Given** the webapp security configuration, **When** examining HTTP headers, **Then** Content Security Policy headers are properly configured to prevent XSS and injection attacks
+35. **Given** the security monitoring system, **When** examining security events, **Then** threat detection and event tracking are implemented with proper alerting
+36. **Given** the performance monitoring setup, **When** examining metrics collection, **Then** Core Web Vitals and health checks are properly tracked and reported
+37. **Given** the privacy implementation, **When** examining data handling, **Then** data minimization and local storage principles are followed with user consent
+38. **Given** the CI/CD pipeline, **When** examining security checks, **Then** automated vulnerability scanning and security testing are integrated
 
 ---
 
@@ -148,6 +153,11 @@ Developers have access to comprehensive testing, linting, and development tools 
 - **FR-038**: System MUST support both manual CLI execution and automated CI/CD pipeline integration for dataset updates
 - **FR-039**: System MUST provide configuration options for different execution modes (development vs CI)
 - **FR-040**: System MUST use ../archive/ implementations as inspiration for patterns and approaches while implementing modern best practices
+- **FR-041**: System MUST implement Content Security Policy (CSP) headers to prevent XSS and injection attacks
+- **FR-042**: System MUST provide comprehensive security monitoring with event tracking and threat detection
+- **FR-043**: System MUST implement performance monitoring with Core Web Vitals tracking and health checks
+- **FR-044**: System MUST ensure privacy compliance with data minimization and local storage principles
+- **FR-045**: System MUST include automated security scanning in the CI/CD pipeline with vulnerability detection
 
 ### Key Entities *(include if feature involves data)*
 
