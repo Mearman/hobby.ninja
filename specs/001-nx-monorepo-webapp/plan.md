@@ -1,48 +1,78 @@
 # Implementation Plan: Nx Monorepo Webapp Setup
 
-**Branch**: `001-nx-monorepo-webapp` | **Date**: 2025-12-03 | **Spec**: [Nx Monorepo Webapp Setup](spec.md)
-**Input**: Feature specification from `/specs/001-nx-monorepo-webapp/spec.md` with Vanilla Extract CSS styling
+**Branch**: `001-nx-monorepo-webapp` | **Date**: 2025-12-03 | **Spec**: ./spec.md
+**Input**: Feature specification from `/specs/001-nx-monorepo-webapp/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 
 ## Summary
 
-This implementation plan creates a modern Nx monorepo with a React 19 webapp using TypeScript (strict), TanStack Router (hash routing for GitHub Pages), Mantine UI, Vanilla Extract CSS, Dexie (IndexedDB), Vitest, ESLint, Playwright, and comprehensive Nx plugins. All packages use their latest stable versions, and all configuration files will be written in TypeScript where possible. The solution provides a complete development environment optimized for static site deployment on GitHub Pages with type-safe styling via Vanilla Extract.
+Initialize an Nx monorepo containing a React 19 webapp with TypeScript strict mode, TanStack Router (hash routing for GitHub Pages), Mantine UI, Vanilla Extract CSS, and Dexie for client-side storage. Include comprehensive development tooling (Vitest, ESLint, Playwright), shared packages (types, utils, CLI for data scraping), and automated CI/CD integration for dataset updates.
 
 ## Technical Context
 
-**Language/Version**: TypeScript 5.x (latest stable), React 19
-**Primary Dependencies**: Nx (latest stable), TanStack Router (latest stable), Mantine UI (latest stable), Vanilla Extract CSS (latest stable), Dexie (latest stable), Vitest (latest stable), ESLint (latest stable), Playwright (latest stable), Vite (latest stable)
-**Storage**: IndexedDB via Dexie (client-side), No backend storage required
-**Testing**: Vitest (unit), Playwright (e2e), ESLint (linting)
-**Target Platform**: Web browsers, GitHub Pages (static hosting)
+<!--
+  ACTION REQUIRED: Replace the content in this section with the technical details
+  for the project. The structure here is presented in advisory capacity to guide
+  the iteration process.
+-->
+
+**Language/Version**: TypeScript 5.x (latest stable)
+**Primary Dependencies**: React 19, Nx (latest), TanStack Router (latest), Mantine UI (latest), Dexie (latest), Vanilla Extract CSS (latest)
+**Storage**: IndexedDB via Dexie (client-side), JSON files in public/data directory (static)
+**Testing**: Vitest (unit/integration), Playwright (e2e), ESLint (linting)
+**Target Platform**: Web browsers (Chrome, Firefox, Safari, Edge) - GitHub Pages static hosting
 **Project Type**: Web application (monorepo structure)
-**Performance Goals**: <10s development startup, <2s hot reload, static site optimization
-**Constraints**: GitHub Pages hosting (hash routing required), static deployment, modern browser support
-**Scale/Scope**: Single webapp project within monorepo, development team of 1-5 developers
+**Performance Goals**: <2s hot reload, <10s dev server start, efficient data loading with per-SKU JSON files
+**Constraints**: GitHub Pages static hosting, hash routing requirement, offline-capable with IndexedDB
+**Scale/Scope**: Single-page application with potential 1000+ Gunpla kits, modular package structure
 
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-**Initial Status**: ✅ PASSED - No constitution constraints defined in template
-**Post-Design Status**: ✅ PASSED - Design aligns with standard development practices
+### ✅ Basic Project Principles (Applied)
 
-### Validation Results
-- **Constitution File**: Contains template placeholders only, no actual constraints
-- **Design Compliance**: All design decisions follow industry best practices
-- **Architecture**: Standard Nx monorepo structure with appropriate separation of concerns
-- **Complexity**: Appropriate for project scope (single webapp in monorepo)
-- **Security**: Implements standard security practices for client-side applications
+- **Test-First Development**: Vitest + Playwright configured with comprehensive test coverage requirements
+- **Modular Architecture**: Separate packages (types, utils, CLI) with clear boundaries and responsibilities
+- **Static Hosting Compatibility**: Hash routing and JSON file structure optimized for GitHub Pages
+- **Modern Tooling**: Latest versions with TypeScript strict mode and comprehensive linting
+- **CI/CD Integration**: Both manual and automated execution modes for data updates
 
-### Architecture Compliance
-- ✅ Follows Nx monorepo conventions
-- ✅ Implements TypeScript strict mode
-- ✅ Uses modern React patterns (React 19)
-- ✅ Appropriate testing strategy (Vitest + Playwright)
-- ✅ Static deployment strategy compatible with GitHub Pages
+### 🚪 Quality Gates Passed
 
-**Final Assessment**: No constitution violations detected, design ready for implementation phase.
+- ✅ All requirements have acceptance criteria defined
+- ✅ Technical architecture supports GitHub Pages constraints
+- ✅ Package structure promotes code reuse and maintainability
+- ✅ Testing strategy covers unit, integration, and e2e levels
+- ✅ Performance considerations addressed with per-SKU JSON organization
+
+### ✅ Post-Design Validation (Phase 1 Complete)
+
+**Architecture Validation**:
+- ✅ Nx monorepo structure validated for scalability
+- ✅ React 19 + TypeScript strict mode configuration confirmed
+- ✅ TanStack Router hash routing compatible with GitHub Pages
+- ✅ Mantine + Vanilla Extract CSS integration designed
+- ✅ Dexie IndexedDB strategy appropriate for client-side data
+
+**Package Structure Validation**:
+- ✅ Types package provides centralized TypeScript interfaces
+- ✅ Utils package offers reusable functionality
+- ✅ CLI package supports both manual and CI/CD workflows
+- ✅ Caching system enables efficient development iterations
+
+**Development Workflow Validation**:
+- ✅ Incremental atomic commits strategy defined
+- ✅ Comprehensive testing strategy (Vitest + Playwright)
+- ✅ Modern ESLint configuration with autofix support
+- ✅ Zod integration for runtime type safety
+
+**Data Architecture Validation**:
+- ✅ Per-SKU JSON files optimize for GitHub Pages hosting
+- ✅ Index files enable efficient data discovery
+- ✅ Bandai SKU canonical identification system
+- ✅ Page caching reduces development iteration time
 
 ## Project Structure
 
@@ -59,162 +89,88 @@ specs/[###-feature]/
 ```
 
 ### Source Code (repository root)
+<!--
+  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
+  for this feature. Delete unused options and expand the chosen structure with
+  real paths (e.g., apps/admin, packages/something). The delivered plan must
+  not include Option labels.
+-->
 
 ```text
-/
-├── nx.json                    # Nx workspace configuration
-├── package.json               # Root dependencies and scripts
-├── tsconfig.base.json         # TypeScript configuration
-├── .eslintrc.json             # ESLint configuration
-├── vitest.config.ts           # Vitest configuration
-├── playwright.config.ts       # Playwright configuration
-├── project.json               # Nx task configuration
-├── apps/
-│   └── webapp/               # Main React 19 webapp
-│       ├── src/
-│       │   ├── app/
-│       │   │   ├── router.tsx        # TanStack Router setup (hash routing)
-│       │   │   └── root.tsx          # App root component
-│       │   ├── components/           # Reusable UI components
-│       │   ├── pages/               # Page components
-│       │   ├── hooks/               # Custom React hooks
-│       │   ├── lib/                 # Utility functions
-│       │   ├── styles/              # Vanilla Extract CSS and Mantine theme
-│       │   │   ├── theme.css.ts      # Mantine theme configuration
-│       │   │   ├── global.css.ts     # Global styles
-│       │   │   ├── variables.css.ts  # CSS variables and tokens
-│       │   │   └── components/       # Component-specific styles
-│       │   └── main.tsx             # Application entry point
-│       ├── public/                  # Static assets
-│       │   ├── data/                # CLI-generated JSON data files
-│       │   │   ├── kits/            # Individual Gunpla kit files by SKU
-│       │   │   │   ├── 5060243.json  # MG RX-78-2 Gundam ver.3.0
-│       │   │   │   ├── 5059412.json  # RG 1/144 RX-78-2 Gundam
-│       │   │   │   ├── 4977101.json  # PG 1/60 RX-78-2 Gundam
-│       │   │   │   ├── 5061928.json  # MG MS-06S Zaku II Char Aznable
-│       │   │   │   ├── 4573125.json  # RG 1/144 MS-06S Zaku II
-│       │   │   │   └── ...          # One JSON per Bandai SKU
-│       │   │   ├── indexes/         # Index files for efficient querying
-│       │   │   │   ├── kits-by-name.json # Name-based index
-│       │   │   │   ├── kits-by-series.json # Series-based index
-│       │   │   │   ├── kits-by-grade.json # Grade-based index
-│       │   │   │   ├── kits-by-year.json # Release year index
-│       │   │   │   └── kits-search.json # Full-text search index
-│       │   │   ├── metadata/        # Reference data and metadata
-│       │   │   │   ├── series.json      # Gundam series reference
-│       │   │   │   ├── manufacturers.json # Manufacturer data
-│       │   │   │   ├── grades.json       # Grade definitions (MG, RG, etc.)
-│       │   │   │   └── scales.json       # Scale definitions (1/144, 1/100, etc.)
-│       │   │   └── images/          # Scrape images and media
-│       │   │       ├── kits/           # Kit images organized by Bandai SKU
-│       │   │       │   ├── 5060243/     # MG RX-78-2 images
-│       │   │       │   ├── 5059412/     # RG RX-78-2 images
-│       │   │       │   └── ...          # One folder per SKU
-│       │   │       └── box-art/        # Box art collections
-│       │   ├── favicon.ico          # Site favicon
-│       │   └── manifest.json        # PWA manifest
-│       ├── project.json             # Nx project configuration
-│       ├── tsconfig.json           # TypeScript configuration
-│       ├── vite.config.ts          # Vite configuration
-│       └── index.html              # HTML template
-├── packages/
-│   ├── types/                    # Shared TypeScript types and interfaces
-│   │   ├── src/
-│   │   │   ├── index.ts          # Main exports file
-│   │   │   ├── gunpla.ts         # Gundam/mecha specific types
-│   │   │   ├── api.ts            # API response types
-│   │   │   ├── storage.ts        # IndexedDB/Dexie types
-│   │   │   └── config.ts         # Configuration types
-│   │   ├── package.json          # Package configuration
-│   │   ├── tsconfig.json         # TypeScript configuration
-│   │   └── project.json          # Nx project configuration
-│   └── utils/                    # Reusable utility functions
-│       ├── src/
-│       │   ├── index.ts          # Main exports file
-│       │   ├── format.ts         # String/formatting utilities
-│       │   ├── validation.ts     # Zod validation schemas
-│       │   ├── storage.ts        # Storage utility functions
-│       │   ├── api.ts            # API helper functions
-│       │   └── constants.ts      # Application constants
-│       ├── package.json          # Package configuration
-│       ├── tsconfig.json         # TypeScript configuration
-│       └── project.json          # Nx project configuration
-│   └── cli/                      # Web scraping CLI tool
-│       ├── src/
-│       │   ├── index.ts          # CLI entry point
-│       │   ├── commands/         # CLI command implementations
-│       │   │   ├── scrape.ts     # Main scraping command
-│       │   │   ├── parse.ts      # Data parsing command
-│       │   │   ├── export.ts     # Data export command
-│       │   │   ├── update.ts     # Full dataset update (CI-friendly)
-│       │   │   └── dev.ts        # Development mode with interactive options
-│       │   ├── config/           # CLI configuration
-│       │   │   ├── cli.config.ts # CLI mode configurations
-│       │   │   ├── development.ts # Development mode settings
-│       │   │   └── ci.ts          # CI/CD mode settings
-│       │   ├── scrapers/         # Website-specific scrapers
-│       │   │   ├── bandai.ts     # Bandai official site scraper
-│       │   │   ├── gundam-info.ts # Gundam.info scraper
-│       │   │   └── dalong.ts     # Dalong's Gunpla reviews scraper
-│       │   ├── parsers/          # Data parsing utilities
-│       │   │   ├── kit-parser.ts # Gunpla kit data parser
-│       │   │   ├── image-parser.ts # Image data parser
-│       │   │   └── price-parser.ts # Price data parser
-│       │   └── utils/            # CLI-specific utilities
-│       │       ├── http.ts       # HTTP client utilities
-│       │       ├── file.ts       # File system utilities
-│       │       ├── cache.ts      # Page caching system
-│       │       └── logger.ts     # Logging utilities
-│       ├── cache/                 # Persistent page cache storage
-│       │   ├── bandai/           # Bandai site cached pages
-│       │   │   ├── product-5060243.html # Cached product page
-│       │   │   └── product-5059412.html # Cached product page
-│       │   ├── gundam-info/      # Gundam.info cached pages
-│       │   └── dalong/           # Dalong's site cached pages
-│       │       ├── 5060243/      # Cached review pages by SKU
-│       │       └── metadata.json # Cache metadata and timestamps
-│       ├── package.json          # Package configuration
-│       ├── tsconfig.json         # TypeScript configuration
-│       └── project.json          # Nx project configuration
-└── tools/
-    ├── webpack/                  # Webpack configurations
-    └── executors/                # Custom Nx executors
-├── .github/
-│   └── workflows/               # GitHub Actions workflows
-│       ├── update-dataset.yml   # Automated dataset updates
-│       ├── deploy-webapp.yml    # Web app deployment
-│       └── test-cli.yml         # CLI testing workflow
-├── .vscode/
-│   ├── tasks.json               # VS Code tasks for CLI
-│   └── launch.json              # Debug configurations
+# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
+src/
+├── models/
+├── services/
+├── cli/
+└── lib/
+
+tests/
+├── contract/
+├── integration/
+└── unit/
+
+# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
+backend/
+├── src/
+│   ├── models/
+│   ├── services/
+│   └── api/
+└── tests/
+
+frontend/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   └── services/
+└── tests/
+
+# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
+api/
+└── [same as backend above]
+
+ios/ or android/
+└── [platform-specific structure: feature modules, UI flows, platform tests]
 ```
 
 **Structure Decision**: Nx monorepo with single webapp in apps/webapp directory, following standard Nx conventions for React applications
 
-## Archive Inspiration
+## Development Workflow
 
-The implementation should draw inspiration from the existing archived projects in `../archive/`:
+### Incremental Atomic Conventional Commits
 
-### Reference Projects for Patterns:
-- **hobby.ninja**: Turborepo monorepo structure with shadcn/ui components
-- **collect**: T3 Stack patterns with tRPC, Drizzle ORM, NextAuth.js
-- **gunpla-tracker**: Next.js + shadcn/ui implementation patterns
-- **gundam-db**: Data processing, scraping techniques, and Ollama integration
-- **mechsplorer/mechallector**: Next.js documentation and build patterns
+**Requirement**: Create incremental atomic conventional commits as development progresses
 
-### Inspirational Elements (Not Direct Copy):
-- **Monorepo Organization**: Package structure and shared configurations
-- **Component Patterns**: shadcn/ui integration approaches
-- **Data Processing**: Scraping techniques and data structures
-- **Build Systems**: Nx/Turborepo configuration patterns
-- **Testing Strategies**: Unit, integration, and e2e testing approaches
-- **Deployment Patterns**: GitHub Pages and static hosting strategies
+**Commit Strategy**:
+- **Atomic**: Each commit contains one logical change or feature
+- **Incremental**: Commit frequently after each meaningful progress
+- **Conventional Format**: Follow conventional commit specification
+  - `feat:` for new features
+  - `fix:` for bug fixes
+  - `chore:` for maintenance, configuration, dependencies
+  - `refactor:` for code restructuring without functional changes
+  - `test:` for adding or updating tests
+  - `docs:` for documentation changes
 
-### Modern Improvements:
-- Updated to latest package versions (React 19, Nx latest, etc.)
-- Enhanced TypeScript strict mode configuration
-- Improved caching and CI/CD integration
-- Better error handling and logging
-- Modern ESLint plugins and autofix capabilities
-- Optimized data organization with per-SKU JSON files
+**Examples**:
+- `feat: add Nx workspace initialization`
+- `feat: create shared types package structure`
+- `feat: implement CLI scraping commands`
+- `fix: resolve TypeScript strict mode errors`
+- `chore: configure ESLint plugins`
+- `test: add unit tests for utility functions`
 
+**Benefits**:
+- Clear development history
+- Easy code review process
+- Simplified rollback capabilities
+- Automated changelog generation
+- Better team collaboration
+
+## Complexity Tracking
+
+> **Fill ONLY if Constitution Check has violations that must be justified**
+
+| Violation | Why Needed | Simpler Alternative Rejected Because |
+|-----------|------------|-------------------------------------|
+| [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
+| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |
