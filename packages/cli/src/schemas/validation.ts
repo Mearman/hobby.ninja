@@ -77,7 +77,7 @@ export function validateProductData(data: any): {
     if (error instanceof z.ZodError) {
       return {
         isValid: false,
-        errors: error.errors.map(err => `${err.path?.join('.') || 'field'}: ${err.message}`)
+        errors: error.issues.map(err => `${err.path?.join('.') || 'field'}: ${err.message}`)
       };
     }
     return {
@@ -89,10 +89,10 @@ export function validateProductData(data: any): {
 
 // Batch validation function
 export function validateProductDataBatch(dataArray: any[]): {
-  valid: ProductData[];
+  valid: any[];
   invalid: { data: any; errors: string[] }[];
 } {
-  const valid: ProductData[] = [];
+  const valid: any[] = [];
   const invalid: { data: any; errors: string[] }[] = [];
 
   for (const data of dataArray) {
