@@ -238,26 +238,6 @@ ios/ or android/
 - **License Compliance**: Check for restrictive or problematic licenses
 - **Supply Chain Security**: Verify integrity of third-party packages
 
-### Observability & Monitoring
-
-**Performance Monitoring**:
-- **Web Vitals**: Core Web Vitals tracking (LCP, FID, CLS)
-- **Error Tracking**: Comprehensive error logging and reporting
-- **Performance Metrics**: Bundle size, loading times, API response times
-- **User Analytics**: Privacy-focused usage statistics
-
-**CLI Monitoring**:
-- **Execution Metrics**: Track scraping success rates and performance
-- **Error Analysis**: Categorize and analyze scraping failures
-- **Resource Usage**: Monitor memory and CPU usage during operations
-- **Data Quality Metrics**: Validate scraped data completeness and accuracy
-
-**Application Health**:
-- **Health Endpoints**: Basic health checks for application status
-- **Database Health**: IndexedDB integrity and performance monitoring
-- **Cache Health**: Cache hit rates and storage usage analytics
-- **Error Budgets**: Track error rates against SLOs
-
 ### Privacy & Compliance
 
 **User Data Privacy**:
