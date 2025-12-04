@@ -82,7 +82,7 @@
       },
       "dependsOn": ["@unnamed-gunpla-app/types:build", "@unnamed-gunpla-app/utils:build"]
     },
-    "e2e": {
+    "test:e2e": {
       "executor": "@nx/playwright:run",
       "options": {
         "config": "playwright.config.ts"
