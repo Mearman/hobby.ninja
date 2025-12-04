@@ -7,13 +7,14 @@
     "./apps/web/src/pages",
     "./apps/web/src/providers",
     "./apps/web/src/styles",
-    "./apps/web/src/utils"
+    "./apps/web/src/utils",
+    "./eslint-plugins"
   ],
   "exclude": [
     "__tests__",
     "__mocks__",
-    "index\\.ts$",
-    "index\\.tsx$",
+    "packages/.*/index\\.ts$",
+    "apps/.*/index\\.ts$",
     ".*\\.test\\.ts$",
     ".*\\.spec\\.ts$",
     ".*\\.test\\.tsx$",
@@ -25,7 +26,7 @@
   "delete": true,
   "location": "all",
   "structure": "filesystem",
-  "exportDefault": false,
+  "exportDefault": true,
   "removeComments": false,
   "noHeader": false,
   "singleQuotes": false
