@@ -1,0 +1,19 @@
+{
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"noEmit": true
+	},
+	"files": [],
+	"include": [],
+	"references": [
+		{
+			"path": "./packages/types"
+		},
+		{
+			"path": "./packages/utils"
+		},
+		{
+			"path": "./packages/cli"
+		}
+	]
+}
