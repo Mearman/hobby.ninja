@@ -11,6 +11,15 @@
 import type { PWAConfig, SyncEvent, SyncRegistration } from '../types/pwa';
 import { logger } from '../logging/logger';
 
+interface SyncResponse {
+  conflicts?: Array<{
+    id: string;
+    local: any;
+    remote: any;
+  }>;
+  timestamp: number;
+}
+
 /**
  * Sync Task Interface
  */
@@ -314,8 +323,9 @@ class SyncQueue {
 
         getRequest.onerror = () => reject(getRequest.error);
         getRequest.onsuccess = () => {
-          const data = getRequest.result.map((item: any) => [item.id, item.task]);
-          resolve(data);
+          const result = getRequest.result || [];
+          const data = result.map((item: any) => [item.id, item.task]);
+          resolve(data as [string, SyncTask][]);
         };
       };
     });
@@ -330,22 +340,35 @@ export class SyncManager {
   private queue: SyncQueue;
   private syncHandlers = new Map<string, (data?: any) => Promise<void>>();
   private isProcessing = false;
+  private conflictResolvers = new Map<string, (local: any, remote: any) => Promise<any>>();
 
   constructor(config: PWAConfig) {
     this.config = config;
     this.queue = new SyncQueue();
     this.initializeSyncHandlers();
+    this.initializeConflictResolvers();
   }
 
   /**
    * Initialize sync handlers
    */
   private initializeSyncHandlers(): void {
-    // Default sync handlers
+    // Gunpla-specific sync handlers
+    this.registerHandler('sync-collection', this.syncCollection.bind(this));
+    this.registerHandler('sync-wishlist', this.syncWishlist.bind(this));
+    this.registerHandler('sync-builds', this.syncBuilds.bind(this));
     this.registerHandler('sync-user-data', this.syncUserData.bind(this));
     this.registerHandler('sync-photos', this.syncPhotos.bind(this));
-    this.registerHandler('sync-messages', this.syncMessages.bind(this));
     this.registerHandler('sync-actions', this.syncActions.bind(this));
+  }
+
+  /**
+   * Initialize conflict resolvers
+   */
+  private initializeConflictResolvers(): void {
+    this.conflictResolvers.set('collection', this.resolveCollectionConflict.bind(this));
+    this.conflictResolvers.set('wishlist', this.resolveWishlistConflict.bind(this));
+    this.conflictResolvers.set('builds', this.resolveBuildConflict.bind(this));
   }
 
   /**
@@ -453,7 +476,7 @@ export class SyncManager {
     if ('serviceWorker' in navigator && 'sync' in ServiceWorkerRegistration.prototype) {
       try {
         const registration = await navigator.serviceWorker.ready;
-        await registration.sync.register(tag);
+        await registration.sync?.register(tag);
         logger.debug('Background sync registered', { tag });
       } catch (error) {
         logger.warn('Failed to register background sync', { tag, error });
@@ -574,6 +597,223 @@ export class SyncManager {
   }
 
   /**
+   * Gunpla-specific sync handlers
+   */
+  private async syncCollection(data?: any): Promise<void> {
+    logger.debug('Syncing collection data', { data });
+
+    try {
+      // Get local collection changes
+      const localChanges = await this.getLocalCollectionChanges();
+
+      let response: SyncResponse | undefined;
+      if (localChanges.length > 0) {
+        // Sync local changes to server
+        response = await this.simulateSyncCall('/api/collection/sync', {
+          changes: localChanges,
+          lastSync: data?.lastSync
+        });
+
+        // Handle conflicts if any
+        if (response.conflicts) {
+          for (const conflict of response.conflicts) {
+            const resolver = this.conflictResolvers.get('collection');
+            if (resolver) {
+              const resolved = await resolver(conflict.local, conflict.remote);
+              await this.updateLocalCollectionItem(conflict.id, resolved);
+            }
+          }
+        }
+
+        // Update last sync timestamp
+        await this.updateLastSyncTimestamp('collection', response.timestamp);
+      }
+
+      logger.info('Collection synced successfully', {
+        changes: localChanges.length,
+        conflicts: response?.conflicts?.length || 0
+      });
+
+    } catch (error) {
+      logger.error('Collection sync failed', { error, data });
+      throw error;
+    }
+  }
+
+  private async syncWishlist(data?: any): Promise<void> {
+    logger.debug('Syncing wishlist data', { data });
+
+    try {
+      const localChanges = await this.getLocalWishlistChanges();
+
+      if (localChanges.length > 0) {
+        const response = await this.simulateSyncCall('/api/wishlist/sync', {
+          changes: localChanges,
+          lastSync: data?.lastSync
+        });
+
+        if (response.conflicts) {
+          for (const conflict of response.conflicts) {
+            const resolver = this.conflictResolvers.get('wishlist');
+            if (resolver) {
+              const resolved = await resolver(conflict.local, conflict.remote);
+              await this.updateLocalWishlistItem(conflict.id, resolved);
+            }
+          }
+        }
+
+        await this.updateLastSyncTimestamp('wishlist', response.timestamp);
+      }
+
+      logger.info('Wishlist synced successfully', {
+        changes: localChanges.length
+      });
+
+    } catch (error) {
+      logger.error('Wishlist sync failed', { error });
+      throw error;
+    }
+  }
+
+  private async syncBuilds(data?: any): Promise<void> {
+    logger.debug('Syncing build progress data', { data });
+
+    try {
+      const localChanges = await this.getLocalBuildChanges();
+
+      if (localChanges.length > 0) {
+        const response = await this.simulateSyncCall('/api/builds/sync', {
+          changes: localChanges,
+          lastSync: data?.lastSync
+        });
+
+        if (response.conflicts) {
+          for (const conflict of response.conflicts) {
+            const resolver = this.conflictResolvers.get('builds');
+            if (resolver) {
+              const resolved = await resolver(conflict.local, conflict.remote);
+              await this.updateLocalBuildItem(conflict.id, resolved);
+            }
+          }
+        }
+
+        await this.updateLastSyncTimestamp('builds', response.timestamp);
+      }
+
+      logger.info('Build progress synced successfully', {
+        changes: localChanges.length
+      });
+
+    } catch (error) {
+      logger.error('Build sync failed', { error });
+      throw error;
+    }
+  }
+
+  /**
+   * Conflict resolvers
+   */
+  private async resolveCollectionConflict(local: any, remote: any): Promise<any> {
+    logger.debug('Resolving collection conflict', { local, remote });
+
+    // Strategy: Use most recent timestamp, then prefer local changes
+    if (local.updatedAt > remote.updatedAt) {
+      return local;
+    } else if (remote.updatedAt > local.updatedAt) {
+      return remote;
+    } else {
+      // If timestamps are equal, prefer local changes
+      return { ...remote, ...local };
+    }
+  }
+
+  private async resolveWishlistConflict(local: any, remote: any): Promise<any> {
+    logger.debug('Resolving wishlist conflict', { local, remote });
+
+    // Strategy: Prefer local priority, then most recent
+    if (local.priority !== remote.priority) {
+      return local.priority > remote.priority ? local : remote;
+    }
+
+    return local.updatedAt > remote.updatedAt ? local : remote;
+  }
+
+  private async resolveBuildConflict(local: any, remote: any): Promise<any> {
+    logger.debug('Resolving build conflict', { local, remote });
+
+    // Strategy: Merge progress, use most recent photos
+    return {
+      ...remote,
+      ...local,
+      progress: Math.max(local.progress || 0, remote.progress || 0),
+      photos: local.updatedAt > remote.updatedAt ? local.photos : remote.photos,
+      updatedAt: Date.now()
+    };
+  }
+
+  /**
+   * Helper methods for offline data management
+   */
+  private async getLocalCollectionChanges(): Promise<any[]> {
+    // This would integrate with your local database
+    return [];
+  }
+
+  private async getLocalWishlistChanges(): Promise<any[]> {
+    return [];
+  }
+
+  private async getLocalBuildChanges(): Promise<any[]> {
+    return [];
+  }
+
+  private async getLocalUserChanges(): Promise<any[]> {
+    return [];
+  }
+
+  private async getPendingPhotos(): Promise<any[]> {
+    return [];
+  }
+
+  private async getPendingActions(): Promise<any[]> {
+    return [];
+  }
+
+  private async updateLocalCollectionItem(id: string, data: any): Promise<void> {
+    logger.debug('Updating local collection item', { id, data });
+  }
+
+  private async updateLocalWishlistItem(id: string, data: any): Promise<void> {
+    logger.debug('Updating local wishlist item', { id, data });
+  }
+
+  private async updateLocalBuildItem(id: string, data: any): Promise<void> {
+    logger.debug('Updating local build item', { id, data });
+  }
+
+  private async updateLastSyncTimestamp(type: string, timestamp: number): Promise<void> {
+    logger.debug('Updating last sync timestamp', { type, timestamp });
+  }
+
+  private async uploadPhoto(photo: any): Promise<void> {
+    logger.debug('Uploading photo', { photoId: photo.id });
+    await this.simulateApiCall('/api/photos/upload', photo);
+  }
+
+  private async markPhotoSynced(photoId: string): Promise<void> {
+    logger.debug('Marking photo as synced', { photoId });
+  }
+
+  private async executeAction(action: any): Promise<void> {
+    logger.debug('Executing action', { actionId: action.id });
+    await this.simulateApiCall(action.endpoint, action.data);
+  }
+
+  private async markActionCompleted(actionId: string): Promise<void> {
+    logger.debug('Marking action as completed', { actionId });
+  }
+
+  /**
    * Simulate API call with realistic delays
    */
   private async simulateApiCall(endpoint: string, data?: any): Promise<void> {
@@ -591,6 +831,29 @@ export class SyncManager {
       duration: delay,
       data,
     });
+  }
+
+  private async simulateSyncCall(endpoint: string, data?: any): Promise<SyncResponse> {
+    const delay = Math.random() * 2000 + 500; // 500-2500ms delay
+
+    // Simulate network failure (10% chance)
+    if (Math.random() < 0.1) {
+      throw new Error(`Network error calling ${endpoint}`);
+    }
+
+    await new Promise(resolve => setTimeout(resolve, delay));
+
+    logger.debug('Sync API call completed', {
+      endpoint,
+      duration: delay,
+      data,
+    });
+
+    // Return mock sync response
+    return {
+      timestamp: Date.now(),
+      conflicts: [] // No conflicts for now
+    };
   }
 
   /**
@@ -622,7 +885,7 @@ export class SyncManager {
     try {
       if ('serviceWorker' in navigator && 'sync' in ServiceWorkerRegistration.prototype) {
         const registration = await navigator.serviceWorker.ready;
-        const tags = await registration.sync.getTags();
+        const tags = registration.sync ? await registration.sync.getTags() : [];
 
         return {
           browserSyncSupported: true,
@@ -640,7 +903,7 @@ export class SyncManager {
       return {
         browserSyncSupported: false,
         internalQueue: this.getStats(),
-        error: error.message,
+        error: error instanceof Error ? error.message : String(error),
       };
     }
   }

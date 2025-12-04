@@ -17,11 +17,16 @@ import { logger } from '../logging/logger';
  */
 export class MetricsCollector {
   private metrics: PWAAnalytics = {
+    serviceWorkerInstalls: 0,
+    serviceWorkerUpdates: 0,
+    offlinePageViews: 0,
     cacheHitRate: 0,
+    pushNotificationsSent: 0,
+    pushNotificationsClicked: 0,
     offlineUsage: 0,
-    pushNotificationEngagement: 0,
     backgroundSyncSuccess: 0,
     serviceWorkerUptime: 0,
+    pushNotificationEngagement: 0,
   };
 
   private cacheMetrics = {
@@ -362,13 +367,17 @@ export class MetricsCollector {
         cache: {
           hits: this.cacheMetrics.hits,
           misses: this.cacheMetrics.misses,
-          total: this.cacheMetrics.totalRequests,
-          hitRate: this.metrics.cacheHitRate,
-          averageResponseTime,
+          puts: 0,
+          deletes: 0,
+          totalSize: 0,
         },
         push: {
           ...this.pushMetrics,
           engagementRate: this.metrics.pushNotificationEngagement,
+        },
+        performance: {
+          ...this.performanceMetrics,
+          averageCacheResponseTime: averageResponseTime,
         },
         sync: Object.fromEntries(this.syncMetrics),
         errors: {
@@ -376,7 +385,6 @@ export class MetricsCollector {
           critical: this.errorMetrics.critical,
           byType: Object.fromEntries(this.errorMetrics.byType),
         },
-        performance: this.performanceMetrics,
         uptime: Date.now() - this.startTime,
         onlineStatus: this.isOnline,
       },
@@ -417,11 +425,16 @@ export class MetricsCollector {
    */
   resetMetrics(): void {
     this.metrics = {
+      serviceWorkerInstalls: 0,
+      serviceWorkerUpdates: 0,
+      offlinePageViews: 0,
       cacheHitRate: 0,
+      pushNotificationsSent: 0,
+      pushNotificationsClicked: 0,
       offlineUsage: 0,
-      pushNotificationEngagement: 0,
       backgroundSyncSuccess: 0,
       serviceWorkerUptime: 0,
+      pushNotificationEngagement: 0,
     };
 
     this.cacheMetrics = {

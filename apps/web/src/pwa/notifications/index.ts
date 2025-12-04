@@ -1,6 +1,6 @@
 /**
- * PWA Notifications module (temporarily simplified for MVP)
+ * PWA Notifications module
  */
 
-// Notification manager temporarily disabled for MVP deployment
-// export { NotificationManager } from './notificationManager';
+// Core notification functionality
+export { NotificationManager } from './notificationManager';

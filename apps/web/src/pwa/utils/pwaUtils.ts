@@ -21,7 +21,7 @@ export function isPWASupported(): boolean {
  * Check if app is running in standalone mode (PWA installed)
  */
 export function isStandaloneMode(): boolean {
-  return (
+  return !!(
     window.matchMedia('(display-mode: standalone)').matches ||
     ('standalone' in window.navigator && window.navigator.standalone) ||
     document.referrer.includes('android-app://')
@@ -162,7 +162,7 @@ export async function getStorageInfo() {
       quota: 0,
       usagePercentage: 0,
       available: 0,
-      error: error.message,
+      error: error instanceof Error ? error.message : 'Unknown error',
     };
   }
 }
@@ -212,7 +212,7 @@ export async function clearAppData(): Promise<{ success: boolean; cleared: any; 
     return {
       success: false,
       cleared: results,
-      error: error.message,
+      error: error instanceof Error ? error.message : 'Unknown error',
     };
   }
 }
@@ -382,7 +382,7 @@ export async function shareContent(shareData: ShareData): Promise<boolean> {
     await navigator.share(shareData);
     return true;
   } catch (error) {
-    if (error.name === 'AbortError') {
+    if (error instanceof Error && error.name === 'AbortError') {
       // User cancelled sharing
       return false;
     }

@@ -5,8 +5,12 @@
  * This file should be imported and called from your main application entry point.
  */
 
-import { pwaRegistration, logger } from './index';
+import { PWARegistration } from './lifecycle/pwaRegistration';
+import { logger } from './logging/logger';
 import type { PWAEvents } from './lifecycle/pwaRegistration';
+
+// Global PWA registration instance
+const pwaRegistration = new PWARegistration();
 
 // Re-export PWAEvents for external use
 export type { PWAEvents };
@@ -14,7 +18,7 @@ export type { PWAEvents };
 /**
  * PWA Setup Configuration
  */
-interface PWASetupConfig {
+export interface PWASetupConfig {
   enableServiceWorker: boolean;
   enableNotifications: boolean;
   enableBackgroundSync: boolean;
@@ -90,7 +94,7 @@ async function setupServiceWorker(
   try {
     const registration = await pwaRegistration.register({
       ...events,
-      onUpdateFound: (reg) => {
+      onUpdateFound: (reg: ServiceWorkerRegistration) => {
         logger.info('Service worker update found');
         events.onUpdateFound?.(reg);
 
@@ -99,11 +103,11 @@ async function setupServiceWorker(
           showUpdateAvailableNotification();
         }
       },
-      onUpdated: (reg) => {
+      onUpdated: (reg: ServiceWorkerRegistration) => {
         logger.info('Service worker updated');
         events.onUpdated?.(reg);
       },
-      onError: (error) => {
+      onError: (error: Error) => {
         logger.error('Service worker error', { error });
         events.onError?.(error);
       },
@@ -199,13 +203,17 @@ function showUpdateAvailableNotification(): void {
   }
 
   // Create a notification for the update
-  const notification = new Notification('App Update Available', {
+  const notificationOptions: NotificationOptions = {
     body: 'A new version of the app is available. Click to update.',
     icon: '/icons/icon-192x192.png',
     badge: '/icons/badge-72x72.png',
     tag: 'app-update',
     requireInteraction: true,
-    actions: [
+  };
+
+  // Add actions if supported
+  if ('actions' in Notification.prototype) {
+    (notificationOptions as any).actions = [
       {
         action: 'update',
         title: 'Update Now',
@@ -214,8 +222,10 @@ function showUpdateAvailableNotification(): void {
         action: 'dismiss',
         title: 'Later',
       },
-    ],
-  });
+    ];
+  }
+
+  const notification = new Notification('App Update Available', notificationOptions);
 
   // Handle notification click
   notification.onclick = (event) => {
@@ -223,8 +233,10 @@ function showUpdateAvailableNotification(): void {
     notification.close();
 
     // Apply the update
-    pwaRegistration.applyUpdate().catch(error => {
-      logger.error('Failed to apply update from notification', { error });
+    pwaRegistration.applyUpdate().catch((error: unknown) => {
+      logger.error('Failed to apply update from notification', {
+        error: error instanceof Error ? error.message : 'Unknown error'
+      });
     });
   };
 
@@ -350,6 +362,7 @@ export async function getPWADiagnostics(): Promise<any> {
       onlineStatus: navigator.onLine,
     },
     storage: null as any,
+    registration: pwaRegistration.getRegistration(),
   };
 
   // Get service worker status

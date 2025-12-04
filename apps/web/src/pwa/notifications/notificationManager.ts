@@ -11,8 +11,8 @@
  * @deprecated Temporarily disabled for MVP deployment
  */
 
-import type { PWAConfig, PushEvent, NotificationEvent } from '../types/pwa';
-// Use global DOM types for NotificationOptions
+import type { PWAConfig } from '../types/pwa';
+// Use global DOM types for NotificationOptions and events
 import { logger } from '../logging/logger';
 
 /**
@@ -89,7 +89,7 @@ export class NotificationManager {
   /**
    * Handle push event from service worker
    */
-  async handlePush(event: PushEvent): Promise<void> {
+  async handlePush(event: any): Promise<void> {
     logger.info('Push event received');
 
     try {
@@ -112,7 +112,7 @@ export class NotificationManager {
   /**
    * Handle notification click
    */
-  async handleNotificationClick(event: NotificationEvent): Promise<void> {
+  async handleNotificationClick(event: any): Promise<void> {
     const { notification, action } = event;
 
     logger.info('Notification clicked', {
@@ -151,7 +151,7 @@ export class NotificationManager {
   /**
    * Handle notification close
    */
-  async handleNotificationClose(event: NotificationEvent): Promise<void> {
+  async handleNotificationClose(event: any): Promise<void> {
     const { notification } = event;
 
     logger.info('Notification closed', {
@@ -291,7 +291,6 @@ export class NotificationManager {
         icon: options.icon || '/icons/icon-192x192.png',
         badge: options.badge || '/icons/badge-72x72.png',
         tag: options.tag || notificationId,
-        renotify: options.renotify !== false,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         data: {
@@ -381,7 +380,6 @@ export class NotificationManager {
       icon: icon || '/icons/icon-192x192.png',
       badge: badge || '/icons/badge-72x72.png',
       tag,
-      actions,
       requireInteraction: priority === 'high',
       data: {
         url,

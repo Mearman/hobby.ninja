@@ -105,6 +105,47 @@ export interface PWAAnalytics {
 	cacheHitRate: number;
 	pushNotificationsSent: number;
 	pushNotificationsClicked: number;
+	offlineUsage: number;
+	backgroundSyncSuccess: number;
+	serviceWorkerUptime: number;
+	pushNotificationEngagement: number;
+}
+
+// PWA Events
+export interface PWAEvents {
+	onInstall?: (event: Event) => void;
+	onInstalled?: () => void;
+	onActivate?: (event: Event) => void;
+	onUpdate?: (event: Event) => void;
+	onUpdateFound?: (registration: ServiceWorkerRegistration) => void;
+	onUpdated?: () => void;
+	onServiceWorkerReady?: (registration: ServiceWorkerRegistration) => void;
+	onPush?: (event: PushEvent) => void;
+	onSync?: (event: SyncEvent) => void;
+	onNotificationClick?: (event: NotificationEvent) => void;
+	onOffline?: () => void;
+	onOnline?: () => void;
+	onError?: (error: any) => void;
+}
+
+// Sync Task
+export interface SyncTask {
+	id: string;
+	url: string;
+	method?: string;
+	body?: string;
+	headers?: Record<string, string>;
+	priority?: number;
+	retryCount?: number;
+	lastAttempt?: number;
+}
+
+// Sync Registration
+export interface SyncRegistration {
+	tag: string;
+	task: SyncTask;
+	registered: boolean;
+	lastSync?: number;
 }
 
 // Web App Manifest Types

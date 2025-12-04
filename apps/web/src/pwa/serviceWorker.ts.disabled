@@ -12,7 +12,8 @@
  * - Error handling and recovery
  */
 
-import type { PWAConfig, CacheStrategy, ExtendableEvent, FetchEvent, PushEvent, NotificationEvent, SyncEvent } from './types/pwa';
+import type { PWAConfig, CacheStrategy } from './types/pwa';
+// Use global DOM types for service worker events
 import { getPWAConfig, getCacheConfigForUrl } from './config/pwaConfig';
 import { logger } from './logging/logger';
 import { CacheManager } from './cache/cacheManager';
@@ -377,7 +378,7 @@ class ServiceWorker {
   /**
    * Handle push events
    */
-  private async handlePush(event: PushEvent): Promise<void> {
+  private async handlePush(event: any): Promise<void> {
     logger.info('Push event received');
 
     event.waitUntil(
@@ -395,7 +396,7 @@ class ServiceWorker {
   /**
    * Handle notification clicks
    */
-  private async handleNotificationClick(event: NotificationEvent): Promise<void> {
+  private async handleNotificationClick(event: any): Promise<void> {
     logger.info('Notification clicked', {
       action: event.action,
       notification: event.notification.title
@@ -416,7 +417,7 @@ class ServiceWorker {
   /**
    * Handle notification closes
    */
-  private async handleNotificationClose(event: NotificationEvent): Promise<void> {
+  private async handleNotificationClose(event: any): Promise<void> {
     logger.info('Notification closed', {
       notification: event.notification.title
     });
