@@ -99,6 +99,56 @@
         "command": "nx affected -t lint typecheck test --parallel=1"
       },
       "cache": true
+    },
+    "knip": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "knip --no-exit-code"
+      },
+      "cache": true,
+      "inputs": [
+        "default",
+        "{workspaceRoot}/knip.config.ts",
+        "{projectRoot}/**/*.{ts,tsx,js,jsx,mjs,cjs,json,md,yml,yaml}"
+      ]
+    },
+    "knip:production": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "knip --no-exit-code --production"
+      },
+      "cache": true,
+      "inputs": [
+        "default",
+        "{workspaceRoot}/knip.config.ts",
+        "{projectRoot}/**/*.{ts,tsx,js,jsx,mjs,cjs,json,md,yml,yaml}"
+      ]
+    },
+    "knip:fix": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "knip --fix"
+      },
+      "cache": true,
+      "inputs": [
+        "default",
+        "{workspaceRoot}/knip.config.ts",
+        "{projectRoot}/**/*.{ts,tsx,js,jsx,mjs,cjs,json,md,yml,yaml}"
+      ]
+    },
+    "syncpack:check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "syncpack list-mismatches"
+      },
+      "cache": true,
+      "inputs": [
+        "default",
+        "{workspaceRoot}/syncpack.config.ts",
+        "{workspaceRoot}/package.json",
+        "apps/*/package.json",
+        "packages/*/package.json"
+      ]
     }
   }
 }
