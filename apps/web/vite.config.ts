@@ -6,7 +6,9 @@ import { VitePWA } from 'vite-plugin-pwa';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
+  root: './',
   cacheDir: '../../node_modules/.vite/webapp',
+  publicDir: 'public',
   plugins: [
     react(),
     nxViteTsPaths(),
@@ -37,93 +39,10 @@ export default defineConfig({
             type: 'image/png',
             purpose: 'any maskable'
           }
-        ],
-        shortcuts: [
-          {
-            name: 'My Collection',
-            short_name: 'Collection',
-            description: 'View and manage your Gunpla collection',
-            url: '/collection',
-            icons: [{ src: 'icons/shortcut-collection-96x96.png', sizes: '96x96' }]
-          },
-          {
-            name: 'Search Kits',
-            short_name: 'Search',
-            description: 'Search for Gundam model kits',
-            url: '/search',
-            icons: [{ src: 'icons/shortcut-search-96x96.png', sizes: '96x96' }]
-          },
-          {
-            name: 'Wishlist',
-            short_name: 'Wishlist',
-            description: 'Manage your wishlist of kits to buy',
-            url: '/wishlist',
-            icons: [{ src: 'icons/shortcut-wishlist-96x96.png', sizes: '96x96' }]
-          },
-          {
-            name: 'Build Progress',
-            short_name: 'Builds',
-            description: 'Track your current build progress',
-            url: '/builds',
-            icons: [{ src: 'icons/shortcut-builds-96x96.png', sizes: '96x96' }]
-          }
         ]
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
-              }
-            }
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'gstatic-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
-              }
-            }
-          },
-          {
-            urlPattern: /\.(?:png|jpg|jpeg|svg|gif|webp)$/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'images-cache',
-              expiration: {
-                maxEntries: 200,
-                maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
-              }
-            }
-          },
-          {
-            urlPattern: /\.(?:js|css)$/i,
-            handler: 'StaleWhileRevalidate',
-            options: {
-              cacheName: 'static-resources-cache',
-              expiration: {
-                maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 24 * 7 // 7 days
-              }
-            }
-          }
-        ],
-        offlineGoogleAnalytics: false,
-        cleanupOutdatedCaches: true,
-        navigateFallback: '/offline.html'
-      },
-      // Development settings
-      devOptions: {
-        enabled: true,
         navigateFallback: '/offline.html'
       }
     }),

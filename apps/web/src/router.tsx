@@ -1,4 +1,4 @@
-import { createHashRouter, RouterProvider } from '@tanstack/react-router';
+import { createRouter, RouterProvider } from '@tanstack/react-router';
 import { createRoute, createRootRoute, Outlet } from '@tanstack/react-router';
 import { Suspense, lazy } from 'react';
 
@@ -91,23 +91,20 @@ const routeTree = rootRoute.addChildren([indexRoute, aboutRoute, notFoundRoute])
 
 /**
  * Router instance with hash routing for GitHub Pages compatibility
+ * Note: Hash routing will be handled by the navigation links using #/ format
  */
-export const router = createHashRouter({
+export const router = createRouter({
   routeTree,
   defaultPreload: 'intent',
   defaultComponent: NotFoundPage,
-  // Add performance optimizations
-  transformer: 'react',
   // Optimize route matching
   caseSensitive: false,
-  // Add route preloading for better UX
-  preload: 'intent',
 });
 
 /**
  * Router provider component for use in main.tsx
  */
-export function AppRouter(): JSX.Element {
+export function AppRouter() {
   return <RouterProvider router={router} />;
 }
 
