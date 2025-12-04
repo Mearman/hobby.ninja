@@ -253,6 +253,7 @@ jobs:
           REPO_NAME: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.number }}
           RUN_ID: ${{ github.run_id }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           COMMENT_BODY="## 🚀 Performance Analysis
 
@@ -268,8 +269,6 @@ jobs:
           View detailed results in the Actions tab."
 
           gh pr comment $PR_NUMBER --body "$COMMENT_BODY"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   cache-optimization:
     name: Cache Analysis and Optimization
