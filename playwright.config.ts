@@ -11,7 +11,7 @@ export default defineConfig({
   testMatch: [
     '**/*.e2e.test.{ts,tsx}',
     '**/e2e/**/*.{test,spec}.{ts,tsx}',
-    '**/tests/**/*.{test,spec}.{ts,tsx}',
+    '**/__tests__/**/*.{test,spec}.{ts,tsx}',
   ],
   testIgnore: [
     '**/node_modules/**',
@@ -66,7 +66,7 @@ export default defineConfig({
   // Enhanced shared settings for all projects
   use: {
     // Base URL to use in actions like `await page.goto('/')`
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:4200/unnamed-gunpla-app',
 
     // Collect trace when retrying the failed test
     trace: 'on-first-retry',
@@ -188,10 +188,10 @@ export default defineConfig({
     },
   ],
 
-  // Enhanced web server configuration
+  // Enhanced web server configuration (serve built app for e2e tests)
   webServer: {
-    command: 'npm run serve',
-    url: 'http://localhost:3000',
+    command: 'pnpm nx serve-static web',
+    url: 'http://localhost:4200/unnamed-gunpla-app',
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000, // 2 minutes
     stdout: 'pipe',
