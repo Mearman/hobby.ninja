@@ -206,13 +206,11 @@ description: "Task list for Nx Monorepo Webapp Setup implementation"
 
 ### Tests for PWA and Accessibility
 
-- [ ] T075 [P] [US4] Performance test for Core Web Vitals tracking in apps/webapp/src/performance/web-vitals.test.ts
-- [ ] T076 [P] [US4] PWA test for service worker functionality in apps/webapp/src/pwa/service-worker.test.ts
 - [ ] T077 [P] [US4] Accessibility test for WCAG compliance in apps/webapp/src/a11y/wcag.test.ts
 
 ### Implementation for PWA and Accessibility
 
-- [ ] T081 [P] [US4] Implement Progressive Web App features with service worker in apps/webapp/src/pwa/
+- [x] T081 [P] [US4] Configure vite-plugin-pwa with Workbox for offline capabilities
 - [x] T082 [P] [US4] Create PWA manifest and app shortcuts configuration
 - [x] T083 [P] [US4] Implement WCAG 2.1 AA accessibility features in apps/webapp/src/a11y/
 
@@ -268,7 +266,7 @@ description: "Task list for Nx Monorepo Webapp Setup implementation"
 - All Setup tasks marked [P] can run in parallel
 - All Foundational tasks marked [P] can run in parallel (within Phase 2)
 - CLI scrapers (T064, T065, T066) can run in parallel
-- Security and PWA implementations (T079-T085) can run in parallel
+- PWA and accessibility implementations (T077, T081-T083) can run in parallel
 - Different user stories can be worked on in parallel by different team members
 
 ---
@@ -322,7 +320,7 @@ With multiple developers:
    - Developer B: User Story 3 (Deployment) - T039-T047
    - Developer C: User Story 4 + CLI (Development tools) - T048-T073
 3. **Final integration**:
-   - Developer D: Security, PWA, and Accessibility features - T074-T085
+   - Developer D: PWA and Accessibility features - T077, T081-T083
    - Team: Polish and documentation - T086-T094
 
 ---
@@ -337,7 +335,7 @@ With multiple developers:
 - **User Story 3**: 9 tasks (including tests)
 - **User Story 4**: 20 tasks (including tests)
 - **CLI Extension**: 14 tasks (including tests)
-- **Security & PWA**: 12 tasks (including tests)
+- **PWA & Accessibility**: 4 tasks (including tests)
 - **Polish**: 9 tasks
 
 **Parallel Opportunities**: 67 tasks (71%) can run in parallel

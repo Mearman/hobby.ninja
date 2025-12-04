@@ -96,11 +96,10 @@ Developers have access to comprehensive testing, linting, and development tools 
 32. **Given** the CI integration, **When** examining workflow files, **Then** GitHub Actions or similar CI/CD is configured for automatic dataset updates
 33. **Given** the existing archive projects, **When** examining implementation approaches, **Then** patterns and solutions from ../archive/ are evaluated for inspiration while implementing modern best practices
 34. **Given** the webapp security configuration, **When** examining HTTP headers, **Then** Content Security Policy headers are properly configured to prevent XSS and injection attacks
-35. **Given** the performance monitoring setup, **When** examining metrics collection, **Then** Core Web Vitals are properly tracked
-37. **Given** the privacy implementation, **When** examining data handling, **Then** data minimization and local storage principles are followed with user consent
-38. **Given** the CI/CD pipeline, **When** examining security checks, **Then** automated vulnerability scanning and security testing are integrated
-39. **Given** the PWA implementation, **When** examining service worker, **Then** offline caching and background sync are properly configured
-40. **Given** the web app installation, **When** examining the manifest, **Then** PWA app shortcuts and installation prompts are available
+35. **Given** the privacy implementation, **When** examining data handling, **Then** data minimization and local storage principles are followed with user consent
+36. **Given** the CI/CD pipeline, **When** examining security checks, **Then** automated vulnerability scanning and security testing are integrated
+37. **Given** the PWA implementation, **When** examining vite-plugin-pwa configuration, **Then** offline caching with Workbox is properly configured
+38. **Given** the web app installation, **When** examining the manifest, **Then** PWA app shortcuts and installation prompts are available
 41. **Given** the accessibility testing, **When** examining WCAG compliance, **Then** semantic HTML and ARIA features are properly implemented
 42. **Given** the keyboard navigation, **When** testing without a mouse, **Then** all app functions are accessible via keyboard
 43. **Given** the user preference settings, **When** examining motion and contrast, **Then** reduced motion and high contrast modes are respected
@@ -158,11 +157,10 @@ Developers have access to comprehensive testing, linting, and development tools 
 - **FR-039**: System MUST provide configuration options for different execution modes (development vs CI)
 - **FR-040**: System MUST use ../archive/ implementations as inspiration for patterns and approaches while implementing modern best practices
 - **FR-041**: System MUST implement Content Security Policy (CSP) headers to prevent XSS and injection attacks
-- **FR-043**: System MUST implement basic performance monitoring with Core Web Vitals tracking
-- **FR-044**: System MUST ensure privacy compliance with data minimization and local storage principles
-- **FR-045**: System MUST include automated security scanning in the CI/CD pipeline with vulnerability detection
-- **FR-046**: System MUST implement Progressive Web App features with service worker for offline capabilities
-- **FR-047**: System MUST provide PWA installation experience with app shortcuts and manifest configuration
+- **FR-042**: System MUST ensure privacy compliance with data minimization and local storage principles
+- **FR-043**: System MUST include automated security scanning in the CI/CD pipeline with vulnerability detection
+- **FR-044**: System MUST implement Progressive Web App features using vite-plugin-pwa with Workbox for offline capabilities
+- **FR-045**: System MUST provide PWA installation experience with app shortcuts and manifest configuration
 - **FR-048**: System MUST ensure WCAG 2.1 AA compliance with comprehensive accessibility features
 - **FR-049**: System MUST support keyboard navigation and screen reader compatibility throughout the application
 - **FR-050**: System MUST respect user preferences for reduced motion and high contrast themes

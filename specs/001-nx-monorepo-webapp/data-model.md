@@ -478,7 +478,7 @@ const TEST_TYPES: Record<TestTypeDefinition['id'], TestTypeDefinition> = {
     typicalSize: 'medium',
     speed: 'medium',
     requiresExternalResources: true,
-    tools: ['Vitest', 'React Testing Library', 'MSW (Mock Service Worker)']
+    tools: ['Vitest', 'React Testing Library']
   },
   e2e: {
     id: 'e2e',
