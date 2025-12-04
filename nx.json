@@ -17,6 +17,11 @@
       "parallel": 5,
       "maxParallel": 5
     },
+    "typecheck": {
+      "cache": true,
+      "parallel": 5,
+      "maxParallel": 5
+    },
     "serve": {
       "cache": false,
       "dependsOn": ["^build"]
@@ -67,6 +72,14 @@
       "plugin": "@nx/playwright/plugin",
       "options": {
         "targetName": "e2e"
+      }
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        }
       }
     }
   ]
