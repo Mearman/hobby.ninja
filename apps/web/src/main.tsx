@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { AppRouter } from './router';
 import { MantineThemeProvider } from './providers/mantine-provider';
-import { initializeDatabase } from './db';
+import { initStorage } from './db/kits';
 import './styles/styles.css';
 
 /**
@@ -36,7 +36,7 @@ async function startApp() {
 
     // Initialize IndexedDB database
     console.log('🗄️ Initializing database...');
-    await initializeDatabase();
+    await initStorage();
     console.log('✅ Database initialized successfully');
 
     // Find root element
