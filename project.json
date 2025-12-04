@@ -149,6 +149,20 @@
         "apps/*/package.json",
         "packages/*/package.json"
       ]
+    },
+    "syncpack:lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "syncpack lint-mismatches"
+      },
+      "cache": true,
+      "inputs": [
+        "default",
+        "{workspaceRoot}/syncpack.config.ts",
+        "{workspaceRoot}/package.json",
+        "apps/*/package.json",
+        "packages/*/package.json"
+      ]
     }
   }
 }

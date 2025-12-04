@@ -33,11 +33,10 @@
     "syncpack": "syncpack list-mismatches && syncpack fix-mismatches",
     "syncpack:check": "nx run unnamed-gunpla-app:syncpack:check",
     "syncpack:fix": "syncpack fix-mismatches",
-    "syncpack:lint": "syncpack lint-mismatches",
+    "syncpack:lint": "nx run unnamed-gunpla-app:syncpack:lint",
     "knip": "nx run unnamed-gunpla-app:knip",
     "knip:production": "nx run unnamed-gunpla-app:knip:production",
     "knip:fix": "nx run unnamed-gunpla-app:knip:fix",
-    "security": "node tools/security/src/index.ts",
     "validate": "nx run unnamed-gunpla-app:validate",
     "validate:affected": "nx run unnamed-gunpla-app:validate-affected",
     "validate:ci": "nx run-many -t lint typecheck test --parallel=1"
