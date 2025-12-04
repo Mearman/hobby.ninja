@@ -1,4 +1,4 @@
-import { execFile, ExecFileException } from 'child_process';
+import { execFile, ExecFileException } from "node:child_process";
 
 /**
  * Result of executing a command safely
@@ -34,67 +34,67 @@ export interface ExecFileOptions {
  * @returns Promise resolving to execution result
  */
 export async function execFileNoThrow(
-  command: string,
-  args: string[] = [],
-  options: ExecFileOptions = {}
+	command: string,
+	args: string[] = [],
+	options: ExecFileOptions = {},
 ): Promise<ExecFileResult> {
-  return new Promise((resolve) => {
-    const {
-      cwd = process.cwd(),
-      timeout = 30000,
-      encoding = 'utf8',
-    } = options;
+	return new Promise((resolve) => {
+		const {
+			cwd = process.cwd(),
+			timeout = 30_000,
+			encoding = "utf8",
+		} = options;
 
-    let stdout = '';
-    let stderr = '';
-    let timeoutId: NodeJS.Timeout | null = null;
+		let stdout = "";
+		let stderr = "";
+		let timeoutId: NodeJS.Timeout | null = null;
 
-    const child = execFile(command, args, {
-      cwd,
-      encoding,
-      timeout,
-    }, (error, stdoutBuffer, stderrBuffer) => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
+		const child = execFile(command, args, {
+			cwd,
+			encoding,
+			timeout,
+		}, (error, stdoutBuffer, stderrBuffer) => {
+			if (timeoutId) {
+				clearTimeout(timeoutId);
+			}
 
-      const result: ExecFileResult = {
-        success: !error,
-        stdout: stdoutBuffer?.toString() || stdout,
-        stderr: stderrBuffer?.toString() || stderr,
-        exitCode: typeof error?.code === 'number' ? error.code : 0,
-      };
+			const result: ExecFileResult = {
+				success: !error,
+				stdout: stdoutBuffer?.toString() || stdout,
+				stderr: stderrBuffer?.toString() || stderr,
+				exitCode: typeof error?.code === "number" ? error.code : 0,
+			};
 
-      resolve(result);
-    });
+			resolve(result);
+		});
 
-    // Stream stdout
-    if (child.stdout) {
-      child.stdout.on('data', (data) => {
-        stdout += data.toString();
-      });
-    }
+		// Stream stdout
+		if (child.stdout) {
+			child.stdout.on("data", (data) => {
+				stdout += data.toString();
+			});
+		}
 
-    // Stream stderr
-    if (child.stderr) {
-      child.stderr.on('data', (data) => {
-        stderr += data.toString();
-      });
-    }
+		// Stream stderr
+		if (child.stderr) {
+			child.stderr.on("data", (data) => {
+				stderr += data.toString();
+			});
+		}
 
-    // Set up timeout
-    if (timeout && timeout > 0) {
-      timeoutId = setTimeout(() => {
-        child.kill('SIGTERM');
-        resolve({
-          success: false,
-          stdout,
-          stderr: `Command timed out after ${timeout}ms`,
-          exitCode: null,
-        });
-      }, timeout);
-    }
-  });
+		// Set up timeout
+		if (timeout && timeout > 0) {
+			timeoutId = setTimeout(() => {
+				child.kill("SIGTERM");
+				resolve({
+					success: false,
+					stdout,
+					stderr: `Command timed out after ${timeout}ms`,
+					exitCode: null,
+				});
+			}, timeout);
+		}
+	});
 }
 
 /**
@@ -105,23 +105,23 @@ export async function execFileNoThrow(
  * @returns Promise resolving to execution result
  */
 export function npmCommand(
-  subcommand: string,
-  args: string[] = [],
-  options?: ExecFileOptions
+	subcommand: string,
+	args: string[] = [],
+	options?: ExecFileOptions,
 ): Promise<ExecFileResult> {
-  const validNpmCommands = [
-    'install', 'run', 'build', 'test', 'start', 'serve',
-    'pack', 'publish', 'update', 'audit', 'ls', 'view'
-  ];
+	const validNpmCommands = [
+		"install", "run", "build", "test", "start", "serve",
+		"pack", "publish", "update", "audit", "ls", "view",
+	];
 
-  if (!validNpmCommands.includes(subcommand)) {
-    return Promise.resolve({
-      success: false,
-      stdout: '',
-      stderr: `Invalid npm command: ${subcommand}`,
-      exitCode: 1,
-    });
-  }
+	if (!validNpmCommands.includes(subcommand)) {
+		return Promise.resolve({
+			success: false,
+			stdout: "",
+			stderr: `Invalid npm command: ${subcommand}`,
+			exitCode: 1,
+		});
+	}
 
-  return execFileNoThrow('npm', [subcommand, ...args], options);
+	return execFileNoThrow("npm", [subcommand, ...args], options);
 }
