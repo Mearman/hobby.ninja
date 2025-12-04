@@ -1,0 +1,66 @@
+{
+	"name": "@unnamed-gunpla-app/translation",
+	"version": "0.0.1",
+	"description": "Translation utilities for Gunpla data with caching and error handling",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc --watch",
+		"test": "vitest",
+		"test:coverage": "vitest --coverage",
+		"lint": "eslint src --ext .ts,.tsx",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"zod": "^4.1.13"
+	},
+	"devDependencies": {
+		"@nx/eslint": "22.1.3",
+		"@nx/js": "22.1.3",
+		"@nx/vite": "22.1.3",
+		"@vitest/coverage-v8": "4.0.15",
+		"@vitest/ui": "4.0.15",
+		"eslint": "9.39.1",
+		"jsdom": "^27.2.0",
+		"typescript": "5.9.3",
+		"vitest": "4.0.15"
+	},
+	"publishConfig": {
+		"access": "restricted"
+	},
+	"nx": {
+		"targets": {
+			"build": {
+				"executor": "@nx/js:tsc",
+				"outputs": [
+					"{options.outputPath}"
+				],
+				"options": {
+					"outputPath": "dist/packages/translation",
+					"main": "packages/translation/src/index.ts",
+					"tsConfig": "packages/translation/tsconfig.json",
+					"assets": []
+				}
+			},
+			"test": {
+				"executor": "@nx/vitest:test",
+				"outputs": [
+					"{workspaceRoot}/coverage/packages/translation"
+				],
+				"options": {
+					"config": "packages/translation/vite.config.ts"
+				}
+			},
+			"lint": {
+				"executor": "@nx/eslint:lint"
+			}
+		}
+	}
+}

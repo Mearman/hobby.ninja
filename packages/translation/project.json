@@ -1,0 +1,34 @@
+{
+  "name": "translation",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/translation/src",
+  "projectType": "library",
+  "tags": ["scope:shared", "type:utility"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/translation",
+        "main": "packages/translation/src/index.ts",
+        "tsConfig": "packages/translation/tsconfig.json",
+        "assets": []
+      }
+    },
+    "test": {
+      "executor": "@nx/vitest:test",
+      "outputs": ["{workspaceRoot}/coverage/packages/translation"],
+      "options": {
+        "vitestConfig": "packages/translation/vite.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/translation/src/**/*.ts", "packages/translation/src/**/*.md"]
+      }
+    }
+  }
+}
