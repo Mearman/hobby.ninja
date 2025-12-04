@@ -1,0 +1,64 @@
+# Prettier ignore file for Nx monorepo
+
+# Dependencies and build outputs
+node_modules/
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.vite/
+
+# Nx specific
+.nx/cache/
+.nx/output/
+
+# Generated files
+coverage/
+*.lcov
+.nyc_output/
+
+# Test results
+test-results/
+playwright-report/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Lock files (keep package-lock.json, yarn.lock, pnpm-lock.yaml)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Configuration files that have their own formatting
+.eslintrc*
+eslint.config.*
+.prettierrc*
+tsconfig*.json
+
+# Environment files
+.env*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Syncpack
+.syncpackrc.json
+
+# Claude AI files
+.claude/
+
+# Security reports
+security-reports/

@@ -1,0 +1,84 @@
+# NPM ignore file for publishing
+# This prevents non-essential files from being published to NPM
+
+# Source files and development files
+src/
+apps/
+packages/
+tools/
+specs/
+docs/
+.claude/
+.specific/
+
+# Configuration files
+*.config.js
+*.config.ts
+.eslintrc*
+eslint.config*
+.prettierrc*
+tsconfig*.json
+vitest.config.*
+playwright.config.*
+
+# Dependencies and build outputs
+node_modules/
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+
+# Test files
+test-results/
+playwright-report/
+*.test.*
+*.spec.*
+**/__tests__/
+**/__mocks__/
+
+# Development files
+.env*
+.nyc_output/
+.cache/
+.vite/
+.nx/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Documentation files that shouldn't be published
+README.md
+CHANGELOG.md
+LICENSE
+
+# Ignore files
+.gitignore
+.eslintignore
+.prettierignore
+.npmignore
+.dockerignore
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Syncpack
+.syncpackrc.json
+
+# Security and temporary files
+security-reports/
+tmp/
+temp/
+*.tmp
+
+# Claude AI files
+.claude/
