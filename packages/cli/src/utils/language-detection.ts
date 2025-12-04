@@ -1,4 +1,4 @@
-import { LanguageCode, LanguageDetection, LanguageDetectionMethod, LanguageAnalysisResult } from '../types/language-detection.js';
+import { LanguageCode, LanguageDetection, LanguageAnalysisResult } from '../types/language-detection.js';
 
 export class LanguageDetector {
   private static readonly JAPANESE_CHARACTER_PATTERN = /[\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf]/g;
@@ -30,15 +30,23 @@ export class LanguageDetector {
   }
 
   private static gatherEvidence(html: string, url: string, headers: Record<string, string>) {
-    return {
-      htmlLang: this.extractHtmlLang(html),
-      contentLanguage: this.extractContentLanguage(headers),
-      urlPattern: this.extractUrlPattern(url),
+    const evidence: any = {
       japaneseRatio: this.calculateJapaneseRatio(html),
       englishRatio: this.calculateEnglishRatio(html),
       japaneseCharacters: this.extractJapaneseCharacters(html),
       englishWords: this.extractEnglishWords(html)
     };
+
+    const htmlLang = this.extractHtmlLang(html);
+    if (htmlLang) evidence.htmlLang = htmlLang;
+
+    const contentLanguage = this.extractContentLanguage(headers);
+    if (contentLanguage) evidence.contentLanguage = contentLanguage;
+
+    const urlPattern = this.extractUrlPattern(url);
+    if (urlPattern && urlPattern !== 'unknown') evidence.urlPattern = urlPattern;
+
+    return evidence;
   }
 
   private static extractHtmlLang(html: string): string | undefined {
@@ -100,10 +108,10 @@ export class LanguageDetector {
     enScore += evidence.englishRatio * 0.4;
 
     // Common words
-    const japaneseCommonWords = evidence.japaneseCharacters.filter(char =>
+    const japaneseCommonWords = evidence.japaneseCharacters.filter((char: string) =>
       this.COMMON_JAPANESE_WORDS.includes(char)
     ).length;
-    const englishCommonWords = evidence.englishWords.filter(word =>
+    const englishCommonWords = evidence.englishWords.filter((word: string) =>
       this.COMMON_ENGLISH_WORDS.includes(word)
     ).length;
 
@@ -148,16 +156,16 @@ export class LanguageDetector {
   private static buildEvidence(analysis: LanguageAnalysisResult): string[] {
     const evidence: string[] = [];
 
-    if (analysis.htmlLang) evidence.push(`HTML lang="${analysis.htmlLang}"`);
-    if (analysis.contentLanguage) evidence.push(`Content-Language: ${analysis.contentLanguage}`);
-    if (analysis.urlPattern !== 'unknown') evidence.push(`URL pattern indicates ${analysis.urlPattern}`);
+    if (analysis.evidence.htmlLang) evidence.push(`HTML lang="${analysis.evidence.htmlLang}"`);
+    if (analysis.evidence.contentLanguage) evidence.push(`Content-Language: ${analysis.evidence.contentLanguage}`);
+    if (analysis.evidence.urlPattern && analysis.evidence.urlPattern !== 'unknown') evidence.push(`URL pattern indicates ${analysis.evidence.urlPattern}`);
 
-    if (analysis.japaneseRatio > 0.1) {
-      evidence.push(`Japanese character ratio: ${(analysis.japaneseRatio * 100).toFixed(1)}%`);
+    if (analysis.evidence.japaneseRatio && analysis.evidence.japaneseRatio > 0.1) {
+      evidence.push(`Japanese character ratio: ${(analysis.evidence.japaneseRatio * 100).toFixed(1)}%`);
     }
 
-    if (analysis.englishRatio > 0.1) {
-      evidence.push(`English word ratio: ${(analysis.englishRatio * 100).toFixed(1)}%`);
+    if (analysis.evidence.englishRatio && analysis.evidence.englishRatio > 0.1) {
+      evidence.push(`English word ratio: ${(analysis.evidence.englishRatio * 100).toFixed(1)}%`);
     }
 
     return evidence;

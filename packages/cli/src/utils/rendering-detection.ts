@@ -32,17 +32,16 @@ export class RenderingDetector {
     const initialLength = html.length;
 
     const staticAnalysis = this.analyzeStaticContent(html);
-    let finalLength = initialLength;
     let requiresJS = false;
     let jsExecutionTime = 0;
 
-    if (staticAnalysis.minimalContent || this.hasDynamicIndicators(html)) {
+    if (staticAnalysis.minimalStaticContent || this.hasDynamicIndicators(html)) {
       requiresJS = true;
 
       if (options.testWithPlaywright) {
         // In a real implementation, this would launch Playwright
         // For now, simulate based on content analysis
-        finalLength = await this.simulateDynamicContent(html);
+        await this.simulateDynamicContent(html);
         jsExecutionTime = Date.now() - startTime;
       }
     }
@@ -51,7 +50,7 @@ export class RenderingDetector {
       renderingType: this.determineRenderingType(html, requiresJS),
       detectionMethod: 'content-analysis',
       initialContentLength,
-      finalContentLength,
+      finalContentLength: initialLength,
       requiresJavaScript: requiresJS,
       jsExecutionTime,
       detectedAt: Date.now(),
@@ -70,10 +69,14 @@ export class RenderingDetector {
         contentLength: html.length,
         missingFields: staticAnalysis.missingFields
       },
-      dynamicAnalysis: {
+      dynamicAnalysis: dynamicAnalysis.framework ? {
         required: dynamicAnalysis.required,
         additionalContent: dynamicAnalysis.additionalContent,
         frameworkDetected: dynamicAnalysis.framework,
+        waitForSelectors: dynamicAnalysis.waitForSelectors
+      } : {
+        required: dynamicAnalysis.required,
+        additionalContent: dynamicAnalysis.additionalContent,
         waitForSelectors: dynamicAnalysis.waitForSelectors
       },
       recommendation: this.getRecommendation(staticAnalysis, dynamicAnalysis)
@@ -216,7 +219,7 @@ export class RenderingDetector {
     return 'dynamic';
   }
 
-  private static calculateConfidence(html: string, analysis: any): number {
+  private static calculateConfidence(html: string, _analysis: any): number {
     let confidence = 0.5; // Base confidence
 
     // High confidence indicators
@@ -228,7 +231,7 @@ export class RenderingDetector {
     return Math.min(confidence, 1.0);
   }
 
-  private static getIndicators(html: string, analysis: any) {
+  private static getIndicators(html: string, _analysis: any) {
     return {
       hasDynamicContent: this.hasDynamicIndicators(html),
       hasLazyLoading: this.LAZY_LOADING_PATTERNS.some(pattern => pattern.test(html)),
