@@ -8,10 +8,12 @@ import importPlugin from 'eslint-plugin-import';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-config-prettier';
 import unicorn from 'eslint-plugin-unicorn';
+import nx from '@nx/eslint-plugin';
 
 export default [
   js.configs.recommended,
   prettier,
+  unicorn.configs.recommended,
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
@@ -40,12 +42,12 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
+      '@nx': nx,
       'react': react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       'import': importPlugin,
       'jsx-a11y': jsxA11y,
-      'unicorn': unicorn,
     },
     settings: {
       react: {
@@ -63,8 +65,22 @@ export default [
       ...typescript.configs.recommended.rules,
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/prefer-const': 'error',
       '@typescript-eslint/no-non-null-assertion': 'warn',
+
+      // Nx rules - enforce module boundaries in monorepo
+      '@nx/enforce-module-boundaries': [
+        'error',
+        {
+          enforceBuildableLibDependency: true,
+          allow: [],
+          depConstraints: [
+            {
+              sourceTag: '*',
+              onlyDependOnLibsWithTags: ['*'],
+            },
+          ],
+        },
+      ],
 
       // React rules for React 19
       ...react.configs.flat.recommended.rules,
@@ -77,7 +93,6 @@ export default [
       'react/jsx-fragments': ['error', 'syntax'],
 
       // React Hooks rules
-      ...reactHooks.configs.flat.rules,
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
 
@@ -114,14 +129,6 @@ export default [
       ...jsxA11y.configs.recommended.rules,
       'jsx-a11y/anchor-is-valid': 'warn', // React Router handles this
 
-      // Unicorn rules with emoji prevention
-      ...unicorn.configs.recommended.rules,
-      'unicorn/prevent-abbreviations': 'off',
-      'unicorn/no-null': 'off',
-      'unicorn/no-emoji': ['error', {
-        message: 'Emojis are not allowed. Use @tabler/icons-react for icons instead.',
-      }],
-
       // Formatting rules
       'quotes': ['error', 'double', { avoidEscape: true, allowTemplateLiterals: true }],
       'indent': ['error', 'tab', { SwitchCase: 1 }],
@@ -145,6 +152,13 @@ export default [
     },
   },
   {
+    // Unicorn rule overrides
+    rules: {
+      'unicorn/prevent-abbreviations': 'off',
+      'unicorn/no-null': 'off',
+    },
+  },
+  {
     files: ['**/*.test.{ts,tsx}', '**/*.spec.{ts,tsx}'],
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
@@ -157,15 +171,6 @@ export default [
       '@typescript-eslint/no-explicit-any': 'off',
       'no-console': 'off',
       'playwright/missing-playwright-await': 'off', // Not using the Playwright ESLint plugin yet
-    },
-  },
-  {
-    files: ['**/*.md'],
-    plugins: ['unicorn'],
-    rules: {
-      'unicorn/no-emoji': ['error', {
-        message: 'Emojis are not allowed in documentation. Use clear text descriptions instead.',
-      }],
     },
   },
   {
