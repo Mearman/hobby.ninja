@@ -92,7 +92,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_path: dist/apps/webapp
+          artifact_path: dist/apps/web
 
   # Preview job for pull requests
   preview:
