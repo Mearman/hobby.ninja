@@ -3,10 +3,9 @@ import react from '@vitejs/plugin-react-swc';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import { VitePWA } from 'vite-plugin-pwa';
-import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
-  root: './',
+  root: __dirname,
   cacheDir: '../../node_modules/.vite/webapp',
   publicDir: 'public',
   plugins: [
@@ -43,17 +42,25 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-        navigateFallback: '/offline.html'
+        globIgnores: ['**/stats.html'],
+        navigateFallback: '/offline.html',
+        maximumFileSizeToCacheInBytes: 3000000, // 3MB
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/.*\.(png|jpg|jpeg|svg|gif|webp)$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'images',
+              expiration: {
+                maxEntries: 60,
+                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+              },
+            },
+          },
+        ],
       }
     }),
-    // Bundle analysis plugin for production builds
-    process.env['NODE_ENV'] === 'production' && visualizer({
-      filename: '../../dist/apps/web/stats.html',
-      open: false,
-      gzipSize: true,
-      brotliSize: true,
-    })
-  ].filter(Boolean),
+  ],
   resolve: {
     alias: {
       '@': './src',
