@@ -1,21 +1,49 @@
 /**
  * Main entry point for @unnamed-gunpla-app/cli package
- * Exports CLI functionality for web data scraping and processing
+ * Placeholder for future CLI functionality for web data scraping and processing
  */
 
-// CLI commands
-export * from "./commands/scrape.js";
-export * from "./commands/export.js";
-export * from "./commands/status.js";
-export * from "./commands/clear-cache.js";
+/**
+ * Placeholder CLI structure for future implementation
+ * This package will eventually contain:
+ * - Data scraping commands for Gunpla model kits
+ * - Export functionality for database generation
+ * - Cache management for scraped data
+ * - Data processing utilities
+ */
 
-// Web scrapers
-export * from "./scrapers/bandai.js";
-export * from "./scrapers/gundam-info.js";
-export * from "./scrapers/dalong.js";
+export interface CliCommand {
+  name: string;
+  description: string;
+  execute: (...args: any[]) => Promise<void>;
+}
 
-// Export utilities
-export * from "./export/json-export.js";
+/**
+ * Placeholder CLI commands interface
+ * Real implementation to be added in future iterations
+ */
+export const CLI_COMMANDS = {
+  scrape: {
+    name: 'scrape',
+    description: 'Scrape Gunpla data from various sources',
+    status: 'placeholder'
+  },
+  export: {
+    name: 'export',
+    description: 'Export scraped data to various formats',
+    status: 'placeholder'
+  },
+  status: {
+    name: 'status',
+    description: 'Show CLI status and configuration',
+    status: 'placeholder'
+  }
+} as const;
 
-// Cache management
-export * from "./cache/index.js";
+/**
+ * Placeholder function that will be replaced with actual CLI functionality
+ */
+export async function runCliCommand(command: string, ...args: any[]): Promise<void> {
+  console.log(`CLI command "${command}" is not yet implemented`);
+  console.log('This is a placeholder for future CLI functionality');
+}

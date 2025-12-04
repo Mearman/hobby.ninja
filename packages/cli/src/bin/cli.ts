@@ -1,127 +1,82 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
-
 import { readFileSync } from "fs";
 import { join } from "path";
 
 const packageJson = JSON.parse(readFileSync(join(__dirname, "../../package.json"), "utf8"));
 const version = packageJson.version;
-import { clearCacheCommand } from "../commands/clear-cache";
-import { exportCommand } from "../commands/export";
-import { scrapeCommand } from "../commands/scrape";
 
 const program = new Command();
 
 program
 	.name("gunpla-scraper")
-	.description("CLI tool for scraping Gundam/Gunpla data from various sources")
+	.description("CLI tool for scraping Gundam/Gunpla data from various sources (Placeholder)")
 	.version(version);
 
-// Main scrape command
+// Placeholder commands that show future functionality
 program
 	.command("scrape")
-	.description("Scrape data from configured sources")
-	.option("-s, --scrapers <scrapers>", "Comma-separated list of scrapers to run (bandai, gundam-info, dalong)", "bandai,gundam-info,dalong")
-	.option("-o, --output <dir>", "Output directory for scraped data", "./apps/webapp/public/data")
-	.option("--no-cache", "Disable caching")
-	.option("--force-refresh", "Force refresh of cached data")
-	.option("-i, --interactive", "Run in interactive mode")
-	.option("-v, --verbose", "Enable verbose output")
-	.option("--timeout <ms>", "Request timeout in milliseconds", "30000")
-	.option("--max-retries <count>", "Maximum number of retries per request", "3")
-	.option("--concurrency <count>", "Number of concurrent requests", "2")
-	.option("--per-sku", "Create per-SKU JSON files")
-	.option("--no-index", "Skip generating index files")
-	.option("--dry-run", "Show what would be scraped without actually scraping")
-	.action(async (options) => {
-		try {
-			await scrapeCommand(options);
-			process.exit(0);
-		} catch (error) {
-			console.error("Error:", error instanceof Error ? error.message : error);
-			if (options.verbose && error instanceof Error && error.stack) {
-				console.error(error.stack);
-			}
-			process.exit(1);
-		}
+	.description("Scrape data from configured sources (PLACEHOLDER - Not yet implemented)")
+	.action(() => {
+		console.log("🚧 Scrape command is not yet implemented");
+		console.log("This will eventually scrape Gunpla data from:");
+		console.log("  - Bandai official website");
+		console.log("  - Gundam.info database");
+		console.log("  - Dalong's model kit database");
 	});
 
-// Cache management commands
-program
-	.command("cache")
-	.description("Manage cache")
-	.command("clear")
-	.description("Clear all cached data")
-	.option("-s, --scraper <scraper>", "Clear cache for specific scraper only")
-	.option("-a, --all", "Clear all cache including index files")
-	.option("--older-than <days>", "Clear cache older than specified days")
-	.action(async (options) => {
-		try {
-			await clearCacheCommand(options);
-			process.exit(0);
-		} catch (error) {
-			console.error("Error:", error instanceof Error ? error.message : error);
-			process.exit(1);
-		}
-	});
-
-// Export command
 program
 	.command("export")
-	.description("Export cached data in various formats")
-	.option("-f, --format <format>", "Export format (json, csv, xlsx)", "json")
-	.option("-o, --output <file>", "Output file path")
-	.option("-s, --scraper <scraper>", "Export data from specific scraper")
-	.option("--include-cache", "Include cache metadata")
-	.action(async (options) => {
-		try {
-			await exportCommand(options);
-			process.exit(0);
-		} catch (error) {
-			console.error("Error:", error instanceof Error ? error.message : error);
-			process.exit(1);
-		}
+	.description("Export cached data in various formats (PLACEHOLDER - Not yet implemented)")
+	.action(() => {
+		console.log("🚧 Export command is not yet implemented");
+		console.log("This will eventually export data in formats:");
+		console.log("  - JSON (for web application)");
+		console.log("  - CSV (for spreadsheets)");
+		console.log("  - XLSX (for Excel)");
 	});
 
-// Configuration command
+program
+	.command("cache")
+	.description("Manage cache (PLACEHOLDER - Not yet implemented)")
+	.action(() => {
+		console.log("🚧 Cache management is not yet implemented");
+		console.log("This will eventually provide:");
+		console.log("  - Clear cache functionality");
+		console.log("  - Cache statistics");
+		console.log("  - Cache size management");
+	});
+
+program
+	.command("status")
+	.description("Show scraping status and statistics (PLACEHOLDER - Not yet implemented)")
+	.action(() => {
+		console.log("🚧 Status command is not yet implemented");
+		console.log("This will eventually show:");
+		console.log("  - Scraping progress");
+		console.log("  - Data statistics");
+		console.log("  - Last update times");
+	});
+
 program
 	.command("config")
 	.description("Manage configuration")
 	.command("show")
 	.description("Show current configuration")
-	.action(async () => {
-		try {
-			console.log("Current configuration:");
-			console.log(JSON.stringify({
-				scrapers: ["bandai", "gundam-info", "dalong"],
-				cache: { ttl: 3600000, maxSize: "100MB" },
-				timeout: 30000,
-				maxRetries: 3,
-				concurrency: 2
-			}, null, 2));
-			process.exit(0);
-		} catch (error) {
-			console.error("Error:", error instanceof Error ? error.message : error);
-			process.exit(1);
-		}
-	});
-
-// Status command
-program
-	.command("status")
-	.description("Show scraping status and statistics")
-	.option("-s, --scraper <scraper>", "Show status for specific scraper")
-	.option("--cache-stats", "Show cache statistics")
-	.action(async (options) => {
-		try {
-			const { getStatusCommand } = await import("../commands/status.js");
-			await getStatusCommand(options);
-			process.exit(0);
-		} catch (error) {
-			console.error("Error:", error instanceof Error ? error.message : error);
-			process.exit(1);
-		}
+	.action(() => {
+		console.log("Current configuration:");
+		console.log(JSON.stringify({
+			status: "placeholder",
+			futureScrapers: ["bandai", "gundam-info", "dalong"],
+			futureFormats: ["json", "csv", "xlsx"],
+			plannedFeatures: [
+				"Web scraping with caching",
+				"Data export functionality",
+				"Progress tracking",
+				"Error handling and retries"
+			]
+		}, null, 2));
 	});
 
 // Help command
@@ -131,17 +86,6 @@ program
 	.action(() => {
 		program.outputHelp();
 	});
-
-// Error handling
-process.on("unhandledRejection", (reason, promise) => {
-	console.error("Unhandled Rejection at:", promise, "reason:", reason);
-	process.exit(1);
-});
-
-process.on("uncaughtException", (error) => {
-	console.error("Uncaught Exception:", error);
-	process.exit(1);
-});
 
 // Parse command line arguments
 if (process.argv.length < 3) {
