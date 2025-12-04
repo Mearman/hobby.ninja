@@ -60,7 +60,25 @@ Content aggregators need to extract anime series information, character data, an
 
 ---
 
-### User Story 4 - Dataset Reconciliation and Integration (Priority: P3)
+### User Story 4 - Raw Page Caching and Re-parsing (Priority: P2)
+
+Developers need to cache raw HTML page content locally to enable iterative improvements to parsing logic without repeatedly fetching the same pages from websites. This accelerates development cycles and reduces load on target websites during testing and refinement phases.
+
+**Why this priority**: Caching enables rapid iteration on parsing algorithms, reduces website load during development, and provides resilience against temporary network issues or rate limiting.
+
+**Independent Test**: Can be fully tested by running scraping operations with caching enabled, modifying parsing logic, and re-running to verify that cached content is used instead of refetching.
+
+**Acceptance Scenarios**:
+
+1. **Given** caching is enabled during scraping, **When** pages are fetched for the first time, **Then** raw HTML content is compressed and stored locally with metadata
+2. **Given** parsing logic needs adjustment, **When** re-processing is initiated, **Then** system reads cached content instead of making new HTTP requests
+3. **Given** cached content becomes outdated, **When** cache invalidation is triggered, **Then** system fetches fresh content and updates cache
+4. **Given** cache storage exceeds configured limits, **When** cleanup runs, **Then** oldest or least frequently accessed cached files are removed automatically
+5. **Given** cache files become corrupted, **When** corruption is detected, **Then** system automatically refetches affected pages
+
+---
+
+### User Story 5 - Dataset Reconciliation and Integration (Priority: P3)
 
 Data analysts need to reconcile and integrate data from all three sources to identify relationships, resolve conflicts, and create a unified master dataset that can be used for downstream applications and analysis.
 
@@ -88,6 +106,9 @@ Data analysts need to reconcile and integrate data from all three sources to ide
 - What happens when language detection fails or is ambiguous?
 - How does system resume processing from interruption points without duplicating previously processed data?
 - What happens when checkpoint files become corrupted or unavailable?
+- How does system manage cache storage to prevent excessive disk usage?
+- What happens when cached page content becomes outdated or websites change structure?
+- How does system handle cache corruption or partial cache files?
 
 ## Requirements *(mandatory)*
 
@@ -104,6 +125,9 @@ Data analysts need to reconcile and integrate data from all three sources to ide
 - **FR-009**: System MUST provide configurable scraping schedules and incremental updates
 - **FR-014**: System MUST maintain processing state to allow resumption from interruption points without data duplication
 - **FR-015**: System MUST create checkpoint files tracking processed URLs, page ranges, and completion status
+- **FR-016**: System MUST cache raw HTML page content locally to enable re-parsing without refetching
+- **FR-017**: System MUST manage cache storage efficiently with compression and cleanup policies
+- **FR-018**: System MUST provide cache invalidation mechanisms for updated content
 - **FR-010**: System MUST handle errors gracefully and continue processing other data when individual items fail
 - **FR-011**: System MUST validate data integrity and completeness before storage
 - **FR-012**: System MUST support data reconciliation and conflict resolution across multiple sources and languages
@@ -117,6 +141,7 @@ Data analysts need to reconcile and integrate data from all three sources to ide
 - **DataSource**: Represents information about data sources including scraping schedules, success rates, language distribution, and quality metrics
 - **LanguageDetection**: Represents language detection results including confidence scores, detection methods, and fallback strategies
 - **ProcessingState**: Represents incremental processing checkpoint data including processed URLs, cursor positions, and resume points
+- **PageCache**: Represents cached raw HTML content with metadata, compression status, and expiration information
 - **ReconciliationResult**: Represents matching and merging results with conflict resolutions, language mappings, and data quality assessments
 
 ## Success Criteria *(mandatory)*
@@ -131,3 +156,5 @@ Data analysts need to reconcile and integrate data from all three sources to ide
 - **SC-006**: System successfully reconciles 90% of duplicate products across different sources and languages
 - **SC-007**: System maintains >98% uptime for scheduled scraping operations over 30-day periods
 - **SC-008**: System resumes interrupted processing within 30 seconds and maintains 99.9% duplicate prevention accuracy
+- **SC-009**: System reduces refetch requests by 95% through effective page caching
+- **SC-010**: System maintains cache storage within configured limits (default 5GB) with automatic cleanup
