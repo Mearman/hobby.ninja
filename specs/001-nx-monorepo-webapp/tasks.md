@@ -198,31 +198,25 @@ description: "Task list for Nx Monorepo Webapp Setup implementation"
 
 ---
 
-## Phase 8: Security, Monitoring, and PWA Features (User Story 4 Extension)
+## Phase 8: PWA Features and Accessibility (User Story 4 Extension)
 
-**Goal**: Implement Content Security Policy headers, security monitoring, performance tracking, PWA features, and accessibility compliance
+**Goal**: Implement PWA features and accessibility compliance
 
-**Independent Test**: Verify security headers, monitoring data, PWA installation, and accessibility compliance
+**Independent Test**: Verify PWA installation and accessibility compliance
 
-### Tests for Security and PWA
+### Tests for PWA and Accessibility
 
-- [ ] T074 [P] [US4] Security test for CSP headers in apps/webapp/src/security/csp.test.ts
 - [ ] T075 [P] [US4] Performance test for Core Web Vitals tracking in apps/webapp/src/performance/web-vitals.test.ts
 - [ ] T076 [P] [US4] PWA test for service worker functionality in apps/webapp/src/pwa/service-worker.test.ts
 - [ ] T077 [P] [US4] Accessibility test for WCAG compliance in apps/webapp/src/a11y/wcag.test.ts
 
-### Implementation for Security, Monitoring, and PWA
+### Implementation for PWA and Accessibility
 
-- [ ] T078 [US4] Implement Content Security Policy headers in apps/webapp/src/security/csp.ts
-- [ ] T079 [P] [US4] Set up security monitoring with threat detection in apps/webapp/src/monitoring/security.ts
-- [ ] T080 [P] [US4] Configure performance monitoring with Core Web Vitals in apps/webapp/src/monitoring/performance.ts
 - [ ] T081 [P] [US4] Implement Progressive Web App features with service worker in apps/webapp/src/pwa/
 - [x] T082 [P] [US4] Create PWA manifest and app shortcuts configuration
 - [x] T083 [P] [US4] Implement WCAG 2.1 AA accessibility features in apps/webapp/src/a11y/
-- [x] T084 [P] [US4] Configure automated security scanning in CI/CD pipeline
-- [x] T085 [P] [US4] Add privacy compliance with data minimization principles
 
-**Checkpoint**: Enterprise-grade security, monitoring, PWA, and accessibility features implemented
+**Checkpoint**: PWA and accessibility features implemented
 
 ---
 
@@ -367,4 +361,3 @@ With multiple developers:
 - CLI supports both manual and CI/CD execution modes
 - PWA features include service workers and app installation
 - Accessibility compliance meets WCAG 2.1 AA standards
-- Security includes CSP headers, monitoring, and automated scanning
