@@ -14,6 +14,16 @@
         "assets": []
       }
     },
+    "typecheck": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "tsConfig": "packages/types/tsconfig.json",
+        "main": "packages/types/src/index.ts",
+        "outputPath": "dist/packages/types",
+        "noEmit": true
+      },
+      "cache": true
+    },
     "test": {
       "executor": "@nx/vite:test",
       "outputs": ["{workspaceRoot}/coverage/types"],

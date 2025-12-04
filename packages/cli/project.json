@@ -31,6 +31,17 @@
         "lintFilePatterns": ["packages/cli/src/**/*.ts"]
       }
     },
+    "typecheck": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "tsConfig": "packages/cli/tsconfig.json",
+        "main": "packages/cli/src/index.ts",
+        "outputPath": "dist/packages/cli",
+        "noEmit": true
+      },
+      "cache": true,
+      "dependsOn": ["types:build", "utils:build"]
+    },
     "cli": {
       "executor": "@nx/workspace:run-commands",
       "options": {
