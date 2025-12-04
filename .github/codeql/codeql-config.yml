@@ -1,0 +1,55 @@
+# CodeQL Configuration for Security Analysis
+# This configuration defines security queries and analysis rules
+
+# Use extended security and quality queries
+queries:
+  - uses: security-and-quality
+  - uses: security-extended
+  - uses: security
+
+# Custom query packs for additional security coverage
+query-packs:
+  - codeql/javascript-queries
+  - codeql/typescript-queries
+
+# Directories to include in analysis
+paths:
+  - apps/
+  - packages/
+  - tools/
+
+# Directories to exclude from analysis
+paths-ignore:
+  - '**/node_modules/**'
+  - '**/dist/**'
+  - '**/build/**'
+  - '**/coverage/**'
+  - '**/.nx/cache/**'
+  - '**/tmp/**'
+  - '**/.git/**'
+
+# Extractor configuration for better analysis
+extractor:
+  javascript:
+    # Enable automatic dependency tracking
+    auto_detect: true
+
+  typescript:
+    # TypeScript project configuration
+    ts_config_path:
+      - tsconfig.base.json
+      - apps/webapp/tsconfig.json
+      - packages/*/tsconfig.json
+
+# Security-specific options
+security:
+  # Enable all security categories
+  enable_all: true
+
+  # Severity threshold for reporting
+  min_severity: warning
+
+# Performance optimization
+packs:
+  - codeql-javascript
+  - codeql-typescript

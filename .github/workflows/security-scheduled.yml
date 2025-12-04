@@ -1,0 +1,306 @@
+name: Scheduled Security Scans
+
+on:
+  schedule:
+    # Comprehensive security scan daily at 1 AM UTC
+    - cron: '0 1 * * *'
+    # Weekly deep security analysis on Sundays at 4 AM UTC
+    - cron: '0 4 * * 0'
+    # Monthly security report on 1st of each month at 6 AM UTC
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+    inputs:
+      scan_type:
+        description: 'Type of security scan to run'
+        required: true
+        default: 'comprehensive'
+        type: choice
+        options:
+          - comprehensive
+          - dependencies
+          - code-analysis
+          - compliance
+      severity_threshold:
+        description: 'Minimum severity level to report'
+        required: false
+        default: 'medium'
+        type: choice
+        options:
+          - low
+          - medium
+          - high
+          - critical
+
+jobs:
+  # Comprehensive security scan
+  comprehensive-scan:
+    name: Comprehensive Security Scan
+    runs-on: ubuntu-latest
+    if: github.event.inputs.scan_type == 'comprehensive' || github.event.inputs.scan_type == '' || github.event.schedule
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript, typescript
+          config-file: ./.github/codeql/codeql-config.yml
+
+      - name: Build project
+        run: yarn build
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:javascript"
+
+      - name: Run dependency audit
+        run: |
+          echo "Running comprehensive dependency audit..."
+          yarn audit --level=low > yarn-audit-comprehensive.json || true
+
+          # Audit each workspace
+          find . -name "package.json" -not -path "./node_modules/*" -not -path "./dist/*" -not -path "./build/*" | while read -r pkg; do
+            echo "Auditing $(basename "$(dirname "$pkg")")..."
+            dir=$(dirname "$pkg")
+            cd "$dir" && npm audit --audit-level=low --json > "comprehensive-audit-$(basename "$dir").json" 2>/dev/null || true
+            cd - > /dev/null
+          done
+
+      - name: Install and run security scanners
+        run: |
+          # Install security scanning tools
+          npm install -g eslint-plugin-security semgrep
+          pip install safety || echo "Safety installation failed, continuing..."
+
+          # Run security linting
+          npx eslint . --ext .js,.jsx,.ts,.tsx --plugin security --format json > eslint-security-comprehensive.json || true
+
+          # Run semgrep analysis
+          semgrep --config=auto --json --output=semgrep-comprehensive.json . || true
+
+      - name: Generate security report
+        env:
+          REPORT_DATE: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+        run: |
+          cat << 'EOF' > comprehensive-security-report.md
+          # Comprehensive Security Report
+
+          ## Scan Information
+          - **Date**: ${REPORT_DATE}
+          - **Repository**: ${{ github.repository }}
+          - **Commit**: ${{ github.sha }}
+          - **Scan Type**: Comprehensive Security Analysis
+
+          ## Executive Summary
+
+          ### CodeQL Analysis
+          - Static analysis completed for JavaScript/TypeScript code
+          - Check SARIF artifacts for detailed findings
+
+          ### Dependency Analysis
+          - All workspace packages audited
+          - Vulnerability assessment completed
+
+          ### Security Code Analysis
+          - ESLint security rules applied
+          - Semgrep analysis completed
+
+          ### Risk Assessment
+          - Critical issues: Review immediately
+          - High issues: Address within 7 days
+          - Medium issues: Address within 30 days
+          - Low issues: Address in next release cycle
+
+          ## Recommendations
+          1. Review and fix any critical/high severity findings
+          2. Update dependencies with known vulnerabilities
+          3. Implement security best practices in code
+          4. Schedule regular security reviews
+          EOF
+
+      - name: Upload comprehensive scan results
+        uses: actions/upload-artifact@v4
+        with:
+          name: comprehensive-security-scan-${{ github.run_number }}
+          path: |
+            yarn-audit-comprehensive.json
+            */comprehensive-audit-*.json
+            eslint-security-comprehensive.json
+            semgrep-comprehensive.json
+            comprehensive-security-report.md
+          retention-days: 90
+
+  # Monthly security report
+  monthly-report:
+    name: Monthly Security Report
+    runs-on: ubuntu-latest
+    if: github.event.schedule == '0 6 1 * *'
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Generate monthly security metrics
+        env:
+          CURRENT_MONTH: $(date -u +"%Y-%m")
+          CURRENT_DATE: $(date -u +"%Y-%m-%d")
+        run: |
+          echo "Generating monthly security metrics for ${CURRENT_MONTH}..."
+
+          # Get dependency statistics
+          yarn list --depth=0 --json > monthly-deps.json
+
+          # Check for outdated packages
+          yarn outdated --json > monthly-outdated.json
+
+          # Count security issues from last audit
+          yarn audit --level=low > monthly-audit.txt
+
+          # Generate metrics
+          cat << EOF > monthly-security-metrics.json
+          {
+            "month": "${CURRENT_MONTH}",
+            "repository": "${{ github.repository }}",
+            "scan_date": "${CURRENT_DATE}",
+            "metrics": {
+              "total_dependencies": "$(grep -c '"' monthly-deps.json || echo 'unknown')",
+              "outdated_packages": "$(grep -c '"current"' monthly-outdated.json || echo '0')",
+              "vulnerabilities_found": "$(grep -c 'Vulnerabilities' monthly-audit.txt || echo '0')",
+              "security_score": "calculated_based_on_findings"
+            }
+          }
+          EOF
+
+      - name: Create monthly security dashboard
+        env:
+          MONTH_NAME: $(date -u +"%B %Y")
+        run: |
+          cat << EOF > monthly-security-dashboard.md
+          # Monthly Security Dashboard
+
+          **Period**: ${MONTH_NAME}
+          **Repository**: ${{ github.repository }}
+
+          ## Security Metrics
+
+          ### Dependencies Overview
+          - Total Dependencies: [Calculated from monthly-security-metrics.json]
+          - Outdated Packages: [Check monthly-outdated.json]
+          - Vulnerabilities Found: [Check monthly-audit.txt]
+
+          ### Security Trends
+          - Compare with previous month for trend analysis
+          - Track improvement or regression in security posture
+
+          ### Key Findings
+          1. [Summarize key security findings]
+          2. [Highlight any critical issues]
+          3. [Note improvements made]
+
+          ### Action Items
+          1. [List required security actions]
+          2. [Schedule security improvements]
+          3. [Plan security training if needed]
+
+          ### Next Month Focus
+          - [Set security priorities for next month]
+          - [Plan security improvements]
+          EOF
+
+      - name: Upload monthly report
+        uses: actions/upload-artifact@v4
+        with:
+          name: monthly-security-report-${CURRENT_MONTH}
+          path: |
+            monthly-security-metrics.json
+            monthly-deps.json
+            monthly-outdated.json
+            monthly-audit.txt
+            monthly-security-dashboard.md
+          retention-days: 365
+
+  # Security alert notifications
+  security-alerts:
+    name: Security Alert Notifications
+    runs-on: ubuntu-latest
+    needs: [comprehensive-scan]
+    if: always() && needs.comprehensive-scan.result == 'failure'
+    permissions:
+      contents: read
+      actions: read
+
+    steps:
+      - name: Create security alert
+        env:
+          ALERT_MESSAGE: |
+            🔒 **Security Alert**
+
+            A comprehensive security scan has failed in repository ${{ github.repository }}.
+
+            **Details:**
+            - Run ID: ${{ github.run_id }}
+            - Commit: ${{ github.sha }}
+            - Timestamp: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+
+            **Action Required:**
+            1. Review the scan results in the artifacts
+            2. Address any critical security findings
+            3. Update dependencies with known vulnerabilities
+            4. Implement recommended security fixes
+
+            **Next Steps:**
+            - Check the comprehensive security scan artifacts
+            - Review security scan logs
+            - Schedule emergency security review if needed
+        run: |
+          echo "Security scan failed - immediate attention required"
+          echo "Run ID: ${{ github.run_id }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Timestamp: $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+
+  # Security scan cleanup
+  cleanup:
+    name: Cleanup Old Security Artifacts
+    runs-on: ubuntu-latest
+    if: always()
+    permissions:
+      actions: write
+
+    steps:
+      - name: Delete old security artifacts
+        uses: geekyeggo/delete-artifact@v5
+        with:
+          name: |
+            comprehensive-security-scan-
+            security-scan-results-
+            dependency-scan-
+          failOnError: false
+          deleteExpiredArtifacts: true

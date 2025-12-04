@@ -1,0 +1,247 @@
+name: Security - Dependencies & Code Analysis
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+  schedule:
+    # Run dependency checks daily at 3 AM UTC
+    - cron: '0 3 * * *'
+
+jobs:
+  # Dependency vulnerability scanning
+  dependency-scan:
+    name: Dependency Security Scan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run yarn audit
+        run: yarn audit --level=moderate
+        continue-on-error: true
+
+      - name: Run npm audit check (additional validation)
+        run: npm audit --audit-level=moderate
+        continue-on-error: true
+
+      - name: Install Snyk CLI
+        run: npm install -g snyk
+
+      - name: Run Snyk security scan
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: |
+          if [ -n "$SNYK_TOKEN" ]; then
+            snyk test --severity-threshold=high
+            snyk monitor --org=your-org-name
+          else
+            echo "Snyk token not configured, skipping Snyk scan"
+          fi
+        continue-on-error: true
+
+      - name: Upload dependency scan results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dependency-scan-results
+          path: |
+            snyk-results.json
+            yarn-audit-results.json
+          retention-days: 30
+
+  # Security linting and code analysis
+  security-lint:
+    name: Security Lint & Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run ESLint with security rules
+        run: yarn lint --format=json --output-file=eslint-results.json
+
+      - name: Install additional security linters
+        run: npm install -g eslint-plugin-security eslint-plugin-no-secrets
+
+      - name: Run security-specific ESLint
+        run: |
+          npx eslint . \
+            --ext .js,.jsx,.ts,.tsx \
+            --config ./.eslintrc.security.js \
+            --format=json \
+            --output-file=eslint-security-results.json
+        continue-on-error: true
+
+      - name: Install and run semgrep
+        run: |
+          pip install semgrep
+          semgrep --config=auto --json --output=semgrep-results.json .
+        continue-on-error: true
+
+      - name: Check for hardcoded secrets
+        run: |
+          if command -v git-secrets &> /dev/null; then
+            git-secrets --scan || true
+          fi
+          if command -v trufflehog &> /dev/null; then
+            trufflehog --regex --json --output=trufflehog-results.json . || true
+          fi
+        continue-on-error: true
+
+      - name: Run npm audit for each workspace
+        run: |
+          find . -name "package.json" -not -path "./node_modules/*" -not -path "./dist/*" -not -path "./build/*" | while read -r pkg; do
+            echo "Auditing $pkg..."
+            dir=$(dirname "$pkg")
+            cd "$dir" && npm audit --audit-level=moderate --json > "npm-audit-$(basename "$dir").json" 2>/dev/null || true
+            cd - > /dev/null
+          done
+        continue-on-error: true
+
+      - name: Upload security lint results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: security-lint-results
+          path: |
+            eslint-results.json
+            eslint-security-results.json
+            semgrep-results.json
+            trufflehog-results.json
+            */npm-audit-*.json
+          retention-days: 30
+
+  # Package quality and security analysis
+  package-analysis:
+    name: Package Security Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Check package health with Snyk Open Source
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: |
+          if [ -n "$SNYK_TOKEN" ]; then
+            npx snyk test --severity-threshold=high --json > snyk-package-results.json
+            npx snyk monitor --org=your-org-name
+          else
+            echo "Snyk token not configured, skipping Snyk package analysis"
+          fi
+        continue-on-error: true
+
+      - name: Run Outdated Package Check
+        run: yarn outdated --json > outdated-packages.json
+        continue-on-error: true
+
+      - name: Analyze package lock files
+        run: |
+          echo "Analyzing yarn.lock for security issues..."
+          if command -v audit-ci &> /dev/null; then
+            npx audit-ci --moderate || true
+          fi
+        continue-on-error: true
+
+      - name: Upload package analysis results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: package-analysis-results
+          path: |
+            snyk-package-results.json
+            outdated-packages.json
+          retention-days: 30
+
+  # Create security summary
+  security-summary:
+    name: Security Summary
+    runs-on: ubuntu-latest
+    needs: [dependency-scan, security-lint, package-analysis]
+    if: always()
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+
+      - name: Generate security summary
+        run: |
+          cat << 'EOF' > security-summary.md
+          # Security Scan Summary
+
+          ## Dependency Scan Status: ${{ needs.dependency-scan.result }}
+          ## Security Lint Status: ${{ needs.security-lint.result }}
+          ## Package Analysis Status: ${{ needs.package-analysis.result }}
+
+          ### Detailed Results
+          - Check the uploaded artifacts for detailed scan results
+          - Review any high or critical severity findings immediately
+          EOF
+
+      - name: Comment on PR with security summary
+        if: github.event_name == 'pull_request'
+        env:
+          SUMMARY_FILE: security-summary.md
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const summary = fs.readFileSync(process.env.SUMMARY_FILE, 'utf8');
+
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `🔒 **Security Scan Results**\n\n${summary}`
+            });
+
+      - name: Upload security summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-summary
+          path: security-summary.md
+          retention-days: 7
