@@ -1,0 +1,54 @@
+{
+  "name": "@unnamed-gunpla-app/cli",
+  "version": "0.0.1",
+  "description": "CLI tool for scraping Gundam/Gunpla data from various sources",
+  "main": "dist/bin/cli.js",
+  "bin": {
+    "gunpla-scraper": "./dist/bin/cli.js",
+    "scrape": "./dist/bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node ./dist/bin/cli.js",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src/**/*.ts --fix",
+    "clean": "rm -rf dist .cache",
+    "scrape": "node ./dist/bin/cli.js scrape",
+    "scrape:bandai": "node ./dist/bin/cli.js scrape --scrapers bandai",
+    "scrape:gundam-info": "node ./dist/bin/cli.js scrape --scrapers gundam-info",
+    "scrape:dalong": "node ./dist/bin/cli.js scrape --scrapers dalong",
+    "clear-cache": "node ./dist/bin/cli.js cache clear",
+    "status": "node ./dist/bin/cli.js status --cache-stats"
+  },
+  "keywords": [
+    "gundam",
+    "gunpla",
+    "scraping",
+    "cli",
+    "data",
+    "bandai"
+  ],
+  "author": "Gunpla App Team",
+  "license": "MIT",
+  "dependencies": {
+    "@unnamed-gunpla-app/utils": "workspace:*",
+    "cheerio": "1.0.0-rc.12",
+    "commander": "12.1.0",
+    "inquirer": "9.2.0"
+  },
+  "devDependencies": {
+    "@types/cheerio": "0.22.35",
+    "@types/inquirer": "9.0.7",
+    "@types/node": "22.10.2",
+    "eslint": "8.57.1",
+    "typescript": "5.7.2",
+    "vitest": "2.1.8"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "type": "module"
+}

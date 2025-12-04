@@ -1,0 +1,68 @@
+{
+  "name": "cli",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/cli/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/cli",
+        "main": "packages/cli/src/index.ts",
+        "tsConfig": "packages/cli/tsconfig.json",
+        "assets": []
+      },
+      "dependsOn": ["types:build", "utils:build"]
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/cli"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "{workspaceRoot}/coverage/cli"
+      },
+      "dependsOn": ["types:build", "utils:build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/cli/src/**/*.ts"]
+      }
+    },
+    "cli": {
+      "executor": "@nx/workspace:run-commands",
+      "options": {
+        "command": "tsx packages/cli/src/bin/cli.ts",
+        "cwd": "{workspaceRoot}"
+      },
+      "dependsOn": ["build"]
+    },
+    "scrape": {
+      "executor": "@nx/workspace:run-commands",
+      "options": {
+        "command": "tsx packages/cli/src/bin/cli.ts scrape",
+        "cwd": "{workspaceRoot}"
+      },
+      "dependsOn": ["build"]
+    },
+    "parse": {
+      "executor": "@nx/workspace:run-commands",
+      "options": {
+        "command": "tsx packages/cli/src/bin/cli.ts parse",
+        "cwd": "{workspaceRoot}"
+      },
+      "dependsOn": ["build"]
+    },
+    "export": {
+      "executor": "@nx/workspace:run-commands",
+      "options": {
+        "command": "tsx packages/cli/src/bin/cli.ts export",
+        "cwd": "{workspaceRoot}"
+      },
+      "dependsOn": ["build"]
+    }
+  },
+  "tags": ["scope:cli", "type:tool", "context:scraping"]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "@unnamed-gunpla-app/utils",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    },
+    "/format": {
+      "types": "./src/format.ts",
+      "import": "./src/format.ts"
+    },
+    "/validation": {
+      "types": "./src/validation.ts",
+      "import": "./src/validation.ts"
+    },
+    "/storage": {
+      "types": "./src/storage.ts",
+      "import": "./src/storage.ts"
+    },
+    "/api": {
+      "types": "./src/api.ts",
+      "import": "./src/api.ts"
+    },
+    "/constants": {
+      "types": "./src/constants.ts",
+      "import": "./src/constants.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "lint": "eslint src --ext ts --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src --ext ts --fix"
+  },
+  "dependencies": {
+    "@unnamed-gunpla-app/types": "workspace:*"
+  },
+  "devDependencies": {
+    "@nx/js": "22.1.3",
+    "typescript": "5.7.2",
+    "vitest": "2.1.8",
+    "zod": "3.24.1"
+  },
+  "peerDependencies": {
+    "zod": "3.24.1"
+  }
+}
