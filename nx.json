@@ -10,7 +10,13 @@
     "test": {
       "cache": true,
       "parallel": 3,
-      "maxParallel": 3
+      "maxParallel": 3,
+      "inputs": [
+        "default",
+        "^default",
+        "{workspaceRoot}/tsconfig.base.json",
+        "{workspaceRoot}/vitest.config.ts"
+      ]
     },
     "lint": {
       "cache": true,
@@ -18,24 +24,40 @@
       "maxParallel": 5
     },
     "typecheck": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "noEmit": true,
+        "skipLibCheck": true
+      },
       "cache": true,
       "parallel": 5,
-      "maxParallel": 5
+      "maxParallel": 5,
+      "inputs": [
+        "default",
+        "^default"
+      ]
     },
         "serve": {
       "cache": false,
       "dependsOn": ["^build"]
     },
-    "e2e": {
+    "test:e2e": {
       "cache": true,
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "inputs": [
+        "default",
+        "^default",
+        "{workspaceRoot}/playwright.config.ts",
+        "{workspaceRoot}/.browserslistrc"
+      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"]
     }
   },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nx/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "test", "lint", "e2e", "typecheck", "typecheck-all", "test-all", "lint-all", "build-all"],
+        "cacheableOperations": ["build", "build:prod", "test", "test:unit", "test:integration", "test:e2e", "lint", "lint:check", "typecheck", "typecheck-root", "validate", "validate:affected"],
         "useDaemonProcess": true,
         "runtimeCacheInputs": ["node -v", "npm -v"]
       }
@@ -71,7 +93,7 @@
     {
       "plugin": "@nx/playwright/plugin",
       "options": {
-        "targetName": "e2e"
+        "targetName": "test:e2e"
       }
     },
     {
@@ -82,5 +104,8 @@
         }
       }
     }
-  ]
+  ],
+  "nx": {
+    "includedScripts": []
+  }
 }
