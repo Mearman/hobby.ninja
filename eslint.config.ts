@@ -54,10 +54,9 @@ export default [
         version: 'detect',
       },
       'import/resolver': {
-        typescript: {
-          alwaysTryTypes: true,
-          project: './tsconfig.base.json',
-        },
+        typescript: true,
+        alwaysTryTypes: true,
+        project: './tsconfig.base.json',
       },
     },
   rules: {

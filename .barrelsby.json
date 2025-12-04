@@ -2,9 +2,12 @@
   "directory": [
     "./packages/types/src",
     "./packages/utils/src",
-    "./apps/web/src/pwa",
+    "./apps/web/src/components",
     "./apps/web/src/db",
-    "./apps/web/src/performance"
+    "./apps/web/src/pages",
+    "./apps/web/src/providers",
+    "./apps/web/src/styles",
+    "./apps/web/src/utils"
   ],
   "exclude": [
     "__tests__",
