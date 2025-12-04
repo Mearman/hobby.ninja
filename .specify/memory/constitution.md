@@ -29,7 +29,10 @@ Full keyboard navigation, screen reader support, high contrast mode, text scalin
 ### IX. Nx Build System Optimization
 Nx executor plugins and inferred targets MUST be preferred over nx:run-commands. Build configurations MUST use specialized executors (@nx/vite:build, @nx/eslint:lint, @nx/playwright:run, etc.) for better caching, dependency tracking, and IDE integration. Project.json files MUST leverage Nx plugin system for automatic target inference. Manual command execution limited to exceptional cases where no suitable executor exists.
 
-### X. Security by Default
+### X. Persistence and Resilience in Problem Solving
+When encountering technical challenges, implementation obstacles, or configuration issues, solutions MUST be pursued to completion with proper investigation and research. Online documentation, official documentation, and community solutions MUST be researched before declaring a problem unsolvable. Temporary workarounds, mock implementations, or simplified fallbacks are PROHIBITED unless explicitly documented as technical debt with a clear remediation plan. Root cause analysis MUST be performed for all blocking issues.
+
+### XI. Security by Default
 Content Security Policy headers implemented. XSS protection via React. Input validation via Zod schemas. Client-side data encryption for sensitive IndexedDB storage. Regular security scanning in CI/CD. No external dependencies without security review.
 
 ## Technology Standards
@@ -52,13 +55,13 @@ This constitution supersedes all other development practices. Amendments require
 
 Template files (plan.md, spec.md, tasks.md) MUST align with constitutional principles. Regular constitution reviews scheduled quarterly or when major architectural changes occur.
 
-**Version**: 1.6.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-04
+**Version**: 1.7.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-04
 
 <!--
 Sync Impact Report:
-Version change: 1.5.0 → 1.6.0 (MINOR - added Nx Build System Optimization principle)
-Modified principles: IX. Security by Default (renumbered to X), added new principle IX
-Added sections: IX. Nx Build System Optimization (new principle for preferring Nx executor plugins and inferred targets over nx:run-commands)
+Version change: 1.6.0 → 1.7.0 (MINOR - added Persistence and Resilience principle)
+Modified principles: XI. Security by Default (renumbered from X), added new principle X
+Added sections: X. Persistence and Resilience in Problem Solving (new principle requiring persistent investigation of technical challenges, prohibiting workarounds/mock solutions)
 Removed sections: None
 Templates updated: ✅ .specify/templates/plan-template.md, ✅ .specify/templates/spec-template.md, ✅ .specify/templates/tasks-template.md
 Commands updated: ✅ All .specify/templates/commands/*.md files
