@@ -50,20 +50,20 @@ export class BandaiHobbyScraper extends BaseScraper {
       },
       quality: {
         completeness: this.calculateCompleteness({
-          name: name || undefined,
-          sku: sku || undefined,
-          price,
-          description: description || undefined,
-          specifications,
-          images
+          ...(name && { name }),
+          ...(sku && { sku }),
+          ...(price && { price }),
+          ...(description && { description }),
+          ...(specifications && { specifications }),
+          ...(images && { images })
         }),
         confidence: this.calculateConfidence({
-          name: name || undefined,
-          sku: sku || undefined,
-          price,
-          description: description || undefined,
-          specifications,
-          images
+          ...(name && { name }),
+          ...(sku && { sku }),
+          ...(price && { price }),
+          ...(description && { description }),
+          ...(specifications && { specifications }),
+          ...(images && { images })
         }),
         validationErrors: [],
         lastValidated: Date.now()

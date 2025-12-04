@@ -16,6 +16,7 @@ interface CacheEntry {
 
 export class CacheManager {
   private cacheDir: string;
+  private compressionEnabled: boolean;
   private defaultTtl: number; // milliseconds
 
   constructor(options: {
