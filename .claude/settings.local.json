@@ -14,7 +14,11 @@
       "Bash(cat:*)",
       "Bash(nx:*)",
       "Bash(git rm:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "WebFetch(domain:tanstack.com)",
+      "Bash(git fetch:*)",
+      "Bash(ls:*)",
+      "Bash(.specify/scripts/bash/create-new-feature.sh:*)"
     ],
     "deny": [
       "Bash(git add .)",
