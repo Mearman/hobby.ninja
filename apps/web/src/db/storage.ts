@@ -1,5 +1,6 @@
 import Dexie, { Table } from "dexie";
 import { z } from "zod";
+
 import { logger } from "../lib/logger";
 
 // Generate UUID function
@@ -137,8 +138,9 @@ export const storage = {
 			updatedAt: now,
 		};
 
-		await db.documents.add(doc);
-		return { success: true, id: doc.id! };
+		const result = await db.documents.add(doc);
+		const returnedId = typeof result === "string" ? result : generateId();
+		return { success: true, id: returnedId };
 	},
 
 	// Update an existing document
@@ -169,7 +171,7 @@ export const storage = {
 		const documents = await this.getBySchema(schemaId);
 		return documents.map(doc => ({
 			data: doc.data as T,
-			id: doc.id!,
+			id: doc.id ?? generateId(),
 		}));
 	},
 

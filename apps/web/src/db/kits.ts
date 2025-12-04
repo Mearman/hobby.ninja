@@ -1,7 +1,8 @@
 import { z } from "zod";
 
-import { storage, schemaRegistry } from "./storage";
 import { logger } from "../lib/logger";
+
+import { storage, schemaRegistry } from "./storage";
 
 // Generic document operations without hardcoded schemas
 export const documents = {
@@ -37,7 +38,7 @@ export const documents = {
 		return docs.map(doc => ({
 			data: doc.data,
 			schemaId: doc.schemaId,
-			id: doc.id!,
+			id: doc.id ?? crypto.randomUUID(),
 		}));
 	},
 
