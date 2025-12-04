@@ -4,6 +4,7 @@ export {
 	defaultTranslator,
 	translateText,
 	translateBatch,
+	createTranslationServiceWithStore,
 } from "./translator";
 
 export {
@@ -53,6 +54,66 @@ export {
 } from "./constants";
 
 export { ERROR_MESSAGES } from "./constants";
+
+// Store exports
+export {
+	TranslationStore,
+	TranslationStoreError,
+} from "./store/translation-store";
+
+// Store factory exports
+export {
+	createTranslationStore,
+	createServerTranslationStore,
+	createBrowserTranslationStore,
+	createTestTranslationStore,
+	validateStoreConfig,
+	createStoreConfig,
+	DEFAULT_STORE_CONFIG as defaultStoreConfig,
+} from "./store/translation-store-factory";
+
+export type {
+	TranslationEntry,
+	StoreConfiguration,
+	StoreStatistics,
+	StoreHealth,
+	StorageMetadata,
+	StoreError as StoreErrorType,
+	StoreWarning,
+} from "./store/translation-store";
+
+// JSON Storage exports
+export {
+	JSONStorage,
+	JSONStorageError,
+} from "./store/json-storage";
+
+export type {
+	JSONStorageConfig,
+	FileOperationResult,
+	StorageStatistics,
+} from "./store/json-storage";
+
+// Hashing exports
+export {
+	generateTextHash,
+	generateKey,
+	validateKey,
+	extractKeyComponents,
+	validateHash,
+	normalizeLanguageCode,
+	areKeysEquivalent,
+	generateBatchHash,
+	HashingError,
+	KEY_SEPARATOR,
+	KEY_FORMAT_REGEX,
+	BASE64_REGEX,
+} from "./store/hashing";
+
+export type {
+	KeyComponents,
+	HashingOptions,
+} from "./store/hashing";
 
 // Logger exports
 export { Logger, logger, log } from "./logger";

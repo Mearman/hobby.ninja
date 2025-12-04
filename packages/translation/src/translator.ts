@@ -14,6 +14,7 @@ import {
 	BatchTranslationResult,
 	TranslationErrorCode,
 } from "./types";
+import { TranslationStore, type StoreConfiguration } from "./store/translation-store";
 
 // Browser globals
 declare const fetch: typeof globalThis.fetch;
@@ -23,25 +24,35 @@ declare const clearTimeout: typeof globalThis.clearTimeout;
 
 
 /**
- * Main translation service
+ * Main translation service with optional persistent storage integration
  */
 export class TranslationService {
 	private cache: TranslationCache;
 	private circuitBreaker: CircuitBreaker;
 	private errorHandler: ErrorHandler;
 	private lastRequestTime = 0;
+	private translationStore?: TranslationStore;
 
+	/**
+	 * Create a new TranslationService instance
+	 *
+	 * @param options - Partial translation options to override defaults
+	 * @param cache - Optional cache instance (defaults to in-memory cache)
+	 * @param translationStore - Optional persistent translation store for caching translations
+	 */
 	constructor(
     private options: Partial<TranslationOptions> = {},
     cache?: TranslationCache,
+    translationStore?: TranslationStore,
 	) {
 		this.cache = cache || defaultCache;
 		this.circuitBreaker = new CircuitBreaker();
 		this.errorHandler = new ErrorHandler();
+		this.translationStore = translationStore;
 	}
 
 	/**
-   * Translate a single text
+   * Translate a single text with optional persistent storage caching
    */
 	async translateText(
 		text: string,
@@ -60,7 +71,32 @@ export class TranslationService {
 			// Validate input
 			this.validateInput(text, finalOptions);
 
-			// Check cache first
+			// Check persistent store first (if available)
+			if (this.translationStore && this.translationStore.isReady()) {
+				try {
+					const storeEntry = await this.translationStore.getByText(
+						text,
+						finalOptions.sourceLanguage as SupportedLanguage,
+						finalOptions.targetLanguage as SupportedLanguage
+					);
+
+					if (storeEntry) {
+						return {
+							original: text,
+							translated: storeEntry.translatedText,
+							sourceLanguage: storeEntry.sourceLanguage,
+							targetLanguage: storeEntry.targetLanguage,
+							cached: true,
+							processingTime: Date.now() - startTime,
+						};
+					}
+				} catch (storeError) {
+					// Log store error but continue with translation
+					console.warn('TranslationStore lookup failed, falling back to API:', storeError);
+				}
+			}
+
+			// Check in-memory cache next
 			if (finalOptions.cacheEnabled) {
 				const cached = this.getCachedTranslation(text, finalOptions);
 				if (cached) {
@@ -89,7 +125,26 @@ export class TranslationService {
 				processingTime: Date.now() - startTime,
 			};
 
-			// Cache the result
+			// Cache the result in persistent store (if available)
+			if (this.translationStore && this.translationStore.isReady()) {
+				try {
+					await this.translationStore.set(
+						text,
+						translation,
+						finalOptions.sourceLanguage as SupportedLanguage,
+						finalOptions.targetLanguage as SupportedLanguage,
+						{
+							apiProvider: 'google-translate',
+							ttl: finalOptions.cacheTtl,
+						}
+					);
+				} catch (storeError) {
+					// Log store error but don't fail the translation
+					console.warn('Failed to store translation in TranslationStore:', storeError);
+				}
+			}
+
+			// Cache the result in in-memory cache
 			if (finalOptions.cacheEnabled) {
 				this.setCachedTranslation(text, finalOptions, translation);
 			}
@@ -455,12 +510,73 @@ export class TranslationService {
 	resetErrorStats(): void {
 		this.errorHandler.resetErrorCounts();
 	}
+
+	/**
+   * Set or update the TranslationStore instance
+   *
+   * @param translationStore - TranslationStore instance to use for persistent caching
+   */
+	setTranslationStore(translationStore?: TranslationStore): void {
+		this.translationStore = translationStore;
+	}
+
+	/**
+   * Get the current TranslationStore instance
+   *
+   * @returns Current TranslationStore instance or undefined if not set
+   */
+	getTranslationStore(): TranslationStore | undefined {
+		return this.translationStore;
+	}
+
+	/**
+   * Check if TranslationStore is available and ready
+   *
+   * @returns true if TranslationStore is available and ready for operations
+   */
+	hasTranslationStore(): boolean {
+		return this.translationStore?.isReady() ?? false;
+	}
 }
 
 /**
  * Default translation service instance
  */
 export const defaultTranslator = new TranslationService();
+
+/**
+ * Create a TranslationService with persistent storage support
+ *
+ * @param options - Optional translation service options
+ * @param storeConfig - Optional store configuration for persistent caching
+ * @returns Promise resolving to configured TranslationService
+ *
+ * @example
+ * ```typescript
+ * // Service with default persistent store
+ * const service = await createTranslationServiceWithStore();
+ *
+ * // Service with custom store configuration
+ * const service = await createTranslationServiceWithStore(
+ *   { cacheEnabled: true },
+ *   { storagePath: './my-translations', maxEntries: 5000 }
+ * );
+ * ```
+ */
+export async function createTranslationServiceWithStore(
+	options?: Partial<TranslationOptions>,
+	storeConfig?: Partial<StoreConfiguration>,
+): Promise<TranslationService> {
+	let store: TranslationStore | undefined;
+
+	if (storeConfig) {
+		// Import dynamically to avoid circular dependencies
+		const { createTranslationStore } = await import('./store/translation-store-factory');
+		store = await createTranslationStore(storeConfig);
+	}
+
+	return new TranslationService(options, undefined, store);
+}
 
 /**
  * Convenience function for single text translation

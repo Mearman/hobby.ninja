@@ -10,8 +10,10 @@
 		"noEmit": false,
 		"composite": true,
 		"incremental": true,
-		"types": ["node"]
+		"types": ["node"],
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true
 	},
 	"include": ["src/**/*.ts"],
-	"exclude": ["**/*.test.ts", "**/*.spec.ts"]
+	"exclude": ["**/*.test.ts", "**/*.spec.ts", "src/examples.ts"]
 }
