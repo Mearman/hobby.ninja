@@ -53,10 +53,10 @@ export const db = new Database();
 
 // In-memory schema registry with persistent metadata
 export const schemaRegistry = {
-	schemas: new Map<string, z.ZodObject<any>>(),
+	schemas: new Map<string, z.ZodObject<z.ZodRawShape>>(),
 
 	// Store a new schema
-	async register(schema: z.ZodObject<any>, name: string, version: string = "1.0.0"): Promise<void> {
+	async register(schema: z.ZodObject<z.ZodRawShape>, name: string, version: string = "1.0.0"): Promise<void> {
 		const id = `${name}@${version}`;
 
 		// Store schema in memory
@@ -72,11 +72,11 @@ export const schemaRegistry = {
 		};
 
 		await db.schemas.put(schemaData);
-		console.log(`✅ Schema registered: ${name}@${version}`);
+		logger.debug(`✅ Schema registered: ${name}@${version}`);
 	},
 
 	// Get a stored schema
-	async get(id: string): Promise<z.ZodObject<any> | null> {
+	async get(id: string): Promise<z.ZodObject<z.ZodRawShape> | null> {
 		return this.schemas.get(id) || null;
 	},
 
@@ -190,6 +190,6 @@ export const storage = {
 	// Initialize database
 	async init(): Promise<void> {
 		await db.open();
-		console.log("✅ Schema-based storage initialized");
+		logger.debug("✅ Schema-based storage initialized");
 	},
 };

@@ -1,11 +1,12 @@
 import { z } from "zod";
 
 import { storage, schemaRegistry } from "./storage";
+import { logger } from "../lib/logger";
 
 // Generic document operations without hardcoded schemas
 export const documents = {
 	// Register a new schema
-	async registerSchema(schema: z.ZodObject<any>, name: string, version: string = "1.0.0"): Promise<void> {
+	async registerSchema(schema: z.ZodObject<z.ZodRawShape>, name: string, version: string = "1.0.0"): Promise<void> {
 		await schemaRegistry.register(schema, name, version);
 	},
 
@@ -64,5 +65,5 @@ export const documents = {
 // Initialize storage without predefined schemas
 export async function initStorage(): Promise<void> {
 	await storage.init();
-	console.log("✅ Database initialized with generic schema-based storage");
+	logger.debug("✅ Database initialized with generic schema-based storage");
 }

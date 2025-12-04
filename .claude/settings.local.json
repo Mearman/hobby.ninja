@@ -10,7 +10,10 @@
       "Bash(.specify/scripts/bash/check-prerequisites.sh:*)",
       "Bash(rm:*)",
       "Bash(echo:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(cat:*)",
+      "Bash(nx:*)",
+      "Bash(git rm:*)"
     ],
     "deny": [
       "Bash(git add .)",
