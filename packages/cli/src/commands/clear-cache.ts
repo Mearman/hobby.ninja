@@ -1,4 +1,4 @@
-import { PageCache } from "../cache";
+import { PageCache } from "../cache/index.js";
 
 export interface ClearCacheOptions {
   scraper?: string;

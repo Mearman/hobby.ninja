@@ -1,14 +1,18 @@
 {
 	"extends": "../../tsconfig.base.json",
 	"compilerOptions": {
-		"outDir": "../../dist/packages/cli",
+		"outDir": "./dist",
 		"rootDir": "./src",
 		"declaration": true,
 		"declarationMap": true,
 		"composite": true,
 		"incremental": true,
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext"
+		"tsBuildInfoFile": "./dist/.tsbuildinfo",
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true
 	},
 	"include": ["src/**/*.ts"],
 	"exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"],

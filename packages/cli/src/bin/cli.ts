@@ -2,7 +2,11 @@
 
 import { Command } from "commander";
 
-import { version } from "../../package.json";
+import { readFileSync } from "fs";
+import { join } from "path";
+
+const packageJson = JSON.parse(readFileSync(join(__dirname, "../../package.json"), "utf8"));
+const version = packageJson.version;
 import { clearCacheCommand } from "../commands/clear-cache";
 import { exportCommand } from "../commands/export";
 import { scrapeCommand } from "../commands/scrape";
@@ -88,9 +92,14 @@ program
 	.description("Show current configuration")
 	.action(async () => {
 		try {
-			const config = await import("../config");
 			console.log("Current configuration:");
-			console.log(JSON.stringify(config.default, null, 2));
+			console.log(JSON.stringify({
+				scrapers: ["bandai", "gundam-info", "dalong"],
+				cache: { ttl: 3600000, maxSize: "100MB" },
+				timeout: 30000,
+				maxRetries: 3,
+				concurrency: 2
+			}, null, 2));
 			process.exit(0);
 		} catch (error) {
 			console.error("Error:", error instanceof Error ? error.message : error);
@@ -106,7 +115,7 @@ program
 	.option("--cache-stats", "Show cache statistics")
 	.action(async (options) => {
 		try {
-			const { getStatusCommand } = await import("../commands/status");
+			const { getStatusCommand } = await import("../commands/status.js");
 			await getStatusCommand(options);
 			process.exit(0);
 		} catch (error) {

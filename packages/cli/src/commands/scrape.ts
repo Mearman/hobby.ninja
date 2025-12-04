@@ -1,10 +1,10 @@
-import { execFileNoThrow } from "@unnamed-gunpla-app/utils/execFileNoThrow";
+import { execFileNoThrow } from "@unnamed-gunpla-app/utils";
 
-import { PageCache } from "../cache";
-import { JsonExporter } from "../export/json-export";
-import { BandaiScraper } from "../scrapers/bandai";
-import { DalongScraper } from "../scrapers/dalong";
-import { GundamInfoScraper } from "../scrapers/gundam-info";
+import { PageCache } from "../cache/index.js";
+import { JsonExporter } from "../export/json-export.js";
+import { BandaiScraper } from "../scrapers/bandai.js";
+import { DalongScraper } from "../scrapers/dalong.js";
+import { GundamInfoScraper } from "../scrapers/gundam-info.js";
 
 
 export interface ScrapeCommandOptions {
@@ -251,8 +251,9 @@ export async function scrapeCommand(options: ScrapeCommandOptions): Promise<void
 // Interactive mode helper
 export async function promptScraperSelection(): Promise<string[]> {
 	const inquirer = await import("inquirer");
+	const { default: inquirerModule } = inquirer;
 
-	const { scrapers } = await inquirer.prompt([
+	const { scrapers } = await inquirerModule.prompt([
 		{
 			type: "checkbox",
 			name: "scrapers",
@@ -271,8 +272,9 @@ export async function promptScraperSelection(): Promise<string[]> {
 
 export async function promptConfiguration(): Promise<Partial<ScrapeCommandOptions>> {
 	const inquirer = await import("inquirer");
+	const { default: inquirerModule } = inquirer;
 
-	const answers = await inquirer.prompt([
+	const answers = await inquirerModule.prompt([
 		{
 			type: "confirm",
 			name: "cache",

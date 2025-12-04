@@ -1,7 +1,7 @@
-import { execFileNoThrow } from "@unnamed-gunpla-app/utils/execFileNoThrow";
-import * as cheerio from "cheerio";
+import { execFileNoThrow } from "@unnamed-gunpla-app/utils";
+import cheerio from "cheerio";
 
-import { PageCache } from "../cache";
+import { PageCache } from "../cache/index.js";
 
 export interface GundamInfoProduct {
   sku: string;
@@ -34,7 +34,7 @@ export interface GundamInfoScraperOptions {
 }
 
 export class GundamInfoScraper {
-	private options: Required<GundamInfoScraperOptions>;
+	private options: GundamInfoScraperOptions;
 	private cache?: PageCache;
 
 	constructor(options: GundamInfoScraperOptions = {}) {
@@ -55,6 +55,7 @@ export class GundamInfoScraper {
 			},
 		};
 
+		
 		if (this.options.useCache && !options.cache) {
 			this.cache = new PageCache({
 				cacheDir: "./.cache/gundam-info",
@@ -122,7 +123,7 @@ export class GundamInfoScraper {
 		return categories;
 	}
 
-	private async scrapeCategory(category: string): Promise<GundamInfoProduct[]> {
+	public async scrapeCategory(category: string): Promise<GundamInfoProduct[]> {
 		const products: GundamInfoProduct[] = [];
 		let page = 1;
 
@@ -178,7 +179,7 @@ export class GundamInfoScraper {
 		return products;
 	}
 
-	private parseProductItem($item: cheerio.Cheerio<any>, category: string): GundamInfoProduct | null {
+	private parseProductItem($item: cheerio.Cheerio, category: string): GundamInfoProduct | null {
 		// Extract product name
 		const name = this.cleanText($item.find(".kit-name, .product-name, .entry-title").first().text());
 		if (!name) return null;
@@ -355,11 +356,11 @@ export class GundamInfoScraper {
 		return "Standard Kit";
 	}
 
-	private extractAccessories($item: cheerio.Cheerio<any>): string[] {
+	private extractAccessories($item: cheerio.Cheerio): string[] {
 		const accessories: string[] = [];
 
 		$item.find(".accessories-list li, .kit-accessories li").each((_, element) => {
-			const accessory = this.cleanText($(element).text());
+			const accessory = this.cleanText(cheerio(element).text());
 			if (accessory) {
 				accessories.push(accessory);
 			}
@@ -393,14 +394,19 @@ export class GundamInfoScraper {
 	private async fetchWithRetry(url: string): Promise<string> {
 		let lastError: Error | null = null;
 
-		for (let attempt = 1; attempt <= this.options.maxRetries; attempt++) {
+		const maxRetries = this.options.maxRetries ?? 3;
+		for (let attempt = 1; attempt <= maxRetries; attempt++) {
 			try {
+				const timeout = this.options.timeout ?? 30_000;
+				const userAgent = this.options.headers?.["User-Agent"] ?? "Mozilla/5.0 (compatible; GundamInfoScraper/1.0)";
+				const accept = this.options.headers?.["Accept"] ?? "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
+
 				const result = await execFileNoThrow("curl", [
 					"-s",
 					"-L",
-					"-m", String(Math.floor(this.options.timeout / 1000)),
-					"-H", `User-Agent: ${this.options.headers["User-Agent"]}`,
-					"-H", `Accept: ${this.options.headers["Accept"]}`,
+					"-m", String(Math.floor(timeout / 1000)),
+					"-H", `User-Agent: ${userAgent}`,
+					"-H", `Accept: ${accept}`,
 					url,
 				]);
 
@@ -413,7 +419,7 @@ export class GundamInfoScraper {
 			} catch (error) {
 				lastError = error instanceof Error ? error : new Error("Unknown fetch error");
 
-				if (attempt < this.options.maxRetries) {
+				if (attempt < maxRetries) {
 					const delay = Math.min(2000 * Math.pow(2, attempt - 1), 15_000);
 					console.warn(`⚠️  Gundam.info attempt ${attempt} failed, retrying in ${delay}ms...`);
 					await this.delay(delay);

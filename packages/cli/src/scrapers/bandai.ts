@@ -1,7 +1,7 @@
-import { execFileNoThrow } from "@unnamed-gunpla-app/utils/execFileNoThrow";
-import * as cheerio from "cheerio";
+import { execFileNoThrow } from "@unnamed-gunpla-app/utils";
+import cheerio from "cheerio";
 
-import { PageCache } from "../cache";
+import { PageCache } from "../cache/index.js";
 
 export interface BandaiProduct {
   sku: string;
@@ -37,8 +37,9 @@ export interface BandaiScraperOptions {
 }
 
 export class BandaiScraper {
-	private options: Required<BandaiScraperOptions>;
+	private options: BandaiScraperOptions;
 	private cache?: PageCache;
+	private cheerioAPI: typeof cheerio.load;
 
 	constructor(options: BandaiScraperOptions = {}) {
 		this.options = {
@@ -58,6 +59,8 @@ export class BandaiScraper {
 				...options.headers,
 			},
 		};
+
+		this.cheerioAPI = cheerio.load;
 
 		if (this.options.useCache && !options.cache) {
 			this.cache = new PageCache({
@@ -154,7 +157,7 @@ export class BandaiScraper {
 		return products;
 	}
 
-	private parseProductItem($item: cheerio.Cheerio<any>, category: string): BandaiProduct | null {
+	private parseProductItem($item: cheerio.Cheerio, category: string): BandaiProduct | null {
 		// Extract product name
 		const name = this.cleanText($item.find(".product-name, .item-title, .product-title").first().text());
 		if (!name) return null;
@@ -215,7 +218,7 @@ export class BandaiScraper {
 		};
 	}
 
-	private async scrapeProductDetail(sku: string): Promise<Partial<BandaiProduct> | null> {
+	public async scrapeProductDetail(sku: string): Promise<Partial<BandaiProduct> | null> {
 		// Implementation for detailed product scraping
 		// This would fetch individual product pages for more detailed information
 		return null;
@@ -323,16 +326,14 @@ export class BandaiScraper {
 		return "Gundam Series";
 	}
 
-	private extractSpecifications($item: cheerio.Cheerio<any>): Record<string, string> {
+	private extractSpecifications($item: cheerio.Cheerio): Record<string, string> {
 		const specs: Record<string, string> = {};
 
 		$item.find(".spec-item, .product-spec, .specification").each((_, element) => {
-			const $spec = $(element);
-			const label = this.cleanText($spec.find(".spec-label, .spec-name").first().text());
-			const value = this.cleanText($spec.find(".spec-value, .spec-data").first().text());
-
-			if (label && value) {
-				specs[label] = value;
+			const specText = cheerio(element).text();
+			const specMatch = specText.match(/^([^:]+):\s*(.+)$/);
+			if (specMatch) {
+				specs[this.cleanText(specMatch[1])] = this.cleanText(specMatch[2]);
 			}
 		});
 
@@ -356,15 +357,20 @@ export class BandaiScraper {
 	private async fetchWithRetry(url: string): Promise<string> {
 		let lastError: Error | null = null;
 
-		for (let attempt = 1; attempt <= this.options.maxRetries; attempt++) {
+		const maxRetries = this.options.maxRetries ?? 3;
+		for (let attempt = 1; attempt <= maxRetries; attempt++) {
 			try {
 				// Use curl for more reliable fetching
+				const timeout = this.options.timeout ?? 30_000;
+				const userAgent = this.options.headers?.["User-Agent"] ?? "Mozilla/5.0 (compatible; GunplaScraper/1.0)";
+				const accept = this.options.headers?.["Accept"] ?? "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
+
 				const result = await execFileNoThrow("curl", [
 					"-s",
 					"-L",
-					"-m", String(Math.floor(this.options.timeout / 1000)),
-					"-H", `User-Agent: ${this.options.headers["User-Agent"]}`,
-					"-H", `Accept: ${this.options.headers["Accept"]}`,
+					"-m", String(Math.floor(timeout / 1000)),
+					"-H", `User-Agent: ${userAgent}`,
+					"-H", `Accept: ${accept}`,
 					url,
 				]);
 
@@ -377,7 +383,7 @@ export class BandaiScraper {
 			} catch (error) {
 				lastError = error instanceof Error ? error : new Error("Unknown fetch error");
 
-				if (attempt < this.options.maxRetries) {
+				if (attempt < maxRetries) {
 					const delay = Math.min(1000 * Math.pow(2, attempt - 1), 10_000);
 					console.warn(`⚠️  Attempt ${attempt} failed, retrying in ${delay}ms...`);
 					await this.delay(delay);

@@ -1,5 +1,5 @@
-import { PageCache } from "../cache";
-import { JsonExporter } from "../export/json-export";
+import { PageCache } from "../cache/index.js";
+import { JsonExporter } from "../export/json-export.js";
 
 export interface ExportCommandOptions {
   format: string;

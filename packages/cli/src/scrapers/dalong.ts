@@ -1,7 +1,7 @@
-import { execFileNoThrow } from "@unnamed-gunpla-app/utils/execFileNoThrow";
-import * as cheerio from "cheerio";
+import { execFileNoThrow } from "@unnamed-gunpla-app/utils";
+import cheerio from "cheerio";
 
-import { PageCache } from "../cache";
+import { PageCache } from "../cache/index.js";
 
 export interface DalongProduct {
   sku: string;
@@ -34,7 +34,7 @@ export interface DalongScraperOptions {
 }
 
 export class DalongScraper {
-	private options: Required<DalongScraperOptions>;
+	private options: DalongScraperOptions;
 	private cache?: PageCache;
 
 	constructor(options: DalongScraperOptions = {}) {
@@ -55,6 +55,7 @@ export class DalongScraper {
 			},
 		};
 
+		
 		if (this.options.useCache && !options.cache) {
 			this.cache = new PageCache({
 				cacheDir: "./.cache/dalong",
@@ -117,7 +118,7 @@ export class DalongScraper {
 		return categories;
 	}
 
-	private async scrapeCategory(category: string): Promise<DalongProduct[]> {
+	public async scrapeCategory(category: string): Promise<DalongProduct[]> {
 		const products: DalongProduct[] = [];
 		let page = 1;
 
@@ -173,7 +174,7 @@ export class DalongScraper {
 		return products;
 	}
 
-	private parseProductItem($item: cheerio.Cheerio<any>, category: string): DalongProduct | null {
+	private parseProductItem($item: cheerio.Cheerio, category: string): DalongProduct | null {
 		// Extract product name
 		const name = this.cleanText($item.find(".kit-name, .model-name, .review-title").first().text());
 		if (!name) return null;
@@ -272,7 +273,7 @@ export class DalongScraper {
 		return "Unknown";
 	}
 
-	private extractRating($item: cheerio.Cheerio<any>): number | undefined {
+	private extractRating($item: cheerio.Cheerio): number | undefined {
 		const ratingText = this.cleanText($item.find(".rating, .kit-rating, .score").first().text());
 		const ratingMatch = ratingText.match(/(\d+\.?\d*)/);
 		return ratingMatch ? Number.parseFloat(ratingMatch[1]) : undefined;
@@ -343,16 +344,14 @@ export class DalongScraper {
 		return "Standard";
 	}
 
-	private extractSpecifications($item: cheerio.Cheerio<any>): Record<string, string> {
+	private extractSpecifications($item: cheerio.Cheerio): Record<string, string> {
 		const specs: Record<string, string> = {};
 
 		$item.find(".spec-item, .kit-spec, .model-spec").each((_, element) => {
-			const $spec = $(element);
-			const label = this.cleanText($spec.find(".spec-label, .spec-name").first().text());
-			const value = this.cleanText($spec.find(".spec-value, .spec-data").first().text());
-
-			if (label && value) {
-				specs[label] = value;
+			const specText = cheerio(element).text();
+			const specMatch = specText.match(/^([^:]+):\s*(.+)$/);
+			if (specMatch) {
+				specs[this.cleanText(specMatch[1])] = this.cleanText(specMatch[2]);
 			}
 		});
 
@@ -384,14 +383,19 @@ export class DalongScraper {
 	private async fetchWithRetry(url: string): Promise<string> {
 		let lastError: Error | null = null;
 
-		for (let attempt = 1; attempt <= this.options.maxRetries; attempt++) {
+		const maxRetries = this.options.maxRetries ?? 3;
+		for (let attempt = 1; attempt <= maxRetries; attempt++) {
 			try {
+				const timeout = this.options.timeout ?? 30_000;
+				const userAgent = this.options.headers?.["User-Agent"] ?? "Mozilla/5.0 (compatible; DalongScraper/1.0)";
+				const accept = this.options.headers?.["Accept"] ?? "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
+
 				const result = await execFileNoThrow("curl", [
 					"-s",
 					"-L",
-					"-m", String(Math.floor(this.options.timeout / 1000)),
-					"-H", `User-Agent: ${this.options.headers["User-Agent"]}`,
-					"-H", `Accept: ${this.options.headers["Accept"]}`,
+					"-m", String(Math.floor(timeout / 1000)),
+					"-H", `User-Agent: ${userAgent}`,
+					"-H", `Accept: ${accept}`,
 					url,
 				]);
 
@@ -404,7 +408,7 @@ export class DalongScraper {
 			} catch (error) {
 				lastError = error instanceof Error ? error : new Error("Unknown fetch error");
 
-				if (attempt < this.options.maxRetries) {
+				if (attempt < maxRetries) {
 					const delay = Math.min(3000 * Math.pow(2, attempt - 1), 20_000);
 					console.warn(`⚠️  Dalong.net attempt ${attempt} failed, retrying in ${delay}ms...`);
 					await this.delay(delay);
