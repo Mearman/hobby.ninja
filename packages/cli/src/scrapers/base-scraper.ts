@@ -32,7 +32,7 @@ export abstract class BaseScraper {
     if (useCache) {
       const cached = await this.getCachedPage(url);
       if (cached) {
-        return { html: cached, method: 'cached' };
+        return { html: cached, method: 'cheerio' };
       }
     }
 
@@ -96,7 +96,7 @@ export abstract class BaseScraper {
 
       return await response.text();
     } catch (error) {
-      throw new Error(`Failed to fetch ${url}: ${error.message}`);
+      throw new Error(`Failed to fetch ${url}: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   }
 
@@ -111,18 +111,18 @@ export abstract class BaseScraper {
     return LanguageDetector.detectFromHtml(html, url, headers);
   }
 
-  protected async cachePage(url: string, html: string, method: 'cheerio' | 'playwright'): Promise<void> {
+  protected async cachePage(_url: string, _html: string, _method: 'cheerio' | 'playwright'): Promise<void> {
     // Placeholder for caching implementation
     // Will be implemented in the cache manager utility
   }
 
-  protected async getCachedPage(url: string): Promise<string | null> {
+  protected async getCachedPage(_url: string): Promise<string | null> {
     // Placeholder for cache retrieval
     // Will be implemented in the cache manager utility
     return null;
   }
 
-  protected async getCachedProfile(url: string): Promise<any> {
+  protected async getCachedProfile(_url: string): Promise<any> {
     // Placeholder for profile retrieval
     // Will be implemented in the profile manager
     return null;
@@ -173,7 +173,7 @@ export abstract class BaseScraper {
 
     if (priceMatch) {
       const [, currency, amountStr] = priceMatch;
-      const amount = parseInt(amountStr.replace(/[^\d]/g, ''), 10);
+      const amount = parseInt(amountStr?.replace(/[^\d]/g, '') || '', 10);
       return {
         amount,
         currency: currency === '¥' ? 'JPY' : 'USD',
