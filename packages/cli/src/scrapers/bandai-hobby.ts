@@ -49,8 +49,22 @@ export class BandaiHobbyScraper extends BaseScraper {
         requiresJavaScript: false
       },
       quality: {
-        completeness: this.calculateCompleteness({ name, sku, price, description, specifications, images }),
-        confidence: this.calculateConfidence({ name, sku, price, description, specifications, images }),
+        completeness: this.calculateCompleteness({
+          name: name || undefined,
+          sku: sku || undefined,
+          price,
+          description: description || undefined,
+          specifications,
+          images
+        }),
+        confidence: this.calculateConfidence({
+          name: name || undefined,
+          sku: sku || undefined,
+          price,
+          description: description || undefined,
+          specifications,
+          images
+        }),
         validationErrors: [],
         lastValidated: Date.now()
       }
@@ -165,7 +179,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     const specTable = $('.specifications table, .spec-table, .product-specs table');
 
     if (specTable.length > 0) {
-      specTable.find('tr').each((_, row) => {
+      specTable.find('tr').each((_: number, row: any) => {
         const $row = $(row);
         const label = this.extractTextContentFromElement($row.find('th, .spec-label, .label'));
         const value = this.extractTextContentFromElement($row.find('td, .spec-value, .value'));
@@ -182,7 +196,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 
     // Look for individual spec items
     const individualSpecs = $('.spec-item, .product-spec');
-    individualSpecs.each((_, element) => {
+    individualSpecs.each((_: number, element: any) => {
       const $element = $(element);
       const label = this.extractTextContentFromElement($element.find('.spec-label, .label'));
       const value = this.extractTextContentFromElement($element.find('.spec-value, .value'));
@@ -233,7 +247,7 @@ export class BandaiHobbyScraper extends BaseScraper {
   private extractImages($: any): ProductImage[] {
     const images: ProductImage[] = [];
 
-    $('.product-image, .item-image, .main-image img, .gallery-image img, .product-image img').each((_, element) => {
+    $('.product-image, .item-image, .main-image img, .gallery-image img, .product-image img').each((_: number, element: any) => {
       const $element = $(element);
       const src = this.extractAttributeFromElement($element, 'src') || this.extractAttributeFromElement($element, 'data-src') || '';
       const alt = this.extractAttributeFromElement($element, 'alt') || '';
@@ -264,7 +278,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     const categories: string[] = [];
 
     // Look for breadcrumb or category information
-    $('.breadcrumb a, .category a, .product-category a, .tag a').each((_, element) => {
+    $('.breadcrumb a, .category a, .product-category a, .tag a').each((_: number, element: any) => {
       const category = this.extractTextContentFromElement($(element));
       if (category) {
         categories.push(category);

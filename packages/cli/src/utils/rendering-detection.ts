@@ -69,15 +69,10 @@ export class RenderingDetector {
         contentLength: html.length,
         missingFields: staticAnalysis.missingFields
       },
-      dynamicAnalysis: dynamicAnalysis.framework ? {
+      dynamicAnalysis: {
         required: dynamicAnalysis.required,
         additionalContent: dynamicAnalysis.additionalContent,
         frameworkDetected: dynamicAnalysis.framework,
-        waitForSelectors: dynamicAnalysis.waitForSelectors
-      } : {
-        required: dynamicAnalysis.required,
-        additionalContent: dynamicAnalysis.additionalContent,
-        frameworkDetected: undefined,
         waitForSelectors: dynamicAnalysis.waitForSelectors
       },
       recommendation: this.getRecommendation(staticAnalysis, dynamicAnalysis)

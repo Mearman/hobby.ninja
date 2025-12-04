@@ -130,7 +130,7 @@ export class ScrapeCommand {
         let productData = null;
         if (options.cache) {
           const cachedData = await this.cacheManager.getByUrl(url);
-          if (cachedData && cachedData.rawHtml) {
+          if (cachedData?.rawHtml) {
             productData = JSON.parse(cachedData.rawHtml);
             cached++;
             if (options.verbose) {
@@ -148,7 +148,7 @@ export class ScrapeCommand {
 
           // Cache the result
           if (options.cache && productData) {
-            await this.cacheManager.setByUrl(url, JSON.stringify(productData), 'bandai-hobby', undefined);
+            await this.cacheManager.setByUrl(url, JSON.stringify(productData), 'bandai-hobby');
           }
           newItems++;
 

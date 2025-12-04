@@ -1,11 +1,21 @@
 import { promises as fs } from 'fs';
 import * as path from 'path';
 import * as crypto from 'crypto';
-import { PageCache, CacheStats, CacheConfig } from '../types/cache-types.js';
+import { PageCache, CacheStats } from '../types/cache-types.js';
+
+interface CacheEntry {
+  url: string;
+  html: string;
+  timestamp: number;
+  expiresAt: number;
+  accessCount: number;
+  lastAccessed: number;
+  source: string;
+  compressed: boolean;
+}
 
 export class CacheManager {
   private cacheDir: string;
-  private compressionEnabled: boolean;
   private defaultTtl: number; // milliseconds
 
   constructor(options: {
@@ -127,7 +137,6 @@ export class CacheManager {
       let oldestEntry = Date.now();
       let newestEntry = 0;
       let totalAccessTime = 0;
-      const now = Date.now();
 
       for (const file of files) {
         try {
