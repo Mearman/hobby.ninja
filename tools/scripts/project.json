@@ -5,10 +5,10 @@
 	"projectType": "library",
 	"targets": {
 		"typecheck": {
-			"executor": "nx:run-commands",
+			"executor": "@nx/js:tsc",
 			"options": {
-				"command": "tsc --noEmit",
-				"cwd": "tools/scripts"
+				"tsConfig": "tools/scripts/tsconfig.json",
+				"noEmit": true
 			},
 			"cache": true,
 			"inputs": [
@@ -20,6 +20,7 @@
 		"lint": {
 			"executor": "@nx/eslint:lint",
 			"outputs": ["{options.outputFile}"],
+			"cache": true,
 			"options": {
 				"lintFilePatterns": ["tools/scripts/**/*.ts"]
 			}
