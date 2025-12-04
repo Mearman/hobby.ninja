@@ -15,12 +15,18 @@ GitHub Pages deployment constraints MUST be respected. Hash routing REQUIRED for
 PWA features MUST be implemented: service worker for offline capability, app manifest for installability, responsive design for mobile-first experience. Performance targets: <2s hot reload, <10s dev server start, Core Web Vitals compliance.
 
 ### V. TypeScript Strict Mode
-TypeScript strict mode ENFORCED across all packages. No implicit any, no unused locals/parameters, strict null checks enabled. All configuration files MUST be TypeScript when possible. Zod integration for runtime type validation.
+TypeScript strict mode ENFORCED across all packages. No implicit any, no unused locals/parameters, strict null checks enabled. All configuration files MUST be TypeScript when possible. Zod integration for runtime type validation. TypeScript MUST never emit .js files in-place - build tools handle all compilation.
 
-### VI. Accessibility First (WCAG 2.1 AA)
+### VI. Configuration Type Safety
+All .ts configuration files MUST be typechecked without being built. Config files MUST be included in TypeScript project references and validated during compilation. Configuration MUST use `noEmit: true` to prevent file generation. Type errors in config files MUST block builds. No JavaScript configuration files allowed where TypeScript equivalent exists. Root-level configuration MUST validate all package configs: vite.config.ts, eslint.config.ts, playwright.config.ts, vitest.config.ts, knip.config.ts, syncpack.config.ts.
+
+### VII. Build Process Isolation
+Source files MUST remain pristine with no in-place compilation artifacts. All .ts files configured with `noEmit: true` to prevent accidental .js generation. Build outputs confined to dist/ directory. Development tools MUST use transpilation pipelines, not file system emission. Source maps MUST reference original source files, not compiled intermediates.
+
+### VIII. Accessibility First (WCAG 2.1 AA)
 Full keyboard navigation, screen reader support, high contrast mode, text scaling to 200%. ARIA labels, semantic HTML, focus management required. Automated axe-core testing integration. Reduced motion respect mandatory.
 
-### VII. Security by Default
+### IX. Security by Default
 Content Security Policy headers implemented. XSS protection via React. Input validation via Zod schemas. Client-side data encryption for sensitive IndexedDB storage. Regular security scanning in CI/CD. No external dependencies without security review.
 
 ## Technology Standards
@@ -43,13 +49,13 @@ This constitution supersedes all other development practices. Amendments require
 
 Template files (plan.md, spec.md, tasks.md) MUST align with constitutional principles. Regular constitution reviews scheduled quarterly or when major architectural changes occur.
 
-**Version**: 1.2.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-04
+**Version**: 1.4.1 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-04
 
 <!--
 Sync Impact Report:
-Version change: 1.1.0 → 1.2.0 (MINOR - added Accessibility and Security principles)
-Modified principles: None renamed
-Added sections: VI. Accessibility First, VII. Security by Default
+Version change: 1.4.0 → 1.4.1 (PATCH - clarified Configuration Type Safety principle with specific config files)
+Modified principles: VI. Configuration Type Safety (enhanced with specific config file requirements)
+Added sections: None
 Removed sections: None
 Templates updated: ✅ .specify/templates/plan-template.md, ✅ .specify/templates/spec-template.md, ✅ .specify/templates/tasks-template.md
 Commands updated: ✅ All .specify/templates/commands/*.md files
