@@ -1,33 +1,12 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
+import { ErrorBoundary } from "./components/error-boundary";
 import { initStorage } from "./db/kits";
+import { logger } from "./lib/logger";
 import { MantineThemeProvider } from "./providers/mantine-provider";
 import { AppRouter } from "./router";
-import { logger } from "./lib/logger";
 import "./styles/styles.css";
-
-/**
- * Error boundary component for development environment
- */
-function ErrorBoundary({ children }: { children: React.ReactNode }) {
-	if (globalThis.window !== undefined && import.meta.env.DEV) {
-		return (
-			<div className="error-boundary">
-				<h2>Development Error Boundary</h2>
-				<p>If you see this, there was an error in the application.</p>
-				<details>
-					<summary>Error Details</summary>
-					<pre>
-            Check the browser console for detailed error information.
-					</pre>
-				</details>
-			</div>
-		);
-	}
-
-	return <>{children}</>;
-}
 
 /**
  * Initialize and start the application

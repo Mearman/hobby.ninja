@@ -1,4 +1,4 @@
-import { createRouter, RouterProvider , createRoute, createRootRoute, Outlet } from "@tanstack/react-router";
+import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet } from "@tanstack/react-router";
 import { Suspense, lazy } from "react";
 
 // Lazy load route components for code splitting
@@ -92,6 +92,7 @@ const routeTree = rootRoute.addChildren([indexRoute, aboutRoute, notFoundRoute])
  * Router instance with hash routing for GitHub Pages compatibility
  * Note: Hash routing will be handled by the navigation links using #/ format
  */
+// eslint-disable-next-line react-refresh/only-export-components
 export const router = createRouter({
 	routeTree,
 	defaultPreload: "intent",
