@@ -1,0 +1,30 @@
+# robots.txt for Gunpla Collection Manager
+# This file tells search engines which pages to crawl and which to ignore
+
+User-agent: *
+Allow: /
+Allow: /icons/
+Allow: /splash/
+Allow: /screenshots/
+
+# Prioritize important pages
+Crawl-delay: 1
+
+# Sitemap location (update with actual URL when deployed)
+# Sitemap: https://your-domain.com/sitemap.xml
+
+# Block common development/debug paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /*.test.*
+Disallow: /*.spec.*
+
+# Allow API endpoints that should be indexed (if any)
+# Allow: /api/public-kits
+
+# Host directive (for Yandex)
+# Host: https://your-domain.com

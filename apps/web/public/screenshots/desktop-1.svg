@@ -1,0 +1,51 @@
+
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#f8f9fa"/>
+  <!-- Header -->
+  <rect width="1280" height="60" fill="#dc2626"/>
+  <text x="20" y="38" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="#ffffff">Gunpla Collection Manager</text>
+
+  <!-- Content area -->
+  <g transform="translate(20, 80)">
+    <rect width="1240" height="560" fill="#ffffff" stroke="#e5e7eb" stroke-width="2" rx="8"/>
+
+    <!-- Mock content -->
+    
+      <rect x="20" y="20" width="200" height="460" fill="#f3f4f6" rx="4"/>
+      <text x="240" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#1f2937">Main collection view with kit details</text>
+      <rect x="240" y="70" width="300" height="8" fill="#e5e7eb" rx="4"/>
+      <rect x="240" y="90" width="250" height="8" fill="#e5e7eb" rx="4"/>
+      <rect x="240" y="110" width="280" height="8" fill="#e5e7eb" rx="4"/>
+
+      <!-- Mock cards -->
+      
+        <rect x="240" y="140" width="960" height="40" fill="#f9fafb" stroke="#e5e7eb" rx="4"/>
+        <rect x="250" y="150" width="60" height="20" fill="#e5e7eb" rx="2"/>
+        <rect x="320" y="150" width="120" height="8" fill="#d1d5db" rx="2"/>
+        <rect x="320" y="162" width="80" height="6" fill="#e5e7eb" rx="2"/>
+      
+        <rect x="240" y="200" width="960" height="40" fill="#f9fafb" stroke="#e5e7eb" rx="4"/>
+        <rect x="250" y="210" width="60" height="20" fill="#e5e7eb" rx="2"/>
+        <rect x="320" y="210" width="120" height="8" fill="#d1d5db" rx="2"/>
+        <rect x="320" y="222" width="80" height="6" fill="#e5e7eb" rx="2"/>
+      
+        <rect x="240" y="260" width="960" height="40" fill="#f9fafb" stroke="#e5e7eb" rx="4"/>
+        <rect x="250" y="270" width="60" height="20" fill="#e5e7eb" rx="2"/>
+        <rect x="320" y="270" width="120" height="8" fill="#d1d5db" rx="2"/>
+        <rect x="320" y="282" width="80" height="6" fill="#e5e7eb" rx="2"/>
+      
+    
+  </g>
+
+  <!-- Bottom navigation -->
+  <rect y="660" width="1280" height="60" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  
+      <text x="160" y="700" font-family="system-ui, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Collection</text>
+    
+      <text x="480" y="700" font-family="system-ui, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Search</text>
+    
+      <text x="800" y="700" font-family="system-ui, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Wishlist</text>
+    
+      <text x="1120" y="700" font-family="system-ui, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Builds</text>
+    
+</svg>

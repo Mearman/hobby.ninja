@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offline - Gunpla Collection Manager</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        color: #ffffff;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .offline-container {
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+      }
+
+      .offline-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 30px;
+        background: #dc2626;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+      }
+
+      .offline-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #ffffff;
+      }
+
+      .offline-description {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #9ca3af;
+        margin-bottom: 40px;
+      }
+
+      .retry-button {
+        background: #dc2626;
+        color: white;
+        border: none;
+        padding: 12px 32px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-bottom: 20px;
+      }
+
+      .retry-button:hover {
+        background: #b91c1c;
+        transform: translateY(-1px);
+      }
+
+      .retry-button:active {
+        transform: translateY(0);
+      }
+
+      .features-list {
+        text-align: left;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 30px;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: #e5e7eb;
+      }
+
+      .feature-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .feature-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+        color: #dc2626;
+        flex-shrink: 0;
+      }
+
+      .connection-status {
+        margin-top: 30px;
+        padding: 12px;
+        background: rgba(220, 38, 38, 0.1);
+        border: 1px solid rgba(220, 38, 38, 0.2);
+        border-radius: 8px;
+        font-size: 14px;
+        color: #fca5a5;
+      }
+
+      @media (max-width: 480px) {
+        .offline-title {
+          font-size: 24px;
+        }
+
+        .offline-description {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="offline-container">
+      <div class="offline-icon">
+        📱
+      </div>
+
+      <h1 class="offline-title">You're Offline</h1>
+
+      <p class="offline-description">
+        It looks like you've lost your internet connection.
+        Some features may be unavailable until you're back online.
+      </p>
+
+      <button class="retry-button" onclick="window.location.reload()">
+        Try Again
+      </button>
+
+      <div class="features-list">
+        <div class="feature-item">
+          <span class="feature-icon">✅</span>
+          <span>View your saved collection</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✅</span>
+          <span>Browse cached kit information</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✅</span>
+          <span>Manage your wishlist</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">❌</span>
+          <span>Search new kits (requires connection)</span>
+        </div>
+      </div>
+
+      <div class="connection-status" id="connection-status">
+        Checking connection status...
+      </div>
+    </div>
+
+    <script>
+      // Safe DOM manipulation functions
+      function setElementText(elementId, text) {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.textContent = text;
+        }
+      }
+
+      function setElementStyles(elementId, styles) {
+        const element = document.getElementById(elementId);
+        if (element) {
+          Object.assign(element.style, styles);
+        }
+      }
+
+      // Check connection status periodically
+      function checkConnection() {
+        const statusElement = document.getElementById('connection-status');
+
+        if (navigator.onLine) {
+          setElementText('connection-status', '✅ Connection restored! You can refresh the page.');
+          setElementStyles('connection-status', {
+            borderColor: 'rgba(34, 197, 94, 0.2)',
+            backgroundColor: 'rgba(34, 197, 94, 0.1)',
+            color: '#86efac'
+          });
+        } else {
+          setElementText('connection-status', '📡 No internet connection detected.');
+          setElementStyles('connection-status', {
+            borderColor: 'rgba(220, 38, 38, 0.2)',
+            backgroundColor: 'rgba(220, 38, 38, 0.1)',
+            color: '#fca5a5'
+          });
+        }
+      }
+
+      // Listen for connection changes
+      window.addEventListener('online', () => {
+        checkConnection();
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+      });
+
+      window.addEventListener('offline', () => {
+        checkConnection();
+      });
+
+      // Initial check
+      checkConnection();
+
+      // Check every 5 seconds
+      setInterval(checkConnection, 5000);
+
+      // Try to detect if the app is installed as PWA
+      if (window.matchMedia('(display-mode: standalone)').matches) {
+        document.title = 'Offline - Gunpla App';
+      }
+    </script>
+  </body>
+</html>
