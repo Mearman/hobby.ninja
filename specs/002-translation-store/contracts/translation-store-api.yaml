@@ -1,0 +1,643 @@
+openapi: 3.0.3
+info:
+  title: TranslationStore API
+  description: CLI translation storage and retrieval API for persistent caching
+  version: 1.0.0
+  contact:
+    name: Gunpla Collection Manager
+    email: dev@example.com
+
+servers:
+  - url: cli://local
+    description: Local CLI interface (not HTTP-based)
+
+paths:
+  /translation:
+    get:
+      summary: Retrieve cached translation
+      description: Get a translated text from the persistent store
+      parameters:
+        - name: key
+          in: query
+          required: true
+          schema:
+            type: string
+            pattern: '^[a-z]{2}:[a-z]{2}:[a-zA-Z0-9+/]{16}$'
+            description: Translation key in format "source:target:hash"
+        - name: sourceLanguage
+          in: query
+          required: false
+          schema:
+            type: string
+            length: 2
+            description: Source language code (e.g., "ja")
+        - name: targetLanguage
+          in: query
+          required: false
+          schema:
+            type: string
+            length: 2
+            description: Target language code (e.g., "en")
+        - name: originalText
+          in: query
+          required: false
+          schema:
+            type: string
+            maxLength: 10000
+            description: Original text to translate (alternative to key)
+      responses:
+        '200':
+          description: Translation found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TranslationEntry'
+        '404':
+          description: Translation not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Store access error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    put:
+      summary: Store translation
+      description: Store a translated text in the persistent cache
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreTranslationRequest'
+      responses:
+        '201':
+          description: Translation stored successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TranslationEntry'
+        '400':
+          description: Invalid request data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Storage error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /translation/batch:
+    post:
+      summary: Batch store translations
+      description: Store multiple translations in a single operation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchStoreRequest'
+      responses:
+        '201':
+          description: Translations stored successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BatchStoreResponse'
+        '400':
+          description: Invalid request data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Storage error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /translation/search:
+    get:
+      summary: Search translations
+      description: Search for translations by various criteria
+      parameters:
+        - name: sourceLanguage
+          in: query
+          schema:
+            type: string
+            length: 2
+          description: Filter by source language
+        - name: targetLanguage
+          in: query
+          schema:
+            type: string
+            length: 2
+          description: Filter by target language
+        - name: textContains
+          in: query
+          schema:
+            type: string
+            maxLength: 1000
+          description: Text to search in original or translated content
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+            default: 100
+          description: Maximum number of results
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+          description: Pagination offset
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          description: Invalid search parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /store/stats:
+    get:
+      summary: Get store statistics
+      description: Retrieve detailed statistics about the translation store
+      responses:
+        '200':
+          description: Store statistics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoreStatistics'
+        '500':
+          description: Statistics retrieval error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /store/health:
+    get:
+      summary: Get store health
+      description: Check the health and status of the translation store
+      responses:
+        '200':
+          description: Store health information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoreHealth'
+        '500':
+          description: Health check error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /store/cleanup:
+    post:
+      summary: Cleanup expired entries
+      description: Remove expired and corrupted entries from the store
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CleanupRequest'
+      responses:
+        '200':
+          description: Cleanup completed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CleanupResponse'
+        '500':
+          description: Cleanup error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    TranslationEntry:
+      type: object
+      required:
+        - key
+        - originalText
+        - translatedText
+        - sourceLanguage
+        - targetLanguage
+        - createdAt
+        - accessedAt
+        - accessCount
+        - compressed
+        - size
+      properties:
+        key:
+          type: string
+          description: Unique translation identifier
+          pattern: '^[a-z]{2}:[a-z]{2}:[a-zA-Z0-9+/]{16}$'
+        originalText:
+          type: string
+          description: Source text
+          maxLength: 10000
+        translatedText:
+          type: string
+          description: Translated text
+          maxLength: 10000
+        sourceLanguage:
+          type: string
+          description: Source language code
+          length: 2
+        targetLanguage:
+          type: string
+          description: Target language code
+          length: 2
+        createdAt:
+          type: integer
+          format: int64
+          description: Creation timestamp (Unix epoch)
+        accessedAt:
+          type: integer
+          format: int64
+          description: Last access timestamp
+        accessCount:
+          type: integer
+          minimum: 0
+          description: Number of times accessed
+        ttl:
+          type: integer
+          minimum: 1
+          description: Time-to-live in milliseconds
+        expiresAt:
+          type: integer
+          format: int64
+          description: Expiration timestamp
+        compressed:
+          type: boolean
+          description: Whether data is compressed
+        size:
+          type: integer
+          minimum: 0
+          description: Size in bytes
+        confidence:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: Translation confidence score
+        apiProvider:
+          type: string
+          description: Translation API provider
+          maxLength: 50
+
+    StoreTranslationRequest:
+      type: object
+      required:
+        - originalText
+        - translatedText
+        - sourceLanguage
+        - targetLanguage
+      properties:
+        originalText:
+          type: string
+          description: Source text to store
+          maxLength: 10000
+        translatedText:
+          type: string
+          description: Translated text
+          maxLength: 10000
+        sourceLanguage:
+          type: string
+          description: Source language code
+          length: 2
+        targetLanguage:
+          type: string
+          description: Target language code
+          length: 2
+        ttl:
+          type: integer
+          minimum: 1
+          description: Time-to-live in milliseconds
+        confidence:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: Translation confidence score
+        apiProvider:
+          type: string
+          description: Translation API provider
+          maxLength: 50
+
+    BatchStoreRequest:
+      type: object
+      required:
+        - translations
+      properties:
+        translations:
+          type: array
+          items:
+            $ref: '#/components/schemas/StoreTranslationRequest'
+          minItems: 1
+          maxItems: 1000
+        defaultTTL:
+          type: integer
+          minimum: 1
+          description: Default TTL for all entries
+
+    BatchStoreResponse:
+      type: object
+      required:
+        - total
+        - successful
+        - failed
+        - results
+      properties:
+        total:
+          type: integer
+          description: Total number of translations processed
+        successful:
+          type: integer
+          description: Number of successful storages
+        failed:
+          type: integer
+          description: Number of failed storages
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/BatchResult'
+
+    BatchResult:
+      type: object
+      required:
+        - index
+        - success
+      properties:
+        index:
+          type: integer
+          description: Index in the original batch
+        success:
+          type: boolean
+          description: Whether storage was successful
+        entry:
+          $ref: '#/components/schemas/TranslationEntry'
+        error:
+          $ref: '#/components/schemas/Error'
+
+    SearchResponse:
+      type: object
+      required:
+        - results
+        - total
+        - limit
+        - offset
+      properties:
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/TranslationEntry'
+        total:
+          type: integer
+          description: Total number of matching results
+        limit:
+          type: integer
+          description: Maximum results returned
+        offset:
+          type: integer
+          description: Pagination offset
+
+    StoreStatistics:
+      type: object
+      required:
+        - totalEntries
+        - activeEntries
+        - expiredEntries
+        - diskUsageBytes
+        - compressionRatio
+        - hitRate
+        - averageLookupTime
+        - averageWriteTime
+        - totalLookups
+        - totalWrites
+        - totalHits
+        - lastCleanup
+        - lastOptimization
+        - createdAt
+        - updatedAt
+      properties:
+        totalEntries:
+          type: integer
+          description: Total entries in store
+        activeEntries:
+          type: integer
+          description: Non-expired entries
+        expiredEntries:
+          type: integer
+          description: Expired entries
+        diskUsageBytes:
+          type: integer
+          description: Current disk usage in bytes
+        compressionRatio:
+          type: number
+          description: Average compression ratio (0-1)
+        hitRate:
+          type: number
+          description: Cache hit rate (0-1)
+        averageLookupTime:
+          type: number
+          description: Average lookup time in milliseconds
+        averageWriteTime:
+          type: number
+          description: Average write time in milliseconds
+        totalLookups:
+          type: integer
+          description: Total lookup operations
+        totalWrites:
+          type: integer
+          description: Total write operations
+        totalHits:
+          type: integer
+          description: Total cache hits
+        lastCleanup:
+          type: integer
+          format: int64
+          description: Last cleanup timestamp
+        lastOptimization:
+          type: integer
+          format: int64
+          description: Last optimization timestamp
+        createdAt:
+          type: integer
+          format: int64
+          description: Store creation timestamp
+        updatedAt:
+          type: integer
+          format: int64
+          description: Last update timestamp
+
+    StoreHealth:
+      type: object
+      required:
+        - status
+        - errors
+        - warnings
+        - diskSpaceAvailable
+        - fragmentationLevel
+        - lockStatus
+        - lastHealthCheck
+      properties:
+        status:
+          type: string
+          enum: [healthy, degraded, corrupted, readonly]
+          description: Overall store health status
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/StoreError'
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/StoreWarning'
+        diskSpaceAvailable:
+          type: integer
+          description: Available disk space in bytes
+        fragmentationLevel:
+          type: number
+          description: Database fragmentation level (0-1)
+        lockStatus:
+          type: string
+          enum: [unlocked, locked, stuck]
+          description: Current lock status
+        lastHealthCheck:
+          type: integer
+          format: int64
+          description: Last health check timestamp
+
+    StoreError:
+      type: object
+      required:
+        - code
+        - message
+        - timestamp
+        - severity
+        - resolved
+      properties:
+        code:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Error message
+        timestamp:
+          type: integer
+          format: int64
+          description: Error timestamp
+        severity:
+          type: string
+          enum: [low, medium, high, critical]
+          description: Error severity
+        resolved:
+          type: boolean
+          description: Whether error has been resolved
+
+    StoreWarning:
+      type: object
+      required:
+        - code
+        - message
+        - timestamp
+        - acknowledged
+      properties:
+        code:
+          type: string
+          description: Warning code
+        message:
+          type: string
+          description: Warning message
+        timestamp:
+          type: integer
+          format: int64
+          description: Warning timestamp
+        acknowledged:
+          type: boolean
+          description: Whether warning has been acknowledged
+
+    CleanupRequest:
+      type: object
+      properties:
+        removeExpired:
+          type: boolean
+          default: true
+          description: Remove expired entries
+        removeCorrupted:
+          type: boolean
+          default: true
+          description: Remove corrupted entries
+        enforceSizeLimit:
+          type: boolean
+          default: false
+          description: Enforce configured size limits
+        dryRun:
+          type: boolean
+          default: false
+          description: Show what would be cleaned without actually cleaning
+
+    CleanupResponse:
+      type: object
+      required:
+        - entriesRemoved
+        - bytesFreed
+        - duration
+        - dryRun
+      properties:
+        entriesRemoved:
+          type: integer
+          description: Number of entries removed
+        bytesFreed:
+          type: integer
+          description: Number of bytes freed
+        duration:
+          type: number
+          description: Cleanup duration in milliseconds
+        dryRun:
+          type: boolean
+          description: Whether this was a dry run
+
+    Error:
+      type: object
+      required:
+        - code
+        - message
+        - timestamp
+      properties:
+        code:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Error message
+        timestamp:
+          type: integer
+          format: int64
+          description: Error timestamp
+        details:
+          type: object
+          description: Additional error details
