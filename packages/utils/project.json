@@ -7,6 +7,7 @@
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
+      "cache": true,
       "options": {
         "outputPath": "dist/packages/utils",
         "main": "packages/utils/src/index.ts",
@@ -29,6 +30,7 @@
     "test": {
       "executor": "@nx/vite:test",
       "outputs": ["{workspaceRoot}/coverage/utils"],
+      "cache": true,
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "{workspaceRoot}/coverage/utils"
@@ -38,9 +40,11 @@
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
+      "cache": true,
       "options": {
         "lintFilePatterns": ["packages/utils/src/**/*.ts"]
-      }
+      },
+      "dependsOn": ["types:build"]
     }
   },
   "tags": ["scope:shared", "type:util", "context:utils"]

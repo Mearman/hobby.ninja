@@ -3,7 +3,9 @@
   "compilerOptions": {
     "outDir": "../../dist/apps/webapp/spec",
     "types": ["node", "vitest/globals", "@testing-library/jest-dom"],
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "composite": true,
+    "noEmit": false
   },
   "include": [
     "src/**/*.test.ts",
