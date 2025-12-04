@@ -1,0 +1,34 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": ["ES2022", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@unnamed-gunpla-app/web": ["apps/web/src/index.ts"],
+      "@unnamed-gunpla-app/web/*": ["apps/web/src/*"],
+      "@unnamed-gunpla-app/types": ["packages/types/src/index.ts"],
+      "@unnamed-gunpla-app/types/*": ["packages/types/src/*"],
+      "@unnamed-gunpla-app/utils": ["packages/utils/src/index.ts"],
+      "@unnamed-gunpla-app/utils/*": ["packages/utils/src/*"],
+      "@unnamed-gunpla-app/cli": ["packages/cli/src/index.ts"],
+      "@unnamed-gunpla-app/cli/*": ["packages/cli/src/*"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

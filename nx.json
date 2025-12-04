@@ -1,0 +1,73 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "parallel": 4,
+      "maxParallel": 4
+    },
+    "test": {
+      "cache": true,
+      "parallel": 3,
+      "maxParallel": 3
+    },
+    "lint": {
+      "cache": true,
+      "parallel": 5,
+      "maxParallel": 5
+    },
+    "serve": {
+      "cache": false,
+      "dependsOn": ["^build"]
+    },
+    "e2e": {
+      "cache": true,
+      "dependsOn": ["^build"]
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nx/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "useDaemonProcess": true,
+        "runtimeCacheInputs": ["node -v", "npm -v"]
+      }
+    }
+  },
+  "generators": {
+    "@nx/react": {
+      "application": {
+        "style": "css",
+        "linter": "eslint",
+        "bundler": "vite",
+        "unitTestRunner": "vitest"
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "linter": "eslint",
+        "unitTestRunner": "vitest"
+      }
+    }
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview"
+      }
+    },
+    {
+      "plugin": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    }
+  ]
+}
