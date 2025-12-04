@@ -1,7 +1,6 @@
 import * as cheerio from 'cheerio';
-import { z } from 'zod';
 import { BaseScraper } from './base-scraper.js';
-import { ProductData } from '../types/product-data.js';
+import { ProductData, ProductImage } from '../types/product-data.js';
 
 export class BandaiHobbyScraper extends BaseScraper {
   constructor() {
@@ -20,7 +19,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     // Extract basic product information
     const name = this.extractProductName($);
     const sku = this.extractSku($, url);
-    const price = this.extractPrice($);
+    const price = this.extractPriceInfo($);
     const description = this.extractDescription($);
     const specifications = this.extractSpecifications($);
     const images = this.extractImages($);
@@ -30,8 +29,8 @@ export class BandaiHobbyScraper extends BaseScraper {
       id: this.generateId('bandai-hobby', sku),
       name,
       sku,
-      price: price || undefined,
-      description: description || undefined,
+      ...(price && { price }),
+      ...(description && { description }),
       specifications,
       detectedLanguage: languageDetection,
       source: {
@@ -87,7 +86,7 @@ export class BandaiHobbyScraper extends BaseScraper {
   private extractSku($: cheerio.CheerioAPI, url: string): string {
     // Try to extract SKU from URL path
     const urlMatch = url.match(/\/([^\/]+)\/?$/);
-    if (urlMatch) {
+    if (urlMatch && urlMatch[1]) {
       return urlMatch[1];
     }
 
@@ -110,7 +109,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     return '';
   }
 
-  private extractPrice($: cheerio.CheerioAPI) {
+  protected extractPriceInfo($: cheerio.CheerioAPI) {
     const priceSelectors = [
       '.price',
       '.product-price',
@@ -120,7 +119,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     ];
 
     for (const selector of priceSelectors) {
-      const price = this.extractPrice($, selector);
+      const price = super.extractPrice($, selector);
       if (price) {
         return {
           amount: price.amount,
@@ -131,7 +130,7 @@ export class BandaiHobbyScraper extends BaseScraper {
       }
     }
 
-    return null;
+    return undefined;
   }
 
   private extractDescription($: cheerio.CheerioAPI): string {
@@ -161,7 +160,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 
     if (specTable.length > 0) {
       specTable.find('tr').each((_, row) => {
-        const $row = cheerio.load(row);
+        const $row = $(row);
         const label = this.extractTextContent($row, 'th, .spec-label, .label');
         const value = this.extractTextContent($row, 'td, .spec-value, .value');
 
@@ -178,7 +177,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     // Look for individual spec items
     const individualSpecs = $('.spec-item, .product-spec');
     individualSpecs.each((_, element) => {
-      const $element = cheerio.load(element);
+      const $element = $(element);
       const label = this.extractTextContent($element, '.spec-label, .label');
       const value = this.extractTextContent($element, '.spec-value, .value');
 
@@ -222,18 +221,18 @@ export class BandaiHobbyScraper extends BaseScraper {
 
   private extractUnit(value: string): string | undefined {
     const unitMatch = value.match(/(mm|cm|m|g|kg|%|deg|°)/);
-    return unitMatch ? unitMatch[1] : undefined;
+    return unitMatch ? unitMatch[1] || undefined : undefined;
   }
 
   private extractImages($: cheerio.CheerioAPI) {
-    const images = [];
+    const images: ProductImage[] = [];
 
     $('.product-image, .item-image, .main-image img, .gallery-image img, .product-image img').each((_, element) => {
-      const $img = cheerio.load(element);
-      const src = $img.attr('src') || $img.attr('data-src');
-      const alt = $img.attr('alt') || '';
-      const width = parseInt($img.attr('width') || '0', 10);
-      const height = parseInt($img.attr('height') || '0', 10);
+      const $element = $(element);
+      const src = $element.attr('src') || $element.attr('data-src') || '';
+      const alt = $element.attr('alt') || '';
+      const width = parseInt($element.attr('width') || '0', 10);
+      const height = parseInt($element.attr('height') || '0', 10);
 
       if (src) {
         images.push({
@@ -241,7 +240,7 @@ export class BandaiHobbyScraper extends BaseScraper {
           alt,
           width,
           height,
-          type: this.determineImageType($img)
+          type: 'gallery'
         });
       }
     });
@@ -249,29 +248,13 @@ export class BandaiHobbyScraper extends BaseScraper {
     return images;
   }
 
-  private determineImageType($img: cheerio.CheerioAPI): 'main' | 'gallery' | 'thumbnail' | 'box' {
-    const classes = $img.attr('class') || '';
-
-    if (classes.includes('main') || classes.includes('primary')) {
-      return 'main';
-    } else if (classes.includes('gallery')) {
-      return 'gallery';
-    } else if (classes.includes('thumbnail') || classes.includes('thumb')) {
-      return 'thumbnail';
-    } else if (classes.includes('box')) {
-      return 'box';
-    }
-
-    return 'gallery';
-  }
-
+  
   private extractCategories($: cheerio.CheerioAPI): string[] {
-    const categories = [];
+    const categories: string[] = [];
 
     // Look for breadcrumb or category information
     $('.breadcrumb a, .category a, .product-category a, .tag a').each((_, element) => {
-      const $a = cheerio.load(element);
-      const category = this.extractTextContent($a);
+      const category = $(element).text().trim();
       if (category) {
         categories.push(category);
       }
@@ -296,7 +279,6 @@ export class BandaiHobbyScraper extends BaseScraper {
     const optionalFields = ['price', 'description', 'images'];
 
     let completeness = 0;
-    const totalFields = requiredFields.length + optionalFields.length;
 
     // Required fields count for 60% of completeness
     requiredFields.forEach(field => {
