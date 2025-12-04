@@ -3,38 +3,94 @@
   "$schema": "./node_modules/nx/schemas/project-schema.json",
   "sourceRoot": ".",
   "projectType": "application",
+  "tags": ["scope:root", "type:workspace"],
   "targets": {
-    "typecheck-all": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpm nx run-many --target=typecheck --parallel=5"
-      },
-      "cache": true,
-      "dependsOn": ["types:build", "utils:build", "cli:build"]
+    "typecheck": {
+      "dependsOn": ["types:typecheck", "utils:typecheck", "cli:typecheck", "scripts:typecheck", "web:typecheck"],
+      "cache": true
     },
-    "test-all": {
-      "executor": "nx:run-commands",
+    "typecheck-root": {
+      "executor": "@nx/js:tsc",
       "options": {
-        "command": "pnpm nx run-many --target=test --parallel=3"
+        "tsConfigPath": "./tsconfig.json",
+        "noEmit": true,
+        "main": "tools/scripts/index.ts",
+        "outputPath": "dist/root"
       },
+      "inputs": [
+        "default",
+        "{projectRoot}/*.config.ts"
+      ],
       "cache": true,
-      "dependsOn": ["types:build", "utils:build", "cli:build"]
+      "metadata": {
+        "description": "TypeScript type checking for root configuration files",
+        "technologies": ["typescript"]
+      }
     },
-    "lint-all": {
+    "typecheck-affected": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "pnpm nx run-many --target=lint --parallel=5"
+        "command": "nx affected -t typecheck --parallel=5"
       },
       "cache": true
     },
-    "build-all": {
+    "build": {
+      "dependsOn": ["types:build", "utils:build", "cli:build", "web:build"],
+      "cache": true,
+      "outputs": ["{workspaceRoot}/dist"]
+    },
+    "build-affected": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "pnpm nx run-many --target=build --parallel=3"
+        "command": "nx affected -t build --parallel=3"
       },
       "cache": true,
       "outputs": ["{workspaceRoot}/dist"]
+    },
+    "test": {
+      "dependsOn": ["types:test", "utils:test", "cli:test", "web:test"],
+      "cache": true
+    },
+    "test:e2e": {
+      "dependsOn": ["web:test:e2e"],
+      "cache": true
+    },
+    "test-affected": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx affected -t test --parallel=3"
+      },
+      "cache": true
+    },
+    "lint": {
+      "dependsOn": ["types:lint", "utils:lint", "cli:lint", "web:lint"],
+      "cache": true
+    },
+    "lint:check": {
+      "dependsOn": ["types:lint", "utils:lint", "cli:lint", "web:lint"],
+      "cache": true
+    },
+    "lint-affected": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx affected -t lint --parallel=5"
+      },
+      "cache": true
+    },
+    "validate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx run-many -t lint typecheck test --parallel=1"
+      },
+      "cache": true,
+      "dependsOn": ["types:build", "utils:build", "cli:build"]
+    },
+    "validate-affected": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx affected -t lint typecheck test --parallel=1"
+      },
+      "cache": true
     }
-  },
-  "tags": ["scope:root", "type:workspace"]
+  }
 }
