@@ -25,6 +25,8 @@
       "executor": "@nx/js:tsc",
       "options": {
         "tsConfig": "apps/web/tsconfig.json",
+        "main": "apps/web/src/main.tsx",
+        "outputPath": "dist/apps/web",
         "noEmit": true
       },
       "cache": true,
