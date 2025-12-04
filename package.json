@@ -8,6 +8,7 @@
     "barrels:watch": "barrelsby --config .barrelsby.json --watch",
     "prebuild": "pnpm barrels",
     "build": "nx run-many --target=build --all",
+    "dev": "pnpm --filter @unnamed-gunpla-app/webapp dev",
     "serve": "nx serve web",
     "start": "nx serve web",
     "test": "nx run-many --target=test --all",
