@@ -107,6 +107,7 @@ export default [
         },
       ],
       'import/no-duplicates': 'error',
+      'import/no-default-export': 'error',
       'import/no-unresolved': 'off', // TypeScript handles this
 
       // JSX A11y rules
@@ -114,10 +115,28 @@ export default [
       'jsx-a11y/anchor-is-valid': 'warn', // React Router handles this
 
       // Unicorn rules with emoji prevention
-      ...unicorn.configs.recommended.rules.filter(rule => rule !== 'unicorn/no-emoji'),
+      ...unicorn.configs.recommended.rules,
+      'unicorn/prevent-abbreviations': 'off',
+      'unicorn/no-null': 'off',
       'unicorn/no-emoji': ['error', {
         message: 'Emojis are not allowed. Use @tabler/icons-react for icons instead.',
       }],
+
+      // Formatting rules
+      'quotes': ['error', 'double', { avoidEscape: true, allowTemplateLiterals: true }],
+      'indent': ['error', 'tab', { SwitchCase: 1 }],
+      'semi': ['error', 'always'],
+      'comma-dangle': ['error', 'always-multiline'],
+
+      // Type coercion prevention
+      'no-implicit-coercion': ['error', {
+        boolean: true,
+        number: true,
+        string: true,
+        disallowTemplateShorthand: true,
+      }],
+      '@typescript-eslint/no-base-to-string': 'error',
+      '@typescript-eslint/restrict-plus-operands': 'error',
 
       // General rules
       'no-console': 'warn',
