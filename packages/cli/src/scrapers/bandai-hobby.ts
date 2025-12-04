@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio';
 import { BaseScraper } from './base-scraper.js';
-import { ProductData, ProductImage } from '../types/product-data.js';
+import { ProductData, ProductImage, PriceInfo } from '../types/product-data.js';
 
 export class BandaiHobbyScraper extends BaseScraper {
   constructor() {
@@ -29,8 +29,6 @@ export class BandaiHobbyScraper extends BaseScraper {
       id: this.generateId('bandai-hobby', sku),
       name,
       sku,
-      ...(price && { price }),
-      ...(description && { description }),
       specifications,
       detectedLanguage: languageDetection,
       source: {
@@ -58,10 +56,18 @@ export class BandaiHobbyScraper extends BaseScraper {
       }
     };
 
+    // Add optional properties only if they exist
+    if (price !== undefined) {
+      productData.price = price;
+    }
+    if (description !== undefined && description !== '') {
+      productData.description = description;
+    }
+
     return productData;
   }
 
-  private extractProductName($: cheerio.CheerioAPI): string {
+  private extractProductName($: any): string {
     // Try multiple selectors for product name
     const selectors = [
       '.product-title',
@@ -83,7 +89,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     return '';
   }
 
-  private extractSku($: cheerio.CheerioAPI, url: string): string {
+  private extractSku($: any, url: string): string {
     // Try to extract SKU from URL path
     const urlMatch = url.match(/\/([^\/]+)\/?$/);
     if (urlMatch && urlMatch[1]) {
@@ -109,7 +115,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     return '';
   }
 
-  protected extractPriceInfo($: cheerio.CheerioAPI) {
+  private extractPriceInfo($: any): PriceInfo | undefined {
     const priceSelectors = [
       '.price',
       '.product-price',
@@ -133,7 +139,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     return undefined;
   }
 
-  private extractDescription($: cheerio.CheerioAPI): string {
+  private extractDescription($: any): string {
     const selectors = [
       '.product-description',
       '.item-description',
@@ -152,7 +158,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     return '';
   }
 
-  private extractSpecifications($: cheerio.CheerioAPI): Record<string, any> {
+  private extractSpecifications($: any): Record<string, any> {
     const specs: Record<string, any> = {};
 
     // Look for specification tables or lists
@@ -161,8 +167,8 @@ export class BandaiHobbyScraper extends BaseScraper {
     if (specTable.length > 0) {
       specTable.find('tr').each((_, row) => {
         const $row = $(row);
-        const label = this.extractTextContent($row, 'th, .spec-label, .label');
-        const value = this.extractTextContent($row, 'td, .spec-value, .value');
+        const label = this.extractTextContentFromElement($row.find('th, .spec-label, .label'));
+        const value = this.extractTextContentFromElement($row.find('td, .spec-value, .value'));
 
         if (label && value) {
           specs[this.normalizeSpecKey(label)] = {
@@ -178,8 +184,8 @@ export class BandaiHobbyScraper extends BaseScraper {
     const individualSpecs = $('.spec-item, .product-spec');
     individualSpecs.each((_, element) => {
       const $element = $(element);
-      const label = this.extractTextContent($element, '.spec-label, .label');
-      const value = this.extractTextContent($element, '.spec-value, .value');
+      const label = this.extractTextContentFromElement($element.find('.spec-label, .label'));
+      const value = this.extractTextContentFromElement($element.find('.spec-value, .value'));
 
       if (label && value) {
         specs[this.normalizeSpecKey(label)] = {
@@ -203,7 +209,7 @@ export class BandaiHobbyScraper extends BaseScraper {
   private parseSpecValue(value: string): string | number | boolean {
     // Try to parse as number first
     const numberMatch = value.match(/([\d,]+(?:\.\d+)?)/);
-    if (numberMatch) {
+    if (numberMatch && numberMatch[1]) {
       return parseFloat(numberMatch[1].replace(/,/g, ''));
     }
 
@@ -221,25 +227,25 @@ export class BandaiHobbyScraper extends BaseScraper {
 
   private extractUnit(value: string): string | undefined {
     const unitMatch = value.match(/(mm|cm|m|g|kg|%|deg|°)/);
-    return unitMatch ? unitMatch[1] || undefined : undefined;
+    return unitMatch?.[1] || undefined;
   }
 
-  private extractImages($: cheerio.CheerioAPI) {
+  private extractImages($: any): ProductImage[] {
     const images: ProductImage[] = [];
 
     $('.product-image, .item-image, .main-image img, .gallery-image img, .product-image img').each((_, element) => {
       const $element = $(element);
-      const src = $element.attr('src') || $element.attr('data-src') || '';
-      const alt = $element.attr('alt') || '';
-      const width = parseInt($element.attr('width') || '0', 10);
-      const height = parseInt($element.attr('height') || '0', 10);
+      const src = this.extractAttributeFromElement($element, 'src') || this.extractAttributeFromElement($element, 'data-src') || '';
+      const alt = this.extractAttributeFromElement($element, 'alt') || '';
+      const width = parseInt(this.extractAttributeFromElement($element, 'width') || '0', 10);
+      const height = parseInt(this.extractAttributeFromElement($element, 'height') || '0', 10);
 
       if (src) {
         images.push({
           url: src.startsWith('http') ? src : `${this.baseUrl}${src}`,
           alt,
-          width,
-          height,
+          width: width || undefined,
+          height: height || undefined,
           type: 'gallery'
         });
       }
@@ -249,12 +255,12 @@ export class BandaiHobbyScraper extends BaseScraper {
   }
 
   
-  private extractCategories($: cheerio.CheerioAPI): string[] {
+  private extractCategories($: any): string[] {
     const categories: string[] = [];
 
     // Look for breadcrumb or category information
     $('.breadcrumb a, .category a, .product-category a, .tag a').each((_, element) => {
-      const category = $(element).text().trim();
+      const category = this.extractTextContentFromElement($(element));
       if (category) {
         categories.push(category);
       }
@@ -274,7 +280,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     }
   }
 
-  private calculateCompleteness(data: Partial<ProductData>): number {
+  private calculateCompleteness(data: { name?: string; sku?: string; price?: PriceInfo; description?: string; specifications?: Record<string, any>; images?: ProductImage[]; }): number {
     const requiredFields = ['name', 'sku'];
     const optionalFields = ['price', 'description', 'images'];
 
@@ -282,18 +288,18 @@ export class BandaiHobbyScraper extends BaseScraper {
 
     // Required fields count for 60% of completeness
     requiredFields.forEach(field => {
-      if (data[field as keyof ProductData]) completeness += 0.6 / requiredFields.length;
+      if (data[field as keyof typeof data]) completeness += 0.6 / requiredFields.length;
     });
 
     // Optional fields count for 40% of completeness
     optionalFields.forEach(field => {
-      if (data[field as keyof ProductData]) completeness += 0.4 / optionalFields.length;
+      if (data[field as keyof typeof data]) completeness += 0.4 / optionalFields.length;
     });
 
     return Math.min(completeness, 1.0);
   }
 
-  private calculateConfidence(data: Partial<ProductData>): number {
+  private calculateConfidence(data: { name?: string; sku?: string; price?: PriceInfo; description?: string; specifications?: Record<string, any>; images?: ProductImage[]; }): number {
     let confidence = 0.5; // Base confidence
 
     // Increase confidence based on data completeness

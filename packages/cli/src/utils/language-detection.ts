@@ -30,7 +30,15 @@ export class LanguageDetector {
   }
 
   private static gatherEvidence(html: string, url: string, headers: Record<string, string>) {
-    const evidence: any = {
+    const evidence: {
+      htmlLang?: string;
+      contentLanguage?: string;
+      urlPattern?: string;
+      japaneseRatio: number;
+      englishRatio: number;
+      japaneseCharacters: string[];
+      englishWords: string[];
+    } = {
       japaneseRatio: this.calculateJapaneseRatio(html),
       englishRatio: this.calculateEnglishRatio(html),
       japaneseCharacters: this.extractJapaneseCharacters(html),

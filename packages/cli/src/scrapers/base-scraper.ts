@@ -1,6 +1,6 @@
-import * as cheerio from 'cheerio';
 import { LanguageDetector } from '../utils/language-detection.js';
 import { RenderingDetector } from '../utils/rendering-detection.js';
+import * as cheerio from 'cheerio';
 
 export abstract class BaseScraper {
   protected baseUrl: string;
@@ -147,17 +147,25 @@ export abstract class BaseScraper {
     return new Promise(resolve => setTimeout(resolve, this.delayMs));
   }
 
-  protected extractTextContent($: cheerio.CheerioAPI, selector: string): string {
+  protected extractTextContent($: any, selector: string): string {
     const element = $(selector);
     return element.length > 0 ? element.first().text().trim() : '';
   }
 
-  protected extractAttribute($: cheerio.CheerioAPI, selector: string, attribute: string): string {
+  protected extractTextContentFromElement($: any): string {
+    return $?.text()?.trim() || '';
+  }
+
+  protected extractAttribute($: any, selector: string, attribute: string): string {
     const element = $(selector);
     return element.length > 0 ? element.first().attr(attribute) || '' : '';
   }
 
-  protected extractNumber($: cheerio.CheerioAPI, selector: string): number | null {
+  protected extractAttributeFromElement($: any, attribute: string): string {
+    return $?.first()?.attr(attribute) || '';
+  }
+
+  protected extractNumber($: any, selector: string): number | null {
     const text = this.extractTextContent($, selector);
     const match = text.match(/[\d,]+/g);
     if (match) {
@@ -167,7 +175,7 @@ export abstract class BaseScraper {
     return null;
   }
 
-  protected extractPrice($: cheerio.CheerioAPI, selector: string): { amount: number; currency: string; originalText: string } | null {
+  protected extractPrice($: any, selector: string): { amount: number; currency: string; originalText: string } | null {
     const text = this.extractTextContent($, selector);
     const priceMatch = text.match(/([¥$£€])\s*([\d,]+)/);
 

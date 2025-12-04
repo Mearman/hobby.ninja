@@ -49,7 +49,7 @@ export class RenderingDetector {
     return {
       renderingType: this.determineRenderingType(html, requiresJS),
       detectionMethod: 'content-analysis',
-      initialContentLength,
+      initialContentLength: initialLength,
       finalContentLength: initialLength,
       requiresJavaScript: requiresJS,
       jsExecutionTime,
@@ -77,6 +77,7 @@ export class RenderingDetector {
       } : {
         required: dynamicAnalysis.required,
         additionalContent: dynamicAnalysis.additionalContent,
+        frameworkDetected: undefined,
         waitForSelectors: dynamicAnalysis.waitForSelectors
       },
       recommendation: this.getRecommendation(staticAnalysis, dynamicAnalysis)
