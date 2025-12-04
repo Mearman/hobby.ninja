@@ -97,7 +97,7 @@ export const schemaRegistry = {
 	},
 
 	// Re-register schemas from database metadata (call this on startup)
-	async reloadFromStorage(schemas: Record<string, z.ZodObject<any>>): Promise<void> {
+	async reloadFromStorage(schemas: Record<string, z.ZodObject<z.ZodRawShape>>): Promise<void> {
 		const storedSchemas = await this.list();
 		for (const stored of storedSchemas) {
 			if (schemas[stored.id]) {
