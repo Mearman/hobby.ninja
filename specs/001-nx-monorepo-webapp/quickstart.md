@@ -1305,12 +1305,6 @@ export function setCSPHeaders() {
 }
 ```
 
-## Performance Monitoring
-
-### Web Vitals Tracking
-
-Performance monitoring is handled through the `utils/performance-monitor.ts` module, which provides Web Vitals tracking and basic performance metrics.
-
 ## Troubleshooting
 
 ### Common Issues
