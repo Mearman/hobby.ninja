@@ -2,10 +2,10 @@
   "name": "@unnamed-gunpla-app/cli",
   "version": "0.0.1",
   "description": "CLI tool for scraping Gundam/Gunpla data from various sources",
-  "main": "dist/bin/cli.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
-    "gunpla-scraper": "./dist/bin/cli.js",
-    "scrape": "./dist/bin/cli.js"
+    "gundam-scraper": "dist/cli/index.js"
   },
   "scripts": {
     "build": "tsc",
@@ -35,19 +35,49 @@
   "license": "MIT",
   "dependencies": {
     "@unnamed-gunpla-app/utils": "workspace:*",
-    "cheerio": "1.0.0-rc.12",
-    "commander": "12.1.0",
-    "inquirer": "9.2.0"
+    "@unnamed-gunpla-app/types": "workspace:*",
+    "cheerio": "latest",
+    "commander": "latest",
+    "playwright": "latest",
+    "zod": "latest",
+    "inquirer": "latest"
   },
   "devDependencies": {
-    "@types/cheerio": "0.22.35",
-    "@types/inquirer": "9.0.7",
-    "@types/node": "24.10.1",
-    "eslint": "9.39.1",
-    "typescript": "5.9.3",
-    "vitest": "4.0.15"
+    "@types/cheerio": "latest",
+    "@types/inquirer": "latest",
+    "@types/node": "latest",
+    "eslint": "latest",
+    "typescript": "latest",
+    "vitest": "latest",
+    "rimraf": "latest"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "executor": "@nx/js:tsc",
+        "outputs": ["{options.outputPath}"],
+        "options": {
+          "outputPath": "dist/packages/cli",
+          "main": "packages/cli/src/index.ts",
+          "tsConfig": "packages/cli/tsconfig.json",
+          "assets": []
+        }
+      },
+      "test": {
+        "executor": "@nx/vite:test",
+        "outputs": ["{workspaceRoot}/coverage/packages/cli"],
+        "options": {
+          "passWithNoTests": true
+        }
+      },
+      "lint": {
+        "executor": "@nx/eslint:lint",
+        "outputs": ["{options.outputFile}"]
+      }
+    }
   }
 }
