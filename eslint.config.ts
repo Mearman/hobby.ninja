@@ -185,6 +185,14 @@ export default [
     },
   },
   {
+    // Logger utility needs to use console statements
+    files: ['**/packages/translation/src/logger.ts'],
+    rules: {
+      'no-console': 'off',
+      'unicorn/no-negated-condition': 'off',
+    },
+  },
+  {
     // Markdown files configuration with emoji ban
     files: ['**/*.md'],
     plugins: {
