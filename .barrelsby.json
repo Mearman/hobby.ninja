@@ -1,0 +1,27 @@
+{
+  "directory": [
+    "./packages/types/src",
+    "./packages/utils/src",
+    "./apps/web/src/pwa",
+    "./apps/web/src/db",
+    "./apps/web/src/performance"
+  ],
+  "exclude": [
+    "__tests__",
+    "__mocks__",
+    "index\\.ts$",
+    "index\\.tsx$",
+    ".*\\.test\\.ts$",
+    ".*\\.spec\\.ts$",
+    ".*\\.test\\.tsx$",
+    ".*\\.spec\\.tsx$",
+    ".*\\.tsx$"
+  ],
+  "delete": true,
+  "location": "all",
+  "structure": "filesystem",
+  "exportDefault": false,
+  "removeComments": false,
+  "noHeader": false,
+  "singleQuotes": false
+}
