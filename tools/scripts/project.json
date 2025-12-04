@@ -5,10 +5,12 @@
 	"projectType": "library",
 	"targets": {
 		"typecheck": {
-			"executor": "nx:run-commands",
+			"executor": "@nx/js:tsc",
 			"options": {
-				"command": "tsc --noEmit",
-				"cwd": "tools/scripts"
+				"tsConfig": "tools/scripts/tsconfig.json",
+				"main": "tools/scripts/index.ts",
+				"outputPath": "dist/tools/scripts",
+				"noEmit": true
 			},
 			"cache": true,
 			"inputs": [
