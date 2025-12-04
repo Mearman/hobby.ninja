@@ -2,7 +2,9 @@
 
 **Feature**: Nx Monorepo Webapp Setup
 **Date**: 2025-12-03
+**Updated**: 2025-12-04
 **Storage**: IndexedDB via Dexie (client-side)
+**Status**: 85% Complete - CLI Data Package Deferred
 
 ## Entity Overview
 
@@ -1092,3 +1094,21 @@ const databaseMigrations = {
 - All configurations favor TypeScript strict mode for maximum type safety
 - IndexedDB usage assumes client-side data storage requirements
 - GitHub Pages deployment constraints influence routing and configuration decisions
+
+## CLI Package Status (Updated 2025-12-04)
+
+**⚠️ PLACEHOLDER DECISION**: The CLI package for data scraping functionality has been converted to a placeholder structure.
+
+**What's Implemented**:
+- Basic package structure with @unnamed-gunpla-app/cli
+- Placeholder interfaces and type definitions
+- Package.json configuration with future dependencies
+
+**What's Deferred**:
+- Bandai, Gundam.info, and Dalong scrapers (T064-T066)
+- Page caching system (T067)
+- Data export to JSON files (T068-T071)
+- CI/CD integration for dataset updates (T072)
+- Interactive execution modes (T073)
+
+**Future Implementation**: The package structure is ready for full implementation when data scraping becomes a priority. The current webapp functions independently with static data or mock data.
