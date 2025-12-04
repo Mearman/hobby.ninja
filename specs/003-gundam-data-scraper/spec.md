@@ -3,7 +3,7 @@
 **Feature Branch**: `003-gundam-data-scraper`
 **Created**: 2025-12-04-213300
 **Status**: Draft
-**Input**: User description: "write a package that fetches builds the json data from bandai-hobby.net, manual.bandai-hobby.net and gundam.info in the source language. we will reconcile the datasets with eachother and handle translations later. the code in ../archive/ to see how it has been done before. use it as inspiration for how we did it before, but do not assume it was correct, so do not copy it."
+**Input**: User description: "write a package that fetches builds the json data from bandai-hobby.net, manual.bandai.hobby.net and gundam.info in the source language. we will handle translations later. the code in ../archive/ to see how it has been done before. use it as inspiration for how we did it before, but do not assume it was correct, so do not copy it. focus on identifying pages and extracting meaningful data without cross-source reconciliation or SKU matching."
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -78,19 +78,22 @@ Developers need to cache raw HTML page content locally to enable iterative impro
 
 ---
 
-### User Story 5 - Dataset Reconciliation and Integration (Priority: P3)
+---
 
-Data analysts need to reconcile and integrate data from all three sources to identify relationships, resolve conflicts, and create a unified master dataset that can be used for downstream applications and analysis.
+### User Story 5 - Data Quality Validation and Completion (Priority: P3)
 
-**Why this priority**: Integration ensures data consistency across sources and enables comprehensive querying and analysis capabilities.
+Data quality specialists need to validate that extracted data is complete, properly formatted, and stored consistently across all three sources. This phase focuses on ensuring data extraction quality without attempting cross-source relationships or reconciliation.
 
-**Independent Test**: Can be fully tested by running reconciliation processes and verifying that products from different sources are properly matched, conflicts are resolved, and relationships are established.
+**Why this priority**: Data quality validation ensures reliable downstream processing and provides visibility into extraction success rates and common issues.
+
+**Independent Test**: Can be fully tested by running quality checks on extracted data and verifying completeness metrics, validation reports, and error categorization.
 
 **Acceptance Scenarios**:
 
-1. **Given** data from all three sources is available, **When** reconciliation is performed, **Then** duplicate products are identified and merged with proper conflict resolution
-2. **Given** products have varying identifiers across sources, **When** matching is performed, **Then** intelligent matching algorithms identify equivalent products using names, SKUs, and other attributes
-3. **Given** data quality issues exist, **When** quality checks are performed, **Then** inconsistent, incomplete, or erroneous data is flagged for review
+1. **Given** extraction is complete from all sources, **When** quality validation runs, **Then** system generates completeness reports showing extraction success rates by source
+2. **Given** data extraction encounters errors, **When** validation processes results, **Then** errors are categorized and logged with detailed context for troubleshooting
+3. **Given** structured data is produced, **When** schema validation runs, **Then** all JSON files conform to expected field structure and data types
+4. **Given** caching and incremental processing occur, **When** validation runs, **Then** system verifies no data duplication or corruption exists
 
 ---
 
@@ -109,6 +112,7 @@ Data analysts need to reconcile and integrate data from all three sources to ide
 - How does system manage cache storage to prevent excessive disk usage?
 - What happens when cached page content becomes outdated or websites change structure?
 - How does system handle cache corruption or partial cache files?
+- What happens when extracted data fails schema validation or is incomplete?
 
 ## Requirements *(mandatory)*
 
@@ -130,7 +134,7 @@ Data analysts need to reconcile and integrate data from all three sources to ide
 - **FR-018**: System MUST provide cache invalidation mechanisms for updated content
 - **FR-010**: System MUST handle errors gracefully and continue processing other data when individual items fail
 - **FR-011**: System MUST validate data integrity and completeness before storage
-- **FR-012**: System MUST support data reconciliation and conflict resolution across multiple sources and languages
+- **FR-012**: System MUST validate extracted data completeness and schema compliance
 - **FR-013**: System MUST provide logging and monitoring for scraping operations and data quality
 
 ### Key Entities *(include if feature involves data)*
@@ -142,7 +146,7 @@ Data analysts need to reconcile and integrate data from all three sources to ide
 - **LanguageDetection**: Represents language detection results including confidence scores, detection methods, and fallback strategies
 - **ProcessingState**: Represents incremental processing checkpoint data including processed URLs, cursor positions, and resume points
 - **PageCache**: Represents cached raw HTML content with metadata, compression status, and expiration information
-- **ReconciliationResult**: Represents matching and merging results with conflict resolutions, language mappings, and data quality assessments
+- **ExtractionReport**: Represents data extraction quality metrics including success rates, error categorization, and completeness statistics
 
 ## Success Criteria *(mandatory)*
 
@@ -153,7 +157,7 @@ Data analysts need to reconcile and integrate data from all three sources to ide
 - **SC-003**: System extracts data from bandai.hobby.net with 95% field completeness for core product attributes across all detected languages
 - **SC-004**: System processes 1000+ product pages per hour without triggering anti-bot protections
 - **SC-005**: System achieves 99% data accuracy compared to manual validation samples
-- **SC-006**: System successfully reconciles 90% of duplicate products across different sources and languages
+- **SC-006**: System achieves 95% data extraction completeness across all sources with proper language categorization
 - **SC-007**: System maintains >98% uptime for scheduled scraping operations over 30-day periods
 - **SC-008**: System resumes interrupted processing within 30 seconds and maintains 99.9% duplicate prevention accuracy
 - **SC-009**: System reduces refetch requests by 95% through effective page caching
