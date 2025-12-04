@@ -1,5 +1,4 @@
-import { RenderingDetection, LanguageDetection } from './language-detection.js';
-import { RenderingType } from './rendering-detection.js';
+import { LanguageDetection } from './language-detection.js';
 
 export interface PageTypeProfile {
   urlPattern: string | RegExp;
@@ -56,7 +55,6 @@ export interface ProfileGenerationResult {
   profile: PageTypeProfile;
   analysis: {
     sampleUrls: string[];
-    renderingDetection: RenderingDetection[];
     languageDetection: LanguageDetection[];
     extractionSuccess: number;
     extractionFailures: number;
