@@ -132,6 +132,13 @@ Data quality specialists need to validate that extracted data is complete, prope
 - **FR-016**: System MUST cache raw HTML page content locally to enable re-parsing without refetching
 - **FR-017**: System MUST manage cache storage efficiently with compression and cleanup policies
 - **FR-018**: System MUST provide cache invalidation mechanisms for updated content
+- **FR-019**: System MUST implement profile building phase to analyze page types and determine optimal rendering strategy (static vs dynamic)
+- **FR-020**: System MUST use progressive enhancement during profile building, starting with Cheerio and escalating to Playwright only when JavaScript content is detected
+- **FR-021**: System MUST classify pages by URL patterns and HTML structure to create reusable page type profiles
+- **FR-022**: System MUST store rendering strategy (Cheerio vs Playwright) and extraction selectors in cached profiles for each page type
+- **FR-023**: System MUST use cached profiles in production phase to select appropriate extraction method without re-analysis
+- **FR-024**: System MUST optimize performance by using Cheerio for static pages and Playwright only for pages requiring JavaScript
+- **FR-025**: System MUST maintain page type profiles to enable efficient scaling and minimize unnecessary Playwright usage
 - **FR-010**: System MUST handle errors gracefully and continue processing other data when individual items fail
 - **FR-011**: System MUST validate data integrity and completeness before storage
 - **FR-012**: System MUST validate extracted data completeness and schema compliance
@@ -147,6 +154,9 @@ Data quality specialists need to validate that extracted data is complete, prope
 - **ProcessingState**: Represents incremental processing checkpoint data including processed URLs, cursor positions, and resume points
 - **PageCache**: Represents cached raw HTML content with metadata, compression status, and expiration information
 - **ExtractionReport**: Represents data extraction quality metrics including success rates, error categorization, and completeness statistics
+- **PageTypeProfile**: Represents analysis results for page types including URL patterns, rendering strategy (static vs dynamic), required extraction method (Cheerio vs Playwright), selectors, and performance characteristics
+- **RenderingDetection**: Represents progressive enhancement analysis results including whether JavaScript content was detected, initial vs final content lengths, and escalation decision criteria
+- **ProfileCache**: Represents cached page type profiles with version tracking, performance metrics, and selectors for both static and dynamic extraction strategies
 
 ## Success Criteria *(mandatory)*
 
@@ -162,3 +172,8 @@ Data quality specialists need to validate that extracted data is complete, prope
 - **SC-008**: System resumes interrupted processing within 30 seconds and maintains 99.9% duplicate prevention accuracy
 - **SC-009**: System reduces refetch requests by 95% through effective page caching
 - **SC-010**: System maintains cache storage within configured limits (default 5GB) with automatic cleanup
+- **SC-011**: System builds accurate page type profiles with 95% correct rendering strategy assignment (static vs dynamic)
+- **SC-012**: System achieves 80-90% reduction in Playwright usage through profile-based method selection
+- **SC-013**: System processes static pages with Cheerio in <50ms and dynamic pages with Playwright in <200ms using cached profiles
+- **SC-014**: System maintains 99% profile accuracy for page type classification and selector optimization
+- **SC-015**: System achieves 3000+ pages per hour processing in production phase using optimized profile-based scraping

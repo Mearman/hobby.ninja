@@ -7,7 +7,7 @@
 
 ## Summary
 
-The Gundam Data Scraper is a CLI package that extracts product data, technical documentation, and series content from three Bandai sources (bandai-hobby.net, manual.bandai.hobby.net, gundam.info) with intelligent language detection and file organization. The system implements respectful scraping practices, comprehensive caching for development efficiency, and resumable incremental processing to handle large-scale data extraction operations. Built as an Nx monorepo package using Playwright for dynamic content handling, with file-based JSON output organized by detected language (.en.json/.jp.json) and compressed raw page caching to enable rapid parsing iteration without refetching.
+The Gundam Data Scraper is a CLI package that extracts product data, technical documentation, and series content from three Bandai sources (bandai-hobby.net, manual.bandai.hobby.net, gundam.info) with intelligent language detection and file organization. The system implements a two-phase approach: **Profile Building Phase** uses progressive enhancement (Cheerio → Playwright escalation) to analyze page types and determine their optimal rendering strategy (static vs dynamic), then **Production Phase** uses the cached profiles to efficiently scrape with the correct method (Cheerio for static pages, Playwright for dynamic pages). This ensures comprehensive data extraction while minimizing unnecessary Playwright overhead.
 
 ## Technical Context
 
@@ -18,14 +18,15 @@ The Gundam Data Scraper is a CLI package that extracts product data, technical d
 -->
 
 **Language/Version**: Node.js 20+, TypeScript 5.7 (strict)
-**Primary Dependencies**: Playwright for web scraping, Cheerio for HTML parsing, Commander.js for CLI, Zod for validation, zlib for compression
-**Storage**: File system with JSON output (.en.json/.jp.json), compressed page cache (gzip), checkpoint files for resumable operations
-**Testing**: Vitest for unit tests, Playwright for integration tests, file system fixtures for data validation
+**Primary Dependencies**: Cheerio for HTML parsing (primary), Playwright for profile building (limited), Commander.js for CLI, Zod for validation, zlib for compression
+**Storage**: File system with JSON output (.en.json/.jp.json), scraping profiles (JSON), compressed page cache (gzip), checkpoint files for resumable operations
+**Testing**: Vitest for unit tests, Playwright for integration tests (profile building only), file system fixtures for data validation
 **Target Platform**: Node.js CLI tool for Nx monorepo (Linux/macOS/Windows)
 **Project Type**: CLI package (packages/cli) in Nx monorepo
-**Performance Goals**: 1000+ pages/hour processing, <30s average page processing, 95% cache hit reduction for re-parsing
-**Constraints**: <200ms page fetch with respectful scraping, <10GB cache storage with automatic cleanup, rate limiting to avoid blocking
+**Performance Goals**: 3000+ pages/hour production scraping, <10s average page processing, 95% cache hit reduction for re-parsing, optimized Playwright usage based on page type requirements
+**Constraints**: <50ms Cheerio-only page fetch, <200ms Playwright page fetch for dynamic pages, <10GB cache storage with automatic cleanup, rate limiting to avoid blocking
 **Scale/Scope**: 10,000+ product pages, 5,000+ manual documents, 1000+ series content pages, multi-language content extraction
+**Two-Phase Strategy**: Profile Building Phase (determine Cheerio vs Playwright per page type) → Production Phase (use cached optimal method per page type)
 
 ## Constitution Check
 
@@ -127,6 +128,49 @@ packages/cli/
 ```
 
 **Structure Decision**: CLI package in packages/cli following Nx monorepo conventions, with modular scrapers, shared utilities, and clear separation of concerns. File-based output organized by source and language.
+
+## Two-Phase Scraping Strategy
+
+### Phase 1: Profile Building (One-Time Analysis)
+
+The system analyzes each unique page type across the three sources to determine optimal rendering strategy:
+
+1. **Progressive Enhancement Analysis**: Start with Cheerio → escalate to Playwright if needed
+2. **Page Type Classification**: Group similar pages by URL patterns and HTML structure
+3. **Rendering Strategy Assignment**: Determine whether each page type requires static or dynamic extraction
+4. **Profile Creation**: Store optimal extraction method and selectors for each page type
+
+**Example Profile Output:**
+```json
+{
+  "bandai-hobby:product-detail": {
+    "requiresPlaywright": false,
+    "selectors": { "name": ".product-title", "price": ".price" },
+    "extractionMethod": "cheerio"
+  },
+  "bandai-hobby:search-results": {
+    "requiresPlaywright": true,
+    "selectors": { "products": ".product-card", "pagination": ".next-page" },
+    "extractionMethod": "playwright",
+    "waitForSelector": ".product-grid"
+  }
+}
+```
+
+### Phase 2: Production Scraping (Optimized Execution)
+
+Using cached profiles, the system selects the appropriate extraction method for each page:
+
+1. **URL Pattern Matching**: Match current URL to cached page type profile
+2. **Method Selection**: Use Cheerio for static pages, Playwright for dynamic pages
+3. **Optimized Extraction**: Apply pre-determined selectors and strategies
+4. **Performance Gains**: Avoid unnecessary Playwright overhead for static content
+
+**Performance Benefits:**
+- **Static pages**: 95% processed with Cheerio (~50ms per page)
+- **Dynamic pages**: Only pages requiring JavaScript use Playwright (~200ms per page)
+- **Overall efficiency**: 80-90% reduction in Playwright usage vs universal approach
+- **Consistent quality**: Profile-based extraction ensures reliable data capture
 
 ## Complexity Tracking
 
