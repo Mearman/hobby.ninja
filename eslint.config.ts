@@ -9,6 +9,8 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-config-prettier';
 import unicorn from 'eslint-plugin-unicorn';
 import nx from '@nx/eslint-plugin';
+import markdown from 'eslint-plugin-markdown';
+import { eslintPluginNoEmoji } from './eslint-plugins';
 
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -180,6 +182,46 @@ export default [
       '@typescript-eslint/no-explicit-any': 'off',
       'no-console': 'off',
       'playwright/missing-playwright-await': 'off', // Not using the Playwright ESLint plugin yet
+    },
+  },
+  {
+    // Markdown files configuration with emoji ban
+    files: ['**/*.md'],
+    plugins: {
+      'markdown': markdown,
+      'no-emoji': eslintPluginNoEmoji,
+    },
+    processor: 'markdown/markdown',
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'script',
+    },
+    rules: {
+      'no-emoji/no-emoji': 'error',
+    },
+  },
+  {
+    // Configuration for code blocks extracted from markdown files
+    files: ['**/*.md/**'],
+    plugins: {
+      'no-emoji': eslintPluginNoEmoji,
+    },
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        project: false,
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    rules: {
+      'no-emoji/no-emoji': 'error',
+      // Disable TypeScript rules that require type information for extracted blocks
+      '@typescript-eslint/no-base-to-string': 'off',
+      '@typescript-eslint/restrict-plus-operands': 'off',
     },
   },
   {
