@@ -88,6 +88,18 @@
         "config": "playwright.config.ts"
       },
       "dependsOn": ["web:build"]
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "web:build",
+        "port": 4200
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "web:build:production"
+        }
+      }
     }
   },
   "tags": ["scope:web", "type:app"]
