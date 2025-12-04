@@ -23,6 +23,30 @@
 			"options": {
 				"lintFilePatterns": ["tools/scripts/**/*.ts"]
 			}
+		},
+		"count-tokens": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "npx tsx count-markdown-tokens.ts",
+				"cwd": "tools/scripts"
+			},
+			"cache": false,
+			"inputs": [
+				"{workspaceRoot}/**/*.md"
+			]
+		},
+		"check-claude-tokens": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "npx tsx count-claude-tokens.ts",
+				"cwd": "tools/scripts"
+			},
+			"cache": false,
+			"inputs": [
+				"{workspaceRoot}/CLAUDE.md",
+				"{workspaceRoot}/README.md",
+				"{workspaceRoot}/.specify/memory/**/*.md"
+			]
 		}
 	},
 	"tags": ["type:tooling", "scope:scripts"]
