@@ -118,7 +118,7 @@ export class ScrapeCommand {
     const results: any[] = [];
     const errors: string[] = [];
     let cached = 0;
-    let new = 0;
+    let newItems = 0;
 
     for (let i = 0; i < urls.length; i++) {
       const url = urls[i];
@@ -150,7 +150,7 @@ export class ScrapeCommand {
           if (options.cache && productData) {
             await this.cacheManager.setByUrl(url, JSON.stringify(productData), 'bandai-hobby');
           }
-          new++;
+          newItems++;
 
           if (options.verbose) {
             console.log(`  ✓ Fresh data scraped`);
@@ -198,7 +198,7 @@ export class ScrapeCommand {
       successful: results.length,
       failed: errors.length,
       cached,
-      new,
+      new: newItems,
       errors,
       duration: 0 // Will be set by caller
     };
