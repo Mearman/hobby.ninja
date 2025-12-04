@@ -3,8 +3,10 @@
 	"compilerOptions": {
 		"noEmit": true
 	},
-	"files": [],
-	"include": [],
+	"include": [
+		"*.config.ts",
+		".nx/**/*.ts"
+	],
 	"references": [
 		{
 			"path": "./packages/types"
