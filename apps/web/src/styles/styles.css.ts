@@ -1,4 +1,4 @@
-import { style, globalStyle } from '@vanilla-extract/css';
+import { style, globalStyle } from "@vanilla-extract/css";
 
 /**
  * Vanilla Extract styles for custom styling beyond Mantine components.
@@ -16,16 +16,16 @@ import { style, globalStyle } from '@vanilla-extract/css';
 
 // Example custom style using Mantine variables
 export const exampleCard = style({
-  padding: 'var(--mantine-spacing-md)',
-  borderRadius: 'var(--mantine-radius-md)',
-  border: '1px solid var(--mantine-color-default-border)',
-  boxShadow: 'var(--mantine-shadow-sm)',
+	padding: "var(--mantine-spacing-md)",
+	borderRadius: "var(--mantine-radius-md)",
+	border: "1px solid var(--mantine-color-default-border)",
+	boxShadow: "var(--mantine-shadow-sm)",
 });
 
 // Example of descendant selector using globalStyle
 globalStyle(`${exampleCard} h3`, {
-  marginTop: 0,
-  marginBottom: 'var(--mantine-spacing-xs)',
+	marginTop: 0,
+	marginBottom: "var(--mantine-spacing-xs)",
 });
 
 // Placeholder exports for existing page components
