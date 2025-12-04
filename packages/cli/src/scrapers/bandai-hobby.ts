@@ -49,8 +49,8 @@ export class BandaiHobbyScraper extends BaseScraper {
         requiresJavaScript: false
       },
       quality: {
-        completeness: this.calculateCompleteness({ name, sku, price, description, specifications, images, categories }),
-        confidence: this.calculateConfidence({ name, sku, price, description, specifications, images, categories }),
+        completeness: this.calculateCompleteness({ name, sku, price, description, specifications, images }),
+        confidence: this.calculateConfidence({ name, sku, price, description, specifications, images }),
         validationErrors: [],
         lastValidated: Date.now()
       }
@@ -241,13 +241,18 @@ export class BandaiHobbyScraper extends BaseScraper {
       const height = parseInt(this.extractAttributeFromElement($element, 'height') || '0', 10);
 
       if (src) {
-        images.push({
+        const image: ProductImage = {
           url: src.startsWith('http') ? src : `${this.baseUrl}${src}`,
           alt,
-          width: width || undefined,
-          height: height || undefined,
           type: 'gallery'
-        });
+        };
+        if (width !== 0) {
+          image.width = width;
+        }
+        if (height !== 0) {
+          image.height = height;
+        }
+        images.push(image);
       }
     });
 
