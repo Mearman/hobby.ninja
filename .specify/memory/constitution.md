@@ -14,8 +14,8 @@ GitHub Pages deployment constraints MUST be respected. Hash routing REQUIRED for
 ### IV. Progressive Web App Standards
 PWA features MUST be implemented: service worker for offline capability, app manifest for installability, responsive design for mobile-first experience. Performance targets: <2s hot reload, <10s dev server start, Core Web Vitals compliance.
 
-### V. TypeScript Strict Mode
-TypeScript strict mode ENFORCED across all packages. No implicit any, no unused locals/parameters, strict null checks enabled. All configuration files MUST be TypeScript when possible. Zod integration for runtime type validation. TypeScript MUST never emit .js files in-place - build tools handle all compilation.
+### V. Comprehensive TypeScript Type Checking
+All TypeScript code MUST be typechecked regardless of compilation strategy. Source files, scripts, and configuration files MUST be validated by TypeScript compiler, even if only JIT transpiled when executed. Build tools MUST include all .ts files in typechecking scope. No untyped JavaScript files allowed where TypeScript equivalent exists. Type errors MUST block execution and deployment.
 
 ### VI. Configuration Type Safety
 All .ts configuration files MUST be typechecked without being built. Config files MUST be included in TypeScript project references and validated during compilation. Configuration MUST use `noEmit: true` to prevent file generation. Type errors in config files MUST block builds. No JavaScript configuration files allowed where TypeScript equivalent exists. Root-level configuration MUST validate all package configs: vite.config.ts, eslint.config.ts, playwright.config.ts, vitest.config.ts, knip.config.ts, syncpack.config.ts.
@@ -26,14 +26,17 @@ Source files MUST remain pristine with no in-place compilation artifacts. All .t
 ### VIII. Accessibility First (WCAG 2.1 AA)
 Full keyboard navigation, screen reader support, high contrast mode, text scaling to 200%. ARIA labels, semantic HTML, focus management required. Automated axe-core testing integration. Reduced motion respect mandatory.
 
-### IX. Security by Default
+### IX. Nx Build System Optimization
+Nx executor plugins and inferred targets MUST be preferred over nx:run-commands. Build configurations MUST use specialized executors (@nx/vite:build, @nx/eslint:lint, @nx/playwright:run, etc.) for better caching, dependency tracking, and IDE integration. Project.json files MUST leverage Nx plugin system for automatic target inference. Manual command execution limited to exceptional cases where no suitable executor exists.
+
+### X. Security by Default
 Content Security Policy headers implemented. XSS protection via React. Input validation via Zod schemas. Client-side data encryption for sensitive IndexedDB storage. Regular security scanning in CI/CD. No external dependencies without security review.
 
 ## Technology Standards
 
 React 19 with latest stable dependencies. TanStack Router for type-safe routing with hash mode. Mantine UI component library prioritized over custom implementations. Vanilla Extract CSS for type-safe styling with minimal custom CSS. Dexie for IndexedDB wrapper.
 
-Performance optimization through code splitting, lazy loading, and bundle analysis. Nx computational caching for development efficiency. Syncpack for dependency version consistency across monorepo.
+Performance optimization through code splitting, lazy loading, and bundle analysis. Nx computational caching for development efficiency. Nx executor plugins (@nx/vite, @nx/eslint, @nx/playwright) for optimized build and test execution. Syncpack for dependency version consistency across monorepo.
 
 ## Development Workflow
 
@@ -49,13 +52,13 @@ This constitution supersedes all other development practices. Amendments require
 
 Template files (plan.md, spec.md, tasks.md) MUST align with constitutional principles. Regular constitution reviews scheduled quarterly or when major architectural changes occur.
 
-**Version**: 1.4.1 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-04
+**Version**: 1.6.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-04
 
 <!--
 Sync Impact Report:
-Version change: 1.4.0 → 1.4.1 (PATCH - clarified Configuration Type Safety principle with specific config files)
-Modified principles: VI. Configuration Type Safety (enhanced with specific config file requirements)
-Added sections: None
+Version change: 1.5.0 → 1.6.0 (MINOR - added Nx Build System Optimization principle)
+Modified principles: IX. Security by Default (renumbered to X), added new principle IX
+Added sections: IX. Nx Build System Optimization (new principle for preferring Nx executor plugins and inferred targets over nx:run-commands)
 Removed sections: None
 Templates updated: ✅ .specify/templates/plan-template.md, ✅ .specify/templates/spec-template.md, ✅ .specify/templates/tasks-template.md
 Commands updated: ✅ All .specify/templates/commands/*.md files
