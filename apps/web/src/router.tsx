@@ -1,4 +1,4 @@
-import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet } from "@tanstack/react-router";
+import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet, Link, createHashHistory } from "@tanstack/react-router";
 import { Suspense, lazy } from "react";
 
 // Lazy load route components for code splitting
@@ -34,14 +34,14 @@ const rootRoute = createRootRoute({
 			<header className="app-header">
 				<nav className="app-nav">
 					<h1 className="app-title">
-						<a href="#/">Unnamed Gunpla App</a>
+						<Link to="/">Unnamed Gunpla App</Link>
 					</h1>
 					<ul className="nav-links">
 						<li>
-							<a href="#/">Home</a>
+							<Link to="/">Home</Link>
 						</li>
 						<li>
-							<a href="#/about">About</a>
+							<Link to="/about">About</Link>
 						</li>
 					</ul>
 				</nav>
@@ -88,13 +88,17 @@ const notFoundRoute = createRoute({
 // Create route tree with all routes
 const routeTree = rootRoute.addChildren([indexRoute, aboutRoute, notFoundRoute]);
 
+// Create hash history for GitHub Pages compatibility
+const hashHistory = createHashHistory();
+
 /**
  * Router instance with hash routing for GitHub Pages compatibility
- * Note: Hash routing will be handled by the navigation links using #/ format
+ * Uses built-in TanStack Router hash history for reliable hash-based navigation
  */
 // eslint-disable-next-line react-refresh/only-export-components
 export const router = createRouter({
 	routeTree,
+	history: hashHistory, // Use built-in hash history for GitHub Pages compatibility
 	defaultPreload: "intent",
 	defaultComponent: NotFoundPage,
 	// Optimize route matching
