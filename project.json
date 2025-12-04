@@ -1,0 +1,40 @@
+{
+  "name": "unnamed-gunpla-app",
+  "$schema": "./node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": ".",
+  "projectType": "application",
+  "targets": {
+    "typecheck-all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm nx run-many --target=typecheck --parallel=5"
+      },
+      "cache": true,
+      "dependsOn": ["types:build", "utils:build", "cli:build"]
+    },
+    "test-all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm nx run-many --target=test --parallel=3"
+      },
+      "cache": true,
+      "dependsOn": ["types:build", "utils:build", "cli:build"]
+    },
+    "lint-all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm nx run-many --target=lint --parallel=5"
+      },
+      "cache": true
+    },
+    "build-all": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm nx run-many --target=build --parallel=3"
+      },
+      "cache": true,
+      "outputs": ["{workspaceRoot}/dist"]
+    }
+  },
+  "tags": ["scope:root", "type:workspace"]
+}

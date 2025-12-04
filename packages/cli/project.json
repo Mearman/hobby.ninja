@@ -43,33 +43,9 @@
       "dependsOn": ["types:build", "utils:build"]
     },
     "cli": {
-      "executor": "@nx/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "command": "tsx packages/cli/src/bin/cli.ts",
-        "cwd": "{workspaceRoot}"
-      },
-      "dependsOn": ["build"]
-    },
-    "scrape": {
-      "executor": "@nx/workspace:run-commands",
-      "options": {
-        "command": "tsx packages/cli/src/bin/cli.ts scrape",
-        "cwd": "{workspaceRoot}"
-      },
-      "dependsOn": ["build"]
-    },
-    "parse": {
-      "executor": "@nx/workspace:run-commands",
-      "options": {
-        "command": "tsx packages/cli/src/bin/cli.ts parse",
-        "cwd": "{workspaceRoot}"
-      },
-      "dependsOn": ["build"]
-    },
-    "export": {
-      "executor": "@nx/workspace:run-commands",
-      "options": {
-        "command": "tsx packages/cli/src/bin/cli.ts export",
         "cwd": "{workspaceRoot}"
       },
       "dependsOn": ["build"]
