@@ -10,7 +10,6 @@ export default defineConfig({
       dir: '../../node_modules/.vite/vitest',
     },
     environment: 'jsdom',
-    setupFiles: ['./apps/webapp/src/test-setup.ts'],
     include: [
       '**/*.{unit,component,integration,e2e}.test.{ts,tsx,js,jsx}',
       '**/*.spec.{ts,tsx,js,jsx}',
@@ -45,8 +44,8 @@ export default defineConfig({
         '**/__mocks__/**',
         '**/stories/**',
         '**/*.stories.{ts,tsx}',
-        'apps/webapp/src/main.tsx',
-        'apps/webapp/src/vite-env.d.ts',
+        'apps/web/src/main.tsx',
+        'apps/web/src/vite-env.d.ts',
       ],
       include: [
         'apps/webapp/src/**/*.{ts,tsx}',

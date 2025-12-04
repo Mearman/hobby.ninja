@@ -28,7 +28,7 @@
       "dependsOn": ["types:build"]
     },
     "test": {
-      "executor": "@nx/vite:test",
+      "executor": "@nx/vitest:test",
       "outputs": ["{workspaceRoot}/coverage/utils"],
       "cache": true,
       "options": {
