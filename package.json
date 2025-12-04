@@ -32,7 +32,7 @@
     "deps": "nx show project web --json | jq '.implicitDependencies'",
     "syncpack": "syncpack list-mismatches && syncpack fix-mismatches",
     "syncpack:check": "nx run unnamed-gunpla-app:syncpack:check",
-    "syncpack:fix": "syncpack fix-mismatches",
+    "syncpack:fix": "nx run unnamed-gunpla-app:syncpack:fix",
     "syncpack:lint": "nx run unnamed-gunpla-app:syncpack:lint",
     "knip": "nx run unnamed-gunpla-app:knip",
     "knip:production": "nx run unnamed-gunpla-app:knip:production",

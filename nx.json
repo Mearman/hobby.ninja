@@ -3,7 +3,7 @@
   "targetDefaults": {
     "build": {
       "cache": true,
-      "dependsOn": ["^build", "lint", "typecheck"],
+      "dependsOn": ["^build", "syncpack:fix", "barrels", "lint:fix", "typecheck"],
       "parallel": 4,
       "maxParallel": 4
     },
@@ -57,7 +57,7 @@
     "default": {
       "runner": "@nx/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "build:prod", "test", "test:unit", "test:integration", "test:e2e", "lint", "lint:check", "typecheck", "typecheck-root", "validate", "validate:affected"],
+        "cacheableOperations": ["build", "build:prod", "test", "test:unit", "test:integration", "test:e2e", "lint", "lint:check", "lint:fix", "typecheck", "typecheck-root", "syncpack:fix", "barrels", "validate", "validate:affected"],
         "useDaemonProcess": true,
         "runtimeCacheInputs": ["node -v", "npm -v"]
       }
