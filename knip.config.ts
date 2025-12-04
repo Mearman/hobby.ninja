@@ -13,7 +13,6 @@ const config: KnipConfig = {
     '**/vite.config.ts',
     '**/vitest.config.ts',
     '**/playwright.config.ts',
-    'eslint.config.ts',
     '**/project.json',
     'specs/**',
     'docs/**',
