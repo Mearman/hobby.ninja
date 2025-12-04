@@ -1,50 +1,69 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 1.1.0 → 1.2.0
+- Modified principles: Streamlined all principles for conciseness
+- Added sections: N/A
+- Removed sections: N/A
+- Templates requiring updates: N/A (templates already aligned)
+- Follow-up TODOs: N/A
+-->
+
+# Unnamed Gunpla App Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Clean Workspace
+Remove all temporary files (DEPLOYMENT_READINESS.md, drafts, *.tmp). Never commit non-production artifacts.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. TypeScript First
+Strict TypeScript mode mandatory. All code must pass type checking before completion.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Test Coverage
+Comprehensive testing required (unit, integration, e2e). Tests written before or alongside implementation.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Independent MVPs
+Each user story must be independently testable and deliver standalone value.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Documentation Driven
+Features specified before implementation with clear user stories and acceptance criteria.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### VI. No Type Coercion
+All type conversions must be explicit. No implicit coercion allowed.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Development Standards
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### Code Quality
+- TypeScript strict mode enforcement
+- Linting and formatting checks mandatory
+- Security best practices required
+- Code reviews for all changes
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Architecture
+- Nx monorepo with workspace management
+- Shared packages for common functionality
+- Client-side storage via IndexedDB (Dexie)
+- Clear frontend/backend separation
+
+### Performance
+- PWA features enabled
+- WCAG 2.1 AA accessibility
+- Optimized bundle sizes
+- Mobile-first responsive design
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all development guidelines. All PRs must verify compliance.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+### Amendment Process
+1. Document proposed changes with rationale
+2. Maintainer approval required
+3. Migration plan for breaking changes
+4. Semantic versioning updates
+
+### Compliance Review
+- Regular codebase reviews
+- Automated checks (linting, type checking, coverage)
+- Manual architectural reviews
+- Documentation updates required
+
+**Version**: 1.2.0 | **Ratified**: 2025-12-04 | **Last Amended**: 2025-12-04
