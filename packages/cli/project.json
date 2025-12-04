@@ -47,12 +47,10 @@
       "dependsOn": ["types:build", "utils:build"]
     },
     "cli": {
-      "executor": "nx:run-commands",
+      "executor": "@nx/js:node",
       "options": {
-        "command": "tsx packages/cli/src/bin/cli.ts",
-        "cwd": "{workspaceRoot}"
-      },
-      "dependsOn": ["build"]
+        "buildTarget": "cli:build"
+      }
     }
   },
   "tags": ["scope:cli", "type:tool", "context:scraping"]
