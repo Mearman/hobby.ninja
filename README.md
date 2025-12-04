@@ -76,6 +76,10 @@ pnpm nx build webapp          # Production build
 # Workspace
 pnpm install                 # Install dependencies
 pnpm nx graph                # Visualize dependencies
+
+# Barrels (Export Management)
+pnpm barrels                 # Generate barrel exports
+pnpm barrels:watch          # Watch and regenerate exports
 ```
 
 ## Project Structure
@@ -86,6 +90,7 @@ packages/types/        # Shared TypeScript definitions
 packages/utils/        # Common utilities
 packages/cli/          # Data scraping CLI
 tools/security/        # Security scanning tools
+eslint-plugins/        # Custom ESLint plugins
 ```
 
 ## Deployment
