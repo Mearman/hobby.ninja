@@ -1,7 +1,9 @@
 #!/usr/bin/env tsx
 
 import { resolve } from "node:path";
+
 import { globSync } from "glob";
+
 import { countFileTokens, countTokens } from "./markdown-utils";
 
 interface TokenCountResult {
@@ -124,7 +126,7 @@ function countFiles(pattern: string, options: { ignore?: string[] } = {}): Token
 	// Report symlinks found
 	if (symlinksFound.length > 0) {
 		console.log(`\n🔗 Found ${symlinksFound.length} symlink(s):`);
-		symlinksFound.forEach(symlink => console.log(`   ${symlink}`));
+		for (const symlink of symlinksFound) console.log(`   ${symlink}`);
 		console.log(`   (Deduplicated to avoid double-counting)\n`);
 	}
 
@@ -227,7 +229,7 @@ function countFromString(content: string) {
 	if (tokenCount.modelTokens.gpt4 > 4000) {
 		console.log(`⚠️  Warning: This content exceeds typical context window limits`);
 	}
-	if (tokenCount.modelTokens.gpt4 > 100000) {
+	if (tokenCount.modelTokens.gpt4 > 100_000) {
 		console.log(`🚨 Critical: This content exceeds 100k tokens - very expensive to process`);
 	}
 }
@@ -312,4 +314,6 @@ if (require.main === module) {
 	main();
 }
 
-export { countFile, countFiles, countTokens, type TokenCountResult, type TokenCountReport };
+export { countFile, countFiles,  type TokenCountResult, type TokenCountReport };
+
+export {countTokens} from "./markdown-utils";

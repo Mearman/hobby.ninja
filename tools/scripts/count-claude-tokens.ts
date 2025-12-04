@@ -1,119 +1,91 @@
 #!/usr/bin/env tsx
 
 import { readFileSync } from "node:fs";
-import { encoding_for_model } from "tiktoken";
-import { mergeMarkdown, validateEmbeds } from "./merge-markdown";
-import { countTokens } from "./markdown-utils";
+import { resolve, relative } from "node:path";
 
-/**
- * Configuration
- */
-const TOKEN_THRESHOLD = 1000; // Temporary for testing
-const CLAUDE_FILE = "../../CLAUDE.md";
+import { countTokens , EMBED_LINK_REGEX, EMBED_SIMPLE_REGEX, readMarkdownFile } from "./markdown-utils";
 
-/**
- * Count tokens in merged content
- */
-function countMergedTokens(content: string): {
-	gpt3_5: number;
-	gpt4: number;
-	claude: number;
-	total: number;
-} {
+const CLAUDE_FILE = "CLAUDE.md";
+const TOKEN_THRESHOLD = 40_000;
+
+console.log("🔍 Analyzing CLAUDE.md and all merged content...\n");
+
+// Build file tree
+const buildFileTree = (filePath: string, visited = new Set<string>, depth = 0) => {
+	const absolutePath = resolve(filePath);
+	if (visited.has(absolutePath)) return null;
+
 	try {
-		// Get encodings for different models
-		const gpt3_5_encoding = encoding_for_model("gpt-3.5-turbo");
-		const gpt4_encoding = encoding_for_model("gpt-4");
-		const p50k_encoding = encoding_for_model("gpt-4"); // Use gpt-4 for Claude approximation
+		const markdownFile = readMarkdownFile(filePath);
+		const content = markdownFile.content;
+		const tokens = countTokens(content).estimatedTokens;
+		const children: any[] = [];
 
-		// Count tokens
-		const gpt3_5_tokens = gpt3_5_encoding.encode(content).length;
-		const gpt4_tokens = gpt4_encoding.encode(content).length;
-		const claude_tokens = p50k_encoding.encode(content).length;
-
-		// Clean up encodings
-		gpt3_5_encoding.free();
-		gpt4_encoding.free();
-		p50k_encoding.free();
-
-		return {
-			gpt3_5: gpt3_5_tokens,
-			gpt4: gpt4_tokens,
-			claude: claude_tokens,
-			total: gpt4_tokens, // Use GPT-4 as primary
-		};
-	} catch (error) {
-		console.error("Error counting tokens:", error instanceof Error ? error.message : error);
-		throw error;
-	}
-}
-
-/**
- * Format number with thousands separator
- */
-function formatNumber(num: number): string {
-	return num.toLocaleString();
-}
-
-/**
- * Main function
- */
-function main() {
-	try {
-		console.log("🔍 Analyzing CLAUDE.md and all merged content...\n");
-
-		// First validate embeds
-		console.log("Validating embed references...");
-		const validationResult = validateEmbeds(CLAUDE_FILE);
-		if (!validationResult.valid) {
-			console.error("❌ Validation failed:");
-			for (const error of validationResult.errors) {
-				console.error(`  - ${error}`);
+		const linkMatches = [...content.matchAll(EMBED_LINK_REGEX)];
+		for (const match of linkMatches) {
+			const [, linkText, linkPath] = match;
+			if (linkText === linkPath) {
+				const child = buildFileTree(resolve(markdownFile.directory, linkPath), visited, depth + 1);
+				if (child) children.push(child);
 			}
-			process.exit(1);
-		}
-		console.log("✅ All embed references are valid\n");
-
-		// Merge content
-		console.log("Merging content...");
-		const mergedContent = mergeMarkdown(CLAUDE_FILE);
-		console.log(`✅ Merged ${mergedContent.length} characters\n`);
-
-		// Count tokens
-		console.log("Counting tokens...");
-		const tokenCounts = countMergedTokens(mergedContent);
-
-		// Display results
-		console.log("=== Token Count Results ===\n");
-		console.log(`GPT-3.5 Turbo: ${formatNumber(tokenCounts.gpt3_5)} tokens`);
-		console.log(`GPT-4:         ${formatNumber(tokenCounts.gpt4)} tokens`);
-		console.log(`Claude (approx): ${formatNumber(tokenCounts.claude)} tokens`);
-		console.log();
-
-		// Check threshold
-		if (tokenCounts.total > TOKEN_THRESHOLD) {
-			console.log(`🚨 WARNING: ${formatNumber(tokenCounts.total)} tokens exceeds threshold of ${formatNumber(TOKEN_THRESHOLD)}`);
-			console.log(`This content may be too large for some LLM contexts.`);
-
-			// Return token count as exit code (capped at 255 for Unix compatibility)
-			const exitCode = Math.min(tokenCounts.total, 255);
-			console.log(`\nExiting with code: ${exitCode}`);
-			process.exit(exitCode);
-		} else {
-			console.log(`✅ ${formatNumber(tokenCounts.total)} tokens is within threshold`);
-			console.log(`Below limit of ${formatNumber(TOKEN_THRESHOLD)} tokens`);
-			process.exit(0);
 		}
 
-	} catch (error) {
-		console.error("❌ Error:", error instanceof Error ? error.message : error);
-		process.exit(1);
+		return { filePath, relativePath: relative(process.cwd(), absolutePath), tokens, children, depth };
+	} catch {
+		return null;
 	}
+};
+
+// Print tree
+const printFileTree = (node: any, prefix = "", isLast = true) => {
+	if (!node) return;
+	const connector = isLast ? "└── " : "├── ";
+	const extension = node.children.length > 0 ? "" : (node.tokens > 1000 ? " 🔴" : node.tokens > 500 ? " 🟡" : " 🟢");
+	console.log(`${prefix}${connector}${node.relativePath} (${node.tokens.toLocaleString()} tokens${extension})`);
+
+	const childPrefix = prefix + (isLast ? "    " : "│   ");
+	for (let i = 0; i < node.children.length; i++) {
+		printFileTree(node.children[i], childPrefix, i === node.children.length - 1);
+	}
+};
+
+// Calculate tree tokens
+const calculateTreeTokens = (node: any): number => {
+	if (!node) return 0;
+	let total = node.tokens;
+	for (const child of node.children) {
+		total += calculateTreeTokens(child);
+	}
+	return total;
+};
+
+// Main execution
+const tree = buildFileTree(CLAUDE_FILE);
+if (tree) {
+	printFileTree(tree);
+	const treeTokens = calculateTreeTokens(tree);
+	console.log(`\n📊 Total tokens (tree): ${treeTokens.toLocaleString()}\n`);
 }
 
-// Run if executed directly
-if (require.main === module) {
-	main();
-}
+// Count tokens
+console.log("📈 Counting tokens in merged content...");
+const mergedContent = readFileSync(CLAUDE_FILE, "utf-8");
+const tokenCounts = countTokens(mergedContent);
+const totalTokens = tokenCounts.estimatedTokens;
 
-export { countMergedTokens, TOKEN_THRESHOLD, CLAUDE_FILE };
+console.log("=== Token Count Results ===\n");
+console.log(`GPT-3.5 Turbo: ${tokenCounts.modelTokens.gpt3_5.toLocaleString()} tokens`);
+console.log(`GPT-4:         ${tokenCounts.modelTokens.gpt4.toLocaleString()} tokens`);
+console.log(`Claude (approx): ${tokenCounts.modelTokens.claude.toLocaleString()} tokens`);
+console.log();
+
+if (totalTokens > TOKEN_THRESHOLD) {
+	console.log(`🚨 WARNING: ${totalTokens.toLocaleString()} tokens exceeds threshold of ${TOKEN_THRESHOLD.toLocaleString()}`);
+	const exitCode = Math.min(totalTokens, 255);
+	console.log(`\nExiting with code: ${exitCode} (token count)`);
+	process.exit(exitCode);
+} else {
+	console.log(`✅ ${totalTokens.toLocaleString()} tokens is within threshold`);
+	console.log(`Below limit of ${TOKEN_THRESHOLD.toLocaleString()} tokens`);
+	process.exit(0);
+}

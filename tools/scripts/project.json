@@ -30,7 +30,7 @@
 				"command": "npx tsx count-markdown-tokens.ts",
 				"cwd": "tools/scripts"
 			},
-			"cache": false,
+			"cache": true,
 			"inputs": [
 				"{workspaceRoot}/**/*.md"
 			]
@@ -38,10 +38,10 @@
 		"check-claude-tokens": {
 			"executor": "nx:run-commands",
 			"options": {
-				"command": "npx tsx count-claude-tokens.ts",
-				"cwd": "tools/scripts"
+				"command": "npx tsx tools/scripts/count-claude-tokens.ts",
+				"cwd": "."
 			},
-			"cache": false,
+			"cache": true,
 			"inputs": [
 				"{workspaceRoot}/CLAUDE.md",
 				"{workspaceRoot}/README.md",

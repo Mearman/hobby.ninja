@@ -2,6 +2,7 @@
 
 import { readFileSync, existsSync, statSync, lstatSync, readlinkSync } from "node:fs";
 import { resolve, dirname, isAbsolute, relative, basename } from "node:path";
+
 import { encoding_for_model, get_encoding } from "tiktoken";
 
 /**
@@ -182,7 +183,7 @@ export function countTokens(content: string): TokenCount {
 	// Count basic metrics
 	const words = content.split(/\s+/).filter(word => word.length > 0).length;
 	const characters = content.length;
-	const charactersNoSpaces = content.replace(/\s/g, "").length;
+	const charactersNoSpaces = content.replaceAll(/\s/g, "").length;
 
 	// Use tiktoken for accurate token counting
 	try {
