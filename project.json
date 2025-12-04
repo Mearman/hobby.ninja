@@ -146,8 +146,8 @@
         "default",
         "{workspaceRoot}/syncpack.config.ts",
         "{workspaceRoot}/package.json",
-        "apps/*/package.json",
-        "packages/*/package.json"
+        "{workspaceRoot}/apps/*/package.json",
+        "{workspaceRoot}/packages/*/package.json"
       ]
     },
     "syncpack:lint": {
@@ -160,8 +160,8 @@
         "default",
         "{workspaceRoot}/syncpack.config.ts",
         "{workspaceRoot}/package.json",
-        "apps/*/package.json",
-        "packages/*/package.json"
+        "{workspaceRoot}/apps/*/package.json",
+        "{workspaceRoot}/packages/*/package.json"
       ]
     },
     "syncpack:fix": {
@@ -173,8 +173,8 @@
         "default",
         "{workspaceRoot}/syncpack.config.ts",
         "{workspaceRoot}/package.json",
-        "apps/*/package.json",
-        "packages/*/package.json"
+        "{workspaceRoot}/apps/*/package.json",
+        "{workspaceRoot}/packages/*/package.json"
       ]
     }
   }
