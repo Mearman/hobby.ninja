@@ -2,13 +2,13 @@ import { createRouter, RouterProvider , createRoute, createRootRoute, Outlet } f
 import { Suspense, lazy } from "react";
 
 // Lazy load route components for code splitting
-const HomePage = lazy(() => import("./pages/HomePage").then(module => ({
+const HomePage = lazy(() => import("./pages/home-page").then(module => ({
 	default: module.HomePage,
 })));
-const AboutPage = lazy(() => import("./pages/AboutPage").then(module => ({
+const AboutPage = lazy(() => import("./pages/about-page").then(module => ({
 	default: module.AboutPage,
 })));
-const NotFoundPage = lazy(() => import("./pages/NotFoundPage").then(module => ({
+const NotFoundPage = lazy(() => import("./pages/not-found-page").then(module => ({
 	default: module.NotFoundPage,
 })));
 
