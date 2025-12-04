@@ -114,7 +114,7 @@ export const SecurityEventSchema = z.object({
 	type: z.enum(["xss_attempt", "injection_attempt", "suspicious_activity", "rate_limit"]),
 	severity: z.enum(["low", "medium", "high", "critical"]),
 	message: z.string().min(1).max(1000),
-	details: z.record(z.unknown()).optional(),
+	details: z.record(z.string(), z.unknown()).optional(),
 	timestamp: z.string().datetime(),
 	resolved: z.boolean().default(false),
 });
