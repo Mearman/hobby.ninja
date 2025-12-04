@@ -15,7 +15,7 @@ export const IdSchema = z.string().uuid();
 
 // Bandai SKU pattern (e.g., "HG-1/144-RX-78-2", "MG-1/100-MSN-04")
 export const BandaiSKUSchema = z.string()
-	.regex(/^(HG|MG|PG|RG|SD|RE|EG|Mega Size)-\d\/\d+-[A-Z0-9\-]+$/, {
+	.regex(/^(HG|MG|PG|RG|SD|RE|EG|Mega Size)-\d\/\d+-[A-Z0-9-]+$/, {
 		message: "Invalid Bandai SKU format. Expected format: HG-1/144-RX-78-2",
 	});
 
