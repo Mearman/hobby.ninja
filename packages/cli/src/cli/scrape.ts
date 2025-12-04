@@ -3,7 +3,7 @@ import * as path from 'path';
 import { BandaiHobbyScraper } from '../scrapers/bandai-hobby.js';
 import { CacheManager } from '../utils/cache-manager.js';
 import { BandaiRateLimiter } from '../utils/rate-limiter.js';
-import { validateProductData, validateProductDataBatch } from '../schemas/validation.js';
+import { validateProductData } from '../schemas/validation.js';
 
 export interface ScrapeOptions {
   source: string;
@@ -53,10 +53,10 @@ export class ScrapeCommand {
         urls = await this.loadCheckpoint();
         if (urls.length === 0) {
           console.log('No checkpoint found. Starting fresh.');
-          urls = await this.getUrlsToScrape(options.source, options.language);
+          urls = await this.getUrlsToScrape(options.source);
         }
       } else {
-        urls = await this.getUrlsToScrape(options.source, options.language);
+        urls = await this.getUrlsToScrape(options.source);
       }
 
       console.log(`Starting scrape: ${urls.length} URLs to process`);
@@ -97,7 +97,7 @@ export class ScrapeCommand {
     }
   }
 
-  private async getUrlsToScrape(source: string, language: string): Promise<string[]> {
+  private async getUrlsToScrape(source: string): Promise<string[]> {
     // This would normally fetch URLs from the source
     // For now, return example URLs
     const urls: string[] = [];
@@ -130,7 +130,7 @@ export class ScrapeCommand {
         let productData = null;
         if (options.cache) {
           const cachedData = await this.cacheManager.getByUrl(url);
-          if (cachedData) {
+          if (cachedData && cachedData.rawHtml) {
             productData = JSON.parse(cachedData.rawHtml);
             cached++;
             if (options.verbose) {
@@ -148,7 +148,7 @@ export class ScrapeCommand {
 
           // Cache the result
           if (options.cache && productData) {
-            await this.cacheManager.setByUrl(url, JSON.stringify(productData), 'bandai-hobby');
+            await this.cacheManager.setByUrl(url, JSON.stringify(productData), 'bandai-hobby', undefined);
           }
           newItems++;
 

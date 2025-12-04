@@ -1,6 +1,5 @@
 import { LanguageDetector } from '../utils/language-detection.js';
 import { RenderingDetector } from '../utils/rendering-detection.js';
-import * as cheerio from 'cheerio';
 
 export abstract class BaseScraper {
   protected baseUrl: string;

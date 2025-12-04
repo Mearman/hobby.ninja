@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import * as path from 'path';
-import { validateProductData, validateProductDataBatch } from '../schemas/validation.js';
+import { validateProductDataBatch } from '../schemas/validation.js';
 
 export interface ValidateCommandOptions {
   source?: string;
@@ -25,9 +25,9 @@ export class ValidateCommand {
       let result: ValidationResult;
 
       if (options.file) {
-        result = await this.validateFile(options.file, options.fix);
+        result = await this.validateFile(options.file, !!options.fix);
       } else if (options.source) {
-        result = await this.validateSourceOutput(options.source, options.fix);
+        result = await this.validateSourceOutput(options.source, !!options.fix);
       } else {
         console.log('Please specify either --file or --source to validate');
         process.exit(1);
