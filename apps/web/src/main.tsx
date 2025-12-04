@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import { initStorage } from "./db/kits";
 import { MantineThemeProvider } from "./providers/mantine-provider";
 import { AppRouter } from "./router";
+import { logger } from "./lib/logger";
 import "./styles/styles.css";
 
 /**
@@ -31,63 +32,73 @@ function ErrorBoundary({ children }: { children: React.ReactNode }) {
 /**
  * Initialize and start the application
  */
-async function startApp() {
-	try {
-		console.log("🚀 Initializing application...");
+try {
+	logger.info("🚀 Initializing application...");
 
-		// Initialize IndexedDB database
-		console.log("🗄️ Initializing database...");
-		await initStorage();
-		console.log("✅ Database initialized successfully");
+	// Initialize IndexedDB database
+	logger.info("🗄️ Initializing database...");
+	await initStorage();
+	logger.info("✅ Database initialized successfully");
 
-		// Find root element
-		const rootElement = document.querySelector("#root");
-		if (!rootElement) {
-			throw new Error("Root element not found");
-		}
+	// Find root element
+	const rootElement = document.querySelector("#root");
+	if (!rootElement) {
+		throw new Error("Root element not found");
+	}
 
-		const root = createRoot(rootElement);
+	const root = createRoot(rootElement);
 
-		// Clear initial loading state safely
-		while (rootElement.firstChild) {
-			rootElement.firstChild.remove();
-		}
+	// Clear initial loading state safely
+	while (rootElement.firstChild) {
+		rootElement.firstChild.remove();
+	}
 
-		// Render app with providers and error boundary
-		root.render(
-			<React.StrictMode>
-				<ErrorBoundary>
-					<MantineThemeProvider>
-						<AppRouter />
-					</MantineThemeProvider>
-				</ErrorBoundary>
-			</React.StrictMode>,
-		);
+	// Render app with providers and error boundary
+	root.render(
+		<React.StrictMode>
+			<ErrorBoundary>
+				<MantineThemeProvider>
+					<AppRouter />
+				</MantineThemeProvider>
+			</ErrorBoundary>
+		</React.StrictMode>,
+	);
 
-		console.log("✅ Application mounted successfully");
+	logger.info("✅ Application mounted successfully");
 
-	} catch (error) {
-		console.error("❌ Failed to start application:", error);
+} catch (error) {
+	logger.error("❌ Failed to start application:", error);
 
-		// Show error message in the UI
-		const rootElement = document.querySelector("#root");
-		if (rootElement) {
-			rootElement.innerHTML = `
-        <div class="error-boundary">
-          <h2>Application Startup Error</h2>
-          <p>Failed to initialize the application. Please check the browser console for details.</p>
-          <details>
-            <summary>Error Details</summary>
-            <pre>${error instanceof Error ? error.message : "Unknown error"}</pre>
-          </details>
-        </div>
-      `;
-		}
+	// Show error message in the UI using safe DOM methods
+	const rootElement = document.querySelector("#root");
+	if (rootElement) {
+		const errorDiv = document.createElement("div");
+		errorDiv.className = "error-boundary";
+
+		const title = document.createElement("h2");
+		title.textContent = "Application Startup Error";
+
+		const message = document.createElement("p");
+		message.textContent = "Failed to initialize the application. Please check the browser console for details.";
+
+		const details = document.createElement("details");
+		const summary = document.createElement("summary");
+		summary.textContent = "Error Details";
+
+		const pre = document.createElement("pre");
+		pre.textContent = error instanceof Error ? error.message : "Unknown error";
+
+		details.append(summary);
+		details.append(pre);
+
+		errorDiv.append(title);
+		errorDiv.append(message);
+		errorDiv.append(details);
+
+		rootElement.innerHTML = "";
+		rootElement.append(errorDiv);
 	}
 }
-
-// Start the application
-startApp();
 
 // Enable hot module replacement
 if (import.meta.hot) {
@@ -99,7 +110,7 @@ if (import.meta.hot) {
  */
 if ("serviceWorker" in navigator) {
 	navigator.serviceWorker.addEventListener("controllerchange", () => {
-		console.log("🔄 Service worker controller changed - reloading...");
+		logger.info("🔄 Service worker controller changed - reloading...");
 		globalThis.location.reload();
 	});
 }
@@ -109,9 +120,9 @@ if ("serviceWorker" in navigator) {
  */
 document.addEventListener("visibilitychange", () => {
 	if (document.hidden) {
-		console.log("📱 Application hidden");
+		logger.info("📱 Application hidden");
 	} else {
-		console.log("📱 Application visible");
+		logger.info("📱 Application visible");
 	}
 });
 
@@ -119,5 +130,5 @@ document.addEventListener("visibilitychange", () => {
  * Handle application unmount/cleanup
  */
 window.addEventListener("beforeunload", () => {
-	console.log("🛑 Application unloading...");
+	logger.info("🛑 Application unloading...");
 });

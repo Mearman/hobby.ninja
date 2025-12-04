@@ -1,5 +1,6 @@
 import Dexie, { Table } from "dexie";
 import { z } from "zod";
+import { logger } from "../lib/logger";
 
 // Generate UUID function
 function generateId(): string {
@@ -10,7 +11,7 @@ function generateId(): string {
 
 	// Fallback for older browsers
 	return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replaceAll(/[xy]/g, (c) => {
-		const r = (Math.random() * 16) | 0;
+		const r = Math.trunc(Math.random() * 16);
 		const v = c === "x" ? r : (r & 0x3) | 0x8;
 		return v.toString(16);
 	});

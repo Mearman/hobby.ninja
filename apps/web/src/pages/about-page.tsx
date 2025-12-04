@@ -50,7 +50,7 @@ export function AboutPage() {
             all built with modern web technologies for the best possible user experience.
 					</Text>
 					<Text size="md" color="dimmed">
-            Whether you're just starting your Gunpla journey or you're a seasoned collector with hundreds of kits,
+            Whether you&apos;re just starting your Gunpla journey or you&apos;re a seasoned collector with hundreds of kits,
             our platform adapts to your needs and helps you organize, track, and discover amazing Gundam model kits.
 					</Text>
 				</Card>
