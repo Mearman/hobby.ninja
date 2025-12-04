@@ -10,6 +10,12 @@ import prettier from 'eslint-config-prettier';
 import unicorn from 'eslint-plugin-unicorn';
 import nx from '@nx/eslint-plugin';
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 export default [
   js.configs.recommended,
   prettier,
@@ -24,7 +30,15 @@ export default [
         ecmaFeatures: {
           jsx: true,
         },
-        project: './tsconfig.base.json',
+        // Use absolute paths for TypeScript project configurations
+        project: [
+          path.resolve(__dirname, 'tsconfig.base.json'),
+          path.resolve(__dirname, 'packages/types/tsconfig.json'),
+          path.resolve(__dirname, 'packages/utils/tsconfig.json'),
+          path.resolve(__dirname, 'packages/cli/tsconfig.json'),
+          path.resolve(__dirname, 'apps/web/tsconfig.json'),
+          path.resolve(__dirname, 'tsconfig.json')
+        ],
       },
       globals: {
         console: 'readonly',
@@ -38,6 +52,7 @@ export default [
         navigator: 'readonly',
         localStorage: 'readonly',
         sessionStorage: 'readonly',
+        crypto: 'readonly',
       },
     },
     plugins: {
@@ -52,11 +67,6 @@ export default [
     settings: {
       react: {
         version: 'detect',
-      },
-      'import/resolver': {
-        typescript: true,
-        alwaysTryTypes: true,
-        project: './tsconfig.base.json',
       },
     },
   rules: {
