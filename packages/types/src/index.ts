@@ -98,6 +98,7 @@ export interface PageTypeProfile {
   metadata?: {
     lastUpdated: number;
     rawHtml?: string;
+    source?: string;
   };
   performance?: {
     estimatedLoadTime: number;
@@ -137,6 +138,7 @@ export interface ProfileGenerationResult {
     extractionSuccess?: number;
     extractionFailures?: number;
   };
+  recommendations?: string[];
   requiresPlaywright: boolean;
   confidence: number;
   sampleUrls: string[];
@@ -164,6 +166,7 @@ export interface RenderingDetection {
   finalContentLength?: number;
   jsExecutionTime?: number;
   detectedAt?: number;
+  indicators?: string[];
 }
 
 export interface ProgressiveEnhancementResult {
