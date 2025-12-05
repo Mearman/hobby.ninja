@@ -109,8 +109,10 @@ export class CheckpointManager {
         throw new Error('Cannot increment retries: no checkpoint data found');
       }
 
-      data.retries = (data.retries || 0) + 1;
-      if (data.retries > this.maxRetries) {
+      const currentRetries = (data['retries'] as number) || 0;
+      data['retries'] = currentRetries + 1;
+
+      if (data['retries'] > this.maxRetries) {
         throw new Error(`Maximum retries exceeded (${this.maxRetries})`);
       }
 
@@ -120,7 +122,7 @@ export class CheckpointManager {
 
   async getRetries(): Promise<number> {
     const data = await this.loadCheckpoint();
-    return data?.retries || 0;
+    return (data?.['retries'] as number) || 0;
   }
 
   async shouldRetry(): Promise<boolean> {
@@ -157,14 +159,14 @@ export class CheckpointManager {
       return null;
     }
 
-    return data as {
-      source: data.source || '',
-      remainingUrls: data.remainingUrls || [],
-      completedUrls: data.completedUrls || [],
-      metadata: data.metadata || {},
-      status: data.status || 'unknown',
-      createdAt: data.createdAt || Date.now(),
-      lastUpdated: data.lastUpdated || Date.now()
+    return {
+      source: (data['source'] as string) || '',
+      remainingUrls: (data['remainingUrls'] as string[]) || [],
+      completedUrls: (data['completedUrls'] as string[]) || [],
+      metadata: (data['metadata'] as Record<string, any>) || {},
+      status: (data['status'] as string) || 'unknown',
+      createdAt: (data['createdAt'] as number) || Date.now(),
+      lastUpdated: (data['lastUpdated'] as number) || Date.now()
     };
   }
 
@@ -174,8 +176,8 @@ export class CheckpointManager {
         throw new Error('Cannot mark completed: invalid checkpoint data');
       }
 
-      data.status = 'completed';
-      data.completedAt = Date.now();
+      data['status'] = 'completed';
+      data['completedAt'] = Date.now();
       return data;
     });
   }
@@ -186,9 +188,9 @@ export class CheckpointManager {
         throw new Error('Cannot mark failed: invalid checkpoint data');
       }
 
-      data.status = 'failed';
-      data.error = error.message;
-      data.failedAt = Date.now();
+      data['status'] = 'failed';
+      data['error'] = error.message;
+      data['failedAt'] = Date.now();
       return data;
     });
   }

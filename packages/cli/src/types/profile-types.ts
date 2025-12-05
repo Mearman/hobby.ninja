@@ -63,3 +63,9 @@ export interface ProfileGenerationResult {
   confidence: number; // 0.0 - 1.0
   recommendations: string[];
 }
+
+export interface CheckpointData {
+  type: 'scrape' | 'index' | 'process';
+  source: string;
+  [key: string]: any; // Allow dynamic properties based on type
+}

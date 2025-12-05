@@ -1,3 +1,5 @@
+import * as fs from 'fs/promises';
+
 export enum ErrorSeverity {
   LOW = 'low',
   MEDIUM = 'medium',
@@ -47,7 +49,7 @@ export class ErrorHandler {
   constructor(options: { maxErrors?: number; logToFile?: boolean; logFilePath?: string } = {}) {
     this.maxErrors = options.maxErrors || 1000;
     this.logToFile = options.logToFile || false;
-    this.logFilePath = options.logFilePath;
+    this.logFilePath = options.logFilePath || undefined;
   }
 
   createError(
@@ -256,7 +258,7 @@ export class ErrorHandler {
       };
 
       const logLine = JSON.stringify(logEntry) + '\n';
-      await fs.promises.appendFile(this.logFilePath, logLine);
+      await fs.appendFile(this.logFilePath, logLine);
     } catch (logError) {
       console.warn('Failed to write error to log file:', logError);
     }
