@@ -74,8 +74,10 @@ export abstract class BaseScraper {
       console.log(`✅ Using cached profile: ${profile.name} (extraction: ${profile.extractionMethod})`);
 
       // Update the profile to indicate we've used it
+      const profilePattern = profileManager.getProfileForUrl(url)?.urlPattern;
+      const profileKey = typeof profilePattern === 'string' ? profilePattern : String(profilePattern);
       await profileManager.updateProfilePerformance(
-        profileManager.getProfileForUrl(url)?.urlPattern || '',
+        profileKey,
         true,
         Date.now() // This will be updated after actual extraction
       );
