@@ -438,39 +438,17 @@ export class Downloader {
     }
     const rangeEnd = upperBound;
 
-    // Collect all IDs in the found range - but limit to reasonable size
+    // Trust the binary search results completely - no individual verification needed
     const finalStart = Math.max(rangeStart, minId);
     const finalEnd = Math.min(rangeEnd, maxId);
     const rangeSize = finalEnd - finalStart + 1;
 
-    // Safety limit: don't check more than 50 individual IDs in one range
-    const maxRangeSize = 50;
-    let actualEnd = finalEnd;
-
-    if (rangeSize > maxRangeSize) {
-      actualEnd = finalStart + maxRangeSize - 1;
-      console.log(`   ⚠️ Range too large (${rangeSize} IDs), limiting to first ${maxRangeSize}`);
-    }
-
+    // Generate the full range based on binary search boundaries
     const range: number[] = [];
-    for (let id = finalStart; id <= actualEnd; id++) {
-      if (!existingFiles.has(id) && !checked.has(id)) {
-        checked.add(id);
-        checksMade++;
-        if (await this.testUrl(baseUrl + id + '/')) {
-          range.push(id);
-        }
-
-        // Progress update for large ranges
-        if (rangeSize > 10 && id % 10 === 0) {
-          process.stdout.write(`\r   🔍 Checking gap: ${id - finalStart + 1}/${Math.min(rangeSize, maxRangeSize)} (${range.length} found)`);
-        }
+    for (let id = finalStart; id <= finalEnd; id++) {
+      if (!existingFiles.has(id)) {
+        range.push(id);
       }
-    }
-
-    // Clear progress line if we showed it
-    if (rangeSize > 10) {
-      process.stdout.write('\r' + ' '.repeat(80) + '\r');
     }
 
     console.log(`   ✅ Gap analysis complete: ${checksMade} URL checks, found ${range.length} valid manuals`);
