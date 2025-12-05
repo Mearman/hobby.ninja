@@ -81,7 +81,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     return productData;
   }
 
-  private extractProductName($: any): string {
+  private extractProductName($: cheerio.Root): string {
     // Try multiple selectors for product name
     const selectors = [
       '.product-title',
@@ -103,7 +103,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     return '';
   }
 
-  private extractSku($: any, url: string): string {
+  private extractSku($: cheerio.Root, url: string): string {
     // Try to extract SKU from URL path
     const urlMatch = url.match(/\/([^\/]+)\/?$/);
     if (urlMatch && urlMatch[1]) {
@@ -129,7 +129,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     return '';
   }
 
-  private extractPriceInfo($: any): PriceInfo | undefined {
+  private extractPriceInfo($: cheerio.Root): PriceInfo | undefined {
     const priceSelectors = [
       '.price',
       '.product-price',
@@ -153,7 +153,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     return undefined;
   }
 
-  private extractDescription($: any): string {
+  private extractDescription($: cheerio.Root): string {
     const selectors = [
       '.product-description',
       '.item-description',
@@ -172,7 +172,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     return '';
   }
 
-  private extractSpecifications($: any): Record<string, any> {
+  private extractSpecifications($: cheerio.Root): Record<string, any> {
     const specs: Record<string, any> = {};
 
     // Look for specification tables or lists
@@ -244,7 +244,7 @@ export class BandaiHobbyScraper extends BaseScraper {
     return unitMatch?.[1] || undefined;
   }
 
-  private extractImages($: any): ProductImage[] {
+  private extractImages($: cheerio.Root): ProductImage[] {
     const images: ProductImage[] = [];
 
     $('.product-image, .item-image, .main-image img, .gallery-image img, .product-image img').each((_: number, element: any) => {
@@ -274,7 +274,7 @@ export class BandaiHobbyScraper extends BaseScraper {
   }
 
   
-  private extractCategories($: any): string[] {
+  private extractCategories($: cheerio.Root): string[] {
     const categories: string[] = [];
 
     // Look for breadcrumb or category information
