@@ -104,7 +104,7 @@ export class CheckpointManager {
   }
 
   async incrementRetries(): Promise<number> {
-    return this.updateCheckpoint((data) => {
+    const updatedData = await this.updateCheckpoint((data) => {
       if (!data) {
         throw new Error('Cannot increment retries: no checkpoint data found');
       }
@@ -118,6 +118,8 @@ export class CheckpointManager {
 
       return data;
     });
+
+    return (updatedData['retries'] as number) || 0;
   }
 
   async getRetries(): Promise<number> {

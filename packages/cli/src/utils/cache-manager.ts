@@ -16,16 +16,13 @@ interface CacheEntry {
 
 export class CacheManager {
   private cacheDir: string;
-  private compressionEnabled: boolean;
   private defaultTtl: number; // milliseconds
 
   constructor(options: {
     cacheDir?: string;
-    compressionEnabled?: boolean;
     defaultTtl?: number;
   } = {}) {
     this.cacheDir = options.cacheDir || path.join(process.cwd(), '.cache', 'gundam-scraper');
-    this.compressionEnabled = options.compressionEnabled ?? true;
     this.defaultTtl = options.defaultTtl || 24 * 60 * 60 * 1000; // 24 hours
   }
 

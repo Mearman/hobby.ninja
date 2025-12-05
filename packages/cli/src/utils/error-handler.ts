@@ -49,7 +49,9 @@ export class ErrorHandler {
   constructor(options: { maxErrors?: number; logToFile?: boolean; logFilePath?: string } = {}) {
     this.maxErrors = options.maxErrors || 1000;
     this.logToFile = options.logToFile || false;
-    this.logFilePath = options.logFilePath || undefined;
+    if (options.logFilePath) {
+      this.logFilePath = options.logFilePath;
+    }
   }
 
   createError(
@@ -66,12 +68,22 @@ export class ErrorHandler {
       severity,
       category,
       timestamp: Date.now(),
-      retryable: this.isRetryableError(category, severity),
-      context,
-      originalError,
-      url,
-      source
+      retryable: this.isRetryableError(category, severity)
     };
+
+    // Only add optional properties if they exist
+    if (context !== undefined) {
+      error.context = context;
+    }
+    if (originalError !== undefined) {
+      error.originalError = originalError;
+    }
+    if (url !== undefined) {
+      error.url = url;
+    }
+    if (source !== undefined) {
+      error.source = source;
+    }
 
     if (originalError?.stack) {
       error.stackTrace = originalError.stack;

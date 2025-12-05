@@ -132,7 +132,7 @@ export class ProfileManager {
       name: this.generateProfileName(urlPattern),
       requiresPlaywright,
       extractionMethod,
-      selectors: await this.extractSelectors(sampleHtmls[0]),
+      selectors: await this.extractSelectors(sampleHtmls[0] || ''),
       waitForSelectors: this.extractWaitForSelectors(renderingAnalyses),
       timeout: this.calculateOptimalTimeout(renderingAnalyses),
       retryCount: 3,
@@ -264,7 +264,7 @@ export class ProfileManager {
     return 'Bandai Generic Page';
   }
 
-  private async extractSelectors(html: string): Promise<Record<string, string>> {
+  private async extractSelectors(_html: string): Promise<Record<string, string>> {
     // This would normally use more sophisticated analysis
     // For now, return common selectors for bandai-hobby.net
     return {
