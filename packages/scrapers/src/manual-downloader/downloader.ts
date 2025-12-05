@@ -300,12 +300,16 @@ export class Downloader {
 
       // Only check ranges that overlap with our target range
       if (sample < startId - 50 || sample > endId + 50) {
+        console.log(`   ⏭ Skipping seed ${sample} (too far from range ${startId}-${endId})`);
         continue; // Skip seeds too far from our range
       }
 
       // Check range around each seed point
       const rangeStart = Math.max(startId, sample - 50);
       const rangeEnd = Math.min(endId, sample + 50);
+      const rangeSize = rangeEnd - rangeStart + 1;
+
+      console.log(`   🔍 Seed ${i + 1}/${samples.length}: ID ${sample}, checking range ${rangeStart}-${rangeEnd} (${rangeSize} URLs)`);
 
       if (sample >= startId && sample <= endId) {
         seedsInRange++;
@@ -313,23 +317,27 @@ export class Downloader {
         seedsOutsideRange++;
       }
 
+      let rangeChecked = 0;
       for (let id = rangeStart; id <= rangeEnd; id++) {
         if (!checked.has(id)) {
           checked.add(id);
           totalChecked++;
+          rangeChecked++;
 
           if (await this.testUrl(baseUrl + id + '/')) {
             found.push(id);
+            console.log(`   ✅ Found valid manual: ${id}`);
           }
 
-          // Show progress every 50 checks
-          if (totalChecked % 50 === 0) {
-            process.stdout.write(`\r   🔍 Checked ${totalChecked}, found: ${found.length} valid manuals`);
+          // Show progress every 10 checks within this range
+          if (rangeChecked % 10 === 0) {
+            process.stdout.write(`\r   🔍 Range ${rangeStart}-${rangeEnd}: ${rangeChecked}/${rangeSize} checked, ${found.length} total found`);
           }
 
           await this.smartWait();
         }
       }
+      console.log(`   ✅ Completed range ${rangeStart}-${rangeEnd}: checked ${rangeChecked} URLs`);
     }
 
     console.log(`\n   ✅ Expansion complete: checked ${totalChecked} unique URLs, found ${found.length} valid manuals`);
