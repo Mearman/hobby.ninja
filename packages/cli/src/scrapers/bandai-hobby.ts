@@ -14,7 +14,17 @@ export class BandaiHobbyScraper extends BaseScraper {
 
   async extractFromPage(html: string, url: string): Promise<ProductData> {
     const $ = cheerio.load(html);
-    const languageDetection = this.parseLanguage(html, url);
+    const rawLanguageDetection = this.parseLanguage(html, url);
+
+    // Transform language detection to match expected structure
+    const languageDetection = {
+      primaryLanguage: {
+        code: rawLanguageDetection.language,
+        confidence: rawLanguageDetection.confidence
+      },
+      method: rawLanguageDetection.method,
+      evidence: rawLanguageDetection.evidence
+    };
 
     // Extract basic product information
     const name = this.extractProductName($);
@@ -31,6 +41,7 @@ export class BandaiHobbyScraper extends BaseScraper {
       sku,
       specifications,
       detectedLanguage: languageDetection,
+      description: description || '', // Always include description field
       source: {
         domain: 'bandai-hobby.net',
         section: 'gunpla',
@@ -70,12 +81,9 @@ export class BandaiHobbyScraper extends BaseScraper {
       }
     };
 
-    // Add optional properties only if they exist
+    // Add optional price only if it exists
     if (price !== undefined) {
       productData.price = price;
-    }
-    if (description !== undefined && description !== '') {
-      productData.description = description;
     }
 
     return productData;
@@ -214,15 +222,54 @@ export class BandaiHobbyScraper extends BaseScraper {
   }
 
   private normalizeSpecKey(key: string): string {
-    return key
+    // Japanese to English mapping for common specifications
+    const japaneseToEnglish: Record<string, string> = {
+      'スケール': 'scale',
+      '価格': 'price',
+      '発売日': 'release_date',
+      '重さ': 'weight',
+      'サイズ': 'size',
+      '高さ': 'height',
+      '幅': 'width',
+      '奥行き': 'depth'
+    };
+
+    // First check if we have a direct Japanese mapping
+    if (japaneseToEnglish[key]) {
+      return japaneseToEnglish[key];
+    }
+
+    const normalized = key
       .toLowerCase()
-      .replace(/[^\w\s]/g, '')
-      .replace(/\s+/g, '_');
+      .replace(/[^\w\s\u3040-\u309f\u30a0-\u30ff]/g, '') // Keep Japanese characters
+      .replace(/\s+/g, '_')
+      .replace(/^_+|_+$/g, ''); // Remove leading/trailing underscores
+
+    // If normalization results in empty string, use a simplified version
+    if (!normalized) {
+      return key.toLowerCase().replace(/[^a-z\u3040-\u309f\u30a0-\u30ff]/g, '_').substring(0, 20);
+    }
+
+    return normalized;
   }
 
   private parseSpecValue(value: string): string | number | boolean {
-    // Try to parse as number first
-    const numberMatch = value.match(/([\d,]+(?:\.\d+)?)/);
+    // Special handling for scale ratios (e.g., "1/144", "1/60")
+    if (value.includes('/')) {
+      const ratioMatch = value.match(/^\s*([\d]+)\s*\/\s*([\d]+)\s*$/);
+      if (ratioMatch) {
+        return value.trim(); // Keep the full ratio as string
+      }
+    }
+
+    // Try to parse as number first, handling currency symbols
+    const currencyMatch = value.match(/([¥$€£]\s*|)([\d,]+(?:\.\d+)?)(\s*[円元€£$]?)/);
+    if (currencyMatch && currencyMatch[2]) {
+      return parseFloat(currencyMatch[2].replace(/,/g, ''));
+    }
+
+    // Try to parse as plain number (but not if it looks like a ratio)
+    const numberMatch = value.match(/^([\d,]+(?:\.\d+)?)\s*$/);
     if (numberMatch && numberMatch[1]) {
       return parseFloat(numberMatch[1].replace(/,/g, ''));
     }
@@ -247,7 +294,7 @@ export class BandaiHobbyScraper extends BaseScraper {
   private extractImages($: cheerio.Root): ProductImage[] {
     const images: ProductImage[] = [];
 
-    $('.product-image, .item-image, .main-image img, .gallery-image img, .product-image img').each((_: number, element: any) => {
+    $('.product-image, .item-image, .main-image img, .gallery-image, .product-image img, .thumbnail').each((_: number, element: any) => {
       const $element = $(element);
       const src = this.extractAttributeFromElement($element, 'src') || this.extractAttributeFromElement($element, 'data-src') || '';
       const alt = this.extractAttributeFromElement($element, 'alt') || '';
@@ -255,10 +302,20 @@ export class BandaiHobbyScraper extends BaseScraper {
       const height = parseInt(this.extractAttributeFromElement($element, 'height') || '0', 10);
 
       if (src) {
+        // Determine image type based on CSS classes and attributes
+        let imageType: 'main' | 'gallery' | 'thumbnail' | 'box' = 'gallery';
+        if ($element.hasClass('thumbnail') || $element.attr('alt')?.includes('Thumbnail')) {
+          imageType = 'thumbnail';
+        } else if ($element.hasClass('main-image')) {
+          imageType = 'main';
+        } else if ($element.hasClass('box-image') || $element.attr('alt')?.includes('Box')) {
+          imageType = 'box';
+        }
+
         const image: ProductImage = {
-          url: src.startsWith('http') ? src : `${this.baseUrl}${src}`,
+          url: src.startsWith('http') ? src : `${this.baseUrl}/${src.replace(/^\//, '')}`,
           alt,
-          type: 'gallery'
+          type: imageType
         };
         if (width !== 0) {
           image.width = width;
@@ -292,7 +349,7 @@ export class BandaiHobbyScraper extends BaseScraper {
   private determinePageType(url: string): 'listing' | 'detail' | 'variant' {
     if (url.includes('/category/') || url.includes('/list/')) {
       return 'listing';
-    } else if (url.includes('/product/') || url.includes('/item/')) {
+    } else if (url.includes('/site/') || url.includes('/product/') || url.includes('/item/')) {
       return 'detail';
     } else {
       return 'variant';
