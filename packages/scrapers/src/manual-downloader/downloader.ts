@@ -78,6 +78,7 @@ export class Downloader {
       // Use only boundary points of contiguous ranges as expansion seeds
       // This dramatically reduces redundant seed points while maintaining coverage
       const expansionSeeds = this.getBoundarySeeds(Array.from(allExistingFiles));
+      console.log(`📍 Selected ${expansionSeeds.length} boundary seed points: [${expansionSeeds.join(', ')}]`);
       const expandedIds = await this.expandAroundSamples(baseUrl, startId, endId, expansionSeeds);
       confirmedIds.push(...expandedIds.filter(id => !existingFilesInRange.has(id)));
     } else {
@@ -234,6 +235,7 @@ export class Downloader {
     if (sortedIds.length === 0) return [];
 
     const boundaries: number[] = [];
+    const ranges: string[] = [];
     sortedIds.sort((a, b) => a - b);
 
     let rangeStart = sortedIds[0];
@@ -247,6 +249,7 @@ export class Downloader {
         // Add boundaries of completed range
         boundaries.push(rangeStart);
         boundaries.push(prevId);
+        ranges.push(`${rangeStart}-${prevId}`);
         rangeStart = currentId;
       }
 
@@ -256,6 +259,12 @@ export class Downloader {
     // Add boundaries of final range
     boundaries.push(rangeStart);
     boundaries.push(prevId);
+    ranges.push(`${rangeStart}-${prevId}`);
+
+    // Log the ranges being represented
+    if (ranges.length > 0) {
+      console.log(`   📊 Contiguous ranges detected: [${ranges.join(', ')}]`);
+    }
 
     return [...new Set(boundaries)].sort((a, b) => a - b); // Dedupe and sort
   }
