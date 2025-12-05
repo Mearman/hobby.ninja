@@ -29,7 +29,7 @@ export class SimpleDownloader {
     const startId = options.startId || 1;
     const endId = options.endId || 1000; // Reasonable default
     const baseUrl = options.url || 'https://manual.bandai-hobby.net/menus/detail/';
-    const outputDir = options.output || './data/manuals';
+    const outputDir = options.output || './data/bandai/manuals';
 
     console.log(`🚀 Starting simple download from ID ${startId} to ${endId}`);
     console.log(`📁 Output directory: ${outputDir}`);
@@ -111,7 +111,7 @@ OPTIONS:
   -s, --start <id>      Start from this ID (default: 1)
   -e, --end <id>        End at this ID (default: 1000)
   -u, --url <url>       Base URL for manual pages
-  -o, --output <dir>    Output directory (default: ./data/manuals)
+  -o, --output <dir>    Output directory (default: ./data/bandai/manuals)
   -h, --help            Show this help
 
 EXAMPLES:

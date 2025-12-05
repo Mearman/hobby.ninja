@@ -44,7 +44,7 @@ OPTIONS:
   -s, --start <id>      Start from this ID (default: 1)
   -e, --end <id>        End at this ID (default: 1000)
   -u, --url <url>       Base URL for manual pages
-  -o, --output <dir>    Output directory (default: ./data/manuals)
+  -o, --output <dir>    Output directory (default: ./data/bandai/manuals)
   -h, --help            Show this help
 
 EXAMPLES:
