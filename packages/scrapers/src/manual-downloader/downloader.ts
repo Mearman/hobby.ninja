@@ -308,12 +308,12 @@ export class Downloader {
     console.log(`   🔍 Binary search discovery from ${gapSeeds.length} gap-based seed points...`);
 
     for (let i = 0; i < gapSeeds.length; i++) {
-      const sample = gapSeeds[i];
+      const { seed, gapStart, gapEnd } = gapSeeds[i];
 
-      console.log(`   🔍 Gap Seed ${i + 1}/${gapSeeds.length}: ID ${sample}`);
+      console.log(`   🔍 Gap Seed ${i + 1}/${gapSeeds.length}: ID ${seed} (gap: ${gapStart}-${gapEnd})`);
 
-      // Binary search for range boundaries
-      const range = await this.findValidRange(baseUrl, sample, startId, endId, existingFilesInRange, checked);
+      // Binary search for range boundaries within the gap bounds
+      const range = await this.findValidRange(baseUrl, seed, gapStart, gapEnd, existingFilesInRange, checked);
 
       for (const id of range) {
         if (!existingFilesInRange.has(id)) {
@@ -328,10 +328,10 @@ export class Downloader {
   }
 
   /**
-   * Generate seed points only at gaps between existing ranges
+   * Generate seed points with gap bounds for more targeted searching
    */
-  private getGapBasedSeeds(ranges: Array<{start: number, end: number}>, startId: number, endId: number): number[] {
-    const gapSeeds: number[] = [];
+  private getGapBasedSeeds(ranges: Array<{start: number, end: number}>, startId: number, endId: number): Array<{seed: number, gapStart: number, gapEnd: number}> {
+    const gapSeeds: Array<{seed: number, gapStart: number, gapEnd: number}> = [];
 
     // Sort ranges by start ID
     const sortedRanges = [...ranges].sort((a, b) => a.start - b.start);
@@ -348,9 +348,15 @@ export class Downloader {
 
         // Check if this gap overlaps with our target range
         if (gapEnd >= startId && gapStart <= endId) {
-          // Add a seed point in the middle of the gap
-          const gapMiddle = Math.floor((gapStart + gapEnd) / 2);
-          gapSeeds.push(gapMiddle);
+          // Clamp gap to target range bounds
+          const actualGapStart = Math.max(gapStart, startId);
+          const actualGapEnd = Math.min(gapEnd, endId);
+
+          if (actualGapEnd >= actualGapStart) {
+            // Add a seed point in the middle of the gap with bounds
+            const gapMiddle = Math.floor((actualGapStart + actualGapEnd) / 2);
+            gapSeeds.push({ seed: gapMiddle, gapStart: actualGapStart, gapEnd: actualGapEnd });
+          }
         }
       }
     }
@@ -362,7 +368,7 @@ export class Downloader {
         const gapStart = startId;
         const gapEnd = firstRange.start - 1;
         const gapMiddle = Math.floor((gapStart + gapEnd) / 2);
-        gapSeeds.push(gapMiddle);
+        gapSeeds.push({ seed: gapMiddle, gapStart, gapEnd });
       }
     }
 
@@ -373,15 +379,15 @@ export class Downloader {
         const gapStart = lastRange.end + 1;
         const gapEnd = endId;
         const gapMiddle = Math.floor((gapStart + gapEnd) / 2);
-        gapSeeds.push(gapMiddle);
+        gapSeeds.push({ seed: gapMiddle, gapStart, gapEnd });
       }
     } else {
       // No ranges at all - seed the middle of the entire target range
       const gapMiddle = Math.floor((startId + endId) / 2);
-      gapSeeds.push(gapMiddle);
+      gapSeeds.push({ seed: gapMiddle, gapStart: startId, gapEnd: endId });
     }
 
-    return gapSeeds.filter(seed => seed >= startId && seed <= endId);
+    return gapSeeds;
   }
 
   /**
@@ -391,6 +397,7 @@ export class Downloader {
     // Binary search to find the lower bound
     let lowerBound = minId;
     let upperBound = Math.min(seedId, maxId);
+    let checksMade = 0;
 
     // Find start of range (search downwards from seed)
     while (lowerBound <= upperBound) {
@@ -401,6 +408,7 @@ export class Downloader {
       }
 
       checked.add(mid);
+      checksMade++;
       if (await this.testUrl(baseUrl + mid + '/')) {
         upperBound = mid - 1;
       } else {
@@ -421,6 +429,7 @@ export class Downloader {
       }
 
       checked.add(mid);
+      checksMade++;
       if (await this.testUrl(baseUrl + mid + '/')) {
         lowerBound = mid + 1;
       } else {
@@ -429,16 +438,42 @@ export class Downloader {
     }
     const rangeEnd = upperBound;
 
-    // Collect all IDs in the found range
+    // Collect all IDs in the found range - but limit to reasonable size
+    const finalStart = Math.max(rangeStart, minId);
+    const finalEnd = Math.min(rangeEnd, maxId);
+    const rangeSize = finalEnd - finalStart + 1;
+
+    // Safety limit: don't check more than 50 individual IDs in one range
+    const maxRangeSize = 50;
+    let actualEnd = finalEnd;
+
+    if (rangeSize > maxRangeSize) {
+      actualEnd = finalStart + maxRangeSize - 1;
+      console.log(`   ⚠️ Range too large (${rangeSize} IDs), limiting to first ${maxRangeSize}`);
+    }
+
     const range: number[] = [];
-    for (let id = Math.max(rangeStart, minId); id <= Math.min(rangeEnd, maxId); id++) {
+    for (let id = finalStart; id <= actualEnd; id++) {
       if (!existingFiles.has(id) && !checked.has(id)) {
         checked.add(id);
+        checksMade++;
         if (await this.testUrl(baseUrl + id + '/')) {
           range.push(id);
         }
+
+        // Progress update for large ranges
+        if (rangeSize > 10 && id % 10 === 0) {
+          process.stdout.write(`\r   🔍 Checking gap: ${id - finalStart + 1}/${Math.min(rangeSize, maxRangeSize)} (${range.length} found)`);
+        }
       }
     }
+
+    // Clear progress line if we showed it
+    if (rangeSize > 10) {
+      process.stdout.write('\r' + ' '.repeat(80) + '\r');
+    }
+
+    console.log(`   ✅ Gap analysis complete: ${checksMade} URL checks, found ${range.length} valid manuals`);
 
     if (range.length > 0) {
       console.log(`   📍 Found range ${range[0]}-${range[range.length - 1]} (${range.length} manuals)`);
