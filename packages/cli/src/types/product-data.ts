@@ -1,5 +1,7 @@
 import { LanguageDetection } from './language-detection.js';
 
+export { LanguageDetection };
+
 export interface PriceInfo {
   amount: number;
   currency: string;

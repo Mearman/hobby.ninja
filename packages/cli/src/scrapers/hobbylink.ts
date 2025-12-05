@@ -31,16 +31,9 @@ export class HobbyLinkScraper extends BaseScraper {
     // Generate ID
     const id = this.generateId('hobbylink', janCode || name || url);
 
-    return {
+    const result: GundamData = {
       id,
       name,
-      brand,
-      category,
-      price: price?.amount,
-      currency: price?.currency || 'JPY',
-      releaseDate,
-      sku: janCode,
-      description,
       specifications: {
         ...(specifications || {}),
         ...(janCode && { janCode })
@@ -51,12 +44,25 @@ export class HobbyLinkScraper extends BaseScraper {
       source: 'hobbylink',
       scrapedAt: new Date().toISOString()
     };
+
+    // Add optional properties only if they have values
+    if (brand !== undefined && brand !== '') result.brand = brand;
+    if (category !== undefined && category !== '') result.category = category;
+    if (price !== null && price !== undefined) {
+      result.price = price.amount;
+      result.currency = price.currency || 'JPY';
+    }
+    if (releaseDate !== null && releaseDate !== undefined) result.releaseDate = releaseDate;
+    if (janCode !== null && janCode !== undefined) result.sku = janCode;
+    if (description !== null && description !== undefined) result.description = description;
+
+    return result;
   }
 
   /**
    * Extract product name
    */
-  private extractName($: any): string {
+  private extractName($: cheerio.CheerioAPI | cheerio.Root): string {
     const selectors = [
       'h1[itemprop="name"]',
       '.item-name',
@@ -89,7 +95,7 @@ export class HobbyLinkScraper extends BaseScraper {
   /**
    * Extract brand information
    */
-  private extractBrand($: any): string {
+  private extractBrand($: cheerio.CheerioAPI | cheerio.Root): string {
     // Look for brand in breadcrumbs or meta tags
     const selectors = [
       '.brand-name',
@@ -126,7 +132,7 @@ export class HobbyLinkScraper extends BaseScraper {
   /**
    * Extract category
    */
-  private extractCategory($: any): string {
+  private extractCategory($: cheerio.CheerioAPI | cheerio.Root): string {
     // Look for category in breadcrumbs or navigation
     const selectors = [
       '.breadcrumb a',
@@ -161,7 +167,7 @@ export class HobbyLinkScraper extends BaseScraper {
   /**
    * Extract price information
    */
-  protected override extractPrice($: any): { amount: number; currency: string; originalText: string } | null {
+  protected override extractPrice($: cheerio.CheerioAPI | cheerio.Root): { amount: number; currency: string; originalText: string } | null {
     const selectors = [
       '.price',
       '.price-value',
@@ -206,7 +212,7 @@ export class HobbyLinkScraper extends BaseScraper {
   /**
    * Extract release date
    */
-  private extractReleaseDate($: any): string | null {
+  private extractReleaseDate($: cheerio.CheerioAPI | cheerio.Root): string | null {
     const selectors = [
       '.release-date',
       '.launch-date',
@@ -229,7 +235,7 @@ export class HobbyLinkScraper extends BaseScraper {
   /**
    * Extract JAN code (Japanese Article Number)
    */
-  private extractJanCode($: any): string | null {
+  private extractJanCode($: cheerio.CheerioAPI | cheerio.Root): string | null {
     const selectors = [
       '.jan-code',
       '.product-code',
@@ -256,7 +262,7 @@ export class HobbyLinkScraper extends BaseScraper {
   /**
    * Extract description
    */
-  private extractDescription($: any): string | null {
+  private extractDescription($: cheerio.CheerioAPI | cheerio.Root): string | null {
     const selectors = [
       '.description',
       '.product-description',
@@ -280,11 +286,11 @@ export class HobbyLinkScraper extends BaseScraper {
   /**
    * Extract specifications
    */
-  private extractSpecifications($: any): Record<string, unknown> | null {
+  private extractSpecifications($: cheerio.CheerioAPI | cheerio.Root): Record<string, unknown> | null {
     const specs: Record<string, unknown> = {};
 
     // Look for specification table
-    $('.spec-table tr, .specs tr').each((_, element) => {
+    $('.spec-table tr, .specs tr').each((_index: number, element: cheerio.Element) => {
       const row = $(element);
       const header = row.find('th, td:first').text().trim();
       const value = row.find('td:last').text().trim();
@@ -296,14 +302,14 @@ export class HobbyLinkScraper extends BaseScraper {
     });
 
     // Look for list-style specifications
-    $('.spec-list li').each((_, element) => {
+    $('.spec-list li').each((_index: number, element: cheerio.Element) => {
       const item = $(element);
       const text = item.text().trim();
       const parts = text.split(/[:：]/);
 
       if (parts.length === 2) {
-        const key = this.normalizeSpecKey(parts[0].trim());
-        const value = parts[1].trim();
+        const key = this.normalizeSpecKey(parts[0]!.trim());
+        const value = parts[1]!.trim();
         specs[key] = value;
       }
     });
@@ -314,11 +320,11 @@ export class HobbyLinkScraper extends BaseScraper {
   /**
    * Extract images
    */
-  private extractImages($: any): Array<{ type: string; url: string; alt: string }> {
+  private extractImages($: cheerio.CheerioAPI | cheerio.Root): Array<{ type: string; url: string; alt: string }> {
     const images: Array<{ type: string; url: string; alt: string }> = [];
 
     // Main product images
-    $('.item-image img, .product-image img, .gallery img').each((_, element) => {
+    $('.item-image img, .product-image img, .gallery img').each((_index: number, element: cheerio.Element) => {
       const img = $(element);
       const src = img.attr('src') || img.attr('data-src') || img.attr('data-original');
       const alt = img.attr('alt') || '';
@@ -337,7 +343,7 @@ export class HobbyLinkScraper extends BaseScraper {
   /**
    * Detect language
    */
-  private detectLanguage($: any, url: string): LanguageDetection {
+  private detectLanguage(_$: cheerio.CheerioAPI | cheerio.Root, _url: string): LanguageDetection {
     // Japanese site defaults to Japanese
     return {
       language: 'ja',
@@ -388,7 +394,7 @@ export class HobbyLinkScraper extends BaseScraper {
   /**
    * Determine image type
    */
-  private determineImageType(img: any, url: string): string {
+  private determineImageType(img: cheerio.Cheerio, url: string): string {
     if (img.hasClass('main') || img.parent().hasClass('main-image')) {
       return 'main';
     }
@@ -421,15 +427,15 @@ export class HobbyLinkScraper extends BaseScraper {
         let year, month, day;
 
         if (pattern === patterns[0]) { // YYYY年MM月DD日
-          year = match[1];
+          year = match[1]!;
           month = match[2]!.padStart(2, '0');
           day = match[3]!.padStart(2, '0');
         } else if (pattern === patterns[1]) { // YYYY/MM/DD
-          year = match[1];
+          year = match[1]!;
           month = match[2]!.padStart(2, '0');
           day = match[3]!.padStart(2, '0');
         } else { // MM/DD/YYYY
-          year = match[3];
+          year = match[3]!;
           month = match[1]!.padStart(2, '0');
           day = match[2]!.padStart(2, '0');
         }
