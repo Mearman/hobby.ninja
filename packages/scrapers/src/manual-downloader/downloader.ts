@@ -44,28 +44,56 @@ export class Downloader {
 
     let useSmartScan = true;
 
-    // Try smart sampling first
+    // Check for existing files first to use as seed points
+    const existingFiles = new Set<number>();
     try {
-      const samples = this.sampleRange(startId, endId, 100); // Sample 100 IDs
-
-      // Check if any samples are valid
-      let foundValid = false;
-      for (const sample of samples) {
-        if (await this.testUrl(baseUrl + sample + '/')) {
-          foundValid = true;
-          break;
+      const files = await fs.readdir(outputDir);
+      for (const file of files) {
+        if (file.endsWith('.html')) {
+          const idStr = file.replace('.html', '');
+          const id = parseInt(idStr, 10);
+          if (!isNaN(id) && id >= startId && id <= endId) {
+            existingFiles.add(id);
+          }
         }
       }
+    } catch (error) {
+      // Directory might not exist yet
+    }
 
-      if (foundValid) {
-        console.log(`✅ Smart scan viable - found valid IDs in samples`);
-        confirmedIds.push(...await this.expandAroundSamples(baseUrl, startId, endId, samples));
-      } else {
+    if (existingFiles.size > 0) {
+      console.log(`📁 Found ${existingFiles.size} existing valid manuals, using as seed points`);
+      confirmedIds.push(...Array.from(existingFiles));
+
+      // Expand around existing files to find more
+      const expansionSeeds = Array.from(existingFiles);
+      const expandedIds = await this.expandAroundSamples(baseUrl, startId, endId, expansionSeeds);
+      confirmedIds.push(...expandedIds.filter(id => !existingFiles.has(id)));
+    } else {
+      // No existing files, fall back to random sampling
+      console.log(`📁 No existing files found, trying random sampling...`);
+      try {
+        const samples = this.sampleRange(startId, endId, 100); // Sample 100 IDs
+
+        // Check if any samples are valid
+        let foundValid = false;
+        for (const sample of samples) {
+          if (await this.testUrl(baseUrl + sample + '/')) {
+            foundValid = true;
+            break;
+          }
+        }
+
+        if (foundValid) {
+          console.log(`✅ Smart scan viable - found valid IDs in samples`);
+          confirmedIds.push(...await this.expandAroundSamples(baseUrl, startId, endId, samples));
+        } else {
+          useSmartScan = false;
+        }
+      } catch (error) {
+        console.log(`⚠️ Smart scan failed, using linear scan`);
         useSmartScan = false;
       }
-    } catch (error) {
-      console.log(`⚠️ Smart scan failed, using linear scan`);
-      useSmartScan = false;
     }
 
     // Phase 2: Linear scan (always works)
@@ -95,19 +123,32 @@ export class Downloader {
 
     console.log(`\n✅ Found ${confirmedIds.length} valid manuals`);
 
-    // Phase 3: Download confirmed IDs
+    // Phase 3: Download confirmed IDs (skipping existing)
     console.log(`\n📥 Phase 2: Downloading ${confirmedIds.length} manuals...`);
 
     let successCount = 0;
     let failCount = 0;
+    let skippedCount = 0;
     let currentPadding = 1;
+
+    // Reuse existingFiles from discovery phase
+    console.log(`📁 Found ${existingFiles.size} existing manuals, will skip these`);
 
     for (const id of confirmedIds) {
       try {
         const url = `${baseUrl}${id}/`;
 
+        // Check if file already exists
+        if (existingFiles.has(id)) {
+          skippedCount++;
+          const paddedId = id.toString().padStart(currentPadding, '0');
+          console.log(`⏭ Skipped: ${paddedId}.html (already exists)`);
+          continue;
+        }
+
         // Show progress
-        process.stdout.write(`\r📥 ${confirmedIds.indexOf(id) + 1}/${confirmedIds.length} ✓${successCount} ✗${failCount}`);
+        const currentIndex = confirmedIds.indexOf(id) + 1;
+        process.stdout.write(`\r📥 ${currentIndex}/${confirmedIds.length} ✓${successCount} ✗${failCount} ⏭${skippedCount}`);
 
         // Adaptive wait
         await this.smartWait();
@@ -130,6 +171,7 @@ export class Downloader {
             const filePath = join(outputDir, `${paddedId}.html`);
             await fs.writeFile(filePath, data, 'utf8');
             successCount++;
+            console.log(`\n✅ Downloaded: ${paddedId}.html (${data.length.toLocaleString()} bytes)`);
 
             // Handle padding for new power of 10
             const newPadding = id.toString().length;
@@ -165,6 +207,9 @@ export class Downloader {
 
     console.log(`\n🎉 COMPLETE!`);
     console.log(`   • Downloaded: ${successCount}`);
+    if (skippedCount > 0) {
+      console.log(`   • Skipped (already exist): ${skippedCount}`);
+    }
     console.log(`   • Failed: ${failCount}`);
     console.log(`   • Average delay: ${Math.round(this.getAverageDelay())}ms`);
     console.log(`📁 Files: ${outputDir}`);
@@ -189,21 +234,38 @@ export class Downloader {
    */
   private async expandAroundSamples(baseUrl: string, startId: number, endId: number, samples: number[]): Promise<number[]> {
     const found: number[] = [];
+    const checked = new Set<number>(); // Track checked IDs to avoid duplicates
+    let totalChecked = 0;
 
-    for (const sample of samples) {
+    console.log(`   🔍 Expanding around ${samples.length} samples...`);
+
+    for (let i = 0; i < samples.length; i++) {
+      const sample = samples[i];
       // Check range around each sample
       const rangeStart = Math.max(startId, sample - 50);
       const rangeEnd = Math.min(endId, sample + 50);
 
       for (let id = rangeStart; id <= rangeEnd; id++) {
-        if (await this.testUrl(baseUrl + id + '/')) {
-          found.push(id);
+        if (!checked.has(id)) {
+          checked.add(id);
+          totalChecked++;
+
+          if (await this.testUrl(baseUrl + id + '/')) {
+            found.push(id);
+          }
+
+          // Show progress every 50 checks
+          if (totalChecked % 50 === 0) {
+            process.stdout.write(`\r   🔍 Checked ${totalChecked}, found: ${found.length} valid manuals`);
+          }
+
+          await this.smartWait();
         }
-        await this.smartWait();
       }
     }
 
-    return [...new Set(found)].sort((a, b) => a - b); // Dedupe and sort
+    console.log(`\n   ✅ Expansion complete: checked ${totalChecked} unique URLs, found ${found.length} valid manuals`);
+    return found.sort((a, b) => a - b);
   }
 
   /**
