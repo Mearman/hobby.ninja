@@ -55,6 +55,11 @@ export default [
         localStorage: 'readonly',
         sessionStorage: 'readonly',
         crypto: 'readonly',
+        fetch: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
       },
     },
     plugins: {

@@ -18,7 +18,8 @@
       "WebFetch(domain:tanstack.com)",
       "Bash(git fetch:*)",
       "Bash(ls:*)",
-      "Bash(.specify/scripts/bash/create-new-feature.sh:*)"
+      "Bash(.specify/scripts/bash/create-new-feature.sh:*)",
+      "Bash(find:*)"
     ],
     "deny": [
       "Bash(git add .)",
