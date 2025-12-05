@@ -1,0 +1,311 @@
+#!/usr/bin/env node
+
+/**
+ * CLI command entry point for URL scanner
+ *
+ * Usage:
+ *   scan-urls <url-file> [options]
+ *   scan-urls --url <single-url> [options]
+ */
+
+import { URLScanner } from '../url-scanner/index.js';
+import { promises as fs } from 'fs';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+interface CLIOptions {
+  url?: string;
+  file?: string;
+  output?: string;
+  concurrency?: number;
+  timeout?: number;
+  retries?: number;
+  delay?: number;
+  progress?: string;
+  resume?: boolean;
+  userAgent?: string;
+  followRedirects?: boolean;
+  maxRedirects?: number;
+}
+
+/**
+ * Parse command line arguments
+ */
+function parseArgs(): CLIOptions & { help?: boolean } {
+  const args = process.argv.slice(2);
+  const options: CLIOptions & { help?: boolean } = {};
+
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i];
+    const nextArg = args[i + 1];
+
+    switch (arg) {
+      case '--help':
+      case '-h':
+        options.help = true;
+        break;
+
+      case '--url':
+      case '-u':
+        options.url = nextArg;
+        i++; // Skip next arg
+        break;
+
+      case '--output':
+      case '-o':
+        options.output = nextArg;
+        i++; // Skip next arg
+        break;
+
+      case '--concurrency':
+      case '-c':
+        options.concurrency = parseInt(nextArg, 10);
+        i++; // Skip next arg
+        break;
+
+      case '--timeout':
+      case '-t':
+        options.timeout = parseInt(nextArg, 10);
+        i++; // Skip next arg
+        break;
+
+      case '--retries':
+      case '-r':
+        options.retries = parseInt(nextArg, 10);
+        i++; // Skip next arg
+        break;
+
+      case '--delay':
+      case '-d':
+        options.delay = parseInt(nextArg, 10);
+        i++; // Skip next arg
+        break;
+
+      case '--progress':
+      case '-p':
+        options.progress = nextArg;
+        i++; // Skip next arg
+        break;
+
+      case '--resume':
+        options.resume = true;
+        break;
+
+      case '--user-agent':
+        options.userAgent = nextArg;
+        i++; // Skip next arg
+        break;
+
+      case '--no-redirects':
+        options.followRedirects = false;
+        break;
+
+      case '--max-redirects':
+        options.maxRedirects = parseInt(nextArg, 10);
+        i++; // Skip next arg
+        break;
+
+      default:
+        // If not a flag, treat as file path
+        if (!arg.startsWith('-') && !options.file && !options.url) {
+          options.file = arg;
+        }
+        break;
+    }
+  }
+
+  return options;
+}
+
+/**
+ * Show help message
+ */
+function showHelp(): void {
+  console.log(`
+URL Scanner - Check URLs for static data availability
+
+USAGE:
+  scan-urls <file> [options]        Scan URLs from file
+  scan-urls --url <url> [options]   Scan single URL
+
+ARGUMENTS:
+  <file>                          Path to file containing URLs (one per line)
+
+OPTIONS:
+  -u, --url <url>                Single URL to scan
+  -o, --output <dir>             Output directory (default: ./scan-results)
+  -c, --concurrency <num>        Concurrent requests (default: 3)
+  -t, --timeout <ms>             Request timeout (default: 10000)
+  -r, --retries <num>            Retry attempts (default: 3)
+  -d, --delay <ms>               Delay between requests (default: 500)
+  -p, --progress <file>          Progress file for resume capability
+  --resume                       Resume from progress file
+  --user-agent <agent>           Custom user agent string
+  --no-redirects                 Don't follow redirects
+  --max-redirects <num>          Maximum redirects (default: 5)
+  -h, --help                     Show this help
+
+EXAMPLES:
+  # Scan URLs from file
+  scan-urls urls.txt --output ./results
+
+  # Scan single URL with custom settings
+  scan-urls --url "https://bandai-hobby.net/item/01_3804/" --timeout 15000
+
+  # Resume interrupted scan
+  scan-urls urls.txt --progress scan-progress.json --resume
+
+  # Test with real Bandai URLs
+  scan-urls --url "https://bandai-hobby.net/item/01_3804/"
+  scan-urls --url "https://manual.bandai-hobby.net/menus/detail/652/"
+  scan-urls --url "https://p-bandai.com/us/item/F2434385006"
+
+OUTPUT FILES:
+  Single JSON file is created in the output directory:
+  - scan-results.json      - All scan results with metadata
+
+  JSON Structure:
+  {
+    "scanInfo": {
+      "timestamp": "2025-12-05T...",
+      "version": "1.0.0",
+      "scannerType": "bandai-url-scanner"
+    },
+    "results": [
+      {
+        "url": "https://...",
+        "timestamp": "2025-12-05T...",
+        "status": "valid|invalid",
+        "hasStaticData": true,
+        "dataType": "complete|partial|none",
+        "confidence": 0.85,
+        "indicators": ["static-title", "structured-data"],
+        "statusCode": 200,
+        "finalUrl": "https://...",
+        "error": null
+      }
+    ]
+  }
+`);
+}
+
+/**
+ * Read URLs from file
+ */
+async function readUrlsFromFile(filePath: string): Promise<string[]> {
+  try {
+    const content = await fs.readFile(filePath, 'utf8');
+    return content
+      .split('\n')
+      .map(line => line.trim())
+      .filter(line => line.length > 0 && !line.startsWith('#'));
+  } catch (error) {
+    throw new Error(`Failed to read URLs from file "${filePath}": ${error instanceof Error ? error.message : 'Unknown error'}`);
+  }
+}
+
+/**
+ * Main CLI function
+ */
+async function main(): Promise<void> {
+  try {
+    const options = parseArgs();
+
+    if (options.help) {
+      showHelp();
+      process.exit(0);
+    }
+
+    if (!options.url && !options.file) {
+      console.error('Error: Please provide either a URL file (--file) or single URL (--url)');
+      console.error('Use --help for usage information');
+      process.exit(1);
+    }
+
+    // Get URLs to scan
+    let urls: string[] = [];
+    if (options.url) {
+      urls = [options.url];
+    } else if (options.file) {
+      urls = await readUrlsFromFile(options.file);
+    }
+
+    if (urls.length === 0) {
+      console.error('Error: No URLs to scan');
+      process.exit(1);
+    }
+
+    console.log(`Initializing URL scanner...`);
+    console.log(`URLs to scan: ${urls.length}`);
+    console.log(`Output directory: ${options.output || './scan-results'}`);
+
+    // Initialize scanner
+    const scanner = new URLScanner();
+    await scanner.initialize({
+      urlPatterns: [],
+      concurrency: options.concurrency || 3,
+      timeoutMs: options.timeout || 10000,
+      retryAttempts: options.retries || 3,
+      requestDelayMs: options.delay || 500,
+      outputDirectory: options.output || './scan-results',
+      followRedirects: options.followRedirects !== false,
+      maxRedirects: options.maxRedirects || 5,
+      userAgent: options.userAgent || 'GundamURLScanner/1.0',
+      progressFile: options.progress
+    });
+
+    // Show progress if resuming
+    if (options.resume && options.progress) {
+      const progress = await scanner.getProgress();
+      console.log(`Resuming from previous scan: ${progress.totalProcessed} URLs already processed`);
+    }
+
+    console.log('Starting URL scan...\n');
+
+    // Scan URLs
+    const startTime = Date.now();
+    const results = await scanner.scanUrls(urls);
+    const endTime = Date.now();
+
+    // Show results
+    console.log('\n=== Scan Results ===');
+    const stats = scanner.getStatistics();
+
+    console.log(`Total URLs: ${stats.totalProcessed}`);
+    console.log(`Successful: ${Math.round(stats.successRate * 100)}%`);
+    console.log(`Static data available: ${Math.round(stats.staticDataRate * 100)}%`);
+    console.log(`Average confidence: ${stats.averageConfidence.toFixed(2)}`);
+    console.log(`Duration: ${((endTime - startTime) / 1000).toFixed(1)}s`);
+
+    // Show categorized results
+    const staticResults = results.filter(r => r.isValid && r.hasStaticData);
+    const dynamicResults = results.filter(r => r.isValid && !r.hasStaticData);
+    const invalidResults = results.filter(r => !r.isValid);
+
+    console.log(`\n--- Static Data URLs (${staticResults.length}) ---`);
+    staticResults.forEach(result => {
+      console.log(`  ✓ ${result.url} (${result.dataType}, confidence: ${result.confidence.toFixed(2)})`);
+    });
+
+    console.log(`\n--- Dynamic/JavaScript URLs (${dynamicResults.length}) ---`);
+    dynamicResults.forEach(result => {
+      console.log(`  ⚡ ${result.url} (${result.dataType}, confidence: ${result.confidence.toFixed(2)})`);
+    });
+
+    console.log(`\n--- Invalid/Error URLs (${invalidResults.length}) ---`);
+    invalidResults.forEach(result => {
+      console.log(`  ✗ ${result.url} (${result.error || 'Invalid'})`);
+    });
+
+    console.log(`\nResults saved to: ${path.join(options.output || './scan-results', 'scan-results.json')}`);
+
+  } catch (error) {
+    console.error('Error:', error instanceof Error ? error.message : 'Unknown error');
+    process.exit(1);
+  }
+}
+
+// Run main function
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
