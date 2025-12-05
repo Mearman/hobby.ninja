@@ -486,7 +486,23 @@ export class Downloader {
 
       if (getResponse.ok) {
         const data = await getResponse.text();
-        return data.length > 1000 && (data.includes('<html') || data.includes('<!DOCTYPE'));
+
+        // Basic HTML check
+        if (!data.length > 1000 || !(data.includes('<html') || data.includes('<!DOCTYPE'))) {
+          return false;
+        }
+
+        // Check if this is a generic page with default title (INVALID)
+        // Generic pages have: content=" バンダイプラモデルWEB取説 | バンダイ ホビーサイト"
+        const genericTitlePattern = /content="\s*バンダイプラモデルWEB取説\s*\|\s*バンダイ ホビーサイト/;
+
+        // If we find the generic title pattern, reject this page
+        if (genericTitlePattern.test(data)) {
+          return false;
+        }
+
+        // If it doesn't have the generic title, accept it as valid manual content
+        return true;
       }
 
       return false;
