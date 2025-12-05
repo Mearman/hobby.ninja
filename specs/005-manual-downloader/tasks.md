@@ -30,11 +30,11 @@ description: "Task list for implementing Bandai Manual Content Downloader featur
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create manual-downloader directory structure in packages/scrapers/src/manual-downloader/
-- [ ] T002 [P] Create test directory structure in packages/scrapers/tests/manual-downloader/{unit,integration,e2e,fixtures}
-- [ ] T003 [P] Update packages/scrapers/tsconfig.json to include new manual-downloader paths
-- [ ] T004 Update packages/scrapers/package.json with new CLI script "download-manuals"
-- [ ] T005 [P] Create index.ts export file in packages/scrapers/src/manual-downloader/
+- [X] T001 Create manual-downloader directory structure in packages/scrapers/src/manual-downloader/
+- [X] T002 [P] Create test directory structure in packages/scrapers/tests/manual-downloader/{unit,integration,e2e,fixtures}
+- [X] T003 [P] Update packages/scrapers/tsconfig.json to include new manual-downloader paths
+- [X] T004 Update packages/scrapers/package.json with new CLI script "download-manuals"
+- [X] T005 [P] Create index.ts export file in packages/scrapers/src/manual-downloader/
 
 ---
 
@@ -44,13 +44,13 @@ description: "Task list for implementing Bandai Manual Content Downloader featur
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T006 Create type definitions in packages/scrapers/src/manual-downloader/types/index.ts
-- [ ] T007 [P] Implement RateLimiterService in packages/scrapers/src/manual-downloader/services/rate-limiter-service.ts
-- [ ] T008 [P] Implement HttpClient in packages/scrapers/src/manual-downloader/services/http-client.ts
-- [ ] T009 [P] Implement ValidationError classes in packages/scrapers/src/manual-downloader/services/errors.ts
-- [ ] T010 [P] Create configuration management in packages/scrapers/src/manual-downloader/services/configuration.ts
-- [ ] T011 [P] Implement logging service in packages/scrapers/src/manual-downloader/services/logging.ts
-- [ ] T012 [P] Create crypto utilities for SHA-256 hashing in packages/scrapers/src/manual-downloader/utils/crypto.ts
+- [X] T006 Create type definitions in packages/scrapers/src/manual-downloader/types/index.ts
+- [X] T007 [P] Implement RateLimiterService in packages/scrapers/src/manual-downloader/services/rate-limiter-service.ts
+- [X] T008 [P] Implement HttpClient in packages/scrapers/src/manual-downloader/services/http-client.ts
+- [X] T009 [P] Implement ValidationError classes in packages/scrapers/src/manual-downloader/services/errors.ts
+- [X] T010 [P] Create configuration management in packages/scrapers/src/manual-downloader/services/configuration.ts
+- [X] T011 [P] Implement logging service in packages/scrapers/src/manual-downloader/services/logging.ts
+- [X] T012 [P] Create crypto utilities for SHA-256 hashing in packages/scrapers/src/manual-downloader/utils/crypto.ts
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -73,14 +73,18 @@ description: "Task list for implementing Bandai Manual Content Downloader featur
 
 ### Implementation for User Story 1
 
-- [ ] T017 [P] [US1] Create ManualPage entity in packages/scrapers/src/manual-downloader/types/manual-page.ts
-- [ ] T018 [P] [US1] Create DownloadSession entity in packages/scrapers/src/manual-downloader/types/download-session.ts
-- [ ] T019 [US1] Implement DiscoveryService in packages/scrapers/src/manual-downloader/services/discovery-service.ts (depends on T017, T018)
-- [ ] T020 [US1] Implement DownloaderService in packages/scrapers/src/manual-downloader/services/downloader-service.ts (depends on T019)
-- [ ] T021 [US1] Add discovery algorithms for unknown ID ranges in DiscoveryService
-- [ ] T022 [US1] Add 404 error handling and graceful skipping in DownloaderService
-- [ ] T023 [US1] Add 8-second rate limiting implementation using RateLimiterService
-- [ ] T024 [US1] Add progress tracking and logging for discovery operations
+- [X] T013 [P] [US1] Unit test for DiscoveryService in packages/scrapers/tests/manual-downloader/unit/discovery-service.test.ts
+- [X] T014 [P] [US1] Unit test for DownloaderService in packages/scrapers/tests/manual-downloader/unit/downloader-service.test.ts
+- [X] T015 [P] [US1] Integration test for discovery workflow in packages/scrapers/tests/manual-downloader/integration/discovery-workflow.test.ts
+- [X] T016 [P] [US1] E2E test with real Bandai URLs in packages/scrapers/tests/manual-downloader/e2e/manual-discovery.test.ts
+- [X] T017 [P] [US1] Create ManualPage entity in packages/scrapers/src/manual-downloader/types/manual-page.ts
+- [X] T018 [P] [US1] Create DownloadSession entity in packages/scrapers/src/manual-downloader/types/download-session.ts
+- [X] T019 [US1] Implement DiscoveryService in packages/scrapers/src/manual-downloader/services/discovery-service.ts (depends on T017, T018)
+- [X] T020 [US1] Implement DownloaderService in packages/scrapers/src/manual-downloader/services/downloader-service.ts (depends on T019)
+- [X] T021 [US1] Add discovery algorithms for unknown ID ranges in DiscoveryService
+- [X] T022 [US1] Add 404 error handling and graceful skipping in DownloaderService
+- [X] T023 [US1] Add 8-second rate limiting implementation using RateLimiterService
+- [X] T024 [US1] Add progress tracking and logging for discovery operations
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 

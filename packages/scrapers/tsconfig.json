@@ -15,7 +15,14 @@
     "outDir": "dist",
     "rootDir": "src",
     "downlevelIteration": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@manual-downloader/*": ["./src/manual-downloader/*"],
+      "@manual-downloader/services/*": ["./src/manual-downloader/services/*"],
+      "@manual-downloader/types/*": ["./src/manual-downloader/types/*"],
+      "@manual-downloader/utils/*": ["./src/manual-downloader/utils/*"],
+      "@manual-downloader/cli/*": ["./src/manual-downloader/cli/*"]
+    }
   },
   "include": [
     "src/**/*.ts"
