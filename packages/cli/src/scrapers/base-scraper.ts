@@ -1,5 +1,6 @@
 import { LanguageDetector } from '../utils/language-detection.js';
 import { RenderingDetector } from '../utils/rendering-detection.js';
+import { profileManager } from '../utils/profile-manager.js';
 
 export abstract class BaseScraper {
   protected baseUrl: string;
@@ -17,6 +18,20 @@ export abstract class BaseScraper {
     this.userAgent = config.userAgent || 'GundamDataScraper/1.0';
     this.delayMs = config.delayMs || 2000;
     this.cacheEnabled = config.cacheEnabled ?? true;
+
+    // Initialize profile manager asynchronously
+    this.initializeProfileManager().catch(error => {
+      console.warn('⚠️  Profile manager initialization failed:', error);
+    });
+  }
+
+  private async initializeProfileManager(): Promise<void> {
+    try {
+      await profileManager.loadProfiles();
+      console.log('📊 Profile manager initialized');
+    } catch (error) {
+      console.warn('⚠️  Profile manager initialization failed:', error);
+    }
   }
 
   abstract extractFromPage(html: string, url: string): Promise<any>;
@@ -54,23 +69,38 @@ export abstract class BaseScraper {
 
   protected async determineOptimalMethod(url: string): Promise<'cheerio' | 'playwright'> {
     // Check if we have a cached profile for this URL pattern
-    const profile = await this.getCachedProfile(url);
+    const profile = profileManager.getProfileForUrl(url);
     if (profile) {
+      console.log(`✅ Using cached profile: ${profile.name} (extraction: ${profile.extractionMethod})`);
+
+      // Update the profile to indicate we've used it
+      await profileManager.updateProfilePerformance(
+        profileManager.getProfileForUrl(url)?.urlPattern || '',
+        true,
+        Date.now() // This will be updated after actual extraction
+      );
+
       return profile.requiresPlaywright ? 'playwright' : 'cheerio';
     }
 
-    // Perform progressive enhancement analysis
+    // Perform progressive enhancement analysis and build a new profile
     try {
+      console.log(`🔍 Analyzing ${url} to build profile...`);
       const sampleHtml = await this.fetchWithCheerio(url);
       const analysis = RenderingDetector.analyzeProgressiveEnhancement(sampleHtml);
 
       if (analysis.recommendation === 'dynamic-required') {
+        // Build profile for this URL pattern
+        await profileManager.buildProfileForUrl(url, [url]);
         return 'playwright';
       } else if (analysis.recommendation === 'hybrid-approach') {
         // For hybrid, test with Playwright to be safe
+        await profileManager.buildProfileForUrl(url, [url]);
         return 'playwright';
       }
 
+      // Build profile for static content
+      await profileManager.buildProfileForUrl(url, [url]);
       return 'cheerio';
     } catch (error) {
       console.warn(`Error determining method for ${url}, falling back to Cheerio:`, error);
@@ -121,12 +151,7 @@ export abstract class BaseScraper {
     return null;
   }
 
-  protected async getCachedProfile(_url: string): Promise<any> {
-    // Placeholder for profile retrieval
-    // Will be implemented in the profile manager
-    return null;
-  }
-
+  
   protected generateId(source: string, identifier: string): string {
     const hash = this.simpleHash(`${source}:${identifier}`);
     return `${source}:${identifier}:${hash}`;
