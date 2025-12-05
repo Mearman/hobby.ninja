@@ -99,6 +99,7 @@ export interface PageTypeProfile {
     lastUpdated: number;
     rawHtml?: string;
     source?: string;
+    contentType?: string;
   };
   performance?: {
     estimatedLoadTime: number;
@@ -111,6 +112,10 @@ export interface PageTypeProfile {
   };
   recommendations?: string[];
   languageDetections?: LanguageDetection[];
+  language?: {
+    defaultLanguage: string;
+    detectionPatterns: string[];
+  };
 }
 
 export interface ProfileCache {
