@@ -1,12 +1,11 @@
 /**
  * Bandai Manual Content Downloader
  *
- * Most reliable basic implementation with zero-padding.
+ * Unified implementation with smart discovery and fallback logic.
  */
 
-// Export both versions
-export { SimpleDownloader } from './simple-downloader';
-export { BasicDownloader } from './basic-downloader';
+// Export unified implementation
+export { Downloader } from './downloader';
 export { HttpClient } from './services/http-client';
 export { RateLimiterService } from './services/rate-limiter-service';
 
@@ -14,7 +13,7 @@ export { RateLimiterService } from './services/rate-limiter-service';
 export { ManualDownloaderCLI, main } from './cli/main';
 
 // Export types
-export interface SimpleOptions {
+export interface DownloaderOptions {
   startId?: number;
   endId?: number;
   url?: string;
@@ -22,4 +21,4 @@ export interface SimpleOptions {
 }
 
 // Package version
-export const VERSION = '2.1.0'; // Added BasicDownloader
+export const VERSION = '3.0.0'; // Unified implementation
