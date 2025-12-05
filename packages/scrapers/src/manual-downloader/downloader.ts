@@ -46,14 +46,22 @@ export class Downloader {
 
     // Check for existing files first to use as seed points
     const existingFiles = new Set<number>();
+    const existingFilesInRange = new Set<number>();
+    const allExistingFiles = new Set<number>(); // For expansion seeds
+
     try {
       const files = await fs.readdir(outputDir);
       for (const file of files) {
         if (file.endsWith('.html')) {
           const idStr = file.replace('.html', '');
           const id = parseInt(idStr, 10);
-          if (!isNaN(id) && id >= startId && id <= endId) {
-            existingFiles.add(id);
+          if (!isNaN(id)) {
+            allExistingFiles.add(id);
+
+            // Only add to range set if within bounds
+            if (id >= startId && id <= endId) {
+              existingFilesInRange.add(id);
+            }
           }
         }
       }
@@ -61,14 +69,17 @@ export class Downloader {
       // Directory might not exist yet
     }
 
-    if (existingFiles.size > 0) {
-      console.log(`📁 Found ${existingFiles.size} existing valid manuals, using as seed points`);
-      confirmedIds.push(...Array.from(existingFiles));
+    if (allExistingFiles.size > 0) {
+      console.log(`📁 Found ${existingFilesInRange.size} existing manuals in range ${startId}-${endId}, plus ${allExistingFiles.size - existingFilesInRange.size} outside range to use as seed points`);
 
-      // Expand around existing files to find more
-      const expansionSeeds = Array.from(existingFiles);
+      // Add existing files within range to confirmed IDs
+      confirmedIds.push(...Array.from(existingFilesInRange));
+
+      // Use ALL existing files (including outside range) as expansion seeds
+      // This allows us to discover manuals in gaps across the entire range
+      const expansionSeeds = Array.from(allExistingFiles);
       const expandedIds = await this.expandAroundSamples(baseUrl, startId, endId, expansionSeeds);
-      confirmedIds.push(...expandedIds.filter(id => !existingFiles.has(id)));
+      confirmedIds.push(...expandedIds.filter(id => !existingFilesInRange.has(id)));
     } else {
       // No existing files, fall back to random sampling
       console.log(`📁 No existing files found, trying random sampling...`);
@@ -131,15 +142,15 @@ export class Downloader {
     let skippedCount = 0;
     let currentPadding = 1;
 
-    // Reuse existingFiles from discovery phase
-    console.log(`📁 Found ${existingFiles.size} existing manuals, will skip these`);
+    // Reuse existingFilesInRange from discovery phase
+    console.log(`📁 Found ${existingFilesInRange.size} existing manuals, will skip these`);
 
     for (const id of confirmedIds) {
       try {
         const url = `${baseUrl}${id}/`;
 
         // Check if file already exists
-        if (existingFiles.has(id)) {
+        if (existingFilesInRange.has(id)) {
           skippedCount++;
           const paddedId = id.toString().padStart(currentPadding, '0');
           console.log(`⏭ Skipped: ${paddedId}.html (already exists)`);
@@ -236,14 +247,28 @@ export class Downloader {
     const found: number[] = [];
     const checked = new Set<number>(); // Track checked IDs to avoid duplicates
     let totalChecked = 0;
+    let seedsInRange = 0;
+    let seedsOutsideRange = 0;
 
-    console.log(`   🔍 Expanding around ${samples.length} samples...`);
+    console.log(`   🔍 Expanding around ${samples.length} seed points...`);
 
     for (let i = 0; i < samples.length; i++) {
       const sample = samples[i];
-      // Check range around each sample
+
+      // Only check ranges that overlap with our target range
+      if (sample < startId - 50 || sample > endId + 50) {
+        continue; // Skip seeds too far from our range
+      }
+
+      // Check range around each seed point
       const rangeStart = Math.max(startId, sample - 50);
       const rangeEnd = Math.min(endId, sample + 50);
+
+      if (sample >= startId && sample <= endId) {
+        seedsInRange++;
+      } else {
+        seedsOutsideRange++;
+      }
 
       for (let id = rangeStart; id <= rangeEnd; id++) {
         if (!checked.has(id)) {
@@ -265,6 +290,7 @@ export class Downloader {
     }
 
     console.log(`\n   ✅ Expansion complete: checked ${totalChecked} unique URLs, found ${found.length} valid manuals`);
+    console.log(`   📍 Used ${seedsInRange} in-range seeds + ${seedsOutsideRange} nearby seeds`);
     return found.sort((a, b) => a - b);
   }
 
