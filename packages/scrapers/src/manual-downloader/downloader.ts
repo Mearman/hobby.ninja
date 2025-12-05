@@ -39,10 +39,8 @@ export class Downloader {
 
     const confirmedIds: number[] = [];
 
-    // Phase 1: Smart discovery (try to be fast, but fall back if needed)
+    // Phase 1: Smart discovery
     console.log(`\n🔍 Phase 1: Finding valid IDs...`);
-
-    let useSmartScan = true;
 
     // Check for existing files first to use as seed points
     const existingFiles = new Set<number>();
@@ -84,51 +82,41 @@ export class Downloader {
     } else {
       // No existing files, fall back to random sampling
       console.log(`📁 No existing files found, trying random sampling...`);
-      try {
-        const samples = this.sampleRange(startId, endId, 100); // Sample 100 IDs
+      const samples = this.sampleRange(startId, endId, 100); // Sample 100 IDs
 
-        // Check if any samples are valid
-        let foundValid = false;
-        for (const sample of samples) {
-          if (await this.testUrl(baseUrl + sample + '/')) {
-            foundValid = true;
-            break;
-          }
+      // Check if any samples are valid
+      let foundValid = false;
+      for (const sample of samples) {
+        if (await this.testUrl(baseUrl + sample + '/')) {
+          foundValid = true;
+          break;
         }
-
-        if (foundValid) {
-          console.log(`✅ Smart scan viable - found valid IDs in samples`);
-          confirmedIds.push(...await this.expandAroundSamples(baseUrl, startId, endId, samples, existingFilesInRange));
-        } else {
-          useSmartScan = false;
-        }
-      } catch (error) {
-        console.log(`⚠️ Smart scan failed, using linear scan`);
-        useSmartScan = false;
       }
-    }
 
-    // Phase 2: Linear scan (always works)
-    if (!useSmartScan || confirmedIds.length === 0) {
-      console.log(`🔄 Phase 1: Linear scan from ${startId}...`);
-
-      for (let id = startId; id <= endId; id++) {
-        const isValid = await this.testUrl(baseUrl + id + '/');
-        if (isValid) {
-          confirmedIds.push(id);
-        }
-
-        // Show progress and recent finds every 20 IDs
-        if (id % 20 === 0) {
-          const recentFinds = confirmedIds.slice(-5); // Last 5 found
-          console.log(`🔍 Scanned ${id - startId + 1}/${endId - startId + 1}, total found: ${confirmedIds.length}`);
-          if (recentFinds.length > 0) {
-            console.log(`   Recent finds: [${recentFinds.join(', ')}]`);
+      if (foundValid) {
+        console.log(`✅ Smart scan viable - found valid IDs in samples`);
+        confirmedIds.push(...await this.expandAroundSamples(baseUrl, startId, endId, samples, existingFilesInRange));
+      } else {
+        // Fall back to linear scan if no valid samples found
+        console.log(`🔄 No valid samples found, falling back to linear scan...`);
+        for (let id = startId; id <= endId; id++) {
+          const isValid = await this.testUrl(baseUrl + id + '/');
+          if (isValid) {
+            confirmedIds.push(id);
           }
-        }
 
-        // Small delay to be reasonable
-        await this.smartWait();
+          // Show progress and recent finds every 20 IDs
+          if (id % 20 === 0) {
+            const recentFinds = confirmedIds.slice(-5); // Last 5 found
+            console.log(`🔍 Scanned ${id - startId + 1}/${endId - startId + 1}, total found: ${confirmedIds.length}`);
+            if (recentFinds.length > 0) {
+              console.log(`   Recent finds: [${recentFinds.join(', ')}]`);
+            }
+          }
+
+          // Small delay to be reasonable
+          await this.smartWait();
+        }
       }
     }
 
@@ -303,24 +291,26 @@ export class Downloader {
   }
 
   /**
-   * Intelligent range discovery using binary search from seed points
+   * Intelligent range discovery using binary search from gap-based seed points
    */
   private async expandAroundSamples(baseUrl: string, startId: number, endId: number, samples: number[], existingFilesInRange: Set<number>): Promise<number[]> {
     const found: number[] = [];
     const checked = new Set<number>(); // Track checked IDs to avoid duplicates
-    let totalChecked = 0;
 
-    console.log(`   🔍 Binary search discovery from ${samples.length} seed points...`);
+    // Identify gaps between existing ranges where we should search
+    const gapSeeds = this.getGapBasedSeeds(samples, startId, endId, existingFilesInRange);
 
-    for (let i = 0; i < samples.length; i++) {
-      const sample = samples[i];
+    if (gapSeeds.length === 0) {
+      console.log(`   ✅ No gaps found - all ranges already covered`);
+      return found;
+    }
 
-      // Only expand from seeds that could overlap with our target range
-      if (sample < startId - 200 || sample > endId + 200) {
-        continue; // Skip seeds too far from our range
-      }
+    console.log(`   🔍 Binary search discovery from ${gapSeeds.length} gap-based seed points...`);
 
-      console.log(`   🔍 Seed ${i + 1}/${samples.length}: ID ${sample}`);
+    for (let i = 0; i < gapSeeds.length; i++) {
+      const sample = gapSeeds[i];
+
+      console.log(`   🔍 Gap Seed ${i + 1}/${gapSeeds.length}: ID ${sample}`);
 
       // Binary search for range boundaries
       const range = await this.findValidRange(baseUrl, sample, startId, endId, existingFilesInRange, checked);
@@ -331,12 +321,59 @@ export class Downloader {
           console.log(`   ✅ Found new manual: ${id}`);
         }
       }
-
-      totalChecked += range.length;
     }
 
     console.log(`\n   ✅ Binary search complete: discovered ${found.length} new manuals`);
     return found.sort((a, b) => a - b);
+  }
+
+  /**
+   * Generate seed points only at gaps between existing ranges
+   */
+  private getGapBasedSeeds(boundaries: number[], startId: number, endId: number, existingFilesInRange: Set<number>): number[] {
+    const gapSeeds: number[] = [];
+
+    // Sort boundaries for processing
+    const sortedBoundaries = [...boundaries].sort((a, b) => a - b);
+
+    // Find gaps between existing ranges
+    for (let i = 0; i < sortedBoundaries.length - 1; i++) {
+      const current = sortedBoundaries[i];
+      const next = sortedBoundaries[i + 1];
+
+      // If there's a gap of more than 1 between boundaries
+      if (next > current + 1) {
+        const gapStart = current + 1;
+        const gapEnd = next - 1;
+
+        // Check if this gap overlaps with our target range
+        if (gapEnd >= startId && gapStart <= endId) {
+          // Add a seed point in the middle of the gap
+          const gapMiddle = Math.floor((gapStart + gapEnd) / 2);
+          gapSeeds.push(gapMiddle);
+        }
+      }
+    }
+
+    // Check gap before first boundary
+    const firstBoundary = sortedBoundaries[0];
+    if (firstBoundary > startId) {
+      const gapStart = startId;
+      const gapEnd = firstBoundary - 1;
+      const gapMiddle = Math.floor((gapStart + gapEnd) / 2);
+      gapSeeds.push(gapMiddle);
+    }
+
+    // Check gap after last boundary
+    const lastBoundary = sortedBoundaries[sortedBoundaries.length - 1];
+    if (lastBoundary < endId) {
+      const gapStart = lastBoundary + 1;
+      const gapEnd = endId;
+      const gapMiddle = Math.floor((gapStart + gapEnd) / 2);
+      gapSeeds.push(gapMiddle);
+    }
+
+    return gapSeeds.filter(seed => seed >= startId && seed <= endId);
   }
 
   /**
@@ -521,7 +558,7 @@ if (require.main === module) {
       case '--help':
       case '-h':
         console.log(`
-Smart Manual Downloader - One Implementation, Handles Everything
+Smart Manual Downloader - Intelligent Bandai Manual Discovery and Download
 
 USAGE:
   downloader [OPTIONS]
@@ -539,18 +576,19 @@ EXAMPLES:
   downloader --start 1 --end 10000 --url https://example.com/detail/
 
 FEATURES:
-  • Smart discovery: samples ranges first, then expands
+  • Gap-based discovery: only searches between existing manual ranges
+  • Binary search expansion: finds new ranges efficiently from gap seed points
   • Adaptive speed: starts fast, slows on issues automatically
   • Zero-padding: files sort correctly (099.html, 100.html, 101.html)
-  • Fallback logic: always works regardless of environment
   • Real-time progress: see current ID and success/failure counts
   • Self-optimizing: learns optimal delays based on server response
 
-SPEED:
-  • Smart discovery reduces search space by 80-90%
-  • Adaptive rate limiting: 50ms to 8s based on server response
-  • Two-phase: quick validation then full download
-  • Much faster than brute force when network allows
+INTELLIGENCE:
+  • Analyzes existing files to identify contiguous ranges
+  • Places search seeds only in gaps between known ranges
+  • Eliminates redundant searches over already-downloaded content
+  • Falls back to linear scan only when no existing files found
+  • Much faster than brute force by focusing on unknown territories
         `);
         process.exit(0);
     }
