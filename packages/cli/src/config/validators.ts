@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { LanguageCode } from '../types/language-detection.js';
 
 const LanguageCodeSchema = z.enum(['ja', 'en', 'mixed', 'unknown']);
 
@@ -89,7 +88,7 @@ export class ConfigValidator {
     const errors: ValidationError[] = result.error.issues.map((issue) => ({
       field: issue.path.join('.'),
       message: issue.message,
-      value: issue.received
+      value: issue.received || issue.code
     }));
 
     return { success: false, errors };
@@ -105,7 +104,7 @@ export class ConfigValidator {
     const errors: ValidationError[] = result.error.issues.map((issue) => ({
       field: issue.path.join('.'),
       message: issue.message,
-      value: issue.received
+      value: issue.received || issue.code
     }));
 
     return { success: false, errors };

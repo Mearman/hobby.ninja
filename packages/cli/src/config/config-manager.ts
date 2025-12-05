@@ -50,7 +50,7 @@ export class ConfigManager {
     // 1. Load from config file
     const configData = await this.loadConfigFile(configFile);
     if (configData) {
-      config = { ...config, ...configData };
+      config = { ...config, ...configData.config };
       source = 'file';
       configFilePath = configData.filePath;
     }
@@ -108,7 +108,7 @@ export class ConfigManager {
    * Load configuration from file system
    */
   private async loadConfigFile(customPath?: string): Promise<{ config: Partial<ValidatedConfig>; filePath: string } | null> {
-    const searchPaths = customPath ? [customPath] : this.getConfigFilePaths();
+    const searchPaths = customPath ? [customPath] : await this.getConfigFilePaths();
 
     for (const filePath of searchPaths) {
       try {
@@ -217,7 +217,7 @@ export class ConfigManager {
   /**
    * Get possible configuration file paths in order of precedence
    */
-  private getConfigFilePaths(): string[] {
+  private async getConfigFilePaths(): Promise<string[]> {
     const paths: string[] = [];
 
     // Current working directory

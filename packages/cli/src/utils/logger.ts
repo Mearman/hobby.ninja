@@ -95,7 +95,7 @@ export class Logger {
   /**
    * Log a message with timing
    */
-  time<T>(label: string, fn: () => Promise<T> | T): Promise<T> {
+  async time<T>(label: string, fn: () => Promise<T> | T): Promise<T> {
     const start = Date.now();
 
     this.debug(`Starting: ${label}`);
@@ -132,7 +132,7 @@ export class Logger {
         name: error.name,
         message: error.message,
         stack: error.stack
-      } : undefined
+      } as Error : undefined
     };
 
     // Add to queue
@@ -315,21 +315,24 @@ export class Logger {
       const logDir = path.dirname(this.logFile);
       const files = await fs.readdir(logDir);
 
-      const logFiles = files
-        .filter(file => file.endsWith('.log'))
-        .map(file => path.join(logDir, file))
-        .map(async (filePath) => {
-          try {
-            const stats = await fs.stat(filePath);
-            return {
-              path: filePath,
-              mtime: stats.mtime
-            };
-          } catch {
-            return null;
-          }
-        })
-        .filter(Boolean) as Array<{ path: string; mtime: Date }>;
+      const fileStats = await Promise.all(
+        files
+          .filter(file => file.endsWith('.log'))
+          .map(file => path.join(logDir, file))
+          .map(async (filePath) => {
+            try {
+              const stats = await fs.stat(filePath);
+              return {
+                path: filePath,
+                mtime: stats.mtime
+              };
+            } catch {
+              return null;
+            }
+          })
+      );
+
+      const logFiles = fileStats.filter(Boolean) as Array<{ path: string; mtime: Date }>;
 
       // Sort by modification time (newest first)
       logFiles.sort((a, b) => b.mtime.getTime() - a.mtime.getTime());
