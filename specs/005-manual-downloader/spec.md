@@ -52,19 +52,19 @@ As a data consumer, I want downloaded manual pages to be saved in an organized h
 
 ---
 
-### User Story 3 - Progress Tracking and Error Handling (Priority: P2)
+### User Story 3 - Progress Tracking and Simple Resume (Priority: P2)
 
-As a system operator, I want to see progress updates and detailed error reporting, so I can monitor the scraping process and troubleshoot any issues.
+As a system operator, I want to see basic progress updates and be able to resume from the last checked ID if interrupted, so I can monitor the scraping process and continue without re-checking IDs.
 
-**Why this priority**: For large ID ranges, visibility into progress and error conditions is essential for operational reliability.
+**Why this priority**: For large ID ranges, basic progress visibility and simple resume capability save time and provide operational clarity.
 
-**Independent Test**: Can be tested by intentionally introducing network errors or invalid URLs and verifying proper error reporting and progress tracking.
+**Independent Test**: Can be tested by running the scraper for a few IDs, interrupting it, and restarting to verify it continues from the last checked ID.
 
 **Acceptance Scenarios**:
 
-1. **Given** the scraper is processing a large ID range, **When** running, **Then** it displays real-time progress including IDs checked, pages found, and errors encountered
-2. **Given** a manual page fails to download, **When** an error occurs, **Then** the error is logged with sufficient detail for troubleshooting without stopping the entire process
-3. **Given** the scraping process is interrupted, **When** restarted, **Then** it can resume from the last processed ID
+1. **Given** the scraper is processing a large ID range, **When** running, **Then** it displays basic progress showing current ID, pages found, and errors encountered
+2. **Given** a manual page fails to download, **When** an error occurs, **Then** the error is logged with the ID and error message, and processing continues
+3. **Given** the scraping process is interrupted, **When** restarted, **Then** it reads the last checked ID from a simple state file and continues from the next ID
 
 ---
 
@@ -88,8 +88,8 @@ As a system operator, I want to see progress updates and detailed error reportin
 - **FR-006**: System MUST skip pages that return 404 or other error responses and continue processing
 - **FR-007**: System MUST provide progress tracking showing total IDs checked, valid pages found, and errors encountered
 - **FR-008**: System MUST implement rate limiting to avoid overwhelming the target website
-- **FR-009**: System MUST resume scanning from the last processed ID if interrupted
-- **FR-010**: System MUST log detailed error information for failed downloads
+- **FR-009**: System MUST save the last checked ID to a simple state file and resume from the next ID on restart
+- **FR-010**: System MUST log basic error information for failed downloads including ID and error message
 
 ### Key Entities *(include if feature involves data)*
 
@@ -105,7 +105,7 @@ As a system operator, I want to see progress updates and detailed error reportin
 - **SC-002**: System processes 100 manual IDs per minute on average with proper rate limiting
 - **SC-003**: System handles 404 errors and network failures without crashing, with 99% success rate for valid pages
 - **SC-004**: Downloaded HTML files are 100% valid and complete as served by the original website
-- **SC-005**: System can resume operation from any interruption point within 5 seconds
+- **SC-005**: System can resume operation from the last checked ID within 1 second (simple state file read)
 - **SC-006**: All downloaded files follow the exact naming convention `./data/raw/bandai/manuals/{ID}.html`
 
 ### Assumptions

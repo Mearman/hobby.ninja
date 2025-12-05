@@ -104,40 +104,37 @@ description: "Task list for implementing Bandai Manual Content Downloader featur
 
 ### Implementation for User Story 2
 
-- [ ] T028 [P] [US2] Implement StorageService in packages/scrapers/src/manual-downloader/services/storage-service.ts
-- [ ] T029 [P] [US2] Create file operations utilities in packages/scrapers/src/manual-downloader/utils/file-operations.ts
-- [ ] T030 [US2] Add automatic directory creation for ./data/raw/bandai/manuals/
-- [ ] T031 [US2] Add file naming convention {ID}.html implementation
-- [ ] T032 [US2] Add file validation and integrity checking in StorageService
-- [ ] T033 [US2] Integrate StorageService with DownloaderService from US1
+- [X] T028 [P] [US2] Implement StorageService in packages/scrapers/src/manual-downloader/services/storage-service.ts
+- [X] T029 [P] [US2] Create file operations utilities in packages/scrapers/src/manual-downloader/utils/file-operations.ts
+- [X] T030 [US2] Add automatic directory creation for ./data/raw/bandai/manuals/
+- [X] T031 [US2] Add file naming convention {ID}.html implementation
+- [X] T032 [US2] Add file validation and integrity checking in StorageService
+- [X] T033 [US2] Integrate StorageService with DownloaderService from US1
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
 ---
 
-## Phase 5: User Story 3 - Progress Tracking and Error Handling (Priority: P2)
+## Phase 5: User Story 3 - Progress Tracking and Simple Resume (Priority: P2)
 
-**Goal**: Display real-time progress updates and detailed error reporting for operational monitoring
+**Goal**: Display basic progress updates and simple resume capability from last checked ID
 
-**Independent Test**: Intentionally introduce network errors or invalid URLs and verify proper error reporting and progress tracking
+**Independent Test**: Run scraper for a few IDs, interrupt it, and restart to verify it continues from the last checked ID
 
 ### Tests for User Story 3 (REQUIRED - Constitution mandates test-first development) ⚠️
 
-- [ ] T034 [P] [US3] Unit test for ResumeService in packages/scrapers/tests/manual-downloader/unit/resume-service.test.ts
-- [ ] T035 [P] [US3] Unit test for ValidationService in packages/scrapers/tests/manual-downloader/unit/validation-service.test.ts
-- [ ] T036 [P] [US3] Integration test for error recovery in packages/scrapers/tests/manual-downloader/integration/error-recovery.test.ts
-- [ ] T037 [P] [US3] Integration test for resume functionality in packages/scrapers/tests/manual-downloader/integration/resume-recovery.test.ts
+- [ ] T034 [P] [US3] Unit test for ProgressTracker in packages/scrapers/tests/manual-downloader/unit/progress-tracker.test.ts
+- [ ] T035 [P] [US3] Unit test for StateManager in packages/scrapers/tests/manual-downloader/unit/state-manager.test.ts
+- [ ] T036 [P] [US3] Integration test for simple resume functionality in packages/scrapers/tests/manual-downloader/integration/simple-resume.test.ts
 
 ### Implementation for User Story 3
 
-- [ ] T038 [P] [US3] Implement ResumeService in packages/scrapers/src/manual-downloader/services/resume-service.ts
-- [ ] T039 [P] [US3] Implement ValidationService in packages/scrapers/src/manual-downloader/services/validation-service.ts
-- [ ] T040 [P] [US3] Add JSON-based session persistence with atomic file operations
-- [ ] T041 [US3] Add progress event emission and real-time status updates
-- [ ] T042 [US3] Add comprehensive error classification and logging
-- [ ] T043 [US3] Add resume capability with <5-second recovery time
-- [ ] T044 [US3] Add network timeout and retry logic with exponential backoff
-- [ ] T045 [US3] Integrate progress tracking into CLI output
+- [ ] T037 [P] [US3] Implement ProgressTracker in packages/scrapers/src/manual-downloader/services/progress-tracker.ts
+- [ ] T038 [P] [US3] Implement StateManager in packages/scrapers/src/manual-downloader/services/state-manager.ts
+- [ ] T039 [US3] Add simple state file persistence (last checked ID)
+- [ ] T040 [US3] Add basic progress logging and CLI output
+- [ ] T041 [US3] Integrate simple resume into DownloaderService
+- [ ] T042 [US3] Add error logging with ID and message details
 
 **Checkpoint**: All user stories should now be independently functional
 
