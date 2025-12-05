@@ -1,6 +1,11 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
+    "barrels": {
+      "cache": true,
+      "command": "barrelsby --config .barrelsby.json",
+      "parallel": false
+    },
     "build": {
       "cache": true,
       "dependsOn": ["^build", "syncpack:fix", "barrels", "lint:fix", "typecheck"],
@@ -39,7 +44,7 @@
     },
         "serve": {
       "cache": false,
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build", "barrels"]
     },
     "test:e2e": {
       "cache": true,

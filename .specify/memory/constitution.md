@@ -32,7 +32,10 @@ Nx executor plugins and inferred targets MUST be preferred over nx:run-commands.
 ### X. Persistence and Resilience in Problem Solving
 When encountering technical challenges, implementation obstacles, or configuration issues, solutions MUST be pursued to completion with proper investigation and research. Online documentation, official documentation, and community solutions MUST be researched before declaring a problem unsolvable. **SIMPLE, TEMPORARY, OR MOCK IMPLEMENTATIONS ARE ABSOLUTELY FORBIDDEN.** All implementations MUST be complete, production-ready solutions that fully address the requirements. Simplified fallbacks, placeholder implementations, and "minimum viable" approaches are PROHIBITED unless explicitly documented as technical debt with an approved remediation plan and timeline. Root cause analysis MUST be performed for all blocking issues.
 
-### XI. Security by Default
+### XI. Automated Barrel Export Management
+Index files (index.ts) MUST NEVER be manually modified or contain manual content. All barrel exports MUST be generated and managed exclusively by barrelsby automation. Manual entries in index files are FORBIDDEN. Content MUST be organized in properly named files within appropriate directories, allowing barrelsby to generate clean, consistent export structures. This ensures maintainable module boundaries and prevents merge conflicts.
+
+### XII. Security by Default
 Content Security Policy headers implemented. XSS protection via React. Input validation via Zod schemas. Client-side data encryption for sensitive IndexedDB storage. Regular security scanning in CI/CD. No external dependencies without security review.
 
 ## Technology Standards
@@ -55,13 +58,13 @@ This constitution supersedes all other development practices. Amendments require
 
 Template files (plan.md, spec.md, tasks.md) MUST align with constitutional principles. Regular constitution reviews scheduled quarterly or when major architectural changes occur.
 
-**Version**: 1.7.1 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-05
+**Version**: 1.8.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-05
 
 <!--
 Sync Impact Report:
-Version change: 1.7.0 → 1.7.1 (PATCH - strengthened Principle X with explicit prohibition of simple implementations)
-Modified principles: X. Persistence and Resilience in Problem Solving (strengthened language to absolutely forbid simple/temporary/mock implementations)
-Added sections: None
+Version change: 1.7.1 → 1.8.0 (MINOR - added new principle XI for automated barrel export management)
+Modified principles: X. Persistence and Resilience in Problem Solving (renumbered to X), XI. Security by Default (renumbered to XII)
+Added sections: XI. Automated Barrel Export Management (new principle forbidding manual index.ts modifications)
 Removed sections: None
 Templates updated: ✅ .specify/templates/plan-template.md, ✅ .specify/templates/spec-template.md, ✅ .specify/templates/tasks-template.md
 Commands updated: ✅ All .specify/templates/commands/*.md files
