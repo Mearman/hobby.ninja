@@ -19,7 +19,9 @@
       "Bash(git fetch:*)",
       "Bash(ls:*)",
       "Bash(.specify/scripts/bash/create-new-feature.sh:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(tsx:*)"
     ],
     "deny": [
       "Bash(git add .)",
