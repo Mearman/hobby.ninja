@@ -1,7 +1,7 @@
-import { ProductData, ProductImage, PriceInfo } from "@workspace/types/product-data.js";
+import { ProductData, ProductImage, PriceInfo } from "@unnamed-gunpla-app/types/product-data";
 import * as cheerio from "cheerio";
 
-import { BaseScraper } from "./base-scraper.js";
+import { BaseScraper } from "./base-scraper";
 
 export class BandaiHobbyScraper extends BaseScraper {
 	constructor() {

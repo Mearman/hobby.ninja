@@ -1,7 +1,7 @@
-import type { GundamData, LanguageDetection } from "@workspace/types/product-data.js";
+import type { GundamData, LanguageDetection } from "@unnamed-gunpla-app/types/product-data";
 import * as cheerio from "cheerio";
 
-import { BaseScraper } from "./base-scraper.js";
+import { BaseScraper } from "./base-scraper";
 
 export class GundamInfoScraper extends BaseScraper {
 	constructor() {

@@ -1,6 +1,6 @@
-import { LanguageDetector } from "@workspace/utils/language-detection.js";
-import { profileManager } from "@workspace/utils/profile-manager.js";
-import { RenderingDetector } from "@workspace/utils/rendering-detection.js";
+import { LanguageDetector } from "@unnamed-gunpla-app/utils/language-detection";
+import { profileManager } from "@unnamed-gunpla-app/utils/profile-manager";
+import { RenderingDetector } from "@unnamed-gunpla-app/utils/rendering-detection";
 
 export abstract class BaseScraper {
 	protected baseUrl: string;

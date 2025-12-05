@@ -4,3 +4,8 @@
 
 import * as execFileNoThrowts from "./execFileNoThrow";
 export {execFileNoThrowts as execFileNoThrow};
+
+export * from "./language-detection";
+export * from "./profile-manager";
+export * from "./rendering-detection";
+export * from "./cache-manager";

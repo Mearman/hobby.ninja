@@ -1,8 +1,8 @@
-import type { LanguageDetection } from "@workspace/types/language-detection.js";
-import type { GundamData } from "@workspace/types/product-data.js";
+import type { LanguageDetection } from "@unnamed-gunpla-app/types/language-detection";
+import type { GundamData } from "@unnamed-gunpla-app/types/product-data";
 import * as cheerio from "cheerio";
 
-import { BaseScraper } from "./base-scraper.js";
+import { BaseScraper } from "./base-scraper";
 
 export class HobbyLinkScraper extends BaseScraper {
 	constructor() {

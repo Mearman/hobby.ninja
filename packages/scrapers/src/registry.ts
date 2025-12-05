@@ -2,10 +2,10 @@
  * Scraper registry for managing all available data sources
  */
 
-import { BandaiHobbyScraper } from "./bandai-hobby.js";
-import type { BaseScraper } from "./base-scraper.js";
-import { GundamInfoScraper } from "./gundam-info.js";
-import { HobbyLinkScraper } from "./hobbylink.js";
+import { BandaiHobbyScraper } from "./bandai-hobby";
+import type { BaseScraper } from "./base-scraper";
+import { GundamInfoScraper } from "./gundam-info";
+import { HobbyLinkScraper } from "./hobbylink";
 
 export type ScraperType = "bandai-hobby" | "gundam-info" | "hobbylink";
 

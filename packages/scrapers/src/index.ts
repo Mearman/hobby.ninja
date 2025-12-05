@@ -2,24 +2,24 @@
  * Scrapers module exports
  */
 
-import { ScraperRegistry, getScraper, AVAILABLE_SCRAPERS } from "./registry.js";
-import type { ScraperType } from "./registry.js";
+import { ScraperRegistry, getScraper, AVAILABLE_SCRAPERS } from "./registry";
+import type { ScraperType } from "./registry";
 
-export type { BaseScraper } from "./base-scraper.js";
-export { BandaiHobbyScraper } from "./bandai-hobby.js";
-export { GundamInfoScraper } from "./gundam-info.js";
-export { HobbyLinkScraper } from "./hobbylink.js";
+export type { BaseScraper } from "./base-scraper";
+export { BandaiHobbyScraper } from "./bandai-hobby";
+export { GundamInfoScraper } from "./gundam-info";
+export { HobbyLinkScraper } from "./hobbylink";
 
 export type {
 	ScraperType,
 	ScraperInfo,
-} from "./registry.js";
+} from "./registry";
 
 export {
 	ScraperRegistry,
 	getScraper,
 	AVAILABLE_SCRAPERS,
-} from "./registry.js";
+} from "./registry";
 
 // Convenience exports for common operations
 export const Scrapers = {

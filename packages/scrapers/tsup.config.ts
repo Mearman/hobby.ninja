@@ -6,5 +6,5 @@ export default defineConfig({
 	dts: true,
 	clean: true,
 	sourcemap: true,
-	external: ["@workspace/types", "@workspace/utils"],
+	external: ["@unnamed-gunpla-app/types", "@unnamed-gunpla-app/utils"],
 });

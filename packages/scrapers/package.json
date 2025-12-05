@@ -1,5 +1,5 @@
 {
-  "name": "@workspace/scrapers",
+  "name": "@unnamed-gunpla-app/scrapers",
   "version": "1.0.0",
   "description": "Web scrapers for Gundam and Gunpla data sources",
   "main": "dist/index.js",
@@ -24,8 +24,8 @@
     "cheerio": "^1.0.0-rc.12"
   },
   "peerDependencies": {
-    "@workspace/types": "*",
-    "@workspace/utils": "*",
+    "@unnamed-gunpla-app/types": "*",
+    "@unnamed-gunpla-app/utils": "*",
     "typescript": "^5.0.0"
   },
   "devDependencies": {
