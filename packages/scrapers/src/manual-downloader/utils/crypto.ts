@@ -22,6 +22,16 @@ export function computeSHA256(content: string): string {
 }
 
 /**
+ * Calculate SHA-256 hash (alias for computeSHA256)
+ *
+ * @param content Text content to hash
+ * @returns SHA-256 hash as hex string
+ */
+export function calculateSHA256(content: string): string {
+  return computeSHA256(content);
+}
+
+/**
  * Compute SHA-256 hash of file content
  *
  * @param filePath Path to file to hash

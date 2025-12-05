@@ -88,7 +88,7 @@ As a system operator, I want to see basic progress updates and be able to resume
 - **FR-006**: System MUST skip pages that return 404 or other error responses and continue processing
 - **FR-007**: System MUST provide progress tracking showing total IDs checked, valid pages found, and errors encountered
 - **FR-008**: System MUST implement rate limiting to avoid overwhelming the target website
-- **FR-009**: System MUST save the last checked ID to a simple state file and resume from the next ID on restart
+- **FR-009**: System MUST allow starting from any specified ID to continue from where previous run left off
 - **FR-010**: System MUST log basic error information for failed downloads including ID and error message
 
 ### Key Entities *(include if feature involves data)*

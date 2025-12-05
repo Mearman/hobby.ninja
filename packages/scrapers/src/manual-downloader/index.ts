@@ -1,28 +1,24 @@
 /**
- * Bandai Manual Content Downloader
+ * Bandai Manual Content Downloader - Simple Version
  *
- * CLI tool for discovering and downloading Bandai hobby manuals
- * from unknown ID ranges with intelligent algorithms and
- * respectful rate limiting.
- *
- * @version 1.0.0
- * @since 2025-12-05
+ * No complex sessions, just ID incrementing from start to end.
  */
 
-// Export main services and types
-export { DownloaderService } from './services/downloader-service';
-export { DiscoveryService } from './services/discovery-service';
-export { RateLimiterService } from './services/rate-limiter-service';
+// Export the simple downloader and its dependencies
+export { SimpleDownloader } from './simple-downloader';
 export { HttpClient } from './services/http-client';
-export { ConfigurationService } from './services/configuration';
-export { LoggingService } from './services/logging';
+export { RateLimiterService } from './services/rate-limiter-service';
 
-// Export types and entities
-export * from './types';
-export * from './utils/crypto';
+// Export CLI
+export { ManualDownloaderCLI, main } from './cli/main';
 
-// CLI entry point
-export * from './cli';
+// Export minimal types
+export interface SimpleOptions {
+  startId?: number;
+  endId?: number;
+  url?: string;
+  output?: string;
+}
 
 // Package version
-export const VERSION = '1.0.0';
+export const VERSION = '2.0.0'; // Simplified version

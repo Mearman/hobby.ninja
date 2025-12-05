@@ -22,6 +22,9 @@ import { HttpClient } from './http-client';
 import { RateLimiterService } from './rate-limiter-service';
 import { LoggingService } from './logging';
 import { ConfigurationService } from './configuration';
+import { StorageService } from './storage-service';
+import { ProgressTracker } from './progress-tracker';
+import { StateManager } from './state-manager';
 import { computeSHA256 } from '../utils/crypto';
 import { ErrorFactory } from './errors';
 
@@ -34,6 +37,9 @@ export class DownloaderService {
   private httpClient: HttpClient;
   private rateLimiter: RateLimiterService;
   private logger: LoggingService;
+  private storageService: StorageService;
+  private progressTracker: ProgressTracker;
+  private stateManager: StateManager;
   private currentSession: DownloadSession | null = null;
 
   constructor(config?: Partial<ConfigurationService['config']>) {
@@ -41,16 +47,76 @@ export class DownloaderService {
     this.discoveryService = new DiscoveryService(new HttpClient());
     this.httpClient = new HttpClient();
     this.rateLimiter = new RateLimiterService();
+    this.storageService = new StorageService({
+      outputDirectory: './data/raw/bandai/manuals',
+      createDirectories: true,
+      verifyIntegrity: true,
+      compressFiles: false
+    });
     this.logger = new LoggingService({
       level: 'info',
       enableConsoleOutput: true,
       enableFileOutput: false
     });
 
-    // Set up progress callback
+    // Initialize progress tracker with logger integration
+    this.progressTracker = new ProgressTracker({
+      enableLogging: true,
+      updateInterval: 1000, // Update every second
+      logCallback: (message: string, data?: any) => {
+        // Forward progress logs to the main logger
+        this.logger.logProgress({
+          type: 'progress',
+          timestamp: new Date().toISOString(),
+          session: {
+            id: this.currentSession?.sessionId || '',
+            phase: this.currentSession?.currentPhase || '',
+            status: this.currentSession?.status || 'unknown'
+          },
+          progress: {
+            totalChecked: this.currentSession?.stats.totalChecked || 0,
+            totalDiscovered: this.currentSession?.discoveredIds.length || 0,
+            successCount: this.currentSession?.stats.successCount || 0,
+            failureCount: this.currentSession?.stats.failureCount || 0,
+            percentage: 0,
+            speed: 0,
+            eta: 0,
+            ...data
+          },
+          message
+        });
+      }
+    });
+
+    // Initialize state manager
+    this.stateManager = new StateManager({
+      stateDirectory: './data/raw/bandai/manuals/states',
+      enableBackups: false
+    });
+
+    // Set up progress callback with rich progress information
     this.logger.setProgressCallback((event) => {
       if (this.currentSession) {
         this.currentSession.stats.lastUpdateTime = event.timestamp;
+
+        // Enhance progress event with session data for CLI
+        if (event.type === 'progress' && event.progress) {
+          const progress = this.progressTracker.getProgress();
+          const stats = this.progressTracker.getStatistics();
+
+          // Update progress with comprehensive information
+          event.progress = {
+            ...event.progress,
+            currentId: progress.currentId,
+            totalChecked: this.currentSession.stats.totalChecked,
+            totalDiscovered: this.currentSession.discoveredIds.length,
+            successCount: this.currentSession.stats.successCount,
+            failureCount: this.currentSession.stats.failureCount,
+            percentage: this.calculateOverallProgress(),
+            speed: stats.averageRate * 60, // Convert to per-minute
+            eta: stats.estimatedCompletion || 0
+          };
+        }
       }
     });
   }
@@ -59,8 +125,8 @@ export class DownloaderService {
     try {
       this.logger.info('Initializing downloader service');
 
-      // Create new session
-      const sessionId = randomUUID();
+      // Create new session (or use existing for resume)
+      const sessionId = options.resume && options.sessionId ? options.sessionId : randomUUID();
       const targetUrl = options.url || this.config.get('targetUrl');
       const outputDirectory = options.output || this.config.get('outputDirectory');
 
@@ -100,6 +166,16 @@ export class DownloaderService {
           integrityHash: ''
         }
       };
+
+      // Handle resume functionality during initialization
+      if (options.resume && options.sessionId) {
+        const lastCheckedId = await this.stateManager.loadLastCheckedId(options.sessionId);
+        if (lastCheckedId !== null) {
+          this.logger.info(`Resuming from last checked ID: ${lastCheckedId}`);
+          session.lastProcessedId = lastCheckedId;
+          session.status = 'resuming';
+        }
+      }
 
       // Ensure output directory exists
       await fs.mkdir(outputDirectory, { recursive: true });
@@ -236,8 +312,11 @@ export class DownloaderService {
       manual?: ManualPage;
     }> = [];
 
-    for (const id of ids) {
+      for (const id of ids) {
       try {
+        // Update progress tracker before processing
+        this.progressTracker.updateCurrentId(id);
+
         const manual = await this.downloadSingleManual(id);
         results.push({
           success: true,
@@ -245,10 +324,16 @@ export class DownloaderService {
           manual
         });
 
+        // Record successful download
+        this.progressTracker.recordFoundPage(id);
+
         this.currentSession!.stats.successCount++;
         this.currentSession!.stats.totalBytesDownloaded += manual.contentSize;
 
       } catch (error) {
+        // Record error
+        this.progressTracker.recordError(id, error instanceof Error ? error.message : String(error));
+
         this.logger.error(`Failed to download manual ${id}`, ErrorFactory.process(error));
         results.push({
           success: false,
@@ -259,25 +344,18 @@ export class DownloaderService {
         this.currentSession!.failedIds.push(id);
       }
 
+      // Save state after each ID for resume capability
+      await this.stateManager.saveLastCheckedId(
+        this.currentSession!.sessionId,
+        id,
+        {
+          targetUrl: this.currentSession!.targetUrl,
+          userAgent: this.config.get('userAgent')
+        }
+      );
+
       // Rate limiting
       await this.rateLimiter.wait();
-
-      // Update progress
-      const progress = (results.filter(r => r.success).length / ids.length) * 100;
-      this.logProgress('progress', {
-        sessionId: this.currentSession!.sessionId,
-        phase: 'bulk-download',
-        status: 'downloading',
-        progress: {
-          totalChecked: this.currentSession!.stats.totalChecked + results.length,
-          totalDiscovered: this.currentSession!.discoveredIds.length,
-          successCount: this.currentSession!.stats.successCount,
-          failureCount: this.currentSession!.stats.failureCount,
-          percentage: Math.round(progress),
-          speed: this.calculateCurrentSpeed(),
-          eta: this.estimateTimeRemaining(ids.length - results.length, results.filter(r => r.success).length)
-        }
-      });
     }
 
     return results;
@@ -429,20 +507,34 @@ export class DownloaderService {
   getProgress(): DownloadProgress | null {
     if (!this.currentSession) return null;
 
+    const trackerProgress = this.progressTracker.getProgress();
+    const stats = this.progressTracker.getStatistics();
+
     return {
       status: this.currentSession.status as any,
-      totalChecked: this.currentSession.stats.totalChecked,
+      totalChecked: trackerProgress.totalChecked,
       discoveredIds: this.currentSession.discoveredIds,
-      successCount: this.currentSession.stats.successCount,
-      failureCount: this.currentSession.stats.failureCount,
-      currentId: this.currentSession.lastProcessedId || undefined,
+      successCount: trackerProgress.pagesFound,
+      failureCount: trackerProgress.errors,
+      currentId: trackerProgress.currentId || undefined,
       startTime: new Date(this.currentSession.startTime).getTime(),
-      estimatedTimeRemaining: this.estimateTimeRemaining(
-        this.currentSession.queuedIds.length - this.currentSession.stats.totalChecked,
-        this.currentSession.stats.successCount
-      ),
-      requestsPerSecond: this.calculateCurrentSpeed() / 60
+      estimatedTimeRemaining: stats.estimatedCompletion || 0,
+      requestsPerSecond: trackerProgress.requestsPerSecond
     };
+  }
+
+  /**
+   * Calculate overall progress percentage
+   */
+  private calculateOverallProgress(): number {
+    if (!this.currentSession || this.currentSession.discoveredIds.length === 0) {
+      return 0;
+    }
+
+    const totalIds = this.currentSession.discoveredIds.length;
+    const processedIds = this.currentSession.stats.successCount + this.currentSession.stats.failureCount;
+
+    return Math.min((processedIds / totalIds) * 100, 100);
   }
 
   async pause(): Promise<void> {
@@ -463,6 +555,10 @@ export class DownloaderService {
     if (this.currentSession) {
       this.currentSession.status = 'completed';
       this.currentSession.endTime = new Date().toISOString();
+
+      // Clear state file when completed successfully
+      await this.stateManager.clearState(this.currentSession.sessionId);
+
       this.logger.info('Download process stopped');
     }
   }
