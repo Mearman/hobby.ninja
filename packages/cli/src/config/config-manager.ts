@@ -3,6 +3,7 @@ import * as path from 'path';
 import { homedir } from 'os';
 import { DEFAULT_CONFIG, CONFIG_FILE_NAMES, ENV_PREFIX } from './default-config.js';
 import { ConfigValidator, type ValidatedConfig, type ValidationError } from './validators.js';
+import { ScraperRegistry, type ScraperType } from '../scrapers/registry.js';
 
 export interface ConfigLoadOptions {
   configFile?: string;
@@ -13,8 +14,8 @@ export interface ConfigLoadOptions {
 export interface ConfigLoadResult {
   config: ValidatedConfig;
   source: 'default' | 'file' | 'env' | 'mixed';
-  filePath?: string;
-  warnings?: string[];
+  filePath: string | undefined;
+  warnings: string[];
 }
 
 export class ConfigManager {
@@ -79,12 +80,14 @@ export class ConfigManager {
     this.config = config;
     this.configFilePath = configFilePath || null;
 
-    return {
+    const result: ConfigLoadResult = {
       config,
       source,
-      filePath: configFilePath,
-      warnings: warnings.length > 0 ? warnings : undefined
+      filePath: configFilePath || undefined,
+      warnings
     };
+
+    return result;
   }
 
   /**
@@ -173,11 +176,20 @@ export class ConfigManager {
       [`${ENV_PREFIX}LOG_TO_FILE`]: 'logToFile'
     };
 
-    // Parse simple properties
+    // Parse simple properties with special handling for ScraperType
     Object.entries(envMappings).forEach(([envKey, configKey]) => {
       const value = parseEnv(envKey);
       if (value !== undefined) {
-        (envConfig as any)[configKey] = value;
+        // Special validation for ScraperType
+        if (configKey === 'source') {
+          if (value && ScraperRegistry.isValidType(value as string)) {
+            (envConfig as any)[configKey] = value as ScraperType;
+          } else if (value) {
+            console.warn(`Warning: Invalid scraper type '${value}' for ${envKey}. Available types: ${ScraperRegistry.getAvailableTypes().join(', ')}`);
+          }
+        } else {
+          (envConfig as any)[configKey] = value;
+        }
       }
     });
 

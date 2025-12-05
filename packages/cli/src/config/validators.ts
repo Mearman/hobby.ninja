@@ -6,6 +6,8 @@ const OutputFormatSchema = z.enum(['json', 'csv', 'excel', 'ndjson']);
 
 const LogLevelSchema = z.enum(['error', 'warn', 'info', 'debug']);
 
+const ScraperTypeSchema = z.enum(['bandai-hobby', 'gundam-info', 'hobbylink']);
+
 const RateLimitingSchema = z.object({
   enabled: z.boolean(),
   requestsPerSecond: z.number().min(0.1).max(100),
@@ -39,7 +41,7 @@ const ExportSchema = z.object({
 });
 
 export const ScrapingConfigSchema = z.object({
-  source: z.string().min(1),
+  source: ScraperTypeSchema,
   language: z.union([LanguageCodeSchema, z.literal('all')]),
 
   output: z.string().min(1),
@@ -88,7 +90,7 @@ export class ConfigValidator {
     const errors: ValidationError[] = result.error.issues.map((issue) => ({
       field: issue.path.join('.'),
       message: issue.message,
-      value: issue.received || issue.code
+      value: (issue as any).received || issue.code
     }));
 
     return { success: false, errors };
@@ -98,13 +100,13 @@ export class ConfigValidator {
     const result = ScrapingConfigSchema.partial().safeParse(config);
 
     if (result.success) {
-      return { success: true, data: result.data };
+      return { success: true, data: result.data as Partial<ValidatedConfig> };
     }
 
     const errors: ValidationError[] = result.error.issues.map((issue) => ({
       field: issue.path.join('.'),
       message: issue.message,
-      value: issue.received || issue.code
+      value: (issue as any).received || issue.code
     }));
 
     return { success: false, errors };

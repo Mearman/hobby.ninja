@@ -3,66 +3,9 @@
  * Provides sensible defaults that can be overridden by users
  */
 
-import { LanguageCode } from '../types/language-detection.js';
+import type { ValidatedConfig } from './validators.js';
 
-export interface ScrapingConfig {
-  // Source configuration
-  source: string;
-  language: LanguageCode | 'all';
-
-  // Output configuration
-  output: string;
-  format: 'json' | 'csv' | 'excel' | 'ndjson';
-
-  // Performance settings
-  concurrency: number;
-  delayMs: number;
-  timeout: number;
-  retries: number;
-
-  // Cache settings
-  cache: boolean;
-  cacheExpiry: number; // hours
-
-  // Resume/checkpoint settings
-  resume: boolean;
-  checkpointsEnabled: boolean;
-
-  // Quality and validation
-  validate: boolean;
-  fixIssues: boolean;
-
-  // Logging and reporting
-  verbose: boolean;
-  dryRun: boolean;
-  logLevel: 'error' | 'warn' | 'info' | 'debug';
-  logToFile: boolean;
-
-  // Rate limiting
-  rateLimiting: {
-    enabled: boolean;
-    requestsPerSecond: number;
-    burstSize: number;
-  };
-
-  // Data filtering
-  filters: {
-    minPrice?: number;
-    maxPrice?: number;
-    categories?: string[];
-    excludeKeywords?: string[];
-    includeKeywords?: string[];
-  };
-
-  // Export options
-  export: {
-    includeImages: boolean;
-    includeSpecifications: boolean;
-    includeCategories: boolean;
-    prettyPrint: boolean;
-    compression: boolean;
-  };
-}
+export type ScrapingConfig = ValidatedConfig;
 
 export const DEFAULT_CONFIG: ScrapingConfig = {
   source: 'bandai-hobby',
