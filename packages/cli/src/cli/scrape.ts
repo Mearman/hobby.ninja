@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import * as path from 'path';
-import { getScraper } from '@workspace/scrapers';
+import { getScraper } from '@unnamed-gunpla-app/scrapers';
 import { CacheManager } from '../utils/cache-manager.js';
 import { BandaiRateLimiter } from '../utils/rate-limiter.js';
 import { validateProductData } from '../schemas/validation.js';
