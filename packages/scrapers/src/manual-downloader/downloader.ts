@@ -118,9 +118,13 @@ export class Downloader {
           confirmedIds.push(id);
         }
 
-        // Show progress every 50 IDs
-        if (id % 50 === 0 || id === endId) {
-          process.stdout.write(`\r🔍 Scanned ${id - startId + 1}/${endId - startId + 1}, found: ${confirmedIds.length}`);
+        // Show progress and recent finds every 20 IDs
+        if (id % 20 === 0) {
+          const recentFinds = confirmedIds.slice(-5); // Last 5 found
+          console.log(`🔍 Scanned ${id - startId + 1}/${endId - startId + 1}, total found: ${confirmedIds.length}`);
+          if (recentFinds.length > 0) {
+            console.log(`   Recent finds: [${recentFinds.join(', ')}]`);
+          }
         }
 
         // Small delay to be reasonable
@@ -326,12 +330,12 @@ export class Downloader {
 
           if (await this.testUrl(baseUrl + id + '/')) {
             found.push(id);
-            console.log(`   ✅ Found valid manual: ${id}`);
+            console.log(`   ✅ Found manual: ${id}`);
           }
 
           // Show progress every 10 checks within this range
           if (rangeChecked % 10 === 0) {
-            process.stdout.write(`\r   🔍 Range ${rangeStart}-${rangeEnd}: ${rangeChecked}/${rangeSize} checked, ${found.length} total found`);
+            console.log(`   🔍 Progress: ${rangeChecked}/${rangeSize} checked in range ${rangeStart}-${rangeEnd}, ${found.length} total found`);
           }
 
           await this.smartWait();
