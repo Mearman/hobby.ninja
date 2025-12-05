@@ -75,9 +75,8 @@ export class Downloader {
 
       // Use only boundary points of contiguous ranges as expansion seeds
       // This dramatically reduces redundant seed points while maintaining coverage
-      const expansionSeeds = this.getBoundarySeeds(Array.from(allExistingFiles));
-      console.log(`📍 Selected ${expansionSeeds.length} boundary seed points: [${expansionSeeds.join(', ')}]`);
-      const expandedIds = await this.expandAroundSamples(baseUrl, startId, endId, expansionSeeds, existingFilesInRange);
+      const { boundaries: expansionSeeds, ranges } = this.getBoundarySeeds(Array.from(allExistingFiles));
+      const expandedIds = await this.expandAroundSamples(baseUrl, startId, endId, ranges, existingFilesInRange);
       confirmedIds.push(...expandedIds.filter(id => !existingFilesInRange.has(id)));
     } else {
       // No existing files, fall back to random sampling
@@ -223,11 +222,11 @@ export class Downloader {
    * Get only boundary points of contiguous ranges as efficient seeds
    * Instead of using every existing file, only use the ends of continuous ranges
    */
-  private getBoundarySeeds(sortedIds: number[]): number[] {
-    if (sortedIds.length === 0) return [];
+  private getBoundarySeeds(sortedIds: number[]): { boundaries: number[], ranges: Array<{start: number, end: number}> } {
+    if (sortedIds.length === 0) return { boundaries: [], ranges: [] };
 
     const boundaries: number[] = [];
-    const ranges: string[] = [];
+    const ranges: Array<{start: number, end: number}> = [];
     sortedIds.sort((a, b) => a - b);
 
     let rangeStart = sortedIds[0];
@@ -241,7 +240,7 @@ export class Downloader {
         // Add boundaries of completed range
         boundaries.push(rangeStart);
         boundaries.push(prevId);
-        ranges.push(`${rangeStart}-${prevId}`);
+        ranges.push({ start: rangeStart, end: prevId });
         rangeStart = currentId;
       }
 
@@ -251,7 +250,7 @@ export class Downloader {
     // Add boundaries of final range
     boundaries.push(rangeStart);
     boundaries.push(prevId);
-    ranges.push(`${rangeStart}-${prevId}`);
+    ranges.push({ start: rangeStart, end: prevId });
 
     // Remove redundant boundaries when ranges are adjacent
     const optimizedBoundaries = [];
@@ -269,11 +268,12 @@ export class Downloader {
 
     // Log the ranges being represented
     if (ranges.length > 0) {
-      console.log(`   📊 Contiguous ranges detected: [${ranges.join(', ')}]`);
+      const rangeStrings = ranges.map(r => `${r.start}-${r.end}`);
+      console.log(`   📊 Contiguous ranges detected: [${rangeStrings.join(', ')}]`);
       console.log(`   📍 Optimized boundaries: [${optimizedBoundaries.join(', ')}] (removed ${sortedBoundaries.length - optimizedBoundaries.length} redundant points)`);
     }
 
-    return optimizedBoundaries;
+    return { boundaries: optimizedBoundaries, ranges };
   }
 
   /**
@@ -291,14 +291,14 @@ export class Downloader {
   }
 
   /**
-   * Intelligent range discovery using binary search from gap-based seed points
+   * Intelligent range discovery using binary search from gaps between existing ranges
    */
-  private async expandAroundSamples(baseUrl: string, startId: number, endId: number, samples: number[], existingFilesInRange: Set<number>): Promise<number[]> {
+  private async expandAroundSamples(baseUrl: string, startId: number, endId: number, ranges: Array<{start: number, end: number}>, existingFilesInRange: Set<number>): Promise<number[]> {
     const found: number[] = [];
     const checked = new Set<number>(); // Track checked IDs to avoid duplicates
 
     // Identify gaps between existing ranges where we should search
-    const gapSeeds = this.getGapBasedSeeds(samples, startId, endId, existingFilesInRange);
+    const gapSeeds = this.getGapBasedSeeds(ranges, startId, endId);
 
     if (gapSeeds.length === 0) {
       console.log(`   ✅ No gaps found - all ranges already covered`);
@@ -330,21 +330,21 @@ export class Downloader {
   /**
    * Generate seed points only at gaps between existing ranges
    */
-  private getGapBasedSeeds(boundaries: number[], startId: number, endId: number, existingFilesInRange: Set<number>): number[] {
+  private getGapBasedSeeds(ranges: Array<{start: number, end: number}>, startId: number, endId: number): number[] {
     const gapSeeds: number[] = [];
 
-    // Sort boundaries for processing
-    const sortedBoundaries = [...boundaries].sort((a, b) => a - b);
+    // Sort ranges by start ID
+    const sortedRanges = [...ranges].sort((a, b) => a.start - b.start);
 
     // Find gaps between existing ranges
-    for (let i = 0; i < sortedBoundaries.length - 1; i++) {
-      const current = sortedBoundaries[i];
-      const next = sortedBoundaries[i + 1];
+    for (let i = 0; i < sortedRanges.length - 1; i++) {
+      const currentRange = sortedRanges[i];
+      const nextRange = sortedRanges[i + 1];
 
-      // If there's a gap of more than 1 between boundaries
-      if (next > current + 1) {
-        const gapStart = current + 1;
-        const gapEnd = next - 1;
+      // If there's a gap between this range and the next
+      if (nextRange.start > currentRange.end + 1) {
+        const gapStart = currentRange.end + 1;
+        const gapEnd = nextRange.start - 1;
 
         // Check if this gap overlaps with our target range
         if (gapEnd >= startId && gapStart <= endId) {
@@ -355,21 +355,29 @@ export class Downloader {
       }
     }
 
-    // Check gap before first boundary
-    const firstBoundary = sortedBoundaries[0];
-    if (firstBoundary > startId) {
-      const gapStart = startId;
-      const gapEnd = firstBoundary - 1;
-      const gapMiddle = Math.floor((gapStart + gapEnd) / 2);
-      gapSeeds.push(gapMiddle);
+    // Check gap before first range
+    if (sortedRanges.length > 0) {
+      const firstRange = sortedRanges[0];
+      if (firstRange.start > startId) {
+        const gapStart = startId;
+        const gapEnd = firstRange.start - 1;
+        const gapMiddle = Math.floor((gapStart + gapEnd) / 2);
+        gapSeeds.push(gapMiddle);
+      }
     }
 
-    // Check gap after last boundary
-    const lastBoundary = sortedBoundaries[sortedBoundaries.length - 1];
-    if (lastBoundary < endId) {
-      const gapStart = lastBoundary + 1;
-      const gapEnd = endId;
-      const gapMiddle = Math.floor((gapStart + gapEnd) / 2);
+    // Check gap after last range
+    if (sortedRanges.length > 0) {
+      const lastRange = sortedRanges[sortedRanges.length - 1];
+      if (lastRange.end < endId) {
+        const gapStart = lastRange.end + 1;
+        const gapEnd = endId;
+        const gapMiddle = Math.floor((gapStart + gapEnd) / 2);
+        gapSeeds.push(gapMiddle);
+      }
+    } else {
+      // No ranges at all - seed the middle of the entire target range
+      const gapMiddle = Math.floor((startId + endId) / 2);
       gapSeeds.push(gapMiddle);
     }
 
