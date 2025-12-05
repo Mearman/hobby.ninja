@@ -31,10 +31,16 @@ export { CsvExporter } from './exporters/csv-exporter.js';
 export { ExcelExporter } from './exporters/excel-exporter.js';
 
 // Convenience exports
+import { ExportManager as EM } from './export-manager.js';
+import { DataTransformer as DT } from './data-transformer.js';
+import { JsonExporter as JE } from './exporters/json-exporter.js';
+import { CsvExporter as CE } from './exporters/csv-exporter.js';
+import { ExcelExporter as EE } from './exporters/excel-exporter.js';
+
 export const Export = {
-  Manager: ExportManager,
-  Transformer: DataTransformer,
-  Json: JsonExporter,
-  Csv: CsvExporter,
-  Excel: ExcelExporter
+  Manager: EM,
+  Transformer: DT,
+  Json: JE,
+  Csv: CE,
+  Excel: EE
 };

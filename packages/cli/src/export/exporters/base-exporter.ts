@@ -6,12 +6,11 @@ import { promises as fs } from 'fs';
 import * as path from 'path';
 import { promisify } from 'util';
 import { pipeline } from 'stream';
-import { createGzip, createDeflate } from 'zlib';
-import type { GundamData } from '../../../types/index.js';
+import { createGzip } from 'zlib';
+import type { GundamData } from '../../types/product-data.js';
 import type {
   ExportOptions,
   ExportResult,
-  ExportProgress,
   ProgressCallback,
   TransformedData,
   ExporterConfig
@@ -71,7 +70,7 @@ export abstract class BaseExporter {
         format: this.options.format,
         recordCount: transformedData.length,
         fileSize: stats.size,
-        compressed: this.options.compression && finalPath !== outputPath,
+        ...(this.options.compression && { compressed: finalPath !== outputPath }),
         duration
       };
 
@@ -94,11 +93,12 @@ export abstract class BaseExporter {
    */
   protected prepareData(data: GundamData[]): TransformedData[] {
     // Transform data
-    const transformed = DataTransformer.transformData(data, {
-      includeImages: this.options.includeImages,
-      includeSpecifications: this.options.includeSpecifications,
-      language: this.options.language || 'all'
-    });
+    const transformOptions: { includeImages?: boolean; includeSpecifications?: boolean; language?: 'ja' | 'en' | 'all' } = {};
+    if (this.options.includeImages !== undefined) transformOptions.includeImages = this.options.includeImages;
+    if (this.options.includeSpecifications !== undefined) transformOptions.includeSpecifications = this.options.includeSpecifications;
+    if (this.options.language !== undefined) transformOptions.language = this.options.language;
+
+    const transformed = DataTransformer.transformData(data, transformOptions);
 
     // Apply filters if provided
     const filtered = this.options.filters
@@ -152,12 +152,15 @@ export abstract class BaseExporter {
    */
   protected updateProgress(current: number, total: number, stage: string, message?: string): void {
     if (this.progressCallback) {
-      this.progressCallback({
+      const progress: any = {
         current,
         total,
-        stage,
-        message
-      });
+        stage
+      };
+      if (message !== undefined) {
+        progress.message = message;
+      }
+      this.progressCallback(progress);
     }
   }
 

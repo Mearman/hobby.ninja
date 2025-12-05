@@ -2,10 +2,10 @@
  * Type definitions for data export functionality
  */
 
-import type { GundamData, LanguageDetection } from '../../types/index.js';
+import type { LanguageDetection } from '../types/product-data.js';
 
 export interface ExportOptions {
-  format: 'json' | 'csv' | 'excel';
+  format: 'json' | 'csv' | 'excel' | 'ndjson';
   outputPath: string;
   includeImages?: boolean;
   includeSpecifications?: boolean;

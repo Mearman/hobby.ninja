@@ -63,7 +63,8 @@ export class CsvExporter extends BaseExporter {
     // Add data rows
     for (let i = 0; i < data.length; i++) {
       const item = data[i];
-      const row = columns.map(col => {
+      if (!item) continue; // Skip undefined items
+      const row = columns.map((col: { key: string; header: string }) => {
         const value = this.extractValue(item, col.key);
         return this.escapeCsvValue(value);
       }).join(this.csvOptions.delimiter);
@@ -117,7 +118,7 @@ export class CsvExporter extends BaseExporter {
     columns.add('url');
 
     // Convert to column definitions with proper headers
-    return Array.from(columns).map(key => ({
+    return Array.from(columns).map((key: string) => ({
       key,
       header: this.formatHeader(key)
     }));
@@ -147,12 +148,12 @@ export class CsvExporter extends BaseExporter {
 
       if (key === 'primaryImageUrl') {
         const primary = item.images?.find(img => img.type === 'main' || img.type === 'primary');
-        return primary?.url || '';
+        return primary?.url ?? '';
       }
 
       if (key === 'galleryImageUrls') {
         const gallery = item.images?.filter(img => img.type === 'gallery');
-        return gallery?.map(img => img.url).join('; ') || '';
+        return gallery?.map(img => img.url).join('; ') ?? '';
       }
 
       // Handle specification keys
@@ -267,7 +268,7 @@ export class CsvExporter extends BaseExporter {
    * Export multiple CSV files by category
    */
   protected async exportByCategories(data: TransformedData[]): Promise<string> {
-    const categories = [...new Set(data.map(item => item.category).filter(Boolean))];
+    const categories = [...new Set(data.map(item => item.category).filter((cat): cat is string => Boolean(cat)))];
     const baseDir = path.dirname(this.options.outputPath);
     const baseName = path.basename(this.options.outputPath, '.csv');
 
@@ -290,7 +291,7 @@ export class CsvExporter extends BaseExporter {
     await this.createSummaryCsv(categories, data.length, summaryPath);
     exportPaths.push(summaryPath);
 
-    return exportPaths[0]; // Return the first file as primary
+    return exportPaths[0]!; // Return the first file as primary
   }
 
   /**

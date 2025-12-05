@@ -3,7 +3,6 @@
  */
 
 import type { GundamData } from '../types/product-data.js';
-import type { LanguageDetection } from '../types/language-detection.js';
 import type { TransformedData, ExportFilters, ValidationResult, ValidationError, ValidationWarning } from './types.js';
 
 export class DataTransformer {
@@ -42,19 +41,19 @@ export class DataTransformer {
       images: options.includeImages ? this.transformImages(item.images || []) : []
     };
 
-    // Add language-specific names
-    if (item.name && typeof item.name === 'object') {
-      if (item.name.ja) transformed.nameJa = item.name.ja;
-      if (item.name.en) transformed.nameEn = item.name.en;
-    }
-
     // Add optional fields if they exist
-    if (item.series) transformed.series = this.extractSeries(item);
-    if (item.category) transformed.category = this.extractCategory(item);
-    if (item.price) transformed.price = this.extractPrice(item);
-    if (item.currency) transformed.currency = item.currency;
-    if (item.releaseDate) transformed.releaseDate = item.releaseDate;
-    if (item.url) transformed.url = item.url;
+    const series = this.extractSeries(item);
+    if (series !== undefined) transformed.series = series;
+
+    const category = this.extractCategory(item);
+    if (category !== undefined) transformed.category = category;
+
+    const price = this.extractPrice(item);
+    if (price !== undefined) transformed.price = price;
+
+    if (item.currency !== undefined) transformed.currency = item.currency;
+    if (item.releaseDate !== undefined) transformed.releaseDate = item.releaseDate;
+    if (item.url !== undefined) transformed.url = item.url;
 
     // Extract specifications if requested
     if (options.includeSpecifications && item.specifications) {
@@ -62,8 +61,8 @@ export class DataTransformer {
 
       // Extract commonly used spec fields as top-level properties
       const specs = item.specifications;
-      if (specs.scale) transformed.scale = String(specs.scale);
-      if (specs.grade) transformed.grade = String(specs.grade);
+      if (specs['scale']) transformed.scale = String(specs['scale']);
+      if (specs['grade']) transformed.grade = String(specs['grade']);
     }
 
     // Add description
@@ -132,7 +131,7 @@ export class DataTransformer {
     const errors: ValidationError[] = [];
     const warnings: ValidationWarning[] = [];
 
-    data.forEach((item, index) => {
+    data.forEach((item) => {
       // Required fields
       if (!item.id) {
         errors.push({
@@ -196,31 +195,23 @@ export class DataTransformer {
   /**
    * Get localized name based on language preference
    */
-  private static getLocalizedName(name: GundamData['name'], language: string): string {
+  private static getLocalizedName(name: GundamData['name'], _language: string): string {
     if (!name) return 'Unknown';
 
+    // GundamData.name is always a string according to the interface
     if (typeof name === 'string') {
       return name;
     }
 
-    switch (language) {
-      case 'ja':
-        return name.ja || name.en || 'Unknown';
-      case 'en':
-        return name.en || name.ja || 'Unknown';
-      case 'all':
-      default:
-        return [name.ja, name.en].filter(Boolean).join(' / ') || 'Unknown';
-    }
+    // Fallback for any non-string data (shouldn't happen with proper typing)
+    return String(name);
   }
 
   /**
    * Extract series information
    */
-  private static extractSeries(item: GundamData): string | undefined {
-    if (item.series) {
-      return typeof item.series === 'string' ? item.series : String(item.series);
-    }
+  private static extractSeries(_item: GundamData): string | undefined {
+    // GundamData doesn't have series property according to interface, so return undefined
     return undefined;
   }
 
@@ -228,6 +219,7 @@ export class DataTransformer {
    * Extract category information
    */
   private static extractCategory(item: GundamData): string | undefined {
+    // Return category if it exists on GundamData
     if (item.category) {
       return typeof item.category === 'string' ? item.category : String(item.category);
     }
@@ -238,13 +230,11 @@ export class DataTransformer {
    * Extract price information
    */
   private static extractPrice(item: GundamData): number | undefined {
-    if (typeof item.price === 'number') {
-      return item.price;
+    const price = item.price;
+    if (typeof price === 'number') {
+      return price;
     }
-    if (typeof item.price === 'string') {
-      const parsed = parseFloat(item.price.replace(/[^\d.]/g, ''));
-      return isNaN(parsed) ? undefined : parsed;
-    }
+    // GundamData interface shows price as number | undefined, so string case shouldn't happen
     return undefined;
   }
 
@@ -256,22 +246,21 @@ export class DataTransformer {
       return [];
     }
 
-    return images.map(img => ({
-      type: img.type || 'unknown',
-      url: img.url || '',
-      alt: img.alt,
-      width: img.width,
-      height: img.height,
-      size: img.size
-    }));
+    return images.map(img => {
+      const transformed: TransformedData['images'][0] = {
+        type: img.type || 'unknown',
+        url: img.url || '',
+        alt: img.alt
+      };
+      return transformed;
+    });
   }
 
   /**
    * Generate ID from item data if not provided
    */
   private static generateId(item: GundamData): string {
-    const name = typeof item.name === 'string' ? item.name :
-                 (item.name?.ja || item.name?.en || 'unknown');
+    const name = typeof item.name === 'string' ? item.name : 'unknown';
     const brand = item.brand || 'unknown';
     const hash = Buffer.from(`${brand}-${name}-${item.source || 'unknown'}`).toString('base64');
     return hash.replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);

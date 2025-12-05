@@ -82,7 +82,9 @@ export class ExportManager {
     const totalFormats = formats.length;
 
     for (let i = 0; i < formats.length; i++) {
-      const { format, outputPath } = formats[i];
+      const formatItem = formats[i];
+      if (!formatItem) continue;
+      const { format, outputPath } = formatItem;
 
       const options: ExportOptions = {
         format,
@@ -128,11 +130,13 @@ export class ExportManager {
     validation: ValidationResult;
   }> {
     // Transform and filter limited data
-    const transformed = DataTransformer.transformData(data.slice(0, maxRecords), {
-      includeImages: options.includeImages,
-      includeSpecifications: options.includeSpecifications,
-      language: options.language || 'all'
-    });
+    const transformOptions: Parameters<typeof DataTransformer.transformData>[1] = {};
+    if (options.includeImages !== undefined) transformOptions.includeImages = options.includeImages;
+    if (options.includeSpecifications !== undefined) transformOptions.includeSpecifications = options.includeSpecifications;
+    if (options.language !== undefined) transformOptions.language = options.language;
+    else transformOptions.language = 'all';
+
+    const transformed = DataTransformer.transformData(data.slice(0, maxRecords), transformOptions);
 
     const filtered = options.filters
       ? DataTransformer.filterData(transformed, options.filters)
@@ -140,20 +144,12 @@ export class ExportManager {
 
     // Generate summary
     const summary = DataTransformer.getDataSummary(
-      DataTransformer.transformData(data, {
-        includeImages: options.includeImages,
-        includeSpecifications: options.includeSpecifications,
-        language: options.language || 'all'
-      })
+      DataTransformer.transformData(data, transformOptions)
     );
 
     // Validate data
     const validation = DataTransformer.validateData(
-      DataTransformer.transformData(data, {
-        includeImages: options.includeImages,
-        includeSpecifications: options.includeSpecifications,
-        language: options.language || 'all'
-      })
+      DataTransformer.transformData(data, transformOptions)
     );
 
     // Estimate file size
@@ -190,8 +186,11 @@ export class ExportManager {
       if (!formatBreakdown[result.format]) {
         formatBreakdown[result.format] = { count: 0, size: 0 };
       }
-      formatBreakdown[result.format].count++;
-      formatBreakdown[result.format].size += result.fileSize;
+      const breakdown = formatBreakdown[result.format];
+      if (breakdown) {
+        breakdown.count++;
+        breakdown.size += result.fileSize;
+      }
     });
 
     return {

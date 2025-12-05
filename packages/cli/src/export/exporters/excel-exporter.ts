@@ -2,9 +2,8 @@
  * Excel exporter implementation using XLSX library
  */
 
-import { promises as fs } from 'fs';
 import * as path from 'path';
-import type { TransformedData, ExporterConfig, ExportOptions, ExcelWorksheet, ExcelColumn, ExcelStyle } from '../types.js';
+import type { TransformedData, ExporterConfig, ExportOptions, ExcelColumn } from '../types.js';
 import { BaseExporter } from './base-exporter.js';
 
 export class ExcelExporter extends BaseExporter {
@@ -18,7 +17,12 @@ export class ExcelExporter extends BaseExporter {
   protected async exportToFile(data: TransformedData[]): Promise<string> {
     try {
       // Dynamically import xlsx library to avoid build issues
-      const XLSX = await import('xlsx');
+      let XLSX: any;
+      try {
+        XLSX = await import('xlsx' as any); // Dynamic import of optional dependency
+      } catch (error) {
+        throw new Error('Excel export requires the xlsx package. Please install it with: npm install xlsx');
+      }
 
       const outputPath = this.generateOutputPath();
       await this.ensureOutputDirectory(outputPath);
@@ -339,7 +343,7 @@ export class ExcelExporter extends BaseExporter {
    * Get unique categories from data
    */
   private getCategories(data: TransformedData[]): string[] {
-    return [...new Set(data.map(item => item.category).filter(Boolean))];
+    return [...new Set(data.map(item => item.category).filter((cat): cat is string => Boolean(cat)))];
   }
 
   /**
@@ -382,7 +386,12 @@ export class ExcelExporter extends BaseExporter {
    */
   protected async createStyledWorkbook(data: TransformedData[]): Promise<any> {
     try {
-      const XLSX = await import('xlsx');
+      let XLSX: any;
+      try {
+        XLSX = await import('xlsx' as any); // Dynamic import of optional dependency
+      } catch (error) {
+        throw new Error('Excel export requires the xlsx package. Please install it with: npm install xlsx');
+      }
       const workbook = XLSX.utils.book_new();
 
       // Define styles

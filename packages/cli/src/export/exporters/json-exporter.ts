@@ -22,13 +22,18 @@ export class JsonExporter extends BaseExporter {
     // Create export data structure
     const exportData = this.createExportData(data);
 
-    // Convert to JSON string
-    const jsonString = this.options.prettyPrint
-      ? JSON.stringify(exportData, null, 2)
-      : JSON.stringify(exportData);
-
-    // Handle encoding if needed
-    const content = await this.handleEncoding(jsonString);
+    // Handle content differently for NDJSON vs regular JSON
+    let content: string | Buffer;
+    if (typeof exportData === 'string') {
+      // NDJSON format - already a string
+      content = await this.handleEncoding(exportData);
+    } else {
+      // Regular JSON format
+      const jsonString = this.options.prettyPrint
+        ? JSON.stringify(exportData, null, 2)
+        : JSON.stringify(exportData);
+      content = await this.handleEncoding(jsonString);
+    }
 
     // Write to file
     await fs.writeFile(outputPath, content, this.getEncodingOptions());
@@ -39,7 +44,7 @@ export class JsonExporter extends BaseExporter {
   /**
    * Create JSON export data structure
    */
-  private createExportData(data: TransformedData[]): Record<string, unknown> {
+  private createExportData(data: TransformedData[]): Record<string, unknown> | string {
     const exportData: Record<string, unknown> = {
       data,
       ...this.createSummary(data)
@@ -82,12 +87,12 @@ export class JsonExporter extends BaseExporter {
    */
   protected validateJsonData(exportData: Record<string, unknown>): void {
     // Basic validation
-    if (!exportData.data || !Array.isArray(exportData.data)) {
+    if (!exportData['data'] || !Array.isArray(exportData['data'])) {
       throw new Error('Export data must contain a data array');
     }
 
     // Validate each item
-    exportData.data.forEach((item, index) => {
+    (exportData['data'] as any[]).forEach((item, index) => {
       if (!item.id) {
         throw new Error(`Item at index ${index} is missing required field: id`);
       }
