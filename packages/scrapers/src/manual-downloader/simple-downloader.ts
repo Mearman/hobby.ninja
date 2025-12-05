@@ -39,6 +39,7 @@ export class SimpleDownloader {
 
     let successCount = 0;
     let failCount = 0;
+    let currentPadding = 1; // Start with 1 digit (1-9)
 
     for (let id = startId; id <= endId; id++) {
       try {
@@ -54,10 +55,19 @@ export class SimpleDownloader {
         const response = await this.httpClient.get(url, { timeout: 10000 });
 
         if (response.statusCode === 200 && response.data && response.data.length > 1000) {
-          // Success! Save the file
-          const filePath = join(outputDir, `${id}.html`);
+          // Success! Save the file with current padding
+          const paddedId = id.toString().padStart(currentPadding, '0');
+          const filePath = join(outputDir, `${paddedId}.html`);
           await fs.writeFile(filePath, response.data, 'utf8');
           successCount++;
+
+          // Check if we hit a new power of 10 and need to pad existing files
+          const newPadding = id.toString().length;
+          if (newPadding > currentPadding) {
+            console.log(`\n📝 Padding existing files to ${newPadding} digits...`);
+            await this.padExistingFiles(outputDir, currentPadding, newPadding);
+            currentPadding = newPadding;
+          }
         } else {
           failCount++;
         }
@@ -73,6 +83,32 @@ export class SimpleDownloader {
 
     console.log(`\n✅ Complete! Found ${successCount} manuals, ${failCount} not found`);
     console.log(`📁 Files saved to: ${outputDir}`);
+  }
+
+  /**
+   * Pad existing files with zeros when hitting a new power of 10
+   */
+  private async padExistingFiles(outputDir: string, oldPadding: number, newPadding: number): Promise<void> {
+    try {
+      const files = await fs.readdir(outputDir);
+
+      for (const file of files) {
+        if (file.endsWith('.html')) {
+          const idStr = file.replace('.html', '');
+
+          // Only rename files that match the old padding length
+          if (idStr.length === oldPadding && /^\d+$/.test(idStr)) {
+            const paddedId = idStr.padStart(newPadding, '0');
+            const oldPath = join(outputDir, file);
+            const newPath = join(outputDir, `${paddedId}.html`);
+
+            await fs.rename(oldPath, newPath);
+          }
+        }
+      }
+    } catch (error) {
+      console.log(`⚠️  Error padding files: ${error instanceof Error ? error.message : String(error)}`);
+    }
   }
 }
 
