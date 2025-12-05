@@ -4,6 +4,7 @@ import { Command } from 'commander';
 import { ScrapeCommand, ScrapeOptions } from './scrape.js';
 import { CacheCommand } from './cache.js';
 import { ValidateCommand } from './validate.js';
+import { SingleUrlCommand } from './single-url.js';
 
 const program = new Command();
 
@@ -91,6 +92,45 @@ program
   .action(async (options) => {
     const validateCommand = new ValidateCommand();
     await validateCommand.execute(options);
+  });
+
+program
+  .command('single-url')
+  .description('Scrape data from a single URL')
+  .argument('<url>', 'URL to scrape (must be from bandai-hobby.net, manual.bandai-hobby.net, or gundam.info)')
+  .option('--output <dir>', 'Output directory', './gundam-single-scrape')
+  .option('--verbose', 'Enable verbose logging', false)
+  .action(async (url, options) => {
+    const singleUrlCommand = new SingleUrlCommand();
+
+    try {
+      const result = await singleUrlCommand.execute({
+        url,
+        output: options.output,
+        verbose: options.verbose
+      });
+
+      if (result.success) {
+        console.log('\n🎉 Single URL scraping completed!');
+        console.log(`URL: ${result.url}`);
+
+        if (result.skus && result.skus.length > 0) {
+          console.log(`SKUs found: ${result.skus.join(', ')}`);
+        }
+
+        if (result.outputFile) {
+          console.log(`Output: ${result.outputFile}`);
+        }
+
+        process.exit(0);
+      } else {
+        console.error('❌ Single URL scraping failed:', result.error);
+        process.exit(1);
+      }
+    } catch (error) {
+      console.error('❌ Single URL scraping failed:', error instanceof Error ? error.message : 'Unknown error');
+      process.exit(1);
+    }
   });
 
 if (require.main === module) {
