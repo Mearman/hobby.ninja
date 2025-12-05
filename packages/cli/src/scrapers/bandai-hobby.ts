@@ -18,10 +18,8 @@ export class BandaiHobbyScraper extends BaseScraper {
 
     // Transform language detection to match expected structure
     const languageDetection = {
-      primaryLanguage: {
-        code: rawLanguageDetection.language,
-        confidence: rawLanguageDetection.confidence
-      },
+      language: rawLanguageDetection.language,
+      confidence: rawLanguageDetection.confidence,
       method: rawLanguageDetection.method,
       evidence: rawLanguageDetection.evidence
     };
