@@ -171,7 +171,8 @@ export class FileManager {
         indicators: result.indicators,
         statusCode: result.statusCode,
         finalUrl: result.finalUrl,
-        error: result.error
+        error: result.error,
+        title: result.title
       });
 
       // Write back to file

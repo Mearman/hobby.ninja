@@ -84,7 +84,9 @@ export class URLScanner implements IURLScanner {
         confidence: urlCheckResult.confidence,
         indicators: urlCheckResult.indicators,
         statusCode: urlCheckResult.statusCode,
-        error: urlCheckResult.errorMessage
+        error: urlCheckResult.errorMessage,
+        title: urlCheckResult.title,
+        extractedData: urlCheckResult.extractedData
       };
 
       // Update progress

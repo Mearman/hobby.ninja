@@ -41,6 +41,16 @@ export interface URLCheckResult {
 
   /** Time taken for the request in milliseconds */
   requestTime?: number;
+
+  /** Extracted page title */
+  title?: string;
+
+  /** Additional extracted data */
+  extractedData?: {
+    description?: string;
+    sku?: string;
+    images?: string[];
+  };
 }
 
 export interface ProgressState {
@@ -155,6 +165,48 @@ export interface ScanStatistics {
   invalid: number;
   errors: number;
   averageRequestTime: number;
+}
+
+export interface ScanResult {
+  /** The URL that was checked */
+  url: string;
+
+  /** Timestamp of when the check was performed (ISO 8601) */
+  timestamp: string;
+
+  /** Whether the URL is valid (responded successfully) */
+  isValid: boolean;
+
+  /** Whether essential Gundam data is available in initial HTML */
+  hasStaticData: boolean;
+
+  /** Type of data availability */
+  dataType: 'complete' | 'partial' | 'none';
+
+  /** Confidence in the static/dynamic classification (0-1) */
+  confidence: number;
+
+  /** Detected indicators that influenced classification */
+  indicators: string[];
+
+  /** HTTP status code (if request completed) */
+  statusCode?: number;
+
+  /** Final destination URL if redirects were followed */
+  finalUrl?: string;
+
+  /** Error message if check failed */
+  error?: string;
+
+  /** Extracted page title */
+  title?: string;
+
+  /** Additional extracted data */
+  extractedData?: {
+    description?: string;
+    sku?: string;
+    images?: string[];
+  };
 }
 
 export interface ScanSummary {

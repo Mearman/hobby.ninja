@@ -117,7 +117,13 @@ export class URLChecker {
         finalUrl: response.url || url,
         contentType,
         responseSize,
-        requestTime: Date.now() - startTime
+        requestTime: Date.now() - startTime,
+        title: staticDataResult.extractedData?.title,
+        extractedData: staticDataResult.extractedData ? {
+          description: staticDataResult.extractedData.description,
+          sku: staticDataResult.extractedData.sku,
+          images: staticDataResult.extractedData.images
+        } : undefined
       };
 
     } catch (error) {

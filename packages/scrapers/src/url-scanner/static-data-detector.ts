@@ -20,10 +20,10 @@ export class StaticDataDetector {
       /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi
     ],
     skuPatterns: [
-      /(?:HG|MG|PG|RG|SD|RE\/100|MGEX|EG|MB)[\s-_]*[\dA-Za-z\/-]+/gi,
-      /1\/(?:100|144|60|48|550)\s*(?:HG|MG|PG|RG|SD|HGUC)/gi,
-      /ガンダム[\s-_]*[^\s<]*\((?:HG|MG|PG|RG|SD)/gi,
-      /機動戦士[\s-_]*[^\s<]*\((?:HG|MG|PG|RG|SD)/gi
+      /(?:^|\s)[A-Z]{0,2}(?:HG|MG|PG|RG|SD|RE\/100|MGEX|EG|MB|HY2M)(?:\s+|[_-])[\dA-Za-z]+/gi,
+      /(?:^|\s)1\/(?:100|144|60|48|550)\s+(?:HG|MG|PG|RG|SD|HGUC|HY2M)/gi,
+      /ガンダム[\s-_]*[^\s<]*\((?:HG|MG|PG|RG|SD|HY2M)/gi,
+      /機動戦士[\s-_]*[^\s<]*\((?:HG|MG|PG|RG|SD|HY2M)/gi
     ],
     imageElements: [
       /<img[^>]*(?:src|srcset)=["']([^"']+)["'][^>]*(?:alt=["']([^"']+)["'])?/gi
@@ -99,6 +99,12 @@ export class StaticDataDetector {
     if (titles.length > 0) {
       indicators.push('static-title');
       extractedData.title = this.cleanText(titles[0]);
+
+      // Check if this is a 404 error page
+      if (extractedData.title.toLowerCase().includes('404') ||
+          extractedData.title.toLowerCase().includes('not found')) {
+        indicators.push('404-error');
+      }
     }
 
     // Extract meta description
@@ -316,11 +322,17 @@ export class StaticDataDetector {
   private calculateConfidence(indicators: string[], hasStaticData: boolean): number {
     let confidence = 0.3; // Base confidence
 
+    // Check for 404 error pages (which should have very low confidence)
+    const is404Page = indicators.some(indicator =>
+      indicator.toLowerCase().includes('404') ||
+      indicator.toLowerCase().includes('not found')
+    );
+
     // Add for strong positive indicators
     if (indicators.includes('structured-data')) confidence += 0.4;
-    if (indicators.includes('static-title')) confidence += 0.3;
+    if (indicators.includes('static-title') && !is404Page) confidence += 0.3;
     if (indicators.includes('meta-description')) confidence += 0.2;
-    if (indicators.includes('image-elements')) confidence += 0.1;
+    if (indicators.includes('image-elements') && !is404Page) confidence += 0.1;
     if (indicators.includes('sku-pattern-found')) confidence += 0.1;
 
     // Subtract for negative indicators
@@ -332,10 +344,20 @@ export class StaticDataDetector {
     if (indicators.includes('empty-content')) confidence -= 0.3;
     if (indicators.includes('non-html-content')) confidence -= 0.5;
 
-    // Ensure minimum threshold if static data is detected
-    if (hasStaticData && confidence < 0.5) {
-      confidence = 0.5;
-    } else if (!hasStaticData && confidence > 0.7) {
+    // Heavy penalty for 404 pages - they need JavaScript
+    if (is404Page) {
+      confidence = Math.min(confidence, 0.2);
+    }
+
+    // Heavy penalty for script-data-source without other real content
+    if (indicators.includes('script-data-source') &&
+        !indicators.includes('structured-data') &&
+        !indicators.includes('sku-pattern-found')) {
+      confidence = Math.min(confidence, 0.3);
+    }
+
+    // Don't artificially inflate confidence - remove minimum threshold
+    if (!hasStaticData && confidence > 0.7) {
       confidence = 0.7;
     }
 
