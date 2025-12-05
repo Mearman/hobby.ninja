@@ -1,3 +1,3 @@
 // Main barrel export for the CLI package
 
-export * from './cli/index.js';
+export * from './cli/index';
