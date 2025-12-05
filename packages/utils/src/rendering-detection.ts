@@ -46,8 +46,12 @@ export class RenderingDetector {
       }
     }
 
+    const renderingType = this.determineRenderingType(html, requiresJS);
     return {
-      renderingType: this.determineRenderingType(html, requiresJS),
+      renderingType,
+      requiresPlaywright: requiresJS,
+      recommendation: renderingType === 'static' ? 'cheerio' : 'playwright',
+      evidence: [requiresJS ? 'requires JavaScript' : 'static content sufficient'],
       detectionMethod: 'content-analysis',
       initialContentLength: initialLength,
       finalContentLength: initialLength,
@@ -64,7 +68,17 @@ export class RenderingDetector {
     const dynamicAnalysis = this.analyzeDynamicContent(html);
 
     return {
+      hasProgressiveEnhancement: staticAnalysis.sufficient && dynamicAnalysis.required,
+      hasDynamicContent: dynamicAnalysis.required,
+      renderingType: staticAnalysis.sufficient && !dynamicAnalysis.required ? 'static' :
+                      dynamicAnalysis.required ? 'dynamic' : 'static',
+      confidence: this.calculateConfidence(html, staticAnalysis),
+      requiresPlaywright: dynamicAnalysis.required,
+      recommendation: this.getRecommendation(staticAnalysis, dynamicAnalysis),
+      evidence: [],
       staticAnalysis: {
+        frameworkIndicators: staticAnalysis.hasFrameworkSignals ? ['detected'] : [],
+        complexity: html.length,
         sufficient: staticAnalysis.sufficient,
         contentLength: html.length,
         missingFields: staticAnalysis.missingFields
@@ -78,8 +92,7 @@ export class RenderingDetector {
         required: dynamicAnalysis.required,
         additionalContent: dynamicAnalysis.additionalContent,
         waitForSelectors: dynamicAnalysis.waitForSelectors
-      },
-      recommendation: this.getRecommendation(staticAnalysis, dynamicAnalysis)
+      }
     };
   }
 
@@ -231,15 +244,17 @@ export class RenderingDetector {
     return Math.min(confidence, 1.0);
   }
 
-  private static getIndicators(html: string, _analysis: any) {
-    return {
-      hasDynamicContent: this.hasDynamicIndicators(html),
-      hasLazyLoading: this.LAZY_LOADING_PATTERNS.some(pattern => pattern.test(html)),
-      hasAjaxCalls: html.includes('fetch(') || html.includes('axios') || html.includes('XMLHttpRequest'),
-      hasFrameworkSignals: this.detectFrameworkSignals(html),
-      hasCSPRestrictions: html.includes('Content-Security-Policy'),
-      minimalStaticContent: this.hasMinimalContent(html)
-    };
+  private static getIndicators(html: string, _analysis: any): string[] {
+    const indicators: string[] = [];
+
+    if (this.hasDynamicIndicators(html)) indicators.push('hasDynamicContent');
+    if (this.LAZY_LOADING_PATTERNS.some(pattern => pattern.test(html))) indicators.push('hasLazyLoading');
+    if (html.includes('fetch(') || html.includes('axios') || html.includes('XMLHttpRequest')) indicators.push('hasAjaxCalls');
+    if (this.detectFrameworkSignals(html)) indicators.push('hasFrameworkSignals');
+    if (html.includes('Content-Security-Policy')) indicators.push('hasCSPRestrictions');
+    if (this.hasMinimalContent(html)) indicators.push('minimalStaticContent');
+
+    return indicators;
   }
 
   private static getRecommendation(staticAnalysis: any, dynamicAnalysis: any): 'static-only' | 'dynamic-required' | 'hybrid-approach' {

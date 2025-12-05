@@ -88,6 +88,7 @@ export class ProfileManager {
     if (existingProfile && !this.isProfileExpired(existingProfile)) {
       console.log(`✅ Using existing profile for ${urlPattern}`);
       return {
+        success: true,
         urlPattern,
         profile: existingProfile,
         analysis: {
@@ -97,7 +98,9 @@ export class ProfileManager {
           extractionFailures: 0
         },
         confidence: 0.9,
-        recommendations: ['Existing profile is still valid']
+        recommendations: ['Existing profile is still valid'],
+        requiresPlaywright: existingProfile.requiresPlaywright,
+        sampleUrls
       };
     }
 
@@ -128,13 +131,20 @@ export class ProfileManager {
       name: this.generateProfileName(urlPattern),
       requiresPlaywright,
       extractionMethod,
+      confidence: this.calculateConfidence(renderingAnalyses, languageDetections),
+      lastUpdated: new Date().toISOString(),
+      sampleUrls: sampleUrls.length > 0 ? sampleUrls : [url],
       selectors: await this.extractSelectors(sampleHtmls[0] || ''),
       waitForSelectors: this.extractWaitForSelectors(renderingAnalyses),
       timeout: this.calculateOptimalTimeout(renderingAnalyses),
       retryCount: 3,
       performance: {
+        estimatedLoadTime: this.calculateOptimalTimeout(renderingAnalyses),
+        averageJsExecutionTime: Math.max(...renderingAnalyses.map(a => a.jsExecutionTime || 1000)),
         averageExtractionTime: this.estimateExtractionTime(renderingAnalyses),
         successRate: 0.95, // Initial estimate
+        memoryUsage: 50000, // Estimated memory usage in bytes
+        domComplexity: this.calculateDomComplexity(renderingAnalyses),
         lastAnalyzed: Date.now()
       },
       language: {
@@ -154,6 +164,7 @@ export class ProfileManager {
     this.updateStatistics();
 
     return {
+      success: true,
       urlPattern,
       profile,
       analysis: {
@@ -163,7 +174,9 @@ export class ProfileManager {
         extractionFailures: 0
       },
       confidence: this.calculateConfidence(renderingAnalyses, languageDetections),
-      recommendations: this.generateRecommendations(profile, renderingAnalyses)
+      recommendations: this.generateRecommendations(profile, renderingAnalyses),
+      requiresPlaywright,
+      sampleUrls: sampleUrls.length > 0 ? sampleUrls : [url]
     };
   }
 
@@ -182,11 +195,11 @@ export class ProfileManager {
 
   async updateProfilePerformance(profileKey: string, success: boolean, extractionTime: number): Promise<void> {
     const profile = this.profileCache.profiles.get(profileKey);
-    if (!profile) return;
+    if (!profile || !profile.performance) return;
 
     // Update performance metrics
-    const currentAvg = profile.performance.averageExtractionTime;
-    const currentSuccessRate = profile.performance.successRate;
+    const currentAvg = profile.performance.averageExtractionTime || 0;
+    const currentSuccessRate = profile.performance.successRate || 0;
     const totalAttempts = this.estimateTotalAttempts(profile);
 
     profile.performance.averageExtractionTime =
@@ -205,9 +218,9 @@ export class ProfileManager {
     for (const url of urls) {
       try {
         // Try to get from cache first
-        const cached = await this.cacheManager.getByUrl(url);
-        if (cached?.rawHtml) {
-          htmls.push(cached.rawHtml);
+        const cached = await this.cacheManager.getByUrl?.(url);
+        if (cached && typeof cached === 'object' && 'rawHtml' in cached) {
+          htmls.push(cached.rawHtml as string);
           continue;
         }
 
@@ -226,7 +239,7 @@ export class ProfileManager {
           htmls.push(html);
 
           // Cache for future use
-          await this.cacheManager.setByUrl(url, html, 'profile-analysis');
+          await this.cacheManager.setByUrl?.(url, html, 'profile-analysis');
         }
       } catch (error) {
         console.warn(`⚠️  Failed to fetch ${url}:`, error);
@@ -348,46 +361,29 @@ export class ProfileManager {
     return Math.min(confidence, 1.0);
   }
 
-  private generateRecommendations(profile: PageTypeProfile, analyses: any[]): string[] {
-    const recommendations: string[] = [];
-
-    if (profile.requiresPlaywright) {
-      recommendations.push('Use Playwright for optimal extraction');
-    } else {
-      recommendations.push('Static extraction with Cheerio is sufficient');
-    }
-
-    if (profile.waitForSelectors && profile.waitForSelectors.length > 0) {
-      recommendations.push('Wait for dynamic content to load');
-    }
-
-    if (analyses.some(analysis => analysis.indicators?.hasLazyLoading)) {
-      recommendations.push('Consider implementing lazy loading handling');
-    }
-
-    return recommendations;
-  }
-
+  
   private isProfileExpired(profile: PageTypeProfile): boolean {
-    const ageHours = (Date.now() - profile.metadata.lastUpdated) / (1000 * 60 * 60);
+    const ageHours = (Date.now() - (profile.metadata?.lastUpdated || 0)) / (1000 * 60 * 60);
     return ageHours > this.updateInterval;
   }
 
   private estimateTotalAttempts(profile: PageTypeProfile): number {
     // Rough estimate based on when the profile was last updated
-    const ageHours = (Date.now() - profile.performance.lastAnalyzed) / (1000 * 60 * 60);
+    const ageHours = (Date.now() - (profile.performance?.lastAnalyzed || 0)) / (1000 * 60 * 60);
     return Math.max(1, ageHours / 2); // Assume 1 attempt every 2 hours
   }
 
   private updateStatistics(): void {
     const profiles = Array.from(this.profileCache.profiles.values());
 
-    this.profileCache.statistics.totalProfiles = profiles.length;
-    this.profileCache.statistics.staticOnlyProfiles =
-      profiles.filter(p => !p.requiresPlaywright).length;
-    this.profileCache.statistics.dynamicProfiles =
-      profiles.filter(p => p.requiresPlaywright).length;
-    this.profileCache.statistics.lastUpdated = Date.now();
+    if (this.profileCache.statistics) {
+      this.profileCache.statistics.totalProfiles = profiles.length;
+      this.profileCache.statistics.staticOnlyProfiles =
+        profiles.filter(p => !p.requiresPlaywright).length;
+      this.profileCache.statistics.dynamicProfiles =
+        profiles.filter(p => p.requiresPlaywright).length;
+      this.profileCache.statistics.lastUpdated = Date.now();
+    }
   }
 
   // Utility methods
@@ -415,6 +411,27 @@ export class ProfileManager {
       await this.saveProfiles();
       console.log(`🗑️  Cleared ${expiredKeys.length} expired profiles`);
     }
+  }
+
+  private calculateDomComplexity(renderingAnalyses: any[]): number {
+    // Simple heuristic based on analysis complexity
+    return renderingAnalyses.reduce((complexity, analysis) => {
+      return complexity + (analysis.domComplexity || 50);
+    }, 0);
+  }
+
+  private generateRecommendations(profile: PageTypeProfile, renderingAnalyses: any[]): string[] {
+    const recommendations: string[] = [];
+
+    if (renderingAnalyses.some(a => a.requiresJavaScript)) {
+      recommendations.push('Consider using Playwright for dynamic content');
+    }
+
+    if (profile.confidence < 0.8) {
+      recommendations.push('Profile confidence is low, consider manual review');
+    }
+
+    return recommendations;
   }
 }
 
