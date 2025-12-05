@@ -262,15 +262,15 @@ importers:
 
   packages/cli:
     dependencies:
+      '@unnamed-gunpla-app/scrapers':
+        specifier: workspace:*
+        version: link:../scrapers
       '@unnamed-gunpla-app/types':
         specifier: workspace:*
         version: link:../types
       '@unnamed-gunpla-app/utils':
         specifier: workspace:*
         version: link:../utils
-      '@workspace/scrapers':
-        specifier: workspace:*
-        version: link:../scrapers
       cheerio:
         specifier: latest
         version: 1.1.2
@@ -311,9 +311,12 @@ importers:
 
   packages/scrapers:
     dependencies:
-      axios:
-        specifier: ^1.6.0
-        version: 1.13.2
+      '@unnamed-gunpla-app/types':
+        specifier: workspace:*
+        version: link:../types
+      '@unnamed-gunpla-app/utils':
+        specifier: workspace:*
+        version: link:../utils
       cheerio:
         specifier: ^1.0.0-rc.12
         version: 1.1.2
