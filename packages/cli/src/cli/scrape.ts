@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import * as path from 'path';
-import { BandaiHobbyScraper } from '../scrapers/bandai-hobby.js';
+import { getScraper } from '@workspace/scrapers';
 import { CacheManager } from '../utils/cache-manager.js';
 import { BandaiRateLimiter } from '../utils/rate-limiter.js';
 import { validateProductData } from '../schemas/validation.js';
@@ -28,13 +28,13 @@ export interface ScrapeResult {
 export class ScrapeCommand {
   private cacheManager: CacheManager;
   private rateLimiter: BandaiRateLimiter;
-  private scraper: BandaiHobbyScraper;
+  private scraper: any;
   private checkpointFile: string;
 
   constructor() {
     this.cacheManager = new CacheManager();
     this.rateLimiter = new BandaiRateLimiter();
-    this.scraper = new BandaiHobbyScraper();
+    this.scraper = getScraper('bandai-hobby');
     this.checkpointFile = path.join(process.cwd(), '.gundam-scraper-checkpoint.json');
   }
 

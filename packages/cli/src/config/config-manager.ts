@@ -3,7 +3,7 @@ import * as path from 'path';
 import { homedir } from 'os';
 import { DEFAULT_CONFIG, CONFIG_FILE_NAMES, ENV_PREFIX } from './default-config.js';
 import { ConfigValidator, type ValidatedConfig, type ValidationError } from './validators.js';
-import { ScraperRegistry, type ScraperType } from '../scrapers/registry.js';
+import { ScraperRegistry, type ScraperType } from '@workspace/scrapers';
 
 export interface ConfigLoadOptions {
   configFile?: string;
