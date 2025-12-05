@@ -233,6 +233,20 @@ export default [
     },
   },
   {
+    // Types package files require camelCase for barrelsby to work properly
+    files: ['packages/types/src/*.ts'],
+    rules: {
+      'unicorn/filename-case': 'off',
+    },
+  },
+  {
+    // Utils package files require camelCase for barrelsby to work properly
+    files: ['packages/utils/src/*.ts'],
+    rules: {
+      'unicorn/filename-case': 'off',
+    },
+  },
+  {
     ignores: [
       'dist/**',
       'build/**',
