@@ -23,14 +23,3 @@ export {
   RetryConfig,
   ErrorMetrics
 } from './error-handler.js';
-
-// Re-export commonly used error creation functions
-export const ErrorHelpers = {
-  network: ScraperError.network,
-  filesystem: ScraperError.filesystem,
-  configuration: ScraperError.configuration,
-  scraping: ScraperError.scraping,
-  validation: ScraperError.validation,
-  create: createScraperError,
-  fromError: ScraperError.fromError
-};

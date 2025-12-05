@@ -127,12 +127,14 @@ export class Logger {
       timestamp: new Date().toISOString(),
       level,
       message,
-      context,
-      error: error ? {
-        name: error.name,
-        message: error.message,
-        stack: error.stack
-      } as Error : undefined
+      ...(context && { context }),
+      ...(error && {
+        error: {
+          name: error.name,
+          message: error.message,
+          stack: error.stack
+        } as Error
+      })
     };
 
     // Add to queue

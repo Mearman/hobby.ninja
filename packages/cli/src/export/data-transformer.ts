@@ -2,7 +2,8 @@
  * Data transformation utilities for export functionality
  */
 
-import type { GundamData, LanguageDetection } from '../../types/index.js';
+import type { GundamData } from '../types/product-data.js';
+import type { LanguageDetection } from '../types/language-detection.js';
 import type { TransformedData, ExportFilters, ValidationResult, ValidationError, ValidationWarning } from './types.js';
 
 export class DataTransformer {

@@ -4,7 +4,7 @@
  */
 
 import { ScraperError, ErrorContext } from './scraper-error.js';
-import { ErrorCode, ErrorCategory, ErrorRegistry } from './error-codes.js';
+import { ErrorCode, ErrorCategory } from './error-codes.js';
 import Logger from '../utils/logger.js';
 
 export interface ErrorReport {
@@ -253,7 +253,7 @@ export class ErrorHandler {
     shouldContinue: boolean;
   }> {
     if (error.code === ErrorCode.SCRAPE_STRUCTURE_CHANGED) {
-      this.logger.critical('Website structure has changed - scraper needs update', error);
+      this.logger.error('Website structure has changed - scraper needs update', error);
       return {
         handled: true,
         shouldContinue: false
@@ -281,7 +281,7 @@ export class ErrorHandler {
     shouldContinue: boolean;
   }> {
     if (error.code === ErrorCode.FS_DISK_FULL) {
-      this.logger.critical('Disk space exhausted - cannot continue', error);
+      this.logger.error('Disk space exhausted - cannot continue', error);
       return {
         handled: true,
         shouldContinue: false
@@ -324,8 +324,8 @@ export class ErrorHandler {
     this.logger.warn('Validation error', error);
 
     // Log specific validation issues
-    if (error.context.fieldName) {
-      this.logger.error(`Validation failed for field: ${error.context.fieldName}`);
+    if (error.context['fieldName']) {
+      this.logger.error(`Validation failed for field: ${error.context['fieldName']}`);
     }
 
     return {
@@ -356,7 +356,7 @@ export class ErrorHandler {
     this.logger.error('System error detected', error);
 
     if (error.severity === 'critical') {
-      this.logger.critical('Critical system error - cannot continue', error);
+      this.logger.error('Critical system error - cannot continue', error);
       return {
         handled: true,
         shouldContinue: false

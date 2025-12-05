@@ -66,3 +66,22 @@ export interface ProductData {
     lastValidated: number;
   };
 }
+
+// Gundam-specific data interface for scraped data
+export interface GundamData {
+  id: string;
+  name: string;
+  brand?: string;
+  category?: string;
+  price?: number;
+  currency?: string;
+  releaseDate?: string;
+  sku?: string;
+  description?: string;
+  specifications?: Record<string, unknown>;
+  images: Array<{ type: string; url: string; alt: string }>;
+  language: LanguageDetection;
+  url?: string;
+  source: string;
+  scrapedAt: string;
+}

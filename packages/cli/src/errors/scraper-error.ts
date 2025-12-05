@@ -3,7 +3,7 @@
  * Integrates with error codes system and provides rich context for debugging
  */
 
-import { ErrorCode, ErrorCategory, ErrorInfo, ErrorRegistry } from './error-codes.js';
+import { ErrorCode, ErrorCategory, ErrorRegistry } from './error-codes.js';
 
 export interface ErrorContext {
   url?: string;
@@ -64,8 +64,8 @@ export class ScraperError extends Error {
 
     this.metadata = {
       timestamp: new Date().toISOString(),
-      stackTrace: this.stack,
-      originalError
+      ...(this.stack && { stackTrace: this.stack }),
+      ...(originalError && { originalError })
     };
 
     // Maintains proper prototype chain for instanceof checks
@@ -91,11 +91,14 @@ export class ScraperError extends Error {
    * Create a ScraperError for network-related issues
    */
   static network(code: ErrorCode, url: string, statusCode?: number, originalError?: Error): ScraperError {
-    return new ScraperError(code, {
+    const context: ErrorContext = {
       url,
-      statusCode,
       operation: 'http_request'
-    }, originalError);
+    };
+    if (statusCode !== undefined) {
+      context.statusCode = statusCode;
+    }
+    return new ScraperError(code, context, originalError);
   }
 
   /**
@@ -112,10 +115,13 @@ export class ScraperError extends Error {
    * Create a ScraperError for configuration issues
    */
   static configuration(code: ErrorCode, configKey?: string, originalError?: Error): ScraperError {
-    return new ScraperError(code, {
-      configKey,
+    const context: ErrorContext = {
       operation: 'configuration'
-    }, originalError);
+    };
+    if (configKey !== undefined) {
+      context.configKey = configKey;
+    }
+    return new ScraperError(code, context, originalError);
   }
 
   /**
