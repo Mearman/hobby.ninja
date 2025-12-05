@@ -48,6 +48,8 @@ Performance optimization through code splitting, lazy loading, and bundle analys
 
 Incremental atomic conventional commits required. Each commit MUST contain one logical change. Format: feat:, fix:, chore:, refactor:, test:, docs:. Peer review mandatory for all changes.
 
+**Spec Management Process**: All /speckit command completions MUST be committed immediately to preserve specification state and enable proper change tracking. Each /speckit operation generates version-controlled artifacts that require persistent storage. Commit messages for /speckit commands follow conventional commit format: docs: amend spec.md to vX.Y, feat: add URL scanner specification, etc.
+
 CI/CD pipeline includes automated security scanning, dependency updates, and deployment to GitHub Pages. Manual and automated CLI execution modes for data updates. Environment-specific configurations handled through build-time variables.
 
 Quality gates enforce: TypeScript compilation, ESLint rules, test coverage, accessibility compliance, security validation. No production deployments without gate completion.
@@ -58,15 +60,15 @@ This constitution supersedes all other development practices. Amendments require
 
 Template files (plan.md, spec.md, tasks.md) MUST align with constitutional principles. Regular constitution reviews scheduled quarterly or when major architectural changes occur.
 
-**Version**: 1.8.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-05
+**Version**: 1.8.1 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-05
 
 <!--
 Sync Impact Report:
-Version change: 1.7.1 → 1.8.0 (MINOR - added new principle XI for automated barrel export management)
-Modified principles: X. Persistence and Resilience in Problem Solving (renumbered to X), XI. Security by Default (renumbered to XII)
-Added sections: XI. Automated Barrel Export Management (new principle forbidding manual index.ts modifications)
+Version change: 1.8.0 → 1.8.1 (PATCH - added spec management process requirement)
+Modified principles: None (process clarification only)
+Added sections: Spec Management Process in Development Workflow section
 Removed sections: None
-Templates updated: ✅ .specify/templates/plan-template.md, ✅ .specify/templates/spec-template.md, ✅ .specify/templates/tasks-template.md
-Commands updated: ✅ All .specify/templates/commands/*.md files
-Follow-up TODOs: None - all placeholders filled with concrete values
+Templates updated: ⚠ .specify/templates/commands/speckit-constitution.md should reference the new process requirement
+Commands updated: ⚠ Commands may need to reference the new commit requirement
+Follow-up TODOs: Update command templates to reference the spec management process requirement
 -->
