@@ -95,6 +95,10 @@ export interface PageTypeProfile {
   waitForSelectors?: string[];
   timeout?: number;
   retryCount?: number;
+  metadata?: {
+    lastUpdated: number;
+    rawHtml?: string;
+  };
   performance?: {
     estimatedLoadTime: number;
     averageJsExecutionTime: number;
@@ -131,6 +135,7 @@ export interface ProfileGenerationResult {
     sampleUrls: string[];
     languageDetection: LanguageDetection[];
     extractionSuccess?: number;
+    extractionFailures?: number;
   };
   requiresPlaywright: boolean;
   confidence: number;
@@ -158,6 +163,7 @@ export interface RenderingDetection {
   initialContentLength?: number;
   finalContentLength?: number;
   jsExecutionTime?: number;
+  detectedAt?: number;
 }
 
 export interface ProgressiveEnhancementResult {
@@ -175,6 +181,7 @@ export interface ProgressiveEnhancementResult {
     complexity: number;
     sufficient?: boolean;
     contentLength?: number;
+    missingFields?: string[];
   };
   dynamicAnalysis?: {
     required?: boolean;

@@ -267,6 +267,18 @@ export class FileSystemCacheManager implements CacheManager {
     };
   }
 
+  // Additional methods for URL-based caching
+  async getByUrl(url: string): Promise<unknown | null> {
+    const urlKey = `url:${url}`;
+    return this.get(urlKey);
+  }
+
+  async setByUrl(url: string, value: unknown, type: string): Promise<void> {
+    const urlKey = `url:${url}:${type}`;
+    const ttl = type === 'profile-analysis' ? 1800000 : this.options.ttl; // 30 minutes for profile analysis
+    this.set(urlKey, { rawHtml: value }, ttl);
+  }
+
   // Cleanup method to be called when shutting down
   destroy(): void {
     if (this.cleanupInterval) {
