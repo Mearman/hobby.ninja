@@ -79,7 +79,7 @@ export class Downloader {
       // This dramatically reduces redundant seed points while maintaining coverage
       const expansionSeeds = this.getBoundarySeeds(Array.from(allExistingFiles));
       console.log(`📍 Selected ${expansionSeeds.length} boundary seed points: [${expansionSeeds.join(', ')}]`);
-      const expandedIds = await this.expandAroundSamples(baseUrl, startId, endId, expansionSeeds);
+      const expandedIds = await this.expandAroundSamples(baseUrl, startId, endId, expansionSeeds, existingFilesInRange);
       confirmedIds.push(...expandedIds.filter(id => !existingFilesInRange.has(id)));
     } else {
       // No existing files, fall back to random sampling
@@ -98,7 +98,7 @@ export class Downloader {
 
         if (foundValid) {
           console.log(`✅ Smart scan viable - found valid IDs in samples`);
-          confirmedIds.push(...await this.expandAroundSamples(baseUrl, startId, endId, samples));
+          confirmedIds.push(...await this.expandAroundSamples(baseUrl, startId, endId, samples, existingFilesInRange));
         } else {
           useSmartScan = false;
         }
@@ -290,7 +290,7 @@ export class Downloader {
   /**
    * Expand around confirmed samples
    */
-  private async expandAroundSamples(baseUrl: string, startId: number, endId: number, samples: number[]): Promise<number[]> {
+  private async expandAroundSamples(baseUrl: string, startId: number, endId: number, samples: number[], existingFilesInRange: Set<number>): Promise<number[]> {
     const found: number[] = [];
     const checked = new Set<number>(); // Track checked IDs to avoid duplicates
     let totalChecked = 0;
@@ -328,14 +328,20 @@ export class Downloader {
           totalChecked++;
           rangeChecked++;
 
+          // Skip checking if we already have this file locally
+          if (existingFilesInRange.has(id)) {
+            console.log(`   ⏭ Skip checking ${id} (already downloaded)`);
+            continue;
+          }
+
           if (await this.testUrl(baseUrl + id + '/')) {
             found.push(id);
-            console.log(`   ✅ Found manual: ${id}`);
+            console.log(`   ✅ Found new manual: ${id}`);
           }
 
           // Show progress every 10 checks within this range
           if (rangeChecked % 10 === 0) {
-            console.log(`   🔍 Progress: ${rangeChecked}/${rangeSize} checked in range ${rangeStart}-${rangeEnd}, ${found.length} total found`);
+            console.log(`   🔍 Progress: ${rangeChecked}/${rangeSize} checked in range ${rangeStart}-${rangeEnd}, ${found.length} new found`);
           }
 
           await this.smartWait();
