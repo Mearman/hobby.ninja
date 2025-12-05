@@ -122,6 +122,9 @@ export class ScrapeCommand {
 
     for (let i = 0; i < urls.length; i++) {
       const url = urls[i];
+      if (!url) {
+        continue; // Skip undefined URLs
+      }
 
       try {
         console.log(`Processing ${i + 1}/${urls.length}: ${url}`);
