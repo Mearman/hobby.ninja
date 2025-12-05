@@ -28,7 +28,7 @@ export class Downloader {
   async download(options: DownloaderOptions = {}) {
     const startId = options.startId || 1;
     const endId = options.endId || 10000;
-    const baseUrl = options.url || 'https://manual.bandai.hobby.net/menus/detail/';
+    const baseUrl = options.url || 'https://manual.bandai-hobby.net/menus/detail/';
     const outputDir = options.output || './data/bandai/manuals';
 
     console.log(`🚀 Smart download from ID ${startId} to ${endId}`);
