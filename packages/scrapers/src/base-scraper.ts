@@ -1,6 +1,38 @@
-import { LanguageDetector } from "@unnamed-gunpla-app/utils/language-detection";
-import { profileManager } from "@unnamed-gunpla-app/utils/profile-manager";
-import { RenderingDetector } from "@unnamed-gunpla-app/utils/rendering-detection";
+import { LanguageDetector } from "@unnamed-gunpla-app/utils/languageDetection";
+import { profileManager } from "@unnamed-gunpla-app/utils/profileManager";
+import { RenderingDetector } from "@unnamed-gunpla-app/utils/renderingDetection";
+
+interface ExtractResult {
+  [key: string]: unknown;
+}
+
+interface CheerioAPI {
+  (selector: string): CheerioAPI;
+  length: number;
+  first(): CheerioAPI;
+  text(): string;
+  trim(): string;
+  attr(attribute: string): string | undefined;
+  html(): string;
+}
+
+interface Logger {
+  warn(message: string, ...args: unknown[]): void;
+  log(message: string, ...args: unknown[]): void;
+}
+
+const logger: Logger = {
+	warn: (message: string, ...args: unknown[]): void => {
+		// In a real implementation, this would use a proper logging library
+		// eslint-disable-next-line no-console
+		console.warn(message, ...args);
+	},
+	log: (message: string, ...args: unknown[]): void => {
+		// In a real implementation, this would use a proper logging library
+		// eslint-disable-next-line no-console
+		console.log(message, ...args);
+	},
+};
 
 export abstract class BaseScraper {
 	protected baseUrl: string;
@@ -21,20 +53,20 @@ export abstract class BaseScraper {
 
 		// Initialize profile manager asynchronously
 		this.initializeProfileManager().catch(error => {
-			console.warn("⚠️  Profile manager initialization failed:", error);
+			logger.warn("⚠️  Profile manager initialization failed:", error);
 		});
 	}
 
 	private async initializeProfileManager(): Promise<void> {
 		try {
 			await profileManager.loadProfiles();
-			console.log("📊 Profile manager initialized");
+			logger.log("📊 Profile manager initialized");
 		} catch (error) {
-			console.warn("⚠️  Profile manager initialization failed:", error);
+			logger.warn("⚠️  Profile manager initialization failed:", error);
 		}
 	}
 
-  abstract extractFromPage(html: string, url: string): Promise<any>;
+  abstract extractFromPage(html: string, url: string): Promise<ExtractResult>;
 
   protected async fetchPage(url: string, options: {
     method?: "cheerio" | "playwright";
@@ -50,9 +82,7 @@ export abstract class BaseScraper {
   		}
   	}
 
-  	let html: string;
-
-  	html = await (method === "playwright" ? this.fetchWithPlaywright(url) : this.fetchWithCheerio(url));
+  	const html = await (method === "playwright" ? this.fetchWithPlaywright(url) : this.fetchWithCheerio(url));
 
   	if (useCache) {
   		await this.cachePage(url, html, method);
@@ -67,7 +97,7 @@ export abstract class BaseScraper {
   	// Check if we have a cached profile for this URL pattern
   	const profile = profileManager.getProfileForUrl(url);
   	if (profile) {
-  		console.log(`✅ Using cached profile: ${profile.name} (extraction: ${profile.extractionMethod})`);
+  		logger.log(`✅ Using cached profile: ${profile.name} (extraction: ${profile.extractionMethod})`);
 
   		// Update the profile to indicate we've used it
   		const profilePattern = profileManager.getProfileForUrl(url)?.urlPattern;
@@ -83,7 +113,7 @@ export abstract class BaseScraper {
 
   	// Perform progressive enhancement analysis and build a new profile
   	try {
-  		console.log(`🔍 Analyzing ${url} to build profile...`);
+  		logger.log(`🔍 Analyzing ${url} to build profile...`);
   		const sampleHtml = await this.fetchWithCheerio(url);
   		const analysis = RenderingDetector.analyzeProgressiveEnhancement(sampleHtml);
 
@@ -101,7 +131,7 @@ export abstract class BaseScraper {
   		await profileManager.buildProfileForUrl(url, [url]);
   		return "cheerio";
   	} catch (error) {
-  		console.warn(`Error determining method for ${url}, falling back to Cheerio:`, error);
+  		logger.warn(`Error determining method for ${url}, falling back to Cheerio:`, error);
   		return "cheerio";
   	}
   }
@@ -130,7 +160,7 @@ export abstract class BaseScraper {
   protected async fetchWithPlaywright(url: string): Promise<string> {
   	// Placeholder for Playwright implementation
   	// In a real implementation, this would use Playwright to fetch and render the page
-  	console.log(`Playwright fetch not yet implemented for: ${url}`);
+  	logger.log(`Playwright fetch not yet implemented for: ${url}`);
   	return this.fetchWithCheerio(url);
   }
 
@@ -158,7 +188,7 @@ export abstract class BaseScraper {
   protected simpleHash(str: string): string {
   	let hash = 0;
   	for (let i = 0; i < str.length; i++) {
-  		const char = str.charCodeAt(i);
+  		const char = str.codePointAt(i) ?? 0;
   		hash = ((hash << 5) - hash) + char;
   		hash = hash & hash; // Convert to 32-bit integer
   	}
@@ -166,28 +196,30 @@ export abstract class BaseScraper {
   }
 
   protected delay(): Promise<void> {
-  	return new Promise(resolve => setTimeout(resolve, this.delayMs));
+  	return new Promise(resolve => {
+  		setTimeout(resolve, this.delayMs);
+  	});
   }
 
-  protected extractTextContent($: any, selector: string): string {
+  protected extractTextContent($: CheerioAPI, selector: string): string {
   	const element = $(selector);
   	return element.length > 0 ? element.first().text().trim() : "";
   }
 
-  protected extractTextContentFromElement($: any): string {
+  protected extractTextContentFromElement($: CheerioAPI): string {
   	return $?.text()?.trim() || "";
   }
 
-  protected extractAttribute($: any, selector: string, attribute: string): string {
+  protected extractAttribute($: CheerioAPI, selector: string, attribute: string): string {
   	const element = $(selector);
   	return element.length > 0 ? element.first().attr(attribute) || "" : "";
   }
 
-  protected extractAttributeFromElement($: any, attribute: string): string {
+  protected extractAttributeFromElement($: CheerioAPI, attribute: string): string {
   	return $?.first()?.attr(attribute) || "";
   }
 
-  protected extractNumber($: any, selector: string): number | null {
+  protected extractNumber($: CheerioAPI, selector: string): number | null {
   	const text = this.extractTextContent($, selector);
   	const match = text.match(/[\d,]+/g);
   	if (match) {
@@ -197,7 +229,7 @@ export abstract class BaseScraper {
   	return null;
   }
 
-  protected extractPrice($: any, selector: string): { amount: number; currency: string; originalText: string } | null {
+  protected extractPrice($: CheerioAPI, selector: string): { amount: number; currency: string; originalText: string } | null {
   	const text = this.extractTextContent($, selector);
   	const priceMatch = text.match(/([¥$£€])\s*([\d,]+)/);
 

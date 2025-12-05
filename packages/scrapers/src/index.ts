@@ -70,7 +70,3 @@ export const Scrapers = {
 	getDefault: () => ScraperRegistry.getDefaultScraper(),
 };
 
-/**
- * Default export for convenience
- */
-export default Scrapers;

@@ -309,8 +309,8 @@ export class HobbyLinkScraper extends BaseScraper {
 			const parts = text.split(/[:：]/);
 
 			if (parts.length === 2) {
-				const key = this.normalizeSpecKey(parts[0]!.trim());
-				const value = parts[1]!.trim();
+				const key = this.normalizeSpecKey(parts[0]?.trim() ?? "");
+				const value = parts[1]?.trim() ?? "";
 				specs[key] = value;
 			}
 		});
@@ -428,17 +428,17 @@ export class HobbyLinkScraper extends BaseScraper {
 				let year, month, day;
 
 				if (pattern === patterns[0]) { // YYYY年MM月DD日
-					year = match[1]!;
-					month = match[2]!.padStart(2, "0");
-					day = match[3]!.padStart(2, "0");
+					year = match[1] ?? "";
+					month = (match[2] ?? "").padStart(2, "0");
+					day = (match[3] ?? "").padStart(2, "0");
 				} else if (pattern === patterns[1]) { // YYYY/MM/DD
-					year = match[1]!;
-					month = match[2]!.padStart(2, "0");
-					day = match[3]!.padStart(2, "0");
+					year = match[1] ?? "";
+					month = (match[2] ?? "").padStart(2, "0");
+					day = (match[3] ?? "").padStart(2, "0");
 				} else { // MM/DD/YYYY
-					year = match[3]!;
-					month = match[1]!.padStart(2, "0");
-					day = match[2]!.padStart(2, "0");
+					year = match[3] ?? "";
+					month = (match[1] ?? "").padStart(2, "0");
+					day = (match[2] ?? "").padStart(2, "0");
 				}
 
 				return `${year}-${month}-${day}`;

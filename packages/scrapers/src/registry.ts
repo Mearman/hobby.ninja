@@ -20,7 +20,7 @@ export interface ScraperInfo {
   specialties: string[];
 }
 
-type ScraperConstructor = new (...args: any[]) => BaseScraper;
+type ScraperConstructor = new (...args: unknown[]) => BaseScraper;
 
 /**
  * Registry of all available scrapers with their metadata
@@ -122,24 +122,23 @@ export class ScraperRegistry {
 	static getRecommendedFor(dataNeed: "pricing" | "specifications" | "images" | "availability" | "general"): ScraperInfo[] {
 		switch (dataNeed) {
 			case "pricing": {
-				return [this.getScraperInfo("hobbylink")!, this.getScraperInfo("bandai-hobby")!].filter(Boolean);
+				return [this.getScraperInfo("hobbylink"), this.getScraperInfo("bandai-hobby")].filter((info): info is ScraperInfo => info !== undefined);
 			}
 
 			case "specifications": {
-				return [this.getScraperInfo("bandai-hobby")!, this.getScraperInfo("gundam-info")!].filter(Boolean);
+				return [this.getScraperInfo("bandai-hobby"), this.getScraperInfo("gundam-info")].filter((info): info is ScraperInfo => info !== undefined);
 			}
 
 			case "images": {
-				return [this.getScraperInfo("bandai-hobby")!, this.getScraperInfo("hobbylink")!].filter(Boolean);
+				return [this.getScraperInfo("bandai-hobby"), this.getScraperInfo("hobbylink")].filter((info): info is ScraperInfo => info !== undefined);
 			}
 
 			case "availability": {
-				return [this.getScraperInfo("hobbylink")!].filter(Boolean);
+				return [this.getScraperInfo("hobbylink")].filter((info): info is ScraperInfo => info !== undefined);
 			}
 
-			case "general":
 			default: {
-				return [this.getScraperInfo("bandai-hobby")!, this.getScraperInfo("gundam-info")!, this.getScraperInfo("hobbylink")!].filter(Boolean);
+				return [this.getScraperInfo("bandai-hobby"), this.getScraperInfo("gundam-info"), this.getScraperInfo("hobbylink")].filter((info): info is ScraperInfo => info !== undefined);
 			}
 		}
 	}
@@ -155,26 +154,30 @@ export class ScraperRegistry {
    * Get default scraper for general use
    */
 	static getDefaultScraper(): ScraperInfo {
-		return this.getScraperInfo("bandai-hobby")!;
+		const scraper = this.getScraperInfo("bandai-hobby");
+		if (!scraper) {
+			throw new Error("Default scraper 'bandai-hobby' not found in registry");
+		}
+		return scraper;
 	}
 
 	/**
    * Get scraper recommendations based on quality and reliability
    */
 	static getQualityRanking(): ScraperInfo[] {
-		return [...this.scraperInfo.values()]
-			.sort((a, b) => {
-				// Prioritize official sources
-				if (a.baseUrl.includes("bandai") && !b.baseUrl.includes("bandai")) return -1;
-				if (!a.baseUrl.includes("bandai") && b.baseUrl.includes("bandai")) return 1;
+		const scrapers = [...this.scraperInfo.values()];
+		return scrapers.sort((a, b) => {
+			// Prioritize official sources
+			if (a.baseUrl.includes("bandai") && !b.baseUrl.includes("bandai")) return -1;
+			if (!a.baseUrl.includes("bandai") && b.baseUrl.includes("bandai")) return 1;
 
-				// Then by language support
-				if (a.supportedLanguages.length > b.supportedLanguages.length) return -1;
-				if (a.supportedLanguages.length < b.supportedLanguages.length) return 1;
+			// Then by language support
+			if (a.supportedLanguages.length > b.supportedLanguages.length) return -1;
+			if (a.supportedLanguages.length < b.supportedLanguages.length) return 1;
 
-				// Finally by name for consistency
-				return a.name.localeCompare(b.name);
-			});
+			// Finally by name for consistency
+			return a.name.localeCompare(b.name);
+		});
 	}
 }
 

@@ -1,7 +1,21 @@
-import { ProductData, ProductImage, PriceInfo } from "@unnamed-gunpla-app/types/product-data";
+import { GundamData, ProductImage, PriceInfo } from "@unnamed-gunpla-app/types/product-data";
 import * as cheerio from "cheerio";
 
 import { BaseScraper } from "./base-scraper";
+
+interface Specification {
+  value: string | number | boolean;
+  unit?: string;
+  originalText: string;
+}
+
+interface SpecificationData {
+  [key: string]: Specification;
+}
+
+interface CheerioElement {
+  [key: string]: unknown;
+}
 
 export class BandaiHobbyScraper extends BaseScraper {
 	constructor() {
@@ -13,7 +27,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 		});
 	}
 
-	async extractFromPage(html: string, url: string): Promise<ProductData> {
+	async extractFromPage(html: string, url: string): Promise<GundamData> {
 		const $ = cheerio.load(html);
 		const rawLanguageDetection = this.parseLanguage(html, url);
 
@@ -34,7 +48,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 		const images = this.extractImages($);
 		const categories = this.extractCategories($);
 
-		const productData: ProductData = {
+		const productData: GundamData = {
 			id: this.generateId("bandai-hobby", sku),
 			name,
 			sku,
@@ -88,7 +102,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 		return productData;
 	}
 
-	private extractProductName($: cheerio.Root): string {
+	private extractProductName($: cheerio.CheerioAPI): string {
 		// Try multiple selectors for product name
 		const selectors = [
 			".product-title",
@@ -110,9 +124,9 @@ export class BandaiHobbyScraper extends BaseScraper {
 		return "";
 	}
 
-	private extractSku($: cheerio.Root, url: string): string {
+	private extractSku($: cheerio.CheerioAPI, url: string): string {
 		// Try to extract SKU from URL path
-		const urlMatch = url.match(/\/([^\/]+)\/?$/);
+		const urlMatch = url.match(/\/([^/]+)\/?$/);
 		if (urlMatch && urlMatch[1]) {
 			return urlMatch[1];
 		}
@@ -136,7 +150,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 		return "";
 	}
 
-	private extractPriceInfo($: cheerio.Root): PriceInfo | undefined {
+	private extractPriceInfo($: cheerio.CheerioAPI): PriceInfo | undefined {
 		const priceSelectors = [
 			".price",
 			".product-price",
@@ -160,7 +174,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 		return undefined;
 	}
 
-	private extractDescription($: cheerio.Root): string {
+	private extractDescription($: cheerio.CheerioAPI): string {
 		const selectors = [
 			".product-description",
 			".item-description",
@@ -179,14 +193,14 @@ export class BandaiHobbyScraper extends BaseScraper {
 		return "";
 	}
 
-	private extractSpecifications($: cheerio.Root): Record<string, any> {
-		const specs: Record<string, any> = {};
+	private extractSpecifications($: cheerio.CheerioAPI): SpecificationData {
+		const specs: SpecificationData = {};
 
 		// Look for specification tables or lists
 		const specTable = $(".specifications table, .spec-table, .product-specs table");
 
 		if (specTable.length > 0) {
-			specTable.find("tr").each((_: number, row: any) => {
+			specTable.find("tr").each((_: number, row: CheerioElement) => {
 				const $row = $(row);
 				const label = this.extractTextContentFromElement($row.find("th, .spec-label, .label"));
 				const value = this.extractTextContentFromElement($row.find("td, .spec-value, .value"));
@@ -203,7 +217,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 
 		// Look for individual spec items
 		const individualSpecs = $(".spec-item, .product-spec");
-		individualSpecs.each((_: number, element: any) => {
+		individualSpecs.each((_: number, element: CheerioElement) => {
 			const $element = $(element);
 			const label = this.extractTextContentFromElement($element.find(".spec-label, .label"));
 			const value = this.extractTextContentFromElement($element.find(".spec-value, .value"));
@@ -290,10 +304,10 @@ export class BandaiHobbyScraper extends BaseScraper {
 		return unitMatch?.[1] || undefined;
 	}
 
-	private extractImages($: cheerio.Root): ProductImage[] {
+	private extractImages($: cheerio.CheerioAPI): ProductImage[] {
 		const images: ProductImage[] = [];
 
-		$(".product-image, .item-image, .main-image img, .gallery-image, .product-image img, .thumbnail").each((_: number, element: any) => {
+		$(".product-image, .item-image, .main-image img, .gallery-image, .product-image img, .thumbnail").each((_: number, element: CheerioElement) => {
 			const $element = $(element);
 			const src = this.extractAttributeFromElement($element, "src") || this.extractAttributeFromElement($element, "data-src") || "";
 			const alt = this.extractAttributeFromElement($element, "alt") || "";
@@ -330,11 +344,11 @@ export class BandaiHobbyScraper extends BaseScraper {
 	}
 
   
-	private extractCategories($: cheerio.Root): string[] {
+	private extractCategories($: cheerio.CheerioAPI): string[] {
 		const categories: string[] = [];
 
 		// Look for breadcrumb or category information
-		$(".breadcrumb a, .category a, .product-category a, .tag a").each((_: number, element: any) => {
+		$(".breadcrumb a, .category a, .product-category a, .tag a").each((_: number, element: CheerioElement) => {
 			const category = this.extractTextContentFromElement($(element));
 			if (category) {
 				categories.push(category);
@@ -355,7 +369,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 		}
 	}
 
-	private calculateCompleteness(data: { name?: string; sku?: string; price?: PriceInfo; description?: string; specifications?: Record<string, any>; images?: ProductImage[]; }): number {
+	private calculateCompleteness(data: { name?: string; sku?: string; price?: PriceInfo; description?: string; specifications?: SpecificationData; images?: ProductImage[]; }): number {
 		const requiredFields = ["name", "sku"];
 		const optionalFields = ["price", "description", "images"];
 
@@ -374,7 +388,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 		return Math.min(completeness, 1);
 	}
 
-	private calculateConfidence(data: { name?: string; sku?: string; price?: PriceInfo; description?: string; specifications?: Record<string, any>; images?: ProductImage[]; }): number {
+	private calculateConfidence(data: { name?: string; sku?: string; price?: PriceInfo; description?: string; specifications?: SpecificationData; images?: ProductImage[]; }): number {
 		let confidence = 0.5; // Base confidence
 
 		// Increase confidence based on data completeness

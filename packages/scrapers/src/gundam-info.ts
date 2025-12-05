@@ -275,7 +275,7 @@ export class GundamInfoScraper extends BaseScraper {
 	private parseDate(dateText: string): string | null {
 		// Try to parse various date formats
 		const date = new Date(dateText);
-		if (!isNaN(date.getTime())) {
+		if (!Number.isNaN(date.getTime())) {
 			return date.toISOString().split("T")[0] || null; // Return just the date part
 		}
 		return null;
