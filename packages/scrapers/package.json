@@ -25,15 +25,13 @@
   },
   "peerDependencies": {
     "@workspace/types": "*",
-    "@workspace/utils": "*"
+    "@workspace/utils": "*",
+    "typescript": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
     "tsup": "^8.0.0",
     "typescript": "^5.7.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
   },
   "files": [
     "dist"

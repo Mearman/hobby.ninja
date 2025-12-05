@@ -1,14 +1,21 @@
 {
-  "extends": "../../packages/typescript-config/base.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "src",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "strict": true,
     "noEmit": false,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "target": "ES2022",
-    "downlevelIteration": true
+    "outDir": "dist",
+    "rootDir": "src",
+    "downlevelIteration": true,
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts"
