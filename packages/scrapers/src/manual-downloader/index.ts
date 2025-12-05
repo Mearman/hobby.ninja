@@ -1,18 +1,19 @@
 /**
- * Bandai Manual Content Downloader - Simple Version
+ * Bandai Manual Content Downloader
  *
- * No complex sessions, just ID incrementing from start to end.
+ * Most reliable basic implementation with zero-padding.
  */
 
-// Export the simple downloader and its dependencies
+// Export both versions
 export { SimpleDownloader } from './simple-downloader';
+export { BasicDownloader } from './basic-downloader';
 export { HttpClient } from './services/http-client';
 export { RateLimiterService } from './services/rate-limiter-service';
 
 // Export CLI
 export { ManualDownloaderCLI, main } from './cli/main';
 
-// Export minimal types
+// Export types
 export interface SimpleOptions {
   startId?: number;
   endId?: number;
@@ -21,4 +22,4 @@ export interface SimpleOptions {
 }
 
 // Package version
-export const VERSION = '2.0.0'; // Simplified version
+export const VERSION = '2.1.0'; // Added BasicDownloader

@@ -58,6 +58,13 @@ export class HttpClient {
   }
 
   /**
+   * Make HTTP HEAD request (headers only, fast)
+   */
+  async head(url: string, options: HttpClientOptions = {}): Promise<HttpResponse<string>> {
+    return this.request<string>('HEAD', url, undefined, { ...options, headersOnly: true });
+  }
+
+  /**
    * Make HTTP request with method
    */
   async request<T = string>(
@@ -96,25 +103,26 @@ export class HttpClient {
           headers: mergedOptions.headers,
           body,
           signal: mergedOptions.signal,
-          redirect: mergedOptions.followRedirects ? 'follow' : 'manual'
+          redirect: mergedOptions.followRedirects ? 'follow' : 'follow' // Always follow redirects for now
         });
 
         // Clear timeout
         clearTimeout(timeoutId);
 
-        // Handle redirect manually if not following
-        if (!mergedOptions.followRedirects && response.redirected) {
-          throw new Error(`Request redirected to ${response.url} but redirects are disabled`);
-        }
-
-        // Get response data
+        // Get response data (only for non-HEAD requests)
         let data: T;
-        const contentType = response.headers.get('content-type');
+        const isHeadRequest = (options as any).headersOnly;
 
-        if (contentType?.includes('application/json')) {
-          data = (await response.json()) as T;
+        if (isHeadRequest) {
+          // For HEAD requests, return empty string
+          data = '' as T;
         } else {
-          data = (await response.text()) as T;
+          const contentType = response.headers.get('content-type');
+          if (contentType?.includes('application/json')) {
+            data = (await response.json()) as T;
+          } else {
+            data = (await response.text()) as T;
+          }
         }
 
         const duration = Date.now() - startTime;
