@@ -1,10 +1,8 @@
 import { LanguageCode, LanguageDetection, LanguageAnalysisResult } from '@unnamed-gunpla-app/types';
 
 export class LanguageDetector {
-  private static readonly JAPANESE_CHARACTER_PATTERN = /[\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf]/g;
-  private static readonly ENGLISH_WORD_PATTERN = /[a-zA-Z]+/g;
-  private static readonly COMMON_JAPANESE_WORDS = ['です', 'ます', 'です', 'ある', 'ない', 'ください', 'ありがとうございます'];
-  private static readonly COMMON_ENGLISH_WORDS = ['the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'];
+  private static readonly JAPANESE_CHARACTER_PATTERN = /[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf]/g;
+  private static readonly ENGLISH_CHARACTER_PATTERN = /[a-zA-Z]/g;
 
   static detectFromHtml(html: string, url: string, headers: Record<string, string> = {}): LanguageDetection {
     const analysis = this.analyze(html, url, headers);
@@ -80,9 +78,9 @@ export class LanguageDetector {
   }
 
   private static calculateEnglishRatio(html: string): number {
-    const englishWords = html.match(this.ENGLISH_WORD_PATTERN) || [];
-    const totalWords = html.split(/\s+/).filter(word => word.length > 0).length;
-    return totalWords > 0 ? englishWords.length / totalWords : 0;
+    const englishChars = html.match(this.ENGLISH_CHARACTER_PATTERN) || [];
+    const totalChars = html.replace(/\s/g, '').length;
+    return totalChars > 0 ? englishChars.length / totalChars : 0;
   }
 
   private static extractJapaneseCharacters(html: string): string[] {
@@ -91,40 +89,14 @@ export class LanguageDetector {
   }
 
   private static extractEnglishWords(html: string): string[] {
-    const matches = html.match(this.ENGLISH_WORD_PATTERN) || [];
-    return [...new Set(matches.map(word => word.toLowerCase()))];
+    const matches = html.match(this.ENGLISH_CHARACTER_PATTERN) || [];
+    return [...new Set(matches)];
   }
 
   private static calculateLanguageScore(evidence: any): { ja: number; en: number; mixed: number } {
-    let jaScore = 0;
-    let enScore = 0;
-
-    // HTML lang attribute
-    if (evidence.htmlLang === 'ja') jaScore += 0.3;
-    if (evidence.htmlLang === 'en') enScore += 0.3;
-
-    // Content-Language header
-    if (evidence.contentLanguage === 'ja') jaScore += 0.3;
-    if (evidence.contentLanguage === 'en') enScore += 0.3;
-
-    // URL pattern
-    if (evidence.urlPattern === 'ja') jaScore += 0.2;
-    if (evidence.urlPattern === 'en') enScore += 0.2;
-
-    // Content analysis
-    jaScore += evidence.japaneseRatio * 0.4;
-    enScore += evidence.englishRatio * 0.4;
-
-    // Common words
-    const japaneseCommonWords = evidence.japaneseCharacters.filter((char: string) =>
-      this.COMMON_JAPANESE_WORDS.includes(char)
-    ).length;
-    const englishCommonWords = evidence.englishWords.filter((word: string) =>
-      this.COMMON_ENGLISH_WORDS.includes(word)
-    ).length;
-
-    jaScore += Math.min(japaneseCommonWords / 10, 0.2);
-    enScore += Math.min(englishCommonWords / 20, 0.2);
+    // Content analysis based purely on character percentages
+    const jaScore = evidence.japaneseRatio;
+    const enScore = evidence.englishRatio;
 
     return {
       ja: Math.min(jaScore, 1.0),
@@ -145,35 +117,24 @@ export class LanguageDetector {
   }
 
   private static calculateConfidence(score: { ja: number; en: number; mixed: number }, evidence: any): number {
-    let confidence = 0;
-    let evidenceCount = 0;
-
-    // Strong indicators
-    if (evidence.htmlLang) { confidence += 0.25; evidenceCount++; }
-    if (evidence.contentLanguage) { confidence += 0.25; evidenceCount++; }
-    if (evidence.urlPattern !== 'unknown') { confidence += 0.15; evidenceCount++; }
-
-    // Content analysis
+    // Confidence based on how strong the character percentage signal is
     const maxContentRatio = Math.max(score.ja, score.en);
-    confidence += maxContentRatio * 0.35;
+    const minContentRatio = Math.min(score.ja, score.en);
 
-    // Normalize by evidence count
-    return Math.min(confidence * (1 + evidenceCount * 0.1), 1.0);
+    // Higher confidence when one language dominates
+    const confidence = maxContentRatio * (1 - minContentRatio);
+    return Math.min(confidence, 1.0);
   }
 
   private static buildEvidence(analysis: LanguageAnalysisResult): string[] {
     const evidence: string[] = [];
 
-    if (analysis.evidence.htmlLang) evidence.push(`HTML lang="${analysis.evidence.htmlLang}"`);
-    if (analysis.evidence.contentLanguage) evidence.push(`Content-Language: ${analysis.evidence.contentLanguage}`);
-    if (analysis.evidence.urlPattern && analysis.evidence.urlPattern !== 'unknown') evidence.push(`URL pattern indicates ${analysis.evidence.urlPattern}`);
-
-    if (analysis.evidence.japaneseRatio && analysis.evidence.japaneseRatio > 0.1) {
+    if (analysis.evidence.japaneseRatio > 0.01) {
       evidence.push(`Japanese character ratio: ${(analysis.evidence.japaneseRatio * 100).toFixed(1)}%`);
     }
 
-    if (analysis.evidence.englishRatio && analysis.evidence.englishRatio > 0.1) {
-      evidence.push(`English word ratio: ${(analysis.evidence.englishRatio * 100).toFixed(1)}%`);
+    if (analysis.evidence.englishRatio > 0.01) {
+      evidence.push(`English character ratio: ${(analysis.evidence.englishRatio * 100).toFixed(1)}%`);
     }
 
     return evidence;

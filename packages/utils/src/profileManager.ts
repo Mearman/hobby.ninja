@@ -1,8 +1,8 @@
 import { promises as fs } from 'fs';
 import * as path from 'path';
 import { PageTypeProfile, ProfileCache, ProfileGenerationResult, CacheManager } from '@unnamed-gunpla-app/types';
-import { LanguageDetector } from './language-detection';
-import { RenderingDetector } from './rendering-detection';
+import { LanguageDetector } from './languageDetection';
+import { RenderingDetector } from './renderingDetection';
 import { cacheManager } from './cache-manager';
 
 export interface ProfileManagerOptions {
