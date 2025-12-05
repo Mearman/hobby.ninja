@@ -75,9 +75,9 @@ export class Downloader {
       // Add existing files within range to confirmed IDs
       confirmedIds.push(...Array.from(existingFilesInRange));
 
-      // Use ALL existing files (including outside range) as expansion seeds
-      // This allows us to discover manuals in gaps across the entire range
-      const expansionSeeds = Array.from(allExistingFiles);
+      // Use only boundary points of contiguous ranges as expansion seeds
+      // This dramatically reduces redundant seed points while maintaining coverage
+      const expansionSeeds = this.getBoundarySeeds(Array.from(allExistingFiles));
       const expandedIds = await this.expandAroundSamples(baseUrl, startId, endId, expansionSeeds);
       confirmedIds.push(...expandedIds.filter(id => !existingFilesInRange.has(id)));
     } else {
@@ -224,6 +224,40 @@ export class Downloader {
     console.log(`   • Failed: ${failCount}`);
     console.log(`   • Average delay: ${Math.round(this.getAverageDelay())}ms`);
     console.log(`📁 Files: ${outputDir}`);
+  }
+
+  /**
+   * Get only boundary points of contiguous ranges as efficient seeds
+   * Instead of using every existing file, only use the ends of continuous ranges
+   */
+  private getBoundarySeeds(sortedIds: number[]): number[] {
+    if (sortedIds.length === 0) return [];
+
+    const boundaries: number[] = [];
+    sortedIds.sort((a, b) => a - b);
+
+    let rangeStart = sortedIds[0];
+    let prevId = sortedIds[0];
+
+    for (let i = 1; i < sortedIds.length; i++) {
+      const currentId = sortedIds[i];
+
+      // Gap of more than 1 indicates end of contiguous range
+      if (currentId > prevId + 1) {
+        // Add boundaries of completed range
+        boundaries.push(rangeStart);
+        boundaries.push(prevId);
+        rangeStart = currentId;
+      }
+
+      prevId = currentId;
+    }
+
+    // Add boundaries of final range
+    boundaries.push(rangeStart);
+    boundaries.push(prevId);
+
+    return [...new Set(boundaries)].sort((a, b) => a - b); // Dedupe and sort
   }
 
   /**
