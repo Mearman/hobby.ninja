@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { promises as fs } from 'fs';
 import * as path from 'path';
-import { CheckpointManager } from '../../../src/utils/checkpoint';
+import { CheckpointManager } from '../../src/utils/checkpoint.js';
 
 // Simple execFile utility for testing
 async function execFileNoThrow(command: string, args: string[]) {

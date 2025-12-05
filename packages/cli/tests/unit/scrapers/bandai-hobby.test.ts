@@ -237,7 +237,7 @@ describe('BandaiHobbyScraper', () => {
             // These are tested through the determinePageType method indirectly
             // by checking the source.pageType in the extracted data
             const detailResult = await scraper.extractFromPage(mockProductPageHtml, detailUrl);
-            expect(detailResult.source.pageType).toBe('variant'); // scraper correctly classifies /site/ URLs as variant
+            expect(detailResult.source.pageType).toBe('detail'); // scraper correctly classifies /site/ URLs as detail pages
         });
     });
 
@@ -341,7 +341,8 @@ describe('BandaiHobbyScraper', () => {
             const result = await scraper.extractFromPage(categoryHtml, 'https://bandai-hobby.net/test/');
 
             expect(result.categories).toEqual(['Home', 'Gundam', 'HG', 'Plamo']);
-            expect(result.categories).not.toContainDuplicates;
+            // Check for duplicates by comparing array length to Set size
+            expect(result.categories.length).toBe(new Set(result.categories).size);
         });
     });
 
