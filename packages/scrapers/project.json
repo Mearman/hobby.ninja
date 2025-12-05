@@ -6,13 +6,11 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@nx:run-commands",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/scrapers",
-        "main": "packages/scrapers/src/index.ts",
-        "tsConfig": "packages/scrapers/tsconfig.json",
-        "assets": []
+        "command": "tsup",
+        "cwd": "packages/scrapers"
       }
     },
     "typecheck": {
