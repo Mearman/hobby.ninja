@@ -265,12 +265,27 @@ export class Downloader {
     boundaries.push(prevId);
     ranges.push(`${rangeStart}-${prevId}`);
 
+    // Remove redundant boundaries when ranges are adjacent
+    const optimizedBoundaries = [];
+    const sortedBoundaries = [...new Set(boundaries)].sort((a, b) => a - b);
+
+    for (let i = 0; i < sortedBoundaries.length; i++) {
+      const boundary = sortedBoundaries[i];
+      const isRedundant = (i > 0 && sortedBoundaries[i - 1] + 1 === boundary) ||
+                        (i < sortedBoundaries.length - 1 && sortedBoundaries[i + 1] - 1 === boundary);
+
+      if (!isRedundant) {
+        optimizedBoundaries.push(boundary);
+      }
+    }
+
     // Log the ranges being represented
     if (ranges.length > 0) {
       console.log(`   📊 Contiguous ranges detected: [${ranges.join(', ')}]`);
+      console.log(`   📍 Optimized boundaries: [${optimizedBoundaries.join(', ')}] (removed ${sortedBoundaries.length - optimizedBoundaries.length} redundant points)`);
     }
 
-    return [...new Set(boundaries)].sort((a, b) => a - b); // Dedupe and sort
+    return optimizedBoundaries;
   }
 
   /**
@@ -288,71 +303,103 @@ export class Downloader {
   }
 
   /**
-   * Expand around confirmed samples
+   * Intelligent range discovery using binary search from seed points
    */
   private async expandAroundSamples(baseUrl: string, startId: number, endId: number, samples: number[], existingFilesInRange: Set<number>): Promise<number[]> {
     const found: number[] = [];
     const checked = new Set<number>(); // Track checked IDs to avoid duplicates
     let totalChecked = 0;
-    let seedsInRange = 0;
-    let seedsOutsideRange = 0;
 
-    console.log(`   🔍 Expanding around ${samples.length} seed points...`);
+    console.log(`   🔍 Binary search discovery from ${samples.length} seed points...`);
 
     for (let i = 0; i < samples.length; i++) {
       const sample = samples[i];
 
-      // Only check ranges that overlap with our target range
-      if (sample < startId - 50 || sample > endId + 50) {
-        console.log(`   ⏭ Skipping seed ${sample} (too far from range ${startId}-${endId})`);
+      // Only expand from seeds that could overlap with our target range
+      if (sample < startId - 200 || sample > endId + 200) {
         continue; // Skip seeds too far from our range
       }
 
-      // Check range around each seed point
-      const rangeStart = Math.max(startId, sample - 50);
-      const rangeEnd = Math.min(endId, sample + 50);
-      const rangeSize = rangeEnd - rangeStart + 1;
+      console.log(`   🔍 Seed ${i + 1}/${samples.length}: ID ${sample}`);
 
-      console.log(`   🔍 Seed ${i + 1}/${samples.length}: ID ${sample}, checking range ${rangeStart}-${rangeEnd} (${rangeSize} URLs)`);
+      // Binary search for range boundaries
+      const range = await this.findValidRange(baseUrl, sample, startId, endId, existingFilesInRange, checked);
 
-      if (sample >= startId && sample <= endId) {
-        seedsInRange++;
-      } else {
-        seedsOutsideRange++;
-      }
-
-      let rangeChecked = 0;
-      for (let id = rangeStart; id <= rangeEnd; id++) {
-        if (!checked.has(id)) {
-          checked.add(id);
-          totalChecked++;
-          rangeChecked++;
-
-          // Skip checking if we already have this file locally
-          if (existingFilesInRange.has(id)) {
-            console.log(`   ⏭ Skip checking ${id} (already downloaded)`);
-            continue;
-          }
-
-          if (await this.testUrl(baseUrl + id + '/')) {
-            found.push(id);
-            console.log(`   ✅ Found new manual: ${id}`);
-          }
-
-          // Show progress every 10 checks within this range
-          if (rangeChecked % 10 === 0) {
-            console.log(`   🔍 Progress: ${rangeChecked}/${rangeSize} checked in range ${rangeStart}-${rangeEnd}, ${found.length} new found`);
-          }
-
-          await this.smartWait();
+      for (const id of range) {
+        if (!existingFilesInRange.has(id)) {
+          found.push(id);
+          console.log(`   ✅ Found new manual: ${id}`);
         }
       }
-      console.log(`   ✅ Completed range ${rangeStart}-${rangeEnd}: checked ${rangeChecked} URLs`);
+
+      totalChecked += range.length;
     }
 
-    console.log(`\n   ✅ Expansion complete: checked ${totalChecked} unique URLs, found ${found.length} valid manuals`);
-    console.log(`   📍 Used ${seedsInRange} in-range seeds + ${seedsOutsideRange} nearby seeds`);
+    console.log(`\n   ✅ Binary search complete: discovered ${found.length} new manuals`);
     return found.sort((a, b) => a - b);
+  }
+
+  /**
+   * Find contiguous range of valid manuals using binary search
+   */
+  private async findValidRange(baseUrl: string, seedId: number, minId: number, maxId: number, existingFiles: Set<number>, checked: Set<number>): Promise<number[]> {
+    // Binary search to find the lower bound
+    let lowerBound = minId;
+    let upperBound = Math.min(seedId, maxId);
+
+    // Find start of range (search downwards from seed)
+    while (lowerBound <= upperBound) {
+      const mid = Math.floor((lowerBound + upperBound) / 2);
+      if (mid <= 0 || existingFiles.has(mid) || checked.has(mid)) {
+        lowerBound = mid + 1;
+        continue;
+      }
+
+      checked.add(mid);
+      if (await this.testUrl(baseUrl + mid + '/')) {
+        upperBound = mid - 1;
+      } else {
+        lowerBound = mid + 1;
+      }
+    }
+    const rangeStart = lowerBound;
+
+    // Find end of range (search upwards from seed)
+    lowerBound = Math.max(seedId, minId);
+    upperBound = maxId;
+
+    while (lowerBound <= upperBound) {
+      const mid = Math.floor((lowerBound + upperBound) / 2);
+      if (mid > maxId || existingFiles.has(mid) || checked.has(mid)) {
+        upperBound = mid - 1;
+        continue;
+      }
+
+      checked.add(mid);
+      if (await this.testUrl(baseUrl + mid + '/')) {
+        lowerBound = mid + 1;
+      } else {
+        upperBound = mid - 1;
+      }
+    }
+    const rangeEnd = upperBound;
+
+    // Collect all IDs in the found range
+    const range: number[] = [];
+    for (let id = Math.max(rangeStart, minId); id <= Math.min(rangeEnd, maxId); id++) {
+      if (!existingFiles.has(id) && !checked.has(id)) {
+        checked.add(id);
+        if (await this.testUrl(baseUrl + id + '/')) {
+          range.push(id);
+        }
+      }
+    }
+
+    if (range.length > 0) {
+      console.log(`   📍 Found range ${range[0]}-${range[range.length - 1]} (${range.length} manuals)`);
+    }
+
+    return range;
   }
 
   /**
