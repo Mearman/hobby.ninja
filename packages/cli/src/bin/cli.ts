@@ -224,6 +224,105 @@ program
 		}
 	});
 
+// Wayback status command - view checkpoint data
+program
+	.command("wayback-status")
+	.description("View Wayback submission status from checkpoint")
+	.option("--checkpoint <file>", "Checkpoint file path", ".wayback-checkpoint.json")
+	.option("--show-failed", "Show failed URLs", false)
+	.option("--show-successful", "Show successful URLs", false)
+	.option("--limit <n>", "Limit number of URLs to show", "20")
+	.option("--export-failed <file>", "Export failed URLs to a file")
+	.action(async (options) => {
+		try {
+			const checkpointPath = resolve(process.cwd(), options.checkpoint);
+			const content = readFileSync(checkpointPath, "utf8");
+			const checkpoint = JSON.parse(content);
+
+			console.log("Wayback Checkpoint Status");
+			console.log("=".repeat(50));
+			console.log(`Checkpoint file: ${checkpointPath}`);
+			console.log(`Last updated: ${new Date(checkpoint.lastUpdated).toLocaleString()}`);
+			console.log(`Source: ${checkpoint.source || "unknown"}`);
+			console.log("");
+
+			console.log("Progress:");
+			console.log(`  Total URLs tracked: ${checkpoint.totalUrls || "unknown"}`);
+			console.log(`  Processed: ${checkpoint.processedUrls?.length || 0}`);
+			console.log(`  Successful: ${checkpoint.successfulSubmissions?.length || 0}`);
+			console.log(`  Failed: ${checkpoint.failedSubmissions?.length || 0}`);
+			console.log("");
+
+			// Group failures by error type
+			if (checkpoint.failedSubmissions?.length > 0) {
+				const errorGroups: Record<string, number> = {};
+				const ageGroups: Record<string, number> = {};
+
+				for (const sub of checkpoint.failedSubmissions) {
+					const error = sub.error || "(empty error)";
+					errorGroups[error] = (errorGroups[error] || 0) + 1;
+
+					const age = sub.ageCheckResult || "unknown";
+					ageGroups[age] = (ageGroups[age] || 0) + 1;
+				}
+
+				console.log("Failed by error type:");
+				for (const [error, count] of Object.entries(errorGroups).sort((a, b) => b[1] - a[1])) {
+					console.log(`  ${count}x: ${error.substring(0, 80)}`);
+				}
+				console.log("");
+
+				console.log("Failed by age check:");
+				for (const [age, count] of Object.entries(ageGroups).sort((a, b) => b[1] - a[1])) {
+					console.log(`  ${count}x: ${age}`);
+				}
+				console.log("");
+			}
+
+			// Show failed URLs if requested
+			if (options.showFailed && checkpoint.failedSubmissions?.length > 0) {
+				const limit = parseInt(options.limit, 10);
+				console.log(`Failed URLs (showing ${Math.min(limit, checkpoint.failedSubmissions.length)} of ${checkpoint.failedSubmissions.length}):`);
+				for (const sub of checkpoint.failedSubmissions.slice(0, limit)) {
+					console.log(`  [${sub.sourceType || "manual"}:${sub.itemId || sub.manualId}] ${sub.field}: ${sub.url}`);
+					if (sub.error) {
+						console.log(`    Error: ${sub.error}`);
+					}
+				}
+				console.log("");
+			}
+
+			// Show successful URLs if requested
+			if (options.showSuccessful && checkpoint.successfulSubmissions?.length > 0) {
+				const limit = parseInt(options.limit, 10);
+				console.log(`Successful URLs (showing ${Math.min(limit, checkpoint.successfulSubmissions.length)} of ${checkpoint.successfulSubmissions.length}):`);
+				for (const sub of checkpoint.successfulSubmissions.slice(0, limit)) {
+					console.log(`  [${sub.sourceType || "manual"}:${sub.itemId || sub.manualId}] ${sub.field}: ${sub.url}`);
+					if (sub.archiveUrl) {
+						console.log(`    Archive: ${sub.archiveUrl}`);
+					}
+				}
+				console.log("");
+			}
+
+			// Export failed URLs to file if requested
+			if (options.exportFailed && checkpoint.failedSubmissions?.length > 0) {
+				const exportPath = resolve(process.cwd(), options.exportFailed);
+				const failedUrls = checkpoint.failedSubmissions.map((sub: { url: string }) => sub.url);
+				const { writeFileSync } = await import("fs");
+				writeFileSync(exportPath, failedUrls.join("\n"), "utf8");
+				console.log(`Exported ${failedUrls.length} failed URLs to ${exportPath}`);
+			}
+		} catch (error) {
+			if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+				console.error("No checkpoint file found. Run `wayback` command first to create one.");
+			} else {
+				console.error("Error reading checkpoint:", error instanceof Error ? error.message : String(error));
+			}
+			process.exit(1);
+		}
+	});
+
 program
 	.command("config")
 	.description("Manage configuration")

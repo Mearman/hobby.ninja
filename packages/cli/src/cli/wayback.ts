@@ -18,14 +18,47 @@ const MANUAL_FIELDS: UrlField[] = ['sourceUrl', 'pdfUrl', 'productImage', 'suppl
 const CATALOG_FIELDS: UrlField[] = ['sourceUrl', 'images'];
 
 const CHECKPOINT_FILE = '.wayback-checkpoint.json';
+const ARCHIVE_CACHE_FILE = '.wayback-archive-cache.json';
 const WAYBACK_SAVE_URL = 'https://web.archive.org/save';
 const WAYBACK_AVAILABLE_URL = 'https://archive.org/wayback/available';
+
+/**
+ * Cache entry for archive status
+ * Stores whether a URL has been archived and when we last checked
+ */
+interface ArchiveCacheEntry {
+	/** When we last checked this URL */
+	checkedAt: number;
+	/** The archive status result */
+	result: 'not_archived' | 'too_new' | 'needs_update';
+	/** Archive info if available */
+	archive?: {
+		timestamp: string;
+		age: number;
+		url: string;
+	};
+}
+
+/**
+ * On-disk cache for archive availability checks
+ * Keyed by URL
+ */
+interface ArchiveCache {
+	version: number;
+	entries: Record<string, ArchiveCacheEntry>;
+}
 
 export class WaybackCommand {
 	private checkpoint: WaybackCheckpoint | null = null;
 	private checkpointPath: string = '';
 	private minAgeMs: number = 0;
 	private maxAgeMs: number = 0;
+	private archiveCache: ArchiveCache | null = null;
+	private archiveCachePath: string = '';
+	/** How long to consider a cache entry valid (default: 24 hours) */
+	private cacheTtlMs: number = 24 * 60 * 60 * 1000;
+	/** Track if cache is dirty and needs saving */
+	private archiveCacheDirty: boolean = false;
 
 	constructor() {
 		// Constructor - no debug output needed
@@ -34,10 +67,18 @@ export class WaybackCommand {
 	async execute(options: WaybackOptions): Promise<WaybackResult> {
 		const startTime = Date.now();
 		this.checkpointPath = path.join(process.cwd(), CHECKPOINT_FILE);
+		this.archiveCachePath = path.join(process.cwd(), ARCHIVE_CACHE_FILE);
 
 		// Parse age thresholds
 		this.minAgeMs = this.parseDuration(options.minArchiveAge);
 		this.maxAgeMs = this.parseDuration(options.maxArchiveAge);
+
+		// Load archive cache
+		this.archiveCache = await this.loadArchiveCache();
+		const cacheSize = Object.keys(this.archiveCache.entries).length;
+		if (cacheSize > 0) {
+			console.log(`Loaded archive cache (${cacheSize} entries)`);
+		}
 
 		const result: WaybackResult = {
 			totalUrls: 0,
@@ -173,9 +214,10 @@ export class WaybackCommand {
 				this.checkpoint.processedUrls.push(submission.url);
 				this.checkpoint.lastUpdated = Date.now();
 
-				// Save checkpoint periodically
+				// Save checkpoint and cache periodically
 				if ((i + 1) % 10 === 0) {
 					await this.saveCheckpoint();
+					await this.saveArchiveCacheIfDirty();
 				}
 			}
 
@@ -186,13 +228,16 @@ export class WaybackCommand {
 			await this.sleep(100);
 			progressRenderer.cleanup();
 
-			// Final checkpoint save
+			// Final checkpoint and cache save
 			await this.saveCheckpoint();
+			await this.saveArchiveCacheIfDirty();
 
 			// Save results to output directory
 			await this.saveResults(result, options.output);
 		} catch (error) {
 			result.errors.push(error instanceof Error ? error.message : 'Unknown error');
+			// Still save cache on error
+			await this.saveArchiveCacheIfDirty();
 		}
 
 		result.duration = Date.now() - startTime;
@@ -559,6 +604,62 @@ export class WaybackCommand {
 	}
 
 	private async checkArchiveAge(url: string): Promise<ArchiveAgeCheck> {
+		// Check cache first
+		const cached = this.getCachedArchiveStatus(url);
+		if (cached) {
+			return cached;
+		}
+
+		// Not in cache or cache expired, fetch from API
+		const result = await this.fetchArchiveAge(url);
+
+		// Cache the result
+		this.cacheArchiveStatus(url, result);
+
+		return result;
+	}
+
+	/**
+	 * Get cached archive status if it exists and is still valid
+	 */
+	private getCachedArchiveStatus(url: string): ArchiveAgeCheck | null {
+		if (!this.archiveCache) return null;
+
+		const entry = this.archiveCache.entries[url];
+		if (!entry) return null;
+
+		// Check if cache entry is still valid
+		const age = Date.now() - entry.checkedAt;
+		if (age > this.cacheTtlMs) {
+			// Cache entry expired
+			return null;
+		}
+
+		// Return cached result
+		return {
+			result: entry.result,
+			archive: entry.archive,
+		};
+	}
+
+	/**
+	 * Store archive status in cache
+	 */
+	private cacheArchiveStatus(url: string, check: ArchiveAgeCheck): void {
+		if (!this.archiveCache) return;
+
+		this.archiveCache.entries[url] = {
+			checkedAt: Date.now(),
+			result: check.result,
+			archive: check.archive,
+		};
+		this.archiveCacheDirty = true;
+	}
+
+	/**
+	 * Fetch archive age from Wayback Machine API
+	 */
+	private async fetchArchiveAge(url: string): Promise<ArchiveAgeCheck> {
 		try {
 			const response = await fetch(`${WAYBACK_AVAILABLE_URL}?url=${encodeURIComponent(url)}`, {
 				method: 'GET',
@@ -595,6 +696,39 @@ export class WaybackCommand {
 			// If we can't check, assume not archived and proceed
 			return { result: 'not_archived' };
 		}
+	}
+
+	/**
+	 * Load archive cache from disk
+	 */
+	private async loadArchiveCache(): Promise<ArchiveCache> {
+		try {
+			const content = await fs.readFile(this.archiveCachePath, 'utf-8');
+			const cache = JSON.parse(content) as ArchiveCache;
+
+			// Validate cache version
+			if (cache.version !== 1) {
+				console.log('Archive cache version mismatch, starting fresh');
+				return { version: 1, entries: {} };
+			}
+
+			return cache;
+		} catch {
+			// No cache file or invalid JSON, start fresh
+			return { version: 1, entries: {} };
+		}
+	}
+
+	/**
+	 * Save archive cache to disk if it has been modified
+	 */
+	private async saveArchiveCacheIfDirty(): Promise<void> {
+		if (!this.archiveCacheDirty || !this.archiveCache) return;
+
+		const tempPath = `${this.archiveCachePath}.tmp`;
+		await fs.writeFile(tempPath, JSON.stringify(this.archiveCache, null, 2), 'utf-8');
+		await fs.rename(tempPath, this.archiveCachePath);
+		this.archiveCacheDirty = false;
 	}
 
 	private parseDuration(duration: string): number {
