@@ -275,6 +275,8 @@ describe("TranslationService", () => {
 			expect(stats).toEqual({
 				size: expect.any(Number),
 				maxSize: expect.any(Number),
+				hits: expect.any(Number),
+				misses: expect.any(Number),
 				hitRate: expect.any(Number),
 				memoryUsage: expect.any(Number),
 			});
