@@ -132,6 +132,67 @@ program
 		console.log("  - Last update times");
 	});
 
+// Download command implementation
+program
+	.command("download")
+	.description("Download images and PDFs from scraped data")
+	.option("--source <source>", "Data source (all, manuals, catalog)", "all")
+	.option("--manuals-dir <dir>", "Manual data directory", "./data/bandai/manuals")
+	.option("--catalog-dir <dir>", "Catalog data directory", "./data/bandai/items")
+	.option("--concurrency <n>", "Number of concurrent downloads", "5")
+	.option("--delay <ms>", "Delay between batches in milliseconds", "100")
+	.option("--dry-run", "Show what would be downloaded without downloading", false)
+	.option("-v, --verbose", "Verbose output", false)
+	.action(async (options) => {
+		try {
+			const { downloadAssets } = await import("../cli/download-command.js");
+
+			console.log("Downloading assets from scraped data...");
+			console.log(`Source: ${options.source}`);
+			console.log(`Manuals directory: ${options.manualsDir}`);
+			console.log(`Catalog directory: ${options.catalogDir}`);
+			console.log(`Concurrency: ${options.concurrency}`);
+			console.log(`Delay: ${options.delay}ms`);
+			console.log(`Dry run: ${options.dryRun}`);
+			console.log("");
+
+			const result = await downloadAssets({
+				source: options.source,
+				manualsDir: options.manualsDir,
+				catalogDir: options.catalogDir,
+				concurrency: parseInt(options.concurrency, 10),
+				delayMs: parseInt(options.delay, 10),
+				dryRun: options.dryRun,
+				verbose: options.verbose,
+			});
+
+			console.log("\nDownload Results:");
+			console.log(`Total items processed: ${result.totalItems}`);
+			console.log(`Downloaded: ${result.downloaded}`);
+			console.log(`Skipped (already exist): ${result.skipped}`);
+			console.log(`Failed: ${result.failed}`);
+			console.log(`Duration: ${(result.duration / 1000).toFixed(1)}s`);
+
+			if (result.errors.length > 0 && result.errors.length <= 10) {
+				console.log("\nErrors:");
+				result.errors.forEach((error) => console.log(`  - ${error}`));
+			} else if (result.errors.length > 10) {
+				console.log(`\n${result.errors.length} errors occurred (showing first 10):`);
+				result.errors.slice(0, 10).forEach((error) => console.log(`  - ${error}`));
+			}
+
+			process.exit(result.failed === 0 ? 0 : 1);
+		} catch (error) {
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Download failed:", errorMessage);
+			if (options.verbose) {
+				const errorStack = error instanceof Error ? error.stack : String(error);
+				console.error(errorStack);
+			}
+			process.exit(1);
+		}
+	});
+
 // Wayback command implementation
 program
 	.command("wayback")
