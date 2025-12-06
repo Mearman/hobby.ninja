@@ -18,9 +18,9 @@ import {
 	TRANSLATION_STORE_DIR,
 } from '../../../translation/src/index';
 import type { CatalogItem } from '../../../types/src/catalogData';
+import { TranslationProgressRenderer } from './ui/TranslationProgress';
 
-const BATCH_SIZE = 10;
-const DELAY_BETWEEN_BATCHES_MS = 500;
+const BATCH_SIZE = 50;
 
 const DEFAULT_CATALOG_DIR = 'data/bandai/items';
 const DEFAULT_MANUALS_DIR = 'data/bandai/manuals';
@@ -55,9 +55,6 @@ interface FilteredManualData {
 	[key: string]: unknown;
 }
 
-async function sleep(ms: number): Promise<void> {
-	return new Promise((resolve) => setTimeout(resolve, ms));
-}
 
 /**
  * Main entry point - translate data from all or specific sources
@@ -123,6 +120,9 @@ export async function translateCatalogData(options: TranslateOptions): Promise<v
 	if (dryRun) {
 		console.log('\n[DRY RUN] No files were modified.');
 	}
+
+	// Exit cleanly - Ink keeps the event loop alive otherwise
+	process.exit(0);
 }
 
 // ============================================================================
@@ -181,7 +181,9 @@ async function translateCatalogItems(options: CatalogTranslateOptions): Promise<
 		return { translated: 0, fieldsTranslated: 0 };
 	}
 
-	console.log(`Found ${entries.length} catalog items to process\n`);
+	// Initialize Ink progress renderer
+	const progressRenderer = new TranslationProgressRenderer('Catalog', entries.length);
+	progressRenderer.start();
 
 	const progress: TranslationProgress = {
 		processed: 0,
@@ -212,33 +214,25 @@ async function translateCatalogItems(options: CatalogTranslateOptions): Promise<
 			} else {
 				progress.skipped++;
 			}
-		}
 
-		// Progress logging
-		if (progress.processed % 100 === 0 || progress.processed === entries.length) {
-			console.log(
-				`[Catalog] Progress: ${progress.processed}/${entries.length} | ` +
-					`Translated: ${progress.translated} (${progress.fieldsTranslated} fields) | ` +
-					`Skipped: ${progress.skipped} | ` +
-					`Errors: ${progress.errors}`
-			);
-		}
-
-		// Rate limiting between batches
-		if (i + BATCH_SIZE < entries.length) {
-			await sleep(DELAY_BETWEEN_BATCHES_MS);
+			// Update Ink progress UI
+			progressRenderer.update({
+				processed: progress.processed,
+				translated: progress.translated,
+				fieldsTranslated: progress.fieldsTranslated,
+				skipped: progress.skipped,
+				errors: progress.errors,
+			});
 		}
 	}
 
-	console.log('\n[Catalog] Complete!');
-	console.log(`  Total processed: ${progress.processed}`);
-	console.log(`  Translated: ${progress.translated} items (${progress.fieldsTranslated} fields)`);
-	console.log(`  Skipped (already translated): ${progress.skipped}`);
-	console.log(`  Errors: ${progress.errors}`);
-
-	// Show cache stats
+	// Show completion with cache stats
 	const cacheStats = translator.getCacheStats();
-	console.log(`  Cache stats: ${cacheStats.hits} hits, ${cacheStats.misses} misses`);
+	progressRenderer.complete(cacheStats.hits, cacheStats.misses);
+
+	// Small delay to ensure final render is visible before cleanup
+	await new Promise((resolve) => setTimeout(resolve, 100));
+	progressRenderer.cleanup();
 
 	return { translated: progress.translated, fieldsTranslated: progress.fieldsTranslated };
 }
@@ -353,7 +347,9 @@ async function translateManualFiles(options: ManualTranslateOptions): Promise<Tr
 		return { translated: 0, fieldsTranslated: 0 };
 	}
 
-	console.log(`Found ${entries.length} manual files to process\n`);
+	// Initialize Ink progress renderer
+	const progressRenderer = new TranslationProgressRenderer('Manuals', entries.length);
+	progressRenderer.start();
 
 	const progress: TranslationProgress = {
 		processed: 0,
@@ -384,33 +380,25 @@ async function translateManualFiles(options: ManualTranslateOptions): Promise<Tr
 			} else {
 				progress.skipped++;
 			}
-		}
 
-		// Progress logging
-		if (progress.processed % 100 === 0 || progress.processed === entries.length) {
-			console.log(
-				`[Manuals] Progress: ${progress.processed}/${entries.length} | ` +
-					`Translated: ${progress.translated} (${progress.fieldsTranslated} fields) | ` +
-					`Skipped: ${progress.skipped} | ` +
-					`Errors: ${progress.errors}`
-			);
-		}
-
-		// Rate limiting between batches
-		if (i + BATCH_SIZE < entries.length) {
-			await sleep(DELAY_BETWEEN_BATCHES_MS);
+			// Update Ink progress UI
+			progressRenderer.update({
+				processed: progress.processed,
+				translated: progress.translated,
+				fieldsTranslated: progress.fieldsTranslated,
+				skipped: progress.skipped,
+				errors: progress.errors,
+			});
 		}
 	}
 
-	console.log('\n[Manuals] Complete!');
-	console.log(`  Total processed: ${progress.processed}`);
-	console.log(`  Translated: ${progress.translated} items (${progress.fieldsTranslated} fields)`);
-	console.log(`  Skipped (already translated): ${progress.skipped}`);
-	console.log(`  Errors: ${progress.errors}`);
-
-	// Show cache stats
+	// Show completion with cache stats
 	const cacheStats = translator.getCacheStats();
-	console.log(`  Cache stats: ${cacheStats.hits} hits, ${cacheStats.misses} misses`);
+	progressRenderer.complete(cacheStats.hits, cacheStats.misses);
+
+	// Small delay to ensure final render is visible before cleanup
+	await new Promise((resolve) => setTimeout(resolve, 100));
+	progressRenderer.cleanup();
 
 	return { translated: progress.translated, fieldsTranslated: progress.fieldsTranslated };
 }
