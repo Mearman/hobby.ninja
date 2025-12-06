@@ -1,0 +1,492 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Bandai Manual Document Schema",
+  "description": "Schema for parsed Bandai manual HTML files with Japanese text support",
+  "type": "object",
+  "required": ["id", "metadata", "content", "assets", "structure", "extractedAt", "source"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^\\d+$",
+      "minLength": 1,
+      "maxLength": 10,
+      "description": "Unique manual ID from Bandai"
+    },
+    "metadata": {
+      "$ref": "#/definitions/ManualMetadata"
+    },
+    "content": {
+      "$ref": "#/definitions/ManualContent"
+    },
+    "assets": {
+      "$ref": "#/definitions/ManualAssets"
+    },
+    "structure": {
+      "$ref": "#/definitions/DocumentStructure"
+    },
+    "extractedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO timestamp when extraction was performed"
+    },
+    "source": {
+      "$ref": "#/definitions/SourceInfo"
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "ManualMetadata": {
+      "type": "object",
+      "required": ["title", "product", "publication"],
+      "properties": {
+        "title": {
+          "$ref": "#/definitions/LocalizedText"
+        },
+        "product": {
+          "$ref": "#/definitions/ProductInfo"
+        },
+        "publication": {
+          "$ref": "#/definitions/PublicationInfo"
+        },
+        "bandai": {
+          "type": "object",
+          "properties": {
+            "categoryId": {"type": "string"},
+            "productId": {"type": "string"},
+            "manualId": {"type": "string"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "LocalizedText": {
+      "type": "object",
+      "required": ["ja"],
+      "properties": {
+        "ja": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "[\\u3040-\\u309F\\u30A0-\\u30FF\\u4E00-\\u9FAF\\u3000-\\u303F\\uFF00-\\uFFEF\\w\\s\\-\\.,()]+",
+          "description": "Japanese text content"
+        },
+        "en": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "English translation if available"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ProductInfo": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "series": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "grade": {
+          "type": "string",
+          "enum": ["HG", "MG", "PG", "RG", "EG", "SD", "RE", "Mega Size"]
+        },
+        "scale": {
+          "type": "string",
+          "pattern": "^\\d\\/\\d+$",
+          "examples": ["1/144", "1/100", "1/60", "1/48"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "PublicationInfo": {
+      "type": "object",
+      "required": ["language"],
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "version": {
+          "type": "string",
+          "maxLength": 20
+        },
+        "language": {
+          "type": "string",
+          "enum": ["ja", "en", "mixed"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "ManualContent": {
+      "type": "object",
+      "required": ["sections", "blocks", "statistics"],
+      "properties": {
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContentSection"
+          }
+        },
+        "blocks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContentBlock"
+          }
+        },
+        "statistics": {
+          "$ref": "#/definitions/ContentStatistics"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ContentSection": {
+      "type": "object",
+      "required": ["id", "level", "title", "blocks", "subsections"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^section-\\d+$"
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "title": {
+          "$ref": "#/definitions/LocalizedText"
+        },
+        "blocks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContentBlock"
+          }
+        },
+        "subsections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContentSection"
+          }
+        },
+        "pageNumber": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9999
+        }
+      },
+      "additionalProperties": false
+    },
+    "ContentBlock": {
+      "type": "object",
+      "required": ["id", "type", "content"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^block-\\d+$"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["heading", "paragraph", "list", "table", "image", "warning", "note", "instruction", "specification"]
+        },
+        "content": {
+          "oneOf": [
+            {"type": "string"},
+            {"$ref": "#/definitions/BlockData"}
+          ]
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "className": {"type": "string"},
+            "pageNumber": {"type": "integer", "minimum": 1, "maximum": 9999},
+            "footnote": {"type": "string"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "BlockData": {
+      "type": "object",
+      "properties": {
+        "text": {"type": "string"},
+        "items": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TableRow"
+          }
+        },
+        "image": {"$ref": "#/definitions/ImageReference"},
+        "specifications": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              {"type": "string"},
+              {"type": "number"},
+              {"type": "boolean"}
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "TableRow": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "ContentStatistics": {
+      "type": "object",
+      "required": ["totalSections", "totalBlocks", "wordCount", "japaneseCharacterCount", "imageCount"],
+      "properties": {
+        "totalSections": {"type": "integer", "minimum": 0},
+        "totalBlocks": {"type": "integer", "minimum": 0},
+        "wordCount": {"type": "integer", "minimum": 0},
+        "japaneseCharacterCount": {"type": "integer", "minimum": 0},
+        "imageCount": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "ManualAssets": {
+      "type": "object",
+      "required": ["images", "diagrams", "thumbnails"],
+      "properties": {
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ImageReference"
+          }
+        },
+        "diagrams": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DiagramReference"
+          }
+        },
+        "thumbnails": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ThumbnailReference"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ImageReference": {
+      "type": "object",
+      "required": ["id", "src", "alt", "type"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^img-\\d+$"
+        },
+        "src": {
+          "type": "string",
+          "format": "uri"
+        },
+        "alt": {
+          "$ref": "#/definitions/LocalizedText"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["illustration", "photo", "diagram", "symbol"]
+        },
+        "size": {
+          "type": "object",
+          "properties": {
+            "width": {"type": "integer", "minimum": 1},
+            "height": {"type": "integer", "minimum": 1}
+          },
+          "additionalProperties": false
+        },
+        "pageNumber": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9999
+        }
+      },
+      "additionalProperties": false
+    },
+    "DiagramReference": {
+      "allOf": [
+        {"$ref": "#/definitions/ImageReference"},
+        {
+          "type": "object",
+          "required": ["labels", "annotations"],
+          "properties": {
+            "type": {"const": "diagram"},
+            "labels": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DiagramLabel"
+              }
+            },
+            "annotations": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DiagramAnnotation"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "DiagramLabel": {
+      "type": "object",
+      "required": ["text", "position"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "position": {
+          "$ref": "#/definitions/Position"
+        },
+        "target": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "DiagramAnnotation": {
+      "type": "object",
+      "required": ["id", "text", "position"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^annotation-\\d+$"},
+        "text": {"type": "string", "minLength": 1},
+        "position": {
+          "$ref": "#/definitions/Position"
+        },
+        "target": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "ThumbnailReference": {
+      "type": "object",
+      "required": ["id", "src"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^thumb-\\d+$"
+        },
+        "src": {
+          "type": "string",
+          "format": "uri"
+        },
+        "width": {"type": "integer", "minimum": 1},
+        "height": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "Position": {
+      "type": "object",
+      "required": ["x", "y"],
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "y": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "additionalProperties": false
+    },
+    "DocumentStructure": {
+      "type": "object",
+      "required": ["outline", "navigation"],
+      "properties": {
+        "outline": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OutlineEntry"
+          }
+        },
+        "navigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NavigationItem"
+          }
+        },
+        "pageCount": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "OutlineEntry": {
+      "type": "object",
+      "required": ["id", "level", "title", "sectionId", "children"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^outline-\\d+$"
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "title": {"type": "string", "minLength": 1},
+        "sectionId": {
+          "type": "string",
+          "pattern": "^section-\\d+$"
+        },
+        "pageNumber": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9999
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OutlineEntry"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "NavigationItem": {
+      "type": "object",
+      "required": ["id", "type", "title", "target", "order"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^nav-\\d+$"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["page", "section", "chapter", "appendix"]
+        },
+        "title": {"type": "string", "minLength": 1},
+        "target": {"type": "string"},
+        "order": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "SourceInfo": {
+      "type": "object",
+      "required": ["htmlPath", "htmlSize"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "htmlPath": {"type": "string", "minLength": 1},
+        "htmlSize": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
