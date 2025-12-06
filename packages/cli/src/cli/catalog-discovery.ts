@@ -8,35 +8,74 @@ import type { CatalogDiscoveryOptions, CatalogDiscoveryResult, CatalogRangeStats
 // Fast HTTP client for discovery phase
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
+// Read only 2KB to extract title (95% bandwidth reduction from ~47KB full page)
+const PARTIAL_READ_BYTES = 2048;
+
 /**
  * Fast HTTP check to determine if a catalog page is valid (has product content)
+ * Uses streaming to read only ~2KB instead of full page (~47KB)
  * Checks the raw HTML title for "404" without rendering JavaScript
  */
 async function quickCheckUrl(url: string): Promise<{ isValid: boolean; title?: string }> {
+	const controller = new AbortController();
+
 	try {
 		const response = await fetch(url, {
 			headers: { 'User-Agent': USER_AGENT },
-			signal: AbortSignal.timeout(10000)
+			signal: controller.signal
 		});
 
 		if (!response.ok) {
 			return { isValid: false };
 		}
 
-		const html = await response.text();
+		// Stream the response and read only what we need
+		const reader = response.body?.getReader();
+		if (!reader) {
+			return { isValid: false };
+		}
 
-		// Check for 404 in title (Bandai returns HTTP 200 but shows 404 page)
+		const decoder = new TextDecoder();
+		let html = '';
+		let bytesRead = 0;
+
+		// Read chunks until we have enough to find title or hit our limit
+		while (bytesRead < PARTIAL_READ_BYTES) {
+			const { done, value } = await reader.read();
+			if (done) break;
+
+			html += decoder.decode(value, { stream: true });
+			bytesRead += value.length;
+
+			// Check if we have the complete title tag yet
+			const titleMatch = html.match(/<title>([^<]+)<\/title>/i);
+			if (titleMatch) {
+				// Found title - abort the connection and return result
+				controller.abort();
+				const title = titleMatch[1];
+				const isValid = !title.includes('404');
+				return { isValid, title };
+			}
+		}
+
+		// Abort connection after reading enough bytes
+		controller.abort();
+
+		// Check for title in what we read
 		const titleMatch = html.match(/<title>([^<]+)<\/title>/i);
 		const title = titleMatch?.[1] || '';
 
-		// If title contains "404", it's an invalid/missing page
 		if (title.includes('404')) {
 			return { isValid: false, title };
 		}
 
 		return { isValid: true, title };
 	} catch (error) {
-		// Network error - treat as invalid for now
+		// AbortError is expected when we abort after finding title
+		if (error instanceof Error && error.name === 'AbortError') {
+			return { isValid: false };
+		}
+		// Network error - treat as invalid
 		return { isValid: false };
 	}
 }
@@ -78,9 +117,9 @@ export async function discoverValidIds(
 		console.log(`  ⏭️  ${skippedIds.length} previously checked (${existCount} exist, ${notFoundCount} not found)`);
 	}
 
-	// Second pass: parallel HTTP checks for unchecked IDs (batches of 50)
+	// Second pass: parallel HTTP checks for unchecked IDs (batches of 100)
 	if (needsCheck.length > 0) {
-		const BATCH_SIZE = 50;
+		const BATCH_SIZE = 100;
 		const totalBatches = Math.ceil(needsCheck.length / BATCH_SIZE);
 		let newExistCount = 0;
 		let newNotFoundCount = 0;
@@ -118,11 +157,6 @@ export async function discoverValidIds(
 
 			// Save index after each batch
 			saveCatalogIndex();
-
-			// Small delay between batches (not between individual requests)
-			if (i + BATCH_SIZE < needsCheck.length) {
-				await new Promise(resolve => setTimeout(resolve, options.delayMs / 5));
-			}
 		}
 
 		// Final summary on new line
