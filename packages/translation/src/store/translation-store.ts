@@ -10,7 +10,7 @@ import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import { z } from 'zod';
 import { JSONStorage, type JSONStorageConfig, type FileOperationResult } from './json-storage';
-import { generateKey, generateTextHash, validateKey, type HashingError } from './hashing';
+import { generateKey, generateTextHash, validateKey, extractKeyComponents, type HashingError } from './hashing';
 import { SupportedLanguage } from '../types';
 
 /**
@@ -321,26 +321,22 @@ export class TranslationStore {
 	}
 
 	/**
-	 * Generate two-level shard path from hash.
+	 * Get full file path for a translation key.
 	 *
-	 * @param hash - SHA-256 hash string
-	 * @returns Array of [shardDir, filename]
-	 */
-	private generateShardPath(hash: string): [string, string] {
-		const shard = hash.substring(0, this.SHARD_DEPTH);
-		const filename = `${hash}.json`;
-		return [shard, filename];
-	}
-
-	/**
-	 * Get full file path for a hash using two-level sharding.
+	 * Uses directory structure: {storagePath}/{sourceLang}/{targetLang}/{hash}.json
+	 * This avoids special characters in filenames for cross-platform compatibility.
 	 *
-	 * @param hash - SHA-256 hash string
+	 * @param key - Translation key in format "sourceLang:targetLang:hash"
 	 * @returns Complete file path
 	 */
-	private getFilePath(hash: string): string {
-		const [shard, filename] = this.generateShardPath(hash);
-		return path.join(this.config.storagePath, shard, filename);
+	private getFilePath(key: string): string {
+		const components = extractKeyComponents(key);
+		return path.join(
+			this.config.storagePath,
+			components.sourceLang,
+			components.targetLang,
+			`${components.hash}.json`
+		);
 	}
 
 	/**

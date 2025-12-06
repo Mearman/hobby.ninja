@@ -70,7 +70,7 @@ export interface KeyComponents {
  */
 const DEFAULT_OPTIONS: Required<HashingOptions> = {
 	algorithm: 'sha256',
-	encoding: 'base64',
+	encoding: 'hex',
 } as const;
 
 /**
@@ -80,31 +80,32 @@ const KEY_SEPARATOR = ':';
 
 /**
  * Regular expression for validating key format
- * Matches: sourceLang:targetLang:base64hash
+ * Matches: sourceLang:targetLang:hexhash
+ * Uses hex encoding (0-9a-f) for filesystem compatibility
  */
-const KEY_FORMAT_REGEX = /^([a-z]{2}(_[a-z]{2})?):([a-z]{2}(_[a-z]{2})?):([A-Za-z0-9+/]+={0,2})$/;
+const KEY_FORMAT_REGEX = /^([a-z]{2}(_[a-z]{2})?):([a-z]{2}(_[a-z]{2})?):([a-f0-9]+)$/;
 
 /**
- * Regular expression for validating Base64 strings
+ * Regular expression for validating hex strings
  */
-const BASE64_REGEX = /^[A-Za-z0-9+/]+={0,2}$/;
+const HEX_REGEX = /^[a-f0-9]+$/;
 
 /**
- * Generates a SHA-256 hash of the provided text and returns it as a Base64 encoded string.
+ * Generates a SHA-256 hash of the provided text and returns it as a hex encoded string.
  *
  * This function is pure and deterministic - the same input will always produce the same hash.
  * Uses Node.js built-in crypto module for consistent, cross-platform results.
  *
  * @param text - The text to hash. Empty strings and null/undefined are handled gracefully.
  * @param options - Optional configuration for hashing operations
- * @returns Base64-encoded SHA-256 hash of the input text
+ * @returns Hex-encoded SHA-256 hash of the input text
  *
  * @throws {HashingError} When hashing operation fails due to invalid input or crypto errors
  *
  * @example
  * ```typescript
  * const hash = generateTextHash("Hello world");
- * console.log(hash); // "SGVsbG8gd29ybGQ=" (example output)
+ * console.log(hash); // "64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c"
  * ```
  */
 export function generateTextHash(text: string, options: HashingOptions = {}): string {
@@ -116,12 +117,9 @@ export function generateTextHash(text: string, options: HashingOptions = {}): st
 			throw new HashingError('Input text must be a string');
 		}
 
-		// Handle empty string - still produce a valid hash
-		const normalizedText = text;
-
 		// Generate SHA-256 hash
 		const hash = createHash(config.algorithm)
-			.update(normalizedText, 'utf8')
+			.update(text, 'utf8')
 			.digest(config.encoding);
 
 		return hash;
@@ -213,7 +211,7 @@ export function validateKey(key: string): boolean {
 
 	// Validate Base64 hash component
 	const hashComponent = match[5];
-	return BASE64_REGEX.test(hashComponent);
+	return HEX_REGEX.test(hashComponent);
 }
 
 /**
@@ -245,7 +243,7 @@ export function extractKeyComponents(key: string): KeyComponents {
 	const [, sourceLang, , targetLang, , hash] = match;
 
 	// Additional validation of hash component
-	if (!BASE64_REGEX.test(hash)) {
+	if (!HEX_REGEX.test(hash)) {
 		throw new HashingError(`Invalid Base64 hash component in key: ${key}`);
 	}
 
@@ -288,7 +286,7 @@ export function validateHash(
 
 		// Validate Base64 format of expected hash
 		const config = { ...DEFAULT_OPTIONS, ...options };
-		if (config.encoding === 'base64' && !BASE64_REGEX.test(expectedHash)) {
+		if (config.encoding === 'base64' && !HEX_REGEX.test(expectedHash)) {
 			return false;
 		}
 
@@ -399,4 +397,4 @@ export function generateBatchHash(texts: readonly string[], options: HashingOpti
 }
 
 // Export constants for testing and external use
-export { KEY_SEPARATOR, KEY_FORMAT_REGEX, BASE64_REGEX };
+export { KEY_SEPARATOR, KEY_FORMAT_REGEX, HEX_REGEX };
