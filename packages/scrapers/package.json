@@ -22,6 +22,9 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
+    "parse5": "^7.1.2",
+    "zod": "^3.22.0",
+    "p-limit": "^4.0.0",
     "@unnamed-gunpla-app/types": "workspace:*",
     "@unnamed-gunpla-app/utils": "workspace:*"
   },
