@@ -1100,7 +1100,7 @@ const databaseMigrations = {
 **⚠️ PLACEHOLDER DECISION**: The CLI package for data scraping functionality has been converted to a placeholder structure.
 
 **What's Implemented**:
-- Basic package structure with @hobby-ninja/cli
+- Basic package structure with @unnamed-gunpla-app/cli
 - Placeholder interfaces and type definitions
 - Package.json configuration with future dependencies
 

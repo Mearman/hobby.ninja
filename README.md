@@ -1,13 +1,13 @@
-# hobby.ninja
+# Gunpla Collection Manager
 
-A modern progressive web application for managing hobby collections. Built with React 19, TypeScript, and cutting-edge web technologies.
+A modern progressive web application for managing Gundam and Gunpla model kit collections. Built with React 19, TypeScript, and cutting-edge web technologies.
 
 ## Features
 
-- **Collection Management**: Track your hobby items with purchase info, status, and photos
+- **Collection Management**: Track owned Gunpla kits with purchase info, build status, and photos
 - **Wishlist System**: Maintain wishlist with priority tracking
-- **Progress Tracking**: Document your hobby journey
-- **Search & Discovery**: Database with advanced filtering
+- **Build Progress**: Document your model kit building journey
+- **Search & Discovery**: Comprehensive database with advanced filtering
 - **Offline Support**: Full offline functionality with data sync
 
 ## Tech Stack
@@ -29,7 +29,7 @@ pnpm 10.0.0+
 
 # Install
 git clone <repo-url>
-cd hobby-ninja
+cd unnamed-gunpla-app
 pnpm install
 
 # Development

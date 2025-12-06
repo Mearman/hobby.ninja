@@ -41,7 +41,7 @@ export default defineConfig({
   // Shared settings for all projects
   use: {
     // Base URL for Vite dev server
-    baseURL: 'http://localhost:3000/unnamed-gunpla-app',
+    baseURL: 'http://localhost:3000/hobby-ninja',
 
     // Collect trace when retrying the failed test
     trace: 'on-first-retry',

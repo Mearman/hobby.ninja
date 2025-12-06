@@ -48,7 +48,7 @@ export default defineConfig({
   // Shared settings for all projects
   use: {
     // Base URL for production static server
-    baseURL: 'http://localhost:4200/unnamed-gunpla-app',
+    baseURL: 'http://localhost:4200/hobby-ninja',
 
     // Collect trace when retrying the failed test
     trace: 'on-first-retry',
@@ -113,7 +113,7 @@ export default defineConfig({
   // Production server configuration (starts static file server)
   webServer: {
     command: 'pnpm nx serve-static web',
-    url: 'http://localhost:4200/unnamed-gunpla-app',
+    url: 'http://localhost:4200/hobby-ninja',
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000, // 2 minutes
     stdout: 'pipe',

@@ -66,7 +66,7 @@ export default defineConfig({
   // Enhanced shared settings for all projects
   use: {
     // Base URL to use in actions like `await page.goto('/')`
-    baseURL: 'http://localhost:4200/unnamed-gunpla-app',
+    baseURL: 'http://localhost:4200/hobby-ninja',
 
     // Collect trace when retrying the failed test
     trace: 'on-first-retry',
@@ -191,7 +191,7 @@ export default defineConfig({
   // Enhanced web server configuration (serve built app for e2e tests)
   webServer: {
     command: 'pnpm nx serve-static web',
-    url: 'http://localhost:4200/unnamed-gunpla-app',
+    url: 'http://localhost:4200/hobby-ninja',
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000, // 2 minutes
     stdout: 'pipe',

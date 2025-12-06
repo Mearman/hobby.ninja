@@ -10,7 +10,7 @@ Parse Bandai manual HTML files into structured JSON format, preserving Japanese 
 ## Technical Context
 
 **Language/Version**: TypeScript 5.7+ (Node.js 20+)
-**Primary Dependencies**: parse5 v7.1.2, Zod v3.22.0, p-limit v4.0.0, @hobby-ninja/types
+**Primary Dependencies**: parse5 v7.1.2, Zod v3.22.0, p-limit v4.0.0, @unnamed-gunpla-app/types
 **Storage**: File system (JSON output to ./data/bandai/manuals/{id}/{id}.jp.json)
 **Testing**: Vitest for unit/integration, Playwright for e2e
 **Target Platform**: Node.js server environment

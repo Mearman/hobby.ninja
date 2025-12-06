@@ -16,9 +16,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt', 'offline.html'],
       manifest: {
-        name: 'Gunpla Collection Manager',
-        short_name: 'Gunpla App',
-        description: 'A comprehensive Gundam and Gunpla model kit database and collection manager',
+        name: 'hobby.ninja',
+        short_name: 'hobby.ninja',
+        description: 'A hobby collection manager for enthusiasts',
         theme_color: '#dc2626',
         background_color: '#1a1a1a',
         display: 'standalone',
@@ -71,7 +71,7 @@ export default defineConfig({
     host: true,
   },
   // GitHub Pages base path - adjust for your repository name
-  base: '/unnamed-gunpla-app/',
+  base: '/hobby-ninja/',
   build: {
     outDir: '../../dist/apps/web',
     emptyOutDir: true,

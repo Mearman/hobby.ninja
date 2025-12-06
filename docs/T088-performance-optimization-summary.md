@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document summarizes the comprehensive performance optimization implementation for the hobby-ninja Nx monorepo, covering all aspects of application performance including bundle optimization, database performance, rendering efficiency, and build optimization.
+This document summarizes the comprehensive performance optimization implementation for the unnamed-gunpla-app Nx monorepo, covering all aspects of application performance including bundle optimization, database performance, rendering efficiency, and build optimization.
 
 ## Implemented Optimizations
 
