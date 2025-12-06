@@ -11,7 +11,7 @@ import { ProgressBar, Spinner } from '@inkjs/ui';
 /** A single log entry for the scrolling log */
 export interface LogEntry {
 	url: string;
-	status: 'success' | 'failed' | 'skipped' | 'cached' | 'retrying';
+	status: 'success' | 'failed' | 'skipped' | 'cached' | 'retrying' | 'requeued' | 'auth_fallback';
 	message?: string;
 	/** Number of retry attempts (0 = first try succeeded) */
 	retryCount?: number;
@@ -21,6 +21,8 @@ export interface LogEntry {
 	fromCache?: boolean;
 	/** Delay before next retry in ms (for retrying status) */
 	retryDelayMs?: number;
+	/** How many times this URL has been requeued */
+	requeueCount?: number;
 }
 
 export interface WaybackStats {
@@ -181,11 +183,15 @@ function WaybackProgressUI({ stats }: WaybackProgressProps) {
 						const statusIcon = log.status === 'success' ? '✓' :
 							log.status === 'failed' ? '✗' :
 							log.status === 'cached' ? '⚡' :
-							log.status === 'retrying' ? '↻' : '○';
+							log.status === 'retrying' ? '↻' :
+							log.status === 'requeued' ? '⟳' :
+							log.status === 'auth_fallback' ? '🔓' : '○';
 						const statusColor = log.status === 'success' ? 'green' :
 							log.status === 'failed' ? 'red' :
 							log.status === 'cached' ? 'cyan' :
-							log.status === 'retrying' ? 'magenta' : 'yellow';
+							log.status === 'retrying' ? 'magenta' :
+							log.status === 'requeued' ? 'blue' :
+							log.status === 'auth_fallback' ? 'yellow' : 'yellow';
 						// Truncate URL to fit in terminal
 						const maxUrlLen = 50;
 						const displayUrl = log.url.length > maxUrlLen
