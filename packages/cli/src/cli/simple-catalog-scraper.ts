@@ -36,6 +36,16 @@ export class SimpleCatalogScraper {
 				'Upgrade-Insecure-Requests': '1'
 			}
 		});
+
+		// Block unnecessary resources to speed up page loads (we only need HTML)
+		// Note: Don't block 'script' as some pages need JS for initial render
+		await this.context.route('**/*', (route: any) => {
+			const resourceType = route.request().resourceType();
+			if (['image', 'stylesheet', 'font', 'media'].includes(resourceType)) {
+				return route.abort();
+			}
+			return route.continue();
+		});
 	}
 
 	async cleanup() {
