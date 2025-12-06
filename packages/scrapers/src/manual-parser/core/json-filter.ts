@@ -87,7 +87,7 @@ function extractProductNumber(blocks: RawParsedJson['content']['blocks']): strin
       return match[1];
     }
   }
-  return '';
+  throw new Error('Failed to extract product number (品番) from manual');
 }
 
 /**
@@ -109,7 +109,7 @@ function extractReleaseDate(blocks: RawParsedJson['content']['blocks']): {
       };
     }
   }
-  return { raw: '', formatted: '' };
+  throw new Error('Failed to extract release date (発売日) from manual');
 }
 
 /**
@@ -161,13 +161,16 @@ function extractGrade(blocks: RawParsedJson['content']['blocks']): { grade: stri
 function extractSeries(blocks: RawParsedJson['content']['blocks']): LocalizedText {
   for (const block of blocks) {
     const text = block.content?.text || block.content?.ja || '';
-    // Look for pattern: 作品 followed by series name
-    const match = text.match(/作品[^\u4E00-\u9FAF\u3040-\u309F\u30A0-\u30FF]*([\u4E00-\u9FAF\u3040-\u309F\u30A0-\u30FF\s]+(?:SEED|DESTINY|00|OO|UC|AGE|Build|G|W|X|V|F91|ZZ|Z|Victory)?[\u4E00-\u9FAF\u3040-\u309F\u30A0-\u30FF]*)/);
+    // Look for pattern: 作品 followed by any text (Japanese + alphanumeric)
+    const match = text.match(/作品[\s\n]*([^\n取]{2,})/);
     if (match) {
-      return { ja: match[1].trim() };
+      const series = match[1].trim();
+      if (series) {
+        return { ja: series };
+      }
     }
   }
-  return { ja: '' };
+  throw new Error('Failed to extract series (作品) from manual');
 }
 
 /**
@@ -198,7 +201,7 @@ function extractProductName(
     }
   }
 
-  return { ja: '' };
+  throw new Error('Failed to extract product name from manual');
 }
 
 /**
