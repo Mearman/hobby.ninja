@@ -493,22 +493,23 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 		result.discoveredUrls = discovery.validIds.length;
 		result.processedUrls = discovery.validIds.length;
 	} else {
-		// Phase 2: Download content for valid IDs using Playwright (parallel tabs)
-		const CONCURRENT_TABS = 20; // Number of parallel browser tabs
-		console.log(`\n📥 Phase 2: Downloading content for ${idsNeedingDownload.length} valid IDs (${CONCURRENT_TABS} parallel tabs)...`);
+		// Phase 2: Download content for valid IDs using Playwright (rolling worker pool)
+		const WORKER_COUNT = 20; // Number of concurrent workers (browser tabs)
+		console.log(`\n📥 Phase 2: Downloading content for ${idsNeedingDownload.length} valid IDs (${WORKER_COUNT} workers)...`);
 
 		// Initialize browser ONCE for all downloads
 		const scraper = new SimpleCatalogScraper();
 		console.log(`  🌐 Initializing browser...`);
 		await scraper.initialize();
 
-		// Helper function to process a single item
-		const processItem = async (range: string, index: number): Promise<void> => {
-			try {
-				if (options.verbose) {
-					console.log(`  [${index + 1}/${idsNeedingDownload.length}] Downloading ${range}...`);
-				}
+		// Track progress
+		let completedCount = 0;
+		let nextIndex = 0;
+		const total = idsNeedingDownload.length;
 
+		// Helper function to process a single item
+		const processItem = async (range: string): Promise<void> => {
+			try {
 				const processResult = await processCatalogRange(range, options, scraper);
 
 				if (processResult.success && processResult.data) {
@@ -550,36 +551,39 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 						}
 					}
 
-					console.log(`     ✅ ${range} - ${productName || processResult.data.title}`);
+					completedCount++;
+					console.log(`  [${completedCount}/${total}] ✅ ${range} - ${productName || processResult.data.title}`);
 				} else {
 					result.errors.push(processResult.error || `${range}: Download failed`);
-					console.log(`     ❌ ${range} - Failed: ${processResult.error}`);
+					completedCount++;
+					console.log(`  [${completedCount}/${total}] ❌ ${range} - Failed: ${processResult.error}`);
 				}
 			} catch (error) {
 				const errorMessage = error instanceof Error ? error.message : String(error);
 				result.errors.push(`${range}: ${errorMessage}`);
-				console.log(`     ❌ ${range} - Error: ${errorMessage}`);
+				completedCount++;
+				console.log(`  [${completedCount}/${total}] ❌ ${range} - Error: ${errorMessage}`);
+			}
+
+			// Save index periodically (every 10 completions)
+			if (completedCount % 10 === 0) {
+				saveCatalogIndex();
+			}
+		};
+
+		// Worker function that keeps processing until queue is empty
+		const worker = async (): Promise<void> => {
+			while (nextIndex < total) {
+				const currentIndex = nextIndex++;
+				const range = idsNeedingDownload[currentIndex];
+				await processItem(range);
 			}
 		};
 
 		try {
-			// Process in batches of CONCURRENT_TABS
-			for (let i = 0; i < idsNeedingDownload.length; i += CONCURRENT_TABS) {
-				const batch = idsNeedingDownload.slice(i, i + CONCURRENT_TABS);
-
-				// Process batch in parallel
-				await Promise.all(
-					batch.map((range, batchIndex) => processItem(range, i + batchIndex))
-				);
-
-				// Save index after each batch
-				saveCatalogIndex();
-
-				// Small delay between batches to be respectful to the server
-				if (i + CONCURRENT_TABS < idsNeedingDownload.length) {
-					await new Promise(resolve => setTimeout(resolve, options.delayMs / 2));
-				}
-			}
+			// Start WORKER_COUNT workers that process from the shared queue
+			const workers = Array.from({ length: Math.min(WORKER_COUNT, total) }, () => worker());
+			await Promise.all(workers);
 		} finally {
 			// Cleanup browser after all downloads
 			console.log(`  🌐 Closing browser...`);
