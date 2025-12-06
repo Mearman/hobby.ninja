@@ -14,6 +14,7 @@
 import {
 	TranslationService,
 	createServerTranslationStore,
+	loadDictionary,
 } from '../../../translation/src/index';
 import type { TranslationStore } from '../../../translation/src/index';
 import type {
@@ -63,7 +64,7 @@ export class CatalogTranslator {
 	}
 
 	/**
-	 * Initialize the translation service with persistent store
+	 * Initialize the translation service with persistent store and dictionary
 	 */
 	async initialize(): Promise<void> {
 		if (this.initialized) {
@@ -72,6 +73,18 @@ export class CatalogTranslator {
 
 		if (this.verbose) {
 			console.log(`[CatalogTranslator] Initializing with store at: ${this.storeDir}`);
+		}
+
+		// Load dictionary for fast O(1) lookups of known phrases
+		try {
+			const dictionary = await loadDictionary();
+			if (this.verbose) {
+				console.log(`[CatalogTranslator] Dictionary loaded: ${dictionary.stats.uniquePhrases} phrases, ${dictionary.stats.uniqueWords} words`);
+			}
+		} catch {
+			if (this.verbose) {
+				console.log('[CatalogTranslator] Dictionary not found, will use API/store only');
+			}
 		}
 
 		this.store = await createServerTranslationStore(this.storeDir, {
