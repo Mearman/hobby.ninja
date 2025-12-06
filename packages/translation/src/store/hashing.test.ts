@@ -22,7 +22,7 @@ import {
 	HashingError,
 	KEY_SEPARATOR,
 	KEY_FORMAT_REGEX,
-	BASE64_REGEX,
+	HEX_REGEX,
 	type KeyComponents,
 	type HashingOptions,
 } from './hashing';
@@ -35,7 +35,7 @@ describe('hashing', () => {
 			const hash2 = generateTextHash(text);
 
 			expect(hash1).toBe(hash2);
-			expect(hash1).toMatch(BASE64_REGEX);
+			expect(hash1).toMatch(HEX_REGEX);
 		});
 
 		it('should generate different hashes for different inputs', () => {
@@ -47,7 +47,7 @@ describe('hashing', () => {
 
 		it('should handle empty string', () => {
 			const hash = generateTextHash('');
-			expect(hash).toMatch(BASE64_REGEX);
+			expect(hash).toMatch(HEX_REGEX);
 			expect(hash.length).toBeGreaterThan(0);
 		});
 
@@ -61,7 +61,7 @@ describe('hashing', () => {
 
 			texts.forEach(text => {
 				const hash = generateTextHash(text);
-				expect(hash).toMatch(BASE64_REGEX);
+				expect(hash).toMatch(HEX_REGEX);
 				expect(hash.length).toBeGreaterThan(0);
 			});
 		});
@@ -71,8 +71,9 @@ describe('hashing', () => {
 			const base64Hash = generateTextHash(text, { encoding: 'base64' });
 			const hexHash = generateTextHash(text, { encoding: 'hex' });
 
-			expect(base64Hash).toMatch(BASE64_REGEX);
-			expect(hexHash).toMatch(/^[a-f0-9]+$/);
+			// base64 encoding still supported but not the default
+			expect(base64Hash).toMatch(/^[A-Za-z0-9+/=]+$/);
+			expect(hexHash).toMatch(HEX_REGEX);
 			expect(base64Hash).not.toBe(hexHash);
 		});
 
@@ -92,7 +93,7 @@ describe('hashing', () => {
 			expect(parts).toHaveLength(3);
 			expect(parts[0]).toBe('en');
 			expect(parts[1]).toBe('ja');
-			expect(parts[2]).toMatch(BASE64_REGEX);
+			expect(parts[2]).toMatch(HEX_REGEX);
 		});
 
 		it('should generate unique keys for different content', () => {
@@ -134,9 +135,9 @@ describe('hashing', () => {
 	describe('validateKey', () => {
 		it('should validate properly formatted keys', () => {
 			const validKeys = [
-				'en:ja:SGVsbG8gd29ybGQ=',
-				'ja:en:44GT44KT44Gr44Gh44Gv',
-				'zh_cn:ko:6ZW/6ZW/6ZW/',
+				'en:ja:64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c',
+				'ja:en:125aeadf27b0459b8760c13a3d80912dfa8a81a68261906f60d87f4a0268646c',
+				'zh_cn:ko:9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08',
 			];
 
 			validKeys.forEach(key => {
@@ -172,24 +173,24 @@ describe('hashing', () => {
 
 	describe('extractKeyComponents', () => {
 		it('should extract components from valid keys', () => {
-			const key = 'en:ja:SGVsbG8gd29ybGQ=';
+			const key = 'en:ja:64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c';
 			const components = extractKeyComponents(key);
 
 			expect(components).toEqual({
 				sourceLang: 'en',
 				targetLang: 'ja',
-				hash: 'SGVsbG8gd29ybGQ=',
+				hash: '64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c',
 			});
 		});
 
 		it('should handle complex language codes', () => {
-			const key = 'zh_cn:zh_tw:6ZW/6ZW/6ZW/';
+			const key = 'zh_cn:zh_tw:9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08';
 			const components = extractKeyComponents(key);
 
 			expect(components).toEqual({
 				sourceLang: 'zh_cn',
 				targetLang: 'zh_tw',
-				hash: '6ZW/6ZW/6ZW/',
+				hash: '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08',
 			});
 		});
 
@@ -292,7 +293,7 @@ describe('hashing', () => {
 
 	describe('areKeysEquivalent', () => {
 		it('should return true for identical keys', () => {
-			const key = 'en:ja:SGVsbG8gd29ybGQ=';
+			const key = 'en:ja:64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c';
 			expect(areKeysEquivalent(key, key)).toBe(true);
 		});
 
@@ -332,7 +333,7 @@ describe('hashing', () => {
 			const hash2 = generateBatchHash(texts);
 
 			expect(hash1).toBe(hash2);
-			expect(hash1).toMatch(BASE64_REGEX);
+			expect(hash1).toMatch(HEX_REGEX);
 		});
 
 		it('should generate different hashes for different batches', () => {
@@ -360,8 +361,8 @@ describe('hashing', () => {
 			const hash2 = generateBatchHash(['Hello']);
 
 			// Note: These won't be equal because batch hashing adds delimiters
-			expect(hash1).toMatch(BASE64_REGEX);
-			expect(hash2).toMatch(BASE64_REGEX);
+			expect(hash1).toMatch(HEX_REGEX);
+			expect(hash2).toMatch(HEX_REGEX);
 		});
 
 		it('should throw HashingError for non-array input', () => {
@@ -384,21 +385,21 @@ describe('hashing', () => {
 		it('should export correct constants', () => {
 			expect(KEY_SEPARATOR).toBe(':');
 			expect(typeof KEY_FORMAT_REGEX).toBe('object');
-			expect(typeof BASE64_REGEX).toBe('object');
+			expect(typeof HEX_REGEX).toBe('object');
 		});
 
 		it('should have working regex patterns', () => {
 			// Test key format regex
-			expect(KEY_FORMAT_REGEX.test('en:ja:SGVsbG8gd29ybGQ=')).toBe(true);
-			expect(KEY_FORMAT_REGEX.test('zh_cn:zh_tw:6ZW/6ZW/6ZW/=')).toBe(true);
+			expect(KEY_FORMAT_REGEX.test('en:ja:64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c')).toBe(true);
+			expect(KEY_FORMAT_REGEX.test('zh_cn:zh_tw:9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08')).toBe(true);
 			expect(KEY_FORMAT_REGEX.test('invalid')).toBe(false);
 			expect(KEY_FORMAT_REGEX.test('en:ja:')).toBe(false);
 
-			// Test Base64 regex
-			expect(BASE64_REGEX.test('SGVsbG8gd29ybGQ=')).toBe(true);
-			expect(BASE64_REGEX.test('6ZW/6ZW/6ZW/=')).toBe(true);
-			expect(BASE64_REGEX.test('invalid!hash')).toBe(false);
-			expect(BASE64_REGEX.test('')).toBe(false);
+			// Test hex regex
+			expect(HEX_REGEX.test('64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c')).toBe(true);
+			expect(HEX_REGEX.test('9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08')).toBe(true);
+			expect(HEX_REGEX.test('invalid!hash')).toBe(false);
+			expect(HEX_REGEX.test('')).toBe(false);
 		});
 	});
 
@@ -422,7 +423,7 @@ describe('hashing', () => {
 			const hash = generateTextHash(longText);
 			const key = generateKey('en', 'ja', longText);
 
-			expect(hash).toMatch(BASE64_REGEX);
+			expect(hash).toMatch(HEX_REGEX);
 			expect(validateKey(key)).toBe(true);
 		});
 
@@ -433,7 +434,7 @@ describe('hashing', () => {
 				const hash = generateTextHash(text);
 				const key = generateKey('en', 'ja', text);
 
-				expect(hash).toMatch(BASE64_REGEX);
+				expect(hash).toMatch(HEX_REGEX);
 				expect(validateKey(key)).toBe(true);
 			});
 		});
@@ -448,7 +449,7 @@ describe('hashing', () => {
 
 			edgeTexts.forEach(text => {
 				const hash = generateTextHash(text);
-				expect(hash).toMatch(BASE64_REGEX);
+				expect(hash).toMatch(HEX_REGEX);
 			});
 		});
 

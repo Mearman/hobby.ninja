@@ -243,27 +243,9 @@ export class JSONStorage {
 			// Acquire file lock for concurrent access coordination
 			lockRelease = await this.acquireLock(filePath);
 
-			// Serialize data to JSON
-			const jsonString = JSON.stringify(data, null, 0);
+			// Serialize data to plain JSON (human-readable with indentation)
+			const jsonString = JSON.stringify(data, null, 2);
 			const originalBuffer = Buffer.from(jsonString, 'utf8');
-
-			// Determine compression strategy
-			const compressionFormat = this.determineCompression(originalBuffer.length);
-
-			// Compress data if needed
-			const { data: finalBuffer, compressed } = await this.compressData(originalBuffer, compressionFormat);
-
-			// Create file metadata
-			const metadata: FileMetadata = {
-				checksum: this.calculateChecksum(originalBuffer),
-				compression: compressionFormat,
-				originalSize: originalBuffer.length,
-				createdAt: Date.now(),
-				version: this.STORAGE_VERSION
-			};
-
-			// Create final file with metadata header
-			const finalData = this.createFileBuffer(metadata, finalBuffer);
 
 			// Generate temporary file path in same directory for atomic rename
 			const dirPath = path.dirname(filePath);
@@ -272,33 +254,25 @@ export class JSONStorage {
 			const tempSuffix = `${this.config.tempFilePrefix}${fileName}-${Date.now()}-${Math.random().toString(36).substring(2)}${fileExt}`;
 			tempFilePath = path.join(dirPath, tempSuffix);
 
-			// Write to temporary file
-			await fs.writeFile(tempFilePath, finalData);
-
-			// Verify integrity if enabled
-			if (this.config.verifyIntegrity) {
-				await this.verifyFileIntegrity(tempFilePath, metadata);
-			}
+			// Write plain JSON to temporary file
+			await fs.writeFile(tempFilePath, jsonString, 'utf8');
 
 			// Atomic rename to target file
 			await fs.rename(tempFilePath, filePath);
 
-			// Calculate operation metrics
-			const compressionRatio = compressed ? finalBuffer.length / originalBuffer.length : 1.0;
-
 			const result: FileOperationResult = {
 				filePath,
-				compressed,
-				compressionFormat,
-				fileSize: finalBuffer.length,
+				compressed: false,
+				compressionFormat: 'none',
+				fileSize: originalBuffer.length,
 				originalSize: originalBuffer.length,
-				compressionRatio,
+				compressionRatio: 1.0,
 				timestamp: Date.now(),
-				checksum: metadata.checksum
+				checksum: this.calculateChecksum(originalBuffer)
 			};
 
 			// Update statistics
-			this.updateWriteStatistics(originalBuffer.length, finalBuffer.length, compressed);
+			this.updateWriteStatistics(originalBuffer.length, originalBuffer.length, false);
 
 			return result;
 
@@ -351,7 +325,6 @@ export class JSONStorage {
 	 * @throws {JSONStorageError} If read operation fails or file is corrupted
 	 */
 	async readJSON(filePath: string): Promise<unknown> {
-		const startTime = Date.now();
 		let lockRelease: (() => Promise<void>) | null = null;
 
 		try {
@@ -368,41 +341,16 @@ export class JSONStorage {
 			// Acquire file lock
 			lockRelease = await this.acquireLock(filePath);
 
-			// Read file data
-			const fileBuffer = await fs.readFile(filePath);
-
-			// Parse metadata header
-			const { metadata, dataBuffer } = this.parseFileBuffer(fileBuffer);
-
-			// Verify metadata compatibility
-			this.validateMetadata(metadata);
-
-			// Decompress data if needed
-			const decompressedBuffer = await this.decompressData(dataBuffer, metadata.compression);
-
-			// Verify integrity if enabled
-			if (this.config.verifyIntegrity) {
-				const actualChecksum = this.calculateChecksum(decompressedBuffer);
-				if (actualChecksum !== metadata.checksum) {
-					this.statistics.integrityFailures++;
-					throw new JSONStorageError(
-						'INTEGRITY_CHECK_FAILED',
-						`File integrity verification failed: ${filePath}`,
-						filePath
-					);
-				}
-				this.statistics.integrityVerifications++;
-			}
+			// Read plain JSON file
+			const jsonString = await fs.readFile(filePath, 'utf8');
 
 			// Parse JSON data
-			const jsonString = decompressedBuffer.toString('utf8');
 			const data = JSON.parse(jsonString);
 
 			// Update statistics
 			this.statistics.totalOperations++;
 			this.statistics.readOperations++;
-			this.statistics.totalBytesRead += decompressedBuffer.length;
-			this.statistics.decompressionOperations++;
+			this.statistics.totalBytesRead += jsonString.length;
 
 			return data;
 
