@@ -182,7 +182,7 @@ function generateSplashScreens(): void {
     <polygon points="-40,-80 0,-120 40,-80 20,-80 0,-100 -20,-80" fill="#dc2626"/>
     <rect x="-20" y="-50" width="15" height="8" fill="#ff4444" rx="2"/>
     <rect x="5" y="-50" width="15" height="8" fill="#ff4444" rx="2"/>
-    <text x="0" y="100" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#ffffff" text-anchor="middle">Gunpla Collection Manager</text>
+    <text x="0" y="100" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#ffffff" text-anchor="middle">hobby.ninja</text>
     <text x="0" y="130" font-family="system-ui, sans-serif" font-size="16" fill="#999999" text-anchor="middle">Loading...</text>
   </g>
 </svg>`;
@@ -210,7 +210,7 @@ function generateScreenshots(): void {
   <rect width="${width}" height="${height}" fill="#f8f9fa"/>
   <!-- Header -->
   <rect width="${width}" height="60" fill="#dc2626"/>
-  <text x="20" y="38" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="#ffffff">Gunpla Collection Manager</text>
+  <text x="20" y="38" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="#ffffff">hobby.ninja</text>
 
   <!-- Content area -->
   <g transform="translate(20, 80)">

@@ -1,6 +1,6 @@
 # PWA (Progressive Web App) Configuration
 
-This document explains the Progressive Web App implementation for the Gunpla Collection Manager.
+This document explains the Progressive Web App implementation for the hobby.ninja.
 
 ##  PWA Features
 
@@ -87,7 +87,7 @@ Key manifest settings:
 
 ### Manual Installation
 **Chrome/Edge:**
-- Click the menu (⋮) → "Install Gunpla Collection Manager"
+- Click the menu (⋮) → "Install hobby.ninja"
 
 **Firefox:**
 - The install prompt will appear automatically
