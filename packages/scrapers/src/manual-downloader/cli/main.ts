@@ -2,10 +2,10 @@
  * Simple CLI for Manual Downloader
  */
 
-import { SimpleDownloader } from '../simple-downloader';
+import { Downloader } from '../downloader';
 
 export class ManualDownloaderCLI {
-  private downloader: SimpleDownloader;
+  private downloader: Downloader;
 
   constructor() {
     this.downloader = new SimpleDownloader();

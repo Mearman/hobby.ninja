@@ -1,10 +1,10 @@
-import { languageDetection } from '@unnamed-gunpla-app/types';
+import type { LanguageDetection, LanguageAnalysisResult, LanguageCode } from '@hobby-ninja/types';
 
 export class LanguageDetector {
   private static readonly JAPANESE_CHARACTER_PATTERN = /[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf]/g;
   private static readonly ENGLISH_CHARACTER_PATTERN = /[a-zA-Z]/g;
 
-  static detectFromHtml(html: string, url: string, headers: Record<string, string> = {}): languageDetection.LanguageDetection {
+  static detectFromHtml(html: string, url: string, headers: Record<string, string> = {}): LanguageDetection {
     const analysis = this.analyze(html, url, headers);
     return {
       language: analysis.detectedLanguage,
@@ -14,7 +14,7 @@ export class LanguageDetector {
     };
   }
 
-  static analyze(html: string, url: string, headers: Record<string, string> = {}): languageDetection.LanguageAnalysisResult {
+  static analyze(html: string, url: string, headers: Record<string, string> = {}): LanguageAnalysisResult {
     const evidence = this.gatherEvidence(html, url, headers);
     const languageScore = this.calculateLanguageScore(evidence);
     const confidence = this.calculateConfidence(languageScore, evidence);
@@ -105,7 +105,7 @@ export class LanguageDetector {
     };
   }
 
-  private static determineLanguage(score: { ja: number; en: number; mixed: number }): languageDetection.LanguageCode {
+  private static determineLanguage(score: { ja: number; en: number; mixed: number }): LanguageCode {
     const threshold = 0.6;
     const mixedThreshold = 0.4;
 
@@ -126,7 +126,7 @@ export class LanguageDetector {
     return Math.min(confidence, 1.0);
   }
 
-  private static buildEvidence(analysis: languageDetection.LanguageAnalysisResult): string[] {
+  private static buildEvidence(analysis: LanguageAnalysisResult): string[] {
     const evidence: string[] = [];
 
     if (analysis.evidence.japaneseRatio > 0.01) {
@@ -140,7 +140,7 @@ export class LanguageDetector {
     return evidence;
   }
 
-  static getFileExtension(language: languageDetection.LanguageCode): string {
+  static getFileExtension(language: LanguageCode): string {
     switch (language) {
       case 'ja': return '.jp.json';
       case 'en': return '.en.json';

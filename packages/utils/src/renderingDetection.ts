@@ -1,4 +1,4 @@
-import { profileManagement } from '@unnamed-gunpla-app/types';
+import type { RenderingDetection, ProgressiveEnhancementResult, RenderingType } from '@hobby-ninja/types';
 
 export class RenderingDetector {
   private static readonly FRAMEWORK_PATTERNS = {
@@ -27,7 +27,7 @@ export class RenderingDetector {
   static async detectRenderingStrategy(html: string, options: {
     testWithPlaywright?: boolean;
     timeout?: number;
-  } = {}): Promise<profileManagement.RenderingDetection> {
+  } = {}): Promise<RenderingDetection> {
     const startTime = Date.now();
     const initialLength = html.length;
 
@@ -63,7 +63,7 @@ export class RenderingDetector {
     };
   }
 
-  static analyzeProgressiveEnhancement(html: string): profileManagement.ProgressiveEnhancementResult {
+  static analyzeProgressiveEnhancement(html: string): ProgressiveEnhancementResult {
     const staticAnalysis = this.analyzeStaticContent(html);
     const dynamicAnalysis = this.analyzeDynamicContent(html);
 
@@ -211,7 +211,7 @@ export class RenderingDetector {
     return cleanHtml;
   }
 
-  private static determineRenderingType(html: string, requiresJS: boolean): profileManagement.RenderingType {
+  private static determineRenderingType(html: string, requiresJS: boolean): RenderingType {
     if (!requiresJS) {
       return 'static';
     }

@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import * as path from 'path';
-import { profileManagement } from '@unnamed-gunpla-app/types';
+import type { CacheManager, ProfileCache, ProfileGenerationResult, PageTypeProfile } from '@hobby-ninja/types';
 import { LanguageDetector } from './languageDetection';
 import { RenderingDetector } from './renderingDetection';
 import { cacheManager } from './cache-manager';
@@ -17,8 +17,8 @@ export class ProfileManager {
   private enableAutoUpdate: boolean;
   private updateInterval: number;
   private fallbackToPlaywright: boolean;
-  private cacheManager: profileManagement.CacheManager;
-  private profileCache: profileManagement.ProfileCache;
+  private cacheManager: CacheManager;
+  private profileCache: ProfileCache;
 
   constructor(options: ProfileManagerOptions = {}) {
     this.profileCachePath = options.profileCachePath ||
@@ -30,7 +30,7 @@ export class ProfileManager {
     this.profileCache = this.initializeProfileCache();
   }
 
-  private initializeProfileCache(): profileManagement.ProfileCache {
+  private initializeProfileCache(): ProfileCache {
     return {
       profiles: new Map(),
       version: "1.0.0",
@@ -76,7 +76,7 @@ export class ProfileManager {
     }
   }
 
-  async buildProfileForUrl(url: string, sampleUrls: string[] = []): Promise<profileManagement.ProfileGenerationResult> {
+  async buildProfileForUrl(url: string, sampleUrls: string[] = []): Promise<ProfileGenerationResult> {
     console.log(`🔍 Building profile for: ${url}`);
 
     // Analyze the URL pattern
@@ -126,7 +126,7 @@ export class ProfileManager {
       : 'cheerio';
 
     // Build the profile
-    const profile: profileManagement.PageTypeProfile = {
+    const profile: PageTypeProfile = {
       urlPattern,
       name: this.generateProfileName(urlPattern),
       requiresPlaywright,
@@ -180,7 +180,7 @@ export class ProfileManager {
     };
   }
 
-  getProfileForUrl(url: string): profileManagement.PageTypeProfile | null {
+  getProfileForUrl(url: string): PageTypeProfile | null {
     const urlPattern = this.extractUrlPattern(url);
     const profileKey = this.generateProfileKey(urlPattern);
 
@@ -362,12 +362,12 @@ export class ProfileManager {
   }
 
   
-  private isProfileExpired(profile: profileManagement.PageTypeProfile): boolean {
+  private isProfileExpired(profile: PageTypeProfile): boolean {
     const ageHours = (Date.now() - (profile.metadata?.lastUpdated || 0)) / (1000 * 60 * 60);
     return ageHours > this.updateInterval;
   }
 
-  private estimateTotalAttempts(profile: profileManagement.PageTypeProfile): number {
+  private estimateTotalAttempts(profile: PageTypeProfile): number {
     // Rough estimate based on when the profile was last updated
     const ageHours = (Date.now() - (profile.performance?.lastAnalyzed || 0)) / (1000 * 60 * 60);
     return Math.max(1, ageHours / 2); // Assume 1 attempt every 2 hours
@@ -387,11 +387,11 @@ export class ProfileManager {
   }
 
   // Utility methods
-  async getStatistics(): Promise<profileManagement.ProfileCache['statistics']> {
+  async getStatistics(): Promise<ProfileCache['statistics']> {
     return this.profileCache.statistics;
   }
 
-  async getAllProfiles(): Promise<profileManagement.PageTypeProfile[]> {
+  async getAllProfiles(): Promise<PageTypeProfile[]> {
     return Array.from(this.profileCache.profiles.values());
   }
 
@@ -420,7 +420,7 @@ export class ProfileManager {
     }, 0);
   }
 
-  private generateRecommendations(profile: profileManagement.PageTypeProfile, renderingAnalyses: any[]): string[] {
+  private generateRecommendations(profile: PageTypeProfile, renderingAnalyses: any[]): string[] {
     const recommendations: string[] = [];
 
     if (renderingAnalyses.some(a => a.requiresJavaScript)) {

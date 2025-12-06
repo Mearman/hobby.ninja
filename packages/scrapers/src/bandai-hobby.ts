@@ -1,6 +1,5 @@
-import { productData } from "@unnamed-gunpla-app/types";
+import type { GundamData, LanguageDetection, PriceInfo, ProductImage } from "@hobby-ninja/types";
 import * as cheerio from "cheerio";
-import type { CheerioAPI } from "cheerio";
 import type { Element } from "domhandler";
 
 import { BaseScraper } from "./base-scraper";
@@ -26,12 +25,12 @@ export class BandaiHobbyScraper extends BaseScraper {
 		});
 	}
 
-	async extractFromPage(html: string, url: string): Promise<productData.GundamData> {
+	async extractFromPage(html: string, url: string): Promise<GundamData> {
 		const $ = cheerio.load(html);
 		const rawLanguageDetection = this.parseLanguage(html, url);
 
 		// Transform language detection to match expected structure
-		const languageDetection = {
+		const languageDetection: LanguageDetection = {
 			language: rawLanguageDetection.language,
 			confidence: rawLanguageDetection.confidence,
 			method: rawLanguageDetection.method,
@@ -44,58 +43,38 @@ export class BandaiHobbyScraper extends BaseScraper {
 		const price = this.extractPriceInfo($);
 		const description = this.extractDescription($);
 		const specifications = this.extractSpecifications($);
-		const images = this.extractImages($);
+		const rawImages = this.extractImages($);
 		const categories = this.extractCategories($);
+
+		// Transform images to match GundamData interface (alt is required)
+		const images = rawImages.map(img => ({
+			type: img.type,
+			url: img.url,
+			alt: img.alt ?? "",
+		}));
 
 		const productData: GundamData = {
 			id: this.generateId("bandai-hobby", sku),
 			name,
 			sku,
 			specifications,
-			detectedLanguage: languageDetection,
-			description: description || "", // Always include description field
-			source: {
-				domain: "bandai-hobby.net",
-				section: "gunpla",
-				pageType: this.determinePageType(url),
-				version: "1.0",
-			},
+			description: description || "",
+			source: "bandai-hobby.net",
 			url,
-			extractedAt: Date.now(),
 			images,
-			categories,
-			extraction: {
-				method: "cheerio",
-				renderingType: "static",
-				extractedAt: Date.now(),
-				extractionDuration: 0,
-				requiresJavaScript: false,
-			},
-			quality: {
-				completeness: this.calculateCompleteness({
-					...(name && { name }),
-					...(sku && { sku }),
-					...(price && { price }),
-					...(description && { description }),
-					...(specifications && { specifications }),
-					...(images && { images }),
-				}),
-				confidence: this.calculateConfidence({
-					...(name && { name }),
-					...(sku && { sku }),
-					...(price && { price }),
-					...(description && { description }),
-					...(specifications && { specifications }),
-					...(images && { images }),
-				}),
-				validationErrors: [],
-				lastValidated: Date.now(),
-			},
+			language: languageDetection,
+			scrapedAt: new Date().toISOString(),
 		};
 
-		// Add optional price only if it exists
+		// Add optional price only if it exists (convert PriceInfo to number)
 		if (price !== undefined) {
-			productData.price = price;
+			productData.price = price.amount;
+			productData.currency = price.currency;
+		}
+
+		// Add category from categories array
+		if (categories.length > 0) {
+			productData.category = categories.join(" > ");
 		}
 
 		return productData;
@@ -199,7 +178,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 		const specTable = $(".specifications table, .spec-table, .product-specs table");
 
 		if (specTable.length > 0) {
-			specTable.find("tr").each((_: number, row: CheerioElement) => {
+			specTable.find("tr").each((_: number, row: Element) => {
 				const $row = $(row);
 				const label = this.extractTextContentFromElement($row.find("th, .spec-label, .label"));
 				const value = this.extractTextContentFromElement($row.find("td, .spec-value, .value"));
@@ -216,7 +195,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 
 		// Look for individual spec items
 		const individualSpecs = $(".spec-item, .product-spec");
-		individualSpecs.each((_: number, element: CheerioElement) => {
+		individualSpecs.each((_: number, element: Element) => {
 			const $element = $(element);
 			const label = this.extractTextContentFromElement($element.find(".spec-label, .label"));
 			const value = this.extractTextContentFromElement($element.find(".spec-value, .value"));
@@ -306,7 +285,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 	private extractImages($: cheerio.CheerioAPI): ProductImage[] {
 		const images: ProductImage[] = [];
 
-		$(".product-image, .item-image, .main-image img, .gallery-image, .product-image img, .thumbnail").each((_: number, element: CheerioElement) => {
+		$(".product-image, .item-image, .main-image img, .gallery-image, .product-image img, .thumbnail").each((_: number, element: Element) => {
 			const $element = $(element);
 			const src = this.extractAttributeFromElement($element, "src") || this.extractAttributeFromElement($element, "data-src") || "";
 			const alt = this.extractAttributeFromElement($element, "alt") || "";
@@ -347,7 +326,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 		const categories: string[] = [];
 
 		// Look for breadcrumb or category information
-		$(".breadcrumb a, .category a, .product-category a, .tag a").each((_: number, element: CheerioElement) => {
+		$(".breadcrumb a, .category a, .product-category a, .tag a").each((_: number, element: Element) => {
 			const category = this.extractTextContentFromElement($(element));
 			if (category) {
 				categories.push(category);
@@ -368,36 +347,4 @@ export class BandaiHobbyScraper extends BaseScraper {
 		}
 	}
 
-	private calculateCompleteness(data: { name?: string; sku?: string; price?: PriceInfo; description?: string; specifications?: SpecificationData; images?: ProductImage[]; }): number {
-		const requiredFields = ["name", "sku"];
-		const optionalFields = ["price", "description", "images"];
-
-		let completeness = 0;
-
-		// Required fields count for 60% of completeness
-		for (const field of requiredFields) {
-			if (data[field as keyof typeof data]) completeness += 0.6 / requiredFields.length;
-		}
-
-		// Optional fields count for 40% of completeness
-		for (const field of optionalFields) {
-			if (data[field as keyof typeof data]) completeness += 0.4 / optionalFields.length;
-		}
-
-		return Math.min(completeness, 1);
-	}
-
-	private calculateConfidence(data: { name?: string; sku?: string; price?: PriceInfo; description?: string; specifications?: SpecificationData; images?: ProductImage[]; }): number {
-		let confidence = 0.5; // Base confidence
-
-		// Increase confidence based on data completeness
-		if (data.name && data.name.length > 0) confidence += 0.1;
-		if (data.sku && data.sku.length > 0) confidence += 0.1;
-		if (data.price) confidence += 0.1;
-		if (data.description && data.description.length > 50) confidence += 0.1;
-		if (data.images && data.images.length > 0) confidence += 0.1;
-		if (data.specifications && Object.keys(data.specifications).length > 0) confidence += 0.1;
-
-		return Math.min(confidence, 1);
-	}
 }

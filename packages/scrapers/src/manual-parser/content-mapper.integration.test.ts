@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { parse } from 'parse5';
 import { ContentMapper, ContentMappingConfig } from './core/content-mapper';
-import { ManualDocument } from '@workspace/types';
+import type { ManualDocument } from '@hobby-ninja/types';
 
 describe('Content Mapper Integration', () => {
   let mapper: ContentMapper;

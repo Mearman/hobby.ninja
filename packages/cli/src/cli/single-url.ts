@@ -1,5 +1,5 @@
-import { scrapers } from '@unnamed-gunpla-app/scrapers';
-import { LanguageDetector } from '@unnamed-gunpla-app/utils';
+import { scrapers } from '@hobby-ninja/scrapers';
+import { LanguageDetector } from '@hobby-ninja/utils';
 import { promises as fs } from 'fs';
 import path from 'path';
 

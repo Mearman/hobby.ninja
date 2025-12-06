@@ -12,7 +12,7 @@ import type {
 	CatalogSeries,
 	CatalogCategory,
 	CatalogRelatedProduct
-} from '@unnamed-gunpla-app/types';
+} from '@hobby-ninja/types';
 
 export interface ParseResult {
 	success: boolean;

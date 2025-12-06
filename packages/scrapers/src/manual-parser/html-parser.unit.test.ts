@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { htmlParser } from './core';
-import { ManualDocument } from '@workspace/types';
+import type { ManualDocument } from '@hobby-ninja/types';
 import { errors } from './core';
 
 // Extract the HtmlParser class from the htmlParser module

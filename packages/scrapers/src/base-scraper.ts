@@ -1,12 +1,9 @@
-import { LanguageDetector, ProfileManager, RenderingDetector } from "@unnamed-gunpla-app/utils";
+import type { GundamData } from "@hobby-ninja/types";
+import { LanguageDetector, ProfileManager, RenderingDetector } from "@hobby-ninja/utils";
 import type { CheerioAPI, Cheerio } from "cheerio";
 import type { Element } from "domhandler";
 
 const profileManager = new ProfileManager();
-
-interface ExtractResult {
-  [key: string]: unknown;
-}
 
 
 interface Logger {
@@ -59,7 +56,7 @@ export abstract class BaseScraper {
 		}
 	}
 
-  abstract extractFromPage(html: string, url: string): Promise<ExtractResult>;
+  abstract extractFromPage(html: string, url: string): Promise<GundamData>;
 
   protected async fetchPage(url: string, options: {
     method?: "cheerio" | "playwright";

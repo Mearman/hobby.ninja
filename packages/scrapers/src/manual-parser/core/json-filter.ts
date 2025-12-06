@@ -5,7 +5,7 @@
  */
 
 import { promises as fs } from 'node:fs';
-import type { LocalizedText } from '@unnamed-gunpla-app/types';
+import type { LocalizedText } from '@hobby-ninja/types';
 
 /**
  * Raw parsed HTML JSON structure (from SimpleHtmlParser)

@@ -1,4 +1,4 @@
-import { ManualDocument, ProcessingMetadata } from '@workspace/types';
+import type { ManualDocument } from '@hobby-ninja/types';
 import { HtmlParser } from './html-parser';
 import { JsonFormatter, JsonFormatterOptions } from './json-formatter';
 import { ManualDocumentValidator } from './validator';
@@ -250,8 +250,9 @@ export class HtmlToJsonConverter {
       averageFormatTime: 0
     };
 
-    const totalParseTime = htmlInputs.reduce((sum, input) => {
-      const result = this.convert(input.html, input.filePath);
+    let totalParseTime = 0;
+    for (const input of htmlInputs) {
+      const result = await this.convert(input.html, input.filePath);
       results.push(result);
 
       if (result.success) {
@@ -262,9 +263,8 @@ export class HtmlToJsonConverter {
 
       summary.totalErrors += result.errors.length;
       summary.totalWarnings += result.warnings.length;
-
-      return sum + (result.performance?.parseTime || 0);
-    }, 0);
+      totalParseTime += result.performance?.parseTime || 0;
+    }
 
     const totalFormatTime = results.reduce((sum, result) =>
       sum + (result.performance?.formatTime || 0), 0
