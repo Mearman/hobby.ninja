@@ -1,6 +1,6 @@
 # E2E Testing Setup
 
-This directory contains end-to-end tests for the Gunpla Collection Manager web application using Playwright.
+This directory contains end-to-end tests for the hobby.ninja web application using Playwright.
 
 ## 🎯 Available E2E Targets
 

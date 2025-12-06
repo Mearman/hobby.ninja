@@ -61,7 +61,7 @@ export function HomePage(): React.ReactElement {
 				{/* Hero Section */}
 				<div style={{ textAlign: "center", marginBottom: "4rem" }}>
 					<Title order={1} size={48} mb="md">
-            Welcome to Unnamed Gunpla App
+            Welcome to hobby.ninja
 					</Title>
 					<Text size="lg" color="dimmed" mb="xl">
             Your comprehensive companion for Gundam and Gunpla model kit collection management
