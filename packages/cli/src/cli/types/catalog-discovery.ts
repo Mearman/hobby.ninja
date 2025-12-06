@@ -112,3 +112,58 @@ export interface CatalogDiscoveryInput {
 	dryRun?: boolean;            // New --dry-run option
 	delayMs?: number;            // Existing delay option
 }
+
+/**
+ * Entry for a valid catalog item in the index
+ */
+export interface CatalogIndexEntry {
+	/** Catalog ID (e.g., "01_1000") */
+	id: string;
+
+	/** Whether the page contains valid product content */
+	hasContent: boolean;
+
+	/** Last time this entry was checked */
+	lastChecked: string;
+
+	/** Whether the HTML file exists on disk */
+	hasFile: boolean;
+
+	/** Product name if available */
+	productName?: string;
+}
+
+/**
+ * Range of invalid catalog IDs
+ */
+export interface CatalogInvalidRange {
+	/** Starting ID of invalid range */
+	start: string;
+
+	/** Ending ID of invalid range */
+	end: string;
+
+	/** When this range was last checked */
+	lastChecked: string;
+}
+
+/**
+ * Compact index format for tracking valid/invalid catalog IDs
+ * Similar to manual downloader's index.json structure
+ */
+export interface CatalogIndex {
+	/** Valid catalog entries keyed by ID */
+	valid: Record<string, CatalogIndexEntry>;
+
+	/** Ranges of consecutive invalid IDs (for efficient storage) */
+	invalidRanges: CatalogInvalidRange[];
+
+	/** Individual invalid IDs that don't form ranges */
+	invalidSingles: string[];
+
+	/** Total number of IDs checked */
+	totalChecked: number;
+
+	/** Timestamp of last index update */
+	lastUpdated: string;
+}

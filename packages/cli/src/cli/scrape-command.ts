@@ -53,11 +53,12 @@ async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 	console.log('🔍 Starting Bandai catalog discovery...');
 
 	// Generate ranges starting from startId
-	const startIndex = parseInt(startId.split('_')[1] || '0');
+	const [prefix, suffix] = startId.split('_');
+	const startIndex = parseInt(suffix || '0');
 	const ranges = generateCatalogRanges(count).map((_, index) => {
 		const id = startIndex + index;
 		const formattedId = id.toString().padStart(4, '0');
-		return `00_${formattedId}`;
+		return `${prefix}_${formattedId}`;
 	});
 
 	if (verbose) {
@@ -67,7 +68,7 @@ async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 	// Prepare catalog discovery options
 	const catalogOptions = {
 		ranges,
-		outputDir: join(output, 'bandai', 'catalog'),
+		outputDir: output,
 		cache: options.cache ?? true,
 		resume: options.resume ?? false,
 		verbose,
@@ -95,7 +96,7 @@ async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 	}
 
 	// Save summary statistics
-	const summaryFile = join(output, 'bandai', 'catalog', 'summary.json');
+	const summaryFile = join(output, 'summary.json');
 	const summary = {
 		timestamp: new Date().toISOString(),
 		source: 'bandai-catalog',
