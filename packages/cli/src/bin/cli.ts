@@ -2,8 +2,12 @@
 
 import { Command } from "commander";
 import { readFileSync } from "fs";
-import { join } from "path";
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
 import { TRANSLATION_STORE_DIR } from "../../../translation/src/index";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const packageJson = JSON.parse(readFileSync(join(__dirname, "../../package.json"), "utf8"));
 const version = packageJson.version;
