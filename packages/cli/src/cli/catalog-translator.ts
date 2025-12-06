@@ -1,0 +1,249 @@
+/**
+ * CatalogTranslator - Reusable translation module for Bandai catalog items
+ *
+ * Translates all text fields from Japanese to English:
+ * - name, series (LocalizedText)
+ * - brands, categories (arrays with ja/en)
+ * - description, accessories, contents (LocalizedText arrays)
+ * - relatedProducts[].name (LocalizedText)
+ *
+ * Uses TranslationService with persistent store for caching.
+ * Skips fields that already have .en values.
+ */
+
+import {
+	TranslationService,
+	createServerTranslationStore,
+} from '../../../translation/src/index';
+import type { TranslationStore } from '../../../translation/src/index';
+import type {
+	CatalogItem,
+	CatalogBrand,
+	CatalogSeries,
+	CatalogCategory,
+	CatalogRelatedProduct,
+} from '../../../types/src/catalogData';
+import type { LocalizedText } from '../../../types/src/manualData';
+
+export interface CatalogTranslatorOptions {
+	/** Directory for persistent translation cache */
+	storeDir: string;
+	/** Enable verbose logging */
+	verbose?: boolean;
+}
+
+export interface TranslateItemResult {
+	/** Whether any fields were translated */
+	translated: boolean;
+	/** Number of fields that were translated */
+	fieldsTranslated: number;
+	/** Error message if translation failed */
+	error?: string;
+}
+
+interface CacheStats {
+	hits: number;
+	misses: number;
+}
+
+/**
+ * Translates Bandai catalog items from Japanese to English
+ */
+export class CatalogTranslator {
+	private translator?: TranslationService;
+	private store?: TranslationStore;
+	private storeDir: string;
+	private verbose: boolean;
+	private initialized = false;
+	private cacheStats: CacheStats = { hits: 0, misses: 0 };
+
+	constructor(options: CatalogTranslatorOptions) {
+		this.storeDir = options.storeDir;
+		this.verbose = options.verbose ?? false;
+	}
+
+	/**
+	 * Initialize the translation service with persistent store
+	 */
+	async initialize(): Promise<void> {
+		if (this.initialized) {
+			return;
+		}
+
+		if (this.verbose) {
+			console.log(`[CatalogTranslator] Initializing with store at: ${this.storeDir}`);
+		}
+
+		this.store = await createServerTranslationStore(this.storeDir, {
+			maxEntries: 10000,
+		});
+
+		this.translator = new TranslationService({}, undefined, this.store);
+		this.initialized = true;
+
+		if (this.verbose) {
+			console.log('[CatalogTranslator] Translation service ready');
+		}
+	}
+
+	/**
+	 * Translate all text fields in a catalog item
+	 * Skips fields that already have .en values
+	 */
+	async translateItem(item: CatalogItem): Promise<TranslateItemResult> {
+		if (!this.initialized || !this.translator) {
+			return {
+				translated: false,
+				fieldsTranslated: 0,
+				error: 'CatalogTranslator not initialized. Call initialize() first.',
+			};
+		}
+
+		let fieldsTranslated = 0;
+
+		try {
+			// Translate name (LocalizedText)
+			if (item.name.ja && !item.name.en) {
+				const result = await this.translateText(item.name.ja);
+				if (result) {
+					item.name.en = result;
+					fieldsTranslated++;
+				}
+			}
+
+			// Translate series (CatalogSeries)
+			if (item.series?.ja && !item.series.en) {
+				const result = await this.translateText(item.series.ja);
+				if (result) {
+					item.series.en = result;
+					fieldsTranslated++;
+				}
+			}
+
+			// Translate brands array
+			fieldsTranslated += await this.translateBrands(item.brands);
+
+			// Translate categories array
+			fieldsTranslated += await this.translateCategories(item.categories);
+
+			// Translate description array (LocalizedText[])
+			fieldsTranslated += await this.translateLocalizedTextArray(item.description);
+
+			// Translate accessories array (LocalizedText[])
+			fieldsTranslated += await this.translateLocalizedTextArray(item.accessories);
+
+			// Translate contents array (LocalizedText[])
+			fieldsTranslated += await this.translateLocalizedTextArray(item.contents);
+
+			// Translate relatedProducts names
+			fieldsTranslated += await this.translateRelatedProducts(item.relatedProducts);
+
+			return {
+				translated: fieldsTranslated > 0,
+				fieldsTranslated,
+			};
+		} catch (error) {
+			const message = error instanceof Error ? error.message : String(error);
+			return {
+				translated: fieldsTranslated > 0,
+				fieldsTranslated,
+				error: message,
+			};
+		}
+	}
+
+	/**
+	 * Get cache statistics
+	 */
+	getCacheStats(): CacheStats {
+		if (this.translator) {
+			const translatorStats = this.translator.getCacheStats();
+			return {
+				hits: translatorStats.hits,
+				misses: translatorStats.misses,
+			};
+		}
+		return this.cacheStats;
+	}
+
+	/**
+	 * Check if translator is initialized
+	 */
+	isInitialized(): boolean {
+		return this.initialized;
+	}
+
+	// Private helper methods
+
+	private async translateText(text: string): Promise<string | undefined> {
+		if (!this.translator || !text.trim()) {
+			return undefined;
+		}
+
+		try {
+			const result = await this.translator.translateText(text, 'en', 'ja');
+			return result.translated;
+		} catch (error) {
+			if (this.verbose) {
+				console.error(`[CatalogTranslator] Failed to translate: "${text.slice(0, 50)}..."`, error);
+			}
+			return undefined;
+		}
+	}
+
+	private async translateBrands(brands: CatalogBrand[]): Promise<number> {
+		let count = 0;
+		for (const brand of brands) {
+			if (brand.ja && !brand.en) {
+				const result = await this.translateText(brand.ja);
+				if (result) {
+					brand.en = result;
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
+	private async translateCategories(categories: CatalogCategory[]): Promise<number> {
+		let count = 0;
+		for (const category of categories) {
+			if (category.ja && !category.en) {
+				const result = await this.translateText(category.ja);
+				if (result) {
+					category.en = result;
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
+	private async translateLocalizedTextArray(items: LocalizedText[]): Promise<number> {
+		let count = 0;
+		for (const item of items) {
+			if (item.ja && !item.en) {
+				const result = await this.translateText(item.ja);
+				if (result) {
+					item.en = result;
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
+	private async translateRelatedProducts(products: CatalogRelatedProduct[]): Promise<number> {
+		let count = 0;
+		for (const product of products) {
+			if (product.name.ja && !product.name.en) {
+				const result = await this.translateText(product.name.ja);
+				if (result) {
+					product.name.en = result;
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+}

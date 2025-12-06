@@ -8,6 +8,7 @@ export interface ScrapeOptions {
 	cache: boolean;
 	resume: boolean;
 	verbose: boolean;
+	translate?: boolean;
 	delay?: number;
 	delayMs?: number;
 	startId?: string;
@@ -72,7 +73,8 @@ async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 		cache: options.cache ?? true,
 		resume: options.resume ?? false,
 		verbose,
-		delayMs
+		delayMs,
+		translate: options.translate ?? false
 	};
 
 	// Execute catalog discovery

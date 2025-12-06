@@ -1,10 +1,10 @@
 // Bandai Catalog Item Types
 
-import type { LocalizedText } from './manualData';
+import type { LocalizedText } from "./manualData";
 
 export interface CatalogPrice {
 	amount: number;
-	currency: 'JPY';
+	currency: "JPY";
 	taxIncluded: boolean;
 	taxRate: number;
 }
@@ -18,16 +18,19 @@ export interface CatalogReleaseDate {
 
 export interface CatalogBrand {
 	ja: string;
+	en?: string;
 	url?: string;
 }
 
 export interface CatalogSeries {
 	ja: string;
+	en?: string;
 	url?: string;
 }
 
 export interface CatalogCategory {
 	ja: string;
+	en?: string;
 	url?: string;
 }
 
