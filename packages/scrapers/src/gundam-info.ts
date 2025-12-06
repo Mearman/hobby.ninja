@@ -1,4 +1,4 @@
-import type { GundamData, LanguageDetection } from "@unnamed-gunpla-app/types/product-data";
+import type { GundamData, LanguageDetection } from "@unnamed-gunpla-app/types";
 import * as cheerio from "cheerio";
 
 import { BaseScraper } from "./base-scraper";
