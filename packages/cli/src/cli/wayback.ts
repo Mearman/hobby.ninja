@@ -21,6 +21,10 @@ export class WaybackCommand {
 	private minAgeMs: number = 0;
 	private maxAgeMs: number = 0;
 
+	constructor() {
+		// Constructor - no debug output needed
+	}
+
 	async execute(options: WaybackOptions): Promise<WaybackResult> {
 		const startTime = Date.now();
 		this.checkpointPath = path.join(process.cwd(), CHECKPOINT_FILE);
@@ -230,7 +234,10 @@ export class WaybackCommand {
 					}
 					return successSubmission;
 				} else {
-					lastError = result.error || 'Unknown error';
+					lastError = result.error || `SubmitUrl returned no error message (success: ${result.success})`;
+					if (verbose && result.error) {
+						console.log(`  SubmitUrl failed with: ${result.error}`);
+					}
 
 					// Don't retry on permanent errors
 					if (result.permanent) {
@@ -268,58 +275,110 @@ export class WaybackCommand {
 	}
 
 	private async submitUrl(url: string): Promise<{ success: boolean; archiveUrl?: string; error?: string; permanent?: boolean }> {
-		const response = await fetch(WAYBACK_SAVE_URL, {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded',
-				'User-Agent': 'GunplaCollectionManager/1.0 (gunpla-archive-preservation)',
-			},
-			body: new URLSearchParams({ url }),
-		});
+		try {
+			const response = await fetch(WAYBACK_SAVE_URL, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded',
+					'User-Agent': 'GunplaCollectionManager/1.0 (gunpla-archive-preservation)',
+				},
+				body: new URLSearchParams({ url }),
+			});
 
-		if (response.ok) {
-			// The Wayback Machine returns the archived URL in various ways
-			// Check for redirect or parse response
-			const location = response.headers.get('location');
-			if (location) {
-				// Ensure the location includes id_ suffix in the timestamp
-				const correctedUrl = location.replace(/\/web\/(\d{14})\//, '/web/$1id_/');
-				return { success: true, archiveUrl: correctedUrl };
+			if (response.ok) {
+				// Check for location headers first (these indicate successful archiving)
+				const location = response.headers.get('location');
+				if (location) {
+					// Ensure the location includes id_ suffix in the timestamp
+					const correctedUrl = location.replace(/\/web\/(\d{14})\//, '/web/$1id_/');
+					return { success: true, archiveUrl: correctedUrl };
+				}
+
+				// Try to parse content-location or construct URL
+				const contentLocation = response.headers.get('content-location');
+				if (contentLocation) {
+					// Ensure the content-location includes id_ suffix in the timestamp
+					const archiveUrl = contentLocation.startsWith('http') ? contentLocation : `https://web.archive.org${contentLocation}`;
+					// If the content-location doesn't have id_ after the timestamp, add it
+					const correctedUrl = archiveUrl.replace(/\/web\/(\d{14})\//, '/web/$1id_/');
+					return { success: true, archiveUrl: correctedUrl };
+				}
+
+				// If no location headers, check if we got an HTML response (indicates error/confirmation page)
+				const contentType = response.headers.get('content-type');
+				if (contentType && contentType.includes('text/html')) {
+					// This is likely an HTML page (donation prompt, error page, etc.)
+					// Try to read the response to understand what happened
+					let responseText = '';
+					try {
+						responseText = await response.text();
+					} catch {
+						// Ignore response text parsing errors
+					}
+
+					// Look for specific error patterns in the HTML
+					if (responseText.includes('has already been archived')) {
+						return { success: false, error: 'URL already exists in archive (check via Available API)', permanent: true };
+					} else if (responseText.includes('robots.txt') || responseText.includes('blocked')) {
+						return { success: false, error: 'URL blocked by robots.txt or access restrictions', permanent: true };
+					} else if (responseText.includes('forbidden')) {
+						return { success: false, error: 'Access forbidden - URL may be restricted', permanent: true };
+					} else if (responseText.includes('donate') || responseText.includes('reminder')) {
+						return { success: false, error: 'Archive submission requires user interaction (donation prompt)', permanent: false };
+					} else {
+						return { success: false, error: 'Archive submission failed - unknown HTML response', permanent: false };
+					}
+				}
+
+				// If we get here, we have a 200 response but no location headers and not HTML
+				// This is unexpected - treat as failure
+				return { success: false, error: 'Archive submission incomplete - no location headers received', permanent: false };
 			}
 
-			// Try to parse content-location or construct URL
-			const contentLocation = response.headers.get('content-location');
-			if (contentLocation) {
-				// Ensure the content-location includes id_ suffix in the timestamp
-				const archiveUrl = contentLocation.startsWith('http') ? contentLocation : `https://web.archive.org${contentLocation}`;
-				// If the content-location doesn't have id_ after the timestamp, add it
-				const correctedUrl = archiveUrl.replace(/\/web\/(\d{14})\//, '/web/$1id_/');
-				return { success: true, archiveUrl: correctedUrl };
+			// Enhanced error handling - try to get response text for more details
+			let responseText = '';
+			try {
+				responseText = await response.text();
+			} catch {
+				// Ignore response text parsing errors
 			}
 
-			// Construct expected archive URL
-			const timestamp = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);
-			return { success: true, archiveUrl: `https://web.archive.org/web/${timestamp}id_/${url}` };
+			// Handle specific error responses
+			switch (response.status) {
+				case 429:
+					return { success: false, error: 'Rate limited (429)', permanent: false };
+				case 403:
+					return { success: false, error: `Forbidden (403) - ${responseText || 'URL may be blocked'}`, permanent: true };
+				case 404:
+					return { success: false, error: `Original URL not found (404) - ${responseText || 'URL may not exist'}`, permanent: true };
+				case 423:
+					return { success: false, error: `Locked (423) - ${responseText || 'Resource is locked'}`, permanent: false };
+				case 503:
+					return { success: false, error: `Service unavailable (503) - ${responseText || 'Wayback Machine temporarily unavailable'}`, permanent: false };
+				default:
+					if (response.status >= 500) {
+						return { success: false, error: `Server error (${response.status}) - ${responseText || 'Server-side issue'}`, permanent: false };
+					} else if (response.status >= 400) {
+						return { success: false, error: `Client error (${response.status}) - ${responseText || 'Request issue'}`, permanent: true };
+					} else {
+						// This shouldn't happen since response.ok is false, but handle it anyway
+						return { success: false, error: `Unexpected response (${response.status}) - ${responseText || 'Unknown issue'}`, permanent: false };
+					}
+			}
+		} catch (error) {
+			// Handle network errors, fetch failures, etc.
+			if (error instanceof Error) {
+				// Common fetch errors
+				if (error.name === 'AbortError') {
+					return { success: false, error: 'Request timeout', permanent: false };
+				} else if (error.name === 'TypeError' && error.message.includes('fetch')) {
+					return { success: false, error: 'Network error - DNS or connection failed', permanent: false };
+				} else {
+					return { success: false, error: `Network error: ${error.message}`, permanent: false };
+				}
+			}
+			return { success: false, error: 'Unknown network error', permanent: false };
 		}
-
-		// Handle error responses
-		if (response.status === 429) {
-			return { success: false, error: 'Rate limited (429)', permanent: false };
-		}
-
-		if (response.status === 403) {
-			return { success: false, error: 'Forbidden (403) - URL may be blocked', permanent: true };
-		}
-
-		if (response.status === 404) {
-			return { success: false, error: 'Original URL not found (404)', permanent: true };
-		}
-
-		if (response.status >= 500) {
-			return { success: false, error: `Server error (${response.status})`, permanent: false };
-		}
-
-		return { success: false, error: `HTTP ${response.status}`, permanent: true };
 	}
 
 	private async loadCheckpoint(): Promise<WaybackCheckpoint | null> {
