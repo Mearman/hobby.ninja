@@ -14,16 +14,31 @@ program
 	.description("CLI tool for scraping Gundam/Gunpla data from various sources (Placeholder)")
 	.version(version);
 
-// Placeholder commands that show future functionality
+// Scrape command implementation
 program
 	.command("scrape")
-	.description("Scrape data from configured sources (PLACEHOLDER - Not yet implemented)")
-	.action(() => {
-		console.log("🚧 Scrape command is not yet implemented");
-		console.log("This will eventually scrape Gunpla data from:");
-		console.log("  - Bandai official website");
-		console.log("  - Gundam.info database");
-		console.log("  - Dalong's model kit database");
+	.description("Scrape data from various sources")
+	.option("-s, --source <source>", "Data source to scrape (manuals, bandai-catalog)")
+	.option("-o, --output <dir>", "Output directory", "./data")
+	.option("-c, --cache", "Enable caching", true)
+	.option("-r, --resume", "Resume from previous run", false)
+	.option("-v, --verbose", "Verbose output", false)
+	.option("-d, --delay <ms>", "Delay between requests in ms", "1000")
+	.option("--start-id <id>", "Starting ID for catalog discovery", "00_0000")
+	.option("--count <number>", "Number of IDs to process", "10")
+	.action(async (options) => {
+		try {
+			const { scrapeData } = await import("../cli/scrape-command.js");
+			await scrapeData(options);
+		} catch (error) {
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("❌ Error in scrape command:", errorMessage);
+			if (options.verbose) {
+				const errorStack = error instanceof Error ? error.stack : String(error);
+				console.error(errorStack);
+			}
+			process.exit(1);
+		}
 	});
 
 program
