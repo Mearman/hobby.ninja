@@ -284,19 +284,23 @@ export function buildCatalogUrl(range: string): string {
 /**
  * Processes a single catalog range using SimpleCatalogScraper
  * Catalog pages are static HTML but require browser headers to bypass anti-bot protection
+ * @param scraper - Optional pre-initialized scraper instance for browser reuse
  */
 export async function processCatalogRange(
 	range: string,
-	options: CatalogDiscoveryOptions
+	options: CatalogDiscoveryOptions,
+	scraper?: SimpleCatalogScraper
 ): Promise<{ success: boolean; error?: string; data?: any }> {
-	const scraper = new SimpleCatalogScraper();
+	const ownsScraper = !scraper;
+	const activeScraper = scraper ?? new SimpleCatalogScraper();
 
 	try {
-		if (options.verbose) {
-			console.log(`Initializing browser for catalog range: ${range}`);
+		if (ownsScraper) {
+			if (options.verbose) {
+				console.log(`Initializing browser for catalog range: ${range}`);
+			}
+			await activeScraper.initialize();
 		}
-
-		await scraper.initialize();
 
 		const url = buildCatalogUrl(range);
 
@@ -305,7 +309,7 @@ export async function processCatalogRange(
 		}
 
 		// Use SimpleCatalogScraper to bypass anti-bot protection and extract data
-		const result = await scraper.extractFromPage(range, url);
+		const result = await activeScraper.extractFromPage(range, url);
 
 		return {
 			success: true,
@@ -324,11 +328,14 @@ export async function processCatalogRange(
 			error: `${range}: ${errorMessage}`
 		};
 	} finally {
-		try {
-			await scraper.cleanup();
-		} catch (cleanupError) {
-			if (options.verbose) {
-				console.error(`Error cleaning up scraper:`, cleanupError);
+		// Only cleanup if we created the scraper (not shared)
+		if (ownsScraper) {
+			try {
+				await activeScraper.cleanup();
+			} catch (cleanupError) {
+				if (options.verbose) {
+					console.error(`Error cleaning up scraper:`, cleanupError);
+				}
 			}
 		}
 	}
@@ -449,59 +456,70 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 		// Phase 2: Download content for valid IDs using Playwright
 		console.log(`\n📥 Phase 2: Downloading content for ${idsNeedingDownload.length} valid IDs...`);
 
-		for (let i = 0; i < idsNeedingDownload.length; i++) {
-			const range = idsNeedingDownload[i];
+		// Initialize browser ONCE for all downloads
+		const scraper = new SimpleCatalogScraper();
+		console.log(`  🌐 Initializing browser...`);
+		await scraper.initialize();
 
-			try {
-				console.log(`  [${i + 1}/${idsNeedingDownload.length}] Downloading ${range}...`);
+		try {
+			for (let i = 0; i < idsNeedingDownload.length; i++) {
+				const range = idsNeedingDownload[i];
 
-				const processResult = await processCatalogRange(range, options);
+				try {
+					console.log(`  [${i + 1}/${idsNeedingDownload.length}] Downloading ${range}...`);
 
-				if (processResult.success && processResult.data) {
-					const productName = processResult.data.productName;
-					recordValidId(range, true, productName);
-					result.completedRanges++;
-					result.discoveredUrls++;
-					result.processedUrls++;
+					// Pass shared scraper instance to avoid re-launching browser
+					const processResult = await processCatalogRange(range, options, scraper);
 
-					// Save the extracted data to the output directory
-					const itemDir = join(options.outputDir, range);
-					mkdirSync(itemDir, { recursive: true });
+					if (processResult.success && processResult.data) {
+						const productName = processResult.data.productName;
+						recordValidId(range, true, productName);
+						result.completedRanges++;
+						result.discoveredUrls++;
+						result.processedUrls++;
 
-					// Save HTML content and structured HTML as JSON
-					if (processResult.data.html) {
-						const htmlFile = join(itemDir, `${range}.html`);
-						writeFileSync(htmlFile, processResult.data.html, 'utf8');
+						// Save the extracted data to the output directory
+						const itemDir = join(options.outputDir, range);
+						mkdirSync(itemDir, { recursive: true });
 
-						// Save structured HTML content as .html.json
-						const htmlParser = new SimpleHtmlParser();
-						const parsedHtml = htmlParser.parse(processResult.data.html);
+						// Save HTML content and structured HTML as JSON
+						if (processResult.data.html) {
+							const htmlFile = join(itemDir, `${range}.html`);
+							writeFileSync(htmlFile, processResult.data.html, 'utf8');
 
-						if (parsedHtml.success && parsedHtml.data) {
-							const htmlJsonFile = join(itemDir, `${range}.html.json`);
-							writeFileSync(htmlJsonFile, JSON.stringify(parsedHtml.data, null, 2), 'utf8');
+							// Save structured HTML content as .html.json
+							const htmlParser = new SimpleHtmlParser();
+							const parsedHtml = htmlParser.parse(processResult.data.html);
+
+							if (parsedHtml.success && parsedHtml.data) {
+								const htmlJsonFile = join(itemDir, `${range}.html.json`);
+								writeFileSync(htmlJsonFile, JSON.stringify(parsedHtml.data, null, 2), 'utf8');
+							}
 						}
+
+						console.log(`     ✅ ${range} - ${productName || processResult.data.title}`);
+
+						// Save index after each successful download
+						saveCatalogIndex();
+					} else {
+						result.errors.push(processResult.error || `${range}: Download failed`);
+						console.log(`     ❌ ${range} - Failed: ${processResult.error}`);
 					}
 
-					console.log(`     ✅ ${range} - ${productName || processResult.data.title}`);
-
-					// Save index after each successful download
-					saveCatalogIndex();
-				} else {
-					result.errors.push(processResult.error || `${range}: Download failed`);
-					console.log(`     ❌ ${range} - Failed: ${processResult.error}`);
+					// Delay between Playwright requests
+					if (i < idsNeedingDownload.length - 1) {
+						await new Promise(resolve => setTimeout(resolve, options.delayMs));
+					}
+				} catch (error) {
+					const errorMessage = error instanceof Error ? error.message : String(error);
+					result.errors.push(`${range}: ${errorMessage}`);
+					console.log(`     ❌ ${range} - Error: ${errorMessage}`);
 				}
-
-				// Delay between Playwright requests
-				if (i < idsNeedingDownload.length - 1) {
-					await new Promise(resolve => setTimeout(resolve, options.delayMs));
-				}
-
-			} catch (error) {
-				const errorMessage = error instanceof Error ? error.message : String(error);
-				result.errors.push(`${range}: ${errorMessage}`);
-				console.log(`     ❌ ${range} - Error: ${errorMessage}`);
 			}
+		} finally {
+			// Cleanup browser after all downloads
+			console.log(`  🌐 Closing browser...`);
+			await scraper.cleanup();
 		}
 
 		// Add already-downloaded valid IDs to counts
