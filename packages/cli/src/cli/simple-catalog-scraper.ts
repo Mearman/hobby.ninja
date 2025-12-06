@@ -51,7 +51,7 @@ export class SimpleCatalogScraper {
 		const page = await this.context.newPage();
 
 		try {
-			await page.goto(url, { waitUntil: 'networkidle', timeout: 10000 });
+			await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 10000 });
 
 			const title = await page.title();
 			const html = await page.content();
