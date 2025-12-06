@@ -20,16 +20,16 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@unnamed-gunpla-app/web": ["apps/web/src/index.ts"],
-      "@unnamed-gunpla-app/web/*": ["apps/web/src/*"],
-      "@unnamed-gunpla-app/types": ["packages/types/src/index.ts"],
-      "@unnamed-gunpla-app/types/*": ["packages/types/src/*"],
-      "@unnamed-gunpla-app/utils": ["packages/utils/src/index.ts"],
-      "@unnamed-gunpla-app/utils/*": ["packages/utils/src/*"],
-      "@unnamed-gunpla-app/cli": ["packages/cli/src/index.ts"],
-      "@unnamed-gunpla-app/cli/*": ["packages/cli/src/*"],
-      "@unnamed-gunpla-app/scrapers": ["packages/scrapers/src/index.ts"],
-      "@unnamed-gunpla-app/scrapers/*": ["packages/scrapers/src/*"]
+      "@hobby-ninja/web": ["apps/web/src/index.ts"],
+      "@hobby-ninja/web/*": ["apps/web/src/*"],
+      "@hobby-ninja/types": ["packages/types/src/index.ts"],
+      "@hobby-ninja/types/*": ["packages/types/src/*"],
+      "@hobby-ninja/utils": ["packages/utils/src/index.ts"],
+      "@hobby-ninja/utils/*": ["packages/utils/src/*"],
+      "@hobby-ninja/cli": ["packages/cli/src/index.ts"],
+      "@hobby-ninja/cli/*": ["packages/cli/src/*"],
+      "@hobby-ninja/scrapers": ["packages/scrapers/src/index.ts"],
+      "@hobby-ninja/scrapers/*": ["packages/scrapers/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
