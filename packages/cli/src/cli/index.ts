@@ -141,14 +141,16 @@ program
   .option('--data-dir <dir>', 'Manual data directory', './data/bandai/manuals')
   .option('--fields <fields>', 'URL fields (comma-separated)', 'sourceUrl,pdfUrl,productImage,supplementaryPdfUrl')
   .option('--dry-run', 'Show URLs without submitting', false)
-  .option('--resume', 'Resume from checkpoint', false)
+  .option('--resume', 'Resume from checkpoint', true)
   .option('--verbose', 'Verbose logging', false)
-  .option('--retries <n>', 'Retry attempts', '5')
+  .option('--retries <n>', 'Retry attempts (-1 for unlimited)', '-1')
   .option('--delay <seconds>', 'Delay between requests', '0')
   .option('--rate-limit-delay <seconds>', 'Base delay after rate limit error', '30')
   .option('--access-key <key>', 'Internet Archive S3 access key')
   .option('--secret-key <key>', 'Internet Archive S3 secret key')
   .option('--output <dir>', 'Results directory', './wayback-results')
+  .option('--min-archive-age <duration>', 'Skip archives newer than this (e.g., 30d, 6m)', '30d')
+  .option('--max-archive-age <duration>', 'Force re-archive if older than this (e.g., 1y, 18m)', '1y')
   .action(async (options) => {
     const waybackCommand = new WaybackCommand();
 
@@ -164,6 +166,8 @@ program
       console.log(`Rate limit retry delay: ${options.rateLimitDelay}s (exponential backoff)`);
       console.log(`Max retries: ${options.retries}`);
       console.log(`Authentication: ${accessKey ? 'API keys provided' : 'No authentication'}`);
+      console.log(`Archive age thresholds: min=${options.minArchiveAge}, max=${options.maxArchiveAge}`);
+      console.log(`Resume: ${options.resume}`);
       console.log(`Dry run: ${options.dryRun}`);
       console.log('');
 
@@ -179,6 +183,8 @@ program
         accessKey,
         secretKey,
         output: options.output,
+        minArchiveAge: options.minArchiveAge,
+        maxArchiveAge: options.maxArchiveAge,
       });
 
       console.log('\nWayback Submission Results:');
@@ -188,6 +194,13 @@ program
       console.log(`Failed: ${result.failed}`);
       console.log(`Skipped: ${result.skipped}`);
       console.log(`Duration: ${(result.duration / 1000 / 60).toFixed(1)} minutes`);
+
+      if (result.ageStats) {
+        console.log('\nArchive Age Analysis:');
+        console.log(`Too recent (skipped): ${result.ageStats.tooNew}`);
+        console.log(`Needs update: ${result.ageStats.needsUpdate}`);
+        console.log(`Not archived: ${result.ageStats.notArchived}`);
+      }
 
       if (result.errors.length > 0 && result.errors.length <= 10) {
         console.log('\nErrors:');
