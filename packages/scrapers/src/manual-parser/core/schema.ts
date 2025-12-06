@@ -18,7 +18,7 @@ import type {
   NavigationItem,
   DocumentStructure,
   SourceInfo
-} from '@unnamed-gunpla-app/types';
+} from '@hobby-ninja/types';
 
 // Japanese text validation
 const JAPANESE_TEXT_PATTERN = /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF\u3000-\u303F\uFF00-\uFFEF]/;

@@ -1,6 +1,5 @@
-import { productData, languageDetection } from "@unnamed-gunpla-app/types";
+import type { GundamData, LanguageDetection } from "@hobby-ninja/types";
 import * as cheerio from "cheerio";
-import type { CheerioAPI } from "cheerio";
 import type { Element } from "domhandler";
 
 import { BaseScraper } from "./base-scraper";
@@ -15,7 +14,7 @@ export class GundamInfoScraper extends BaseScraper {
 		});
 	}
 
-	async extractFromPage(html: string, url: string): Promise<productData.GundamData> {
+	async extractFromPage(html: string, url: string): Promise<GundamData> {
 		const $ = cheerio.load(html);
 		const languageDetection = this.detectLanguage($, url);
 
@@ -34,7 +33,7 @@ export class GundamInfoScraper extends BaseScraper {
 		// Generate ID from URL and name
 		const id = this.generateGundamInfoId("gundam-info", name, url);
 
-		const result: productData.GundamData = {
+		const result: GundamData = {
 			id,
 			name,
 			brand,
@@ -317,7 +316,7 @@ export class GundamInfoScraper extends BaseScraper {
 		const specs: Record<string, unknown> = {};
 
 		// Look for specification table
-		$(".specifications tr, .specs tr").each((_index: number, element: cheerio.Element) => {
+		$(".specifications tr, .specs tr").each((_index: number, element: Element) => {
 			const row = $(element);
 			const header = row.find("th, td:first").text().trim();
 			const value = row.find("td:last").text().trim();
@@ -338,7 +337,7 @@ export class GundamInfoScraper extends BaseScraper {
 		const images: Array<{ type: string; url: string; alt: string }> = [];
 
 		// Main product image
-		$(".product-image img, .main-image img, .gallery img").each((_index: number, element: cheerio.Element) => {
+		$(".product-image img, .main-image img, .gallery img").each((_index: number, element: Element) => {
 			const img = $(element);
 			const src = img.attr("src") || img.attr("data-src");
 			const alt = img.attr("alt") || "";
@@ -357,7 +356,7 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Detect language of the page
    */
-	private detectLanguage($: cheerio.CheerioAPI, url: string): languageDetection.LanguageDetection {
+	private detectLanguage($: cheerio.CheerioAPI, url: string): LanguageDetection {
 		// Check URL for language indicators
 		if (url.includes("/en/") || url.includes("/english")) {
 			return {
@@ -427,7 +426,7 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Determine image type
    */
-	private determineImageType(img: Element, url: string): string {
+	private determineImageType(img: cheerio.Cheerio<Element>, url: string): string {
 		if (img.hasClass("main") || img.parent().hasClass("main-image")) {
 			return "main";
 		}

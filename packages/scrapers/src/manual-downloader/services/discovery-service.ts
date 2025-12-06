@@ -73,7 +73,7 @@ export class DiscoveryService {
       // Step 1: Expand range from starting point
       const expansion = await this.expandRange(baseUrl, startId, {
         direction: 'both',
-        strategy: 'adaptive' as any,
+        stepStrategy: 'linear',
         confidenceThreshold: minConfidence
       });
 

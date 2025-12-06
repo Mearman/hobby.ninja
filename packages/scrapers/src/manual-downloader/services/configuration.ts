@@ -56,8 +56,8 @@ interface ConfigurationFile {
  * Configuration service class
  */
 export class ConfigurationService {
-  private config: ManualDownloaderConfig;
-  private sessionConfig: SessionConfiguration;
+  private config!: ManualDownloaderConfig;
+  private sessionConfig!: SessionConfiguration;
 
   constructor(configPath?: string) {
     this.loadConfiguration(configPath);
@@ -218,7 +218,7 @@ export class ConfigurationService {
   /**
    * Update configuration value
    */
-  set(key: keyof ManualDownloaderConfig, value: any): void {
+  set<K extends keyof ManualDownloaderConfig>(key: K, value: ManualDownloaderConfig[K]): void {
     this.config[key] = value;
     this.validateConfiguration();
   }
@@ -226,7 +226,7 @@ export class ConfigurationService {
   /**
    * Update session configuration value
    */
-  setSession(key: keyof SessionConfiguration, value: any): void {
+  setSession<K extends keyof SessionConfiguration>(key: K, value: SessionConfiguration[K]): void {
     this.sessionConfig[key] = value;
     this.validateConfiguration();
   }

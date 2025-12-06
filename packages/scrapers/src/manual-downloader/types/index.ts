@@ -99,18 +99,40 @@ export interface GapPattern {
 
 export interface IdValidationResult {
   id: number;
-  exists: boolean;
-  statusCode?: number;
-  responseTime?: number;
+  isValid: boolean;
+  statusCode: number;
+  finalUrl: string;
+  contentLength: number;
+  responseTime: number;
+  fromCache: boolean;
   error?: string;
+  confidence: number;
 }
 
 export interface RangeExpansionResult {
   minId: number;
   maxId: number;
-  expansions: number;
-  confidence: number;
-  strategy: string;
+  rangeSize: number;
+  expansion: {
+    upwardSteps: number;
+    downwardSteps: number;
+    totalSteps: number;
+    consecutiveFailures: {
+      upward: number;
+      downward: number;
+    };
+  };
+  quality: {
+    confidence: number;
+    coverage: number;
+    gapDensity: number;
+  };
+  performance: {
+    duration: number;
+    requestsMade: number;
+    averageResponseTime: number;
+    successRate: number;
+  };
 }
 
 export interface CLIOptions {

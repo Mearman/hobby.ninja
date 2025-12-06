@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { ManualDocument } from '@workspace/types';
+import type { ManualDocument } from '@hobby-ninja/types';
 import { z } from 'zod';
 import { schema } from './core';
 
