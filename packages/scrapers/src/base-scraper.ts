@@ -1,20 +1,13 @@
-import { LanguageDetector } from "@unnamed-gunpla-app/utils/languageDetection";
-import { profileManager } from "@unnamed-gunpla-app/utils/profileManager";
-import { RenderingDetector } from "@unnamed-gunpla-app/utils/renderingDetection";
+import { LanguageDetector, ProfileManager, RenderingDetector } from "@unnamed-gunpla-app/utils";
+import type { CheerioAPI, Cheerio } from "cheerio";
+import type { Element } from "domhandler";
+
+const profileManager = new ProfileManager();
 
 interface ExtractResult {
   [key: string]: unknown;
 }
 
-interface CheerioAPI {
-  (selector: string): CheerioAPI;
-  length: number;
-  first(): CheerioAPI;
-  text(): string;
-  trim(): string;
-  attr(attribute: string): string | undefined;
-  html(): string;
-}
 
 interface Logger {
   warn(message: string, ...args: unknown[]): void;
@@ -206,7 +199,7 @@ export abstract class BaseScraper {
   	return element.length > 0 ? element.first().text().trim() : "";
   }
 
-  protected extractTextContentFromElement($: CheerioAPI): string {
+  protected extractTextContentFromElement($: Cheerio<Element>): string {
   	return $?.text()?.trim() || "";
   }
 
@@ -215,7 +208,7 @@ export abstract class BaseScraper {
   	return element.length > 0 ? element.first().attr(attribute) || "" : "";
   }
 
-  protected extractAttributeFromElement($: CheerioAPI, attribute: string): string {
+  protected extractAttributeFromElement($: Cheerio<Element>, attribute: string): string {
   	return $?.first()?.attr(attribute) || "";
   }
 

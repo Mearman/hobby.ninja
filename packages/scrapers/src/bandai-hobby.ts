@@ -1,5 +1,7 @@
-import { GundamData, ProductImage, PriceInfo } from "@unnamed-gunpla-app/types/product-data";
+import { productData } from "@unnamed-gunpla-app/types";
 import * as cheerio from "cheerio";
+import type { CheerioAPI } from "cheerio";
+import type { Element } from "domhandler";
 
 import { BaseScraper } from "./base-scraper";
 
@@ -13,9 +15,6 @@ interface SpecificationData {
   [key: string]: Specification;
 }
 
-interface CheerioElement {
-  [key: string]: unknown;
-}
 
 export class BandaiHobbyScraper extends BaseScraper {
 	constructor() {
@@ -27,7 +26,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 		});
 	}
 
-	async extractFromPage(html: string, url: string): Promise<GundamData> {
+	async extractFromPage(html: string, url: string): Promise<productData.GundamData> {
 		const $ = cheerio.load(html);
 		const rawLanguageDetection = this.parseLanguage(html, url);
 
