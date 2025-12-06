@@ -22,19 +22,19 @@ description: "Task list for Bandai Hobby Catalog Discovery feature implementatio
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create catalog discovery types in packages/cli/src/cli/types/catalog-discovery.ts
-- [ ] T002 [P] Create catalog discovery test directory structure packages/cli/src/tests/catalog-discovery/
-- [ ] T003 [P] Create scraper test directory structure packages/scrapers/src/tests/catalog-discovery/
+- [x] T001 Create catalog discovery types in packages/cli/src/cli/types/catalog-discovery.ts
+- [x] T002 [P] Create catalog discovery test directory structure packages/cli/src/tests/catalog-discovery/
+- [x] T003 [P] Create scraper test directory structure packages/scrapers/src/tests/catalog-discovery/
 
 ## Phase 2: Foundational (Blocking Prerequisites)
 
 **Purpose**: Core functionality needed before user stories
 
-- [ ] T004 Create CatalogDiscoveryOptions interface in packages/cli/src/cli/types/catalog-discovery.ts
-- [ ] T005 Create CatalogDiscoveryResult interface in packages/cli/src/cli/types/catalog-discovery.ts
-- [ ] T006 Create CatalogRange interface in packages/cli/src/cli/types/catalog-discovery.ts
-- [ ] T007 Create CatalogDiscoveryInput interface in packages/cli/src/cli/types/catalog-discovery.ts
-- [ ] T008 Write unit tests for catalog discovery types in packages/cli/src/tests/catalog-discovery/types.test.ts
+- [x] T004 Create CatalogDiscoveryOptions interface in packages/cli/src/cli/types/catalog-discovery.ts
+- [x] T005 Create CatalogDiscoveryResult interface in packages/cli/src/cli/types/catalog-discovery.ts
+- [x] T006 Create CatalogRange interface in packages/cli/src/cli/types/catalog-discovery.ts
+- [x] T007 Create CatalogDiscoveryInput interface in packages/cli/src/cli/types/catalog-discovery.ts
+- [x] T008 Write unit tests for catalog discovery types in packages/cli/src/tests/catalog-discovery/types.test.ts
 
 ## Phase 3: User Story 1 - Catalog URL Discovery
 
