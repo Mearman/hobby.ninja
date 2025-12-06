@@ -243,6 +243,11 @@ export const MAX_TEXT_LENGTH = 5000; // Maximum text length per request
 export const DEFAULT_CACHE_TTL = 1000 * 60 * 60 * 24 * 7; // 1 week
 export const MAX_CACHE_SIZE = 10_000; // Maximum number of entries in memory cache
 
+// Shared translation storage paths (relative to project root)
+export const TRANSLATION_STORE_DIR = 'data/translations';
+export const TRANSLATION_DICTIONARY_PATH = 'data/translations/dictionary.json';
+export const TRANSLATION_CACHE_DIR = 'data/translations/ja/en';
+
 // Error messages
 export const ERROR_MESSAGES = {
 	[TranslationErrorCode.NETWORK_ERROR]: "Network error occurred while translating",
