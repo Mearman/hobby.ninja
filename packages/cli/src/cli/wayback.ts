@@ -11,6 +11,7 @@ import {
 	ArchiveAgeCheck,
 	WaybackAvailableResponse,
 } from '../types/wayback.js';
+import { WaybackProgressRenderer } from './ui/WaybackProgress.js';
 
 // Default fields for each source type
 const MANUAL_FIELDS: UrlField[] = ['sourceUrl', 'pdfUrl', 'productImage', 'supplementaryPdfUrl'];
@@ -100,7 +101,7 @@ export class WaybackCommand {
 				? submissions.filter((s) => !this.checkpoint!.processedUrls.includes(s.url))
 				: submissions;
 
-			console.log(`${pendingSubmissions.length} URLs pending submission`);
+			console.log(`${pendingSubmissions.length} URLs pending submission\n`);
 
 			// Initialize checkpoint if not resuming
 			if (!this.checkpoint) {
@@ -117,18 +118,24 @@ export class WaybackCommand {
 				};
 			}
 
+			// Initialize Ink progress renderer
+			const progressRenderer = new WaybackProgressRenderer(pendingSubmissions.length);
+			progressRenderer.start();
+
 			// Process submissions
 			for (let i = 0; i < pendingSubmissions.length; i++) {
 				const submission = pendingSubmissions[i];
 				if (!submission) continue;
 
-				const progress = `[${i + 1}/${pendingSubmissions.length}]`;
-
-				if (options.verbose) {
-					console.log(`${progress} Submitting: ${submission.url}`);
-				} else if ((i + 1) % 100 === 0 || i === 0) {
-					console.log(`${progress} Progress: ${submission.sourceType}:${submission.itemId}/${submission.field}`);
-				}
+				// Update progress UI with current item
+				progressRenderer.update({
+					processed: i,
+					currentItem: {
+						sourceType: submission.sourceType,
+						itemId: submission.itemId,
+						field: submission.field,
+					},
+				});
 
 				const processedSubmission = await this.submitWithAgeCheck(submission, options.retries, options.verbose);
 				result.submitted++;
@@ -145,22 +152,22 @@ export class WaybackCommand {
 				if (processedSubmission.status === 'success') {
 					result.successful++;
 					this.checkpoint.successfulSubmissions.push(processedSubmission);
-					if (options.verbose) {
-						console.log(`  -> Archived: ${processedSubmission.archiveUrl}`);
-					}
 				} else if (processedSubmission.status === 'failed') {
 					result.failed++;
 					result.errors.push(`${submission.url}: ${processedSubmission.error || 'Unknown error'}`);
 					this.checkpoint.failedSubmissions.push(processedSubmission);
-					if (options.verbose) {
-						console.log(`  -> Failed: ${processedSubmission.error || 'Unknown error'}`);
-					}
 				} else if (processedSubmission.status === 'skipped') {
 					result.skipped++;
-					if (options.verbose && processedSubmission.ageCheckResult === 'too_new') {
-						console.log(`  -> Skipped: Archive too recent (${this.formatDuration(processedSubmission.existingArchive?.age || 0)} old)`);
-					}
 				}
+
+				// Update progress UI with latest stats
+				progressRenderer.update({
+					processed: i + 1,
+					successful: result.successful,
+					failed: result.failed,
+					skipped: result.skipped,
+					ageStats: { ...result.ageStats },
+				});
 
 				// Update checkpoint
 				this.checkpoint.processedUrls.push(submission.url);
@@ -171,6 +178,13 @@ export class WaybackCommand {
 					await this.saveCheckpoint();
 				}
 			}
+
+			// Mark progress as complete
+			progressRenderer.complete();
+
+			// Small delay to ensure final render is visible before cleanup
+			await this.sleep(100);
+			progressRenderer.cleanup();
 
 			// Final checkpoint save
 			await this.saveCheckpoint();
