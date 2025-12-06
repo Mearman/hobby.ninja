@@ -1,5 +1,4 @@
-import { mkdirSync, writeFileSync } from 'fs';
-import { join } from 'path';
+import { mkdirSync } from 'fs';
 import { discoverCatalogItems, generateCatalogRanges } from './catalog-discovery.js';
 
 export interface ScrapeOptions {
@@ -95,46 +94,6 @@ async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 		result.errors.forEach((error, index) => {
 			console.log(`  ${index + 1}. ${error}`);
 		});
-	}
-
-	// Save summary statistics
-	const summaryFile = join(output, 'summary.json');
-	const summary = {
-		timestamp: new Date().toISOString(),
-		source: 'bandai-catalog',
-		results: {
-			totalRanges: result.totalRanges,
-			completedRanges: result.completedRanges,
-			failedRanges: result.failedRanges,
-			discoveredUrls: result.discoveredUrls,
-			processedUrls: result.processedUrls,
-			processingTime: result.processingTime,
-			averageProcessingTime: result.stats.averageProcessingTime
-		},
-		processedRanges: result.rangeStats,
-		errors: result.errors
-	};
-
-	writeFileSync(summaryFile, JSON.stringify(summary, null, 2), 'utf8');
-	console.log(`\n💾 Summary saved to: ${summaryFile}`);
-
-	// Save individual catalog items if output directory is specified
-	if (catalogOptions.outputDir && result.completedRanges > 0) {
-		mkdirSync(catalogOptions.outputDir, { recursive: true });
-
-		// In a full implementation, we would save each result.data item as a separate JSON file
-		// For now, we save a combined file with all processed items
-		const catalogFile = join(catalogOptions.outputDir, 'catalog-items.json');
-		console.log(`💾 Combined catalog data saved to: ${catalogFile}`);
-
-		// Placeholder for actual item data saving
-		writeFileSync(catalogFile, JSON.stringify({
-			discoveredAt: new Date().toISOString(),
-			source: 'bandai-hobby.net',
-			totalProcessed: result.completedRanges,
-			// Note: In full implementation, this would contain the actual scraped item data
-			items: result.rangeStats
-		}, null, 2), 'utf-8');
 	}
 
 	if (result.successful) {
