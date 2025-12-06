@@ -48,7 +48,8 @@ export interface FilteredManualData {
   name: LocalizedText;
   productNumber: string;
   releaseDate: LocalizedDate;
-  grade: string;
+  grade?: string; // Full grade (e.g., "HGUC")
+  baseGrade?: string; // Base grade family (e.g., "HG")
   scale?: string;
   series: LocalizedText;
   productImage: string;
@@ -141,34 +142,179 @@ function extractReleaseDate(blocks: RawParsedJson['content']['blocks']): Localiz
 }
 
 /**
+ * Base grades - the fundamental grade families
+ * Order matters: longer bases first to avoid partial matches (e.g., "RE" before "R")
+ */
+const BASE_GRADES = ['HG', 'MG', 'PG', 'RG', 'SD', 'EG', 'RE', 'FM'] as const;
+
+/**
+ * Special grade patterns that don't follow the {BASE}{SUFFIX} pattern
+ */
+const SPECIAL_GRADES: Record<string, string> = {
+  'FIGURE-RISE': 'FIGURE-RISE',
+};
+
+/**
+ * Regex to match compound grades: base grade followed by 1-4 uppercase letters
+ * Must be at word boundary (not preceded by letter) and not followed by hyphen (model numbers)
+ * Examples: HGUC, SDCS, MGEX, HGTWFM (4 letters max for suffix)
+ * Excludes: RGM-79, RGZ-91 (model numbers), REVIVAL (5 letter suffix = word, not grade)
+ */
+const COMPOUND_GRADE_REGEX = new RegExp(
+  `(?<![A-Za-z])(${BASE_GRADES.join('|')})([A-Z]{1,4})(?![a-z-])`,
+  'g'
+);
+
+/**
+ * Regex to match 30 Minutes series: 30MM, 30MF, 30MS
+ */
+const THIRTY_MINUTES_REGEX = /30M[MFS]/g;
+
+/**
+ * Derive base grade from a grade string
+ * - Compound grades (HGUC, SDCS) → extract prefix (HG, SD)
+ * - Base grades (HG, MG) → return as-is
+ * - 30 Minutes (30MM) → return as-is (its own family)
+ * - Special grades → use mapping
+ */
+function deriveBaseGrade(grade: string): string {
+  // Check special grades first
+  if (SPECIAL_GRADES[grade]) {
+    return SPECIAL_GRADES[grade];
+  }
+
+  // 30 Minutes series - they are their own base
+  if (/^30M[MFS]$/.test(grade)) {
+    return grade;
+  }
+
+  // Check if it starts with a known base grade
+  for (const base of BASE_GRADES) {
+    if (grade.startsWith(base)) {
+      return base;
+    }
+  }
+
+  // Unknown grade - return as-is
+  return grade;
+}
+
+/**
+ * Map ブランド (Brand) field values to grades
+ * Only needed for brands that don't match standard patterns
+ */
+const BRAND_TO_GRADE: Record<string, string | null> = {
+  '30 MINUTES MISSIONS': '30MM',
+  '30 MINUTES SISTERS': '30MS',
+  '30 MINUTES LABEL': '30MM',
+  '30 MINUTES FANTASY': '30MF',
+  'ENTRY GRADE': 'EG',
+  'FULL MECHANICS': 'FM',
+  アクションベース: null, // Accessories - no grade
+  その他: null, // Other - check product name
+};
+
+/**
+ * Map full-width characters to half-width for grade matching
+ */
+const FULLWIDTH_TO_HALFWIDTH: Record<string, string> = {
+  Ａ: 'A', Ｂ: 'B', Ｃ: 'C', Ｄ: 'D', Ｅ: 'E', Ｆ: 'F', Ｇ: 'G', Ｈ: 'H',
+  Ｉ: 'I', Ｊ: 'J', Ｋ: 'K', Ｌ: 'L', Ｍ: 'M', Ｎ: 'N', Ｏ: 'O', Ｐ: 'P',
+  Ｑ: 'Q', Ｒ: 'R', Ｓ: 'S', Ｔ: 'T', Ｕ: 'U', Ｖ: 'V', Ｗ: 'W', Ｘ: 'X',
+  Ｙ: 'Y', Ｚ: 'Z',
+};
+
+/**
+ * Normalize text by converting full-width letters to half-width
+ */
+function normalizeForGradeMatch(text: string): string {
+  return text.replace(/[Ａ-Ｚ]/g, (char) => FULLWIDTH_TO_HALFWIDTH[char] || char);
+}
+
+/**
+ * Find grade in text using dynamic pattern matching
+ * Returns the first grade found
+ */
+function findGradeInText(text: string): string | undefined {
+  // Normalize full-width characters
+  const normalizedText = normalizeForGradeMatch(text);
+
+  // Check special grades first
+  for (const special of Object.keys(SPECIAL_GRADES)) {
+    if (normalizedText.includes(special)) {
+      return special;
+    }
+  }
+
+  // Check for 30 Minutes series
+  const thirtyMatch = normalizedText.match(/30M[MFS]/);
+  if (thirtyMatch) {
+    return thirtyMatch[0];
+  }
+
+  // Find all grade candidates with their positions
+  const candidates: Array<{ grade: string; position: number }> = [];
+
+  // Find compound grades (e.g., HGUC, SDCS, MGEX)
+  COMPOUND_GRADE_REGEX.lastIndex = 0;
+  let compoundMatch = COMPOUND_GRADE_REGEX.exec(normalizedText);
+  while (compoundMatch) {
+    const fullMatch = compoundMatch[0];
+    const afterMatch = normalizedText.substring(compoundMatch.index + fullMatch.length);
+    // Only accept if followed by space (grade prefix pattern)
+    if (/^\s/.test(afterMatch)) {
+      candidates.push({ grade: fullMatch, position: compoundMatch.index });
+    }
+    compoundMatch = COMPOUND_GRADE_REGEX.exec(normalizedText);
+  }
+
+  // Find base grades (e.g., HG, MG)
+  for (const base of BASE_GRADES) {
+    const baseRegex = new RegExp(`(?<![A-Za-z])${base}\\s`, 'g');
+    let baseMatch = baseRegex.exec(normalizedText);
+    while (baseMatch) {
+      candidates.push({ grade: base, position: baseMatch.index });
+      baseMatch = baseRegex.exec(normalizedText);
+    }
+  }
+
+  // Return the grade that appears earliest in the text
+  if (candidates.length > 0) {
+    candidates.sort((a, b) => a.position - b.position);
+    return candidates[0].grade;
+  }
+
+  return undefined;
+}
+
+/**
  * Extract grade/brand (ブランド) from text
  */
-function extractGrade(blocks: RawParsedJson['content']['blocks']): { grade: string; scale?: string } {
-  const gradePatterns = ['HGUC', 'HGCE', 'HGAC', 'HGAW', 'HGFC', 'HGCC', 'HG', 'MG', 'PG', 'RG', 'EG', 'SD', 'RE'];
+function extractGrade(blocks: RawParsedJson['content']['blocks']): {
+  grade?: string;
+  baseGrade?: string;
+  scale?: string;
+} {
   const scalePatterns = ['1/144', '1/100', '1/60', '1/48'];
 
-  let grade = '';
+  let grade: string | undefined;
   let scale: string | undefined;
+  let brandValue: string | undefined;
 
   for (const block of blocks) {
     const text = block.content?.text || block.content?.ja || '';
 
-    // Look for grade after ブランド
-    if (!grade) {
-      const gradeMatch = text.match(/ブランド[^\w]*(\w+)/i);
-      if (gradeMatch) {
-        grade = gradeMatch[1].toUpperCase();
+    // Extract ブランド field value for later use
+    if (!brandValue) {
+      const brandMatch = text.match(/ブランド[\s\n]*([^\n品発作取]+)/);
+      if (brandMatch) {
+        brandValue = brandMatch[1].trim();
       }
     }
 
-    // Also check for grade in product name (longer patterns first)
+    // Check product name for grade (priority - most accurate)
     if (!grade) {
-      for (const g of gradePatterns) {
-        if (text.includes(g)) {
-          grade = g;
-          break;
-        }
-      }
+      grade = findGradeInText(text);
     }
 
     // Extract scale from product name (optional)
@@ -182,11 +328,32 @@ function extractGrade(blocks: RawParsedJson['content']['blocks']): { grade: stri
     }
   }
 
-  if (!grade) {
-    throw new Error('Failed to extract grade (ブランド) from manual');
+  // If no grade found in product name, try mapping from brand
+  if (!grade && brandValue) {
+    // Check if brand is a known mapping
+    for (const [brand, mappedGrade] of Object.entries(BRAND_TO_GRADE)) {
+      if (brandValue.includes(brand)) {
+        if (mappedGrade) {
+          grade = mappedGrade;
+        }
+        break;
+      }
+    }
+
+    // Try to find grade pattern in brand value itself
+    if (!grade) {
+      grade = findGradeInText(brandValue);
+    }
   }
 
-  return { grade, scale };
+  // Return with baseGrade if we found a grade
+  if (grade) {
+    const baseGrade = deriveBaseGrade(grade);
+    return { grade, baseGrade, scale };
+  }
+
+  // No grade found - this is OK for accessories and older kits
+  return { scale };
 }
 
 /**
@@ -331,7 +498,7 @@ export function filterManualJson(rawJson: unknown, manualId: string): FilteredMa
   const name = extractProductName(rawJson.title, blocks);
   const productNumber = extractProductNumber(blocks);
   const releaseDate = extractReleaseDate(blocks);
-  const { grade, scale } = extractGrade(blocks);
+  const { grade, baseGrade, scale } = extractGrade(blocks);
   const series = extractSeries(blocks);
   const { productImage, thumbnailImage } = extractProductImage(blocks, assets);
 
@@ -340,7 +507,6 @@ export function filterManualJson(rawJson: unknown, manualId: string): FilteredMa
     name,
     productNumber,
     releaseDate,
-    grade,
     series,
     productImage,
     thumbnailImage,
@@ -348,6 +514,12 @@ export function filterManualJson(rawJson: unknown, manualId: string): FilteredMa
     extractedAt: rawJson.metadata?.extractedAt || new Date().toISOString(),
   };
 
+  if (grade) {
+    result.grade = grade;
+  }
+  if (baseGrade) {
+    result.baseGrade = baseGrade;
+  }
   if (scale) {
     result.scale = scale;
   }
