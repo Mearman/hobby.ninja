@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 
+import { config } from "dotenv";
 import { Command } from "commander";
 import { readFileSync } from "fs";
-import { dirname, join } from "path";
+import { dirname, join, resolve } from "path";
 import { fileURLToPath } from "url";
 import { TRANSLATION_STORE_DIR } from "../../../translation/src/index";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
+// Load .env from repo root (packages/cli/src/bin -> repo root is 4 levels up)
+config({ path: resolve(__dirname, "../../../../.env") });
 
 const packageJson = JSON.parse(readFileSync(join(__dirname, "../../package.json"), "utf8"));
 const version = packageJson.version;
