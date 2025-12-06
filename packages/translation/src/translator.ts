@@ -15,6 +15,7 @@ import {
 	TranslationErrorCode,
 } from "./types";
 import { TranslationStore, type StoreConfiguration } from "./store/translation-store";
+import { lookupPhrase, addPhrase, isDictionaryLoaded } from "./dictionary";
 
 // Browser globals
 declare const fetch: typeof globalThis.fetch;
@@ -71,7 +72,22 @@ export class TranslationService {
 			// Validate input
 			this.validateInput(text, finalOptions);
 
-			// Check persistent store first (if available)
+			// Check dictionary first (O(1) lookup, no I/O)
+			if (isDictionaryLoaded()) {
+				const dictEntry = lookupPhrase(text);
+				if (dictEntry && finalOptions.targetLanguage === 'en') {
+					return {
+						original: text,
+						translated: dictEntry.en,
+						sourceLanguage: finalOptions.sourceLanguage,
+						targetLanguage: finalOptions.targetLanguage,
+						cached: true,
+						processingTime: Date.now() - startTime,
+					};
+				}
+			}
+
+			// Check persistent store next (if available)
 			if (this.translationStore && this.translationStore.isReady()) {
 				try {
 					const storeEntry = await this.translationStore.getByText(
@@ -142,6 +158,11 @@ export class TranslationService {
 					// Log store error but don't fail the translation
 					console.warn('Failed to store translation in TranslationStore:', storeError);
 				}
+			}
+
+			// Add to in-memory dictionary for future lookups
+			if (isDictionaryLoaded() && finalOptions.targetLanguage === 'en') {
+				addPhrase(text, translation);
 			}
 
 			// Cache the result in in-memory cache
