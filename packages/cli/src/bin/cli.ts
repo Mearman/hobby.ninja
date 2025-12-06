@@ -79,6 +79,7 @@ program
 		try {
 			const { normalizeData } = await import("../cli/normalize-command.js");
 			await normalizeData(options);
+			process.exit(0);
 		} catch (error) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
 			console.error("Error in normalize command:", errorMessage);
