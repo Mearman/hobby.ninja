@@ -66,22 +66,33 @@ export async function discoverValidIds(
 			} else {
 				invalidIds.push(range);
 			}
-			if (options.verbose) {
-				const status = indexCheck.isValid ? '✅' : '❌';
-				console.log(`  ${status} ${range} - already indexed`);
-			}
 		} else {
 			needsCheck.push(range);
 		}
 	}
 
-	// Second pass: parallel HTTP checks for unindexed IDs (batches of 10)
+	// Show summary for already-indexed items (not each one)
+	if (skippedIds.length > 0) {
+		const validCount = validIds.length;
+		const invalidCount = invalidIds.length;
+		console.log(`  ⏭️  ${skippedIds.length} already indexed (${validCount} valid, ${invalidCount} invalid)`);
+	}
+
+	// Second pass: parallel HTTP checks for unindexed IDs (batches of 50)
 	if (needsCheck.length > 0) {
-		console.log(`  📡 Checking ${needsCheck.length} new IDs...`);
-		const BATCH_SIZE = 10;
+		const BATCH_SIZE = 50;
+		const totalBatches = Math.ceil(needsCheck.length / BATCH_SIZE);
+		let newValidCount = 0;
+		let newInvalidCount = 0;
+
+		process.stdout.write(`  📡 Checking ${needsCheck.length} new IDs...`);
 
 		for (let i = 0; i < needsCheck.length; i += BATCH_SIZE) {
 			const batch = needsCheck.slice(i, i + BATCH_SIZE);
+			const batchNum = Math.floor(i / BATCH_SIZE) + 1;
+
+			// Show progress
+			process.stdout.write(`\r  📡 Checking ${needsCheck.length} new IDs... batch ${batchNum}/${totalBatches}`);
 
 			// Check batch in parallel
 			const results = await Promise.all(
@@ -92,15 +103,16 @@ export async function discoverValidIds(
 				})
 			);
 
-			// Process results
+			// Process results (no per-item logging)
 			for (const { range, result } of results) {
 				if (result.isValid) {
 					validIds.push(range);
-					console.log(`  ✅ ${range} - valid (${result.title?.substring(0, 50) || 'unknown'})`);
+					recordDiscoveredValidId(range, result.title); // Record in index immediately
+					newValidCount++;
 				} else {
 					invalidIds.push(range);
 					recordInvalidId(range);
-					console.log(`  ❌ ${range} - invalid (404)`);
+					newInvalidCount++;
 				}
 			}
 
@@ -112,6 +124,9 @@ export async function discoverValidIds(
 				await new Promise(resolve => setTimeout(resolve, options.delayMs / 5));
 			}
 		}
+
+		// Final summary on new line
+		console.log(`\n  ✅ ${newValidCount} valid, ❌ ${newInvalidCount} invalid`);
 	}
 
 	console.log(`\n📊 Discovery complete:`);
@@ -215,17 +230,30 @@ function compareIds(a: string, b: string): number {
  * Records a valid catalog entry in the index
  */
 export function recordValidId(id: string, hasContent: boolean, productName?: string): void {
-	catalogIndex.totalChecked++;
+	// Only increment totalChecked if this is a new entry
+	if (!catalogIndex.valid[id]) {
+		catalogIndex.totalChecked++;
+	}
 	catalogIndex.valid[id] = {
 		id,
 		hasContent,
 		lastChecked: new Date().toISOString(),
-		hasFile: true,
+		hasFile: hasContent, // hasFile = true only if we have content
 		productName
 	};
 
 	// Remove from invalid lists if present
 	catalogIndex.invalidSingles = catalogIndex.invalidSingles.filter(s => s !== id);
+}
+
+/**
+ * Records a discovered valid ID (before content is downloaded)
+ */
+export function recordDiscoveredValidId(id: string, productName?: string): void {
+	// Don't overwrite if we already have full content
+	if (catalogIndex.valid[id]?.hasContent) return;
+
+	recordValidId(id, false, productName);
 }
 
 /**
@@ -466,7 +494,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 		result.processedUrls = discovery.validIds.length;
 	} else {
 		// Phase 2: Download content for valid IDs using Playwright (parallel tabs)
-		const CONCURRENT_TABS = 5; // Number of parallel browser tabs
+		const CONCURRENT_TABS = 20; // Number of parallel browser tabs
 		console.log(`\n📥 Phase 2: Downloading content for ${idsNeedingDownload.length} valid IDs (${CONCURRENT_TABS} parallel tabs)...`);
 
 		// Initialize browser ONCE for all downloads
