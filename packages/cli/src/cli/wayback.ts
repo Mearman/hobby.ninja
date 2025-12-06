@@ -404,8 +404,9 @@ export class WaybackCommand {
 		verbose: boolean
 	): Promise<WaybackSubmission> {
 		let lastError = '';
+		const unlimitedRetries = maxRetries < 0;
 
-		for (let attempt = 0; attempt <= maxRetries; attempt++) {
+		for (let attempt = 0; unlimitedRetries || attempt <= maxRetries; attempt++) {
 			try {
 				const result = await this.submitUrl(submission.url);
 
@@ -433,10 +434,10 @@ export class WaybackCommand {
 					}
 
 					// Exponential backoff for retryable errors
-					if (attempt < maxRetries) {
-						const delay = Math.pow(2, attempt) * 1000;
+					if (unlimitedRetries || attempt < maxRetries) {
+						const delay = Math.min(Math.pow(2, attempt) * 1000, 60000); // Cap at 60s
 						if (verbose) {
-							console.log(`  Retry ${attempt + 1}/${maxRetries} after ${delay}ms...`);
+							console.log(`  Retry ${attempt + 1}/${unlimitedRetries ? '∞' : maxRetries} after ${delay}ms...`);
 						}
 						await this.sleep(delay);
 					}
@@ -444,10 +445,10 @@ export class WaybackCommand {
 			} catch (error) {
 				lastError = error instanceof Error ? error.message : 'Network error';
 
-				if (attempt < maxRetries) {
-					const delay = Math.pow(2, attempt) * 1000;
+				if (unlimitedRetries || attempt < maxRetries) {
+					const delay = Math.min(Math.pow(2, attempt) * 1000, 60000); // Cap at 60s
 					if (verbose) {
-						console.log(`  Retry ${attempt + 1}/${maxRetries} after ${delay}ms...`);
+						console.log(`  Retry ${attempt + 1}/${unlimitedRetries ? '∞' : maxRetries} after ${delay}ms...`);
 					}
 					await this.sleep(delay);
 				}
