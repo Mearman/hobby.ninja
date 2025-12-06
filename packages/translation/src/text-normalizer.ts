@@ -12,12 +12,15 @@ export interface NormalizerOptions {
 	normalizeGundamJa?: boolean;
 	/** Normalize spacing around quoted text */
 	normalizeQuotes?: boolean;
+	/** Replace "■" with proper bullet "•" and ensure space follows */
+	normalizeBullets?: boolean;
 }
 
 const DEFAULT_OPTIONS: NormalizerOptions = {
 	normalizeGundam: true,
 	normalizeGundamJa: true,
 	normalizeQuotes: true,
+	normalizeBullets: true,
 };
 
 /**
@@ -52,6 +55,10 @@ export function normalizeText(
 
 	if (options.normalizeQuotes) {
 		result = normalizeQuoteSpacing(result);
+	}
+
+	if (options.normalizeBullets) {
+		result = normalizeBullets(result);
 	}
 
 	return result;
@@ -123,6 +130,28 @@ function normalizeQuoteSpacing(text: string): string {
 
 	// Clean up any double spaces created
 	result = result.replace(/ {2,}/g, ' ');
+
+	return result;
+}
+
+/**
+ * Normalize bullet characters
+ *
+ * Replaces "■" (black square) with "•" (bullet) and ensures a space follows.
+ * Examples:
+ * - "■From" → "• From"
+ * - "■ From" → "• From"
+ */
+function normalizeBullets(text: string): string {
+	let result = text;
+
+	// Replace ■ with • and ensure space follows
+	// First handle case where space already exists
+	result = result.replace(/■ /g, '• ');
+	// Then handle case where no space exists
+	result = result.replace(/■([^ ])/g, '• $1');
+	// Handle trailing ■ at end of string
+	result = result.replace(/■$/g, '•');
 
 	return result;
 }
