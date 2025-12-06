@@ -17,6 +17,8 @@ export class TranslationCache {
 	private accessOrder: Map<string, number> = new Map();
 	private accessCounter = 0;
 	private cleanupInterval: TimerId | null = null;
+	private hits = 0;
+	private misses = 0;
 
 	constructor(
     private maxSize: number = MAX_CACHE_SIZE,
@@ -51,6 +53,7 @@ export class TranslationCache {
 		const entry = this.cache.get(key);
 
 		if (!entry) {
+			this.misses++;
 			return null;
 		}
 
@@ -58,11 +61,13 @@ export class TranslationCache {
 		if (Date.now() > entry.timestamp + entry.ttl) {
 			this.cache.delete(key);
 			this.accessOrder.delete(key);
+			this.misses++;
 			return null;
 		}
 
 		// Update access order for LRU
 		this.accessOrder.set(key, ++this.accessCounter);
+		this.hits++;
 		return entry.value;
 	}
 
@@ -144,6 +149,8 @@ export class TranslationCache {
 		this.cache.clear();
 		this.accessOrder.clear();
 		this.accessCounter = 0;
+		this.hits = 0;
+		this.misses = 0;
 	}
 
 	/**
@@ -152,6 +159,8 @@ export class TranslationCache {
 	getStats(): {
     size: number;
     maxSize: number;
+    hits: number;
+    misses: number;
     hitRate: number;
     memoryUsage: number;
     } {
@@ -162,6 +171,8 @@ export class TranslationCache {
 		return {
 			size,
 			maxSize: this.maxSize,
+			hits: this.hits,
+			misses: this.misses,
 			hitRate,
 			memoryUsage,
 		};
@@ -244,9 +255,9 @@ export class TranslationCache {
    * Calculate cache hit rate
    */
 	private calculateHitRate(): number {
-		// This is a simplified implementation
-		// In a real scenario, you'd track hits and misses separately
-		return 0.85; // Placeholder
+		const total = this.hits + this.misses;
+		if (total === 0) return 0;
+		return this.hits / total;
 	}
 
 	/**
