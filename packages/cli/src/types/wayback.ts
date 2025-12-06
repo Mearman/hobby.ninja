@@ -12,6 +12,8 @@ export interface WaybackOptions {
 	rateLimitDelayMs: number; // Delay after rate limit error
 	accessKey?: string; // Internet Archive S3 access key
 	secretKey?: string; // Internet Archive S3 secret key
+	minArchiveAge: string; // Skip archives newer than this (default: 30d)
+	maxArchiveAge: string; // Force re-archive if older than this (default: 1y)
 }
 
 export interface WaybackSubmission {
@@ -22,6 +24,12 @@ export interface WaybackSubmission {
 	archiveUrl?: string;
 	error?: string;
 	retryCount: number;
+	existingArchive?: {
+		timestamp: string;
+		age: number;
+		url: string;
+	};
+	ageCheckResult?: 'too_new' | 'needs_update' | 'not_archived';
 }
 
 export interface WaybackCheckpoint {
@@ -42,6 +50,31 @@ export interface WaybackResult {
 	skipped: number;
 	errors: string[];
 	duration: number;
+	ageStats: {
+		tooNew: number;
+		needsUpdate: number;
+		notArchived: number;
+	};
+}
+
+export interface ArchiveAgeCheck {
+	result: 'not_archived' | 'too_new' | 'needs_update';
+	archive?: {
+		timestamp: string;
+		age: number;
+		url: string;
+	};
+}
+
+export interface WaybackAvailableResponse {
+	archived_snapshots: {
+		closest?: {
+			available: boolean;
+			url: string;
+			timestamp: string;
+			status: string;
+		};
+	};
 }
 
 export interface ManualJson {
