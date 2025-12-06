@@ -21,7 +21,13 @@
       "Bash(.specify/scripts/bash/create-new-feature.sh:*)",
       "Bash(find:*)",
       "Bash(git rev-parse:*)",
-      "Bash(tsx:*)"
+      "Bash(tsx:*)",
+      "Bash(node -e:*)",
+      "Bash(curl:*)",
+      "Bash(host collector.app)",
+      "Bash(xargs:*)",
+      "Bash(grep:*)",
+      "Bash(wrangler r2 bucket list:*)"
     ],
     "deny": [
       "Bash(git add .)",
