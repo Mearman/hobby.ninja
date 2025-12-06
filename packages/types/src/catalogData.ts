@@ -48,7 +48,7 @@ export interface CatalogItem {
 	brands: CatalogBrand[];
 	categories: CatalogCategory[];
 	scale?: string;
-	description?: LocalizedText;
+	description: LocalizedText[];
 	accessories: LocalizedText[];
 	contents: LocalizedText[];
 	images: string[];
