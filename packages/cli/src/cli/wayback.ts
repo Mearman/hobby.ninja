@@ -7,18 +7,27 @@ import {
 	WaybackCheckpoint,
 	UrlField,
 	ManualJson,
+	ArchiveAgeCheck,
+	WaybackAvailableResponse,
 } from '../types/wayback.js';
 
 const CHECKPOINT_FILE = '.wayback-checkpoint.json';
 const WAYBACK_SAVE_URL = 'https://web.archive.org/save';
+const WAYBACK_AVAILABLE_URL = 'https://archive.org/wayback/available';
 
 export class WaybackCommand {
 	private checkpoint: WaybackCheckpoint | null = null;
 	private checkpointPath: string = '';
+	private minAgeMs: number = 0;
+	private maxAgeMs: number = 0;
 
 	async execute(options: WaybackOptions): Promise<WaybackResult> {
 		const startTime = Date.now();
 		this.checkpointPath = path.join(process.cwd(), CHECKPOINT_FILE);
+
+		// Parse age thresholds
+		this.minAgeMs = this.parseDuration(options.minArchiveAge);
+		this.maxAgeMs = this.parseDuration(options.maxArchiveAge);
 
 		const result: WaybackResult = {
 			totalUrls: 0,
@@ -28,6 +37,11 @@ export class WaybackCommand {
 			skipped: 0,
 			errors: [],
 			duration: 0,
+			ageStats: {
+				tooNew: 0,
+				needsUpdate: 0,
+				notArchived: 0,
+			},
 		};
 
 		try {
@@ -47,6 +61,8 @@ export class WaybackCommand {
 
 			if (options.dryRun) {
 				console.log('\nDry run - URLs that would be submitted:');
+				console.log(`Age thresholds: min=${this.formatDuration(this.minAgeMs)}, max=${this.formatDuration(this.maxAgeMs)}`);
+
 				for (const sub of submissions.slice(0, 20)) {
 					console.log(`  [${sub.manualId}] ${sub.field}: ${sub.url}`);
 				}
@@ -90,8 +106,17 @@ export class WaybackCommand {
 					console.log(`${progress} Progress: ${submission.manualId}/${submission.field}`);
 				}
 
-				const processedSubmission = await this.submitWithRetry(submission, options.retries, options.verbose);
+				const processedSubmission = await this.submitWithAgeCheck(submission, options.retries, options.verbose);
 				result.submitted++;
+
+				// Update age statistics
+				if (processedSubmission.ageCheckResult === 'too_new') {
+					result.ageStats.tooNew++;
+				} else if (processedSubmission.ageCheckResult === 'needs_update') {
+					result.ageStats.needsUpdate++;
+				} else if (processedSubmission.ageCheckResult === 'not_archived') {
+					result.ageStats.notArchived++;
+				}
 
 				if (processedSubmission.status === 'success') {
 					result.successful++;
@@ -108,6 +133,9 @@ export class WaybackCommand {
 					}
 				} else if (processedSubmission.status === 'skipped') {
 					result.skipped++;
+					if (options.verbose && processedSubmission.ageCheckResult === 'too_new') {
+						console.log(`  -> Skipped: Archive too recent (${this.formatDuration(processedSubmission.existingArchive?.age || 0)} old)`);
+					}
 				}
 
 				// Update checkpoint
@@ -254,18 +282,24 @@ export class WaybackCommand {
 			// Check for redirect or parse response
 			const location = response.headers.get('location');
 			if (location) {
-				return { success: true, archiveUrl: location };
+				// Ensure the location includes id_ suffix in the timestamp
+				const correctedUrl = location.replace(/\/web\/(\d{14})\//, '/web/$1id_/');
+				return { success: true, archiveUrl: correctedUrl };
 			}
 
 			// Try to parse content-location or construct URL
 			const contentLocation = response.headers.get('content-location');
 			if (contentLocation) {
-				return { success: true, archiveUrl: `https://web.archive.org${contentLocation}` };
+				// Ensure the content-location includes id_ suffix in the timestamp
+				const archiveUrl = contentLocation.startsWith('http') ? contentLocation : `https://web.archive.org${contentLocation}`;
+				// If the content-location doesn't have id_ after the timestamp, add it
+				const correctedUrl = archiveUrl.replace(/\/web\/(\d{14})\//, '/web/$1id_/');
+				return { success: true, archiveUrl: correctedUrl };
 			}
 
 			// Construct expected archive URL
 			const timestamp = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);
-			return { success: true, archiveUrl: `https://web.archive.org/web/${timestamp}/${url}` };
+			return { success: true, archiveUrl: `https://web.archive.org/web/${timestamp}id_/${url}` };
 		}
 
 		// Handle error responses
@@ -318,6 +352,124 @@ export class WaybackCommand {
 		}
 
 		console.log(`Results saved to ${resultsPath}`);
+	}
+
+	private async submitWithAgeCheck(
+		submission: WaybackSubmission,
+		maxRetries: number,
+		verbose: boolean
+	): Promise<WaybackSubmission> {
+		// Check archive age first
+		const ageCheck = await this.checkArchiveAge(submission.url);
+
+		let processedSubmission: WaybackSubmission = {
+			...submission,
+			ageCheckResult: ageCheck.result,
+		};
+
+		if (ageCheck.archive) {
+			processedSubmission.existingArchive = ageCheck.archive;
+		}
+
+		// If archive is too new, skip submission
+		if (ageCheck.result === 'too_new') {
+			if (verbose) {
+				console.log(`  Archive exists and is too recent (${this.formatDuration(ageCheck.archive!.age)} old)`);
+			}
+			processedSubmission.status = 'skipped';
+			return processedSubmission;
+		}
+
+		// Otherwise proceed with submission
+		return await this.submitWithRetry(processedSubmission, maxRetries, verbose);
+	}
+
+	private async checkArchiveAge(url: string): Promise<ArchiveAgeCheck> {
+		try {
+			const response = await fetch(`${WAYBACK_AVAILABLE_URL}?url=${encodeURIComponent(url)}`, {
+				method: 'GET',
+				headers: {
+					'User-Agent': 'GunplaCollectionManager/1.0 (gunpla-archive-check)',
+				},
+			});
+
+			if (!response.ok) {
+				// If we can't check, assume not archived
+				return { result: 'not_archived' };
+			}
+
+			const data: WaybackAvailableResponse = await response.json();
+
+			if (!data.archived_snapshots?.closest || !data.archived_snapshots.closest.available) {
+				return { result: 'not_archived' };
+			}
+
+			const archive = data.archived_snapshots.closest;
+			const archiveDate = this.parseWaybackTimestamp(archive.timestamp);
+			const age = Date.now() - archiveDate.getTime();
+
+			return {
+				result: age < this.minAgeMs ? 'too_new' :
+						age > this.maxAgeMs ? 'needs_update' : 'too_new',
+				archive: {
+					timestamp: archive.timestamp,
+					age,
+					url: archive.url,
+				},
+			};
+		} catch (error) {
+			// If we can't check, assume not archived and proceed
+			return { result: 'not_archived' };
+		}
+	}
+
+	private parseDuration(duration: string): number {
+		const match = duration.match(/^(\d+)([dmy])$/);
+		if (!match) {
+			throw new Error(`Invalid duration format: ${duration}. Use format like 30d, 6m, 2y`);
+		}
+
+		const [, num, unit] = match;
+		const value = parseInt(num, 10);
+
+		switch (unit) {
+			case 'd': return value * 24 * 60 * 60 * 1000; // days to ms
+			case 'm': return value * 30 * 24 * 60 * 60 * 1000; // months to ms (approximate)
+			case 'y': return value * 365 * 24 * 60 * 60 * 1000; // years to ms (approximate)
+			default:
+				throw new Error(`Invalid duration unit: ${unit}. Use d, m, or y`);
+		}
+	}
+
+	private parseWaybackTimestamp(timestamp: string): Date {
+		if (timestamp.length !== 14) {
+			throw new Error(`Invalid Wayback timestamp format: ${timestamp}`);
+		}
+
+		const year = parseInt(timestamp.slice(0, 4), 10);
+		const month = parseInt(timestamp.slice(4, 6), 10) - 1; // JS months are 0-based
+		const day = parseInt(timestamp.slice(6, 8), 10);
+		const hour = parseInt(timestamp.slice(8, 10), 10);
+		const minute = parseInt(timestamp.slice(10, 12), 10);
+		const second = parseInt(timestamp.slice(12, 14), 10);
+
+		return new Date(Date.UTC(year, month, day, hour, minute, second));
+	}
+
+	private formatDuration(ms: number): string {
+		const days = Math.floor(ms / (24 * 60 * 60 * 1000));
+		const remainingMs = ms % (24 * 60 * 60 * 1000);
+		const hours = Math.floor(remainingMs / (60 * 60 * 1000));
+		const remainingMinutesMs = remainingMs % (60 * 60 * 1000);
+		const minutes = Math.floor(remainingMinutesMs / (60 * 1000));
+
+		if (days > 0) {
+			return `${days}d ${hours}h`;
+		} else if (hours > 0) {
+			return `${hours}h ${minutes}m`;
+		} else {
+			return `${minutes}m`;
+		}
 	}
 
 	private sleep(ms: number): Promise<void> {
