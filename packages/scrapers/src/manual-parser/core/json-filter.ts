@@ -30,10 +30,13 @@ interface RawParsedJson {
 }
 
 /**
- * Localized date with ISO value
+ * Localized date with parsed components
+ * year/month/day omitted for special cases like 非公開 (undisclosed)
  */
 export interface LocalizedDate extends LocalizedText {
-  iso: string;
+  year?: number;
+  month?: number;
+  day?: number;
 }
 
 /**
@@ -46,7 +49,7 @@ export interface FilteredManualData {
   productNumber: string;
   releaseDate: LocalizedDate;
   grade: string;
-  scale: string;
+  scale?: string;
   series: LocalizedText;
   productImage: string;
   thumbnailImage: string;
@@ -102,13 +105,35 @@ function extractProductNumber(blocks: RawParsedJson['content']['blocks']): strin
 function extractReleaseDate(blocks: RawParsedJson['content']['blocks']): LocalizedDate {
   for (const block of blocks) {
     const text = block.content?.text || block.content?.ja || '';
-    // Look for pattern: 発売日 followed by date (e.g., 2002年11月16日発売)
-    const match = text.match(/発売日[^\d]*(\d{4})年(\d{1,2})月(\d{1,2})日/);
-    if (match) {
-      const [, year, month, day] = match;
+
+    // Try full date first: 2002年11月16日
+    const fullMatch = text.match(/発売日[^\d]*(\d{4})年(\d{1,2})月(\d{1,2})日/);
+    if (fullMatch) {
+      const [, year, month, day] = fullMatch;
       return {
         ja: `${year}年${month}月${day}日`,
-        iso: `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`,
+        year: parseInt(year, 10),
+        month: parseInt(month, 10),
+        day: parseInt(day, 10),
+      };
+    }
+
+    // Try month-only date: 2022年2月発売
+    const monthMatch = text.match(/発売日[^\d]*(\d{4})年(\d{1,2})月/);
+    if (monthMatch) {
+      const [, year, month] = monthMatch;
+      return {
+        ja: `${year}年${month}月`,
+        year: parseInt(year, 10),
+        month: parseInt(month, 10),
+      };
+    }
+
+    // Handle 非公開 (undisclosed) - special releases without public date
+    const undisclosedMatch = text.match(/発売日[\s\n]*非公開/);
+    if (undisclosedMatch) {
+      return {
+        ja: '非公開',
       };
     }
   }
@@ -118,12 +143,12 @@ function extractReleaseDate(blocks: RawParsedJson['content']['blocks']): Localiz
 /**
  * Extract grade/brand (ブランド) from text
  */
-function extractGrade(blocks: RawParsedJson['content']['blocks']): { grade: string; scale: string } {
+function extractGrade(blocks: RawParsedJson['content']['blocks']): { grade: string; scale?: string } {
   const gradePatterns = ['HGUC', 'HGCE', 'HGAC', 'HGAW', 'HGFC', 'HGCC', 'HG', 'MG', 'PG', 'RG', 'EG', 'SD', 'RE'];
   const scalePatterns = ['1/144', '1/100', '1/60', '1/48'];
 
   let grade = '';
-  let scale = '';
+  let scale: string | undefined;
 
   for (const block of blocks) {
     const text = block.content?.text || block.content?.ja || '';
@@ -146,7 +171,7 @@ function extractGrade(blocks: RawParsedJson['content']['blocks']): { grade: stri
       }
     }
 
-    // Extract scale from product name
+    // Extract scale from product name (optional)
     if (!scale) {
       for (const s of scalePatterns) {
         if (text.includes(s)) {
@@ -159,9 +184,6 @@ function extractGrade(blocks: RawParsedJson['content']['blocks']): { grade: stri
 
   if (!grade) {
     throw new Error('Failed to extract grade (ブランド) from manual');
-  }
-  if (!scale) {
-    throw new Error('Failed to extract scale from manual');
   }
 
   return { grade, scale };
@@ -217,25 +239,40 @@ function extractProductName(
 }
 
 /**
+ * Check if URL is a product image (not a common/logo image)
+ */
+function isProductImage(url: string): boolean {
+  // Exclude common assets
+  if (url.includes('/common/')) return false;
+  if (url.includes('logo_')) return false;
+  if (url.includes('bnr_')) return false;
+
+  // Include bandai-hobby.net product images (various paths)
+  if (url.includes('bandai-hobby.net/images/')) return true;
+  if (url.includes('bandai-hobby.net/temp/')) return true;
+  if (url.includes('bandai-hobby.net/ecms_img/')) return true;
+
+  // Akamai CDN for Bandai images
+  if (url.includes('bandai-a.akamaihd.net/')) return true;
+
+  return false;
+}
+
+/**
  * Extract product image URL
  */
 function extractProductImage(
   blocks: RawParsedJson['content']['blocks'],
   assets: RawParsedJson['assets']
 ): { productImage: string; thumbnailImage: string } {
-  // Look for bandai-hobby.net product images
-  const productImages = assets.images.filter(
-    (img) => img.includes('bandai-hobby.net/images/') && !img.includes('/common/')
-  );
+  const productImages = assets.images.filter(isProductImage);
 
   // Also check img blocks
   for (const block of blocks) {
     if (block.type === 'img' && block.content?.src) {
       const src = block.content.src;
-      if (src.includes('bandai-hobby.net/images/') && !src.includes('/common/')) {
-        if (!productImages.includes(src)) {
-          productImages.push(src);
-        }
+      if (isProductImage(src) && !productImages.includes(src)) {
+        productImages.push(src);
       }
     }
   }
@@ -254,17 +291,37 @@ function extractProductImage(
  * Build source URL from manual ID
  */
 function buildSourceUrl(manualId: string): string {
-  return `https://manual.bandai-hobby.net/${manualId}.html`;
+  const numericId = parseInt(manualId, 10);
+  return `https://manual.bandai-hobby.net/menus/detail/${numericId}/`;
+}
+
+/**
+ * Check if raw JSON has expected parsed HTML structure
+ */
+function isValidParsedHtml(rawJson: unknown): rawJson is RawParsedJson {
+  if (!rawJson || typeof rawJson !== 'object') return false;
+  const obj = rawJson as Record<string, unknown>;
+  return (
+    obj.content !== undefined &&
+    typeof obj.content === 'object' &&
+    obj.content !== null &&
+    'blocks' in obj.content &&
+    Array.isArray((obj.content as Record<string, unknown>).blocks)
+  );
 }
 
 /**
  * Filter raw parsed JSON to clean product data
  */
-export function filterManualJson(rawJson: RawParsedJson, manualId: string): FilteredManualData {
-  const blocks = rawJson.content?.blocks;
+export function filterManualJson(rawJson: unknown, manualId: string): FilteredManualData {
+  if (!isValidParsedHtml(rawJson)) {
+    throw new Error('Invalid structure: not a parsed HTML JSON file');
+  }
+
+  const blocks = rawJson.content.blocks;
   const assets = rawJson.assets;
 
-  if (!blocks || blocks.length === 0) {
+  if (blocks.length === 0) {
     throw new Error('No content blocks found in raw JSON');
   }
   if (!assets) {
@@ -278,19 +335,24 @@ export function filterManualJson(rawJson: RawParsedJson, manualId: string): Filt
   const series = extractSeries(blocks);
   const { productImage, thumbnailImage } = extractProductImage(blocks, assets);
 
-  return {
+  const result: FilteredManualData = {
     id: manualId,
     name,
     productNumber,
     releaseDate,
     grade,
-    scale,
     series,
     productImage,
     thumbnailImage,
     sourceUrl: buildSourceUrl(manualId),
     extractedAt: rawJson.metadata?.extractedAt || new Date().toISOString(),
   };
+
+  if (scale) {
+    result.scale = scale;
+  }
+
+  return result;
 }
 
 /**
@@ -302,7 +364,7 @@ export async function filterJsonFile(
   manualId: string
 ): Promise<FilteredManualData> {
   const rawContent = await fs.readFile(inputPath, 'utf-8');
-  const rawJson = JSON.parse(rawContent) as RawParsedJson;
+  const rawJson: unknown = JSON.parse(rawContent);
 
   const filtered = filterManualJson(rawJson, manualId);
 
