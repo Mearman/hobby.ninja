@@ -23,6 +23,9 @@ export interface CatalogDiscoveryOptions {
 
 	/** Delay between requests in milliseconds */
 	delayMs: number;
+
+	/** Enable translation of Japanese text to English */
+	translate?: boolean;
 }
 
 /**

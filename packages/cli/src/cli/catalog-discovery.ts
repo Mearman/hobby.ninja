@@ -1,5 +1,6 @@
 import { SimpleCatalogScraper } from "./simple-catalog-scraper";
 import { BandaiCatalogParser } from "./bandai-catalog-parser";
+import { CatalogTranslator } from "./catalog-translator";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
@@ -489,6 +490,19 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 
 	console.log(`📊 Index: ${indexStats.valid} products found, ${indexStats.invalid} IDs with no page, ${indexStats.totalChecked} total checked`);
 
+	// Initialize translator if translation is enabled
+	let catalogTranslator: CatalogTranslator | undefined;
+	if (options.translate) {
+		console.log(`🌐 Translation enabled - initializing translation service...`);
+		const translationCacheDir = join(options.outputDir, '..', 'translations');
+		catalogTranslator = new CatalogTranslator({
+			storeDir: translationCacheDir,
+			verbose: options.verbose
+		});
+		await catalogTranslator.initialize();
+		console.log(`✅ Translation service ready`);
+	}
+
 	const result: CatalogDiscoveryResult = {
 		successful: true,
 		totalRanges: options.ranges.length,
@@ -573,6 +587,21 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 					];
 
 					if (catalogResult.success && catalogResult.data) {
+						// Translate if translation is enabled
+						if (catalogTranslator) {
+							try {
+								const translateResult = await catalogTranslator.translateItem(catalogResult.data);
+								if (translateResult.translated && options.verbose) {
+									console.log(`    🌐 Translated ${translateResult.fieldsTranslated} fields`);
+								}
+							} catch (translateError) {
+								// Log translation error but don't fail the scrape
+								if (options.verbose) {
+									console.warn(`    ⚠️ Translation failed: ${translateError}`);
+								}
+							}
+						}
+
 						writePromises.push(
 							writeFile(join(itemDir, `${range}.json`), JSON.stringify(catalogResult.data, null, 2), 'utf8')
 						);
