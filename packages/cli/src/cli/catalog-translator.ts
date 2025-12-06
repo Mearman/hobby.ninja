@@ -15,6 +15,8 @@ import {
 	TranslationService,
 	createServerTranslationStore,
 	loadDictionary,
+	rebuildAndReloadDictionary,
+	TRANSLATION_STORE_DIR,
 } from '../../../translation/src/index';
 import type { TranslationStore } from '../../../translation/src/index';
 import type {
@@ -27,10 +29,12 @@ import type {
 import type { LocalizedText } from '../../../types/src/manualData';
 
 export interface CatalogTranslatorOptions {
-	/** Directory for persistent translation cache */
-	storeDir: string;
+	/** Directory for persistent translation cache (default: data/translations) */
+	storeDir?: string;
 	/** Enable verbose logging */
 	verbose?: boolean;
+	/** Rebuild dictionary after translation completes */
+	rebuildDictionary?: boolean;
 }
 
 export interface TranslateItemResult {
@@ -55,12 +59,14 @@ export class CatalogTranslator {
 	private store?: TranslationStore;
 	private storeDir: string;
 	private verbose: boolean;
+	private rebuildDictionary: boolean;
 	private initialized = false;
 	private cacheStats: CacheStats = { hits: 0, misses: 0 };
 
-	constructor(options: CatalogTranslatorOptions) {
-		this.storeDir = options.storeDir;
+	constructor(options: CatalogTranslatorOptions = {}) {
+		this.storeDir = options.storeDir ?? TRANSLATION_STORE_DIR;
 		this.verbose = options.verbose ?? false;
+		this.rebuildDictionary = options.rebuildDictionary ?? true;
 	}
 
 	/**
@@ -184,6 +190,30 @@ export class CatalogTranslator {
 	 */
 	isInitialized(): boolean {
 		return this.initialized;
+	}
+
+	/**
+	 * Finalize translation run - rebuilds dictionary if enabled
+	 * Call this after all translations are complete
+	 */
+	async finalize(): Promise<void> {
+		if (!this.rebuildDictionary) {
+			return;
+		}
+
+		if (this.verbose) {
+			console.log('[CatalogTranslator] Rebuilding dictionary from cache...');
+		}
+
+		const result = await rebuildAndReloadDictionary({ verbose: this.verbose });
+
+		if (result.success && result.dictionary) {
+			if (this.verbose) {
+				console.log(`[CatalogTranslator] Dictionary rebuilt: ${result.dictionary.stats.uniquePhrases} phrases`);
+			}
+		} else if (result.error) {
+			console.error(`[CatalogTranslator] Failed to rebuild dictionary: ${result.error}`);
+		}
 	}
 
 	// Private helper methods
