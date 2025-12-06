@@ -1,5 +1,5 @@
 import { scrapers } from '@unnamed-gunpla-app/scrapers';
-import { LanguageDetection } from '@unnamed-gunpla-app/utils';
+import { LanguageDetector } from '@unnamed-gunpla-app/utils';
 import { promises as fs } from 'fs';
 import path from 'path';
 
@@ -71,9 +71,10 @@ export class SingleUrlCommand {
       }
 
       // Detect language
-      const language = LanguageDetection.detect(html);
+      const languageDetection = LanguageDetector.detectFromHtml(html, url);
+      const language = languageDetection.language;
       if (verbose) {
-        console.log(`🌍 Language: ${language.language} (${(language.confidence * 100).toFixed(1)}% confidence)`);
+        console.log(`🌍 Language: ${language} (${(languageDetection.confidence * 100).toFixed(1)}% confidence)`);
       }
 
       // Scrape data using the appropriate scraper
@@ -104,7 +105,7 @@ export class SingleUrlCommand {
         console.log(`   ✅ Name: ${scrapedData.name}`);
         console.log(`   ✅ Brand: ${scrapedData.brand}`);
         console.log(`   ✅ Source: ${scrapedData.source}`);
-        console.log(`   ✅ Language: ${language.language}`);
+        console.log(`   ✅ Language: ${language}`);
 
         if (scrapedData.images && scrapedData.images.length > 0) {
           console.log(`   ✅ Images: ${scrapedData.images.length} found`);
