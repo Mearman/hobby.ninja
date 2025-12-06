@@ -5,6 +5,8 @@ import { ScrapeCommand, ScrapeOptions } from './scrape.js';
 import { CacheCommand } from './cache.js';
 import { ValidateCommand } from './validate.js';
 import { SingleUrlCommand } from './single-url.js';
+import { WaybackCommand } from './wayback.js';
+import { UrlField } from '../types/wayback.js';
 
 const program = new Command();
 
@@ -129,6 +131,74 @@ program
       }
     } catch (error) {
       console.error('❌ Single URL scraping failed:', error instanceof Error ? error.message : 'Unknown error');
+      process.exit(1);
+    }
+  });
+
+program
+  .command('wayback')
+  .description('Submit URLs to Internet Archive Wayback Machine')
+  .option('--data-dir <dir>', 'Manual data directory', './data/bandai/manuals')
+  .option('--fields <fields>', 'URL fields (comma-separated)', 'sourceUrl,pdfUrl,productImage,supplementaryPdfUrl')
+  .option('--dry-run', 'Show URLs without submitting', false)
+  .option('--resume', 'Resume from checkpoint', false)
+  .option('--verbose', 'Verbose logging', false)
+  .option('--retries <n>', 'Retry attempts', '5')
+  .option('--delay <seconds>', 'Delay between requests', '0')
+  .option('--rate-limit-delay <seconds>', 'Base delay after rate limit error', '30')
+  .option('--access-key <key>', 'Internet Archive S3 access key')
+  .option('--secret-key <key>', 'Internet Archive S3 secret key')
+  .option('--output <dir>', 'Results directory', './wayback-results')
+  .action(async (options) => {
+    const waybackCommand = new WaybackCommand();
+
+    try {
+      // Parse API keys from options or environment
+      const accessKey = options.accessKey || process.env.IA_ACCESS_KEY;
+      const secretKey = options.secretKey || process.env.IA_SECRET_KEY;
+
+      console.log('Submitting URLs to Internet Archive Wayback Machine...');
+      console.log(`Data directory: ${options.dataDir}`);
+      console.log(`Fields: ${options.fields}`);
+      console.log(`Delay between requests: ${options.delay}s`);
+      console.log(`Rate limit retry delay: ${options.rateLimitDelay}s (exponential backoff)`);
+      console.log(`Max retries: ${options.retries}`);
+      console.log(`Authentication: ${accessKey ? 'API keys provided' : 'No authentication'}`);
+      console.log(`Dry run: ${options.dryRun}`);
+      console.log('');
+
+      const result = await waybackCommand.execute({
+        dataDir: options.dataDir,
+        fields: options.fields.split(',') as UrlField[],
+        dryRun: options.dryRun,
+        resume: options.resume,
+        verbose: options.verbose,
+        retries: parseInt(options.retries, 10),
+        delayMs: parseFloat(options.delay) * 1000,
+        rateLimitDelayMs: parseFloat(options.rateLimitDelay) * 1000,
+        accessKey,
+        secretKey,
+        output: options.output,
+      });
+
+      console.log('\nWayback Submission Results:');
+      console.log(`Total URLs: ${result.totalUrls}`);
+      console.log(`Submitted: ${result.submitted}`);
+      console.log(`Successful: ${result.successful}`);
+      console.log(`Failed: ${result.failed}`);
+      console.log(`Skipped: ${result.skipped}`);
+      console.log(`Duration: ${(result.duration / 1000 / 60).toFixed(1)} minutes`);
+
+      if (result.errors.length > 0 && result.errors.length <= 10) {
+        console.log('\nErrors:');
+        result.errors.forEach((error) => console.log(`  - ${error}`));
+      } else if (result.errors.length > 10) {
+        console.log(`\n${result.errors.length} errors (see results file for details)`);
+      }
+
+      process.exit(result.failed === 0 ? 0 : 1);
+    } catch (error) {
+      console.error('Wayback submission failed:', error instanceof Error ? error.message : 'Unknown error');
       process.exit(1);
     }
   });

@@ -15,7 +15,7 @@ export interface ProductInfo {
 export interface PublicationInfo {
   date?: string;
   version?: string;
-  language: 'ja' | 'en' | 'mixed';
+  language: "ja" | "en" | "mixed";
 }
 
 export interface BandaiInfo {
@@ -32,15 +32,15 @@ export interface ManualMetadata {
 }
 
 export type BlockType =
-  | 'heading'
-  | 'paragraph'
-  | 'list'
-  | 'table'
-  | 'image'
-  | 'warning'
-  | 'note'
-  | 'instruction'
-  | 'specification';
+  | "heading"
+  | "paragraph"
+  | "list"
+  | "table"
+  | "image"
+  | "warning"
+  | "note"
+  | "instruction"
+  | "specification";
 
 export interface BlockMetadata {
   className?: string;
@@ -108,7 +108,7 @@ export interface ImageReference {
   id: string;
   src: string;
   alt: LocalizedText;
-  type: 'illustration' | 'photo' | 'diagram' | 'symbol';
+  type: "illustration" | "photo" | "diagram" | "symbol";
   size?: {
     width?: number;
     height?: number;
@@ -117,7 +117,7 @@ export interface ImageReference {
 }
 
 export interface DiagramReference extends ImageReference {
-  type: 'diagram';
+  type: "diagram";
   labels: DiagramLabel[];
   annotations: DiagramAnnotation[];
 }
@@ -146,7 +146,7 @@ export interface OutlineEntry {
 
 export interface NavigationItem {
   id: string;
-  type: 'page' | 'section' | 'chapter' | 'appendix';
+  type: "page" | "section" | "chapter" | "appendix";
   title: string;
   target: string;
   order: number;
@@ -190,7 +190,7 @@ export interface ProcessingProgress {
   errors: number;
   rate: string;
   eta: string;
-  memory: NodeJS.MemoryUsage;
+  memory: { heapUsed: number; heapTotal: number; rss: number; external: number };
 }
 
 export interface ProcessingResult {
