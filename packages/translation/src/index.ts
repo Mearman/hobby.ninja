@@ -152,6 +152,14 @@ export type {
 	DictionaryBuildOptions,
 } from "./dictionary-builder";
 
+// Text normalizer exports
+export {
+	normalizeText,
+	normalizeTexts,
+} from "./text-normalizer";
+
+export type { NormalizerOptions } from "./text-normalizer";
+
 // Schema exports for validation
 export {
 	TranslationOptionsSchema,
