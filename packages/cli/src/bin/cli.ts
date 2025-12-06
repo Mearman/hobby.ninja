@@ -67,6 +67,29 @@ program
 		}
 	});
 
+// Normalize command implementation
+program
+	.command("normalize")
+	.description("Normalize text spacing in existing data files (Gundam/ガンダム padding)")
+	.option("-s, --source <source>", "Data source (all, bandai-catalog, bandai-manuals)", "all")
+	.option("-i, --input <dir>", "Override input directory for the specified source")
+	.option("--dry-run", "Preview changes without writing", false)
+	.option("-v, --verbose", "Verbose output", false)
+	.action(async (options) => {
+		try {
+			const { normalizeData } = await import("../cli/normalize-command.js");
+			await normalizeData(options);
+		} catch (error) {
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Error in normalize command:", errorMessage);
+			if (options.verbose) {
+				const errorStack = error instanceof Error ? error.stack : String(error);
+				console.error(errorStack);
+			}
+			process.exit(1);
+		}
+	});
+
 program
 	.command("export")
 	.description("Export cached data in various formats (PLACEHOLDER - Not yet implemented)")
