@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import * as path from 'path';
-import { CacheManager } from '@unnamed-gunpla-app/types';
+import { profileManagement } from '@unnamed-gunpla-app/types';
 
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
@@ -17,7 +17,7 @@ export interface CacheItem {
   lastAccessed: number;
 }
 
-export class FileSystemCacheManager implements CacheManager {
+export class FileSystemCacheManager implements profileManagement.CacheManager {
   private memoryCache = new Map<string, CacheItem>();
   private options: Required<CacheOptions>;
   private cleanupInterval: NodeJS.Timeout;
