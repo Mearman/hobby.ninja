@@ -180,18 +180,25 @@ export class BandaiCatalogParser {
 		return match ? `1/${match[1]}` : undefined;
 	}
 
-	private extractDescription($: cheerio.CheerioAPI): { ja: string } | undefined {
+	private extractDescription($: cheerio.CheerioAPI): Array<{ ja: string }> {
 		const descriptionEl = $('.pg-products__instructionTxt p').first();
 		const text = descriptionEl.text().trim();
 
-		if (!text) return undefined;
+		if (!text) return [];
 
 		// Clean up the description - remove accessories/contents sections
 		const cleanText = text
 			.split(/【付属品】|【商品内容】/)[0]
 			.trim();
 
-		return cleanText ? { ja: cleanText } : undefined;
+		if (!cleanText) return [];
+
+		// Split by newline and return as array of localized strings
+		return cleanText
+			.split('\n')
+			.map(line => line.trim())
+			.filter(line => line.length > 0)
+			.map(line => ({ ja: line }));
 	}
 
 	private extractAccessories($: cheerio.CheerioAPI): Array<{ ja: string }> {
