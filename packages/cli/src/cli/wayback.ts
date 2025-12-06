@@ -62,6 +62,11 @@ export class WaybackCommand {
 	/** Track cache hits/misses for UI display */
 	private cacheHits: number = 0;
 	private cacheMisses: number = 0;
+	/** Internet Archive API keys */
+	private accessKey?: string;
+	private secretKey?: string;
+	/** Callback for when auth fallback is triggered */
+	private onAuthFallback?: (url: string, authError: string) => void;
 
 	constructor() {
 		// Constructor - no debug output needed
@@ -71,6 +76,10 @@ export class WaybackCommand {
 		const startTime = Date.now();
 		this.checkpointPath = path.join(process.cwd(), CHECKPOINT_FILE);
 		this.archiveCachePath = path.join(process.cwd(), ARCHIVE_CACHE_FILE);
+
+		// Store API keys
+		this.accessKey = options.accessKey;
+		this.secretKey = options.secretKey;
 
 		// Parse age thresholds
 		this.minAgeMs = this.parseDuration(options.minArchiveAge);
@@ -166,14 +175,29 @@ export class WaybackCommand {
 			const progressRenderer = new WaybackProgressRenderer(pendingSubmissions.length);
 			progressRenderer.start();
 
-			// Process submissions
-			for (let i = 0; i < pendingSubmissions.length; i++) {
-				const submission = pendingSubmissions[i];
-				if (!submission) continue;
+			// Set up auth fallback callback to log to UI
+			this.onAuthFallback = (url, authError) => {
+				progressRenderer.log({
+					url,
+					status: 'auth_fallback',
+					message: authError,
+				});
+			};
+
+			// Convert to queue for dynamic requeuing of failed submissions
+			const queue: WaybackSubmission[] = [...pendingSubmissions];
+			const maxRequeues = 3; // Max times to requeue a URL after failures
+			let processedCount = 0;
+			let totalToProcess = queue.length; // Track original total for progress
+
+			// Process submissions using queue
+			while (queue.length > 0) {
+				const submission = queue.shift()!;
 
 				// Update progress UI with current item
 				progressRenderer.update({
-					processed: i,
+					processed: processedCount,
+					total: totalToProcess,
 					currentItem: {
 						sourceType: submission.sourceType,
 						itemId: submission.itemId,
@@ -200,7 +224,8 @@ export class WaybackCommand {
 							retryDelayMs: delayMs,
 						});
 						progressRenderer.update({
-							processed: i,
+							processed: processedCount,
+							total: totalToProcess,
 							cacheStats: {
 								hits: this.cacheHits,
 								misses: this.cacheMisses,
@@ -223,32 +248,76 @@ export class WaybackCommand {
 				if (processedSubmission.status === 'success') {
 					result.successful++;
 					this.checkpoint.successfulSubmissions.push(processedSubmission);
+					processedCount++;
+
+					// Log success
+					progressRenderer.log({
+						url: submission.url,
+						status: 'success',
+						retryCount: processedSubmission.retryCount,
+					});
 				} else if (processedSubmission.status === 'failed') {
-					result.failed++;
-					result.errors.push(`${submission.url}: ${processedSubmission.error || 'Unknown error'}`);
-					this.checkpoint.failedSubmissions.push(processedSubmission);
+					// Check if we should requeue this submission
+					const currentRequeueCount = submission.requeueCount || 0;
+
+					if (currentRequeueCount < maxRequeues) {
+						// Requeue: push to back of queue with incremented requeueCount
+						const requeuedSubmission: WaybackSubmission = {
+							...submission,
+							requeueCount: currentRequeueCount + 1,
+							retryCount: 0, // Reset retry count for next attempt
+							status: 'pending',
+						};
+						queue.push(requeuedSubmission);
+						totalToProcess++; // Adjust total since we added one back
+
+						// Log requeue event
+						progressRenderer.log({
+							url: submission.url,
+							status: 'requeued',
+							message: processedSubmission.error,
+							requeueCount: currentRequeueCount + 1,
+						});
+						// Don't count as processed yet - we'll try again
+					} else {
+						// Max requeues reached - mark as permanently failed
+						result.failed++;
+						result.errors.push(`${submission.url}: ${processedSubmission.error || 'Unknown error'} (after ${currentRequeueCount} requeues)`);
+						this.checkpoint.failedSubmissions.push({
+							...processedSubmission,
+							requeueCount: currentRequeueCount,
+						});
+						processedCount++;
+
+						// Log final failure
+						progressRenderer.log({
+							url: submission.url,
+							status: 'failed',
+							message: `${processedSubmission.error} (exhausted ${maxRequeues} requeues)`,
+							retryCount: processedSubmission.retryCount,
+							requeueCount: currentRequeueCount,
+						});
+					}
 				} else if (processedSubmission.status === 'skipped') {
 					result.skipped++;
-				}
+					processedCount++;
 
-				// Log the URL result to the scrolling log
-				const archiveAge = processedSubmission.existingArchive
-					? this.formatDuration(processedSubmission.existingArchive.age)
-					: undefined;
-				progressRenderer.log({
-					url: submission.url,
-					status: processedSubmission.status === 'success' ? 'success' :
-							processedSubmission.status === 'failed' ? 'failed' :
-							processedSubmission.ageCheckResult === 'too_new' ? 'cached' : 'skipped',
-					message: processedSubmission.error,
-					retryCount: processedSubmission.retryCount,
-					archiveAge,
-					fromCache: processedSubmission.ageCheckFromCache,
-				});
+					// Log the skip result to the scrolling log
+					const archiveAge = processedSubmission.existingArchive
+						? this.formatDuration(processedSubmission.existingArchive.age)
+						: undefined;
+					progressRenderer.log({
+						url: submission.url,
+						status: processedSubmission.ageCheckResult === 'too_new' ? 'cached' : 'skipped',
+						archiveAge,
+						fromCache: processedSubmission.ageCheckFromCache,
+					});
+				}
 
 				// Update progress UI with latest stats
 				progressRenderer.update({
-					processed: i + 1,
+					processed: processedCount,
+					total: totalToProcess,
 					successful: result.successful,
 					failed: result.failed,
 					skipped: result.skipped,
@@ -260,15 +329,15 @@ export class WaybackCommand {
 					},
 				});
 
-				// Update checkpoint
-				this.checkpoint.processedUrls.push(submission.url);
+				// Update checkpoint (only for completed URLs, not requeued ones)
+				if (processedSubmission.status !== 'failed' || (submission.requeueCount || 0) >= maxRequeues) {
+					this.checkpoint.processedUrls.push(submission.url);
+				}
 				this.checkpoint.lastUpdated = Date.now();
 
-				// Save checkpoint and cache periodically
-				if ((i + 1) % 10 === 0) {
-					await this.saveCheckpoint();
-					await this.saveArchiveCacheIfDirty();
-				}
+				// Save checkpoint after every item to avoid losing progress on cancel
+				await this.saveCheckpoint();
+				await this.saveArchiveCacheIfDirty();
 			}
 
 			// Mark progress as complete
@@ -428,8 +497,8 @@ export class WaybackCommand {
 	): Promise<WaybackSubmission> {
 		let lastError = '';
 		const unlimitedRetries = maxRetries < 0;
-		// Hard cap at 10 retries even in "unlimited" mode to prevent long waits
-		const effectiveMaxRetries = unlimitedRetries ? 10 : maxRetries;
+		// Hard cap at 3 retries even in "unlimited" mode - failed items get requeued
+		const effectiveMaxRetries = unlimitedRetries ? 3 : maxRetries;
 
 		for (let attempt = 0; attempt <= effectiveMaxRetries; attempt++) {
 			try {
@@ -437,9 +506,7 @@ export class WaybackCommand {
 
 				if (result.success) {
 					const successSubmission: WaybackSubmission = {
-						url: submission.url,
-						field: submission.field,
-						manualId: submission.manualId,
+						...submission,
 						status: 'success',
 						retryCount: attempt,
 					};
@@ -495,13 +562,47 @@ export class WaybackCommand {
 	}
 
 	private async submitUrl(url: string): Promise<{ success: boolean; archiveUrl?: string; error?: string; permanent?: boolean }> {
+		// If we have API keys, try with auth first
+		if (this.accessKey && this.secretKey) {
+			const authResult = await this.submitUrlWithAuth(url, true);
+			if (authResult.success) {
+				return authResult;
+			}
+			// If auth failed with a non-permanent error, try without auth
+			if (!authResult.permanent) {
+				// Log the fallback to UI
+				if (this.onAuthFallback) {
+					this.onAuthFallback(url, authResult.error || 'Auth failed');
+				}
+				const noAuthResult = await this.submitUrlWithAuth(url, false);
+				// If both auth and no-auth failed, mark as permanent to avoid retries
+				// (we've exhausted both authentication strategies)
+				if (!noAuthResult.success) {
+					return { ...noAuthResult, permanent: true };
+				}
+				return noAuthResult;
+			}
+			return authResult;
+		}
+		// No API keys, just submit without auth
+		return this.submitUrlWithAuth(url, false);
+	}
+
+	private async submitUrlWithAuth(url: string, useAuth: boolean): Promise<{ success: boolean; archiveUrl?: string; error?: string; permanent?: boolean }> {
 		try {
+			const headers: Record<string, string> = {
+				'Content-Type': 'application/x-www-form-urlencoded',
+				'User-Agent': 'GunplaCollectionManager/1.0 (gunpla-archive-preservation)',
+			};
+
+			// Add S3-style authorization if requested and keys are available
+			if (useAuth && this.accessKey && this.secretKey) {
+				headers['Authorization'] = `LOW ${this.accessKey}:${this.secretKey}`;
+			}
+
 			const response = await fetch(WAYBACK_SAVE_URL, {
 				method: 'POST',
-				headers: {
-					'Content-Type': 'application/x-www-form-urlencoded',
-					'User-Agent': 'GunplaCollectionManager/1.0 (gunpla-archive-preservation)',
-				},
+				headers,
 				body: new URLSearchParams({ url }),
 			});
 
@@ -544,6 +645,7 @@ export class WaybackCommand {
 					} else if (responseText.includes('forbidden')) {
 						return { success: false, error: 'Access forbidden - URL may be restricted', permanent: true };
 					} else if (responseText.includes('donate') || responseText.includes('reminder')) {
+						// Donation prompt - not permanent, auth fallback might help
 						return { success: false, error: 'Archive submission requires user interaction (donation prompt)', permanent: false };
 					} else {
 						return { success: false, error: 'Archive submission failed - unknown HTML response', permanent: false };
