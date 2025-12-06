@@ -40,6 +40,14 @@ export interface LocalizedDate extends LocalizedText {
 }
 
 /**
+ * Grade information with code and family
+ */
+export interface GradeInfo {
+  code: string; // Specific grade code (e.g., "HGUC", "SDCS", "30MM")
+  family: string; // Grade family (e.g., "HG", "SD", "30MM")
+}
+
+/**
  * Clean filtered output structure
  * Uses LocalizedText for fields that can be translated
  */
@@ -48,8 +56,7 @@ export interface FilteredManualData {
   name: LocalizedText;
   productNumber: string;
   releaseDate: LocalizedDate;
-  grade?: string; // Full grade (e.g., "HGUC")
-  baseGrade?: string; // Base grade family (e.g., "HG")
+  grade?: GradeInfo;
   scale?: string;
   series: LocalizedText;
   productImage: string;
@@ -291,8 +298,7 @@ function findGradeInText(text: string): string | undefined {
  * Extract grade/brand (ブランド) from text
  */
 function extractGrade(blocks: RawParsedJson['content']['blocks']): {
-  grade?: string;
-  baseGrade?: string;
+  grade?: GradeInfo;
   scale?: string;
 } {
   const scalePatterns = ['1/144', '1/100', '1/60', '1/48'];
@@ -346,10 +352,10 @@ function extractGrade(blocks: RawParsedJson['content']['blocks']): {
     }
   }
 
-  // Return with baseGrade if we found a grade
+  // Return with grade info if we found a grade
   if (grade) {
-    const baseGrade = deriveBaseGrade(grade);
-    return { grade, baseGrade, scale };
+    const family = deriveBaseGrade(grade);
+    return { grade: { code: grade, family }, scale };
   }
 
   // No grade found - this is OK for accessories and older kits
@@ -498,7 +504,7 @@ export function filterManualJson(rawJson: unknown, manualId: string): FilteredMa
   const name = extractProductName(rawJson.title, blocks);
   const productNumber = extractProductNumber(blocks);
   const releaseDate = extractReleaseDate(blocks);
-  const { grade, baseGrade, scale } = extractGrade(blocks);
+  const { grade, scale } = extractGrade(blocks);
   const series = extractSeries(blocks);
   const { productImage, thumbnailImage } = extractProductImage(blocks, assets);
 
@@ -516,9 +522,6 @@ export function filterManualJson(rawJson: unknown, manualId: string): FilteredMa
 
   if (grade) {
     result.grade = grade;
-  }
-  if (baseGrade) {
-    result.baseGrade = baseGrade;
   }
   if (scale) {
     result.scale = scale;
