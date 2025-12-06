@@ -54,7 +54,7 @@ export async function discoverValidIds(
 	const skippedIds: string[] = [];
 	const needsCheck: string[] = [];
 
-	console.log(`\n🔍 Phase 1: Fast discovery of ${ranges.length} IDs...`);
+	console.log(`\n🔍 Checking which product pages exist (${ranges.length} IDs)...`);
 
 	// First pass: quickly categorize indexed vs needs-check (no async, instant)
 	for (const range of ranges) {
@@ -71,28 +71,28 @@ export async function discoverValidIds(
 		}
 	}
 
-	// Show summary for already-indexed items (not each one)
+	// Show summary for previously checked items
 	if (skippedIds.length > 0) {
-		const validCount = validIds.length;
-		const invalidCount = invalidIds.length;
-		console.log(`  ⏭️  ${skippedIds.length} already indexed (${validCount} valid, ${invalidCount} invalid)`);
+		const existCount = validIds.length;
+		const notFoundCount = invalidIds.length;
+		console.log(`  ⏭️  ${skippedIds.length} previously checked (${existCount} exist, ${notFoundCount} not found)`);
 	}
 
-	// Second pass: parallel HTTP checks for unindexed IDs (batches of 50)
+	// Second pass: parallel HTTP checks for unchecked IDs (batches of 50)
 	if (needsCheck.length > 0) {
 		const BATCH_SIZE = 50;
 		const totalBatches = Math.ceil(needsCheck.length / BATCH_SIZE);
-		let newValidCount = 0;
-		let newInvalidCount = 0;
+		let newExistCount = 0;
+		let newNotFoundCount = 0;
 
-		process.stdout.write(`  📡 Checking ${needsCheck.length} new IDs...`);
+		process.stdout.write(`  🌐 Checking ${needsCheck.length} URLs...`);
 
 		for (let i = 0; i < needsCheck.length; i += BATCH_SIZE) {
 			const batch = needsCheck.slice(i, i + BATCH_SIZE);
 			const batchNum = Math.floor(i / BATCH_SIZE) + 1;
 
 			// Show progress
-			process.stdout.write(`\r  📡 Checking ${needsCheck.length} new IDs... batch ${batchNum}/${totalBatches}`);
+			process.stdout.write(`\r  🌐 Checking ${needsCheck.length} URLs... ${batchNum}/${totalBatches}`);
 
 			// Check batch in parallel
 			const results = await Promise.all(
@@ -108,11 +108,11 @@ export async function discoverValidIds(
 				if (result.isValid) {
 					validIds.push(range);
 					recordDiscoveredValidId(range, result.title); // Record in index immediately
-					newValidCount++;
+					newExistCount++;
 				} else {
 					invalidIds.push(range);
 					recordInvalidId(range);
-					newInvalidCount++;
+					newNotFoundCount++;
 				}
 			}
 
@@ -126,13 +126,10 @@ export async function discoverValidIds(
 		}
 
 		// Final summary on new line
-		console.log(`\n  ✅ ${newValidCount} valid, ❌ ${newInvalidCount} invalid`);
+		console.log(`\n  📋 ${newExistCount} pages exist, ${newNotFoundCount} not found`);
 	}
 
-	console.log(`\n📊 Discovery complete:`);
-	console.log(`   ✅ Valid: ${validIds.length}`);
-	console.log(`   ❌ Invalid: ${invalidIds.length}`);
-	console.log(`   ⏭️  Skipped (already indexed): ${skippedIds.length}`);
+	console.log(`\n📊 Summary: ${validIds.length} products found, ${invalidIds.length} IDs have no page`);
 
 	return { validIds, invalidIds, skippedIds };
 }
@@ -337,7 +334,7 @@ export async function processCatalogRange(
 	try {
 		if (ownsScraper) {
 			if (options.verbose) {
-				console.log(`Initializing browser for catalog range: ${range}`);
+				console.log(`  Opening browser for: ${range}`);
 			}
 			await activeScraper.initialize();
 		}
@@ -345,7 +342,7 @@ export async function processCatalogRange(
 		const url = buildCatalogUrl(range);
 
 		if (options.verbose) {
-			console.log(`Processing catalog range: ${range} -> ${url}`);
+			console.log(`  Loading page: ${url}`);
 		}
 
 		// Use SimpleCatalogScraper to bypass anti-bot protection and extract data
@@ -360,7 +357,7 @@ export async function processCatalogRange(
 		const errorMessage = error instanceof Error ? error.message : String(error);
 
 		if (options.verbose) {
-			console.error(`Error processing catalog range ${range}:`, errorMessage);
+			console.error(`  Error loading ${range}:`, errorMessage);
 		}
 
 		return {
@@ -374,7 +371,7 @@ export async function processCatalogRange(
 				await activeScraper.cleanup();
 			} catch (cleanupError) {
 				if (options.verbose) {
-					console.error(`Error cleaning up scraper:`, cleanupError);
+					console.error(`  Error closing browser:`, cleanupError);
 				}
 			}
 		}
@@ -456,7 +453,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 	loadCatalogIndex(options.outputDir);
 	const indexStats = getIndexStats();
 
-	console.log(`📊 Index loaded: ${indexStats.valid} valid, ${indexStats.invalid} invalid, ${indexStats.totalChecked} total checked`);
+	console.log(`📊 Index: ${indexStats.valid} products found, ${indexStats.invalid} IDs with no page, ${indexStats.totalChecked} total checked`);
 
 	const result: CatalogDiscoveryResult = {
 		successful: true,
@@ -488,18 +485,18 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 	});
 
 	if (idsNeedingDownload.length === 0) {
-		console.log(`\n✅ All valid IDs already have content downloaded.`);
+		console.log(`\n✅ All product pages already scraped.`);
 		result.completedRanges = discovery.validIds.length;
 		result.discoveredUrls = discovery.validIds.length;
 		result.processedUrls = discovery.validIds.length;
 	} else {
-		// Phase 2: Download content for valid IDs using Playwright (rolling worker pool)
-		const WORKER_COUNT = 20; // Number of concurrent workers (browser tabs)
-		console.log(`\n📥 Phase 2: Downloading content for ${idsNeedingDownload.length} valid IDs (${WORKER_COUNT} workers)...`);
+		// Phase 2: Scrape product pages using Playwright (rolling worker pool)
+		const WORKER_COUNT = 20; // Number of concurrent browser tabs
+		console.log(`\n📥 Scraping ${idsNeedingDownload.length} product pages (${WORKER_COUNT} parallel tabs)...`);
 
 		// Initialize browser ONCE for all downloads
 		const scraper = new SimpleCatalogScraper();
-		console.log(`  🌐 Initializing browser...`);
+		console.log(`  🌐 Opening browser...`);
 		await scraper.initialize();
 
 		// Track progress
@@ -611,7 +608,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 		averageProcessingTime: result.processingTime / Math.max(1, options.ranges.length)
 	};
 
-	console.log(`\n📊 Final index stats: ${finalStats.valid} valid, ${finalStats.invalid} invalid, ${finalStats.totalChecked} total`);
+	console.log(`\n📊 Done! ${finalStats.valid} products found, ${finalStats.invalid} IDs with no page`);
 
 	result.successful = result.errors.length === 0;
 	return result;
