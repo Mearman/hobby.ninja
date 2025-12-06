@@ -6,7 +6,7 @@ import { CacheCommand } from './cache.js';
 import { ValidateCommand } from './validate.js';
 import { SingleUrlCommand } from './single-url.js';
 import { WaybackCommand } from './wayback.js';
-import { UrlField } from '../types/wayback.js';
+import { WaybackSource } from '../types/wayback.js';
 
 const program = new Command();
 
@@ -138,8 +138,9 @@ program
 program
   .command('wayback')
   .description('Submit URLs to Internet Archive Wayback Machine')
-  .option('--data-dir <dir>', 'Manual data directory', './data/bandai/manuals')
-  .option('--fields <fields>', 'URL fields (comma-separated)', 'sourceUrl,pdfUrl,productImage,supplementaryPdfUrl')
+  .option('--source <source>', 'Data source (all, manuals, catalog)', 'all')
+  .option('--manuals-dir <dir>', 'Manual data directory', './data/bandai/manuals')
+  .option('--catalog-dir <dir>', 'Catalog data directory', './data/bandai/items')
   .option('--dry-run', 'Show URLs without submitting', false)
   .option('--resume', 'Resume from checkpoint', true)
   .option('--verbose', 'Verbose logging', false)
@@ -160,8 +161,9 @@ program
       const secretKey = options.secretKey || process.env['IA_SECRET_KEY'];
 
       console.log('Submitting URLs to Internet Archive Wayback Machine...');
-      console.log(`Data directory: ${options.dataDir}`);
-      console.log(`Fields: ${options.fields}`);
+      console.log(`Source: ${options.source}`);
+      console.log(`Manuals directory: ${options.manualsDir}`);
+      console.log(`Catalog directory: ${options.catalogDir}`);
       console.log(`Delay between requests: ${options.delay}s`);
       console.log(`Rate limit retry delay: ${options.rateLimitDelay}s (exponential backoff)`);
       console.log(`Max retries: ${options.retries}`);
@@ -172,8 +174,10 @@ program
       console.log('');
 
       const result = await waybackCommand.execute({
-        dataDir: options.dataDir,
-        fields: options.fields.split(',') as UrlField[],
+        source: options.source as WaybackSource,
+        manualsDir: options.manualsDir,
+        catalogDir: options.catalogDir,
+        fields: [], // Fields are determined by source type internally
         dryRun: options.dryRun,
         resume: options.resume,
         verbose: options.verbose,

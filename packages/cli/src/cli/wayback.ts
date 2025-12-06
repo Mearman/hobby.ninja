@@ -7,9 +7,14 @@ import {
 	WaybackCheckpoint,
 	UrlField,
 	ManualJson,
+	CatalogItemJson,
 	ArchiveAgeCheck,
 	WaybackAvailableResponse,
 } from '../types/wayback.js';
+
+// Default fields for each source type
+const MANUAL_FIELDS: UrlField[] = ['sourceUrl', 'pdfUrl', 'productImage', 'supplementaryPdfUrl'];
+const CATALOG_FIELDS: UrlField[] = ['sourceUrl', 'images'];
 
 const CHECKPOINT_FILE = '.wayback-checkpoint.json';
 const WAYBACK_SAVE_URL = 'https://web.archive.org/save';
@@ -57,8 +62,21 @@ export class WaybackCommand {
 				}
 			}
 
-			// Collect all URLs to submit
-			const submissions = await this.collectUrls(options.dataDir, options.fields);
+			// Collect all URLs to submit from configured sources
+			const submissions: WaybackSubmission[] = [];
+
+			if (options.source === 'all' || options.source === 'manuals') {
+				const manualSubmissions = await this.collectManualUrls(options.manualsDir, MANUAL_FIELDS);
+				submissions.push(...manualSubmissions);
+				console.log(`Found ${manualSubmissions.length} URLs from manuals`);
+			}
+
+			if (options.source === 'all' || options.source === 'catalog') {
+				const catalogSubmissions = await this.collectCatalogUrls(options.catalogDir, CATALOG_FIELDS);
+				submissions.push(...catalogSubmissions);
+				console.log(`Found ${catalogSubmissions.length} URLs from catalog`);
+			}
+
 			result.totalUrls = submissions.length;
 
 			console.log(`Found ${submissions.length} URLs to submit`);
@@ -68,7 +86,7 @@ export class WaybackCommand {
 				console.log(`Age thresholds: min=${this.formatDuration(this.minAgeMs)}, max=${this.formatDuration(this.maxAgeMs)}`);
 
 				for (const sub of submissions.slice(0, 20)) {
-					console.log(`  [${sub.manualId}] ${sub.field}: ${sub.url}`);
+					console.log(`  [${sub.sourceType}:${sub.itemId}] ${sub.field}: ${sub.url}`);
 				}
 				if (submissions.length > 20) {
 					console.log(`  ... and ${submissions.length - 20} more`);
@@ -93,7 +111,9 @@ export class WaybackCommand {
 					lastUpdated: Date.now(),
 					totalUrls: submissions.length,
 					fields: options.fields,
-					dataDir: options.dataDir,
+					source: options.source,
+					manualsDir: options.manualsDir,
+					catalogDir: options.catalogDir,
 				};
 			}
 
@@ -107,7 +127,7 @@ export class WaybackCommand {
 				if (options.verbose) {
 					console.log(`${progress} Submitting: ${submission.url}`);
 				} else if ((i + 1) % 100 === 0 || i === 0) {
-					console.log(`${progress} Progress: ${submission.manualId}/${submission.field}`);
+					console.log(`${progress} Progress: ${submission.sourceType}:${submission.itemId}/${submission.field}`);
 				}
 
 				const processedSubmission = await this.submitWithAgeCheck(submission, options.retries, options.verbose);
@@ -165,9 +185,17 @@ export class WaybackCommand {
 		return result;
 	}
 
-	private async collectUrls(dataDir: string, fields: UrlField[]): Promise<WaybackSubmission[]> {
+	private async collectManualUrls(dataDir: string, fields: UrlField[]): Promise<WaybackSubmission[]> {
 		const submissions: WaybackSubmission[] = [];
 		const absoluteDataDir = path.resolve(dataDir);
+
+		// Check if directory exists
+		try {
+			await fs.access(absoluteDataDir);
+		} catch {
+			console.log(`  Manuals directory not found: ${absoluteDataDir}`);
+			return submissions;
+		}
 
 		// Read all subdirectories
 		const entries = await fs.readdir(absoluteDataDir, { withFileTypes: true });
@@ -190,19 +218,92 @@ export class WaybackCommand {
 
 		// Collect URLs grouped by field type (sourceUrl first, then pdfUrl, etc.)
 		for (const field of fields) {
+			if (field === 'images') continue; // images field is catalog-only
+
 			for (const dir of dirs) {
 				const manual = manuals.get(dir);
 				if (!manual) continue;
 
-				const url = manual[field];
+				const url = manual[field as keyof ManualJson];
 				if (url && typeof url === 'string' && url.startsWith('http')) {
 					submissions.push({
 						url,
 						field,
-						manualId: manual.id,
+						itemId: manual.id,
+						sourceType: 'manual',
 						status: 'pending',
 						retryCount: 0,
 					});
+				}
+			}
+		}
+
+		return submissions;
+	}
+
+	private async collectCatalogUrls(dataDir: string, fields: UrlField[]): Promise<WaybackSubmission[]> {
+		const submissions: WaybackSubmission[] = [];
+		const absoluteDataDir = path.resolve(dataDir);
+
+		// Check if directory exists
+		try {
+			await fs.access(absoluteDataDir);
+		} catch {
+			console.log(`  Catalog directory not found: ${absoluteDataDir}`);
+			return submissions;
+		}
+
+		// Read all subdirectories
+		const entries = await fs.readdir(absoluteDataDir, { withFileTypes: true });
+		const dirs = entries
+			.filter((e) => e.isDirectory())
+			.map((e) => e.name)
+			.sort();
+
+		// Pre-load all catalog items to avoid repeated file reads
+		const items: Map<string, CatalogItemJson> = new Map();
+		for (const dir of dirs) {
+			const jsonPath = path.join(absoluteDataDir, dir, `${dir}.json`);
+			try {
+				const content = await fs.readFile(jsonPath, 'utf-8');
+				items.set(dir, JSON.parse(content));
+			} catch {
+				// Skip unreadable files
+			}
+		}
+
+		// Collect URLs grouped by field type
+		for (const field of fields) {
+			for (const dir of dirs) {
+				const item = items.get(dir);
+				if (!item) continue;
+
+				if (field === 'images' && item.images) {
+					// Handle images array
+					for (const imageUrl of item.images) {
+						if (imageUrl && typeof imageUrl === 'string' && imageUrl.startsWith('http')) {
+							submissions.push({
+								url: imageUrl,
+								field: 'images',
+								itemId: item.id,
+								sourceType: 'catalog',
+								status: 'pending',
+								retryCount: 0,
+							});
+						}
+					}
+				} else if (field === 'sourceUrl' && item.sourceUrl) {
+					// Handle sourceUrl
+					if (item.sourceUrl.startsWith('http')) {
+						submissions.push({
+							url: item.sourceUrl,
+							field: 'sourceUrl',
+							itemId: item.id,
+							sourceType: 'catalog',
+							status: 'pending',
+							retryCount: 0,
+						});
+					}
 				}
 			}
 		}
