@@ -52,13 +52,12 @@ export async function discoverValidIds(
 	const validIds: string[] = [];
 	const invalidIds: string[] = [];
 	const skippedIds: string[] = [];
+	const needsCheck: string[] = [];
 
 	console.log(`\n🔍 Phase 1: Fast discovery of ${ranges.length} IDs...`);
 
-	for (let i = 0; i < ranges.length; i++) {
-		const range = ranges[i];
-
-		// Check if already indexed
+	// First pass: quickly categorize indexed vs needs-check (no async, instant)
+	for (const range of ranges) {
 		const indexCheck = isIdIndexed(range);
 		if (indexCheck.indexed) {
 			skippedIds.push(range);
@@ -67,41 +66,53 @@ export async function discoverValidIds(
 			} else {
 				invalidIds.push(range);
 			}
-
 			if (options.verbose) {
 				const status = indexCheck.isValid ? '✅' : '❌';
 				console.log(`  ${status} ${range} - already indexed`);
 			}
-			continue;
-		}
-
-		// Fast HTTP check
-		const url = buildCatalogUrl(range);
-		const result = await quickCheckUrl(url);
-
-		if (result.isValid) {
-			validIds.push(range);
-			// Don't record in index yet - will be recorded after full download
-			console.log(`  ✅ ${range} - valid (${result.title?.substring(0, 50) || 'unknown'})`);
 		} else {
-			invalidIds.push(range);
-			recordInvalidId(range);
-			console.log(`  ❌ ${range} - invalid (404)`);
-		}
-
-		// Save index periodically (every 10 checks)
-		if ((i + 1) % 10 === 0) {
-			saveCatalogIndex();
-		}
-
-		// Small delay between HTTP requests
-		if (i < ranges.length - 1) {
-			await new Promise(resolve => setTimeout(resolve, options.delayMs / 10)); // Fast delay (1/10th)
+			needsCheck.push(range);
 		}
 	}
 
-	// Final save
-	saveCatalogIndex();
+	// Second pass: parallel HTTP checks for unindexed IDs (batches of 10)
+	if (needsCheck.length > 0) {
+		console.log(`  📡 Checking ${needsCheck.length} new IDs...`);
+		const BATCH_SIZE = 10;
+
+		for (let i = 0; i < needsCheck.length; i += BATCH_SIZE) {
+			const batch = needsCheck.slice(i, i + BATCH_SIZE);
+
+			// Check batch in parallel
+			const results = await Promise.all(
+				batch.map(async (range) => {
+					const url = buildCatalogUrl(range);
+					const result = await quickCheckUrl(url);
+					return { range, result };
+				})
+			);
+
+			// Process results
+			for (const { range, result } of results) {
+				if (result.isValid) {
+					validIds.push(range);
+					console.log(`  ✅ ${range} - valid (${result.title?.substring(0, 50) || 'unknown'})`);
+				} else {
+					invalidIds.push(range);
+					recordInvalidId(range);
+					console.log(`  ❌ ${range} - invalid (404)`);
+				}
+			}
+
+			// Save index after each batch
+			saveCatalogIndex();
+
+			// Small delay between batches (not between individual requests)
+			if (i + BATCH_SIZE < needsCheck.length) {
+				await new Promise(resolve => setTimeout(resolve, options.delayMs / 5));
+			}
+		}
+	}
 
 	console.log(`\n📊 Discovery complete:`);
 	console.log(`   ✅ Valid: ${validIds.length}`);
