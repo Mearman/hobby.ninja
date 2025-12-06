@@ -8,7 +8,7 @@ export class ManualDownloaderCLI {
   private downloader: Downloader;
 
   constructor() {
-    this.downloader = new SimpleDownloader();
+    this.downloader = new Downloader();
   }
 
   async run(args: string[]): Promise<void> {
