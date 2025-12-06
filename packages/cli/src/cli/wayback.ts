@@ -209,6 +209,15 @@ export class WaybackCommand {
 					result.skipped++;
 				}
 
+				// Log the URL result to the scrolling log
+				progressRenderer.log({
+					url: submission.url,
+					status: processedSubmission.status === 'success' ? 'success' :
+							processedSubmission.status === 'failed' ? 'failed' :
+							processedSubmission.ageCheckResult === 'too_new' ? 'cached' : 'skipped',
+					message: processedSubmission.ageCheckResult || processedSubmission.error,
+				});
+
 				// Update progress UI with latest stats
 				progressRenderer.update({
 					processed: i + 1,
