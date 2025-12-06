@@ -14,6 +14,7 @@ export interface SimpleCatalogResult {
 	releaseDate?: string | undefined;
 	series?: string | undefined;
 	hasContent: boolean;
+	html?: string;
 }
 
 export class SimpleCatalogScraper {
@@ -53,6 +54,7 @@ export class SimpleCatalogScraper {
 			await page.goto(url, { waitUntil: 'networkidle', timeout: 10000 });
 
 			const title = await page.title();
+			const html = await page.content();
 
 			// Check if this is a 404 or invalid page
 			if (title.includes('404') || title.includes('NOT FOUND')) {
@@ -60,7 +62,8 @@ export class SimpleCatalogScraper {
 					url,
 					range,
 					title,
-					hasContent: false
+					hasContent: false,
+					html
 				};
 			}
 
@@ -103,7 +106,8 @@ export class SimpleCatalogScraper {
 				price: price?.trim(),
 				releaseDate: releaseDate?.trim(),
 				series: series?.trim(),
-				hasContent
+				hasContent,
+				html
 			};
 
 		} catch (error) {
