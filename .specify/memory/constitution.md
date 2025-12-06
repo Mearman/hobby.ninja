@@ -1,4 +1,4 @@
-# hobby.ninja Constitution
+# Gunpla Collection Manager Constitution
 
 ## Core Principles
 

@@ -17,7 +17,7 @@ pnpm add -D @types/better-sqlite3
 ### Creating a Translation Store
 
 ```typescript
-import { TranslationStore, createTranslationStore } from '@hobby-ninja/translation';
+import { TranslationStore, createTranslationStore } from '@unnamed-gunpla-app/translation';
 
 // Create store with default configuration
 const store = createTranslationStore();
@@ -59,7 +59,7 @@ if (translation) {
 ### Integration with Translation Service
 
 ```typescript
-import { TranslationService } from '@hobby-ninja/translation';
+import { TranslationService } from '@unnamed-gunpla-app/translation';
 
 // Create store-enabled translation service
 const store = createTranslationStore();
@@ -123,7 +123,7 @@ const defaultConfig = {
 
 ```typescript
 #!/usr/bin/env node
-import { TranslationService, createTranslationStore } from '@hobby-ninja/translation';
+import { TranslationService, createTranslationStore } from '@unnamed-gunpla-app/translation';
 
 class GunplaScraper {
   private translator: TranslationService;

@@ -30,20 +30,20 @@ packages/scrapers/src/
 
 ```bash
 # Scan all URL patterns with default settings
-pnpm nx run @hobby-ninja/scrapers:scan-urls
+pnpm nx run @unnamed-gunpla-app/scrapers:scan-urls
 
 # Scan with custom configuration
-pnpm nx run @hobby-ninja/scrapers:scan-urls \
+pnpm nx run @unnamed-gunpla-app/scrapers:scan-urls \
   --concurrency 20 \
   --timeout 10000 \
   --output ./scan-results \
   --patterns bandai-hobby,manual,p-bandai
 
 # Resume interrupted scan
-pnpm nx run @hobby-ninja/scrapers:scan-urls --resume
+pnpm nx run @unnamed-gunpla-app/scrapers:scan-urls --resume
 
 # Check specific URLs
-pnpm nx run @hobby-ninja/scrapers:scan-urls \
+pnpm nx run @unnamed-gunpla-app/scrapers:scan-urls \
   --urls https://bandai-hobby.net/item/01_3804/ \
         https://manual.bandai-hobby.net/menus/detail/652/
 ```
@@ -51,7 +51,7 @@ pnpm nx run @hobby-ninja/scrapers:scan-urls \
 ### Programmatic Usage
 
 ```typescript
-import { URLScanner } from '@hobby-ninja/scrapers/url-scanner';
+import { URLScanner } from '@unnamed-gunpla-app/scrapers/url-scanner';
 
 const scanner = new URLScanner();
 
@@ -243,7 +243,7 @@ The scanner handles these common error scenarios:
 The URL scanner integrates with the existing scraper registry:
 
 ```typescript
-import { scrapers } from '@hobby-ninja/scrapers';
+import { scrapers } from '@unnamed-gunpla-app/scrapers';
 
 // Add URL validation capability to existing scrapers
 const enhancedScrapers = {

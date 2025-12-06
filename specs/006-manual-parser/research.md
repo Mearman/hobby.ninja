@@ -99,8 +99,8 @@
 - parse5: ^7.1.2 (HTML parsing)
 - zod: ^3.22.0 (schema validation)
 - p-limit: ^4.0.0 (concurrency control)
-- @hobby-ninja/types: workspace:* (shared types)
-- @hobby-ninja/utils: workspace:* (shared utilities)
+- @unnamed-gunpla-app/types: workspace:* (shared types)
+- @unnamed-gunpla-app/utils: workspace:* (shared utilities)
 
 ## Risk Mitigation
 

@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This document provides a comprehensive performance optimization strategy for the hobby-ninja Nx monorepo, focusing on React webapp performance, CLI tool efficiency, and monorepo build optimization.
+This document provides a comprehensive performance optimization strategy for the unnamed-gunpla-app Nx monorepo, focusing on React webapp performance, CLI tool efficiency, and monorepo build optimization.
 
 ## Current Performance Assessment
 
@@ -558,6 +558,6 @@ getTTFB(sendToAnalytics);
 
 ## Conclusion
 
-This comprehensive performance optimization plan addresses all aspects of the hobby-ninja, from bundle size and database performance to build optimization and user experience. The phased approach ensures minimal disruption while delivering maximum performance improvements.
+This comprehensive performance optimization plan addresses all aspects of the unnamed-gunpla-app, from bundle size and database performance to build optimization and user experience. The phased approach ensures minimal disruption while delivering maximum performance improvements.
 
 By implementing these optimizations, the application will achieve modern web performance standards, providing an excellent user experience across all devices and network conditions.

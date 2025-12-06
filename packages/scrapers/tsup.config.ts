@@ -8,5 +8,5 @@ export default defineConfig({
 	},
 	clean: true,
 	sourcemap: true,
-	external: ["@unnamed-gunpla-app/types", "@unnamed-gunpla-app/utils"],
+	external: ["@hobby-ninja/types", "@hobby-ninja/utils"],
 });

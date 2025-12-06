@@ -38,7 +38,7 @@ export default defineConfig({
 				'stream',
 				'util',
 				// Workspace packages
-				/^@unnamed-gunpla-app\//,
+				/^@hobby-ninja\//,
 				// Dependencies that should remain external
 				'commander',
 				'cheerio',
@@ -61,10 +61,10 @@ export default defineConfig({
 	},
 	resolve: {
 		alias: {
-			'@unnamed-gunpla-app/translation': resolve(__dirname, '../translation/src'),
-			'@unnamed-gunpla-app/types': resolve(__dirname, '../types/src'),
-			'@unnamed-gunpla-app/utils': resolve(__dirname, '../utils/src'),
-			'@unnamed-gunpla-app/scrapers': resolve(__dirname, '../scrapers/src'),
+			'@hobby-ninja/translation': resolve(__dirname, '../translation/src'),
+			'@hobby-ninja/types': resolve(__dirname, '../types/src'),
+			'@hobby-ninja/utils': resolve(__dirname, '../utils/src'),
+			'@hobby-ninja/scrapers': resolve(__dirname, '../scrapers/src'),
 		},
 	},
 	esbuild: {
