@@ -29,13 +29,16 @@ Full keyboard navigation, screen reader support, high contrast mode, text scalin
 ### IX. Nx Build System Optimization
 Nx executor plugins and inferred targets MUST be preferred over nx:run-commands. Build configurations MUST use specialized executors (@nx/vite:build, @nx/eslint:lint, @nx/playwright:run, etc.) for better caching, dependency tracking, and IDE integration. Project.json files MUST leverage Nx plugin system for automatic target inference. Manual command execution limited to exceptional cases where no suitable executor exists.
 
-### X. Persistence and Resilience in Problem Solving
+### X. Programmatic Implementation
+Implementations MUST be simple, direct, and programmatic. YAGNI (You Aren't Gonna Need It) principle strictly enforced - build only what is needed for current requirements. Prefer built-in Node.js APIs and standard library features over third-party dependencies. Avoid premature optimization, complex abstractions, and over-engineering. Solutions MUST be practical and maintainable over theoretically perfect. Custom implementations acceptable only when standard solutions don't exist or are proven inadequate.
+
+### XI. Persistence and Resilience in Problem Solving
 When encountering technical challenges, implementation obstacles, or configuration issues, solutions MUST be pursued to completion with proper investigation and research. Online documentation, official documentation, and community solutions MUST be researched before declaring a problem unsolvable. **SIMPLE, TEMPORARY, OR MOCK IMPLEMENTATIONS ARE ABSOLUTELY FORBIDDEN.** All implementations MUST be complete, production-ready solutions that fully address the requirements. Simplified fallbacks, placeholder implementations, and "minimum viable" approaches are PROHIBITED unless explicitly documented as technical debt with an approved remediation plan and timeline. Root cause analysis MUST be performed for all blocking issues.
 
-### XI. Automated Barrel Export Management
+### XII. Automated Barrel Export Management
 Index files (index.ts) MUST NEVER be manually modified or contain manual content. All barrel exports MUST be generated and managed exclusively by barrelsby automation. Manual entries in index files are FORBIDDEN. Content MUST be organized in properly named files within appropriate directories, allowing barrelsby to generate clean, consistent export structures. This ensures maintainable module boundaries and prevents merge conflicts.
 
-### XII. Security by Default
+### XIII. Security by Default
 Content Security Policy headers implemented. XSS protection via React. Input validation via Zod schemas. Client-side data encryption for sensitive IndexedDB storage. Regular security scanning in CI/CD. No external dependencies without security review.
 
 ## Technology Standards
@@ -60,15 +63,15 @@ This constitution supersedes all other development practices. Amendments require
 
 Template files (plan.md, spec.md, tasks.md) MUST align with constitutional principles. Regular constitution reviews scheduled quarterly or when major architectural changes occur.
 
-**Version**: 1.8.1 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-05
+**Version**: 1.9.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-05
 
 <!--
 Sync Impact Report:
-Version change: 1.8.0 → 1.8.1 (PATCH - added spec management process requirement)
-Modified principles: None (process clarification only)
-Added sections: Spec Management Process in Development Workflow section
+Version change: 1.8.1 → 1.9.0 (MINOR - added Programmatic Implementation principle)
+Modified principles: Re numbered XI-XII to XI-XIII, added new principle X
+Added sections: X. Programmatic Implementation
 Removed sections: None
-Templates updated: ⚠ .specify/templates/commands/speckit-constitution.md should reference the new process requirement
-Commands updated: ⚠ Commands may need to reference the new commit requirement
-Follow-up TODOs: Update command templates to reference the spec management process requirement
+Templates updated: ⚠ .specify/templates/plan-template.md should reference programmatic implementation approach
+Commands updated: ⚠ Commands should emphasize simple, programmatic solutions over over-engineering
+Follow-up TODOs: Update task templates to prioritize direct solutions over complex abstractions
 -->
