@@ -1,15 +1,16 @@
 {
   "name": "@unnamed-gunpla-app/cli",
   "version": "0.0.1",
+  "type": "module",
   "description": "CLI tool for scraping Gundam/Gunpla data from various sources",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "gundam-scraper": "dist/cli/index.js"
+    "gundam-scraper": "dist/bin/cli.js"
   },
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
+    "build": "vite build",
+    "dev": "tsx src/bin/cli.ts",
     "start": "node ./dist/bin/cli.js",
     "test": "vitest",
     "test:watch": "vitest --watch",
@@ -34,23 +35,28 @@
   "author": "Gunpla App Team",
   "license": "MIT",
   "dependencies": {
-    "@unnamed-gunpla-app/utils": "workspace:*",
-    "@unnamed-gunpla-app/types": "workspace:*",
+    "@inkjs/ui": "^2.0.0",
     "@unnamed-gunpla-app/scrapers": "workspace:*",
+    "@unnamed-gunpla-app/types": "workspace:*",
+    "@unnamed-gunpla-app/utils": "workspace:*",
     "cheerio": "latest",
     "commander": "latest",
+    "ink": "^6.5.1",
+    "inquirer": "latest",
     "playwright": "latest",
-    "zod": "latest",
-    "inquirer": "latest"
+    "react": "19.2.1",
+    "zod": "latest"
   },
   "devDependencies": {
     "@types/cheerio": "latest",
     "@types/inquirer": "latest",
     "@types/node": "latest",
     "eslint": "latest",
+    "rimraf": "latest",
     "typescript": "latest",
-    "vitest": "latest",
-    "rimraf": "latest"
+    "vite": "7.2.6",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "latest"
   },
   "engines": {
     "node": ">=20.0.0",
@@ -60,7 +66,9 @@
     "targets": {
       "build": {
         "executor": "@nx/js:tsc",
-        "outputs": ["{options.outputPath}"],
+        "outputs": [
+          "{options.outputPath}"
+        ],
         "options": {
           "outputPath": "dist/packages/cli",
           "main": "packages/cli/src/index.ts",
@@ -70,14 +78,18 @@
       },
       "test": {
         "executor": "@nx/vite:test",
-        "outputs": ["{workspaceRoot}/coverage/packages/cli"],
+        "outputs": [
+          "{workspaceRoot}/coverage/packages/cli"
+        ],
         "options": {
           "passWithNoTests": true
         }
       },
       "lint": {
         "executor": "@nx/eslint:lint",
-        "outputs": ["{options.outputFile}"]
+        "outputs": [
+          "{options.outputFile}"
+        ]
       }
     }
   }
