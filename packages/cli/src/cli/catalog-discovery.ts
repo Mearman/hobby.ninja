@@ -1,5 +1,6 @@
 import { SimpleCatalogScraper } from "./simple-catalog-scraper";
 import { SimpleHtmlParser } from "@unnamed-gunpla-app/scrapers/manual-parser/core/simple-html-parser";
+import { BandaiCatalogParser } from "./bandai-catalog-parser";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import type { CatalogDiscoveryOptions, CatalogDiscoveryResult, CatalogRangeStats, CatalogIndex, CatalogIndexEntry } from "./types/catalog-discovery";
@@ -487,13 +488,26 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 							const htmlFile = join(itemDir, `${range}.html`);
 							writeFileSync(htmlFile, processResult.data.html, 'utf8');
 
-							// Save structured HTML content as .html.json
+							// Save structured HTML content as .html.json (generic parse5 output)
 							const htmlParser = new SimpleHtmlParser();
 							const parsedHtml = htmlParser.parse(processResult.data.html);
 
 							if (parsedHtml.success && parsedHtml.data) {
 								const htmlJsonFile = join(itemDir, `${range}.html.json`);
 								writeFileSync(htmlJsonFile, JSON.stringify(parsedHtml.data, null, 2), 'utf8');
+							}
+
+							// Save structured catalog data as .json (semantic Cheerio extraction)
+							const catalogParser = new BandaiCatalogParser();
+							const catalogResult = catalogParser.parse(
+								processResult.data.html,
+								range,
+								buildCatalogUrl(range)
+							);
+
+							if (catalogResult.success && catalogResult.data) {
+								const catalogJsonFile = join(itemDir, `${range}.json`);
+								writeFileSync(catalogJsonFile, JSON.stringify(catalogResult.data, null, 2), 'utf8');
 							}
 						}
 
