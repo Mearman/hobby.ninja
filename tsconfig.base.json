@@ -27,7 +27,9 @@
       "@unnamed-gunpla-app/utils": ["packages/utils/src/index.ts"],
       "@unnamed-gunpla-app/utils/*": ["packages/utils/src/*"],
       "@unnamed-gunpla-app/cli": ["packages/cli/src/index.ts"],
-      "@unnamed-gunpla-app/cli/*": ["packages/cli/src/*"]
+      "@unnamed-gunpla-app/cli/*": ["packages/cli/src/*"],
+      "@unnamed-gunpla-app/scrapers": ["packages/scrapers/src/index.ts"],
+      "@unnamed-gunpla-app/scrapers/*": ["packages/scrapers/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
