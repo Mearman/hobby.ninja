@@ -186,7 +186,29 @@ export class WaybackCommand {
 					},
 				});
 
-				const processedSubmission = await this.submitWithAgeCheck(submission, options.retries, options.verbose);
+				const processedSubmission = await this.submitWithAgeCheck(
+					submission,
+					options.retries,
+					options.verbose,
+					(attempt, error, delayMs) => {
+						// Show retry in progress log
+						progressRenderer.log({
+							url: submission.url,
+							status: 'retrying',
+							message: error,
+							retryCount: attempt,
+							retryDelayMs: delayMs,
+						});
+						progressRenderer.update({
+							processed: i,
+							cacheStats: {
+								hits: this.cacheHits,
+								misses: this.cacheMisses,
+								size: Object.keys(this.archiveCache?.entries || {}).length,
+							},
+						});
+					}
+				);
 				result.submitted++;
 
 				// Update age statistics
@@ -401,12 +423,15 @@ export class WaybackCommand {
 	private async submitWithRetry(
 		submission: WaybackSubmission,
 		maxRetries: number,
-		verbose: boolean
+		verbose: boolean,
+		onRetry?: (attempt: number, error: string, delayMs: number) => void
 	): Promise<WaybackSubmission> {
 		let lastError = '';
 		const unlimitedRetries = maxRetries < 0;
+		// Hard cap at 10 retries even in "unlimited" mode to prevent long waits
+		const effectiveMaxRetries = unlimitedRetries ? 10 : maxRetries;
 
-		for (let attempt = 0; unlimitedRetries || attempt <= maxRetries; attempt++) {
+		for (let attempt = 0; attempt <= effectiveMaxRetries; attempt++) {
 			try {
 				const result = await this.submitUrl(submission.url);
 
@@ -434,8 +459,11 @@ export class WaybackCommand {
 					}
 
 					// Exponential backoff for retryable errors
-					if (unlimitedRetries || attempt < maxRetries) {
+					if (attempt < effectiveMaxRetries) {
 						const delay = Math.min(Math.pow(2, attempt) * 1000, 60000); // Cap at 60s
+						if (onRetry) {
+							onRetry(attempt + 1, lastError, delay);
+						}
 						if (verbose) {
 							console.log(`  Retry ${attempt + 1}/${unlimitedRetries ? '∞' : maxRetries} after ${delay}ms...`);
 						}
@@ -445,8 +473,11 @@ export class WaybackCommand {
 			} catch (error) {
 				lastError = error instanceof Error ? error.message : 'Network error';
 
-				if (unlimitedRetries || attempt < maxRetries) {
+				if (attempt < effectiveMaxRetries) {
 					const delay = Math.min(Math.pow(2, attempt) * 1000, 60000); // Cap at 60s
+					if (onRetry) {
+						onRetry(attempt + 1, lastError, delay);
+					}
 					if (verbose) {
 						console.log(`  Retry ${attempt + 1}/${unlimitedRetries ? '∞' : maxRetries} after ${delay}ms...`);
 					}
@@ -459,7 +490,7 @@ export class WaybackCommand {
 			...submission,
 			status: 'failed',
 			error: lastError,
-			retryCount: maxRetries,
+			retryCount: effectiveMaxRetries,
 		};
 	}
 
@@ -605,7 +636,8 @@ export class WaybackCommand {
 	private async submitWithAgeCheck(
 		submission: WaybackSubmission,
 		maxRetries: number,
-		verbose: boolean
+		verbose: boolean,
+		onRetry?: (attempt: number, error: string, delayMs: number) => void
 	): Promise<WaybackSubmission> {
 		// Check archive age first
 		const ageCheck = await this.checkArchiveAge(submission.url);
@@ -630,7 +662,7 @@ export class WaybackCommand {
 		}
 
 		// Otherwise proceed with submission
-		return await this.submitWithRetry(processedSubmission, maxRetries, verbose);
+		return await this.submitWithRetry(processedSubmission, maxRetries, verbose, onRetry);
 	}
 
 	private async checkArchiveAge(url: string): Promise<ArchiveAgeCheck> {
