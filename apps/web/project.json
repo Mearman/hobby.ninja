@@ -30,7 +30,7 @@
         "noEmit": true
       },
       "cache": true,
-      "dependsOn": ["@unnamed-gunpla-app/types:build", "@unnamed-gunpla-app/utils:build"]
+      "dependsOn": ["@hobby-ninja/types:build", "@hobby-ninja/utils:build"]
     },
     "serve": {
       "executor": "@nx/vite:dev-server",
@@ -71,7 +71,7 @@
         "passWithNoTests": true,
         "reportsDirectory": "{workspaceRoot}/coverage/web"
       },
-      "dependsOn": ["@unnamed-gunpla-app/types:build", "@unnamed-gunpla-app/utils:build"]
+      "dependsOn": ["@hobby-ninja/types:build", "@hobby-ninja/utils:build"]
     },
     "lint": {
       "executor": "@nx/eslint:lint",
@@ -80,7 +80,7 @@
       "options": {
         "lintFilePatterns": ["apps/web/src/**/*.{ts,tsx,js,jsx}"]
       },
-      "dependsOn": ["@unnamed-gunpla-app/types:build", "@unnamed-gunpla-app/utils:build"]
+      "dependsOn": ["@hobby-ninja/types:build", "@hobby-ninja/utils:build"]
     },
     "test:e2e": {
       "executor": "@nx/playwright:playwright",

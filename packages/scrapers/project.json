@@ -16,6 +16,8 @@
     "typecheck": {
       "executor": "@nx/js:tsc",
       "options": {
+        "main": "packages/scrapers/src/index.ts",
+        "outputPath": "dist/packages/scrapers",
         "tsConfig": "packages/scrapers/tsconfig.json"
       }
     },

@@ -1,5 +1,5 @@
 {
-  "name": "@unnamed-gunpla-app/scrapers",
+  "name": "@hobby-ninja/scrapers",
   "version": "1.0.0",
   "description": "Web scrapers for Gundam and Gunpla data sources",
   "main": "dist/index.js",
@@ -25,9 +25,9 @@
     "parse5": "^7.1.2",
     "zod": "^3.22.0",
     "p-limit": "^4.0.0",
-    "@unnamed-gunpla-app/types": "workspace:*",
-    "@unnamed-gunpla-app/utils": "workspace:*",
-    "@unnamed-gunpla-app/translation": "workspace:*"
+    "@hobby-ninja/types": "workspace:*",
+    "@hobby-ninja/utils": "workspace:*",
+    "@hobby-ninja/translation": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

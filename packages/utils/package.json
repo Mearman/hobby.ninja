@@ -1,5 +1,5 @@
 {
-  "name": "@unnamed-gunpla-app/utils",
+  "name": "@hobby-ninja/utils",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -34,7 +34,7 @@
     "lint:fix": "eslint src --ext ts --fix"
   },
   "dependencies": {
-    "@unnamed-gunpla-app/types": "workspace:*"
+    "@hobby-ninja/types": "workspace:*"
   },
   "devDependencies": {
     "@nx/js": "22.1.3",

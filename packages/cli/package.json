@@ -1,5 +1,5 @@
 {
-  "name": "@unnamed-gunpla-app/cli",
+  "name": "@hobby-ninja/cli",
   "version": "0.0.1",
   "type": "module",
   "description": "CLI tool for scraping Gundam/Gunpla data from various sources",
@@ -32,13 +32,13 @@
     "data",
     "bandai"
   ],
-  "author": "Gunpla App Team",
+  "author": "hobby-ninja Team",
   "license": "MIT",
   "dependencies": {
     "@inkjs/ui": "^2.0.0",
-    "@unnamed-gunpla-app/scrapers": "workspace:*",
-    "@unnamed-gunpla-app/types": "workspace:*",
-    "@unnamed-gunpla-app/utils": "workspace:*",
+    "@hobby-ninja/scrapers": "workspace:*",
+    "@hobby-ninja/types": "workspace:*",
+    "@hobby-ninja/utils": "workspace:*",
     "cheerio": "latest",
     "commander": "latest",
     "dotenv": "^17.2.3",
