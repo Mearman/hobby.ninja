@@ -128,6 +128,98 @@ program
 		console.log("  - Last update times");
 	});
 
+// Wayback command implementation
+program
+	.command("wayback")
+	.description("Submit URLs to Internet Archive Wayback Machine")
+	.option("--source <source>", "Data source (all, manuals, catalog)", "all")
+	.option("--manuals-dir <dir>", "Manual data directory", "./data/bandai/manuals")
+	.option("--catalog-dir <dir>", "Catalog data directory", "./data/bandai/items")
+	.option("--dry-run", "Show URLs without submitting", false)
+	.option("--resume", "Resume from checkpoint", true)
+	.option("-v, --verbose", "Verbose logging", false)
+	.option("--retries <n>", "Retry attempts (-1 for unlimited)", "-1")
+	.option("--delay <seconds>", "Delay between requests", "0")
+	.option("--rate-limit-delay <seconds>", "Base delay after rate limit error", "30")
+	.option("--access-key <key>", "Internet Archive S3 access key")
+	.option("--secret-key <key>", "Internet Archive S3 secret key")
+	.option("--output <dir>", "Results directory", "./wayback-results")
+	.option("--min-archive-age <duration>", "Skip archives newer than this (e.g., 30d, 6m)", "30d")
+	.option("--max-archive-age <duration>", "Force re-archive if older than this (e.g., 1y, 18m)", "1y")
+	.action(async (options) => {
+		try {
+			const { WaybackCommand } = await import("../cli/wayback.js");
+			const waybackCommand = new WaybackCommand();
+
+			// Parse API keys from options or environment
+			const accessKey = options.accessKey || process.env["IA_ACCESS_KEY"];
+			const secretKey = options.secretKey || process.env["IA_SECRET_KEY"];
+
+			console.log("Submitting URLs to Internet Archive Wayback Machine...");
+			console.log(`Source: ${options.source}`);
+			console.log(`Manuals directory: ${options.manualsDir}`);
+			console.log(`Catalog directory: ${options.catalogDir}`);
+			console.log(`Delay between requests: ${options.delay}s`);
+			console.log(`Rate limit retry delay: ${options.rateLimitDelay}s (exponential backoff)`);
+			console.log(`Max retries: ${options.retries}`);
+			console.log(`Authentication: ${accessKey ? "API keys provided" : "No authentication"}`);
+			console.log(`Archive age thresholds: min=${options.minArchiveAge}, max=${options.maxArchiveAge}`);
+			console.log(`Resume: ${options.resume}`);
+			console.log(`Dry run: ${options.dryRun}`);
+			console.log("");
+
+			const result = await waybackCommand.execute({
+				source: options.source,
+				manualsDir: options.manualsDir,
+				catalogDir: options.catalogDir,
+				fields: [], // Fields are determined by source type internally
+				dryRun: options.dryRun,
+				resume: options.resume,
+				verbose: options.verbose,
+				retries: parseInt(options.retries, 10),
+				delayMs: parseFloat(options.delay) * 1000,
+				rateLimitDelayMs: parseFloat(options.rateLimitDelay) * 1000,
+				accessKey,
+				secretKey,
+				output: options.output,
+				minArchiveAge: options.minArchiveAge,
+				maxArchiveAge: options.maxArchiveAge,
+			});
+
+			console.log("\nWayback Submission Results:");
+			console.log(`Total URLs: ${result.totalUrls}`);
+			console.log(`Submitted: ${result.submitted}`);
+			console.log(`Successful: ${result.successful}`);
+			console.log(`Failed: ${result.failed}`);
+			console.log(`Skipped: ${result.skipped}`);
+			console.log(`Duration: ${(result.duration / 1000 / 60).toFixed(1)} minutes`);
+
+			if (result.ageStats) {
+				console.log("\nArchive Age Analysis:");
+				console.log(`Too recent (skipped): ${result.ageStats.tooNew}`);
+				console.log(`Needs update: ${result.ageStats.needsUpdate}`);
+				console.log(`Not archived: ${result.ageStats.notArchived}`);
+			}
+
+			if (result.errors.length > 0 && result.errors.length <= 10) {
+				console.log("\nErrors:");
+				result.errors.forEach((error) => console.log(`  - ${error}`));
+			} else if (result.errors.length > 10) {
+				console.log(`\n${result.errors.length} errors (see results file for details)`);
+			}
+
+			process.exit(result.failed === 0 ? 0 : 1);
+		} catch (error) {
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Wayback submission failed:", errorMessage);
+			if (options.verbose) {
+				const errorStack = error instanceof Error ? error.stack : String(error);
+				console.error(errorStack);
+			}
+			process.exit(1);
+		}
+	});
+
 program
 	.command("config")
 	.description("Manage configuration")

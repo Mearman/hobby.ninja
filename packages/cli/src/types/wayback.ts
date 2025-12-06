@@ -1,7 +1,11 @@
-export type UrlField = 'sourceUrl' | 'pdfUrl' | 'productImage' | 'supplementaryPdfUrl';
+export type UrlField = 'sourceUrl' | 'pdfUrl' | 'productImage' | 'supplementaryPdfUrl' | 'images';
+
+export type WaybackSource = 'all' | 'manuals' | 'catalog';
 
 export interface WaybackOptions {
-	dataDir: string;
+	source: WaybackSource;
+	manualsDir: string;
+	catalogDir: string;
 	fields: UrlField[];
 	dryRun: boolean;
 	resume: boolean;
@@ -19,7 +23,8 @@ export interface WaybackOptions {
 export interface WaybackSubmission {
 	url: string;
 	field: UrlField;
-	manualId: string;
+	itemId: string;
+	sourceType: 'manual' | 'catalog';
 	status: 'pending' | 'success' | 'failed' | 'skipped';
 	archiveUrl?: string;
 	error?: string;
@@ -39,7 +44,9 @@ export interface WaybackCheckpoint {
 	lastUpdated: number;
 	totalUrls: number;
 	fields: UrlField[];
-	dataDir: string;
+	source: WaybackSource;
+	manualsDir: string;
+	catalogDir: string;
 }
 
 export interface WaybackResult {
@@ -83,4 +90,10 @@ export interface ManualJson {
 	pdfUrl?: string;
 	productImage?: string;
 	supplementaryPdfUrl?: string;
+}
+
+export interface CatalogItemJson {
+	id: string;
+	sourceUrl?: string;
+	images?: string[];
 }
