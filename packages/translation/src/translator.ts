@@ -1,5 +1,5 @@
 import { TranslationCache, defaultCache } from "./cache";
-import { GOOGLE_TRANSLATE_API_URL, RATE_LIMIT_DELAY, MAX_TEXT_LENGTH, GUNDAM_TEXT_REPLACEMENTS, DEFAULT_TRANSLATION_OPTIONS } from "./constants";
+import { GOOGLE_TRANSLATE_API_URL, MAX_TEXT_LENGTH, GUNDAM_TEXT_REPLACEMENTS, DEFAULT_TRANSLATION_OPTIONS } from "./constants";
 import {
 	TranslationServiceError,
 	CircuitBreaker,
@@ -31,7 +31,6 @@ export class TranslationService {
 	private cache: TranslationCache;
 	private circuitBreaker: CircuitBreaker;
 	private errorHandler: ErrorHandler;
-	private lastRequestTime = 0;
 	private translationStore?: TranslationStore;
 
 	/**
@@ -224,11 +223,6 @@ export class TranslationService {
 
 			const batchResults = await Promise.all(batchPromises);
 			results.push(...batchResults);
-
-			// Rate limiting delay between batches
-			if (batches.length > 1 && batches.indexOf(batch) < batches.length - 1) {
-				await this.delay(RATE_LIMIT_DELAY);
-			}
 		}
 
 		return {
@@ -247,9 +241,6 @@ export class TranslationService {
 		text: string,
 		options: Required<TranslationOptions>,
 	): Promise<string> {
-		// Rate limiting
-		await this.enforceRateLimit();
-
 		const url = this.buildApiUrl(text, options);
 
 		return retryWithBackoff(
@@ -451,21 +442,6 @@ export class TranslationService {
 	}
 
 	/**
-   * Enforce rate limiting
-   */
-	private async enforceRateLimit(): Promise<void> {
-		const now = Date.now();
-		const timeSinceLastRequest = now - this.lastRequestTime;
-
-		if (timeSinceLastRequest < RATE_LIMIT_DELAY) {
-			const delay = RATE_LIMIT_DELAY - timeSinceLastRequest;
-			await this.delay(delay);
-		}
-
-		this.lastRequestTime = Date.now();
-	}
-
-	/**
    * Utility function to escape regex special characters
    */
 	private escapeRegExp(string: string): string {
@@ -481,13 +457,6 @@ export class TranslationService {
 			chunks.push(array.slice(i, i + chunkSize));
 		}
 		return chunks;
-	}
-
-	/**
-   * Utility function to create delay
-   */
-	private delay(ms: number): Promise<void> {
-		return new Promise(resolve => setTimeout(resolve, ms));
 	}
 
 	/**
