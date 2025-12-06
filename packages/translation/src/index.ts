@@ -51,6 +51,9 @@ export {
 	MAX_TEXT_LENGTH,
 	MAX_BATCH_SIZE,
 	DEFAULT_CACHE_TTL,
+	TRANSLATION_STORE_DIR,
+	TRANSLATION_DICTIONARY_PATH,
+	TRANSLATION_CACHE_DIR,
 } from "./constants";
 
 export { ERROR_MESSAGES } from "./constants";
@@ -137,6 +140,17 @@ export type {
 	DictionaryStats,
 	TranslationDictionary,
 } from "./dictionary";
+
+// Dictionary builder exports
+export {
+	buildDictionary,
+	rebuildAndReloadDictionary,
+} from "./dictionary-builder";
+
+export type {
+	DictionaryBuildResult,
+	DictionaryBuildOptions,
+} from "./dictionary-builder";
 
 // Schema exports for validation
 export {
