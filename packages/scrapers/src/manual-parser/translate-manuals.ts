@@ -10,6 +10,9 @@ import { join } from 'node:path';
 import {
   TranslationService,
   createServerTranslationStore,
+  loadDictionary,
+  rebuildAndReloadDictionary,
+  TRANSLATION_STORE_DIR,
 } from '../../../translation/src/index';
 import type { FilteredManualData } from './core/json-filter';
 
@@ -74,16 +77,25 @@ async function translateManual(
 async function main() {
   console.log('Translating manual name and series fields...\n');
 
+  // Use shared translation store directory (works from any cwd)
   let manualsDir = 'data/bandai/manuals';
-  let storeDir = 'data/translations';
   if (process.cwd().endsWith('packages/scrapers')) {
     manualsDir = '../../data/bandai/manuals';
-    storeDir = '../../data/translations';
   }
 
   // Initialize translation service with persistent store
   console.log('Initializing translation service with persistent cache...');
-  const store = await createServerTranslationStore(storeDir, {
+  console.log(`  Store directory: ${TRANSLATION_STORE_DIR}`);
+
+  // Load dictionary for fast O(1) lookups
+  try {
+    const dictionary = await loadDictionary();
+    console.log(`  Dictionary loaded: ${dictionary.stats.uniquePhrases} phrases, ${dictionary.stats.uniqueWords} words`);
+  } catch {
+    console.log('  Dictionary not found, will use API/store only');
+  }
+
+  const store = await createServerTranslationStore(TRANSLATION_STORE_DIR, {
     maxEntries: 10000,
   });
   const translator = new TranslationService({}, undefined, store);
@@ -150,6 +162,17 @@ async function main() {
   // Show cache stats
   const cacheStats = translator.getCacheStats();
   console.log(`\nCache stats: ${cacheStats.hits} hits, ${cacheStats.misses} misses`);
+
+  // Rebuild dictionary with new translations
+  if (progress.translated > 0) {
+    console.log('\nRebuilding dictionary with new translations...');
+    const result = await rebuildAndReloadDictionary({ verbose: false });
+    if (result.success && result.dictionary) {
+      console.log(`Dictionary rebuilt: ${result.dictionary.stats.uniquePhrases} phrases`);
+    } else if (result.error) {
+      console.error(`Failed to rebuild dictionary: ${result.error}`);
+    }
+  }
 }
 
 main().catch(console.error);
