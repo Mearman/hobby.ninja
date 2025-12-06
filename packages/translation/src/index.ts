@@ -107,7 +107,6 @@ export {
 	HashingError,
 	KEY_SEPARATOR,
 	KEY_FORMAT_REGEX,
-	BASE64_REGEX,
 } from "./store/hashing";
 
 export type {
@@ -118,6 +117,26 @@ export type {
 // Logger exports
 export { Logger, logger, log } from "./logger";
 export type { LoggerConfig, LogLevel } from "./logger";
+
+// Dictionary exports
+export {
+	loadDictionary,
+	lookupPhrase,
+	lookupWord,
+	isDictionaryLoaded,
+	getDictionaryStats,
+	getPatterns,
+	clearDictionaryCache,
+	addPhrase,
+} from "./dictionary";
+
+export type {
+	WordMapping,
+	PhraseMapping,
+	DiscoveredPattern,
+	DictionaryStats,
+	TranslationDictionary,
+} from "./dictionary";
 
 // Schema exports for validation
 export {
