@@ -8,6 +8,13 @@ import React from 'react';
 import { render, Box, Text } from 'ink';
 import { ProgressBar, Spinner } from '@inkjs/ui';
 
+/** A single log entry for the scrolling log */
+export interface LogEntry {
+	url: string;
+	status: 'success' | 'failed' | 'skipped' | 'cached';
+	message?: string;
+}
+
 export interface WaybackStats {
 	/** Total URLs to process */
 	total: number;
@@ -41,6 +48,8 @@ export interface WaybackStats {
 	isComplete?: boolean;
 	/** Elapsed time in ms */
 	elapsedMs?: number;
+	/** Recent log entries for scrolling display */
+	recentLogs?: LogEntry[];
 }
 
 interface WaybackProgressProps {
@@ -155,9 +164,42 @@ function WaybackProgressUI({ stats }: WaybackProgressProps) {
 					<Text color="gray">Elapsed: {elapsed}</Text>
 				</Box>
 			)}
+
+			{/* Scrolling log of recent URLs */}
+			{stats.recentLogs && stats.recentLogs.length > 0 && (
+				<Box marginTop={1} flexDirection="column" borderStyle="single" borderColor="gray" paddingX={1}>
+					<Text color="gray" dimColor>Recent activity:</Text>
+					{stats.recentLogs.map((log, i) => {
+						const statusIcon = log.status === 'success' ? '✓' :
+							log.status === 'failed' ? '✗' :
+							log.status === 'cached' ? '⚡' : '○';
+						const statusColor = log.status === 'success' ? 'green' :
+							log.status === 'failed' ? 'red' :
+							log.status === 'cached' ? 'cyan' : 'yellow';
+						// Truncate URL to fit in terminal
+						const maxUrlLen = 60;
+						const displayUrl = log.url.length > maxUrlLen
+							? '...' + log.url.slice(-maxUrlLen + 3)
+							: log.url;
+						return (
+							<Box key={i}>
+								<Text color={statusColor}>{statusIcon}</Text>
+								<Text> </Text>
+								<Text color="gray">{displayUrl}</Text>
+								{log.message && (
+									<Text color="gray" dimColor> ({log.message})</Text>
+								)}
+							</Box>
+						);
+					})}
+				</Box>
+			)}
 		</Box>
 	);
 }
+
+/** Maximum number of log entries to display */
+const MAX_LOG_ENTRIES = 8;
 
 /**
  * Progress renderer that can be updated during Wayback submission
@@ -167,6 +209,7 @@ export class WaybackProgressRenderer {
 	private unmount: (() => void) | null = null;
 	private stats: WaybackStats;
 	private startTime: number = 0;
+	private logEntries: LogEntry[] = [];
 
 	constructor(total: number) {
 		this.stats = {
@@ -181,6 +224,7 @@ export class WaybackProgressRenderer {
 				notArchived: 0,
 			},
 			isComplete: false,
+			recentLogs: [],
 		};
 	}
 
@@ -202,9 +246,21 @@ export class WaybackProgressRenderer {
 			...this.stats,
 			...partial,
 			elapsedMs: Date.now() - this.startTime,
+			recentLogs: this.logEntries,
 		};
 		if (this.rerender) {
 			this.rerender(<WaybackProgressUI stats={this.stats} />);
+		}
+	}
+
+	/**
+	 * Add a log entry to the scrolling log
+	 */
+	log(entry: LogEntry): void {
+		this.logEntries.push(entry);
+		// Keep only the most recent entries
+		if (this.logEntries.length > MAX_LOG_ENTRIES) {
+			this.logEntries = this.logEntries.slice(-MAX_LOG_ENTRIES);
 		}
 	}
 
@@ -217,6 +273,7 @@ export class WaybackProgressRenderer {
 			isComplete: true,
 			elapsedMs: Date.now() - this.startTime,
 			currentItem: undefined,
+			recentLogs: this.logEntries,
 		};
 		if (this.rerender) {
 			this.rerender(<WaybackProgressUI stats={this.stats} />);
