@@ -49,7 +49,7 @@ nx --version
 
 ```bash
 # Navigate to monorepo root
-cd /path/to/unnamed-gunpla-app
+cd /path/to/hobby-ninja
 
 # Install all dependencies
 pnpm install

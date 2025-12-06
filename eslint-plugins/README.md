@@ -1,6 +1,6 @@
 # ESLint Custom Plugins
 
-This directory contains custom ESLint plugins for the Gunpla Collection Manager project.
+This directory contains custom ESLint plugins for the hobby.ninja project.
 
 ## Structure
 

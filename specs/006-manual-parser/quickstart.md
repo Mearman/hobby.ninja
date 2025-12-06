@@ -67,7 +67,7 @@ pnpm nx manual-parser:batch --source ./data/bandai/manuals --dry-run
 ### Programmatic Interface
 
 ```typescript
-import { ManualParser, ProcessingOptions } from '@unnamed-gunpla-app/manual-parser';
+import { ManualParser, ProcessingOptions } from '@hobby-ninja/manual-parser';
 
 const parser = new ManualParser();
 
@@ -91,7 +91,7 @@ const batchResult = await parser.parseBatch({
 ### Event-Driven Processing
 
 ```typescript
-import { ManualProcessor } from '@unnamed-gunpla-app/manual-parser';
+import { ManualProcessor } from '@hobby-ninja/manual-parser';
 
 const processor = new ManualProcessor();
 
