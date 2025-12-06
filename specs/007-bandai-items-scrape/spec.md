@@ -7,19 +7,20 @@
 
 ## User Scenarios & Testing *(mandatory)*
 
-### User Story 1 - Catalog URL Discovery (Priority: P1)
+### User Story 1 - Catalog Range Processing (Priority: P1)
 
-As a data collector, I want to discover all item URLs from the Bandai hobby catalog pages so that I can scrape them with the existing scraper.
+As a data collector, I want to increment through catalog range identifiers (like 01_1000, 02_1000, etc.) so that I can systematically process all catalog items without needing to parse HTML.
 
-**Why this priority**: This enables bulk collection of all catalog items without manual URL gathering.
+**Why this priority**: This enables bulk collection of all catalog items following the same proven pattern as the manual scraper, eliminating the complexity of HTML parsing while processing actual catalog pages that may contain client-side rendered content.
 
-**Independent Test**: Can be tested by running discovery on one catalog range and verifying it generates valid item URLs.
+**Independent Test**: Can be tested by running catalog range processing and verifying it generates valid catalog URLs.
 
 **Acceptance Scenarios**:
 
-1. **Given** the catalog page "https://bandai-hobby.net/item/01_1000/", **When** processed, **Then** it extracts all individual item page URLs
-2. **Given** discovered item URLs, **When** passed to the existing scraper, **Then** they process correctly and save to `data/bandai/items/`
-3. **Given** no URLs found on a catalog page, **When** this happens, **Then** it logs the issue and continues to next range
+1. **Given** the catalog range "00_0000", **When** processed, **Then** it generates the URL "https://bandai-hobby.net/item/00_0000/" for processing by existing scraper
+2. **Given** catalog range URLs, **When** passed to the existing scraper, **Then** they process correctly and save to `data/bandai/items/`
+3. **Given** a catalog range with no valid items, **When** this happens, **Then** it logs the issue and continues to next range
+4. **Given** the pattern of catalog ranges, **When** processed sequentially, **Then** it covers all ranges from "00_0000" through potentially "99_9999" or similar
 
 ---
 
@@ -41,32 +42,38 @@ As a user, I want a simple CLI command to discover and scrape all catalog items 
 
 ### Edge Cases
 
-- Catalog pages change structure or have different pagination
-- Invalid or empty catalog ranges
-- Network errors during discovery
+- Catalog ranges that don't exist (return 404)
+- Very large numbers of catalog ranges that may exceed reasonable processing time
+- Network errors during catalog page processing
+- Client-side rendering failures requiring Playwright fallback
+- Catalog pages with no item data
+- Unknown upper bound of catalog range sequence
 
 ## Requirements *(mandatory)*
 
 ### Functional Requirements
 
-- **FR-001**: Add catalog discovery logic to find item URLs from pages like `/item/01_1000/`
-- **FR-002**: Extend existing CLI to support catalog discovery mode
-- **FR-003**: Pass discovered URLs to existing `BandaiHobbyScraper` for processing
+- **FR-001**: Add catalog range generation logic to create catalog URLs like `https://bandai-hobby.net/item/00_0000/`
+- **FR-002**: Extend existing CLI to support catalog range processing mode
+- **FR-003**: Pass generated catalog URLs to existing `BandaiHobbyScraper` for processing
 - **FR-004**: Use existing infrastructure for rate limiting, caching, and resuming
-- **FR-005**: Support all catalog ranges (01_1000, 02_1000, etc.)
-- **FR-006**: Log discovery progress and errors using existing patterns
+- **FR-005**: Support all catalog ranges (00_0000, 01_1000, 02_1000, etc.) with sequential incrementation
+- **FR-006**: Log range processing progress and errors using existing patterns
+- **FR-007**: Handle client-side rendering requirements using existing BaseScraper Playwright fallback
 
 ### Key Entities *(include if feature involves data)*
 
-- **Catalog Page**: Pages like `/item/01_1000/` that contain lists of item URLs
-- **Item URL**: Individual product page URLs discovered and passed to existing scraper
+- **Catalog Range**: Range identifier like "00_0000" that forms part of the catalog URL
+- **Catalog URL**: Generated URL like `https://bandai-hobby.net/item/00_0000/` for processing
+- **Item Data**: Product data extracted by existing `BandaiHobbyScraper` from catalog pages
 
 ## Success Criteria *(mandatory)*
 
 ### Measurable Outcomes
 
-- **SC-001**: Catalog discovery successfully finds item URLs from target pages
-- **SC-002**: Discovered URLs process correctly through existing scraper pipeline
+- **SC-001**: Catalog range generation successfully creates catalog URLs from sequential range identifiers
+- **SC-002**: Generated catalog URLs process correctly through existing scraper pipeline
 - **SC-003**: CLI integration works with existing options and patterns
 - **SC-004**: Output format matches existing `data/bandai/items/` structure
 - **SC-005**: Error handling follows existing patterns for logging and recovery
+- **SC-006**: Sequential range processing covers all available catalog ranges systematically
