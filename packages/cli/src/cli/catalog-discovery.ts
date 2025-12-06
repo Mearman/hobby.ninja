@@ -465,80 +465,91 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 		result.discoveredUrls = discovery.validIds.length;
 		result.processedUrls = discovery.validIds.length;
 	} else {
-		// Phase 2: Download content for valid IDs using Playwright
-		console.log(`\n📥 Phase 2: Downloading content for ${idsNeedingDownload.length} valid IDs...`);
+		// Phase 2: Download content for valid IDs using Playwright (parallel tabs)
+		const CONCURRENT_TABS = 5; // Number of parallel browser tabs
+		console.log(`\n📥 Phase 2: Downloading content for ${idsNeedingDownload.length} valid IDs (${CONCURRENT_TABS} parallel tabs)...`);
 
 		// Initialize browser ONCE for all downloads
 		const scraper = new SimpleCatalogScraper();
 		console.log(`  🌐 Initializing browser...`);
 		await scraper.initialize();
 
-		try {
-			for (let i = 0; i < idsNeedingDownload.length; i++) {
-				const range = idsNeedingDownload[i];
+		// Helper function to process a single item
+		const processItem = async (range: string, index: number): Promise<void> => {
+			try {
+				if (options.verbose) {
+					console.log(`  [${index + 1}/${idsNeedingDownload.length}] Downloading ${range}...`);
+				}
 
-				try {
-					console.log(`  [${i + 1}/${idsNeedingDownload.length}] Downloading ${range}...`);
+				const processResult = await processCatalogRange(range, options, scraper);
 
-					// Pass shared scraper instance to avoid re-launching browser
-					const processResult = await processCatalogRange(range, options, scraper);
+				if (processResult.success && processResult.data) {
+					const productName = processResult.data.productName;
+					recordValidId(range, true, productName);
+					result.completedRanges++;
+					result.discoveredUrls++;
+					result.processedUrls++;
 
-					if (processResult.success && processResult.data) {
-						const productName = processResult.data.productName;
-						recordValidId(range, true, productName);
-						result.completedRanges++;
-						result.discoveredUrls++;
-						result.processedUrls++;
+					// Save the extracted data to the output directory
+					const itemDir = join(options.outputDir, range);
+					mkdirSync(itemDir, { recursive: true });
 
-						// Save the extracted data to the output directory
-						const itemDir = join(options.outputDir, range);
-						mkdirSync(itemDir, { recursive: true });
+					// Save HTML content and structured HTML as JSON
+					if (processResult.data.html) {
+						const htmlFile = join(itemDir, `${range}.html`);
+						writeFileSync(htmlFile, processResult.data.html, 'utf8');
 
-						// Save HTML content and structured HTML as JSON
-						if (processResult.data.html) {
-							const htmlFile = join(itemDir, `${range}.html`);
-							writeFileSync(htmlFile, processResult.data.html, 'utf8');
+						// Save structured HTML content as .html.json (generic parse5 output)
+						const htmlParser = new SimpleHtmlParser();
+						const parsedHtml = htmlParser.parse(processResult.data.html);
 
-							// Save structured HTML content as .html.json (generic parse5 output)
-							const htmlParser = new SimpleHtmlParser();
-							const parsedHtml = htmlParser.parse(processResult.data.html);
-
-							if (parsedHtml.success && parsedHtml.data) {
-								const htmlJsonFile = join(itemDir, `${range}.html.json`);
-								writeFileSync(htmlJsonFile, JSON.stringify(parsedHtml.data, null, 2), 'utf8');
-							}
-
-							// Save structured catalog data as .json (semantic Cheerio extraction)
-							const catalogParser = new BandaiCatalogParser();
-							const catalogResult = catalogParser.parse(
-								processResult.data.html,
-								range,
-								buildCatalogUrl(range)
-							);
-
-							if (catalogResult.success && catalogResult.data) {
-								const catalogJsonFile = join(itemDir, `${range}.json`);
-								writeFileSync(catalogJsonFile, JSON.stringify(catalogResult.data, null, 2), 'utf8');
-							}
+						if (parsedHtml.success && parsedHtml.data) {
+							const htmlJsonFile = join(itemDir, `${range}.html.json`);
+							writeFileSync(htmlJsonFile, JSON.stringify(parsedHtml.data, null, 2), 'utf8');
 						}
 
-						console.log(`     ✅ ${range} - ${productName || processResult.data.title}`);
+						// Save structured catalog data as .json (semantic Cheerio extraction)
+						const catalogParser = new BandaiCatalogParser();
+						const catalogResult = catalogParser.parse(
+							processResult.data.html,
+							range,
+							buildCatalogUrl(range)
+						);
 
-						// Save index after each successful download
-						saveCatalogIndex();
-					} else {
-						result.errors.push(processResult.error || `${range}: Download failed`);
-						console.log(`     ❌ ${range} - Failed: ${processResult.error}`);
+						if (catalogResult.success && catalogResult.data) {
+							const catalogJsonFile = join(itemDir, `${range}.json`);
+							writeFileSync(catalogJsonFile, JSON.stringify(catalogResult.data, null, 2), 'utf8');
+						}
 					}
 
-					// Delay between Playwright requests
-					if (i < idsNeedingDownload.length - 1) {
-						await new Promise(resolve => setTimeout(resolve, options.delayMs));
-					}
-				} catch (error) {
-					const errorMessage = error instanceof Error ? error.message : String(error);
-					result.errors.push(`${range}: ${errorMessage}`);
-					console.log(`     ❌ ${range} - Error: ${errorMessage}`);
+					console.log(`     ✅ ${range} - ${productName || processResult.data.title}`);
+				} else {
+					result.errors.push(processResult.error || `${range}: Download failed`);
+					console.log(`     ❌ ${range} - Failed: ${processResult.error}`);
+				}
+			} catch (error) {
+				const errorMessage = error instanceof Error ? error.message : String(error);
+				result.errors.push(`${range}: ${errorMessage}`);
+				console.log(`     ❌ ${range} - Error: ${errorMessage}`);
+			}
+		};
+
+		try {
+			// Process in batches of CONCURRENT_TABS
+			for (let i = 0; i < idsNeedingDownload.length; i += CONCURRENT_TABS) {
+				const batch = idsNeedingDownload.slice(i, i + CONCURRENT_TABS);
+
+				// Process batch in parallel
+				await Promise.all(
+					batch.map((range, batchIndex) => processItem(range, i + batchIndex))
+				);
+
+				// Save index after each batch
+				saveCatalogIndex();
+
+				// Small delay between batches to be respectful to the server
+				if (i + CONCURRENT_TABS < idsNeedingDownload.length) {
+					await new Promise(resolve => setTimeout(resolve, options.delayMs / 2));
 				}
 			}
 		} finally {
