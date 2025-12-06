@@ -128,5 +128,6 @@ export interface ProgressiveEnhancementResult {
 
 export type RenderingType = "static" | "dynamic" | "hybrid";
 
+
 // Import types from other files
 import type { LanguageDetection } from "./languageDetection";
