@@ -9,12 +9,8 @@ export interface SimpleCatalogResult {
 	url: string;
 	range: string;
 	title: string;
-	productName?: string | undefined;
-	price?: string | undefined;
-	releaseDate?: string | undefined;
-	series?: string | undefined;
 	hasContent: boolean;
-	html?: string;
+	html: string;
 }
 
 export class SimpleCatalogScraper {
@@ -67,55 +63,12 @@ export class SimpleCatalogScraper {
 			const html = await page.content();
 
 			// Check if this is a 404 or invalid page
-			if (title.includes('404') || title.includes('NOT FOUND')) {
-				return {
-					url,
-					range,
-					title,
-					hasContent: false,
-					html
-				};
-			}
-
-			// Extract product information using page selectors
-			let productName: string | undefined;
-			let price: string | undefined;
-			let releaseDate: string | undefined;
-			let series: string | undefined;
-
-			try {
-				// Product name (usually in h1 with product class)
-				productName = await page.locator('h1.p-heading__h1-product').first().textContent().catch(() => undefined);
-				if (!productName) {
-					productName = await page.locator('h1').first().textContent().catch(() => undefined);
-				}
-			} catch {}
-
-			try {
-				// Price information
-				price = await page.locator('[class*="price"]').first().textContent().catch(() => undefined);
-			} catch {}
-
-			try {
-				// Release date
-				releaseDate = await page.locator('[class*="release"], [class*="date"]').first().textContent().catch(() => undefined);
-			} catch {}
-
-			try {
-				// Series information
-				series = await page.locator('[class*="series"]').first().textContent().catch(() => undefined);
-			} catch {}
-
-			const hasContent = !!(productName || price || releaseDate || series);
+			const hasContent = !title.includes('404') && !title.includes('NOT FOUND');
 
 			return {
 				url,
 				range,
 				title,
-				productName: productName?.trim(),
-				price: price?.trim(),
-				releaseDate: releaseDate?.trim(),
-				series: series?.trim(),
 				hasContent,
 				html
 			};

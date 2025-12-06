@@ -1,7 +1,7 @@
 import { SimpleCatalogScraper } from "./simple-catalog-scraper";
-import { SimpleHtmlParser } from "@unnamed-gunpla-app/scrapers/manual-parser/core/simple-html-parser";
 import { BandaiCatalogParser } from "./bandai-catalog-parser";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import type { CatalogDiscoveryOptions, CatalogDiscoveryResult, CatalogRangeStats, CatalogIndex, CatalogIndexEntry } from "./types/catalog-discovery";
 
@@ -504,52 +504,50 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 		let nextIndex = 0;
 		const total = idsNeedingDownload.length;
 
+		// Reusable parser instance (thread-safe for sequential use per worker)
+		const catalogParser = new BandaiCatalogParser();
+
 		// Helper function to process a single item
 		const processItem = async (range: string): Promise<void> => {
 			try {
 				const processResult = await processCatalogRange(range, options, scraper);
 
 				if (processResult.success && processResult.data) {
-					const productName = processResult.data.productName;
+					// Parse HTML to extract product data
+					const catalogResult = catalogParser.parse(
+						processResult.data.html,
+						range,
+						buildCatalogUrl(range)
+					);
+
+					const productName = catalogResult.success && catalogResult.data?.name?.ja
+						? catalogResult.data.name.ja
+						: processResult.data.title;
+
 					recordValidId(range, true, productName);
 					result.completedRanges++;
 					result.discoveredUrls++;
 					result.processedUrls++;
 
-					// Save the extracted data to the output directory
+					// Save files asynchronously
 					const itemDir = join(options.outputDir, range);
-					mkdirSync(itemDir, { recursive: true });
+					await mkdir(itemDir, { recursive: true });
 
-					// Save HTML content and structured HTML as JSON
-					if (processResult.data.html) {
-						const htmlFile = join(itemDir, `${range}.html`);
-						writeFileSync(htmlFile, processResult.data.html, 'utf8');
+					// Write HTML and JSON in parallel
+					const writePromises: Promise<void>[] = [
+						writeFile(join(itemDir, `${range}.html`), processResult.data.html, 'utf8')
+					];
 
-						// Save structured HTML content as .html.json (generic parse5 output)
-						const htmlParser = new SimpleHtmlParser();
-						const parsedHtml = htmlParser.parse(processResult.data.html);
-
-						if (parsedHtml.success && parsedHtml.data) {
-							const htmlJsonFile = join(itemDir, `${range}.html.json`);
-							writeFileSync(htmlJsonFile, JSON.stringify(parsedHtml.data, null, 2), 'utf8');
-						}
-
-						// Save structured catalog data as .json (semantic Cheerio extraction)
-						const catalogParser = new BandaiCatalogParser();
-						const catalogResult = catalogParser.parse(
-							processResult.data.html,
-							range,
-							buildCatalogUrl(range)
+					if (catalogResult.success && catalogResult.data) {
+						writePromises.push(
+							writeFile(join(itemDir, `${range}.json`), JSON.stringify(catalogResult.data, null, 2), 'utf8')
 						);
-
-						if (catalogResult.success && catalogResult.data) {
-							const catalogJsonFile = join(itemDir, `${range}.json`);
-							writeFileSync(catalogJsonFile, JSON.stringify(catalogResult.data, null, 2), 'utf8');
-						}
 					}
 
+					await Promise.all(writePromises);
+
 					completedCount++;
-					console.log(`  [${completedCount}/${total}] ✅ ${range} - ${productName || processResult.data.title}`);
+					console.log(`  [${completedCount}/${total}] ✅ ${range} - ${productName}`);
 				} else {
 					result.errors.push(processResult.error || `${range}: Download failed`);
 					completedCount++;
