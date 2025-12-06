@@ -25,10 +25,12 @@ export interface WaybackSubmission {
 	field: UrlField;
 	itemId: string;
 	sourceType: 'manual' | 'catalog';
-	status: 'pending' | 'success' | 'failed' | 'skipped';
+	status: 'pending' | 'success' | 'failed' | 'skipped' | 'requeued';
 	archiveUrl?: string;
 	error?: string;
 	retryCount: number;
+	/** How many times this submission has been sent to the back of the queue */
+	requeueCount?: number;
 	existingArchive?: {
 		timestamp: string;
 		age: number;
