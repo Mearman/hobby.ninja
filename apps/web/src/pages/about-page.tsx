@@ -32,10 +32,10 @@ export function AboutPage() {
 				{/* Hero Section */}
 				<div style={{ textAlign: "center", marginBottom: "3rem" }}>
 					<Title order={1} size={42}>
-            About Unnamed Gunpla App
+            About hobby.ninja
 					</Title>
 					<Text size="lg" color="dimmed">
-            A comprehensive platform for Gundam and Gunpla enthusiasts to manage their collections and access detailed kit information
+            A hobby collection manager for enthusiasts
 					</Text>
 				</div>
 
@@ -45,7 +45,7 @@ export function AboutPage() {
             Our Mission
 					</Title>
 					<Text size="md" color="dimmed" mb="lg">
-            We believe that every Gunpla enthusiast deserves a powerful, intuitive tool to manage their passion.
+            We believe that every hobbyist deserves a powerful, intuitive tool to manage their passion.
             This application combines comprehensive database information with personal collection management,
             all built with modern web technologies for the best possible user experience.
 					</Text>

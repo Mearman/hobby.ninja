@@ -34,7 +34,7 @@ const rootRoute = createRootRoute({
 			<header className="app-header">
 				<nav className="app-nav">
 					<h1 className="app-title">
-						<Link to="/">Unnamed Gunpla App</Link>
+						<Link to="/">hobby.ninja</Link>
 					</h1>
 					<ul className="nav-links">
 						<li>
@@ -52,7 +52,7 @@ const rootRoute = createRootRoute({
 				</Suspense>
 			</main>
 			<footer className="app-footer">
-				<p>&copy; 2025 Unnamed Gunpla App. Built with ❤️ for Gundam fans.</p>
+				<p>&copy; 2025 hobby.ninja</p>
 			</footer>
 		</div>
 	),

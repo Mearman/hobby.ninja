@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 /**
- * Comprehensive E2E Tests for Gunpla Collection Manager
+ * Comprehensive E2E Tests for hobby.ninja
  *
  * This test suite works against both development and production environments,
  * providing thorough validation of application functionality across all scenarios.
@@ -93,7 +93,7 @@ test.describe('Application E2E Tests', () => {
         await page.waitForLoadState('domcontentloaded');
       }
 
-      const expectedTitle = 'Gunpla Collection Manager';
+      const expectedTitle = 'hobby.ninja';
       const title = await page.title();
 
       if (testEnv === 'development') {
