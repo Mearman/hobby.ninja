@@ -11,7 +11,7 @@ import { ProgressBar, Spinner } from '@inkjs/ui';
 /** A single log entry for the scrolling log */
 export interface LogEntry {
 	url: string;
-	status: 'success' | 'failed' | 'skipped' | 'cached';
+	status: 'success' | 'failed' | 'skipped' | 'cached' | 'retrying';
 	message?: string;
 	/** Number of retry attempts (0 = first try succeeded) */
 	retryCount?: number;
@@ -19,6 +19,8 @@ export interface LogEntry {
 	archiveAge?: string;
 	/** Whether the age check came from cache */
 	fromCache?: boolean;
+	/** Delay before next retry in ms (for retrying status) */
+	retryDelayMs?: number;
 }
 
 export interface WaybackStats {
@@ -178,10 +180,12 @@ function WaybackProgressUI({ stats }: WaybackProgressProps) {
 					{stats.recentLogs.map((log, i) => {
 						const statusIcon = log.status === 'success' ? '✓' :
 							log.status === 'failed' ? '✗' :
-							log.status === 'cached' ? '⚡' : '○';
+							log.status === 'cached' ? '⚡' :
+							log.status === 'retrying' ? '↻' : '○';
 						const statusColor = log.status === 'success' ? 'green' :
 							log.status === 'failed' ? 'red' :
-							log.status === 'cached' ? 'cyan' : 'yellow';
+							log.status === 'cached' ? 'cyan' :
+							log.status === 'retrying' ? 'magenta' : 'yellow';
 						// Truncate URL to fit in terminal
 						const maxUrlLen = 50;
 						const displayUrl = log.url.length > maxUrlLen
@@ -189,7 +193,10 @@ function WaybackProgressUI({ stats }: WaybackProgressProps) {
 							: log.url;
 						// Build detail string with extra info
 						const details: string[] = [];
-						if (log.retryCount && log.retryCount > 0) {
+						if (log.status === 'retrying' && log.retryCount) {
+							const delaySec = log.retryDelayMs ? Math.round(log.retryDelayMs / 1000) : 0;
+							details.push(`retry #${log.retryCount}, wait ${delaySec}s`);
+						} else if (log.retryCount && log.retryCount > 0) {
 							details.push(`${log.retryCount} retries`);
 						}
 						if (log.archiveAge) {
@@ -198,8 +205,12 @@ function WaybackProgressUI({ stats }: WaybackProgressProps) {
 						if (log.fromCache) {
 							details.push('cached');
 						}
-						if (log.message && !log.archiveAge) {
+						if (log.message && !log.archiveAge && log.status !== 'retrying') {
 							details.push(log.message);
+						}
+						// For retrying status, show the error message separately
+						if (log.status === 'retrying' && log.message) {
+							details.push(log.message.substring(0, 30));
 						}
 						const detailStr = details.length > 0 ? ` (${details.join(', ')})` : '';
 						return (
