@@ -16,6 +16,7 @@ import {
 	createServerTranslationStore,
 	loadDictionary,
 	rebuildAndReloadDictionary,
+	normalizeText,
 	TRANSLATION_STORE_DIR,
 } from '../../../translation/src/index';
 import type { TranslationStore } from '../../../translation/src/index';
@@ -224,8 +225,11 @@ export class CatalogTranslator {
 		}
 
 		try {
-			const result = await this.translator.translateText(text, 'en', 'ja');
-			return result.translated;
+			// Normalize input (Japanese) before translation
+			const normalizedInput = normalizeText(text);
+			const result = await this.translator.translateText(normalizedInput, 'en', 'ja');
+			// Normalize output (English) after translation
+			return normalizeText(result.translated);
 		} catch (error) {
 			if (this.verbose) {
 				console.error(`[CatalogTranslator] Failed to translate: "${text.slice(0, 50)}..."`, error);
