@@ -13,6 +13,12 @@ export interface LogEntry {
 	url: string;
 	status: 'success' | 'failed' | 'skipped' | 'cached';
 	message?: string;
+	/** Number of retry attempts (0 = first try succeeded) */
+	retryCount?: number;
+	/** Archive age info when skipped due to existing archive */
+	archiveAge?: string;
+	/** Whether the age check came from cache */
+	fromCache?: boolean;
 }
 
 export interface WaybackStats {
@@ -177,17 +183,32 @@ function WaybackProgressUI({ stats }: WaybackProgressProps) {
 							log.status === 'failed' ? 'red' :
 							log.status === 'cached' ? 'cyan' : 'yellow';
 						// Truncate URL to fit in terminal
-						const maxUrlLen = 60;
+						const maxUrlLen = 50;
 						const displayUrl = log.url.length > maxUrlLen
 							? '...' + log.url.slice(-maxUrlLen + 3)
 							: log.url;
+						// Build detail string with extra info
+						const details: string[] = [];
+						if (log.retryCount && log.retryCount > 0) {
+							details.push(`${log.retryCount} retries`);
+						}
+						if (log.archiveAge) {
+							details.push(`age: ${log.archiveAge}`);
+						}
+						if (log.fromCache) {
+							details.push('cached');
+						}
+						if (log.message && !log.archiveAge) {
+							details.push(log.message);
+						}
+						const detailStr = details.length > 0 ? ` (${details.join(', ')})` : '';
 						return (
 							<Box key={i}>
 								<Text color={statusColor}>{statusIcon}</Text>
 								<Text> </Text>
 								<Text color="gray">{displayUrl}</Text>
-								{log.message && (
-									<Text color="gray" dimColor> ({log.message})</Text>
+								{detailStr && (
+									<Text color="gray" dimColor>{detailStr}</Text>
 								)}
 							</Box>
 						);

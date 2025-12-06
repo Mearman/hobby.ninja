@@ -210,12 +210,18 @@ export class WaybackCommand {
 				}
 
 				// Log the URL result to the scrolling log
+				const archiveAge = processedSubmission.existingArchive
+					? this.formatDuration(processedSubmission.existingArchive.age)
+					: undefined;
 				progressRenderer.log({
 					url: submission.url,
 					status: processedSubmission.status === 'success' ? 'success' :
 							processedSubmission.status === 'failed' ? 'failed' :
 							processedSubmission.ageCheckResult === 'too_new' ? 'cached' : 'skipped',
-					message: processedSubmission.ageCheckResult || processedSubmission.error,
+					message: processedSubmission.error,
+					retryCount: processedSubmission.retryCount,
+					archiveAge,
+					fromCache: processedSubmission.ageCheckFromCache,
 				});
 
 				// Update progress UI with latest stats
@@ -606,6 +612,7 @@ export class WaybackCommand {
 		let processedSubmission: WaybackSubmission = {
 			...submission,
 			ageCheckResult: ageCheck.result,
+			ageCheckFromCache: ageCheck.fromCache,
 		};
 
 		if (ageCheck.archive) {
@@ -630,7 +637,7 @@ export class WaybackCommand {
 		const cached = this.getCachedArchiveStatus(url);
 		if (cached) {
 			this.cacheHits++;
-			return cached;
+			return { ...cached, fromCache: true };
 		}
 
 		// Not in cache or cache expired, fetch from API
@@ -640,7 +647,7 @@ export class WaybackCommand {
 		// Cache the result
 		this.cacheArchiveStatus(url, result);
 
-		return result;
+		return { ...result, fromCache: false };
 	}
 
 	/**
