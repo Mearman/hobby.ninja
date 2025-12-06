@@ -59,6 +59,9 @@ export class WaybackCommand {
 	private cacheTtlMs: number = 24 * 60 * 60 * 1000;
 	/** Track if cache is dirty and needs saving */
 	private archiveCacheDirty: boolean = false;
+	/** Track cache hits/misses for UI display */
+	private cacheHits: number = 0;
+	private cacheMisses: number = 0;
 
 	constructor() {
 		// Constructor - no debug output needed
@@ -176,6 +179,11 @@ export class WaybackCommand {
 						itemId: submission.itemId,
 						field: submission.field,
 					},
+					cacheStats: {
+						hits: this.cacheHits,
+						misses: this.cacheMisses,
+						size: Object.keys(this.archiveCache?.entries || {}).length,
+					},
 				});
 
 				const processedSubmission = await this.submitWithAgeCheck(submission, options.retries, options.verbose);
@@ -208,6 +216,11 @@ export class WaybackCommand {
 					failed: result.failed,
 					skipped: result.skipped,
 					ageStats: { ...result.ageStats },
+					cacheStats: {
+						hits: this.cacheHits,
+						misses: this.cacheMisses,
+						size: Object.keys(this.archiveCache?.entries || {}).length,
+					},
 				});
 
 				// Update checkpoint
@@ -607,10 +620,12 @@ export class WaybackCommand {
 		// Check cache first
 		const cached = this.getCachedArchiveStatus(url);
 		if (cached) {
+			this.cacheHits++;
 			return cached;
 		}
 
 		// Not in cache or cache expired, fetch from API
+		this.cacheMisses++;
 		const result = await this.fetchArchiveAge(url);
 
 		// Cache the result

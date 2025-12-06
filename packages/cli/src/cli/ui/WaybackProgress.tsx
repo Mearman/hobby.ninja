@@ -25,6 +25,12 @@ export interface WaybackStats {
 		needsUpdate: number;
 		notArchived: number;
 	};
+	/** Cache stats */
+	cacheStats?: {
+		hits: number;
+		misses: number;
+		size: number;
+	};
 	/** Current item being processed */
 	currentItem?: {
 		sourceType: 'manual' | 'catalog';
@@ -126,6 +132,22 @@ function WaybackProgressUI({ stats }: WaybackProgressProps) {
 				<Text> </Text>
 				<Text color="magenta">Not archived: {stats.ageStats.notArchived}</Text>
 			</Box>
+
+			{/* Cache stats row */}
+			{stats.cacheStats && (
+				<Box marginTop={1}>
+					<Text color="cyan">Cache: </Text>
+					<Text color="green">Hits: {stats.cacheStats.hits}</Text>
+					<Text> </Text>
+					<Text color="yellow">Misses: {stats.cacheStats.misses}</Text>
+					<Text> </Text>
+					<Text color="gray">
+						({stats.cacheStats.hits + stats.cacheStats.misses > 0
+							? Math.round((stats.cacheStats.hits / (stats.cacheStats.hits + stats.cacheStats.misses)) * 100)
+							: 0}% hit rate, {stats.cacheStats.size} cached)
+					</Text>
+				</Box>
+			)}
 
 			{/* Elapsed time */}
 			{stats.elapsedMs !== undefined && (
