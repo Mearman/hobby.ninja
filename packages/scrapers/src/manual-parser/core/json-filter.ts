@@ -30,6 +30,13 @@ interface RawParsedJson {
 }
 
 /**
+ * Localized date with ISO value
+ */
+export interface LocalizedDate extends LocalizedText {
+  iso: string;
+}
+
+/**
  * Clean filtered output structure
  * Uses LocalizedText for fields that can be translated
  */
@@ -37,8 +44,7 @@ export interface FilteredManualData {
   id: string;
   name: LocalizedText;
   productNumber: string;
-  releaseDate: string;
-  releaseDateRaw: string;
+  releaseDate: LocalizedDate;
   grade: string;
   scale: string;
   series: LocalizedText;
@@ -93,10 +99,7 @@ function extractProductNumber(blocks: RawParsedJson['content']['blocks']): strin
 /**
  * Extract release date (発売日) from text
  */
-function extractReleaseDate(blocks: RawParsedJson['content']['blocks']): {
-  raw: string;
-  formatted: string;
-} {
+function extractReleaseDate(blocks: RawParsedJson['content']['blocks']): LocalizedDate {
   for (const block of blocks) {
     const text = block.content?.text || block.content?.ja || '';
     // Look for pattern: 発売日 followed by date (e.g., 2002年11月16日発売)
@@ -104,8 +107,8 @@ function extractReleaseDate(blocks: RawParsedJson['content']['blocks']): {
     if (match) {
       const [, year, month, day] = match;
       return {
-        raw: `${year}年${month}月${day}日`,
-        formatted: `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`,
+        ja: `${year}年${month}月${day}日`,
+        iso: `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`,
       };
     }
   }
@@ -116,7 +119,7 @@ function extractReleaseDate(blocks: RawParsedJson['content']['blocks']): {
  * Extract grade/brand (ブランド) from text
  */
 function extractGrade(blocks: RawParsedJson['content']['blocks']): { grade: string; scale: string } {
-  const gradePatterns = ['HG', 'MG', 'PG', 'RG', 'EG', 'SD', 'RE', 'HGUC', 'HGCE', 'HGAC', 'HGAW', 'HGFC', 'HGCC'];
+  const gradePatterns = ['HGUC', 'HGCE', 'HGAC', 'HGAW', 'HGFC', 'HGCC', 'HG', 'MG', 'PG', 'RG', 'EG', 'SD', 'RE'];
   const scalePatterns = ['1/144', '1/100', '1/60', '1/48'];
 
   let grade = '';
@@ -126,12 +129,14 @@ function extractGrade(blocks: RawParsedJson['content']['blocks']): { grade: stri
     const text = block.content?.text || block.content?.ja || '';
 
     // Look for grade after ブランド
-    const gradeMatch = text.match(/ブランド[^\w]*(HG|MG|PG|RG|EG|SD|RE)/i);
-    if (gradeMatch) {
-      grade = gradeMatch[1].toUpperCase();
+    if (!grade) {
+      const gradeMatch = text.match(/ブランド[^\w]*(\w+)/i);
+      if (gradeMatch) {
+        grade = gradeMatch[1].toUpperCase();
+      }
     }
 
-    // Also check for grade in product name
+    // Also check for grade in product name (longer patterns first)
     if (!grade) {
       for (const g of gradePatterns) {
         if (text.includes(g)) {
@@ -150,6 +155,13 @@ function extractGrade(blocks: RawParsedJson['content']['blocks']): { grade: stri
         }
       }
     }
+  }
+
+  if (!grade) {
+    throw new Error('Failed to extract grade (ブランド) from manual');
+  }
+  if (!scale) {
+    throw new Error('Failed to extract scale from manual');
   }
 
   return { grade, scale };
@@ -228,9 +240,13 @@ function extractProductImage(
     }
   }
 
+  if (productImages.length === 0) {
+    throw new Error('Failed to extract product image from manual');
+  }
+
   return {
-    productImage: productImages[0] || '',
-    thumbnailImage: productImages[0] || '',
+    productImage: productImages[0],
+    thumbnailImage: productImages[0],
   };
 }
 
@@ -245,12 +261,19 @@ function buildSourceUrl(manualId: string): string {
  * Filter raw parsed JSON to clean product data
  */
 export function filterManualJson(rawJson: RawParsedJson, manualId: string): FilteredManualData {
-  const blocks = rawJson.content?.blocks || [];
-  const assets = rawJson.assets || { images: [], links: [] };
+  const blocks = rawJson.content?.blocks;
+  const assets = rawJson.assets;
 
-  const { name, nameJa } = extractProductName(rawJson.title, blocks);
+  if (!blocks || blocks.length === 0) {
+    throw new Error('No content blocks found in raw JSON');
+  }
+  if (!assets) {
+    throw new Error('No assets found in raw JSON');
+  }
+
+  const name = extractProductName(rawJson.title, blocks);
   const productNumber = extractProductNumber(blocks);
-  const { raw: releaseDateRaw, formatted: releaseDate } = extractReleaseDate(blocks);
+  const releaseDate = extractReleaseDate(blocks);
   const { grade, scale } = extractGrade(blocks);
   const series = extractSeries(blocks);
   const { productImage, thumbnailImage } = extractProductImage(blocks, assets);
@@ -258,14 +281,11 @@ export function filterManualJson(rawJson: RawParsedJson, manualId: string): Filt
   return {
     id: manualId,
     name,
-    nameJa,
     productNumber,
     releaseDate,
-    releaseDateRaw,
     grade,
     scale,
     series,
-    seriesJa: series,
     productImage,
     thumbnailImage,
     sourceUrl: buildSourceUrl(manualId),
