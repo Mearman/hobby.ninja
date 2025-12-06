@@ -63,6 +63,8 @@ export interface FilteredManualData {
   thumbnailImage: string;
   sourceUrl: string;
   extractedAt: string;
+  pdfUrl?: string;
+  supplementaryPdfUrl?: string;
 }
 
 /**
@@ -469,6 +471,49 @@ function buildSourceUrl(manualId: string): string {
 }
 
 /**
+ * Check if raw content contains 補足説明書 (supplementary manual)
+ */
+function hasSupplementaryManual(blocks: RawParsedJson['content']['blocks']): boolean {
+  for (const block of blocks) {
+    const text = block.content?.text || block.content?.ja || '';
+    if (text.includes('補足説明書')) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Build PDF URL from manual ID
+ * Pattern: https://manual.bandai-hobby.net/pdf/{id}.pdf
+ */
+function buildPdfUrl(manualId: string): string {
+  const numericId = parseInt(manualId, 10);
+  return `https://manual.bandai-hobby.net/pdf/${numericId}.pdf`;
+}
+
+/**
+ * Build supplementary PDF URL from manual ID
+ * Pattern: https://manual.bandai-hobby.net/pdf/{id}_2.pdf
+ */
+function buildSupplementaryPdfUrl(manualId: string): string {
+  const numericId = parseInt(manualId, 10);
+  return `https://manual.bandai-hobby.net/pdf/${numericId}_2.pdf`;
+}
+
+/**
+ * Check if a PDF URL exists (returns 200 OK)
+ */
+async function checkPdfExists(url: string): Promise<boolean> {
+  try {
+    const response = await fetch(url, { method: 'HEAD' });
+    return response.ok;
+  } catch {
+    return false;
+  }
+}
+
+/**
  * Check if raw JSON has expected parsed HTML structure
  */
 function isValidParsedHtml(rawJson: unknown): rawJson is RawParsedJson {
@@ -486,7 +531,10 @@ function isValidParsedHtml(rawJson: unknown): rawJson is RawParsedJson {
 /**
  * Filter raw parsed JSON to clean product data
  */
-export function filterManualJson(rawJson: unknown, manualId: string): FilteredManualData {
+export async function filterManualJson(
+  rawJson: unknown,
+  manualId: string
+): Promise<FilteredManualData> {
   if (!isValidParsedHtml(rawJson)) {
     throw new Error('Invalid structure: not a parsed HTML JSON file');
   }
@@ -527,6 +575,21 @@ export function filterManualJson(rawJson: unknown, manualId: string): FilteredMa
     result.scale = scale;
   }
 
+  // All manuals have a PDF available
+  result.pdfUrl = buildPdfUrl(manualId);
+
+  // Only add supplementary PDF if text indicates it AND the PDF actually exists
+  if (hasSupplementaryManual(blocks)) {
+    const supplementaryUrl = buildSupplementaryPdfUrl(manualId);
+    if (await checkPdfExists(supplementaryUrl)) {
+      result.supplementaryPdfUrl = supplementaryUrl;
+    } else {
+      throw new Error(
+        `Supplementary manual indicated in HTML but PDF not found: ${supplementaryUrl}`
+      );
+    }
+  }
+
   return result;
 }
 
@@ -541,7 +604,7 @@ export async function filterJsonFile(
   const rawContent = await fs.readFile(inputPath, 'utf-8');
   const rawJson: unknown = JSON.parse(rawContent);
 
-  const filtered = filterManualJson(rawJson, manualId);
+  const filtered = await filterManualJson(rawJson, manualId);
 
   await fs.writeFile(outputPath, JSON.stringify(filtered, null, 2), 'utf-8');
 
