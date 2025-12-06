@@ -3,6 +3,7 @@
 import { Command } from "commander";
 import { readFileSync } from "fs";
 import { join } from "path";
+import { TRANSLATION_STORE_DIR } from "../../../translation/src/index";
 
 const packageJson = JSON.parse(readFileSync(join(__dirname, "../../package.json"), "utf8"));
 const version = packageJson.version;
@@ -46,9 +47,9 @@ program
 program
 	.command("translate")
 	.description("Translate existing scraped data from Japanese to English")
-	.option("-s, --source <source>", "Data source to translate (bandai-catalog)", "bandai-catalog")
-	.option("-i, --input <dir>", "Input directory containing scraped items", "./data/bandai/items")
-	.option("-c, --cache-dir <dir>", "Directory for translation cache", "./data/translations")
+	.option("-s, --source <source>", "Data source (all, bandai-catalog, bandai-manuals)", "all")
+	.option("-i, --input <dir>", "Override input directory for the specified source")
+	.option("-c, --cache-dir <dir>", "Directory for translation cache", TRANSLATION_STORE_DIR)
 	.option("--dry-run", "Preview changes without writing", false)
 	.option("-v, --verbose", "Verbose output", false)
 	.action(async (options) => {
