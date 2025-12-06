@@ -4,7 +4,6 @@
 
 export * from "./configuration";
 export * from "./discovery-service";
-export * from "./downloader-service";
 export * from "./errors";
 export * from "./http-client";
 export * from "./logging";
