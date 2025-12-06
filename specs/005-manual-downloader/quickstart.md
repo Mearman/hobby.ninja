@@ -36,7 +36,7 @@ This guide provides everything you need to start implementing the Bandai Manual 
 ```bash
 # Clone the repository (if not already done)
 git clone <repository-url>
-cd unnamed-gunpla-app
+cd hobby-ninja
 
 # Install dependencies
 pnpm install

@@ -1100,7 +1100,7 @@ self.addEventListener('fetch', (event) => {
 ```json
 // public/manifest.json
 {
-  "name": "Gunpla Collection Manager",
+  "name": "hobby.ninja",
   "short_name": "Gunpla",
   "description": "Manage your Gunpla collection with offline capabilities",
   "theme_color": "#1971c2",
@@ -1177,7 +1177,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
       {/* Footer */}
       <footer role="contentinfo">
-        <p>&copy; 2024 Gunpla Collection Manager</p>
+        <p>&copy; 2024 hobby.ninja</p>
       </footer>
     </div>
   );

@@ -1,4 +1,4 @@
-# @unnamed-gunpla-app/translation
+# @hobby-ninja/translation
 
 A production-ready translation package for Gunpla data with caching, error handling, and retry logic. Optimized for Japanese to English translation of Gundam/Gunpla model kit information.
 
@@ -18,7 +18,7 @@ A production-ready translation package for Gunpla data with caching, error handl
 ## Installation
 
 ```bash
-pnpm add @unnamed-gunpla-app/translation
+pnpm add @hobby-ninja/translation
 ```
 
 ## Quick Start
@@ -26,7 +26,7 @@ pnpm add @unnamed-gunpla-app/translation
 ### Basic Text Translation
 
 ```typescript
-import { translateText } from '@unnamed-gunpla-app/translation';
+import { translateText } from '@hobby-ninja/translation';
 
 // Simple translation
 const result = await translateText('こんにちは世界', 'en');
@@ -40,7 +40,7 @@ console.log(result2.translated); // "HG 1/144 RX-78-2 Gundam"
 ### JSON Translation
 
 ```typescript
-import { translateJson } from '@unnamed-gunpla-app/translation';
+import { translateJson } from '@hobby-ninja/translation';
 
 const gunplaData = {
   name: 'HG 1/144 RX-78-2 ガンダム',
@@ -70,7 +70,7 @@ console.log(translatedData);
 ### Batch Translation
 
 ```typescript
-import { translateBatch } from '@unnamed-gunpla-app/translation';
+import { translateBatch } from '@hobby-ninja/translation';
 
 const texts = [
   'HG 1/144 RX-78-2 ガンダム',
@@ -87,7 +87,7 @@ console.log(results.results);
 ### Custom Translation Service
 
 ```typescript
-import { TranslationService } from '@unnamed-gunpla-app/translation';
+import { TranslationService } from '@hobby-ninja/translation';
 
 const translator = new TranslationService({
   cacheEnabled: true,
@@ -104,7 +104,7 @@ const result = await translator.translateText('テスト', 'en');
 ### JSON Translation with Custom Options
 
 ```typescript
-import { translateJson } from '@unnamed-gunpla-app/translation';
+import { translateJson } from '@hobby-ninja/translation';
 
 const data = {
   product_name: '製品名',
@@ -125,7 +125,7 @@ const translated = await translateJson(data, 'en', options);
 ### Custom Cache
 
 ```typescript
-import { TranslationService, createCache } from '@unnamed-gunpla-app/translation';
+import { TranslationService, createCache } from '@hobby-ninja/translation';
 
 // Create custom cache with specific settings
 const customCache = createCache({
@@ -238,7 +238,7 @@ const cache = new TranslationCache(maxSize?, defaultTtl?, enablePeriodicCleanup?
 The package provides comprehensive error handling with custom error types:
 
 ```typescript
-import { TranslationServiceError, TranslationErrorCode } from '@unnamed-gunpla-app/translation';
+import { TranslationServiceError, TranslationErrorCode } from '@hobby-ninja/translation';
 
 try {
   const result = await translateText('テキスト', 'en');
@@ -332,4 +332,4 @@ pnpm test --watch
 
 ## License
 
-Internal package for the Gunpla Collection Manager project.
+Internal package for the hobby.ninja project.
