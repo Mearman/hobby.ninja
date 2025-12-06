@@ -154,8 +154,8 @@ program
 
     try {
       // Parse API keys from options or environment
-      const accessKey = options.accessKey || process.env.IA_ACCESS_KEY;
-      const secretKey = options.secretKey || process.env.IA_SECRET_KEY;
+      const accessKey = options.accessKey || process.env['IA_ACCESS_KEY'];
+      const secretKey = options.secretKey || process.env['IA_SECRET_KEY'];
 
       console.log('Submitting URLs to Internet Archive Wayback Machine...');
       console.log(`Data directory: ${options.dataDir}`);
