@@ -35,6 +35,10 @@ export interface WaybackSubmission {
 		url: string;
 	};
 	ageCheckResult?: 'too_new' | 'needs_update' | 'not_archived';
+	/** Whether the age check came from local cache */
+	ageCheckFromCache?: boolean;
+	/** @deprecated Use itemId instead */
+	manualId?: string;
 }
 
 export interface WaybackCheckpoint {
@@ -71,6 +75,8 @@ export interface ArchiveAgeCheck {
 		age: number;
 		url: string;
 	};
+	/** Whether this result came from the local cache */
+	fromCache?: boolean;
 }
 
 export interface WaybackAvailableResponse {
