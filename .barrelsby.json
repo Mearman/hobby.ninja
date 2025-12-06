@@ -3,13 +3,6 @@
     "./packages/types/src",
     "./packages/utils/src",
     "./packages/scrapers/src",
-    "./packages/scrapers/src/manual-parser",
-    "./apps/web/src/components",
-    "./apps/web/src/db",
-    "./apps/web/src/pages",
-    "./apps/web/src/providers",
-    "./apps/web/src/styles",
-    "./apps/web/src/utils",
     "./eslint-plugins"
   ],
   "exclude": [
@@ -27,7 +20,7 @@
   ],
   "delete": true,
   "location": "all",
-  "structure": "filesystem",
+  "structure": "flat",
   "exportDefault": true,
   "removeComments": false,
   "noHeader": false,
