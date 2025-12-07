@@ -214,7 +214,10 @@ export const ItemDetailPage: React.FC = () => {
 			const updated = [
 				{
 					id: item.id,
-					name: "name" in item ? (item.name.ja || item.name.en || item.name) : item.title,
+					name: "name" in item ?
+						(typeof item.name === "string" ? item.name :
+							(item.name as any)?.ja || (item.name as any)?.en || (item.name as any)) :
+						item.title,
 					timestamp: Date.now(),
 					type: "sources" in item ? "unified" : ("metadata" in item ? "manual" : "catalog"),
 				},

@@ -20,6 +20,24 @@ interface GraphNodePageLoader {
 }
 
 /**
+ * Hook to get loader data with proper typing
+ */
+function useGraphNodeLoader(): GraphNodePageLoader {
+	try {
+		return useLoaderData({ from: '/$nodeType/$id' }) as GraphNodePageLoader;
+	} catch {
+		// Fallback for client-side navigation
+		return {
+			nodeData: null,
+			nodeType: '',
+			nodeId: '',
+			relatedNodes: [],
+			error: 'Unable to load node data'
+		};
+	}
+}
+
+/**
  * Breadcrumb navigation for graph nodes
  */
 function GraphNodeBreadcrumbs({ nodeType, nodeId, nodeData }: { nodeType: string; nodeId: string; nodeData: GraphNode | null }) {
@@ -72,7 +90,7 @@ function GraphNodeMeta({ nodeData, nodeType }: { nodeData: GraphNode | null; nod
  * Main graph node page component
  */
 export function GraphNodePage() {
-	const { nodeData, nodeType, nodeId, relatedNodes, error } = useLoaderData() as GraphNodePageLoader;
+	const { nodeData, nodeType, nodeId, relatedNodes, error } = useGraphNodeLoader();
 
 	// Handle loading state
 	if (!nodeData && !error) {
