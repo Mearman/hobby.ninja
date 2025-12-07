@@ -40,7 +40,7 @@ describe("execFileNoThrow", () => {
 
 	describe("Basic functionality", () => {
 		it("should execute successful command and return success result", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "stdout output", "");
 				return createMockChildProcess();
 			});
@@ -62,7 +62,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle command with no arguments", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "test output", "");
 				return createMockChildProcess();
 			});
@@ -74,7 +74,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle empty args array explicitly", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "test output", "");
 				return createMockChildProcess();
 			});
@@ -93,9 +93,9 @@ describe("execFileNoThrow", () => {
 
 	describe("Error handling", () => {
 		it("should handle command execution errors", async () => {
-			const error = new Error("Command not found");
-			(error as any).code = 2;
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			const error = new Error("Command not found") as Error & { code?: number };
+			error.code = 2;
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(error, "", "Command not found");
 				return createMockChildProcess();
 			});
@@ -112,8 +112,7 @@ describe("execFileNoThrow", () => {
 
 		it("should handle error with no exit code", async () => {
 			const error = new Error("Unknown error");
-			delete (error as any).code;
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(error, "", "Unknown error");
 				return createMockChildProcess();
 			});
@@ -125,7 +124,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle empty stdout and stderr buffers", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(new Error("Test error"), null, null);
 				return createMockChildProcess();
 			});
@@ -138,7 +137,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle null and undefined callbacks gracefully", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, _callback) => {
 				return createMockChildProcess();
 			});
 
@@ -168,7 +167,7 @@ describe("execFileNoThrow", () => {
 				kill: vi.fn(),
 			};
 
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, _callback) => {
 				// Don't call callback to simulate hanging process
 				return mockChildProcess;
 			});
@@ -200,7 +199,7 @@ describe("execFileNoThrow", () => {
 				kill: vi.fn(),
 			};
 
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, _callback) => {
 				return mockChildProcess;
 			});
 
@@ -214,7 +213,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should not timeout when timeout is set to 0", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				setTimeout(() => callback(null, "success", ""), 100);
 				return createMockChildProcess();
 			});
@@ -231,7 +230,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle negative timeout values", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "success", "");
 				return createMockChildProcess();
 			});
@@ -244,7 +243,7 @@ describe("execFileNoThrow", () => {
 
 	describe("Options handling", () => {
 		it("should use custom working directory", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "success", "");
 				return createMockChildProcess();
 			});
@@ -260,7 +259,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should use default working directory when not specified", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "success", "");
 				return createMockChildProcess();
 			});
@@ -276,8 +275,8 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle different encoding options", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
-				callback(null, Buffer.from("test"), "");
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
+				callback(null, "test", "");
 				return createMockChildProcess();
 			});
 
@@ -292,7 +291,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle empty options object", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "success", "");
 				return createMockChildProcess();
 			});
@@ -316,10 +315,10 @@ describe("execFileNoThrow", () => {
 		it("should accumulate stdout data from streams", async () => {
 			const mockChildProcess = {
 				stdout: {
-					on: vi.fn((event, callback) => {
+					on: vi.fn((event: string, callback: (data: string) => void) => {
 						if (event === "data") {
-							setTimeout(() => callback("first chunk"), 10);
-							setTimeout(() => callback("second chunk"), 20);
+							setTimeout(() => { callback("first chunk"); }, 10);
+							setTimeout(() => { callback("second chunk"); }, 20);
 						}
 					}),
 				},
@@ -329,7 +328,7 @@ describe("execFileNoThrow", () => {
 				kill: vi.fn(),
 			};
 
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				setTimeout(() => callback(null, "", ""), 30);
 				return mockChildProcess;
 			});
@@ -345,16 +344,16 @@ describe("execFileNoThrow", () => {
 					on: vi.fn(),
 				},
 				stderr: {
-					on: vi.fn((event, callback) => {
+					on: vi.fn((event: string, callback: (data: string) => void) => {
 						if (event === "data") {
-							setTimeout(() => callback("error message"), 10);
+							setTimeout(() => { callback("error message"); }, 10);
 						}
 					}),
 				},
 				kill: vi.fn(),
 			};
 
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				setTimeout(() => callback(null, "", ""), 20);
 				return mockChildProcess;
 			});
@@ -373,7 +372,7 @@ describe("execFileNoThrow", () => {
 				kill: vi.fn(),
 			};
 
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				setTimeout(() => callback(null, "success", ""), 10);
 				return mockChildProcess;
 			});
@@ -393,7 +392,7 @@ describe("execFileNoThrow", () => {
 				kill: vi.fn(),
 			};
 
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				setTimeout(() => callback(null, "", "error"), 10);
 				return mockChildProcess;
 			});
@@ -407,7 +406,7 @@ describe("execFileNoThrow", () => {
 
 	describe("npmCommand function", () => {
 		it("should validate and execute valid npm commands", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "npm output", "");
 				return createMockChildProcess();
 			});
@@ -436,7 +435,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should pass options to execFile", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "success", "");
 				return createMockChildProcess();
 			});
@@ -458,7 +457,7 @@ describe("execFileNoThrow", () => {
 				"pack", "publish", "update", "audit", "ls", "view",
 			];
 
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "success", "");
 				return createMockChildProcess();
 			});
@@ -470,7 +469,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle npm commands with empty args array", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "success", "");
 				return createMockChildProcess();
 			});
@@ -489,7 +488,7 @@ describe("execFileNoThrow", () => {
 	describe("Edge cases and boundary conditions", () => {
 		it("should handle extremely long command output", async () => {
 			const longOutput = "x".repeat(1_000_000); // 1MB of output
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, longOutput, "");
 				return createMockChildProcess();
 			});
@@ -501,8 +500,9 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle commands with unicode characters in output", async () => {
+			// eslint-disable-next-line no-emoji/no-emoji
 			const unicodeOutput = "🚀 Gundam RX-78-2 ✨";
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, unicodeOutput, "");
 				return createMockChildProcess();
 			});
@@ -514,9 +514,9 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle commands that return exit code 0 but have stderr output", async () => {
-			const error = new Error("Warning message");
-			(error as any).code = 0;
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			const error = new Error("Warning message") as Error & { code?: number };
+			error.code = 0;
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(error, "success output", "warning message");
 				return createMockChildProcess();
 			});
@@ -531,15 +531,15 @@ describe("execFileNoThrow", () => {
 			});
 		});
 
-		it("should handle Buffer objects in callback", async () => {
-			const stdoutBuffer = Buffer.from("buffered output");
-			const stderrBuffer = Buffer.from("buffered error");
-			(execFile as any).mockImplementation((command, args, options, callback) => {
-				callback(null, stdoutBuffer, stderrBuffer);
+		it("should handle string output in callback", async () => {
+			const stdoutStr = "buffered output";
+			const stderrStr = "buffered error";
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
+				callback(null, stdoutStr, stderrStr);
 				return createMockChildProcess();
 			});
 
-			const result = await execFileNoThrow("buffer-test");
+			const result = await execFileNoThrow("string-test");
 
 			expect(result.success).toBe(true);
 			expect(result.stdout).toBe("buffered output");
@@ -547,7 +547,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle concurrent command execution", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((command: string, _args, _options, callback) => {
 				setTimeout(() => callback(null, `result-${command}`, ""), Math.random() * 100);
 				return createMockChildProcess();
 			});
@@ -567,7 +567,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle commands with special characters", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "success", "");
 				return createMockChildProcess();
 			});
@@ -584,7 +584,7 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle very large timeout values", async () => {
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				callback(null, "success", "");
 				return createMockChildProcess();
 			});
@@ -606,7 +606,7 @@ describe("execFileNoThrow", () => {
 		it("should clean up timeout when process completes normally", async () => {
 			const clearTimeoutSpy = vi.spyOn(globalThis, "clearTimeout");
 
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				setTimeout(() => callback(null, "success", ""), 100);
 				return createMockChildProcess();
 			});
@@ -628,7 +628,7 @@ describe("execFileNoThrow", () => {
 				kill: vi.fn(),
 			};
 
-			(execFile as any).mockImplementation((command, args, options, callback) => {
+			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
 				setTimeout(() => callback(null, "quick success", ""), 100);
 				return mockChildProcess;
 			});

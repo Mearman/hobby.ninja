@@ -1,4 +1,4 @@
-import { execFile, ExecFileException } from "node:child_process";
+import { execFile } from "node:child_process";
 
 /**
  * Result of executing a command safely
@@ -46,7 +46,6 @@ export async function execFileNoThrow(
 		} = options;
 
 		let stdout = "";
-		let stderr = "";
 		let timeoutId: NodeJS.Timeout | null = null;
 
 		const child = execFile(command, args, {
@@ -60,8 +59,8 @@ export async function execFileNoThrow(
 
 			const result: ExecFileResult = {
 				success: !error,
-				stdout: stdoutBuffer?.toString() || stdout,
-				stderr: stderrBuffer?.toString() || stderr,
+				stdout: stdoutBuffer,
+				stderr: stderrBuffer,
 				exitCode: typeof error?.code === "number" ? error.code : 0,
 			};
 
@@ -70,16 +69,14 @@ export async function execFileNoThrow(
 
 		// Stream stdout
 		if (child.stdout) {
-			child.stdout.on("data", (data) => {
-				stdout += data.toString();
+			child.stdout.on("data", (data: string) => {
+				stdout += data;
 			});
 		}
 
-		// Stream stderr
+		// Stream stderr (not accumulated, but listener needed for proper process handling)
 		if (child.stderr) {
-			child.stderr.on("data", (data) => {
-				stderr += data.toString();
-			});
+			child.stderr.on("data", () => { /* noop */ });
 		}
 
 		// Set up timeout

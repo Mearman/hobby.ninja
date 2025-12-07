@@ -1,11 +1,13 @@
 import { promises as fs } from "node:fs";
-import * as path from "node:path";
+import path from "node:path";
 
-import type { CacheManager, ProfileCache, ProfileGenerationResult, PageTypeProfile } from "@hobby-ninja/types/profile";
+import type { LanguageDetection } from "@hobby-ninja/types/language";
+import type { CacheManager, ProfileCache, ProfileGenerationResult, PageTypeProfile, RenderingDetection } from "@hobby-ninja/types/profile";
 
 import { cacheManager } from "./cache-manager";
-import { LanguageDetector } from "./languageDetection";
-import { RenderingDetector } from "./renderingDetection";
+import { detectFromHtml } from "./languageDetection";
+import { logger } from "./logger";
+import { detectRenderingStrategy } from "./renderingDetection";
 
 export interface ProfileManagerOptions {
   profileCachePath?: string;
@@ -23,10 +25,10 @@ export class ProfileManager {
 	private profileCache: ProfileCache;
 
 	constructor(options: ProfileManagerOptions = {}) {
-		this.profileCachePath = options.profileCachePath ||
+		this.profileCachePath = options.profileCachePath ??
       path.join(process.cwd(), ".gundam-scraper-profiles.json");
 		this.enableAutoUpdate = options.enableAutoUpdate ?? true;
-		this.updateInterval = options.updateInterval || 24; // 24 hours
+		this.updateInterval = options.updateInterval ?? 24; // 24 hours
 		this.fallbackToPlaywright = options.fallbackToPlaywright ?? true;
 		this.cacheManager = cacheManager;
 		this.profileCache = this.initializeProfileCache();
@@ -49,17 +51,24 @@ export class ProfileManager {
 	async loadProfiles(): Promise<void> {
 		try {
 			const data = await fs.readFile(this.profileCachePath, "utf8");
-			const cacheData = JSON.parse(data);
+			const cacheData = JSON.parse(data) as {
+				profiles?: Record<string, PageTypeProfile>;
+				version?: string;
+				lastUpdated?: string;
+				statistics?: ProfileCache["statistics"];
+			};
 
 			// Convert profiles object back to Map
 			this.profileCache = {
-				...cacheData,
-				profiles: new Map(Object.entries(cacheData.profiles || {})),
+				version: cacheData.version ?? "1.0.0",
+				lastUpdated: cacheData.lastUpdated ?? new Date().toISOString(),
+				statistics: cacheData.statistics ?? this.initializeProfileCache().statistics,
+				profiles: new Map(Object.entries(cacheData.profiles ?? {})),
 			};
 
-			console.log(`✅ Loaded ${this.profileCache.profiles.size} profiles from cache`);
+			logger.info(`Loaded ${this.profileCache.profiles.size} profiles from cache`);
 		} catch {
-			console.log("📝 No existing profile cache found, starting fresh");
+			logger.info("No existing profile cache found, starting fresh");
 			this.profileCache = this.initializeProfileCache();
 		}
 	}
@@ -72,14 +81,14 @@ export class ProfileManager {
 			};
 
 			await fs.writeFile(this.profileCachePath, JSON.stringify(cacheData, null, 2));
-			console.log(`💾 Saved ${this.profileCache.profiles.size} profiles to cache`);
+			logger.info(`Saved ${this.profileCache.profiles.size} profiles to cache`);
 		} catch (error) {
-			console.error("❌ Failed to save profile cache:", error);
+			logger.error("Failed to save profile cache:", error);
 		}
 	}
 
 	async buildProfileForUrl(url: string, sampleUrls: string[] = []): Promise<ProfileGenerationResult> {
-		console.log(`🔍 Building profile for: ${url}`);
+		logger.info(`Building profile for: ${url}`);
 
 		// Analyze the URL pattern
 		const urlPattern = this.extractUrlPattern(url);
@@ -88,7 +97,7 @@ export class ProfileManager {
 		// Check if profile already exists and is still valid
 		const existingProfile = this.profileCache.profiles.get(profileKey);
 		if (existingProfile && !this.isProfileExpired(existingProfile)) {
-			console.log(`✅ Using existing profile for ${urlPattern}`);
+			logger.info(`Using existing profile for ${urlPattern}`);
 			return {
 				success: true,
 				urlPattern,
@@ -109,18 +118,16 @@ export class ProfileManager {
 		// Perform progressive enhancement analysis
 		const sampleHtmls = await this.fetchSampleHtmls(sampleUrls.length > 0 ? sampleUrls : [url]);
 		const languageDetections = sampleHtmls.map(html =>
-			LanguageDetector.detectFromHtml(html, url),
+			detectFromHtml(html, url),
 		);
 
-		const renderingAnalyses = await Promise.all(
-			sampleHtmls.map(html =>
-				RenderingDetector.detectRenderingStrategy(html, { testWithPlaywright: false }),
-			),
+		const renderingAnalyses = sampleHtmls.map(html =>
+			detectRenderingStrategy(html, { testWithPlaywright: false }),
 		);
 
 		// Determine optimal extraction strategy
 		const requiresPlaywright = renderingAnalyses.some(analysis =>
-			analysis.requiresJavaScript || analysis.renderingType === "dynamic",
+			(analysis.requiresJavaScript ?? false) || analysis.renderingType === "dynamic",
 		);
 
 		const extractionMethod = requiresPlaywright ?
@@ -136,13 +143,13 @@ export class ProfileManager {
 			confidence: this.calculateConfidence(renderingAnalyses, languageDetections),
 			lastUpdated: new Date().toISOString(),
 			sampleUrls: sampleUrls.length > 0 ? sampleUrls : [url],
-			selectors: await this.extractSelectors(sampleHtmls[0] || ""),
+			selectors: this.extractSelectors(sampleHtmls[0] ?? ""),
 			waitForSelectors: this.extractWaitForSelectors(renderingAnalyses),
 			timeout: this.calculateOptimalTimeout(renderingAnalyses),
 			retryCount: 3,
 			performance: {
 				estimatedLoadTime: this.calculateOptimalTimeout(renderingAnalyses),
-				averageJsExecutionTime: Math.max(...renderingAnalyses.map(a => a.jsExecutionTime || 1000)),
+				averageJsExecutionTime: this.calculateMaxJsExecutionTime(renderingAnalyses),
 				averageExtractionTime: this.estimateExtractionTime(renderingAnalyses),
 				successRate: 0.95, // Initial estimate
 				memoryUsage: 50_000, // Estimated memory usage in bytes
@@ -200,8 +207,8 @@ export class ProfileManager {
 		if (!profile?.performance) return;
 
 		// Update performance metrics
-		const currentAvg = profile.performance.averageExtractionTime || 0;
-		const currentSuccessRate = profile.performance.successRate || 0;
+		const currentAvg = profile.performance.averageExtractionTime ?? 0;
+		const currentSuccessRate = profile.performance.successRate ?? 0;
 		const totalAttempts = this.estimateTotalAttempts(profile);
 
 		profile.performance.averageExtractionTime =
@@ -244,7 +251,7 @@ export class ProfileManager {
 					await this.cacheManager.setByUrl?.(url, html, "profile-analysis");
 				}
 			} catch (error) {
-				console.warn(`⚠️  Failed to fetch ${url}:`, error);
+				logger.warn(`Failed to fetch ${url}:`, error);
 			}
 		}
 
@@ -257,9 +264,9 @@ export class ProfileManager {
 		let pattern = urlObj.pathname;
 
 		// Replace product-specific parts with placeholders
-		pattern = pattern.replace(/\/site\/[^\/]+-[^\/]+-[^\/]+\//, "/site/{grade-scale}/{product-name}/");
-		pattern = pattern.replace(/\/category\/[^\/]+/, "/category/{category}");
-		pattern = pattern.replace(/\/[^\/]*\d+[^\/]*\//, "/{id}/");
+		pattern = pattern.replace(/\/site\/[^/]+-[^/]+-[^/]+\//, "/site/{grade-scale}/{product-name}/");
+		pattern = pattern.replace(/\/category\/[^/]+/, "/category/{category}");
+		pattern = pattern.replace(/\/[^/]*\d+[^/]*\//, "/{id}/");
 
 		return pattern;
 	}
@@ -275,7 +282,7 @@ export class ProfileManager {
 		return "Bandai Generic Page";
 	}
 
-	private async extractSelectors(_html: string): Promise<Record<string, string>> {
+	private extractSelectors(_html: string): Record<string, string> {
 		// This would normally use more sophisticated analysis
 		// For now, return common selectors for bandai-hobby.net
 		return {
@@ -289,15 +296,15 @@ export class ProfileManager {
 		};
 	}
 
-	private extractWaitForSelectors(analyses: any[]): string[] {
+	private extractWaitForSelectors(analyses: RenderingDetection[]): string[] {
 		// Extract selectors that might need to wait for dynamic content
 		const waitForSelectors: string[] = [];
 
 		for (const analysis of analyses) {
-			if (analysis.indicators?.hasDynamicContent) {
+			if (analysis.indicators?.includes("hasDynamicContent")) {
 				waitForSelectors.push(".content", ".main", "#app");
 			}
-			if (analysis.indicators?.hasLazyLoading) {
+			if (analysis.indicators?.includes("hasLazyLoading")) {
 				waitForSelectors.push("[data-loaded]", ".loaded");
 			}
 		}
@@ -305,35 +312,56 @@ export class ProfileManager {
 		return [...new Set(waitForSelectors)];
 	}
 
-	private calculateOptimalTimeout(analyses: any[]): number {
-		const avgJsTime = analyses.reduce((sum, analysis) => sum + (analysis.jsExecutionTime || 0), 0) / analyses.length;
+	private calculateOptimalTimeout(analyses: RenderingDetection[]): number {
+		if (analyses.length === 0) return 5000;
+		let sum = 0;
+		for (const analysis of analyses) {
+			sum += analysis.jsExecutionTime ?? 0;
+		}
+		const avgJsTime = sum / analyses.length;
 		return Math.max(5000, avgJsTime * 2); // At least 5 seconds, or 2x average JS time
 	}
 
-	private estimateExtractionTime(analyses: any[]): number {
-		const totalTime = analyses.reduce((sum, analysis) => sum + (analysis.jsExecutionTime || 1000), 0);
+	private calculateMaxJsExecutionTime(analyses: RenderingDetection[]): number {
+		if (analyses.length === 0) return 1000;
+		let maxTime = 0;
+		for (const analysis of analyses) {
+			const time = analysis.jsExecutionTime ?? 1000;
+			if (time > maxTime) maxTime = time;
+		}
+		return maxTime;
+	}
+
+	private estimateExtractionTime(analyses: RenderingDetection[]): number {
+		if (analyses.length === 0) return 1000;
+		let totalTime = 0;
+		for (const analysis of analyses) {
+			totalTime += analysis.jsExecutionTime ?? 1000;
+		}
 		return totalTime / analyses.length;
 	}
 
-	private inferDefaultLanguage(detections: any[]): "ja" | "en" | "mixed" {
-		const langCounts = detections.reduce<Record<string, number>>((counts, detection) => {
-			const lang = detection.primaryLanguage?.code || "unknown";
-			counts[lang] = (counts[lang] || 0) + 1;
-			return counts;
-		}, {});
+	private inferDefaultLanguage(detections: LanguageDetection[]): "ja" | "en" | "mixed" {
+		if (detections.length === 0) return "mixed";
+
+		const langCounts: Record<string, number> = {};
+		for (const detection of detections) {
+			const lang = detection.language;
+			langCounts[lang] = (langCounts[lang] ?? 0) + 1;
+		}
 
 		const totalDetections = detections.length;
-		const jaCount = langCounts["ja"] || 0;
-		const enCount = langCounts["en"] || 0;
+		const jaCount = langCounts["ja"] ?? 0;
+		const enCount = langCounts["en"] ?? 0;
 
 		if (jaCount / totalDetections > 0.8) return "ja";
 		if (enCount / totalDetections > 0.8) return "en";
 		return "mixed";
 	}
 
-	private extractLanguagePatterns(detections: any[]): string[] {
+	private extractLanguagePatterns(detections: LanguageDetection[]): string[] {
 		// Extract common language detection patterns
-		return detections.map(detection => detection.confidence).filter(Boolean);
+		return detections.map(detection => String(detection.confidence)).filter(Boolean);
 	}
 
 	private inferContentType(url: string): "product" | "manual" | "series" | "character" | "mecha" {
@@ -343,17 +371,17 @@ export class ProfileManager {
 		return "product";
 	}
 
-	private calculateConfidence(renderingAnalyses: any[], languageDetections: any[]): number {
+	private calculateConfidence(renderingAnalyses: RenderingDetection[], languageDetections: LanguageDetection[]): number {
 		let confidence = 0.5; // Base confidence
 
 		// Increase confidence based on consistent analysis results
 		const consistentRendering = renderingAnalyses.every(analysis =>
-			analysis.renderingType === renderingAnalyses[0].renderingType,
+			analysis.renderingType === renderingAnalyses[0]?.renderingType,
 		);
 		if (consistentRendering) confidence += 0.2;
 
 		const consistentLanguage = languageDetections.every(detection =>
-			detection.primaryLanguage?.code === languageDetections[0].primaryLanguage?.code,
+			detection.language === languageDetections[0]?.language,
 		);
 		if (consistentLanguage) confidence += 0.2;
 
@@ -365,13 +393,13 @@ export class ProfileManager {
 
   
 	private isProfileExpired(profile: PageTypeProfile): boolean {
-		const ageHours = (Date.now() - (profile.metadata?.lastUpdated || 0)) / (1000 * 60 * 60);
+		const ageHours = (Date.now() - (profile.metadata?.lastUpdated ?? 0)) / (1000 * 60 * 60);
 		return ageHours > this.updateInterval;
 	}
 
 	private estimateTotalAttempts(profile: PageTypeProfile): number {
 		// Rough estimate based on when the profile was last updated
-		const ageHours = (Date.now() - (profile.performance?.lastAnalyzed || 0)) / (1000 * 60 * 60);
+		const ageHours = (Date.now() - (profile.performance?.lastAnalyzed ?? 0)) / (1000 * 60 * 60);
 		return Math.max(1, ageHours / 2); // Assume 1 attempt every 2 hours
 	}
 
@@ -389,11 +417,11 @@ export class ProfileManager {
 	}
 
 	// Utility methods
-	async getStatistics(): Promise<ProfileCache["statistics"]> {
+	getStatistics(): ProfileCache["statistics"] {
 		return this.profileCache.statistics;
 	}
 
-	async getAllProfiles(): Promise<PageTypeProfile[]> {
+	getAllProfiles(): PageTypeProfile[] {
 		return [...this.profileCache.profiles.values()];
 	}
 
@@ -411,18 +439,20 @@ export class ProfileManager {
 		if (expiredKeys.length > 0) {
 			this.updateStatistics();
 			await this.saveProfiles();
-			console.log(`🗑️  Cleared ${expiredKeys.length} expired profiles`);
+			logger.info(`Cleared ${expiredKeys.length} expired profiles`);
 		}
 	}
 
-	private calculateDomComplexity(renderingAnalyses: any[]): number {
+	private calculateDomComplexity(renderingAnalyses: RenderingDetection[]): number {
 		// Simple heuristic based on analysis complexity
-		return renderingAnalyses.reduce((complexity, analysis) => {
-			return complexity + (analysis.domComplexity || 50);
-		}, 0);
+		let complexity = 0;
+		for (const analysis of renderingAnalyses) {
+			complexity += analysis.domComplexity ?? 50;
+		}
+		return complexity;
 	}
 
-	private generateRecommendations(profile: PageTypeProfile, renderingAnalyses: any[]): string[] {
+	private generateRecommendations(profile: PageTypeProfile, renderingAnalyses: RenderingDetection[]): string[] {
 		const recommendations: string[] = [];
 
 		if (renderingAnalyses.some(a => a.requiresJavaScript)) {

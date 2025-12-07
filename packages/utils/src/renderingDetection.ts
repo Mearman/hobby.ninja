@@ -1,279 +1,290 @@
 import type { RenderingDetection, ProgressiveEnhancementResult, RenderingType } from "@hobby-ninja/types/profile";
 
-export class RenderingDetector {
-	private static readonly FRAMEWORK_PATTERNS = {
-		react: /react|React|createElement|useState|useEffect/i,
-		vue: /vue|Vue|v-if|v-for|@click/i,
-		angular: /angular|ng-if|ngFor|ng-model/i,
-		nextjs: /next|Next\.js|getStaticProps|getServerSideProps/i,
-		svelte: /svelte|Svelte|bind:/i,
+const FRAMEWORK_PATTERNS: Record<string, RegExp> = {
+	react: /react|React|createElement|useState|useEffect/i,
+	vue: /vue|Vue|v-if|v-for|@click/i,
+	angular: /angular|ng-if|ngFor|ng-model/i,
+	nextjs: /next|Next\.js|getStaticProps|getServerSideProps/i,
+	svelte: /svelte|Svelte|bind:/i,
+};
+
+const DYNAMIC_INDICATORS = [
+	"data-reactroot",
+	"ng-version",
+	"v-app",
+	'id="app"',
+	"data-vue",
+	"data-svelte",
+];
+
+const LAZY_LOADING_PATTERNS = [
+	/loading|spinner|placeholder|skeleton/i,
+	/lazy|defer|async/i,
+	/intersectionobserver|mutationobserver/i,
+];
+
+interface StaticAnalysis {
+	sufficient: boolean;
+	missingFields: string[];
+	minimalStaticContent: boolean;
+	hasFrameworkSignals: boolean;
+}
+
+interface DynamicAnalysis {
+	required: boolean;
+	additionalContent: number;
+	framework: string | undefined;
+	waitForSelectors: string[];
+}
+
+export function detectRenderingStrategy(html: string, options: {
+	testWithPlaywright?: boolean;
+	timeout?: number;
+} = {}): RenderingDetection {
+	const startTime = Date.now();
+	const initialLength = html.length;
+
+	const staticAnalysis = analyzeStaticContent(html);
+	let requiresJS = false;
+	let jsExecutionTime = 0;
+
+	if (staticAnalysis.minimalStaticContent || hasDynamicIndicators(html)) {
+		requiresJS = true;
+
+		if (options.testWithPlaywright) {
+			simulateDynamicContent(html);
+			jsExecutionTime = Date.now() - startTime;
+		}
+	}
+
+	const renderingType = determineRenderingType(html, requiresJS);
+	return {
+		renderingType,
+		requiresPlaywright: requiresJS,
+		recommendation: renderingType === "static" ? "cheerio" : "playwright",
+		evidence: [requiresJS ? "requires JavaScript" : "static content sufficient"],
+		detectionMethod: "content-analysis",
+		initialContentLength: initialLength,
+		finalContentLength: initialLength,
+		requiresJavaScript: requiresJS,
+		jsExecutionTime,
+		detectedAt: Date.now(),
+		confidence: calculateConfidence(html),
+		indicators: getIndicators(html),
+		domComplexity: calculateDomComplexity(html),
 	};
+}
 
-	private static readonly DYNAMIC_INDICATORS = [
-		"data-reactroot",
-		"ng-version",
-		"v-app",
-		'id="app"',
-		"data-vue",
-		"data-svelte",
+function calculateDomComplexity(html: string): number {
+	// Simple heuristic based on HTML structure
+	const tagCount = (html.match(/<[a-z]/gi) ?? []).length;
+	const nestedDivs = (html.match(/<div[^>]*>/gi) ?? []).length;
+	return Math.min(tagCount + nestedDivs * 2, 1000);
+}
+
+export function analyzeProgressiveEnhancement(html: string): ProgressiveEnhancementResult {
+	const staticAnalysis = analyzeStaticContent(html);
+	const dynamicAnalysis = analyzeDynamicContent(html);
+
+	return {
+		hasProgressiveEnhancement: staticAnalysis.sufficient && dynamicAnalysis.required,
+		hasDynamicContent: dynamicAnalysis.required,
+		renderingType: staticAnalysis.sufficient && !dynamicAnalysis.required ? "static" :
+			dynamicAnalysis.required ? "dynamic" : "static",
+		confidence: calculateConfidence(html),
+		requiresPlaywright: dynamicAnalysis.required,
+		recommendation: getRecommendation(staticAnalysis, dynamicAnalysis),
+		evidence: [],
+		staticAnalysis: {
+			frameworkIndicators: staticAnalysis.hasFrameworkSignals ? ["detected"] : [],
+			complexity: html.length,
+			sufficient: staticAnalysis.sufficient,
+			contentLength: html.length,
+			missingFields: staticAnalysis.missingFields,
+		},
+		dynamicAnalysis: dynamicAnalysis.framework ? {
+			required: dynamicAnalysis.required,
+			additionalContent: dynamicAnalysis.additionalContent,
+			frameworkDetected: dynamicAnalysis.framework,
+			waitForSelectors: dynamicAnalysis.waitForSelectors,
+		} : {
+			required: dynamicAnalysis.required,
+			additionalContent: dynamicAnalysis.additionalContent,
+			waitForSelectors: dynamicAnalysis.waitForSelectors,
+		},
+	};
+}
+
+function analyzeStaticContent(html: string): StaticAnalysis {
+	const sufficient = !hasMinimalContent(html);
+	const missingFields = identifyMissingFields(html);
+
+	return {
+		sufficient,
+		missingFields,
+		minimalStaticContent: html.length < 2000,
+		hasFrameworkSignals: detectFrameworkSignals(html),
+	};
+}
+
+function analyzeDynamicContent(html: string): DynamicAnalysis {
+	const required = hasDynamicIndicators(html);
+	const framework = detectFramework(html);
+	const waitForSelectors = extractWaitForSelectors(html);
+
+	return {
+		required,
+		additionalContent: required ? 5000 : 0,
+		framework,
+		waitForSelectors,
+	};
+}
+
+function hasMinimalContent(html: string): boolean {
+	const textContent = extractTextContent(html);
+	return textContent.length < 500;
+}
+
+function hasDynamicIndicators(html: string): boolean {
+	return DYNAMIC_INDICATORS.some(indicator => html.includes(indicator)) ||
+		LAZY_LOADING_PATTERNS.some(pattern => pattern.test(html)) ||
+		hasEmptyContainers(html);
+}
+
+function hasEmptyContainers(html: string): boolean {
+	const emptyDivs = (html.match(/<div[^>]*>\s*<\/div>/gi) ?? []).length;
+	const emptySpans = (html.match(/<span[^>]*>\s*<\/span>/gi) ?? []).length;
+	return emptyDivs > 5 || emptySpans > 10;
+}
+
+function detectFramework(html: string): string | undefined {
+	for (const [framework, pattern] of Object.entries(FRAMEWORK_PATTERNS)) {
+		if (pattern.test(html)) {
+			return framework;
+		}
+	}
+	return undefined;
+}
+
+function detectFrameworkSignals(html: string): boolean {
+	return Object.values(FRAMEWORK_PATTERNS).some(pattern => pattern.test(html));
+}
+
+function extractWaitForSelectors(html: string): string[] {
+	const selectors: string[] = [];
+
+	const commonSelectors = [
+		".content",
+		".main",
+		"#app",
+		".products",
+		".items",
+		"[data-loaded]",
+		".loaded",
 	];
 
-	private static readonly LAZY_LOADING_PATTERNS = [
-		/loading|spinner|placeholder|skeleton/i,
-		/lazy|defer|async/i,
-		/intersectionobserver|mutationobserver/i,
-	];
-
-	static async detectRenderingStrategy(html: string, options: {
-    testWithPlaywright?: boolean;
-    timeout?: number;
-  } = {}): Promise<RenderingDetection> {
-		const startTime = Date.now();
-		const initialLength = html.length;
-
-		const staticAnalysis = this.analyzeStaticContent(html);
-		let requiresJS = false;
-		let jsExecutionTime = 0;
-
-		if (staticAnalysis.minimalStaticContent || this.hasDynamicIndicators(html)) {
-			requiresJS = true;
-
-			if (options.testWithPlaywright) {
-				// In a real implementation, this would launch Playwright
-				// For now, simulate based on content analysis
-				await this.simulateDynamicContent(html);
-				jsExecutionTime = Date.now() - startTime;
-			}
+	for (const selector of commonSelectors) {
+		const element = html.match(new RegExp(selector.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`), "g"));
+		if (element && element.length > 0) {
+			selectors.push(selector);
 		}
-
-		const renderingType = this.determineRenderingType(html, requiresJS);
-		return {
-			renderingType,
-			requiresPlaywright: requiresJS,
-			recommendation: renderingType === "static" ? "cheerio" : "playwright",
-			evidence: [requiresJS ? "requires JavaScript" : "static content sufficient"],
-			detectionMethod: "content-analysis",
-			initialContentLength: initialLength,
-			finalContentLength: initialLength,
-			requiresJavaScript: requiresJS,
-			jsExecutionTime,
-			detectedAt: Date.now(),
-			confidence: this.calculateConfidence(html, staticAnalysis),
-			indicators: this.getIndicators(html, staticAnalysis),
-		};
 	}
 
-	static analyzeProgressiveEnhancement(html: string): ProgressiveEnhancementResult {
-		const staticAnalysis = this.analyzeStaticContent(html);
-		const dynamicAnalysis = this.analyzeDynamicContent(html);
+	return selectors;
+}
 
-		return {
-			hasProgressiveEnhancement: staticAnalysis.sufficient && dynamicAnalysis.required,
-			hasDynamicContent: dynamicAnalysis.required,
-			renderingType: staticAnalysis.sufficient && !dynamicAnalysis.required ? "static" :
-				dynamicAnalysis.required ? "dynamic" : "static",
-			confidence: this.calculateConfidence(html, staticAnalysis),
-			requiresPlaywright: dynamicAnalysis.required,
-			recommendation: this.getRecommendation(staticAnalysis, dynamicAnalysis),
-			evidence: [],
-			staticAnalysis: {
-				frameworkIndicators: staticAnalysis.hasFrameworkSignals ? ["detected"] : [],
-				complexity: html.length,
-				sufficient: staticAnalysis.sufficient,
-				contentLength: html.length,
-				missingFields: staticAnalysis.missingFields,
-			},
-			dynamicAnalysis: dynamicAnalysis.framework ? {
-				required: dynamicAnalysis.required,
-				additionalContent: dynamicAnalysis.additionalContent,
-				frameworkDetected: dynamicAnalysis.framework,
-				waitForSelectors: dynamicAnalysis.waitForSelectors,
-			} : {
-				required: dynamicAnalysis.required,
-				additionalContent: dynamicAnalysis.additionalContent,
-				waitForSelectors: dynamicAnalysis.waitForSelectors,
-			},
-		};
+function identifyMissingFields(html: string): string[] {
+	const missing: string[] = [];
+	const lowerHtml = html.toLowerCase();
+
+	if (!lowerHtml.includes("price") || !lowerHtml.includes("¥") || !lowerHtml.includes("$")) {
+		missing.push("price");
 	}
 
-	private static analyzeStaticContent(html: string) {
-		const sufficient = !this.hasMinimalContent(html);
-		const missingFields = this.identifyMissingFields(html);
-
-		return {
-			sufficient,
-			missingFields,
-			minimalStaticContent: html.length < 2000,
-			hasFrameworkSignals: this.detectFrameworkSignals(html),
-		};
+	if (!lowerHtml.includes("description") && !lowerHtml.includes("詳細")) {
+		missing.push("description");
 	}
 
-	private static analyzeDynamicContent(html: string) {
-		const required = this.hasDynamicIndicators(html);
-		const framework = this.detectFramework(html);
-		const waitForSelectors = this.extractWaitForSelectors(html);
-
-		return {
-			required,
-			additionalContent: required ? 5000 : 0, // Estimated additional content
-			framework,
-			waitForSelectors,
-		};
+	if (!lowerHtml.includes("specification") && !lowerHtml.includes("仕様")) {
+		missing.push("specifications");
 	}
 
-	private static hasMinimalContent(html: string): boolean {
-		const textContent = this.extractTextContent(html);
-		return textContent.length < 500;
+	if (!lowerHtml.includes("image") && !lowerHtml.includes("img")) {
+		missing.push("images");
 	}
 
-	private static hasDynamicIndicators(html: string): boolean {
-		return this.DYNAMIC_INDICATORS.some(indicator => html.includes(indicator)) ||
-           this.LAZY_LOADING_PATTERNS.some(pattern => pattern.test(html)) ||
-           this.hasEmptyContainers(html);
+	return missing;
+}
+
+function extractTextContent(html: string): string {
+	const cleanHtml = html
+		.replaceAll(/<script[^>]*>.*?<\/script>/gis, "")
+		.replaceAll(/<style[^>]*>.*?<\/style>/gis, "")
+		.replaceAll(/<[^>]+>/g, " ")
+		.replaceAll(/\s+/g, " ")
+		.trim();
+
+	return cleanHtml;
+}
+
+function determineRenderingType(html: string, requiresJS: boolean): RenderingType {
+	if (!requiresJS) {
+		return "static";
 	}
 
-	private static hasEmptyContainers(html: string): boolean {
-		const emptyDivs = (html.match(/<div[^>]*>\s*<\/div>/gi) || []).length;
-		const emptySpans = (html.match(/<span[^>]*>\s*<\/span>/gi) || []).length;
-		return emptyDivs > 5 || emptySpans > 10;
-	}
-
-	private static detectFramework(html: string): string | undefined {
-		for (const [framework, pattern] of Object.entries(this.FRAMEWORK_PATTERNS)) {
-			if (pattern.test(html)) {
-				return framework;
-			}
-		}
-		return undefined;
-	}
-
-	private static detectFrameworkSignals(html: string): boolean {
-		return Object.values(this.FRAMEWORK_PATTERNS).some(pattern => pattern.test(html));
-	}
-
-	private static extractWaitForSelectors(html: string): string[] {
-		const selectors: string[] = [];
-
-		// Common selectors that might indicate dynamic content
-		const commonSelectors = [
-			".content",
-			".main",
-			"#app",
-			".products",
-			".items",
-			"[data-loaded]",
-			".loaded",
-		];
-
-		for (const selector of commonSelectors) {
-			const element = html.match(new RegExp(selector.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`), "g"));
-			if (element && element.length > 0) {
-				selectors.push(selector);
-			}
-		}
-
-		return selectors;
-	}
-
-	private static identifyMissingFields(html: string): string[] {
-		const missing: string[] = [];
-		const lowerHtml = html.toLowerCase();
-
-		// Check for common missing content indicators
-		if (!lowerHtml.includes("price") || !lowerHtml.includes("¥") || !lowerHtml.includes("$")) {
-			missing.push("price");
-		}
-
-		if (!lowerHtml.includes("description") && !lowerHtml.includes("詳細")) {
-			missing.push("description");
-		}
-
-		if (!lowerHtml.includes("specification") && !lowerHtml.includes("仕様")) {
-			missing.push("specifications");
-		}
-
-		if (!lowerHtml.includes("image") && !lowerHtml.includes("img")) {
-			missing.push("images");
-		}
-
-		return missing;
-	}
-
-	private static extractTextContent(html: string): string {
-		// Remove scripts and styles, then extract text
-		const cleanHtml = html
-			.replaceAll(/<script[^>]*>.*?<\/script>/gis, "")
-			.replaceAll(/<style[^>]*>.*?<\/style>/gis, "")
-			.replaceAll(/<[^>]+>/g, " ")
-			.replaceAll(/\s+/g, " ")
-			.trim();
-
-		return cleanHtml;
-	}
-
-	private static determineRenderingType(html: string, requiresJS: boolean): RenderingType {
-		if (!requiresJS) {
-			return "static";
-		}
-
-		const framework = this.detectFramework(html);
-		if (framework) {
-			return "dynamic";
-		}
-
-		// Check if it's a hybrid case (some static content but requires JS for completeness)
-		const hasSubstantialStaticContent = !this.hasMinimalContent(html);
-		const hasDynamicEnhancements = this.hasDynamicIndicators(html);
-
-		if (hasSubstantialStaticContent && hasDynamicEnhancements) {
-			return "hybrid";
-		}
-
+	const framework = detectFramework(html);
+	if (framework) {
 		return "dynamic";
 	}
 
-	private static calculateConfidence(html: string, _analysis: any): number {
-		let confidence = 0.5; // Base confidence
+	const hasSubstantialStaticContent = !hasMinimalContent(html);
+	const hasDynamicEnhancements = hasDynamicIndicators(html);
 
-		// High confidence indicators
-		if (html.includes('lang="') || html.includes("lang='")) confidence += 0.2;
-		if (this.detectFramework(html)) confidence += 0.15;
-		if (!this.hasMinimalContent(html)) confidence += 0.1;
-		if (this.hasDynamicIndicators(html)) confidence += 0.05;
-
-		return Math.min(confidence, 1);
+	if (hasSubstantialStaticContent && hasDynamicEnhancements) {
+		return "hybrid";
 	}
 
-	private static getIndicators(html: string, _analysis: any): string[] {
-		const indicators: string[] = [];
+	return "dynamic";
+}
 
-		if (this.hasDynamicIndicators(html)) indicators.push("hasDynamicContent");
-		if (this.LAZY_LOADING_PATTERNS.some(pattern => pattern.test(html))) indicators.push("hasLazyLoading");
-		if (html.includes("fetch(") || html.includes("axios") || html.includes("XMLHttpRequest")) indicators.push("hasAjaxCalls");
-		if (this.detectFrameworkSignals(html)) indicators.push("hasFrameworkSignals");
-		if (html.includes("Content-Security-Policy")) indicators.push("hasCSPRestrictions");
-		if (this.hasMinimalContent(html)) indicators.push("minimalStaticContent");
+function calculateConfidence(html: string): number {
+	let confidence = 0.5;
 
-		return indicators;
+	if (html.includes('lang="') || html.includes("lang='")) confidence += 0.2;
+	if (detectFramework(html)) confidence += 0.15;
+	if (!hasMinimalContent(html)) confidence += 0.1;
+	if (hasDynamicIndicators(html)) confidence += 0.05;
+
+	return Math.min(confidence, 1);
+}
+
+function getIndicators(html: string): string[] {
+	const indicators: string[] = [];
+
+	if (hasDynamicIndicators(html)) indicators.push("hasDynamicContent");
+	if (LAZY_LOADING_PATTERNS.some(pattern => pattern.test(html))) indicators.push("hasLazyLoading");
+	if (html.includes("fetch(") || html.includes("axios") || html.includes("XMLHttpRequest")) indicators.push("hasAjaxCalls");
+	if (detectFrameworkSignals(html)) indicators.push("hasFrameworkSignals");
+	if (html.includes("Content-Security-Policy")) indicators.push("hasCSPRestrictions");
+	if (hasMinimalContent(html)) indicators.push("minimalStaticContent");
+
+	return indicators;
+}
+
+function getRecommendation(staticAnalysis: { sufficient: boolean }, dynamicAnalysis: { required: boolean }): "static-only" | "dynamic-required" | "hybrid-approach" {
+	if (staticAnalysis.sufficient && !dynamicAnalysis.required) {
+		return "static-only";
 	}
 
-	private static getRecommendation(staticAnalysis: any, dynamicAnalysis: any): "static-only" | "dynamic-required" | "hybrid-approach" {
-		if (staticAnalysis.sufficient && !dynamicAnalysis.required) {
-			return "static-only";
-		}
-
-		if (!staticAnalysis.sufficient || dynamicAnalysis.required) {
-			return "dynamic-required";
-		}
-
-		return "hybrid-approach";
+	if (!staticAnalysis.sufficient || dynamicAnalysis.required) {
+		return "dynamic-required";
 	}
 
-	private static async simulateDynamicContent(html: string): Promise<number> {
-		// Simulate dynamic content loading
-		// In a real implementation, this would use Playwright
-		const baseLength = html.length;
-		const dynamicMultiplier = Math.random() * 2 + 1; // 1-3x increase
-		return Math.floor(baseLength * dynamicMultiplier);
-	}
+	return "hybrid-approach";
+}
+
+function simulateDynamicContent(html: string): number {
+	const baseLength = html.length;
+	const dynamicMultiplier = Math.random() * 2 + 1;
+	return Math.floor(baseLength * dynamicMultiplier);
 }
