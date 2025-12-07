@@ -312,29 +312,29 @@ export async function runAllExamples() {
 	try {
 		// Initialize the data service
 		await dataService.initialize();
-		console.log("✅ Data service initialized\n");
+		console.log("[OK] Data service initialized\n");
 
 		// Run examples
 		await basicSearchExample();
-		console.log("✅ Basic search completed\n");
+		console.log("[OK] Basic search completed\n");
 
 		await searchWithProgressExample();
-		console.log("✅ Progressive search completed\n");
+		console.log("[OK] Progressive search completed\n");
 
 		await paginationExample();
-		console.log("✅ Pagination example completed\n");
+		console.log("[OK] Pagination example completed\n");
 
 		await dataAggregationExample();
-		console.log("✅ Data aggregation completed\n");
+		console.log("[OK] Data aggregation completed\n");
 
 		await serviceStatsExample();
-		console.log("✅ Service statistics retrieved\n");
+		console.log("[OK] Service statistics retrieved\n");
 
 		await filterPresetsExample();
-		console.log("✅ Filter presets example completed\n");
+		console.log("[OK] Filter presets example completed\n");
 
 		await advancedOperationExample();
-		console.log("✅ Advanced operation completed\n");
+		console.log("[OK] Advanced operation completed\n");
 
 		console.log("=== All Examples Completed Successfully ===");
 	} catch (error) {

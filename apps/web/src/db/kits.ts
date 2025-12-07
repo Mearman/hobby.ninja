@@ -66,5 +66,5 @@ export const documents = {
 // Initialize storage without predefined schemas
 export async function initStorage(): Promise<void> {
 	await storage.init();
-	logger.debug("✅ Database initialized with generic schema-based storage");
+	logger.debug("Database initialized with generic schema-based storage");
 }
