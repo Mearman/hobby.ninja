@@ -924,7 +924,7 @@ export class Downloader {
 
 				// Check after the last range
 				const lastRange = ranges.at(-1);
-				if (lastRange.end < endId) {
+				if (lastRange && lastRange.end < endId) {
 					console.log(`   🔍 Exploring after last range (${lastRange.end})...`);
 					await this.linearScanImmediate(baseUrl, Math.max(lastRange.end + 1, startId), endId, outputDir, existingFilesInRange);
 				}
@@ -1044,7 +1044,7 @@ export class Downloader {
 		// Check gap after last range
 		if (sortedRanges.length > 0) {
 			const lastRange = sortedRanges.at(-1);
-			if (lastRange.end < endId) {
+			if (lastRange && lastRange.end < endId) {
 				const gapStart = lastRange.end + 1;
 				const gapEnd = endId;
 				const gapMiddle = Math.floor((gapStart + gapEnd) / 2);

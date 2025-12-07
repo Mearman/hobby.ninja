@@ -8,10 +8,10 @@
  * @since 2025-12-05
  */
 
-import { ErrorInfo } from "../types";
+import { ErrorInfo } from "../types/types";
 
 // Re-export for convenience
-export { ErrorInfo } from "../types";
+export { ErrorInfo } from "../types/types";
 
 /**
  * Base error class for manual downloader operations

@@ -1,4 +1,5 @@
-import type { GundamData, LanguageDetection, PriceInfo, ProductImage } from "@hobby-ninja/types";
+import type { LanguageDetection } from "@hobby-ninja/types/language";
+import type { GundamData, PriceInfo, ProductImage } from "@hobby-ninja/types/product";
 import * as cheerio from "cheerio";
 import type { Element } from "domhandler";
 

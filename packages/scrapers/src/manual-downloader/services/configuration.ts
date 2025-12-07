@@ -11,7 +11,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 
-import { ManualDownloaderConfig, SessionConfiguration } from "../types";
+import { ManualDownloaderConfig, SessionConfiguration } from "../types/types";
 
 import { ConfigurationError, ErrorFactory } from "./errors";
 
@@ -27,7 +27,7 @@ const DEFAULT_CONFIG: ManualDownloaderConfig = {
 	timeout: 30_000, // 30 seconds
 };
 
-const DEFAULT_SESSION_CONFIG: Partial<SessionConfiguration> = {
+const DEFAULT_SESSION_CONFIG: SessionConfiguration = {
 	rateLimitDelay: DEFAULT_CONFIG.rateLimitDelay,
 	maxConcurrent: 1,
 	maxRetries: DEFAULT_CONFIG.maxRetries,
@@ -70,7 +70,7 @@ export class ConfigurationService {
 		try {
 			// Start with defaults
 			this.config = { ...DEFAULT_CONFIG };
-			this.sessionConfig = DEFAULT_SESSION_CONFIG as SessionConfiguration;
+			this.sessionConfig = DEFAULT_SESSION_CONFIG;
 
 			// Load from file if provided
 			if (configPath && existsSync(configPath)) {

@@ -12,7 +12,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { URLScanner } from "../url-scanner/index.js";
+import { URLScanner } from "../url-scanner/scanner.js";
 
 interface CLIOptions {
   url?: string;

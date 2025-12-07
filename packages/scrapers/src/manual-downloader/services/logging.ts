@@ -8,7 +8,7 @@
  * @since 2025-12-05
  */
 
-import { ProgressEvent } from "../types";
+import { ProgressEvent } from "../types/types";
 
 import { ErrorInfo } from "./errors";
 
