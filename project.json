@@ -179,6 +179,7 @@
     },
     "check": {
       "dependsOn": [
+        "syncpack:fix",
         "typecheck",
         "lint",
         "test",
@@ -186,7 +187,7 @@
       ],
       "cache": true,
       "metadata": {
-        "description": "Run all quality gates: typecheck, lint, test, build"
+        "description": "Run all quality gates: syncpack, typecheck, lint, test, build"
       }
     }
   }

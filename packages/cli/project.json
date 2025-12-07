@@ -51,6 +51,10 @@
       "options": {
         "buildTarget": "cli:build"
       }
+    },
+    "check": {
+      "dependsOn": ["typecheck", "lint", "test", "build"],
+      "cache": true
     }
   },
   "tags": ["scope:cli", "type:tool", "context:scraping"]

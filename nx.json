@@ -56,13 +56,23 @@
         "{workspaceRoot}/.browserslistrc"
       ],
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"]
+    },
+    "check": {
+      "dependsOn": [
+        "syncpack:fix",
+        "typecheck",
+        "lint",
+        "test",
+        "build"
+      ],
+      "cache": true
     }
   },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nx/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "build:prod", "test", "test:unit", "test:integration", "test:e2e", "lint", "lint:check", "lint:fix", "typecheck", "typecheck-root", "syncpack:fix", "barrels", "validate", "validate:affected"],
+        "cacheableOperations": ["build", "build:prod", "test", "test:unit", "test:integration", "test:e2e", "lint", "lint:check", "lint:fix", "typecheck", "typecheck-root", "syncpack:fix", "barrels", "validate", "validate:affected", "check"],
         "useDaemonProcess": true,
         "runtimeCacheInputs": ["node -v", "npm -v"]
       }

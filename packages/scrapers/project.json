@@ -35,6 +35,10 @@
         "lintFilePatterns": ["packages/scrapers/**/*.ts"],
         "fix": true
       }
+    },
+    "check": {
+      "dependsOn": ["typecheck", "lint", "build"],
+      "cache": true
     }
   }
 }

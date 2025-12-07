@@ -29,6 +29,10 @@
       "options": {
         "lintFilePatterns": ["packages/translation/src/**/*.ts", "packages/translation/src/**/*.md"]
       }
+    },
+    "check": {
+      "dependsOn": ["lint", "test", "build"],
+      "cache": true
     }
   }
 }
