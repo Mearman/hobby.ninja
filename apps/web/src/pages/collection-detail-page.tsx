@@ -234,13 +234,13 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 								placeholder="Search items..."
 								leftSection={<IconSearch size={16} />}
 								value={searchQuery}
-								onChange={(e) => setSearchQuery(e.target.value)}
+								onChange={(e) => { setSearchQuery(e.target.value); }}
 								style={{ flex: 1 }}
 							/>
 							<Select
 								data={statusOptions}
 								value={statusFilter}
-								onChange={(value) => setStatusFilter(value || "")}
+								onChange={(value) => { setStatusFilter(value || ""); }}
 								placeholder="Filter by status"
 								leftSection={<IconFilter size={16} />}
 								w={200}
@@ -316,7 +316,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 													<Menu.Dropdown>
 														<Menu.Item
 															leftSection={<IconEdit size={14} />}
-															onClick={() => handleEditItem(item.id)}
+															onClick={() => { handleEditItem(item.id); }}
 														>
 															Edit
 														</Menu.Item>

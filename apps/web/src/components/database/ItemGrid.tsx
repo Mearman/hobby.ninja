@@ -285,7 +285,7 @@ export function ItemGrid({
 			observer.observe(loadMoreRef.current);
 		}
 
-		return () => observer.disconnect();
+		return () => { observer.disconnect(); };
 	}, [infiniteScroll, onLoadMore, loading, items.length, total]);
 
 	// Calculate grid styles
@@ -390,7 +390,7 @@ export function ItemGrid({
 							{ label: <IconList size={16} />, value: "list" },
 						]}
 						value={viewMode}
-						onChange={(value) => handleViewModeChange(value as ViewMode)}
+						onChange={(value) => { handleViewModeChange(value as ViewMode); }}
 						size="sm"
 					/>
 
@@ -405,7 +405,7 @@ export function ItemGrid({
 							<ActionIcon
 								size="xs"
 								variant="subtle"
-								onClick={() => handleSortChange(sortField)}
+								onClick={() => { handleSortChange(sortField); }}
 							>
 								{sortDirection === "asc" ? "↑" : "↓"}
 							</ActionIcon>

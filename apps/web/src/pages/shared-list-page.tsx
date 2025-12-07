@@ -124,7 +124,7 @@ export function SharedListPage(): React.ReactElement {
 		const shareUrl = `${globalThis.location.origin}${globalThis.location.pathname}${globalThis.location.search}${globalThis.location.hash}`;
 		navigator.clipboard.writeText(shareUrl).then(() => {
 			setCopiedToClipboard(true);
-			setTimeout(() => setCopiedToClipboard(false), 2000);
+			setTimeout(() => { setCopiedToClipboard(false); }, 2000);
 		});
 	}, []);
 
@@ -142,11 +142,11 @@ export function SharedListPage(): React.ReactElement {
 		totalItems: items.length,
 		withImages: items.filter((item) => item.images && item.images.length > 0).length,
 		withManuals: items.filter((item) => item.manuals && item.manuals.length > 0).length,
-		byGrade: items.reduce((acc, item) => {
+		byGrade: items.reduce<Record<string, number>>((acc, item) => {
 			const grade = item.grade || "Unknown";
 			acc[grade] = (acc[grade] || 0) + 1;
 			return acc;
-		}, {} as Record<string, number>),
+		}, {}),
 	};
 
 	// Render loading state
@@ -363,7 +363,7 @@ export function SharedListPage(): React.ReactElement {
 									withBorder={true}
 									h="100%"
 									style={{ cursor: "pointer" }}
-									onClick={() => navigateToItem(item)}
+									onClick={() => { navigateToItem(item); }}
 								>
 									<Stack h="100%" gap="sm">
 										{item.images && item.images.length > 0 ? (

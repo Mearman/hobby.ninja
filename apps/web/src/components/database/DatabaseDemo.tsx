@@ -125,7 +125,7 @@ export function DatabaseDemo() {
 						<Button
 							variant={infiniteScroll ? "filled" : "light"}
 							size="sm"
-							onClick={() => setInfiniteScroll(!infiniteScroll)}
+							onClick={() => { setInfiniteScroll(!infiniteScroll); }}
 						>
 							{infiniteScroll ? "Infinite Scroll" : "Pagination"}
 						</Button>
@@ -137,7 +137,7 @@ export function DatabaseDemo() {
 					<TextInput
 						placeholder="Search models by name, series, grade..."
 						value={searchQuery}
-						onChange={(e) => setSearchQuery(e.target.value)}
+						onChange={(e) => { setSearchQuery(e.target.value); }}
 						leftSection={<IconSearch size={16} />}
 						style={{ flex: 1 }}
 						onKeyDown={(e) => e.key === "Enter" && handleSearch()}
@@ -177,7 +177,7 @@ export function DatabaseDemo() {
 						title="Error"
 						color="red"
 						withCloseButton={true}
-						onClose={() => setError(null)}
+						onClose={() => { setError(null); }}
 					>
 						{error}
 					</Alert>

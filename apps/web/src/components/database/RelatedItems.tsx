@@ -198,13 +198,13 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			];
 
 			// Remove duplicates and sort by score
-			const uniqueRelations = relations.reduce((acc, current) => {
+			const uniqueRelations = relations.reduce<RelatedItem[]>((acc, current) => {
 				const existing = acc.find(item => item.id === current.id);
 				if (!existing || current.score > existing.score) {
 					return [...acc.filter(item => item.id !== current.id), current];
 				}
 				return acc;
-			}, [] as RelatedItem[]);
+			}, []);
 
 			// Sort by score and limit results
 			const sortedRelations = uniqueRelations
@@ -232,7 +232,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 
 				return itemSeries && (
 					itemSeries.toLowerCase() === currentItemProps.series!.toLowerCase() ||
-          itemSeries.includes(currentItemProps.series!) ||
+          itemSeries.includes(currentItemProps.series) ||
           currentItemProps.series!.includes(itemSeries)
 				);
 			})
@@ -548,7 +548,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			<Card.Section p="md">
 				{/* Tabs for filtering */}
 				{availableTabs.length > 2 && (
-					<Tabs value={activeTab} onChange={(value) => setActiveTab(value || "all")} mb="md">
+					<Tabs value={activeTab} onChange={(value) => { setActiveTab(value || "all"); }} mb="md">
 						<Tabs.List>
 							{availableTabs.map(tab => (
 								<Tabs.Tab
@@ -580,7 +580,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 									cursor: "pointer",
 									transition: "all 0.2s ease",
 								}}
-								onClick={() => handleItemClick(item.id)}
+								onClick={() => { handleItemClick(item.id); }}
 								onMouseEnter={(e) => {
 									e.currentTarget.style.transform = "translateY(-2px)";
 									e.currentTarget.style.boxShadow = "var(--mantine-shadow-md)";

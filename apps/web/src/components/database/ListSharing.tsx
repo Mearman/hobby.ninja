@@ -69,7 +69,7 @@ interface ShareResult {
 }
 
 interface ListSharingProps {
-  items: (UnifiedItem | ManualItem | DatabaseCatalogItem)[];
+  items: Array<UnifiedItem | ManualItem | DatabaseCatalogItem>;
   onClose?: () => void;
   initialFilters?: any;
 }
@@ -302,7 +302,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 		try {
 			await navigator.clipboard.writeText(text);
 			setCopySuccess(true);
-			setTimeout(() => setCopySuccess(false), 2000);
+			setTimeout(() => { setCopySuccess(false); }, 2000);
 
 			notifications.show({
 				title: "Copied!",
@@ -378,21 +378,21 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 											label="Include Images"
 											description="Add thumbnail images to share data"
 											checked={shareOptions.includeImages}
-											onChange={(e) => setShareOptions({ ...shareOptions, includeImages: e.currentTarget.checked })}
+											onChange={(e) => { setShareOptions({ ...shareOptions, includeImages: e.currentTarget.checked }); }}
 										/>
 
 										<Switch
 											label="Include Metadata"
 											description="Add filters and options information"
 											checked={shareOptions.includeMetadata}
-											onChange={(e) => setShareOptions({ ...shareOptions, includeMetadata: e.currentTarget.checked })}
+											onChange={(e) => { setShareOptions({ ...shareOptions, includeMetadata: e.currentTarget.checked }); }}
 										/>
 
 										<Switch
 											label="Compress Data"
 											description="Use Pako compression for smaller URLs"
 											checked={shareOptions.compressData}
-											onChange={(e) => setShareOptions({ ...shareOptions, compressData: e.currentTarget.checked })}
+											onChange={(e) => { setShareOptions({ ...shareOptions, compressData: e.currentTarget.checked }); }}
 										/>
 
 										<NumberInput
@@ -401,14 +401,14 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 											min={1}
 											max={100}
 											value={shareOptions.maxItems}
-											onChange={(value) => setShareOptions({ ...shareOptions, maxItems: value || 50 })}
+											onChange={(value) => { setShareOptions({ ...shareOptions, maxItems: value || 50 }); }}
 										/>
 
 										<Group>
 											<Button
 												variant={shareOptions.format === "json" ? "filled" : "outline"}
 												size="sm"
-												onClick={() => setShareOptions({ ...shareOptions, format: "json" })}
+												onClick={() => { setShareOptions({ ...shareOptions, format: "json" }); }}
 											>
 												<IconFileText size={14} />
                         JSON
@@ -416,7 +416,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 											<Button
 												variant={shareOptions.format === "csv" ? "filled" : "outline"}
 												size="sm"
-												onClick={() => setShareOptions({ ...shareOptions, format: "csv" })}
+												onClick={() => { setShareOptions({ ...shareOptions, format: "csv" }); }}
 											>
 												<IconFileText size={14} />
                         CSV
@@ -532,7 +532,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 												<Button
 													variant="outline"
 													size="sm"
-													onClick={() => setShowQRCode(true)}
+													onClick={() => { setShowQRCode(true); }}
 													leftSection={<IconQrcode size={14} />}
 												>
                           QR Code
@@ -573,7 +573,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 			{/* QR Code Modal */}
 			<Modal
 				opened={showQRCode}
-				onClose={() => setShowQRCode(false)}
+				onClose={() => { setShowQRCode(false); }}
 				title="QR Code"
 				centered={true}
 				size="md"

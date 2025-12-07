@@ -77,15 +77,15 @@ export const mockCatalogItems: DatabaseCatalogItem[] = [
 ];
 
 // Helper function to get mixed items for testing
-export function getMockItems(count: number = 50) {
-	const allItems: (UnifiedItem | ManualItem | DatabaseCatalogItem)[] = [
+export function getMockItems(count = 50) {
+	const allItems: Array<UnifiedItem | ManualItem | DatabaseCatalogItem> = [
 		...mockUnifiedItems,
 		...mockManualItems,
 		...mockCatalogItems,
 	];
 
 	// Create more items by duplicating with different IDs
-	const items: (UnifiedItem | ManualItem | DatabaseCatalogItem)[] = [];
+	const items: Array<UnifiedItem | ManualItem | DatabaseCatalogItem> = [];
 	for (let i = 0; i < count; i++) {
 		const baseItem = allItems[i % allItems.length];
 		const itemWithId = { ...baseItem };

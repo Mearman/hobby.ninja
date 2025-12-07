@@ -7,7 +7,7 @@ import { storage, schemaRegistry } from "./storage";
 // Generic document operations without hardcoded schemas
 export const documents = {
 	// Register a new schema
-	async registerSchema(schema: z.ZodObject<z.ZodRawShape>, name: string, version: string = "1.0.0"): Promise<void> {
+	async registerSchema(schema: z.ZodObject<z.ZodRawShape>, name: string, version = "1.0.0"): Promise<void> {
 		await schemaRegistry.register(schema, name, version);
 	},
 

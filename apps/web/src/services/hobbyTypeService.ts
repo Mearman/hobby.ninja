@@ -25,7 +25,7 @@ export interface HobbyTypeStats {
 }
 
 export class HobbyTypeService {
-	private cache: Map<string, HobbyType[]> = new Map();
+	private cache = new Map<string, HobbyType[]>();
 	private lastFetch = 0;
 	private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 

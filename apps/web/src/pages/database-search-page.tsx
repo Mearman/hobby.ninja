@@ -203,7 +203,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 				<Center h="50vh">
 					<Alert color="red" variant="light" w="100%" maw={500}>
 						<Text ta="center">{error}</Text>
-						<Button variant="outline" onClick={() => globalThis.location.reload()} mt="md">
+						<Button variant="outline" onClick={() => { globalThis.location.reload(); }} mt="md">
               Try Again
 						</Button>
 					</Alert>
@@ -244,7 +244,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 						loading={loading}
 						initialQuery={searchQuery}
 						initialFilters={filters}
-						onAdvancedToggle={() => setAdvancedFiltersOpened(true)}
+						onAdvancedToggle={() => { setAdvancedFiltersOpened(true); }}
 					/>
 				</Paper>
 
@@ -444,19 +444,19 @@ export function DatabaseSearchPage(): React.ReactElement {
 								<Group>
 									<Button
 										variant="light"
-										onClick={() => handleSearch("Gundam", {})}
+										onClick={() => { handleSearch("Gundam", {}); }}
 									>
                     Try "Gundam"
 									</Button>
 									<Button
 										variant="light"
-										onClick={() => handleSearch("", { grade: ["MG"] })}
+										onClick={() => { handleSearch("", { grade: ["MG"] }); }}
 									>
                     Master Grade
 									</Button>
 									<Button
 										variant="light"
-										onClick={() => setAdvancedFiltersOpened(true)}
+										onClick={() => { setAdvancedFiltersOpened(true); }}
 									>
                     Advanced Filters
 									</Button>
@@ -470,10 +470,10 @@ export function DatabaseSearchPage(): React.ReactElement {
 			{/* Advanced Filters Modal */}
 			<AdvancedFilters
 				opened={advancedFiltersOpened}
-				onClose={() => setAdvancedFiltersOpened(false)}
+				onClose={() => { setAdvancedFiltersOpened(false); }}
 				filters={filters}
 				onFiltersChange={setFilters}
-				onApply={() => handleSearch(searchQuery, filters)}
+				onApply={() => { handleSearch(searchQuery, filters); }}
 			/>
 		</Container>
 	);

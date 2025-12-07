@@ -166,7 +166,7 @@ export function DatabasePage(): React.ReactElement {
 					<Center h="50vh">
 						<Alert color="red" variant="light" w="100%" maw={500}>
 							<Text ta="center">{error}</Text>
-							<Button variant="outline" onClick={() => globalThis.location.reload()} mt="md">
+							<Button variant="outline" onClick={() => { globalThis.location.reload(); }} mt="md">
 								Try Again
 							</Button>
 						</Alert>
@@ -199,14 +199,14 @@ export function DatabasePage(): React.ReactElement {
 								rightSection={
 									<Button
 										size="sm"
-										onClick={() => handleSearch(searchQuery)}
+										onClick={() => { handleSearch(searchQuery); }}
 										disabled={!searchQuery.trim()}
 									>
 										Search
 									</Button>
 								}
 								value={searchQuery}
-								onChange={(event) => setSearchQuery(event.currentTarget.value)}
+								onChange={(event) => { setSearchQuery(event.currentTarget.value); }}
 								onKeyPress={(event) => {
 									if (event.key === "Enter") {
 										handleSearch(searchQuery);
@@ -307,7 +307,7 @@ export function DatabasePage(): React.ReactElement {
 							withBorder={true}
 							shadow="sm"
 							h="100%"
-							onClick={() => handleHobbyTypeSelect(type.id)}
+							onClick={() => { handleHobbyTypeSelect(type.id); }}
 							style={{ cursor: "pointer" }}
 							component="button"
 							type="button"
@@ -363,7 +363,7 @@ export function DatabasePage(): React.ReactElement {
 							<Button
 								key={filter.name}
 								variant="outline"
-								onClick={() => handleFilterSelect(filter)}
+								onClick={() => { handleFilterSelect(filter); }}
 								leftSection={<filter.icon size={16} />}
 								styles={{
 									inner: {

@@ -4,8 +4,7 @@ import { Link } from "@tanstack/react-router";
 import React, { useState, useEffect } from "react";
 
 import { collectionService } from "../services/collectionService";
-import { hobbyGraphService } from "../services/hobbyGraphService";
-import { HobbyType } from "../services/hobbyGraphService";
+import { hobbyGraphService , HobbyType } from "../services/hobbyGraphService";
 
 interface CollectionStats {
 	totalCollections: number;

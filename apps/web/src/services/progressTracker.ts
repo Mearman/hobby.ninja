@@ -282,7 +282,7 @@ export class ProgressTracker {
 
 		try {
 			const result = await executor({
-				updateProgress: (progress) => this.updateProgress(id, progress),
+				updateProgress: (progress) => { this.updateProgress(id, progress); },
 				checkPaused: () => this.isPaused(id),
 				checkCancelled: () => this.isCancelled(id),
 			});
@@ -303,7 +303,7 @@ export class ProgressTracker {
 				return this.retryOperation(id, error as Error);
 			}
 
-			return this.failOperation(id, error as Error);
+			this.failOperation(id, error as Error); return;
 		}
 	}
 
@@ -312,7 +312,7 @@ export class ProgressTracker {
    */
 	updateProgress(id: string, progress: ProgressUpdate): void {
 		const operation = this.operations.get(id);
-		if (!operation || operation.status !== "running") {
+		if (operation?.status !== "running") {
 			return;
 		}
 
@@ -454,7 +454,7 @@ export class ProgressTracker {
    */
 	resumeOperation(id: string): boolean {
 		const operation = this.operations.get(id);
-		if (!operation || operation.status !== "paused") {
+		if (operation?.status !== "paused") {
 			return false;
 		}
 

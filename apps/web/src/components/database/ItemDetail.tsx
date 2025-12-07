@@ -137,12 +137,12 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 							</ActionIcon>
 						</Tooltip>
 						<Tooltip label="Zoom In">
-							<ActionIcon variant="subtle" onClick={() => handleScale(0.2)}>
+							<ActionIcon variant="subtle" onClick={() => { handleScale(0.2); }}>
 								<IconZoomIn size={16} />
 							</ActionIcon>
 						</Tooltip>
 						<Tooltip label="Zoom Out">
-							<ActionIcon variant="subtle" onClick={() => handleScale(-0.2)}>
+							<ActionIcon variant="subtle" onClick={() => { handleScale(-0.2); }}>
 								<IconZoomOut size={16} />
 							</ActionIcon>
 						</Tooltip>
@@ -187,7 +187,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 									overflow: "hidden",
 									cursor: "pointer",
 								}}
-								onClick={() => setCurrentImageIndex(index)}
+								onClick={() => { setCurrentImageIndex(index); }}
 							>
 								<Image
 									src={image}
@@ -226,7 +226,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
 			<Button
 				variant="outline"
 				leftSection={<IconFilePdf size={16} />}
-				onClick={() => setIsOpened(true)}
+				onClick={() => { setIsOpened(true); }}
 				fullWidth={true}
 			>
         View PDF Manual
@@ -234,7 +234,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
 
 			<Modal
 				opened={isOpened}
-				onClose={() => setIsOpened(false)}
+				onClose={() => { setIsOpened(false); }}
 				size="90%"
 				title={title}
 				centered={true}
@@ -323,7 +323,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 			// If we have source links, load the full data
 			if ("sources" in loadedItem) {
-				const unifiedItem = loadedItem as UnifiedItem;
+				const unifiedItem = loadedItem;
 				const [catalogData, manualData] = await Promise.all([
 					unifiedItem.sources.catalog
 						? dataService.getItemById(unifiedItem.sources.catalog.id, "catalog") as Promise<DatabaseCatalogItem | null>
@@ -373,7 +373,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			URL.revokeObjectURL(url);
 
 			setShareSuccess(true);
-			setTimeout(() => setShareSuccess(false), 3000);
+			setTimeout(() => { setShareSuccess(false); }, 3000);
 		} catch (error_) {
 			console.error("Export failed:", error_);
 		}
@@ -483,7 +483,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			<Transition mounted={shareSuccess} transition="fade" duration={300}>
 				{(styles) => (
 					<Affix position={{ top: 20, right: 20 }} style={styles}>
-						<Alert color="green" withCloseButton={true} onClose={() => setShareSuccess(false)}>
+						<Alert color="green" withCloseButton={true} onClose={() => { setShareSuccess(false); }}>
               Item exported successfully!
 						</Alert>
 					</Affix>
@@ -864,13 +864,13 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			{/* Sharing Modal */}
 			<Modal
 				opened={showSharing}
-				onClose={() => setShowSharing(false)}
+				onClose={() => { setShowSharing(false); }}
 				title="Share Item"
 				size="lg"
 			>
 				<ListSharing
 					items={[item]}
-					onClose={() => setShowSharing(false)}
+					onClose={() => { setShowSharing(false); }}
 				/>
 			</Modal>
 		</Container>

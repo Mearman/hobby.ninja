@@ -271,7 +271,7 @@ export function SearchAndFilter({
 					variant="light"
 					size="sm"
 					rightSection={<IconChevronDown size={12} />}
-					onClick={() => setQuickFiltersOpened(!quickFiltersOpened)}
+					onClick={() => { setQuickFiltersOpened(!quickFiltersOpened); }}
 				>
           Quick Filters
 					{getActiveFilterCount() > 0 && (
@@ -313,7 +313,7 @@ export function SearchAndFilter({
 							placeholder="Select grades..."
 							data={gradeOptions}
 							value={filters.grade || []}
-							onChange={(value) => handleFilterChange({ grade: value })}
+							onChange={(value) => { handleFilterChange({ grade: value }); }}
 							size="xs"
 							searchable={true}
 							clearable={true}
@@ -329,7 +329,7 @@ export function SearchAndFilter({
 							placeholder="Select scales..."
 							data={scaleOptions}
 							value={filters.scale || []}
-							onChange={(value) => handleFilterChange({ scale: value })}
+							onChange={(value) => { handleFilterChange({ scale: value }); }}
 							size="xs"
 							searchable={true}
 							clearable={true}
@@ -345,7 +345,7 @@ export function SearchAndFilter({
 							placeholder="Select series..."
 							data={seriesOptions.slice(0, 20)} // Limit options for performance
 							value={filters.series || []}
-							onChange={(value) => handleFilterChange({ series: value })}
+							onChange={(value) => { handleFilterChange({ series: value }); }}
 							size="xs"
 							searchable={true}
 							clearable={true}
@@ -376,8 +376,8 @@ export function SearchAndFilter({
 								size="lg"
 								placeholder={placeholder}
 								value={query}
-								onChange={(event) => handleQueryChange(event.currentTarget.value)}
-								onFocus={() => setSuggestionsOpened(true)}
+								onChange={(event) => { handleQueryChange(event.currentTarget.value); }}
+								onFocus={() => { setSuggestionsOpened(true); }}
 								leftSection={<IconSearch size={20} />}
 								rightSection={
 									<Group gap="xs">
@@ -421,7 +421,7 @@ export function SearchAndFilter({
 											justify="start"
 											fullWidth={true}
 											size="sm"
-											onClick={() => handleSuggestionSelect(suggestion)}
+											onClick={() => { handleSuggestionSelect(suggestion); }}
 											leftSection={
 												suggestion.type === "recent" ? (
 													<IconHistory size={14} />
@@ -462,7 +462,7 @@ export function SearchAndFilter({
 									{ value: "catalog", label: "Catalog Only" },
 								]}
 								value={filters.dataSource as any || "unified"}
-								onChange={(value) => handleFilterChange({ dataSource: value as any })}
+								onChange={(value) => { handleFilterChange({ dataSource: value as any }); }}
 								size="xs"
 								w={120}
 								clearable={true}
