@@ -1,9 +1,6 @@
-import { Container, Title, Text, Grid, Card, Badge, Button, Group } from "@mantine/core";
+import { Container, Title, Text, Card, Badge, Button, Group, Stack, SimpleGrid } from "@mantine/core";
 import { Link } from "@tanstack/react-router";
 import React from "react";
-
-import { homeContainer, featuresGrid, featureCard } from "../styles/styles.css";
-
 
 /**
  * Home page component displaying app overview, features, and quick start options
@@ -56,151 +53,131 @@ export function HomePage(): React.ReactElement {
 	];
 
 	return (
-		<div className={homeContainer}>
-			<Container size="lg">
-				{/* Hero Section */}
-				<div style={{ textAlign: "center", marginBottom: "4rem" }}>
-					<Title order={1} size={48} mb="md">
-            Welcome to hobby.ninja
-					</Title>
-					<Text size="lg" color="dimmed" mb="xl">
-            Your comprehensive companion for Gundam and Gunpla model kit collection management
-					</Text>
-					<Group justify="center" gap="md">
-						<Button component={Link} to="#/about" variant="outline" size="lg">
-              Learn More
-						</Button>
-						<Button component={Link} to="#/database" size="lg">
-              Browse Database
-						</Button>
-					</Group>
-				</div>
-
-				{/* Stats Section */}
-				<Card p="xl" radius="md" mb="3rem" withBorder={true}>
-					<Title order={2} mb="lg" ta="center">
-            Database Overview
-					</Title>
-					<Grid>
-						{stats.map((stat) => (
-							<Grid.Col span={{ base: 12, sm: 6, md: 3 }} key={stat.label}>
-								<div style={{ textAlign: "center" }}>
-									<Title order={3} size={32} c="primary">
-										{stat.value}
-									</Title>
-									<Text size="sm" color="dimmed">
-										{stat.label}
-									</Text>
-								</div>
-							</Grid.Col>
-						))}
-					</Grid>
-				</Card>
-
-				{/* Features Section */}
-				<Title order={2} mb="lg" ta="center">
-          Features
+		<Container size="lg" py="xl">
+			{/* Hero Section */}
+			<Stack align="center" gap="lg" mb="xl">
+				<Title order={1} size={48} ta="center">
+					Welcome to hobby.ninja
 				</Title>
-				<div className={featuresGrid}>
-					{features.map((feature) => (
-						<Card
-							key={feature.title}
-							p="xl"
-							radius="md"
-							withBorder={true}
-							shadow="sm"
-							className={featureCard}
-						>
-							<div style={{ textAlign: "center", marginBottom: "1rem" }}>
-								<div style={{ fontSize: "3rem", marginBottom: "1rem" }}>
-									{feature.icon}
-								</div>
-								<Title order={3} mb="sm">
-									{feature.title}
-								</Title>
-							</div>
-							<Text color="dimmed" mb="md" style={{ minHeight: "60px" }}>
+				<Text size="lg" color="dimmed" ta="center" maw={600}>
+					Your comprehensive companion for Gundam and Gunpla model kit collection management
+				</Text>
+				<Group>
+					<Button component={Link} to="#/about" variant="outline" size="lg">
+						Learn More
+					</Button>
+					<Button component={Link} to="#/database" size="lg">
+						Browse Database
+					</Button>
+				</Group>
+			</Stack>
+
+			{/* Stats Section */}
+			<Card p="xl" radius="md" mb="xl" withBorder={true}>
+				<Title order={2} mb="lg" ta="center">
+					Database Overview
+				</Title>
+				<SimpleGrid cols={{ base: 2, sm: 4 }} spacing="lg">
+					{stats.map((stat) => (
+						<Stack key={stat.label} align="center" gap="xs">
+							<Title order={3} size={32} c="primary" ta="center">
+								{stat.value}
+							</Title>
+							<Text size="sm" color="dimmed" ta="center">
+								{stat.label}
+							</Text>
+						</Stack>
+					))}
+				</SimpleGrid>
+			</Card>
+
+			{/* Features Section */}
+			<Title order={2} mb="lg" ta="center">
+				Features
+			</Title>
+			<SimpleGrid cols={{ base: 1, md: 2, lg: 3 }} spacing="lg" mb="xl">
+				{features.map((feature) => (
+					<Card
+						key={feature.title}
+						p="xl"
+						radius="md"
+						withBorder={true}
+						shadow="sm"
+						h="100%"
+					>
+						<Stack align="center" gap="md" h="100%">
+							<Text size="3rem">{feature.icon}</Text>
+							<Title order={3} ta="center">
+								{feature.title}
+							</Title>
+							<Text color="dimmed" ta="center" style={{ minHeight: "60px" }}>
 								{feature.description}
 							</Text>
-							<Group justify="center">
-								<Badge color={feature.color} variant="light">
-                  Coming Soon
-								</Badge>
-							</Group>
-						</Card>
-					))}
-				</div>
+							<Badge color={feature.color} variant="light" size="lg">
+								Coming Soon
+							</Badge>
+						</Stack>
+					</Card>
+				))}
+			</SimpleGrid>
 
-				{/* Quick Start Section */}
-				<Card p="xl" radius="md" mt="3rem" withBorder={true}>
-					<Title order={2} mb="lg" ta="center">
-            Quick Start
-					</Title>
-					<Grid>
-						<Grid.Col span={{ base: 12, md: 6 }}>
-							<div style={{ textAlign: "center" }}>
-								<div style={{ fontSize: "4rem", marginBottom: "1rem" }}>🏁</div>
-								<Title order={3} mb="sm">
-                  New to Gunpla?
-								</Title>
-								<Text color="dimmed" mb="md">
-                  Start by exploring our database to discover amazing Gundam model kits.
-								</Text>
-								<Button component={Link} to="#/database" variant="outline" fullWidth={true}>
-                  Browse Database
-								</Button>
-							</div>
-						</Grid.Col>
-						<Grid.Col span={{ base: 12, md: 6 }}>
-							<div style={{ textAlign: "center" }}>
-								<div style={{ fontSize: "4rem", marginBottom: "1rem" }}>📱</div>
-								<Title order={3} mb="sm">
-                  Have a Collection?
-								</Title>
-								<Text color="dimmed" mb="md">
-                  Import your existing Gunpla collection and start organizing your kits.
-								</Text>
-								<Button component={Link} to="#/collection" variant="outline" fullWidth={true}>
-                  Manage Collection
-								</Button>
-							</div>
-						</Grid.Col>
-					</Grid>
-				</Card>
+			{/* Quick Start Section */}
+			<Card p="xl" radius="md" withBorder={true}>
+				<Title order={2} mb="lg" ta="center">
+					Quick Start
+				</Title>
+				<SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
+					<Stack align="center" gap="md">
+						<Text size="4rem">🏁</Text>
+						<Title order={3} ta="center">
+							New to Gunpla?
+						</Title>
+						<Text color="dimmed" ta="center" mb="md">
+							Start by exploring our database to discover amazing Gundam model kits.
+						</Text>
+						<Button component={Link} to="#/database" variant="outline" fullWidth={true} size="lg">
+							Browse Database
+						</Button>
+					</Stack>
+					<Stack align="center" gap="md">
+						<Text size="4rem">📱</Text>
+						<Title order={3} ta="center">
+							Have a Collection?
+						</Title>
+						<Text color="dimmed" ta="center" mb="md">
+							Import your existing Gunpla collection and start organizing your kits.
+						</Text>
+						<Button component={Link} to="#/collection" fullWidth={true} size="lg">
+							Manage Collection
+						</Button>
+					</Stack>
+				</SimpleGrid>
+			</Card>
 
-				{/* Technology Stack */}
-				<Card p="xl" radius="md" mt="3rem" withBorder={true}>
-					<Title order={2} mb="lg" ta="center">
-            Built with Modern Technology
-					</Title>
-					<Grid>
-						<Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-							<Text ta="center" fw={600}>React 19</Text>
-							<Text ta="center" color="dimmed" size="sm">
-                Latest React with TypeScript
-							</Text>
-						</Grid.Col>
-						<Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-							<Text ta="center" fw={600}>TanStack Router</Text>
-							<Text ta="center" color="dimmed" size="sm">
-                Type-safe routing
-							</Text>
-						</Grid.Col>
-						<Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-							<Text ta="center" fw={600}>Mantine UI</Text>
-							<Text ta="center" color="dimmed" size="sm">
-                Modern React components
-							</Text>
-						</Grid.Col>
-						<Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-							<Text ta="center" fw={600}>Vanilla Extract</Text>
-							<Text ta="center" color="dimmed" size="sm">
-                Zero-runtime CSS
-							</Text>
-						</Grid.Col>
-					</Grid>
-				</Card>
-			</Container>
-		</div>
+			{/* Technology Stack */}
+			<Card p="xl" radius="md" mt="xl" withBorder={true}>
+				<Title order={2} mb="lg" ta="center">
+					Built with Modern Technology
+				</Title>
+				<SimpleGrid cols={{ base: 2, sm: 3, md: 4 }} spacing="md">
+					<Stack align="center" gap="xs">
+						<Text fw={500}>React 19</Text>
+						<Text size="sm" color="dimmed">Latest React with TypeScript</Text>
+					</Stack>
+					<Stack align="center" gap="xs">
+						<Text fw={500}>TanStack Router</Text>
+						<Text size="sm" color="dimmed">Type-safe routing</Text>
+					</Stack>
+					<Stack align="center" gap="xs">
+						<Text fw={500}>Mantine UI</Text>
+						<Text size="sm" color="dimmed">Modern React components</Text>
+					</Stack>
+					<Stack align="center" gap="xs">
+						<Text fw={500}>Vanilla Extract</Text>
+						<Text size="sm" color="dimmed">Zero-runtime CSS</Text>
+					</Stack>
+				</SimpleGrid>
+			</Card>
+		</Container>
 	);
 }
