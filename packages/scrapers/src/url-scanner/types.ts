@@ -10,7 +10,7 @@ export interface URLCheckResult {
   timestamp: string;
 
   /** Overall validity status */
-  validity: 'valid' | 'invalid' | 'error';
+  validity: "valid" | "invalid" | "error";
 
   /** HTTP status code (if request completed) */
   statusCode?: number;
@@ -19,7 +19,7 @@ export interface URLCheckResult {
   hasStaticData: boolean;
 
   /** Type of data availability */
-  dataType: 'complete' | 'partial' | 'none';
+  dataType: "complete" | "partial" | "none";
 
   /** Confidence in the static/dynamic classification (0-1) */
   confidence: number;
@@ -76,7 +76,7 @@ export interface ProgressState {
   endTime?: string;
 
   /** Current scan status */
-  status: 'idle' | 'ready' | 'running' | 'paused' | 'completed' | 'failed';
+  status: "idle" | "ready" | "running" | "paused" | "completed" | "failed";
 
   /** URL results keyed by URL */
   urls: Record<string, ScanResult>;
@@ -140,7 +140,7 @@ export interface URLPattern {
   step: number;
 
   /** Number format (decimal, hex, etc.) */
-  numberFormat: 'decimal' | 'hex';
+  numberFormat: "decimal" | "hex";
 
   /** Zero-padding length */
   zeroPad?: number;
@@ -156,7 +156,7 @@ export interface CheckOptions {
 
 export interface DetectionResult {
   hasStaticData: boolean;
-  dataType: 'complete' | 'partial' | 'none';
+  dataType: "complete" | "partial" | "none";
   confidence: number;
   indicators: string[];
   extractedData?: {
@@ -190,7 +190,7 @@ export interface ScanResult {
   hasStaticData: boolean;
 
   /** Type of data availability */
-  dataType: 'complete' | 'partial' | 'none';
+  dataType: "complete" | "partial" | "none";
 
   /** Confidence in the static/dynamic classification (0-1) */
   confidence: number;

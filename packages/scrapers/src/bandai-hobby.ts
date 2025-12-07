@@ -10,9 +10,7 @@ interface Specification {
   originalText: string;
 }
 
-interface SpecificationData {
-  [key: string]: Specification;
-}
+type SpecificationData = Record<string, Specification>;
 
 
 export class BandaiHobbyScraper extends BaseScraper {
@@ -104,7 +102,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 
 	private extractSku($: cheerio.CheerioAPI, url: string): string {
 		// Try to extract SKU from URL path
-		const urlMatch = url.match(/\/([^/]+)\/?$/);
+		const urlMatch = /\/([^/]+)\/?$/.exec(url);
 		if (urlMatch && urlMatch[1]) {
 			return urlMatch[1];
 		}
@@ -247,20 +245,20 @@ export class BandaiHobbyScraper extends BaseScraper {
 	private parseSpecValue(value: string): string | number | boolean {
 		// Special handling for scale ratios (e.g., "1/144", "1/60")
 		if (value.includes("/")) {
-			const ratioMatch = value.match(/^\s*([\d]+)\s*\/\s*([\d]+)\s*$/);
+			const ratioMatch = /^\s*([\d]+)\s*\/\s*([\d]+)\s*$/.exec(value);
 			if (ratioMatch) {
 				return value.trim(); // Keep the full ratio as string
 			}
 		}
 
 		// Try to parse as number first, handling currency symbols
-		const currencyMatch = value.match(/([¥$€£]\s*|)([\d,]+(?:\.\d+)?)(\s*[円元€£$]?)/);
+		const currencyMatch = /([¥$€£]\s*|)([\d,]+(?:\.\d+)?)(\s*[円元€£$]?)/.exec(value);
 		if (currencyMatch && currencyMatch[2]) {
 			return Number.parseFloat(currencyMatch[2].replaceAll(",", ""));
 		}
 
 		// Try to parse as plain number (but not if it looks like a ratio)
-		const numberMatch = value.match(/^([\d,]+(?:\.\d+)?)\s*$/);
+		const numberMatch = /^([\d,]+(?:\.\d+)?)\s*$/.exec(value);
 		if (numberMatch && numberMatch[1]) {
 			return Number.parseFloat(numberMatch[1].replaceAll(",", ""));
 		}
@@ -278,7 +276,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 	}
 
 	private extractUnit(value: string): string | undefined {
-		const unitMatch = value.match(/(mm|cm|m|g|kg|%|deg|°)/);
+		const unitMatch = /(mm|cm|m|g|kg|%|deg|°)/.exec(value);
 		return unitMatch?.[1] || undefined;
 	}
 

@@ -201,7 +201,7 @@ export class HobbyLinkScraper extends BaseScraper {
 			.replaceAll(",", "")
 			.trim();
 
-		const numberMatch = cleaned.match(/\d+/);
+		const numberMatch = /\d+/.exec(cleaned);
 		if (numberMatch) {
 			const amount = Number.parseInt(numberMatch[0], 10);
 			return { amount, currency: "JPY", originalText: priceText };

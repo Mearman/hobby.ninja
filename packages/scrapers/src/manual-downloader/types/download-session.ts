@@ -5,7 +5,7 @@
  * with comprehensive statistics and state management.
  */
 
-import { ManualPage } from './manual-page';
+import { ManualPage } from "./manual-page";
 
 export interface DownloadSession {
   /** Unique session identifier (UUID v4) */
@@ -27,10 +27,10 @@ export interface DownloadSession {
   outputDirectory: string;
 
   /** Current processing status */
-  status: 'initializing' | 'discovering' | 'downloading' | 'completed' | 'failed' | 'paused';
+  status: "initializing" | "discovering" | "downloading" | "completed" | "failed" | "paused";
 
   /** Current phase of operation */
-  currentPhase: 'range-discovery' | 'gap-detection' | 'bulk-download' | 'verification';
+  currentPhase: "range-discovery" | "gap-detection" | "bulk-download" | "verification";
 
   /** Last processed manual ID */
   lastProcessedId: number;
@@ -171,95 +171,95 @@ export function createDownloadSession(config: {
   outputDirectory: string;
   sessionConfig: SessionConfiguration;
 }): DownloadSession {
-  const now = new Date().toISOString();
-  const sessionId = config.sessionId || generateSessionId();
+	const now = new Date().toISOString();
+	const sessionId = config.sessionId || generateSessionId();
 
-  return {
-    sessionId,
-    startTime: now,
-    targetUrl: config.targetUrl,
-    outputDirectory: config.outputDirectory,
-    status: 'initializing',
-    currentPhase: 'range-discovery',
-    lastProcessedId: 0,
-    discoveredIds: [],
-    failedIds: [],
-    queuedIds: [],
-    config: config.sessionConfig,
-    stats: {
-      totalChecked: 0,
-      successCount: 0,
-      failureCount: 0,
-      skippedCount: 0,
-      verifiedCount: 0,
-      averageResponseTime: 0,
-      totalBytesDownloaded: 0,
-      discoveryRate: 0,
-      downloadRate: 0,
-      currentSpeed: 0,
-      estimatedTimeRemaining: 0,
-      progressPercentage: 0,
-      lastUpdateTime: now
-    },
-    checkpoint: {
-      lastCheckpointTime: now,
-      checkpointCount: 0,
-      checkpointSize: 0,
-      lastCheckpointSuccessful: true,
-      availableCheckpoints: [],
-      integrityHash: ''
-    }
-  };
+	return {
+		sessionId,
+		startTime: now,
+		targetUrl: config.targetUrl,
+		outputDirectory: config.outputDirectory,
+		status: "initializing",
+		currentPhase: "range-discovery",
+		lastProcessedId: 0,
+		discoveredIds: [],
+		failedIds: [],
+		queuedIds: [],
+		config: config.sessionConfig,
+		stats: {
+			totalChecked: 0,
+			successCount: 0,
+			failureCount: 0,
+			skippedCount: 0,
+			verifiedCount: 0,
+			averageResponseTime: 0,
+			totalBytesDownloaded: 0,
+			discoveryRate: 0,
+			downloadRate: 0,
+			currentSpeed: 0,
+			estimatedTimeRemaining: 0,
+			progressPercentage: 0,
+			lastUpdateTime: now,
+		},
+		checkpoint: {
+			lastCheckpointTime: now,
+			checkpointCount: 0,
+			checkpointSize: 0,
+			lastCheckpointSuccessful: true,
+			availableCheckpoints: [],
+			integrityHash: "",
+		},
+	};
 }
 
 /**
  * Generate a session identifier
  */
 function generateSessionId(): string {
-  const timestamp = Date.now().toString(36);
-  const random = Math.random().toString(36).substring(2, 15);
-  return `${timestamp}-${random}`;
+	const timestamp = Date.now().toString(36);
+	const random = Math.random().toString(36).slice(2, 15);
+	return `${timestamp}-${random}`;
 }
 
 /**
  * Update session statistics
  */
 export function updateSessionStats(session: DownloadSession, manual: ManualPage): void {
-  if (manual.status === 'completed') {
-    session.stats.successCount++;
-    session.stats.totalBytesDownloaded += manual.contentSize;
-  } else if (manual.status === 'failed') {
-    session.stats.failureCount++;
-  }
+	if (manual.status === "completed") {
+		session.stats.successCount++;
+		session.stats.totalBytesDownloaded += manual.contentSize;
+	} else if (manual.status === "failed") {
+		session.stats.failureCount++;
+	}
 
-  session.stats.lastUpdateTime = new Date().toISOString();
+	session.stats.lastUpdateTime = new Date().toISOString();
 
-  // Calculate progress percentage
-  if (session.discoveredIds.length > 0) {
-    session.stats.progressPercentage = Math.round(
-      (session.stats.successCount / session.discoveredIds.length) * 100
-    );
-  }
+	// Calculate progress percentage
+	if (session.discoveredIds.length > 0) {
+		session.stats.progressPercentage = Math.round(
+			(session.stats.successCount / session.discoveredIds.length) * 100,
+		);
+	}
 
-  // Calculate average response time
-  const totalRequests = session.stats.successCount + session.stats.failureCount;
-  if (totalRequests > 0) {
-    const totalTime = session.stats.averageResponseTime * (totalRequests - 1) + manual.downloadDuration;
-    session.stats.averageResponseTime = totalTime / totalRequests;
-  }
+	// Calculate average response time
+	const totalRequests = session.stats.successCount + session.stats.failureCount;
+	if (totalRequests > 0) {
+		const totalTime = session.stats.averageResponseTime * (totalRequests - 1) + manual.downloadDuration;
+		session.stats.averageResponseTime = totalTime / totalRequests;
+	}
 
-  // Update current speed
-  const elapsed = new Date(session.startTime).getTime();
-  if (elapsed > 0) {
-    session.stats.currentSpeed = (session.stats.successCount / elapsed) * 60000; // per minute
-  }
+	// Update current speed
+	const elapsed = new Date(session.startTime).getTime();
+	if (elapsed > 0) {
+		session.stats.currentSpeed = (session.stats.successCount / elapsed) * 60_000; // per minute
+	}
 }
 
 /**
  * Check if session is complete
  */
 export function isSessionComplete(session: DownloadSession): boolean {
-  return session.status === 'completed' &&
+	return session.status === "completed" &&
          session.discoveredIds.length > 0 &&
          session.stats.successCount === session.discoveredIds.length;
 }
@@ -268,21 +268,21 @@ export function isSessionComplete(session: DownloadSession): boolean {
  * Get session duration in human readable format
  */
 export function getFormattedDuration(session: DownloadSession): string {
-  const duration = session.duration ||
+	const duration = session.duration ||
     (session.endTime ?
-      new Date(session.endTime).getTime() - new Date(session.startTime).getTime() :
-      Date.now() - new Date(session.startTime).getTime()
+    	new Date(session.endTime).getTime() - new Date(session.startTime).getTime() :
+    	Date.now() - new Date(session.startTime).getTime()
     );
 
-  const hours = Math.floor(duration / (1000 * 60 * 60));
-  const minutes = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((duration % (1000 * 60)) / 1000);
+	const hours = Math.floor(duration / (1000 * 60 * 60));
+	const minutes = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
+	const seconds = Math.floor((duration % (1000 * 60)) / 1000);
 
-  if (hours > 0) {
-    return `${hours}h ${minutes}m ${seconds}s`;
-  } else if (minutes > 0) {
-    return `${minutes}m ${seconds}s`;
-  } else {
-    return `${seconds}s`;
-  }
+	if (hours > 0) {
+		return `${hours}h ${minutes}m ${seconds}s`;
+	} else if (minutes > 0) {
+		return `${minutes}m ${seconds}s`;
+	} else {
+		return `${seconds}s`;
+	}
 }
