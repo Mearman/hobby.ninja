@@ -36,8 +36,8 @@
       "@hobby-ninja/utils/profile": ["packages/utils/dist/src/profileManager.d.ts"],
       "@hobby-ninja/utils/rendering": ["packages/utils/dist/src/renderingDetection.d.ts"],
       "@hobby-ninja/cli/*": ["packages/cli/src/*"],
-      "@hobby-ninja/scrapers": ["packages/scrapers/dist/registry.d.ts"],
-      "@hobby-ninja/scrapers/*": ["packages/scrapers/dist/*"],
+      "@hobby-ninja/scrapers": ["packages/scrapers/dist/src/registry.d.ts"],
+      "@hobby-ninja/scrapers/*": ["packages/scrapers/dist/src/*"],
       "@hobby-ninja/translation": ["packages/translation/dist/src/mod.d.ts"],
       "@hobby-ninja/translation/*": ["packages/translation/dist/src/*"]
     }
