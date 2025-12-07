@@ -1,4 +1,4 @@
-import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet, createBrowserHistory } from "@tanstack/react-router";
+import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet, createHashHistory } from "@tanstack/react-router";
 import { Suspense, lazy, useState } from "react";
 
 import { Header } from "./components/layout/Header";
@@ -201,18 +201,17 @@ const routeTree = rootRoute.addChildren([
 	notFoundRoute,
 ]);
 
-// Create browser history for clean URLs in development
-const browserHistory = createBrowserHistory();
+// Create hash history for static hosting compatibility
+const hashHistory = createHashHistory();
 
 /**
- * Router instance with browser history for clean URLs
+ * Router instance with hash-based routing for static hosting compatibility
  */
 export const router = createRouter({
 	routeTree,
-	history: browserHistory,
+	history: hashHistory,
 	defaultPreload: "intent",
 	defaultComponent: NotFoundPage,
-	// Optimize route matching
 	caseSensitive: false,
 });
 
