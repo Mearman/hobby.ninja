@@ -259,7 +259,6 @@ export default [
 				{
 					allowConstantExport: true,
 					allowExportNames: ["router", "Route", "AppRouter"],
-					customExportNamePattern: "^[A-Z][a-zA-Z0-9]*$",
 				},
 			],
 
