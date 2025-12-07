@@ -1,4 +1,8 @@
 // Profile Management Types
+// Import types from other files
+import type { LanguageDetection } from "./languageDetection";
+
+
 export interface PageTypeProfile {
   urlPattern: string | RegExp;
   name: string;
@@ -127,7 +131,3 @@ export interface ProgressiveEnhancementResult {
 }
 
 export type RenderingType = "static" | "dynamic" | "hybrid";
-
-
-// Import types from other files
-import type { LanguageDetection } from "./languageDetection";

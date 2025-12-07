@@ -1,272 +1,503 @@
-import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import importPlugin from 'eslint-plugin-import';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-import prettier from 'eslint-config-prettier';
-import unicorn from 'eslint-plugin-unicorn';
-import nx from '@nx/eslint-plugin';
-import markdown from 'eslint-plugin-markdown';
-import { eslintPluginNoEmoji } from './eslint-plugins';
+import js from "@eslint/js";
+import typescript from "@typescript-eslint/eslint-plugin";
+import typescriptParser from "@typescript-eslint/parser";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import importPlugin from "eslint-plugin-import";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import prettier from "eslint-config-prettier";
+import unicorn from "eslint-plugin-unicorn";
+import nx from "@nx/eslint-plugin";
+import markdown from "eslint-plugin-markdown";
+import { eslintPluginNoEmoji } from "./eslint-plugins";
 
-import path from 'path';
-import { fileURLToPath } from 'url';
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default [
-  js.configs.recommended,
-  prettier,
-  unicorn.configs.recommended,
-  {
-    files: ['**/*.{ts,tsx,js,jsx}'],
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-        // Use absolute paths for TypeScript project configurations
-        project: [
-          path.resolve(__dirname, 'tsconfig.base.json'),
-          path.resolve(__dirname, 'packages/types/tsconfig.json'),
-          path.resolve(__dirname, 'packages/utils/tsconfig.json'),
-          path.resolve(__dirname, 'packages/cli/tsconfig.json'),
-          path.resolve(__dirname, 'apps/web/tsconfig.json'),
-          path.resolve(__dirname, 'tsconfig.json')
-        ],
-      },
-      globals: {
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        crypto: 'readonly',
-        fetch: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-      },
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      '@nx': nx,
-      'react': react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      'import': importPlugin,
-      'jsx-a11y': jsxA11y,
-      'no-emoji': eslintPluginNoEmoji,
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  rules: {
-      // TypeScript rules
-      ...typescript.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-non-null-assertion': 'warn',
+	// Base configurations
+	js.configs.recommended,
+	prettier,
+	unicorn.configs.recommended,
 
-      // Nx rules - enforce module boundaries in monorepo
-      '@nx/enforce-module-boundaries': [
-        'error',
-        {
-          enforceBuildableLibDependency: true,
-          allow: [],
-          depConstraints: [
-            {
-              sourceTag: '*',
-              onlyDependOnLibsWithTags: ['*'],
-            },
-          ],
-        },
-      ],
+	// Nx flat configs for TypeScript
+	...nx.configs["flat/typescript"],
 
-      // React rules for React 19
-      ...react.configs.flat.recommended.rules,
-      'react/react-in-jsx-scope': 'off', // Not needed in React 19+
-      'react/jsx-uses-react': 'off', // Not needed in React 19+
-      'react/prop-types': 'off', // Using TypeScript for prop validation
-      'react/jsx-boolean-value': ['error', 'always'],
-      'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
-      'react/self-closing-comp': 'error',
-      'react/jsx-fragments': ['error', 'syntax'],
+	// Nx flat configs for React (includes react-base, react-typescript, react-jsx)
+	...nx.configs["flat/react"],
 
-      // React Hooks rules
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
+	{
+		files: ["**/*.{ts,tsx,js,jsx}"],
+		languageOptions: {
+			parser: typescriptParser,
+			parserOptions: {
+				ecmaVersion: "latest",
+				sourceType: "module",
+				ecmaFeatures: {
+					jsx: true,
+				},
+				// Use absolute paths for TypeScript project configurations
+				project: [
+					path.resolve(__dirname, "tsconfig.base.json"),
+					path.resolve(__dirname, "packages/types/tsconfig.json"),
+					path.resolve(__dirname, "packages/utils/tsconfig.json"),
+					path.resolve(__dirname, "packages/cli/tsconfig.json"),
+					path.resolve(__dirname, "apps/web/tsconfig.json"),
+					path.resolve(__dirname, "tsconfig.json"),
+				],
+			},
+			globals: {
+				console: "readonly",
+				process: "readonly",
+				Buffer: "readonly",
+				__dirname: "readonly",
+				__filename: "readonly",
+				global: "readonly",
+				window: "readonly",
+				document: "readonly",
+				navigator: "readonly",
+				localStorage: "readonly",
+				sessionStorage: "readonly",
+				crypto: "readonly",
+				fetch: "readonly",
+				setTimeout: "readonly",
+				clearTimeout: "readonly",
+				setInterval: "readonly",
+				clearInterval: "readonly",
+			},
+		},
+		plugins: {
+			"@typescript-eslint": typescript,
+			"@nx": nx,
+			react: react,
+			"react-hooks": reactHooks,
+			"react-refresh": reactRefresh,
+			import: importPlugin,
+			"jsx-a11y": jsxA11y,
+			"no-emoji": eslintPluginNoEmoji,
+		},
+		settings: {
+			react: {
+				version: "detect",
+			},
+		},
+		rules: {
+			// TypeScript rules (enhanced from Nx flat/typescript)
+			...typescript.configs.recommended.rules,
+			"@typescript-eslint/no-unused-vars": [
+				"error",
+				{ argsIgnorePattern: "^_" },
+			],
+			"@typescript-eslint/no-explicit-any": "warn",
+			"@typescript-eslint/no-non-null-assertion": "warn",
+			"@typescript-eslint/no-array-constructor": "warn",
+			"@typescript-eslint/no-namespace": "error",
+			"@typescript-eslint/no-use-before-define": [
+				"warn",
+				{
+					functions: false,
+					classes: false,
+					variables: false,
+					typedefs: false,
+				},
+			],
+			"@typescript-eslint/no-useless-constructor": "warn",
+			"@typescript-eslint/no-unused-expressions": [
+				"error",
+				{
+					allowShortCircuit: true,
+					allowTernary: true,
+					allowTaggedTemplates: true,
+				},
+			],
+			"@typescript-eslint/adjacent-overload-signatures": "error",
+			"@typescript-eslint/prefer-namespace-keyword": "error",
+			"@typescript-eslint/no-empty-function": "error",
+			"@typescript-eslint/no-inferrable-types": "error",
+			"@typescript-eslint/no-empty-interface": "error",
+			"@typescript-eslint/explicit-member-accessibility": "off",
+			"@typescript-eslint/explicit-module-boundary-types": "off",
+			"@typescript-eslint/explicit-function-return-type": "off",
+			"@typescript-eslint/no-parameter-properties": "off",
 
-      // React Refresh rules
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
+			// Nx rules - enforce module boundaries in monorepo
+			"@nx/enforce-module-boundaries": [
+				"error",
+				{
+					enforceBuildableLibDependency: true,
+					allow: [],
+					depConstraints: [
+						{
+							sourceTag: "*",
+							onlyDependOnLibsWithTags: ["*"],
+						},
+					],
+				},
+			],
 
-      // Import rules
-      'import/order': [
-        'error',
-        {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-          ],
-          'newlines-between': 'always',
-          alphabetize: {
-            order: 'asc',
-            caseInsensitive: true,
-          },
-        },
-      ],
-      'import/no-duplicates': 'error',
-      'import/no-default-export': 'error',
-      'import/no-unresolved': 'off', // TypeScript handles this
+			// React rules for React 19 (enhanced from Nx flat/react-jsx)
+			...react.configs.flat.recommended.rules,
+			"react/react-in-jsx-scope": "off", // Not needed in React 19+
+			"react/jsx-uses-react": "off", // Not needed in React 19+
+			"react/prop-types": "off", // Using TypeScript for prop validation
+			"react/jsx-boolean-value": ["error", "always"],
+			"react/jsx-curly-brace-presence": [
+				"error",
+				{ props: "never", children: "never" },
+			],
+			"react/self-closing-comp": "error",
+			"react/jsx-fragments": ["error", "syntax"],
+			"react/forbid-foreign-prop-types": ["warn", { allowInPropTypes: true }],
+			"react/jsx-no-comment-textnodes": "warn",
+			"react/jsx-no-duplicate-props": "warn",
+			"react/jsx-no-target-blank": "warn",
+			"react/jsx-no-undef": "error",
+			"react/jsx-pascal-case": ["warn", { allowAllCaps: true, ignore: [] }],
+			"react/jsx-uses-vars": "warn",
+			"react/no-danger-with-children": "warn",
+			"react/no-direct-mutation-state": "warn",
+			"react/no-is-mounted": "warn",
+			"react/no-typos": "error",
+			"react/require-render-return": "error",
+			"react/style-prop-object": "warn",
+			"react/jsx-no-useless-fragment": "warn",
 
-      // JSX A11y rules
-      ...jsxA11y.configs.recommended.rules,
-      'jsx-a11y/anchor-is-valid': 'warn', // React Router handles this
+			// React Hooks rules
+			"react-hooks/rules-of-hooks": "error",
+			"react-hooks/exhaustive-deps": "warn",
 
-      // Formatting rules
-      'quotes': ['error', 'double', { avoidEscape: true, allowTemplateLiterals: true }],
-      'indent': ['error', 'tab', { SwitchCase: 1 }],
-      'semi': ['error', 'always'],
-      'comma-dangle': ['error', 'always-multiline'],
+			// React Refresh rules
+			"react-refresh/only-export-components": [
+				"warn",
+				{ allowConstantExport: true },
+			],
 
-      // Type coercion prevention
-      'no-implicit-coercion': ['error', {
-        boolean: true,
-        number: true,
-        string: true,
-        disallowTemplateShorthand: true,
-      }],
-      '@typescript-eslint/no-base-to-string': 'error',
-      '@typescript-eslint/restrict-plus-operands': 'error',
+			// Import rules (enhanced from Nx flat/react-base)
+			"import/order": [
+				"error",
+				{
+					groups: [
+						"builtin",
+						"external",
+						"internal",
+						"parent",
+						"sibling",
+						"index",
+					],
+					"newlines-between": "always",
+					alphabetize: {
+						order: "asc",
+						caseInsensitive: true,
+					},
+				},
+			],
+			"import/no-duplicates": "error",
+			"import/no-default-export": "error",
+			"import/no-unresolved": "off", // TypeScript handles this
+			"import/first": "error",
+			"import/no-amd": "error",
+			"import/no-webpack-loader-syntax": "error",
 
-      // General rules
-      'no-console': 'warn',
-      'prefer-const': 'error',
-      'no-var': 'error',
+			// JSX A11y rules (enhanced from Nx flat/react-jsx)
+			...jsxA11y.configs.recommended.rules,
+			"jsx-a11y/anchor-is-valid": [
+				"warn",
+				{ aspects: ["noHref", "invalidHref"] },
+			],
+			"jsx-a11y/accessible-emoji": "warn",
+			"jsx-a11y/alt-text": "warn",
+			"jsx-a11y/anchor-has-content": "warn",
+			"jsx-a11y/aria-activedescendant-has-tabindex": "warn",
+			"jsx-a11y/aria-props": "warn",
+			"jsx-a11y/aria-proptypes": "warn",
+			"jsx-a11y/aria-role": "warn",
+			"jsx-a11y/aria-unsupported-elements": "warn",
+			"jsx-a11y/heading-has-content": "warn",
+			"jsx-a11y/iframe-has-title": "warn",
+			"jsx-a11y/img-redundant-alt": "warn",
+			"jsx-a11y/no-access-key": "warn",
+			"jsx-a11y/no-distracting-elements": "warn",
+			"jsx-a11y/no-redundant-roles": "warn",
+			"jsx-a11y/role-has-required-aria-props": "warn",
+			"jsx-a11y/role-supports-aria-props": "warn",
+			"jsx-a11y/scope": "warn",
 
-      // Emoji ban
-      'no-emoji/no-emoji': 'error',
-    },
-  },
-  {
-    // Unicorn rule overrides
-    rules: {
-      'unicorn/prevent-abbreviations': 'off',
-      'unicorn/no-null': 'off',
-    },
-  },
-  {
-    files: ['**/*.test.{ts,tsx}', '**/*.spec.{ts,tsx}'],
-    rules: {
-      '@typescript-eslint/no-explicit-any': 'off',
-      'no-console': 'off',
-    },
-  },
-  {
-    files: ['**/*.e2e.test.{ts,tsx}'],
-    rules: {
-      '@typescript-eslint/no-explicit-any': 'off',
-      'no-console': 'off',
-      'playwright/missing-playwright-await': 'off', // Not using the Playwright ESLint plugin yet
-    },
-  },
-  {
-    // Logger utility needs to use console statements
-    files: ['**/packages/translation/src/logger.ts'],
-    rules: {
-      'no-console': 'off',
-      'unicorn/no-negated-condition': 'off',
-    },
-  },
-  {
-    // Markdown files configuration with emoji ban
-    files: ['**/*.md'],
-    plugins: {
-      'markdown': markdown,
-      'no-emoji': eslintPluginNoEmoji,
-    },
-    processor: 'markdown/markdown',
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'script',
-    },
-    rules: {
-      'no-emoji/no-emoji': 'error',
-    },
-  },
-  {
-    // Configuration for code blocks extracted from markdown files
-    files: ['**/*.md/**'],
-    plugins: {
-      'no-emoji': eslintPluginNoEmoji,
-    },
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        project: false,
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    rules: {
-      'no-emoji/no-emoji': 'error',
-      // Disable TypeScript rules that require type information for extracted blocks
-      '@typescript-eslint/no-base-to-string': 'off',
-      '@typescript-eslint/restrict-plus-operands': 'off',
-    },
-  },
-  {
-    // Types package files require camelCase for barrelsby to work properly
-    files: ['packages/types/src/*.ts'],
-    rules: {
-      'unicorn/filename-case': 'off',
-    },
-  },
-  {
-    // Utils package files require camelCase for barrelsby to work properly
-    files: ['packages/utils/src/*.ts'],
-    rules: {
-      'unicorn/filename-case': 'off',
-    },
-  },
-  {
-    ignores: [
-      'dist/**',
-      'build/**',
-      'node_modules/**',
-      'coverage/**',
-      'tmp/**',
-      '.nx/cache/**',
-      '.next/**',
-      '!.syncpackrc.json',
-      'playwright-report/**',
-      'test-results/**',
-    ],
-  },
+			// Standard ESLint rules (from Nx flat/react-base)
+			"array-callback-return": "warn",
+			"dot-location": ["warn", "property"],
+			eqeqeq: ["warn", "smart"],
+			"new-parens": "warn",
+			"no-caller": "warn",
+			"no-cond-assign": ["warn", "except-parens"],
+			"no-const-assign": "warn",
+			"no-control-regex": "warn",
+			"no-delete-var": "warn",
+			"no-dupe-args": "warn",
+			"no-dupe-keys": "warn",
+			"no-duplicate-case": "warn",
+			"no-empty-character-class": "warn",
+			"no-empty-pattern": "warn",
+			"no-eval": "warn",
+			"no-ex-assign": "warn",
+			"no-extend-native": "warn",
+			"no-extra-bind": "warn",
+			"no-extra-label": "warn",
+			"no-fallthrough": "warn",
+			"no-func-assign": "warn",
+			"no-implied-eval": "warn",
+			"no-invalid-regexp": "warn",
+			"no-iterator": "warn",
+			"no-label-var": "warn",
+			"no-labels": ["warn", { allowLoop: true, allowSwitch: false }],
+			"no-lone-blocks": "warn",
+			"no-loop-func": "warn",
+			"no-mixed-operators": [
+				"warn",
+				{
+					groups: [
+						["&", "|", "^", "~", "<<", ">>", ">>>"],
+						["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+						["&&", "||"],
+						["in", "instanceof"],
+					],
+					allowSamePrecedence: false,
+				},
+			],
+			"no-multi-str": "warn",
+			"no-new-func": "warn",
+			"no-new-wrappers": "warn",
+			"no-obj-calls": "warn",
+			"no-octal": "warn",
+			"no-octal-escape": "warn",
+			"no-redeclare": "warn",
+			"no-regex-spaces": "warn",
+			"no-restricted-syntax": ["warn", "WithStatement"],
+			"no-script-url": "warn",
+			"no-self-assign": "warn",
+			"no-self-compare": "warn",
+			"no-sequences": "warn",
+			"no-shadow-restricted-names": "warn",
+			"no-sparse-arrays": "warn",
+			"no-template-curly-in-string": "warn",
+			"no-this-before-super": "warn",
+			"no-throw-literal": "warn",
+			"no-unexpected-multiline": "warn",
+			"no-unreachable": "warn",
+			"no-unused-labels": "warn",
+			"no-useless-computed-key": "warn",
+			"no-useless-concat": "warn",
+			"no-useless-escape": "warn",
+			"no-useless-rename": [
+				"warn",
+				{
+					ignoreDestructuring: false,
+					ignoreImport: false,
+					ignoreExport: false,
+				},
+			],
+			"no-with": "warn",
+			"no-whitespace-before-property": "warn",
+			"require-yield": "warn",
+			"rest-spread-spacing": ["warn", "never"],
+			strict: ["warn", "never"],
+			"unicode-bom": ["warn", "never"],
+			"use-isnan": "warn",
+			"valid-typeof": "warn",
+			"no-restricted-properties": [
+				"error",
+				{
+					object: "require",
+					property: "ensure",
+					message:
+						"Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting",
+				},
+				{
+					object: "System",
+					property: "import",
+					message:
+						"Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting",
+				},
+			],
+			"getter-return": "warn",
+			"default-case": "off", // TypeScript's noFallthroughCasesInSwitch is more robust
+			"no-dupe-class-members": "off", // tsc handles this
+			"no-undef": "off", // tsc handles this
+			"no-array-constructor": "off", // Using @typescript-eslint version
+			"no-use-before-define": "off", // Using @typescript-eslint version
+			"no-unused-vars": "off", // Using @typescript-eslint version
+			"no-useless-constructor": "off", // Using @typescript-eslint version
+			"no-unused-expressions": "off", // Using @typescript-eslint version
+			"no-empty-function": "off", // Using @typescript-eslint version
+
+			// Formatting rules
+			quotes: [
+				"error",
+				"double",
+				{ avoidEscape: true, allowTemplateLiterals: true },
+			],
+			indent: ["error", "tab", { SwitchCase: 1 }],
+			semi: ["error", "always"],
+			"comma-dangle": ["error", "always-multiline"],
+
+			// Type coercion prevention
+			"no-implicit-coercion": [
+				"error",
+				{
+					boolean: true,
+					number: true,
+					string: true,
+					disallowTemplateShorthand: true,
+				},
+			],
+			"@typescript-eslint/no-base-to-string": "error",
+			"@typescript-eslint/restrict-plus-operands": "error",
+
+			// General rules
+			"no-console": "warn",
+			"prefer-const": "error",
+			"no-var": "error",
+
+			// Emoji ban
+			"no-emoji/no-emoji": "error",
+		},
+	},
+
+	// Nx dependency-checks for package.json validation
+	{
+		files: ["**/package.json"],
+		plugins: {
+			"@nx": nx,
+		},
+		rules: {
+			"@nx/dependency-checks": [
+				"error",
+				{
+					buildTargets: ["build"],
+					checkMissingDependencies: true,
+					checkObsoleteDependencies: true,
+					checkVersionMismatches: true,
+					ignoredDependencies: [],
+					ignoredFiles: [],
+					includeTransitiveDependencies: false,
+				},
+			],
+		},
+	},
+
+	{
+		// Unicorn rule overrides
+		rules: {
+			"unicorn/prevent-abbreviations": "off",
+			"unicorn/no-null": "off",
+		},
+	},
+	{
+		files: ["**/*.test.{ts,tsx}", "**/*.spec.{ts,tsx}"],
+		rules: {
+			"@typescript-eslint/no-explicit-any": "off",
+			"no-console": "off",
+		},
+	},
+	{
+		files: ["**/*.e2e.test.{ts,tsx}"],
+		rules: {
+			"@typescript-eslint/no-explicit-any": "off",
+			"no-console": "off",
+			"playwright/missing-playwright-await": "off", // Not using the Playwright ESLint plugin yet
+		},
+	},
+	{
+		// Logger utility needs to use console statements
+		files: ["**/packages/translation/src/logger.ts"],
+		rules: {
+			"no-console": "off",
+			"unicorn/no-negated-condition": "off",
+		},
+	},
+	{
+		// Markdown files configuration with emoji ban
+		files: ["**/*.md"],
+		plugins: {
+			markdown: markdown,
+			"no-emoji": eslintPluginNoEmoji,
+		},
+		processor: "markdown/markdown",
+		languageOptions: {
+			ecmaVersion: "latest",
+			sourceType: "script",
+		},
+		rules: {
+			"no-emoji/no-emoji": "error",
+		},
+	},
+	{
+		// Configuration for code blocks extracted from markdown files
+		files: ["**/*.md/**"],
+		plugins: {
+			"no-emoji": eslintPluginNoEmoji,
+		},
+		languageOptions: {
+			parser: typescriptParser,
+			parserOptions: {
+				project: false,
+				ecmaVersion: "latest",
+				sourceType: "module",
+				ecmaFeatures: {
+					jsx: true,
+				},
+			},
+		},
+		rules: {
+			"no-emoji/no-emoji": "error",
+			// Disable TypeScript rules that require type information for extracted blocks
+			"@typescript-eslint/no-base-to-string": "off",
+			"@typescript-eslint/restrict-plus-operands": "off",
+		},
+	},
+	{
+		// Types package files require camelCase for barrelsby to work properly
+		files: ["packages/types/src/*.ts"],
+		rules: {
+			"unicorn/filename-case": "off",
+		},
+	},
+	{
+		// Utils package files require camelCase for barrelsby to work properly
+		files: ["packages/utils/src/*.ts"],
+		rules: {
+			"unicorn/filename-case": "off",
+		},
+	},
+	{
+		// Config files can use default exports
+		files: [
+			"*.config.ts",
+			"*.config.js",
+			"*.config.mjs",
+			"vite.config.ts",
+			"vitest.config.ts",
+			"playwright.config.ts",
+		],
+		rules: {
+			"import/no-default-export": "off",
+		},
+	},
+	{
+		ignores: [
+			"dist/**",
+			"build/**",
+			"node_modules/**",
+			"coverage/**",
+			"tmp/**",
+			".nx/cache/**",
+			".next/**",
+			"!.syncpackrc.json",
+			"playwright-report/**",
+			"test-results/**",
+		],
+	},
 ];

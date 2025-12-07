@@ -1,4 +1,7 @@
 // Product Data Types
+// Import LanguageDetection from the languageDetection file
+import type { LanguageDetection } from "./languageDetection";
+
 export interface PriceInfo {
   amount: number;
   currency: string;
@@ -38,6 +41,3 @@ export interface GundamData {
   source: string;
   scrapedAt: string;
 }
-
-// Import LanguageDetection from the languageDetection file
-import type { LanguageDetection } from "./languageDetection";
