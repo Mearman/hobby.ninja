@@ -2,8 +2,8 @@
 export { SearchAndFilter } from "./SearchAndFilter";
 export type { SearchAndFilterProps } from "./SearchAndFilter";
 
-export { AdvancedFilters } from "./AdvancedFilters";
-export type { AdvancedFiltersProps } from "./AdvancedFilters";
+export { AdvancedFilters } from "./advanced-filters";
+export type { AdvancedFiltersProps } from "./advanced-filters";
 
 // Display components
 export { ItemCard } from "./ItemCard";

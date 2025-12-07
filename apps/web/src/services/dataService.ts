@@ -295,7 +295,7 @@ interface ProgressUpdate {
 }
 
 import { progressTracker } from "./progressTracker";
-import { workerManager } from "./workerManager";
+import { workerManager } from "./worker-manager";
 
 // ============================================================================
 // CONFIGURATION & CONSTANTS

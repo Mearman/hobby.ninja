@@ -25,7 +25,7 @@ import { IconSearch, IconFilter, IconChevronRight, IconAdjustmentsHorizontal } f
 import { useNavigate, useParams, Link } from "@tanstack/react-router";
 import React, { useState, useEffect, useCallback } from "react";
 
-import { AdvancedFilters } from "../components/database/AdvancedFilters";
+import { AdvancedFilters } from "../components/database/advanced-filters";
 import { ItemCard } from "../components/database/ItemCard";
 import { dataService } from "../services/dataService";
 import { databaseContainer, heroSection, statsCard } from "../styles/styles.css";
