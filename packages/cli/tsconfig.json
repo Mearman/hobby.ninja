@@ -1,38 +1,44 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "strict": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "exactOptionalPropertyTypes": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "declaration": true,
-    "declarationMap": true,
-    "composite": true,
-    "incremental": true,
-    "tsBuildInfoFile": "./dist/.tsbuildinfo",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "noEmit": false,
-    "sourceMap": true,
-    "module": "CommonJS",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"],
-  "references": [
-    {
-      "path": "../utils"
-    },
-    {
-      "path": "../types"
-    }
-  ]
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"strict": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"exactOptionalPropertyTypes": false,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"declaration": true,
+		"declarationMap": true,
+		"incremental": true,
+		"tsBuildInfoFile": "./dist/.tsbuildinfo",
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"noEmit": false,
+		"sourceMap": true,
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true
+	},
+	"include": ["src/**/*.ts", "src/**/*.tsx"],
+	"exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"],
+	"references": [
+		{
+			"path": "../utils"
+		},
+		{
+			"path": "../types"
+		},
+		{
+			"path": "../translation"
+		},
+		{
+			"path": "../scrapers"
+		}
+	]
 }
