@@ -140,7 +140,7 @@ program
 	.option("--manuals-dir <dir>", "Manual data directory", "./data/bandai/manuals")
 	.option("--catalog-dir <dir>", "Catalog data directory", "./data/bandai/items")
 	.option("--concurrency <n>", "Number of concurrent downloads", "5")
-	.option("--delay <ms>", "Delay between batches in milliseconds", "100")
+	.option("--delay <ms>", "Delay between batches in milliseconds", "0")
 	.option("--dry-run", "Show what would be downloaded without downloading", false)
 	.option("-v, --verbose", "Verbose output", false)
 	.action(async (options) => {
@@ -379,6 +379,54 @@ program
 				console.error("No checkpoint file found. Run `wayback` command first to create one.");
 			} else {
 				console.error("Error reading checkpoint:", error instanceof Error ? error.message : String(error));
+			}
+			process.exit(1);
+		}
+	});
+
+// Unify command implementation
+program
+	.command("unify")
+	.description("Build unified product database by matching catalog items to manuals")
+	.option("--data-dir <dir>", "Base data directory", "./data/bandai")
+	.option("--output <dir>", "Output directory for unified data", "./data/bandai/unified")
+	.option("--min-confidence <n>", "Minimum confidence for auto-match (0.0-1.0)", "0.70")
+	.option("--review-threshold <n>", "Below this goes to orphans, above to review queue (0.0-1.0)", "0.50")
+	.option("--dry-run", "Preview without writing files", false)
+	.option("-v, --verbose", "Verbose output", false)
+	.action(async (options) => {
+		try {
+			const { runUnification, printStats } = await import("../unify/unifier.js");
+			const { resolve } = await import("path");
+
+			const dataDir = resolve(process.cwd(), options.dataDir);
+			const outputDir = resolve(process.cwd(), options.output);
+
+			console.log("Building unified product database...");
+			console.log(`Data directory: ${dataDir}`);
+			console.log(`Output directory: ${outputDir}`);
+			console.log(`Min confidence: ${options.minConfidence}`);
+			console.log(`Review threshold: ${options.reviewThreshold}`);
+			console.log(`Dry run: ${options.dryRun}`);
+			console.log("");
+
+			const stats = await runUnification(dataDir, {
+				thresholds: {
+					autoAccept: parseFloat(options.minConfidence),
+					reviewCutoff: parseFloat(options.reviewThreshold),
+				},
+				dryRun: options.dryRun,
+				outputDir,
+			});
+
+			printStats(stats);
+			process.exit(0);
+		} catch (error) {
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Unification failed:", errorMessage);
+			if (options.verbose) {
+				const errorStack = error instanceof Error ? error.stack : String(error);
+				console.error(errorStack);
 			}
 			process.exit(1);
 		}
