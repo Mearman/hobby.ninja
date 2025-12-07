@@ -1,7 +1,7 @@
 import { promises as fs } from "node:fs";
 import * as path from "node:path";
 
-import type { CacheManager } from "@hobby-ninja/types";
+import type { CacheManager } from "@hobby-ninja/types/profile";
 
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds

@@ -14,7 +14,7 @@ import {
   TranslationResult,
   TranslationStoreError,
   type StoreConfiguration,
-} from '../index';
+} from '../mod';
 
 /**
  * Example 1: Basic usage with factory function

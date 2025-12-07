@@ -21,7 +21,7 @@ import {
 	TranslationService,
 	createCache,
 	TranslationServiceError,
-} from "./index";
+} from "./mod";
 
 // Configure logger for examples - always enabled for demo purposes
 logger.updateConfig({

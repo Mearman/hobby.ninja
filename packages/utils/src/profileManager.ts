@@ -1,7 +1,7 @@
 import { promises as fs } from "node:fs";
 import * as path from "node:path";
 
-import type { CacheManager, ProfileCache, ProfileGenerationResult, PageTypeProfile } from "@hobby-ninja/types";
+import type { CacheManager, ProfileCache, ProfileGenerationResult, PageTypeProfile } from "@hobby-ninja/types/profile";
 
 import { cacheManager } from "./cache-manager";
 import { LanguageDetector } from "./languageDetection";
