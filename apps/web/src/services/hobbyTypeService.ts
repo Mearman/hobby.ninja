@@ -10,8 +10,12 @@ export interface PublicHobbyType {
   name: string;
   description: string;
   brands?: string[];
-  grades?: string[];
+  categories?: string[];
   scales?: string[];
+  difficulty_levels?: string[];
+  rarities?: string[];
+  card_types?: string[];
+  materials?: string[];
 }
 
 export interface HobbyTypeStats {
@@ -251,19 +255,83 @@ export class HobbyTypeService {
 			},
 		];
 
-		// Add hobby-specific fields
-		if (publicType.grades?.length) {
+		// Add hobby-specific fields based on type
+		if (publicType.id === "model_kits" && publicType.difficulty_levels?.length) {
 			baseFields.push({
-				id: "grade",
-				name: "Grade",
-				key: "grade",
+				id: "difficulty_level",
+				name: "Difficulty Level",
+				key: "difficulty_level",
 				type: "select" as const,
 				required: false,
 				searchable: false,
 				filterable: true,
 				displayInList: true,
 				displayInDetail: true,
-				options: publicType.grades.map(grade => ({ label: grade, value: grade })),
+				options: publicType.difficulty_levels.map(level => ({ label: level, value: level })),
+				order: 3,
+			});
+		}
+
+		if (publicType.id === "trading_cards" && publicType.rarities?.length) {
+			baseFields.push({
+				id: "rarity",
+				name: "Rarity",
+				key: "rarity",
+				type: "select" as const,
+				required: false,
+				searchable: false,
+				filterable: true,
+				displayInList: true,
+				displayInDetail: true,
+				options: publicType.rarities.map(rarity => ({ label: rarity, value: rarity })),
+				order: 3,
+			});
+		}
+
+		if (publicType.id === "trading_cards" && publicType.card_types?.length) {
+			baseFields.push({
+				id: "card_type",
+				name: "Card Type",
+				key: "card_type",
+				type: "select" as const,
+				required: false,
+				searchable: false,
+				filterable: true,
+				displayInList: true,
+				displayInDetail: true,
+				options: publicType.card_types.map(type => ({ label: type, value: type })),
+				order: 4,
+			});
+		}
+
+		if (publicType.id === "action_figures" && publicType.materials?.length) {
+			baseFields.push({
+				id: "material",
+				name: "Material",
+				key: "material",
+				type: "select" as const,
+				required: false,
+				searchable: false,
+				filterable: true,
+				displayInList: false,
+				displayInDetail: true,
+				options: publicType.materials.map(material => ({ label: material, value: material })),
+				order: 3,
+			});
+		}
+
+		if (publicType.id === "miniatures" && publicType.materials?.length) {
+			baseFields.push({
+				id: "material",
+				name: "Material",
+				key: "material",
+				type: "select" as const,
+				required: false,
+				searchable: false,
+				filterable: true,
+				displayInList: false,
+				displayInDetail: true,
+				options: publicType.materials.map(material => ({ label: material, value: material })),
 				order: 3,
 			});
 		}

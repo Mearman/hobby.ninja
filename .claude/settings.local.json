@@ -27,7 +27,10 @@
       "Bash(host collector.app)",
       "Bash(xargs:*)",
       "Bash(grep:*)",
-      "Bash(wrangler r2 bucket list:*)"
+      "Bash(wrangler r2 bucket list:*)",
+      "Bash(for pkg in cli scrapers translation utils web)",
+      "Bash(do echo \"=== $pkg ===\")",
+      "Bash(done)"
     ],
     "deny": [
       "Bash(git add .)",
