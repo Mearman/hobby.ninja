@@ -1,0 +1,74 @@
+{
+  "id": "01_3187",
+  "type": "item",
+  "name": {
+    "ja": "1/60 量産型ザク",
+    "en": "1/60 mass-produced Zaku"
+  },
+  "price": {
+    "amount": 2200,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1985年04月01日 (月)",
+    "year": 1985,
+    "month": 4,
+    "day": 1
+  },
+  "targetAge": 15,
+  "scale": "1/60",
+  "description": [
+    {
+      "ja": "『機動戦士ガンダム』より、1/60スケールで、量産型ザクが登場。",
+      "en": "From \"Mobile Suit Gundam\", a 1/60 scale mass-produced Zaku appears."
+    },
+    {
+      "ja": "別売のムギ球と単三乾電池２本を使用し、モノアイが点灯可能です。脚は左右、ハの字方向の可動と、足首の前後スイングが可能です。手首は通常の握り手と、ザク・マシンガン専用右握り手、同スケールのジオン兵フィギュアを乗せる左手首が付いています。",
+      "en": "Monoeye can be lit using a wheat bulb and two AA batteries (sold separately). The legs can be moved left and right, and the ankles can be swung back and forth. The wrists include a normal gripping hand, a right gripping hand for the Zaku machine gun, and a left wrist for holding a Zeon soldier figure of the same scale."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4146_s_2osnswevt44scv7e5zi1kone565k.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3187/",
+  "extractedAt": "2025-12-06T17:50:55.351Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

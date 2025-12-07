@@ -1,0 +1,90 @@
+{
+  "id": "01_5488",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 ガザC",
+    "en": "HGUC 1/144 Gaza C"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2006年04月08日 (土)",
+    "year": 2006,
+    "month": 4,
+    "day": 8
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「機動戦士Ｚガンダム」に登場するアクシズのモビルスーツ、ガザＣ（一般機）のHGUCシリーズプラモデルです。モビルアーマーへの変形を一部パーツ差替えで再現可能です。ハマーンのガザＣと一緒に飾れるスタンドが付属します。",
+      "en": "HGUC series plastic model of Gaza C (general aircraft), the Axis mobile suit that appears in \"Mobile Suit Z Gundam\". Transformation into mobile armor can be reproduced by replacing some parts. Comes with a stand that can be displayed with Haman's Gaza C."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_632_s_gz9jqdz0t4p3kdeslza5l70tlmkf.jpg",
+    "https://bandai-hobby.net/images/155_632_s_oiuqz4ppd5fq1hrxoi3ictc99f6i.jpg",
+    "https://bandai-hobby.net/images/156_632_s_q545uu5jc4j9plb47ytxgsp64tiu.jpg",
+    "https://bandai-hobby.net/images/157_632_s_7p3dnsz5dger8byte7ivi7ayk7xk.jpg",
+    "https://bandai-hobby.net/images/158_632_s_rfe87hjxntrvg8w0pc22162dfmzh.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5488/",
+  "extractedAt": "2025-12-06T17:56:01.441Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0894",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5468",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5375",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5162",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "0594",
+  "type": "manual",
+  "name": {
+    "ja": "MG 1/100 ガンダムヘビーアームズ EW",
+    "en": "MG 1/100 Gundam Heavy Arms EW"
+  },
+  "productNumber": "2137799",
+  "releaseDate": {
+    "ja": "2012年1月28日",
+    "year": 2012,
+    "month": 1,
+    "day": 28
+  },
+  "productImage": "https://bandai-hobby.net/images/156_2727_s_fueagxcvp7mb237tu2bcov81ikrc.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_2727_s_fueagxcvp7mb237tu2bcov81ikrc.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/594/",
+  "extractedAt": "2025-12-05T23:09:47.296Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/594.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "new-mobile-report-gundam-w",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1788",
+        "targetType": "item"
+      }
+    ]
+  }
+}

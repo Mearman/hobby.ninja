@@ -1,0 +1,41 @@
+{
+  "id": "0490",
+  "type": "manual",
+  "name": {
+    "ja": "HGAC 1/144 マグアナック",
+    "en": "HGAC 1/144 Maguanac"
+  },
+  "productNumber": "2467930",
+  "releaseDate": {
+    "ja": "2019年4月20日",
+    "year": 2019,
+    "month": 4,
+    "day": 20
+  },
+  "productImage": "https://bandai-hobby.net/images/190_3125_s_5fnfia40bf9lu0pyy3w3hgcu7bka.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/190_3125_s_5fnfia40bf9lu0pyy3w3hgcu7bka.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/490/",
+  "extractedAt": "2025-12-05T23:09:47.117Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/490.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "new-mobile-report-gundam-w",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2177",
+        "targetType": "item"
+      }
+    ]
+  }
+}

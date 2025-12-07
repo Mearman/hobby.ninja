@@ -1,0 +1,103 @@
+{
+  "id": "01_2400",
+  "type": "item",
+  "name": {
+    "ja": "30MM 1/144 アームユニット ライフル/大型クロー",
+    "en": "30MM 1/144 Arm Unit Rifle/Large Claw"
+  },
+  "price": {
+    "amount": 770,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2019年09月14日 (土)",
+    "year": 2019,
+    "month": 9,
+    "day": 14
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "武器もカスタマイズ!!",
+      "en": "Customize your weapons too!!"
+    },
+    {
+      "ja": "30MM 1/144用オプションウェポンが登場！",
+      "en": "Option Weapon for 30MM 1/144 is now available!"
+    },
+    {
+      "ja": "• 大型クローとアームライフルのセット。",
+      "en": "• Large claw and arm rifle set."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "大型クロー×1",
+      "en": "Large claw x 1"
+    },
+    {
+      "ja": "アームライフル×1",
+      "en": "Arm rifle x 1"
+    }
+  ],
+  "contents": [
+    {
+      "ja": "成形品×1",
+      "en": "Molded product x 1"
+    }
+  ],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139465_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139465_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139465_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139465_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139465_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000139465_6.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2400/",
+  "extractedAt": "2025-12-06T17:49:16.901Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "3642",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-missions",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5972",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5973",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5974",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5964",
+        "targetType": "item"
+      }
+    ]
+  }
+}

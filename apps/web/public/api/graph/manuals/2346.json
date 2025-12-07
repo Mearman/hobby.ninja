@@ -1,0 +1,40 @@
+{
+  "id": "2346",
+  "type": "manual",
+  "name": {
+    "ja": "ＭＧ 1/100 ブレイズザクファントム（レイ・ザ・バレル専用機）",
+    "en": "MG 1/100 Blaze Zaku Phantom (Ray the Barrel exclusive machine)"
+  },
+  "productNumber": "2563435",
+  "releaseDate": {
+    "ja": "2021年6月",
+    "year": 2021,
+    "month": 6
+  },
+  "productImage": "https://bandai-hobby.net/images/153_4428_s_dp40vwtlrz71k78krboe05nilv51.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_4428_s_dp40vwtlrz71k78krboe05nilv51.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2346/",
+  "extractedAt": "2025-12-05T23:09:48.537Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2346.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3474",
+        "targetType": "item"
+      }
+    ]
+  }
+}

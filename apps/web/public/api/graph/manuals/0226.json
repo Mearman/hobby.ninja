@@ -1,0 +1,40 @@
+{
+  "id": "0226",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 MS-14Fs ゲルググマリーネシーマカスタム",
+    "en": "HGUC 1/144 MS-14Fs Gelgoog Marine Seama Custom"
+  },
+  "productNumber": "1107720",
+  "releaseDate": {
+    "ja": "2002年1月",
+    "year": 2002,
+    "month": 1
+  },
+  "productImage": "https://bandai-hobby.net/images/157_244_s_lwd8rq3bm3ayyhobeaeaou8z7yj2.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_244_s_lwd8rq3bm3ayyhobeaeaou8z7yj2.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/226/",
+  "extractedAt": "2025-12-05T23:09:46.688Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/226.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-0083-stardust-memory",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1533",
+        "targetType": "item"
+      }
+    ]
+  }
+}

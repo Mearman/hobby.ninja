@@ -1,0 +1,77 @@
+{
+  "id": "01_4948",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 RX-78-2 GUNDAM Ver.G30th グリーン東京プロジェクト",
+    "en": "HG 1/144 RX-78-2 GUNDAM Ver.G30th Green Tokyo Project"
+  },
+  "price": {
+    "amount": 1572,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2009年07月11日 (土)",
+    "year": 2009,
+    "month": 7,
+    "day": 11
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "HG 1/144 RX-78-2 GUNDAM Ver.G30th グリーン東京プロジェクト登場！",
+      "en": "HG 1/144 RX-78-2 GUNDAM Ver.G30th Green Tokyo Project is here!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5820_s_o0gt3ad9jml8yv4s14mkrmrbgoaf.jpg",
+    "https://bandai-hobby.net/images/155_5820_s_v5br5ispzzevj6tewkn82n48ivti.jpg",
+    "https://bandai-hobby.net/images/156_5820_s_jl3w26tfd3nba6775ja5grf7osx5.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4948/",
+  "extractedAt": "2025-12-06T17:54:46.910Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4365",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3669",
+        "targetType": "item"
+      }
+    ]
+  }
+}

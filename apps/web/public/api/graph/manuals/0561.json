@@ -1,0 +1,41 @@
+{
+  "id": "0561",
+  "type": "manual",
+  "name": {
+    "ja": "MG 1/100 Vダッシュガンダム Ver.Ka",
+    "en": "MG 1/100 V Dash Gundam Ver.Ka"
+  },
+  "productNumber": "2028931",
+  "releaseDate": {
+    "ja": "2010年7月22日",
+    "year": 2010,
+    "month": 7,
+    "day": 22
+  },
+  "productImage": "https://bandai-hobby.net/images/196_2703_s_suuww6dv4umegq5018v32ss4h7ip.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/196_2703_s_suuww6dv4umegq5018v32ss4h7ip.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/561/",
+  "extractedAt": "2025-12-05T23:09:47.252Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/561.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-v-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1762",
+        "targetType": "item"
+      }
+    ]
+  }
+}

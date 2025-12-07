@@ -1,0 +1,63 @@
+{
+  "id": "01_2191",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ガンダムアスタロトリナシメント[アイアンブラッドコーティング]",
+    "en": "HG 1/144 Gundam Astarothorinascimento [Iron Blood Coating]"
+  },
+  "price": {
+    "amount": 4290,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2018年12月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
+      "en": "Event-limited Gunpla sold at various event venues."
+    },
+    {
+      "ja": "HG アスタロトリナシメントがイベント限定のアイアンブラッドコーティングで登場！",
+      "en": "HG Astaroth Trinascimento now available in event-limited Iron Blood coating!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3138_o_1d2a1pc4b53u15331qmq16jeeq623.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2191/",
+  "extractedAt": "2025-12-06T17:48:50.163Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "iron-blooded-orphans-1100-full-mechanics",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      }
+    ]
+  }
+}

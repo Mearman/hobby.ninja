@@ -1,0 +1,41 @@
+{
+  "id": "0717",
+  "type": "manual",
+  "name": {
+    "ja": "HGBC 1/144 メテオホッパー",
+    "en": "HGBC 1/144 Meteor Hopper"
+  },
+  "productNumber": "2221170",
+  "releaseDate": {
+    "ja": "2013年12月7日",
+    "year": 2013,
+    "month": 12,
+    "day": 7
+  },
+  "productImage": "https://bandai-hobby.net/images/155_998_s_6jc2tuwpc7m270ykp0jdphcla6vh.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/155_998_s_6jc2tuwpc7m270ykp0jdphcla6vh.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/717/",
+  "extractedAt": "2025-12-05T23:09:47.454Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/717.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-fighters",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5920",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "0085",
+  "type": "manual",
+  "name": {
+    "ja": "HGBD:R 1/144 ガンダムテルティウム",
+    "en": "HGBD:R 1/144 Gundam Tertium"
+  },
+  "productNumber": "2492935",
+  "releaseDate": {
+    "ja": "2020年2月8日",
+    "year": 2020,
+    "month": 2,
+    "day": 8
+  },
+  "productImage": "https://bandai-hobby.net/images/159_3699_s_bhydy0tfgnxlsk4aul166abubli3.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/159_3699_s_bhydy0tfgnxlsk4aul166abubli3.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/85/",
+  "extractedAt": "2025-12-05T23:09:46.440Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/85.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers-rerise",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2704",
+        "targetType": "item"
+      }
+    ]
+  }
+}

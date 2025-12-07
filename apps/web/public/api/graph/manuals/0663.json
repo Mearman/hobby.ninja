@@ -1,0 +1,41 @@
+{
+  "id": "0663",
+  "type": "manual",
+  "name": {
+    "ja": "RG 1/144 ZGMF-X42S デスティニーガンダム",
+    "en": "RG 1/144 ZGMF-X42S Destiny Gundam"
+  },
+  "productNumber": "2205030",
+  "releaseDate": {
+    "ja": "2013年4月27日",
+    "year": 2013,
+    "month": 4,
+    "day": 27
+  },
+  "productImage": "https://bandai-hobby.net/images/193_872_o_1ddksh57kdkg17msapj1jqk2qv3v.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/193_872_o_1ddksh57kdkg17msapj1jqk2qv3v.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/663/",
+  "extractedAt": "2025-12-05T23:09:47.383Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/663.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed-destiny",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "rg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5802",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "0647",
+  "type": "manual",
+  "name": {
+    "ja": "MG 1/100 ゼータガンダム Ver.Ka",
+    "en": "MG 1/100 Zeta Gundam Ver.Ka"
+  },
+  "productNumber": "2615240",
+  "releaseDate": {
+    "ja": "2023年4月29日",
+    "year": 2023,
+    "month": 4,
+    "day": 29
+  },
+  "productImage": "https://bandai-hobby.net/images/196_5223_s_1ffmjpf2wznmwzr38hf734r86g3g.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/196_5223_s_1ffmjpf2wznmwzr38hf734r86g3g.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/647/",
+  "extractedAt": "2025-12-05T23:09:47.363Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/647.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4311",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "01_1605",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士 194武者ナタク",
+    "en": "BB Senshi 194 Musha Nataku"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1999年03月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "description": [
+    {
+      "ja": "BB戦士 194武者ナタク登場！！",
+      "en": "BB Senshi 194 Musha Nataku appears! !"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2517_s_z4fk8o71pi7qu1f142loyuesa0n8.jpg",
+    "https://bandai-hobby.net/images/155_2517_s_vmjndx5n3hbk5dmvemmokfgustdy.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1605/",
+  "extractedAt": "2025-12-06T17:34:50.844Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-series",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-warrior",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

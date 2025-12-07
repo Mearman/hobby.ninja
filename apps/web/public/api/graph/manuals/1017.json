@@ -1,0 +1,41 @@
+{
+  "id": "1017",
+  "type": "manual",
+  "name": {
+    "ja": "HGBD 1/144 ジムIIIビームマスター",
+    "en": "HGBD 1/144 Jim III Beam Master"
+  },
+  "productNumber": "2426155",
+  "releaseDate": {
+    "ja": "2018年4月14日",
+    "year": 2018,
+    "month": 4,
+    "day": 14
+  },
+  "productImage": "https://bandai-hobby.net/images/158_2244_s_mepfn7sdatis09mnasvcjrh10ptl.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/158_2244_s_mepfn7sdatis09mnasvcjrh10ptl.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1017/",
+  "extractedAt": "2025-12-05T23:09:47.913Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/1017.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1315",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "0125",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ウイングガンダムスカイゼロ",
+    "en": "HG 1/144 Wing Gundam Sky Zero"
+  },
+  "productNumber": "2555034",
+  "releaseDate": {
+    "ja": "2022年2月",
+    "year": 2022,
+    "month": 2
+  },
+  "productImage": "https://bandai-hobby.net/images/153_4585_o_1f7vt252n12co1mec1r1m1gkdhle23.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_4585_o_1f7vt252n12co1mec1r1m1gkdhle23.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/125/",
+  "extractedAt": "2025-12-05T23:09:46.497Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/125.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-breaker-battlogue",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3631",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "0263",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 ブルーディスティニー2号機",
+    "en": "HGUC 1/144 Blue Destiny Unit 2"
+  },
+  "productNumber": "2004931",
+  "releaseDate": {
+    "ja": "2007年4月",
+    "year": 2007,
+    "month": 4
+  },
+  "productImage": "https://bandai-hobby.net/images/158_2558_s_cuxs1ohftkgfdc0s7vmb1bx1qqek.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/158_2558_s_cuxs1ohftkgfdc0s7vmb1bx1qqek.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/263/",
+  "extractedAt": "2025-12-05T23:09:46.754Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/263.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-gaiden-the-blue-destiny",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1648",
+        "targetType": "item"
+      }
+    ]
+  }
+}

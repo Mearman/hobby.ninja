@@ -1,0 +1,41 @@
+{
+  "id": "0601",
+  "type": "manual",
+  "name": {
+    "ja": "MG 1/100 バスターガンダム",
+    "en": "MG 1/100 Buster Gundam"
+  },
+  "productNumber": "2156732",
+  "releaseDate": {
+    "ja": "2012年9月22日",
+    "year": 2012,
+    "month": 9,
+    "day": 22
+  },
+  "productImage": "https://bandai-hobby.net/images/157_2733_s_mu8zig5qdw8n5lc9fq13i7mto3pp.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_2733_s_mu8zig5qdw8n5lc9fq13i7mto3pp.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/601/",
+  "extractedAt": "2025-12-05T23:09:47.307Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/601.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1794",
+        "targetType": "item"
+      }
+    ]
+  }
+}

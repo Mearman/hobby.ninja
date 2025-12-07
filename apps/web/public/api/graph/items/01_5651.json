@@ -1,0 +1,86 @@
+{
+  "id": "01_5651",
+  "type": "item",
+  "name": {
+    "ja": "FG ガンダムキュリオス",
+    "en": "FG Gundam Curios"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2007年09月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "• 「機動戦士ガンダム 00」より“ガンダムキュリオス”がFGシリーズに登場",
+      "en": "• “Gundam Kyrios” from “Mobile Suit Gundam 00” appears in the FG series"
+    },
+    {
+      "ja": "• ニッパー不要のタッチゲートを採用、プラモデルの作り応えをそのままに初心者にも簡単に組み立てられることが可能",
+      "en": "• Adopts a touch gate that does not require nippers, making it easy for even beginners to assemble while maintaining the responsiveness of plastic models."
+    },
+    {
+      "ja": "• 設定カラーに基づき色分けされたパーツにより、組み立てるだけで機体イメージを再現（細部はホイルシールで再現）",
+      "en": "• Parts are color-coded based on the setting color to reproduce the aircraft image just by assembly (details are reproduced with foil seals)"
+    },
+    {
+      "ja": "• 股関節のスイングアクションや肩、ヒジ、ヒザの可動で様々なアクションポーズを再現可能",
+      "en": "• Various action poses can be recreated by swinging the hip joint and moving the shoulders, elbows, and knees."
+    },
+    {
+      "ja": "• 武器はライフル、シールドが付属",
+      "en": "• Weapons include rifle and seal"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_718_s_5f93rzk82tuah3b0314jpc3s8ndx.jpg",
+    "https://bandai-hobby.net/images/155_718_s_cq820vhml4sux5v6wcflfhg27hci.jpg",
+    "https://bandai-hobby.net/images/156_718_s_qafpuly0mmaeswprl60t8dyblo1o.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5651/",
+  "extractedAt": "2025-12-06T17:56:21.050Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-00-double-o",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000216602",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5526",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000161849",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5102",
+        "targetType": "item"
+      }
+    ]
+  }
+}

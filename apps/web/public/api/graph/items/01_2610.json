@@ -1,0 +1,75 @@
+{
+  "id": "01_2610",
+  "type": "item",
+  "name": {
+    "ja": "ＨＧ 1/144 リーオー（フルウェポンセット）",
+    "en": "HG 1/144 Rio (Full Weapon Set)"
+  },
+  "price": {
+    "amount": 2310,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年01月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3531_o_1dmsia42a97i143e1tep2q212ki23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2610/",
+  "extractedAt": "2025-12-06T17:49:42.970Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "2552",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "new-mobile-report-gundam-w-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5590",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000213249",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5340",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000183318",
+        "targetType": "item"
+      }
+    ]
+  }
+}

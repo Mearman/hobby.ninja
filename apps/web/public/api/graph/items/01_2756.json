@@ -1,0 +1,97 @@
+{
+  "id": "01_2756",
+  "type": "item",
+  "name": {
+    "ja": "30MM 1/144 防衛作戦用オプションアーマー[シエルノヴァ用/グレー]",
+    "en": "30MM 1/144 Optional Armor for Defense Operations [For Cielnova/Gray]"
+  },
+  "price": {
+    "amount": 440,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年06月13日 (土)",
+    "year": 2020,
+    "month": 6,
+    "day": 13
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "30MMのオプションアーマーシリーズにシエルノヴァ用アイテムが登場！",
+      "en": "Items for Ciel Nova are now available in the 30MM optional armor series!"
+    },
+    {
+      "ja": "• アーマー一式と大型ハンドパーツのセット。",
+      "en": "• A set of armor and large hand parts."
+    },
+    {
+      "ja": "• アーマーは開閉ギミックを搭載。",
+      "en": "• The armor is equipped with an opening and closing gimmick."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "アーマー×１式",
+      "en": "Armor x 1 set"
+    },
+    {
+      "ja": "大型ハンドパーツ×１",
+      "en": "Large hand parts x 1"
+    }
+  ],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3745_s_3u20inpt8h7v83qq5rdnb6m2peyb.jpg",
+    "https://bandai-hobby.net/images/155_3745_s_z3jods4h13srha6s28qczcpak3jt.jpg",
+    "https://bandai-hobby.net/images/156_3745_s_9v45n4vu37nqxi6yw039t3f9l2gb.jpg",
+    "https://bandai-hobby.net/images/157_3745_s_v28b5usoikkm5t79i019nvjujufe.jpg",
+    "https://bandai-hobby.net/images/158_3745_s_6kpxg3m7tjvbm5ukolqdjs8p3tvz.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2756/",
+  "extractedAt": "2025-12-06T17:50:01.349Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "3688",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-missions",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5972",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5973",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5974",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5964",
+        "targetType": "item"
+      }
+    ]
+  }
+}

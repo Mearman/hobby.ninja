@@ -1,0 +1,75 @@
+{
+  "id": "01_4824",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 グフ クリアカラーVer.",
+    "en": "HGUC 1/144 Gouf Clear Color Ver."
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2016年11月19日 (土)",
+    "year": 2016,
+    "month": 11,
+    "day": 19
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "HGUC 1/144 グフ クリアカラーVer.登場！",
+      "en": "HGUC 1/144 Gouf Clear Color Ver. now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5707_s_i176ut647sgdfdbjrryhj8x0ib4x.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4824/",
+  "extractedAt": "2025-12-06T17:54:28.963Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4365",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3669",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "0935",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 グフカスタム",
+    "en": "HGUC 1/144 Gouf Custom"
+  },
+  "productNumber": "2101619",
+  "releaseDate": {
+    "ja": "2010年11月6日",
+    "year": 2010,
+    "month": 11,
+    "day": 6
+  },
+  "productImage": "https://bandai-hobby.net/images/158_2711_s_hsmgbmhm26ooecwnjja8u0vyp1pf.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/158_2711_s_hsmgbmhm26ooecwnjja8u0vyp1pf.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/935/",
+  "extractedAt": "2025-12-05T23:09:47.794Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/935.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-08th-ms-platoon",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1771",
+        "targetType": "item"
+      }
+    ]
+  }
+}

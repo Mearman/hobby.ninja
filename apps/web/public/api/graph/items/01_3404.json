@@ -1,0 +1,68 @@
+{
+  "id": "01_3404",
+  "type": "item",
+  "name": {
+    "ja": "SDW HEROES エドワードセカンドV",
+    "en": "SDW HEROES Edward Second V"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2021年05月29日 (土)",
+    "year": 2021,
+    "month": 5,
+    "day": 29
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4358_s_6d8fs1ve9u24pgqtwbdrnsvnqq2q.jpg",
+    "https://bandai-hobby.net/images/155_4358_s_9otdw19hqs82yl04mdyec6d7zm23.jpg",
+    "https://bandai-hobby.net/images/156_4358_s_9kvx2crcybamvfsui29y4kcontu2.jpg",
+    "https://bandai-hobby.net/images/157_4358_s_m69smrly3scku035olpjkysv0eqh.jpg",
+    "https://bandai-hobby.net/images/158_4358_s_66me3h22xis5wyv95ckrcbcbng8p.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3404/",
+  "extractedAt": "2025-12-06T17:51:23.111Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "sd-gundam-world-heroes",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5470",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5471",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5472",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5347",
+        "targetType": "item"
+      }
+    ]
+  }
+}

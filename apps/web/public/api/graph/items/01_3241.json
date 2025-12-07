@@ -1,0 +1,70 @@
+{
+  "id": "01_3241",
+  "type": "item",
+  "name": {
+    "ja": "ＢＢ戦士 18 バウンドドック",
+    "en": "BB Senshi 18 Bound Dog"
+  },
+  "price": {
+    "amount": 330,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1988年10月20日 (木)",
+    "year": 1988,
+    "month": 10,
+    "day": 20
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4195_s_as6vjrcj15fnfsc6yjk9hvw9d9bz.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3241/",
+  "extractedAt": "2025-12-06T17:51:02.193Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3236",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1108",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1108",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3236",
+        "targetType": "item"
+      }
+    ]
+  }
+}

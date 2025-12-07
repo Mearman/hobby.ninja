@@ -1,0 +1,103 @@
+{
+  "id": "01_2808",
+  "type": "item",
+  "name": {
+    "ja": "ENTRY GRADE ウルトラマンゼロ",
+    "en": "ENTRY GRADE Ultraman Zero"
+  },
+  "price": {
+    "amount": 1100,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年08月08日 (土)",
+    "year": 2020,
+    "month": 8,
+    "day": 8
+  },
+  "targetAge": 3,
+  "description": [
+    {
+      "ja": "大好きなヒーローをキミの手でつくろう！全てのプラモデル未経験者に贈る入門用シリーズ「ENTRY GRADE」にウルトラマンゼロが登場！",
+      "en": "Create your favorite hero with your own hands! Ultraman Zero appears in the introductory series \"ENTRY GRADE\" given to all plastic model inexperienced people!"
+    },
+    {
+      "ja": "• タッチゲートだからパーツは手で“プチッ！”と取れる！",
+      "en": "• Because it is a touch gate, parts can be removed by hand!"
+    },
+    {
+      "ja": "• 少ないパーツ数（28パーツ）で、プラモデルを初めてつくる方でもサクサクと組み立てが可能！",
+      "en": "• With a small number of parts (28 parts), even those who are making plastic models for the first time can easily assemble it!"
+    },
+    {
+      "ja": "• 各部位の色分けはパーツにより再現！",
+      "en": "• Color coding of each part is reproduced by parts!"
+    },
+    {
+      "ja": "• カラータイマーパーツを回転させると、カラータイマーの色が変わるギミックを採用。",
+      "en": "• Adopts a gimmick in which the color of the color timer changes when the color timer parts are rotated."
+    },
+    {
+      "ja": "• 接着剤や工具は不要。説明書は見やすい色付き。",
+      "en": "• No glue or tools required. The manual is colored for easy viewing."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "ランナー×3",
+      "en": "Runner×3"
+    },
+    {
+      "ja": "取扱説明書×1",
+      "en": "Handling manual×1"
+    },
+    {
+      "ja": "シール×1",
+      "en": "Seal×1"
+    }
+  ],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148824_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148824_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148824_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148824_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148824_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000148824_6.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2808/",
+  "extractedAt": "2025-12-06T17:50:08.723Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5244",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "ultraman",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "entry-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5244",
+        "targetType": "item"
+      }
+    ]
+  }
+}

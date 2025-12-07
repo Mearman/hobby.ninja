@@ -1,0 +1,104 @@
+{
+  "id": "01_5773",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 ローゼン・ズール",
+    "en": "HGUC 1/144 Rosen Zuhl"
+  },
+  "price": {
+    "amount": 3080,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2012年12月29日 (土)",
+    "year": 2012,
+    "month": 12,
+    "day": 29
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 『機動戦士ガンダム UC episode6』でも活躍するインコム搭載の大型機。",
+      "en": "• A large machine equipped with Incom that also plays an active role in \"Mobile Suit Gundam UC episode 6\"."
+    },
+    {
+      "ja": "• バラをモチーフとした特徴的なフォルムとボリューム感を忠実に再現。",
+      "en": "• Faithfully reproduces the distinctive form and volume with a rose motif."
+    },
+    {
+      "ja": "• インコムやサイコ・ジャマーなどアクションギミックも多彩。さまざまなポージングが可能。",
+      "en": "• Various action gimmicks such as Incom and Psycho Jammer. Various poses are possible."
+    },
+    {
+      "ja": "• 背部にある2機のバインダーは開閉可能。",
+      "en": "• The two binders on the back can be opened and closed."
+    },
+    {
+      "ja": "• インコム用台座が付属。",
+      "en": "• Incom pedestal included."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_835_s_0m6pe74x9h953ljfphyo0ubs0tqx.jpg",
+    "https://bandai-hobby.net/images/155_835_s_tqlaapp5vnjt5mnn11s37w4mhgnw.jpg",
+    "https://bandai-hobby.net/images/156_835_s_5hzphtv4nixhxw5ppcyyz697naxb.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5773/",
+  "extractedAt": "2025-12-06T17:56:35.149Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0439",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-uc-unicorn",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5527",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4986",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000163998",
+        "targetType": "item"
+      }
+    ]
+  }
+}

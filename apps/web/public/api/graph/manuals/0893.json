@@ -1,0 +1,41 @@
+{
+  "id": "0893",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ストライクフリーダムガンダム",
+    "en": "HG 1/144 Strike Freedom Gundam"
+  },
+  "productNumber": "1134113",
+  "releaseDate": {
+    "ja": "2005年9月30日",
+    "year": 2005,
+    "month": 9,
+    "day": 30
+  },
+  "productImage": "https://bandai-hobby.net/images/191_587_s_px37pm9x8d8boeoe5ti1bt20p3v4.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/191_587_s_px37pm9x8d8boeoe5ti1bt20p3v4.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/893/",
+  "extractedAt": "2025-12-05T23:09:47.732Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/893.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed-destiny",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5012",
+        "targetType": "item"
+      }
+    ]
+  }
+}

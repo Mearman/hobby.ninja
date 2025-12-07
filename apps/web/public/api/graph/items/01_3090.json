@@ -1,0 +1,76 @@
+{
+  "id": "01_3090",
+  "type": "item",
+  "name": {
+    "ja": "1/144 旧型ザク",
+    "en": "1/144 Old Zaku"
+  },
+  "price": {
+    "amount": 330,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1981年10月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "左肩アーマーと足首を別パーツ化しています。 股関節の左右開閉が可能、腕も前後のスイングが可能になり、バリエーションに富んだポージングを可能にしました。 手首パーツは左右ともに握り手と平手の２種が付いています。武器はヒート・ホークを装備しています。",
+      "en": "The left shoulder armor and ankle are separate parts. The hip joints can be opened and closed to the left and right, and the arms can swing back and forth, allowing for a wide variety of poses. There are two types of wrist parts for both left and right: a grip hand and an open hand. Equipped with a heat hawk as a weapon."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4058_s_nxdroyzb2encqvvohdg8e90fay90.jpg",
+    "https://bandai-hobby.net/images/155_4058_s_92958bw4msnn97r3lvzxz3ica04q.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3090/",
+  "extractedAt": "2025-12-06T17:50:44.885Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1959",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

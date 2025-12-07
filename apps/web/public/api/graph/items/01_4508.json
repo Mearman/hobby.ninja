@@ -1,0 +1,83 @@
+{
+  "id": "01_4508",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ブレイズザクファントム(ディアッカ・エルスマン専用機)",
+    "en": "HG 1/144 Blaze Zaku Phantom (Dearka Elsman exclusive machine)"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2007年09月08日 (土)",
+    "year": 2007,
+    "month": 9,
+    "day": 8
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "ディアッカが「機動戦士ガンダム SEED DESTINY」で搭乗した黒いザクがHGシリーズにラインナップ 背部のブレイズウィザードのミサイルハッチは開閉、スラスターカバーも上下に可動 ビーム突撃銃、ビームトマホークが付属 初回出荷分のみSeed Club modileのディアッカのコンパートメントカードが付属",
+      "en": "The black Zaku that Dearka piloted in \"Mobile Suit Gundam SEED DESTINY\" is now available in the HG series. The Blaze Wizard missile hatch on the back can be opened and closed, and the thruster cover can also be moved up and down. Beam assault gun and beam tomahawk are included. Only the first shipment comes with Dearka's compartment card from Seed Club modile."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5410_s_pqays6arr8bez16xg0gxt75fo26y.jpg",
+    "https://bandai-hobby.net/images/155_5410_s_tfqn8r7cifam2g0ve5c3hic1ai3q.jpg",
+    "https://bandai-hobby.net/images/156_5410_s_c7yfsxzwcqmryw5fycgrgu0lnn9t.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4508/",
+  "extractedAt": "2025-12-06T17:53:51.243Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0198",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed-destiny",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000203308",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5097",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3739",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000157417",
+        "targetType": "item"
+      }
+    ]
+  }
+}

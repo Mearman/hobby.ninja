@@ -1,0 +1,85 @@
+{
+  "id": "01_3480",
+  "type": "item",
+  "name": {
+    "ja": "HGAB レプラカーン",
+    "en": "HGAB Leprechaun"
+  },
+  "price": {
+    "amount": 1980,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2013年03月23日 (土)",
+    "year": 2013,
+    "month": 3,
+    "day": 23
+  },
+  "targetAge": 15,
+  "description": [
+    {
+      "ja": "「ＨＧ レプラカーン」が登場！",
+      "en": "\"HG Leprechaun\" is here!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_7.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_8.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_9.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_10.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_11.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000155261_12.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3480/",
+  "extractedAt": "2025-12-06T17:51:33.123Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "holy-warrior-dunbine",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000203131",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000211055",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000199895",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000194225",
+        "targetType": "item"
+      }
+    ]
+  }
+}

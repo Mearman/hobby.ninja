@@ -1,0 +1,41 @@
+{
+  "id": "0120",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ブレイジングガンダム",
+    "en": "HG 1/144 Blazing Gundam"
+  },
+  "productNumber": "2555019",
+  "releaseDate": {
+    "ja": "2021年12月11日",
+    "year": 2021,
+    "month": 12,
+    "day": 11
+  },
+  "productImage": "https://bandai-hobby.net/images/190_4579_s_yd3ljmdcwt9pvzil62exhk008jwm.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/190_4579_s_yd3ljmdcwt9pvzil62exhk008jwm.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/120/",
+  "extractedAt": "2025-12-05T23:09:46.487Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/120.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-breaker-battlogue",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3625",
+        "targetType": "item"
+      }
+    ]
+  }
+}

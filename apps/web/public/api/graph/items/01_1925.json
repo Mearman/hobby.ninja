@@ -1,0 +1,84 @@
+{
+  "id": "01_1925",
+  "type": "item",
+  "name": {
+    "ja": "メガサイズモデル 1/48 ガンダムベース限定 RX-78-2 ガンダム [メタリックグロスインジェクション]",
+    "en": "Mega Size Model 1/48 Gundam Base Limited RX-78-2 Gundam [Metallic Gloss Injection]"
+  },
+  "price": {
+    "amount": 11550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2017年09月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/48",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126794_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126794_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126794_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126794_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000126794_5.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1925/",
+  "extractedAt": "2025-12-06T17:48:23.466Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4961",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4782",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mega-size-model",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4961",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4784",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4782",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4569",
+        "targetType": "item"
+      }
+    ]
+  }
+}

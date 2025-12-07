@@ -1,0 +1,95 @@
+{
+  "id": "01_5792",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 ガンダム Ez8",
+    "en": "HGUC 1/144 Gundam Ez8"
+  },
+  "price": {
+    "amount": 1980,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2013年04月13日 (土)",
+    "year": 2013,
+    "month": 4,
+    "day": 13
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 第08MS小隊に登場した陸戦型ガンダム改修機Ez8をHGUCで新規立体化。",
+      "en": "• The ground battle type Gundam modified Ez8 that appeared in the 08th MS platoon has been made into a new three-dimensional model using HGUC."
+    },
+    {
+      "ja": "• 最新のHGUC技術を盛り込み、アクション性能とプロポーションを両立。",
+      "en": "• Incorporates the latest HGUC technology to achieve both action performance and proportions."
+    },
+    {
+      "ja": "• シールドのほか、ビームライフルと100ｍｍマシンガンが付属。",
+      "en": "• In addition to Seal, a beam rifle and 100mm machine gun are included."
+    },
+    {
+      "ja": "• パラシュートパックは脱着可能。別売りのHGUC 1/144 陸戦型ガンダムのコンテナと差し替え可能。",
+      "en": "• Parachute pack is removable. Can be replaced with the HGUC 1/144 Ground Type Gundam container sold separately."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_858_s_nibsespesxqctm31jc3h0ftbgp5f.jpg",
+    "https://bandai-hobby.net/images/155_858_s_tqs4d5g0u9cxez8vaxduhr8zgoz8.jpg",
+    "https://bandai-hobby.net/images/156_858_s_upj45gm1e9ravc3ghznd9qmr1gz3.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5792/",
+  "extractedAt": "2025-12-06T17:56:37.181Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0378",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5986",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5963",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5961",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5951",
+        "targetType": "item"
+      }
+    ]
+  }
+}

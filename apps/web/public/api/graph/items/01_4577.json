@@ -1,0 +1,72 @@
+{
+  "id": "01_4577",
+  "type": "item",
+  "name": {
+    "ja": "AG 1/144 ゼダス",
+    "en": "AG 1/144 Zedas"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2011年11月06日 (日)",
+    "year": 2011,
+    "month": 11,
+    "day": 6
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 塗装不要、道具不要。直感的に組み立てられる「ブロックビルド」の採用で、あっという間に完成。 • 付属のゲイジングチップを組み込み、ゲイジングバトルベースでスキャンすれば、自分だけのチームを作ってバトルできる。",
+      "en": "• No painting or tools required. By using \"block build\", which allows for intuitive assembly, it can be completed in no time. • By incorporating the included gazing chip and scanning it with the gazing battle base, you can create your own team and battle."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5475_s_uyctw73uvkeb8dtrw7qtw4icfp1l.jpg",
+    "https://bandai-hobby.net/images/155_5475_s_zyh3v3vwvya07c8e270tpfi4m3up.jpg",
+    "https://bandai-hobby.net/images/156_5475_s_fbmmu4af45mhhg21z17keiezllqv.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4577/",
+  "extractedAt": "2025-12-06T17:53:59.170Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000181355",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000181354",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000170540",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4196",
+        "targetType": "item"
+      }
+    ]
+  }
+}

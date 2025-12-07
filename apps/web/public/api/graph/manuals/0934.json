@@ -1,0 +1,41 @@
+{
+  "id": "0934",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 ギラ・ズール(アンジェロ・ザウパー専用機)",
+    "en": "HGUC 1/144 Gila Zuul (Angelo Sauper special machine)"
+  },
+  "productNumber": "2101612",
+  "releaseDate": {
+    "ja": "2010年7月31日",
+    "year": 2010,
+    "month": 7,
+    "day": 31
+  },
+  "productImage": "https://bandai-hobby.net/images/157_740_s_51w00humpdibf9ehkcu12lz28azf.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_740_s_51w00humpdibf9ehkcu12lz28azf.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/934/",
+  "extractedAt": "2025-12-05T23:09:47.793Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/934.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-uc",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5674",
+        "targetType": "item"
+      }
+    ]
+  }
+}

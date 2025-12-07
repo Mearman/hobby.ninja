@@ -1,0 +1,74 @@
+{
+  "id": "01_3184",
+  "type": "item",
+  "name": {
+    "ja": "1/250 G・アーマー",
+    "en": "1/250 G Armor"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1984年08月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/250",
+  "description": [
+    {
+      "ja": "『機動戦士ガンダム』より、1/250スケールでＧ・アーマーが登場。",
+      "en": "From \"Mobile Suit Gundam\", G Armor appears in 1/250 scale."
+    },
+    {
+      "ja": "Ｇ・アーマー、Ｇ・ファイター、Ｇ・スカイ、Ｇ・スカイ・イージー、Ｇ・ブルの５形態が再現可能です。キャタピラ部はラバーパーツを使用しています。ガンダムは、Ａ・Ｂパーツの分離・合体のほか、コア・ファイターの変形・離脱ギミックを再現しています。",
+      "en": "Five forms can be reproduced: G Armor, G Fighter, G Sky, G Sky Easy, and G Bull. The caterpillar part uses rubber parts. In addition to separating and combining A and B parts, Gundam also reproduces the core fighter's transformation and separation gimmick."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4143_s_8lw8gwuferfsh4t60ikzhm2c51q9.jpg",
+    "https://bandai-hobby.net/images/155_4143_s_o2xzzlqq7ib2em628h22fuq46p3q.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3184/",
+  "extractedAt": "2025-12-06T17:50:55.270Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

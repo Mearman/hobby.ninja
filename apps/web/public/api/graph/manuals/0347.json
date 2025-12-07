@@ -1,0 +1,41 @@
+{
+  "id": "0347",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 クランシェ",
+    "en": "HG 1/144 Clanche"
+  },
+  "productNumber": "2165043",
+  "releaseDate": {
+    "ja": "2012年9月8日",
+    "year": 2012,
+    "month": 9,
+    "day": 8
+  },
+  "productImage": "https://bandai-hobby.net/images/157_4559_s_r2fm3rw25ahrqlo1bfwhmht2hk1k.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_4559_s_r2fm3rw25ahrqlo1bfwhmht2hk1k.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/347/",
+  "extractedAt": "2025-12-05T23:09:46.907Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/347.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3604",
+        "targetType": "item"
+      }
+    ]
+  }
+}

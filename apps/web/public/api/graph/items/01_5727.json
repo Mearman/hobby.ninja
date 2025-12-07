@@ -1,0 +1,74 @@
+{
+  "id": "01_5727",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 ユニコーンガンダム 2号機 バンシィ(デストロイモード)",
+    "en": "HGUC 1/144 Unicorn Gundam Unit 2 Banshee (Destroy Mode)"
+  },
+  "price": {
+    "amount": 1980,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2012年01月08日 (日)",
+    "year": 2012,
+    "month": 1,
+    "day": 8
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 「機動戦士ガンダムユニコーン」episode４でついに姿を現したユニコーンガンダム２号機「バンシィ」がHGUC化。 • アニメ版オリジナルの武装を再現。 • 装甲の隙間からサイコフレームが見える。",
+      "en": "• Unicorn Gundam Unit 02 \"Banshee \", which finally appeared in \" Mobile Suit Gundam Unicorn\" episode 4, has been transformed into HGUC. • Reproduce the original weapons of the anime version. • Psychoframe can be seen through gaps in the armor."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092285_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092285_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092285_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092285_4.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5727/",
+  "extractedAt": "2025-12-06T17:56:29.839Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0441",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-uc-unicorn",
+        "targetType": "series"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5527",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4986",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000163998",
+        "targetType": "item"
+      }
+    ]
+  }
+}

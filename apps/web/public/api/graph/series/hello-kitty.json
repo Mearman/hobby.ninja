@@ -1,0 +1,34 @@
+{
+  "id": "hello-kitty",
+  "type": "series",
+  "name": {
+    "ja": "ハローキティ",
+    "en": "hello kitty"
+  },
+  "url": "https://bandai-hobby.net/series/hellokitty/",
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_3295",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_3294",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_2924",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_2730",
+        "targetType": "item"
+      }
+    ],
+    "outbound": []
+  }
+}

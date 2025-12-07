@@ -1,0 +1,77 @@
+{
+  "id": "01_4959",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 シャア専用ザク&量産型ザク THE ART OF GUNDAM OSAKA メタリックエディション",
+    "en": "HGUC 1/144 Char's Zaku & Mass Production Zaku THE ART OF GUNDAM OSAKA Metallic Edition"
+  },
+  "price": {
+    "amount": 2242,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2014年07月12日 (土)",
+    "year": 2014,
+    "month": 7,
+    "day": 12
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "HGUC 1/144 シャア専用ザク&量産型ザク THE ART OF GUNDAM OSAKA メタリックエディション登場！",
+      "en": "HGUC 1/144 Char's Zaku & mass-produced Zaku THE ART OF GUNDAM OSAKA Metallic Edition now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5830_s_e7jis83fudr9kdh1xgo6o6319k2q.jpg",
+    "https://bandai-hobby.net/images/155_5830_s_oarhuzymp97sl1zqi9h6gega5lal.jpg",
+    "https://bandai-hobby.net/images/156_5830_s_uiexxfokpf5hlb6zos46ilsf782l.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4959/",
+  "extractedAt": "2025-12-06T17:54:47.128Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4365",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3669",
+        "targetType": "item"
+      }
+    ]
+  }
+}

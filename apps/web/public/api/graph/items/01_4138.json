@@ -1,0 +1,69 @@
+{
+  "id": "01_4138",
+  "type": "item",
+  "name": {
+    "ja": "SD ガンダムちーびー戦士 騎士ガンダム GP01Jr.",
+    "en": "SD Gundam Little Warrior Knight Gundam GP01Jr."
+  },
+  "price": {
+    "amount": 440,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2008年09月20日 (土)",
+    "year": 2008,
+    "month": 9,
+    "day": 20
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "「SD ガンダムちーびー戦士 騎士ガンダムＧＰ０１Ｊｒ．」が登場！",
+      "en": "\"SD Gundam Little Warrior Knight Gundam GP01 Jr.\" is now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5064_s_2st8ccsjuagasuuu61lc3ezab55d.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4138/",
+  "extractedAt": "2025-12-06T17:53:01.861Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-series",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000193966",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4975",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4336",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4312",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "01_3139",
+  "type": "item",
+  "name": {
+    "ja": "1/100 ゴッグ",
+    "en": "1/100 Gog"
+  },
+  "price": {
+    "amount": 880,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1982年03月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [
+    {
+      "ja": "『機動戦士ガンダム』より、1/100スケールで、ゴッグが登場。",
+      "en": "From \"Mobile Suit Gundam\", Gog appears in 1/100 scale."
+    },
+    {
+      "ja": "頭部モノアイが可動します。両腕の伸縮を再現し、手首が肩アーマーに収納可能です。腰部は回転が可能です。脚は膝からハの字型に開きます。",
+      "en": "The head mono-eye is movable. The expansion and contraction of both arms is reproduced, and the wrists can be stored in the shoulder armor. The waist can be rotated. Legs open from the knees in a V-shape."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4102_s_vw891eyjqnmhuq30kw59s27fucvj.jpg",
+    "https://bandai-hobby.net/images/155_4102_s_0f5axl32zu7ybgnjsn31p8uy2wqs.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3139/",
+  "extractedAt": "2025-12-06T17:50:49.882Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

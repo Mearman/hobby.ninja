@@ -1,0 +1,40 @@
+{
+  "id": "2335",
+  "type": "manual",
+  "name": {
+    "ja": "ＨＧ 1/144 クロスボーン・ガンダムＸ-０フルクロス",
+    "en": "HG 1/144 Crossbone Gundam X-0 Full Cross"
+  },
+  "productNumber": "2553860",
+  "releaseDate": {
+    "ja": "2021年5月",
+    "year": 2021,
+    "month": 5
+  },
+  "productImage": "https://bandai-hobby.net/images/153_4387_s_0x978s6741zwk6p9ifk5xgfmchxp.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_4387_s_0x978s6741zwk6p9ifk5xgfmchxp.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2335/",
+  "extractedAt": "2025-12-05T23:09:48.526Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2335.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-crossbone-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3433",
+        "targetType": "item"
+      }
+    ]
+  }
+}

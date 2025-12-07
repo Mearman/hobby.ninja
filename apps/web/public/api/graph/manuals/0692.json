@@ -1,0 +1,41 @@
+{
+  "id": "0692",
+  "type": "manual",
+  "name": {
+    "ja": "HGBC 1/144 ダイバーエースユニット",
+    "en": "HGBC 1/144 Diver Ace Unit"
+  },
+  "productNumber": "2426163",
+  "releaseDate": {
+    "ja": "2018年5月11日",
+    "year": 2018,
+    "month": 5,
+    "day": 11
+  },
+  "productImage": "https://bandai-hobby.net/images/155_2254_s_f8qs7meuti060czo3abmicp72yoj.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/155_2254_s_f8qs7meuti060czo3abmicp72yoj.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/692/",
+  "extractedAt": "2025-12-05T23:09:47.417Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/692.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1326",
+        "targetType": "item"
+      }
+    ]
+  }
+}

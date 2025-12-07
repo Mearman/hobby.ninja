@@ -1,0 +1,97 @@
+{
+  "id": "01_5664",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 ギラ・ズール",
+    "en": "HGUC 1/144 Gira Zuul"
+  },
+  "price": {
+    "amount": 1980,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2009年12月26日 (土)",
+    "year": 2009,
+    "month": 12,
+    "day": 26
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 機動戦士ガンダムユニコーンより、ジオンの系譜量産機、最新デザインのギラ・ズールが登場！",
+      "en": "• From Mobile Suit Gundam Unicorn, Zeon's lineage mass-produced machine, the latest design Gira Zulu, is now available!"
+    },
+    {
+      "ja": "• 付属品が充実の内容でフル装備も可能！隊長機用ヘルメット、武器ラックなどが付属。さらに、ビーム・マシンガンは２モード交換可能。",
+      "en": "• Fully equipped with a wide range of accessories! Includes captain's helmet, weapon rack, etc. Furthermore, the beam machine gun can be exchanged between two modes."
+    },
+    {
+      "ja": "• エングレーブはモールドとシールで再現。",
+      "en": "• The engraving is reproduced with mold and seal."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_731_s_iar29uz0r02mze5gvaudtsyiw79t.jpg",
+    "https://bandai-hobby.net/images/155_731_s_r0zo4g9c0floks6vii8ebzb6tg5x.jpg",
+    "https://bandai-hobby.net/images/156_731_s_dqpf6b03yr0liq3d5i5l01mkahoz.jpg",
+    "https://bandai-hobby.net/images/157_731_s_w4y1kubpl8hx2r8lvlsrd193ies0.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5664/",
+  "extractedAt": "2025-12-06T17:56:23.032Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0920",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-uc-unicorn",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5527",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4986",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000163998",
+        "targetType": "item"
+      }
+    ]
+  }
+}

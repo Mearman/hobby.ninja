@@ -1,0 +1,70 @@
+{
+  "id": "01_3052",
+  "type": "item",
+  "name": {
+    "ja": "1/144 ミレーヌバルキリー",
+    "en": "1/144 Mylene Valkyrie"
+  },
+  "price": {
+    "amount": 990,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2009年02月21日 (土)",
+    "year": 2009,
+    "month": 2,
+    "day": 21
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「1/144 ミレーヌバルキリー」が登場！",
+      "en": "\"1/144 Mylene Valkyrie\" is now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4021_s_zdh2kqlxskqeao0wg6mg7nqx3y24.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3052/",
+  "extractedAt": "2025-12-06T17:50:40.413Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "macross-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5944",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5945",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5946",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5465",
+        "targetType": "item"
+      }
+    ]
+  }
+}

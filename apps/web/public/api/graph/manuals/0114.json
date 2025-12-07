@@ -1,0 +1,41 @@
+{
+  "id": "0114",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ガンダムグレモリー",
+    "en": "HG 1/144 Gundam Gremory"
+  },
+  "productNumber": "2553527",
+  "releaseDate": {
+    "ja": "2021年10月16日",
+    "year": 2021,
+    "month": 10,
+    "day": 16
+  },
+  "productImage": "https://bandai-hobby.net/images/190_4597_s_lfxu9ovtsmrvlj1ai7zli21h3ukr.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/190_4597_s_lfxu9ovtsmrvlj1ai7zli21h3ukr.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/114/",
+  "extractedAt": "2025-12-05T23:09:46.477Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/114.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-iron-blooded-orphans",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3642",
+        "targetType": "item"
+      }
+    ]
+  }
+}

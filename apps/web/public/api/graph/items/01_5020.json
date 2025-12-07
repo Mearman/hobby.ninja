@@ -1,0 +1,101 @@
+{
+  "id": "01_5020",
+  "type": "item",
+  "name": {
+    "ja": "30MS オプションボディパーツ タイプS05[カラーA]",
+    "en": "30MS Option Body Parts Type S05 [Color A]"
+  },
+  "price": {
+    "amount": 880,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2023年11月11日 (土)",
+    "year": 2023,
+    "month": 11,
+    "day": 11
+  },
+  "targetAge": 15,
+  "description": [
+    {
+      "ja": "30MS素体との組み合わせで世界観が広がる！オプションボディパーツに夏らしい新衣装がラインアップ！",
+      "en": "The world view expands when combined with the 30MS body! A lineup of new summery costumes with optional body parts!"
+    },
+    {
+      "ja": "• 夏らしくさわやかなオプションボディパーツ。",
+      "en": "• Optional body parts that are refreshing and summery."
+    },
+    {
+      "ja": "• 30MS共通の3mmジョイントを介して別売りのキャラクターと腕・脚の組み替えが可能。",
+      "en": "• Arms and legs can be rearranged with characters sold separately via 3mm joints common to 30MS."
+    },
+    {
+      "ja": "• 集光樹脂を使用したジョイントパーツを同梱。",
+      "en": "• Joint parts using light-concentrating resin are included."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "ボディパーツ×1式",
+      "en": "Body parts x 1 set"
+    },
+    {
+      "ja": "ジョイントパーツ×1式",
+      "en": "Joint parts x 1 set"
+    }
+  ],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202444_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202444_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202444_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202444_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202444_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000202444_6.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5020/",
+  "extractedAt": "2025-12-06T17:54:55.505Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "3571",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-sisters",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5975",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5976",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5977",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5954",
+        "targetType": "item"
+      }
+    ]
+  }
+}

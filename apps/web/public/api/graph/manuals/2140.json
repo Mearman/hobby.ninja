@@ -1,0 +1,41 @@
+{
+  "id": "2140",
+  "type": "manual",
+  "name": {
+    "ja": "ＭＧ 1/100 トールギスII",
+    "en": "MG 1/100 Tallgeese II"
+  },
+  "productNumber": "2193537",
+  "releaseDate": {
+    "ja": "2013年3月",
+    "year": 2013,
+    "month": 3
+  },
+  "productImage": "https://bandai-hobby.net/images/153_4810_s_gkhuf2br4hjaiwpaxu3lo6igxcza.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_4810_s_gkhuf2br4hjaiwpaxu3lo6igxcza.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2140/",
+  "extractedAt": "2025-12-05T23:09:48.330Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2140.pdf",
+  "supplementaryPdfUrl": "https://manual.bandai-hobby.net/pdf/2140_2.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "new-mobile-report-gundam-w",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3867",
+        "targetType": "item"
+      }
+    ]
+  }
+}

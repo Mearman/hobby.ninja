@@ -1,0 +1,40 @@
+{
+  "id": "2259",
+  "type": "manual",
+  "name": {
+    "ja": "ＭＧ 1/100 S ガンダム ブースター・ユニット装着型",
+    "en": "MG 1/100 S Gundam booster unit installed type"
+  },
+  "productNumber": "2262266",
+  "releaseDate": {
+    "ja": "2014年8月",
+    "year": 2014,
+    "month": 8
+  },
+  "productImage": "https://bandai-hobby.net/images/153_4872_s_gei69cnumvgpy73ecfvj0kzdvkfg.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_4872_s_gei69cnumvgpy73ecfvj0kzdvkfg.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2259/",
+  "extractedAt": "2025-12-05T23:09:48.450Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2259.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-sentinel",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3934",
+        "targetType": "item"
+      }
+    ]
+  }
+}

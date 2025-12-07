@@ -1,0 +1,41 @@
+{
+  "id": "0361",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 ガンダムデルタカイ",
+    "en": "HGUC 1/144 Gundam Delta Kai"
+  },
+  "productNumber": "2140532",
+  "releaseDate": {
+    "ja": "2012年12月8日",
+    "year": 2012,
+    "month": 12,
+    "day": 8
+  },
+  "productImage": "https://bandai-hobby.net/images/156_834_s_rnq18aax52yyfsr3fezt6i41yjgl.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_834_s_rnq18aax52yyfsr3fezt6i41yjgl.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/361/",
+  "extractedAt": "2025-12-05T23:09:46.924Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/361.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-uc",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5772",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "01_1758",
+  "type": "item",
+  "name": {
+    "ja": "ＢＢ戦士 73新荒烈駆主",
+    "en": "BB Senshi 73 New Aura"
+  },
+  "price": {
+    "amount": 880,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1991年03月20日 (水)",
+    "year": 1991,
+    "month": 3,
+    "day": 20
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_26_s_ocd7dv8bvbeewc4tkz4n5rfzfwvr.jpg",
+    "https://bandai-hobby.net/images/155_26_s_r82kuxc21wwelfz727zhich1zfus.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1758/",
+  "extractedAt": "2025-12-06T17:48:02.955Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-warrior",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

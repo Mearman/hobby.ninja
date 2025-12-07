@@ -1,0 +1,41 @@
+{
+  "id": "0661",
+  "type": "manual",
+  "name": {
+    "ja": "RG 1/144 RX-178 ガンダム Mk-II（エゥーゴ仕様）",
+    "en": "RG 1/144 RX-178 Gundam Mk-II (AEGO specification)"
+  },
+  "productNumber": "2174360",
+  "releaseDate": {
+    "ja": "2012年5月12日",
+    "year": 2012,
+    "month": 5,
+    "day": 12
+  },
+  "productImage": "https://bandai-hobby.net/images/158_3862_s_u001z6uecwlm25gxcl0j3mmx1hlj.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/158_3862_s_u001z6uecwlm25gxcl0j3mmx1hlj.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/661/",
+  "extractedAt": "2025-12-05T23:09:47.381Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/661.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "rg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2882",
+        "targetType": "item"
+      }
+    ]
+  }
+}

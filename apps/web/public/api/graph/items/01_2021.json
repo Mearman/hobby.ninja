@@ -1,0 +1,98 @@
+{
+  "id": "01_2021",
+  "type": "item",
+  "name": {
+    "ja": "メカコレクション 波動実験艦 銀河",
+    "en": "Mecha Collection Wave Experimental Ship Ginga"
+  },
+  "price": {
+    "amount": 770,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2018年11月23日 (金)",
+    "year": 2018,
+    "month": 11,
+    "day": 23
+  },
+  "targetAge": 15,
+  "description": [
+    {
+      "ja": "『宇宙戦艦ヤマト2202』に登場するヤマトの姉妹艦「銀河」をキット化！",
+      "en": "Kit version of Yamato's sister ship \"Galaxy \" that appears in \" Space Battleship Yamato 2202\"!"
+    },
+    {
+      "ja": "• 人工知能の自律操作を見据えた次世代艦の先駆け的存在をメカコレクションサイズに凝縮。",
+      "en": "• The pioneering presence of next-generation ships that focus on autonomous operation of artificial intelligence is condensed into a mecha collection size."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "ディスプレイベース×1",
+      "en": "Display base x 1"
+    }
+  ],
+  "contents": [
+    {
+      "ja": "成形品×5",
+      "en": "Molded product x 5"
+    },
+    {
+      "ja": "水転写式デカール×1",
+      "en": "Water transfer decal x 1"
+    },
+    {
+      "ja": "取扱説明書(箱裏側に記載)",
+      "en": "Instruction manual (written on the back of the box)"
+    }
+  ],
+  "images": [
+    "https://bandai-hobby.net/images/153_2964_s_2ws5oac1aqgs0wgbs9zmgv4vb2a7.jpg",
+    "https://bandai-hobby.net/images/155_2964_s_u5zv8c81uphuffv9zwknbrw48gjr.jpg",
+    "https://bandai-hobby.net/images/156_2964_s_0csiel00127igcwfd8txzkf4w48l.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2021/",
+  "extractedAt": "2025-12-06T16:45:40.301Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "space-battleship-yamato-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mecha-collection",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5498",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5500",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3667",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3650",
+        "targetType": "item"
+      }
+    ]
+  }
+}

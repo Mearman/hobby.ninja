@@ -1,0 +1,107 @@
+{
+  "id": "01_1225",
+  "type": "item",
+  "name": {
+    "ja": "ピカちんキット０１ カンニングラス",
+    "en": "Pikachin Kit01 Cheat Glass"
+  },
+  "price": {
+    "amount": 1320,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2018年01月13日 (土)",
+    "year": 2018,
+    "month": 1,
+    "day": 13
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "• なんでもこっそり見ることができるサイッコーのメガネ！",
+      "en": "• Awesome glasses that let you see everything secretly!"
+    },
+    {
+      "ja": "• テレビ番組「ポチっと発明 ピカちんキット」に登場するカンニングラスが商品化！",
+      "en": "• The cheating glass that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!"
+    },
+    {
+      "ja": "• カンニングラスとは、前を向いたままこっそり横が覗けちゃう発明品！",
+      "en": "• A cheating glass is an invention that allows you to secretly peek at the side while facing forward!"
+    },
+    {
+      "ja": "• 隣の席の気になるあの子が書いている手紙もバレずにウォッチング！",
+      "en": "• Watch the letter that the girl sitting next to you is writing without knowing it!"
+    },
+    {
+      "ja": "• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！",
+      "en": "• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
+    }
+  ],
+  "accessories": [],
+  "contents": [
+    {
+      "ja": "カンニングラス×1\n（成形品×4）",
+      "en": "Cheat glass x 1 (molded product x 4)"
+    },
+    {
+      "ja": "ピカちんQRコード×1",
+      "en": "Pikachin QR code x 1"
+    },
+    {
+      "ja": "ミラーシール×2",
+      "en": "Mirror Seal×2"
+    },
+    {
+      "ja": "ピカちんシート×1",
+      "en": "Pikachin sheet x 1"
+    }
+  ],
+  "images": [
+    "https://bandai-hobby.net/images/153_2159_s_6jsk5geoiqtklnvhdqq6tqjn142u.jpg",
+    "https://bandai-hobby.net/images/155_2159_s_dbx75ps7rxskjby3qfg1bis5y06v.jpg",
+    "https://bandai-hobby.net/images/156_2159_s_mn2ocrowhhs8u1toxbggfh5ny6yo.jpg",
+    "https://bandai-hobby.net/images/157_2159_s_id0y1onqj2nv24znv2pyxvu9f8pc.jpg",
+    "https://bandai-hobby.net/images/158_2159_s_0clw6eodwqupj8tolb5y82vugl8u.jpg",
+    "https://bandai-hobby.net/images/159_2159_s_ut5nfzmgqevgwm2jd3evojpi73b5.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1225/",
+  "extractedAt": "2025-12-06T17:01:19.401Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "invention-pikachin-kit",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2605",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2606",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2607",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2545",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "01_3968",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 ズサ",
+    "en": "HGUC 1/144 Zusa"
+  },
+  "price": {
+    "amount": 2970,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2015年07月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4902_s_rho34jvotywbfbr8cjwnefu55h6w.jpg",
+    "https://bandai-hobby.net/images/155_4902_s_2ncoozpukc5so5y63ctiwbrvkf3p.jpg",
+    "https://bandai-hobby.net/images/156_4902_s_5opdasuosfwidal85jc1rfmkdgoo.jpg",
+    "https://bandai-hobby.net/images/157_4902_s_84ucd5044ygsfo34mfa0501a56wu.jpg",
+    "https://bandai-hobby.net/images/158_4902_s_y7bkx482xu3p3oygy8os4z9twxzq.jpg",
+    "https://bandai-hobby.net/images/159_4902_s_rzii92pdefdd7ndcykgfg6ky7dyu.jpg",
+    "https://bandai-hobby.net/images/189_4902_s_gjjltebuhz2uskz5ep0n3kpad9nl.jpg",
+    "https://bandai-hobby.net/images/190_4902_s_wrrjw11ih9ga0kg8ooiq1oxcwywc.jpg",
+    "https://bandai-hobby.net/images/191_4902_s_d0uishrulg5seovba9wufrwsqnqq.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3968/",
+  "extractedAt": "2025-12-06T17:52:37.939Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-zz",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-gradepreban-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5963",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000137712",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "01_3096",
+  "type": "item",
+  "name": {
+    "ja": "1/550 ビグロ",
+    "en": "1/550 Bigro"
+  },
+  "price": {
+    "amount": 330,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1981年09月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/550",
+  "description": [
+    {
+      "ja": "アーム部は基部と肘関節が可動します。メガ粒子砲の砲口は開閉選択式です。専用のディスプレイ台が付いています。",
+      "en": "The arm part has a movable base and elbow joint. The muzzle of the mega particle cannon can be opened or closed. Comes with its own display stand."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4063_s_1pwzu4tis0wmsjsappizgr8u8abv.jpg",
+    "https://bandai-hobby.net/images/155_4063_s_gfri6zihjjm7rpkr0sk0ywp9l888.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3096/",
+  "extractedAt": "2025-12-06T17:50:45.975Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1966",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

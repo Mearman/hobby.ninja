@@ -1,0 +1,40 @@
+{
+  "id": "3485",
+  "type": "manual",
+  "name": {
+    "ja": "30MS SIS-D00 ネヴァリア［カラーＡ］",
+    "en": "30MS SIS-D00 Neveria [Color A]"
+  },
+  "productNumber": "2620608",
+  "releaseDate": {
+    "ja": "2023年2月25日",
+    "year": 2023,
+    "month": 2,
+    "day": 25
+  },
+  "productImage": "https://bandai-hobby.net/images/2620608.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/2620608.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3485/",
+  "extractedAt": "2025-12-05T23:09:49.319Z",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/3485.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "30-minutes-sisters",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30ms",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4315",
+        "targetType": "item"
+      }
+    ]
+  }
+}

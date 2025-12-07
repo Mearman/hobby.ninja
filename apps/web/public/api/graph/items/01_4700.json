@@ -1,0 +1,69 @@
+{
+  "id": "01_4700",
+  "type": "item",
+  "name": {
+    "ja": "1/144 ハイパーモード G ガンダム",
+    "en": "1/144 Hypermode G Gundam"
+  },
+  "price": {
+    "amount": 770,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1994年05月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "『機動武闘伝G ガンダム』より、1/144スケールで、ハイパーモードG ガンダムが登場。",
+      "en": "From \"Mobile Fighter G Gundam\", 1/144 Scale Hyper Mode G Gundam is now available."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5589_s_jjqd7vk41feurpq63zynhgmz83zt.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4700/",
+  "extractedAt": "2025-12-06T17:54:15.402Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-fighter-g-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5544",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5995",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000213247",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000194970",
+        "targetType": "item"
+      }
+    ]
+  }
+}

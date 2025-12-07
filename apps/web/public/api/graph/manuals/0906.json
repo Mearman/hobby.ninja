@@ -1,0 +1,41 @@
+{
+  "id": "0906",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 ヤクト・ドーガ(クェス・エア専用機)",
+    "en": "HGUC 1/144 Jagd Doga (Ques Air dedicated machine)"
+  },
+  "productNumber": "2004934",
+  "releaseDate": {
+    "ja": "2007年10月20日",
+    "year": 2007,
+    "month": 10,
+    "day": 20
+  },
+  "productImage": "https://bandai-hobby.net/images/155_2745_s_6pkrexfjmy7ychktcq6ftwkvt2vc.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/155_2745_s_6pkrexfjmy7ychktcq6ftwkvt2vc.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/906/",
+  "extractedAt": "2025-12-05T23:09:47.751Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/906.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-chars-counterattack",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1807",
+        "targetType": "item"
+      }
+    ]
+  }
+}

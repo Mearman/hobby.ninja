@@ -1,0 +1,88 @@
+{
+  "id": "01_1644",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 量産型ゲルググ/ゲルググキャノン",
+    "en": "HGUC 1/144 Mass-produced Gelgoog/Gelgoog Cannon"
+  },
+  "price": {
+    "amount": 1980,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2007年03月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "『機動戦士ガンダム』より、一年戦争末期に投入された高性能MS“ゲルググキャノン”がHGUCシリーズに登場。頭部やバックパックなど、一部パーツの差し替えにより「量産型ゲルググ」も再現可能。武器はビーム・ライフル、ビーム・ナギナタ、3連ミサイルランチャー、バックラー・シールド、大型シールドが付属。",
+      "en": "From \"Mobile Suit Gundam \", the high-performance MS \" Gelgoog Cannon \" introduced at the end of the First World War is now available in the HGUC series. \" Mass-produced Gelgoog\" can also be reproduced by replacing some parts such as the head and backpack. Weapons include a beam rifle, beam naginata, triple missile launcher, buckler seal, and large seal."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092293_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092293_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092293_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092293_4.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1644/",
+  "extractedAt": "2025-12-06T17:37:58.296Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0904",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4365",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3669",
+        "targetType": "item"
+      }
+    ]
+  }
+}

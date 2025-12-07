@@ -1,0 +1,68 @@
+{
+  "id": "01_5614",
+  "type": "item",
+  "name": {
+    "ja": "ケロロ軍曹プラモコレクション　ケロロロボ",
+    "en": "Keroro Sergeant Plastic Model Collection Keroro Robo"
+  },
+  "price": {
+    "amount": 990,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2006年08月26日 (土)",
+    "year": 2006,
+    "month": 8,
+    "day": 26
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_666_s_3tpduutwboix8ss3113zt3ddcjsk.jpg",
+    "https://bandai-hobby.net/images/155_666_s_0z6uckknyt00snr82yuopdzz1uib.jpg",
+    "https://bandai-hobby.net/images/156_666_s_t4bgtqbiy8ovx607i9ya8dlp2e3w.jpg",
+    "https://bandai-hobby.net/images/157_666_s_j9a4vllh8tybudqhxx13tcn6jid7.jpg",
+    "https://bandai-hobby.net/images/158_666_s_0x6a9o6vn9kz9c8tdbfs8l9xjgye.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5614/",
+  "extractedAt": "2025-12-06T17:56:16.876Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "sergeant-keroro",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_7034",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2120",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2122",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2104",
+        "targetType": "item"
+      }
+    ]
+  }
+}

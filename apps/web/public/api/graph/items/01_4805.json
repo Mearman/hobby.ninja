@@ -1,0 +1,77 @@
+{
+  "id": "01_4805",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ダブルオーライザー＋GNソードIII メタリックバージョン",
+    "en": "HG 1/144 00 Raiser + GN Sword III Metallic Version"
+  },
+  "price": {
+    "amount": 3666,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2010年08月10日 (火)",
+    "year": 2010,
+    "month": 8,
+    "day": 10
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "HG 1/144 ダブルオーライザー＋GNソードIII メタリックバージョン登場！",
+      "en": "HG 1/144 00 Raiser + GN Sword III Metallic version now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/156_5685_s_0el4yvljlv676ns2gjzu50maphm9.jpg",
+    "https://bandai-hobby.net/images/153_5685_s_qfk25q7exg8eh4flf8vmzrg5anbo.jpg",
+    "https://bandai-hobby.net/images/155_5685_s_mkg72hjkyspfokvoo7ii52qwm1bv.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4805/",
+  "extractedAt": "2025-12-06T17:54:26.666Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-00-double-o",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1954",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1953",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000114085",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_957",
+        "targetType": "item"
+      }
+    ]
+  }
+}

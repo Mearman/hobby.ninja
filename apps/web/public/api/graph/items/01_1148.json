@@ -1,0 +1,75 @@
+{
+  "id": "01_1148",
+  "type": "item",
+  "name": {
+    "ja": "EXモデル 01 1/144 連邦軍用ガンダムトレーラー",
+    "en": "EXModel 01 1/144 Federation Forces Gundam Trailer"
+  },
+  "price": {
+    "amount": 3300,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2001年07月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "地球連邦軍のモビルスーツ運搬用トレーラーを1/144スケールで立体化しました。HGUC RX-78-2 ガンダムを載せれば『機動戦士ガンダム』第1話の名シーンが再現可能です。劇中の既存ディテールを追求するだけでなく、新解釈の専用ハンガーが付属。",
+      "en": "A 1/144 scale three-dimensional version of the Earth Federation army's mobile suit transport trailer. If you install HGUC RX-78-2 Gundam, you can recreate the famous scene from the first episode of \"Mobile Suit Gundam\". In addition to pursuing the existing details from the play, a special hanger with a new interpretation is included."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_207_s_7zryqbg9lvevnmd9sfnlbg9m3wg8.jpg",
+    "https://bandai-hobby.net/images/155_207_s_s8vwmrs6d8oqdc6q31soapt5020p.jpg",
+    "https://bandai-hobby.net/images/156_207_s_nywv1wiz0sbw6nug4dglup901vi4.jpg",
+    "https://bandai-hobby.net/images/157_207_s_t6o6ome0stm489v6mdc67v1siivy.jpg",
+    "https://bandai-hobby.net/images/158_207_s_8avfhqoyzdp3s30fr1aed5u70cat.jpg",
+    "https://bandai-hobby.net/images/159_207_s_y4pde0v2hoyv6ayajor480yolgqm.jpg",
+    "https://bandai-hobby.net/images/189_207_s_8dn2oetqw74m8l2vvhwr7buy2qi9.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1148/",
+  "extractedAt": "2025-12-06T16:56:38.431Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "01_3272",
+  "type": "item",
+  "name": {
+    "ja": "ＢＢ戦士 37 ガンダム NT-1",
+    "en": "BB Senshi 37 Gundam NT-1"
+  },
+  "price": {
+    "amount": 330,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1989年08月10日 (木)",
+    "year": 1989,
+    "month": 8,
+    "day": 10
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4223_s_3s7oswl24dvdymctxv87q1fzucw9.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3272/",
+  "extractedAt": "2025-12-06T17:51:04.593Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3275",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-0080-war-in-the-pocket",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3275",
+        "targetType": "item"
+      }
+    ]
+  }
+}

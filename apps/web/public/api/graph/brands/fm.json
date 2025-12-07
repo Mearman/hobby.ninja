@@ -1,0 +1,53 @@
+{
+  "id": "fm",
+  "type": "brand",
+  "name": {
+    "ja": "FM",
+    "en": "FM"
+  },
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "1093",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "1094",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "1095",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "1096",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "2357",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "2486",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "2494",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "2522",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": []
+  }
+}

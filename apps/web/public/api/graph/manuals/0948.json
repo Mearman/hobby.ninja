@@ -1,0 +1,41 @@
+{
+  "id": "0948",
+  "type": "manual",
+  "name": {
+    "ja": "MG 1/100 イージスガンダム",
+    "en": "MG 1/100 Aegis Gundam"
+  },
+  "productNumber": "2156734",
+  "releaseDate": {
+    "ja": "2012年10月27日",
+    "year": 2012,
+    "month": 10,
+    "day": 27
+  },
+  "productImage": "https://bandai-hobby.net/images/156_2735_s_ukr7leg8atqqe10jmw39yc8rchj4.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_2735_s_ukr7leg8atqqe10jmw39yc8rchj4.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/948/",
+  "extractedAt": "2025-12-05T23:09:47.811Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/948.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1796",
+        "targetType": "item"
+      }
+    ]
+  }
+}

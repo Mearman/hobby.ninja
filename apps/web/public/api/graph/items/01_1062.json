@@ -1,0 +1,103 @@
+{
+  "id": "01_1062",
+  "type": "item",
+  "name": {
+    "ja": "ポケモンプラモコレクション No.41 セレクトシリーズ ピカチュウ",
+    "en": "Pokemon Plastic Model Collection No.41 Select Series Pikachu"
+  },
+  "price": {
+    "amount": 836,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2017年07月08日 (土)",
+    "year": 2017,
+    "month": 7,
+    "day": 8
+  },
+  "targetAge": 6,
+  "description": [
+    {
+      "ja": "• ポケモンプラモコレクション セレクトシリーズに可動満載のピカチュウが登場！",
+      "en": "• Pokémon plastic model collection Select series now includes fully movable Pikachu!"
+    },
+    {
+      "ja": "• 耳、首、手、尻尾、足の可動が大幅アップ！",
+      "en": "• The movement of ears, neck, hands, tail, and feet has been greatly improved!"
+    },
+    {
+      "ja": "• かわいいおすわりポーズや劇中で印象的なZワザポーズなど様々なポーズが再現可能に！",
+      "en": "• A variety of poses can be recreated, including the cute sitting pose and the impressive Z-move pose from the movie!"
+    },
+    {
+      "ja": "• 表情パーツもやる気満々に表情とかわいいにっこり表情の2種付属。",
+      "en": "• Two types of expression parts are included: a motivated expression and a cute smiling expression."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "表情パーツ×2",
+      "en": "Facial expression parts x 2"
+    }
+  ],
+  "contents": [
+    {
+      "ja": "成形品×3",
+      "en": "Molded product x 3"
+    },
+    {
+      "ja": "シール×1",
+      "en": "Seal×1"
+    },
+    {
+      "ja": "取扱説明書×1",
+      "en": "Handling manual×1"
+    }
+  ],
+  "images": [
+    "https://bandai-hobby.net/images/153_1996_s_xvr1bfmf2w2ch9c8nf7lf37sirsh.jpg",
+    "https://bandai-hobby.net/images/155_1996_s_cvq7p3ng143x79gurff2a4x14k6o.jpg",
+    "https://bandai-hobby.net/images/156_1996_s_nzn9f9p7ipt1blbe81zqoyrsrg80.jpg",
+    "https://bandai-hobby.net/images/157_1996_s_pu5bkim1361l980xrnexiv5khhmp.jpg",
+    "https://bandai-hobby.net/images/158_1996_s_zwfu32rly6bhxxbr58nghkh8j0o6.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1062/",
+  "extractedAt": "2025-12-06T16:47:13.843Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "pocket-monster",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5984",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5958",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5947",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5568",
+        "targetType": "item"
+      }
+    ]
+  }
+}

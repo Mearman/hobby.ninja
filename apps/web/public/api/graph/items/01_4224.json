@@ -1,0 +1,73 @@
+{
+  "id": "01_4224",
+  "type": "item",
+  "name": {
+    "ja": "30MS オプションヘアスタイルパーツVol.6 全4種 ロングヘア1[ピンク1]",
+    "en": "30MS Option Hairstyle Parts Vol.6 4 types in total Long Hair 1 [Pink 1]"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年11月26日 (土)",
+    "year": 2022,
+    "month": 11,
+    "day": 26
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5143_o_1i6mgfe97122c11vsifk1okiv3n23.jpg",
+    "https://bandai-hobby.net/images/155_5143_o_1i6mgfl7egs7k3611mv109vmim2d.jpg",
+    "https://bandai-hobby.net/images/156_5143_o_1i6mgfo581dtp14981pod1eiuti52i.jpg",
+    "https://bandai-hobby.net/images/157_5143_o_1i6mgfr0etat142vshf1tok16ca2n.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4224/",
+  "extractedAt": "2025-12-06T17:53:12.571Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "3480",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-sisters",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5975",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5976",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5977",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5954",
+        "targetType": "item"
+      }
+    ]
+  }
+}

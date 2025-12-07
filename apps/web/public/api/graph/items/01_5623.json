@@ -1,0 +1,101 @@
+{
+  "id": "01_5623",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 シャア専用ゲルググ",
+    "en": "HGUC 1/144 Char's Gelgoog"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2006年10月14日 (土)",
+    "year": 2006,
+    "month": 10,
+    "day": 14
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「機動戦士ガンダム」に登場する“シャア専用ゲルググ”がHGUCシリーズに遂に登場！",
+      "en": "“Char’s Gelgoog” that appears in “Mobile Suit Gundam” is finally available in the HGUC series!"
+    },
+    {
+      "ja": "頭部モノアイは左右に可動、シンボルであるツノはアニメ版デザインで再現、また、腹部ブロックの上下に可動ポイントを設け、上半身の反りや捻りといったアクションが再現可能。",
+      "en": "The head mono-eye can move left and right, the symbol horn is reproduced in the anime version design, and there are movable points above and below the abdominal block, allowing you to reproduce actions such as warping and twisting the upper body."
+    },
+    {
+      "ja": "腰部スカートのパーツ分割に加え、股間軸の可動によりアクションポーズの再現性が向上。",
+      "en": "In addition to the waist skirt being divided into parts, the crotch axis can be moved to improve the reproducibility of action poses."
+    },
+    {
+      "ja": "リアスカートや脚部装甲の内側にはモールドを彫刻し、武器はビーム・ライフル、ビーム・ナギナタ、シールドが付属。",
+      "en": "Molds are engraved on the inside of the rear skirt and leg armor, and weapons include a beam rifle, beam naginata, and seal."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_681_s_1l2uw4gdtml15srmdmloztf6jtqx.jpg",
+    "https://bandai-hobby.net/images/155_681_s_uagaj3exz5n9uj5td5rjaqbe88lf.jpg",
+    "https://bandai-hobby.net/images/156_681_s_cc29pzh9fhotjuy7e0x2w0o8q7zt.jpg",
+    "https://bandai-hobby.net/images/157_681_s_xkzjdzjjb1qtrsu1xp3ebtx6u5zi.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5623/",
+  "extractedAt": "2025-12-06T17:56:18.322Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0828",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4365",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3669",
+        "targetType": "item"
+      }
+    ]
+  }
+}

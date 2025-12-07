@@ -1,0 +1,69 @@
+{
+  "id": "01_3239",
+  "type": "item",
+  "name": {
+    "ja": "ＢＢ戦士 16 ジオング",
+    "en": "BB Senshi 16 Zeong"
+  },
+  "price": {
+    "amount": 330,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1988年09月15日 (木)",
+    "year": 1988,
+    "month": 9,
+    "day": 15
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4193_s_2k0vhw3f588cfnp18kpwj09c8sfq.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3239/",
+  "extractedAt": "2025-12-06T17:51:01.459Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4789",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4783",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2038",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "0998",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 陸戦型ガンダム地上戦セット",
+    "en": "HGUC 1/144 Ground Type Gundam Ground Combat Set"
+  },
+  "productNumber": "2071805",
+  "releaseDate": {
+    "ja": "2009年9月",
+    "year": 2009,
+    "month": 9
+  },
+  "productImage": "https://bandai-hobby.net/images/157_4273_o_1ej9qe7kjmfdk52gvi1uuk1gnp2s.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_4273_o_1ej9qe7kjmfdk52gvi1uuk1gnp2s.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/998/",
+  "extractedAt": "2025-12-05T23:09:47.877Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/998.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-08th-ms-platoon",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3318",
+        "targetType": "item"
+      }
+    ]
+  }
+}

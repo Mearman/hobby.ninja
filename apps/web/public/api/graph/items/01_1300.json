@@ -1,0 +1,77 @@
+{
+  "id": "01_1300",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士222 鎧丸（ヨロイマル）",
+    "en": "BB Senshi 222 Yoroimaru"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2001年10月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "コミックボンボンにて好評連載中の「武者○伝」に登場する「鎧丸」がプラモデルで登場。全身の鎧を組替えて「城塞モード」に変形可能。",
+      "en": "The \"Yorimaru \" that appears in \" Musha○den \", which is being serialized in Comic Bonbon, is now available as a plastic model. Can be transformed into \" castle mode\" by rearranging the armor of the whole body."
+    },
+    {
+      "ja": "双絶刀（２本）、ダブルビームライフルの武器が付属。",
+      "en": "Comes with two double beam rifle weapons."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_222_s_5ww0n52e8323wdcbu8o12fekx22d.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1300/",
+  "extractedAt": "2025-12-06T17:08:07.393Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-series",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-warrior",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

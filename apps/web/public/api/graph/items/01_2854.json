@@ -1,0 +1,93 @@
+{
+  "id": "01_2854",
+  "type": "item",
+  "name": {
+    "ja": "メカコレクション 自律無人戦闘艦BBB アンドロメダブラック",
+    "en": "Mecha Collection Autonomous Unmanned Combat Ship BBB Andromeda Black"
+  },
+  "price": {
+    "amount": 770,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年09月12日 (土)",
+    "year": 2020,
+    "month": 9,
+    "day": 12
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3837_s_3aqwc3jt5cmiq4d4te2sk1qjdbs5.jpg",
+    "https://bandai-hobby.net/images/155_3837_s_974ewbh1uyhtv3fzwkqo36strzsi.jpg",
+    "https://bandai-hobby.net/images/156_3837_s_gnj4mgzm48ohrfavxgarlshelm1w.jpg",
+    "https://bandai-hobby.net/images/157_3837_s_rvlwcnzk3lzezwfl9fopljb7uzxu.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2854/",
+  "extractedAt": "2025-12-06T17:50:15.258Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5500",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5498",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3667",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3650",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "space-battleship-yamato-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mecha-collection",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5498",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5500",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3667",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3650",
+        "targetType": "item"
+      }
+    ]
+  }
+}

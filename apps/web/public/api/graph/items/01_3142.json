@@ -1,0 +1,80 @@
+{
+  "id": "01_3142",
+  "type": "item",
+  "name": {
+    "ja": "1/550 アッザム",
+    "en": "1/550 Azzam"
+  },
+  "price": {
+    "amount": 440,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1982年06月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/550",
+  "description": [
+    {
+      "ja": "『機動戦士ガンダム』より、1/550スケールで、 アッザムが登場。",
+      "en": "From \"Mobile Suit Gundam\", Azzam appears in 1/550 scale."
+    },
+    {
+      "ja": "４本の腕部は伸縮の調節が可能です。上部の砲身が可動します。同スケールのアッザム・リーダー、ガンダム、マゼラ・アタック、メが粒子砲弾が付いています。",
+      "en": "The four arms can be adjusted for expansion and contraction. The upper gun barrel is movable. The Azzam Leader, Gundam, Magella Attack, and Megumi of the same scale come with particle cannonballs."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4105_s_bqyt6shz4qzk7w76spou8jaijtp0.jpg",
+    "https://bandai-hobby.net/images/155_4105_s_frt1cmhbu84pqaw6jmy2i5hfjfda.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3142/",
+  "extractedAt": "2025-12-06T17:50:51.573Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1977",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

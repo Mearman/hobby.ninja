@@ -1,0 +1,72 @@
+{
+  "id": "01_5586",
+  "type": "item",
+  "name": {
+    "ja": "1/1 ガンプラくん[ガンプラくん劇場イメージカラー]",
+    "en": "1/1 Gunpla-kun [Gunpla-kun theater image color]"
+  },
+  "price": {
+    "amount": 880,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2024年12月07日 (土)",
+    "year": 2024,
+    "month": 12,
+    "day": 7
+  },
+  "targetAge": 8,
+  "scale": "1/1",
+  "description": [
+    {
+      "ja": "ガンダム 45周年を記念して劇場版『機動戦士ガンダム』のポスターをイメージしたカラーリングのガンプラくんが登場！",
+      "en": "To commemorate Gundam's 45th anniversary, Gunpla-kun is now available in a color scheme inspired by the poster for the movie \"Mobile Suit Gundam\"!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_6421_o_1idjkfgui1ab0ide3jo1u8n1dhk2d.jpg",
+    "https://bandai-hobby.net/images/155_6421_o_1idjkg9vhl75jt3g98mcf15qr2n.jpg",
+    "https://bandai-hobby.net/images/156_6421_o_1idjkgjmfh1419r48s0s79rme2s.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5586/",
+  "extractedAt": "2025-12-06T17:56:12.951Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gunpla-kun",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5571",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5556",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5478",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      }
+    ]
+  }
+}

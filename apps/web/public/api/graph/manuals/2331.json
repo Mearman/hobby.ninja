@@ -1,0 +1,40 @@
+{
+  "id": "2331",
+  "type": "manual",
+  "name": {
+    "ja": "ＭＧ 1/100 ガンダムアストレア TYPE-F（フルウェポンセット）",
+    "en": "MG 1/100 Gundam Astrea TYPE-F (Full Weapon Set)"
+  },
+  "productNumber": "2553525",
+  "releaseDate": {
+    "ja": "2022年4月",
+    "year": 2022,
+    "month": 4
+  },
+  "productImage": "https://bandai-hobby.net/images/153_4997_s_i5yyso4kq8zz1nkoklhvg3qnukv3.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_4997_s_i5yyso4kq8zz1nkoklhvg3qnukv3.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2331/",
+  "extractedAt": "2025-12-05T23:09:48.523Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2331.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-00",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4069",
+        "targetType": "item"
+      }
+    ]
+  }
+}

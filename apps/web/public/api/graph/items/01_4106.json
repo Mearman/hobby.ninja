@@ -1,0 +1,76 @@
+{
+  "id": "01_4106",
+  "type": "item",
+  "name": {
+    "ja": "1/144 ガイアガンダム",
+    "en": "1/144 Gaia Gundam"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2004年12月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「機動戦士ガンダム SEED DESTINY」に登場する「ガイアガンダム」の1/144スケール、コレクションシリーズのプラモデル。プラモデル初心者でも組み立てやすい導入版です。新型ポリキャップ「アレイジョイント」により、可動範囲が拡大しアニメーションのカッコイイポーズが再現可能です。ビームライフルを肩にシールドを胸に取り付け、バックパックを移動することで、MA形態に簡易変形可能です。",
+      "en": "1/144 Scale, collection series plastic model of \"Gaia Gundam \" that appears in \" Mobile Suit Gundam SEED DESTINY \". An introductory version that is easy to assemble even for plastic model beginners. The new polycap \" array joint\" expands the range of motion and allows you to reproduce cool animation poses. It can be easily transformed into MA form by attaching the beam rifle to the shoulder and the Seal to the chest and moving the backpack."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_502_s_ltb47gb39i2ki10qv66s8gtamaad.jpg",
+    "https://bandai-hobby.net/images/155_502_o_1hgi4fr58bserdu1c04qbr12sl23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4106/",
+  "extractedAt": "2025-12-06T17:52:56.932Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1146",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed-destiny",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5394",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000214960",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5365",
+        "targetType": "item"
+      }
+    ]
+  }
+}

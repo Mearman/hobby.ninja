@@ -1,0 +1,76 @@
+{
+  "id": "01_4828",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 RX-78-2 ガンダム+ガンダムトレーラー ガンダム大地に立つセット（エクストラフィニッシュバージョン）",
+    "en": "HGUC 1/144 RX-78-2 Gundam+Gundam Trailer Gundam Earth Standing Set (Extra Finish Version)"
+  },
+  "price": {
+    "amount": 5238,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2005年08月20日 (土)",
+    "year": 2005,
+    "month": 8,
+    "day": 20
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「HGUC 1/144 RX-78-2 ガンダム+ガンダムトレーラー ガンダム大地に立つセット（エクストラフィニッシュバージョン）」登場！",
+      "en": "\"HGUC 1/144 RX-78-2 Gundam + Gundam Trailer Gundam Earth Standing Set (Extra Finish Version)\" now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5710_s_d63h3a97ntw9qsgutbm7n2cigk8l.jpg",
+    "https://bandai-hobby.net/images/155_5710_s_uq8qfm92qjrmohby9b8di472orro.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4828/",
+  "extractedAt": "2025-12-06T17:54:29.254Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4365",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3669",
+        "targetType": "item"
+      }
+    ]
+  }
+}

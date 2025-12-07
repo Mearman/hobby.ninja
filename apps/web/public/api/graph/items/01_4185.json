@@ -1,0 +1,77 @@
+{
+  "id": "01_4185",
+  "type": "item",
+  "name": {
+    "ja": "30MS オプションボディパーツ アームパーツ&レッグパーツ[カラーC]",
+    "en": "30MS Optional Body Parts Arm Parts & Leg Parts [Color C]"
+  },
+  "price": {
+    "amount": 880,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年09月17日 (土)",
+    "year": 2022,
+    "month": 9,
+    "day": 17
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175355_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175355_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175355_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175355_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175355_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175355_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175355_7.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175355_8.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4185/",
+  "extractedAt": "2025-12-06T17:53:07.268Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "3478",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-sisters",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5975",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5976",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5977",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5954",
+        "targetType": "item"
+      }
+    ]
+  }
+}

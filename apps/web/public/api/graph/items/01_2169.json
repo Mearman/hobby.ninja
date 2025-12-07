@@ -1,0 +1,69 @@
+{
+  "id": "01_2169",
+  "type": "item",
+  "name": {
+    "ja": "ガンプラ用LEDユニット2個セット(緑)",
+    "en": "Set of 2 LED units for Gunpla (green)"
+  },
+  "price": {
+    "amount": 1430,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2011年09月23日 (金)",
+    "year": 2011,
+    "month": 9,
+    "day": 23
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "LEDライトユニット（緑）登場",
+      "en": "LED light unit (green) now available"
+    },
+    {
+      "ja": "ボタン電池（LR41）（別売り）を２個ご使用ください。",
+      "en": "Please use two button batteries (LR41) (sold separately)."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132799_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132799_2.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2169/",
+  "extractedAt": "2025-12-06T17:48:48.288Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5968",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5987",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5988",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5969",
+        "targetType": "item"
+      }
+    ]
+  }
+}

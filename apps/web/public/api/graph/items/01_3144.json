@@ -1,0 +1,74 @@
+{
+  "id": "01_3144",
+  "type": "item",
+  "name": {
+    "ja": "1/100 量産型ズゴック",
+    "en": "1/100 mass-produced Z'Gok"
+  },
+  "price": {
+    "amount": 880,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1982年06月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [
+    {
+      "ja": "『機動戦士ガンダム』より、1/100スケールで、量産型ズゴックが登場。",
+      "en": "From ``Mobile Suit Gundam'' comes the mass-produced Z'Gok in 1/100 scale."
+    },
+    {
+      "ja": "両腕のクロー部分が開閉でき、それぞれの状態でポージングが可能です。胴が胸と別パーツ化され、前後左右スイングが可能になっています。膝と足首は前後左右にスイングします。",
+      "en": "The claws on both arms can be opened and closed, allowing for posing in each state. The torso is a separate part from the chest, allowing it to swing forward, backward, left and right. Swing your knees and ankles back and forth and side to side."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4107_s_q9i1mkyyrsabop4arzjspy7ax0d0.jpg",
+    "https://bandai-hobby.net/images/155_4107_s_8udun4tg44ya5pzzp58hp7qtc28d.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3144/",
+  "extractedAt": "2025-12-06T17:50:51.722Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "0674",
+  "type": "manual",
+  "name": {
+    "ja": "RG 1/144 ユニコーンガンダム",
+    "en": "RG 1/144 Unicorn Gundam"
+  },
+  "productNumber": "2370362",
+  "releaseDate": {
+    "ja": "2017年8月5日",
+    "year": 2017,
+    "month": 8,
+    "day": 5
+  },
+  "productImage": "https://bandai-hobby.net/images/192_2017_s_as6n819e4eillpkfzuqqfwr481x3.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/192_2017_s_as6n819e4eillpkfzuqqfwr481x3.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/674/",
+  "extractedAt": "2025-12-05T23:09:47.397Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/674.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-uc",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "rg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1085",
+        "targetType": "item"
+      }
+    ]
+  }
+}

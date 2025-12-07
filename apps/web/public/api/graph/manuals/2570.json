@@ -1,0 +1,40 @@
+{
+  "id": "2570",
+  "type": "manual",
+  "name": {
+    "ja": "ＨＧ 1/144 イフリート（ダグ・シュナイド機）",
+    "en": "HG 1/144 Ifrit (Doug Schneid machine)"
+  },
+  "productNumber": "2488883",
+  "releaseDate": {
+    "ja": "2020年3月",
+    "year": 2020,
+    "month": 3
+  },
+  "productImage": "https://bandai-hobby.net/images/153_3585_s_jps6re5fs0nj1902ydyfud2lt1hr.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_3585_s_jps6re5fs0nj1902ydyfud2lt1hr.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2570/",
+  "extractedAt": "2025-12-05T23:09:48.793Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2570.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "others",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2662",
+        "targetType": "item"
+      }
+    ]
+  }
+}

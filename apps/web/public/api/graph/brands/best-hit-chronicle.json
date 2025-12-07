@@ -1,0 +1,34 @@
+{
+  "id": "best-hit-chronicle",
+  "type": "brand",
+  "name": {
+    "ja": "BEST HIT CHRONICLE",
+    "en": "BEST HIT CHRONICLE"
+  },
+  "url": "https://bandai-hobby.net/brand/besthit_chronicle/",
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_6325",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_2962",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_2630",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_2628",
+        "targetType": "item"
+      }
+    ],
+    "outbound": []
+  }
+}

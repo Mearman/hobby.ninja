@@ -1,0 +1,59 @@
+{
+  "id": "master-grade-sd",
+  "type": "brand",
+  "name": {
+    "ja": "MASTER GRADE SD",
+    "en": "MASTER GRADE SD"
+  },
+  "url": "https://bandai-hobby.net/brand/mgsd/",
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_6881",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_6739",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_6538",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_6483",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_5962",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_5377",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_5332",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_4994",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_4293",
+        "targetType": "item"
+      }
+    ],
+    "outbound": []
+  }
+}

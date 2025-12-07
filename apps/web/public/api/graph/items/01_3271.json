@@ -1,0 +1,70 @@
+{
+  "id": "01_3271",
+  "type": "item",
+  "name": {
+    "ja": "1/144 ガンダム NT-1",
+    "en": "1/144 Gundam NT-1"
+  },
+  "price": {
+    "amount": 880,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1989年08月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「機動戦士ガンダム 0080 ポケットの中の戦争」に登場したニュータイプ専用に開発されたガンダムをモデル化しました。ビーム・サーベルはバックパック収納用と、手持ち用の２形態が付属しています。チョパームアーマーは前腕カバーと背面装甲の差替えにより装着時の再現が可能です。股関節部はボールジョイントを採用しています。サイドアーマー、左右フロントアーマーが独立して可動します。前腕部のガトリング砲の展開ギミックは差替えなしで再現できます。ビーム・ライフル、ビーム・サーベル、シールド、チョパムアーマーが付いています。",
+      "en": "A model of the Gundam developed exclusively for the new type that appeared in \"Mobile Suit Gundam 0080: War in the Pocket\". The beam saber comes in two versions: one for storing in a backpack and one for hand-held. Chopalm armor can be reproduced when worn by replacing the forearm cover and back armor. The hip joint uses a ball joint. Side armor, left and right front armor move independently. The deployment gimmick of the Gatling gun on the forearm can be reproduced without replacement. Comes with beam rifle, beam saber, seal, and chopham armor."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4222_s_1xk1vmfxdetwikf78gkc2gt1xyoc.jpg",
+    "https://bandai-hobby.net/images/155_4222_s_dgukxm9107yrwsigd0azxzs7cj1w.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3271/",
+  "extractedAt": "2025-12-06T17:51:05.010Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-0080-war-in-the-pocket",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5429",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5149",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5150",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2461",
+        "targetType": "item"
+      }
+    ]
+  }
+}

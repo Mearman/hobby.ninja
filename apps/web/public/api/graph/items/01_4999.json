@@ -1,0 +1,79 @@
+{
+  "id": "01_4999",
+  "type": "item",
+  "name": {
+    "ja": "30MS 櫻木真乃",
+    "en": "30MS Mano Sakuragi"
+  },
+  "price": {
+    "amount": 4180,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2023年10月21日 (土)",
+    "year": 2023,
+    "month": 10,
+    "day": 21
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5868_s_r2b20lpjgvrh1ppv8carynz7vv0z.jpg",
+    "https://bandai-hobby.net/images/155_5868_s_c5pml0tj99btpx8e0ta5erc89w4e.jpg",
+    "https://bandai-hobby.net/images/156_5868_s_tgpj35a7ccaq2xvubfgckv7e83xk.jpg",
+    "https://bandai-hobby.net/images/157_5868_s_p4sr3m1mftg7aa56ta42opiclkdb.jpg",
+    "https://bandai-hobby.net/images/158_5868_s_6ulq62ng6fidyyog84g5eaumvs7m.jpg",
+    "https://bandai-hobby.net/images/159_5868_s_1jrn7ysyq6xxi1xxiyb3ca3afc3u.jpg",
+    "https://bandai-hobby.net/images/189_5868_s_mhqld7deljix1klqjbaxzlpopu69.jpg",
+    "https://bandai-hobby.net/images/190_5868_s_2g4c3yx9crryt6znr8rkjgjhc555.jpg",
+    "https://bandai-hobby.net/images/191_5868_s_n9qnapm9ofc6myvgmjbekpanc500.jpg",
+    "https://bandai-hobby.net/images/192_5868_s_vaflhyiz5yxpcw5km2oidw918djl.jpg",
+    "https://bandai-hobby.net/images/193_5868_s_yo8jawtstaq7a72w1l91nwcxisua.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4999/",
+  "extractedAt": "2025-12-06T17:54:53.251Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "idolmaster-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-sisters",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6755",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6756",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5976",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5975",
+        "targetType": "item"
+      }
+    ]
+  }
+}

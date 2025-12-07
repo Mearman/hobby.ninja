@@ -1,0 +1,70 @@
+{
+  "id": "01_3101",
+  "type": "item",
+  "name": {
+    "ja": "1/1200 マゼラン",
+    "en": "1/1200 Magellan"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1983年03月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/1200",
+  "description": [
+    {
+      "ja": "同スケールのジム、ボール各２機が付いています。大気圏突入用カプセルが、本体下部へ脱着可能です。専用ディスプレイスタンドが付属しています。",
+      "en": "Comes with the same Scale gym and 2 balls each. The atmospheric entry capsule can be attached to and removed from the bottom of the main body. A dedicated display stand is included."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/155_4068_s_61e7wed2lnhvj6xeqksbqhujbzl5.jpg",
+    "https://bandai-hobby.net/images/153_4068_s_oficj14xu0c16jwx4gb4lghkx76a.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3101/",
+  "extractedAt": "2025-12-06T17:50:46.132Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

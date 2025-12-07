@@ -1,0 +1,80 @@
+{
+  "id": "01_3294",
+  "type": "item",
+  "name": {
+    "ja": "ハローキティ/シャア専用ザクII[SD ガンダムクロスシルエット]",
+    "en": "Hello Kitty/Char's Zaku II [SD Gundam Cross Silhouette]"
+  },
+  "price": {
+    "amount": 2750,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年12月05日 (土)",
+    "year": 2020,
+    "month": 12,
+    "day": 5
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153010_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153010_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153010_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153010_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153010_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153010_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153010_7.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153010_8.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153010_9.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153010_10.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153010_11.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000153010_12.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3294/",
+  "extractedAt": "2025-12-06T17:51:08.049Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "hello-kitty",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-cross-silhouette",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5275",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5191",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5014",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4893",
+        "targetType": "item"
+      }
+    ]
+  }
+}

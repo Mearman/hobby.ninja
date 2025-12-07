@@ -1,0 +1,63 @@
+{
+  "id": "sd",
+  "type": "brand",
+  "name": {
+    "ja": "SD",
+    "en": "SD"
+  },
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "1029",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "1045",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "1052",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "0740",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "0731",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "0727",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "0726",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "0101",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "0082",
+        "targetType": "manual"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "0071",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": []
+  }
+}

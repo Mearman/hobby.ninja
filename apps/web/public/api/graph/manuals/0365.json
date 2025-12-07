@@ -1,0 +1,41 @@
+{
+  "id": "0365",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 アンクシャ",
+    "en": "HGUC 1/144 Ankusha"
+  },
+  "productNumber": "2166498",
+  "releaseDate": {
+    "ja": "2012年5月26日",
+    "year": 2012,
+    "month": 5,
+    "day": 26
+  },
+  "productImage": "https://bandai-hobby.net/images/158_818_s_wpzmmo1nh9eowvb1hznzxwd5sukm.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/158_818_s_wpzmmo1nh9eowvb1hznzxwd5sukm.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/365/",
+  "extractedAt": "2025-12-05T23:09:46.929Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/365.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-uc",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5754",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "01_5023",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ガンダムダブルオーダイバーアーク",
+    "en": "HG 1/144 Gundam 00 Diver Arc"
+  },
+  "price": {
+    "amount": 2750,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2023年12月02日 (土)",
+    "year": 2023,
+    "month": 12,
+    "day": 2
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5890_s_lfsdgtm66mydwfefxwekvjh0tm6m.jpg",
+    "https://bandai-hobby.net/images/155_5890_s_2yyke5tn4iko3irbubdpf3j023eq.jpg",
+    "https://bandai-hobby.net/images/156_5890_s_nqnav1gn4rizvk1puukcffvutg27.jpg",
+    "https://bandai-hobby.net/images/157_5890_s_jtwbc4bi26q40zxzeo7agqmg05xi.jpg",
+    "https://bandai-hobby.net/images/158_5890_s_skhuxi3615oisk52uckdafc38e39.jpg",
+    "https://bandai-hobby.net/images/159_5890_s_td27ij5os3mu2d54pspxa33episj.jpg",
+    "https://bandai-hobby.net/images/189_5890_s_2hhzelltu3nq3c84bp0ezxxakh58.jpg",
+    "https://bandai-hobby.net/images/190_5890_s_ioxts3leqjf575w7dfw5bho9l9za.jpg",
+    "https://bandai-hobby.net/images/191_5890_s_ztg47gwxv9ueshz10ap16icqst5j.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5023/",
+  "extractedAt": "2025-12-06T17:55:02.112Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1222",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-metaverse",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5236",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5235",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5083",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5071",
+        "targetType": "item"
+      }
+    ]
+  }
+}

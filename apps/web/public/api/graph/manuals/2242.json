@@ -1,0 +1,40 @@
+{
+  "id": "2242",
+  "type": "manual",
+  "name": {
+    "ja": "ＭＧ 1/100 ガンダムアストレイ レッドフレーム",
+    "en": "MG 1/100 Gundam Astray Red Frame"
+  },
+  "productNumber": "2242118",
+  "releaseDate": {
+    "ja": "2014年1月",
+    "year": 2014,
+    "month": 1
+  },
+  "productImage": "https://bandai-hobby.net/images/153_4845_s_8ypi8khwwrsa74sjn05hxorggrcz.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_4845_s_8ypi8khwwrsa74sjn05hxorggrcz.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2242/",
+  "extractedAt": "2025-12-05T23:09:48.432Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2242.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3904",
+        "targetType": "item"
+      }
+    ]
+  }
+}

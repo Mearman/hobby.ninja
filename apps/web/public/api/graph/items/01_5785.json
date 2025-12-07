@@ -1,0 +1,65 @@
+{
+  "id": "01_5785",
+  "type": "item",
+  "name": {
+    "ja": "ＢＢ戦士 131覇道武者魔殺駆",
+    "en": "BB Senshi 131 Supremacy Musha Demon Slayer"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1994年07月01日 (金)",
+    "year": 1994,
+    "month": 7,
+    "day": 1
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_84_s_zybftjnf7nmribpz8bqewbu48tbt.jpg",
+    "https://bandai-hobby.net/images/155_84_s_o88p2x3jchw62ry2obfiqn0i3sf9.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5785/",
+  "extractedAt": "2025-12-06T17:56:36.621Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

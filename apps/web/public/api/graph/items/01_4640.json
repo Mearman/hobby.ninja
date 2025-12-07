@@ -1,0 +1,65 @@
+{
+  "id": "01_4640",
+  "type": "item",
+  "name": {
+    "ja": "クイックモデル バスターガンダム",
+    "en": "Quick Model Buster Gundam"
+  },
+  "price": {
+    "amount": 1078,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2003年04月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5533_o_1go67qcgtb6t1tba1h8b3ja15jk23.jpg",
+    "https://bandai-hobby.net/images/155_5533_o_1go67qios1at6f5p1p0b1o0tk6h2d.jpg",
+    "https://bandai-hobby.net/images/156_5533_o_1gois434gdg5bnunh91jlh1q6023.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4640/",
+  "extractedAt": "2025-12-06T17:54:06.999Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5994",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5440",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5441",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5365",
+        "targetType": "item"
+      }
+    ]
+  }
+}

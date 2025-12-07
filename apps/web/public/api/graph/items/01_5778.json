@@ -1,0 +1,70 @@
+{
+  "id": "01_5778",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士130 機動武者大鋼",
+    "en": "BB Senshi 130 Mobile Musha Taihagane"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1994年07月01日 (金)",
+    "year": 1994,
+    "month": 7,
+    "day": 1
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "BB戦士130 機動武者大鋼登場！",
+      "en": "BB Senshi 130 Mobile Musha Taihagane is here!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_83_s_qzvakidkisvjbqo8rbej4th57s5x.jpg",
+    "https://bandai-hobby.net/images/155_83_s_iuagqrkkw0bztraj90rpt06n8748.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5778/",
+  "extractedAt": "2025-12-06T17:56:36.460Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "01_2840",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ガンダム端白星",
+    "en": "HG 1/144 Gundam End White Star"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年08月22日 (土)",
+    "year": 2020,
+    "month": 8,
+    "day": 22
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3823_s_oolg4qjjr55w1rmhg971okl9y2a9.jpg",
+    "https://bandai-hobby.net/images/155_3823_s_5chr5mhtpxeqqnxpvziyhbw9bmf0.jpg",
+    "https://bandai-hobby.net/images/156_3823_s_mv3jk702qe99oi2rupug0woqcd9w.jpg",
+    "https://bandai-hobby.net/images/157_3823_s_e8uv6fp4hwny4cqteyabyy8iikpo.jpg",
+    "https://bandai-hobby.net/images/158_3823_s_xwupqzwia14kdg7fiy1dii7d661c.jpg",
+    "https://bandai-hobby.net/images/159_3823_s_7u569d7i4ecw12pj6xo2c4zvmhsk.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2840/",
+  "extractedAt": "2025-12-06T17:50:14.225Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0806",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-iron-blooded-orphans",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4103",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4240",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4188",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4094",
+        "targetType": "item"
+      }
+    ]
+  }
+}

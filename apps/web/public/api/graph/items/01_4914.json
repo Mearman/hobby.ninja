@@ -1,0 +1,77 @@
+{
+  "id": "01_4914",
+  "type": "item",
+  "name": {
+    "ja": "HG グフ イグナイテッド(量産機)",
+    "en": "HG Gouf Ignited (mass production machine)"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2005年08月12日 (金)",
+    "year": 2005,
+    "month": 8,
+    "day": 12
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "「機動戦士ガンダム SEED DESTINY」に登場するグフイグナイテッド（量産機カラー）のHGシリーズ1/144スケールのプラモデルです。専用ソードは、シールドに収納可能な短剣タイプと、ビーム刃を取り付け可能な延長タイプの２タイプを付属しています。フライングイメージを再現できる専用台座も付属。ヒートロッドの攻撃状態をクリアタイプにてリアルに再現しています。",
+      "en": "A plastic model of the HG series 1/144 Scale of Gouf Ignited (mass production machine color) that appears in \"Mobile Suit Gundam SEED DESTINY\". The special sword comes with two types: a dagger type that can be stored in the seal, and an extension type that can attach a beam blade. A special pedestal is also included to recreate the flying image. The attack state of the heat rod is realistically reproduced in clear type."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_578_s_lylvin4fs2tbv82z768z6urjr7l9.jpg",
+    "https://bandai-hobby.net/images/155_578_s_f9143wzs8kep0ugh4av4kk475f7n.jpg",
+    "https://bandai-hobby.net/images/156_578_s_fdf4uecd81806wzix7r51e8fasdh.jpg",
+    "https://bandai-hobby.net/images/157_578_s_37menrvzpm3mpqdwg1e327lb53la.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4914/",
+  "extractedAt": "2025-12-06T17:54:38.793Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed-destiny",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000203308",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5097",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3739",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000157417",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "01_4213",
+  "type": "item",
+  "name": {
+    "ja": "MG 1/100 ガンダムベース限定 ガンダム F90[クリアカラー］",
+    "en": "MG 1/100 Gundam Base Limited Gundam F90 [Clear Color]"
+  },
+  "price": {
+    "amount": 4400,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年06月11日 (土)",
+    "year": 2022,
+    "month": 6,
+    "day": 11
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5132_s_929ird7s9fizgs63a9r66c5q0nws.jpg",
+    "https://bandai-hobby.net/images/155_5132_s_uotbwwa7rcnl1hx5hsscrtb5ze7f.jpg",
+    "https://bandai-hobby.net/images/156_5132_s_163n1udy9umfir2kcxlxv14snrtn.jpg",
+    "https://bandai-hobby.net/images/157_5132_s_06v5qyrywyyl9emnj7djiricoxp1.jpg",
+    "https://bandai-hobby.net/images/158_5132_s_h9qid7nfy2mqphs86fnkls46hoe2.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4213/",
+  "extractedAt": "2025-12-06T17:53:11.464Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-f90",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_7056",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000224327",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000203900",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000223368",
+        "targetType": "item"
+      }
+    ]
+  }
+}

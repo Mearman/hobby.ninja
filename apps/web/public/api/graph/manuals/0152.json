@@ -1,0 +1,40 @@
+{
+  "id": "0152",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ガンダムアストレイ レッドフレーム",
+    "en": "HG 1/144 Gundam Astray Red Frame"
+  },
+  "productNumber": "1122715",
+  "releaseDate": {
+    "ja": "2003年11月",
+    "year": 2003,
+    "month": 11
+  },
+  "productImage": "https://bandai-hobby.net/images/157_389_s_r063jc6cyak2ozpmxzs6b0aof14q.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_389_s_r063jc6cyak2ozpmxzs6b0aof14q.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/152/",
+  "extractedAt": "2025-12-05T23:09:46.531Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/152.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2922",
+        "targetType": "item"
+      }
+    ]
+  }
+}

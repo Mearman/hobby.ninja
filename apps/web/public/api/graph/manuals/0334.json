@@ -1,0 +1,41 @@
+{
+  "id": "0334",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 R05 イージスガンダム",
+    "en": "HG 1/144 R05 Aegis Gundam"
+  },
+  "productNumber": "2156316",
+  "releaseDate": {
+    "ja": "2011年11月19日",
+    "year": 2011,
+    "month": 11,
+    "day": 19
+  },
+  "productImage": "https://bandai-hobby.net/images/156_5480_s_1kv7ape5yladrd120qz8z6zoi23a.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_5480_s_1kv7ape5yladrd120qz8z6zoi23a.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/334/",
+  "extractedAt": "2025-12-05T23:09:46.892Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/334.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4582",
+        "targetType": "item"
+      }
+    ]
+  }
+}

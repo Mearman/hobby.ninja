@@ -1,0 +1,83 @@
+{
+  "id": "01_3623",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ガンダムバルバタウロス",
+    "en": "HG 1/144 Gundam Barbataur"
+  },
+  "price": {
+    "amount": 2420,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年01月15日 (土)",
+    "year": 2022,
+    "month": 1,
+    "day": 15
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4697_s_2txrnrccolau8fw56ne388qzg9q0.jpg",
+    "https://bandai-hobby.net/images/155_4697_s_a1j58tgyknn7yqqyc6lq35lqtfqv.jpg",
+    "https://bandai-hobby.net/images/156_4697_s_e6uua2crwwft9iy8rdj55w9sxnms.jpg",
+    "https://bandai-hobby.net/images/157_4697_s_uqn3ssmi35d1gkqfqwnexd8dreix.jpg",
+    "https://bandai-hobby.net/images/158_4697_s_g78v8lx2w0stmx9zs3yf0e5in3fj.jpg",
+    "https://bandai-hobby.net/images/159_4697_s_jbrxcicyln27v6bmdkovutgtjnrx.jpg",
+    "https://bandai-hobby.net/images/189_4697_s_q2s02wqpuo898kxn4dy4u3xye6wz.jpg",
+    "https://bandai-hobby.net/images/190_4697_s_gfb4spzr1enuk2v9dj74f1vsuy66.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3623/",
+  "extractedAt": "2025-12-06T17:51:50.970Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0118",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-breaker-battlogue",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4128",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000166359",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000166322",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000166358",
+        "targetType": "item"
+      }
+    ]
+  }
+}

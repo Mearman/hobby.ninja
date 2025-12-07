@@ -1,0 +1,41 @@
+{
+  "id": "0006",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 Gサイフォス",
+    "en": "HG 1/144 G Xiphos"
+  },
+  "productNumber": "2207572",
+  "releaseDate": {
+    "ja": "2013年3月16日",
+    "year": 2013,
+    "month": 3,
+    "day": 16
+  },
+  "productImage": "https://bandai-hobby.net/images/156_846_s_x3yb3gfwsaj30o7ic4yhqvb4gs39.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_846_s_x3yb3gfwsaj30o7ic4yhqvb4gs39.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/6/",
+  "extractedAt": "2025-12-05T23:09:46.334Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/6.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5783",
+        "targetType": "item"
+      }
+    ]
+  }
+}

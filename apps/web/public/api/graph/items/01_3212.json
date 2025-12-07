@@ -1,0 +1,75 @@
+{
+  "id": "01_3212",
+  "type": "item",
+  "name": {
+    "ja": "1/300 サイコガンダム MK2",
+    "en": "1/300 Psycho Gundam MK2"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1986年04月01日 (火)",
+    "year": 1986,
+    "month": 4,
+    "day": 1
+  },
+  "targetAge": 15,
+  "scale": "1/300",
+  "description": [
+    {
+      "ja": "『機動戦士Z ガンダム』より、1/300スケールでサイコガンダム MK2が登場。",
+      "en": "From \"Mobile Suit Z Gundam\", Psycho Gundam MK2 appears in 1/300 scale."
+    },
+    {
+      "ja": "頭部、手首パーツの差替えにより、モビルアーマー形態への変形が可能です。肩アーマーは取り外し可能です。シールドは分割式で、モビルアーマー形態時には腕部に取り付けられます。",
+      "en": "By replacing the head and wrist parts, it can be transformed into mobile armor form. Shoulder armor is removable. The Seal is split and attached to the arm when in mobile armor form."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4169_s_ifsxzuk6isqf3ng0j0v6hjfu922v.jpg",
+    "https://bandai-hobby.net/images/155_4169_s_pwz1gajf28fjcj4529syixi8b8uo.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3212/",
+  "extractedAt": "2025-12-06T17:50:57.793Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5468",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5375",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5162",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      }
+    ]
+  }
+}

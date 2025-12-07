@@ -1,0 +1,40 @@
+{
+  "id": "2222",
+  "type": "manual",
+  "name": {
+    "ja": "ＨＧ 1/144 ミーティアユニット",
+    "en": "HG 1/144 Meteor unit"
+  },
+  "productNumber": "2196491",
+  "releaseDate": {
+    "ja": "2012年10月",
+    "year": 2012,
+    "month": 10
+  },
+  "productImage": "https://bandai-hobby.net/images/1000077001_1.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/1000077001_1.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2222/",
+  "extractedAt": "2025-12-05T23:09:48.412Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2222.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3853",
+        "targetType": "item"
+      }
+    ]
+  }
+}

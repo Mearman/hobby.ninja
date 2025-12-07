@@ -1,0 +1,97 @@
+{
+  "id": "01_2088",
+  "type": "item",
+  "name": {
+    "ja": "メカコレクション 1式空間戦闘攻撃機コスモタイガーII（単座型）",
+    "en": "Mecha Collection Type 1 space combat attack aircraft Cosmo Tiger II (single seat type)"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2019年01月26日 (土)",
+    "year": 2019,
+    "month": 1,
+    "day": 26
+  },
+  "targetAge": 15,
+  "description": [
+    {
+      "ja": "『宇宙戦艦ヤマト2202 愛の戦士たち』より、新たな地球連邦艦隊が運用する高機動新型艦上戦闘攻撃機がメカコレクションにラインアップ！",
+      "en": "From \"Space Battleship Yamato 2202 Warriors of Love\", a new high-mobility carrier-based fighter attack aircraft operated by the new Earth Federation fleet is now available in the Mecha Collection!"
+    },
+    {
+      "ja": "• 劇中をイメージさせるパース感のあるフォルムを再現。",
+      "en": "• Reproduces a perspective form reminiscent of the movie."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "ディスプレイベース×1",
+      "en": "Display base x 1"
+    }
+  ],
+  "contents": [
+    {
+      "ja": "成形品×4",
+      "en": "Molded product x 4"
+    },
+    {
+      "ja": "水転写式デカール×1",
+      "en": "Water transfer decal x 1"
+    },
+    {
+      "ja": "取扱説明書(箱裏側に記載)",
+      "en": "Instruction manual (written on the back of the box)"
+    }
+  ],
+  "images": [
+    "https://bandai-hobby.net/images/153_3037_s_6ibgysieya43ne8s6lbg6f97b4rp.jpg",
+    "https://bandai-hobby.net/images/155_3037_s_vu319xp12nhf8kwh3x18m3fzp50v.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2088/",
+  "extractedAt": "2025-12-06T17:48:37.224Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "space-battleship-yamato-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mecha-collection",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5498",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5500",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3667",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3650",
+        "targetType": "item"
+      }
+    ]
+  }
+}

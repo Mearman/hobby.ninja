@@ -1,0 +1,41 @@
+{
+  "id": "0333",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 R04 ブリッツガンダム",
+    "en": "HG 1/144 R04 Blitz Gundam"
+  },
+  "productNumber": "2156315",
+  "releaseDate": {
+    "ja": "2011年11月19日",
+    "year": 2011,
+    "month": 11,
+    "day": 19
+  },
+  "productImage": "https://bandai-hobby.net/images/156_5479_s_z0d9dz7v52775bte3dgpgdoyix18.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_5479_s_z0d9dz7v52775bte3dgpgdoyix18.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/333/",
+  "extractedAt": "2025-12-05T23:09:46.891Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/333.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4581",
+        "targetType": "item"
+      }
+    ]
+  }
+}

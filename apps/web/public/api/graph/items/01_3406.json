@@ -1,0 +1,70 @@
+{
+  "id": "01_3406",
+  "type": "item",
+  "name": {
+    "ja": "SDW HEROES 信長ガンダムエピオン",
+    "en": "SDW HEROES Nobunaga Gundam Epyon"
+  },
+  "price": {
+    "amount": 770,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2021年04月17日 (土)",
+    "year": 2021,
+    "month": 4,
+    "day": 17
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4360_s_0arfzf74gmg8g5q0sl44ys067yig.jpg",
+    "https://bandai-hobby.net/images/155_4360_s_jpk10lktqunnhp5ondn7nugalbax.jpg",
+    "https://bandai-hobby.net/images/156_4360_s_05a8gdjd5yhrgf9dsvf638v388ep.jpg",
+    "https://bandai-hobby.net/images/157_4360_s_qe2kigoldfrgtxuk0yjkrcoqjpmn.jpg",
+    "https://bandai-hobby.net/images/158_4360_s_5737et8ybgk522be474i7uiy2kj2.jpg",
+    "https://bandai-hobby.net/images/159_4360_s_83b9h7lpkfelbvoysh91zf3aynh5.jpg",
+    "https://bandai-hobby.net/images/189_4360_s_m5g67hnf3k7jp92g8ehl8o0wblxi.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3406/",
+  "extractedAt": "2025-12-06T17:51:22.531Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "sd-gundam-world-heroes",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5470",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5471",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5472",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5347",
+        "targetType": "item"
+      }
+    ]
+  }
+}

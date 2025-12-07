@@ -1,0 +1,41 @@
+{
+  "id": "0350",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ギラーガ",
+    "en": "HG 1/144 Giraga"
+  },
+  "productNumber": "2165083",
+  "releaseDate": {
+    "ja": "2012年6月16日",
+    "year": 2012,
+    "month": 6,
+    "day": 16
+  },
+  "productImage": "https://bandai-hobby.net/images/157_2753_s_ugkupc0c2h83l61b45afnt0g2eti.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_2753_s_ugkupc0c2h83l61b45afnt0g2eti.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/350/",
+  "extractedAt": "2025-12-05T23:09:46.911Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/350.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1816",
+        "targetType": "item"
+      }
+    ]
+  }
+}

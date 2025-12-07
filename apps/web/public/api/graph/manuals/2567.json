@@ -1,0 +1,40 @@
+{
+  "id": "2567",
+  "type": "manual",
+  "name": {
+    "ja": "ＲＧ 1/144 パーフェクトストライクガンダム",
+    "en": "RG 1/144 Perfect Strike Gundam"
+  },
+  "productNumber": "2487790",
+  "releaseDate": {
+    "ja": "2019年9月",
+    "year": 2019,
+    "month": 9
+  },
+  "productImage": "https://bandai-hobby.net/images/153_3355_s_opzdxv1tu99tm2sinyxcjzkfd40e.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_3355_s_opzdxv1tu99tm2sinyxcjzkfd40e.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2567/",
+  "extractedAt": "2025-12-05T23:09:48.788Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2567.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "rg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2424",
+        "targetType": "item"
+      }
+    ]
+  }
+}

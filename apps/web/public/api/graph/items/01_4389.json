@@ -1,0 +1,71 @@
+{
+  "id": "01_4389",
+  "type": "item",
+  "name": {
+    "ja": "ポケモンプラモコレクション クイック!! 14 ポカブ",
+    "en": "Pokemon Plastic Model Collection Quick!! 14 Pokabu"
+  },
+  "price": {
+    "amount": 715,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2023年05月20日 (土)",
+    "year": 2023,
+    "month": 5,
+    "day": 20
+  },
+  "targetAge": 6,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5294_s_3we578sk1njddwdaiui0fbu6zvak.jpg",
+    "https://bandai-hobby.net/images/155_5294_s_z7yi4ixk1vocl1uwgpsco58qrsce.jpg",
+    "https://bandai-hobby.net/images/156_5294_s_4vupcix2yosrr964vyhxmvf4nfyw.jpg",
+    "https://bandai-hobby.net/images/157_5294_s_gz3r0cfzara8la039lu4mmdn2a68.jpg",
+    "https://bandai-hobby.net/images/158_5294_s_45asu4bnilvha0lkn7xdc5awno9w.jpg",
+    "https://bandai-hobby.net/images/159_5294_s_9uz5liqw4q1satfqc7oqvtq6vkqa.jpg",
+    "https://bandai-hobby.net/images/189_5294_s_od1sn7xciy9o54uth4bn7cgd0d99.jpg",
+    "https://bandai-hobby.net/images/190_5294_s_4ap0obu6j5w2mqbw3trrj7tvoc5j.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4389/",
+  "extractedAt": "2025-12-06T17:53:36.023Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "pocket-monster",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5984",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5958",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5947",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5568",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "01_4086",
+  "type": "item",
+  "name": {
+    "ja": "30MS オプションパーツセット5(ヘビーアーマー)",
+    "en": "30MS Option Parts Set 5 (Heavy Armor)"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年04月29日 (金)",
+    "year": 2022,
+    "month": 4,
+    "day": 29
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5010_s_ivleyzg0ksdjf93wxboqnlg1i8fy.jpg",
+    "https://bandai-hobby.net/images/155_5010_s_tc6md1e4wtdjedrpr1g63ldym3dx.jpg",
+    "https://bandai-hobby.net/images/156_5010_s_bu6a8lx2s07tumcbnv9pwcl15mdc.jpg",
+    "https://bandai-hobby.net/images/157_5010_s_p1xarotsj4h5f0zl94gv66w5a7r8.jpg",
+    "https://bandai-hobby.net/images/158_5010_s_p7l3578uqlh0bht3o5dznzlw4vcn.jpg",
+    "https://bandai-hobby.net/images/159_5010_s_2mxrc4velp0k80ogqldxj5izgkbr.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4086/",
+  "extractedAt": "2025-12-06T17:52:54.803Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "3465",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-sisters",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5975",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5976",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5977",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5954",
+        "targetType": "item"
+      }
+    ]
+  }
+}

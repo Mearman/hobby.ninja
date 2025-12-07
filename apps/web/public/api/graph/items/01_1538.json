@@ -1,0 +1,74 @@
+{
+  "id": "01_1538",
+  "type": "item",
+  "name": {
+    "ja": "1/100 Ｇガンダム",
+    "en": "1/100 G Gundam"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1994年08月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/100",
+  "description": [
+    {
+      "ja": "『機動武闘伝G ガンダム』より、1/100スケールで、G ガンダムが登場。",
+      "en": "From \"Mobile Fighter G Gundam\", G Gundam appears in 1/100 scale."
+    },
+    {
+      "ja": "ネオ・ホンコンでの決勝大会用にネオ・ジャパンが開発したゴッドガンダムとも呼ばれるモビルファイターを1/100スケールでモデル化しました。肩のマシンキャノンの開閉はパーツ差替えにより再現可能です。爆熱ゴッドフィンガーは、前腕スライドギミックとゴッドフィンガー用平手の差替えにより、再現できます。背面のフィールド発生装置は可動、展開します。ゴッドスラッシュ２本はサイドアーマーへのマウントが可能です。胸部、ふくらはぎのハッチは開閉します。コアランダーは脱着が可能です。",
+      "en": "A 1/100 scale model of the mobile fighter, also known as God Gundam, developed by Neo Japan for the final tournament in Neo Hong Kong. The opening and closing of the machine cannon on the shoulder can be reproduced by replacing parts. The explosive god finger can be reproduced by replacing the forearm slide gimmick and the open hand for the god finger. The field generator on the back is movable and expands. Two God Slashes can be mounted on side armor. Open and close the chest and calf hatches. Corelander is removable."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2454_s_g3yuykeig2b7ywflthwffldf6qqs.jpg",
+    "https://bandai-hobby.net/images/155_2454_s_l8ei9z9oosozob6nx15fq9pcl1xh.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1538/",
+  "extractedAt": "2025-12-06T17:30:09.515Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-fighter-g-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5544",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5995",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000213247",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000194970",
+        "targetType": "item"
+      }
+    ]
+  }
+}

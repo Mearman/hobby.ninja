@@ -1,0 +1,85 @@
+{
+  "id": "01_4487",
+  "type": "item",
+  "name": {
+    "ja": "SD ガンダム Gジェネレーション51 ガンダム GP04",
+    "en": "SD Gundam G Generation 51 Gundam GP04"
+  },
+  "price": {
+    "amount": 440,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2000年10月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "「SD ガンダム Gジェネレーション51 ガンダムＧＰ０４」が登場！",
+      "en": "\"SD Gundam G Generation 51 Gundam GP04\" is now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5391_s_wx72170z6nzgme3peuw33pt34ybu.jpg",
+    "https://bandai-hobby.net/images/155_5391_s_lwzhpf465oeys6mg2lzs3msxqp99.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4487/",
+  "extractedAt": "2025-12-06T17:53:49.978Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4465",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1604",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1396",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-0083-stardust-memory",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-series",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1396",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4465",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1604",
+        "targetType": "item"
+      }
+    ]
+  }
+}

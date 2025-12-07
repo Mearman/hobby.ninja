@@ -1,0 +1,40 @@
+{
+  "id": "0879",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 カラミティガンダム",
+    "en": "HG 1/144 Calamity Gundam"
+  },
+  "productNumber": "1120461",
+  "releaseDate": {
+    "ja": "2003年8月",
+    "year": 2003,
+    "month": 8
+  },
+  "productImage": "https://bandai-hobby.net/images/157_367_s_a2p0s4h9f5bfgka5pb7g5ocet0mk.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_367_s_a2p0s4h9f5bfgka5pb7g5ocet0mk.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/879/",
+  "extractedAt": "2025-12-05T23:09:47.714Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/879.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2693",
+        "targetType": "item"
+      }
+    ]
+  }
+}

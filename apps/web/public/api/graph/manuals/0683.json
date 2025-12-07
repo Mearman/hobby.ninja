@@ -1,0 +1,41 @@
+{
+  "id": "0683",
+  "type": "manual",
+  "name": {
+    "ja": "RG 1/144 Hi-νガンダム",
+    "en": "RG 1/144 Hi-νGundam"
+  },
+  "productNumber": "2555540",
+  "releaseDate": {
+    "ja": "2021年9月11日",
+    "year": 2021,
+    "month": 9,
+    "day": 11
+  },
+  "productImage": "https://bandai-hobby.net/images/196_4475_s_o3b7s58tcpaz9uz41vhh15aalqr4.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/196_4475_s_o3b7s58tcpaz9uz41vhh15aalqr4.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/683/",
+  "extractedAt": "2025-12-05T23:09:47.409Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/683.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-chars-counterattack",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "rg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3524",
+        "targetType": "item"
+      }
+    ]
+  }
+}

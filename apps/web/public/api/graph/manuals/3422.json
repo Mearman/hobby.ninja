@@ -1,0 +1,40 @@
+{
+  "id": "3422",
+  "type": "manual",
+  "name": {
+    "ja": "30MF ローザンランサー",
+    "en": "30MF Rose Lancer"
+  },
+  "productNumber": "2773785",
+  "releaseDate": {
+    "ja": "2025年6月14日",
+    "year": 2025,
+    "month": 6,
+    "day": 14
+  },
+  "productImage": "https://bandai-hobby.net/images/2773785.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/2773785.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3422/",
+  "extractedAt": "2025-12-05T23:09:49.232Z",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/3422.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "30-minutes-fantasy",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30mf",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5565",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "01_2842",
+  "type": "item",
+  "name": {
+    "ja": "HGBD:R 1/144 アウンリゼアーマー",
+    "en": "HGBD:R 1/144 Aunrise Armor"
+  },
+  "price": {
+    "amount": 935,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年08月29日 (土)",
+    "year": 2020,
+    "month": 8,
+    "day": 29
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3825_s_p0qigxqianpjcgfyk6v0vajp1pt1.jpg",
+    "https://bandai-hobby.net/images/155_3825_s_b1uovvj1n5gnqyk13gzz939t9x1y.jpg",
+    "https://bandai-hobby.net/images/156_3825_s_q24k4evskz87gcezqyz6igwhxzo4.jpg",
+    "https://bandai-hobby.net/images/157_3825_s_1hvhhkryk18sn5dokvle6g3cmcs6.jpg",
+    "https://bandai-hobby.net/images/158_3825_s_o38rxn1odffm8nv7ao1w1xwlfcue.jpg",
+    "https://bandai-hobby.net/images/159_3825_s_v52m2nkgld2ol678hrht4i0781j3.jpg",
+    "https://bandai-hobby.net/images/189_3825_s_n4ae0b3nk5at5xp1ffmrgws6j3eb.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2842/",
+  "extractedAt": "2025-12-06T17:50:13.994Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0107",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers-rerise",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5054",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3562",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3565",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3291",
+        "targetType": "item"
+      }
+    ]
+  }
+}

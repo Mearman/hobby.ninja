@@ -1,0 +1,84 @@
+{
+  "id": "01_3595",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 アデル(ディーヴァ所属部隊カラー)",
+    "en": "HG 1/144 Adele (Diva belonging unit color)"
+  },
+  "price": {
+    "amount": 1320,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2012年04月21日 (土)",
+    "year": 2012,
+    "month": 4,
+    "day": 21
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 「機動戦士ガンダム AGE アセム編」で登場したアデルが、ディーヴァ所属部隊専用カラーで登場。 成形品×5、マーキングシール×1、ホイルシール×1、組立説明書×1",
+      "en": "• Adel, who appeared in \"Mobile Suit Gundam AGE Asemu Edition\", is now available in a color exclusive to the Diva squad. Molded product x 5, Marking Seal x 1, Foil Seal x 1, Assembly Manual x 1"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4550_s_o99b1wpog06zfsk02hvk4psud1h3.jpg",
+    "https://bandai-hobby.net/images/155_4550_s_evw7ch7sysryf9v5cg4zoeryhxfm.jpg",
+    "https://bandai-hobby.net/images/156_4550_s_py7k02bp22ctm0xjb4jxhnvgts3f.jpg",
+    "https://bandai-hobby.net/images/157_4550_s_o5940hi4ad9inez3gm20jv5sf78r.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3595/",
+  "extractedAt": "2025-12-06T17:51:47.892Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0356",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000170540",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000169836",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3738",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000082540",
+        "targetType": "item"
+      }
+    ]
+  }
+}

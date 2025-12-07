@@ -1,0 +1,41 @@
+{
+  "id": "0371",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 ハンブラビ",
+    "en": "HGUC 1/144 Hambrabi"
+  },
+  "productNumber": "2176836",
+  "releaseDate": {
+    "ja": "2012年8月25日",
+    "year": 2012,
+    "month": 8,
+    "day": 25
+  },
+  "productImage": "https://bandai-hobby.net/images/156_829_s_jlt4l8tj1umo3g6k46vgzqe2pw0s.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_829_s_jlt4l8tj1umo3g6k46vgzqe2pw0s.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/371/",
+  "extractedAt": "2025-12-05T23:09:46.940Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/371.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5766",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "3717",
+  "type": "manual",
+  "name": {
+    "ja": "カスタマイズウェポンズ (戦国兵装)",
+    "en": "Customized Weapons (Sengoku Weapons)"
+  },
+  "productNumber": "2553534",
+  "releaseDate": {
+    "ja": "2021年5月22日",
+    "year": 2021,
+    "month": 5,
+    "day": 22
+  },
+  "productImage": "https://bandai-hobby.net/images/2553534.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/2553534.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3717/",
+  "extractedAt": "2025-12-05T23:09:49.580Z",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/3717.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "30-minutes-missions",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30mm",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3424",
+        "targetType": "item"
+      }
+    ]
+  }
+}

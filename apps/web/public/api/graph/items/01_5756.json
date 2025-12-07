@@ -1,0 +1,69 @@
+{
+  "id": "01_5756",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士127 獣王頑駄無",
+    "en": "BB Senshi 127 Beast King Gundam"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1994年05月01日 (日)",
+    "year": 1994,
+    "month": 5,
+    "day": 1
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "BB戦士127 獣王頑駄無登場！",
+      "en": "BB Senshi 127 Beast King Gundam appears!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_81_s_1ulf8r82oxqwlpwek1st0eyey714.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5756/",
+  "extractedAt": "2025-12-06T17:56:33.152Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

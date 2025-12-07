@@ -1,0 +1,40 @@
+{
+  "id": "1100",
+  "type": "manual",
+  "name": {
+    "ja": "MGSD ガンダムバルバトス",
+    "en": "MGSD Gundam Barbatos"
+  },
+  "productNumber": "2655095",
+  "releaseDate": {
+    "ja": "2023年10月21日",
+    "year": 2023,
+    "month": 10,
+    "day": 21
+  },
+  "productImage": "https://bandai-hobby.net/images/196_5863_s_x19ej9rkl7rdhqikv1uxltvrxoyg.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/196_5863_s_x19ej9rkl7rdhqikv1uxltvrxoyg.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1100/",
+  "extractedAt": "2025-12-05T23:09:48.060Z",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/1100.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-iron-blooded-orphans",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4994",
+        "targetType": "item"
+      }
+    ]
+  }
+}

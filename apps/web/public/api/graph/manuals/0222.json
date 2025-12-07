@@ -1,0 +1,40 @@
+{
+  "id": "0222",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 ジオング",
+    "en": "HGUC 1/144 Zeon"
+  },
+  "productNumber": "1103327",
+  "releaseDate": {
+    "ja": "2001年6月",
+    "year": 2001,
+    "month": 6
+  },
+  "productImage": "https://bandai-hobby.net/images/158_201_s_cvq0u5wthg5p7vyxm3537z11nan8.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/158_201_s_cvq0u5wthg5p7vyxm3537z11nan8.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/222/",
+  "extractedAt": "2025-12-05T23:09:46.680Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/222.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1088",
+        "targetType": "item"
+      }
+    ]
+  }
+}

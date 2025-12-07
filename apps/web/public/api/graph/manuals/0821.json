@@ -1,0 +1,40 @@
+{
+  "id": "0821",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 百式＋メガバズーカランチャー",
+    "en": "HGUC 1/144 Hyakushiki + Mega Bazooka Launcher"
+  },
+  "productNumber": "1126793",
+  "releaseDate": {
+    "ja": "2004年7月",
+    "year": 2004,
+    "month": 7
+  },
+  "productImage": "https://bandai-hobby.net/images/157_464_s_bp8s5dcrzloycam31ezlp1du22bs.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_464_s_bp8s5dcrzloycam31ezlp1du22bs.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/821/",
+  "extractedAt": "2025-12-05T23:09:47.617Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/821.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3696",
+        "targetType": "item"
+      }
+    ]
+  }
+}

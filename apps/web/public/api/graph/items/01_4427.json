@@ -1,0 +1,71 @@
+{
+  "id": "01_4427",
+  "type": "item",
+  "name": {
+    "ja": "1/144 RMS-106 ハイザック",
+    "en": "1/144 RMS-106 Hizak"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1985年04月01日 (月)",
+    "year": 1985,
+    "month": 4,
+    "day": 1
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「1/144 RMS-106 ハイザック」登場！",
+      "en": "\"1/144 RMS-106 Hizak\" now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5333_s_iw9z7yj10vy7g41znrtet6ng2q8g.jpg",
+    "https://bandai-hobby.net/images/155_5333_s_dosj4moybfpd8622umjsa73a1rj2.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4427/",
+  "extractedAt": "2025-12-06T17:53:41.155Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5468",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5375",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5162",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      }
+    ]
+  }
+}

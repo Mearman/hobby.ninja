@@ -1,0 +1,41 @@
+{
+  "id": "0276",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 モビルシグー(ジスト・エルウェス専用機)",
+    "en": "HG 1/144 Mobile Sigou (Jist Elwes exclusive machine)"
+  },
+  "productNumber": "2031706",
+  "releaseDate": {
+    "ja": "2008年2月23日",
+    "year": 2008,
+    "month": 2,
+    "day": 23
+  },
+  "productImage": "https://bandai-hobby.net/images/159_3362_s_gls9qcpu3ykcz061f1hnmb2rasm4.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/159_3362_s_gls9qcpu3ykcz061f1hnmb2rasm4.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/276/",
+  "extractedAt": "2025-12-05T23:09:46.770Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/276.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2432",
+        "targetType": "item"
+      }
+    ]
+  }
+}

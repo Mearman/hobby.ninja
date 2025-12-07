@@ -1,0 +1,81 @@
+{
+  "id": "01_5161",
+  "type": "item",
+  "name": {
+    "ja": "アクションベースミニ",
+    "en": "action base mini"
+  },
+  "price": {
+    "amount": 462,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2016年01月16日 (土)",
+    "year": 2016,
+    "month": 1,
+    "day": 16
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "アクションベースミニが登場！！",
+      "en": "Action base mini is now available! !"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_6019_o_1hfrl6o7i16ep7uh4nu1pg41igs23.jpg",
+    "https://bandai-hobby.net/images/155_6019_o_1hfrl8spaau6nhusaiokdcv92d.jpg",
+    "https://bandai-hobby.net/images/156_6019_o_1hfrl96dk1rto2u5clu1snmc1b2i.jpg",
+    "https://bandai-hobby.net/images/157_6019_o_1hfrl9gr811scr30h6qbdc1bqe2n.jpg",
+    "https://bandai-hobby.net/images/158_6019_o_1hfrl9pnasr81e1cbpeb11rg92s.jpg",
+    "https://bandai-hobby.net/images/159_6019_o_1hfrla2q61fdj6riov1178r3ll31.jpg",
+    "https://bandai-hobby.net/images/189_6019_o_1hfrlad5r1fu2kp41p7518ea1uma36.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5161/",
+  "extractedAt": "2025-12-06T17:55:18.530Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1189",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "action-base",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5934",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5256",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5258",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5165",
+        "targetType": "item"
+      }
+    ]
+  }
+}

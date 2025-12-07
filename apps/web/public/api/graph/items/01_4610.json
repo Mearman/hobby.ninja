@@ -1,0 +1,83 @@
+{
+  "id": "01_4610",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ガンダム AGE-2 ダブルバレット",
+    "en": "HG 1/144 Gundam AGE-2 Double Bullet"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2012年03月24日 (土)",
+    "year": 2012,
+    "month": 3,
+    "day": 24
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• AGEシステムが導く新たな形態。「ガンダム AGE-2 ダブルバレット」がHGシリーズに登場。 成形品×7、ホイルシール×1、組立説明書×1",
+      "en": "• A new form led by the AGE system. \"Gundam AGE-2 Double Bullet\" is now available in the HG series. Molded product x 7, foil seal x 1, assembly manual x 1"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5506_s_c0zgcttzm7je7894pq53w63777z2.jpg",
+    "https://bandai-hobby.net/images/155_5506_s_d4br0xhhdy8x30608z5j3uott506.jpg",
+    "https://bandai-hobby.net/images/156_5506_s_q19llg6hapl72bds2me9xhpmb6ev.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4610/",
+  "extractedAt": "2025-12-06T17:54:04.724Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0943",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000170540",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000169836",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3738",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000082540",
+        "targetType": "item"
+      }
+    ]
+  }
+}

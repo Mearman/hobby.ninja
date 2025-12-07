@@ -1,0 +1,69 @@
+{
+  "id": "01_4488",
+  "type": "item",
+  "name": {
+    "ja": "SD ガンダム Gジェネレーション52 ブルーディスティニー3号機",
+    "en": "SD Gundam G Generation 52 Blue Destiny Unit 3"
+  },
+  "price": {
+    "amount": 440,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2000年10月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "「SD ガンダム Gジェネレーション52 ブルーディスティニー３号機」が登場！",
+      "en": "\"SD Gundam G Generation 52 Blue Destiny Unit 3\" is now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5392_s_rbp6tfg1darijg391e3zwf4rken8.jpg",
+    "https://bandai-hobby.net/images/155_5392_s_jxjtf5eu9eji77uwyoblwav27uxw.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4488/",
+  "extractedAt": "2025-12-06T17:53:49.583Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-series",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000193966",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4975",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4336",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4312",
+        "targetType": "item"
+      }
+    ]
+  }
+}

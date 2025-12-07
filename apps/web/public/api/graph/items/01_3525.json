@@ -1,0 +1,74 @@
+{
+  "id": "01_3525",
+  "type": "item",
+  "name": {
+    "ja": "SDW HEROES 信長ガンダムエピオン ダークマスクVer.",
+    "en": "SDW HEROES Nobunaga Gundam Epyon Dark Mask Ver."
+  },
+  "price": {
+    "amount": 990,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2021年10月30日 (土)",
+    "year": 2021,
+    "month": 10,
+    "day": 30
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4476_s_qk65rmld7w3ldfbapds5vwz7c5lw.jpg",
+    "https://bandai-hobby.net/images/155_4476_s_l5rrfzhsyk9193qdx3q567k4x1dp.jpg",
+    "https://bandai-hobby.net/images/156_4476_s_tbbd5x8wh5wraeyosjmduux2ioc3.jpg",
+    "https://bandai-hobby.net/images/157_4476_s_4bmti9cpn21srvslevtaqj9tfuoa.jpg",
+    "https://bandai-hobby.net/images/158_4476_s_bba56hwpv7m3e3imdzp21urfy4kt.jpg",
+    "https://bandai-hobby.net/images/159_4476_s_e68hv2l8yre1h0vxfa5fsdm3suzd.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3525/",
+  "extractedAt": "2025-12-06T17:51:40.296Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "sd-gundam-world-heroes",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-series",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000193966",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4336",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4312",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4634",
+        "targetType": "item"
+      }
+    ]
+  }
+}

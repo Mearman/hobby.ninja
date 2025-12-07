@@ -1,0 +1,67 @@
+{
+  "id": "01_4903",
+  "type": "item",
+  "name": {
+    "ja": "ケロロ軍曹プラモコレクション　タママ二等兵",
+    "en": "Keroro Sergeant Plastic Model Collection Private Tamama"
+  },
+  "price": {
+    "amount": 880,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2005年08月12日 (金)",
+    "year": 2005,
+    "month": 8,
+    "day": 12
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_577_s_whe1phvx73snhvkql158157dvq6b.jpg",
+    "https://bandai-hobby.net/images/155_577_s_houbwws2c76svhxp9g7455zrv2gi.jpg",
+    "https://bandai-hobby.net/images/156_577_s_kxw9purpg9sji1p8om83fgjs9n7s.jpg",
+    "https://bandai-hobby.net/images/157_577_s_p7jcus0kpnoiubzjwofrce44tq9o.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4903/",
+  "extractedAt": "2025-12-06T17:54:36.992Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "sergeant-keroro",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_7034",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2120",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2122",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2104",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "01_4595",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ゼダスR",
+    "en": "HG 1/144 Zedas R"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2012年01月28日 (土)",
+    "year": 2012,
+    "month": 1,
+    "day": 28
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 高機動型ゼダスがHGになって登場。 • カラーリングを成形色で再現。 • 尻尾型ソードの可動や変形機構などのギミックを搭載。 成形品×5、ホイルシール×1、組立説明書",
+      "en": "• High-mobility Zedas now available as HG. • Reproduce the coloring with molded colors. • Equipped with gimmicks such as a movable tail-shaped sword and a deformation mechanism. Molded product x 5, foil seal x 1, assembly manual"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5493_s_084v82vlre7gg5u6trzs2lv86lpm.jpg",
+    "https://bandai-hobby.net/images/155_5493_s_2o26qux6s0mncyo1qu16g5809kgf.jpg",
+    "https://bandai-hobby.net/images/156_5493_s_w6fnakrs7s36ddhnh8b7u6ubki37.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4595/",
+  "extractedAt": "2025-12-06T17:54:01.859Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0327",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000170540",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000169836",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3738",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000082540",
+        "targetType": "item"
+      }
+    ]
+  }
+}

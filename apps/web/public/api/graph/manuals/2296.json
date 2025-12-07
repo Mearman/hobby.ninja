@@ -1,0 +1,40 @@
+{
+  "id": "2296",
+  "type": "manual",
+  "name": {
+    "ja": "ＭＧ 1/100 ガンダムアメイジングエクシア",
+    "en": "MG 1/100 Gundam Amazing Exia"
+  },
+  "productNumber": "2313217",
+  "releaseDate": {
+    "ja": "2015年12月",
+    "year": 2015,
+    "month": 12
+  },
+  "productImage": "https://bandai-hobby.net/images/153_4924_s_6kle7kzf4ae9x4lhpke8rzrd1s6x.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_4924_s_6kle7kzf4ae9x4lhpke8rzrd1s6x.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2296/",
+  "extractedAt": "2025-12-05T23:09:48.495Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2296.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-fighters",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3992",
+        "targetType": "item"
+      }
+    ]
+  }
+}

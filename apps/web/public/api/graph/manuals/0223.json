@@ -1,0 +1,40 @@
+{
+  "id": "0223",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 MSA-0011 S ガンダム",
+    "en": "HGUC 1/144 MSA-0011 S Gundam"
+  },
+  "productNumber": "1104020",
+  "releaseDate": {
+    "ja": "2001年9月",
+    "year": 2001,
+    "month": 9
+  },
+  "productImage": "https://bandai-hobby.net/images/157_217_s_9j2lgumuyhskolygwr35lxev2uu4.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_217_s_9j2lgumuyhskolygwr35lxev2uu4.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/223/",
+  "extractedAt": "2025-12-05T23:09:46.682Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/223.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-sentinel",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1247",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "01_3319",
+  "type": "item",
+  "name": {
+    "ja": "ハロプラ ハロ［GUNDAM FACTORY YOKOHAMAカラー］",
+    "en": "Haropla Haro [GUNDAM FACTORY YOKOHAMA color]"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年12月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "『GUNDAM FACTORY YOKOHAMA』限定のハロプラが登場！",
+      "en": "\"GUNDAM FACTORY YOKOHAMA\" limited Haropura is now available!"
+    },
+    {
+      "ja": "• 接着剤不要・塗装不要・ニッパー不要。道具を使わず、簡単に楽しく組み立てられる。",
+      "en": "• No adhesive, painting, or nippers required. Easy and fun assembly without using any tools."
+    },
+    {
+      "ja": "• パーツの組み替えで手足の収納も再現可能。",
+      "en": "• Storing the limbs can also be recreated by rearranging the parts."
+    },
+    {
+      "ja": "• GUNDAM FACTORY YOKOHAMAのロゴのマーキングシールが付属。",
+      "en": "• Comes with GUNDAM FACTORY YOKOHAMA logo MarkingSeal."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "台座×１",
+      "en": "Pedestal x 1"
+    },
+    {
+      "ja": "マーキングシール×１",
+      "en": "MarkingSeal×1"
+    }
+  ],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4274_o_1eja589se17d21h1p1v7o1qae1giu23.jpg",
+    "https://bandai-hobby.net/images/155_4274_o_1eja58n131j2phopm1l1fvn1t2d.jpg",
+    "https://bandai-hobby.net/images/156_4274_o_1eja58r8v1s9oge919iqufh16v32i.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3319/",
+  "extractedAt": "2025-12-06T17:51:10.290Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "gundam-factory-yokohama",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5035",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4239",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3472",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3841",
+        "targetType": "item"
+      }
+    ]
+  }
+}

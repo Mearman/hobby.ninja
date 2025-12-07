@@ -1,0 +1,84 @@
+{
+  "id": "01_4309",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ザウォート",
+    "en": "HG 1/144 Zawort"
+  },
+  "price": {
+    "amount": 1760,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2023年02月11日 (土)",
+    "year": 2023,
+    "month": 2,
+    "day": 11
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5221_s_himsauu12rnkvmbq037udyweftn1.jpg",
+    "https://bandai-hobby.net/images/155_5221_s_c965d6p89rd7v319qcov7a3t05n4.jpg",
+    "https://bandai-hobby.net/images/156_5221_s_q34x483v6vkou8cczkf6jc4lbemt.jpg",
+    "https://bandai-hobby.net/images/157_5221_s_7n5u36v4r8depvej9ann0eett6a6.jpg",
+    "https://bandai-hobby.net/images/158_5221_s_3ci8t4anler1wjylpzcpt4tqseo7.jpg",
+    "https://bandai-hobby.net/images/159_5221_s_5ukft179ovxawh7i1uednvtrlte6.jpg",
+    "https://bandai-hobby.net/images/189_5221_s_1yjgy7mgk39sh7tnr6p5sw0t4n9d.jpg",
+    "https://bandai-hobby.net/images/190_5221_s_7t02oaga5nvqbzoa6kp24xqowi93.jpg",
+    "https://bandai-hobby.net/images/191_5221_s_10vwem550ms6iopr2v51ue42slv3.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4309/",
+  "extractedAt": "2025-12-06T17:53:25.340Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0143",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-witch-of-mercury",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000216474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000211616",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5422",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000203129",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "girls-and-panzer",
+  "type": "series",
+  "name": {
+    "ja": "ガールズ＆パンツァー",
+    "en": "Girls & Panzer"
+  },
+  "url": "https://bandai-hobby.net/series/garupan/",
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_6095",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_6077",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_6067",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_1102",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_1097",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_1098",
+        "targetType": "item"
+      }
+    ],
+    "outbound": []
+  }
+}

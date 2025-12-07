@@ -1,0 +1,74 @@
+{
+  "id": "01_4516",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士 逆襲のシャアセット",
+    "en": "BB Senshi Char's Counterattack Set"
+  },
+  "price": {
+    "amount": 3300,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2008年03月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "映画「機動戦士ガンダム 逆襲のシャア」に登場したMSがセットになって登場 ニューガンダム、サザビー、リ・ガズィ、ヤクト・ドーガ、クェス専用ヤクト・ドーガ、レズン専用ギラ・ドーガ、ギラ・ドーガ、ジェガンの8体セット",
+      "en": "MS that appeared in the movie \"Mobile Suit Gundam: Char's Counterattack\" is now available as a set - New Gundam, Sazabi, Re-Gazi, Yakut Doga, Yakut Doga for Quess, Gira Doga for Rezun, Gira Doga, and Jegan - 8 body set"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5418_s_6jj8vlyqcnguymalkor72m8cclqj.jpg",
+    "https://bandai-hobby.net/images/155_5418_s_7xju7tjlhk0fo312qqzx9jxtp2nl.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4516/",
+  "extractedAt": "2025-12-06T17:53:53.001Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-chars-counterattack",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4975",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4190",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2323",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_46",
+        "targetType": "item"
+      }
+    ]
+  }
+}

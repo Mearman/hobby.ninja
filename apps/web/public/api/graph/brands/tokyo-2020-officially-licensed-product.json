@@ -1,0 +1,54 @@
+{
+  "id": "tokyo-2020-officially-licensed-product",
+  "type": "brand",
+  "name": {
+    "ja": "東京2020 公式ライセンス商品",
+    "en": "Tokyo 2020 Officially Licensed Product"
+  },
+  "url": "https://bandai-hobby.net/brand/tokyo2020_official/",
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_2871",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_2869",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_2870",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_2867",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_2826",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_2827",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_2660",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_2659",
+        "targetType": "item"
+      }
+    ],
+    "outbound": []
+  }
+}

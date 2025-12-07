@@ -1,0 +1,41 @@
+{
+  "id": "1070",
+  "type": "manual",
+  "name": {
+    "ja": "HGBF 1/144 ミセス.ローエングリン子",
+    "en": "HGBF 1/144 Mrs. Lohengrinko"
+  },
+  "productNumber": "2409203",
+  "releaseDate": {
+    "ja": "2018年3月10日",
+    "year": 2018,
+    "month": 3,
+    "day": 10
+  },
+  "productImage": "https://bandai-hobby.net/images/190_2219_s_w7249ewzwfpmwplzd8m2l2wzgddi.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/190_2219_s_w7249ewzwfpmwplzd8m2l2wzgddi.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1070/",
+  "extractedAt": "2025-12-05T23:09:48.034Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/1070.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-fighters",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1288",
+        "targetType": "item"
+      }
+    ]
+  }
+}

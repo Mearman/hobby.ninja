@@ -1,0 +1,101 @@
+{
+  "id": "01_5804",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 フルアーマー・ユニコーンガンダム(ユニコーンモード)",
+    "en": "HGUC 1/144 Full Armor Unicorn Gundam (Unicorn Mode)"
+  },
+  "price": {
+    "amount": 3300,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2013年05月02日 (木)",
+    "year": 2013,
+    "month": 5,
+    "day": 2
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• ユニコーンモードの「フルアーマー・ユニコーンガンダム」がHGUCで登場。",
+      "en": "• Unicorn mode \"Full Armor Unicorn Gundam\" is now available in HGUC."
+    },
+    {
+      "ja": "• フルアーマーの名にふさわしい武装ボリュームとプレイバリュー。",
+      "en": "• Weapon volume and play value worthy of the name Full Armor."
+    },
+    {
+      "ja": "• ビーム・サーベルを含め、２５にも及ぶ武装が付属。別売りの「HGUCユニコーンガンダム（デストロイモード）」への取り付けも可能。",
+      "en": "• Comes with as many as 25 weapons, including a beam saber. Can also be attached to the separately sold \"HGUC Unicorn Gundam (Destroy Mode)\"."
+    },
+    {
+      "ja": "• 大型ブースターを支えるための支柱が付属。",
+      "en": "• Comes with a pole to support the large booster."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_874_s_b0cos754zu6rriia4t2nymbus7aw.jpg",
+    "https://bandai-hobby.net/images/155_874_s_djthm4qk8mqqz0lhwf3nz74073cz.jpg",
+    "https://bandai-hobby.net/images/156_874_s_3x2gp63hvljqhg7a6cwymi8hgnyl.jpg",
+    "https://bandai-hobby.net/images/157_874_s_00ziuv1ic1lxj91ku99fu62eg8e7.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5804/",
+  "extractedAt": "2025-12-06T17:56:39.257Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0382",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-uc-unicorn",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5527",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4986",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000163998",
+        "targetType": "item"
+      }
+    ]
+  }
+}

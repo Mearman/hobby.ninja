@@ -1,0 +1,40 @@
+{
+  "id": "0831",
+  "type": "manual",
+  "name": {
+    "ja": "MG 1/100 量産型ゲルググ Ver.2.0",
+    "en": "MG 1/100 mass-produced Gelgoog Ver.2.0"
+  },
+  "productNumber": "2001366",
+  "releaseDate": {
+    "ja": "2008年4月",
+    "year": 2008,
+    "month": 4
+  },
+  "productImage": "https://bandai-hobby.net/images/156_2584_s_yvc4sb1v0ocxomgcrkp6tr1na5mi.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_2584_s_yvc4sb1v0ocxomgcrkp6tr1na5mi.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/831/",
+  "extractedAt": "2025-12-05T23:09:47.630Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/831.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1677",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "01_2187",
+  "type": "item",
+  "name": {
+    "ja": "ＨＧ 1/300 ダークゴウザウラー",
+    "en": "HG 1/300 Dark Gowsaurer"
+  },
+  "price": {
+    "amount": 5720,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2019年05月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/300",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3134_o_1d29gv0p8o1v1lvr1frg17iqs0f23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2187/",
+  "extractedAt": "2025-12-06T17:48:50.138Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "hot-blooded-strongest-gozaurer",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "preban-character-pla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      }
+    ]
+  }
+}

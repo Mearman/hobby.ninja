@@ -1,0 +1,100 @@
+{
+  "id": "01_5789",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ガンダム AGE-1 フルグランサ",
+    "en": "HG 1/144 Gundam AGE-1 Full Grancer"
+  },
+  "price": {
+    "amount": 1760,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2013年04月13日 (土)",
+    "year": 2013,
+    "month": 4,
+    "day": 13
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 初回生産分に「ガンダムトライエイジスペシャルカードパック5」が付属。",
+      "en": "• \"Gundam Try Age Special Card Pack 5\" is included with the first production."
+    },
+    {
+      "ja": "• 『機動戦士ガンダム AGE』のクライマックスに登場したAGE-1フルグランサをHG化。",
+      "en": "• HG version of the AGE-1 Full Grancer that appeared in the climax of \"Mobile Suit Gundam AGE\"."
+    },
+    {
+      "ja": "• フルグランサの特徴となるグラストロランチャーは90度回転して発射形態を再現。グリップを持つことも可能。",
+      "en": "• The Glastro launcher, which is a feature of Furuglansa, rotates 90 degrees to reproduce the firing form. It is also possible to have a grip."
+    },
+    {
+      "ja": "• グラストロランチャーを外せばAGE-1グランサ、装甲を外せばAGE-1フラットを再現できる。",
+      "en": "• If you remove the Glastro Launcher, you can recreate AGE-1 Gransa, and if you remove the armor, you can recreate AGE-1 Flat."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_855_s_lrsgn03ybqvgtgu03nh62va7yb55.jpg",
+    "https://bandai-hobby.net/images/155_855_s_ca45kqw40pt239pqb8yzgsv2f4gc.jpg",
+    "https://bandai-hobby.net/images/156_855_s_38vf8wtp6ipvre0hxu1s45jcr0jf.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5789/",
+  "extractedAt": "2025-12-06T17:56:37.074Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3738",
+        "targetType": "item"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0003",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000170540",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000169836",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3738",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000082540",
+        "targetType": "item"
+      }
+    ]
+  }
+}

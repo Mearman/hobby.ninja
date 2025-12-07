@@ -1,0 +1,40 @@
+{
+  "id": "2536",
+  "type": "manual",
+  "name": {
+    "ja": "ＭＧ 1/100 百式壊",
+    "en": "MG 1/100 Hyakushiki Kai"
+  },
+  "productNumber": "2457563",
+  "releaseDate": {
+    "ja": "2019年1月",
+    "year": 2019,
+    "month": 1
+  },
+  "productImage": "https://bandai-hobby.net/images/153_3022_o_1cpjdn8gkrgi15ge7dr1h9p1q4t23.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_3022_o_1cpjdn8gkrgi15ge7dr1h9p1q4t23.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2536/",
+  "extractedAt": "2025-12-05T23:09:48.749Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2536.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2073",
+        "targetType": "item"
+      }
+    ]
+  }
+}

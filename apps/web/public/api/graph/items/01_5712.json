@@ -1,0 +1,69 @@
+{
+  "id": "01_5712",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士124 Vダッシュガンダム",
+    "en": "BB Senshi 124 V Dash Gundam"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1994年03月01日 (火)",
+    "year": 1994,
+    "month": 3,
+    "day": 1
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "VダッシュガンダムがBB戦士で登場！",
+      "en": "V Dash Gundam appears as BB Senshi!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_77_s_lcum44u98t5ji0mszbg7at3t4vnb.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5712/",
+  "extractedAt": "2025-12-06T17:56:27.860Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

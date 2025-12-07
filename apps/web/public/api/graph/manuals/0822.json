@@ -1,0 +1,40 @@
+{
+  "id": "0822",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 サイコガンダム",
+    "en": "HGUC 1/144 Psycho Gundam"
+  },
+  "productNumber": "1126800",
+  "releaseDate": {
+    "ja": "2004年8月",
+    "year": 2004,
+    "month": 8
+  },
+  "productImage": "https://bandai-hobby.net/images/191_471_s_ticbzcczc9bptyvcl6oihc6s64jw.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/191_471_s_ticbzcczc9bptyvcl6oihc6s64jw.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/822/",
+  "extractedAt": "2025-12-05T23:09:47.618Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/822.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3769",
+        "targetType": "item"
+      }
+    ]
+  }
+}

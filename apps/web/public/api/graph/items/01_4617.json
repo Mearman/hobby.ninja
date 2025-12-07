@@ -1,0 +1,72 @@
+{
+  "id": "01_4617",
+  "type": "item",
+  "name": {
+    "ja": "AG 1/144 ガンダム AGE-3 フォートレス",
+    "en": "AG 1/144 Gundam AGE-3 Fortress"
+  },
+  "price": {
+    "amount": 880,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2012年05月26日 (土)",
+    "year": 2012,
+    "month": 5,
+    "day": 26
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 武装強化型の「ホバータイプ」ウェア。 • 道具を使わず、パーツが手で外せる「タッチゲート」。 • 組み立てるだけでカラフルに仕上がる「イロプラ」。 • 直感的にサクサク組み立てられる「ブロックビルド」。 • ゲイジングチップ１枚付属。",
+      "en": "• \"Hover type \" wear with enhanced armament. • \" Touch gate \" allows parts to be removed by hand without using tools. • \" Iropla \" creates a colorful finish just by assembling it. • \" Block build\" allows for intuitive and quick assembly. • Comes with 1 gauging tip."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5512_s_o5wfo89tlw1p1r3un6lf78bwyjbt.jpg",
+    "https://bandai-hobby.net/images/155_5512_s_llrj5m7ekragm01b2w8efyx724ku.jpg",
+    "https://bandai-hobby.net/images/156_5512_s_olt9gullpsk78ggzxfc12cnwa4g3.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4617/",
+  "extractedAt": "2025-12-06T17:54:04.345Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000181355",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000181354",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000170540",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4196",
+        "targetType": "item"
+      }
+    ]
+  }
+}

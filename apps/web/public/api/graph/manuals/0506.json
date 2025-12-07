@@ -1,0 +1,41 @@
+{
+  "id": "0506",
+  "type": "manual",
+  "name": {
+    "ja": "HGAC 1/144 ガンダムデスサイズ",
+    "en": "HGAC 1/144 Gundam Deathscythe"
+  },
+  "productNumber": "2554745",
+  "releaseDate": {
+    "ja": "2021年5月22日",
+    "year": 2021,
+    "month": 5,
+    "day": 22
+  },
+  "productImage": "https://bandai-hobby.net/images/189_4374_s_h3gv1cfvxeb1ffkzentp30nyp3yp.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/189_4374_s_h3gv1cfvxeb1ffkzentp30nyp3yp.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/506/",
+  "extractedAt": "2025-12-05T23:09:47.141Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/506.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "new-mobile-report-gundam-w",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3420",
+        "targetType": "item"
+      }
+    ]
+  }
+}

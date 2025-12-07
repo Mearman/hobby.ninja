@@ -1,0 +1,76 @@
+{
+  "id": "01_3987",
+  "type": "item",
+  "name": {
+    "ja": "1/144 カオスガンダム",
+    "en": "1/144 Chaos Gundam"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2004年11月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "現在放映中のTVアニメ「機動戦士ガンダム SEED DESTINY」に登場する「カオスガンダム」の1/144スケール、コレクションシリーズのプラモデル。プラモデル初心者でも組み立てやすい導入版です。新型ポリキャップ「アレイジョイント」により、可動範囲が拡大しアニメーションのかっこいいポーズが再現可能です。5色(白、青、赤、黄、黒)のイロプラを使用し、カオスガンダムの設定カラーを再現しています。可動箇所は首、肩、股間、足首が可動します。ホイルシール付き。",
+      "en": "A 1/144 Scale plastic model of the collection series of \"Chaos Gundam \" that appears in the currently airing TV anime \" Mobile Suit Gundam SEED DESTINY \". An introductory version that is easy to assemble even for plastic model beginners. The new polycap \" array joint\" expands the range of motion and allows you to recreate cool animation poses. Using 5 colors (white, blue, red, yellow, and black) of Iropla, the set colors of Chaos Gundam are reproduced. Movable parts include the neck, shoulders, groin, and ankles. Comes with foil seal."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_491_s_i2zosbp53i9a1fnii5msprl247c7.jpg",
+    "https://bandai-hobby.net/images/155_491_o_1hgi4injdaqrm10jta144b19ql23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3987/",
+  "extractedAt": "2025-12-06T17:52:40.937Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1145",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed-destiny",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5394",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000214960",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5365",
+        "targetType": "item"
+      }
+    ]
+  }
+}

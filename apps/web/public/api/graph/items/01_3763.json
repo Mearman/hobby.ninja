@@ -1,0 +1,97 @@
+{
+  "id": "01_3763",
+  "type": "item",
+  "name": {
+    "ja": "30MS オプションパーツセット4(ステルスアーマー)",
+    "en": "30MS Option Parts Set 4 (Stealth Armor)"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年02月26日 (土)",
+    "year": 2022,
+    "month": 2,
+    "day": 26
+  },
+  "targetAge": 15,
+  "description": [
+    {
+      "ja": "“キャラメイキング”×“カスタマイズ”で自分好みのキャラクターがつくれる30MSシリーズよりオプションパーツセットが登場！キャラクター素体(別売り)への盛りカスタマイズが可能！",
+      "en": "Introducing an optional parts set from the 30MS series that allows you to create your favorite character through “character making” and “customization”! It is possible to customize the character body (sold separately)!"
+    },
+    {
+      "ja": "• 狐をイメージしたデザインのオプションパーツセット。",
+      "en": "• Optional parts set with a fox-inspired design."
+    },
+    {
+      "ja": "• カスタマイズの幅を広げる30MINUTESシリーズ共通の汎用ジョイントランナーが付属。",
+      "en": "• Includes a general-purpose joint runner common to the 30 MINUTES series that expands the range of customization."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "オプションアーマー×1式",
+      "en": "Optional armor x 1 set"
+    },
+    {
+      "ja": "30MINUTES汎用ジョイントランナー×1",
+      "en": "30MINUTES General purpose joint Runner x 1"
+    }
+  ],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170123_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170123_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170123_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170123_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170123_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000170123_6.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3763/",
+  "extractedAt": "2025-12-06T17:52:08.698Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "3455",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-sisters",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6777",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6778",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6770",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6771",
+        "targetType": "item"
+      }
+    ]
+  }
+}

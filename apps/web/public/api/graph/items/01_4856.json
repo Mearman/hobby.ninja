@@ -1,0 +1,71 @@
+{
+  "id": "01_4856",
+  "type": "item",
+  "name": {
+    "ja": "MG 1/100 RX-78-3 G-3 ガンダム Ver.ONE YEAR WAR 0079",
+    "en": "MG 1/100 RX-78-3 G-3 Gundam Ver.ONE YEAR WAR 0079"
+  },
+  "price": {
+    "amount": 3353,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2008年08月30日 (土)",
+    "year": 2008,
+    "month": 8,
+    "day": 30
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [
+    {
+      "ja": "「MG 1/100 RX-78-3 G-3 ガンダム Ver.ONE YEAR WAR 0079」登場！",
+      "en": "\"MG 1/100 RX-78-3 G-3 Gundam Ver.ONE YEAR WAR 0079\" is now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5736_s_c8391a2qzrxmmrkwlmk8pgjpr1a5.jpg",
+    "https://bandai-hobby.net/images/155_5736_s_jtlcr1kxg7yhqbb6c4vlbq1f34qj.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4856/",
+  "extractedAt": "2025-12-06T17:54:32.194Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5994",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5469",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5593",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000216602",
+        "targetType": "item"
+      }
+    ]
+  }
+}

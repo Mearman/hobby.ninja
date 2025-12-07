@@ -1,0 +1,100 @@
+{
+  "id": "01_5810",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士382 サザビー",
+    "en": "BB Senshi 382 Sazabi"
+  },
+  "price": {
+    "amount": 1100,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2013年05月25日 (土)",
+    "year": 2013,
+    "month": 5,
+    "day": 25
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "• リニューアルにより、最新スタイルで登場。",
+      "en": "• Updated with the latest style."
+    },
+    {
+      "ja": "• 脱出ポッドディテールを再現。",
+      "en": "• Reproduce escape pod details."
+    },
+    {
+      "ja": "• ファンネル射出をエフェクトパーツで再現。",
+      "en": "• Reproduce funnel injection with effect parts."
+    },
+    {
+      "ja": "• モノアイは左右に可動。",
+      "en": "• Monoeye can move left and right."
+    },
+    {
+      "ja": "• ファンネル・コンテナを再現可能。",
+      "en": "• Funnel containers can be reproduced."
+    },
+    {
+      "ja": "• ビーム・ショット・ライフル、ビームエフェクト付きのビーム・トマホークが付属。",
+      "en": "• Beam shot rifle and beam tomahawk with beam effects included."
+    },
+    {
+      "ja": "• シールドにビーム・トマホークを収納可能。",
+      "en": "• Beam tomahawk can be stored in the seal."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_882_s_qn7wetdmuvx3iqh679hcmas821h4.jpg",
+    "https://bandai-hobby.net/images/155_882_s_pvmt39atjf82n3irbypzvqu2879j.jpg",
+    "https://bandai-hobby.net/images/156_882_s_2vp3sydno5nsia56pqx14796wc9a.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5810/",
+  "extractedAt": "2025-12-06T17:56:39.247Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-chars-counterattack",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4975",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4190",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2323",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_46",
+        "targetType": "item"
+      }
+    ]
+  }
+}

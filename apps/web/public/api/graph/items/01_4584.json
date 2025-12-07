@@ -1,0 +1,72 @@
+{
+  "id": "01_4584",
+  "type": "item",
+  "name": {
+    "ja": "AG 1/144 AGE-1スパロー",
+    "en": "AG 1/144 AGE-1 Sparrow"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2011年12月01日 (木)",
+    "year": 2011,
+    "month": 12,
+    "day": 1
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 塗装不要、道具不要。直感的に組み立てられる「ブロックビルド」の採用で、あっという間に完成。 • 付属のゲイジングチップを組み込み、ゲイジングバトルベースでスキャンすれば、自分だけのチームを作ってバトルできる。",
+      "en": "• No painting or tools required. By using \"block build\", which allows for intuitive assembly, it can be completed in no time. • By incorporating the included gazing chip and scanning it with the gazing battle base, you can create your own team and battle."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5482_s_1tkp9xld2rf14uh3teelnehmorkp.jpg",
+    "https://bandai-hobby.net/images/155_5482_s_tsj04pd9kyfussv7sqj9ryzgfyw2.jpg",
+    "https://bandai-hobby.net/images/156_5482_s_bmfngnmbeoq9dsa6k9g5rt335zw7.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4584/",
+  "extractedAt": "2025-12-06T17:54:00.011Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000181355",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000181354",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000170540",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4196",
+        "targetType": "item"
+      }
+    ]
+  }
+}

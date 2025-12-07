@@ -1,0 +1,81 @@
+{
+  "id": "01_4118",
+  "type": "item",
+  "name": {
+    "ja": "Figure-rise Standard ウマ娘 プリティーダービー トウカイテイオー",
+    "en": "Figure-rise Standard Uma Musume Pretty Derby Tokai Teio"
+  },
+  "price": {
+    "amount": 3850,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年09月23日 (金)",
+    "year": 2022,
+    "month": 9,
+    "day": 23
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_7.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_8.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_9.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_10.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_11.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000175029_12.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4118/",
+  "extractedAt": "2025-12-06T17:53:00.044Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5417",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4989",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "uma-musume-pretty-derby",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "figure-rise-standard",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5417",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4989",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "01_2849",
+  "type": "item",
+  "name": {
+    "ja": "SD ガンダム クロスシルエット シルエットブースター2 [ホワイト]",
+    "en": "SD Gundam Cross Silhouette Silhouette Booster 2 [White]"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年09月19日 (土)",
+    "year": 2020,
+    "month": 9,
+    "day": 19
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3832_s_8us5815g2uefufmswy28lx8fcpt8.jpg",
+    "https://bandai-hobby.net/images/155_3832_s_bw3ahw5ugepcalipim4y4d7y6wcz.jpg",
+    "https://bandai-hobby.net/images/156_3832_s_xmj5r04a4wzpzktk5zxx3gqs2mq0.jpg",
+    "https://bandai-hobby.net/images/157_3832_s_8vrpp9smgcnfws0nhxpddch9fg4t.jpg",
+    "https://bandai-hobby.net/images/158_3832_s_h606d6ozx00wfbec82ikq24xhryp.jpg",
+    "https://bandai-hobby.net/images/159_3832_s_7ip2ffvggkhx6xvegppki4uyru1s.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2849/",
+  "extractedAt": "2025-12-06T17:50:14.933Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-cross-silhouette",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5275",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5191",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5014",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4893",
+        "targetType": "item"
+      }
+    ]
+  }
+}

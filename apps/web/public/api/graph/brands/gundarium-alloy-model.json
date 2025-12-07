@@ -1,0 +1,19 @@
+{
+  "id": "gundarium-alloy-model",
+  "type": "brand",
+  "name": {
+    "ja": "ガンダリウム合金モデル",
+    "en": "Gundarium Alloy Model"
+  },
+  "url": "https://bandai-hobby.net/brand/gundarium_gundam/",
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_3303",
+        "targetType": "item"
+      }
+    ],
+    "outbound": []
+  }
+}

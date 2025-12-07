@@ -1,0 +1,65 @@
+{
+  "id": "01_3281",
+  "type": "item",
+  "name": {
+    "ja": "ＢＢ戦士 45 闇皇帝",
+    "en": "BB Warrior 45 Dark Emperor"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1989年11月20日 (月)",
+    "year": 1989,
+    "month": 11,
+    "day": 20
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4231_s_aruajqdic4h0yk79gtvtc2hrox5e.jpg",
+    "https://bandai-hobby.net/images/155_4231_s_1j0i7e4ojwfris3lihu4k5jfnpdr.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3281/",
+  "extractedAt": "2025-12-06T17:51:05.711Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}
