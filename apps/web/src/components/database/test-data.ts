@@ -2,13 +2,13 @@
  * Mock test data for ItemCard and ItemGrid components
  */
 
-import type { UnifiedItem, ManualItem, DatabaseCatalogItem } from "../../services/dataService";
+import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
 export const mockUnifiedItems: UnifiedItem[] = [
 	{
 		id: "up_00001",
 		type: "unified_item",
-		category: "node" as const,
+		category: "data" as const,
 		schemaId: "unified_item_schema_v1",
 		properties: {
 			name: { en: "Strike Freedom Gundam", ja: "ストライクフリーダムガンダム" },
@@ -34,7 +34,7 @@ export const mockUnifiedItems: UnifiedItem[] = [
 	{
 		id: "up_00002",
 		type: "unified_item",
-		category: "node" as const,
+		category: "data" as const,
 		schemaId: "unified_item_schema_v1",
 		properties: {
 			name: { en: "Wing Gundam Zero", ja: "ウイングガンダムゼロ" },
@@ -61,7 +61,7 @@ export const mockUnifiedItems: UnifiedItem[] = [
 export const mockManualItems: ManualItem[] = [
 	{
 		id: "0001",
-		category: "node",
+		category: "data",
 		type: "manual_item",
 		schemaId: "manual_item_schema_001",
 		properties: {
@@ -92,7 +92,7 @@ export const mockManualItems: ManualItem[] = [
 
 ];
 
-export const mockCatalogItems: DatabaseCatalogItem[] = [
+export const mockCatalogItems: CatalogItem[] = [
 	{
 		id: "cat_001",
 		name: "Strike Freedom Gundam",
@@ -111,14 +111,14 @@ export const mockCatalogItems: DatabaseCatalogItem[] = [
 
 // Helper function to get mixed items for testing
 export function getMockItems(count = 50) {
-	const allItems: Array<UnifiedItem | ManualItem | DatabaseCatalogItem> = [
+	const allItems: Array<UnifiedItem | ManualItem | CatalogItem> = [
 		...mockUnifiedItems,
 		...mockManualItems,
 		...mockCatalogItems,
 	];
 
 	// Create more items by duplicating with different IDs
-	const items: Array<UnifiedItem | ManualItem | DatabaseCatalogItem> = [];
+	const items: Array<UnifiedItem | ManualItem | CatalogItem> = [];
 	for (let i = 0; i < count; i++) {
 		const baseItem = allItems[i % allItems.length];
 		const itemWithId = { ...baseItem };
