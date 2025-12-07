@@ -50,12 +50,12 @@ async function quickCheckUrl(url: string): Promise<{ isValid: boolean; title?: s
 
 			// Check if we have the complete title tag yet
 			const titleMatch = html.match(/<title>([^<]+)<\/title>/i);
-			if (titleMatch) {
+			const matchedTitle = titleMatch?.[1];
+			if (matchedTitle) {
 				// Found title - abort the connection and return result
 				controller.abort();
-				const title = titleMatch[1];
-				const isValid = !title.includes('404');
-				return { isValid, title };
+				const isValid = !matchedTitle.includes('404');
+				return { isValid, title: matchedTitle };
 			}
 		}
 
@@ -87,7 +87,7 @@ async function quickCheckUrl(url: string): Promise<{ isValid: boolean; title?: s
  */
 export async function discoverValidIds(
 	ranges: string[],
-	options: CatalogDiscoveryOptions
+	_options: CatalogDiscoveryOptions
 ): Promise<{ validIds: string[]; invalidIds: string[]; skippedIds: string[] }> {
 	const validIds: string[] = [];
 	const invalidIds: string[] = [];
@@ -248,14 +248,18 @@ export function isIdIndexed(id: string): { indexed: boolean; isValid?: boolean; 
  * Compare two catalog IDs (e.g., "01_1000" vs "01_1001")
  */
 function compareIds(a: string, b: string): number {
-	const [prefixA, suffixA] = a.split('_');
-	const [prefixB, suffixB] = b.split('_');
+	const partsA = a.split('_');
+	const partsB = b.split('_');
+	const prefixA = partsA[0] ?? '';
+	const prefixB = partsB[0] ?? '';
+	const suffixA = partsA[1] ?? '0';
+	const suffixB = partsB[1] ?? '0';
 
 	if (prefixA !== prefixB) {
 		return prefixA.localeCompare(prefixB);
 	}
 
-	return parseInt(suffixA) - parseInt(suffixB);
+	return Number.parseInt(suffixA, 10) - Number.parseInt(suffixB, 10);
 }
 
 /**

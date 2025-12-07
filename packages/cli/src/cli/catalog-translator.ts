@@ -18,16 +18,16 @@ import {
 	rebuildAndReloadDictionary,
 	normalizeText,
 	TRANSLATION_STORE_DIR,
-} from '../../../translation/src/index';
-import type { TranslationStore } from '../../../translation/src/index';
+} from '@hobby-ninja/translation';
+import type { TranslationStore } from '@hobby-ninja/translation';
 import type {
 	CatalogItem,
 	CatalogBrand,
 	CatalogSeries,
 	CatalogCategory,
 	CatalogRelatedProduct,
-} from '../../../types/src/catalogData';
-import type { LocalizedText } from '../../../types/src/manualData';
+} from '@hobby-ninja/types/catalog';
+import type { LocalizedText } from '@hobby-ninja/types/manual';
 
 export interface CatalogTranslatorOptions {
 	/** Directory for persistent translation cache (default: data/translations) */

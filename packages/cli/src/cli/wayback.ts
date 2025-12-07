@@ -899,12 +899,13 @@ export class WaybackCommand {
 
 	private parseDuration(duration: string): number {
 		const match = duration.match(/^(\d+)([dmy])$/);
-		if (!match) {
+		if (!match?.[1] || !match[2]) {
 			throw new Error(`Invalid duration format: ${duration}. Use format like 30d, 6m, 2y`);
 		}
 
-		const [, num, unit] = match;
-		const value = parseInt(num, 10);
+		const num = match[1];
+		const unit = match[2];
+		const value = Number.parseInt(num, 10);
 
 		switch (unit) {
 			case 'd': return value * 24 * 60 * 60 * 1000; // days to ms
