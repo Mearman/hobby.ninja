@@ -25,6 +25,18 @@ const SharedListPage = lazy(() => import("./pages/shared-list-page").then(module
 const SearchPage = lazy(() => import("./pages/search-page").then(module => ({
 	default: module.SearchPage,
 })));
+const CollectionPage = lazy(() => import("./pages/collection-page").then(module => ({
+	default: module.CollectionPage,
+})));
+const CollectionHobbyPage = lazy(() => import("./pages/collection-hobby-page").then(module => ({
+	default: module.CollectionHobbyPage,
+})));
+const CollectionDetailPage = lazy(() => import("./pages/collection-detail-page").then(module => ({
+	default: module.CollectionDetailPage,
+})));
+const ItemEditPage = lazy(() => import("./pages/item-edit-page").then(module => ({
+	default: module.ItemEditPage,
+})));
 const NotFoundPage = lazy(() => import("./pages/not-found-page").then(module => ({
 	default: module.NotFoundPage,
 })));
@@ -120,6 +132,42 @@ const searchRoute = createRoute({
 });
 
 /**
+ * Collection hub route
+ */
+const collectionRoute = createRoute({
+	getParentRoute: () => rootRoute,
+	path: "/collection",
+	component: CollectionPage,
+});
+
+/**
+ * Collection hobby type route
+ */
+const collectionHobbyRoute = createRoute({
+	getParentRoute: () => rootRoute,
+	path: "/collection/$hobbyType",
+	component: CollectionHobbyPage,
+});
+
+/**
+ * Collection detail route
+ */
+const collectionDetailRoute = createRoute({
+	getParentRoute: () => rootRoute,
+	path: "/collection/$hobbyType/$collectionId",
+	component: CollectionDetailPage,
+});
+
+/**
+ * Item edit/create route
+ */
+const itemEditRoute = createRoute({
+	getParentRoute: () => rootRoute,
+	path: "/collection/$hobbyType/item/$itemId",
+	component: ItemEditPage,
+});
+
+/**
  * About route
  */
 const aboutRoute = createRoute({
@@ -145,6 +193,10 @@ const routeTree = rootRoute.addChildren([
 	itemDetailRoute,
 	sharedListRoute,
 	searchRoute,
+	collectionRoute,
+	collectionHobbyRoute,
+	collectionDetailRoute,
+	itemEditRoute,
 	aboutRoute,
 	notFoundRoute,
 ]);
