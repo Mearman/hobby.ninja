@@ -499,7 +499,7 @@ export function AdvancedFilters({
 											onChange={(value) => { handleFilterChange({
 												releaseDateRange: {
 													...localFilters.releaseDateRange,
-													start: value || undefined,
+													start: typeof value === 'number' ? value : value ? parseInt(value, 10) || undefined : undefined,
 												},
 											}); }}
 										/>
@@ -514,7 +514,7 @@ export function AdvancedFilters({
 											onChange={(value) => { handleFilterChange({
 												releaseDateRange: {
 													...localFilters.releaseDateRange,
-													end: value || undefined,
+													end: typeof value === 'number' ? value : value ? parseInt(value, 10) || undefined : undefined,
 												},
 											}); }}
 										/>
@@ -563,7 +563,7 @@ export function AdvancedFilters({
 											onChange={(value) => { handleFilterChange({
 												priceRange: {
 													...localFilters.priceRange,
-													min: value || undefined,
+													min: typeof value === 'number' ? value : value ? parseInt(value, 10) || undefined : undefined,
 												},
 											}); }}
 										/>
@@ -575,7 +575,7 @@ export function AdvancedFilters({
 											onChange={(value) => { handleFilterChange({
 												priceRange: {
 													...localFilters.priceRange,
-													max: value || undefined,
+													max: typeof value === 'number' ? value : value ? parseInt(value, 10) || undefined : undefined,
 												},
 											}); }}
 										/>
@@ -602,7 +602,7 @@ export function AdvancedFilters({
 										{ value: "preorder", label: "Pre-order" },
 									]}
 									value={localFilters.availability || []}
-									onChange={(value) => { handleFilterChange({ availability: value }); }}
+									onChange={(value) => { handleFilterChange({ availability: value as Array<"available" | "discontinued" | "preorder"> }); }}
 									placeholder="Select availability status..."
 									clearable={true}
 								/>
@@ -631,7 +631,8 @@ export function AdvancedFilters({
 										onChange={(value) => { handleFilterChange({
 											sort: {
 												...localFilters.sort,
-												field: value as any,
+												field: value as "name" | "releaseDate" | "price" | "relevance",
+												direction: localFilters.sort?.direction || "asc",
 											},
 										}); }}
 									/>
@@ -645,7 +646,8 @@ export function AdvancedFilters({
 										onChange={(value) => { handleFilterChange({
 											sort: {
 												...localFilters.sort,
-												direction: value as any,
+												field: localFilters.sort?.field || "name",
+												direction: value as "asc" | "desc",
 											},
 										}); }}
 									/>

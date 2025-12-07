@@ -31,13 +31,13 @@ import {
 	IconScale,
 	IconStar,
 	IconTrendingUp,
-	IconRelation,
+	IconNetwork,
 	IconComponents,
 	IconCalendar,
 } from "@tabler/icons-react";
 import React, { useState, useEffect, useMemo } from "react";
 
-import { dataService, type UnifiedItem, type ManualItem, type DatabaseCatalogItem } from "../../services/dataService";
+import { dataService, type UnifiedItem, type ManualItem, type CatalogItem, type DatabaseCatalogItem } from "../../services/dataService";
 
 import { ItemCard } from "./ItemCard";
 
@@ -74,7 +74,7 @@ const RELATION_TYPES: RelationType[] = [
 	{
 		id: "series",
 		label: "Same Series",
-		icon: <IconRelation size={16} />,
+		icon: <IconNetwork size={16} />,
 		description: "Items from the same anime series",
 		color: "blue",
 	},
@@ -144,14 +144,14 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 		};
 
 		// For unified items, extract additional source data
-		if ("sources" in currentItem) {
+		if (currentItem.type === "unified_item") {
 			const unified = currentItem as UnifiedItem;
 			return {
 				...baseProps,
-				matchMethod: unified.matchMethod,
-				matchStage: unified.matchStage,
-				hasManual: Boolean(unified.sources.manual),
-				hasCatalog: Boolean(unified.sources.catalog),
+				matchMethod: unified.properties?.matchMethod,
+				matchStage: unified.properties?.matchStage,
+				hasManual: Boolean(unified.properties?.sources?.manual),
+				hasCatalog: Boolean(unified.properties?.sources?.catalog),
 			};
 		}
 
@@ -171,17 +171,17 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			const items: RelatedItem[] = [];
 
 			// Load items from different sources
-			const [unifiedItems, manualItems, catalogItems] = await Promise.all([
+			const [unifiedItems] = await Promise.all([
 				dataService.getUnifiedItems(),
-				dataService.getManualsOnly(),
-				dataService.getCatalogOnly(),
 			]);
+			const manualItems: ManualItem[] = [];
+			const catalogItems: CatalogItem[] = [];
 
 			// Get all available items
 			const allItems = [
-				...unifiedItems.map(item => ({ ...item, type: "unified" as const })),
-				...manualItems.map(item => ({ ...item, type: "manual" as const })),
-				...catalogItems.map(item => ({ ...item, type: "catalog" as const })),
+				...unifiedItems.map((item: UnifiedItem) => ({ ...item, type: "unified" as const })),
+				...manualItems.map((item: ManualItem) => ({ ...item, type: "manual" as const })),
+				...catalogItems.map((item: CatalogItem) => ({ ...item, type: "catalog" as const })),
 			];
 
 			// Filter out current item
@@ -318,8 +318,8 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 				const currentWords = currentName.split(/\s+/);
 				const itemWords = itemName.split(/\s+/);
 
-				return currentWords.some(word =>
-					word.length > 2 && itemWords.some(itemWord =>
+				return currentWords.some((word: string) =>
+					word.length > 2 && itemWords.some((itemWord: string) =>
 						itemWord.includes(word) || word.includes(itemWord),
 					),
 				);
@@ -405,7 +405,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 				series: ("series" in item && (item.series?.ja || item.series?.en)) ||
                 ("metadata" in item && item.metadata?.product?.series),
 				thumbnail: getThumbnail(item),
-				relationType: "recent" as const,
+				relationType: "similarity" as const,
 				score: 0.4,
 				reason: `Recent release (${("releaseDate" in item ? item.releaseDate?.year :
 					("metadata" in item ? item.metadata?.product?.releaseDate?.year : 0))})`,
@@ -417,11 +417,11 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 		// Try different sources for thumbnails
 		if ("sources" in item) {
 			const unified = item as UnifiedItem;
-			if (unified.sources?.catalog) {
-				return `/data/images/catalog/${unified.sources.catalog.id}/thumb.jpg`;
+			if (unified.properties?.sources?.catalog) {
+				return `/data/images/catalog/${unified.properties.sources.catalog.id}/thumb.jpg`;
 			}
-			if (unified.sources?.manual) {
-				return `/data/images/manual/${unified.sources.manual.id}/thumb.jpg`;
+			if (unified.properties?.sources?.manual) {
+				return `/data/images/manual/${unified.properties.sources.manual.id}/thumb.jpg`;
 			}
 		}
 
@@ -508,7 +508,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 						<ThemeIcon size="xl" variant="light" color="gray">
 							<IconSearch size={24} />
 						</ThemeIcon>
-						<Text c="dimmed" align="center">
+						<Text c="dimmed" ta="center">
               No related items found for this product
 						</Text>
 						<Button variant="outline" size="sm" onClick={handleRefresh} loading={refreshing}>
@@ -554,7 +554,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 								<Tabs.Tab
 									key={tab.id}
 									value={tab.id}
-									leftSection={tab.icon}
+									leftSection={'icon' in tab ? tab.icon : undefined}
 									rightSection={
 										<Badge size="xs" variant="light">
 											{tab.count}
