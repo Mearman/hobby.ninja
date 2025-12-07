@@ -14,6 +14,8 @@ import { createStaticHandler } from '@tanstack/react-router';
 import { staticRouter } from '../src/router';
 import { getGraphPreloader } from '../src/utils/graph-preloader';
 import { generateGraphRoutes } from '../src/utils/graph-routes-generator';
+import { generateSEOFiles } from './sitemap-generator';
+import { StructuredDataGenerator } from './structured-data-generator';
 import { ReactElement } from 'react';
 
 // Configuration
@@ -317,8 +319,11 @@ export async function buildSSG(options: SSGOptions = {}): Promise<void> {
 			totalFailed += failed;
 		}
 
-		// Generate sitemap
-		await generateSitemap(allRoutes, OUTPUT_DIR);
+		// Generate SEO files (sitemap.xml, robots.txt)
+		if (verbose) {
+			console.log('🔍 Generating SEO files...');
+		}
+		await generateSEOFiles();
 
 		const duration = Date.now() - startTime;
 
@@ -339,29 +344,6 @@ export async function buildSSG(options: SSGOptions = {}): Promise<void> {
 	}
 }
 
-/**
- * Generates sitemap.xml for all routes
- */
-async function generateSitemap(routes: string[], outputDir: string): Promise<void> {
-	const baseUrl = 'https://hobby.ninja';
-	const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${routes.map(route => `
-  <url>
-    <loc>${baseUrl}${route}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${route === '/' ? '1.0' : '0.8'}</priority>
-  </url>`).join('')}
-</urlset>`;
-
-	const sitemapPath = join(outputDir, 'sitemap.xml');
-	const writeStream = createWriteStream(sitemapPath);
-	writeStream.write(sitemapContent);
-	writeStream.end();
-
-	console.log(`🗺️  Generated sitemap: ${sitemapPath}`);
-}
 
 /**
  * CLI execution
