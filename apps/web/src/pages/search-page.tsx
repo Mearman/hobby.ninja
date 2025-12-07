@@ -389,7 +389,7 @@ export function SearchPage(): React.ReactElement {
 									key={item.id}
 									item={item}
 									highlightQuery={searchQuery}
-									onItemClick={(id) => {
+									onItemClick={(id: string) => {
 										const hobbyType = item.type || "gunpla";
 										navigate({
 											to: "/database/$hobbyType/$id",
@@ -419,7 +419,7 @@ export function SearchPage(): React.ReactElement {
 					</>
 				) : searchQuery || Object.keys(filters).length > 0 ? (
 					<Paper p="xl" radius="md" withBorder={true} mb="xl" ta="center">
-						<IconSearch size={48} color="var(--mantine-color-dimmed)" mb="md" />
+						<IconSearch size={48} color="var(--mantine-color-dimmed)" style={{ marginBottom: 'var(--mantine-spacing-md)' }} />
 						<Text size="lg" mb="sm">
 							No results found
 						</Text>

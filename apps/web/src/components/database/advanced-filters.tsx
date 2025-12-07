@@ -427,7 +427,7 @@ export function AdvancedFilters({
 					</Card>
 
 					{/* Filter options */}
-					<Accordion variant="separated" defaultValue={["basic", "dates", "pricing"]}>
+					<Accordion variant="separated" multiple defaultValue={["basic", "dates", "pricing"]}>
 						{/* Basic filters */}
 						<Accordion.Item value="basic">
 							<Accordion.Control icon={<IconFilter size={16} />}>

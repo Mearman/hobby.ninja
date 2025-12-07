@@ -334,16 +334,20 @@ globalStyle("@keyframes slide-up", {
 
 // Mobile responsiveness
 export const mobileBreakpoint = style({
-	"@media (max-width: 768px)": {
-		padding: "var(--mantine-spacing-sm)",
+	"@media": {
+		"(max-width: 768px)": {
+			padding: "var(--mantine-spacing-sm)",
+		},
 	},
 });
 
 // Compact view for mobile
 export const mobileGrid = style({
-	"@media (max-width: 768px)": {
-		gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
-		gap: "var(--mantine-spacing-sm)",
+	"@media": {
+		"(max-width: 768px)": {
+			gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
+			gap: "var(--mantine-spacing-sm)",
+		},
 	},
 });
 
@@ -368,50 +372,91 @@ export const focusVisible = style({
 });
 
 // High contrast mode support
-globalStyle("@media (prefers-contrast: high)", {
-	".item-card": {
-		borderWidth: "2px",
-		borderColor: "var(--mantine-color-gray-7)",
+globalStyle(".item-card", {
+	"@media": {
+		"(prefers-contrast: high)": {
+			borderWidth: "2px",
+			borderColor: "var(--mantine-color-gray-7)",
+		},
 	},
-	".filter-chip": {
-		borderWidth: "2px",
-		borderColor: "var(--mantine-color-gray-7)",
+});
+
+globalStyle(".filter-chip", {
+	"@media": {
+		"(prefers-contrast: high)": {
+			borderWidth: "2px",
+			borderColor: "var(--mantine-color-gray-7)",
+		},
 	},
-	".search-input": {
-		borderWidth: "2px",
-		borderColor: "var(--mantine-color-gray-7)",
+});
+
+globalStyle(".search-input", {
+	"@media": {
+		"(prefers-contrast: high)": {
+			borderWidth: "2px",
+			borderColor: "var(--mantine-color-gray-7)",
+		},
 	},
 });
 
 // Reduced motion support
-globalStyle("@media (prefers-reduced-motion: reduce)", {
-	".item-card": {
-		animation: "none",
-		transition: "none",
+globalStyle(".item-card", {
+	"@media": {
+		"(prefers-reduced-motion: reduce)": {
+			animation: "none",
+			transition: "none",
+		},
 	},
-	".filter-chip": {
-		animation: "none",
-		transition: "none",
+});
+
+globalStyle(".filter-chip", {
+	"@media": {
+		"(prefers-reduced-motion: reduce)": {
+			animation: "none",
+			transition: "none",
+		},
 	},
-	".fade-in": {
-		animation: "none",
-		transition: "none",
+});
+
+globalStyle(".fade-in", {
+	"@media": {
+		"(prefers-reduced-motion: reduce)": {
+			animation: "none",
+			transition: "none",
+		},
 	},
-	".slide-up": {
-		animation: "none",
-		transition: "none",
+});
+
+globalStyle(".slide-up", {
+	"@media": {
+		"(prefers-reduced-motion: reduce)": {
+			animation: "none",
+			transition: "none",
+		},
 	},
 });
 
 // Print styles
-globalStyle("@media print", {
-	".search-container": {
-		display: "none",
+globalStyle(".search-container", {
+	"@media": {
+		print: {
+			display: "none",
+		},
 	},
-	".filters-section": {
-		display: "none",
+});
+
+globalStyle(".filters-section", {
+	"@media": {
+		print: {
+			display: "none",
+		},
 	},
-	".item-grid": {
-		gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+});
+
+globalStyle(".item-grid", {
+	"@media": {
+		print: {
+			gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+		},
 	},
 });
