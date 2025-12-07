@@ -27,8 +27,26 @@ import React, { useState, useEffect, useCallback } from "react";
 
 import { AdvancedFilters } from "../components/database/advanced-filters";
 import { ItemCard } from "../components/database/ItemCard";
-import { dataService } from "../services/dataService";
+import { dataService, type FilterOptions } from "../services/dataService";
 import { databaseContainer, heroSection, statsCard } from "../styles/styles.css";
+
+const getItemType = (item: unknown): "unified" | "manual" | "catalog" => {
+	if (!item || typeof item !== 'object' || !('type' in item)) {
+		return "unified";
+	}
+
+	const typedItem = item as { type: string };
+	switch (typedItem.type) {
+		case "unified_item":
+			return "unified";
+		case "manual_item":
+			return "manual";
+		case "catalog_item":
+			return "catalog";
+		default:
+			return "unified";
+	}
+};
 
 interface FilterState {
 	grade?: string;
@@ -87,7 +105,8 @@ export function DatabaseHobbyPage(): React.ReactElement {
 	// Redirect if invalid hobby type
 	if (!config) {
 		navigate({ to: "/database" });
-		return null;
+		// Return loading state while redirecting
+		return <Container>Loading...</Container>;
 	}
 
 	// Load items based on current state
@@ -106,7 +125,15 @@ export function DatabaseHobbyPage(): React.ReactElement {
 					sortBy,
 				};
 
-				const result = await dataService.searchItems(searchQuery, filters, {
+				// Convert FilterState to FilterOptions
+				const filterOptions: FilterOptions = {
+					series: filters.series ? [filters.series] : undefined,
+					grade: filters.grade ? [filters.grade] : undefined,
+					scale: filters.scale ? [filters.scale] : undefined,
+					availability: filters.availability ? [filters.availability as "available" | "discontinued" | "preorder"] : undefined,
+				};
+
+				const result = await dataService.searchItems(searchQuery, filterOptions, {
 					page: currentPage,
 					limit: 24,
 					sortBy,
@@ -216,8 +243,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 								leftSection={<IconSearch size={16} />}
 								value={searchQuery}
 								onChange={(event) => { handleSearch(event.currentTarget.value); }}
-								style={{ flex: 1 }}
-								maxWidth={400}
+								style={{ flex: 1, maxWidth: 400 }}
 							/>
 
 							<Select
@@ -282,10 +308,25 @@ export function DatabaseHobbyPage(): React.ReactElement {
 				{showFilters && (
 					<Paper p="lg" radius="md" withBorder={true} mb="xl">
 						<AdvancedFilters
-							filters={filters}
-							onFilterChange={handleFilterChange}
-							hobbyType={hobbyType}
-							config={config}
+							opened={showFilters}
+							onClose={() => { setShowFilters(false); }}
+							onApply={() => { /* Apply logic handled by onFiltersChange */ }}
+							filters={{
+								series: filters.series ? [filters.series] : undefined,
+								grade: filters.grade ? [filters.grade] : undefined,
+								scale: filters.scale ? [filters.scale] : undefined,
+								priceRange: filters.priceRange ? { min: filters.priceRange[0], max: filters.priceRange[1] } : undefined,
+								availability: filters.availability ? [filters.availability as "available" | "discontinued" | "preorder"] : undefined,
+							}}
+							onFiltersChange={(newFilters: any) => {
+								handleFilterChange({
+									series: newFilters.series?.[0],
+									grade: newFilters.grade?.[0],
+									scale: newFilters.scale?.[0],
+									priceRange: newFilters.priceRange,
+									availability: newFilters.availability?.[0],
+								});
+							}}
 						/>
 					</Paper>
 				)}
@@ -310,17 +351,26 @@ export function DatabaseHobbyPage(): React.ReactElement {
 				{/* Items grid */}
 				{items.length > 0 ? (
 					<SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 6 }} spacing="lg" mb="xl">
-						{items.map((item: any) => (
-							<ItemCard
+						{items.map((item) => (
+							<Card
 								key={item.id}
-								item={item}
-								onItemClick={(id) =>
+								shadow="sm"
+								p="md"
+								radius="md"
+								component="button"
+								onClick={() =>
 									navigate({
 										to: "/database/$hobbyType/$id",
-										params: { hobbyType, id },
+										params: { hobbyType, id: item.id },
 									})
 								}
-							/>
+								style={{ cursor: "pointer" }}
+							>
+								<ItemCard
+									item={item}
+									itemType={getItemType(item)}
+								/>
+							</Card>
 						))}
 					</SimpleGrid>
 				) : (

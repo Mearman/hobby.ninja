@@ -87,7 +87,7 @@ export function DatabasePage(): React.ReactElement {
 				const [statsData, recentData, popularData] = await Promise.all([
 					dataService.getStatistics(),
 					dataService.getItemsByPage(1, 6, "unified"),
-					dataService.searchItems("", {}, { maxResults: 6 }),
+					dataService.searchItems("", {}, { limit: 6 }),
 				]);
 
 				setStats(statsData);
