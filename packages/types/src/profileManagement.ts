@@ -73,11 +73,11 @@ export interface ProfileGenerationResult {
 }
 
 export interface CacheManager {
-  get(key: string): unknown | null;
+  get(key: string): unknown;
   set(key: string, value: unknown, ttl?: number): void;
   clear(): void;
   delete(key: string): boolean;
-  getByUrl?(url: string): Promise<unknown | null>;
+  getByUrl?(url: string): Promise<unknown>;
   setByUrl?(url: string, value: unknown, type: string): Promise<void>;
 }
 

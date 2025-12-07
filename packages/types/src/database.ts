@@ -238,7 +238,7 @@ export interface FilterOptions {
     end?: number;
   };
   /** Filter by availability */
-  availability?: ("available" | "discontinued" | "preorder")[];
+  availability?: Array<"available" | "discontinued" | "preorder">;
   /** Filter by price range */
   priceRange?: {
     /** Minimum price */
@@ -268,7 +268,7 @@ export interface HobbyType {
   /** Default data sources */
   defaultSources: string[];
   /** Specific filters for this hobby */
-  hobbyFilters?: Record<string, any>;
+  hobbyFilters?: Record<string, unknown>;
   /** Icon identifier */
   icon?: string;
   /** Color theme */
@@ -309,7 +309,7 @@ export interface MasterIndexItem {
   /** File size */
   fileSize?: number;
   /** Additional metadata */
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 /**
@@ -556,7 +556,7 @@ export interface CustomFieldDefinition {
   /** Is this field required? */
   required: boolean;
   /** Default value */
-  defaultValue?: any;
+  defaultValue?: unknown;
   /** Validation rules */
   validation?: {
     /** Minimum value (for numbers) */
@@ -564,7 +564,7 @@ export interface CustomFieldDefinition {
     /** Maximum value (for numbers) */
     max?: number;
     /** Allowed values (for enums) */
-    allowedValues?: any[];
+    allowedValues?: unknown[];
     /** Regular expression pattern */
     pattern?: string;
   };
@@ -589,9 +589,9 @@ export interface DatabasePlugin {
   /** Custom data processors */
   processors?: {
     /** Pre-processing hook */
-    beforeSave?: (data: any) => Promise<any>;
+    beforeSave?: (data: unknown) => Promise<unknown>;
     /** Post-processing hook */
-    afterLoad?: (data: any) => Promise<any>;
+    afterLoad?: (data: unknown) => Promise<unknown>;
   };
   /** Custom search handlers */
   searchHandlers?: {
