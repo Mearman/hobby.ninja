@@ -5,9 +5,10 @@
  * Compatible with Google and other search engines
  */
 
-import { createWriteStream, existsSync, mkdirSync } from 'node:fs';
-import { join } from 'node:path';
-import { generateGraphRoutes } from '../src/utils/graph-routes-generator';
+import { createWriteStream, existsSync, mkdirSync } from "node:fs";
+import { join } from "node:path";
+
+import { generateGraphRoutes } from "../src/utils/graph-routes-generator";
 
 interface SitemapEntry {
 	url: string;
@@ -20,8 +21,8 @@ export class SitemapGenerator {
 	private baseUrl: string;
 	private outputDir: string;
 
-	constructor(baseUrl: string = 'https://hobby.ninja', outputDir: string = join(process.cwd(), 'dist', 'apps', 'web')) {
-		this.baseUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+	constructor(baseUrl = "https://hobby.ninja", outputDir: string = join(process.cwd(), "dist", "apps", "web")) {
+		this.baseUrl = baseUrl.endsWith("/") ? baseUrl.slice(0, -1) : baseUrl;
 		this.outputDir = outputDir;
 	}
 
@@ -29,7 +30,7 @@ export class SitemapGenerator {
 	 * Generates sitemap.xml for all graph nodes
 	 */
 	async generateSitemap(): Promise<void> {
-		console.log('🗺️ Generating sitemap.xml...');
+		console.log("🗺️ Generating sitemap.xml...");
 
 		try {
 			const routes = await generateGraphRoutes();
@@ -42,13 +43,13 @@ export class SitemapGenerator {
 			}
 
 			// Write sitemap.xml
-			const sitemapPath = join(this.outputDir, 'sitemap.xml');
+			const sitemapPath = join(this.outputDir, "sitemap.xml");
 			await this.writeFile(sitemapPath, sitemapXml);
 
 			console.log(`✅ Generated sitemap.xml with ${sitemapEntries.length} URLs`);
 			console.log(`📍 Location: ${sitemapPath}`);
 		} catch (error) {
-			console.error('❌ Failed to generate sitemap:', error);
+			console.error("❌ Failed to generate sitemap:", error);
 			throw error;
 		}
 	}
@@ -58,60 +59,65 @@ export class SitemapGenerator {
 	 */
 	private async createSitemapEntries(routes: string[]): Promise<SitemapEntry[]> {
 		const entries: SitemapEntry[] = [];
-		const lastmod = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+		const lastmod = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
 
 		// Add static pages
 		entries.push(
 			{
 				url: this.baseUrl,
 				lastmod,
-				changefreq: 'weekly',
-				priority: 1.0
+				changefreq: "weekly",
+				priority: 1,
 			},
 			{
 				url: `${this.baseUrl}/database`,
 				lastmod,
-				changefreq: 'weekly',
-				priority: 0.8
-			}
+				changefreq: "weekly",
+				priority: 0.8,
+			},
 		);
 
 		// Add graph node pages
 		for (const route of routes) {
-			const nodeType = route.split('/')[1]; // Extract nodeType from /brand/30mm
+			const nodeType = route.split("/")[1]; // Extract nodeType from /brand/30mm
 
 			let priority = 0.7;
-			let changefreq = 'monthly';
+			let changefreq = "monthly";
 
 			// Set priority and change frequency based on node type
 			switch (nodeType) {
-				case 'item':
+				case "item": {
 					priority = 0.9;
-					changefreq = 'yearly';
+					changefreq = "yearly";
 					break;
-				case 'brand':
+				}
+				case "brand": {
 					priority = 0.8;
-					changefreq = 'monthly';
+					changefreq = "monthly";
 					break;
-				case 'series':
+				}
+				case "series": {
 					priority = 0.8;
-					changefreq = 'monthly';
+					changefreq = "monthly";
 					break;
-				case 'category':
+				}
+				case "category": {
 					priority = 0.7;
-					changefreq = 'yearly';
+					changefreq = "yearly";
 					break;
-				case 'manual':
+				}
+				case "manual": {
 					priority = 0.6;
-					changefreq = 'yearly';
+					changefreq = "yearly";
 					break;
+				}
 			}
 
 			entries.push({
 				url: `${this.baseUrl}${route}`,
 				lastmod,
 				changefreq,
-				priority
+				priority,
 			});
 		}
 
@@ -127,7 +133,7 @@ export class SitemapGenerator {
     <lastmod>${entry.lastmod}</lastmod>
     <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority.toFixed(1)}</priority>
-  </url>`).join('\n');
+  </url>`).join("\n");
 
 		return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -140,10 +146,10 @@ ${xmlEntries}
 	 */
 	private async writeFile(filePath: string, content: string): Promise<void> {
 		return new Promise((resolve, reject) => {
-			const stream = createWriteStream(filePath, { encoding: 'utf8' });
+			const stream = createWriteStream(filePath, { encoding: "utf8" });
 
-			stream.on('finish', resolve);
-			stream.on('error', reject);
+			stream.on("finish", resolve);
+			stream.on("error", reject);
 
 			stream.write(content);
 			stream.end();
@@ -154,7 +160,7 @@ ${xmlEntries}
 	 * Generates robots.txt with sitemap reference
 	 */
 	async generateRobotsTxt(): Promise<void> {
-		console.log('🤖 Generating robots.txt...');
+		console.log("🤖 Generating robots.txt...");
 
 		const robotsTxt = `User-agent: *
 Allow: /
@@ -166,7 +172,7 @@ Sitemap: ${this.baseUrl}/sitemap.xml
 Disallow: /admin/
 `;
 
-		const robotsPath = join(this.outputDir, 'robots.txt');
+		const robotsPath = join(this.outputDir, "robots.txt");
 		await this.writeFile(robotsPath, robotsTxt);
 
 		console.log(`✅ Generated robots.txt`);
@@ -183,5 +189,5 @@ export async function generateSEOFiles(): Promise<void> {
 	await generator.generateSitemap();
 	await generator.generateRobotsTxt();
 
-	console.log('🎉 SEO files generated successfully!');
+	console.log("🎉 SEO files generated successfully!");
 }
