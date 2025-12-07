@@ -131,17 +131,20 @@ export const itemGrid = style({
 
 // Responsive grid layouts
 export const itemGridCompact = style({
-	composes: itemGrid,
+	display: "grid",
+	gap: "var(--mantine-spacing-md)",
 	gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
 });
 
 export const itemGridComfortable = style({
-	composes: itemGrid,
+	display: "grid",
+	gap: "var(--mantine-spacing-md)",
 	gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
 });
 
 export const itemGridSpacious = style({
-	composes: itemGrid,
+	display: "grid",
+	gap: "var(--mantine-spacing-md)",
 	gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
 });
 
@@ -159,7 +162,15 @@ export const itemCard = style({
 });
 
 export const itemCardHover = style({
-	composes: itemCard,
+	background: "var(--mantine-color-white)",
+	borderRadius: "var(--mantine-radius-lg)",
+	border: "1px solid var(--mantine-color-gray-3)",
+	overflow: "hidden",
+	transition: "all 0.2s ease",
+	cursor: "pointer",
+	height: "100%",
+	display: "flex",
+	flexDirection: "column",
 });
 
 globalStyle(`${itemCardHover}:hover`, {
@@ -169,7 +180,15 @@ globalStyle(`${itemCardHover}:hover`, {
 });
 
 export const itemCardSelected = style({
-	composes: itemCard,
+	background: "var(--mantine-color-white)",
+	borderRadius: "var(--mantine-radius-lg)",
+	border: "1px solid var(--mantine-color-gray-3)",
+	overflow: "hidden",
+	transition: "all 0.2s ease",
+	cursor: "pointer",
+	height: "100%",
+	display: "flex",
+	flexDirection: "column",
 	borderColor: "var(--mantine-color-blue-6)",
 	boxShadow: "0 0 0 2px var(--mantine-color-blue-1)",
 });
@@ -276,19 +295,37 @@ export const statusIndicator = style({
 });
 
 export const statusIndicatorNew = style({
-	composes: statusIndicator,
+	display: "inline-flex",
+	alignItems: "center",
+	gap: "var(--mantine-spacing-xs)",
+	fontSize: "var(--mantine-font-size-xs)",
+	fontWeight: 500,
+	padding: "2px var(--mantine-spacing-xs)",
+	borderRadius: "var(--mantine-radius-sm)",
 	backgroundColor: "var(--mantine-color-green-1)",
 	color: "var(--mantine-color-green-8)",
 });
 
 export const statusIndicatorUpdated = style({
-	composes: statusIndicator,
+	display: "inline-flex",
+	alignItems: "center",
+	gap: "var(--mantine-spacing-xs)",
+	fontSize: "var(--mantine-font-size-xs)",
+	fontWeight: 500,
+	padding: "2px var(--mantine-spacing-xs)",
+	borderRadius: "var(--mantine-radius-sm)",
 	backgroundColor: "var(--mantine-color-blue-1)",
 	color: "var(--mantine-color-blue-8)",
 });
 
 export const statusIndicatorDiscontinued = style({
-	composes: statusIndicator,
+	display: "inline-flex",
+	alignItems: "center",
+	gap: "var(--mantine-spacing-xs)",
+	fontSize: "var(--mantine-font-size-xs)",
+	fontWeight: 500,
+	padding: "2px var(--mantine-spacing-xs)",
+	borderRadius: "var(--mantine-radius-sm)",
 	backgroundColor: "var(--mantine-color-red-1)",
 	color: "var(--mantine-color-red-8)",
 });
@@ -312,21 +349,21 @@ export const slideUp = style({
 
 // Define animations
 globalStyle("@keyframes skeleton-loading", {
-	"0%": { backgroundPosition: "200% 0" },
-	"100%": { backgroundPosition: "-200% 0" },
+	0: { backgroundPosition: "200% 0" },
+	100: { backgroundPosition: "-200% 0" },
 });
 
 globalStyle("@keyframes fade-in", {
-	"0%": { opacity: 0 },
-	"100%": { opacity: 1 },
+	0: { opacity: 0 },
+	100: { opacity: 1 },
 });
 
 globalStyle("@keyframes slide-up", {
-	"0%": {
+	0: {
 		opacity: 0,
 		transform: "translateY(20px)",
 	},
-	"100%": {
+	100: {
 		opacity: 1,
 		transform: "translateY(0)",
 	},
