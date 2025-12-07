@@ -636,10 +636,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 													{(item as DetailItem).catalogData?.properties?.description &&
 													typeof (item as DetailItem).catalogData!.properties!.description === "string" && (
 														<Text key="catalog-desc" size="sm">
-															{typeof (item as DetailItem).catalogData!.properties!.description === "string"
-														? (item as DetailItem).catalogData!.properties!.description
-														: (item as DetailItem).catalogData!.properties!.description?.en ||
-														  (item as DetailItem).catalogData!.properties!.description?.ja || 'No description'}
+															{(item as DetailItem).catalogData!.properties!.description as string}
 														</Text>
 													)}
 													{(item as DetailItem).manualData?.properties?.name && (
@@ -781,17 +778,19 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 											<Text fw={500}>Match Information</Text>
 										</Card.Section>
 										<Stack gap="sm" p="md">
+											{item.properties && 'matchMethod' in item.properties && (
 											<Group>
 												<Text size="sm" c="dimmed" w={100}>Match Method:</Text>
 												<Badge
 													color={
-														item.properties?.matchMethod === "exact" ? "green" :
-															(item.properties?.matchMethod === "fuzzy" ? "yellow" : "blue")
+														(item.properties as any).matchMethod === "exact" ? "green" :
+															((item.properties as any).matchMethod === "fuzzy" ? "yellow" : "blue")
 													}
 												>
-													{item.properties?.matchMethod}
+													{(item.properties as any).matchMethod}
 												</Badge>
 											</Group>
+										)}
 											{item.properties?.matchStage && (
 												<Group>
 													<Text size="sm" c="dimmed" w={100}>Match Stage:</Text>
