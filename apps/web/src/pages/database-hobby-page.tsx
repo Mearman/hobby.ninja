@@ -180,7 +180,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 					<Center h="50vh">
 						<Alert color="red" variant="light" w="100%" maw={500}>
 							<Text ta="center">{error}</Text>
-							<Button variant="outline" onClick={() => globalThis.location.reload()} mt="md">
+							<Button variant="outline" onClick={() => { globalThis.location.reload(); }} mt="md">
 								Try Again
 							</Button>
 						</Alert>
@@ -215,7 +215,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 								placeholder={`Search ${config.name.toLowerCase()}...`}
 								leftSection={<IconSearch size={16} />}
 								value={searchQuery}
-								onChange={(event) => handleSearch(event.currentTarget.value)}
+								onChange={(event) => { handleSearch(event.currentTarget.value); }}
 								style={{ flex: 1 }}
 								maxWidth={400}
 							/>
@@ -223,7 +223,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 							<Select
 								placeholder="Sort by"
 								value={sortBy}
-								onChange={(value) => setSortBy(value || "name")}
+								onChange={(value) => { setSortBy(value || "name"); }}
 								data={[
 									{ value: "name", label: "Name" },
 									{ value: "grade", label: "Grade" },
@@ -237,7 +237,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 							<Button
 								variant="outline"
 								leftSection={<IconAdjustmentsHorizontal size={16} />}
-								onClick={() => setShowFilters(!showFilters)}
+								onClick={() => { setShowFilters(!showFilters); }}
 							>
 								Filters
 								{Object.keys(filters).length > 0 && (

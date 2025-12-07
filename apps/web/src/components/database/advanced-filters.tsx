@@ -31,12 +31,12 @@ import {
 } from "@tabler/icons-react";
 import React, { useState, useEffect, useCallback } from "react";
 
-// eslint-disable-next-line no-undef
-const globalAlert = alert;
-// eslint-disable-next-line no-undef
-const globalBtoa = btoa;
-
 import { FilterOptions, FilterPreset } from "../../services/dataService";
+
+ 
+const globalAlert = alert;
+ 
+const globalBtoa = btoa;
 
 interface AdvancedFiltersProps {
   opened: boolean;
@@ -332,7 +332,7 @@ export function AdvancedFilters({
 									variant="outline"
 									size="xs"
 									leftSection={<IconDeviceFloppy size={12} />}
-									onClick={() => setShowPresetForm(true)}
+									onClick={() => { setShowPresetForm(true); }}
 								>
                   Save Current
 								</Button>
@@ -345,19 +345,19 @@ export function AdvancedFilters({
 									<TextInput
 										placeholder="Preset name..."
 										value={presetForm.name}
-										onChange={(e) => setPresetForm(prev => ({
+										onChange={(e) => { setPresetForm(prev => ({
 											...prev,
 											name: e.target.value,
-										}))}
+										})); }}
 										size="sm"
 									/>
 									<TextInput
 										placeholder="Description (optional)..."
 										value={presetForm.description}
-										onChange={(e) => setPresetForm(prev => ({
+										onChange={(e) => { setPresetForm(prev => ({
 											...prev,
 											description: e.target.value,
-										}))}
+										})); }}
 										size="sm"
 									/>
 									<Group gap="sm">
@@ -371,7 +371,7 @@ export function AdvancedFilters({
 										<Button
 											variant="outline"
 											size="xs"
-											onClick={() => setShowPresetForm(false)}
+											onClick={() => { setShowPresetForm(false); }}
 										>
                       Cancel
 										</Button>
@@ -391,7 +391,7 @@ export function AdvancedFilters({
 											p="xs"
 											withBorder={true}
 											style={{ cursor: "pointer" }}
-											onClick={() => handleLoadPreset(preset)}
+											onClick={() => { handleLoadPreset(preset); }}
 										>
 											<Stack gap={0}>
 												<Group justify="space-between" align="center">
@@ -444,7 +444,7 @@ export function AdvancedFilters({
 											placeholder="Select grades..."
 											data={gradeOptions}
 											value={localFilters.grade || []}
-											onChange={(value) => handleFilterChange({ grade: value })}
+											onChange={(value) => { handleFilterChange({ grade: value }); }}
 											searchable={true}
 											clearable={true}
 											disabled={loadingOptions}
@@ -456,7 +456,7 @@ export function AdvancedFilters({
 											placeholder="Select scales..."
 											data={scaleOptions}
 											value={localFilters.scale || []}
-											onChange={(value) => handleFilterChange({ scale: value })}
+											onChange={(value) => { handleFilterChange({ scale: value }); }}
 											searchable={true}
 											clearable={true}
 											disabled={loadingOptions}
@@ -468,7 +468,7 @@ export function AdvancedFilters({
 											placeholder="Select series..."
 											data={seriesOptions}
 											value={localFilters.series || []}
-											onChange={(value) => handleFilterChange({ series: value })}
+											onChange={(value) => { handleFilterChange({ series: value }); }}
 											searchable={true}
 											clearable={true}
 											maxDropdownHeight={200}
@@ -496,12 +496,12 @@ export function AdvancedFilters({
 											min={1970}
 											max={new Date().getFullYear() + 5}
 											value={localFilters.releaseDateRange?.start}
-											onChange={(value) => handleFilterChange({
+											onChange={(value) => { handleFilterChange({
 												releaseDateRange: {
 													...localFilters.releaseDateRange,
 													start: value || undefined,
 												},
-											})}
+											}); }}
 										/>
 									</Grid.Col>
 									<Grid.Col span={{ base: 12, sm: 6 }}>
@@ -511,12 +511,12 @@ export function AdvancedFilters({
 											min={1970}
 											max={new Date().getFullYear() + 5}
 											value={localFilters.releaseDateRange?.end}
-											onChange={(value) => handleFilterChange({
+											onChange={(value) => { handleFilterChange({
 												releaseDateRange: {
 													...localFilters.releaseDateRange,
 													end: value || undefined,
 												},
-											})}
+											}); }}
 										/>
 									</Grid.Col>
 								</Grid>
@@ -542,9 +542,9 @@ export function AdvancedFilters({
 											localFilters.priceRange?.min || 0,
 											localFilters.priceRange?.max || 50_000,
 										]}
-										onChange={([min, max]) => handleFilterChange({
+										onChange={([min, max]) => { handleFilterChange({
 											priceRange: { min, max },
-										})}
+										}); }}
 										marks={[
 											{ value: 0, label: "¥0" },
 											{ value: 10_000, label: "¥10k" },
@@ -560,24 +560,24 @@ export function AdvancedFilters({
 											placeholder="0"
 											min={0}
 											value={localFilters.priceRange?.min}
-											onChange={(value) => handleFilterChange({
+											onChange={(value) => { handleFilterChange({
 												priceRange: {
 													...localFilters.priceRange,
 													min: value || undefined,
 												},
-											})}
+											}); }}
 										/>
 										<NumberInput
 											label="Maximum Price"
 											placeholder="50000"
 											min={0}
 											value={localFilters.priceRange?.max}
-											onChange={(value) => handleFilterChange({
+											onChange={(value) => { handleFilterChange({
 												priceRange: {
 													...localFilters.priceRange,
 													max: value || undefined,
 												},
-											})}
+											}); }}
 										/>
 									</Group>
 								</Stack>
@@ -602,7 +602,7 @@ export function AdvancedFilters({
 										{ value: "preorder", label: "Pre-order" },
 									]}
 									value={localFilters.availability || []}
-									onChange={(value) => handleFilterChange({ availability: value })}
+									onChange={(value) => { handleFilterChange({ availability: value }); }}
 									placeholder="Select availability status..."
 									clearable={true}
 								/>
@@ -628,12 +628,12 @@ export function AdvancedFilters({
 											{ value: "relevance", label: "Relevance" },
 										]}
 										value={localFilters.sort?.field}
-										onChange={(value) => handleFilterChange({
+										onChange={(value) => { handleFilterChange({
 											sort: {
 												...localFilters.sort,
 												field: value as any,
 											},
-										})}
+										}); }}
 									/>
 									<Select
 										label="Order"
@@ -642,12 +642,12 @@ export function AdvancedFilters({
 											{ value: "desc", label: "Descending" },
 										]}
 										value={localFilters.sort?.direction}
-										onChange={(value) => handleFilterChange({
+										onChange={(value) => { handleFilterChange({
 											sort: {
 												...localFilters.sort,
 												direction: value as any,
 											},
-										})}
+										}); }}
 									/>
 								</Group>
 							</Accordion.Panel>

@@ -282,7 +282,7 @@ export const ItemDetailPage: React.FC = () => {
 		};
 
 		return (
-			<Badge color={colors[type as keyof typeof colors]} variant="light">
+			<Badge color={colors[type]} variant="light">
 				{type.charAt(0).toUpperCase() + type.slice(1)}
 			</Badge>
 		);

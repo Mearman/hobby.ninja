@@ -271,14 +271,14 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 									label="Item Name"
 									placeholder="Enter item name"
 									value={formData.name}
-									onChange={(e) => handleInputChange("name", e.target.value)}
+									onChange={(e) => { handleInputChange("name", e.target.value); }}
 									required={true}
 								/>
 								<TextInput
 									label="Brand/Manufacturer"
 									placeholder="Enter brand or manufacturer"
 									value={formData.brand}
-									onChange={(e) => handleInputChange("brand", e.target.value)}
+									onChange={(e) => { handleInputChange("brand", e.target.value); }}
 								/>
 							</SimpleGrid>
 						</Stack>
@@ -292,27 +292,27 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 										label="Grade/Class"
 										data={gradeOptions}
 										value={formData.grade}
-										onChange={(value) => handleInputChange("grade", value || "")}
+										onChange={(value) => { handleInputChange("grade", value || ""); }}
 										clearable={true}
 									/>
 									<Select
 										label="Scale"
 										data={scaleOptions}
 										value={formData.scale}
-										onChange={(value) => handleInputChange("scale", value || "")}
+										onChange={(value) => { handleInputChange("scale", value || ""); }}
 										clearable={true}
 									/>
 									<TextInput
 										label="Series"
 										placeholder="Enter series name"
 										value={formData.series}
-										onChange={(e) => handleInputChange("series", e.target.value)}
+										onChange={(e) => { handleInputChange("series", e.target.value); }}
 									/>
 									<NumberInput
 										label="Price"
 										placeholder="Enter price"
 										value={formData.price}
-										onChange={(value) => handleInputChange("price", value)}
+										onChange={(value) => { handleInputChange("price", value); }}
 										prefix="$"
 										decimalScale={2}
 									/>
@@ -328,14 +328,14 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 									label="Status"
 									data={statusOptions}
 									value={formData.status}
-									onChange={(value) => handleInputChange("status", value as ItemStatus)}
+									onChange={(value) => { handleInputChange("status", value as ItemStatus); }}
 								/>
 							</SimpleGrid>
 							<Textarea
 								label="Notes"
 								placeholder="Add any additional notes about this item"
 								value={formData.notes}
-								onChange={(e) => handleInputChange("notes", e.target.value)}
+								onChange={(e) => { handleInputChange("notes", e.target.value); }}
 								rows={4}
 							/>
 						</Stack>
@@ -347,7 +347,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 								<TextInput
 									placeholder="Add a tag"
 									value={tagInput}
-									onChange={(e) => setTagInput(e.target.value)}
+									onChange={(e) => { setTagInput(e.target.value); }}
 									onKeyPress={(e) => {
 										if (e.key === "Enter") {
 											e.preventDefault();
@@ -374,7 +374,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 											variant="outline"
 											size="xs"
 											rightSection={<IconX size={10} />}
-											onClick={() => handleRemoveTag(tag)}
+											onClick={() => { handleRemoveTag(tag); }}
 										>
 											{tag}
 										</Button>

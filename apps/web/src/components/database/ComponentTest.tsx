@@ -54,7 +54,7 @@ export function ComponentTest() {
 					<Switch
 						label="View Mode"
 						checked={viewMode === "grid"}
-						onChange={(e) => setViewMode(e.target.checked ? "grid" : "list")}
+						onChange={(e) => { setViewMode(e.target.checked ? "grid" : "list"); }}
 					/>
 					<Text size="sm" c="dimmed">
 						{selectedItems.size} items selected
@@ -69,11 +69,11 @@ export function ComponentTest() {
 					total={mockItems.length}
 					selectedItems={selectedItems}
 					onSelectionChange={handleSelectionChange}
-					onSortChange={(field, direction) => console.log("Sort:", field, direction)}
+					onSortChange={(field, direction) => { console.log("Sort:", field, direction); }}
 					onViewModeChange={setViewMode}
 					onItemClick={handleItemClick}
-					onRefresh={() => console.log("Refresh")}
-					onFiltersClick={() => console.log("Filters")}
+					onRefresh={() => { console.log("Refresh"); }}
+					onFiltersClick={() => { console.log("Filters"); }}
 					compact={viewMode === "grid"}
 					showFilters={true}
 					viewMode={viewMode}

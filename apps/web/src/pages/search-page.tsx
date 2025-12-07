@@ -66,7 +66,7 @@ interface FilterState {
  */
 export function SearchPage(): React.ReactElement {
 	const navigate = useNavigate();
-	const searchParams = useSearch({ from: "/search" }) as SearchParams;
+	const searchParams = useSearch({ from: "/search" });
 
 	// State management
 	const [searchQuery, setSearchQuery] = useState(searchParams.q || "");
@@ -198,7 +198,7 @@ export function SearchPage(): React.ReactElement {
 			}
 		}, 300);
 
-		return () => clearTimeout(timer);
+		return () => { clearTimeout(timer); };
 	}, [searchQuery]);
 
 	// Initial search on mount or params change
@@ -228,7 +228,7 @@ export function SearchPage(): React.ReactElement {
 							placeholder="Search for kits, series, grades, or keywords..."
 							leftSection={<IconSearch size={16} />}
 							value={searchQuery}
-							onChange={(event) => setSearchQuery(event.currentTarget.value)}
+							onChange={(event) => { setSearchQuery(event.currentTarget.value); }}
 							onKeyPress={(event) => {
 								if (event.key === "Enter") {
 									handleSearch(searchQuery);
@@ -240,7 +240,7 @@ export function SearchPage(): React.ReactElement {
 								searchQuery && (
 									<ActionIcon
 										variant="transparent"
-										onClick={() => setSearchQuery("")}
+										onClick={() => { setSearchQuery(""); }}
 									>
 										<IconX size={14} />
 									</ActionIcon>
@@ -251,7 +251,7 @@ export function SearchPage(): React.ReactElement {
 						<Select
 							placeholder="Sort by"
 							value={sortBy}
-							onChange={(value) => setSortBy(value || "relevance")}
+							onChange={(value) => { setSortBy(value || "relevance"); }}
 							data={sortOptions}
 							w={200}
 						/>
@@ -259,7 +259,7 @@ export function SearchPage(): React.ReactElement {
 						<Button
 							variant="outline"
 							leftSection={<IconAdjustmentsHorizontal size={16} />}
-							onClick={() => setShowFilters(!showFilters)}
+							onClick={() => { setShowFilters(!showFilters); }}
 						>
 							Filters
 							{Object.keys(filters).length > 0 && (
@@ -282,7 +282,7 @@ export function SearchPage(): React.ReactElement {
 										key={suggestion}
 										variant="subtle"
 										size="xs"
-										onClick={() => handleSearch(suggestion)}
+										onClick={() => { handleSearch(suggestion); }}
 									>
 										{suggestion}
 									</Button>
@@ -462,7 +462,7 @@ export function SearchPage(): React.ReactElement {
 								<Button
 									key={suggestion}
 									variant="outline"
-									onClick={() => handleSearch(suggestion)}
+									onClick={() => { handleSearch(suggestion); }}
 								>
 									{suggestion}
 								</Button>

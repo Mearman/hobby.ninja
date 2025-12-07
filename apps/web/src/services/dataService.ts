@@ -7,6 +7,9 @@
  */
 
 // Temporary type definitions until @workspace/types is properly configured
+import { progressTracker } from "./progressTracker";
+import { workerManager } from "./worker-manager";
+
 interface LocalizedName {
   ja?: string;
   en?: string;
@@ -120,7 +123,7 @@ interface FilterOptions {
     start?: number;
     end?: number;
   };
-  availability?: ("available" | "discontinued" | "preorder")[];
+  availability?: Array<"available" | "discontinued" | "preorder">;
   priceRange?: {
     min?: number;
     max?: number;
@@ -293,9 +296,6 @@ interface ProgressUpdate {
   rate?: number;
   metadata?: Record<string, any>;
 }
-
-import { progressTracker } from "./progressTracker";
-import { workerManager } from "./worker-manager";
 
 // ============================================================================
 // CONFIGURATION & CONSTANTS
@@ -736,7 +736,7 @@ class TextProcessor {
 export class DataService {
 	private cache: LRUCache<any>;
 	private storage: StorageManager;
-	private searchRequests: Map<string, SearchRequest> = new Map();
+	private searchRequests = new Map<string, SearchRequest>();
 	private isInitialized = false;
 	private config: DatabaseConfig | null = null;
 
@@ -970,7 +970,7 @@ export class DataService {
    * Get paginated items from data source
    */
 	async getItemsByPage(
-		page: number = 1,
+		page = 1,
 		limit: number = DEFAULT_CONFIG.DEFAULT_PAGE_LIMIT,
 		source?: DataSourceType,
 	): Promise<PaginationResult<UnifiedItem | ManualItem | DatabaseCatalogItem>> {
@@ -1217,12 +1217,12 @@ export class DataService {
 					earliestYear: Math.min(
 						...unifiedItems
 							.map(item => item.releaseDate?.year)
-							.filter(year => year !== undefined) as number[],
+							.filter(year => year !== undefined),
 					),
 					latestYear: Math.max(
 						...unifiedItems
 							.map(item => item.releaseDate?.year)
-							.filter(year => year !== undefined) as number[],
+							.filter(year => year !== undefined),
 					),
 				},
 			};
@@ -1832,7 +1832,7 @@ export class DataService {
 					// Boost popular terms
 					if (item.popularTerms) {
 						for (const term of queryTerms) {
-							if (item.popularTerms!.includes(term)) {
+							if (item.popularTerms.includes(term)) {
 								score += 0.5;
 							}
 						}
@@ -1843,8 +1843,7 @@ export class DataService {
 				}
 
 				// Apply field weights if specified
-				if (filters.query && item.metadata && // Boost name matches
-          item.metadata.name && item.metadata.name.toLowerCase().includes(query.toLowerCase())) {
+				if (filters.query && item.metadata?.name?.toLowerCase().includes(query.toLowerCase())) {
 					score *= 1.5;
 				}
 

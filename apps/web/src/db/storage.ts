@@ -57,7 +57,7 @@ export const schemaRegistry = {
 	schemas: new Map<string, z.ZodObject<z.ZodRawShape>>(),
 
 	// Store a new schema
-	async register(schema: z.ZodObject<z.ZodRawShape>, name: string, version: string = "1.0.0"): Promise<void> {
+	async register(schema: z.ZodObject<z.ZodRawShape>, name: string, version = "1.0.0"): Promise<void> {
 		const id = `${name}@${version}`;
 
 		// Store schema in memory

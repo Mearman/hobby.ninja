@@ -52,7 +52,7 @@ export function NotFoundPage() {
 					<Button
 						variant="subtle"
 						size="sm"
-						onClick={() => globalThis.history.back()}
+						onClick={() => { globalThis.history.back(); }}
 						leftSection={<IconArrowLeft size={14} />}
 					>
             Go Back

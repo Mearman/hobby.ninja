@@ -419,7 +419,7 @@ export class CollectionService {
 
 				// Search in item data fields
 				const dataString = JSON.stringify(item.data).toLowerCase();
-				const nameMatch = item.data.name && item.data.name.toLowerCase().includes(queryLower);
+				const nameMatch = item.data.name?.toLowerCase().includes(queryLower);
 				const tagsMatch = item.tags.some(tag => tag.toLowerCase().includes(queryLower));
 
 				return dataString.includes(queryLower) || nameMatch || tagsMatch;
@@ -519,7 +519,7 @@ export class CollectionService {
 	/**
    * Export collection to specified format
    */
-	async exportCollection(collectionId: string, format: string = "json"): Promise<Blob> {
+	async exportCollection(collectionId: string, format = "json"): Promise<Blob> {
 		const collection = await this.getCollection(collectionId);
 		if (!collection) {
 			throw new Error(`Collection not found: ${collectionId}`);

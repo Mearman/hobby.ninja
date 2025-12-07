@@ -4,9 +4,9 @@ import { FilterOptions } from "../services/dataService";
  * URL utilities for sharing filters and search parameters
  */
 
-// eslint-disable-next-line no-undef
+ 
 const globalBtoa = btoa;
-// eslint-disable-next-line no-undef
+ 
 const globalAtob = atob;
 
 // Helper function for base64 encoding in browser environment
@@ -58,7 +58,7 @@ export const decompressFilters = (compressed: string): FilterOptions | null => {
  */
 export const buildShareableUrl = (
 	baseUrl: string,
-	query: string = "",
+	query = "",
 	filters: FilterOptions = {},
 ): string => {
 	const url = new URL(baseUrl);

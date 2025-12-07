@@ -132,7 +132,7 @@ export function ItemCard({
 	const getImageSrc = useCallback(() => {
 		// For unified items, prioritize catalog images
 		if (itemType === "unified" && "sources" in item) {
-			const unified = item as UnifiedItem;
+			const unified = item;
 			if (unified.sources.catalog) {
 				// Try to get catalog image
 				return `/data/bandai/items/${unified.id}/image.jpg`;

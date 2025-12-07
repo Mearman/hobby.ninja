@@ -369,7 +369,7 @@ export class WorkerManager {
 		if (type === "PROGRESS") {
 			// Handle progress update
 			const task = this.tasks.get(id);
-			if (task && task.onProgress) {
+			if (task?.onProgress) {
 				task.onProgress(payload);
 			}
 			return;

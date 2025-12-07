@@ -220,7 +220,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								size="sm"
 								w={300}
 								value={searchQuery}
-								onChange={(event) => setSearchQuery(event.currentTarget.value)}
+								onChange={(event) => { setSearchQuery(event.currentTarget.value); }}
 								onKeyPress={(event) => {
 									if (event.key === "Enter") {
 										handleSearch(searchQuery);
@@ -246,109 +246,107 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 
 			{/* Mobile menu */}
 			{opened && (
-				<>
-					<Box
-						bg="var(--mantine-color-body)"
-						style={{
-							borderTop: "1px solid var(--mantine-color-default-border)",
-						}}
-					>
-						<Container size="lg" py="md">
-							<Stack gap="sm">
-								<TextInput
-									placeholder="Search kits, series, grades..."
-									leftSection={<IconSearch size={16} />}
-									value={searchQuery}
-									onChange={(event) => setSearchQuery(event.currentTarget.value)}
-									onKeyPress={(event) => {
-										if (event.key === "Enter") {
-											handleSearch(searchQuery);
-											toggle();
-										}
-									}}
-								/>
-
-								<Button
-									variant="subtle"
-									justify="start"
-									leftSection={<IconHome size={16} />}
-									onClick={() => {
-										navigate({ to: "/" });
+				<Box
+					bg="var(--mantine-color-body)"
+					style={{
+						borderTop: "1px solid var(--mantine-color-default-border)",
+					}}
+				>
+					<Container size="lg" py="md">
+						<Stack gap="sm">
+							<TextInput
+								placeholder="Search kits, series, grades..."
+								leftSection={<IconSearch size={16} />}
+								value={searchQuery}
+								onChange={(event) => { setSearchQuery(event.currentTarget.value); }}
+								onKeyPress={(event) => {
+									if (event.key === "Enter") {
+										handleSearch(searchQuery);
 										toggle();
-									}}
-								>
+									}
+								}}
+							/>
+
+							<Button
+								variant="subtle"
+								justify="start"
+								leftSection={<IconHome size={16} />}
+								onClick={() => {
+									navigate({ to: "/" });
+									toggle();
+								}}
+							>
 									Home
-								</Button>
+							</Button>
 
-								<Button
-									variant="subtle"
-									justify="start"
-									leftSection={<IconDatabase size={16} />}
-									onClick={() => {
-										navigate({ to: "/database" });
-										toggle();
-									}}
-								>
+							<Button
+								variant="subtle"
+								justify="start"
+								leftSection={<IconDatabase size={16} />}
+								onClick={() => {
+									navigate({ to: "/database" });
+									toggle();
+								}}
+							>
 									Database
-								</Button>
+							</Button>
 
-								{hobbyTypes.map((type) => (
-									<Button
-										key={type.id}
-										variant="subtle"
-										justify="start"
-										onClick={() => {
-											navigate({
-												to: "/database/$hobbyType",
-												params: { hobbyType: type.id },
-											});
-											toggle();
-										}}
-										pl="lg"
-									>
-										<Text size="sm">{type.name}</Text>
-									</Button>
-								))}
-
+							{hobbyTypes.map((type) => (
 								<Button
+									key={type.id}
 									variant="subtle"
 									justify="start"
-									leftSection={<IconAdjustmentsHorizontal size={16} />}
 									onClick={() => {
-										navigate({ to: "/search" });
+										navigate({
+											to: "/database/$hobbyType",
+											params: { hobbyType: type.id },
+										});
 										toggle();
 									}}
+									pl="lg"
 								>
+									<Text size="sm">{type.name}</Text>
+								</Button>
+							))}
+
+							<Button
+								variant="subtle"
+								justify="start"
+								leftSection={<IconAdjustmentsHorizontal size={16} />}
+								onClick={() => {
+									navigate({ to: "/search" });
+									toggle();
+								}}
+							>
 									Advanced Search
-								</Button>
+							</Button>
 
-								<Button
-									variant="subtle"
-									justify="start"
-									leftSection={<IconClipboardList size={16} />}
-									onClick={() => {
-										navigate({ to: "/collection" });
-										toggle();
-									}}
-								>
+							<Button
+								variant="subtle"
+								justify="start"
+								leftSection={<IconClipboardList size={16} />}
+								onClick={() => {
+									navigate({ to: "/collection" });
+									toggle();
+								}}
+							>
 									Collections
-								</Button>
+							</Button>
 
-								<Button
-									variant="subtle"
-									justify="start"
-									leftSection={<IconInfoCircle size={16} />}
-									onClick={() => {
-										navigate({ to: "/about" });
-										toggle();
-									}}
-								>
+							<Button
+								variant="subtle"
+								justify="start"
+								leftSection={<IconInfoCircle size={16} />}
+								onClick={() => {
+									navigate({ to: "/about" });
+									toggle();
+								}}
+							>
 									About
-								</Button>
-							</Stack>
-						</Container>
-					</Box>
-				</>
+							</Button>
+						</Stack>
+					</Container>
+				</Box>
 			)}
 		</header>
 	);
