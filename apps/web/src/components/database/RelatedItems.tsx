@@ -37,12 +37,12 @@ import {
 } from "@tabler/icons-react";
 import React, { useState, useEffect, useMemo } from "react";
 
-import { dataService, type UnifiedItem, type ManualItem, type CatalogItem, type DatabaseCatalogItem } from "../../services/dataService";
+import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../../services/dataService";
 
 import { ItemCard } from "./ItemCard";
 
 // Types for related items
-interface RelatedItem extends Partial<UnifiedItem | ManualItem | DatabaseCatalogItem> {
+interface RelatedItem extends Partial<UnifiedItem | ManualItem | CatalogItem> {
   id: string;
   type: "unified" | "manual" | "catalog";
   name: string;
@@ -64,7 +64,7 @@ interface RelationType {
 }
 
 interface RelatedItemsProps {
-  currentItem: UnifiedItem | ManualItem | DatabaseCatalogItem;
+  currentItem: UnifiedItem | ManualItem | CatalogItem;
   onItemClick?: (itemId: string) => void;
   maxItems?: number;
   showControls?: boolean;

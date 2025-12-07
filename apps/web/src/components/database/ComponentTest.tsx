@@ -5,14 +5,14 @@
 import { Title, Divider, Switch, Group, Text, Container, Stack } from "@mantine/core";
 import React, { useState } from "react";
 
-import type { UnifiedItem, ManualItem, DatabaseCatalogItem } from "../../services/dataService";
+import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
 import { ItemCard } from "./ItemCard";
 import { ItemGrid } from "./ItemGrid";
 import { getMockItems } from "./test-data";
 
 
-type ItemData = UnifiedItem | ManualItem | DatabaseCatalogItem;
+type ItemData = UnifiedItem | ManualItem | CatalogItem;
 
 export function ComponentTest() {
 	const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
@@ -90,7 +90,7 @@ export function ComponentTest() {
 								item={item}
 								itemType={getItemType(item)}
 								compact={false}
-								selected={selectedItems.has(item.id)}
+								selected={selectedItems.has(item.id || '')}
 								onSelect={handleSelectionChange ? (id, selected) => {
 									const newSelection = new Set(selectedItems);
 									if (selected) {

@@ -21,11 +21,11 @@ import React, { useState, useEffect, useCallback } from "react";
 
 
 import { dataService } from "../../services/dataService";
-import type { UnifiedItem, ManualItem, DatabaseCatalogItem, FilterOptions } from "../../services/dataService";
+import type { UnifiedItem, ManualItem, CatalogItem, FilterOptions } from "../../services/dataService";
 
 import { ItemGrid } from "./ItemGrid";
 
-type ItemData = UnifiedItem | ManualItem | DatabaseCatalogItem;
+type ItemData = UnifiedItem | ManualItem | CatalogItem;
 
 export function DatabaseDemo() {
 	const [items, setItems] = useState<ItemData[]>([]);
