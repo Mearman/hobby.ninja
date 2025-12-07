@@ -4,8 +4,8 @@ import { Link } from "@tanstack/react-router";
 import React, { useState, useEffect } from "react";
 
 import { collectionService } from "../services/collectionService";
-import { hobbyTypeService } from "../services/hobbyTypeService";
-import { HobbyType } from "../types/hobby";
+import { hobbyGraphService } from "../services/hobbyGraphService";
+import { HobbyType } from "../services/hobbyGraphService";
 
 interface CollectionStats {
 	totalCollections: number;
@@ -34,8 +34,8 @@ export function CollectionPage(): React.ReactElement {
 			try {
 				setLoading(true);
 
-				// Load dynamic hobby types
-				const types = await hobbyTypeService.getHobbyTypes();
+				// Load dynamic hobby types from graph service
+				const types = await hobbyGraphService.getHobbyTypes();
 				setHobbyTypes(types);
 
 				// Load collection stats
@@ -58,7 +58,7 @@ export function CollectionPage(): React.ReactElement {
 
 				// Load stats for each hobby type
 				const statsPromises = types.map(async (type) => {
-					const typeStats = await hobbyTypeService.getHobbyTypeStats(type.id);
+					const typeStats = await hobbyGraphService.getHobbyTypeStats(type.id);
 					return { [type.id]: typeStats };
 				});
 
@@ -267,44 +267,68 @@ export function CollectionPage(): React.ReactElement {
 				</Text>
 
 				<SimpleGrid cols={{ base: 1, sm: 2 }} spacing="xl">
-					{hobbyTypes.map((hobby) => (
-						<Card
-							key={hobby.id}
-							p="xl"
-							radius="lg"
-							shadow="md"
-							withBorder={true}
-							style={{
-								transition: "all 0.2s ease",
-								border: "1px solid var(--mantine-color-gray-3)",
-							}}
-							component={Link}
-							to={`/collection/${hobby.id}`}
-							style={{ textDecoration: "none", color: "inherit" }}
-						>
-							<Stack align="center" gap="lg">
-								<ThemeIcon
-									size={80}
-									radius="xl"
-									variant="light"
-									color={hobby.color}
-								>
-									<Text size={40}>{hobby.icon}</Text>
-								</ThemeIcon>
-								<Title order={3} ta="center">{hobby.name}</Title>
-								<Text color="dimmed" ta="center" size="sm">
-									{hobby.description}
-								</Text>
-								<Button
-									variant="outline"
-									fullWidth={true}
-									mt="md"
-								>
-									Manage {hobby.name}
-								</Button>
-							</Stack>
-						</Card>
-					))}
+					{hobbyTypes.map((hobby) => {
+						const stats = hobbyTypeStats[hobby.id];
+						return (
+							<Card
+								key={hobby.id}
+								p="xl"
+								radius="lg"
+								shadow="md"
+								withBorder={true}
+								style={{
+									transition: "all 0.2s ease",
+									border: "1px solid var(--mantine-color-gray-3)",
+									textDecoration: "none",
+									color: "inherit",
+								}}
+								component={Link}
+								to={`/collection/${hobby.id}`}
+							>
+								<Stack align="center" gap="lg">
+									<ThemeIcon
+										size={80}
+										radius="xl"
+										variant="light"
+										color={hobby.color}
+									>
+										<IconPackage size={40} />
+									</ThemeIcon>
+									<Title order={3} ta="center">{hobby.name}</Title>
+									<Text color="dimmed" ta="center" size="sm">
+										{hobby.description}
+									</Text>
+									{stats && (
+										<Group gap="lg" mt="sm">
+											<Stack gap={0} align="center">
+												<Text size="lg" fw={500} c={hobby.color}>
+													{stats.totalCollections}
+												</Text>
+												<Text size="xs" color="dimmed">
+													Collections
+												</Text>
+											</Stack>
+											<Stack gap={0} align="center">
+												<Text size="lg" fw={500} c={hobby.color}>
+													{stats.totalItems}
+												</Text>
+												<Text size="xs" color="dimmed">
+													Items
+												</Text>
+											</Stack>
+										</Group>
+									)}
+									<Button
+										variant="outline"
+										fullWidth={true}
+										mt="md"
+									>
+										Manage {hobby.name}
+									</Button>
+								</Stack>
+							</Card>
+						);
+					})}
 				</SimpleGrid>
 			</Container>
 
