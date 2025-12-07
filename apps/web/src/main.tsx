@@ -8,6 +8,9 @@ import { MantineThemeProvider } from "./providers/mantine-provider";
 import { AppRouter } from "./router";
 import { dataService } from "./services/dataService";
 
+// Import global styles for Vanilla Extract
+import "./styles/styles.css";
+
 /**
  * Initialize and start the application
  */
