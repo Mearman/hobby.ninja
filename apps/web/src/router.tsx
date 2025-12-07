@@ -1,7 +1,9 @@
-import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet, createHashHistory } from "@tanstack/react-router";
+import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet, createHashHistory, createBrowserHistory } from "@tanstack/react-router";
 import { Suspense, lazy, useState } from "react";
 
 import { Header } from "./components/layout/Header";
+import { loadGraphNode, getRelatedNodes } from "./utils/graph-routes-generator";
+import type { GraphNode } from "./utils/graph-routes-generator";
 
 // Lazy load route components for code splitting
 const HomePage = lazy(() => import("./pages/home-page").then(module => ({
@@ -36,6 +38,9 @@ const CollectionDetailPage = lazy(() => import("./pages/collection-detail-page")
 })));
 const ItemEditPage = lazy(() => import("./pages/item-edit-page").then(module => ({
 	default: module.ItemEditPage,
+})));
+const GraphNodePage = lazy(() => import("./pages/graph-node-page").then(module => ({
+	default: module.GraphNodePage,
 })));
 const NotFoundPage = lazy(() => import("./pages/not-found-page").then(module => ({
 	default: module.NotFoundPage,
@@ -177,6 +182,44 @@ const aboutRoute = createRoute({
 });
 
 /**
+ * Graph node routes for static generation
+ * These routes support both hash routing and clean paths for hybrid approach
+ */
+
+// Helper function to create graph node routes with data loading
+const createGraphNodeRoute = (nodeType: string) =>
+	createRoute({
+		getParentRoute: () => rootRoute,
+		path: `/${nodeType}/$id`,
+		loader: async ({ params }) => {
+			const nodeData = await loadGraphNode(nodeType, params.id);
+			const relatedNodes = nodeData ? await getRelatedNodes(nodeData) : [];
+
+			return {
+				nodeData,
+				nodeType,
+				nodeId: params.id,
+				relatedNodes,
+				error: nodeData ? null : `${nodeType} with ID ${params.id} not found`
+			};
+		},
+		component: GraphNodePage,
+		errorComponent: () => (
+			<div>
+				<h1>Node Not Found</h1>
+				<p>The requested graph node could not be found.</p>
+			</div>
+		),
+	});
+
+// Create routes for all graph node types
+const brandRoute = createGraphNodeRoute('brand');
+const categoryRoute = createGraphNodeRoute('category');
+const itemRoute = createGraphNodeRoute('item');
+const manualRoute = createGraphNodeRoute('manual');
+const seriesRoute = createGraphNodeRoute('series');
+
+/**
  * 404 catch-all route
  */
 const notFoundRoute = createRoute({
@@ -198,6 +241,11 @@ const routeTree = rootRoute.addChildren([
 	collectionDetailRoute,
 	itemEditRoute,
 	aboutRoute,
+	brandRoute,
+	categoryRoute,
+	itemRoute,
+	manualRoute,
+	seriesRoute,
 	notFoundRoute,
 ]);
 
@@ -206,10 +254,23 @@ const hashHistory = createHashHistory();
 
 /**
  * Router instance with hash-based routing for static hosting compatibility
+ * This maintains existing functionality while supporting clean paths for SSG
  */
 export const router = createRouter({
 	routeTree,
-	history: hashHistory,
+	history: hashHistory, // Keep hash routing for dynamic features
+	defaultPreload: "intent",
+	defaultComponent: NotFoundPage,
+	caseSensitive: false,
+});
+
+/**
+ * Static handler for SSG generation
+ * Uses browser history for clean paths during static generation
+ */
+export const staticRouter = createRouter({
+	routeTree,
+	history: createBrowserHistory(), // Clean paths for static generation
 	defaultPreload: "intent",
 	defaultComponent: NotFoundPage,
 	caseSensitive: false,
