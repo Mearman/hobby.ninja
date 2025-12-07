@@ -6,6 +6,7 @@ import { initStorage } from "./db/kits";
 import { logger } from "./lib/logger";
 import { MantineThemeProvider } from "./providers/mantine-provider";
 import { AppRouter } from "./router";
+import { dataService } from "./services/dataService";
 import "./styles/styles.css";
 
 /**
@@ -18,6 +19,11 @@ try {
 	logger.info("🗄️ Initializing database...");
 	await initStorage();
 	logger.info("✅ Database initialized successfully");
+
+	// Initialize DataService
+	logger.info("📊 Initializing data service...");
+	await dataService.initialize();
+	logger.info("✅ Data service initialized successfully");
 
 	// Find root element
 	const rootElement = document.querySelector("#root");
