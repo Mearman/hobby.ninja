@@ -1042,12 +1042,20 @@ export class DataService {
 		}
 
 		try {
-			const response = await fetch(`${DEFAULT_CONFIG.DATA_PATH}unified/unified-products.json`);
-			if (!response.ok) {
-				throw new Error(`Failed to load unified items: ${response.statusText}`);
-			}
+			// Load unified items from master index since we don't have a single file
+			const masterIndex = await this.loadMasterIndex();
+			const unifiedItemIds = masterIndex.items
+				.filter(item => item.type === 'unified')
+				.map(item => item.id);
 
-			items = await response.json();
+			// Load a sample of unified items for now
+			const sampleSize = Math.min(100, unifiedItemIds.length);
+			const sampleIds = unifiedItemIds.slice(0, sampleSize);
+
+			items = await Promise.all(
+				sampleIds.map(id => this.getItemById(id, 'unified'))
+			).then(results => results.filter(item => item !== null));
+
 			this.cache.set(cacheKey, items);
 			return items;
 		} catch (error) {
@@ -1776,7 +1784,7 @@ export class DataService {
 
 		switch (source) {
 			case "unified": {
-				filePath = `${DEFAULT_CONFIG.DATA_PATH}unified/products/${id}.json`;
+				filePath = `${DEFAULT_CONFIG.DATA_PATH}bandai/unified/${id}.json`;
 				break;
 			}
 			case "manual": {
@@ -1784,7 +1792,7 @@ export class DataService {
 				break;
 			}
 			case "catalog": {
-				filePath = `${DEFAULT_CONFIG.DATA_PATH}bandai/catalog/${id}.json`;
+				filePath = `${DEFAULT_CONFIG.DATA_PATH}bandai/items/${id}.json`;
 				break;
 			}
 			default: {
