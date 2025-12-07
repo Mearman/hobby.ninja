@@ -8,7 +8,7 @@
     },
     "build": {
       "cache": true,
-      "dependsOn": ["^build", "syncpack:fix", "barrels", "lint:fix", "typecheck"],
+      "dependsOn": ["^build", "typecheck"],
       "parallel": 4,
       "maxParallel": 4
     },
@@ -29,14 +29,8 @@
       "maxParallel": 5
     },
     "typecheck": {
-      "executor": "@nx/js:tsc",
-      "options": {
-        "noEmit": true,
-        "skipLibCheck": true
-      },
       "cache": true,
-      "parallel": 5,
-      "maxParallel": 5,
+      "dependsOn": ["^typecheck"],
       "inputs": [
         "default",
         "^default"

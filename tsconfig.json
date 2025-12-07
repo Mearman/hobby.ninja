@@ -3,10 +3,7 @@
 	"compilerOptions": {
 		"noEmit": true
 	},
-	"include": [
-		"*.config.ts",
-		".nx/**/*.ts"
-	],
+	"include": ["*.config.ts", ".nx/**/*.ts"],
 	"references": [
 		{
 			"path": "./packages/types"
@@ -15,7 +12,10 @@
 			"path": "./packages/utils"
 		},
 		{
-			"path": "./packages/cli"
+			"path": "./packages/translation"
+		},
+		{
+			"path": "./packages/scrapers"
 		}
 	]
 }
