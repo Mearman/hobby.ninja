@@ -15,7 +15,7 @@ const createGraphValue = () => {
       z.number(),
       z.boolean(),
       z.array(GraphValue),
-      z.record(GraphValue),
+      z.record(z.string(), GraphValue),
       z.date(),
       z.null(),
     ])
@@ -62,15 +62,15 @@ export const RelationshipDirectionEnum = z.enum([
 
 // Schema definition types
 const ObjectSchemaDefinition = z.object({
-  properties: z.record(z.string()),
+  properties: z.record(z.string(), GraphValue),
   required: z.array(z.string()).optional(),
   additionalProperties: z.boolean().default(true),
 });
 
 const FieldSchemaDefinition = z.object({
   fieldType: z.enum(["string", "number", "boolean", "date", "array", "object", "enum"]),
-  constraints: z.record(GraphValue).optional(),
-  validation: z.record(GraphValue).optional(),
+  constraints: z.record(z.string(), GraphValue).optional(),
+  validation: z.record(z.string(), GraphValue).optional(),
 });
 
 const EnumSchemaDefinition = z.object({
@@ -88,7 +88,7 @@ const RelationshipSchemaDefinition = z.object({
   fromNodeType: z.string(), // Reference to schema node ID
   toNodeType: z.string(),   // Reference to schema node ID
   direction: RelationshipDirectionEnum.default("directed"),
-  properties: z.record(GraphValue).optional(),
+  properties: z.record(z.string(), GraphValue).optional(),
 });
 
 // Schema node - defines structure for data nodes
@@ -123,7 +123,7 @@ export const DataNode = z.object({
   schemaId: z.string(), // Reference to schema node ID
 
   // Data content follows schema definition
-  properties: z.record(GraphValue),
+  properties: z.record(z.string(), GraphValue),
 
   // Runtime metadata
   metadata: z.object({
@@ -144,7 +144,7 @@ export const Relationship = z.object({
   toNode: z.string(),   // Node ID
   direction: RelationshipDirectionEnum.default("directed"),
 
-  properties: z.record(GraphValue).optional(),
+  properties: z.record(z.string(), GraphValue).optional(),
 
   metadata: z.object({
     createdAt: z.string().datetime(),
@@ -157,8 +157,8 @@ export const Relationship = z.object({
 // Complete graph database
 export const ArbitraryGraph = z.object({
   nodes: z.array(z.union([SchemaNode, DataNode, Relationship])),
-  schemas: z.record(z.object({
-    jsonSchema: z.record(z.unknown()),
+  schemas: z.record(z.string(), z.object({
+    jsonSchema: z.record(z.string(), z.unknown()),
     zodSchema: z.string(), // String representation for runtime use
   })).optional(),
 
@@ -208,12 +208,12 @@ export class ArbitraryGraphManager {
   }
 
   // Get nodes by type
-  getSchemaNodesByType(type: SchemaNodeTypeEnum): SchemaNodeUnion[] {
-    return this.getSchemaNodes().filter(node => node.type === type);
+  getSchemaNodesByType(type: z.infer<typeof SchemaNodeTypeEnum>): SchemaNodeUnion[] {
+    return this.getSchemaNodes().filter((node: SchemaNodeUnion) => node.type === type);
   }
 
-  getDataNodesByType(type: DataNodeTypeEnum): DataNodeUnion[] {
-    return this.getDataNodes().filter(node => node.type === type);
+  getDataNodesByType(type: z.infer<typeof DataNodeTypeEnum>): DataNodeUnion[] {
+    return this.getDataNodes().filter((node: DataNodeUnion) => node.type === type);
   }
 
   // Get schema for a data node
