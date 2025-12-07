@@ -4,6 +4,7 @@
  * Integrates schema node registry for centralized schema management
  */
 
+import { z } from 'zod';
 import {
   ArbitraryGraph,
   ArbitraryGraphManager,
@@ -16,14 +17,22 @@ import {
   RelationshipDirectionEnum,
   validateArbitraryGraph
 } from '../schemas/arbitrary-graph-schema';
+import type {
+  ArbitraryGraphType,
+  SchemaNodeType,
+  DataNodeType,
+  RelationshipType
+} from '../schemas/arbitrary-graph-schema';
 import { SchemaNodeRegistry, SchemaDefinition } from './schemaNodeRegistry';
 
 export interface GraphQueryOptions {
   nodeType?: string;
   category?: string;
+  type?: string;
   limit?: number;
   offset?: number;
   orderBy?: string;
+  orderKey?: string;
   orderDirection?: 'asc' | 'desc';
 }
 
@@ -34,8 +43,8 @@ export interface GraphSearchResult {
 }
 
 export interface NodeConnection {
-  node: any;
-  relationship: Relationship;
+  node: z.infer<typeof DataNode>;
+  relationship: z.infer<typeof Relationship>;
   direction: 'incoming' | 'outgoing';
 }
 
@@ -43,7 +52,7 @@ export interface NodeConnection {
  * Unified graph database service that handles both build-time and runtime operations
  */
 export class UnifiedGraphDB {
-  private graph: ArbitraryGraph | null = null;
+  private graph: ArbitraryGraphType | null = null;
   private manager: ArbitraryGraphManager | null = null;
   private schemaRegistry: SchemaNodeRegistry;
   private initialized = false;
@@ -55,7 +64,7 @@ export class UnifiedGraphDB {
   /**
    * Initialize the graph database with data
    */
-  async initialize(graph: ArbitraryGraph): Promise<void> {
+  async initialize(graph: ArbitraryGraphType): Promise<void> {
     if (this.initialized) {
       throw new Error('Graph database already initialized');
     }
@@ -81,7 +90,7 @@ export class UnifiedGraphDB {
   /**
    * Get the raw graph data
    */
-  getGraph(): ArbitraryGraph | null {
+  getGraph(): ArbitraryGraphType | null {
     return this.graph;
   }
 
@@ -106,16 +115,16 @@ export class UnifiedGraphDB {
    */
   createSchema(
     id: string,
-    type: SchemaNodeTypeEnum,
+    type: z.infer<typeof SchemaNodeTypeEnum>,
     name: string,
     definition: any,
     description?: string
-  ): SchemaNode {
+  ): z.infer<typeof SchemaNode> {
     if (!this.initialized) {
       throw new Error('Database not initialized');
     }
 
-    const schemaNode: SchemaNode = {
+    const schemaNode: z.infer<typeof SchemaNode> = {
       id,
       category: NodeCategoryEnum.enum.schema,
       type,
@@ -161,8 +170,8 @@ export class UnifiedGraphDB {
     // Apply ordering
     if (options?.orderBy) {
       schemas.sort((a, b) => {
-        const aValue = (a as any)[options.orderKey || 'name'];
-        const bValue = (b as any)[options.orderKey || 'name'];
+        const aValue = (a as any)[options.orderBy || 'name'];
+        const bValue = (b as any)[options.orderBy || 'name'];
         const direction = options.orderDirection === 'desc' ? -1 : 1;
         return aValue > bValue ? direction : -direction;
       });
@@ -184,10 +193,10 @@ export class UnifiedGraphDB {
    */
   createDataNode(
     id: string,
-    type: DataNodeTypeEnum,
+    type: z.infer<typeof DataNodeTypeEnum>,
     schemaId: string,
     properties: Record<string, any>
-  ): DataNode {
+  ): z.infer<typeof DataNode> {
     if (!this.initialized) {
       throw new Error('Database not initialized');
     }
@@ -198,7 +207,7 @@ export class UnifiedGraphDB {
       throw new Error(`Data validation failed: ${validation.errors.join(', ')}`);
     }
 
-    const dataNode: DataNode = {
+    const dataNode: z.infer<typeof DataNode> = {
       id,
       category: NodeCategoryEnum.enum.data,
       type,
@@ -217,7 +226,7 @@ export class UnifiedGraphDB {
   /**
    * Get data node by ID
    */
-  getDataNode(id: string): DataNode | null {
+  getDataNode(id: string): z.infer<typeof DataNode> | null {
     if (!this.initialized) return null;
     return this.manager!.getDataNodes().find(node => node.id === id) || null;
   }
@@ -242,8 +251,8 @@ export class UnifiedGraphDB {
     // Apply ordering
     if (options?.orderBy) {
       nodes.sort((a, b) => {
-        const aValue = (a.properties[options.orderKey as string] || a[options.orderKey as string]);
-        const bValue = (b.properties[options.orderKey as string] || b[options.orderKey as string]);
+        const aValue = (a.properties[options.orderBy as string] || a[options.orderBy as string]);
+        const bValue = (b.properties[options.orderBy as string] || b[options.orderBy as string]);
         const direction = options.orderDirection === 'desc' ? -1 : 1;
         return aValue > bValue ? direction : -direction;
       });
@@ -267,13 +276,13 @@ export class UnifiedGraphDB {
   /**
    * Update a data node
    */
-  updateDataNode(id: string, updates: Partial<DataNode>): DataNode | null {
+  updateDataNode(id: string, updates: Partial<z.infer<typeof DataNode>>): z.infer<typeof DataNode> | null {
     if (!this.initialized) return null;
 
     const nodeIndex = this.graph!.nodes.findIndex(node => node.id === id && node.category === 'data');
     if (nodeIndex === -1) return null;
 
-    const existingNode = this.graph!.nodes[nodeIndex] as DataNode;
+    const existingNode = this.graph!.nodes[nodeIndex] as z.infer<typeof DataNode>;
 
     // Validate updated properties if provided
     if (updates.properties) {
@@ -333,14 +342,14 @@ export class UnifiedGraphDB {
     type: string,
     fromNode: string,
     toNode: string,
-    direction: RelationshipDirectionEnum = RelationshipDirectionEnum.enum.directed,
+    direction: z.infer<typeof RelationshipDirectionEnum> = 'directed' as z.infer<typeof RelationshipDirectionEnum>,
     properties?: Record<string, any>
   ): Relationship {
     if (!this.initialized) {
       throw new Error('Database not initialized');
     }
 
-    const relationship: Relationship = {
+    const relationship: z.infer<typeof Relationship> = {
       id,
       category: NodeCategoryEnum.enum.relationship,
       type,
@@ -361,7 +370,7 @@ export class UnifiedGraphDB {
   /**
    * Get relationships for a node
    */
-  getNodeRelationships(nodeId: string): Relationship[] {
+  getNodeRelationships(nodeId: string): z.infer<typeof Relationship>[] {
     if (!this.initialized) return [];
     return this.manager!.getRelationshipsForNode(nodeId);
   }
@@ -505,7 +514,7 @@ export class UnifiedGraphDB {
   /**
    * Export graph to JSON
    */
-  export(): ArbitraryGraph {
+  export(): z.infer<typeof ArbitraryGraph> {
     if (!this.initialized) {
       throw new Error('Database not initialized');
     }
@@ -516,7 +525,7 @@ export class UnifiedGraphDB {
   /**
    * Import graph from JSON
    */
-  async import(graph: ArbitraryGraph): Promise<void> {
+  async import(graph: z.infer<typeof ArbitraryGraph>): Promise<void> {
     await this.initialize(graph);
   }
 

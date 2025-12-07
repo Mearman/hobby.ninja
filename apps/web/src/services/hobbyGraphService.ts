@@ -7,8 +7,9 @@ import {
 	HobbyGraph,
 	HobbyGraphManager,
 	NodeTypeEnum,
-	RelationshipTypeEnum,
+	RelationshipType,
 	GraphNodeType,
+	GraphNodeTypeType,
 	GraphRelationshipType,
 	validateHobbyGraph,
 } from "../schemas/hobby-schema";
@@ -88,10 +89,12 @@ export class HobbyGraphService {
 				throw new Error(`Invalid graph data: ${validationResult.error}`);
 			}
 
-			this.graphCache = validationResult.data;
-			this.manager = new HobbyGraphManager(validationResult.data);
+			// Extract validated data from the validation result
+			const validatedGraphData = (validationResult as { data?: HobbyGraph }).data || graphData;
+			this.graphCache = validatedGraphData;
+			this.manager = new HobbyGraphManager(validatedGraphData);
 
-			return validationResult.data;
+			return validatedGraphData;
 		} catch (error) {
 			console.error("Failed to load hobby graph:", error);
 			throw error;
@@ -150,10 +153,10 @@ export class HobbyGraphService {
    */
 	async getHobbyTypeWithDetails(id: string): Promise<{
     hobbyType: HobbyType;
-    brands: GraphNodeType[];
-    scales: GraphNodeType[];
-    categories: GraphNodeType[];
-    fields: GraphNodeType[];
+    brands: GraphNodeTypeType[];
+    scales: GraphNodeTypeType[];
+    categories: GraphNodeTypeType[];
+    fields: GraphNodeTypeType[];
   } | null> {
 		try {
 			const graph = await this.loadHobbyGraph();
@@ -296,7 +299,7 @@ export class HobbyGraphService {
 	async getAllBrands(): Promise<GraphNodeType[]> {
 		try {
 			const graph = await this.loadHobbyGraph();
-			return graph.nodes.filter(node => node.type === "brand");
+			return graph.nodes.filter((node: GraphNodeType) => node.type === "brand");
 		} catch (error) {
 			console.error("Failed to get all brands:", error);
 			return [];
@@ -309,7 +312,7 @@ export class HobbyGraphService {
 	async getAllScales(): Promise<GraphNodeType[]> {
 		try {
 			const graph = await this.loadHobbyGraph();
-			return graph.nodes.filter(node => node.type === "scale");
+			return graph.nodes.filter((node: GraphNodeType) => node.type === "scale");
 		} catch (error) {
 			console.error("Failed to get all scales:", error);
 			return [];
@@ -369,21 +372,30 @@ export class HobbyGraphService {
 
 	// Private helper methods
 
-	private async convertGraphToHobbyType(node: GraphNodeType, manager: HobbyGraphManager): Promise<HobbyType> {
+	private async convertGraphToHobbyType(node: GraphNodeTypeType, manager: HobbyGraphManager): Promise<HobbyType> {
 		const properties = node.properties || {};
 
 		// Get fields for this hobby type
-		const fieldNodes = manager.getConnectedNodes(node.id, RelationshipTypeEnum.enum.HAS_FIELD);
+		const fieldNodes = manager.getConnectedNodes(node.id, RelationshipType.enum.HAS_FIELD);
 		const fields = fieldNodes
 			.filter(fieldNode => fieldNode.type === "field")
 			.map(fieldNode => this.convertGraphNodeToField(fieldNode));
 
+		// Safely extract properties with proper type casting
+		const name = typeof properties['name'] === 'string' ? properties['name'] : "Unknown";
+		const description = typeof properties['description'] === 'string' ? properties['description'] : "";
+		const icon = typeof properties['icon'] === 'string' ? properties['icon'] : "📦";
+		const color = typeof properties['color'] === 'string' ? properties['color'] : "gray";
+		const isActive = typeof properties['isActive'] === 'boolean' ? properties['isActive'] : true;
+		const createdAt = typeof properties['createdAt'] === 'string' ? properties['createdAt'] : new Date().toISOString();
+		const updatedAt = typeof properties['updatedAt'] === 'string' ? properties['updatedAt'] : new Date().toISOString();
+
 		return {
 			id: node.id.replace("hobby_", ""),
-			name: properties.name || "Unknown",
-			description: properties.description || "",
-			icon: properties.icon || "📦",
-			color: properties.color || "gray",
+			name,
+			description,
+			icon,
+			color,
 			category: this.inferCategory(node.id),
 			fields,
 			settings: {
@@ -392,27 +404,38 @@ export class HobbyGraphService {
 				defaultSort: "name",
 				defaultView: "grid",
 			},
-			isActive: properties.isActive !== false,
-			createdAt: properties.createdAt || new Date().toISOString(),
-			updatedAt: properties.updatedAt || new Date().toISOString(),
+			isActive,
+			createdAt,
+			updatedAt,
 		};
 	}
 
-	private convertGraphNodeToField(fieldNode: GraphNodeType): FieldConfig {
+	private convertGraphNodeToField(fieldNode: GraphNodeTypeType): FieldConfig {
 		const properties = fieldNode.properties || {};
+
+		// Safely extract properties with proper type casting
+		const name = typeof properties['name'] === 'string' ? properties['name'] : "Unknown";
+		const fieldType = typeof properties['fieldType'] === 'string' ? properties['fieldType'] : "text";
+		const required = typeof properties['required'] === 'boolean' ? properties['required'] : false;
+		const searchable = typeof properties['searchable'] === 'boolean' ? properties['searchable'] : false;
+		const filterable = typeof properties['filterable'] === 'boolean' ? properties['filterable'] : false;
+		const displayInList = typeof properties['displayInList'] === 'boolean' ? properties['displayInList'] : true;
+		const displayInDetail = typeof properties['displayInDetail'] === 'boolean' ? properties['displayInDetail'] : true;
+		const order = typeof properties['order'] === 'number' ? properties['order'] : 0;
+		const description = typeof properties['description'] === 'string' ? properties['description'] : undefined;
 
 		return {
 			id: fieldNode.id,
-			name: properties.name || "Unknown",
+			name,
 			key: fieldNode.id,
-			type: properties.fieldType || "text",
-			required: properties.required || false,
-			searchable: properties.searchable || false,
-			filterable: properties.filterable || false,
-			displayInList: properties.displayInList !== false,
-			displayInDetail: properties.displayInDetail !== false,
-			order: properties.order || 0,
-			description: properties.description,
+			type: fieldType as FieldConfig['type'],
+			required,
+			searchable,
+			filterable,
+			displayInList,
+			displayInDetail,
+			order,
+			description,
 		};
 	}
 
