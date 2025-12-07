@@ -2,19 +2,41 @@
   "name": "@hobby-ninja/scrapers",
   "version": "1.0.0",
   "description": "Web scrapers for Gundam and Gunpla data sources",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/registry.js",
+  "types": "dist/registry.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+    "./registry": {
+      "types": "./dist/registry.d.ts",
+      "import": "./dist/registry.js"
+    },
+    "./base": {
+      "types": "./dist/base-scraper.d.ts",
+      "import": "./dist/base-scraper.js"
+    },
+    "./bandai": {
+      "types": "./dist/bandai-hobby.d.ts",
+      "import": "./dist/bandai-hobby.js"
+    },
+    "./gundam-info": {
+      "types": "./dist/gundam-info.d.ts",
+      "import": "./dist/gundam-info.js"
+    },
+    "./hobbylink": {
+      "types": "./dist/hobbylink.d.ts",
+      "import": "./dist/hobbylink.js"
+    },
+    "./url-scanner": {
+      "types": "./dist/url-scanner/scanner.d.ts",
+      "import": "./dist/url-scanner/scanner.js"
+    },
+    "./manual-downloader": {
+      "types": "./dist/manual-downloader/mod.d.ts",
+      "import": "./dist/manual-downloader/mod.js"
     }
   },
   "scripts": {
-    "build": "tsup src/index.ts",
-    "dev": "tsup --watch",
-    "typecheck": "tsc --noEmit",
+    "build": "vite build",
+    "dev": "vite build --watch",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "clean": "rm -rf dist",
@@ -23,7 +45,7 @@
   "dependencies": {
     "cheerio": "*",
     "parse5": "^7.1.2",
-    "zod": "*",
+    "zod": "4.2.0-canary.20251202T062120",
     "p-limit": "^4.0.0",
     "@hobby-ninja/types": "workspace:*",
     "@hobby-ninja/utils": "workspace:*",
@@ -31,7 +53,8 @@
   },
   "devDependencies": {
     "@types/node": "*",
-    "tsup": "^8.0.0",
+    "vite": "*",
+    "vite-plugin-dts": "^4.5.4",
     "typescript": "*"
   },
   "files": [
