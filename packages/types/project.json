@@ -41,6 +41,10 @@
       "options": {
         "lintFilePatterns": ["packages/types/src/**/*.ts"]
       }
+    },
+    "check": {
+      "dependsOn": ["typecheck", "lint", "test", "build"],
+      "cache": true
     }
   },
   "tags": ["scope:shared", "type:util", "context:types"]

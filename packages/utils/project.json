@@ -45,6 +45,10 @@
         "lintFilePatterns": ["packages/utils/src/**/*.ts"]
       },
       "dependsOn": ["types:build"]
+    },
+    "check": {
+      "dependsOn": ["typecheck", "lint", "test", "build"],
+      "cache": true
     }
   },
   "tags": ["scope:shared", "type:util", "context:utils"]

@@ -114,6 +114,10 @@
           "buildTarget": "web:build:production"
         }
       }
+    },
+    "check": {
+      "dependsOn": ["typecheck", "lint", "test", "build"],
+      "cache": true
     }
   },
   "tags": ["scope:web", "type:app"]
