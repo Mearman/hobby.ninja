@@ -14,6 +14,7 @@ export interface HttpClientOptions {
   followRedirects?: boolean;
   maxRedirects?: number;
   userAgent?: string;
+  headersOnly?: boolean;
 }
 
 export interface HttpResponse<T = string> {
@@ -191,13 +192,6 @@ export class HttpClient {
         fromCache: false
       };
     }
-  }
-
-  /**
-   * Make HEAD request
-   */
-  async head(url: string, options: HttpClientOptions = {}): Promise<HttpResponse<null>> {
-    return this.request('HEAD', url, undefined, options);
   }
 
   /**
