@@ -2,8 +2,13 @@
 
 ## Core Principles
 
-### I. Test-First Development
-Tests MUST be written before implementation. Red-Green-Refactor cycle strictly enforced. All features require unit tests, integration tests for contracts, and e2e tests for user workflows. Vitest for unit/integration, Playwright for e2e. Coverage thresholds: 80% statements, 75% branches, 80% functions, 80% lines.
+### I. Test-First Development (Red-Green-Refactor TDD)
+Tests MUST be written before implementation using the Red-Green-Refactor cycle:
+- **RED**: Write a failing test that defines expected behavior. Test MUST fail before proceeding.
+- **GREEN**: Write minimal implementation code to make the test pass. No extra features.
+- **REFACTOR**: Improve code structure while keeping tests green. No behavior changes.
+
+This cycle MUST be followed for every unit of functionality. Skipping directly to implementation is PROHIBITED. All features require unit tests, integration tests for contracts, and e2e tests for user workflows. Vitest for unit/integration, Playwright for e2e. Coverage thresholds: 80% statements, 75% branches, 80% functions, 80% lines.
 
 ### II. Modular Monorepo Architecture
 Clear package separation with defined boundaries: apps/webapp (main application), packages/types (TypeScript definitions), packages/utils (shared utilities), packages/cli (data scraping). Each package MUST be independently testable and have single responsibility. Cross-package dependencies MUST be explicitly declared and minimal.
@@ -63,15 +68,17 @@ This constitution supersedes all other development practices. Amendments require
 
 Template files (plan.md, spec.md, tasks.md) MUST align with constitutional principles. Regular constitution reviews scheduled quarterly or when major architectural changes occur.
 
-**Version**: 1.9.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-05
+**Version**: 1.9.1 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-07
 
 <!--
 Sync Impact Report:
-Version change: 1.8.1 → 1.9.0 (MINOR - added Programmatic Implementation principle)
-Modified principles: Re numbered XI-XII to XI-XIII, added new principle X
-Added sections: X. Programmatic Implementation
+Version change: 1.9.0 → 1.9.1 (PATCH - enhanced Red-Green-Refactor TDD cycle documentation)
+Modified principles: I. Test-First Development → I. Test-First Development (Red-Green-Refactor TDD)
+Added sections: None
 Removed sections: None
-Templates updated: ⚠ .specify/templates/plan-template.md should reference programmatic implementation approach
-Commands updated: ⚠ Commands should emphasize simple, programmatic solutions over over-engineering
-Follow-up TODOs: Update task templates to prioritize direct solutions over complex abstractions
+Templates updated:
+  ✅ .specify/templates/tasks-template.md - Already includes "Write tests FIRST, ensure they FAIL before implementation"
+  ✅ .specify/templates/spec-template.md - Already includes testable acceptance scenarios
+  ✅ .specify/templates/plan-template.md - No changes needed (references constitution check)
+Follow-up TODOs: None - all templates already aligned with TDD workflow
 -->
