@@ -1,6 +1,7 @@
-import { readdir, writeFile, stat } from 'node:fs/promises';
-import { join, relative, extname } from 'node:path';
-import type { Plugin } from 'vite';
+import { readdir, writeFile, stat } from "node:fs/promises";
+import { join, relative, extname } from "node:path";
+
+import type { Plugin } from "vite";
 
 // Debouncing mechanism to prevent infinite loops
 let regenerateTimeout: NodeJS.Timeout | null = null;
@@ -8,14 +9,14 @@ const REGENERATE_DELAY = 1000; // 1 second debounce
 
 // Debounced function to prevent infinite loops
 function debouncedRegenerateIndices(dataDir: string) {
-  if (regenerateTimeout) {
-    clearTimeout(regenerateTimeout);
-  }
+	if (regenerateTimeout) {
+		clearTimeout(regenerateTimeout);
+	}
 
-  regenerateTimeout = setTimeout(() => {
-    console.log('🔄 Regenerating hierarchical data indices...');
-    generateHierarchicalIndices(dataDir);
-  }, REGENERATE_DELAY);
+	regenerateTimeout = setTimeout(() => {
+		console.log("🔄 Regenerating hierarchical data indices...");
+		generateHierarchicalIndices(dataDir);
+	}, REGENERATE_DELAY);
 }
 
 interface IndexEntry {
@@ -23,7 +24,7 @@ interface IndexEntry {
   relativePath: string;
   size: number;
   lastModified: number;
-  type: 'file' | 'directory';
+  type: "file" | "directory";
   id?: string;
   metadata?: any;
 }
@@ -31,7 +32,7 @@ interface IndexEntry {
 interface HierarchicalIndex {
   generated: string;
   version: string;
-  type: 'master' | 'directory';
+  type: "master" | "directory";
   path: string;
   entries: IndexEntry[];
   children: string[]; // Paths to child indexes
@@ -42,199 +43,192 @@ interface HierarchicalIndex {
   };
 }
 
-async function generateIndexForDirectory(
-  dirPath: string,
-  type: string,
-): Promise<DataIndex> {
-  const allJsonFiles = await getAllJsonFilesRecursively(dirPath);
-  const indexFiles: IndexEntry[] = [];
-  let totalSize = 0;
+/**
+ * Recursively scan a directory and build hierarchical index entries
+ */
+async function scanDirectory(
+	dirPath: string,
+	basePath: string = dirPath,
+): Promise<{
+  entries: IndexEntry[];
+  children: string[];
+  summary: HierarchicalIndex["summary"];
+}> {
+	const entries: IndexEntry[] = [];
+	const children: string[] = [];
+	let totalFiles = 0;
+	let totalDirectories = 0;
+	let totalSize = 0;
 
-  for (const filePath of allJsonFiles) {
-    try {
-      const stats = await stat(filePath);
-      const relativePath = filePath.replace(dirPath + '/', '');
+	try {
+		const items = await readdir(dirPath, { withFileTypes: true });
 
-      const entry: IndexEntry = {
-        filename: relativePath,
-        size: stats.size,
-        lastModified: stats.mtime.getTime(),
-      };
+		for (const item of items) {
+			const fullPath = join(dirPath, item.name);
+			const relativePath = relative(basePath, fullPath);
+			const stats = await stat(fullPath);
 
-      // Extract metadata from filename based on type
-      if (type === 'unified') {
-        entry.id = relativePath.replace('.json', '');
-      } else if (type === 'catalog' || type === 'items') {
-        entry.id = relativePath.replace('.json', '');
-      } else if (type === 'manuals') {
-        entry.id = relativePath.replace('.json', '');
-        entry.productNumber = relativePath.split('/')[0]; // Extract folder name as product number
-      }
+			const entry: IndexEntry = {
+				filename: item.name,
+				relativePath,
+				size: stats.size,
+				lastModified: stats.mtime.getTime(),
+				type: item.isDirectory() ? "directory" : "file",
+			};
 
-      indexFiles.push(entry);
-      totalSize += stats.size;
-    } catch (error) {
-      console.warn(`Warning: Could not stat file ${filePath}:`, error);
-    }
-  }
+			// Add ID and metadata for JSON files
+			if (!item.isDirectory() && extname(item.name) === ".json") {
+				entry.id = item.name.replace(".json", "");
 
-  // Sort files by filename for consistent ordering
-  indexFiles.sort((a, b) => a.filename.localeCompare(b.filename));
+				// Extract metadata for specific file types
+				if (item.name.startsWith("up_")) {
+					// Unified product file
+					entry.metadata = {
+						sourceType: "unified",
+						productId: entry.id,
+					};
+				} else if (/^\d+/.test(item.name)) {
+					// Manual file (numeric prefix)
+					entry.metadata = {
+						sourceType: "manual",
+						manualId: entry.id,
+					};
+				} else if (item.name.startsWith("01_")) {
+					// Catalog file
+					entry.metadata = {
+						sourceType: "catalog",
+						catalogId: entry.id,
+					};
+				}
+			}
 
-  return {
-    type,
-    generated: new Date().toISOString(),
-    totalFiles: indexFiles.length,
-    totalSize,
-    files: indexFiles,
-  };
+			entries.push(entry);
+
+			if (item.isDirectory()) {
+				totalDirectories++;
+
+				// Recursively scan subdirectories
+				const childIndex = await scanDirectory(fullPath, basePath);
+				children.push(relativePath);
+
+				// Add child summary to parent totals
+				totalFiles += childIndex.summary.totalFiles;
+				totalDirectories += childIndex.summary.totalDirectories;
+				totalSize += childIndex.summary.totalSize;
+			} else {
+				totalFiles++;
+				totalSize += stats.size;
+			}
+		}
+
+		// Sort entries: directories first, then files alphabetically
+		entries.sort((a, b) => {
+			if (a.type !== b.type) {
+				return a.type === "directory" ? -1 : 1;
+			}
+			return a.filename.localeCompare(b.filename);
+		});
+
+	} catch (error) {
+		console.error(`Error scanning directory ${dirPath}:`, error);
+		throw error;
+	}
+
+	return {
+		entries,
+		children,
+		summary: {
+			totalFiles,
+			totalDirectories,
+			totalSize,
+		},
+	};
 }
 
-async function getAllJsonFilesRecursively(dirPath: string): Promise<string[]> {
-  const { readdir } = await import('node:fs/promises');
-  const jsonFiles: string[] = [];
+/**
+ * Generate hierarchical index for a directory
+ */
+async function generateHierarchicalIndex(
+	dirPath: string,
+	basePath: string,
+	type: "master" | "directory" = "directory",
+): Promise<HierarchicalIndex> {
+	const { entries, children, summary } = await scanDirectory(dirPath, dirPath);
 
-  async function scanDirectory(currentPath: string) {
-    try {
-      const entries = await readdir(currentPath, { withFileTypes: true });
+	const index: HierarchicalIndex = {
+		generated: new Date().toISOString(),
+		version: "1.0.0",
+		type,
+		path: relative(basePath, dirPath) || ".",
+		entries,
+		children,
+		summary,
+	};
 
-      for (const entry of entries) {
-        const fullPath = join(currentPath, entry.name);
-
-        if (entry.isFile() && entry.name.endsWith('.json') && entry.name !== 'index.json') {
-          jsonFiles.push(fullPath);
-        } else if (entry.isDirectory()) {
-          await scanDirectory(fullPath);
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be read
-    }
-  }
-
-  await scanDirectory(dirPath);
-  return jsonFiles;
+	return index;
 }
 
-async function scanDataDirectories(dataDir: string): Promise<string[]> {
-  const { readdir } = await import('node:fs/promises');
-  const entries = await readdir(dataDir, { withFileTypes: true });
-  const directories: string[] = [];
 
-  for (const entry of entries) {
-    if (entry.isDirectory()) {
-      const dirPath = join(dataDir, entry.name);
+async function generateHierarchicalIndices(dataDir: string): Promise<void> {
+	console.log("🚀 Generating hierarchical data indices...");
 
-      try {
-        // Recursively look for JSON files in subdirectories
-        const hasJsonFiles = await checkDirectoryForJsonFiles(dirPath);
+	try {
+		// Check if data directory exists
+		const { stat } = await import("node:fs/promises");
+		try {
+			await stat(dataDir);
+		} catch {
+			console.log(`📁 Data directory does not exist: ${dataDir}`);
+			return;
+		}
 
-        if (hasJsonFiles) {
-          directories.push(entry.name);
-        }
-      } catch (error) {
-        console.warn(`Warning: Could not scan directory ${entry.name}:`, error);
-      }
-    }
-  }
+		// Generate master index for the entire data directory
+		console.log(`📁 Scanning data directory: ${dataDir}`);
+		const masterIndex = await generateHierarchicalIndex(dataDir, dataDir, "master");
+		await writeFile(
+			join(dataDir, "index.json"),
+			JSON.stringify(masterIndex, null, 2),
+			"utf-8",
+		);
 
-  return directories.sort();
-}
+		// Generate indexes for all subdirectories that contain JSON files
+		const entries = masterIndex.entries.filter(entry => entry.type === "directory");
 
-async function checkDirectoryForJsonFiles(dirPath: string): Promise<boolean> {
-  const { readdir, stat } = await import('node:fs/promises');
+		for (const entry of entries) {
+			const subDirPath = join(dataDir, entry.relativePath);
+			try {
+				console.log(`📂 Processing ${entry.relativePath}/...`);
 
-  try {
-    const entries = await readdir(dirPath, { withFileTypes: true });
+				// Only generate index for directories that might contain JSON files
+				const subDirStat = await stat(subDirPath);
+				if (subDirStat.isDirectory()) {
+					const subIndex = await generateHierarchicalIndex(subDirPath, dataDir, "directory");
 
-    for (const entry of entries) {
-      const fullPath = join(dirPath, entry.name);
+					// Only write index if there are JSON files or subdirectories
+					const hasJsonFiles = subIndex.entries.some(e => e.type === "file" && e.filename.endsWith(".json"));
+					const hasSubdirs = subIndex.entries.some(e => e.type === "directory");
 
-      if (entry.isFile() && entry.name.endsWith('.json') && entry.name !== 'index.json') {
-        return true; // Found a JSON file
-      } else if (entry.isDirectory()) {
-        // Recursively check subdirectory
-        const hasJson = await checkDirectoryForJsonFiles(fullPath);
-        if (hasJson) {
-          return true;
-        }
-      }
-    }
+					if (hasJsonFiles || hasSubdirs) {
+						await writeFile(
+							join(subDirPath, "index.json"),
+							JSON.stringify(subIndex, null, 2),
+							"utf-8",
+						);
+					}
+				}
+			} catch (error) {
+				console.warn(`⚠️  Could not process ${entry.relativePath}:`, error);
+			}
+		}
 
-    return false; // No JSON files found
-  } catch (error) {
-    return false;
-  }
-}
+		console.log("✅ Hierarchical data indices generated successfully!");
+		console.log(`   Master index: ${masterIndex.summary.totalFiles.toLocaleString()} files`);
+		console.log(`   Directories: ${masterIndex.summary.totalDirectories.toLocaleString()}`);
+		console.log(`   Total size: ${(masterIndex.summary.totalSize / 1024 / 1024).toFixed(1)} MB`);
 
-async function generateAllIndices(dataDir: string): Promise<void> {
-  console.log('🚀 Scanning data directories for index generation...');
-
-  try {
-    // Check if data directory exists
-    const { stat } = await import('node:fs/promises');
-    try {
-      await stat(dataDir);
-    } catch {
-      console.log(`📁 Data directory does not exist: ${dataDir}`);
-      return;
-    }
-
-    // Scan for all directories with JSON files
-    const directories = await scanDataDirectories(dataDir);
-    console.log(`Found ${directories.length} directories with JSON files:`, directories);
-
-    // Generate indices for all found directories
-    const indexPromises = directories.map(async (dirName) => {
-      const dirPath = join(dataDir, dirName);
-      const index = await generateIndexForDirectory(dirPath, dirName as any);
-      await writeFile(
-        join(dirPath, 'index.json'),
-        JSON.stringify(index, null, 2),
-        'utf-8',
-      );
-      return { dirName, index };
-    });
-
-    const results = await Promise.all(indexPromises);
-
-    // Generate master index with dynamic sources
-    const sources: Record<string, DataIndex> = {};
-    let totalFiles = 0;
-    let totalSize = 0;
-
-    for (const { dirName, index } of results) {
-      sources[dirName] = index;
-      totalFiles += index.totalFiles;
-      totalSize += index.totalSize;
-    }
-
-    const masterIndex = {
-      generated: new Date().toISOString(),
-      version: '1.0.0',
-      sources,
-      summary: {
-        totalFiles,
-        totalSize,
-      },
-    };
-
-    // Write master index
-    await writeFile(
-      join(dataDir, 'index.json'),
-      JSON.stringify(masterIndex, null, 2),
-      'utf-8',
-    );
-
-    console.log('✅ Data indices generated successfully!');
-    for (const { dirName, index } of results) {
-      console.log(`   ${dirName}: ${index.totalFiles.toLocaleString()} files`);
-    }
-    console.log(`   Total: ${totalFiles.toLocaleString()} files`);
-
-  } catch (error) {
-    console.error('❌ Error generating data indices:', error);
-  }
+	} catch (error) {
+		console.error("❌ Error generating hierarchical data indices:", error);
+	}
 }
 
 /**
@@ -244,41 +238,41 @@ async function generateAllIndices(dataDir: string): Promise<void> {
  * generates index.json files for efficient data loading.
  */
 export function dataIndexPlugin(): Plugin {
-  return {
-    name: 'data-index-plugin',
-    configureServer(server) {
-      // Generate initial indices once when server starts
-      const dataDir = join(process.cwd(), 'public/data/bandai');
+	return {
+		name: "data-index-plugin",
+		configureServer(server) {
+			// Generate initial indices once when server starts
+			const dataDir = join(process.cwd(), "public/data/bandai");
 
-      // Only watch for changes if data directory exists
-      server.watcher.add([join(dataDir, '**/!(*index).json')]);
+			// Only watch for changes if data directory exists
+			server.watcher.add([join(dataDir, "**/!(*index).json")]);
 
-      // Debounced regeneration for file changes (excluding index.json)
-      server.watcher.on('change', (path) => {
-        if (path.includes('/data/bandai/') && path.endsWith('.json') && !path.includes('/index.json')) {
-          console.log(`📝 Data file changed: ${path}`);
-          debouncedRegenerateIndices(dataDir);
-        }
-      });
+			// Debounced regeneration for file changes (excluding index.json)
+			server.watcher.on("change", (path) => {
+				if (path.includes("/public/data/") && path.endsWith(".json") && !path.includes("/index.json")) {
+					console.log(`📝 Data file changed: ${path}`);
+					debouncedRegenerateIndices(dataDir);
+				}
+			});
 
-      server.watcher.on('add', (path) => {
-        if (path.includes('/data/bandai/') && path.endsWith('.json') && !path.includes('/index.json')) {
-          console.log(`➕ Data file added: ${path}`);
-          debouncedRegenerateIndices(dataDir);
-        }
-      });
+			server.watcher.on("add", (path) => {
+				if (path.includes("/public/data/") && path.endsWith(".json") && !path.includes("/index.json")) {
+					console.log(`➕ Data file added: ${path}`);
+					debouncedRegenerateIndices(dataDir);
+				}
+			});
 
-      server.watcher.on('unlink', (path) => {
-        if (path.includes('/data/bandai/') && path.endsWith('.json') && !path.includes('/index.json')) {
-          console.log(`➖ Data file removed: ${path}`);
-          debouncedRegenerateIndices(dataDir);
-        }
-      });
-    },
-    buildStart() {
-      // Generate indices before build
-      const dataDir = join(process.cwd(), 'public/data/bandai');
-      return generateAllIndices(dataDir);
-    },
-  };
+			server.watcher.on("unlink", (path) => {
+				if (path.includes("/public/data/") && path.endsWith(".json") && !path.includes("/index.json")) {
+					console.log(`➖ Data file removed: ${path}`);
+					debouncedRegenerateIndices(dataDir);
+				}
+			});
+		},
+		buildStart() {
+			// Generate hierarchical indices before build
+			const dataDir = join(process.cwd(), "public/data");
+			return generateHierarchicalIndices(dataDir);
+		},
+	};
 }

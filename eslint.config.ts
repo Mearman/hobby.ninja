@@ -8,6 +8,7 @@ import importPlugin from "eslint-plugin-import";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import prettier from "eslint-config-prettier";
 import unicorn from "eslint-plugin-unicorn";
+import sonarjs from "eslint-plugin-sonarjs";
 import nx from "@nx/eslint-plugin";
 import markdown from "eslint-plugin-markdown";
 import tseslint from "typescript-eslint";
@@ -89,7 +90,8 @@ export default [
 			import: importPlugin,
 			"jsx-a11y": jsxA11y,
 			"no-emoji": eslintPluginNoEmoji,
-			"barrel-files": barrelFiles,
+			sonarjs: sonarjs,
+						"barrel-files": barrelFiles,
 		},
 		settings: {
 			react: {
@@ -168,6 +170,17 @@ export default [
 			"@typescript-eslint/prefer-reduce-type-parameter": "error",
 			"@typescript-eslint/prefer-return-this-type": "error",
 			"@typescript-eslint/return-await": ["error", "error-handling-correctness-only"],
+
+			// Magic numbers - use TypeScript ESLint version instead of core rule
+			"@typescript-eslint/no-magic-numbers": [
+				"error",
+				{
+					ignore: [-1, 0, 1, 2], // Commonly used small numbers
+					ignoreArrayIndexes: true,
+					ignoreClassFieldInitialValues: true,
+					ignoreEnums: true,
+				},
+			],
 
 			// Turn off base ESLint rules that conflict with TypeScript versions
 			"no-implied-eval": "off",
@@ -424,6 +437,9 @@ export default [
 			"no-unused-expressions": "off", // Using @typescript-eslint version
 			"no-empty-function": "off", // Using @typescript-eslint version
 
+			// SonarJS rules for code quality
+			"sonarjs/no-duplicate-string": "error",
+
 			// Formatting rules
 			quotes: [
 				"error",
@@ -447,6 +463,7 @@ export default [
 			"@typescript-eslint/no-base-to-string": "error",
 			"@typescript-eslint/restrict-plus-operands": "error",
 
+		
 			// General rules
 			"no-console": "warn",
 			"prefer-const": "error",
@@ -480,10 +497,12 @@ export default [
 	},
 
 	{
-		// Unicorn rule overrides
+		// Disable conflicting core rule and enable TypeScript version
 		rules: {
 			"unicorn/prevent-abbreviations": "off",
 			"unicorn/no-null": "off",
+			// Disable ESLint core rule to avoid conflict with TypeScript ESLint
+			"no-magic-numbers": "off",
 		},
 	},
 	{
