@@ -10,32 +10,39 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { execFileNoThrow, npmCommand, ExecFileOptions } from "./execFileNoThrow";
 
 // Mock child_process
-vi.mock("child_process", () => ({
+vi.mock("node:child_process", () => ({
 	execFile: vi.fn(),
 }));
 
-// Mock process
-const mockProcessCwd = vi.fn();
-vi.mock("process", () => ({
-	cwd: mockProcessCwd,
-	env: {},
-}));
+// Store original process.cwd
+const originalCwd = process.cwd;
+
+// Helper to create a mock child process
+function createMockChildProcess() {
+	return {
+		stdout: { on: vi.fn() },
+		stderr: { on: vi.fn() },
+		kill: vi.fn(),
+	};
+}
 
 describe("execFileNoThrow", () => {
 	beforeEach(() => {
 		vi.clearAllMocks();
-		mockProcessCwd.mockReturnValue("/test/current/directory");
+		// Mock process.cwd
+		process.cwd = vi.fn().mockReturnValue("/test/current/directory");
 	});
 
 	afterEach(() => {
 		vi.restoreAllMocks();
+		process.cwd = originalCwd;
 	});
 
 	describe("Basic functionality", () => {
 		it("should execute successful command and return success result", async () => {
-			const mockCallback = vi.fn();
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "stdout output", "");
+				return createMockChildProcess();
 			});
 
 			const result = await execFileNoThrow("echo", ["hello"]);
@@ -46,12 +53,18 @@ describe("execFileNoThrow", () => {
 				stderr: "",
 				exitCode: 0,
 			});
-			expect(execFile).toHaveBeenCalledWith("echo", ["hello"], expect.any(Object));
+			expect(execFile).toHaveBeenCalledWith(
+				"echo",
+				["hello"],
+				expect.objectContaining({ cwd: "/test/current/directory" }),
+				expect.any(Function)
+			);
 		});
 
 		it("should handle command with no arguments", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "test output", "");
+				return createMockChildProcess();
 			});
 
 			const result = await execFileNoThrow("pwd");
@@ -63,12 +76,18 @@ describe("execFileNoThrow", () => {
 		it("should handle empty args array explicitly", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "test output", "");
+				return createMockChildProcess();
 			});
 
 			const result = await execFileNoThrow("ls", []);
 
 			expect(result.success).toBe(true);
-			expect(execFile).toHaveBeenCalledWith("ls", [], expect.any(Object));
+			expect(execFile).toHaveBeenCalledWith(
+				"ls",
+				[],
+				expect.any(Object),
+				expect.any(Function)
+			);
 		});
 	});
 
@@ -78,6 +97,7 @@ describe("execFileNoThrow", () => {
 			(error as any).code = 2;
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(error, "", "Command not found");
+				return createMockChildProcess();
 			});
 
 			const result = await execFileNoThrow("nonexistent");
@@ -95,6 +115,7 @@ describe("execFileNoThrow", () => {
 			delete (error as any).code;
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(error, "", "Unknown error");
+				return createMockChildProcess();
 			});
 
 			const result = await execFileNoThrow("failing-command");
@@ -106,6 +127,7 @@ describe("execFileNoThrow", () => {
 		it("should handle empty stdout and stderr buffers", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(new Error("Test error"), null, null);
+				return createMockChildProcess();
 			});
 
 			const result = await execFileNoThrow("test");
@@ -116,18 +138,8 @@ describe("execFileNoThrow", () => {
 		});
 
 		it("should handle null and undefined callbacks gracefully", async () => {
-			const mockChildProcess = {
-				stdout: {
-					on: vi.fn(),
-				},
-				stderr: {
-					on: vi.fn(),
-				},
-				kill: vi.fn(),
-			};
-
 			(execFile as any).mockImplementation((command, args, options, callback) => {
-				return mockChildProcess;
+				return createMockChildProcess();
 			});
 
 			// Test that the Promise resolves without throwing
@@ -204,6 +216,7 @@ describe("execFileNoThrow", () => {
 		it("should not timeout when timeout is set to 0", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				setTimeout(() => callback(null, "success", ""), 100);
+				return createMockChildProcess();
 			});
 
 			const resultPromise = execFileNoThrow("fast-command", [], { timeout: 0 });
@@ -220,6 +233,7 @@ describe("execFileNoThrow", () => {
 		it("should handle negative timeout values", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "success", "");
+				return createMockChildProcess();
 			});
 
 			const result = await execFileNoThrow("test", [], { timeout: -1 });

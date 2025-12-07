@@ -176,6 +176,18 @@
         "{workspaceRoot}/apps/*/package.json",
         "{workspaceRoot}/packages/*/package.json"
       ]
+    },
+    "check": {
+      "dependsOn": [
+        "typecheck",
+        "lint",
+        "test",
+        "build"
+      ],
+      "cache": true,
+      "metadata": {
+        "description": "Run all quality gates: typecheck, lint, test, build"
+      }
     }
   }
 }
