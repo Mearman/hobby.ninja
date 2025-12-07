@@ -6,19 +6,11 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nx:run-commands",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@nx/vite:build",
+      "outputs": ["{workspaceRoot}/packages/scrapers/dist"],
       "options": {
-        "command": "tsup",
-        "cwd": "packages/scrapers"
-      }
-    },
-    "typecheck": {
-      "executor": "@nx/js:tsc",
-      "options": {
-        "main": "packages/scrapers/src/index.ts",
-        "outputPath": "dist/packages/scrapers",
-        "tsConfig": "packages/scrapers/tsconfig.json"
+        "outputPath": "packages/scrapers/dist",
+        "configFile": "packages/scrapers/vite.config.ts"
       }
     },
     "lint": {

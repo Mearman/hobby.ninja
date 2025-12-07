@@ -1,35 +1,40 @@
 {
-  "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2022", "DOM"],
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "allowJs": true,
-    "strict": true,
-    "noEmit": false,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "outDir": "dist",
-    "rootDir": "src",
-    "baseUrl": ".",
-    "downlevelIteration": true,
-    "skipLibCheck": true,
-    "paths": {
-      "@manual-downloader/*": ["./src/manual-downloader/*"],
-      "@manual-downloader/services/*": ["./src/manual-downloader/services/*"],
-      "@manual-downloader/types/*": ["./src/manual-downloader/types/*"],
-      "@manual-downloader/utils/*": ["./src/manual-downloader/utils/*"],
-      "@manual-downloader/cli/*": ["./src/manual-downloader/cli/*"]
-    }
-  },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules"
-  ]
+	"compilerOptions": {
+		"target": "ES2022",
+		"lib": ["ES2022", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"allowJs": true,
+		"strict": true,
+		"composite": true,
+		"declaration": true,
+		"declarationMap": true,
+		"outDir": "./dist",
+		"rootDir": "src",
+		"baseUrl": ".",
+		"downlevelIteration": true,
+		"skipLibCheck": true,
+		"paths": {
+			"@manual-downloader/*": ["./src/manual-downloader/*"],
+			"@manual-downloader/services/*": ["./src/manual-downloader/services/*"],
+			"@manual-downloader/types/*": ["./src/manual-downloader/types/*"],
+			"@manual-downloader/utils/*": ["./src/manual-downloader/utils/*"],
+			"@manual-downloader/cli/*": ["./src/manual-downloader/cli/*"]
+		}
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["dist", "node_modules"],
+	"references": [
+		{
+			"path": "../translation"
+		},
+		{
+			"path": "../utils"
+		},
+		{
+			"path": "../types"
+		}
+	]
 }
