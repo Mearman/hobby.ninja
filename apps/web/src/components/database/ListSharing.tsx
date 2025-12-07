@@ -39,7 +39,7 @@ import {
 } from "@tabler/icons-react";
 import React, { useState, useCallback, useMemo } from "react";
 
-import type { UnifiedItem, ManualItem, DatabaseCatalogItem } from "../../services/dataService";
+import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
 // Types for sharing
 interface ShareableItem {
@@ -69,7 +69,7 @@ interface ShareResult {
 }
 
 interface ListSharingProps {
-  items: Array<UnifiedItem | ManualItem | DatabaseCatalogItem>;
+  items: Array<UnifiedItem | ManualItem | CatalogItem>;
   onClose?: () => void;
   initialFilters?: any;
 }
@@ -133,14 +133,14 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 					thumbnail: getManualThumbnail(manual),
 				};
 			} else {
-				// DatabaseCatalogItem
-				const catalog = item as DatabaseCatalogItem;
+				// CatalogItem
+				const catalog = item as CatalogItem;
 				return {
 					...baseItem,
 					type: "catalog" as const,
-					grade: catalog.grade,
-					scale: catalog.scale,
-					series: catalog.series,
+					grade: catalog.properties.grade,
+					scale: catalog.properties.scale,
+					series: catalog.properties.series,
 					thumbnail: getCatalogThumbnail(catalog),
 				};
 			}
@@ -171,9 +171,9 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 	};
 
 	// Get thumbnail from catalog item
-	const getCatalogThumbnail = (item: DatabaseCatalogItem): string | undefined => {
-		if (item.images?.length > 0) {
-			return item.images[0];
+	const getCatalogThumbnail = (item: CatalogItem): string | undefined => {
+		if (item.properties.images?.length > 0) {
+			return item.properties.images[0];
 		}
 		return undefined;
 	};

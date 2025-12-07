@@ -53,16 +53,19 @@ import {
 } from "@tabler/icons-react";
 import React, { useState, useEffect } from "react";
 
-import { dataService, type UnifiedItem, type ManualItem, type DatabaseCatalogItem } from "../../services/dataService";
+import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../../services/dataService";
 
 import { ListSharing } from "./ListSharing";
 import { RelatedItems } from "./RelatedItems";
 
 // Enhanced types for better data handling
 interface DetailItem extends UnifiedItem {
-  catalogData?: DatabaseCatalogItem;
+  catalogData?: CatalogItem;
   manualData?: ManualItem;
 }
+
+// Union type for all possible item types
+type ItemDetailData = DetailItem | CatalogItem | ManualItem;
 
 interface SourceMetadata {
   type: "catalog" | "manual" | "unified";
@@ -297,7 +300,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 	preferSource = "unified",
 	onRelatedItemClick,
 }) => {
-	const [item, setItem] = useState<DetailItem | null>(null);
+	const [item, setItem] = useState<ItemDetailData | null>(null);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
 	const [showSharing, setShowSharing] = useState(false);
@@ -319,9 +322,9 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			}
 
 			// Only unified items can be DetailItems with source data
-			if (loadedItem.type !== "unified_item") {
-				// For non-unified items, use as-is without casting to DetailItem
-				setItem(loadedItem as any);
+			if (loadedItem.$type !== "unified_item") {
+				// For non-unified items, use as-is
+				setItem(loadedItem as ItemDetailData);
 				return;
 			}
 
@@ -337,7 +340,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			]);
 
 			// Type the results properly
-			const catalogDataTyped = catalogData as DatabaseCatalogItem | null;
+			const catalogDataTyped = catalogData as CatalogItem | null;
 			const manualDataTyped = manualData as ManualItem | null;
 
 			const detailItem: DetailItem = {
@@ -392,20 +395,40 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 		globalThis.print();
 	};
 
+	// Helper function to get item name safely
+	const getItemName = (): string => {
+		if (!item?.properties?.name) return "Unknown Item";
+
+		if (typeof item.properties.name === "string") {
+			return item.properties.name;
+		}
+
+		return item.properties.name.ja || item.properties.name.en || "Unknown Item";
+	};
+
+	// Helper function to get item properties safely
+	const getCommonProperty = (propertyName: 'grade' | 'scale' | 'series'): string | null => {
+		if (!item?.properties) return null;
+
+		const props = item.properties as any;
+		return props[propertyName] || null;
+	};
+
 	const getSourcesMetadata = (): SourceMetadata[] => {
 		if (!item) return [];
 
 		const sources: SourceMetadata[] = [];
 
-		if ("sources" in item && item.properties?.sources) {
-			const unifiedItem = item as UnifiedItem;
+		// Check if it's a unified item with sources
+		if (item.$type === "unified_item" && "properties" in item && item.properties?.sources) {
+			const unifiedItem = item as DetailItem;
 
 			if (unifiedItem.properties.sources.catalog) {
 				sources.push({
 					type: "catalog",
 					confidence: unifiedItem.properties.sources.catalog.confidence,
 					lastUpdated: unifiedItem.properties.sources.catalog.linkedAt,
-					completeness: item.catalogData ? 85 : 60,
+					completeness: unifiedItem.catalogData ? 85 : 60,
 				});
 			}
 
@@ -414,19 +437,27 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 					type: "manual",
 					confidence: unifiedItem.properties.sources.manual.confidence,
 					lastUpdated: unifiedItem.properties.sources.manual.linkedAt,
-					completeness: item.manualData ? 90 : 50,
+					completeness: unifiedItem.manualData ? 90 : 50,
 				});
 			}
 		} else {
-			// Single source item
-			if ("images" in item) {
+			// Single source item - determine type based on the item's actual type
+			if (item.$type === "catalog_item") {
 				sources.push({
 					type: "catalog",
 					confidence: 1,
 					lastUpdated: item.metadata?.updatedAt || new Date().toISOString(),
 					completeness: 85,
 				});
+			} else if (item.$type === "manual_item") {
+				sources.push({
+					type: "manual",
+					confidence: 1,
+					lastUpdated: item.metadata?.updatedAt || new Date().toISOString(),
+					completeness: 90,
+				});
 			} else {
+				// Default to manual for unknown types
 				sources.push({
 					type: "manual",
 					confidence: 1,
@@ -444,19 +475,39 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 		const images: string[] = [];
 
-		// Add catalog images
-		if (item.catalogData?.images) {
-			images.push(...item.catalogData.images);
-		} else if ("images" in item && Array.isArray(item.images)) {
-			images.push(...item.images);
-		}
+		// Check if it's a unified item with catalog data
+		if (item.$type === "unified_item") {
+			const unifiedItem = item as DetailItem;
 
-		// Add manual images
-		if (item.manualData?.properties?.thumbnailImage) {
-			images.push(item.manualData.properties.thumbnailImage);
-		}
-		if (item.manualData?.properties?.productImage) {
-			images.push(item.manualData.properties.productImage);
+			// Add catalog images from unified item
+			// Note: thumbnailImage property doesn't exist in current schema
+			// if (unifiedItem.catalogData?.properties?.thumbnailImage) {
+			// 	images.push(unifiedItem.catalogData.properties.thumbnailImage);
+			// }
+
+			// Add manual images from unified item
+			if (unifiedItem.manualData?.properties?.thumbnailImage) {
+				images.push(unifiedItem.manualData.properties.thumbnailImage);
+			}
+			if (unifiedItem.manualData?.properties?.productImage) {
+				images.push(unifiedItem.manualData.properties.productImage);
+			}
+		} else if (item.$type === "catalog_item") {
+			// Direct catalog item - check for image properties
+			const catalogItem = item as CatalogItem;
+			// Note: thumbnailImage property doesn't exist in current schema
+			// if (catalogItem.properties?.thumbnailImage) {
+			// 	images.push(catalogItem.properties.thumbnailImage);
+			// }
+		} else if (item.$type === "manual_item") {
+			// Direct manual item - check for image properties
+			const manualItem = item as ManualItem;
+			if (manualItem.properties?.thumbnailImage) {
+				images.push(manualItem.properties.thumbnailImage);
+			}
+			if (manualItem.properties?.productImage) {
+				images.push(manualItem.properties.productImage);
+			}
 		}
 
 		return [...new Set(images)]; // Remove duplicates
@@ -487,7 +538,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	const sourcesMetadata = getSourcesMetadata();
 	const images = getAllImages();
-	const title = item.properties?.name?.ja || item.properties?.name?.en || "Unknown Item";
+	const title = getItemName();
 
 	return (
 		<Container size="xl" py="md">
@@ -507,13 +558,18 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 					<Group justify="space-between" wrap="nowrap">
 						<Stack gap="xs">
 							<Title order={1}>{title}</Title>
-							{item.properties?.name?.en && <Text c="dimmed">{item.properties.name.en}</Text>}
+							{item.properties?.name && typeof item.properties.name === "object" && item.properties.name.en && (
+								<Text c="dimmed">{item.properties.name.en}</Text>
+							)}
 							<Group gap="xs">
-								{item.properties?.grade && <Badge variant="light">{item.properties.grade}</Badge>}
-								{item.properties?.scale && <Badge variant="light">{item.properties.scale}</Badge>}
-								{item.properties?.series && (
+								{getCommonProperty('grade') && <Badge variant="light">{getCommonProperty('grade')}</Badge>}
+								{getCommonProperty('scale') && <Badge variant="light">{getCommonProperty('scale')}</Badge>}
+								{getCommonProperty('series') && (
 									<Badge variant="outline">
-										{item.properties.series.ja || item.properties.series.en}
+										{typeof getCommonProperty('series') === 'object'
+											? (getCommonProperty('series') as any).ja || (getCommonProperty('series') as any).en
+											: getCommonProperty('series')
+										}
 									</Badge>
 								)}
 							</Group>
@@ -571,20 +627,24 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 										<ImageGallery images={images} title={title} />
 
 										{/* Description */}
-										{(item.catalogData?.description || item.manualData?.properties?.name?.en) && (
+										{item.$type === "unified_item" && ((item as DetailItem).catalogData?.properties?.description || (item as DetailItem).manualData?.properties?.name?.en) && (
 											<Card withBorder={true}>
 												<Card.Section withBorder={true} inheritPadding={true} py="xs">
 													<Text fw={500}>Description</Text>
 												</Card.Section>
 												<Stack gap="sm" p="md">
-													{item.catalogData?.description && (
+													{(item as DetailItem).catalogData?.properties?.description &&
+													typeof (item as DetailItem).catalogData!.properties!.description === "string" && (
 														<Text key="catalog-desc" size="sm">
-															{item.catalogData.description}
+															{typeof (item as DetailItem).catalogData!.properties!.description === "string"
+														? (item as DetailItem).catalogData!.properties!.description
+														: (item as DetailItem).catalogData!.properties!.description?.en ||
+														  (item as DetailItem).catalogData!.properties!.description?.ja || 'No description'}
 														</Text>
 													)}
-													{item.manualData?.properties?.name && (
+													{(item as DetailItem).manualData?.properties?.name && (
 														<Text size="sm">
-                              Manual: {item.manualData.properties.name.ja || item.manualData.properties.name.en}
+                              Manual: {(item as DetailItem).manualData!.properties.name.ja || (item as DetailItem).manualData!.properties.name.en}
 														</Text>
 													)}
 												</Stack>
@@ -609,10 +669,16 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 														</Text>
 													</Group>
 												)}
-												{item.properties?.sources?.manual?.productNumber && (
+												{item.$type === "unified_item" && (item as DetailItem).properties?.sources?.manual?.productNumber && (
 													<Group>
 														<Text size="sm" c="dimmed">Product No:</Text>
-														<Text size="sm" fw={500}>{item.properties.sources.manual.productNumber}</Text>
+														<Text size="sm" fw={500}>{(item as DetailItem).properties!.sources!.manual!.productNumber}</Text>
+													</Group>
+												)}
+												{item.$type === "manual_item" && (item as ManualItem).properties?.productNumber && (
+													<Group>
+														<Text size="sm" c="dimmed">Product No:</Text>
+														<Text size="sm" fw={500}>{(item as ManualItem).properties!.productNumber}</Text>
 													</Group>
 												)}
 												</Stack>
@@ -641,7 +707,13 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 											</Card.Section>
 											<Stack gap="xs" p="md">
 												<PDFViewer
-													pdfUrl={item.properties?.sources?.manual?.pdfUrl}
+													pdfUrl={
+														item.$type === "unified_item"
+															? (item as DetailItem).properties?.sources?.manual?.pdfUrl
+															: item.$type === "manual_item"
+																? (item as ManualItem).properties?.pdfUrl
+																: undefined
+													}
 													title={title}
 												/>
 												<Button
@@ -666,22 +738,27 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 											<Text fw={500}>Basic Information</Text>
 										</Card.Section>
 										<Stack gap="sm" p="md">
-											{item.properties?.grade && (
+											{getCommonProperty('grade') && (
 												<Group>
 													<Text size="sm" c="dimmed" w={100}>Grade:</Text>
-													<Text size="sm">{item.properties?.grade}</Text>
+													<Text size="sm">{getCommonProperty('grade')}</Text>
 												</Group>
 											)}
-											{item.properties?.scale && (
+											{getCommonProperty('scale') && (
 												<Group>
 													<Text size="sm" c="dimmed" w={100}>Scale:</Text>
-													<Text size="sm">{item.properties?.scale}</Text>
+													<Text size="sm">{getCommonProperty('scale')}</Text>
 												</Group>
 											)}
-											{item.properties?.series && (
+											{getCommonProperty('series') && (
 												<Group>
 													<Text size="sm" c="dimmed" w={100}>Series:</Text>
-													<Text size="sm">{item.properties?.series.ja || item.properties?.series.en}</Text>
+													<Text size="sm">
+														{typeof getCommonProperty('series') === 'object'
+															? (getCommonProperty('series') as any).ja || (getCommonProperty('series') as any).en
+															: getCommonProperty('series')
+														}
+													</Text>
 												</Group>
 											)}
 											{item.properties?.releaseDate && (
@@ -770,7 +847,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 						<Tabs.Panel value="manual" p="md">
 							<Stack gap="md">
-								{item.manualData ? (
+								{item.$type === "unified_item" && (item as DetailItem).manualData ? (
 									<>
 										<Card withBorder={true}>
 											<Card.Section withBorder={true} inheritPadding={true} py="xs">
@@ -780,14 +857,35 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												<Group>
 													<Text size="sm" c="dimmed">Title:</Text>
 													<Text size="sm">
-														{item.manualData.properties?.name?.ja || item.manualData.properties?.name?.en || "Unknown"}
+														{(item as DetailItem).manualData!.properties?.name?.ja || (item as DetailItem).manualData!.properties?.name?.en || "Unknown"}
 													</Text>
 												</Group>
 											</Stack>
 										</Card>
 
 										<PDFViewer
-											pdfUrl={item.properties?.sources?.manual?.pdfUrl}
+											pdfUrl={(item as DetailItem).properties?.sources?.manual?.pdfUrl}
+											title={title}
+										/>
+									</>
+								) : item.$type === "manual_item" ? (
+									<>
+										<Card withBorder={true}>
+											<Card.Section withBorder={true} inheritPadding={true} py="xs">
+												<Text fw={500}>Manual Information</Text>
+											</Card.Section>
+											<Stack gap="sm" p="md">
+												<Group>
+													<Text size="sm" c="dimmed">Title:</Text>
+													<Text size="sm">
+														{(item as ManualItem).properties?.name?.ja || (item as ManualItem).properties?.name?.en || "Unknown"}
+													</Text>
+												</Group>
+											</Stack>
+										</Card>
+
+										<PDFViewer
+											pdfUrl={(item as ManualItem).properties?.pdfUrl}
 											title={title}
 										/>
 									</>

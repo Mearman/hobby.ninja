@@ -31,11 +31,11 @@ import { useParams, useNavigate, useLocation } from "@tanstack/react-router";
 import React, { useState, useEffect } from "react";
 
 import { ItemDetail } from "../components/database/ItemDetail";
-import { dataService, type UnifiedItem, type ManualItem, type DatabaseCatalogItem } from "../services/dataService";
+import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../services/dataService";
 
 // Types for page state
 interface PageState {
-  item: UnifiedItem | ManualItem | DatabaseCatalogItem | null;
+  item: UnifiedItem | ManualItem | CatalogItem | null;
   loading: boolean;
   error: string | null;
   source: "unified" | "manual" | "catalog" | "auto";
@@ -202,7 +202,7 @@ export const ItemDetailPage: React.FC = () => {
 	};
 
 	// Update recently viewed items
-	const updateRecentItems = (item: UnifiedItem | ManualItem | DatabaseCatalogItem) => {
+	const updateRecentItems = (item: UnifiedItem | ManualItem | CatalogItem) => {
 		try {
 			const recentKey = "hobby_db_recent_items";
 			const recentItems = JSON.parse(localStorage.getItem(recentKey) || "[]");

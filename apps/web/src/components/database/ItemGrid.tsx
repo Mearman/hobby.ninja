@@ -33,12 +33,12 @@ import {
 import { useVirtualizer, useWindowVirtualizer } from "@tanstack/react-virtual";
 import React, { useState, useCallback, useMemo, useRef, useEffect } from "react";
 
-import type { UnifiedItem, ManualItem, DatabaseCatalogItem } from "../../services/dataService";
+import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
 import ItemCard from "./ItemCard";
 
 
-type ItemData = UnifiedItem | ManualItem | DatabaseCatalogItem;
+type ItemData = UnifiedItem | ManualItem | CatalogItem;
 type ItemType = "unified" | "manual" | "catalog";
 type ViewMode = "grid" | "list";
 type SortField = "name" | "releaseDate" | "grade" | "relevance";
@@ -217,7 +217,7 @@ export function ItemGrid({
 						return (item as any).title || "";
 					};
 
-					comparison = getName(a).localeCompare(getName(b));
+					comparison = getName(a).localeCompare(getName(b)) || 0;
 					break;
 				}
 
@@ -242,7 +242,7 @@ export function ItemGrid({
 						return "";
 					};
 
-					comparison = getGrade(a).localeCompare(getGrade(b));
+					comparison = getGrade(a).localeCompare(getGrade(b)) || 0;
 					break;
 				}
 
