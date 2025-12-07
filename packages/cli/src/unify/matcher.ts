@@ -117,6 +117,24 @@ export function evaluateMatch(
 		});
 	}
 
+	// Stage 2.5: Very high name similarity (>= 0.98) + scale + grade family match
+	// This catches cases where HGBF/HGUC catalog items match ＨＧ manual entries
+	if (
+		nameSimilarity >= 0.98 &&
+		scaleMatch(catalog.scale, manual.scale) &&
+		gradeMatch(catalog.grade, manual.grade)
+	) {
+		return createCandidate(catalog, manual, 0.88, 2, {
+			name: {
+				catalogValue: catalog.name,
+				manualValue: manual.name,
+				similarity: nameSimilarity,
+			},
+			scale: { matches: true },
+			grade: { matches: true },
+		});
+	}
+
 	// Stage 3: Fuzzy name (>= 0.80) + scale + date proximity (90 days)
 	if (
 		nameSimilarity >= 0.8 &&
