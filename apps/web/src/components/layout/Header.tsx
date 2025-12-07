@@ -95,7 +95,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								c="gunplaBlue"
 								style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
 							>
-								🤖 hobby.ninja
+								hobby.ninja
 							</Text>
 						</Link>
 

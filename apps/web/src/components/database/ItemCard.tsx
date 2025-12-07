@@ -22,6 +22,7 @@ import {
 } from "@mantine/core";
 import { useHover } from "@mantine/hooks";
 import {
+	IconCheck,
 	IconHeart,
 	IconShare,
 	IconEye,
@@ -417,7 +418,7 @@ export function ItemCard({
 								fontWeight: "bold",
 							}}
 						>
-              ✓
+							<IconCheck size={12} />
 						</Box>
 					)}
 				</Box>
