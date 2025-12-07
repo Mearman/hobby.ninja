@@ -5,11 +5,12 @@
  * using TanStack Router loader data. Provides consistent template with type-specific content.
  */
 
-import { Title, Text, Container, Breadcrumbs, Anchor, Group, Stack, Card, Grid } from '@mantine/core';
-import { Link, useLoaderData } from '@tanstack/react-router';
-import { GraphNodeDetails } from '../components/graph/GraphNodeDetails';
-import { RelatedNodesGrid } from '../components/graph/RelatedNodesGrid';
-import type { GraphNode } from '../utils/graph-routes-generator';
+import { Title, Text, Container, Breadcrumbs, Anchor, Group, Stack, Card, Grid } from "@mantine/core";
+import { Link, useLoaderData } from "@tanstack/react-router";
+
+import { GraphNodeDetails } from "../components/graph/GraphNodeDetails";
+import { RelatedNodesGrid } from "../components/graph/RelatedNodesGrid";
+import type { GraphNode } from "../utils/graph-routes-generator";
 
 interface GraphNodePageLoader {
 	nodeData: GraphNode | null;
@@ -24,15 +25,15 @@ interface GraphNodePageLoader {
  */
 function useGraphNodeLoader(): GraphNodePageLoader {
 	try {
-		return useLoaderData({ from: '/$nodeType/$id' }) as GraphNodePageLoader;
+		return useLoaderData({ from: "/$nodeType/$id" });
 	} catch {
 		// Fallback for client-side navigation
 		return {
 			nodeData: null,
-			nodeType: '',
-			nodeId: '',
+			nodeType: "",
+			nodeId: "",
 			relatedNodes: [],
-			error: 'Unable to load node data'
+			error: "Unable to load node data",
 		};
 	}
 }
@@ -42,16 +43,16 @@ function useGraphNodeLoader(): GraphNodePageLoader {
  */
 function GraphNodeBreadcrumbs({ nodeType, nodeId, nodeData }: { nodeType: string; nodeId: string; nodeData: GraphNode | null }) {
 	const items = [
-		{ title: 'Home', href: '/' },
-		{ title: 'Database', href: '/database' },
+		{ title: "Home", href: "/" },
+		{ title: "Database", href: "/database" },
 		{
 			title: nodeType.charAt(0).toUpperCase() + nodeType.slice(1),
-			href: `/database/${nodeType}s`
+			href: `/database/${nodeType}s`,
 		},
 		{
 			title: nodeData?.name?.en || nodeData?.name?.ja || nodeId,
-			href: `/${nodeType}/${nodeId}`
-		}
+			href: `/${nodeType}/${nodeId}`,
+		},
 	].map((item, index) => (
 		<Anchor key={index} href={item.href} size="sm">
 			{item.title}
@@ -71,7 +72,7 @@ function GraphNodeBreadcrumbs({ nodeType, nodeId, nodeData }: { nodeType: string
 function GraphNodeMeta({ nodeData, nodeType }: { nodeData: GraphNode | null; nodeType: string }) {
 	if (!nodeData) return null;
 
-	const title = nodeData.name?.en || nodeData.name?.ja || 'Graph Node';
+	const title = nodeData.name?.en || nodeData.name?.ja || "Graph Node";
 	const description = `${nodeType.charAt(0).toUpperCase() + nodeType.slice(1)}: ${title}`;
 
 	return (
@@ -159,7 +160,7 @@ export function GraphNodePage() {
 			<Grid>
 				<Grid.Col span={{ base: 12, md: 8 }}>
 					{/* Node Details */}
-					<Card shadow="sm" padding="lg" radius="md" withBorder>
+					<Card shadow="sm" padding="lg" radius="md" withBorder={true}>
 						<Title order={2} mb="md">Details</Title>
 						<GraphNodeDetails node={nodeData} />
 					</Card>
@@ -168,7 +169,7 @@ export function GraphNodePage() {
 				<Grid.Col span={{ base: 12, md: 4 }}>
 					{/* Related Nodes */}
 					{relatedNodes.length > 0 && (
-						<Card shadow="sm" padding="lg" radius="md" withBorder>
+						<Card shadow="sm" padding="lg" radius="md" withBorder={true}>
 							<Title order={3} mb="md">Related Nodes</Title>
 							<RelatedNodesGrid nodes={relatedNodes} currentNodeType={nodeType} />
 						</Card>
@@ -178,10 +179,10 @@ export function GraphNodePage() {
 
 			{/* Navigation Links */}
 			<Group mt="xl">
-				<Link to="/" style={{ textDecoration: 'none' }}>
+				<Link to="/" style={{ textDecoration: "none" }}>
 					<Anchor size="sm">← Back to Home</Anchor>
 				</Link>
-				<Link to="/database" style={{ textDecoration: 'none' }}>
+				<Link to="/database" style={{ textDecoration: "none" }}>
 					<Anchor size="sm">Database</Anchor>
 				</Link>
 			</Group>

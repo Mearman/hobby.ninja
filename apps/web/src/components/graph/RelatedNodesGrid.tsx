@@ -5,8 +5,7 @@
  * Supports filtering, sorting, and type-aware display for different node relationships.
  */
 
-import { Grid, Card, Text, Group, Badge, Anchor, Avatar, SimpleGrid, Stack, Title } from '@mantine/core';
-import { Link } from '@tanstack/react-router';
+import { Grid, Card, Text, Group, Badge, Anchor, Avatar, SimpleGrid, Stack, Title } from "@mantine/core";
 import {
 	IconPackage,
 	IconTag,
@@ -14,8 +13,10 @@ import {
 	IconBooks,
 	IconBuildingFactory,
 	IconExternalLink,
-} from '@tabler/icons-react';
-import type { GraphNode } from '../../utils/graph-routes-generator';
+} from "@tabler/icons-react";
+import { Link } from "@tanstack/react-router";
+
+import type { GraphNode } from "../../utils/graph-routes-generator";
 
 interface RelatedNodesGridProps {
 	nodes: GraphNode[];
@@ -30,28 +31,28 @@ interface RelatedNodesGridProps {
 const NodeTypeConfig = {
 	brand: {
 		icon: IconBuildingFactory,
-		color: 'blue' as const,
-		label: 'Brand',
+		color: "blue" as const,
+		label: "Brand",
 	},
 	category: {
 		icon: IconTag,
-		color: 'green' as const,
-		label: 'Category',
+		color: "green" as const,
+		label: "Category",
 	},
 	item: {
 		icon: IconPackage,
-		color: 'orange' as const,
-		label: 'Item',
+		color: "orange" as const,
+		label: "Item",
 	},
 	manual: {
 		icon: IconFileText,
-		color: 'purple' as const,
-		label: 'Manual',
+		color: "purple" as const,
+		label: "Manual",
 	},
 	series: {
 		icon: IconBooks,
-		color: 'pink' as const,
-		label: 'Series',
+		color: "pink" as const,
+		label: "Series",
 	},
 } as const;
 
@@ -68,9 +69,9 @@ function NodeCard({ node, currentNodeType }: { node: GraphNode; currentNodeType?
 			shadow="sm"
 			padding="sm"
 			radius="md"
-			withBorder
+			withBorder={true}
 			h="100%"
-			style={{ cursor: 'pointer' }}
+			style={{ cursor: "pointer" }}
 			component={Link}
 			to={`/${node.type}/${node.id}`}
 		>
@@ -106,27 +107,27 @@ function NodeCard({ node, currentNodeType }: { node: GraphNode; currentNodeType?
 				)}
 
 				{/* Additional metadata based on node type */}
-				{node.type === 'item' && node.data['price'] && (
+				{node.type === "item" && node.data["price"] && (
 					<Text size="xs" c="blue">
-						¥{Number(node.data['price']).toLocaleString()}
+						¥{Number(node.data["price"]).toLocaleString()}
 					</Text>
 				)}
 
-				{node.type === 'manual' && node.data['pages'] && (
+				{node.type === "manual" && node.data["pages"] && (
 					<Text size="xs" c="dimmed">
-						{node.data['pages']} pages
+						{node.data["pages"]} pages
 					</Text>
 				)}
 
-				{node.type === 'series' && node.data['episodes'] && (
+				{node.type === "series" && node.data["episodes"] && (
 					<Text size="xs" c="dimmed">
-						{node.data['episodes']} episodes
+						{node.data["episodes"]} episodes
 					</Text>
 				)}
 
-				{node.type === 'category' && node.data['itemCount'] !== undefined && (
+				{node.type === "category" && node.data["itemCount"] !== undefined && (
 					<Text size="xs" c="dimmed">
-						{Number(node.data['itemCount']).toLocaleString()} items
+						{Number(node.data["itemCount"]).toLocaleString()} items
 					</Text>
 				)}
 
@@ -163,7 +164,7 @@ function EmptyState() {
 function filterAndSortNodes(
 	nodes: GraphNode[],
 	currentNodeType?: string,
-	maxVisible?: number
+	maxVisible?: number,
 ): GraphNode[] {
 	// Filter out nodes of the same type as current (optional)
 	const filteredNodes = currentNodeType
@@ -174,8 +175,8 @@ function filterAndSortNodes(
 	const sortedNodes = filteredNodes.sort((a, b) => {
 		// Different types get priority
 		if (currentNodeType) {
-			const aDifferentType = a.type !== currentNodeType ? 0 : 1;
-			const bDifferentType = b.type !== currentNodeType ? 0 : 1;
+			const aDifferentType = a.type === currentNodeType ? 1 : 0;
+			const bDifferentType = b.type === currentNodeType ? 1 : 0;
 			if (aDifferentType !== bDifferentType) {
 				return aDifferentType - bDifferentType;
 			}
@@ -199,13 +200,13 @@ function filterAndSortNodes(
  * Group nodes by type for organized display
  */
 function groupNodesByType(nodes: GraphNode[]): Record<string, GraphNode[]> {
-	return nodes.reduce((groups, node) => {
+	return nodes.reduce<Record<string, GraphNode[]>>((groups, node) => {
 		if (!groups[node.type]) {
 			groups[node.type] = [];
 		}
 		groups[node.type].push(node);
 		return groups;
-	}, {} as Record<string, GraphNode[]>);
+	}, {});
 }
 
 /**
@@ -314,7 +315,7 @@ export function RelatedNodesCompact({
 	nodes,
 	currentNodeType,
 	maxVisible = 5,
-}: Omit<RelatedNodesGridProps, 'showAll'>) {
+}: Omit<RelatedNodesGridProps, "showAll">) {
 	const filteredNodes = filterAndSortNodes(nodes, currentNodeType, maxVisible);
 
 	if (filteredNodes.length === 0) {
@@ -338,7 +339,7 @@ export function RelatedNodesCompact({
 					>
 						<Group gap="xs" wrap="nowrap">
 							<IconComponent size={12} color={config.color} />
-							<Text size="xs" span flex={1} lineClamp={1}>
+							<Text size="xs" span={true} flex={1} lineClamp={1}>
 								{displayName}
 							</Text>
 							<Badge
