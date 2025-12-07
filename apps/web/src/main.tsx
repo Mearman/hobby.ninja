@@ -7,7 +7,6 @@ import { logger } from "./lib/logger";
 import { MantineThemeProvider } from "./providers/mantine-provider";
 import { AppRouter } from "./router";
 import { dataService } from "./services/dataService";
-import "./styles/styles.css";
 
 /**
  * Initialize and start the application
