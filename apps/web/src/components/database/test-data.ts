@@ -7,56 +7,89 @@ import type { UnifiedItem, ManualItem, DatabaseCatalogItem } from "../../service
 export const mockUnifiedItems: UnifiedItem[] = [
 	{
 		id: "up_00001",
-		name: { en: "Strike Freedom Gundam", ja: "ストライクフリーダムガンダム" },
-		series: { en: "Mobile Suit Gundam SEED Destiny", ja: "機動戦士ガンダムSEED DESTINY" },
-		grade: "PG",
-		scale: "1/60",
-		releaseDate: { year: 2004, month: 11, day: 27 },
-		sources: {
-			catalog: { id: "cat_001", confidence: 0.95, linkedAt: "2025-12-07T00:00:00Z" },
-			manual: { id: "0001", productNumber: "1114204", confidence: 0.9, linkedAt: "2025-12-07T00:00:00Z" },
+		type: "unified_item",
+		category: "node" as const,
+		schemaId: "unified_item_schema_v1",
+		properties: {
+			name: { en: "Strike Freedom Gundam", ja: "ストライクフリーダムガンダム" },
+			series: { en: "Mobile Suit Gundam SEED Destiny", ja: "機動戦士ガンダムSEED DESTINY" },
+			grade: "PG",
+			scale: "1/60",
+			releaseDate: { year: 2004, month: 11, day: 27 },
+			sources: {
+				catalog: { id: "cat_001", confidence: 0.95, linkedAt: "2025-12-07T00:00:00Z" },
+				manual: { id: "0001", productNumber: "1114204", pdfUrl: "https://example.com/manual.pdf", confidence: 0.9, linkedAt: "2025-12-07T00:00:00Z" },
+			},
+			matchMethod: "exact",
+			matchStage: 5,
 		},
-		matchMethod: "exact",
-		matchStage: 5,
-		createdAt: "2025-12-07T00:00:00Z",
-		updatedAt: "2025-12-07T00:00:00Z",
+		metadata: {
+			createdAt: "2025-12-07T00:00:00Z",
+			updatedAt: "2025-12-07T00:00:00Z",
+			version: "1.0",
+			source: "test_data",
+			confidence: 0.95,
+		},
 	},
 	{
 		id: "up_00002",
-		name: { en: "Wing Gundam Zero", ja: "ウイングガンダムゼロ" },
-		series: { en: "Mobile Suit Gundam Wing", ja: "新機動戦記ガンダムW" },
-		grade: "MG",
-		scale: "1/100",
-		releaseDate: { year: 2000 },
-		sources: {
-			catalog: { id: "cat_002", confidence: 0.88, linkedAt: "2025-12-07T00:00:00Z" },
+		type: "unified_item",
+		category: "node" as const,
+		schemaId: "unified_item_schema_v1",
+		properties: {
+			name: { en: "Wing Gundam Zero", ja: "ウイングガンダムゼロ" },
+			series: { en: "Mobile Suit Gundam Wing", ja: "新機動戦記ガンダムW" },
+			grade: "MG",
+			scale: "1/100",
+			releaseDate: { year: 2000, month: 1, day: 1 },
+			sources: {
+				catalog: { id: "cat_002", confidence: 0.88, linkedAt: "2025-12-07T00:00:00Z" },
+			},
+			matchMethod: "fuzzy",
+			matchStage: 3,
 		},
-		matchMethod: "fuzzy",
-		matchStage: 3,
-		createdAt: "2025-12-07T00:00:00Z",
-		updatedAt: "2025-12-07T00:00:00Z",
+		metadata: {
+			createdAt: "2025-12-07T00:00:00Z",
+			updatedAt: "2025-12-07T00:00:00Z",
+			version: "1.0",
+			source: "test_data",
+			confidence: 0.88,
+		},
 	},
 ];
 
 export const mockManualItems: ManualItem[] = [
 	{
 		id: "0001",
-		title: "HG 1/144 エールストライクガンダム - バンダイプラモデルWEB取説 | バンダイ ホビーサイト",
-		metadata: {
-			language: "ja",
-			encoding: "utf-8",
-			extractedAt: "2025-12-05T23:09:46.317Z",
-		},
-		content: {
-			blocks: [],
-		},
-		assets: {
-			images: [
-				"https://bandai-hobby.net/images/155_303_s_kwjuc0ri80ktzu3ahk5r92ecrdr4.jpg",
-			],
-			links: [],
+		category: "node",
+		type: "manual_item",
+		schemaId: "manual_item_schema_001",
+		properties: {
+			name: {
+				ja: "HG 1/144 エールストライクガンダム",
+				en: "HG 1/144 Aile Strike Gundam",
+			},
+			productNumber: "148785",
+			releaseDate: {
+				year: 2023,
+				month: 12,
+				day: 2,
+			},
+			series: {
+				ja: "機動戦士ガンダムSEED",
+				en: "Mobile Suit Gundam SEED",
+			},
+			grade: {
+				code: "HG",
+				family: "High Grade",
+			},
+			scale: "1/144",
+			pdfUrl: "https://bandai-hobby.net/manual/148785.pdf",
+			productImage: "https://bandai-hobby.net/images/148785.jpg",
+			thumbnailImage: "https://bandai-hobby.net/images/148785_thumb.jpg",
 		},
 	},
+
 ];
 
 export const mockCatalogItems: DatabaseCatalogItem[] = [
@@ -98,10 +131,13 @@ export function getMockItems(count = 50) {
 			itemWithId.title = `${itemWithId.title} #${i + 1}`;
 		}
 
-		if ("name" in itemWithId && typeof itemWithId.name === "object") {
-			itemWithId.name = {
-				en: `${itemWithId.name.en} #${i + 1}`,
-				ja: `${itemWithId.name.ja || ""} #${i + 1}`,
+		if ("properties" in itemWithId && itemWithId.properties?.name) {
+			itemWithId.properties = {
+				...itemWithId.properties,
+				name: {
+					en: `${itemWithId.properties.name.en} #${i + 1}`,
+					ja: `${itemWithId.properties.name.ja || ""} #${i + 1}`,
+				},
 			};
 		}
 
