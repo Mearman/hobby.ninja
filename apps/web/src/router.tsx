@@ -1,4 +1,4 @@
-import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet, createHashHistory } from "@tanstack/react-router";
+import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet, createBrowserHistory } from "@tanstack/react-router";
 import { Suspense, lazy, useState } from "react";
 
 import { Header } from "./components/layout/Header";
@@ -201,17 +201,15 @@ const routeTree = rootRoute.addChildren([
 	notFoundRoute,
 ]);
 
-// Create hash history for GitHub Pages compatibility
-const hashHistory = createHashHistory();
+// Create browser history for clean URLs in development
+const browserHistory = createBrowserHistory();
 
 /**
- * Router instance with hash routing for GitHub Pages compatibility
- * Uses built-in TanStack Router hash history for reliable hash-based navigation
+ * Router instance with browser history for clean URLs
  */
-// eslint-disable-next-line react-refresh/only-export-components
 export const router = createRouter({
 	routeTree,
-	history: hashHistory, // Use built-in hash history for GitHub Pages compatibility
+	history: browserHistory,
 	defaultPreload: "intent",
 	defaultComponent: NotFoundPage,
 	// Optimize route matching

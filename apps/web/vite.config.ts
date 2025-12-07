@@ -77,6 +77,7 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
+    strictPort: true, // Prevent port jumping
   },
   // Base path: use root for both development and hobby.ninja production
   base: '/',
