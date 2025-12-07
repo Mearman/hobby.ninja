@@ -78,8 +78,8 @@ export default defineConfig({
     port: 3000,
     host: true,
   },
-  // Base path: use root for development, hobby-ninja for production
-  base: process.env.NODE_ENV === 'production' ? '/hobby-ninja/' : '/',
+  // Base path: use root for both development and hobby.ninja production
+  base: '/',
   build: {
     outDir: '../../dist/apps/web',
     emptyOutDir: true,
