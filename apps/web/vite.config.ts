@@ -78,8 +78,8 @@ export default defineConfig({
     port: 3000,
     host: true,
   },
-  // Base path - set to root for local development
-  base: '/',
+  // GitHub Pages base path - adjust for your repository name
+  base: '/hobby-ninja/',
   build: {
     outDir: '../../dist/apps/web',
     emptyOutDir: true,
