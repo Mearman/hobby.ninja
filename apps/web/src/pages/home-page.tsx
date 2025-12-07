@@ -64,7 +64,7 @@ export function HomePage(): React.ReactElement {
 			}}>
 				<Container size="lg">
 					<Stack gap="xl">
-						<Text size="xl" c="dimmed" tt="uppercase" fw={500} letterSpacing={2}>
+						<Text size="xl" c="dimmed" tt="uppercase" fw={500} style={{ letterSpacing: '0.2em' }}>
 							Universal Hobby Collection Management
 						</Text>
 						<Title order={1} size={64} c="white" mb="md">
@@ -134,7 +134,6 @@ export function HomePage(): React.ReactElement {
 							key={feature.title}
 							p="xl"
 							radius="lg"
-							shadow="md"
 							h="100%"
 							shadow="hover-lg"
 							style={{

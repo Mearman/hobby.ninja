@@ -166,7 +166,7 @@ export const ItemDetailPage: React.FC = () => {
 			// Load from data service
 			const item = await dataService.getItemById(
 				params.id,
-				preferredSource === "auto" ? undefined : preferredSource,
+				preferredSource === "auto" ? "unified" : preferredSource,
 			);
 
 			if (item) {

@@ -59,11 +59,11 @@ const RouteLoadingFallback = () => (
  */
 const rootRoute = createRootRoute({
 	component: () => {
-		const [opened, { toggle }] = useState(false);
+		const [opened, setOpened] = useState(false);
 
 		return (
 			<div className="app-layout">
-				<Header opened={opened} toggle={toggle} />
+				<Header opened={opened} toggle={() => setOpened(!opened)} />
 				<main className="app-main">
 					<Suspense fallback={<RouteLoadingFallback />}>
 						<Outlet />
