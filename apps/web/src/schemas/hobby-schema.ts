@@ -247,7 +247,6 @@ export {
 	FieldNode,
 	NodeTypeEnum,
 	RelationshipTypeEnum,
-	HobbyGraphManager,
 };
 
 // Validation helper functions
