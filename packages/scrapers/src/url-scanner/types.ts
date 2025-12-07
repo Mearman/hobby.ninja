@@ -54,29 +54,38 @@ export interface URLCheckResult {
 }
 
 export interface ProgressState {
-  /** Unique identifier for this scan session */
-  scanId: string;
-
-  /** Timestamp when scan started */
-  startedAt: string;
-
-  /** Last processed URL index or identifier */
-  lastProcessedIndex: number;
-
   /** Total URLs processed so far */
   totalProcessed: number;
 
-  /** URLs successfully classified */
-  successfulCount: number;
+  /** Valid URLs with static data */
+  validStatic: number;
 
-  /** URLs that failed with errors */
-  errorCount: number;
+  /** Valid URLs with dynamic data only */
+  validDynamic: number;
 
-  /** Scan configuration used */
-  configuration: ScanConfiguration;
+  /** Invalid URLs */
+  invalid: number;
+
+  /** Error count */
+  errors: number;
+
+  /** Timestamp when scan started */
+  startTime: string;
+
+  /** Timestamp when scan ended */
+  endTime?: string;
 
   /** Current scan status */
-  status: 'running' | 'paused' | 'completed' | 'failed';
+  status: 'idle' | 'ready' | 'running' | 'paused' | 'completed' | 'failed';
+
+  /** URL results keyed by URL */
+  urls: Record<string, ScanResult>;
+
+  /** Optional unique identifier for this scan session */
+  scanId?: string;
+
+  /** Optional scan configuration used */
+  configuration?: ScanConfiguration;
 
   /** Optional estimated completion time */
   estimatedCompletion?: string;

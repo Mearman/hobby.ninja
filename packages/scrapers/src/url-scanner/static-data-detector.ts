@@ -2,7 +2,7 @@
  * Static data detector for analyzing HTML content and determining data extraction viability
  */
 
-import { DetectionResult, DetectionResult } from './types.js';
+import { DetectionResult } from './types.js';
 
 export class StaticDataDetector {
   private static readonly INDICATOR_PATTERNS = {
