@@ -33,15 +33,93 @@ import React, { useState, useEffect, useCallback } from "react";
 
 import { AdvancedFilters } from "../components/database/advanced-filters";
 import { SearchAndFilter } from "../components/database/SearchAndFilter";
-import { dataService, FilterOptions, SearchResult } from "../services/dataService";
+import { dataService, FilterOptions, SearchResult, UnifiedItem, ManualItem, CatalogItem } from "../services/dataService";
 import { parseFiltersFromUrl, copyShareableUrl } from "../utils/url-utils";
+
+// Type guards for item data
+function isUnifiedItem(item: unknown): item is UnifiedItem {
+  return (
+    typeof item === 'object' &&
+    item !== null &&
+    item !== undefined &&
+    'type' in item &&
+    (item as { type: string }).type === 'unified_item'
+  );
+}
+
+function isManualItem(item: unknown): item is ManualItem {
+  return (
+    typeof item === 'object' &&
+    item !== null &&
+    item !== undefined &&
+    'type' in item &&
+    (item as { type: string }).type === 'manual_item'
+  );
+}
+
+function isCatalogItem(item: unknown): item is CatalogItem {
+  return (
+    typeof item === 'object' &&
+    item !== null &&
+    item !== undefined &&
+    'type' in item &&
+    (item as { type: string }).type === 'catalog_item'
+  );
+}
+
+function getItemName(item: UnifiedItem | ManualItem | CatalogItem): string {
+  if ('properties' in item && item.properties?.name) {
+    const name = item.properties.name;
+    if (typeof name === 'string') return name;
+    if (name && typeof name === 'object' && 'en' in name) return name.en || name.ja || 'Unknown Item';
+  }
+  if ('name' in item && typeof item.name === 'string') return item.name;
+  return item.id || 'Unknown Item';
+}
+
+function getItemSeries(item: UnifiedItem | ManualItem | CatalogItem): string | undefined {
+  if ('properties' in item && item.properties?.series) {
+    const series = item.properties.series;
+    if (typeof series === 'string') return series;
+    if (series && typeof series === 'object' && 'en' in series) return series.en || series.ja;
+  }
+  return undefined;
+}
+
+function getItemGrade(item: UnifiedItem | ManualItem | CatalogItem): string | undefined {
+  if ('properties' in item && item.properties) {
+    // Handle UnifiedItem with grade object
+    if ('grade' in item.properties && item.properties.grade) {
+      const grade = item.properties.grade;
+      if (grade && typeof grade === 'object' && 'code' in grade) {
+        return grade.code;
+      }
+      if (typeof grade === 'string') {
+        return grade;
+      }
+    }
+  }
+  // Handle CatalogItem with direct grade property
+  if ('grade' in item && typeof item.grade === 'string') {
+    return item.grade;
+  }
+  return undefined;
+}
+
+function getItemScale(item: UnifiedItem | ManualItem | CatalogItem): string | undefined {
+  if ('properties' in item && item.properties?.scale) {
+    return item.properties.scale;
+  }
+  if ('scale' in item && typeof item.scale === 'string') return item.scale;
+  return undefined;
+}
 
 /**
  * Database search results page
  */
 export function DatabaseSearchPage(): React.ReactElement {
 	const navigate = useNavigate();
-	const searchParams = useSearch();
+	const searchParams = useSearch({ from: "/database/search" });
 	const [searchQuery, setSearchQuery] = useState("");
 	const [filters, setFilters] = useState<FilterOptions>({});
 	const [results, setResults] = useState<SearchResult | null>(null);
@@ -81,10 +159,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 			setError(null);
 
 			const searchResults = await dataService.searchItems(query, searchFilters, {
-				maxResults: 50,
-				onProgress: (progress) => {
-					console.log(`Search progress: ${progress.percentage}%`);
-				},
+				limit: 50,
 			});
 
 			setResults(searchResults);
@@ -338,32 +413,27 @@ export function DatabaseSearchPage(): React.ReactElement {
 												mb="xs"
 												style={{ minHeight: "2.5rem" }}
 											>
-												{item.data && "name" in item.data
-													? (typeof item.data.name === "string"
-														? item.data.name
-														: (item.data.name as any)?.en || (item.data.name as any)?.ja || "Unknown Item")
-													: item.id}
+												{item.data && getItemName(item.data)}
 											</Text>
 
 											{/* Item Details */}
-											{item.data && "series" in item.data && item.data.series && (
+											{item.data && getItemSeries(item.data) && (
 												<Text size="xs" color="dimmed" mb="xs">
-                          Series: {typeof item.data.series === "string" ? item.data.series :
-														(item.data.series as any)?.en || (item.data.series as any)?.ja}
+                          Series: {getItemSeries(item.data)}
 												</Text>
 											)}
 
 											{/* Item Metadata */}
 											{item.data && (
 												<Group gap="xs" mb="xs">
-													{"grade" in item.data && item.data.grade && (
+													{getItemGrade(item.data) && (
 														<Badge size="xs" variant="outline">
-															{item.data.grade}
+															{getItemGrade(item.data)}
 														</Badge>
 													)}
-													{"scale" in item.data && item.data.scale && (
+													{getItemScale(item.data) && (
 														<Badge size="xs" variant="outline">
-															{item.data.scale}
+															{getItemScale(item.data)}
 														</Badge>
 													)}
 												</Group>
