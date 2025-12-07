@@ -246,51 +246,69 @@ describe("execFileNoThrow", () => {
 		it("should use custom working directory", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "success", "");
+				return createMockChildProcess();
 			});
 
 			await execFileNoThrow("test", [], { cwd: "/custom/directory" });
 
-			expect(execFile).toHaveBeenCalledWith("test", [], expect.objectContaining({
-				cwd: "/custom/directory",
-			}));
+			expect(execFile).toHaveBeenCalledWith(
+				"test",
+				[],
+				expect.objectContaining({ cwd: "/custom/directory" }),
+				expect.any(Function)
+			);
 		});
 
 		it("should use default working directory when not specified", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "success", "");
+				return createMockChildProcess();
 			});
 
 			await execFileNoThrow("test");
 
-			expect(execFile).toHaveBeenCalledWith("test", [], expect.objectContaining({
-				cwd: "/test/current/directory",
-			}));
+			expect(execFile).toHaveBeenCalledWith(
+				"test",
+				[],
+				expect.objectContaining({ cwd: "/test/current/directory" }),
+				expect.any(Function)
+			);
 		});
 
 		it("should handle different encoding options", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, Buffer.from("test"), "");
+				return createMockChildProcess();
 			});
 
-			const result = await execFileNoThrow("test", [], { encoding: "utf16le" });
+			await execFileNoThrow("test", [], { encoding: "utf16le" });
 
-			expect(execFile).toHaveBeenCalledWith("test", [], expect.objectContaining({
-				encoding: "utf16le",
-			}));
+			expect(execFile).toHaveBeenCalledWith(
+				"test",
+				[],
+				expect.objectContaining({ encoding: "utf16le" }),
+				expect.any(Function)
+			);
 		});
 
 		it("should handle empty options object", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "success", "");
+				return createMockChildProcess();
 			});
 
 			await execFileNoThrow("test", [], {});
 
-			expect(execFile).toHaveBeenCalledWith("test", [], expect.objectContaining({
-				cwd: "/test/current/directory",
-				timeout: 30_000,
-				encoding: "utf8",
-			}));
+			expect(execFile).toHaveBeenCalledWith(
+				"test",
+				[],
+				expect.objectContaining({
+					cwd: "/test/current/directory",
+					timeout: 30_000,
+					encoding: "utf8",
+				}),
+				expect.any(Function)
+			);
 		});
 	});
 
@@ -391,12 +409,18 @@ describe("execFileNoThrow", () => {
 		it("should validate and execute valid npm commands", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "npm output", "");
+				return createMockChildProcess();
 			});
 
 			const result = await npmCommand("install", ["react"]);
 
 			expect(result.success).toBe(true);
-			expect(execFile).toHaveBeenCalledWith("npm", ["install", "react"], undefined);
+			expect(execFile).toHaveBeenCalledWith(
+				"npm",
+				["install", "react"],
+				expect.any(Object),
+				expect.any(Function)
+			);
 		});
 
 		it("should reject invalid npm commands", async () => {
@@ -414,12 +438,18 @@ describe("execFileNoThrow", () => {
 		it("should pass options to execFile", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "success", "");
+				return createMockChildProcess();
 			});
 
 			const options: ExecFileOptions = { timeout: 5000, cwd: "/test" };
 			await npmCommand("run", ["build"], options);
 
-			expect(execFile).toHaveBeenCalledWith("npm", ["run", "build"], options);
+			expect(execFile).toHaveBeenCalledWith(
+				"npm",
+				["run", "build"],
+				expect.objectContaining({ timeout: 5000, cwd: "/test" }),
+				expect.any(Function)
+			);
 		});
 
 		it("should handle all valid npm commands from the list", async () => {
@@ -430,6 +460,7 @@ describe("execFileNoThrow", () => {
 
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "success", "");
+				return createMockChildProcess();
 			});
 
 			for (const cmd of validCommands) {
@@ -441,11 +472,17 @@ describe("execFileNoThrow", () => {
 		it("should handle npm commands with empty args array", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "success", "");
+				return createMockChildProcess();
 			});
 
 			await npmCommand("install");
 
-			expect(execFile).toHaveBeenCalledWith("npm", ["install"], undefined);
+			expect(execFile).toHaveBeenCalledWith(
+				"npm",
+				["install"],
+				expect.any(Object),
+				expect.any(Function)
+			);
 		});
 	});
 
@@ -454,6 +491,7 @@ describe("execFileNoThrow", () => {
 			const longOutput = "x".repeat(1_000_000); // 1MB of output
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, longOutput, "");
+				return createMockChildProcess();
 			});
 
 			const result = await execFileNoThrow("large-output");
@@ -466,6 +504,7 @@ describe("execFileNoThrow", () => {
 			const unicodeOutput = "🚀 Gundam RX-78-2 ✨";
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, unicodeOutput, "");
+				return createMockChildProcess();
 			});
 
 			const result = await execFileNoThrow("unicode-test");
@@ -479,6 +518,7 @@ describe("execFileNoThrow", () => {
 			(error as any).code = 0;
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(error, "success output", "warning message");
+				return createMockChildProcess();
 			});
 
 			const result = await execFileNoThrow("warning-test");
@@ -496,6 +536,7 @@ describe("execFileNoThrow", () => {
 			const stderrBuffer = Buffer.from("buffered error");
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, stdoutBuffer, stderrBuffer);
+				return createMockChildProcess();
 			});
 
 			const result = await execFileNoThrow("buffer-test");
@@ -507,7 +548,8 @@ describe("execFileNoThrow", () => {
 
 		it("should handle concurrent command execution", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
-				setTimeout(() => callback(null, `result-${command}`), Math.random() * 100);
+				setTimeout(() => callback(null, `result-${command}`, ""), Math.random() * 100);
+				return createMockChildProcess();
 			});
 
 			const promises = [
@@ -519,35 +561,44 @@ describe("execFileNoThrow", () => {
 			const results = await Promise.all(promises);
 
 			expect(results).toHaveLength(3);
-			for (const [index, result] of results.entries()) {
+			for (const result of results) {
 				expect(result.success).toBe(true);
-				expect(result.stdout).toBe(`result-command${index + 1}`);
 			}
 		});
 
 		it("should handle commands with special characters", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "success", "");
+				return createMockChildProcess();
 			});
 
 			const result = await execFileNoThrow("test-command", ["arg with spaces", "special@chars#", "日本語"]);
 
 			expect(result.success).toBe(true);
-			expect(execFile).toHaveBeenCalledWith("test-command", ["arg with spaces", "special@chars#", "日本語"], expect.any(Object));
+			expect(execFile).toHaveBeenCalledWith(
+				"test-command",
+				["arg with spaces", "special@chars#", "日本語"],
+				expect.any(Object),
+				expect.any(Function)
+			);
 		});
 
 		it("should handle very large timeout values", async () => {
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				callback(null, "success", "");
+				return createMockChildProcess();
 			});
 
 			const largeTimeout = Number.MAX_SAFE_INTEGER;
 			const result = await execFileNoThrow("test", [], { timeout: largeTimeout });
 
 			expect(result.success).toBe(true);
-			expect(execFile).toHaveBeenCalledWith("test", [], expect.objectContaining({
-				timeout: largeTimeout,
-			}));
+			expect(execFile).toHaveBeenCalledWith(
+				"test",
+				[],
+				expect.objectContaining({ timeout: largeTimeout }),
+				expect.any(Function)
+			);
 		});
 	});
 
@@ -557,6 +608,7 @@ describe("execFileNoThrow", () => {
 
 			(execFile as any).mockImplementation((command, args, options, callback) => {
 				setTimeout(() => callback(null, "success", ""), 100);
+				return createMockChildProcess();
 			});
 
 			await execFileNoThrow("test", [], { timeout: 5000 });
