@@ -2,16 +2,15 @@
  * Main URL scanner for checking URLs and detecting static data availability
  */
 
-import { URLScanner as IURLScanner, ScanConfiguration, ScanResult, ProgressState } from './types.js';
+import { ScanConfiguration, ScanResult, ProgressState, CheckOptions } from './types.js';
 import { URLChecker } from './url-checker.js';
 import { StaticDataDetector } from './static-data-detector.js';
 import { FileManager } from './file-manager.js';
-import { CheckOptions } from './types.js';
 
 /**
  * Main URL scanner implementation that coordinates URL checking and static data detection
  */
-export class URLScanner implements IURLScanner {
+export class URLScanner {
   private config: ScanConfiguration | null = null;
   private urlChecker: URLChecker;
   private staticDataDetector: StaticDataDetector;
@@ -68,6 +67,7 @@ export class URLScanner implements IURLScanner {
         timeoutMs: this.config.timeoutMs,
         userAgent: this.config.userAgent,
         followRedirects: this.config.followRedirects,
+        maxRedirects: this.config.maxRedirects,
         retryAttempts: this.config.retryAttempts
       };
 
