@@ -10,6 +10,7 @@ import prettier from "eslint-config-prettier";
 import unicorn from "eslint-plugin-unicorn";
 import nx from "@nx/eslint-plugin";
 import markdown from "eslint-plugin-markdown";
+import tseslint from "typescript-eslint";
 import { eslintPluginNoEmoji } from "./eslint-plugins";
 
 import path from "path";
@@ -30,6 +31,12 @@ export default [
 	// Nx flat configs for React (includes react-base, react-typescript, react-jsx)
 	...nx.configs["flat/react"],
 
+	// TypeScript ESLint strict type-checked config
+	...tseslint.configs.strictTypeChecked,
+
+	// TypeScript ESLint stylistic type-checked config
+	...tseslint.configs.stylisticTypeChecked,
+
 	{
 		files: ["**/*.{ts,tsx,js,jsx}"],
 		languageOptions: {
@@ -49,6 +56,7 @@ export default [
 					path.resolve(__dirname, "apps/web/tsconfig.json"),
 					path.resolve(__dirname, "tsconfig.json"),
 				],
+				tsconfigRootDir: __dirname,
 			},
 			globals: {
 				console: "readonly",
@@ -86,15 +94,88 @@ export default [
 			},
 		},
 		rules: {
-			// TypeScript rules (enhanced from Nx flat/typescript)
-			...typescript.configs.recommended.rules,
+			// TypeScript strict type-checked rules (from tseslint.configs.strictTypeChecked)
+			// These are automatically applied, but we can override specific ones here
+
+			// Strict rules - keep as error
+			"@typescript-eslint/await-thenable": "error",
+			"@typescript-eslint/no-floating-promises": "error",
+			"@typescript-eslint/no-misused-promises": "error",
+			"@typescript-eslint/no-unnecessary-type-assertion": "error",
+			"@typescript-eslint/no-unnecessary-condition": "error",
+			"@typescript-eslint/no-unsafe-argument": "error",
+			"@typescript-eslint/no-unsafe-assignment": "error",
+			"@typescript-eslint/no-unsafe-call": "error",
+			"@typescript-eslint/no-unsafe-member-access": "error",
+			"@typescript-eslint/no-unsafe-return": "error",
+			"@typescript-eslint/require-await": "error",
+			"@typescript-eslint/restrict-template-expressions": [
+				"error",
+				{
+					allowNumber: true, // Allow numbers in template literals
+					allowBoolean: false,
+					allowAny: false,
+					allowNullish: false,
+					allowRegExp: false,
+				},
+			],
+			"@typescript-eslint/unbound-method": "error",
+			"@typescript-eslint/no-deprecated": "warn",
+			"@typescript-eslint/use-unknown-in-catch-callback-variable": "error",
+
+			// Stylistic rules
+			"@typescript-eslint/prefer-nullish-coalescing": "error",
+			"@typescript-eslint/prefer-optional-chain": "error",
+			"@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+			"@typescript-eslint/array-type": ["error", { default: "array-simple" }],
+			"@typescript-eslint/prefer-for-of": "error",
+			"@typescript-eslint/prefer-includes": "error",
+			"@typescript-eslint/prefer-string-starts-ends-with": "error",
+			"@typescript-eslint/dot-notation": "error",
+			"@typescript-eslint/prefer-find": "error",
+
+			// Relaxed rules for practical development
 			"@typescript-eslint/no-unused-vars": [
 				"error",
 				{ argsIgnorePattern: "^_" },
 			],
-			"@typescript-eslint/no-explicit-any": "warn",
+			"@typescript-eslint/no-explicit-any": "warn", // Keep as warn for gradual migration
 			"@typescript-eslint/no-non-null-assertion": "warn",
-			"@typescript-eslint/no-array-constructor": "warn",
+			"@typescript-eslint/ban-ts-comment": [
+				"error",
+				{
+					"ts-expect-error": "allow-with-description",
+					"ts-ignore": true,
+					"ts-nocheck": true,
+					minimumDescriptionLength: 10,
+				},
+			],
+			"@typescript-eslint/no-require-imports": "warn", // Allow require for some cases
+
+			// Additional strict rules
+			"@typescript-eslint/no-confusing-void-expression": "error",
+			"@typescript-eslint/no-meaningless-void-operator": "error",
+			"@typescript-eslint/no-mixed-enums": "error",
+			"@typescript-eslint/no-redundant-type-constituents": "error",
+			"@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+			"@typescript-eslint/no-unnecessary-template-expression": "error",
+			"@typescript-eslint/no-unnecessary-type-arguments": "error",
+			"@typescript-eslint/only-throw-error": "error",
+			"@typescript-eslint/prefer-promise-reject-errors": "error",
+			"@typescript-eslint/prefer-reduce-type-parameter": "error",
+			"@typescript-eslint/prefer-return-this-type": "error",
+			"@typescript-eslint/return-await": ["error", "error-handling-correctness-only"],
+
+			// Turn off base ESLint rules that conflict with TypeScript versions
+			"no-implied-eval": "off",
+			"no-throw-literal": "off",
+			"prefer-promise-reject-errors": "off",
+			"require-await": "off",
+			"no-return-await": "off",
+			"dot-notation": "off",
+
+			// Keep existing strict rules
+			"@typescript-eslint/no-array-constructor": "error",
 			"@typescript-eslint/no-namespace": "error",
 			"@typescript-eslint/no-use-before-define": [
 				"warn",
@@ -105,7 +186,7 @@ export default [
 					typedefs: false,
 				},
 			],
-			"@typescript-eslint/no-useless-constructor": "warn",
+			"@typescript-eslint/no-useless-constructor": "error",
 			"@typescript-eslint/no-unused-expressions": [
 				"error",
 				{
@@ -118,11 +199,10 @@ export default [
 			"@typescript-eslint/prefer-namespace-keyword": "error",
 			"@typescript-eslint/no-empty-function": "error",
 			"@typescript-eslint/no-inferrable-types": "error",
-			"@typescript-eslint/no-empty-interface": "error",
+			"@typescript-eslint/no-empty-object-type": "error",
 			"@typescript-eslint/explicit-member-accessibility": "off",
 			"@typescript-eslint/explicit-module-boundary-types": "off",
 			"@typescript-eslint/explicit-function-return-type": "off",
-			"@typescript-eslint/no-parameter-properties": "off",
 
 			// Nx rules - enforce module boundaries in monorepo
 			"@nx/enforce-module-boundaries": [
@@ -399,6 +479,14 @@ export default [
 		files: ["**/*.test.{ts,tsx}", "**/*.spec.{ts,tsx}"],
 		rules: {
 			"@typescript-eslint/no-explicit-any": "off",
+			"@typescript-eslint/no-unsafe-argument": "off",
+			"@typescript-eslint/no-unsafe-assignment": "off",
+			"@typescript-eslint/no-unsafe-call": "off",
+			"@typescript-eslint/no-unsafe-member-access": "off",
+			"@typescript-eslint/no-unsafe-return": "off",
+			"@typescript-eslint/no-floating-promises": "off",
+			"@typescript-eslint/unbound-method": "off",
+			"@typescript-eslint/require-await": "off",
 			"no-console": "off",
 		},
 	},
@@ -406,6 +494,13 @@ export default [
 		files: ["**/*.e2e.test.{ts,tsx}"],
 		rules: {
 			"@typescript-eslint/no-explicit-any": "off",
+			"@typescript-eslint/no-unsafe-argument": "off",
+			"@typescript-eslint/no-unsafe-assignment": "off",
+			"@typescript-eslint/no-unsafe-call": "off",
+			"@typescript-eslint/no-unsafe-member-access": "off",
+			"@typescript-eslint/no-unsafe-return": "off",
+			"@typescript-eslint/no-floating-promises": "off",
+			"@typescript-eslint/unbound-method": "off",
 			"no-console": "off",
 			"playwright/missing-playwright-await": "off", // Not using the Playwright ESLint plugin yet
 		},
