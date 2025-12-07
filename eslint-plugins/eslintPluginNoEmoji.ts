@@ -4,14 +4,14 @@ const noEmojiRule: Rule.RuleModule = {
   meta: {
     type: 'problem',
     docs: {
-      description: 'Disallow emoji characters in markdown files',
+      description: 'Disallow emoji characters in source files',
       category: 'Best Practices',
       recommended: true,
     },
     fixable: undefined,
     schema: [],
     messages: {
-      emojiFound: 'Emoji characters are not allowed in markdown files. Found: {{emoji}}',
+      emojiFound: 'Emoji characters are not allowed. Found: {{emoji}}',
     },
   },
   create(context: Rule.RuleContext) {
