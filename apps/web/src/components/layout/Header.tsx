@@ -20,9 +20,14 @@ import {
 	IconChevronDown,
 	IconAdjustmentsHorizontal,
 	IconClipboardList,
+	IconSun,
+	IconMoon,
+	IconDeviceDesktop,
 } from "@tabler/icons-react";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
+
+import { useThemeContext } from "../../providers/mantine-provider";
 
 interface HeaderProps {
 	/**
@@ -43,7 +48,23 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 	const [searchQuery, setSearchQuery] = useState("");
 	const isMobile = useMediaQuery("(max-width: 768px)");
 	const isDesktop = useMediaQuery("(min-width: 769px)");
+	const { colorScheme, cycleTheme } = useThemeContext();
 
+	// Get the appropriate icon based on current theme
+	const getThemeIcon = () => {
+		switch (colorScheme) {
+			case 'system':
+				return <IconDeviceDesktop size={18} />;
+			case 'dark':
+				return <IconSun size={18} />;
+			case 'light':
+				return <IconMoon size={18} />;
+			default:
+				return <IconDeviceDesktop size={18} />;
+		}
+	};
+
+	
 	// Handle search submission
 	const handleSearch = (query: string) => {
 		if (query.trim()) {
@@ -211,7 +232,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 						)}
 					</Group>
 
-					{/* Search bar */}
+					{/* Search bar and theme toggle */}
 					<Group>
 						{isDesktop && (
 							<TextInput
@@ -228,6 +249,16 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								}}
 							/>
 						)}
+
+						{/* Theme toggle button */}
+						<ActionIcon
+							variant="default"
+							size={36}
+							onClick={cycleTheme}
+							aria-label="Toggle theme"
+						>
+							{getThemeIcon()}
+						</ActionIcon>
 
 						{isMobile && (
 							<Tooltip label="Search">
@@ -343,6 +374,18 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								}}
 							>
 									About
+							</Button>
+
+							{/* Theme toggle in mobile menu */}
+							<Button
+								variant="subtle"
+								justify="start"
+								leftSection={getThemeIcon()}
+								onClick={() => {
+									cycleTheme();
+								}}
+							>
+								Theme
 							</Button>
 						</Stack>
 					</Container>
