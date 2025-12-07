@@ -6,9 +6,10 @@
 	"scripts": {
 		"barrels": "barrelsby --config .barrelsby.json",
 		"barrels:watch": "barrelsby --config .barrelsby.json --watch",
-		"prebuild": "pnpm barrels",
-		"build": "nx run hobby-ninja:build",
-		"build:prod": "nx run hobby-ninja:build:prod",
+		"prebuild": "pnpm barrels && pnpm copy-data",
+		"build": "pnpm copy-data && nx run hobby-ninja:build",
+		"build:prod": "pnpm copy-data && nx run hobby-ninja:build:prod",
+		"copy-data": "tsx scripts/copy-database.ts",
 		"dev": "pnpm --filter @hobby-ninja/webapp dev",
 		"serve": "nx serve web",
 		"start": "nx serve web",
