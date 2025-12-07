@@ -7,6 +7,8 @@ export default defineConfig({
 		dts({
 			include: ['src/**/*.ts', 'src/**/*.tsx'],
 			outDir: 'dist',
+			// Skip tsc type checking - run typecheck separately
+			skipDiagnostics: true,
 		}),
 	],
 	build: {

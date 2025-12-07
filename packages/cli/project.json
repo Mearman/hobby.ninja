@@ -5,16 +5,14 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "cache": true,
       "options": {
-        "outputPath": "dist/packages/cli",
-        "main": "packages/cli/src/index.ts",
-        "tsConfig": "packages/cli/tsconfig.json",
-        "assets": []
+        "outputPath": "packages/cli/dist",
+        "configFile": "packages/cli/vite.config.ts"
       },
-      "dependsOn": ["types:build", "utils:build"]
+      "dependsOn": ["types:build", "utils:build", "translation:build", "scrapers:build"]
     },
     "test": {
       "executor": "@nx/vitest:test",

@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "type": "module",
   "description": "CLI tool for scraping Gundam/Gunpla data from various sources",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cli/main.js",
+  "types": "dist/cli/main.d.ts",
   "bin": {
     "gundam-scraper": "dist/bin/cli.js"
   },
@@ -37,6 +37,7 @@
   "dependencies": {
     "@inkjs/ui": "^2.0.0",
     "@hobby-ninja/scrapers": "workspace:*",
+    "@hobby-ninja/translation": "workspace:*",
     "@hobby-ninja/types": "workspace:*",
     "@hobby-ninja/utils": "workspace:*",
     "cheerio": "latest",
@@ -46,7 +47,7 @@
     "inquirer": "latest",
     "playwright": "latest",
     "react": "19.2.1",
-    "zod": "latest"
+    "zod": "4.2.0-canary.20251202T062120"
   },
   "devDependencies": {
     "@types/cheerio": "latest",
@@ -66,15 +67,11 @@
   "nx": {
     "targets": {
       "build": {
-        "executor": "@nx/js:tsc",
-        "outputs": [
-          "{options.outputPath}"
-        ],
+        "executor": "@nx/vite:build",
+        "outputs": ["{options.outputPath}"],
         "options": {
-          "outputPath": "dist/packages/cli",
-          "main": "packages/cli/src/index.ts",
-          "tsConfig": "packages/cli/tsconfig.json",
-          "assets": []
+          "outputPath": "packages/cli/dist",
+          "configFile": "packages/cli/vite.config.ts"
         }
       },
       "test": {
