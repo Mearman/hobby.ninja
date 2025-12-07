@@ -184,11 +184,12 @@ async function uploadFiles() {
 
     for (const file of batch) {
       try {
-        // Use wrangler r2 object put command
+        // Use wrangler r2 object put command with remote flag
         await execCommand('wrangler', [
           'r2', 'object', 'put',
           `${BUCKET_NAME}/${file.remotePath}`,
-          '--file', file.localPath
+          '--file', file.localPath,
+          '--remote'
         ]);
 
         uploaded++;
