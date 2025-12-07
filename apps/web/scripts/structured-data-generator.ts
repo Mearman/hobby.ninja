@@ -5,11 +5,11 @@
  * Implements schema.org markup for products, brands, and series
  */
 
-import { GraphNode } from '../src/utils/graph-routes-generator';
+import { GraphNode } from "../src/utils/graph-routes-generator";
 
 export interface StructuredData {
-	'@context': string;
-	'@type': string;
+	"@context": string;
+	"@type": string;
 	[key: string]: unknown;
 }
 
@@ -19,18 +19,24 @@ export class StructuredDataGenerator {
 	 */
 	generateStructuredData(node: GraphNode): StructuredData | null {
 		switch (node.type) {
-			case 'item':
+			case "item": {
 				return this.generateProductData(node);
-			case 'brand':
+			}
+			case "brand": {
 				return this.generateBrandData(node);
-			case 'series':
+			}
+			case "series": {
 				return this.generateSeriesData(node);
-			case 'category':
+			}
+			case "category": {
 				return this.generateCategoryData(node);
-			case 'manual':
+			}
+			case "manual": {
 				return this.generateManualData(node);
-			default:
+			}
+			default: {
 				return null;
+			}
 		}
 	}
 
@@ -41,26 +47,26 @@ export class StructuredDataGenerator {
 		const data = node.data;
 
 		const product: StructuredData = {
-			'@context': 'https://schema.org',
-			'@type': 'Product',
+			"@context": "https://schema.org",
+			"@type": "Product",
 			name: node.name.en || node.name.ja,
 			description: this.extractDescription(data),
-			identifier: node.id
+			identifier: node.id,
 		};
 
 		// Add brand information
 		if (data.brand?.name?.en) {
 			product.brand = {
-				'@type': 'Brand',
-				name: data.brand.name.en
+				"@type": "Brand",
+				name: data.brand.name.en,
 			};
 		}
 
 		// Add series information
 		if (data.series?.name?.en) {
 			product.isPartOf = {
-				'@type': 'ProductModel',
-				name: data.series.name.en
+				"@type": "ProductModel",
+				name: data.series.name.en,
 			};
 		}
 
@@ -68,20 +74,20 @@ export class StructuredDataGenerator {
 		if (data.grade) {
 			product.additionalProperty = [
 				{
-					'@type': 'PropertyValue',
-					name: 'Grade',
-					value: data.grade
-				}
+					"@type": "PropertyValue",
+					name: "Grade",
+					value: data.grade,
+				},
 			];
 		}
 
 		// Add scale information
 		if (data.scale) {
-			const currentProps = product.additionalProperty as Array<any> || [];
+			const currentProps = product.additionalProperty as any[] || [];
 			currentProps.push({
-				'@type': 'PropertyValue',
-				name: 'Scale',
-				value: data.scale
+				"@type": "PropertyValue",
+				name: "Scale",
+				value: data.scale,
 			});
 			product.additionalProperty = currentProps;
 		}
@@ -94,9 +100,9 @@ export class StructuredDataGenerator {
 		// Add price information
 		if (data.price) {
 			product.offers = {
-				'@type': 'Offer',
+				"@type": "Offer",
 				price: data.price,
-				priceCurrency: 'JPY'
+				priceCurrency: "JPY",
 			};
 		}
 
@@ -115,11 +121,11 @@ export class StructuredDataGenerator {
 		const data = node.data;
 
 		const brand: StructuredData = {
-			'@context': 'https://schema.org',
-			'@type': 'Brand',
+			"@context": "https://schema.org",
+			"@type": "Brand",
 			name: node.name.en || node.name.ja,
 			description: this.extractDescription(data),
-			identifier: node.id
+			identifier: node.id,
 		};
 
 		// Add logo if available
@@ -142,18 +148,18 @@ export class StructuredDataGenerator {
 		const data = node.data;
 
 		const series: StructuredData = {
-			'@context': 'https://schema.org',
-			'@type': 'ProductModel',
+			"@context": "https://schema.org",
+			"@type": "ProductModel",
 			name: node.name.en || node.name.ja,
 			description: this.extractDescription(data),
-			identifier: node.id
+			identifier: node.id,
 		};
 
 		// Add brand if available
 		if (data.brand?.name?.en) {
 			series.brand = {
-				'@type': 'Brand',
-				name: data.brand.name.en
+				"@type": "Brand",
+				name: data.brand.name.en,
 			};
 		}
 
@@ -165,12 +171,12 @@ export class StructuredDataGenerator {
 	 */
 	private generateCategoryData(node: GraphNode): StructuredData {
 		return {
-			'@context': 'https://schema.org',
-			'@type': 'Thing',
+			"@context": "https://schema.org",
+			"@type": "Thing",
 			name: node.name.en || node.name.ja,
 			description: this.extractDescription(node.data),
 			identifier: node.id,
-			additionalType: 'ProductCategory'
+			additionalType: "ProductCategory",
 		};
 	}
 
@@ -181,11 +187,11 @@ export class StructuredDataGenerator {
 		const data = node.data;
 
 		const manual: StructuredData = {
-			'@context': 'https://schema.org',
-			'@type': 'TechArticle',
+			"@context": "https://schema.org",
+			"@type": "TechArticle",
 			name: node.name.en || node.name.ja,
 			description: this.extractDescription(data),
-			identifier: node.id
+			identifier: node.id,
 		};
 
 		// Add page count if available
@@ -201,8 +207,8 @@ export class StructuredDataGenerator {
 		// Add associated product if available
 		if (data.product?.name) {
 			manual.about = {
-				'@type': 'Product',
-				name: data.product.name
+				"@type": "Product",
+				name: data.product.name,
 			};
 		}
 
@@ -227,7 +233,7 @@ export class StructuredDataGenerator {
 			parts.push(`Released: ${data.releaseDate.year}`);
 		}
 
-		return parts.length > 0 ? parts.join(' • ') : `${data.name?.ja || ''} details`;
+		return parts.length > 0 ? parts.join(" • ") : `${data.name?.ja || ""} details`;
 	}
 
 	/**
@@ -235,9 +241,9 @@ export class StructuredDataGenerator {
 	 */
 	generateBreadcrumbData(nodeType: string, nodeId: string, nodeName?: string): StructuredData {
 		const breadcrumbs = [
-			{ name: 'Home', url: '/' },
-			{ name: 'Database', url: '/database' },
-			{ name: nodeType.charAt(0).toUpperCase() + nodeType.slice(1), url: `/database/${nodeType}s` }
+			{ name: "Home", url: "/" },
+			{ name: "Database", url: "/database" },
+			{ name: nodeType.charAt(0).toUpperCase() + nodeType.slice(1), url: `/database/${nodeType}s` },
 		];
 
 		if (nodeName) {
@@ -245,14 +251,14 @@ export class StructuredDataGenerator {
 		}
 
 		return {
-			'@context': 'https://schema.org',
-			'@type': 'BreadcrumbList',
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
 			itemListElement: breadcrumbs.map((crumb, index) => ({
-				'@type': 'ListItem',
+				"@type": "ListItem",
 				position: index + 1,
 				name: crumb.name,
-				item: `https://hobby.ninja${crumb.url}`
-			}))
+				item: `https://hobby.ninja${crumb.url}`,
+			})),
 		};
 	}
 }
