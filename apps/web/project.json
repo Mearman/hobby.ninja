@@ -36,15 +36,20 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "web:build"
+        "buildTarget": "web:build",
+        "port": 3000,
+        "host": true
       },
       "configurations": {
         "development": {
           "buildTarget": "web:build:development",
-          "port": 3000
+          "port": 3000,
+          "host": true
         },
         "production": {
-          "buildTarget": "web:build:production"
+          "buildTarget": "web:build:production",
+          "port": 3000,
+          "host": true
         }
       }
     },

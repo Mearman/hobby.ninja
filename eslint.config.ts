@@ -11,7 +11,9 @@ import unicorn from "eslint-plugin-unicorn";
 import nx from "@nx/eslint-plugin";
 import markdown from "eslint-plugin-markdown";
 import tseslint from "typescript-eslint";
-import { eslintPluginNoEmoji } from "./eslint-plugins";
+import barrelFiles from "eslint-plugin-barrel-files";
+
+import { eslintPluginNoEmoji } from "./eslint-plugins/eslintPluginNoEmoji";
 
 import path from "path";
 import { fileURLToPath } from "url";
@@ -87,6 +89,7 @@ export default [
 			import: importPlugin,
 			"jsx-a11y": jsxA11y,
 			"no-emoji": eslintPluginNoEmoji,
+			"barrel-files": barrelFiles,
 		},
 		settings: {
 			react: {
@@ -253,7 +256,11 @@ export default [
 			// React Refresh rules
 			"react-refresh/only-export-components": [
 				"warn",
-				{ allowConstantExport: true },
+				{
+					allowConstantExport: true,
+					allowExportNames: ["router", "Route", "AppRouter"],
+					customExportNamePattern: "^[A-Z][a-zA-Z0-9]*$",
+				},
 			],
 
 			// Import rules (enhanced from Nx flat/react-base)
@@ -356,6 +363,11 @@ export default [
 			"no-redeclare": "warn",
 			"no-regex-spaces": "warn",
 			"no-restricted-syntax": ["warn", "WithStatement"],
+
+			// Ban re-exports and namespace imports (except in index files - see override below)
+			"barrel-files/avoid-barrel-files": "off", // Allow index files
+			"barrel-files/avoid-re-export-all": "error",
+			"barrel-files/avoid-namespace-import": "error",
 			"no-script-url": "warn",
 			"no-self-assign": "warn",
 			"no-self-compare": "warn",
@@ -554,14 +566,14 @@ export default [
 		},
 	},
 	{
-		// Types package files require camelCase for barrelsby to work properly
+		// Types package files use camelCase for consistency
 		files: ["packages/types/src/*.ts"],
 		rules: {
 			"unicorn/filename-case": "off",
 		},
 	},
 	{
-		// Utils package files require camelCase for barrelsby to work properly
+		// Utils package files use camelCase for consistency
 		files: ["packages/utils/src/*.ts"],
 		rules: {
 			"unicorn/filename-case": "off",
@@ -579,6 +591,13 @@ export default [
 		],
 		rules: {
 			"import/no-default-export": "off",
+		},
+	},
+	{
+		// Index files (barrels) are allowed to have re-exports
+		files: ["**/index.ts", "**/index.tsx"],
+		rules: {
+			"barrel-files/avoid-re-export-all": "off",
 		},
 	},
 	{
