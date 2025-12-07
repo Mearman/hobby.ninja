@@ -1,18 +1,23 @@
-#!/usr/bin/env node
+#!/usr/bin/env tsx
 
 /**
  * Data Copy Script
  *
- * Copies JSON files from data/ to apps/web/public/data/ and generates searchable indices.
- * Handles 37,190+ files efficiently with progress logging and error handling.
+ * CRITICAL: Copies ONLY clean JSON files (excluding .html.json files) from data/ to apps/web/public/data/
+ * and generates searchable indices. Handles large file sets efficiently with progress logging.
+ *
+ * IMPORTANT: This script explicitly EXCLUDES all .html.json files - only clean .json files are processed.
+ *
+ * Usage:
+ *   tsx scripts/copy-database.ts
+ *   or make it executable: chmod +x scripts/copy-database.ts && ./scripts/copy-database.ts
  */
 
-import fs from 'fs/promises';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { promises as fs, readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, statSync } from 'fs';
+import * as path from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Use Node.js __dirname for compatibility
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 
 // Configuration
@@ -106,7 +111,7 @@ class Logger {
     const timestamp = new Date().toISOString();
     console.error(`[${timestamp}] ERROR: ${message}`);
     if (error) {
-      console.error(error);
+      console.error(String(error));
     }
   }
 
@@ -115,6 +120,14 @@ class Logger {
     const elapsed = ((Date.now() - this.startTime) / 1000).toFixed(1);
     console.log(`[${timestamp}] [${elapsed}s] ✅ ${message}`);
   }
+}
+
+/**
+ * CRITICAL: Function to check if a file is a clean JSON file
+ * This explicitly EXCLUDES .html.json files - only includes clean .json files
+ */
+function isCleanJsonFile(filename: string): boolean {
+  return filename.endsWith('.json') && !filename.endsWith('.html.json');
 }
 
 // File system utilities
@@ -160,9 +173,10 @@ async function copyUnifiedProducts(): Promise<UnifiedProduct[]> {
 
   try {
     const files = await fs.readdir(sourceDir, { withFileTypes: true });
-    const jsonFiles = files.filter(file => file.isFile() && file.name.endsWith('.json'));
+    // CRITICAL: Only process clean JSON files, EXCLUDE all .html.json files
+    const jsonFiles = files.filter(file => file.isFile() && isCleanJsonFile(file.name));
 
-    Logger.info(`Found ${jsonFiles.length} unified product files to process`);
+    Logger.info(`Found ${jsonFiles.length} clean unified product files to process (excluding .html.json files)`);
 
     for (const file of jsonFiles) {
       const srcPath = path.join(sourceDir, file.name);
@@ -208,7 +222,8 @@ async function copyManuals(): Promise<ManualData[]> {
       const targetBrandPath = path.join(targetDir, brandDir.name);
 
       const manualFiles = await fs.readdir(brandPath, { withFileTypes: true });
-      const jsonFiles = manualFiles.filter(file => file.isFile() && file.name.endsWith('.json'));
+      // CRITICAL: Only process clean JSON files, EXCLUDE all .html.json files
+      const jsonFiles = manualFiles.filter(file => file.isFile() && isCleanJsonFile(file.name));
 
       for (const file of jsonFiles) {
         const srcPath = path.join(brandPath, file.name);
@@ -263,7 +278,8 @@ async function copyItems(): Promise<ItemData[]> {
       const targetBrandPath = path.join(targetDir, brandDir.name);
 
       const itemFiles = await fs.readdir(brandPath, { withFileTypes: true });
-      const jsonFiles = itemFiles.filter(file => file.isFile() && file.name.endsWith('.json'));
+      // CRITICAL: Only process clean JSON files, EXCLUDE all .html.json files
+      const jsonFiles = itemFiles.filter(file => file.isFile() && isCleanJsonFile(file.name));
 
       for (const file of jsonFiles) {
         const srcPath = path.join(brandPath, file.name);
@@ -294,8 +310,8 @@ async function copyItems(): Promise<ItemData[]> {
 }
 
 // Index generation functions
-function generateTokens(text: string): string[] {
-  if (!text) return [];
+function generateTokens(text: any): string[] {
+  if (!text || typeof text !== 'string') return [];
 
   return text
     .toLowerCase()
@@ -393,7 +409,7 @@ async function generateSearchIndex(
 
     searchIndex.push({
       id: product.id,
-      tokens: [...new Set(tokens)], // Remove duplicates
+      tokens: Array.from(new Set(tokens)), // Remove duplicates
       name: product.name,
       series: product.series,
       model: product.model,
@@ -485,7 +501,8 @@ async function writeConfigJson<T>(filename: string, data: T): Promise<void> {
 
 // Main execution function
 async function main(): Promise<void> {
-  Logger.info('Starting data copy process...');
+  Logger.info('🚀 Starting CRITICAL data copy process...');
+  Logger.info('🚨 IMPORTANT: ONLY copying clean JSON files - EXCLUDING all .html.json files');
   Logger.info(`Source directory: ${CONFIG.sourceDir}`);
   Logger.info(`Target directory: ${CONFIG.targetDir}`);
 
@@ -495,7 +512,8 @@ async function main(): Promise<void> {
     await ensureDirectory(CONFIG.indicesDir);
     await ensureDirectory(CONFIG.configDir);
 
-    // Copy all data files
+    // Copy ONLY clean JSON data files (excluding .html.json files)
+    Logger.info('🔄 Copying ONLY clean JSON files - .html.json files will be EXCLUDED');
     const [unifiedProducts, manuals, items] = await Promise.all([
       copyUnifiedProducts(),
       copyManuals(),
@@ -560,12 +578,12 @@ async function getTotalDataSize(dirPath: string): Promise<number> {
 
 // Handle unhandled promise rejections
 process.on('unhandledRejection', (reason, promise) => {
-  Logger.error('Unhandled Rejection at:', promise, 'reason:', reason);
+  Logger.error(`Unhandled Rejection at: ${promise}, reason: ${reason}`);
   process.exit(1);
 });
 
 // Run the script
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] === __filename) {
   main().catch((error) => {
     Logger.error('Script execution failed', error);
     process.exit(1);
