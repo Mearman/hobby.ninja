@@ -4,7 +4,7 @@ import { z } from "zod";
 import { logger } from "../lib/logger";
 
 // Generate UUID function
-function generateId(): string {
+export function generateId(): string {
 	// Use browser's built-in crypto.randomUUID if available
 	if (typeof crypto !== "undefined" && crypto.randomUUID) {
 		return crypto.randomUUID();
