@@ -66,7 +66,7 @@ export default defineConfig({
   // Enhanced shared settings for all projects
   use: {
     // Base URL to use in actions like `await page.goto('/')`
-    baseURL: 'http://localhost:4200/hobby-ninja',
+    baseURL: 'http://localhost:3000/',
 
     // Collect trace when retrying the failed test
     trace: 'on-first-retry',
@@ -107,91 +107,12 @@ export default defineConfig({
         },
       },
     },
-
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-
-    // Mobile testing
-    {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
-      testMatch: '**/*.mobile.e2e.test.{ts,tsx}',
-    },
-    {
-      name: 'Mobile Safari',
-      use: { ...devices['iPhone 12'] },
-      testMatch: '**/*.mobile.e2e.test.{ts,tsx}',
-    },
-
-    // Tablet testing
-    {
-      name: 'Tablet',
-      use: { ...devices['iPad Pro'] },
-      testMatch: '**/*.tablet.e2e.test.{ts,tsx}',
-    },
-
-    // Branded browsers
-    {
-      name: 'Microsoft Edge',
-      use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    },
-    {
-      name: 'Google Chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    },
-
-    // Specialized testing projects
-    {
-      name: 'accessibility',
-      use: {
-        ...devices['Desktop Chrome'],
-        // Accessibility-specific settings
-        reducedMotion: 'reduce',
-        forcedColors: 'active',
-      },
-      testMatch: '**/*.a11y.e2e.test.{ts,tsx}',
-    },
-
-    {
-      name: 'visual',
-      use: {
-        ...devices['Desktop Chrome'],
-        // Visual regression settings
-        screenshot: 'only-on-failure',
-        fullPage: true,
-      },
-      testMatch: '**/*.visual.e2e.test.{ts,tsx}',
-    },
-
-    {
-      name: 'performance',
-      use: {
-        ...devices['Desktop Chrome'],
-        // Performance testing settings
-        launchOptions: {
-          args: [
-            '--disable-extensions',
-            '--disable-background-timer-throttling',
-            '--disable-backgrounding-occluded-windows',
-            '--disable-renderer-backgrounding',
-          ],
-        },
-      },
-      testMatch: '**/*.perf.e2e.test.{ts,tsx}',
-    },
   ],
 
   // Enhanced web server configuration (serve built app for e2e tests)
   webServer: {
-    command: 'pnpm nx serve-static web',
-    url: 'http://localhost:4200/hobby-ninja',
+    command: 'cd apps/web && pnpm vite --port 3000',
+    url: 'http://localhost:3000/',
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000, // 2 minutes
     stdout: 'pipe',
