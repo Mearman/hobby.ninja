@@ -11,6 +11,8 @@ import { z } from "zod";
 
 // ===== BASE GRAPH ENTITY TYPES =====
 
+// ===== BASE GRAPH ENTITY TYPES =====
+
 // Core value types for graph properties
 const GraphValue: any = z.lazy(() =>
   z.union([
@@ -24,14 +26,19 @@ const GraphValue: any = z.lazy(() =>
   ])
 );
 
-// Base graph entity with common properties
-const BaseGraphEntity = z.object({
-  id: z.string(),
-  type: z.string(),
+// Base entity schema with common properties for all graph objects
+const BaseEntitySchema = z.object({
+  $schema: z.string().url().optional(), // URL to the schema definition
+  $id: z.string(), // Internal path-based identifier (e.g. /graph/...)
+  id: z.string().optional(), // External business ID
+  category: z.enum(["schema", "data", "container", "relationship"]),
+  $type: z.string(), // usage: $type instead of type
+
   properties: z.record(z.string(), GraphValue).optional(),
+
   metadata: z.object({
-    createdAt: z.string().datetime(),
-    updatedAt: z.string().datetime(),
+    createdAt: z.string().datetime().optional(),
+    updatedAt: z.string().datetime().optional(),
     version: z.string().optional(),
     source: z.string().optional(),
     confidence: z.number().min(0).max(1).optional(),
@@ -40,18 +47,31 @@ const BaseGraphEntity = z.object({
 
 // ===== NODE AND EDGE SCHEMAS =====
 
-// Base node schema extending graph entity
-const BaseNode = BaseGraphEntity.extend({
-  category: z.literal("node"),
-  schemaId: z.string(), // Reference to schema node
+// Inline relationship definition (embedded in nodes)
+const InlineRelationshipSchema = z.object({
+  $type: z.string(),
+  node: z.string(), // Target node reference
+  $direction: z.enum(["directed", "undirected", "bidirectional"]).default("directed").optional(),
+  properties: z.record(z.string(), GraphValue).optional(),
 });
 
-// Base edge/relationship schema extending graph entity
-const BaseEdge = BaseGraphEntity.extend({
-  category: z.literal("edge"),
-  fromNode: z.string(), // Node ID
-  toNode: z.string(),   // Node ID
-  direction: z.enum(["directed", "undirected", "bidirectional"]).default("directed"),
+// Base node schema extending entity
+const BaseNodeSchema = BaseEntitySchema.extend({
+  category: z.enum(["schema", "data", "container"]),
+  name: z.union([
+    z.string(),
+    z.object({ ja: z.string(), en: z.string() }) // Multilingual support
+  ]).optional(),
+  $edges: z.array(InlineRelationshipSchema).optional(),
+  standaloneEdges: z.array(z.string()).optional(), // References to external edge files
+});
+
+// Base edge/relationship schema (standalone file)
+const BaseEdgeSchema = BaseEntitySchema.extend({
+  category: z.literal("relationship"),
+  $direction: z.enum(["directed", "undirected", "bidirectional"]).default("directed"),
+  fromNode: z.string(),
+  toNode: z.string(),
 });
 
 // ===== SCHEMA NODE DEFINITIONS =====
@@ -96,9 +116,9 @@ const CatalogItemSchemaDefinition = GraphEntitySchemaDefinition.extend({
 });
 
 // Schema node - defines structure for other nodes
-const SchemaNode = BaseNode.extend({
+const SchemaNode = BaseNodeSchema.extend({
   category: z.literal("schema"),
-  type: SchemaNodeTypeEnum,
+  $type: SchemaNodeTypeEnum,
   name: z.string(),
   description: z.string().optional(),
   definition: z.union([
@@ -162,8 +182,8 @@ const UnifiedSources = z.object({
 });
 
 // Unified item schema (catalog + manual data)
-const UnifiedItemNode = BaseNode.extend({
-  type: z.literal(DataNodeTypeEnum.enum.unified_item),
+const UnifiedItemNode = BaseNodeSchema.extend({
+  $type: z.literal(DataNodeTypeEnum.enum.unified_item),
   schemaId: z.string().startsWith("unified_item_schema_"),
   properties: z.object({
     name: MultilingualText,
@@ -178,8 +198,8 @@ const UnifiedItemNode = BaseNode.extend({
 });
 
 // Manual item schema (manual-only data)
-const ManualItemNode = BaseNode.extend({
-  type: z.literal(DataNodeTypeEnum.enum.manual_item),
+const ManualItemNode = BaseNodeSchema.extend({
+  $type: z.literal(DataNodeTypeEnum.enum.manual_item),
   schemaId: z.string().startsWith("manual_item_schema_"),
   properties: z.object({
     name: MultilingualText,
@@ -198,8 +218,8 @@ const ManualItemNode = BaseNode.extend({
 });
 
 // Catalog item schema (catalog-only data)
-const CatalogItemNode = BaseNode.extend({
-  type: z.literal(DataNodeTypeEnum.enum.catalog_item),
+const CatalogItemNode = BaseNodeSchema.extend({
+  $type: z.literal(DataNodeTypeEnum.enum.catalog_item),
   schemaId: z.string().startsWith("catalog_item_schema_"),
   properties: z.object({
     name: MultilingualText,
@@ -223,8 +243,8 @@ const CatalogItemNode = BaseNode.extend({
 });
 
 // Hobby type node
-const HobbyTypeNode = BaseNode.extend({
-  type: z.literal(DataNodeTypeEnum.enum.hobby_type),
+const HobbyTypeNode = BaseNodeSchema.extend({
+  $type: z.literal(DataNodeTypeEnum.enum.hobby_type),
   schemaId: z.string().startsWith("node_schema_"),
   properties: z.object({
     name: z.string(),
@@ -236,8 +256,8 @@ const HobbyTypeNode = BaseNode.extend({
 });
 
 // Brand node
-const BrandNode = BaseNode.extend({
-  type: z.literal(DataNodeTypeEnum.enum.brand),
+const BrandNode = BaseNodeSchema.extend({
+  $type: z.literal(DataNodeTypeEnum.enum.brand),
   schemaId: z.string().startsWith("node_schema_"),
   properties: z.object({
     name: z.string(),
@@ -248,8 +268,8 @@ const BrandNode = BaseNode.extend({
 });
 
 // Series node
-const SeriesNode = BaseNode.extend({
-  type: z.literal(DataNodeTypeEnum.enum.series),
+const SeriesNode = BaseNodeSchema.extend({
+  $type: z.literal(DataNodeTypeEnum.enum.series),
   schemaId: z.string().startsWith("node_schema_"),
   properties: z.object({
     name: MultilingualText,
@@ -274,8 +294,8 @@ const RelationshipTypeEnum = z.enum([
 ]);
 
 // Unified relationship schemas
-const HasCatalogDataEdge = BaseEdge.extend({
-  type: z.literal(RelationshipTypeEnum.enum.HAS_CATALOG_DATA),
+const HasCatalogDataEdge = BaseEdgeSchema.extend({
+  $type: z.literal(RelationshipTypeEnum.enum.HAS_CATALOG_DATA),
   schemaId: z.string().startsWith("edge_schema_"),
   properties: z.object({
     confidence: z.number().min(0).max(1),
@@ -283,8 +303,8 @@ const HasCatalogDataEdge = BaseEdge.extend({
   }),
 });
 
-const HasManualDataEdge = BaseEdge.extend({
-  type: z.literal(RelationshipTypeEnum.enum.HAS_MANUAL_DATA),
+const HasManualDataEdge = BaseEdgeSchema.extend({
+  $type: z.literal(RelationshipTypeEnum.enum.HAS_MANUAL_DATA),
   schemaId: z.string().startsWith("edge_schema_"),
   properties: z.object({
     confidence: z.number().min(0).max(1),
@@ -292,8 +312,8 @@ const HasManualDataEdge = BaseEdge.extend({
   }),
 });
 
-const MergedWithEdge = BaseEdge.extend({
-  type: z.literal(RelationshipTypeEnum.enum.MERGED_WITH),
+const MergedWithEdge = BaseEdgeSchema.extend({
+  $type: z.literal(RelationshipTypeEnum.enum.MERGED_WITH),
   schemaId: z.string().startsWith("edge_schema_"),
   properties: z.object({
     matchMethod: z.enum(["exact", "fuzzy", "partial"]),
@@ -303,18 +323,18 @@ const MergedWithEdge = BaseEdge.extend({
 });
 
 // General relationship schemas
-const HasBrandEdge = BaseEdge.extend({
-  type: z.literal(RelationshipTypeEnum.enum.HAS_BRAND),
+const HasBrandEdge = BaseEdgeSchema.extend({
+  $type: z.literal(RelationshipTypeEnum.enum.HAS_BRAND),
   schemaId: z.string().startsWith("edge_schema_"),
 });
 
-const HasSeriesEdge = BaseEdge.extend({
-  type: z.literal(RelationshipTypeEnum.enum.HAS_SERIES),
+const HasSeriesEdge = BaseEdgeSchema.extend({
+  $type: z.literal(RelationshipTypeEnum.enum.HAS_SERIES),
   schemaId: z.string().startsWith("edge_schema_"),
 });
 
-const BelongsToSeriesEdge = BaseEdge.extend({
-  type: z.literal(RelationshipTypeEnum.enum.BELONGS_TO_SERIES),
+const BelongsToSeriesEdge = BaseEdgeSchema.extend({
+  $type: z.literal(RelationshipTypeEnum.enum.BELONGS_TO_SERIES),
   schemaId: z.string().startsWith("edge_schema_"),
 });
 
@@ -378,9 +398,9 @@ class SchemaGeneratorImpl {
   // Generate all schemas
   static generateAllSchemas() {
     return {
-      graph_entity: BaseGraphEntity,
-      node: BaseNode,
-      edge: BaseEdge,
+      graph_entity: BaseEntitySchema,
+      node: BaseNodeSchema,
+      edge: BaseEdgeSchema,
       schema_node: SchemaNode,
       unified_item: UnifiedItemNode,
       manual_item: ManualItemNode,
@@ -399,9 +419,9 @@ class SchemaGeneratorImpl {
 // ===== TYPE INFERENCE AND EXPORTS =====
 
 export type UniversalGraphType = z.infer<typeof UniversalGraphSchema>;
-export type BaseGraphEntityType = z.infer<typeof BaseGraphEntity>;
-export type BaseNodeType = z.infer<typeof BaseNode>;
-export type BaseEdgeType = z.infer<typeof BaseEdge>;
+export type BaseEntitySchemaType = z.infer<typeof BaseEntitySchema>;
+export type BaseNodeSchemaType = z.infer<typeof BaseNodeSchema>;
+export type BaseEdgeSchemaType = z.infer<typeof BaseEdgeSchema>;
 export type SchemaNodeType = z.infer<typeof SchemaNode>;
 export type UnifiedItemNodeType = z.infer<typeof UnifiedItemNode>;
 export type ManualItemNodeType = z.infer<typeof ManualItemNode>;
@@ -415,9 +435,9 @@ export type GraphValueType = z.infer<typeof GraphValue>;
 
 export {
   GraphValue,
-  BaseGraphEntity,
-  BaseNode,
-  BaseEdge,
+  BaseEntitySchema,
+  BaseNodeSchema,
+  BaseEdgeSchema,
   SchemaNode,
   UnifiedItemNode,
   ManualItemNode,
