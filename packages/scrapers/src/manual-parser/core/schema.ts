@@ -17,7 +17,7 @@ import type {
 	NavigationItem,
 	DocumentStructure,
 	SourceInfo,
-} from "@hobby-ninja/types";
+} from "@hobby-ninja/types/manual";
 import { z } from "zod";
 
 // Japanese text validation
@@ -77,7 +77,7 @@ const BlockDataSchema = z.object({
 	items: z.array(z.string()).optional(),
 	rows: z.array(z.array(z.string())).optional(),
 	image: z.lazy(() => ImageReferenceSchema).optional(),
-	specifications: z.record(z.union([z.string(), z.number(), z.boolean()])).optional(),
+	specifications: z.record(z.string(), z.union([z.string(), z.number(), z.boolean()])).optional(),
 });
 
 const ContentBlockSchema: z.ZodType<ContentBlock> = z.object({

@@ -1,4 +1,4 @@
-import type { RenderingDetection, ProgressiveEnhancementResult, RenderingType } from "@hobby-ninja/types";
+import type { RenderingDetection, ProgressiveEnhancementResult, RenderingType } from "@hobby-ninja/types/profile";
 
 export class RenderingDetector {
 	private static readonly FRAMEWORK_PATTERNS = {

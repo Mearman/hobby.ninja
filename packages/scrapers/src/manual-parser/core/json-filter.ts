@@ -6,7 +6,7 @@
 
 import { promises as fs } from "node:fs";
 
-import type { LocalizedText } from "@hobby-ninja/types";
+import type { LocalizedText } from "@hobby-ninja/types/manual";
 
 /**
  * Raw parsed HTML JSON structure (from SimpleHtmlParser)

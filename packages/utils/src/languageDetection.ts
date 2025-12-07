@@ -1,4 +1,4 @@
-import type { LanguageDetection, LanguageAnalysisResult, LanguageCode } from "@hobby-ninja/types";
+import type { LanguageDetection, LanguageAnalysisResult, LanguageCode } from "@hobby-ninja/types/language";
 
 export class LanguageDetector {
 	private static readonly JAPANESE_CHARACTER_PATTERN = /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF]/g;
