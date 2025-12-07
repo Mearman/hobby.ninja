@@ -93,11 +93,3 @@ import { eslintPluginNoEmoji } from './eslint-plugins';
 }
 ```
 
-## Barrelsby Integration
-
-The `eslint-plugins/` folder is managed by **barrelsby**, which automatically generates barrel exports:
-
-- Run `pnpm barrels` to regenerate exports
-- Export configuration in `.barrelsby.json`
-- Barrelsby creates `index.ts` with clean imports
-- Manual adjustments may be needed for ESLint plugin compatibility
