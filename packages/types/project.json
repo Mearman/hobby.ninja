@@ -9,21 +9,11 @@
       "outputs": ["{options.outputPath}"],
       "cache": true,
       "options": {
-        "outputPath": "dist/packages/types",
+        "outputPath": "packages/types/dist",
         "main": "packages/types/src/index.ts",
         "tsConfig": "packages/types/tsconfig.json",
         "assets": []
       }
-    },
-    "typecheck": {
-      "executor": "@nx/js:tsc",
-      "options": {
-        "tsConfig": "packages/types/tsconfig.json",
-        "main": "packages/types/src/index.ts",
-        "outputPath": "dist/packages/types",
-        "noEmit": true
-      },
-      "cache": true
     },
     "test": {
       "executor": "@nx/vitest:test",
