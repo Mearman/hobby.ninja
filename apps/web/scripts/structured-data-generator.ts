@@ -55,60 +55,60 @@ export class StructuredDataGenerator {
 		};
 
 		// Add brand information
-		if (data.brand?.name?.en) {
-			product.brand = {
+		if (data["brand"]?.["name"]?.["en"]) {
+			product["brand"] = {
 				"@type": "Brand",
-				name: data.brand.name.en,
+				name: data["brand"]["name"]["en"],
 			};
 		}
 
 		// Add series information
-		if (data.series?.name?.en) {
-			product.isPartOf = {
+		if (data["series"]?.["name"]?.["en"]) {
+			product["isPartOf"] = {
 				"@type": "ProductModel",
-				name: data.series.name.en,
+				name: data["series"]["name"]["en"],
 			};
 		}
 
 		// Add grade information
-		if (data.grade) {
-			product.additionalProperty = [
+		if (data["grade"]) {
+			product["additionalProperty"] = [
 				{
 					"@type": "PropertyValue",
 					name: "Grade",
-					value: data.grade,
+					value: data["grade"],
 				},
 			];
 		}
 
 		// Add scale information
-		if (data.scale) {
-			const currentProps = product.additionalProperty as any[] || [];
+		if (data["scale"]) {
+			const currentProps = product["additionalProperty"] as any[] || [];
 			currentProps.push({
 				"@type": "PropertyValue",
 				name: "Scale",
-				value: data.scale,
+				value: data["scale"],
 			});
-			product.additionalProperty = currentProps;
+			product["additionalProperty"] = currentProps;
 		}
 
 		// Add release date
-		if (data.releaseDate) {
-			product.releaseDate = new Date(data.releaseDate.year, data.releaseDate.month - 1, data.releaseDate.day).toISOString();
+		if (data["releaseDate"]) {
+			product["releaseDate"] = new Date(data["releaseDate"]["year"], data["releaseDate"]["month"] - 1, data["releaseDate"]["day"]).toISOString();
 		}
 
 		// Add price information
-		if (data.price) {
-			product.offers = {
+		if (data["price"]) {
+			product["offers"] = {
 				"@type": "Offer",
-				price: data.price,
+				price: data["price"],
 				priceCurrency: "JPY",
 			};
 		}
 
 		// Add images
-		if (data.images?.length > 0) {
-			product.image = data.images.map((img: any) => img.url || img).filter(Boolean);
+		if (data["images"]?.length > 0) {
+			product["image"] = data["images"].map((img: any) => img.url || img).filter(Boolean);
 		}
 
 		return product;
@@ -129,13 +129,13 @@ export class StructuredDataGenerator {
 		};
 
 		// Add logo if available
-		if (data.logo) {
-			brand.logo = data.logo;
+		if (data["logo"]) {
+			brand["logo"] = data["logo"];
 		}
 
 		// Add URL if available
-		if (data.url) {
-			brand.url = data.url;
+		if (data["url"]) {
+			brand["url"] = data["url"];
 		}
 
 		return brand;
@@ -156,10 +156,10 @@ export class StructuredDataGenerator {
 		};
 
 		// Add brand if available
-		if (data.brand?.name?.en) {
-			series.brand = {
+		if (data["brand"]?.["name"]?.["en"]) {
+			series["brand"] = {
 				"@type": "Brand",
-				name: data.brand.name.en,
+				name: data["brand"]["name"]["en"],
 			};
 		}
 
@@ -195,20 +195,20 @@ export class StructuredDataGenerator {
 		};
 
 		// Add page count if available
-		if (data.pages) {
-			manual.pageEnd = data.pages;
+		if (data["pages"]) {
+			manual["pageEnd"] = data["pages"];
 		}
 
 		// Add PDF URL if available
-		if (data.pdfUrl) {
-			manual.url = data.pdfUrl;
+		if (data["pdfUrl"]) {
+			manual["url"] = data["pdfUrl"];
 		}
 
 		// Add associated product if available
-		if (data.product?.name) {
-			manual.about = {
+		if (data["product"]?.["name"]) {
+			manual["about"] = {
 				"@type": "Product",
-				name: data.product.name,
+				name: data["product"]["name"],
 			};
 		}
 
@@ -220,20 +220,20 @@ export class StructuredDataGenerator {
 	 */
 	private extractDescription(data: Record<string, any>): string {
 		// Try different description fields
-		if (data.description?.en) return data.description.en;
-		if (data.description?.ja) return data.description.ja;
-		if (data.summary?.en) return data.summary.en;
-		if (data.summary?.ja) return data.summary.ja;
+		if (data["description"]?.["en"]) return data["description"]["en"];
+		if (data["description"]?.["ja"]) return data["description"]["ja"];
+		if (data["summary"]?.["en"]) return data["summary"]["en"];
+		if (data["summary"]?.["ja"]) return data["summary"]["ja"];
 
 		// Generate description from available data
 		const parts: string[] = [];
-		if (data.grade) parts.push(`Grade: ${data.grade}`);
-		if (data.scale) parts.push(`Scale: ${data.scale}`);
-		if (data.releaseDate) {
-			parts.push(`Released: ${data.releaseDate.year}`);
+		if (data["grade"]) parts.push(`Grade: ${data["grade"]}`);
+		if (data["scale"]) parts.push(`Scale: ${data["scale"]}`);
+		if (data["releaseDate"]) {
+			parts.push(`Released: ${data["releaseDate"]["year"]}`);
 		}
 
-		return parts.length > 0 ? parts.join(" • ") : `${data.name?.ja || ""} details`;
+		return parts.length > 0 ? parts.join(" • ") : `${data["name"]?.["ja"] || ""} details`;
 	}
 
 	/**
