@@ -5,7 +5,7 @@
  * Tests that our SSG infrastructure can load and process graph data
  */
 
-const { generateGraphRoutes, loadGraphNode } = require('./dist/utils/graph-routes-generator.js');
+const { generateGraphRoutes, loadGraphNode } = require('../src/utils/graph-routes-generator.ts');
 
 async function testSSG() {
   console.log('🧪 Testing SSG Infrastructure...\n');
