@@ -1,5 +1,5 @@
-import { Container, Title, Text, Card, Button, Group, Stack, TextInput, Select, Textarea, NumberInput, SimpleGrid, Alert } from "@mantine/core";
-import { IconSave, IconArrowLeft, IconPhoto, IconPlus, IconX } from "@tabler/icons-react";
+import { Container, Title, Text, Card, Button, Group, Stack, TextInput, Select, Textarea, NumberInput, SimpleGrid, Alert, Skeleton } from "@mantine/core";
+import { IconDeviceFloppy, IconArrowLeft, IconPhoto, IconPlus, IconX } from "@tabler/icons-react";
 import { Link, useParams, useNavigate } from "@tanstack/react-router";
 import React, { useState, useEffect } from "react";
 
@@ -92,12 +92,12 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 
 					// Populate form with existing data
 					setFormData({
-						name: itemData.data.name || "",
-						brand: itemData.data.brand || "",
-						series: itemData.data.series || "",
-						grade: itemData.data.grade || "",
-						scale: itemData.data.scale || "",
-						price: itemData.data.price?.toString() || "",
+						name: itemData.data['name'] || "",
+						brand: itemData.data['brand'] || "",
+						series: itemData.data['series'] || "",
+						grade: itemData.data['grade'] || "",
+						scale: itemData.data['scale'] || "",
+						price: itemData.data['price']?.toString() || "",
 						status: itemData.status,
 						notes: itemData.notes || "",
 						tags: itemData.tags || [],
@@ -171,6 +171,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 			}) : collectionService.createItem({
 				hobbyType,
 				data: itemData,
+				images: [],
 				status: formData.status,
 				tags: formData.tags,
 				notes: formData.notes.trim(),
@@ -226,9 +227,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 						<Group gap="sm">
 							<Button
 								variant="subtle"
-								component={Link}
-								to="/collection/$hobbyType"
-								params={{ hobbyType }}
+								onClick={() => navigate({ to: "/collection/$hobbyType", params: { hobbyType } })}
 								leftSection={<IconArrowLeft size={16} />}
 								size="sm"
 							>
@@ -246,7 +245,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 					<Button
 						onClick={handleSave}
 						loading={saving}
-						leftSection={<IconSave size={16} />}
+						leftSection={<IconDeviceFloppy size={16} />}
 						color={config.color}
 					>
 						{isEditing ? "Save Changes" : "Add Item"}

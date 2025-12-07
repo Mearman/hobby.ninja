@@ -96,7 +96,7 @@ export function SharedListPage(): React.ReactElement {
 				if (parsedData.items.length > 0) {
 					const itemPromises = parsedData.items.map(async (itemId: string) => {
 						try {
-							const item = await dataService.getItemById(itemId);
+							const item = await dataService.getItemById(itemId, 'unified');
 							return item;
 						} catch (itemError) {
 							console.warn(`Failed to load item ${itemId}:`, itemError);
