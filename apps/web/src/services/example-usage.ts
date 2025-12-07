@@ -4,8 +4,9 @@
  * Demonstrates how to use the data service for common operations.
  */
 
-import { dataService, progressTracker, workerManager } from "./index";
-import type { FilterOptions, SearchResult } from "./index";
+import { dataService, progressTracker, workerManager } from "./dataService";
+import type { FilterOptions, SearchResult } from "./dataService";
+import type { ProgressUpdate } from "./progressTracker";
 
 /**
  * Basic search example
@@ -44,7 +45,7 @@ export async function searchWithProgressExample() {
 			{},
 			{
 				useWorker: true,
-				onProgress: (progress) => {
+				onProgress: (progress: ProgressUpdate) => {
 					console.log(`Progress: ${progress.percentage}% - ${progress.message}`);
 				},
 				fieldWeights: {
@@ -122,7 +123,7 @@ export async function preloadDataExample() {
 			indices: true,
 			sampleData: 100,
 			useWorker: true,
-			onProgress: (progress) => {
+			onProgress: (progress: ProgressUpdate) => {
 				console.log(`Preload progress: ${progress.percentage}% - ${progress.message}`);
 			},
 		});
@@ -145,7 +146,7 @@ export async function exportDataExample() {
 			sources: ["unified"],
 			format: "json",
 			includeStats: true,
-			onProgress: (progress) => {
+			onProgress: (progress: ProgressUpdate) => {
 				console.log(`Export progress: ${progress.percentage}% - ${progress.message}`);
 			},
 		});
@@ -253,7 +254,7 @@ export async function advancedOperationExample() {
 				backoffMs: 1000,
 				maxBackoffMs: 5000,
 			},
-			onProgress: (progress) => {
+			onProgress: (progress: ProgressUpdate) => {
 				console.log(`Operation progress: ${progress.percentage}% - ${progress.message}`);
 			},
 			onComplete: (result) => {

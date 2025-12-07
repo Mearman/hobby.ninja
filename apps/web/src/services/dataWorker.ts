@@ -218,8 +218,8 @@ class SearchProcessor {
 		}
 
 		return results
-			.filter(item => item.score > 0.1)
-			.sort((a, b) => b.score - a.score);
+			.filter((item: any) => item.score > 0.1)
+			.sort((a: any, b: any) => b.score - a.score);
 	}
 
 	private processBatch(
@@ -248,20 +248,20 @@ class SearchProcessor {
 
 				// Apply field weights
 				if (fieldWeights && item.metadata) {
-					if (fieldWeights.name && item.metadata.name) {
+					if (fieldWeights['name'] && item.metadata['name']) {
 						const nameRelevance = WorkerTextProcessor.calculateRelevance(
 							normalizedQuery,
-							item.metadata.name,
+							item.metadata['name'],
 						);
-						score += nameRelevance * fieldWeights.name;
+						score += nameRelevance * fieldWeights['name'];
 					}
 
-					if (fieldWeights.series && item.metadata.series) {
+					if (fieldWeights['series'] && item.metadata['series']) {
 						const seriesRelevance = WorkerTextProcessor.calculateRelevance(
 							normalizedQuery,
-							item.metadata.series,
+							item.metadata['series'],
 						);
-						score += seriesRelevance * fieldWeights.series;
+						score += seriesRelevance * fieldWeights['series'];
 					}
 
 					if (fieldWeights.description && item.metadata.description) {
@@ -301,10 +301,10 @@ class DataAggregator {
 		catalogItems: DatabaseCatalogItem[],
 	): Promise<{
     aggregated: UnifiedItem[];
-    conflicts: Array<{ id: string; field: string; unified: any; manual: any; catalog: any }>;
+    conflicts: Array<{ id: string; field: string; unified: unknown; manual: unknown; catalog: unknown }>;
     statistics: { totalUnified; manualOnly; catalogOnly; withManual; withCatalog; withBoth };
   }> {
-		const conflicts: Array<{ id: string; field: string; unified: any; manual: any; catalog: any }> = [];
+		const conflicts: Array<{ id: string; field: string; unified: unknown; manual: unknown; catalog: unknown }> = [];
 		const processedIds = new Set<string>();
 
 		// Process items in batches
