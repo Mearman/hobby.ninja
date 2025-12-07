@@ -16,14 +16,15 @@ import {
   UnifiedItemNodeType,
   ManualItemNodeType,
   CatalogItemNodeType,
-  BaseGraphEntityType
+  BaseEntitySchemaType,
+  MultilingualText
 } from "../schemas/universal-graph-schema.js";
 
 // Export types for the Zod-validated data structures
 export type UnifiedItem = UnifiedItemNodeType;
 export type ManualItem = ManualItemNodeType;
 export type CatalogItem = CatalogItemNodeType;
-export type GraphEntity = BaseGraphEntityType;
+export type GraphEntity = BaseEntitySchemaType;
 
 interface IndexEntry {
   filename: string;
@@ -1181,11 +1182,10 @@ export class DataService {
 
 // Export types
 export type {
-  LocalizedName,
+  MultilingualText,
   ReleaseDate,
   ManualItem,
   CatalogItem,
-  DatabaseCatalogItem,
   UnifiedItem,
   SearchResult,
   FilterOptions,
