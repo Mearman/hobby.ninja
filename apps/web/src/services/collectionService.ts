@@ -274,7 +274,7 @@ export class CollectionService {
 		}
 
 		await this.saveToStorage(storage);
-		logger.info(`Created item: ${newItem.data.name || newItem.id}`);
+		logger.info(`Created item: ${newItem.data?.['name'] || newItem.id}`);
 		return newItem;
 	}
 
@@ -407,7 +407,7 @@ export class CollectionService {
 
 		if (filters.tags && filters.tags.length > 0) {
 			items = items.filter(item =>
-				filters.tags.some(tag => item.tags.includes(tag)),
+				filters.tags?.some(tag => item.tags.includes(tag)),
 			);
 		}
 
@@ -419,7 +419,7 @@ export class CollectionService {
 
 				// Search in item data fields
 				const dataString = JSON.stringify(item.data).toLowerCase();
-				const nameMatch = item.data.name?.toLowerCase().includes(queryLower);
+				const nameMatch = item.data['name']?.toString().toLowerCase().includes(queryLower);
 				const tagsMatch = item.tags.some(tag => tag.toLowerCase().includes(queryLower));
 
 				return dataString.includes(queryLower) || nameMatch || tagsMatch;
@@ -440,7 +440,7 @@ export class CollectionService {
 		const results = {
 			success: 0,
 			failed: 0,
-			errors: [],
+			errors: [] as string[],
 		};
 
 		try {
@@ -492,17 +492,20 @@ export class CollectionService {
 					await this.createItem({
 						hobbyType,
 						data: itemData,
+						images: [], // Default empty images array
+						tags: [], // Default empty tags array
 						status: "wanted", // Default status for imported items
 						metadata: {
 							source: "import",
-							sourceFormat: importData.format,
+							sourceId: importData.format,
 						},
 					});
 
 					results.success++;
 				} catch (error) {
 					results.failed++;
-					results.errors.push(`Row ${results.success + results.failed}: ${error.message}`);
+					const errorMessage = error instanceof Error ? error.message : String(error);
+					results.errors.push(`Row ${results.success + results.failed}: ${errorMessage}`);
 				}
 			}
 
@@ -510,7 +513,8 @@ export class CollectionService {
 		} catch (error) {
 			logger.error("Import failed:", error);
 			results.failed = importData.data.length;
-			results.errors = [error.message];
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			results.errors = [errorMessage];
 		}
 
 		return results;
