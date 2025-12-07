@@ -20,8 +20,7 @@ import {
 	Modal,
 	ScrollArea,
 	CopyButton,
-	QRCodeSVG,
-} from "@mantine/core";
+	} from "@mantine/core";
 import { notifications } from "@mantine/notifications";
 import {
 	IconShare,
@@ -36,6 +35,7 @@ import {
 	IconFileText,
 	IconFileZip,
 	IconRefresh,
+	IconInfoCircle,
 } from "@tabler/icons-react";
 import React, { useState, useCallback, useMemo } from "react";
 
@@ -103,7 +103,11 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 		return items.slice(0, shareOptions.maxItems).map((item) => {
 			const baseItem = {
 				id: item.id,
-				name: "name" in item ? (item.name.ja || item.name.en || item.name) : item.title,
+				name: "properties" in item && item.properties?.name
+					? (item.properties.name.ja || item.properties.name.en || item.properties.name)
+					: "title" in item
+						? item.title
+						: item.id,
 			};
 
 			if ("sources" in item) {
@@ -112,9 +116,9 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 				return {
 					...baseItem,
 					type: "unified" as const,
-					grade: unified.grade,
-					scale: unified.scale,
-					series: unified.series?.ja || unified.series?.en,
+					grade: unified.properties?.grade,
+					scale: unified.properties?.scale,
+					series: unified.properties?.series?.ja || unified.properties?.series?.en,
 					thumbnail: getThumbnail(unified),
 				};
 			} else if ("metadata" in item) {
@@ -123,9 +127,9 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 				return {
 					...baseItem,
 					type: "manual" as const,
-					grade: manual.metadata?.product?.grade,
-					scale: manual.metadata?.product?.scale,
-					series: manual.metadata?.product?.series,
+					grade: manual.properties?.grade?.code,
+					scale: manual.properties?.scale,
+					series: manual.properties?.series?.ja || manual.properties?.series?.en,
 					thumbnail: getManualThumbnail(manual),
 				};
 			} else {
@@ -146,19 +150,22 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 	// Get thumbnail from unified item
 	const getThumbnail = (item: UnifiedItem): string | undefined => {
 		// Try to get thumbnail from catalog or manual data
-		if (item.sources?.catalog) {
-			return `/data/images/catalog/${item.sources.catalog.id}/thumb.jpg`;
+		if (item.properties?.sources?.catalog) {
+			return `/data/images/catalog/${item.properties.sources.catalog.id}/thumb.jpg`;
 		}
-		if (item.sources?.manual) {
-			return `/data/images/manual/${item.sources.manual.id}/thumb.jpg`;
+		if (item.properties?.sources?.manual) {
+			return `/data/images/manual/${item.properties.sources.manual.id}/thumb.jpg`;
 		}
 		return undefined;
 	};
 
 	// Get thumbnail from manual item
 	const getManualThumbnail = (item: ManualItem): string | undefined => {
-		if (item.assets?.thumbnails?.length > 0) {
-			return item.assets.thumbnails[0].src;
+		if (item.properties?.thumbnailImage) {
+			return item.properties.thumbnailImage;
+		}
+		if (item.properties?.productImage) {
+			return item.properties.productImage;
 		}
 		return undefined;
 	};
@@ -283,13 +290,21 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 		const csvRows = [headers.join(",")];
 
 		for (const item of items) {
+			// Get name from the flattened structure used in ShareableItem
+			const name = item.name;
+			const nameStr = `"${String(name).replaceAll('"', '""')}"`;
+			const grade = item.grade || "";
+			const scale = item.scale || "";
+			const series = item.series;
+			const seriesStr = series ? `"${String(series).replaceAll('"', '""')}"` : "";
+
 			const values = [
 				item.id,
 				item.type,
-				`"${item.name.replaceAll('"', '""')}"`,
-				item.grade || "",
-				item.scale || "",
-				`"${item.series?.replaceAll('"', '""') || ""}"`,
+				nameStr,
+				grade,
+				scale,
+				seriesStr,
 			];
 			csvRows.push(values.join(","));
 		}
@@ -401,7 +416,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 											min={1}
 											max={100}
 											value={shareOptions.maxItems}
-											onChange={(value) => { setShareOptions({ ...shareOptions, maxItems: value || 50 }); }}
+											onChange={(value) => { setShareOptions({ ...shareOptions, maxItems: typeof value === 'number' ? value : 50 }); }}
 										/>
 
 										<Group>
@@ -587,15 +602,12 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 								borderRadius: "8px",
 							}}
 						>
-							<QRCodeSVG
-								value={shareResult.url}
-								size={256}
-								bgColor="#FFFFFF"
-								fgColor="#000000"
-								level="M"
-							/>
+							{/* QR Code component - TODO: Implement QR code generation */}
+							<Box w={256} h={256} bg="gray.2" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+								<Text color="dimmed">QR Code</Text>
+							</Box>
 						</Box>
-						<Text size="sm" c="dimmed" align="center">
+						<Text size="sm" c="dimmed" ta="center">
               Scan this QR code to view the shared item list
 						</Text>
 						<Button

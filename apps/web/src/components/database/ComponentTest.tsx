@@ -76,7 +76,6 @@ export function ComponentTest() {
 					onFiltersClick={() => { console.log("Filters"); }}
 					compact={viewMode === "grid"}
 					showFilters={true}
-					viewMode={viewMode}
 					infiniteScroll={false}
 				/>
 

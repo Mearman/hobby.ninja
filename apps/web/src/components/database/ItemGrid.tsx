@@ -21,7 +21,8 @@ import {
 	Container,
 	Flex,
 	Badge,
-	useMantineTheme, useMediaQuery, rem } from "@mantine/core";
+	useMantineTheme, rem } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import {
 	IconGridDots,
 	IconList,
@@ -346,7 +347,7 @@ export function ItemGrid({
 					<Text c="red" size="lg" fw={500}>
             Error loading items
 					</Text>
-					<Text c="dimmed" align="center">
+					<Text c="dimmed">
 						{error}
 					</Text>
 					<Button onClick={handleRefresh} loading={isRefreshing}>
@@ -366,7 +367,7 @@ export function ItemGrid({
             No items found
 					</Text>
 					{searchQuery && (
-						<Text c="dimmed" align="center">
+						<Text c="dimmed">
               Try adjusting your search query or filters
 						</Text>
 					)}

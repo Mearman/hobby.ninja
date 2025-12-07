@@ -28,15 +28,15 @@ import {
 	IconEye,
 	IconStar,
 	IconPhotoOff,
-	IconSource,
+	IconLink,
 } from "@tabler/icons-react";
 import React, { useState, useRef, useCallback } from "react";
 
-import type { UnifiedItem, ManualItem, DatabaseCatalogItem } from "../../services/dataService";
+import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
 interface ItemCardProps {
   /** Item data from any source */
-  item: UnifiedItem | ManualItem | DatabaseCatalogItem;
+  item: UnifiedItem | ManualItem | CatalogItem;
   /** Item type for source identification */
   itemType: "unified" | "manual" | "catalog";
   /** Whether to show compact view */
@@ -48,7 +48,7 @@ interface ItemCardProps {
   /** View mode (grid or list) */
   viewMode?: "grid" | "list";
   /** Custom click handler */
-  onClick?: (item: UnifiedItem | ManualItem | DatabaseCatalogItem) => void;
+  onClick?: (item: UnifiedItem | ManualItem | CatalogItem) => void;
   /** Loading state */
   loading?: boolean;
 }
@@ -72,23 +72,20 @@ export function ItemCard({
 
 	// Extract display name with fallbacks
 	const getDisplayName = useCallback(() => {
-		if ("name" in item) {
-			const name = item.name as { ja?: string; en?: string } | string;
+		if (item.properties?.name) {
+			const name = item.properties.name as { ja?: string; en?: string } | string;
 			if (typeof name === "string") {
 				return name;
 			}
 			return name.en || name.ja || "Unknown";
 		}
-		if ("title" in item) {
-			return item.title;
-		}
-		return "Unknown";
+		return item.id;
 	}, [item]);
 
 	// Extract series information
 	const getSeries = useCallback(() => {
-		if ("series" in item) {
-			const series = item.series as { ja?: string; en?: string } | string;
+		if (item.properties?.series) {
+			const series = item.properties.series as { ja?: string; en?: string } | string;
 			if (typeof series === "string") {
 				return series;
 			}
@@ -99,19 +96,30 @@ export function ItemCard({
 
 	// Extract grade and scale
 	const getGrade = useCallback(() => {
-		return "grade" in item ? item.grade : undefined;
-	}, [item]);
+		if (itemType === "unified") {
+			const properties = item.properties as UnifiedItem["properties"];
+			return properties?.grade;
+		}
+		if (itemType === "manual") {
+			const properties = item.properties as ManualItem["properties"];
+			if (properties?.grade && "code" in properties.grade) {
+				return properties.grade.code;
+			}
+		}
+		// Catalog items don't have grade
+		return undefined;
+	}, [item, itemType]);
 
 	const getScale = useCallback(() => {
-		return "scale" in item ? item.scale : undefined;
+		return item.properties?.scale as string;
 	}, [item]);
 
 	// Extract release date
 	const getReleaseDate = useCallback(() => {
-		if ("releaseDate" in item) {
-			const date = item.releaseDate;
+		if (item.properties?.releaseDate) {
+			const date = item.properties.releaseDate;
 			if (date && typeof date === "object") {
-				if ("ja" in date) {
+				if ("ja" in date && date.ja) {
 					return date.ja;
 				}
 				if ("year" in date) {
@@ -131,26 +139,34 @@ export function ItemCard({
 	// Get image source
 	const getImageSrc = useCallback(() => {
 		// For unified items, prioritize catalog images
-		if (itemType === "unified" && "sources" in item) {
-			const unified = item;
-			if (unified.sources.catalog) {
+		if (itemType === "unified") {
+			const properties = item.properties as UnifiedItem["properties"];
+			if (properties?.sources?.catalog) {
 				// Try to get catalog image
-				return `/data/bandai/items/${unified.id}/image.jpg`;
+				return `/data/bandai/items/${item.id}/image.jpg`;
 			}
-			if (unified.sources.manual) {
+			if (properties?.sources?.manual) {
 				// Try manual image
-				return `/data/bandai/manuals/${unified.id}/image.jpg`;
+				return `/data/bandai/manuals/${item.id}/image.jpg`;
 			}
 		}
 
-		// For catalog items
-		if (itemType === "catalog" && "images" in item && item.images?.length > 0) {
-			return item.images[0];
+		// For catalog items - note: catalog items don't have images property in the schema
+		if (itemType === "catalog") {
+			const properties = item.properties as CatalogItem["properties"];
+			// Catalog items don't have images property in schema, fall back to placeholder
+			return null;
 		}
 
-		// For manual items, use first image from assets
-		if (itemType === "manual" && "assets" in item && item.assets?.images?.length > 0) {
-			return item.assets.images[0];
+		// For manual items, use product image or thumbnail image
+		if (itemType === "manual") {
+			const properties = item.properties as ManualItem["properties"];
+			if (properties?.productImage) {
+				return properties.productImage;
+			}
+			if (properties?.thumbnailImage) {
+				return properties.thumbnailImage;
+			}
 		}
 
 		return null;
@@ -158,19 +174,22 @@ export function ItemCard({
 
 	// Get source confidence for unified items
 	const getMatchConfidence = useCallback(() => {
-		if (itemType === "unified" && "matchStage" in item) {
-			return item.matchStage;
+		if (itemType === "unified") {
+			const properties = item.properties as UnifiedItem["properties"];
+			if (properties?.matchStage !== undefined) {
+				return properties.matchStage;
+			}
 		}
 		return null;
 	}, [item, itemType]);
 
 	// Get source indicators
 	const getSourceIndicators = useCallback(() => {
-		if (itemType === "unified" && "sources" in item) {
-			const sources = item.sources as any;
+		if (itemType === "unified") {
+			const properties = item.properties as UnifiedItem["properties"];
 			return {
-				hasCatalog: Boolean(sources.catalog),
-				hasManual: Boolean(sources.manual),
+				hasCatalog: Boolean(properties?.sources?.catalog),
+				hasManual: Boolean(properties?.sources?.manual),
 			};
 		}
 		return {
@@ -262,14 +281,14 @@ export function ItemCard({
 			<Group gap={4}>
 				{hasCatalog && (
 					<Tooltip label="Catalog data available">
-						<Badge size="xs" color="blue" variant="light" leftSection={<IconSource size={10} />}>
+						<Badge size="xs" color="blue" variant="light" leftSection={<IconLink size={10} />}>
               Cat
 						</Badge>
 					</Tooltip>
 				)}
 				{hasManual && (
 					<Tooltip label="Manual data available">
-						<Badge size="xs" color="orange" variant="light" leftSection={<IconSource size={10} />}>
+						<Badge size="xs" color="orange" variant="light" leftSection={<IconLink size={10} />}>
               Man
 						</Badge>
 					</Tooltip>

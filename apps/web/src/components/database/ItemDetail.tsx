@@ -35,7 +35,7 @@ import {
 	IconEye,
 	IconSearch,
 	IconPhoto,
-	IconFilePdf,
+	IconFile,
 	IconInfoCircle,
 	IconCheck,
 	IconAlertTriangle,
@@ -215,7 +215,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
 
 	if (!pdfUrl) {
 		return (
-			<Alert icon={<IconFilePdf size={16} />} title="Manual Not Available">
+			<Alert icon={<IconFile size={16} />} title="Manual Not Available">
         No PDF manual is available for this item.
 			</Alert>
 		);
@@ -225,7 +225,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
 		<>
 			<Button
 				variant="outline"
-				leftSection={<IconFilePdf size={16} />}
+				leftSection={<IconFile size={16} />}
 				onClick={() => { setIsOpened(true); }}
 				fullWidth={true}
 			>
@@ -318,24 +318,33 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 				return;
 			}
 
-			// Cast to DetailItem and load additional data if needed
-			const detailItem = loadedItem as DetailItem;
-
-			// If we have source links, load the full data
-			if ("sources" in loadedItem) {
-				const unifiedItem = loadedItem;
-				const [catalogData, manualData] = await Promise.all([
-					unifiedItem.sources.catalog
-						? dataService.getItemById(unifiedItem.sources.catalog.id, "catalog") as Promise<DatabaseCatalogItem | null>
-						: Promise.resolve(null),
-					unifiedItem.sources.manual
-						? dataService.getItemById(unifiedItem.sources.manual.id, "manual") as Promise<ManualItem | null>
-						: Promise.resolve(null),
-				]);
-
-				detailItem.catalogData = catalogData || undefined;
-				detailItem.manualData = manualData || undefined;
+			// Only unified items can be DetailItems with source data
+			if (loadedItem.type !== "unified_item") {
+				// For non-unified items, use as-is without casting to DetailItem
+				setItem(loadedItem as any);
+				return;
 			}
+
+			// Create a proper DetailItem from unified item
+			const unifiedItem = loadedItem as UnifiedItem;
+			const [catalogData, manualData] = await Promise.all([
+				unifiedItem.properties?.sources?.catalog
+					? dataService.getItemById(unifiedItem.properties.sources.catalog.id, "catalog")
+					: Promise.resolve(null),
+				unifiedItem.properties?.sources?.manual
+					? dataService.getItemById(unifiedItem.properties.sources.manual.id, "manual")
+					: Promise.resolve(null),
+			]);
+
+			// Type the results properly
+			const catalogDataTyped = catalogData as DatabaseCatalogItem | null;
+			const manualDataTyped = manualData as ManualItem | null;
+
+			const detailItem: DetailItem = {
+				...unifiedItem,
+				catalogData: catalogDataTyped || undefined,
+				manualData: manualDataTyped || undefined,
+			};
 
 			setItem(detailItem);
 		} catch (error_) {
@@ -366,7 +375,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			const url = URL.createObjectURL(blob);
 			const link = document.createElement("a");
 			link.href = url;
-			link.download = `${item.name.ja || item.name.en || "item"}-${itemId}.json`;
+			link.download = `${item.properties?.name?.ja || item.properties?.name?.en || "item"}-${itemId}.json`;
 			document.body.append(link);
 			link.click();
 			link.remove();
@@ -388,23 +397,23 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 		const sources: SourceMetadata[] = [];
 
-		if ("sources" in item) {
+		if ("sources" in item && item.properties?.sources) {
 			const unifiedItem = item as UnifiedItem;
 
-			if (unifiedItem.sources.catalog) {
+			if (unifiedItem.properties.sources.catalog) {
 				sources.push({
 					type: "catalog",
-					confidence: unifiedItem.sources.catalog.confidence,
-					lastUpdated: unifiedItem.sources.catalog.linkedAt,
+					confidence: unifiedItem.properties.sources.catalog.confidence,
+					lastUpdated: unifiedItem.properties.sources.catalog.linkedAt,
 					completeness: item.catalogData ? 85 : 60,
 				});
 			}
 
-			if (unifiedItem.sources.manual) {
+			if (unifiedItem.properties.sources.manual) {
 				sources.push({
 					type: "manual",
-					confidence: unifiedItem.sources.manual.confidence,
-					lastUpdated: unifiedItem.sources.manual.linkedAt,
+					confidence: unifiedItem.properties.sources.manual.confidence,
+					lastUpdated: unifiedItem.properties.sources.manual.linkedAt,
 					completeness: item.manualData ? 90 : 50,
 				});
 			}
@@ -414,14 +423,14 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 				sources.push({
 					type: "catalog",
 					confidence: 1,
-					lastUpdated: item.extractedAt || new Date().toISOString(),
+					lastUpdated: item.metadata?.updatedAt || new Date().toISOString(),
 					completeness: 85,
 				});
 			} else {
 				sources.push({
 					type: "manual",
 					confidence: 1,
-					lastUpdated: item.extractedAt || new Date().toISOString(),
+					lastUpdated: item.metadata?.updatedAt || new Date().toISOString(),
 					completeness: 90,
 				});
 			}
@@ -443,8 +452,11 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 		}
 
 		// Add manual images
-		if (item.manualData?.assets?.images) {
-			images.push(...item.manualData.assets.images.map(img => typeof img === "string" ? img : img.src));
+		if (item.manualData?.properties?.thumbnailImage) {
+			images.push(item.manualData.properties.thumbnailImage);
+		}
+		if (item.manualData?.properties?.productImage) {
+			images.push(item.manualData.properties.productImage);
 		}
 
 		return [...new Set(images)]; // Remove duplicates
@@ -475,7 +487,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	const sourcesMetadata = getSourcesMetadata();
 	const images = getAllImages();
-	const title = item.name.ja || item.name.en || "Unknown Item";
+	const title = item.properties?.name?.ja || item.properties?.name?.en || "Unknown Item";
 
 	return (
 		<Container size="xl" py="md">
@@ -495,13 +507,13 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 					<Group justify="space-between" wrap="nowrap">
 						<Stack gap="xs">
 							<Title order={1}>{title}</Title>
-							{item.name.en && <Text c="dimmed">{item.name.en}</Text>}
+							{item.properties?.name?.en && <Text c="dimmed">{item.properties.name.en}</Text>}
 							<Group gap="xs">
-								{item.grade && <Badge variant="light">{item.grade}</Badge>}
-								{item.scale && <Badge variant="light">{item.scale}</Badge>}
-								{item.series && (
+								{item.properties?.grade && <Badge variant="light">{item.properties.grade}</Badge>}
+								{item.properties?.scale && <Badge variant="light">{item.properties.scale}</Badge>}
+								{item.properties?.series && (
 									<Badge variant="outline">
-										{item.series.ja || item.series.en}
+										{item.properties.series.ja || item.properties.series.en}
 									</Badge>
 								)}
 							</Group>
@@ -544,7 +556,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 							<Tabs.Tab value="sources" leftSection={<IconExternalLink size={16} />}>
                 Sources
 							</Tabs.Tab>
-							<Tabs.Tab value="manual" leftSection={<IconFilePdf size={16} />}>
+							<Tabs.Tab value="manual" leftSection={<IconFile size={16} />}>
                 Manual
 							</Tabs.Tab>
 							<Tabs.Tab value="related" leftSection={<IconStar size={16} />}>
@@ -559,20 +571,20 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 										<ImageGallery images={images} title={title} />
 
 										{/* Description */}
-										{(item.catalogData?.description || item.manualData?.metadata.title) && (
+										{(item.catalogData?.description || item.manualData?.properties?.name?.en) && (
 											<Card withBorder={true}>
 												<Card.Section withBorder={true} inheritPadding={true} py="xs">
 													<Text fw={500}>Description</Text>
 												</Card.Section>
 												<Stack gap="sm" p="md">
-													{item.catalogData?.description?.map((desc, idx) => (
-														<Text key={idx} size="sm">
-															{desc.ja || desc.en || desc}
+													{item.catalogData?.description && (
+														<Text key="catalog-desc" size="sm">
+															{item.catalogData.description}
 														</Text>
-													))}
-													{item.manualData?.metadata.title && (
+													)}
+													{item.manualData?.properties?.name && (
 														<Text size="sm">
-                              Manual: {item.manualData.metadata.title.ja || item.manualData.metadata.title.en}
+                              Manual: {item.manualData.properties.name.ja || item.manualData.properties.name.en}
 														</Text>
 													)}
 												</Stack>
@@ -589,29 +601,21 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												<Text fw={500}>Quick Info</Text>
 											</Card.Section>
 											<Stack gap="xs" p="md">
-												{item.releaseDate && (
+												{item.properties?.releaseDate && (
 													<Group>
 														<Text size="sm" c="dimmed">Release:</Text>
 														<Text size="sm" fw={500}>
-															{item.releaseDate.month ? `${item.releaseDate.year}/${item.releaseDate.month}` : item.releaseDate.year}
+															{item.properties.releaseDate.month ? `${item.properties.releaseDate.year}/${item.properties.releaseDate.month}` : item.properties.releaseDate.year}
 														</Text>
 													</Group>
 												)}
-												{item.productNumber && (
+												{item.properties?.sources?.manual?.productNumber && (
 													<Group>
 														<Text size="sm" c="dimmed">Product No:</Text>
-														<Text size="sm" fw={500}>{item.productNumber}</Text>
+														<Text size="sm" fw={500}>{item.properties.sources.manual.productNumber}</Text>
 													</Group>
 												)}
-												{("price" in item && item.price) && (
-													<Group>
-														<Text size="sm" c="dimmed">Price:</Text>
-														<Text size="sm" fw={500}>
-                              ¥{item.price?.toLocaleString()}
-														</Text>
-													</Group>
-												)}
-											</Stack>
+												</Stack>
 										</Card>
 
 										{/* Source Quality */}
@@ -637,7 +641,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 											</Card.Section>
 											<Stack gap="xs" p="md">
 												<PDFViewer
-													pdfUrl={("sources" in item && item.sources.manual?.pdfUrl)}
+													pdfUrl={item.properties?.sources?.manual?.pdfUrl}
 													title={title}
 												/>
 												<Button
@@ -662,31 +666,31 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 											<Text fw={500}>Basic Information</Text>
 										</Card.Section>
 										<Stack gap="sm" p="md">
-											{item.grade && (
+											{item.properties?.grade && (
 												<Group>
 													<Text size="sm" c="dimmed" w={100}>Grade:</Text>
-													<Text size="sm">{item.grade}</Text>
+													<Text size="sm">{item.properties?.grade}</Text>
 												</Group>
 											)}
-											{item.scale && (
+											{item.properties?.scale && (
 												<Group>
 													<Text size="sm" c="dimmed" w={100}>Scale:</Text>
-													<Text size="sm">{item.scale}</Text>
+													<Text size="sm">{item.properties?.scale}</Text>
 												</Group>
 											)}
-											{item.series && (
+											{item.properties?.series && (
 												<Group>
 													<Text size="sm" c="dimmed" w={100}>Series:</Text>
-													<Text size="sm">{item.series.ja || item.series.en}</Text>
+													<Text size="sm">{item.properties?.series.ja || item.properties?.series.en}</Text>
 												</Group>
 											)}
-											{item.releaseDate && (
+											{item.properties?.releaseDate && (
 												<Group>
 													<Text size="sm" c="dimmed" w={100}>Release Date:</Text>
 													<Text size="sm">
-														{item.releaseDate.year}年
-														{item.releaseDate.month && `${item.releaseDate.month}月`}
-														{item.releaseDate.day && `${item.releaseDate.day}日`}
+														{item.properties?.releaseDate.year}年
+														{item.properties?.releaseDate.month && `${item.properties?.releaseDate.month}月`}
+														{item.properties?.releaseDate.day && `${item.properties?.releaseDate.day}日`}
 													</Text>
 												</Group>
 											)}
@@ -704,62 +708,30 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												<Text size="sm" c="dimmed" w={100}>Match Method:</Text>
 												<Badge
 													color={
-														item.matchMethod === "exact" ? "green" :
-															(item.matchMethod === "fuzzy" ? "yellow" : "blue")
+														item.properties?.matchMethod === "exact" ? "green" :
+															(item.properties?.matchMethod === "fuzzy" ? "yellow" : "blue")
 													}
 												>
-													{item.matchMethod}
+													{item.properties?.matchMethod}
 												</Badge>
 											</Group>
-											{item.matchStage && (
+											{item.properties?.matchStage && (
 												<Group>
 													<Text size="sm" c="dimmed" w={100}>Match Stage:</Text>
-													<Text size="sm">{item.matchStage}/5</Text>
+													<Text size="sm">{item.properties.matchStage}/5</Text>
 												</Group>
 											)}
 											<Group>
 												<Text size="sm" c="dimmed" w={100}>Last Updated:</Text>
 												<Text size="sm">
-													{new Date(item.updatedAt).toLocaleDateString()}
+													{new Date(item.metadata?.updatedAt || Date.now()).toLocaleDateString()}
 												</Text>
 											</Group>
 										</Stack>
 									</Card>
 								</Grid.Col>
-
-								{/* Accessories and Contents */}
-								{item.catalogData && (
-									<Grid.Col span={12}>
-										<Card withBorder={true}>
-											<Card.Section withBorder={true} inheritPadding={true} py="xs">
-												<Text fw={500}>Contents & Accessories</Text>
-											</Card.Section>
-											<SimpleGrid cols={{ base: 1, md: 2 }} p="md">
-												<Stack gap="xs">
-													<Text size="sm" fw={500} c="dimmed">Contents:</Text>
-													<List size="sm" spacing="xs">
-														{item.catalogData.contents?.map((content, idx) => (
-															<List.Item key={idx}>
-																{content.ja || content.en || content}
-															</List.Item>
-														))}
-													</List>
-												</Stack>
-												<Stack gap="xs">
-													<Text size="sm" fw={500} c="dimmed">Accessories:</Text>
-													<List size="sm" spacing="xs">
-														{item.catalogData.accessories?.map((accessory, idx) => (
-															<List.Item key={idx}>
-																{accessory.ja || accessory.en || accessory}
-															</List.Item>
-														))}
-													</List>
-												</Stack>
-											</SimpleGrid>
-										</Card>
-									</Grid.Col>
-								)}
 							</Grid>
+
 						</Tabs.Panel>
 
 						<Tabs.Panel value="sources" p="md">
@@ -790,16 +762,6 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												<Text size="sm" c="dimmed">Completeness:</Text>
 												<Progress value={source.completeness} size="sm" w={200} />
 											</Group>
-
-											{/* Source links */}
-											{"sourceUrl" in item && item.sourceUrl && (
-												<Anchor href={item.sourceUrl} target="_blank" rel="noopener noreferrer">
-													<Group gap="xs">
-														<IconExternalLink size={16} />
-														<Text size="sm">View Original Source</Text>
-													</Group>
-												</Anchor>
-											)}
 										</Stack>
 									</Card>
 								))}
@@ -818,33 +780,19 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												<Group>
 													<Text size="sm" c="dimmed">Title:</Text>
 													<Text size="sm">
-														{item.manualData.metadata.title.ja || item.manualData.metadata.title.en}
+														{item.manualData.properties?.name?.ja || item.manualData.properties?.name?.en || "Unknown"}
 													</Text>
 												</Group>
-												<Group>
-													<Text size="sm" c="dimmed">Language:</Text>
-													<Badge>{item.manualData.metadata.publication.language}</Badge>
-												</Group>
-												<Group>
-													<Text size="sm" c="dimmed">Extracted:</Text>
-													<Text size="sm">{new Date(item.manualData.extractedAt).toLocaleString()}</Text>
-												</Group>
-												{item.manualData.assets.images.length > 0 && (
-													<Group>
-														<Text size="sm" c="dimmed">Images:</Text>
-														<Text size="sm">{item.manualData.assets.images.length} images</Text>
-													</Group>
-												)}
 											</Stack>
 										</Card>
 
 										<PDFViewer
-											pdfUrl={("sources" in item && item.sources.manual?.pdfUrl)}
+											pdfUrl={item.properties?.sources?.manual?.pdfUrl}
 											title={title}
 										/>
 									</>
 								) : (
-									<Alert icon={<IconFilePdf size={16} />}>
+									<Alert icon={<IconFile size={16} />}>
                     No manual data is available for this item.
 									</Alert>
 								)}

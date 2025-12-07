@@ -260,9 +260,10 @@ export function CollectionHobbyPage({}: CollectionHobbyPageProps): React.ReactEl
 									{/* Actions */}
 									<Group justify="space-between" mt="auto">
 										<Button
-											component={Link}
-											to="/collection/$hobbyType/$collectionId"
-											params={{ hobbyType, collectionId: collection.id }}
+											onClick={() => navigate({
+												to: "/collection/$hobbyType/$collectionId",
+												params: { hobbyType, collectionId: collection.id }
+											})}
 											variant="outline"
 											flex={1}
 										>

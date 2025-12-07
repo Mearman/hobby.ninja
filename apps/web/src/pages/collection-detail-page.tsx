@@ -94,7 +94,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 		if (searchQuery.trim()) {
 			const query = searchQuery.toLowerCase();
 			filtered = filtered.filter(item =>
-				item.data.name?.toLowerCase().includes(query) ||
+				item.data['name']?.toString().toLowerCase().includes(query) ||
 				item.tags.some(tag => tag.toLowerCase().includes(query)),
 			);
 		}
@@ -297,11 +297,11 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 											<Group justify="space-between" align="flex-start">
 												<Stack gap="xs" style={{ flex: 1 }}>
 													<Title order={4} size={16} lineClamp={1}>
-														{item.data.name || "Untitled Item"}
+														{item.data['name'] || "Untitled Item"}
 													</Title>
-													{item.data.brand && (
+													{item.data['brand'] && (
 														<Text size="sm" color="dimmed">
-															{item.data.brand}
+															{item.data['brand']}
 														</Text>
 													)}
 												</Stack>
@@ -358,15 +358,15 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 											)}
 
 											{/* Item Details */}
-											{item.data.grade && (
+											{item.data['grade'] && (
 												<Badge variant="outline" size="xs">
-													{item.data.grade}
+													{item.data['grade']}
 												</Badge>
 											)}
 
-											{item.data.scale && (
+											{item.data['scale'] && (
 												<Text size="xs" color="dimmed">
-													Scale: {item.data.scale}
+													Scale: {item.data['scale']}
 												</Text>
 											)}
 
