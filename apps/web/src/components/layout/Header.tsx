@@ -19,6 +19,7 @@ import {
 	IconInfoCircle,
 	IconChevronDown,
 	IconAdjustmentsHorizontal,
+	IconClipboardList,
 } from "@tabler/icons-react";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
@@ -56,9 +57,10 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 
 	// Hobby types for dropdown
 	const hobbyTypes = [
-		{ id: "gunpla", name: "Gunpla", description: "Gundam model kits" },
-		{ id: "figure-rise", name: "Figure-rise", description: "Anime figures" },
-		{ id: "model-kits", name: "Model Kits", description: "Other model kits" },
+		{ id: "model_kits", name: "Model Kits", description: "Plastic models, gunpla, aircraft" },
+		{ id: "trading_cards", name: "Trading Cards", description: "Pokémon, Magic, sports cards" },
+		{ id: "miniatures", name: "Miniatures", description: "Warhammer, D&D, gaming miniatures" },
+		{ id: "other", name: "Other", description: "Custom hobby types" },
 	];
 
 	return (
@@ -175,6 +177,21 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 										</Menu.Item>
 									</Menu.Dropdown>
 								</Menu>
+
+								<Link
+									to="/collection"
+									style={{
+										textDecoration: "none",
+									}}
+								>
+									<Button
+										variant="subtle"
+										leftSection={<IconClipboardList size={16} />}
+										size="sm"
+									>
+										Collections
+									</Button>
+								</Link>
 
 								<Link
 									to="/about"
@@ -303,6 +320,18 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 									}}
 								>
 									Advanced Search
+								</Button>
+
+								<Button
+									variant="subtle"
+									justify="start"
+									leftSection={<IconClipboardList size={16} />}
+									onClick={() => {
+										navigate({ to: "/collection" });
+										toggle();
+									}}
+								>
+									Collections
 								</Button>
 
 								<Button
