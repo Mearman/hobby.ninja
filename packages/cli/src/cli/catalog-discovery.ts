@@ -321,8 +321,8 @@ export function recordInvalidId(id: string): void {
 export function getIndexStats(): { valid: number; invalid: number; totalChecked: number } {
 	const invalidCount = catalogIndex.invalidSingles.length +
 		catalogIndex.invalidRanges.reduce((sum, r) => {
-			const [, startSuffix] = r.start.split('_');
-			const [, endSuffix] = r.end.split('_');
+			const [, startSuffix = '0'] = r.start.split('_');
+			const [, endSuffix = '0'] = r.end.split('_');
 			return sum + (parseInt(endSuffix) - parseInt(startSuffix) + 1);
 		}, 0);
 
@@ -638,7 +638,9 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 			while (nextIndex < total) {
 				const currentIndex = nextIndex++;
 				const range = idsNeedingDownload[currentIndex];
-				await processItem(range);
+				if (range !== undefined) {
+					await processItem(range);
+				}
 			}
 		};
 

@@ -23,7 +23,6 @@ import type { TranslationStore } from '@hobby-ninja/translation';
 import type {
 	CatalogItem,
 	CatalogBrand,
-	CatalogSeries,
 	CatalogCategory,
 	CatalogRelatedProduct,
 } from '@hobby-ninja/types/catalog';

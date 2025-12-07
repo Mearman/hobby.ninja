@@ -290,6 +290,7 @@ export class BandaiCatalogParser {
 			if (!idMatch) return;
 
 			const id = idMatch[1];
+			if (!id) return;
 			const name = $el.find('.p-card__tit').text().trim();
 			const imageUrl = $el.find('.p-card__img img').attr('src');
 

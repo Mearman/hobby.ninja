@@ -1,5 +1,5 @@
-import { scrapers } from '@hobby-ninja/scrapers';
-import { LanguageDetector } from '@hobby-ninja/utils';
+import { ScraperRegistry, type ScraperType } from '@hobby-ninja/scrapers';
+import { LanguageDetector } from '@hobby-ninja/utils/language';
 import { promises as fs } from 'fs';
 import path from 'path';
 
@@ -45,10 +45,10 @@ export class SingleUrlCommand {
       }
 
       // Get the appropriate scraper
-      const scraper = scrapers[sourceType];
-      if (!scraper) {
+      if (!ScraperRegistry.isValidType(sourceType)) {
         throw new Error(`No scraper found for source type: ${sourceType}`);
       }
+      const scraper = ScraperRegistry.createScraper(sourceType as ScraperType);
 
       // Fetch the webpage
       const response = await fetch(url, {
@@ -81,7 +81,7 @@ export class SingleUrlCommand {
       if (verbose) {
         console.log(`🛠️  Using scraper: ${sourceType}`);
       }
-      const scrapedData = await scraper.scrape(html, url);
+      const scrapedData = await scraper.extractFromPage(html, url);
 
       if (!scrapedData) {
         const result: SingleUrlResult = {

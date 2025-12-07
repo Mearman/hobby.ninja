@@ -4,7 +4,7 @@
  * Uses @inkjs/ui components (ProgressBar, Spinner) for rich CLI output.
  */
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { render, Box, Text } from 'ink';
 import { ProgressBar, Spinner } from '@inkjs/ui';
 
