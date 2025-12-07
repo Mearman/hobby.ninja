@@ -5,9 +5,10 @@
  * Handles different data structures and displays relevant information for each node type.
  */
 
-import { Title, Text, Stack, Group, Divider, Badge, List, Anchor } from '@mantine/core';
-import { IconPackage, IconTag, IconFileText, IconBooks, IconBuildingFactory } from '@tabler/icons-react';
-import type { GraphNode } from '../../utils/graph-routes-generator';
+import { Title, Text, Stack, Group, Divider, Badge, List, Anchor } from "@mantine/core";
+import { IconPackage, IconTag, IconFileText, IconBooks, IconBuildingFactory } from "@tabler/icons-react";
+
+import type { GraphNode } from "../../utils/graph-routes-generator";
 
 interface GraphNodeDetailsProps {
 	node: GraphNode;
@@ -33,64 +34,64 @@ function ItemDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Price Information */}
-			{data['price'] && (
+			{data["price"] && (
 				<Group>
 					<Text fw={600} size="sm">Price:</Text>
 					<Text size="sm">
-						¥{Number(data['price']).toLocaleString()}
-						{data['priceTax'] && ` (¥${Number(data['priceTax']).toLocaleString()} with tax)`}
+						¥{Number(data["price"]).toLocaleString()}
+						{data["priceTax"] && ` (¥${Number(data["priceTax"]).toLocaleString()} with tax)`}
 					</Text>
 				</Group>
 			)}
 
 			{/* Release Date */}
-			{data['release'] && (
+			{data["release"] && (
 				<Group>
 					<Text fw={600} size="sm">Release:</Text>
-					<Text size="sm">{new Date(data['release']).toLocaleDateString()}</Text>
+					<Text size="sm">{new Date(data["release"]).toLocaleDateString()}</Text>
 				</Group>
 			)}
 
 			{/* Scale/Grade */}
-			{data['scale'] && (
+			{data["scale"] && (
 				<Group>
 					<Text fw={600} size="sm">Scale:</Text>
-					<Badge color="blue" variant="light">{data['scale']}</Badge>
+					<Badge color="blue" variant="light">{data["scale"]}</Badge>
 				</Group>
 			)}
 
 			{/* Series */}
-			{data['series'] && (
+			{data["series"] && (
 				<Group>
 					<Text fw={600} size="sm">Series:</Text>
-					<Text size="sm">{data['series']}</Text>
+					<Text size="sm">{data["series"]}</Text>
 				</Group>
 			)}
 
 			{/* Dimensions */}
-			{(data['height'] || data['width'] || data['depth']) && (
+			{(data["height"] || data["width"] || data["depth"]) && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Dimensions:</Text>
-					{data['height'] && <Text size="sm">Height: {data['height']}mm</Text>}
-					{data['width'] && <Text size="sm">Width: {data['width']}mm</Text>}
-					{data['depth'] && <Text size="sm">Depth: {data['depth']}mm</Text>}
+					{data["height"] && <Text size="sm">Height: {data["height"]}mm</Text>}
+					{data["width"] && <Text size="sm">Width: {data["width"]}mm</Text>}
+					{data["depth"] && <Text size="sm">Depth: {data["depth"]}mm</Text>}
 				</Stack>
 			)}
 
 			{/* Weight */}
-			{data['weight'] && (
+			{data["weight"] && (
 				<Group>
 					<Text fw={600} size="sm">Weight:</Text>
-					<Text size="sm">{data['weight']}g</Text>
+					<Text size="sm">{data["weight"]}g</Text>
 				</Group>
 			)}
 
 			{/* Materials */}
-			{data['materials'] && Array.isArray(data['materials']) && data['materials'].length > 0 && (
+			{data["materials"] && Array.isArray(data["materials"]) && data["materials"].length > 0 && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Materials:</Text>
 					<Group>
-						{data['materials'].map((material: string, index: number) => (
+						{data["materials"].map((material: string, index: number) => (
 							<Badge key={index} variant="outline" size="sm">
 								{material}
 							</Badge>
@@ -100,19 +101,19 @@ function ItemDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Description */}
-			{data['description'] && (
+			{data["description"] && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Description:</Text>
-					<Text size="sm" lineClamp={3}>{data['description']}</Text>
+					<Text size="sm" lineClamp={3}>{data["description"]}</Text>
 				</Stack>
 			)}
 
 			{/* Official Links */}
-			{data['links'] && Array.isArray(data['links']) && data['links'].length > 0 && (
+			{data["links"] && Array.isArray(data["links"]) && data["links"].length > 0 && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Official Links:</Text>
 					<List size="sm">
-						{data['links'].map((link: { name: string; url: string }, index: number) => (
+						{data["links"].map((link: { name: string; url: string }, index: number) => (
 							<List.Item key={index}>
 								<Anchor href={link.url} target="_blank" rel="noopener noreferrer">
 									{link.name}
@@ -151,29 +152,29 @@ function BrandDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Country */}
-			{data['country'] && (
+			{data["country"] && (
 				<Group>
 					<Text fw={600} size="sm">Country:</Text>
-					<Text size="sm">{data['country']}</Text>
+					<Text size="sm">{data["country"]}</Text>
 				</Group>
 			)}
 
 			{/* Official Website */}
-			{data['website'] && (
+			{data["website"] && (
 				<Group>
 					<Text fw={600} size="sm">Website:</Text>
-					<Anchor href={data['website']} target="_blank" rel="noopener noreferrer">
-						{data['website']}
+					<Anchor href={data["website"]} target="_blank" rel="noopener noreferrer">
+						{data["website"]}
 					</Anchor>
 				</Group>
 			)}
 
 			{/* Product Lines */}
-			{data['productLines'] && Array.isArray(data['productLines']) && data['productLines'].length > 0 && (
+			{data["productLines"] && Array.isArray(data["productLines"]) && data["productLines"].length > 0 && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Product Lines:</Text>
 					<Group>
-						{data['productLines'].map((line: string, index: number) => (
+						{data["productLines"].map((line: string, index: number) => (
 							<Badge key={index} color="grape" variant="light" size="sm">
 								{line}
 							</Badge>
@@ -202,19 +203,19 @@ function CategoryDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Item Count */}
-			{data['itemCount'] !== undefined && (
+			{data["itemCount"] !== undefined && (
 				<Group>
 					<Text fw={600} size="sm">Items:</Text>
-					<Text size="sm">{Number(data['itemCount']).toLocaleString()} items</Text>
+					<Text size="sm">{Number(data["itemCount"]).toLocaleString()} items</Text>
 				</Group>
 			)}
 
 			{/* Subcategories */}
-			{data['subcategories'] && Array.isArray(data['subcategories']) && data['subcategories'].length > 0 && (
+			{data["subcategories"] && Array.isArray(data["subcategories"]) && data["subcategories"].length > 0 && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Subcategories:</Text>
 					<List size="sm">
-						{data['subcategories'].map((subcat: string, index: number) => (
+						{data["subcategories"].map((subcat: string, index: number) => (
 							<List.Item key={index}>{subcat}</List.Item>
 						))}
 					</List>
@@ -233,58 +234,58 @@ function ManualDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Manual Type */}
-			{data['type'] && (
+			{data["type"] && (
 				<Group>
 					<Text fw={600} size="sm">Type:</Text>
-					<Badge color="orange" variant="light">{data['type']}</Badge>
+					<Badge color="orange" variant="light">{data["type"]}</Badge>
 				</Group>
 			)}
 
 			{/* Page Count */}
-			{data['pages'] && (
+			{data["pages"] && (
 				<Group>
 					<Text fw={600} size="sm">Pages:</Text>
-					<Text size="sm">{data['pages']}</Text>
+					<Text size="sm">{data["pages"]}</Text>
 				</Group>
 			)}
 
 			{/* Language */}
-			{data['language'] && (
+			{data["language"] && (
 				<Group>
 					<Text fw={600} size="sm">Language:</Text>
-					<Text size="sm">{data['language']}</Text>
+					<Text size="sm">{data["language"]}</Text>
 				</Group>
 			)}
 
 			{/* Format */}
-			{data['format'] && (
+			{data["format"] && (
 				<Group>
 					<Text fw={600} size="sm">Format:</Text>
-					<Text size="sm">{data['format']}</Text>
+					<Text size="sm">{data["format"]}</Text>
 				</Group>
 			)}
 
 			{/* Publication Date */}
-			{data['published'] && (
+			{data["published"] && (
 				<Group>
 					<Text fw={600} size="sm">Published:</Text>
-					<Text size="sm">{new Date(data['published']).toLocaleDateString()}</Text>
+					<Text size="sm">{new Date(data["published"]).toLocaleDateString()}</Text>
 				</Group>
 			)}
 
 			{/* ISBN */}
-			{data['isbn'] && (
+			{data["isbn"] && (
 				<Group>
 					<Text fw={600} size="sm">ISBN:</Text>
-					<Text size="sm">{data['isbn']}</Text>
+					<Text size="sm">{data["isbn"]}</Text>
 				</Group>
 			)}
 
 			{/* Size */}
-			{data['size'] && (
+			{data["size"] && (
 				<Group>
 					<Text fw={600} size="sm">Size:</Text>
-					<Text size="sm">{data['size']}</Text>
+					<Text size="sm">{data["size"]}</Text>
 				</Group>
 			)}
 		</Stack>
@@ -308,46 +309,46 @@ function SeriesDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Start/End Dates */}
-			{(data['startYear'] || data['endYear']) && (
+			{(data["startYear"] || data["endYear"]) && (
 				<Group>
 					<Text fw={600} size="sm">Period:</Text>
 					<Text size="sm">
-						{data['startYear']}{data['endYear'] && ` - ${data['endYear']}`}
+						{data["startYear"]}{data["endYear"] && ` - ${data["endYear"]}`}
 					</Text>
 				</Group>
 			)}
 
 			{/* Episode Count */}
-			{data['episodes'] && (
+			{data["episodes"] && (
 				<Group>
 					<Text fw={600} size="sm">Episodes:</Text>
-					<Text size="sm">{data['episodes']}</Text>
+					<Text size="sm">{data["episodes"]}</Text>
 				</Group>
 			)}
 
 			{/* Genre */}
-			{data['genre'] && (
+			{data["genre"] && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Genre:</Text>
 					<Group>
-						{Array.isArray(data['genre'])
-							? data['genre'].map((g: string, index: number) => (
-									<Badge key={index} color="pink" variant="light" size="sm">
-										{g}
-									</Badge>
-								))
-							: <Badge color="pink" variant="light" size="sm">{data['genre']}</Badge>
+						{Array.isArray(data["genre"])
+							? data["genre"].map((g: string, index: number) => (
+								<Badge key={index} color="pink" variant="light" size="sm">
+									{g}
+								</Badge>
+							))
+							: <Badge color="pink" variant="light" size="sm">{data["genre"]}</Badge>
 						}
 					</Group>
 				</Stack>
 			)}
 
 			{/* Main Characters */}
-			{data['characters'] && Array.isArray(data['characters']) && data['characters'].length > 0 && (
+			{data["characters"] && Array.isArray(data["characters"]) && data["characters"].length > 0 && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Main Characters:</Text>
-					<Text size="sm">{data['characters'].slice(0, 5).join(', ')}
-						{data['characters'].length > 5 && ` +${data['characters'].length - 5} more`}
+					<Text size="sm">{data["characters"].slice(0, 5).join(", ")}
+						{data["characters"].length > 5 && ` +${data["characters"].length - 5} more`}
 					</Text>
 				</Stack>
 			)}
@@ -365,7 +366,7 @@ function CommonRelationships({ node }: { node: GraphNode }) {
 
 	// Group relationships by type
 	const groupedEdges = edges.reduce((acc, edge) => {
-		const relationType = edge.relation || 'related';
+		const relationType = edge.relation || "related";
 		if (!acc[relationType]) {
 			acc[relationType] = [];
 		}
@@ -387,7 +388,7 @@ function CommonRelationships({ node }: { node: GraphNode }) {
 								{edge.node?.name?.en || edge.node?.name?.ja || edge.node?.id}
 								{edge.node?.type && (
 									<Text size="xs" c="dimmed">
-										{' '}({edge.node.type})
+										{" "}({edge.node.type})
 									</Text>
 								)}
 							</List.Item>
@@ -421,17 +422,17 @@ export function GraphNodeDetails({ node }: GraphNodeDetailsProps) {
 			</Group>
 
 			{/* Type-specific details */}
-			{node.type === 'item' && <ItemDetails node={node} />}
-			{node.type === 'brand' && <BrandDetails node={node} />}
-			{node.type === 'category' && <CategoryDetails node={node} />}
-			{node.type === 'manual' && <ManualDetails node={node} />}
-			{node.type === 'series' && <SeriesDetails node={node} />}
+			{node.type === "item" && <ItemDetails node={node} />}
+			{node.type === "brand" && <BrandDetails node={node} />}
+			{node.type === "category" && <CategoryDetails node={node} />}
+			{node.type === "manual" && <ManualDetails node={node} />}
+			{node.type === "series" && <SeriesDetails node={node} />}
 
 			{/* Common relationships */}
 			<CommonRelationships node={node} />
 
 			{/* Raw data for debugging (remove in production) */}
-			{process.env.NODE_ENV === 'development' && (
+			{process.env.NODE_ENV === "development" && (
 				<>
 					<Divider label="Debug Info" labelPosition="center" />
 					<Text size="xs" c="dimmed" component="pre">
