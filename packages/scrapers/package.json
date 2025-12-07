@@ -21,18 +21,18 @@
     "download-manuals": "node dist/manual-downloader/cli/index.js"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.12",
+    "cheerio": "*",
     "parse5": "^7.1.2",
-    "zod": "^3.22.0",
+    "zod": "*",
     "p-limit": "^4.0.0",
     "@hobby-ninja/types": "workspace:*",
     "@hobby-ninja/utils": "workspace:*",
     "@hobby-ninja/translation": "workspace:*"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
+    "@types/node": "*",
     "tsup": "^8.0.0",
-    "typescript": "^5.7.0"
+    "typescript": "*"
   },
   "files": [
     "dist"

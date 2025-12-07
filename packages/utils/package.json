@@ -38,11 +38,11 @@
   },
   "devDependencies": {
     "@nx/js": "22.1.3",
-    "typescript": "5.9.3",
-    "vitest": "4.0.15",
-    "zod": "4.1.13"
+    "typescript": "*",
+    "vitest": "*",
+    "zod": "*"
   },
   "peerDependencies": {
-    "zod": "4.1.13"
+    "zod": "*"
   }
 }
