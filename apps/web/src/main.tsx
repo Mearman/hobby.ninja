@@ -13,6 +13,7 @@ import "./styles/styles.css";
 
 // Import Mantine's built-in styles
 import "@mantine/core/styles.css";
+import "@mantine/notifications/styles.css";
 
 /**
  * Initialize and start the application
