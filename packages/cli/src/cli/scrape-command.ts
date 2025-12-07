@@ -17,8 +17,6 @@ export interface ScrapeOptions {
 export async function scrapeData(options: ScrapeOptions): Promise<void> {
 	const { source, output } = options;
 	const delayMs = options.delayMs ?? options.delay ?? 1000;
-	const startId = options.startId ?? '00_0000';
-	const count = options.count ?? 10;
 
 	console.log(`🚀 Starting scrape from source: ${source}`);
 	console.log(`📁 Output directory: ${output}`);
@@ -45,7 +43,8 @@ export async function scrapeData(options: ScrapeOptions): Promise<void> {
 }
 
 async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
-	const { output, delayMs } = options;
+	const { output } = options;
+	const delayMs = options.delayMs ?? options.delay ?? 1000;
 	const startId = options.startId ?? '00_0000';
 	const count = options.count ?? 10;
 	const verbose = options.verbose ?? false;
