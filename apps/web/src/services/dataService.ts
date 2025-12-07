@@ -35,7 +35,7 @@ interface MasterIndex {
   version: string;
   sources: {
     unified: DataIndex;
-    catalog: DataIndex;
+    items: DataIndex;  // Changed from 'catalog' to 'items' to match actual data
     manuals: DataIndex;
   };
   summary: {
@@ -294,11 +294,16 @@ class TextProcessor {
 export class DataService {
   private cache: SimpleCache<any>;
   private isInitialized = false;
-  private dataFiles: {
-    unified: string[];
-    manuals: string[];
-    items: string[];
-  } | null = null;
+  private dataIndex: MasterIndex | null = null;
+  private indices: {
+    unified: DataIndex | null;
+    catalog: DataIndex | null;
+    manuals: DataIndex | null;
+  } = {
+    unified: null,
+    catalog: null,
+    manuals: null,
+  };
 
   constructor() {
     this.cache = new SimpleCache();
@@ -727,7 +732,7 @@ export class DataService {
   }
 
   /**
-   * Get database statistics
+   * Get database statistics using generated indices
    */
   async getStatistics(): Promise<DatabaseStats> {
     const cacheKey = "database_stats";
@@ -738,41 +743,61 @@ export class DataService {
     }
 
     try {
-      const [unifiedItems, manualItems, catalogItems] = await Promise.all([
-        this.getUnifiedItems(),
-        this.getManualItems(),
-        this.getCatalogItems(),
-      ]);
+      // Load master index for statistics
+      const masterIndexResponse = await fetch(`${DEFAULT_CONFIG.DATA_PATH}index.json`);
+      if (!masterIndexResponse.ok) {
+        throw new Error('Failed to load master index');
+      }
+
+      const masterIndex: MasterIndex = await masterIndexResponse.json();
+
+      // For coverage statistics, we calculate from the actual totals, not samples
+      const unifiedIndex = masterIndex.sources.unified;
+      const sampleSize = Math.min(100, unifiedIndex.totalFiles); // Sample only 100 items for quality stats to avoid loading all items
+      const sampleFiles = unifiedIndex.files.slice(0, sampleSize);
+
+      const sampledItems = await Promise.all(
+        sampleFiles.map(async (file) => {
+          try {
+            const response = await fetch(`${DEFAULT_CONFIG.DATA_PATH}unified/${file.filename}`);
+            return response.ok ? await response.json() : null;
+          } catch {
+            return null;
+          }
+        })
+      );
+
+      const validItems = sampledItems.filter((item): item is UnifiedItem => item !== null);
 
       stats = {
         generatedAt: new Date().toISOString(),
         totalItems: {
-          unified: unifiedItems.length,
-          manual: manualItems.length,
-          catalog: catalogItems.length,
+          unified: unifiedIndex.totalFiles,
+          manual: masterIndex.sources.manuals?.totalFiles || 0,
+          catalog: masterIndex.sources.items?.totalFiles || 0,
         },
         sourceCoverage: {
-          withManual: unifiedItems.filter(item => item.sources.manual).length,
-          withCatalog: unifiedItems.filter(item => item.sources.catalog).length,
-          withBoth: unifiedItems.filter(item => item.sources.manual && item.sources.catalog).length,
-          singleSource: unifiedItems.filter(item =>
-            (item.sources.manual ? 1 : 0) + (item.sources.catalog ? 1 : 0) === 1,
+          withManual: validItems.filter(item => item.sources?.manual).length,
+          withCatalog: validItems.filter(item => item.sources?.catalog).length,
+          withBoth: validItems.filter(item => item.sources?.manual && item.sources?.catalog).length,
+          singleSource: validItems.filter(item =>
+            (item.sources?.manual ? 1 : 0) + (item.sources?.catalog ? 1 : 0) === 1,
           ).length,
         },
         quality: {
-          highConfidence: unifiedItems.filter(item => item.matchStage && item.matchStage >= 4).length,
-          mediumConfidence: unifiedItems.filter(item => item.matchStage && item.matchStage >= 2 && item.matchStage < 4).length,
-          lowConfidence: unifiedItems.filter(item => item.matchStage && item.matchStage < 2).length,
-          needsReview: unifiedItems.filter(item => item.matchMethod === "manual_override").length,
+          highConfidence: validItems.filter(item => item.matchStage && item.matchStage >= 4).length,
+          mediumConfidence: validItems.filter(item => item.matchStage && item.matchStage >= 2 && item.matchStage < 4).length,
+          lowConfidence: validItems.filter(item => item.matchStage && item.matchStage < 2).length,
+          needsReview: validItems.filter(item => item.matchMethod === "manual_override").length,
         },
         dateRange: {
           earliestYear: Math.min(
-            ...unifiedItems
+            ...validItems
               .map(item => item.releaseDate?.year)
               .filter(year => year !== undefined && year > 0),
           ),
           latestYear: Math.max(
-            ...unifiedItems
+            ...validItems
               .map(item => item.releaseDate?.year)
               .filter(year => year !== undefined && year > 0),
           ),

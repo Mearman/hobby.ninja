@@ -38,18 +38,21 @@
       "options": {
         "buildTarget": "web:build",
         "port": 3000,
-        "host": true
+        "host": true,
+        "base": "/"
       },
       "configurations": {
         "development": {
           "buildTarget": "web:build:development",
           "port": 3000,
-          "host": true
+          "host": true,
+          "base": "/"
         },
         "production": {
           "buildTarget": "web:build:production",
           "port": 3000,
-          "host": true
+          "host": true,
+          "base": "/"
         }
       }
     },
