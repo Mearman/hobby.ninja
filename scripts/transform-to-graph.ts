@@ -567,8 +567,9 @@ class DataTransformer {
       }).optional(),
     });
 
-    this.schemas['node'] = nodeSchema.toJSONSchema();
-    this.schemas['relationship'] = relationshipSchema.toJSONSchema();
+    // Use Zod 4.x built-in JSON schema support
+    this.schemas['node'] = z.toJSONSchema(nodeSchema);
+    this.schemas['relationship'] = z.toJSONSchema(relationshipSchema);
 
     console.log(`Generated ${Object.keys(this.schemas).length} JSON schemas`);
   }
@@ -583,7 +584,7 @@ class DataTransformer {
       specialties: z.array(z.string()),
       isActive: z.boolean().default(true),
     });
-    return brandSchema.toJSONSchema();
+    return z.toJSONSchema(brandSchema);
   }
 
   private generateScaleSchema() {
@@ -595,7 +596,7 @@ class DataTransformer {
       mmPerUnit: z.number().positive().optional(),
       category: z.string().optional(),
     });
-    return scaleSchema.toJSONSchema();
+    return z.toJSONSchema(scaleSchema);
   }
 
   private generateCategorySchema() {
@@ -606,7 +607,7 @@ class DataTransformer {
       parentCategory: z.string().optional(),
       isActive: z.boolean().default(true),
     });
-    return categorySchema.toJSONSchema();
+    return z.toJSONSchema(categorySchema);
   }
 
   private generateHobbyTypeSchema(hobbyId: string, hobbyType: PublicHobbyType) {
@@ -637,7 +638,7 @@ class DataTransformer {
       }),
       isActive: z.boolean().default(true),
     });
-    return hobbyTypeSchema.toJSONSchema();
+    return z.toJSONSchema(hobbyTypeSchema);
   }
 
   private generateItemSchema(hobbyId: string, hobbyType: PublicHobbyType) {
@@ -707,7 +708,7 @@ class DataTransformer {
       })).default([]),
     });
 
-    return itemSchema.toJSONSchema();
+    return z.toJSONSchema(itemSchema);
   }
 }
 
