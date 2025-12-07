@@ -1,7 +1,9 @@
 import { promises as fs } from "node:fs";
-import * as path from "node:path";
+import path from "node:path";
 
 import type { CacheManager } from "@hobby-ninja/types/profile";
+
+import { logger } from "./logger";
 
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
@@ -11,7 +13,7 @@ export interface CacheOptions {
 }
 
 export interface CacheItem {
-  value: any;
+  value: unknown;
   timestamp: number;
   ttl: number;
   accessCount: number;
@@ -25,15 +27,15 @@ export class FileSystemCacheManager implements CacheManager {
 
 	constructor(options: CacheOptions = {}) {
 		this.options = {
-			ttl: options.ttl || 3_600_000, // 1 hour default
-			maxSize: options.maxSize || 1000,
-			persistToFile: options.persistToFile || false,
-			cacheDir: options.cacheDir || path.join(process.cwd(), ".cache"),
+			ttl: options.ttl ?? 3_600_000, // 1 hour default
+			maxSize: options.maxSize ?? 1000,
+			persistToFile: options.persistToFile ?? false,
+			cacheDir: options.cacheDir ?? path.join(process.cwd(), ".cache"),
 		};
 
 		// Ensure cache directory exists
 		if (this.options.persistToFile) {
-			this.ensureCacheDirectory();
+			void this.ensureCacheDirectory();
 		}
 
 		// Start cleanup interval
@@ -46,7 +48,7 @@ export class FileSystemCacheManager implements CacheManager {
 		try {
 			await fs.mkdir(this.options.cacheDir, { recursive: true });
 		} catch (error) {
-			console.warn("Failed to create cache directory:", error);
+			logger.warn("Failed to create cache directory:", error);
 		}
 	}
 
@@ -65,7 +67,7 @@ export class FileSystemCacheManager implements CacheManager {
 		try {
 			const filePath = this.getCacheFilePath(key);
 			const data = await fs.readFile(filePath, "utf8");
-			const item: CacheItem = JSON.parse(data);
+			const item = JSON.parse(data) as CacheItem;
 
 			if (this.isExpired(item)) {
 				await fs.unlink(filePath);
@@ -85,9 +87,9 @@ export class FileSystemCacheManager implements CacheManager {
 		try {
 			const filePath = this.getCacheFilePath(key);
 			const data = JSON.stringify(item);
-			await fs.writeFile(filePath, data, "utf-8");
+			await fs.writeFile(filePath, data, "utf8");
 		} catch (error) {
-			console.warn("Failed to save cache item to file:", error);
+			logger.warn("Failed to save cache item to file:", error);
 		}
 	}
 
@@ -107,19 +109,20 @@ export class FileSystemCacheManager implements CacheManager {
 		if (this.memoryCache.size <= this.options.maxSize) return;
 
 		// Sort by last accessed time and remove the least recently used items
-		const items = [...this.memoryCache.entries()]
-			.sort(([, a], [, b]) => a.lastAccessed - b.lastAccessed);
+		const entries: Array<[string, CacheItem]> = [...this.memoryCache.entries()];
+		const items = [...entries].toSorted(
+			(a, b) => a[1].lastAccessed - b[1].lastAccessed,
+		);
 
 		const itemsToRemove = items.slice(0, items.length - this.options.maxSize);
 
 		for (const [key] of itemsToRemove) {
 			this.memoryCache.delete(key);
-			this.deleteFromFile(key).catch(() => {}); // Fire and forget
+			this.deleteFromFile(key).catch(() => {/* noop */}); // Fire and forget
 		}
 	}
 
 	private cleanup(): void {
-		const now = Date.now();
 		const expiredKeys: string[] = [];
 
 		for (const [key, item] of this.memoryCache.entries()) {
@@ -131,21 +134,21 @@ export class FileSystemCacheManager implements CacheManager {
 		// Remove expired items
 		for (const key of expiredKeys) {
 			this.memoryCache.delete(key);
-			this.deleteFromFile(key).catch(() => {}); // Fire and forget
+			this.deleteFromFile(key).catch(() => {/* noop */}); // Fire and forget
 		}
 
 		// Evict LRU items if cache is still too large
 		this.evictLeastRecentlyUsed();
 	}
 
-	get(key: string): any | null {
+	get(key: string): unknown {
 		// Check memory cache first
 		const memoryItem = this.memoryCache.get(key);
 
 		if (memoryItem) {
 			if (this.isExpired(memoryItem)) {
 				this.memoryCache.delete(key);
-				this.deleteFromFile(key).catch(() => {}); // Fire and forget
+				this.deleteFromFile(key).catch(() => {/* noop */}); // Fire and forget
 				return null;
 			}
 
@@ -160,7 +163,7 @@ export class FileSystemCacheManager implements CacheManager {
 			return this.loadFromFile(key).then(item => {
 				if (item) {
 					if (this.isExpired(item)) {
-						this.deleteFromFile(key).catch(() => {});
+						this.deleteFromFile(key).catch(() => {/* noop */});
 						return null;
 					}
 
@@ -181,7 +184,7 @@ export class FileSystemCacheManager implements CacheManager {
 		return null;
 	}
 
-	set(key: string, value: any, ttl: number = this.options.ttl): void {
+	set(key: string, value: unknown, ttl: number = this.options.ttl): void {
 		const item: CacheItem = {
 			value,
 			timestamp: Date.now(),
@@ -194,7 +197,7 @@ export class FileSystemCacheManager implements CacheManager {
 
 		// Save to file if persistence is enabled
 		if (this.options.persistToFile) {
-			this.saveToFile(key, item).catch(() => {}); // Fire and forget
+			this.saveToFile(key, item).catch(() => {/* noop */}); // Fire and forget
 		}
 
 		// Evict if necessary
@@ -211,11 +214,11 @@ export class FileSystemCacheManager implements CacheManager {
 					const cacheFiles = files.filter(file => file.endsWith(".cache"));
 					return Promise.all(
 						cacheFiles.map(file =>
-							fs.unlink(path.join(this.options.cacheDir, file)).catch(() => {}),
+							fs.unlink(path.join(this.options.cacheDir, file)).catch(() => {/* noop */}),
 						),
 					);
 				})
-				.catch(() => {}); // Fire and forget
+				.catch(() => {/* noop */}); // Fire and forget
 		}
 	}
 
@@ -224,7 +227,7 @@ export class FileSystemCacheManager implements CacheManager {
 
 		// Delete from file if persistence is enabled
 		if (this.options.persistToFile) {
-			this.deleteFromFile(key).catch(() => {}); // Fire and forget
+			this.deleteFromFile(key).catch(() => {/* noop */}); // Fire and forget
 		}
 
 		return deleted;
@@ -269,12 +272,12 @@ export class FileSystemCacheManager implements CacheManager {
 	}
 
 	// Additional methods for URL-based caching
-	async getByUrl(url: string): Promise<unknown | null> {
+	getByUrl(url: string): unknown {
 		const urlKey = `url:${url}`;
 		return this.get(urlKey);
 	}
 
-	async setByUrl(url: string, value: unknown, type: string): Promise<void> {
+	setByUrl(url: string, value: unknown, type: string): void {
 		const urlKey = `url:${url}:${type}`;
 		const ttl = type === "profile-analysis" ? 1_800_000 : this.options.ttl; // 30 minutes for profile analysis
 		this.set(urlKey, { rawHtml: value }, ttl);
@@ -282,9 +285,7 @@ export class FileSystemCacheManager implements CacheManager {
 
 	// Cleanup method to be called when shutting down
 	destroy(): void {
-		if (this.cleanupInterval) {
-			clearInterval(this.cleanupInterval);
-		}
+		clearInterval(this.cleanupInterval);
 	}
 }
 

@@ -95,6 +95,7 @@ export interface RenderingDetection {
   jsExecutionTime?: number;
   detectedAt?: number;
   indicators?: string[];
+  domComplexity?: number;
 }
 
 export interface ProgressiveEnhancementResult {
