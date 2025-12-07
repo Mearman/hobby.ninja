@@ -2,6 +2,7 @@ import { Container, Title, Text, Card, Button, Group, Stack, SimpleGrid, Grid, C
 import { IconPlus, IconSearch, IconHeart, IconPackage, IconSettings, IconEdit, IconTrash, IconFolderOpen } from "@tabler/icons-react";
 import { Link, useParams, useNavigate } from "@tanstack/react-router";
 import React, { useState, useEffect } from "react";
+
 import { collectionService } from "../services/collectionService";
 import { Collection, HobbyType } from "../types/hobby";
 
@@ -42,8 +43,8 @@ export function CollectionHobbyPage({}: CollectionHobbyPageProps): React.ReactEl
 				// Load collections for this hobby type
 				const collectionsData = await collectionService.getCollections(hobbyType);
 				setCollections(collectionsData);
-			} catch (err) {
-				console.error("Failed to load collection data:", err);
+			} catch (error_) {
+				console.error("Failed to load collection data:", error_);
 				setError("Failed to load collections. Please try again.");
 			} finally {
 				setLoading(false);
@@ -77,8 +78,8 @@ export function CollectionHobbyPage({}: CollectionHobbyPageProps): React.ReactEl
 				to: "/collection/$hobbyType/$collectionId",
 				params: { hobbyType, collectionId: newCollection.id },
 			});
-		} catch (err) {
-			console.error("Failed to create collection:", err);
+		} catch (error_) {
+			console.error("Failed to create collection:", error_);
 			setError("Failed to create collection. Please try again.");
 		}
 	};
@@ -91,8 +92,8 @@ export function CollectionHobbyPage({}: CollectionHobbyPageProps): React.ReactEl
 		try {
 			await collectionService.deleteCollection(collectionId);
 			setCollections(prev => prev.filter(c => c.id !== collectionId));
-		} catch (err) {
-			console.error("Failed to delete collection:", err);
+		} catch (error_) {
+			console.error("Failed to delete collection:", error_);
 			setError("Failed to delete collection. Please try again.");
 		}
 	};

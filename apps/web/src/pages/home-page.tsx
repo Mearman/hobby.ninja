@@ -60,7 +60,7 @@ export function HomePage(): React.ReactElement {
 				background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)",
 				color: "white",
 				padding: "6rem 0",
-				textAlign: "center"
+				textAlign: "center",
 			}}>
 				<Container size="lg">
 					<Stack gap="xl">
@@ -139,7 +139,7 @@ export function HomePage(): React.ReactElement {
 							shadow="hover-lg"
 							style={{
 								transition: "all 0.2s ease",
-								border: "1px solid var(--mantine-color-gray-3)"
+								border: "1px solid var(--mantine-color-gray-3)",
 							}}
 							withBorder={true}
 						>

@@ -1045,7 +1045,7 @@ export class DataService {
 			// Load unified items from master index since we don't have a single file
 			const masterIndex = await this.loadMasterIndex();
 			const unifiedItemIds = masterIndex.items
-				.filter(item => item.type === 'unified')
+				.filter(item => item.type === "unified")
 				.map(item => item.id);
 
 			// Load a sample of unified items for now
@@ -1053,7 +1053,7 @@ export class DataService {
 			const sampleIds = unifiedItemIds.slice(0, sampleSize);
 
 			items = await Promise.all(
-				sampleIds.map(id => this.getItemById(id, 'unified'))
+				sampleIds.map(id => this.getItemById(id, "unified")),
 			).then(results => results.filter(item => item !== null));
 
 			this.cache.set(cacheKey, items);

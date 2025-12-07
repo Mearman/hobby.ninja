@@ -2,6 +2,7 @@ import { Container, Title, Text, Card, Button, Group, Stack, SimpleGrid, Grid, C
 import { IconPlus, IconSearch, IconHeart, IconPackage, IconSettings, IconEdit, IconTrash, IconFilter, IconDots, IconPhoto, IconEye, IconShare } from "@tabler/icons-react";
 import { Link, useParams, useNavigate } from "@tanstack/react-router";
 import React, { useState, useEffect } from "react";
+
 import { collectionService } from "../services/collectionService";
 import { Collection, UniversalItem, ItemStatus } from "../types/hobby";
 
@@ -74,8 +75,8 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 				const itemsData = await collectionService.getItems(hobbyType, collectionId);
 				setItems(itemsData);
 				setFilteredItems(itemsData);
-			} catch (err) {
-				console.error("Failed to load collection data:", err);
+			} catch (error_) {
+				console.error("Failed to load collection data:", error_);
 				setError("Failed to load collection. Please try again.");
 			} finally {
 				setLoading(false);
@@ -94,7 +95,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 			const query = searchQuery.toLowerCase();
 			filtered = filtered.filter(item =>
 				item.data.name?.toLowerCase().includes(query) ||
-				item.tags.some(tag => tag.toLowerCase().includes(query))
+				item.tags.some(tag => tag.toLowerCase().includes(query)),
 			);
 		}
 
@@ -128,8 +129,8 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 		try {
 			await collectionService.deleteItem(itemId);
 			setItems(prev => prev.filter(item => item.id !== itemId));
-		} catch (err) {
-			console.error("Failed to delete item:", err);
+		} catch (error_) {
+			console.error("Failed to delete item:", error_);
 			setError("Failed to delete item. Please try again.");
 		}
 	};
@@ -138,10 +139,10 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 		try {
 			await collectionService.updateItem(itemId, { status: newStatus });
 			setItems(prev => prev.map(item =>
-				item.id === itemId ? { ...item, status: newStatus } : item
+				item.id === itemId ? { ...item, status: newStatus } : item,
 			));
-		} catch (err) {
-			console.error("Failed to update item status:", err);
+		} catch (error_) {
+			console.error("Failed to update item status:", error_);
 		}
 	};
 
@@ -243,7 +244,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 								placeholder="Filter by status"
 								leftSection={<IconFilter size={16} />}
 								w={200}
-								clearable
+								clearable={true}
 							/>
 						</Group>
 

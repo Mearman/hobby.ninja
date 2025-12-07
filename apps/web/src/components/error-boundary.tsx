@@ -51,7 +51,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
 				<div className="error-boundary">
 					<h2>Development Error Boundary</h2>
 					<p>If you see this, there was an error in the application.</p>
-					<details open>
+					<details open={true}>
 						<summary>Error Details</summary>
 						<pre>
 							{this.state.error?.toString() || "Unknown error"}
