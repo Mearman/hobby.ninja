@@ -5,7 +5,7 @@ import { Command } from "commander";
 import { readFileSync } from "fs";
 import { dirname, join, resolve } from "path";
 import { fileURLToPath } from "url";
-import { TRANSLATION_STORE_DIR } from "../../../translation/src/index";
+import { TRANSLATION_STORE_DIR } from "@hobby-ninja/translation";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

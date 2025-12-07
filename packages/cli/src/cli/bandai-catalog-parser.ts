@@ -12,7 +12,7 @@ import type {
 	CatalogSeries,
 	CatalogCategory,
 	CatalogRelatedProduct
-} from '@hobby-ninja/types';
+} from '@hobby-ninja/types/catalog';
 
 export interface ParseResult {
 	success: boolean;
@@ -72,10 +72,12 @@ export class BandaiCatalogParser {
 		const amountMatch = priceText.match(/([0-9,]+)\s*円/);
 		const taxMatch = priceText.match(/税(\d+)%込/);
 
-		if (!amountMatch) return undefined;
+		const amountStr = amountMatch?.[1];
+		if (!amountStr) return undefined;
 
-		const amount = parseInt(amountMatch[1].replace(/,/g, ''), 10);
-		const taxRate = taxMatch ? parseInt(taxMatch[1], 10) : 10;
+		const amount = Number.parseInt(amountStr.replace(/,/g, ''), 10);
+		const taxStr = taxMatch?.[1];
+		const taxRate = taxStr ? Number.parseInt(taxStr, 10) : 10;
 
 		return {
 			amount,
@@ -93,15 +95,18 @@ export class BandaiCatalogParser {
 
 		// Parse "2017年05月20日 (土)" format
 		const match = dateText.match(/(\d{4})年(\d{2})月(\d{2})日/);
-		if (!match) {
+		const yearStr = match?.[1];
+		const monthStr = match?.[2];
+		const dayStr = match?.[3];
+		if (!yearStr || !monthStr || !dayStr) {
 			return { ja: dateText, year: 0, month: 0 };
 		}
 
 		return {
 			ja: dateText,
-			year: parseInt(match[1], 10),
-			month: parseInt(match[2], 10),
-			day: parseInt(match[3], 10)
+			year: Number.parseInt(yearStr, 10),
+			month: Number.parseInt(monthStr, 10),
+			day: Number.parseInt(dayStr, 10)
 		};
 	}
 
@@ -113,7 +118,8 @@ export class BandaiCatalogParser {
 
 		// Parse "8歳以上" format
 		const match = ageText.match(/(\d+)歳/);
-		return match ? parseInt(match[1], 10) : undefined;
+		const ageStr = match?.[1];
+		return ageStr ? Number.parseInt(ageStr, 10) : undefined;
 	}
 
 	private extractSeries($: cheerio.CheerioAPI): CatalogSeries | undefined {
@@ -177,7 +183,8 @@ export class BandaiCatalogParser {
 	private extractScale(name: string): string | undefined {
 		// Extract scale from product name like "HGUC 1/144 バーザム"
 		const match = name.match(/1\/(\d+)/);
-		return match ? `1/${match[1]}` : undefined;
+		const scaleNum = match?.[1];
+		return scaleNum ? `1/${scaleNum}` : undefined;
 	}
 
 	private extractDescription($: cheerio.CheerioAPI): Array<{ ja: string }> {
@@ -187,9 +194,8 @@ export class BandaiCatalogParser {
 		if (!text) return [];
 
 		// Clean up the description - remove accessories/contents sections
-		const cleanText = text
-			.split(/【付属品】|【商品内容】/)[0]
-			.trim();
+		const cleanTextPart = text.split(/【付属品】|【商品内容】/)[0];
+		const cleanText = cleanTextPart?.trim() ?? '';
 
 		if (!cleanText) return [];
 
@@ -207,14 +213,17 @@ export class BandaiCatalogParser {
 
 		// Find text between 【付属品】 and 【商品内容】 or end
 		const accessoriesMatch = descText.match(/【付属品】([\s\S]*?)(?:【商品内容】|$)/);
-		if (accessoriesMatch) {
+		const accessoriesText = accessoriesMatch?.[1];
+		if (accessoriesText) {
 			// Split on newlines or ■ at start of line, keep items intact
-			const items = accessoriesMatch[1]
+			const items = accessoriesText
 				.split(/\n■|^■/m)
 				.map(s => s.replace(/^■/, '').trim())
 				.filter(s => s.length > 0);
 
-			items.forEach(item => accessories.push({ ja: item }));
+			for (const item of items) {
+				accessories.push({ ja: item });
+			}
 		}
 
 		return accessories;
@@ -226,14 +235,17 @@ export class BandaiCatalogParser {
 
 		// Find text after 【商品内容】
 		const contentsMatch = descText.match(/【商品内容】([\s\S]*?)$/);
-		if (contentsMatch) {
+		const contentsText = contentsMatch?.[1];
+		if (contentsText) {
 			// Split on newlines or ■ at start of line, keep items intact
-			const items = contentsMatch[1]
+			const items = contentsText
 				.split(/\n■|^■/m)
 				.map(s => s.replace(/^■/, '').trim())
 				.filter(s => s.length > 0);
 
-			items.forEach(item => contents.push({ ja: item }));
+			for (const item of items) {
+				contents.push({ ja: item });
+			}
 		}
 
 		return contents;

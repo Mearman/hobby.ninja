@@ -16,8 +16,8 @@ import {
 	loadDictionary,
 	rebuildAndReloadDictionary,
 	TRANSLATION_STORE_DIR,
-} from '../../../translation/src/index';
-import type { CatalogItem } from '../../../types/src/catalogData';
+} from '@hobby-ninja/translation';
+import type { CatalogItem } from '@hobby-ninja/types/catalog';
 import { TranslationProgressRenderer } from './ui/TranslationProgress';
 
 const BATCH_SIZE = 50;

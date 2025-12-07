@@ -7,7 +7,7 @@
 
 import { promises as fs } from 'node:fs';
 import { join } from 'node:path';
-import { normalizeText } from '../../../translation/src/text-normalizer';
+import { normalizeText } from '@hobby-ninja/translation/text-normalizer';
 
 const DEFAULT_CATALOG_DIR = 'data/bandai/items';
 const DEFAULT_MANUALS_DIR = 'data/bandai/manuals';

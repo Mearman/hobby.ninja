@@ -3,7 +3,7 @@
  * Handles partial dates (year only, year+month, full date).
  */
 
-import type { UnifiedReleaseDate } from "@speckit/types";
+import type { UnifiedReleaseDate } from "@hobby-ninja/types/unified";
 
 /**
  * Convert a partial date to a comparable timestamp.
@@ -80,28 +80,28 @@ export function parseJapaneseDate(
 ): UnifiedReleaseDate | undefined {
 	// Match year, month, day pattern
 	const match = dateStr.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
-	if (match) {
+	if (match?.[1] && match[2] && match[3]) {
 		return {
-			year: parseInt(match[1], 10),
-			month: parseInt(match[2], 10),
-			day: parseInt(match[3], 10),
+			year: Number.parseInt(match[1], 10),
+			month: Number.parseInt(match[2], 10),
+			day: Number.parseInt(match[3], 10),
 		};
 	}
 
 	// Match year and month only
 	const yearMonthMatch = dateStr.match(/(\d{4})年(\d{1,2})月/);
-	if (yearMonthMatch) {
+	if (yearMonthMatch?.[1] && yearMonthMatch[2]) {
 		return {
-			year: parseInt(yearMonthMatch[1], 10),
-			month: parseInt(yearMonthMatch[2], 10),
+			year: Number.parseInt(yearMonthMatch[1], 10),
+			month: Number.parseInt(yearMonthMatch[2], 10),
 		};
 	}
 
 	// Match year only
 	const yearMatch = dateStr.match(/(\d{4})年/);
-	if (yearMatch) {
+	if (yearMatch?.[1]) {
 		return {
-			year: parseInt(yearMatch[1], 10),
+			year: Number.parseInt(yearMatch[1], 10),
 		};
 	}
 

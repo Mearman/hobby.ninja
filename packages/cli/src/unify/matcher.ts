@@ -13,16 +13,14 @@ import type {
 	MatchCandidate,
 	UnifiedReleaseDate,
 	ReviewQueueItem,
-} from "@speckit/types";
+} from "@hobby-ninja/types/unified";
 
 import {
 	normalizeProductName,
-	extractCoreName,
 	productNameSimilarity,
 	seriesMatch,
 	scaleMatch,
 	gradeMatch,
-	normalizeGrade,
 } from "./normalizer";
 
 import { datesWithinDays, dateDifferenceInDays } from "../utils/date-proximity";

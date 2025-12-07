@@ -21,13 +21,9 @@ import type {
 	UnifyStats,
 	MatchCandidate,
 	UnifyOptions,
-	CatalogOrphan,
-	ManualOrphan,
-	LocalizedText,
-	UnifiedReleaseDate,
-} from "@speckit/types";
-
-import type { CatalogItem, CatalogBrand } from "@speckit/types";
+} from "@hobby-ninja/types/unified";
+import type { LocalizedText } from "@hobby-ninja/types/manual";
+import type { CatalogItem } from "@hobby-ninja/types/catalog";
 
 import { matchAll, type CatalogMatchItem, type ManualMatchItem } from "./matcher";
 import { extractGrade, normalizeGrade } from "./normalizer";

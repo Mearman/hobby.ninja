@@ -54,9 +54,6 @@ const GRADE_PREFIXES = [
 	"CUSTOMIZE EFFECT",
 ];
 
-/** Scale patterns to extract */
-const SCALE_PATTERN = /1\/(\d+)/g;
-
 /**
  * Normalize a product name for matching.
  * Applies Unicode normalization, whitespace cleanup, and bracket standardization.
