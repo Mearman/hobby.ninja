@@ -28,7 +28,7 @@ export interface GraphRoute {
  * Scans the graph data directory and generates routes for all nodes
  */
 export async function generateGraphRoutes(): Promise<string[]> {
-	const graphDataPath = join(process.cwd(), "public", "api", "graph");
+	const graphDataPath = join(process.cwd(), "apps", "web", "public", "api", "graph");
 	const routes: string[] = [];
 
 	try {
@@ -62,7 +62,7 @@ export async function generateGraphRoutes(): Promise<string[]> {
  * Loads a specific graph node by type and ID
  */
 export async function loadGraphNode(nodeType: string, nodeId: string): Promise<GraphNode | null> {
-	const graphDataPath = join(process.cwd(), "public", "api", "graph");
+	const graphDataPath = join(process.cwd(), "apps", "web", "public", "api", "graph");
 
 	try {
 		// Convert singular back to plural for file path

@@ -67,7 +67,7 @@ export class GraphPreloader {
    * Preloads a specific node type with chunked processing
    */
 	private async preloadNodeType(nodeType: string): Promise<void> {
-		const graphDataPath = join(process.cwd(), "public", "api", "graph", nodeType);
+		const graphDataPath = join(process.cwd(), "apps", "web", "public", "api", "graph", nodeType);
 		const files = await readdir(graphDataPath);
 		const jsonFiles = files.filter(file => file.endsWith(".json"));
 
@@ -150,7 +150,7 @@ export class GraphPreloader {
    */
 	private async loadNodeOnDemand(type: string, id: string): Promise<GraphNode | null> {
 		try {
-			const graphDataPath = join(process.cwd(), "public", "api", "graph", `${type}s`);
+			const graphDataPath = join(process.cwd(), "apps", "web", "public", "api", "graph", `${type}s`);
 			const filePath = join(graphDataPath, `${id}.json`);
 			const fileContent = await readFile(filePath, "utf-8");
 			const nodeData = JSON.parse(fileContent);
