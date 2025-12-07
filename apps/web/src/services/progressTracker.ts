@@ -273,7 +273,7 @@ export class ProgressTracker {
 		this.emit("operationStarted", { id, operation });
 
 		// Set up timeout
-		let timeoutId: NodeJS.Timeout;
+		let timeoutId: NodeJS.Timeout | undefined;
 		if (operation.config.timeout) {
 			timeoutId = setTimeout(() => {
 				this.failOperation(id, new Error("Operation timeout"));
