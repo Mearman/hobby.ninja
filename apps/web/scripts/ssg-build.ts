@@ -16,6 +16,7 @@ import { getGraphPreloader } from '../src/utils/graph-preloader';
 import { generateGraphRoutes } from '../src/utils/graph-routes-generator';
 import { generateSEOFiles } from './sitemap-generator';
 import { StructuredDataGenerator } from './structured-data-generator';
+import PerformanceMonitor from './performance-monitor';
 import { ReactElement } from 'react';
 
 // Configuration
@@ -260,6 +261,9 @@ export async function buildSSG(options: SSGOptions = {}): Promise<void> {
 	console.log('🚀 Starting SSG build...');
 	const startTime = Date.now();
 
+	// Initialize performance monitor
+	const perfMonitor = new PerformanceMonitor(OUTPUT_DIR);
+
 	try {
 		// Ensure output directory exists
 		if (!existsSync(OUTPUT_DIR)) {
@@ -277,7 +281,10 @@ export async function buildSSG(options: SSGOptions = {}): Promise<void> {
 		await preloader.preloadAllNodes();
 
 		// Generate routes
+		const routeGenStart = Date.now();
 		const graphRoutes = customRoutes || await generateGraphRoutes();
+		const routeGenTime = Date.now() - routeGenStart;
+		perfMonitor.recordRouteGeneration(graphRoutes.length, routeGenTime);
 
 		// Add static pages
 		const staticPages = [
@@ -320,10 +327,19 @@ export async function buildSSG(options: SSGOptions = {}): Promise<void> {
 		}
 
 		// Generate SEO files (sitemap.xml, robots.txt)
+		const seoStart = Date.now();
 		if (verbose) {
 			console.log('🔍 Generating SEO files...');
 		}
 		await generateSEOFiles();
+		const seoTime = Date.now() - seoStart;
+		perfMonitor.recordSEOGeneration(seoTime);
+
+		// Record HTML generation metrics
+		perfMonitor.recordHTMLGeneration(totalSuccess, totalFailed, Date.now() - startTime - routeGenTime - seoTime);
+
+		// Finalize performance monitoring
+		perfMonitor.finalize();
 
 		const duration = Date.now() - startTime;
 

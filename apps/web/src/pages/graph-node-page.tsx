@@ -10,6 +10,7 @@ import { Link, useLoaderData } from "@tanstack/react-router";
 
 import { GraphNodeDetails } from "../components/graph/GraphNodeDetails";
 import { RelatedNodesGrid } from "../components/graph/RelatedNodesGrid";
+import { StructuredDataGenerator } from "../../scripts/structured-data-generator";
 import type { GraphNode } from "../utils/graph-routes-generator";
 
 interface GraphNodePageLoader {
@@ -67,6 +68,23 @@ function GraphNodeBreadcrumbs({ nodeType, nodeId, nodeData }: { nodeType: string
 }
 
 /**
+ * Safe JSON-LD structured data component
+ */
+function StructuredDataScript({ data }: { data: Record<string, unknown> }) {
+	// Sanitize structured data to ensure no script injection
+	const sanitizedData = JSON.stringify(data).replace(/</g, "\\u003c").replace(/>/g, "\\u003e");
+
+	return (
+		<script
+			type="application/ld+json"
+			dangerouslySetInnerHTML={{
+				__html: sanitizedData,
+			}}
+		/>
+	);
+}
+
+/**
  * Meta tags for SEO optimization
  */
 function GraphNodeMeta({ nodeData, nodeType }: { nodeData: GraphNode | null; nodeType: string }) {
@@ -74,6 +92,15 @@ function GraphNodeMeta({ nodeData, nodeType }: { nodeData: GraphNode | null; nod
 
 	const title = nodeData.name?.en || nodeData.name?.ja || "Graph Node";
 	const description = `${nodeType.charAt(0).toUpperCase() + nodeType.slice(1)}: ${title}`;
+
+	// Generate structured data
+	const structuredDataGenerator = new StructuredDataGenerator();
+	const structuredData = structuredDataGenerator.generateStructuredData(nodeData);
+	const breadcrumbData = structuredDataGenerator.generateBreadcrumbData(
+		nodeType,
+		nodeData.id,
+		nodeData.name?.en || nodeData.name?.ja
+	);
 
 	return (
 		<>
@@ -83,6 +110,10 @@ function GraphNodeMeta({ nodeData, nodeType }: { nodeData: GraphNode | null; nod
 			<meta property="og:description" content={description} />
 			<meta property="og:type" content="website" />
 			<link rel="canonical" href={`https://hobby.ninja/${nodeType}/${nodeData.id}`} />
+
+			{/* Safe Structured Data for SEO */}
+			{structuredData && <StructuredDataScript data={structuredData} />}
+			{breadcrumbData && <StructuredDataScript data={breadcrumbData} />}
 		</>
 	);
 }
