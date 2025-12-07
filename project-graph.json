@@ -1,0 +1,2306 @@
+{
+  "graph": {
+    "nodes": {
+      "translation": {
+        "name": "translation",
+        "type": "lib",
+        "data": {
+          "root": "packages/translation",
+          "metadata": {
+            "targetGroups": {
+              "NPM Scripts": [
+                "dev",
+                "test:coverage",
+                "typecheck"
+              ]
+            },
+            "description": "Translation utilities for Gunpla data with caching and error handling",
+            "js": {
+              "packageName": "@hobby-ninja/translation",
+              "packageVersion": "0.0.1",
+              "packageExports": {
+                ".": {
+                  "import": "./dist/index.js",
+                  "types": "./dist/index.d.ts"
+                }
+              },
+              "packageMain": "./dist/index.js",
+              "isInPackageManagerWorkspaces": true
+            }
+          },
+          "targets": {
+            "test": {
+              "executor": "@nx/vitest:test",
+              "outputs": [
+                "{workspaceRoot}/coverage/packages/translation"
+              ],
+              "options": {
+                "config": "packages/translation/vite.config.ts",
+                "vitestConfig": "packages/translation/vite.config.ts",
+                "passWithNoTests": true
+              },
+              "configurations": {},
+              "parallelism": true,
+              "cache": true,
+              "parallel": 3,
+              "maxParallel": 3,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/tsconfig.base.json",
+                "{workspaceRoot}/vitest.config.ts"
+              ]
+            },
+            "typecheck": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "typecheck"
+              },
+              "metadata": {
+                "description": "Runs type-checking for the project.",
+                "technologies": [
+                  "typescript",
+                  "typescript"
+                ],
+                "help": {
+                  "command": "pnpm exec tsc --build --help",
+                  "example": {
+                    "args": [
+                      "--force"
+                    ]
+                  }
+                },
+                "scriptContent": "tsc --noEmit",
+                "runCommand": "pnpm run typecheck"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "build-deps": {
+              "dependsOn": [
+                "^build"
+              ],
+              "configurations": {},
+              "options": {},
+              "parallelism": true,
+              "executor": "nx:noop"
+            },
+            "watch-deps": {
+              "continuous": true,
+              "dependsOn": [
+                "build-deps"
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "pnpm exec nx watch --projects translation --includeDependentProjects -- pnpm exec nx build-deps translation"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "dev": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "dev"
+              },
+              "metadata": {
+                "scriptContent": "tsc --watch",
+                "runCommand": "pnpm run dev"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "test:coverage": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test:coverage"
+              },
+              "metadata": {
+                "scriptContent": "vitest --coverage",
+                "runCommand": "pnpm run test:coverage"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "build": {
+              "executor": "@nx/js:tsc",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "options": {
+                "outputPath": "dist/packages/translation",
+                "main": "packages/translation/src/index.ts",
+                "tsConfig": "packages/translation/tsconfig.json",
+                "assets": []
+              },
+              "configurations": {},
+              "parallelism": true,
+              "cache": true,
+              "dependsOn": [
+                "^build",
+                "syncpack:fix",
+                "barrels",
+                "lint:fix",
+                "typecheck"
+              ],
+              "parallel": 4,
+              "maxParallel": 4
+            },
+            "lint": {
+              "executor": "@nx/eslint:lint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "packages/translation/src/**/*.ts",
+                  "packages/translation/src/**/*.md"
+                ]
+              },
+              "configurations": {},
+              "parallelism": true,
+              "cache": true,
+              "parallel": 5,
+              "maxParallel": 5
+            },
+            "nx-release-publish": {
+              "executor": "@nx/js:release-publish",
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "options": {},
+              "configurations": {},
+              "parallelism": true
+            }
+          },
+          "name": "translation",
+          "tags": [
+            "npm:public",
+            "scope:shared",
+            "type:utility"
+          ],
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "packages/translation/src",
+          "projectType": "library",
+          "implicitDependencies": []
+        }
+      },
+      "scrapers": {
+        "name": "scrapers",
+        "type": "lib",
+        "data": {
+          "root": "packages/scrapers",
+          "targets": {
+            "typecheck": {
+              "executor": "@nx/js:tsc",
+              "options": {
+                "main": "packages/scrapers/src/index.ts",
+                "outputPath": "dist/packages/scrapers",
+                "tsConfig": "packages/scrapers/tsconfig.json",
+                "noEmit": true,
+                "skipLibCheck": true
+              },
+              "configurations": {},
+              "parallelism": true,
+              "cache": true,
+              "parallel": 5,
+              "maxParallel": 5,
+              "inputs": [
+                "default",
+                "^default"
+              ]
+            },
+            "dev": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "dev"
+              },
+              "metadata": {
+                "scriptContent": "tsup --watch",
+                "runCommand": "pnpm run dev"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "clean": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "clean"
+              },
+              "metadata": {
+                "scriptContent": "rm -rf dist",
+                "runCommand": "pnpm run clean"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "download-manuals": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "download-manuals"
+              },
+              "metadata": {
+                "scriptContent": "node dist/manual-downloader/cli/index.js",
+                "runCommand": "pnpm run download-manuals"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "nx-release-publish": {
+              "executor": "@nx/js:release-publish",
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "options": {},
+              "configurations": {},
+              "parallelism": true
+            },
+            "build": {
+              "executor": "@nx:run-commands",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "options": {
+                "command": "tsup",
+                "cwd": "packages/scrapers"
+              },
+              "configurations": {},
+              "parallelism": true,
+              "cache": true,
+              "dependsOn": [
+                "^build",
+                "syncpack:fix",
+                "barrels",
+                "lint:fix",
+                "typecheck"
+              ],
+              "parallel": 4,
+              "maxParallel": 4
+            },
+            "lint": {
+              "executor": "@nx/eslint:lint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "packages/scrapers/**/*.ts"
+                ]
+              },
+              "configurations": {},
+              "parallelism": true,
+              "cache": true,
+              "parallel": 5,
+              "maxParallel": 5
+            },
+            "lint:fix": {
+              "executor": "@nx/eslint:lint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "packages/scrapers/**/*.ts"
+                ],
+                "fix": true
+              },
+              "configurations": {},
+              "parallelism": true
+            }
+          },
+          "name": "scrapers",
+          "tags": [
+            "npm:public"
+          ],
+          "metadata": {
+            "targetGroups": {
+              "NPM Scripts": [
+                "dev",
+                "clean",
+                "download-manuals"
+              ]
+            },
+            "description": "Web scrapers for Gundam and Gunpla data sources",
+            "js": {
+              "packageName": "@hobby-ninja/scrapers",
+              "packageVersion": "1.0.0",
+              "packageExports": {
+                ".": {
+                  "types": "./dist/index.d.ts",
+                  "import": "./dist/index.js",
+                  "require": "./dist/index.cjs"
+                }
+              },
+              "packageMain": "dist/index.js",
+              "isInPackageManagerWorkspaces": true
+            }
+          },
+          "$schema": "../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "packages/scrapers/src",
+          "projectType": "library",
+          "implicitDependencies": []
+        }
+      },
+      "types": {
+        "name": "types",
+        "type": "lib",
+        "data": {
+          "root": "packages/types",
+          "targets": {
+            "typecheck": {
+              "executor": "@nx/js:tsc",
+              "options": {
+                "tsConfig": "packages/types/tsconfig.json",
+                "main": "packages/types/src/index.ts",
+                "outputPath": "dist/packages/types",
+                "noEmit": true,
+                "skipLibCheck": true
+              },
+              "cache": true,
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 5,
+              "maxParallel": 5,
+              "inputs": [
+                "default",
+                "^default"
+              ]
+            },
+            "lint:fix": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "lint:fix"
+              },
+              "metadata": {
+                "scriptContent": "eslint src --ext ts --fix",
+                "runCommand": "pnpm run lint:fix"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "build": {
+              "executor": "@nx/js:tsc",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "cache": true,
+              "options": {
+                "outputPath": "dist/packages/types",
+                "main": "packages/types/src/index.ts",
+                "tsConfig": "packages/types/tsconfig.json",
+                "assets": []
+              },
+              "configurations": {},
+              "parallelism": true,
+              "dependsOn": [
+                "^build",
+                "syncpack:fix",
+                "barrels",
+                "lint:fix",
+                "typecheck"
+              ],
+              "parallel": 4,
+              "maxParallel": 4
+            },
+            "test": {
+              "executor": "@nx/vitest:test",
+              "outputs": [
+                "{workspaceRoot}/coverage/types"
+              ],
+              "cache": true,
+              "options": {
+                "passWithNoTests": true,
+                "reportsDirectory": "coverage/types"
+              },
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 3,
+              "maxParallel": 3,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/tsconfig.base.json",
+                "{workspaceRoot}/vitest.config.ts"
+              ]
+            },
+            "lint": {
+              "executor": "@nx/eslint:lint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "cache": true,
+              "options": {
+                "lintFilePatterns": [
+                  "packages/types/src/**/*.ts"
+                ]
+              },
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 5,
+              "maxParallel": 5
+            }
+          },
+          "name": "types",
+          "tags": [
+            "npm:private",
+            "scope:shared",
+            "type:util",
+            "context:types"
+          ],
+          "metadata": {
+            "targetGroups": {
+              "NPM Scripts": [
+                "lint:fix"
+              ]
+            },
+            "js": {
+              "packageName": "@hobby-ninja/types",
+              "packageVersion": "0.0.1",
+              "packageExports": {
+                ".": {
+                  "types": "./src/index.ts",
+                  "import": "./src/index.ts"
+                },
+                "./schemas": {
+                  "types": "./src/schemas.ts",
+                  "import": "./src/schemas.ts"
+                }
+              },
+              "packageMain": "./src/index.ts",
+              "isInPackageManagerWorkspaces": true
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "packages/types/src",
+          "projectType": "library",
+          "implicitDependencies": []
+        }
+      },
+      "utils": {
+        "name": "utils",
+        "type": "lib",
+        "data": {
+          "root": "packages/utils",
+          "targets": {
+            "typecheck": {
+              "executor": "@nx/js:tsc",
+              "options": {
+                "tsConfig": "packages/utils/tsconfig.json",
+                "main": "packages/utils/src/index.ts",
+                "outputPath": "dist/packages/utils",
+                "noEmit": true,
+                "skipLibCheck": true
+              },
+              "cache": true,
+              "dependsOn": [
+                "types:build"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 5,
+              "maxParallel": 5,
+              "inputs": [
+                "default",
+                "^default"
+              ]
+            },
+            "lint:fix": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "lint:fix"
+              },
+              "metadata": {
+                "scriptContent": "eslint src --ext ts --fix",
+                "runCommand": "pnpm run lint:fix"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "build": {
+              "executor": "@nx/js:tsc",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "cache": true,
+              "options": {
+                "outputPath": "dist/packages/utils",
+                "main": "packages/utils/src/index.ts",
+                "tsConfig": "packages/utils/tsconfig.json",
+                "assets": []
+              },
+              "dependsOn": [
+                "types:build"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 4,
+              "maxParallel": 4
+            },
+            "test": {
+              "executor": "@nx/vitest:test",
+              "outputs": [
+                "{workspaceRoot}/coverage/utils"
+              ],
+              "cache": true,
+              "options": {
+                "passWithNoTests": true,
+                "reportsDirectory": "coverage/utils"
+              },
+              "dependsOn": [
+                "types:build"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 3,
+              "maxParallel": 3,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/tsconfig.base.json",
+                "{workspaceRoot}/vitest.config.ts"
+              ]
+            },
+            "lint": {
+              "executor": "@nx/eslint:lint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "cache": true,
+              "options": {
+                "lintFilePatterns": [
+                  "packages/utils/src/**/*.ts"
+                ]
+              },
+              "dependsOn": [
+                "types:build"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 5,
+              "maxParallel": 5
+            }
+          },
+          "name": "utils",
+          "tags": [
+            "npm:private",
+            "scope:shared",
+            "type:util",
+            "context:utils"
+          ],
+          "metadata": {
+            "targetGroups": {
+              "NPM Scripts": [
+                "lint:fix"
+              ]
+            },
+            "js": {
+              "packageName": "@hobby-ninja/utils",
+              "packageVersion": "0.0.1",
+              "packageExports": {
+                ".": {
+                  "types": "./src/index.ts",
+                  "import": "./src/index.ts"
+                },
+                "/format": {
+                  "types": "./src/format.ts",
+                  "import": "./src/format.ts"
+                },
+                "/storage": {
+                  "types": "./src/storage.ts",
+                  "import": "./src/storage.ts"
+                },
+                "/api": {
+                  "types": "./src/api.ts",
+                  "import": "./src/api.ts"
+                },
+                "/constants": {
+                  "types": "./src/constants.ts",
+                  "import": "./src/constants.ts"
+                }
+              },
+              "packageMain": "./src/index.ts",
+              "isInPackageManagerWorkspaces": true
+            }
+          },
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "packages/utils/src",
+          "projectType": "library",
+          "implicitDependencies": []
+        }
+      },
+      "scripts": {
+        "name": "scripts",
+        "type": "lib",
+        "data": {
+          "root": "tools/scripts",
+          "targets": {
+            "typecheck": {
+              "executor": "@nx/js:tsc",
+              "options": {
+                "tsConfig": "tools/scripts/tsconfig.json",
+                "main": "tools/scripts/index.ts",
+                "outputPath": "dist/tools/scripts",
+                "noEmit": true,
+                "skipLibCheck": true
+              },
+              "cache": true,
+              "inputs": [
+                "{projectRoot}/**/*.ts",
+                "{projectRoot}/tsconfig.json",
+                "{workspaceRoot}/tsconfig.base.json"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 5,
+              "maxParallel": 5
+            },
+            "lint": {
+              "executor": "@nx/eslint:lint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "cache": true,
+              "options": {
+                "lintFilePatterns": [
+                  "tools/scripts/**/*.ts"
+                ]
+              },
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 5,
+              "maxParallel": 5
+            },
+            "count-tokens": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "npx tsx count-markdown-tokens.ts",
+                "cwd": "tools/scripts"
+              },
+              "cache": true,
+              "inputs": [
+                "{workspaceRoot}/**/*.md"
+              ],
+              "configurations": {},
+              "parallelism": true
+            },
+            "check-claude-tokens": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "npx tsx tools/scripts/count-claude-tokens.ts",
+                "cwd": "."
+              },
+              "cache": true,
+              "inputs": [
+                "{workspaceRoot}/CLAUDE.md",
+                "{workspaceRoot}/README.md",
+                "{workspaceRoot}/.specify/memory/**/*.md"
+              ],
+              "configurations": {},
+              "parallelism": true
+            }
+          },
+          "name": "scripts",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "tools/scripts",
+          "projectType": "library",
+          "tags": [
+            "type:tooling",
+            "scope:scripts"
+          ],
+          "implicitDependencies": []
+        }
+      },
+      "cli": {
+        "name": "cli",
+        "type": "lib",
+        "data": {
+          "root": "packages/cli",
+          "projectType": "library",
+          "metadata": {
+            "targetGroups": {
+              "NPM Scripts": [
+                "dev",
+                "start",
+                "test:watch",
+                "test:coverage",
+                "clean",
+                "scrape",
+                "scrape:bandai",
+                "scrape:gundam-info",
+                "scrape:dalong",
+                "clear-cache",
+                "status"
+              ]
+            },
+            "description": "CLI tool for scraping Gundam/Gunpla data from various sources",
+            "js": {
+              "packageName": "@hobby-ninja/cli",
+              "packageVersion": "0.0.1",
+              "packageMain": "dist/index.js",
+              "isInPackageManagerWorkspaces": true
+            }
+          },
+          "targets": {
+            "build": {
+              "executor": "@nx/js:tsc",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "cache": true,
+              "options": {
+                "outputPath": "dist/packages/cli",
+                "main": "packages/cli/src/index.ts",
+                "tsConfig": "packages/cli/tsconfig.json",
+                "assets": []
+              },
+              "dependsOn": [
+                "types:build",
+                "utils:build"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 4,
+              "maxParallel": 4
+            },
+            "serve": {
+              "continuous": true,
+              "options": {
+                "cwd": "packages/cli",
+                "command": "vite"
+              },
+              "metadata": {
+                "technologies": [
+                  "vite"
+                ],
+                "description": "Starts Vite dev server",
+                "help": {
+                  "command": "pnpm exec vite --help",
+                  "example": {
+                    "options": {
+                      "port": 3000
+                    }
+                  }
+                },
+                "deprecated": "Use devTargetName instead. This option will be removed in Nx 22."
+              },
+              "executor": "nx:run-commands",
+              "configurations": {},
+              "parallelism": true,
+              "cache": false,
+              "dependsOn": [
+                "^build",
+                "barrels"
+              ]
+            },
+            "dev": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "dev"
+              },
+              "metadata": {
+                "technologies": [
+                  "vite"
+                ],
+                "description": "Starts Vite dev server",
+                "help": {
+                  "command": "pnpm exec vite --help",
+                  "example": {
+                    "options": {
+                      "port": 3000
+                    }
+                  }
+                },
+                "scriptContent": "tsx src/bin/cli.ts",
+                "runCommand": "pnpm run dev"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "preview": {
+              "continuous": true,
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": "packages/cli",
+                "command": "vite preview"
+              },
+              "metadata": {
+                "technologies": [
+                  "vite"
+                ],
+                "description": "Locally preview Vite production build",
+                "help": {
+                  "command": "pnpm exec vite preview --help",
+                  "example": {
+                    "options": {
+                      "port": 3000
+                    }
+                  }
+                }
+              },
+              "executor": "nx:run-commands",
+              "configurations": {},
+              "parallelism": true
+            },
+            "serve-static": {
+              "continuous": true,
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "spa": true
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "typecheck": {
+              "executor": "@nx/js:tsc",
+              "options": {
+                "tsConfig": "packages/cli/tsconfig.json",
+                "main": "packages/cli/src/index.ts",
+                "outputPath": "dist/packages/cli",
+                "noEmit": true,
+                "skipLibCheck": true
+              },
+              "cache": true,
+              "dependsOn": [
+                "types:build",
+                "utils:build"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 5,
+              "maxParallel": 5,
+              "inputs": [
+                "default",
+                "^default"
+              ]
+            },
+            "build-deps": {
+              "dependsOn": [
+                "^build"
+              ],
+              "configurations": {},
+              "options": {},
+              "parallelism": true,
+              "executor": "nx:noop"
+            },
+            "watch-deps": {
+              "continuous": true,
+              "dependsOn": [
+                "build-deps"
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "pnpm exec nx watch --projects cli --includeDependentProjects -- pnpm exec nx build-deps cli"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "test": {
+              "executor": "@nx/vitest:test",
+              "outputs": [
+                "{workspaceRoot}/coverage/cli"
+              ],
+              "cache": true,
+              "options": {
+                "passWithNoTests": true,
+                "reportsDirectory": "coverage/cli"
+              },
+              "dependsOn": [
+                "types:build",
+                "utils:build"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 3,
+              "maxParallel": 3,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/tsconfig.base.json",
+                "{workspaceRoot}/vitest.config.ts"
+              ]
+            },
+            "start": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "start"
+              },
+              "metadata": {
+                "scriptContent": "node ./dist/bin/cli.js",
+                "runCommand": "pnpm run start"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "test:watch": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test:watch"
+              },
+              "metadata": {
+                "scriptContent": "vitest --watch",
+                "runCommand": "pnpm run test:watch"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "test:coverage": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test:coverage"
+              },
+              "metadata": {
+                "scriptContent": "vitest --coverage",
+                "runCommand": "pnpm run test:coverage"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "clean": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "clean"
+              },
+              "metadata": {
+                "scriptContent": "rm -rf dist .cache",
+                "runCommand": "pnpm run clean"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "scrape": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "scrape"
+              },
+              "metadata": {
+                "scriptContent": "node ./dist/bin/cli.js scrape",
+                "runCommand": "pnpm run scrape"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "scrape:bandai": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "scrape:bandai"
+              },
+              "metadata": {
+                "scriptContent": "node ./dist/bin/cli.js scrape --scrapers bandai",
+                "runCommand": "pnpm run scrape:bandai"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "scrape:gundam-info": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "scrape:gundam-info"
+              },
+              "metadata": {
+                "scriptContent": "node ./dist/bin/cli.js scrape --scrapers gundam-info",
+                "runCommand": "pnpm run scrape:gundam-info"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "scrape:dalong": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "scrape:dalong"
+              },
+              "metadata": {
+                "scriptContent": "node ./dist/bin/cli.js scrape --scrapers dalong",
+                "runCommand": "pnpm run scrape:dalong"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "clear-cache": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "clear-cache"
+              },
+              "metadata": {
+                "scriptContent": "node ./dist/bin/cli.js cache clear",
+                "runCommand": "pnpm run clear-cache"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "status": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "status"
+              },
+              "metadata": {
+                "scriptContent": "node ./dist/bin/cli.js status --cache-stats",
+                "runCommand": "pnpm run status"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "lint": {
+              "executor": "@nx/eslint:lint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "cache": true,
+              "options": {
+                "lintFilePatterns": [
+                  "packages/cli/src/**/*.ts"
+                ]
+              },
+              "dependsOn": [
+                "types:build",
+                "utils:build"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 5,
+              "maxParallel": 5
+            },
+            "nx-release-publish": {
+              "executor": "@nx/js:release-publish",
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "options": {},
+              "configurations": {},
+              "parallelism": true
+            },
+            "cli": {
+              "executor": "@nx/js:node",
+              "options": {
+                "buildTarget": "cli:build"
+              },
+              "configurations": {},
+              "parallelism": true
+            }
+          },
+          "name": "cli",
+          "tags": [
+            "npm:public",
+            "npm:gundam",
+            "npm:gunpla",
+            "npm:scraping",
+            "npm:cli",
+            "npm:data",
+            "npm:bandai",
+            "scope:cli",
+            "type:tool",
+            "context:scraping"
+          ],
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "packages/cli/src",
+          "implicitDependencies": []
+        }
+      },
+      "web": {
+        "name": "web",
+        "type": "app",
+        "data": {
+          "root": "apps/web",
+          "projectType": "application",
+          "metadata": {
+            "targetGroups": {
+              "NPM Scripts": [
+                "dev",
+                "test:watch",
+                "test:ui",
+                "test:coverage",
+                "lint:fix",
+                "e2e",
+                "e2e:ui"
+              ]
+            },
+            "js": {
+              "packageName": "@hobby-ninja/webapp",
+              "packageVersion": "0.0.1",
+              "isInPackageManagerWorkspaces": true
+            }
+          },
+          "targets": {
+            "build": {
+              "executor": "@nx/vite:build",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "cache": true,
+              "defaultConfiguration": "production",
+              "options": {
+                "outputPath": "dist/apps/web"
+              },
+              "configurations": {
+                "development": {
+                  "mode": "development"
+                },
+                "production": {
+                  "mode": "production"
+                }
+              },
+              "parallelism": true,
+              "dependsOn": [
+                "^build",
+                "syncpack:fix",
+                "barrels",
+                "lint:fix",
+                "typecheck"
+              ],
+              "parallel": 4,
+              "maxParallel": 4
+            },
+            "serve": {
+              "executor": "@nx/vite:dev-server",
+              "defaultConfiguration": "development",
+              "options": {
+                "buildTarget": "web:build"
+              },
+              "configurations": {
+                "development": {
+                  "buildTarget": "web:build:development",
+                  "port": 3000
+                },
+                "production": {
+                  "buildTarget": "web:build:production"
+                }
+              },
+              "parallelism": true,
+              "continuous": true,
+              "cache": false,
+              "dependsOn": [
+                "^build",
+                "barrels"
+              ]
+            },
+            "dev": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "dev"
+              },
+              "metadata": {
+                "technologies": [
+                  "vite"
+                ],
+                "description": "Starts Vite dev server",
+                "help": {
+                  "command": "pnpm exec vite --help",
+                  "example": {
+                    "options": {
+                      "port": 3000
+                    }
+                  }
+                },
+                "scriptContent": "vite",
+                "runCommand": "pnpm run dev"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "preview": {
+              "executor": "@nx/vite:preview-server",
+              "defaultConfiguration": "production",
+              "options": {
+                "buildTarget": "web:build"
+              },
+              "configurations": {
+                "development": {
+                  "buildTarget": "web:build:development"
+                },
+                "production": {
+                  "buildTarget": "web:build:production"
+                }
+              },
+              "parallelism": true,
+              "continuous": true
+            },
+            "serve-static": {
+              "continuous": true,
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "web:build",
+                "spa": true,
+                "port": 4200
+              },
+              "configurations": {
+                "production": {
+                  "buildTarget": "web:build:production"
+                }
+              },
+              "parallelism": true
+            },
+            "typecheck": {
+              "executor": "@nx/js:tsc",
+              "options": {
+                "tsConfig": "apps/web/tsconfig.json",
+                "main": "apps/web/src/main.tsx",
+                "outputPath": "dist/apps/web",
+                "noEmit": true,
+                "skipLibCheck": true
+              },
+              "cache": true,
+              "dependsOn": [
+                "@hobby-ninja/types:build",
+                "@hobby-ninja/utils:build"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 5,
+              "maxParallel": 5,
+              "inputs": [
+                "default",
+                "^default"
+              ]
+            },
+            "build-deps": {
+              "dependsOn": [
+                "^build"
+              ],
+              "configurations": {},
+              "options": {},
+              "parallelism": true,
+              "executor": "nx:noop"
+            },
+            "watch-deps": {
+              "continuous": true,
+              "dependsOn": [
+                "build-deps"
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "pnpm exec nx watch --projects web --includeDependentProjects -- pnpm exec nx build-deps web"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "test:watch": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test:watch"
+              },
+              "metadata": {
+                "scriptContent": "vitest --watch",
+                "runCommand": "pnpm run test:watch"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "test:ui": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test:ui"
+              },
+              "metadata": {
+                "scriptContent": "vitest --ui",
+                "runCommand": "pnpm run test:ui"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "test:coverage": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test:coverage"
+              },
+              "metadata": {
+                "scriptContent": "vitest --coverage",
+                "runCommand": "pnpm run test:coverage"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "lint:fix": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "lint:fix"
+              },
+              "metadata": {
+                "scriptContent": "eslint src --ext ts,tsx --fix",
+                "runCommand": "pnpm run lint:fix"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "e2e": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "e2e"
+              },
+              "metadata": {
+                "scriptContent": "playwright test",
+                "runCommand": "pnpm run e2e"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "e2e:ui": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "e2e:ui"
+              },
+              "metadata": {
+                "scriptContent": "playwright test --ui",
+                "runCommand": "pnpm run e2e:ui"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "test": {
+              "executor": "@nx/vitest:test",
+              "outputs": [
+                "{workspaceRoot}/coverage/web"
+              ],
+              "cache": true,
+              "options": {
+                "passWithNoTests": true,
+                "reportsDirectory": "coverage/web"
+              },
+              "dependsOn": [
+                "@hobby-ninja/types:build",
+                "@hobby-ninja/utils:build"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 3,
+              "maxParallel": 3,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/tsconfig.base.json",
+                "{workspaceRoot}/vitest.config.ts"
+              ]
+            },
+            "lint": {
+              "executor": "@nx/eslint:lint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "cache": true,
+              "options": {
+                "lintFilePatterns": [
+                  "apps/web/src/**/*.{ts,tsx,js,jsx}"
+                ]
+              },
+              "dependsOn": [
+                "@hobby-ninja/types:build",
+                "@hobby-ninja/utils:build"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 5,
+              "maxParallel": 5
+            },
+            "test:e2e": {
+              "executor": "@nx/playwright:playwright",
+              "options": {
+                "config": "playwright.config.ts"
+              },
+              "dependsOn": [
+                "web:build"
+              ],
+              "configurations": {},
+              "parallelism": true,
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/playwright.config.ts",
+                "{workspaceRoot}/.browserslistrc"
+              ],
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ]
+            },
+            "test:e2e:dev": {
+              "executor": "@nx/playwright:playwright",
+              "options": {
+                "config": "playwright.dev.config.ts"
+              },
+              "dependsOn": [],
+              "configurations": {},
+              "parallelism": true
+            },
+            "test:e2e:prod": {
+              "executor": "@nx/playwright:playwright",
+              "options": {
+                "config": "playwright.prod.config.ts"
+              },
+              "dependsOn": [
+                "web:build"
+              ],
+              "configurations": {},
+              "parallelism": true
+            }
+          },
+          "name": "web",
+          "tags": [
+            "npm:private",
+            "scope:web",
+            "type:app"
+          ],
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/web/src",
+          "implicitDependencies": []
+        }
+      },
+      "hobby-ninja": {
+        "name": "hobby-ninja",
+        "type": "app",
+        "data": {
+          "root": ".",
+          "metadata": {
+            "targetGroups": {
+              "E2E (CI)": [
+                "e2e-ci",
+                "e2e-ci--merge-reports"
+              ],
+              "NPM Scripts": [
+                "barrels",
+                "barrels:watch",
+                "prebuild",
+                "build",
+                "dev",
+                "serve",
+                "start",
+                "test",
+                "test:affected",
+                "test:e2e",
+                "test:e2e:affected",
+                "lint",
+                "lint:check",
+                "lint:affected",
+                "typecheck",
+                "typecheck:affected",
+                "format",
+                "format:check",
+                "prepare",
+                "clean",
+                "graph",
+                "graph:file",
+                "show:projects",
+                "show:web",
+                "deps",
+                "syncpack",
+                "validate:affected",
+                "validate:ci"
+              ]
+            },
+            "description": "Nx monorepo for hobby collection management",
+            "js": {
+              "packageName": "hobby-ninja",
+              "packageVersion": "0.0.1",
+              "isInPackageManagerWorkspaces": false
+            }
+          },
+          "targets": {
+            "test": {
+              "executor": "nx:run-script",
+              "metadata": {
+                "technologies": [
+                  "vite"
+                ],
+                "description": "Run Vite tests",
+                "help": {
+                  "command": "pnpm exec vitest --help",
+                  "example": {
+                    "options": {
+                      "bail": 1,
+                      "coverage": true
+                    }
+                  }
+                },
+                "scriptContent": "nx run hobby-ninja:test",
+                "runCommand": "pnpm run test"
+              },
+              "dependsOn": [
+                "types:test",
+                "utils:test",
+                "cli:test",
+                "web:test"
+              ],
+              "cache": true,
+              "options": {
+                "script": "test"
+              },
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 3,
+              "maxParallel": 3,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/tsconfig.base.json",
+                "{workspaceRoot}/vitest.config.ts"
+              ]
+            },
+            "typecheck": {
+              "executor": "nx:run-script",
+              "metadata": {
+                "description": "Runs type-checking for the project.",
+                "technologies": [
+                  "typescript"
+                ],
+                "help": {
+                  "command": "pnpm exec tsc -p tsconfig.json --help",
+                  "example": {
+                    "options": {
+                      "noEmit": true
+                    }
+                  }
+                },
+                "scriptContent": "nx run hobby-ninja:typecheck",
+                "runCommand": "pnpm run typecheck"
+              },
+              "dependsOn": [
+                "types:typecheck",
+                "utils:typecheck",
+                "cli:typecheck",
+                "scripts:typecheck",
+                "web:typecheck"
+              ],
+              "cache": true,
+              "options": {
+                "script": "typecheck"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "build-deps": {
+              "dependsOn": [
+                "^build"
+              ],
+              "configurations": {},
+              "options": {},
+              "parallelism": true,
+              "executor": "nx:noop"
+            },
+            "watch-deps": {
+              "continuous": true,
+              "dependsOn": [
+                "build-deps"
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "pnpm exec nx watch --projects hobby-ninja --includeDependentProjects -- pnpm exec nx build-deps hobby-ninja"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "test:e2e": {
+              "executor": "nx:run-script",
+              "metadata": {
+                "technologies": [
+                  "playwright"
+                ],
+                "description": "Runs Playwright Tests",
+                "help": {
+                  "command": "pnpm exec playwright test --help",
+                  "example": {
+                    "options": {
+                      "workers": 1
+                    }
+                  }
+                },
+                "scriptContent": "nx run hobby-ninja:test:e2e",
+                "runCommand": "pnpm run test:e2e"
+              },
+              "dependsOn": [
+                "web:test:e2e"
+              ],
+              "cache": true,
+              "options": {
+                "script": "test:e2e"
+              },
+              "configurations": {},
+              "parallelism": true,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/playwright.config.ts",
+                "{workspaceRoot}/.browserslistrc"
+              ],
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ]
+            },
+            "e2e-ci": {
+              "executor": "nx:noop",
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                {
+                  "externalDependencies": [
+                    "@playwright/test"
+                  ]
+                }
+              ],
+              "outputs": [
+                "{projectRoot}/test-results",
+                "{projectRoot}/playwright-report",
+                "{projectRoot}/test-results/results.json",
+                "{projectRoot}/test-results/junit.xml"
+              ],
+              "dependsOn": [],
+              "metadata": {
+                "technologies": [
+                  "playwright"
+                ],
+                "description": "Runs Playwright Tests in CI",
+                "nonAtomizedTarget": "test:e2e",
+                "help": {
+                  "command": "pnpm exec playwright test --help",
+                  "example": {
+                    "options": {
+                      "workers": 1
+                    }
+                  }
+                }
+              },
+              "configurations": {},
+              "options": {},
+              "parallelism": true
+            },
+            "e2e-ci--merge-reports": {
+              "executor": "@nx/playwright:merge-reports",
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                {
+                  "externalDependencies": [
+                    "@playwright/test"
+                  ]
+                }
+              ],
+              "outputs": [
+                "{projectRoot}/playwright-report",
+                "{projectRoot}/test-results/results.json",
+                "{projectRoot}/test-results/junit.xml"
+              ],
+              "options": {
+                "config": "playwright.config.ts",
+                "expectedSuites": 0
+              },
+              "metadata": {
+                "technologies": [
+                  "playwright"
+                ],
+                "description": "Merges Playwright blob reports from atomized tasks to produce unified reports for the configured reporters."
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "barrels": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "barrels",
+                "command": "barrelsby --config .barrelsby.json"
+              },
+              "metadata": {
+                "scriptContent": "barrelsby --config .barrelsby.json",
+                "runCommand": "pnpm run barrels"
+              },
+              "configurations": {},
+              "parallelism": true,
+              "cache": true,
+              "parallel": false
+            },
+            "barrels:watch": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "barrels:watch"
+              },
+              "metadata": {
+                "scriptContent": "barrelsby --config .barrelsby.json --watch",
+                "runCommand": "pnpm run barrels:watch"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "prebuild": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "prebuild"
+              },
+              "metadata": {
+                "scriptContent": "pnpm barrels",
+                "runCommand": "pnpm run prebuild"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "build": {
+              "executor": "nx:run-script",
+              "metadata": {
+                "scriptContent": "nx run hobby-ninja:build",
+                "runCommand": "pnpm run build"
+              },
+              "dependsOn": [
+                "types:build",
+                "utils:build",
+                "cli:build",
+                "web:build"
+              ],
+              "cache": true,
+              "outputs": [
+                "{workspaceRoot}/dist"
+              ],
+              "options": {
+                "script": "build"
+              },
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 4,
+              "maxParallel": 4
+            },
+            "dev": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "dev"
+              },
+              "metadata": {
+                "scriptContent": "pnpm --filter @hobby-ninja/webapp dev",
+                "runCommand": "pnpm run dev"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "serve": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "serve"
+              },
+              "metadata": {
+                "scriptContent": "nx serve web",
+                "runCommand": "pnpm run serve"
+              },
+              "configurations": {},
+              "parallelism": true,
+              "cache": false,
+              "dependsOn": [
+                "^build",
+                "barrels"
+              ]
+            },
+            "start": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "start"
+              },
+              "metadata": {
+                "scriptContent": "nx serve web",
+                "runCommand": "pnpm run start"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "test:affected": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test:affected"
+              },
+              "metadata": {
+                "scriptContent": "nx run hobby-ninja:test-affected",
+                "runCommand": "pnpm run test:affected"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "test:e2e:affected": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test:e2e:affected"
+              },
+              "metadata": {
+                "scriptContent": "nx affected -t test:e2e",
+                "runCommand": "pnpm run test:e2e:affected"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "lint": {
+              "executor": "nx:run-script",
+              "metadata": {
+                "scriptContent": "nx run hobby-ninja:lint",
+                "runCommand": "pnpm run lint"
+              },
+              "dependsOn": [
+                "types:lint",
+                "utils:lint",
+                "cli:lint",
+                "web:lint"
+              ],
+              "cache": true,
+              "options": {
+                "script": "lint"
+              },
+              "configurations": {},
+              "parallelism": true,
+              "parallel": 5,
+              "maxParallel": 5
+            },
+            "lint:check": {
+              "executor": "nx:run-script",
+              "metadata": {
+                "scriptContent": "nx run hobby-ninja:lint:check",
+                "runCommand": "pnpm run lint:check"
+              },
+              "dependsOn": [
+                "types:lint",
+                "utils:lint",
+                "cli:lint",
+                "web:lint"
+              ],
+              "cache": true,
+              "options": {
+                "script": "lint:check"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "lint:affected": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "lint:affected"
+              },
+              "metadata": {
+                "scriptContent": "nx run hobby-ninja:lint-affected",
+                "runCommand": "pnpm run lint:affected"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "typecheck:affected": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "typecheck:affected"
+              },
+              "metadata": {
+                "scriptContent": "nx run hobby-ninja:typecheck-affected",
+                "runCommand": "pnpm run typecheck:affected"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "format": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "format"
+              },
+              "metadata": {
+                "scriptContent": "prettier --write .",
+                "runCommand": "pnpm run format"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "format:check": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "format:check"
+              },
+              "metadata": {
+                "scriptContent": "prettier --check .",
+                "runCommand": "pnpm run format:check"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "prepare": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "prepare"
+              },
+              "metadata": {
+                "scriptContent": "husky install || true",
+                "runCommand": "pnpm run prepare"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "clean": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "clean"
+              },
+              "metadata": {
+                "scriptContent": "nx reset && rm -rf dist coverage .nx/cache",
+                "runCommand": "pnpm run clean"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "graph": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "graph"
+              },
+              "metadata": {
+                "scriptContent": "nx graph",
+                "runCommand": "pnpm run graph"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "graph:file": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "graph:file"
+              },
+              "metadata": {
+                "scriptContent": "nx graph --file=deps-graph.json",
+                "runCommand": "pnpm run graph:file"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "show:projects": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "show:projects"
+              },
+              "metadata": {
+                "scriptContent": "nx show projects",
+                "runCommand": "pnpm run show:projects"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "show:web": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "show:web"
+              },
+              "metadata": {
+                "scriptContent": "nx show project web --web",
+                "runCommand": "pnpm run show:web"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "deps": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "deps"
+              },
+              "metadata": {
+                "scriptContent": "nx show project web --json | jq '.implicitDependencies'",
+                "runCommand": "pnpm run deps"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "syncpack": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "syncpack"
+              },
+              "metadata": {
+                "scriptContent": "syncpack list-mismatches && syncpack fix-mismatches",
+                "runCommand": "pnpm run syncpack"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "validate:affected": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "validate:affected"
+              },
+              "metadata": {
+                "scriptContent": "nx run hobby-ninja:validate-affected",
+                "runCommand": "pnpm run validate:affected"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "validate:ci": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "validate:ci"
+              },
+              "metadata": {
+                "scriptContent": "nx run-many -t lint typecheck test --parallel=1",
+                "runCommand": "pnpm run validate:ci"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "typecheck-root": {
+              "executor": "@nx/js:tsc",
+              "options": {
+                "tsConfigPath": "./tsconfig.json",
+                "noEmit": true,
+                "main": "tools/scripts/index.ts",
+                "outputPath": "dist/root"
+              },
+              "inputs": [
+                "default",
+                "{projectRoot}/*.config.ts"
+              ],
+              "cache": true,
+              "metadata": {
+                "description": "TypeScript type checking for root configuration files",
+                "technologies": [
+                  "typescript"
+                ]
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "typecheck-affected": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "nx affected -t typecheck --parallel=5"
+              },
+              "cache": true,
+              "configurations": {},
+              "parallelism": true
+            },
+            "build:prod": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "nx run-many -t build --configuration=production"
+              },
+              "cache": true,
+              "outputs": [
+                "{workspaceRoot}/dist"
+              ],
+              "configurations": {},
+              "parallelism": true
+            },
+            "build-affected": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "nx affected -t build --parallel=3"
+              },
+              "cache": true,
+              "outputs": [
+                "{workspaceRoot}/dist"
+              ],
+              "configurations": {},
+              "parallelism": true
+            },
+            "test-affected": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "nx affected -t test --parallel=3"
+              },
+              "cache": true,
+              "configurations": {},
+              "parallelism": true
+            },
+            "lint-affected": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "nx affected -t lint --parallel=5"
+              },
+              "cache": true,
+              "configurations": {},
+              "parallelism": true
+            },
+            "validate": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "nx run-many -t lint typecheck test --parallel=1"
+              },
+              "cache": true,
+              "dependsOn": [
+                "types:build",
+                "utils:build",
+                "cli:build"
+              ],
+              "configurations": {},
+              "parallelism": true
+            },
+            "validate-affected": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "nx affected -t lint typecheck test --parallel=1"
+              },
+              "cache": true,
+              "configurations": {},
+              "parallelism": true
+            },
+            "knip": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "knip --no-exit-code"
+              },
+              "cache": true,
+              "inputs": [
+                "default",
+                "{workspaceRoot}/knip.config.ts",
+                "{projectRoot}/**/*.{ts,tsx,js,jsx,mjs,cjs,json,md,yml,yaml}"
+              ],
+              "configurations": {},
+              "parallelism": true
+            },
+            "knip:production": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "knip --no-exit-code --production"
+              },
+              "cache": true,
+              "inputs": [
+                "default",
+                "{workspaceRoot}/knip.config.ts",
+                "{projectRoot}/**/*.{ts,tsx,js,jsx,mjs,cjs,json,md,yml,yaml}"
+              ],
+              "configurations": {},
+              "parallelism": true
+            },
+            "knip:fix": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "knip --fix"
+              },
+              "cache": true,
+              "inputs": [
+                "default",
+                "{workspaceRoot}/knip.config.ts",
+                "{projectRoot}/**/*.{ts,tsx,js,jsx,mjs,cjs,json,md,yml,yaml}"
+              ],
+              "configurations": {},
+              "parallelism": true
+            },
+            "syncpack:check": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "syncpack list-mismatches"
+              },
+              "cache": true,
+              "inputs": [
+                "default",
+                "{workspaceRoot}/syncpack.config.ts",
+                "{workspaceRoot}/package.json",
+                "{workspaceRoot}/apps/*/package.json",
+                "{workspaceRoot}/packages/*/package.json"
+              ],
+              "configurations": {},
+              "parallelism": true
+            },
+            "syncpack:lint": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "syncpack lint-mismatches"
+              },
+              "cache": true,
+              "inputs": [
+                "default",
+                "{workspaceRoot}/syncpack.config.ts",
+                "{workspaceRoot}/package.json",
+                "{workspaceRoot}/apps/*/package.json",
+                "{workspaceRoot}/packages/*/package.json"
+              ],
+              "configurations": {},
+              "parallelism": true
+            },
+            "syncpack:fix": {
+              "executor": "nx:run-commands",
+              "options": {
+                "command": "syncpack fix-mismatches"
+              },
+              "inputs": [
+                "default",
+                "{workspaceRoot}/syncpack.config.ts",
+                "{workspaceRoot}/package.json",
+                "{workspaceRoot}/apps/*/package.json",
+                "{workspaceRoot}/packages/*/package.json"
+              ],
+              "configurations": {},
+              "parallelism": true
+            }
+          },
+          "name": "hobby-ninja",
+          "tags": [
+            "npm:private",
+            "scope:root",
+            "type:workspace"
+          ],
+          "$schema": "./node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": ".",
+          "projectType": "application",
+          "implicitDependencies": []
+        }
+      }
+    },
+    "dependencies": {
+      "translation": [],
+      "scrapers": [
+        {
+          "source": "scrapers",
+          "target": "types",
+          "type": "static"
+        },
+        {
+          "source": "scrapers",
+          "target": "utils",
+          "type": "static"
+        },
+        {
+          "source": "scrapers",
+          "target": "translation",
+          "type": "static"
+        }
+      ],
+      "types": [],
+      "utils": [
+        {
+          "source": "utils",
+          "target": "types",
+          "type": "static"
+        }
+      ],
+      "scripts": [],
+      "cli": [
+        {
+          "source": "cli",
+          "target": "scrapers",
+          "type": "static"
+        },
+        {
+          "source": "cli",
+          "target": "types",
+          "type": "static"
+        },
+        {
+          "source": "cli",
+          "target": "utils",
+          "type": "static"
+        },
+        {
+          "source": "cli",
+          "target": "translation",
+          "type": "static"
+        }
+      ],
+      "web": [
+        {
+          "source": "web",
+          "target": "types",
+          "type": "static"
+        },
+        {
+          "source": "web",
+          "target": "utils",
+          "type": "static"
+        }
+      ],
+      "hobby-ninja": [
+        {
+          "source": "hobby-ninja",
+          "target": "utils",
+          "type": "static"
+        },
+        {
+          "source": "hobby-ninja",
+          "target": "scrapers",
+          "type": "static"
+        }
+      ]
+    }
+  }
+}
