@@ -23,7 +23,7 @@ export default defineConfig({
     dataIndexPlugin(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'robots.txt', 'offline.html'],
+      includeAssets: ['favicon.ico', 'robots.txt', 'offline.html', 'sitemap.xml'],
       manifest: {
         name: 'hobby.ninja',
         short_name: 'hobby.ninja',
@@ -50,10 +50,10 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2,xml}'],
         globIgnores: ['**/stats.html'],
         navigateFallback: '/offline.html',
-        maximumFileSizeToCacheInBytes: 3000000, // 3MB
+        maximumFileSizeToCacheInBytes: 5000000, // 5MB for static pages
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/.*\.(png|jpg|jpeg|svg|gif|webp)$/,
@@ -61,8 +61,20 @@ export default defineConfig({
             options: {
               cacheName: 'images',
               expiration: {
-                maxEntries: 60,
+                maxEntries: 100, // Increased for graph node images
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+              },
+            },
+          },
+          {
+            // Cache static HTML files
+            urlPattern: /\.(html)$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'static-pages',
+              expiration: {
+                maxEntries: 10000, // Support for 8,485+ pages
+                maxAgeSeconds: 7 * 24 * 60 * 60, // 7 days
               },
             },
           },
@@ -87,7 +99,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       output: {
-        // Implement intelligent code splitting
+        // Implement intelligent code splitting with graph-specific chunks
         manualChunks: {
           // Split vendor libraries
           vendor: ['react', 'react-dom'],
@@ -97,6 +109,9 @@ export default defineConfig({
           database: ['dexie'],
           icons: ['@tabler/icons-react'],
           vanillaExtract: ['@vanilla-extract/css'],
+          // Graph-specific chunks for better caching
+          graphUtils: ['src/utils/graph-routes-generator', 'src/utils/graph-preloader'],
+          graphComponents: ['src/components/graph/GraphNodeDetails', 'src/components/graph/RelatedNodesGrid'],
         },
         // Generate asset filenames with hashes for caching
         chunkFileNames: '[name]-[hash].js',

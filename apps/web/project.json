@@ -123,8 +123,49 @@
         }
       }
     },
+    "build:ssg": {
+      "executor": "@nx/js:node",
+      "outputs": ["{options.outputPath}"],
+      "cache": true,
+      "options": {
+        "outputPath": "dist/apps/web",
+        "script": "./scripts/ssg-build.ts"
+      },
+      "configurations": {
+        "development": {
+          "script": "./scripts/ssg-build.ts --verbose"
+        },
+        "production": {
+          "script": "./scripts/ssg-build.ts --chunk-size 100"
+        }
+      },
+      "dependsOn": ["build"]
+    },
+    "serve:ssg": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "web:build:ssg",
+        "port": 4200,
+        "staticFilePath": "dist/apps/web"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "web:build:ssg:production"
+        }
+      }
+    },
+    "build:ssg:incremental": {
+      "executor": "@nx/js:node",
+      "outputs": ["{options.outputPath}"],
+      "cache": true,
+      "options": {
+        "outputPath": "dist/apps/web",
+        "script": "./scripts/ssg-build.ts --chunk-size 50 --verbose"
+      },
+      "dependsOn": ["build"]
+    },
     "check": {
-      "dependsOn": ["typecheck", "lint", "test", "build"],
+      "dependsOn": ["typecheck", "lint", "test", "build", "build:ssg"],
       "cache": true
     }
   },
