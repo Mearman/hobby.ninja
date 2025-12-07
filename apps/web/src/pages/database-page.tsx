@@ -16,7 +16,7 @@ import {
 	Stack,
 	Center,
 } from "@mantine/core";
-import { IconSearch, IconFilter, IconStar, IconClock, IconTrendingUp, IconDatabase, IconBook, IconPhoto } from "@tabler/icons-react";
+import { IconSearch, IconFilter, IconStar, IconClock, IconTrendingUp, IconDatabase, IconBook, IconPhoto, IconRobot, IconMask, IconRocket, IconBolt, IconDiamond, IconCrown, IconFlame } from "@tabler/icons-react";
 import { useNavigate } from "@tanstack/react-router";
 import React, { useState, useEffect, useCallback } from "react";
 
@@ -41,7 +41,7 @@ export function DatabasePage(): React.ReactElement {
 			id: "gunpla",
 			name: "Gunpla",
 			description: "Gundam model kits and accessories",
-			icon: "🤖",
+			icon: IconRobot,
 			color: "gunplaBlue" as const,
 			count: stats?.totalItems?.unified || 0,
 			features: ["Master Grade", "High Grade", "Real Grade", "Perfect Grade"],
@@ -50,7 +50,7 @@ export function DatabasePage(): React.ReactElement {
 			id: "figure-rise",
 			name: "Figure-rise",
 			description: "Anime character figures and statues",
-			icon: "🎭",
+			icon: IconMask,
 			color: "gunplaRed" as const,
 			count: 0,
 			features: ["Standard", "Effect", "Mechanic"],
@@ -59,7 +59,7 @@ export function DatabasePage(): React.ReactElement {
 			id: "model-kits",
 			name: "Model Kits",
 			description: "Other anime and sci-fi model kits",
-			icon: "🚀",
+			icon: IconRocket,
 			color: "gunplaGray" as const,
 			count: 0,
 			features: ["Cars", "Aircraft", "Ships"],
@@ -68,12 +68,12 @@ export function DatabasePage(): React.ReactElement {
 
 	// Quick filter options
 	const quickFilters = [
-		{ name: "High Grade", grade: "HG", icon: "⚡" },
-		{ name: "Master Grade", grade: "MG", icon: "⭐" },
-		{ name: "Real Grade", grade: "RG", icon: "💎" },
-		{ name: "Perfect Grade", grade: "PG", icon: "👑" },
-		{ name: "Recent Releases", type: "recent", icon: "🆕" },
-		{ name: "Popular Items", type: "popular", icon: "🔥" },
+		{ name: "High Grade", grade: "HG", icon: IconBolt },
+		{ name: "Master Grade", grade: "MG", icon: IconStar },
+		{ name: "Real Grade", grade: "RG", icon: IconDiamond },
+		{ name: "Perfect Grade", grade: "PG", icon: IconCrown },
+		{ name: "Recent Releases", type: "recent", icon: IconClock },
+		{ name: "Popular Items", type: "popular", icon: IconFlame },
 	];
 
 	// Load initial data
@@ -314,9 +314,9 @@ export function DatabasePage(): React.ReactElement {
 						>
 							<Stack h="100%" align="center" justify="space-between">
 								<div style={{ textAlign: "center" }}>
-									<div style={{ fontSize: "3rem", marginBottom: "1rem" }}>
-										{type.icon}
-									</div>
+									<Center mb="md">
+										<type.icon size={48} color={`var(--mantine-color-${type.color})`} />
+									</Center>
 									<Title order={3} mb="xs" c={type.color}>
 										{type.name}
 									</Title>
@@ -364,7 +364,7 @@ export function DatabasePage(): React.ReactElement {
 								key={filter.name}
 								variant="outline"
 								onClick={() => handleFilterSelect(filter)}
-								leftSection={<span>{filter.icon}</span>}
+								leftSection={<filter.icon size={16} />}
 								styles={{
 									inner: {
 										justifyContent: "flex-start",

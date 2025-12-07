@@ -1,5 +1,5 @@
-import { Container, Title, Text, Button, Group, Stack } from "@mantine/core";
-import { IconHome, IconSearch, IconArrowLeft } from "@tabler/icons-react";
+import { Container, Title, Text, Button, Group, Stack, ThemeIcon } from "@mantine/core";
+import { IconHome, IconSearch, IconArrowLeft, IconRobot } from "@tabler/icons-react";
 import { Link } from "@tanstack/react-router";
 import React from "react";
 
@@ -11,7 +11,9 @@ export function NotFoundPage() {
 		<div className={notFoundContainer}>
 			<Container size="sm">
 				<Stack align="center" gap="lg">
-					<div style={{ fontSize: "8rem", opacity: 0.5 }}>🤖</div>
+					<ThemeIcon size={128} variant="light" color="gray" radius="xl" style={{ opacity: 0.5 }}>
+						<IconRobot size={80} />
+					</ThemeIcon>
 
 					<Title order={1} size={48} c="primary">
             404 - Page Not Found

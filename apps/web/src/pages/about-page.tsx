@@ -1,5 +1,5 @@
 import { Container, Title, Text, Grid, Card, Group, Badge, Anchor, List, ThemeIcon } from "@mantine/core";
-import { IconApi, IconBrandReact, IconBrandTypescript, IconDatabase } from "@tabler/icons-react";
+import { IconApi, IconBrandReact, IconBrandTypescript, IconDatabase, IconSparkles } from "@tabler/icons-react";
 import React from "react";
 
 import { aboutContainer, techStack } from "../styles/styles.css";
@@ -65,7 +65,7 @@ export function AboutPage() {
 						size="md"
 						icon={
 							<ThemeIcon color="primary" size={24} radius="xl">
-                ✨
+								<IconSparkles size={14} />
 							</ThemeIcon>
 						}
 					>

@@ -28,11 +28,31 @@ globalStyle(`${exampleCard} h3`, {
 	marginBottom: "var(--mantine-spacing-xs)",
 });
 
-// Placeholder exports for existing page components
-// These can be replaced with real Vanilla Extract styles as needed
-export const homeContainer = style({});
-export const featuresGrid = style({});
-export const featureCard = style({});
+// Home page styles
+export const homeContainer = style({
+	minHeight: "100vh",
+	paddingTop: "var(--mantine-spacing-xl)",
+	paddingBottom: "var(--mantine-spacing-xl)",
+	background: "linear-gradient(180deg, var(--mantine-color-gray-0) 0%, var(--mantine-color-gray-1) 100%)",
+});
+
+export const featuresGrid = style({
+	display: "grid",
+	gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+	gap: "var(--mantine-spacing-lg)",
+	marginBottom: "var(--mantine-spacing-xl)",
+});
+
+export const featureCard = style({
+	height: "100%",
+	transition: "all 0.2s ease",
+	border: "1px solid var(--mantine-color-gray-3)",
+	"&:hover": {
+		transform: "translateY(-2px)",
+		boxShadow: "var(--mantine-shadow-lg)",
+		borderColor: "var(--mantine-color-blue-6)",
+	},
+});
 export const aboutContainer = style({});
 export const techStack = style({});
 export const notFoundContainer = style({});
