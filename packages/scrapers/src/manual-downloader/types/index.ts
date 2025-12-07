@@ -22,9 +22,9 @@ export interface ManualPage {
   contentHash: string;
   isVerified: boolean;
   filePath: string;
-  status: 'pending' | 'downloading' | 'completed' | 'failed' | 'verified';
+  status: "pending" | "downloading" | "completed" | "failed" | "verified";
   error?: {
-    type: 'network' | 'http' | 'filesystem' | 'verification';
+    type: "network" | "http" | "filesystem" | "verification";
     message: string;
     timestamp: string;
     retryCount: number;
@@ -66,8 +66,8 @@ export interface DownloadSession {
   duration?: number;
   targetUrl: string;
   outputDirectory: string;
-  status: 'initializing' | 'discovering' | 'downloading' | 'completed' | 'failed' | 'paused';
-  currentPhase: 'range-discovery' | 'gap-detection' | 'bulk-download' | 'verification';
+  status: "initializing" | "discovering" | "downloading" | "completed" | "failed" | "paused";
+  currentPhase: "range-discovery" | "gap-detection" | "bulk-download" | "verification";
   lastProcessedId: number;
   discoveredIds: number[];
   failedIds: number[];
@@ -93,7 +93,7 @@ export interface GapPattern {
   endId: number;
   gapSize: number;
   confidence: number;
-  type: 'small-gap' | 'medium-gap' | 'large-gap' | 'range-boundary';
+  type: "small-gap" | "medium-gap" | "large-gap" | "range-boundary";
   recommendedAction: string;
 }
 
@@ -154,7 +154,7 @@ export interface CLIOptions {
 }
 
 export interface CLIOutput {
-  status: 'success' | 'error' | 'warning';
+  status: "success" | "error" | "warning";
   message: string;
   results?: {
     session: DownloadSession;
@@ -166,7 +166,7 @@ export interface CLIOutput {
 }
 
 export interface ProgressEvent {
-  type: 'progress' | 'error' | 'completion' | 'checkpoint';
+  type: "progress" | "error" | "completion" | "checkpoint";
   timestamp: string;
   session: {
     id: string;
@@ -213,7 +213,7 @@ export interface ManualDownloaderConfig {
 
 export interface DownloadProgress {
   /** Current processing status */
-  status: 'idle' | 'discovering' | 'downloading' | 'completed' | 'failed' | 'paused';
+  status: "idle" | "discovering" | "downloading" | "completed" | "failed" | "paused";
 
   /** Progress metrics */
   totalChecked: number;
@@ -230,7 +230,7 @@ export interface DownloadProgress {
 
 export interface ErrorInfo {
   /** Error classification */
-  type: 'network' | 'http' | 'filesystem' | 'validation' | 'configuration';
+  type: "network" | "http" | "filesystem" | "validation" | "configuration";
 
   /** Error details */
   code: string;

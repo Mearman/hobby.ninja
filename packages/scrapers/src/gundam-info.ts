@@ -222,7 +222,7 @@ export class GundamInfoScraper extends BaseScraper {
 	private parsePrice(priceText: string): { amount: number; currency: string } | null {
 		// Remove currency symbols and extract numbers
 		const cleaned = priceText.replaceAll(/[¥$€£]/g, "").trim();
-		const numberMatch = cleaned.match(/[\d,]+(?:\.\d+)?/);
+		const numberMatch = /[\d,]+(?:\.\d+)?/.exec(cleaned);
 
 		if (numberMatch) {
 			const amount = Number.parseFloat(numberMatch[0].replaceAll(",", ""));

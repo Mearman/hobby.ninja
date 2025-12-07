@@ -26,13 +26,13 @@ type ScraperConstructor = new (...args: unknown[]) => BaseScraper;
  * Registry of all available scrapers with their metadata
  */
 export class ScraperRegistry {
-	private static scrapers: Map<ScraperType, ScraperConstructor> = new Map([
+	private static scrapers = new Map<ScraperType, ScraperConstructor>([
 		["bandai-hobby", BandaiHobbyScraper as unknown as ScraperConstructor],
 		["gundam-info", GundamInfoScraper as unknown as ScraperConstructor],
 		["hobbylink", HobbyLinkScraper as unknown as ScraperConstructor],
 	]);
 
-	private static scraperInfo: Map<ScraperType, ScraperInfo> = new Map([
+	private static scraperInfo = new Map<ScraperType, ScraperInfo>([
 		["bandai-hobby", {
 			type: "bandai-hobby",
 			name: "Bandai Hobby Official Site",

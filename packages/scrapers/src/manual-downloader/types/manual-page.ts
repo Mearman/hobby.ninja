@@ -40,11 +40,11 @@ export interface ManualPage {
   filePath: string;
 
   /** Processing status */
-  status: 'pending' | 'downloading' | 'completed' | 'failed' | 'verified';
+  status: "pending" | "downloading" | "completed" | "failed" | "verified";
 
   /** Error details if download failed */
   error?: {
-    type: 'network' | 'http' | 'filesystem' | 'verification';
+    type: "network" | "http" | "filesystem" | "verification";
     message: string;
     timestamp: string;
     retryCount: number;
@@ -72,74 +72,74 @@ export interface CreateManualPageParams {
   headers: Record<string, string>;
   downloadDuration: number;
   filePath: string;
-  metadata?: Partial<ManualPage['metadata']>;
+  metadata?: Partial<ManualPage["metadata"]>;
 }
 
 /**
  * Factory function for creating ManualPage instances
  */
 export function createManualPage(params: CreateManualPageParams): ManualPage {
-  const now = new Date().toISOString();
-  const contentSize = Buffer.byteLength(params.htmlContent, 'utf8');
+	const now = new Date().toISOString();
+	const contentSize = Buffer.byteLength(params.htmlContent, "utf8");
 
-  return {
-    id: params.id,
-    url: params.url,
-    downloadedAt: now,
-    htmlContent: params.htmlContent,
-    contentSize,
-    statusCode: params.statusCode,
-    headers: params.headers,
-    downloadDuration: params.downloadDuration,
-    contentHash: '', // Will be set by verification
-    isVerified: false,
-    filePath: params.filePath,
-    status: 'completed',
-    metadata: params.metadata
-  };
+	return {
+		id: params.id,
+		url: params.url,
+		downloadedAt: now,
+		htmlContent: params.htmlContent,
+		contentSize,
+		statusCode: params.statusCode,
+		headers: params.headers,
+		downloadDuration: params.downloadDuration,
+		contentHash: "", // Will be set by verification
+		isVerified: false,
+		filePath: params.filePath,
+		status: "completed",
+		metadata: params.metadata,
+	};
 }
 
 /**
  * Check if a manual page is valid and complete
  */
 export function isValidManualPage(page: ManualPage): boolean {
-  return (
-    page.id > 0 &&
+	return (
+		page.id > 0 &&
     page.url.length > 0 &&
     page.htmlContent.length > 1000 && // Minimum content length
     page.statusCode === 200 &&
-    page.status === 'completed' &&
+    page.status === "completed" &&
     page.filePath.length > 0
-  );
+	);
 }
 
 /**
  * Get manual page file path
  */
 export function getManualPageFilePath(outputDirectory: string, id: number): string {
-  return `${outputDirectory.replace(/\/$/, '')}/${id}.html`;
+	return `${outputDirectory.replace(/\/$/, "")}/${id}.html`;
 }
 
 /**
  * Extract page title from HTML content
  */
 export function extractTitleFromHtml(html: string): string | null {
-  const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
-  return titleMatch ? titleMatch[1].trim() : null;
+	const titleMatch = /<title[^>]*>([^<]+)<\/title>/i.exec(html);
+	return titleMatch ? titleMatch[1].trim() : null;
 }
 
 /**
  * Validate manual page URL format
  */
 export function isValidManualUrl(url: string): boolean {
-  const manualUrlPattern = /^https:\/\/manual\.bandai-hobby\.net\/menus\/detail\/\d+\/?$/;
-  return manualUrlPattern.test(url);
+	const manualUrlPattern = /^https:\/\/manual\.bandai-hobby\.net\/menus\/detail\/\d+\/?$/;
+	return manualUrlPattern.test(url);
 }
 
 /**
  * Extract ID from manual page URL
  */
 export function extractIdFromUrl(url: string): number {
-  const match = url.match(/\/menus\/detail\/(\d+)\/?$/);
-  return match ? parseInt(match[1], 10) : 0;
+	const match = /\/menus\/detail\/(\d+)\/?$/.exec(url);
+	return match ? Number.parseInt(match[1], 10) : 0;
 }

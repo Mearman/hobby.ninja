@@ -8,8 +8,8 @@
  * @since 2025-12-05
  */
 
-import { createHash } from 'node:crypto';
-import { readFile } from 'node:fs/promises';
+import { createHash } from "node:crypto";
+import { readFile } from "node:fs/promises";
 
 /**
  * Compute SHA-256 hash of string content
@@ -18,7 +18,7 @@ import { readFile } from 'node:fs/promises';
  * @returns SHA-256 hash as hex string
  */
 export function computeSHA256(content: string): string {
-  return createHash('sha256').update(content, 'utf8').digest('hex');
+	return createHash("sha256").update(content, "utf8").digest("hex");
 }
 
 /**
@@ -28,7 +28,7 @@ export function computeSHA256(content: string): string {
  * @returns SHA-256 hash as hex string
  */
 export function calculateSHA256(content: string): string {
-  return computeSHA256(content);
+	return computeSHA256(content);
 }
 
 /**
@@ -38,12 +38,12 @@ export function calculateSHA256(content: string): string {
  * @returns Promise resolving to SHA-256 hash as hex string
  */
 export async function computeFileSHA256(filePath: string): Promise<string> {
-  try {
-    const content = await readFile(filePath, 'utf8');
-    return computeSHA256(content);
-  } catch (error) {
-    throw new Error(`Failed to compute SHA-256 hash for file ${filePath}: ${error instanceof Error ? error.message : String(error)}`);
-  }
+	try {
+		const content = await readFile(filePath, "utf8");
+		return computeSHA256(content);
+	} catch (error) {
+		throw new Error(`Failed to compute SHA-256 hash for file ${filePath}: ${error instanceof Error ? error.message : String(error)}`);
+	}
 }
 
 /**
@@ -54,8 +54,8 @@ export async function computeFileSHA256(filePath: string): Promise<string> {
  * @returns True if content matches expected hash
  */
 export function verifyContentIntegrity(content: string, expectedHash: string): boolean {
-  const actualHash = computeSHA256(content);
-  return actualHash === expectedHash.toLowerCase();
+	const actualHash = computeSHA256(content);
+	return actualHash === expectedHash.toLowerCase();
 }
 
 /**
@@ -66,13 +66,13 @@ export function verifyContentIntegrity(content: string, expectedHash: string): b
  * @returns Promise resolving to true if file matches expected hash
  */
 export async function verifyFileIntegrity(filePath: string, expectedHash: string): Promise<boolean> {
-  try {
-    const actualHash = await computeFileSHA256(filePath);
-    return actualHash === expectedHash.toLowerCase();
-  } catch (error) {
-    // If we can't read the file, consider verification failed
-    return false;
-  }
+	try {
+		const actualHash = await computeFileSHA256(filePath);
+		return actualHash === expectedHash.toLowerCase();
+	} catch {
+		// If we can't read the file, consider verification failed
+		return false;
+	}
 }
 
 /**
@@ -81,11 +81,11 @@ export async function verifyFileIntegrity(filePath: string, expectedHash: string
  * @returns UUID v4 string
  */
 export function generateUUID(): string {
-  return createHash('sha256')
-    .update(Date.now().toString() + Math.random().toString())
-    .digest('hex')
-    .substring(0, 32)
-    .replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
+	return createHash("sha256")
+		.update(Date.now().toString() + Math.random().toString())
+		.digest("hex")
+		.slice(0, 32)
+		.replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, "$1-$2-$3-$4-$5");
 }
 
 /**
@@ -95,5 +95,5 @@ export function generateUUID(): string {
  * @returns Simple hash string
  */
 export function generateSimpleHash(data: string): string {
-  return createHash('md5').update(data).digest('hex').substring(0, 16);
+	return createHash("md5").update(data).digest("hex").slice(0, 16);
 }

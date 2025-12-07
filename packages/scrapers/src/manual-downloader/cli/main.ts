@@ -2,39 +2,43 @@
  * Simple CLI for Manual Downloader
  */
 
-import { Downloader } from '../downloader';
+import { Downloader } from "../downloader";
 
 export class ManualDownloaderCLI {
-  private downloader: Downloader;
+	private downloader: Downloader;
 
-  constructor() {
-    this.downloader = new Downloader();
-  }
+	constructor() {
+		this.downloader = new Downloader();
+	}
 
-  async run(args: string[]): Promise<void> {
-    const options: any = {};
+	async run(args: string[]): Promise<void> {
+		const options: any = {};
 
-    for (let i = 0; i < args.length; i++) {
-      switch (args[i]) {
-        case '--start':
-        case '-s':
-          options.startId = parseInt(args[++i]);
-          break;
-        case '--end':
-        case '-e':
-          options.endId = parseInt(args[++i]);
-          break;
-        case '--url':
-        case '-u':
-          options.url = args[++i];
-          break;
-        case '--output':
-        case '-o':
-          options.output = args[++i];
-          break;
-        case '--help':
-        case '-h':
-          console.log(`
+		for (let i = 0; i < args.length; i++) {
+			switch (args[i]) {
+				case "--start":
+				case "-s": {
+					options.startId = Number.parseInt(args[++i]);
+					break;
+				}
+				case "--end":
+				case "-e": {
+					options.endId = Number.parseInt(args[++i]);
+					break;
+				}
+				case "--url":
+				case "-u": {
+					options.url = args[++i];
+					break;
+				}
+				case "--output":
+				case "-o": {
+					options.output = args[++i];
+					break;
+				}
+				case "--help":
+				case "-h": {
+					console.log(`
 Bandai Manual Content Downloader - Simple Version
 
 USAGE:
@@ -57,26 +61,27 @@ FEATURES:
   • Automatic rate limiting for Japanese sites
   • Continue from any ID by specifying --start
           `);
-          return;
-      }
-    }
+					return;
+				}
+			}
+		}
 
-    await this.downloader.download(options);
-  }
+		await this.downloader.download(options);
+	}
 }
 
 export async function main(): Promise<void> {
-  const cli = new ManualDownloaderCLI();
-  const args = process.argv.slice(2);
+	const cli = new ManualDownloaderCLI();
+	const args = process.argv.slice(2);
 
-  try {
-    await cli.run(args);
-  } catch (error) {
-    console.error('❌ Download failed:', error instanceof Error ? error.message : String(error));
-    process.exit(1);
-  }
+	try {
+		await cli.run(args);
+	} catch (error) {
+		console.error("❌ Download failed:", error instanceof Error ? error.message : String(error));
+		process.exit(1);
+	}
 }
 
 if (require.main === module) {
-  main();
+	main();
 }

@@ -5,12 +5,12 @@
  */
 
 // Export unified implementation
-export { Downloader } from './downloader';
-export { HttpClient } from './services/http-client';
-export { RateLimiterService } from './services/rate-limiter-service';
+export { Downloader } from "./downloader";
+export { HttpClient } from "./services/http-client";
+export { RateLimiterService } from "./services/rate-limiter-service";
 
 // Export CLI
-export { ManualDownloaderCLI, main } from './cli/main';
+export { ManualDownloaderCLI, main } from "./cli/main";
 
 // Export types
 export interface DownloaderOptions {
@@ -21,4 +21,4 @@ export interface DownloaderOptions {
 }
 
 // Package version
-export const VERSION = '3.0.0'; // Unified implementation
+export const VERSION = "3.0.0"; // Unified implementation

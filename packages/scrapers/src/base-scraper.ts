@@ -14,12 +14,12 @@ interface Logger {
 const logger: Logger = {
 	warn: (message: string, ...args: unknown[]): void => {
 		// In a real implementation, this would use a proper logging library
-		// eslint-disable-next-line no-console
+		 
 		console.warn(message, ...args);
 	},
 	log: (message: string, ...args: unknown[]): void => {
 		// In a real implementation, this would use a proper logging library
-		// eslint-disable-next-line no-console
+		 
 		console.log(message, ...args);
 	},
 };
@@ -221,7 +221,7 @@ export abstract class BaseScraper {
 
   protected extractPrice($: CheerioAPI, selector: string): { amount: number; currency: string; originalText: string } | null {
   	const text = this.extractTextContent($, selector);
-  	const priceMatch = text.match(/([¥$£€])\s*([\d,]+)/);
+  	const priceMatch = /([¥$£€])\s*([\d,]+)/.exec(text);
 
   	if (priceMatch) {
   		const [, currency, amountStr] = priceMatch;
