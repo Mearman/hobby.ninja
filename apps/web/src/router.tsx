@@ -1,5 +1,7 @@
-import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet, Link, createHashHistory } from "@tanstack/react-router";
-import { Suspense, lazy } from "react";
+import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet, createHashHistory } from "@tanstack/react-router";
+import { Suspense, lazy, useState } from "react";
+
+import { Header } from "./components/layout/Header";
 
 // Lazy load route components for code splitting
 const HomePage = lazy(() => import("./pages/home-page").then(module => ({
@@ -7,6 +9,21 @@ const HomePage = lazy(() => import("./pages/home-page").then(module => ({
 })));
 const AboutPage = lazy(() => import("./pages/about-page").then(module => ({
 	default: module.AboutPage,
+})));
+const DatabasePage = lazy(() => import("./pages/database-page").then(module => ({
+	default: module.DatabasePage,
+})));
+const DatabaseHobbyPage = lazy(() => import("./pages/database-hobby-page").then(module => ({
+	default: module.DatabaseHobbyPage,
+})));
+const ItemDetailPage = lazy(() => import("./pages/item-detail-page").then(module => ({
+	default: module.ItemDetailPage,
+})));
+const SharedListPage = lazy(() => import("./pages/shared-list-page").then(module => ({
+	default: module.SharedListPage,
+})));
+const SearchPage = lazy(() => import("./pages/search-page").then(module => ({
+	default: module.SearchPage,
 })));
 const NotFoundPage = lazy(() => import("./pages/not-found-page").then(module => ({
 	default: module.NotFoundPage,
@@ -29,33 +46,23 @@ const RouteLoadingFallback = () => (
  * Root layout route with header, navigation, and footer
  */
 const rootRoute = createRootRoute({
-	component: () => (
-		<div className="app-layout">
-			<header className="app-header">
-				<nav className="app-nav">
-					<h1 className="app-title">
-						<Link to="/">hobby.ninja</Link>
-					</h1>
-					<ul className="nav-links">
-						<li>
-							<Link to="/">Home</Link>
-						</li>
-						<li>
-							<Link to="/about">About</Link>
-						</li>
-					</ul>
-				</nav>
-			</header>
-			<main className="app-main">
-				<Suspense fallback={<RouteLoadingFallback />}>
-					<Outlet />
-				</Suspense>
-			</main>
-			<footer className="app-footer">
-				<p>&copy; 2025 hobby.ninja</p>
-			</footer>
-		</div>
-	),
+	component: () => {
+		const [opened, { toggle }] = useState(false);
+
+		return (
+			<div className="app-layout">
+				<Header opened={opened} toggle={toggle} />
+				<main className="app-main">
+					<Suspense fallback={<RouteLoadingFallback />}>
+						<Outlet />
+					</Suspense>
+				</main>
+				<footer className="app-footer">
+					<p>&copy; 2025 hobby.ninja</p>
+				</footer>
+			</div>
+		);
+	},
 });
 
 /**
@@ -65,6 +72,51 @@ const indexRoute = createRoute({
 	getParentRoute: () => rootRoute,
 	path: "/",
 	component: HomePage,
+});
+
+/**
+ * Database route
+ */
+const databaseRoute = createRoute({
+	getParentRoute: () => rootRoute,
+	path: "/database",
+	component: DatabasePage,
+});
+
+/**
+ * Database hobby type route
+ */
+const databaseHobbyRoute = createRoute({
+	getParentRoute: () => rootRoute,
+	path: "/database/$hobbyType",
+	component: DatabaseHobbyPage,
+});
+
+/**
+ * Item detail route
+ */
+const itemDetailRoute = createRoute({
+	getParentRoute: () => rootRoute,
+	path: "/database/$hobbyType/$id",
+	component: ItemDetailPage,
+});
+
+/**
+ * Shared list route (Pako URL)
+ */
+const sharedListRoute = createRoute({
+	getParentRoute: () => rootRoute,
+	path: "/database/share/$compressedData",
+	component: SharedListPage,
+});
+
+/**
+ * Search route
+ */
+const searchRoute = createRoute({
+	getParentRoute: () => rootRoute,
+	path: "/search",
+	component: SearchPage,
 });
 
 /**
@@ -86,7 +138,16 @@ const notFoundRoute = createRoute({
 });
 
 // Create route tree with all routes
-const routeTree = rootRoute.addChildren([indexRoute, aboutRoute, notFoundRoute]);
+const routeTree = rootRoute.addChildren([
+	indexRoute,
+	databaseRoute,
+	databaseHobbyRoute,
+	itemDetailRoute,
+	sharedListRoute,
+	searchRoute,
+	aboutRoute,
+	notFoundRoute,
+]);
 
 // Create hash history for GitHub Pages compatibility
 const hashHistory = createHashHistory();
