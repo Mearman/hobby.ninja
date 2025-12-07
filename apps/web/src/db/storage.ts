@@ -73,7 +73,7 @@ export const schemaRegistry = {
 		};
 
 		await db.schemas.put(schemaData);
-		logger.debug(`✅ Schema registered: ${name}@${version}`);
+		logger.debug(`Schema registered: ${name}@${version}`);
 	},
 
 	// Get a stored schema
@@ -192,6 +192,6 @@ export const storage = {
 	// Initialize database
 	async init(): Promise<void> {
 		await db.open();
-		logger.debug("✅ Schema-based storage initialized");
+		logger.debug("Schema-based storage initialized");
 	},
 };
