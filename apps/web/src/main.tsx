@@ -11,21 +11,24 @@ import { dataService } from "./services/dataService";
 // Import global styles for Vanilla Extract
 import "./styles/styles.css";
 
+// Import Mantine's built-in styles
+import "@mantine/core/styles.css";
+
 /**
  * Initialize and start the application
  */
 try {
-	logger.info("🚀 Initializing application...");
+	logger.info("Initializing application...");
 
 	// Initialize IndexedDB database
-	logger.info("🗄️ Initializing database...");
+	logger.info("Initializing database...");
 	await initStorage();
-	logger.info("✅ Database initialized successfully");
+	logger.info("Database initialized successfully");
 
 	// Initialize DataService
-	logger.info("📊 Initializing data service...");
+	logger.info("Initializing data service...");
 	await dataService.initialize();
-	logger.info("✅ Data service initialized successfully");
+	logger.info("Data service initialized successfully");
 
 	// Find root element
 	const rootElement = document.querySelector("#root");
@@ -51,10 +54,10 @@ try {
 		</React.StrictMode>,
 	);
 
-	logger.info("✅ Application mounted successfully");
+	logger.info("Application mounted successfully");
 
 } catch (error) {
-	logger.error("❌ Failed to start application:", error);
+	logger.error("Failed to start application:", error);
 
 	// Show error message in the UI using safe DOM methods
 	const rootElement = document.querySelector("#root");
@@ -97,7 +100,7 @@ if (import.meta.hot) {
  */
 if ("serviceWorker" in navigator) {
 	navigator.serviceWorker.addEventListener("controllerchange", () => {
-		logger.info("🔄 Service worker controller changed - reloading...");
+		logger.info("Service worker controller changed - reloading...");
 		globalThis.location.reload();
 	});
 }
@@ -107,9 +110,9 @@ if ("serviceWorker" in navigator) {
  */
 document.addEventListener("visibilitychange", () => {
 	if (document.hidden) {
-		logger.info("📱 Application hidden");
+		logger.info("Application hidden");
 	} else {
-		logger.info("📱 Application visible");
+		logger.info("Application visible");
 	}
 });
 
@@ -117,5 +120,5 @@ document.addEventListener("visibilitychange", () => {
  * Handle application unmount/cleanup
  */
 window.addEventListener("beforeunload", () => {
-	logger.info("🛑 Application unloading...");
+	logger.info("Application unloading...");
 });
