@@ -6,18 +6,18 @@ import type { CacheManager } from "@hobby-ninja/types/profile";
 import { logger } from "./logger";
 
 export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds
-  maxSize?: number; // Maximum number of items in cache
-  persistToFile?: boolean; // Whether to persist cache to disk
-  cacheDir?: string; // Directory for cache files
+	ttl?: number; // Time to live in milliseconds
+	maxSize?: number; // Maximum number of items in cache
+	persistToFile?: boolean; // Whether to persist cache to disk
+	cacheDir?: string; // Directory for cache files
 }
 
 export interface CacheItem {
-  value: unknown;
-  timestamp: number;
-  ttl: number;
-  accessCount: number;
-  lastAccessed: number;
+	value: unknown;
+	timestamp: number;
+	ttl: number;
+	accessCount: number;
+	lastAccessed: number;
 }
 
 export class FileSystemCacheManager implements CacheManager {
@@ -110,7 +110,7 @@ export class FileSystemCacheManager implements CacheManager {
 
 		// Sort by last accessed time and remove the least recently used items
 		const entries: Array<[string, CacheItem]> = [...this.memoryCache.entries()];
-		const items = [...entries].toSorted(
+		const items = entries.sort(
 			(a, b) => a[1].lastAccessed - b[1].lastAccessed,
 		);
 
@@ -118,7 +118,7 @@ export class FileSystemCacheManager implements CacheManager {
 
 		for (const [key] of itemsToRemove) {
 			this.memoryCache.delete(key);
-			this.deleteFromFile(key).catch(() => {/* noop */}); // Fire and forget
+			this.deleteFromFile(key).catch(() => {/* noop */ }); // Fire and forget
 		}
 	}
 
@@ -134,7 +134,7 @@ export class FileSystemCacheManager implements CacheManager {
 		// Remove expired items
 		for (const key of expiredKeys) {
 			this.memoryCache.delete(key);
-			this.deleteFromFile(key).catch(() => {/* noop */}); // Fire and forget
+			this.deleteFromFile(key).catch(() => {/* noop */ }); // Fire and forget
 		}
 
 		// Evict LRU items if cache is still too large
@@ -148,7 +148,7 @@ export class FileSystemCacheManager implements CacheManager {
 		if (memoryItem) {
 			if (this.isExpired(memoryItem)) {
 				this.memoryCache.delete(key);
-				this.deleteFromFile(key).catch(() => {/* noop */}); // Fire and forget
+				this.deleteFromFile(key).catch(() => {/* noop */ }); // Fire and forget
 				return null;
 			}
 
@@ -163,7 +163,7 @@ export class FileSystemCacheManager implements CacheManager {
 			return this.loadFromFile(key).then(item => {
 				if (item) {
 					if (this.isExpired(item)) {
-						this.deleteFromFile(key).catch(() => {/* noop */});
+						this.deleteFromFile(key).catch(() => {/* noop */ });
 						return null;
 					}
 
@@ -197,7 +197,7 @@ export class FileSystemCacheManager implements CacheManager {
 
 		// Save to file if persistence is enabled
 		if (this.options.persistToFile) {
-			this.saveToFile(key, item).catch(() => {/* noop */}); // Fire and forget
+			this.saveToFile(key, item).catch(() => {/* noop */ }); // Fire and forget
 		}
 
 		// Evict if necessary
@@ -214,11 +214,11 @@ export class FileSystemCacheManager implements CacheManager {
 					const cacheFiles = files.filter(file => file.endsWith(".cache"));
 					return Promise.all(
 						cacheFiles.map(file =>
-							fs.unlink(path.join(this.options.cacheDir, file)).catch(() => {/* noop */}),
+							fs.unlink(path.join(this.options.cacheDir, file)).catch(() => {/* noop */ }),
 						),
 					);
 				})
-				.catch(() => {/* noop */}); // Fire and forget
+				.catch(() => {/* noop */ }); // Fire and forget
 		}
 	}
 
@@ -227,7 +227,7 @@ export class FileSystemCacheManager implements CacheManager {
 
 		// Delete from file if persistence is enabled
 		if (this.options.persistToFile) {
-			this.deleteFromFile(key).catch(() => {/* noop */}); // Fire and forget
+			this.deleteFromFile(key).catch(() => {/* noop */ }); // Fire and forget
 		}
 
 		return deleted;
@@ -248,11 +248,11 @@ export class FileSystemCacheManager implements CacheManager {
 	}
 
 	getStats(): {
-    size: number;
-    maxSize: number;
-    hitRate: number;
-    memoryUsage: number;
-    } {
+		size: number;
+		maxSize: number;
+		hitRate: number;
+		memoryUsage: number;
+	} {
 		let totalAccess = 0;
 		let memoryUsage = 0;
 
