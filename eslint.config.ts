@@ -70,6 +70,7 @@ export default [
       'react-refresh': reactRefresh,
       'import': importPlugin,
       'jsx-a11y': jsxA11y,
+      'no-emoji': eslintPluginNoEmoji,
     },
     settings: {
       react: {
@@ -165,6 +166,9 @@ export default [
       'no-console': 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
+
+      // Emoji ban
+      'no-emoji/no-emoji': 'error',
     },
   },
   {
