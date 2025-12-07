@@ -4,9 +4,7 @@
 	"private": true,
 	"description": "Nx monorepo for hobby collection management",
 	"scripts": {
-		"barrels": "barrelsby --config .barrelsby.json",
-		"barrels:watch": "barrelsby --config .barrelsby.json --watch",
-		"prebuild": "pnpm barrels && pnpm copy-data",
+		"prebuild": "pnpm copy-data",
 		"build": "pnpm copy-data && nx run hobby-ninja:build",
 		"build:prod": "pnpm copy-data && nx run hobby-ninja:build:prod",
 		"copy-data": "tsx scripts/copy-database.ts",
@@ -71,9 +69,9 @@
 		"@vitejs/plugin-react": "5.1.1",
 		"@vitejs/plugin-react-swc": "4.2.2",
 		"@vitest/ui": "4.0.15",
-		"barrelsby": "^2.8.1",
 		"eslint": "*",
 		"eslint-config-prettier": "10.1.8",
+		"eslint-plugin-barrel-files": "^3.0.1",
 		"eslint-plugin-import": "2.32.0",
 		"eslint-plugin-jsx-a11y": "6.10.2",
 		"eslint-plugin-markdown": "^5.1.0",
@@ -108,7 +106,7 @@
 		"dexie": "4.2.1",
 		"react": "19.2.1",
 		"react-dom": "19.2.1",
-		"zod": "*"
+		"zod": "4.2.0-canary.20251202T062120"
 	},
 	"packageManager": "pnpm@10.0.0"
 }
