@@ -36,4 +36,4 @@ export async function parseHtmlContent(htmlContent: string): Promise<any> {
 
 
 // Export the core parser for advanced usage
-export { HtmlToJsonConverter } from './core/html-to-json-converter';
+export { SimpleHtmlParser } from './core/simple-html-parser';
