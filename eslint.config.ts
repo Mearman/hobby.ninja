@@ -582,6 +582,21 @@ export default [
 		},
 	},
 	{
+		// CLI tools and scripts need console output and emojis for user feedback
+		files: [
+			"packages/cli/**/*.ts",
+			"packages/scrapers/**/*.ts",
+			"tools/scripts/**/*.ts",
+			"scripts/**/*.ts",
+		],
+		rules: {
+			"no-console": "off",
+			"no-emoji/no-emoji": "off",
+			"unicorn/no-process-exit": "off",
+			"unicorn/prefer-module": "off", // Allow require.main === module pattern
+		},
+	},
+	{
 		ignores: [
 			"dist/**",
 			"build/**",
