@@ -57,7 +57,7 @@ describe("execFileNoThrow", () => {
 				"echo",
 				["hello"],
 				expect.objectContaining({ cwd: "/test/current/directory" }),
-				expect.any(Function)
+				expect.any(Function),
 			);
 		});
 
@@ -86,7 +86,7 @@ describe("execFileNoThrow", () => {
 				"ls",
 				[],
 				expect.any(Object),
-				expect.any(Function)
+				expect.any(Function),
 			);
 		});
 	});
@@ -255,7 +255,7 @@ describe("execFileNoThrow", () => {
 				"test",
 				[],
 				expect.objectContaining({ cwd: "/custom/directory" }),
-				expect.any(Function)
+				expect.any(Function),
 			);
 		});
 
@@ -271,7 +271,7 @@ describe("execFileNoThrow", () => {
 				"test",
 				[],
 				expect.objectContaining({ cwd: "/test/current/directory" }),
-				expect.any(Function)
+				expect.any(Function),
 			);
 		});
 
@@ -287,7 +287,7 @@ describe("execFileNoThrow", () => {
 				"test",
 				[],
 				expect.objectContaining({ encoding: "utf16le" }),
-				expect.any(Function)
+				expect.any(Function),
 			);
 		});
 
@@ -307,7 +307,7 @@ describe("execFileNoThrow", () => {
 					timeout: 30_000,
 					encoding: "utf8",
 				}),
-				expect.any(Function)
+				expect.any(Function),
 			);
 		});
 	});
@@ -419,7 +419,7 @@ describe("execFileNoThrow", () => {
 				"npm",
 				["install", "react"],
 				expect.any(Object),
-				expect.any(Function)
+				expect.any(Function),
 			);
 		});
 
@@ -448,7 +448,7 @@ describe("execFileNoThrow", () => {
 				"npm",
 				["run", "build"],
 				expect.objectContaining({ timeout: 5000, cwd: "/test" }),
-				expect.any(Function)
+				expect.any(Function),
 			);
 		});
 
@@ -481,7 +481,7 @@ describe("execFileNoThrow", () => {
 				"npm",
 				["install"],
 				expect.any(Object),
-				expect.any(Function)
+				expect.any(Function),
 			);
 		});
 	});
@@ -579,7 +579,7 @@ describe("execFileNoThrow", () => {
 				"test-command",
 				["arg with spaces", "special@chars#", "日本語"],
 				expect.any(Object),
-				expect.any(Function)
+				expect.any(Function),
 			);
 		});
 
@@ -597,7 +597,7 @@ describe("execFileNoThrow", () => {
 				"test",
 				[],
 				expect.objectContaining({ timeout: largeTimeout }),
-				expect.any(Function)
+				expect.any(Function),
 			);
 		});
 	});
