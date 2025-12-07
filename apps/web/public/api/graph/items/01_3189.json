@@ -1,0 +1,74 @@
+{
+  "id": "01_3189",
+  "type": "item",
+  "name": {
+    "ja": "1/144 ガルバルディβ",
+    "en": "1/144 Garibaldi β"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1985年05月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "『機動戦士Z ガンダム』より、1/144スケールで、ガルバルディβが登場。",
+      "en": "From \"Mobile Suit Z Gundam\", Galbaldy β appears in 1/144 scale."
+    },
+    {
+      "ja": "モノアイは別パーツで成形し、可動式になっています。首の動力パイプにはゴムチューブを使用し、質感を追求しています。シールドは左前腕部へ脱着できます。武器のビーム・ライフルは右手首パーツと差替え式です。",
+      "en": "The mono-eye is molded as a separate part and is movable. A rubber tube is used for the power pipe in the neck to create a textured look. Seal can be attached and detached to the left forearm. The weapon beam rifle is interchangeable with the right wrist part."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4148_s_etaw5293u35t8e24k5051pj8mcft.jpg",
+    "https://bandai-hobby.net/images/155_4148_s_o25o3722yixm68oe8t2o3mm4z19g.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3189/",
+  "extractedAt": "2025-12-06T17:50:55.653Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5468",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5375",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5162",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      }
+    ]
+  }
+}

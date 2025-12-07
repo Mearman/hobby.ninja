@@ -1,0 +1,41 @@
+{
+  "id": "0113",
+  "type": "manual",
+  "name": {
+    "ja": "HGBD:R 1/144 コアガンダム II(ティターンズカラー)",
+    "en": "HGBD:R 1/144 Core Gundam II (Titans color)"
+  },
+  "productNumber": "2552128",
+  "releaseDate": {
+    "ja": "2020年12月26日",
+    "year": 2020,
+    "month": 12,
+    "day": 26
+  },
+  "productImage": "https://bandai-hobby.net/images/189_4247_s_cnm8sydear489hpwu313tgrwnpgy.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/189_4247_s_cnm8sydear489hpwu313tgrwnpgy.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/113/",
+  "extractedAt": "2025-12-05T23:09:46.476Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/113.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers-rerise",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3292",
+        "targetType": "item"
+      }
+    ]
+  }
+}

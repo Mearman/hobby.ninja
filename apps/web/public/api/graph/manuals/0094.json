@@ -1,0 +1,41 @@
+{
+  "id": "0094",
+  "type": "manual",
+  "name": {
+    "ja": "HGBD:R 1/144 ガンダムイージスナイト",
+    "en": "HGBD:R 1/144 Gundam Aegis Knight"
+  },
+  "productNumber": "2509124",
+  "releaseDate": {
+    "ja": "2020年8月22日",
+    "year": 2020,
+    "month": 8,
+    "day": 22
+  },
+  "productImage": "https://bandai-hobby.net/images/196_3790_s_zasggjbeddpqfxkl0nm2bhvoulxo.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/196_3790_s_zasggjbeddpqfxkl0nm2bhvoulxo.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/94/",
+  "extractedAt": "2025-12-05T23:09:46.451Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/94.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers-rerise",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2804",
+        "targetType": "item"
+      }
+    ]
+  }
+}

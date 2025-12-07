@@ -1,0 +1,79 @@
+{
+  "id": "01_3761",
+  "type": "item",
+  "name": {
+    "ja": "30MS オプションヘアスタイルパーツVol.4 全4種 ロングヘア3[イエロー1]",
+    "en": "30MS Option Hairstyle Parts Vol.4 4 types in total Long Hair 3 [Yellow 1]"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年03月19日 (土)",
+    "year": 2022,
+    "month": 3,
+    "day": 19
+  },
+  "targetAge": 15,
+  "description": [
+    {
+      "ja": "（11/8記載）諸般の都合により、商品の発売月を変更させていただきました。",
+      "en": "(Posted on 11/8) Due to various circumstances, we have changed the product release."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4712_o_1fu3mgeio1p261b8pu3b10rgof423.jpg",
+    "https://bandai-hobby.net/images/155_4712_o_1fu3mgnib18cg1ijirhf1khoqhu2d.jpg",
+    "https://bandai-hobby.net/images/156_4712_o_1fu3mgugim9g18ngdio1f4q3b42i.jpg",
+    "https://bandai-hobby.net/images/157_4712_o_1fu3mh21g17s4dn61a1gnv1l3g2n.jpg",
+    "https://bandai-hobby.net/images/158_4712_o_1fu3mhcak1qfm6n11u0114lq1ug92s.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3761/",
+  "extractedAt": "2025-12-06T17:52:09.110Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "3463",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-sisters",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5975",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5976",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5977",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5954",
+        "targetType": "item"
+      }
+    ]
+  }
+}

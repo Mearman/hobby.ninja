@@ -1,0 +1,40 @@
+{
+  "id": "0406",
+  "type": "manual",
+  "name": {
+    "ja": "MG 1/100 MS-06S ザクII",
+    "en": "MG 1/100 MS-06S Zaku II"
+  },
+  "productNumber": "1048290",
+  "releaseDate": {
+    "ja": "1995年11月",
+    "year": 1995,
+    "month": 11
+  },
+  "productImage": "https://bandai-hobby.net/images/156_2463_s_lxogeju2uhetrlj2vpnujy2d5btf.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_2463_s_lxogeju2uhetrlj2vpnujy2d5btf.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/406/",
+  "extractedAt": "2025-12-05T23:09:46.986Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/406.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1548",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "01_4111",
+  "type": "item",
+  "name": {
+    "ja": "30MS オプションヘアスタイルパーツVol.5 全4種 ツインテール4[ホワイト1]",
+    "en": "30MS Option Hairstyle Parts Vol.5 All 4 Types Twin Tails 4 [White 1]"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年06月25日 (土)",
+    "year": 2022,
+    "month": 6,
+    "day": 25
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5038_o_1i6mga7cva6i122k1h5c1ckp4ev23.jpg",
+    "https://bandai-hobby.net/images/155_5038_o_1i6mgadm7123blsrrq41b16eo2d.jpg",
+    "https://bandai-hobby.net/images/156_5038_o_1i6mgah4rckt11pai8p49o1uou2i.jpg",
+    "https://bandai-hobby.net/images/157_5038_o_1i6mgakla1fqc15qb6eu14f01fst2n.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4111/",
+  "extractedAt": "2025-12-06T17:52:57.660Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "3471",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-sisters",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5975",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5976",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5977",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5954",
+        "targetType": "item"
+      }
+    ]
+  }
+}

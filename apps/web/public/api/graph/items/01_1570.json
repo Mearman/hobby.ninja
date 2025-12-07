@@ -1,0 +1,69 @@
+{
+  "id": "01_1570",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士 181武者頑駄無零壱",
+    "en": "BB Senshi 181 Musha Gundam Murei 1"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1998年01月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "BB戦士 181武者頑駄無零壱登場！！",
+      "en": "BB Senshi 181 Musha Gundam Mureiichi is here! !"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2486_s_hsxv0qv23doelv5ue4otennakdw6.jpg",
+    "https://bandai-hobby.net/images/155_2486_s_1p1s9qc31s81mpqkg30fl3eg5wq2.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1570/",
+  "extractedAt": "2025-12-06T17:33:16.126Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-warrior",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

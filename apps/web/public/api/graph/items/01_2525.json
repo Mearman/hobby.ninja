@@ -1,0 +1,79 @@
+{
+  "id": "01_2525",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士308 孔明リ・ガズィ",
+    "en": "BB Senshi 308 Komei Ri Gazi"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2008年04月19日 (土)",
+    "year": 2008,
+    "month": 4,
+    "day": 19
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "●軍配が鳥に変形、そのまま背部に装備することも可能",
+      "en": "- Gunbai transforms into a bird and can be equipped on the back as is"
+    },
+    {
+      "ja": "●マスクを装着することでガンダムフェイスに変身",
+      "en": "- Transform into Gundam face by wearing a mask"
+    },
+    {
+      "ja": "●鎧は着脱可能",
+      "en": "-Armor is removable"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3450_s_3ind4gmu338e1o1lb2fkfxcdlk5d.jpg",
+    "https://bandai-hobby.net/images/155_3450_s_oc1x351yae04uqn9v6pnrrbz1y46.jpg",
+    "https://bandai-hobby.net/images/156_3450_s_sdpnqwjuj4y2106un047xwimdo9m.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2525/",
+  "extractedAt": "2025-12-06T17:49:32.933Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

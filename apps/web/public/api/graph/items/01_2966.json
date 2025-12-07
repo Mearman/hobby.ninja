@@ -1,0 +1,82 @@
+{
+  "id": "01_2966",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ガンダムヘビーアームズ",
+    "en": "HG 1/144 Gundam Heavy Arms"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年10月24日 (土)",
+    "year": 2020,
+    "month": 10,
+    "day": 24
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3940_s_av4s2tq1jmeqoyll4uklicju2n28.jpg",
+    "https://bandai-hobby.net/images/155_3940_s_2d14bbxkwac99to67w84757o3xww.jpg",
+    "https://bandai-hobby.net/images/156_3940_s_bu0pqnuy137ujtgne26jxhenixiw.jpg",
+    "https://bandai-hobby.net/images/157_3940_s_hi9cbn7ke3r18kapptb4tb4k1xt3.jpg",
+    "https://bandai-hobby.net/images/158_3940_s_fahr06pk9jup0ghijuze6fxz1a3t.jpg",
+    "https://bandai-hobby.net/images/159_3940_s_wk04tx55lhx6t9c4je22kxx8rptt.jpg",
+    "https://bandai-hobby.net/images/189_3940_s_kvfts4uw2g54m70vzu9j7vaszm44.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2966/",
+  "extractedAt": "2025-12-06T17:50:29.803Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0498",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "new-mobile-report-gundam-w-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5590",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000213249",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5340",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000183318",
+        "targetType": "item"
+      }
+    ]
+  }
+}

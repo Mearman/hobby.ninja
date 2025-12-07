@@ -1,0 +1,39 @@
+{
+  "id": "hg-amplified-imgn",
+  "type": "brand",
+  "name": {
+    "ja": "HG Amplified IMGN",
+    "en": "HG Amplified IMGN"
+  },
+  "url": "https://bandai-hobby.net/brand/hgamplifiedimgn/",
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_6542",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_6447",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_5186",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_5106",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_4169",
+        "targetType": "item"
+      }
+    ],
+    "outbound": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "01_2851",
+  "type": "item",
+  "name": {
+    "ja": "HGBD:R 1/144 リライジングガンダム",
+    "en": "HGBD:R 1/144 Rerising Gundam"
+  },
+  "price": {
+    "amount": 8250,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年09月26日 (土)",
+    "year": 2020,
+    "month": 9,
+    "day": 26
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_12.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_7.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_8.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_9.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_10.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000150009_11.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2851/",
+  "extractedAt": "2025-12-06T17:50:15.461Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0098",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers-rerise",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5054",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3562",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3565",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3291",
+        "targetType": "item"
+      }
+    ]
+  }
+}

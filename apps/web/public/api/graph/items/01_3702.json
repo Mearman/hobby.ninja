@@ -1,0 +1,77 @@
+{
+  "id": "01_3702",
+  "type": "item",
+  "name": {
+    "ja": "バンダイホビーセンター専用エコプラ BB戦士 νガンダム",
+    "en": "Bandai Hobby Center exclusive eco plastic BB Senshi νGundam"
+  },
+  "price": {
+    "amount": 1540,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2017年07月08日 (土)",
+    "year": 2017,
+    "month": 7,
+    "day": 8
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "●SD ガンダムシリーズからエコプラでキット化",
+      "en": "-Kit from SD Gundam series with eco plastic"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4656_s_4i5m431d8chf8cpsgcgazuvt3br2.jpg",
+    "https://bandai-hobby.net/images/155_4656_s_6fuqpiq38r0iyr4eh56g0mpu3da0.jpg",
+    "https://bandai-hobby.net/images/156_4656_s_u9ipzu7o3iayxvjzitwexpcrntrq.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3702/",
+  "extractedAt": "2025-12-06T17:52:00.442Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4975",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3703",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-chars-counterattack",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-series",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4975",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3703",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "01_2963",
+  "type": "item",
+  "name": {
+    "ja": "Figure-rise Standard 仮面ライダー響鬼",
+    "en": "Figure-rise Standard Kamen Rider Hibiki"
+  },
+  "price": {
+    "amount": 3740,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年10月17日 (土)",
+    "year": 2020,
+    "month": 10,
+    "day": 17
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151033_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151033_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151033_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151033_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151033_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151033_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151033_7.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151033_8.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151033_9.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151033_10.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151033_11.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151033_12.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2963/",
+  "extractedAt": "2025-12-06T17:50:30.029Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "kamen-rider-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "figure-rise-standard",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5451",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000215369",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5276",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5175",
+        "targetType": "item"
+      }
+    ]
+  }
+}

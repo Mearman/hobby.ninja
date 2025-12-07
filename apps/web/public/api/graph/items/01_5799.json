@@ -1,0 +1,70 @@
+{
+  "id": "01_5799",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士133 千力頑駄無",
+    "en": "BB Senshi 133 Senriki Gundam"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1994年08月01日 (月)",
+    "year": 1994,
+    "month": 8,
+    "day": 1
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "BB戦士133 千力頑駄無登場！",
+      "en": "BB Senshi 133 Senriki Gundam appears!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_86_s_ziiy9tzm8h2rr7o6jfff65z8q0mf.jpg",
+    "https://bandai-hobby.net/images/155_86_s_aacia7av9awril4obnidcges5qub.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5799/",
+  "extractedAt": "2025-12-06T17:56:38.609Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

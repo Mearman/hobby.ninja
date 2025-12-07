@@ -1,0 +1,83 @@
+{
+  "id": "01_4210",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ガイアガンダム",
+    "en": "HG 1/144 Gaia Gundam"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2005年01月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「機動戦士ガンダム SEED DESTINY」に登場する3号機「ガイアガンダム」の1/144スケール、HG仕様のプラモデル。一部パーツの差替えにより、MA形態への変形が可能です。MA形態時の顔はポリキャップによってスムーズに変形出来ます。背部のビームブレイドは左右に開き、飛行機の主翼のように展開が可能です。ビームブレイドの発光部分とビームサーベルにはクリアパーツを採用しています。",
+      "en": "A 1/144 Scale, HG plastic model of Unit 3 \"Gaia Gundam \" that appears in \" Mobile Suit Gundam SEED DESTINY\". By replacing some parts, it can be transformed into MA form. The face in MA form can be smoothly transformed using the polycap. The beam blades on the back open left and right and can be deployed like the main wings of an airplane. Clear parts are used for the beam blade's light emitting part and beam saber."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_512_s_qexf87bhhv9isz4njoqp99524evr.jpg",
+    "https://bandai-hobby.net/images/155_512_s_ju2co4wfcrzg58vlimhjo6jhqacn.jpg",
+    "https://bandai-hobby.net/images/156_512_s_hz8ogwj84y7v5d5pdpyaml03gesy.jpg",
+    "https://bandai-hobby.net/images/157_512_s_3mwzkgo06e69212gq481jjbmx4aa.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4210/",
+  "extractedAt": "2025-12-06T17:53:11.824Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0161",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed-destiny",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000203308",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5097",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3739",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000157417",
+        "targetType": "item"
+      }
+    ]
+  }
+}

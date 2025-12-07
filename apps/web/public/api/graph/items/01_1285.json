@@ -1,0 +1,79 @@
+{
+  "id": "01_1285",
+  "type": "item",
+  "name": {
+    "ja": "ＲＧ 1/144 ゼータガンダム (バイオセンサーイメージカラー)",
+    "en": "RG 1/144 Zeta Gundam (Biosensor image color)"
+  },
+  "price": {
+    "amount": 3300,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2018年02月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2216_o_1c1cm6rjb1cp82cnt1ni58g0723.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1285/",
+  "extractedAt": "2025-12-06T17:06:34.967Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "rg-real-gradepreban-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "rg-real-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000159026",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000155118",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000145352",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000145001",
+        "targetType": "item"
+      }
+    ]
+  }
+}

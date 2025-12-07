@@ -1,0 +1,80 @@
+{
+  "id": "01_1425",
+  "type": "item",
+  "name": {
+    "ja": "ＭＧ 1/100 Ｇパーツ［フルドド］",
+    "en": "MG 1/100 G parts [Furudodo]"
+  },
+  "price": {
+    "amount": 2420,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2018年07月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2348_o_1cboedt201gep1mc9bdj1ktv139523.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1425/",
+  "extractedAt": "2025-12-06T17:20:47.017Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "2642",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-gradepreban-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5994",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000220190",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000220189",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000216105",
+        "targetType": "item"
+      }
+    ]
+  }
+}

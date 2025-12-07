@@ -1,0 +1,74 @@
+{
+  "id": "01_3127",
+  "type": "item",
+  "name": {
+    "ja": "1/144 ドダイYS",
+    "en": "1/144 Dodai YS"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1981年10月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "『機動戦士ガンダム』より、1/144スケールで、ドダイYSが登場。",
+      "en": "From \"Mobile Suit Gundam\", Dodai YS appears in 1/144 scale."
+    },
+    {
+      "ja": "専用ディスプレイ台が付いています。 同スケールのグフ（別売）の搭載用に、グフの脚部開閉機能のパーツが付いています。",
+      "en": "Comes with a dedicated display stand. For mounting the Gouf of the same Scale (sold separately), parts for opening and closing the legs of the Gouf are included."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4092_s_m52dwyv0pytm480x5sjar6c86d0s.jpg",
+    "https://bandai-hobby.net/images/155_4092_s_sdv56mtggrxesuu4ry8991w2fcjh.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3127/",
+  "extractedAt": "2025-12-06T17:50:48.905Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

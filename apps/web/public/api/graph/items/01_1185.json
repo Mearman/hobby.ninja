@@ -1,0 +1,79 @@
+{
+  "id": "01_1185",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 RGM-89D ジェガンＤ型（ピコ・アルティドール専用機）",
+    "en": "HGUC 1/144 RGM-89D Jegan D type (Pico Altidore exclusive machine)"
+  },
+  "price": {
+    "amount": 1980,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2017年11月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2112_o_1bopjn19uhlicjg1tthe5d1ivo23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1185/",
+  "extractedAt": "2025-12-06T16:58:13.986Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-uc-unicorn",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-gradepreban-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000216106",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000183366",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000164780",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000164779",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "01_2949",
+  "type": "item",
+  "name": {
+    "ja": "1/100 リックディアス",
+    "en": "1/100 Rick Diaz"
+  },
+  "price": {
+    "amount": 1320,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1985年08月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [
+    {
+      "ja": "『機動戦士Z ガンダム』より、1/100スケールで、リックディアスが登場。",
+      "en": "From \"Mobile Suit Z Gundam\", Rick Diaz appears in 1/100 scale."
+    },
+    {
+      "ja": "バックパック部にはバインダーブースターが脱着可能。ビーム・ピストル（２本付き）、クレイ・バズーカのマウント収納も可能です。手指は親指以外すべて独立可動します。クワトロ・バジーナのフィギュア付です。モノアイは可動式です。",
+      "en": "A binder booster is removable in the backpack part. It is also possible to mount and store beam pistols (2 included) and clay bazooka. All fingers except the thumb are movable independently. Comes with Quattro Bagina figure. Monoeye is movable."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3925_s_kqmknj2zcsb5f2kdldojhzslzg05.jpg",
+    "https://bandai-hobby.net/images/155_3925_s_vakttubzzxutc21bsen13cc6krus.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2949/",
+  "extractedAt": "2025-12-06T17:50:28.170Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5468",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5375",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5162",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      }
+    ]
+  }
+}

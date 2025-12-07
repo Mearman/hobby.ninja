@@ -1,0 +1,133 @@
+{
+  "id": "01_1313",
+  "type": "item",
+  "name": {
+    "ja": "HGBD 1/144 ガンダム AGEIIマグナム",
+    "en": "HGBD 1/144 Gundam AGEII Magnum"
+  },
+  "price": {
+    "amount": 1980,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2018年03月10日 (土)",
+    "year": 2018,
+    "month": 3,
+    "day": 10
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 『ガンダムビルドダイバーズ』プロローグに登場するクジョウ・キョウヤが使用するガンプラが放送に先駆けて登場！",
+      "en": "• Gunpla used by Kujo and Kyoya who appear in the \"Gundam Build Divers\" prologue is now available prior to the broadcast!"
+    },
+    {
+      "ja": "• 組み換えによりフェニックスモードへの変形に加え、特徴的なシグルシールド、Fファンネルは着脱が可能！",
+      "en": "• In addition to transforming into Phoenix mode by recombining, the characteristic Siguru Seal and F Funnel can be attached and detached!"
+    },
+    {
+      "ja": "• その他、ライフル武器やビームサーベルなど豊富な武装も再現！劇中の様々なポージングを自在に再現できる！",
+      "en": "• In addition, various weapons such as rifle weapons and beam sabers are also reproduced! You can freely reproduce various poses in the play!"
+    },
+    {
+      "ja": "• 初回限定版のみアニメ告知パッケージ仕様となっている！",
+      "en": "• Only the first limited edition comes with an anime announcement package!"
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "ハイパードッズライフルマグナム×1",
+      "en": "Hyper Dods Rifle Magnum x 1"
+    },
+    {
+      "ja": "ビームサーベル×2",
+      "en": "Beam saber x2"
+    },
+    {
+      "ja": "シグルシールド×1",
+      "en": "Sigur Seal × 1"
+    },
+    {
+      "ja": "Fファンネル×4",
+      "en": "F funnel x 4"
+    },
+    {
+      "ja": "ディスプレイ台座×1",
+      "en": "Display pedestal x 1"
+    }
+  ],
+  "contents": [
+    {
+      "ja": "成形品×11",
+      "en": "Molded products x 11"
+    },
+    {
+      "ja": "シール×1",
+      "en": "Seal×1"
+    },
+    {
+      "ja": "取扱説明書×1",
+      "en": "Handling manual×1"
+    }
+  ],
+  "images": [
+    "https://bandai-hobby.net/images/153_2242_s_mkhkn1rtzm6i88wn8w7uxq5936ft.jpg",
+    "https://bandai-hobby.net/images/155_2242_s_ec2lx37617qi7213m2q2gkhbg1pk.jpg",
+    "https://bandai-hobby.net/images/156_2242_s_8xm8g4cseitvwlhp4owbv2x9zq7g.jpg",
+    "https://bandai-hobby.net/images/157_2242_s_l65le1a7za5x6me61iw0jt80ijrs.jpg",
+    "https://bandai-hobby.net/images/158_2242_s_qamtrjddpd4ik0gomch4vox8t1v2.jpg",
+    "https://bandai-hobby.net/images/159_2242_s_1h879uffhu9440x5hq2f2s0r81e1.jpg",
+    "https://bandai-hobby.net/images/189_2242_s_m0cg0ttsxp9cnys337sz1i7mcics.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1313/",
+  "extractedAt": "2025-12-06T17:12:58.375Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1025",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2623",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000138336",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2518",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2403",
+        "targetType": "item"
+      }
+    ]
+  }
+}

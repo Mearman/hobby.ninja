@@ -1,0 +1,40 @@
+{
+  "id": "2579",
+  "type": "manual",
+  "name": {
+    "ja": "ＨＧ 1/144 ガンダムジェミナス０１",
+    "en": "HG 1/144 Gundam Geminass 01"
+  },
+  "productNumber": "2505896",
+  "releaseDate": {
+    "ja": "2020年5月",
+    "year": 2020,
+    "month": 5
+  },
+  "productImage": "https://bandai-hobby.net/images/153_3782_s_chlhgf2rnxkzrtnexg11qvjecwyo.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_3782_s_chlhgf2rnxkzrtnexg11qvjecwyo.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2579/",
+  "extractedAt": "2025-12-05T23:09:48.807Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2579.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "new-mobile-report-gundam-w",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2795",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "0646",
+  "type": "manual",
+  "name": {
+    "ja": "MGEX 1/100 ストライクフリーダムガンダム",
+    "en": "MGEX 1/100 Strike Freedom Gundam"
+  },
+  "productNumber": "2583176",
+  "releaseDate": {
+    "ja": "2022年11月19日",
+    "year": 2022,
+    "month": 11,
+    "day": 19
+  },
+  "productImage": "https://bandai-hobby.net/images/196_5149_s_4h4ix8i0czfctrqhwa4e0dygycqs.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/196_5149_s_4h4ix8i0czfctrqhwa4e0dygycqs.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/646/",
+  "extractedAt": "2025-12-05T23:09:47.361Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/646.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed-destiny",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4230",
+        "targetType": "item"
+      }
+    ]
+  }
+}

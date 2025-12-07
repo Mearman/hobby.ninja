@@ -1,0 +1,111 @@
+{
+  "id": "01_2090",
+  "type": "item",
+  "name": {
+    "ja": "1/12 R2-Q5",
+    "en": "1/12 R2-Q5"
+  },
+  "price": {
+    "amount": 2200,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2019年01月26日 (土)",
+    "year": 2019,
+    "month": 1,
+    "day": 26
+  },
+  "targetAge": 15,
+  "scale": "1/12",
+  "description": [
+    {
+      "ja": "デス・スターの通路を巡回し、メンテナンスと修理を行う帝国のアストロメク・ドロイドがドロイド・コレクションにラインアップ！",
+      "en": "The Imperial astromech droid, which patrols the corridors of the Death Star and performs maintenance and repairs, is now available in the droid collection!"
+    },
+    {
+      "ja": "• 各エピソードのR2-D2を再現できるドロイド・アクセサリーが付属。R2-Q5には、R2-D2用のドリンク用アームと、コンピューター・インターフェース・アームが付属。",
+      "en": "• Droid Accessory that can reproduce R2-D2 from each episode is included. R2-Q5 comes with a drink arm for R2-D2 and a computer interface arm."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "R2-D2用ドリンク用アーム×1",
+      "en": "Drink arm for R2-D2 x 1"
+    },
+    {
+      "ja": "R2-D2用コンピューター・インターフェース・アーム×2",
+      "en": "Computer interface arm for R2-D2 x 2"
+    },
+    {
+      "ja": "デイスプレイベース×1",
+      "en": "Display base x 1"
+    }
+  ],
+  "contents": [
+    {
+      "ja": "成形品×5",
+      "en": "Molded product x 5"
+    },
+    {
+      "ja": "マーキングシール×1",
+      "en": "MarkingSeal×1"
+    },
+    {
+      "ja": "取扱説明書×1",
+      "en": "Handling manual×1"
+    }
+  ],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132805_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132805_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132805_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132805_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132805_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132805_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132805_7.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132805_8.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132805_9.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132805_10.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132805_11.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000132805_12.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2090/",
+  "extractedAt": "2025-12-06T17:48:38.090Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "star-wars",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4153",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4154",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3514",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3513",
+        "targetType": "item"
+      }
+    ]
+  }
+}

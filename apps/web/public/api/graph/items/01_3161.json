@@ -1,0 +1,94 @@
+{
+  "id": "01_3161",
+  "type": "item",
+  "name": {
+    "ja": "1/144 プロトタイプガンダム",
+    "en": "1/144 Prototype Gundam"
+  },
+  "price": {
+    "amount": 440,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1983年06月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "『機動戦士ガンダム』より、1/144スケールで、MSVシリーズプロトタイプガンダムが登場。",
+      "en": "From \"Mobile Suit Gundam\", the MSV series prototype Gundam appears in 1/144 scale."
+    },
+    {
+      "ja": "アムロの父テム・レイが中心となり開発したガンダムの試作機体を立体化しました",
+      "en": "A three-dimensional version of the Gundam prototype developed mainly by Amuro's father Tem Ray."
+    },
+    {
+      "ja": "。腕が前後にスイング可能です。",
+      "en": ". Arms can swing back and forth."
+    },
+    {
+      "ja": "ふくらはぎ内部にメカディテールを再現、装甲の着脱により確認することができます",
+      "en": "Mechanical details are reproduced inside the calf, and can be confirmed by attaching and detaching the armor."
+    },
+    {
+      "ja": "。股関節部は左右に開閉可能です。",
+      "en": ". The hip joint can be opened and closed to the left and right."
+    },
+    {
+      "ja": "手首パーツは左右握り手と平手、ビームライフル用握り手がついています。シールド、ビームサーベル２本がついています。",
+      "en": "The wrist parts include left and right grips, a flat hand, and a beam rifle grip. Seal and two beam sabers are included."
+    },
+    {
+      "ja": "専用のデカール付です。",
+      "en": "Comes with a special decal."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4122_s_kciu22752cqc9l7ceq5m24r35khg.jpg",
+    "https://bandai-hobby.net/images/155_4122_s_wh2flzzijpf8r3owa55oxyxdqchi.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3161/",
+  "extractedAt": "2025-12-06T17:50:53.404Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

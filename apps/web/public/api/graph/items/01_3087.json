@@ -1,0 +1,76 @@
+{
+  "id": "01_3087",
+  "type": "item",
+  "name": {
+    "ja": "1/144 シャア専用ザク",
+    "en": "1/144 Char's Zaku"
+  },
+  "price": {
+    "amount": 330,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1980年09月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "足首以外の関節が可動式で、上体のひねりも再現可能です。・ザクマシンガンを装備しています。",
+      "en": "Joints other than the ankles are movable, and the twisting of the upper body can be reproduced. - Equipped with a Zaku machine gun."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4055_s_ihafklbg1kzrlegpsp71kh3s7vrc.jpg",
+    "https://bandai-hobby.net/images/155_4055_s_3pmuks3mnxv678b3z9ij919v7vcx.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3087/",
+  "extractedAt": "2025-12-06T17:50:44.997Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1915",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "01_4823",
+  "type": "item",
+  "name": {
+    "ja": "LEGENDBB 騎士スペリオルドラゴン 超メタリックVer.",
+    "en": "LEGENDBB Knight Superior Dragon Super Metallic Ver."
+  },
+  "price": {
+    "amount": 3850,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2016年11月19日 (土)",
+    "year": 2016,
+    "month": 11,
+    "day": 19
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "LEGENDBB 騎士スペリオルドラゴン 超メタリックVer.登場！",
+      "en": "LEGENDBB Knight Superior Dragon Super Metallic Ver. now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5706_s_jydktn1k6px5dl6sr3amdr1bhguh.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4823/",
+  "extractedAt": "2025-12-06T17:54:30.502Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

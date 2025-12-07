@@ -1,0 +1,75 @@
+{
+  "id": "01_1231",
+  "type": "item",
+  "name": {
+    "ja": "ＲＧ 1/144 ダブルオーガンダム セブンソード/G インスペクション",
+    "en": "RG 1/144 00 Gundam Seven Sword/G Inspection"
+  },
+  "price": {
+    "amount": 3850,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2017年12月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2164_o_1bs8483fslj71m4a1c711bel17i823.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1231/",
+  "extractedAt": "2025-12-06T17:02:51.993Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "2673",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-00v-senki",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "rg-real-gradepreban-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "rg-real-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000223115",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000118462",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "01_1362",
+  "type": "item",
+  "name": {
+    "ja": "ＭＧ 1/100 ジンクスIII （アロウズ型）",
+    "en": "MG 1/100 Jinx III (Arrows type)"
+  },
+  "price": {
+    "amount": 4730,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2018年05月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2289_o_1c7iq847n1jg215djq5m195cu3b23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1362/",
+  "extractedAt": "2025-12-06T17:16:04.233Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "2641",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-00-double-o",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-gradepreban-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000216602",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5526",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000161849",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5102",
+        "targetType": "item"
+      }
+    ]
+  }
+}

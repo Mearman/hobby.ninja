@@ -1,0 +1,80 @@
+{
+  "id": "01_3412",
+  "type": "item",
+  "name": {
+    "ja": "Figure-rise Standard Amplified デュークモン",
+    "en": "Figure-rise Standard Amplified Dukemon"
+  },
+  "price": {
+    "amount": 4950,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2021年06月26日 (土)",
+    "year": 2021,
+    "month": 6,
+    "day": 26
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_7.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_8.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_9.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_10.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_11.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000159987_12.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3412/",
+  "extractedAt": "2025-12-06T17:51:24.143Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "digimon-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "figure-rise-standard-amplified",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5983",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000216437",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5277",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000198198",
+        "targetType": "item"
+      }
+    ]
+  }
+}

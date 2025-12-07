@@ -1,0 +1,89 @@
+{
+  "id": "01_5717",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 ジェスタ",
+    "en": "HGUC 1/144 Jesta"
+  },
+  "price": {
+    "amount": 1760,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2011年09月17日 (土)",
+    "year": 2011,
+    "month": 9,
+    "day": 17
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 「機動戦士ガンダム UC」より、ジェガンの最強上位機をHGUC化。 • 完全新規金型で広い可動範囲を実現。 • シールド基部のフレーム可動を再現。 • 多彩な武器、ハンドパーツが付属。 成形品×8、ホイルシール×1、テトロンシール×1、組立説明書×1",
+      "en": "• From \"Mobile Suit Gundam UC\", Jegan's strongest high-end machine is transformed into HGUC. • Completely new mold realizes a wide range of motion. • Reproduce the frame movement of the seal base. • Comes with a variety of weapons and hand parts. Molded product x 8, foil seal x 1, Tetron seal x 1, assembly manual x 1"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_784_s_9p6pupigsqhp4t7cshog0lqookkq.jpg",
+    "https://bandai-hobby.net/images/155_784_s_sf34895psbvp0l2tzae23smlk2vg.jpg",
+    "https://bandai-hobby.net/images/156_784_s_kpvs7i0be7qj4io1omdgzd64ycrj.jpg",
+    "https://bandai-hobby.net/images/157_784_s_lo7cm33xbav9pk1gccx0k8ynim0d.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5717/",
+  "extractedAt": "2025-12-06T17:56:28.562Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0936",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-uc-unicorn",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5527",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4986",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000163998",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "01_4072",
+  "type": "item",
+  "name": {
+    "ja": "ＳＤガンダムフォース VS ダークアクシズ",
+    "en": "SD Gundam Force VS Dark Axis"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2004年12月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "「SD ガンダムフォース」に登場する「ヘビーウエポン・キャプテンガンダム」「GFボール」「GFジム」「ガンバイカー」「ザコソルジャー×2、ザコソルジャーの骨」の5キャラクターのセット。キャプテンガンダムはパールカラーです。",
+      "en": "A set of 5 characters that appear in \"SD Gundam Force \": \" Heavy Weapon Captain Gundam \", \" GF Ball \", \" GF Jim \", \" Gun Biker \", \" Zako Soldier x 2, Zako Soldier Bone\". Captain Gundam is pearl colored."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_499_s_a45yacqy4v2i82cxlft98oeii3oj.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4072/",
+  "extractedAt": "2025-12-06T17:52:52.848Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-series",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

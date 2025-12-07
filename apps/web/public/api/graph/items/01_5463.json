@@ -1,0 +1,104 @@
+{
+  "id": "01_5463",
+  "type": "item",
+  "name": {
+    "ja": "30MF クラスアップアーマー (ローザンビショップ)",
+    "en": "30MF Class Up Armor (Rosain Bishop)"
+  },
+  "price": {
+    "amount": 770,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2025年02月15日 (土)",
+    "year": 2025,
+    "month": 2,
+    "day": 15
+  },
+  "targetAge": 15,
+  "description": [
+    {
+      "ja": "自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「クラスアップアーマー (ローザンビショップ)」が登場！",
+      "en": "From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Class Up Armor (Rosain Bishop)\" is now available!"
+    },
+    {
+      "ja": "• “アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
+      "en": "• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job."
+    },
+    {
+      "ja": "• 別売りの「30MF ローザンプリースト」と組み合わせることで「ローザンビショップ」に“クラスアップ”が可能。",
+      "en": "• By combining with the separately sold \"30MF Rosan Priest \", it is possible to \" class up \" to \" Rosain Bishop\"."
+    },
+    {
+      "ja": "• “エレメントコア”の属性は「火」。",
+      "en": "• The attribute of “element core” is “fire”."
+    },
+    {
+      "ja": "• 別売りのリーベル共和国の「ビショップ」とは異なるフェイスデザインとカラーリング。",
+      "en": "• Face design and coloring different from Liber Republic's \"Bishop\" sold separately."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "アーマーパーツ×1式",
+      "en": "Armor parts x 1 set"
+    },
+    {
+      "ja": "武装パーツ×1式",
+      "en": "Armed parts x 1 set"
+    }
+  ],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225843_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225843_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225843_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225843_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000225843_5.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5463/",
+  "extractedAt": "2025-12-06T17:55:58.588Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "3415",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-fantasy",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5990",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5989",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5972",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5973",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "01_4643",
+  "type": "item",
+  "name": {
+    "ja": "1/100 ニクスプロヴィデンスガンダム",
+    "en": "1/100 Nyx Providence Gundam"
+  },
+  "price": {
+    "amount": 2750,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2009年09月28日 (月)",
+    "year": 2009,
+    "month": 9,
+    "day": 28
+  },
+  "targetAge": 8,
+  "scale": "1/100",
+  "description": [
+    {
+      "ja": "「機動戦士ガンダム SEED VS ASTRAY（ヴァーサスアストレイ）」より“ニクスプロヴィデンスガンダム”が登場。 新規パーツの追加により新機体のプロポーションを再現。 全身のドラグーンは脱着可能。 バックパックは同シリーズの別機体と交換可能。",
+      "en": "“Nyx Providence Gundam” appears from “Mobile Suit Gundam SEED VS ASTRAY”. The proportions of the new aircraft are reproduced by adding new parts. The whole body dragoon is removable. The backpack can be exchanged with another aircraft from the same series."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5536_o_1go68apg318evo461f9l1d1a1pt323.jpg",
+    "https://bandai-hobby.net/images/155_5536_o_1go68b0id11u1uj5vl91pe91uq32d.jpg",
+    "https://bandai-hobby.net/images/156_5536_o_1gois7sebhhj12101imi1s9cdc23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4643/",
+  "extractedAt": "2025-12-06T17:54:07.123Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1176",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5994",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5440",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5441",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5365",
+        "targetType": "item"
+      }
+    ]
+  }
+}

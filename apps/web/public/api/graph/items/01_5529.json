@@ -1,0 +1,73 @@
+{
+  "id": "01_5529",
+  "type": "item",
+  "name": {
+    "ja": "ガンダムベース限定 オプションパーツセット ガンプラ (カスタムウェポン & ジョイントセット 2)",
+    "en": "Gundam Base Limited Option Parts Set Gunpla (Custom Weapon & Joint Set 2)"
+  },
+  "price": {
+    "amount": 990,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2024年12月14日 (土)",
+    "year": 2024,
+    "month": 12,
+    "day": 14
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテム。",
+      "en": "A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world."
+    },
+    {
+      "ja": "武器とジョイントを組み合わせて、キミだけのオリジナル機体を作り出せ！",
+      "en": "Create your own original aircraft by combining weapons and joints!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_6369_s_danq3c84courik3flul9epyum3gb.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5529/",
+  "extractedAt": "2025-12-06T17:56:06.144Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "optional-parts-set",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5441",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5528",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5376",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5242",
+        "targetType": "item"
+      }
+    ]
+  }
+}

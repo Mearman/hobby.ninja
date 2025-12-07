@@ -1,0 +1,72 @@
+{
+  "id": "01_4545",
+  "type": "item",
+  "name": {
+    "ja": "1/48 メガサイズモデル ガンダム",
+    "en": "1/48 Mega size Model Gundam"
+  },
+  "price": {
+    "amount": 8580,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2010年03月04日 (木)",
+    "year": 2010,
+    "month": 3,
+    "day": 4
+  },
+  "targetAge": 8,
+  "scale": "1/48",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5446_s_48js0hwjq7jjcvp4zfwltkg5n74l.jpg",
+    "https://bandai-hobby.net/images/155_5446_s_pqf1vvmpgl57c7z91xu812rpgdcs.jpg",
+    "https://bandai-hobby.net/images/156_5446_s_szsf4iakspvzrmc9gq3oig0exmi3.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4545/",
+  "extractedAt": "2025-12-06T17:53:56.045Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mega-size-model",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4961",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4784",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4782",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4569",
+        "targetType": "item"
+      }
+    ]
+  }
+}

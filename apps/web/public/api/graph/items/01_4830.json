@@ -1,0 +1,77 @@
+{
+  "id": "01_4830",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 RX-78-2 ガンダム グロスインジェクションバージョン",
+    "en": "HGUC 1/144 RX-78-2 Gundam gloss injection version"
+  },
+  "price": {
+    "amount": 1047,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2006年08月23日 (水)",
+    "year": 2006,
+    "month": 8,
+    "day": 23
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「HGUC 1/144 RX-78-2 ガンダム グロスインジェクションバージョン」登場！",
+      "en": "\"HGUC 1/144 RX-78-2 Gundam Gloss Injection Version\" now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5712_s_2ggj6enqddqpfh5xypyirjtewide.jpg",
+    "https://bandai-hobby.net/images/155_5712_s_yl60jbuaakfdm6gk8qd8u851sd54.jpg",
+    "https://bandai-hobby.net/images/156_5712_s_7qgs8bso4s1c0v3n99ucbf32eoo8.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4830/",
+  "extractedAt": "2025-12-06T17:54:29.422Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4365",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3669",
+        "targetType": "item"
+      }
+    ]
+  }
+}

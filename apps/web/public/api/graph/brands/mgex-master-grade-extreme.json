@@ -1,0 +1,44 @@
+{
+  "id": "mgex-master-grade-extreme",
+  "type": "brand",
+  "name": {
+    "ja": "MGEX [マスターグレードエクストリーム]",
+    "en": "MGEX [Master Grade Extreme]"
+  },
+  "url": "https://bandai-hobby.net/brand/mgex/",
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_7001",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_6979",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_4230",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_3364",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_3026",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_3010",
+        "targetType": "item"
+      }
+    ],
+    "outbound": []
+  }
+}

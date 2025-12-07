@@ -1,0 +1,41 @@
+{
+  "id": "0148",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ガンダムルブリスソーン",
+    "en": "HG 1/144 Gundam Rubris Thorn"
+  },
+  "productNumber": "2645143",
+  "releaseDate": {
+    "ja": "2023年3月18日",
+    "year": 2023,
+    "month": 3,
+    "day": 18
+  },
+  "productImage": "https://bandai-hobby.net/images/190_5237_s_ljb8l5b1tdtd45cl0lk0yf5o4opy.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/190_5237_s_ljb8l5b1tdtd45cl0lk0yf5o4opy.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/148/",
+  "extractedAt": "2025-12-05T23:09:46.527Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/148.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-witch-of-mercury",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4326",
+        "targetType": "item"
+      }
+    ]
+  }
+}

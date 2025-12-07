@@ -1,0 +1,58 @@
+{
+  "id": "01_4284",
+  "type": "item",
+  "name": {
+    "ja": "30MS トウカイテイオー from ウマ娘 プリティーダービー",
+    "en": "30MS Tokai Teio from Uma Musume Pretty Derby"
+  },
+  "price": {
+    "amount": 4070,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2023年03月18日 (土)",
+    "year": 2023,
+    "month": 3,
+    "day": 18
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5199_o_1i761dec11gcgivoqe512idttl23.jpg",
+    "https://bandai-hobby.net/images/155_5199_o_1i761e4241sebbpr1dvi1gsrp2b2d.jpg",
+    "https://bandai-hobby.net/images/156_5199_o_1i761ejib5fl163bbkf1fsj11si2i.jpg",
+    "https://bandai-hobby.net/images/157_5199_o_1i761f2m61ai9e928ah138vq512n.jpg",
+    "https://bandai-hobby.net/images/158_5199_o_1i761fe241i3e6s318hk1ei0k8u2s.jpg",
+    "https://bandai-hobby.net/images/159_5199_o_1i761fq15eka1lqdqtvsdchj531.jpg",
+    "https://bandai-hobby.net/images/189_5199_o_1i761gl8n1721h8v1507e61f6c36.jpg",
+    "https://bandai-hobby.net/images/190_5199_o_1i761hud61q181bkfohd1j31f2c3b.jpg",
+    "https://bandai-hobby.net/images/191_5199_o_1i761i8ievbr126b7uk168f1ag33g.jpg",
+    "https://bandai-hobby.net/images/192_5199_o_1i761ikhmk2hebc1vfb9iq1lp93l.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4284/",
+  "extractedAt": "2025-12-06T17:53:21.654Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "uma-musume-pretty-derby",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-sisters",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      }
+    ]
+  }
+}

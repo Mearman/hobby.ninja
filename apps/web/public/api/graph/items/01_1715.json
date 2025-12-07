@@ -1,0 +1,78 @@
+{
+  "id": "01_1715",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士338 周泰ガンダム",
+    "en": "BB Senshi 338 Zhou Tai Gundam"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2009年08月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "「ＢＢ戦士３３８ 周泰ガンダム」が登場！",
+      "en": "\"BB Senshi 338 Shutai Gundam\" is now available!"
+    },
+    {
+      "ja": "●両肩の刃と2本の周刃槍（しゅうじんそう）は組み合わせて長大な槍「周刃十字鋼槍（しゅうじんじゅうじこうそう）」に合体",
+      "en": "-The blades on both shoulders and the two shujinsou are combined into a long spear called the ``shujinjuujikosou''."
+    },
+    {
+      "ja": "●鎧は着脱可能<",
+      "en": "●Armor is removable<"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2624_s_w2rlaau6ja1x0wnjt3jca15l5f7e.jpg",
+    "https://bandai-hobby.net/images/155_2624_s_0xa5d8xqynwfigcu65aik4rlmha4.jpg",
+    "https://bandai-hobby.net/images/156_2624_s_jfen9nx5gqtbb2pwzkdwt353n18t.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1715/",
+  "extractedAt": "2025-12-06T17:44:12.268Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-warrior",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

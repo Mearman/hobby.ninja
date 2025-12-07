@@ -1,0 +1,41 @@
+{
+  "id": "0376",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 MS-06R-1A 黒い三連星ザク",
+    "en": "HGUC 1/144 MS-06R-1A Black Tri-Star Zaku"
+  },
+  "productNumber": "2188282",
+  "releaseDate": {
+    "ja": "2013年2月16日",
+    "year": 2013,
+    "month": 2,
+    "day": 16
+  },
+  "productImage": "https://bandai-hobby.net/images/157_2741_s_kw9o06nkuuon3idkdflo2siemytp.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_2741_s_kw9o06nkuuon3idkdflo2siemytp.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/376/",
+  "extractedAt": "2025-12-05T23:09:46.945Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/376.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-msv",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1803",
+        "targetType": "item"
+      }
+    ]
+  }
+}

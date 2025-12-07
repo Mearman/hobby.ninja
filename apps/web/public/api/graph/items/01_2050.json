@@ -1,0 +1,64 @@
+{
+  "id": "01_2050",
+  "type": "item",
+  "name": {
+    "ja": "ＢＢ戦士 49 ナイトサザビー",
+    "en": "BB Senshi 49 Night Sazabi"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1990年02月20日 (火)",
+    "year": 1990,
+    "month": 2,
+    "day": 20
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2_s_g8revsyinj8q8pn86af6525vvm5j.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2050/",
+  "extractedAt": "2025-12-06T17:48:31.610Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-warrior",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

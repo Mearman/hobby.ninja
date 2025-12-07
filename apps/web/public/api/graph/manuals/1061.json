@@ -1,0 +1,41 @@
+{
+  "id": "1061",
+  "type": "manual",
+  "name": {
+    "ja": "PG 1/60 パーフェクトストライクガンダム",
+    "en": "PG 1/60 Perfect Strike Gundam"
+  },
+  "productNumber": "2499946",
+  "releaseDate": {
+    "ja": "2020年2月22日",
+    "year": 2020,
+    "month": 2,
+    "day": 22
+  },
+  "productImage": "https://bandai-hobby.net/images/193_3507_s_slgeopthboad67k40cpzx366yfb1.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/193_3507_s_slgeopthboad67k40cpzx366yfb1.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1061/",
+  "extractedAt": "2025-12-05T23:09:48.024Z",
+  "scale": "1/60",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/1061.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "pg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2583",
+        "targetType": "item"
+      }
+    ]
+  }
+}

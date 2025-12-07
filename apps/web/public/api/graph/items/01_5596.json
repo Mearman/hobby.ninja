@@ -1,0 +1,84 @@
+{
+  "id": "01_5596",
+  "type": "item",
+  "name": {
+    "ja": "ＨＧ 1/144 シャア専用高機動型ザクII",
+    "en": "HG 1/144 Char's High Mobility Type Zaku II"
+  },
+  "price": {
+    "amount": 2750,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2025年03月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_6431_s_5n22axyi7ckrthtyhigukl0pmn6o.jpg",
+    "https://bandai-hobby.net/images/155_6431_s_4asths0uxvn85umd9bkswbpgbfhr.jpg",
+    "https://bandai-hobby.net/images/156_6431_s_xf1utsi7n0suspkcvao14fnu32j4.jpg",
+    "https://bandai-hobby.net/images/157_6431_s_sk2r9aa150cdxcsvl1gh4b5lfdur.jpg",
+    "https://bandai-hobby.net/images/158_6431_s_g48ekdazdqrrnxiwa7ig4ycktdxa.jpg",
+    "https://bandai-hobby.net/images/159_6431_s_77s44bei7tsnosfg7uex05nsb3kl.jpg",
+    "https://bandai-hobby.net/images/189_6431_s_8tvn2c0mr3eqju2psys87zrighib.jpg",
+    "https://bandai-hobby.net/images/190_6431_s_793psvf594vizs2is90jnbp83rdz.jpg",
+    "https://bandai-hobby.net/images/191_6431_s_s6gmw5rdumii8ya0z20to8bkbmjx.jpg",
+    "https://bandai-hobby.net/images/192_6431_s_gtir2fdmm4bg30dtghqlpsskwvg1.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5596/",
+  "extractedAt": "2025-12-06T17:56:15.616Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "3202",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-cucurrus-doan-island",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-gradepreban-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5514",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000190747",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "01_1602",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士 192ムシャウイングゼロ",
+    "en": "BB Senshi 192 Mushawing Zero"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1999年01月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "BB戦士 192ムシャウイングゼロ登場！！",
+      "en": "BB Senshi 192 Mushawing Zero is here! !"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2514_s_4d947zb4pf8kv8uk7d6q5e16ox89.jpg",
+    "https://bandai-hobby.net/images/155_2514_s_79iusgnlw5fg0o0vqto8mzkahg9o.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1602/",
+  "extractedAt": "2025-12-06T17:34:49.879Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-warrior",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

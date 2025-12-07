@@ -1,0 +1,106 @@
+{
+  "id": "01_1413",
+  "type": "item",
+  "name": {
+    "ja": "HGBC 1/144 スカイハイウイングス",
+    "en": "HGBC 1/144 Sky High Wings"
+  },
+  "price": {
+    "amount": 880,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2018年08月31日 (金)",
+    "year": 2018,
+    "month": 8,
+    "day": 31
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "白に輝く大小2種類の翼パーツがビルドカスタムシリーズに登場！",
+      "en": "Two types of shining white wing parts, large and small, are now available in the Build Custom Series!"
+    },
+    {
+      "ja": "• バックパックに接続するための、様々なジョイントパーツが付属する！",
+      "en": "• Various joint parts are included to connect to the backpack!"
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "ウイング（大小）×各1",
+      "en": "Wings (large and small) x 1 each"
+    },
+    {
+      "ja": "バックパックジョイント×1式",
+      "en": "Backpack joint x 1 set"
+    }
+  ],
+  "contents": [
+    {
+      "ja": "成形品×4",
+      "en": "Molded product x 4"
+    },
+    {
+      "ja": "取扱説明書×1",
+      "en": "Handling manual×1"
+    }
+  ],
+  "images": [
+    "https://bandai-hobby.net/images/153_2336_o_1ckhvh4f81rt915bb1hcncm71eof23.jpg",
+    "https://bandai-hobby.net/images/155_2336_o_1ckhvheg21iok6d113fg13sq1gba2d.jpg",
+    "https://bandai-hobby.net/images/156_2336_o_1ckhvhjiigge17sr1etfh0m1le22i.jpg",
+    "https://bandai-hobby.net/images/157_2336_o_1cm5dh6gg11j47mp1qvj1q8f1snh23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1413/",
+  "extractedAt": "2025-12-06T17:20:46.757Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0699",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2623",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000138336",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2518",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2403",
+        "targetType": "item"
+      }
+    ]
+  }
+}

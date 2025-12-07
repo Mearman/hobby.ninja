@@ -1,0 +1,40 @@
+{
+  "id": "0205",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 キュベレイ",
+    "en": "HGUC 1/144 Qubeley"
+  },
+  "productNumber": "1073326",
+  "releaseDate": {
+    "ja": "1999年9月",
+    "year": 1999,
+    "month": 9
+  },
+  "productImage": "https://bandai-hobby.net/images/157_2529_s_0augsntsy1uoa20y4ho5effmbmb0.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_2529_s_0augsntsy1uoa20y4ho5effmbmb0.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/205/",
+  "extractedAt": "2025-12-05T23:09:46.634Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/205.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1617",
+        "targetType": "item"
+      }
+    ]
+  }
+}

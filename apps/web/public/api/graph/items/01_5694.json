@@ -1,0 +1,65 @@
+{
+  "id": "01_5694",
+  "type": "item",
+  "name": {
+    "ja": "ＢＢ戦士 122 大牙頑駄無超将軍",
+    "en": "BB Senshi 122 Daiga Gundam u Choshogun"
+  },
+  "price": {
+    "amount": 1100,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1993年12月01日 (水)",
+    "year": 1993,
+    "month": 12,
+    "day": 1
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_75_s_i96unbq50di60opz9kd40ojp8rbh.jpg",
+    "https://bandai-hobby.net/images/155_75_s_8xje0vvu9wr8lfa67e7jt53n6rlr.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5694/",
+  "extractedAt": "2025-12-06T17:56:25.787Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

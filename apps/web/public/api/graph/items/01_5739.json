@@ -1,0 +1,95 @@
+{
+  "id": "01_5739",
+  "type": "item",
+  "name": {
+    "ja": "HG　1/144　R15　フリーダムガンダム",
+    "en": "HG 1/144 R15 Freedom Gundam"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2012年02月29日 (水)",
+    "year": 2012,
+    "month": 2,
+    "day": 29
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• アクションベース２（別売）に連結可能なアタッチメントパーツが新規に付属。SEEDならではのアクションポーズを再現できる。",
+      "en": "• New attachment parts that can be connected to Action Base 2 (sold separately) are included. You can reproduce action poses unique to SEED."
+    },
+    {
+      "ja": "• 新たにドレスアップ用マーキングシールを付属。",
+      "en": "• Newly included MarkingSeal for dress-up."
+    },
+    {
+      "ja": "• パッケージデザインを一新。",
+      "en": "• New packaging design."
+    },
+    {
+      "ja": "• 成形色をリニューアルし、よりアニメに忠実な色を再現。",
+      "en": "• The molding colors have been renewed to reproduce colors that are more faithful to the anime."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_804_s_lxa79jnolg4ni2l4qkusu4yc0mvo.jpg",
+    "https://bandai-hobby.net/images/155_804_s_iomcckvskoo3wzhthok35rivtpwx.jpg",
+    "https://bandai-hobby.net/images/156_804_s_d1p8qn1gdo8tb6wn3ej3h10un09m.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5739/",
+  "extractedAt": "2025-12-06T17:56:31.569Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0340",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000181726",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1930",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_384",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_83",
+        "targetType": "item"
+      }
+    ]
+  }
+}

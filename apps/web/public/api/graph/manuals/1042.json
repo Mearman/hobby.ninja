@@ -1,0 +1,41 @@
+{
+  "id": "1042",
+  "type": "manual",
+  "name": {
+    "ja": "HGBD 1/144 ガンダムシャイニングブレイク",
+    "en": "HGBD 1/144 Gundam Shining Break"
+  },
+  "productNumber": "2453787",
+  "releaseDate": {
+    "ja": "2018年12月15日",
+    "year": 2018,
+    "month": 12,
+    "day": 15
+  },
+  "productImage": "https://bandai-hobby.net/images/190_2967_s_pzwn5aic0fg79b8bhihdici1rbsu.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/190_2967_s_pzwn5aic0fg79b8bhihdici1rbsu.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1042/",
+  "extractedAt": "2025-12-05T23:09:47.989Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/1042.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2024",
+        "targetType": "item"
+      }
+    ]
+  }
+}

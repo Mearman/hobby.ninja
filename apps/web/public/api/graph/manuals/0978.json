@@ -1,0 +1,41 @@
+{
+  "id": "0978",
+  "type": "manual",
+  "name": {
+    "ja": "ENTRY GRADE 1/144 RX-78-2 ガンダム (ライトパッケージVer.)",
+    "en": "ENTRY GRADE 1/144 RX-78-2 Gundam (Light Package Ver.)"
+  },
+  "productNumber": "2545717",
+  "releaseDate": {
+    "ja": "2020年12月19日",
+    "year": 2020,
+    "month": 12,
+    "day": 19
+  },
+  "productImage": "https://bandai-hobby.net/images/193_4245_s_7dccdbf1g2mmqx45mk9g0kghdngy.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/193_4245_s_7dccdbf1g2mmqx45mk9g0kghdngy.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/978/",
+  "extractedAt": "2025-12-05T23:09:47.851Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/978.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "eg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3290",
+        "targetType": "item"
+      }
+    ]
+  }
+}

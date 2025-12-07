@@ -1,0 +1,80 @@
+{
+  "id": "01_3154",
+  "type": "item",
+  "name": {
+    "ja": "1/2400 グワジン",
+    "en": "1/2400 Gwajin"
+  },
+  "price": {
+    "amount": 330,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1983年03月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/2400",
+  "description": [
+    {
+      "ja": "『機動戦士ガンダム』より、1/2400スケールでグワジンが登場。",
+      "en": "From \"Mobile Suit Gundam\", Gwajin appears in 1/2400 scale."
+    },
+    {
+      "ja": "専用ディスプレイスタンドが付いています。",
+      "en": "Comes with a dedicated display stand."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4116_s_9577ygxspe53ehtxl88fp4jnppbj.jpg",
+    "https://bandai-hobby.net/images/155_4116_s_vjxfskkjplh35ewwjcwsscw3wvto.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3154/",
+  "extractedAt": "2025-12-06T17:50:51.426Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1971",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

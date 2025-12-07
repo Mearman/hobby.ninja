@@ -1,0 +1,89 @@
+{
+  "id": "01_5424",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 MSA-005 メタス",
+    "en": "HGUC 1/144 MSA-005 Metas"
+  },
+  "price": {
+    "amount": 1540,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2006年03月18日 (土)",
+    "year": 2006,
+    "month": 3,
+    "day": 18
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「機動戦士Ｚガンダム」に登場するメタスのHGUCシリーズプラモデルです。一部差替えでモビルアーマー形態に変形可能です。百式＋メガバズーカランチャーとの連結シーンを演出するコネクトパーツ付属。",
+      "en": "HGUC series plastic model of Metas that appears in \"Mobile Suit Z Gundam\". Can be transformed into mobile armor form by replacing some parts. Connect parts are included to create a connection scene with Hyakushiki + Mega Bazooka Launcher."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_626_s_mi6xk5ya3dmuo0sw7ghuaskya6uk.jpg",
+    "https://bandai-hobby.net/images/155_626_s_pqu83x5ovowr6bfi2qvlt9xpgkd3.jpg",
+    "https://bandai-hobby.net/images/156_626_s_bzacmpjkcv9wb3ev79jwuciogllz.jpg",
+    "https://bandai-hobby.net/images/157_626_s_9tds2a2d8uf0j13txcs0ozp04tzk.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5424/",
+  "extractedAt": "2025-12-06T17:55:53.523Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0896",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5468",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5375",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5162",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      }
+    ]
+  }
+}

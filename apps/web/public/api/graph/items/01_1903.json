@@ -1,0 +1,89 @@
+{
+  "id": "01_1903",
+  "type": "item",
+  "name": {
+    "ja": "RG 1/144 ガンダムアストレイ レッドフレーム メッキVer.",
+    "en": "RG 1/144 Gundam Astray Red Frame Plated Ver."
+  },
+  "price": {
+    "amount": 4840,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2016年08月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
+      "en": "Event-limited Gunpla sold at various event venues."
+    },
+    {
+      "ja": "RG ガンダムアストレイ レッドフレームのベント限定メッキVer.です。",
+      "en": "RG Gundam Astray Red Frame Vent Limited Plating Ver."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2838_s_0p2i865dqjmm4631yl8g5lo4foqt.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1903/",
+  "extractedAt": "2025-12-06T17:48:21.153Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2190",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1145",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed-astray",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "rg-real-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000134497",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4768",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2190",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000116090",
+        "targetType": "item"
+      }
+    ]
+  }
+}

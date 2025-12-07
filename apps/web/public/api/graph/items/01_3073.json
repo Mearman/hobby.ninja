@@ -1,0 +1,71 @@
+{
+  "id": "01_3073",
+  "type": "item",
+  "name": {
+    "ja": "ENTRY GRADE 仮面ライダーセイバー",
+    "en": "ENTRY GRADE Kamen Rider Saber"
+  },
+  "price": {
+    "amount": 1100,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年11月28日 (土)",
+    "year": 2020,
+    "month": 11,
+    "day": 28
+  },
+  "targetAge": 3,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151934_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151934_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151934_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151934_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151934_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151934_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151934_7.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151934_8.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151934_9.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151934_10.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151934_11.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000151934_12.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3073/",
+  "extractedAt": "2025-12-06T17:50:43.300Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2671",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "kamen-rider-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "entry-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2671",
+        "targetType": "item"
+      }
+    ]
+  }
+}

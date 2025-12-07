@@ -1,0 +1,40 @@
+{
+  "id": "0814",
+  "type": "manual",
+  "name": {
+    "ja": "MG 1/100 シャイニングガンダム",
+    "en": "MG 1/100 Shining Gundam"
+  },
+  "productNumber": "1110535",
+  "releaseDate": {
+    "ja": "2002年5月",
+    "year": 2002,
+    "month": 5
+  },
+  "productImage": "https://bandai-hobby.net/images/158_267_s_u7ydt0w42yl4j802kgj9r63mq5sr.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/158_267_s_u7ydt0w42yl4j802kgj9r63mq5sr.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/814/",
+  "extractedAt": "2025-12-05T23:09:47.606Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/814.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-fighter-g-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1746",
+        "targetType": "item"
+      }
+    ]
+  }
+}

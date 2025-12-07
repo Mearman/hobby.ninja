@@ -1,0 +1,65 @@
+{
+  "id": "01_2814",
+  "type": "item",
+  "name": {
+    "ja": "ＢＢ戦士 85犀頑駄無",
+    "en": "BB Senshi 85 Sai Gundam"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1991年08月10日 (土)",
+    "year": 1991,
+    "month": 8,
+    "day": 10
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_37_s_n1ujbyo4jg8a3e7tj1pyovzssitb.jpg",
+    "https://bandai-hobby.net/images/155_37_s_rx78xzsnu55eclamztxgzu4juz6m.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2814/",
+  "extractedAt": "2025-12-06T17:50:09.233Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "1097",
+  "type": "manual",
+  "name": {
+    "ja": "RG 1/144 ガンダムエピオン",
+    "en": "RG 1/144 Gundam Epyon"
+  },
+  "productNumber": "2655094",
+  "releaseDate": {
+    "ja": "2023年9月30日",
+    "year": 2023,
+    "month": 9,
+    "day": 30
+  },
+  "productImage": "https://bandai-hobby.net/images/196_5798_s_2e5jx41skyiqrnrzkdw51t8t2dyp.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/196_5798_s_2e5jx41skyiqrnrzkdw51t8t2dyp.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1097/",
+  "extractedAt": "2025-12-05T23:09:48.057Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/1097.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "new-mobile-report-gundam-w",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "rg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4923",
+        "targetType": "item"
+      }
+    ]
+  }
+}

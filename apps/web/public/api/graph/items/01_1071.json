@@ -1,0 +1,73 @@
+{
+  "id": "01_1071",
+  "type": "item",
+  "name": {
+    "ja": "ＭＧ 1/100 キャスバル専用ガンダム Ver.3.0",
+    "en": "MG 1/100 Casval exclusive Gundam Ver.3.0"
+  },
+  "price": {
+    "amount": 4950,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2017年08月",
+    "year": 0,
+    "month": 0
+  },
+  "scale": "1/100",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2003_o_1bgpvt5p5og3ats1mh51tof8bu23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1071/",
+  "extractedAt": "2025-12-06T16:48:47.786Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-gradepreban-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5994",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000220190",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000220189",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000216105",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "0941",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ガンダム AGE-1 スパロー",
+    "en": "HG 1/144 Gundam AGE-1 Sparrow"
+  },
+  "productNumber": "2139090",
+  "releaseDate": {
+    "ja": "2011年12月10日",
+    "year": 2011,
+    "month": 12,
+    "day": 10
+  },
+  "productImage": "https://bandai-hobby.net/images/157_4543_s_1kfja01lo6hq3wu4lriyl9cc09lj.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_4543_s_1kfja01lo6hq3wu4lriyl9cc09lj.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/941/",
+  "extractedAt": "2025-12-05T23:09:47.801Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/941.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3588",
+        "targetType": "item"
+      }
+    ]
+  }
+}

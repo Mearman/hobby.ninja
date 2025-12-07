@@ -1,0 +1,41 @@
+{
+  "id": "0004",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 R17 パーフェクトストライクガンダム",
+    "en": "HG 1/144 R17 Perfect Strike Gundam"
+  },
+  "productNumber": "2197210",
+  "releaseDate": {
+    "ja": "2013年2月23日",
+    "year": 2013,
+    "month": 2,
+    "day": 23
+  },
+  "productImage": "https://bandai-hobby.net/images/156_5534_o_1gois5a1u1migp7k1b351sclhlt23.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_5534_o_1gois5a1u1migp7k1b351sclhlt23.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/4/",
+  "extractedAt": "2025-12-05T23:09:46.330Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/4.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4641",
+        "targetType": "item"
+      }
+    ]
+  }
+}

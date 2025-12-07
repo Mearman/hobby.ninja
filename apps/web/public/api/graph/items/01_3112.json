@@ -1,0 +1,74 @@
+{
+  "id": "01_3112",
+  "type": "item",
+  "name": {
+    "ja": "1/100 シャア専用ゲルググ",
+    "en": "1/100 Char's Gelgoog"
+  },
+  "price": {
+    "amount": 880,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1981年03月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [
+    {
+      "ja": "『機動戦士ガンダム』より、1/100スケールで、シャア専用ゲルググが登場。",
+      "en": "From \"Mobile Suit Gundam\", Char's Gelgoog appears in 1/100 scale."
+    },
+    {
+      "ja": "腰部の回転が可能です。・ 股関節は左右の開閉が可能です。右手はビーム・ライフル装備時と通常の拳の差替え式です。ビーム・ナギナタは展開と収納の２形態が付いています。収納形態のビーム・ナギナタとシールドは背面へ装着できます。",
+      "en": "Rotation of the waist is possible.・The hip joint can be opened and closed to the left and right. The right hand is interchangeable between when equipped with a beam rifle and a regular fist. Beam Naginata comes with two forms: expanded and stored. Beam Naginata and Seal in storage form can be attached to the back."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4078_s_hhss65ndc8vxzwyxhltsch70zwba.jpg",
+    "https://bandai-hobby.net/images/155_4078_s_ddfvi9xsbvps81xqccuvw0z88uc0.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3112/",
+  "extractedAt": "2025-12-06T17:50:47.298Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5992",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5473",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5475",
+        "targetType": "item"
+      }
+    ]
+  }
+}

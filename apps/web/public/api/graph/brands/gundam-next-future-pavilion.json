@@ -1,0 +1,29 @@
+{
+  "id": "gundam-next-future-pavilion",
+  "type": "brand",
+  "name": {
+    "ja": "GUNDAM NEXT FUTURE PAVILION",
+    "en": "GUNDAM NEXT FUTURE PAVILION"
+  },
+  "url": "https://bandai-hobby.net/brand/expo2025-gunpla/",
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_5585",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_5584",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "01_5583",
+        "targetType": "item"
+      }
+    ],
+    "outbound": []
+  }
+}

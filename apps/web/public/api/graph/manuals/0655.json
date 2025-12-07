@@ -1,0 +1,40 @@
+{
+  "id": "0655",
+  "type": "manual",
+  "name": {
+    "ja": "PG 1/60 ガンダムアストレイ レッドフレーム",
+    "en": "PG 1/60 Gundam Astray Red Frame"
+  },
+  "productNumber": "2038041",
+  "releaseDate": {
+    "ja": "2009年3月",
+    "year": 2009,
+    "month": 3
+  },
+  "productImage": "https://bandai-hobby.net/images/158_4670_s_ez4797zzj70zpajd5lb4krb6jum2.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/158_4670_s_ez4797zzj70zpajd5lb4krb6jum2.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/655/",
+  "extractedAt": "2025-12-05T23:09:47.374Z",
+  "scale": "1/60",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/655.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "pg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3718",
+        "targetType": "item"
+      }
+    ]
+  }
+}

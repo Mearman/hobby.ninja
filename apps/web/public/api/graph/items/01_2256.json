@@ -1,0 +1,64 @@
+{
+  "id": "01_2256",
+  "type": "item",
+  "name": {
+    "ja": "ＢＢ戦士 78クラウンナイトガンダム",
+    "en": "BB Senshi 78 Crown Knight Gundam"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1991年06月25日 (火)",
+    "year": 1991,
+    "month": 6,
+    "day": 25
+  },
+  "targetAge": 8,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_31_s_m4ahnhr7yfe3mrb4yzocmroekffh.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2256/",
+  "extractedAt": "2025-12-06T17:48:58.777Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

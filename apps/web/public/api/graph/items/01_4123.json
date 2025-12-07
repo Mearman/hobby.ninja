@@ -1,0 +1,94 @@
+{
+  "id": "01_4123",
+  "type": "item",
+  "name": {
+    "ja": "ＭＧ 1/100 ガンダムＦ９０（火星独立ジオン軍仕様）",
+    "en": "MG 1/100 Gundam F90 (Mars independent Zeon army specification)"
+  },
+  "price": {
+    "amount": 5390,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年04月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168369_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168369_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168369_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168369_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168369_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168369_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168369_7.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168369_8.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168369_9.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000168369_10.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4123/",
+  "extractedAt": "2025-12-06T17:53:00.336Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "2351",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-f90",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-gradepreban-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_7056",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000224327",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000223368",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000223367",
+        "targetType": "item"
+      }
+    ]
+  }
+}

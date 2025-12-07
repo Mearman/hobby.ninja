@@ -1,0 +1,76 @@
+{
+  "id": "01_3778",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/72 ブレイディハウンド(ブラッド専用機)",
+    "en": "HG 1/72 Brady Hound (Brad exclusive machine)"
+  },
+  "price": {
+    "amount": 2750,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年03月12日 (土)",
+    "year": 2022,
+    "month": 3,
+    "day": 12
+  },
+  "targetAge": 15,
+  "scale": "1/72",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4728_s_sefwke4qcwm65guerbxl5mh3pw5q.jpg",
+    "https://bandai-hobby.net/images/155_4728_s_dlcd3ezld0i08fqvcrl23djknmuw.jpg",
+    "https://bandai-hobby.net/images/156_4728_s_fwkpdjcuffnmvrob0n9s1eg4tkzx.jpg",
+    "https://bandai-hobby.net/images/157_4728_s_c9mlkwd99t4zwldofynufday0orz.jpg",
+    "https://bandai-hobby.net/images/158_4728_s_vlks40br25nm1cgg7skyjr79qbtm.jpg",
+    "https://bandai-hobby.net/images/159_4728_s_daxqma5d3yj72ch0sptleelxiclm.jpg",
+    "https://bandai-hobby.net/images/189_4728_s_n5ofljpyncnnahz5o8zssembda1s.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3778/",
+  "extractedAt": "2025-12-06T17:52:11.983Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "kyoukai-senki",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5196",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5183",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5170",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5171",
+        "targetType": "item"
+      }
+    ]
+  }
+}

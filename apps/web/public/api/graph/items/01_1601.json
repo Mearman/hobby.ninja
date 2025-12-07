@@ -1,0 +1,82 @@
+{
+  "id": "01_1601",
+  "type": "item",
+  "name": {
+    "ja": "MG 1/100 スーパーガンダム",
+    "en": "MG 1/100 Super Gundam"
+  },
+  "price": {
+    "amount": 4400,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1999年01月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [
+    {
+      "ja": "『機動戦士Z ガンダム』より、ガンダム Mk-IIと、それをサポートする大型支援戦闘機Gディフェンサーのセットをキット化しました。Gディフェンサーの脱出ポッドやミサイルポッドは設定通りに展開、可動が再現されています。Gディフェンサーとガンダム Mk-IIは、バックパックのコネクターを介し、スーパーガンダムへの合体が可能です。スーパーガンダムは、Gフライヤー形態への変形が可能。バルカンポッド、ビームライフル、ビームサーベルが２本、ハイパーバズーカ、シールドなどガンダム Mk-IIのバリエーション豊かな武器に加え、ロングライフルが付いています。",
+      "en": "From \"Mobile Suit Z Gundam\", the Gundam Mk-II and the large support fighter G-Defenser that supports it are made into a kit. G Defensor's escape pod and missile pod are deployed and move exactly as set. G Defensor and Gundam Mk-II can be combined into Super Gundam via the backpack connector. Super Gundam can transform into G Flyer form. In addition to Gundam Mk-II's wide variety of weapons such as Vulcan pod, beam rifle, two beam sabers, hyper bazooka, and Seal, it also comes with a long rifle."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2513_s_pq1n0uxo4e20jy05jh1nfsbrinnu.jpg",
+    "https://bandai-hobby.net/images/155_2513_s_kob7zfr3xvrsqsgikcjap4ubc3ik.jpg",
+    "https://bandai-hobby.net/images/156_2513_s_invp1vupa00pegmwdbztild7jmvx.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1601/",
+  "extractedAt": "2025-12-06T17:34:49.916Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0430",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000145352",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000131596",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4270",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000112091",
+        "targetType": "item"
+      }
+    ]
+  }
+}

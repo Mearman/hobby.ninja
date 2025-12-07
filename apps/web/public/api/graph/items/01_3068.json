@@ -1,0 +1,70 @@
+{
+  "id": "01_3068",
+  "type": "item",
+  "name": {
+    "ja": "1/72 VF-1J バルキリースーパーファイター",
+    "en": "1/72 VF-1J Valkyrie Super Fighter"
+  },
+  "price": {
+    "amount": 1540,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2008年09月27日 (土)",
+    "year": 2008,
+    "month": 9,
+    "day": 27
+  },
+  "targetAge": 15,
+  "scale": "1/72",
+  "description": [
+    {
+      "ja": "「1/72 ＶＦ－１Ｊ バルキリースーパーファイター」が登場！",
+      "en": "\"1/72 VF-1J Valkyrie Super Fighter\" is now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4036_s_nn9yha535pfds8kwuxl4n7ypbrqy.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3068/",
+  "extractedAt": "2025-12-06T17:50:42.389Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "macross-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5944",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5945",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5946",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5465",
+        "targetType": "item"
+      }
+    ]
+  }
+}

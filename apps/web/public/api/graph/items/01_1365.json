@@ -1,0 +1,63 @@
+{
+  "id": "01_1365",
+  "type": "item",
+  "name": {
+    "ja": "Figure-riseBust 初音ミク［リミテッドカラー］",
+    "en": "Figure-riseBust Hatsune Miku [Limited Color]"
+  },
+  "price": {
+    "amount": 2200,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2018年05月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2292_o_1c84f083i1n4c1jqf1n8t1hja1s7p23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1365/",
+  "extractedAt": "2025-12-06T17:16:04.359Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "figure-risebust",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000133317",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000127507",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1096",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1010",
+        "targetType": "item"
+      }
+    ]
+  }
+}

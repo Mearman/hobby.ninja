@@ -1,0 +1,69 @@
+{
+  "id": "01_5144",
+  "type": "item",
+  "name": {
+    "ja": "ポケモンプラモコレクションNo.1 進化シリーズ メガニウム進化セット",
+    "en": "Pokemon Plastic Model Collection No.1 Evolution Series Meganium Evolution Set"
+  },
+  "price": {
+    "amount": 836,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2009年09月10日 (木)",
+    "year": 2009,
+    "month": 9,
+    "day": 10
+  },
+  "targetAge": 6,
+  "description": [
+    {
+      "ja": "ポケモンプラモコレクションNo.1 進化シリーズ メガニウム進化セット登場！",
+      "en": "Pokemon Plastic Model Collection No.1 Evolution Series Meganium Evolution Set is now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_6003_o_1he1qa8361iqh17m8vc1fdt12gi23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5144/",
+  "extractedAt": "2025-12-06T17:55:15.730Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "pocket-monster",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5984",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5958",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5947",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5568",
+        "targetType": "item"
+      }
+    ]
+  }
+}

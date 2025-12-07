@@ -1,0 +1,40 @@
+{
+  "id": "2367",
+  "type": "manual",
+  "name": {
+    "ja": "ＭＧ 1/100 ガンダムエクスインパルス",
+    "en": "MG 1/100 Gundam Ex Impulse"
+  },
+  "productNumber": "2607736",
+  "releaseDate": {
+    "ja": "2022年8月",
+    "year": 2022,
+    "month": 8
+  },
+  "productImage": "https://bandai-hobby.net/images/153_5131_s_7ytku2s55lzt14nbtjcfa6ve5dfl.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_5131_s_7ytku2s55lzt14nbtjcfa6ve5dfl.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2367/",
+  "extractedAt": "2025-12-05T23:09:48.560Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2367.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4212",
+        "targetType": "item"
+      }
+    ]
+  }
+}

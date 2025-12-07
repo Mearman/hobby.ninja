@@ -1,0 +1,101 @@
+{
+  "id": "01_4096",
+  "type": "item",
+  "name": {
+    "ja": "FULL MECHANICS 1/100 レイダーガンダム",
+    "en": "FULL MECHANICS 1/100 Raider Gundam"
+  },
+  "price": {
+    "amount": 5500,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年05月21日 (土)",
+    "year": 2022,
+    "month": 5,
+    "day": 21
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5020_s_6moakq35aatn8dflsnmxyn91dyfw.jpg",
+    "https://bandai-hobby.net/images/155_5020_s_5pr3zriby5dy9ymhi3292cwtm3c0.jpg",
+    "https://bandai-hobby.net/images/156_5020_s_7g12c1tth5nwxdwwvpbm2nazvfpv.jpg",
+    "https://bandai-hobby.net/images/157_5020_s_782i8vqwneersef5ohs0yi0ixw88.jpg",
+    "https://bandai-hobby.net/images/158_5020_s_rf6uv1sox43tgnbj9fj9hqay490u.jpg",
+    "https://bandai-hobby.net/images/159_5020_s_ht5visxvk8t1gqi3tgwkftnwxc45.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4096/",
+  "extractedAt": "2025-12-06T17:52:56.395Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5209",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4906",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3573",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3426",
+        "targetType": "item"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1094",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "full-mechanics",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5209",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4906",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3573",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3426",
+        "targetType": "item"
+      }
+    ]
+  }
+}

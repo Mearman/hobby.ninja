@@ -1,0 +1,88 @@
+{
+  "id": "01_3351",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 アトール",
+    "en": "HG 1/144 Atoll"
+  },
+  "price": {
+    "amount": 2200,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2021年03月13日 (土)",
+    "year": 2021,
+    "month": 3,
+    "day": 13
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4305_s_q7vv9936c0vzyo0q6exi3al7gczg.jpg",
+    "https://bandai-hobby.net/images/155_4305_s_wk5u150do2dfljgq091hvrb0ttvh.jpg",
+    "https://bandai-hobby.net/images/156_4305_s_j4415b4n3d1nrjt7dcxv3s1poyma.jpg",
+    "https://bandai-hobby.net/images/157_4305_s_f9reid9owiez01tw38rkbhgeyza5.jpg",
+    "https://bandai-hobby.net/images/158_4305_s_tq4wc3b72164852fxnsr20595mbz.jpg",
+    "https://bandai-hobby.net/images/159_4305_s_axi69sguugt8yxpm2a15sf2obzd0.jpg",
+    "https://bandai-hobby.net/images/189_4305_s_h9sfxycuckj8ishw56sc50qhnzja.jpg",
+    "https://bandai-hobby.net/images/190_4305_s_y2bpcexd9gu6ce6rr9x7bw9xp8dp.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3351/",
+  "extractedAt": "2025-12-06T17:51:15.537Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3349",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3350",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "heavy-fighter-l-gaim",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000216436",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000205639",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3350",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3352",
+        "targetType": "item"
+      }
+    ]
+  }
+}

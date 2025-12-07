@@ -1,0 +1,54 @@
+{
+  "id": "01_5745",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士129 V2アサルトバスターガンダム",
+    "en": "BB Senshi 129 V2 Assault Buster Gundam"
+  },
+  "price": {
+    "amount": 880,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1994年05月01日 (日)",
+    "year": 1994,
+    "month": 5,
+    "day": 1
+  },
+  "targetAge": 15,
+  "description": [
+    {
+      "ja": "V2アサルトバスターガンダムがBB戦士で登場！",
+      "en": "V2 Assault Buster Gundam is now available as BB Senshi!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_80_s_z3s38yr1tn70i89zkblvux6nsgkv.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5745/",
+  "extractedAt": "2025-12-06T17:56:32.700Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-v-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      }
+    ]
+  }
+}

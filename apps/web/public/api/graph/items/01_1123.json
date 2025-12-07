@@ -1,0 +1,74 @@
+{
+  "id": "01_1123",
+  "type": "item",
+  "name": {
+    "ja": "RE/100 1/100 バウ量産型",
+    "en": "RE/100 1/100 bow mass production type"
+  },
+  "price": {
+    "amount": 3850,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2017年09月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2055_o_1bk5uhhkn16ap11671o8131bett23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1123/",
+  "extractedAt": "2025-12-06T16:53:33.011Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-zz",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "re100-reborn-one-hundred",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000137712",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2231",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2077",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1390",
+        "targetType": "item"
+      }
+    ]
+  }
+}

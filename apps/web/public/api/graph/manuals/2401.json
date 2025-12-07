@@ -1,0 +1,40 @@
+{
+  "id": "2401",
+  "type": "manual",
+  "name": {
+    "ja": "ＭＧ 1/100 ガンダムＦ９０用 ミッションパック Ｒタイプ＆Ｖタイプ",
+    "en": "Mission pack for MG 1/100 Gundam F90 R type & V type"
+  },
+  "productNumber": "2563768",
+  "releaseDate": {
+    "ja": "2021年6月",
+    "year": 2021,
+    "month": 6
+  },
+  "productImage": "https://bandai-hobby.net/images/153_4437_s_it59csrrtelxtcdzr51um654cxqm.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_4437_s_it59csrrtelxtcdzr51um654cxqm.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2401/",
+  "extractedAt": "2025-12-05T23:09:48.601Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2401.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "others",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3483",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "01_3011",
+  "type": "item",
+  "name": {
+    "ja": "HGBD:R 1/144 ガンダムダブルオースカイメビウス",
+    "en": "HGBD:R 1/144 Gundam Double Oskai Mebius"
+  },
+  "price": {
+    "amount": 2640,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年12月05日 (土)",
+    "year": 2020,
+    "month": 12,
+    "day": 5
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3983_s_zazszvvbqvv9zslcunpu9kapul2u.jpg",
+    "https://bandai-hobby.net/images/155_3983_s_slbinc6bgj1f1te5xtixlohvekgw.jpg",
+    "https://bandai-hobby.net/images/156_3983_s_qylwwk47xhyfyfnrstohofp3x6kg.jpg",
+    "https://bandai-hobby.net/images/157_3983_s_1s5j3i8usuzshn5vy9tyvcjcbwzm.jpg",
+    "https://bandai-hobby.net/images/158_3983_s_z4a5q1tdpztf0ks9b76gu804ekib.jpg",
+    "https://bandai-hobby.net/images/159_3983_s_vrr4t6rb0f1s3v3oyggl45k03rpj.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3011/",
+  "extractedAt": "2025-12-06T17:50:35.850Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0108",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers-rerise",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5054",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3562",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3565",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3291",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "0323",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ガンダム AGE-2 ダークハウンド",
+    "en": "HG 1/144 Gundam AGE-2 Dark Hound"
+  },
+  "productNumber": "2139097",
+  "releaseDate": {
+    "ja": "2012年7月14日",
+    "year": 2012,
+    "month": 7,
+    "day": 14
+  },
+  "productImage": "https://bandai-hobby.net/images/156_5515_s_jpsadi57atssx3i9c0419wbqtirg.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_5515_s_jpsadi57atssx3i9c0419wbqtirg.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/323/",
+  "extractedAt": "2025-12-05T23:09:46.872Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/323.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4620",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "0488",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 シナンジュ・スタイン (ナラティブVer.)",
+    "en": "HGUC 1/144 Sinanju Stein (Narrative Ver.)"
+  },
+  "productNumber": "2449049",
+  "releaseDate": {
+    "ja": "2018年10月27日",
+    "year": 2018,
+    "month": 10,
+    "day": 27
+  },
+  "productImage": "https://bandai-hobby.net/images/191_2916_s_dz8bq3hgcgf3oy8070sndkv0vu0k.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/191_2916_s_dz8bq3hgcgf3oy8070sndkv0vu0k.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/488/",
+  "extractedAt": "2025-12-05T23:09:47.114Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/488.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-nt-narrative",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1987",
+        "targetType": "item"
+      }
+    ]
+  }
+}

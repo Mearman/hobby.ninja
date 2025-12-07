@@ -1,0 +1,76 @@
+{
+  "id": "01_2688",
+  "type": "item",
+  "name": {
+    "ja": "1/144 フォビドゥンガンダム",
+    "en": "1/144 Forbidden Gundam"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2003年07月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「機動戦士ガンダム SEED」に登場する新ライバル機「フォビドゥンガンダム」の1/144スケールのプラモデル。低年齢層でも簡単に組み立てられるようにパーツはシンプルに構成しています。特徴的な円盤状のバックウェポンを本体上部に装着することで、武装モードを再現出来ます。武器はカマ・レールガン、対ビームシールドが付属します。",
+      "en": "A 1/144 scale plastic model of the new rival machine \"Forbidden Gundam \" that appears in \" Mobile Suit Gundam SEED\". The parts are simple so that even younger people can easily assemble it. By attaching the characteristic disc-shaped back weapon to the top of the main body, you can reproduce the armed mode. Weapons include a kama railgun and anti-beam seal."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_361_s_ngxq1kwz1g6483drm9hnvyaf31ll.jpg",
+    "https://bandai-hobby.net/images/155_361_o_1hgi5oko0qai1ee511m016rou8h23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2688/",
+  "extractedAt": "2025-12-06T17:49:52.924Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1120",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5994",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5440",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5441",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5365",
+        "targetType": "item"
+      }
+    ]
+  }
+}

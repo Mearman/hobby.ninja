@@ -1,0 +1,41 @@
+{
+  "id": "1222",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ガンダムダブルオーダイバーアーク",
+    "en": "HG 1/144 Gundam 00 Diver Arc"
+  },
+  "productNumber": "2677954",
+  "releaseDate": {
+    "ja": "2023年12月2日",
+    "year": 2023,
+    "month": 12,
+    "day": 2
+  },
+  "productImage": "https://bandai-hobby.net/images/191_5890_s_ztg47gwxv9ueshz10ap16icqst5j.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/191_5890_s_ztg47gwxv9ueshz10ap16icqst5j.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1222/",
+  "extractedAt": "2025-12-05T23:09:48.168Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/1222.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-metaverse",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5023",
+        "targetType": "item"
+      }
+    ]
+  }
+}

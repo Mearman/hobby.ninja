@@ -1,0 +1,41 @@
+{
+  "id": "0472",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 バーザム",
+    "en": "HGUC 1/144 Barzam"
+  },
+  "productNumber": "2376497",
+  "releaseDate": {
+    "ja": "2017年5月20日",
+    "year": 2017,
+    "month": 5,
+    "day": 20
+  },
+  "productImage": "https://bandai-hobby.net/images/189_1937_s_51rrj6v2z8xx58j04e12ryxz4s3f.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/189_1937_s_51rrj6v2z8xx58j04e12ryxz4s3f.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/472/",
+  "extractedAt": "2025-12-05T23:09:47.086Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/472.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1000",
+        "targetType": "item"
+      }
+    ]
+  }
+}

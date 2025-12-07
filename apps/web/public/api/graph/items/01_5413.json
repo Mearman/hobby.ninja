@@ -1,0 +1,80 @@
+{
+  "id": "01_5413",
+  "type": "item",
+  "name": {
+    "ja": "HGUC グリプス戦役セット",
+    "en": "HGUC Gryps Campaign Set"
+  },
+  "price": {
+    "amount": 4620,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2006年03月18日 (土)",
+    "year": 2006,
+    "month": 3,
+    "day": 18
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "「機動戦士Ｚガンダム」でのグリプス戦役で活躍する主力モビルスーツ、Ｚガンダム・百式・Mk-IIの3体セットのHGUCシリーズプラモデルです。3体ともリアルカラーで劇中のイメージを完全再現しました。Mk-IIにはクリアパーツで再現されたビームサーベルが新たに付属。グリプス戦役解説付きブックレット形式の取扱説明書と、スペシャルマーキングシールが付属します。",
+      "en": "A set of 3 HGUC series plastic models: Z Gundam, Hyakushiki, and Mk-II, which are the main mobile suits used in the Gryps battle in \"Mobile Suit Z Gundam\". All three figures are fully reproduced in real color to recreate the images from the play. Mk-II comes with a new beam saber reproduced with clear parts. Includes a booklet-style instruction manual with Gryps campaign commentary and a special marking seal."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_625_s_p306z667k1glylvjj8pad9yoeiib.jpg",
+    "https://bandai-hobby.net/images/155_625_o_1h0q0b82gunjl4ocv1eh038923.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5413/",
+  "extractedAt": "2025-12-06T17:55:51.857Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5468",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5375",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5162",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      }
+    ]
+  }
+}

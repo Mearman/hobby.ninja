@@ -1,0 +1,71 @@
+{
+  "id": "01_4790",
+  "type": "item",
+  "name": {
+    "ja": "SD RX-78-3 G-3 ガンダム Ver.GFT",
+    "en": "SD RX-78-3 G-3 Gundam Ver.GFT"
+  },
+  "price": {
+    "amount": 1048,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2014年04月26日 (土)",
+    "year": 2014,
+    "month": 4,
+    "day": 26
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "SD RX-78-3 G-3 ガンダム Ver.GFT　登場！",
+      "en": "SD RX-78-3 G-3 Gundam Ver.GFT is now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5671_s_cd7wsnl36nb7avk26tb5m8olsljq.jpg",
+    "https://bandai-hobby.net/images/155_5671_s_c13f69054pb790ck1a4r6d5zxu7h.jpg",
+    "https://bandai-hobby.net/images/156_5671_s_okcnmzfrfllfjvxkjuzkjjrq9mvj.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4790/",
+  "extractedAt": "2025-12-06T17:54:24.662Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

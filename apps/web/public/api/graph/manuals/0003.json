@@ -1,0 +1,41 @@
+{
+  "id": "0003",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ガンダム AGE-1 フルグランサ",
+    "en": "HG 1/144 Gundam AGE-1 Full Grancer"
+  },
+  "productNumber": "2189989",
+  "releaseDate": {
+    "ja": "2013年4月13日",
+    "year": 2013,
+    "month": 4,
+    "day": 13
+  },
+  "productImage": "https://bandai-hobby.net/images/156_855_s_38vf8wtp6ipvre0hxu1s45jcr0jf.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_855_s_38vf8wtp6ipvre0hxu1s45jcr0jf.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/3/",
+  "extractedAt": "2025-12-05T23:09:46.327Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/3.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5789",
+        "targetType": "item"
+      }
+    ]
+  }
+}

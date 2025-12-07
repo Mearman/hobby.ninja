@@ -1,0 +1,41 @@
+{
+  "id": "0135",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 デミトレーナー",
+    "en": "HG 1/144 Demi Trainer"
+  },
+  "productNumber": "2604770",
+  "releaseDate": {
+    "ja": "2022年12月10日",
+    "year": 2022,
+    "month": 12,
+    "day": 10
+  },
+  "productImage": "https://bandai-hobby.net/images/191_5183_s_ywjurd5hghetjsn6419ct869serr.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/191_5183_s_ywjurd5hghetjsn6419ct869serr.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/135/",
+  "extractedAt": "2025-12-05T23:09:46.510Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/135.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-witch-of-mercury",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4267",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "0549",
+  "type": "manual",
+  "name": {
+    "ja": "MG 1/100 ストライクノワールガンダム",
+    "en": "MG 1/100 Strike Noir Gundam"
+  },
+  "productNumber": "2001467",
+  "releaseDate": {
+    "ja": "2007年3月",
+    "year": 2007,
+    "month": 3
+  },
+  "productImage": "https://bandai-hobby.net/images/189_2554_s_arfojzwhmzylknyrkexdil6bchml.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/189_2554_s_arfojzwhmzylknyrkexdil6bchml.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/549/",
+  "extractedAt": "2025-12-05T23:09:47.232Z",
+  "scale": "1/100",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/549.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1645",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "0116",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ガンダムヘリオス",
+    "en": "HG 1/144 Gundam Helios"
+  },
+  "productNumber": "2555014",
+  "releaseDate": {
+    "ja": "2021年11月6日",
+    "year": 2021,
+    "month": 11,
+    "day": 6
+  },
+  "productImage": "https://bandai-hobby.net/images/189_4575_s_1q7vvw5jpktjuvr3yvfvkxbl55lb.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/189_4575_s_1q7vvw5jpktjuvr3yvfvkxbl55lb.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/116/",
+  "extractedAt": "2025-12-05T23:09:46.481Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/116.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-breaker-battlogue",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3621",
+        "targetType": "item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "01_2451",
+  "type": "item",
+  "name": {
+    "ja": "MG MSA-0011[Ext] Ex-S ガンダム",
+    "en": "MG MSA-0011[Ext] Ex-S Gundam"
+  },
+  "price": {
+    "amount": 8800,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2003年03月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "description": [
+    {
+      "ja": "「ガンダムセンチネル」に登場する主役MSの重装備形態「Ex-S ガンダム」のMG仕様のプラモデル。長距離巡航形態のGクルーザーにも完全変形が可能です。特徴である大型バックパックや脚部増加装甲を差替えなしで取り付けが可能です。武器はビームスマートガン、ビームサーベル、ビームカノンが付属します。",
+      "en": "An MG plastic model of the heavily armed form of the main MS that appears in \"Gundam Sentinel \", \" Ex-S Gundam\". It can be completely transformed into the long-distance cruising form of the G Cruiser. Features: Large backpack and additional leg armor can be attached without replacement. Weapons include a beam smart gun, beam saber, and beam cannon."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_337_s_9094qmm3wn4mqqgdg63vni84rkgr.jpg",
+    "https://bandai-hobby.net/images/155_337_o_1h3718efk3tjqan12kmdirobu23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2451/",
+  "extractedAt": "2025-12-06T17:49:23.587Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-sentinel",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5593",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3408",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2176",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1291",
+        "targetType": "item"
+      }
+    ]
+  }
+}

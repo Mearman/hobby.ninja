@@ -1,0 +1,40 @@
+{
+  "id": "2216",
+  "type": "manual",
+  "name": {
+    "ja": "ＰＧ 1/60 ガンダムアストレイ ブルーフレーム",
+    "en": "PG 1/60 Gundam Astray Blue Frame"
+  },
+  "productNumber": "2127504",
+  "releaseDate": {
+    "ja": "2014年2月",
+    "year": 2014,
+    "month": 2
+  },
+  "productImage": "https://bandai-hobby.net/images/153_4846_s_lbt2lbh84augi53t0c63cdwsxubu.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_4846_s_lbt2lbh84augi53t0c63cdwsxubu.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2216/",
+  "extractedAt": "2025-12-05T23:09:48.405Z",
+  "scale": "1/60",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2216.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "pg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3905",
+        "targetType": "item"
+      }
+    ]
+  }
+}

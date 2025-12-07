@@ -1,0 +1,75 @@
+{
+  "id": "01_5665",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 リゼル",
+    "en": "HGUC 1/144 Lisel"
+  },
+  "price": {
+    "amount": 2420,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2010年01月22日 (金)",
+    "year": 2010,
+    "month": 1,
+    "day": 22
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "• 機動戦士ガンダム UCからZ系可変量産機リゼルがHGUCに！ • MS形態とWR形態の両モードでプロポーションを再現！ • 変形はボディパーツを交換する事で簡単に再現可能。 • 変形機ながら自由なポージングが可能。 成形品×8、ホイルシール×1、組立説明書×1",
+      "en": "• Mobile Suit Gundam UC's Z-series variable mass-produced machine Rezel is now available as HGUC! • Reproduce proportions in both MS and WR modes! • Deformation can be easily reproduced by replacing body parts. • Although it is a transforming machine, it can be freely posed. Molded product x 8, foil seal x 1, assembly manual x 1"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092208_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092208_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092208_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092208_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000092208_5.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5665/",
+  "extractedAt": "2025-12-06T17:56:22.949Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0414",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-uc-unicorn",
+        "targetType": "series"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5527",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4986",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000163998",
+        "targetType": "item"
+      }
+    ]
+  }
+}

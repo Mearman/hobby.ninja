@@ -1,0 +1,41 @@
+{
+  "id": "0259",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 ギャプラン TR-5［フライルー］",
+    "en": "HGUC 1/144 Gaplan TR-5 [Flyroux]"
+  },
+  "productNumber": "2000734",
+  "releaseDate": {
+    "ja": "2006年12月23日",
+    "year": 2006,
+    "month": 12,
+    "day": 23
+  },
+  "productImage": "https://bandai-hobby.net/images/192_706_s_737e1ptjxlh61ii5ah3qvl8ucp9p.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/192_706_s_737e1ptjxlh61ii5ah3qvl8ucp9p.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/259/",
+  "extractedAt": "2025-12-05T23:09:46.746Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/259.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "advance-of-z",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5644",
+        "targetType": "item"
+      }
+    ]
+  }
+}

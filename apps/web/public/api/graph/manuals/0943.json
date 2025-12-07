@@ -1,0 +1,41 @@
+{
+  "id": "0943",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ガンダム AGE-2 ダブルバレット",
+    "en": "HG 1/144 Gundam AGE-2 Double Bullet"
+  },
+  "productNumber": "2139095",
+  "releaseDate": {
+    "ja": "2012年3月24日",
+    "year": 2012,
+    "month": 3,
+    "day": 24
+  },
+  "productImage": "https://bandai-hobby.net/images/156_5506_s_q19llg6hapl72bds2me9xhpmb6ev.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_5506_s_q19llg6hapl72bds2me9xhpmb6ev.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/943/",
+  "extractedAt": "2025-12-05T23:09:47.803Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/943.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4610",
+        "targetType": "item"
+      }
+    ]
+  }
+}

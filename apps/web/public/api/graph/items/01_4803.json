@@ -1,0 +1,77 @@
+{
+  "id": "01_4803",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ストライクフリーダムガンダム クリアカラーバージョン",
+    "en": "HG 1/144 Strike Freedom Gundam Clear Color Version"
+  },
+  "price": {
+    "amount": 1600,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2009年12月19日 (土)",
+    "year": 2009,
+    "month": 12,
+    "day": 19
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "HG 1/144 ストライクフリーダムガンダム クリアカラーバージョン登場！",
+      "en": "HG 1/144 Strike Freedom Gundam clear color version now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5683_s_6bbvsqmmpki8srv8uqelp72t7a4u.jpg",
+    "https://bandai-hobby.net/images/155_5683_s_p2wdp8zz5pqphcklb2retewtw609.jpg",
+    "https://bandai-hobby.net/images/156_5683_s_a7wkx4c3olyfvqipiyzk7ct68xoh.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4803/",
+  "extractedAt": "2025-12-06T17:54:27.326Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed-destiny",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000203308",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5097",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3739",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000157417",
+        "targetType": "item"
+      }
+    ]
+  }
+}

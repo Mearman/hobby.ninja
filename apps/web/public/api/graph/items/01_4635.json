@@ -1,0 +1,70 @@
+{
+  "id": "01_4635",
+  "type": "item",
+  "name": {
+    "ja": "クイックモデル ストライクガンダム",
+    "en": "Quick Model Strike Gundam"
+  },
+  "price": {
+    "amount": 1078,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2002年11月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "「機動戦士ガンダム SEED」に登場する「ストライクガンダム」がクイックガンダムモデルでキット化しました。彩色済みなので、組み立てるだけで機体色の再現が可能です。関節にABSのパーツを採用していますので、様々なアクションポーズが楽しめます。武器にビーム・ライフルとシールドが付きます。",
+      "en": "\"Strike Gundam \" that appears in \" Mobile Suit Gundam SEED\" has been made into a kit with Quick Gundam Model. Since it is already colored, you can reproduce the aircraft color just by using Assembly. ABS parts are used for the joints, so you can enjoy various action poses. Weapons include a beam rifle and a seal."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5529_o_1go679u1o1ql817ev1ler8k2rkt23.jpg",
+    "https://bandai-hobby.net/images/155_5529_o_1go67a4971pol1jb21r39clo3va2d.jpg",
+    "https://bandai-hobby.net/images/156_5529_o_1goirun801to442pkvnn3n1d9t23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4635/",
+  "extractedAt": "2025-12-06T17:54:06.842Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5994",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5440",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5441",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5365",
+        "targetType": "item"
+      }
+    ]
+  }
+}

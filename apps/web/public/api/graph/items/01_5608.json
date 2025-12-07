@@ -1,0 +1,93 @@
+{
+  "id": "01_5608",
+  "type": "item",
+  "name": {
+    "ja": "MG ガンダムＦ９１",
+    "en": "MG Gundam F91"
+  },
+  "price": {
+    "amount": 3520,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2006年07月29日 (土)",
+    "year": 2006,
+    "month": 7,
+    "day": 29
+  },
+  "targetAge": 15,
+  "description": [
+    {
+      "ja": "映画「機動戦士ガンダム F91」の主人公機“ガンダム F91”がマスターグレードシリーズに待望のラインナップ！",
+      "en": "The long-awaited lineup of the main character machine \"Gundam F91 \" from the movie \" Mobile Suit Gundam F91\" in the Master Grade series!"
+    },
+    {
+      "ja": "MG初の「ポリキャップレス」を実現！従来より小柄なMSのプロポーションと可動を両立。",
+      "en": "Achieved MG's first \"poly capless\" design! Balances the proportions and movement of a smaller MS than before."
+    },
+    {
+      "ja": "肩の放熱フィンやビームシールドは薄肉成形、ビームシールドはビームの波紋をグラデーションプリントで再現。",
+      "en": "The radiation fins on the shoulder and the beam seal are thin-walled, and the beam seal reproduces the ripples of the beam with a gradation print."
+    },
+    {
+      "ja": "MAラフレシアとの対決シーンを再現できるディスプレイスタンドが付属、ラフレシアのテンタクルアームやコクピットの透明キャノピーも再現、コクピット内には“鉄仮面”のフィギュア入り。",
+      "en": "A display stand is included to recreate the confrontation scene with MA Rafflesia, Rafflesia's tentacle arm and transparent cockpit canopy are also reproduced, and an \"Iron Mask\" figure is included in the cockpit."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_659_s_zd9y94g8d95a9xf4rrxoxwnnf3dk.jpg",
+    "https://bandai-hobby.net/images/155_659_o_1h36tolqkihpgoa1kea2p0raf23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5608/",
+  "extractedAt": "2025-12-06T17:56:16.283Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1838",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1349",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-f91",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000155996",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000130517",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1838",
+        "targetType": "item"
+      }
+    ]
+  }
+}

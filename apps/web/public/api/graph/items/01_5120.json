@@ -1,0 +1,77 @@
+{
+  "id": "01_5120",
+  "type": "item",
+  "name": {
+    "ja": "ポケモンプラモコレクションNo.25 セレクトシリーズ テラキオン",
+    "en": "Pokemon Plastic Model Collection No.25 Select Series Terrakion"
+  },
+  "price": {
+    "amount": 836,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2012年05月09日 (水)",
+    "year": 2012,
+    "month": 5,
+    "day": 9
+  },
+  "targetAge": 6,
+  "description": [
+    {
+      "ja": "• 劇場版ポケットモンスター「キュレム VS(たい) 聖剣士ケルディオ」で活躍するテラキオンが登場。",
+      "en": "• Terrakion, who plays an active role in the movie version of Pokemon \"Kyurem VS Holy Swordsman Keldeo\", appears."
+    },
+    {
+      "ja": "• ポケプラアクションは、体を起こすと前足を上げて飛びかかるポーズ！",
+      "en": "• Pokepla action is a pose where you raise your body, raise your front legs and pounce!"
+    },
+    {
+      "ja": "成形品×4、シール×1、組立説明書×1",
+      "en": "Molded product x 4, Seal x 1, Assembly manual x 1"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5983_s_9f3zrnh49itlgpn5u8ww7k7qtez9.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5120/",
+  "extractedAt": "2025-12-06T17:55:13.475Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "pocket-monster",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5984",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5958",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5947",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5568",
+        "targetType": "item"
+      }
+    ]
+  }
+}

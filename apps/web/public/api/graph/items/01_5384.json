@@ -1,0 +1,80 @@
+{
+  "id": "01_5384",
+  "type": "item",
+  "name": {
+    "ja": "30MS オプションヘアスタイル&フェイスパーツセット(三峰結華/幽谷霧子)",
+    "en": "30MS Optional Hairstyle & Face Parts Set (Yuka Mitsumine/Kiriko Yuya)"
+  },
+  "price": {
+    "amount": 3080,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2024年11月23日 (土)",
+    "year": 2024,
+    "month": 11,
+    "day": 23
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_7.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_8.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_9.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_10.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_11.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000220950_12.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5384/",
+  "extractedAt": "2025-12-06T17:55:48.788Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "idolmaster-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-sisters",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6755",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6756",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5977",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5976",
+        "targetType": "item"
+      }
+    ]
+  }
+}

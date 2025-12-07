@@ -1,0 +1,77 @@
+{
+  "id": "01_4955",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ビルドアカツキガンダム(川口克己プロデュース)",
+    "en": "HG 1/144 Build Akatsuki Gundam (produced by Katsumi Kawaguchi)"
+  },
+  "price": {
+    "amount": 2200,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2013年11月23日 (土)",
+    "year": 2013,
+    "month": 11,
+    "day": 23
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "HG 1/144 ビルドアカツキガンダム(川口克己プロデュース)登場！",
+      "en": "HG 1/144 Build Akatsuki Gundam (produced by Katsumi Kawaguchi) is now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5827_s_ltxai0lp50pg5v67jwnfsmfni2v1.jpg",
+    "https://bandai-hobby.net/images/155_5827_s_o7paiyw4sbl2q6nuq2frw90gzodq.jpg",
+    "https://bandai-hobby.net/images/156_5827_s_doitmedbvhz2hflzm021cbi5iqc7.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4955/",
+  "extractedAt": "2025-12-06T17:54:47.008Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-fighters",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5057",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1942",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1288",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1261",
+        "targetType": "item"
+      }
+    ]
+  }
+}

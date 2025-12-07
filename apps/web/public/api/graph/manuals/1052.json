@@ -1,0 +1,40 @@
+{
+  "id": "1052",
+  "type": "manual",
+  "name": {
+    "ja": "SD ガンダム EXスタンダード ガンダムエアリアル",
+    "en": "SD Gundam EX Standard Gundam Aerial"
+  },
+  "productNumber": "2637836",
+  "releaseDate": {
+    "ja": "2022年10月15日",
+    "year": 2022,
+    "month": 10,
+    "day": 15
+  },
+  "productImage": "https://bandai-hobby.net/images/189_5177_s_nv4f2h8lxn059n91p4u9pr844vev.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/189_5177_s_nv4f2h8lxn059n91p4u9pr844vev.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1052/",
+  "extractedAt": "2025-12-05T23:09:48.012Z",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/1052.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-witch-of-mercury",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4260",
+        "targetType": "item"
+      }
+    ]
+  }
+}

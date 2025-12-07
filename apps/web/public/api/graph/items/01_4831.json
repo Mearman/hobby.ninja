@@ -1,0 +1,77 @@
+{
+  "id": "01_4831",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 MSZ-006 ゼータガンダム グロスインジェクションバージョン",
+    "en": "HGUC 1/144 MSZ-006 Zeta Gundam gross injection version"
+  },
+  "price": {
+    "amount": 1676,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2006年08月23日 (水)",
+    "year": 2006,
+    "month": 8,
+    "day": 23
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「HGUC 1/144 MSZ-006 ゼータガンダム グロスインジェクションバージョン」登場！",
+      "en": "\"HGUC 1/144 MSZ-006 Zeta Gundam Gloss Injection Version\" now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5713_s_v0ic3einiiqvhl95qy379vib83gi.jpg",
+    "https://bandai-hobby.net/images/155_5713_s_vn2xhpkm14xd9d8lgxfcpkc0gj71.jpg",
+    "https://bandai-hobby.net/images/156_5713_s_snqjf0g8xi07qi38ahmbkia5kxqx.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4831/",
+  "extractedAt": "2025-12-06T17:54:29.722Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5468",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5375",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5162",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      }
+    ]
+  }
+}

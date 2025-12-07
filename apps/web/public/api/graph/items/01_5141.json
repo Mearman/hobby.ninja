@@ -1,0 +1,69 @@
+{
+  "id": "01_5141",
+  "type": "item",
+  "name": {
+    "ja": "ポケモンプラモコレクションNo.13 セレクトシリーズ レシラム",
+    "en": "Pokemon Plastic Model Collection No.13 Select Series Reshiram"
+  },
+  "price": {
+    "amount": 935,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2010年10月30日 (土)",
+    "year": 2010,
+    "month": 10,
+    "day": 30
+  },
+  "targetAge": 6,
+  "description": [
+    {
+      "ja": "ポケモンプラモコレクションNo.13 セレクトシリーズ レシラム登場！",
+      "en": "Pokemon Plastic Model Collection No.13 Select Series Reshiram is here!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_6000_o_1hdvtjid61acj11g09ssq4h1lp123.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5141/",
+  "extractedAt": "2025-12-06T17:55:16.321Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "pocket-monster",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5984",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5958",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5947",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5568",
+        "targetType": "item"
+      }
+    ]
+  }
+}

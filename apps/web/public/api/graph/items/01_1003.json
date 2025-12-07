@@ -1,0 +1,60 @@
+{
+  "id": "01_1003",
+  "type": "item",
+  "name": {
+    "ja": "SD ガンダム Gジェネレーション58 マスターガンダム",
+    "en": "SD Gundam G Generation 58 Master Gundam"
+  },
+  "price": {
+    "amount": 440,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2001年03月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "大人気ゲーム「ＧジェネレーションＦ」に登場する「マスターガンダム」がプラモデルで登場。ポリキャップを使用して，各関節が可動しますので、色々なポーズを取らせることが出来ます。同シリーズの「Ｇガンダム」や「シャイニングガンダム」と一緒に遊んで下さい。",
+      "en": "\"Master Gundam \" that appears in the popular game \" G Generation F \" is now available as a plastic model. Using polycaps, each joint is movable, so you can make various poses. Please play with \" G Gundam \" and \" Shining Gundam\" from the same series."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/155_193_s_kddj63504ix9ladtdom0d5mraec8.jpg",
+    "https://bandai-hobby.net/images/153_193_s_yym2n1740l3s7mds98m2tn6tzne7.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1003/",
+  "extractedAt": "2025-12-06T16:20:43.630Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4682",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-fighter-g-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-series",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      }
+    ]
+  }
+}

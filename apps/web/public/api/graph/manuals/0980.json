@@ -1,0 +1,41 @@
+{
+  "id": "0980",
+  "type": "manual",
+  "name": {
+    "ja": "ENTRY GRADE 1/144 ストライクガンダム",
+    "en": "ENTRY GRADE 1/144 Strike Gundam"
+  },
+  "productNumber": "2582155",
+  "releaseDate": {
+    "ja": "2022年1月15日",
+    "year": 2022,
+    "month": 1,
+    "day": 15
+  },
+  "productImage": "https://bandai-hobby.net/images/196_4698_s_58tm16vdulsjy4f2c7xaobp0nm4n.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/196_4698_s_58tm16vdulsjy4f2c7xaobp0nm4n.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/980/",
+  "extractedAt": "2025-12-05T23:09:47.854Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/980.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "eg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3744",
+        "targetType": "item"
+      }
+    ]
+  }
+}

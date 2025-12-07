@@ -1,0 +1,80 @@
+{
+  "id": "01_7012",
+  "type": "item",
+  "name": {
+    "ja": "30MS 小宮果穂",
+    "en": "30MS Kaho Komiya"
+  },
+  "price": {
+    "amount": 4180,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2026年05月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://d3bk8pkqsprcvh.cloudfront.net/hobby/jp/product/2025/11/pUm1sQgVwThuERZR/58QfvPFcQhY8bjC7.jpg?Expires=1765044201&Key-Pair-Id=K7AVJM1114TH7&Signature=e7FopXIDa-Ci4A3j5JXnB6lmNQU0QmFrxraVoKcie~BeI4Xon5yryw4A8zXPs~MdrnzvgxcFgeXrvY26nwmmro505eFocuyc5p~HLmHNY9Ma63N34iNPQYOu8syokNpTFqInzi~VZrTZ-URs4GFqSD45lPrmGUKUE-T967JwrM6N8sMKI9lQ3aNsoPXdEmX43wPbmIjJRYrD5pvyIvJSlPMsfrIdB4LpOzisVEna0gSqZSDrU13-ZpdrwN6joXNOWoVYTsUFKRcZJk8KotaG~dZeYkcaTq5pgsQrAT4e7Yxw7G67Yjk4r4-7WXzK9rMyGBbEN2RY4ssK~857f3E~zA__",
+    "https://d3bk8pkqsprcvh.cloudfront.net/hobby/jp/product/2025/11/xAKJKBHipozQoQ9O/DXZyWixOrQnp1MeA.jpg?Expires=1765044201&Key-Pair-Id=K7AVJM1114TH7&Signature=Ru1AyX8rhVct~8JtDrVUks4mJbltw1uslFP~cw2f5N2Nh7ZdcMacO7z1LgXN9tO77bn3Iz0O22Zd3DYugXaBniqD4W7tMis3rPrHDvyW9wEQPjhQPo8LtbRHrBMCLhqMQR8senVOWdkGqeopD4wnEqjLlNbKOTt1xEe4qwO9JZ4nYKuyTVd6h10xYqvJaE54dhoRhZNHMT4blX~u9H1-KkR9GTbjhnhewF3C8CM3cfq4uazwvIqVevv79IxBuFVsyY2e8hGMSMKwksKo9iHzu~5Ldh1eWxcFxMv0VZnGMWtvMHH1IspRKrytL6mvPHXDYIylqv7SjLa4RazCn9j6tA__"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_7012/",
+  "extractedAt": "2025-12-06T17:58:22.082Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_7013",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_7008",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "idolmaster-series",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-sisters",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_7008",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6950",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6934",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6755",
+        "targetType": "item"
+      }
+    ]
+  }
+}

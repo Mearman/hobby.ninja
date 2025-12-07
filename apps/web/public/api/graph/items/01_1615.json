@@ -1,0 +1,69 @@
+{
+  "id": "01_1615",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士 198ゼータガンダム",
+    "en": "BB Senshi 198 Zeta Gundam"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1999年08月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "BB戦士 198ゼータガンダム登場！！",
+      "en": "BB Senshi 198 Zeta Gundam is here! !"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2527_s_mw3qt8ywfrjoaj9ionx3fw7y0zpb.jpg",
+    "https://bandai-hobby.net/images/155_2527_s_p9ep9ioao0stzx7t9czythukjd6b.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1615/",
+  "extractedAt": "2025-12-06T17:36:24.528Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-warrior",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

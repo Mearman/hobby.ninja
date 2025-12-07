@@ -1,0 +1,41 @@
+{
+  "id": "1019",
+  "type": "manual",
+  "name": {
+    "ja": "HGBD 1/144 オーガ刃-Ｘ",
+    "en": "HGBD 1/144 Auger Blade-X"
+  },
+  "productNumber": "2426161",
+  "releaseDate": {
+    "ja": "2018年5月19日",
+    "year": 2018,
+    "month": 5,
+    "day": 19
+  },
+  "productImage": "https://bandai-hobby.net/images/159_2253_s_6kypvco3a1f0h420mtnajcqfsti3.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/159_2253_s_6kypvco3a1f0h420mtnajcqfsti3.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/1019/",
+  "extractedAt": "2025-12-05T23:09:47.923Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/1019.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1325",
+        "targetType": "item"
+      }
+    ]
+  }
+}

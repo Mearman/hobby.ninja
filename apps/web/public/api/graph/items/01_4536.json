@@ -1,0 +1,83 @@
+{
+  "id": "01_4536",
+  "type": "item",
+  "name": {
+    "ja": "ガンダムデカールNo.73 MG 1/100 ガンタンク用",
+    "en": "Gundam Decal No.73 MG 1/100 Guntank"
+  },
+  "price": {
+    "amount": 440,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2009年12月24日 (木)",
+    "year": 2009,
+    "month": 12,
+    "day": 24
+  },
+  "targetAge": 8,
+  "scale": "1/100",
+  "description": [
+    {
+      "ja": "100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
+      "en": "Introducing the popular Gundam decal series, which boasts a lineup of over 100 items."
+    },
+    {
+      "ja": "MG 1/100 ガンタンク用のデカールです。",
+      "en": "Decal for MG 1/100 Guntank."
+    },
+    {
+      "ja": "水転写式デカール",
+      "en": "water transfer decal"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5437_s_oljjesvgla1ztf82mgizeqa0017k.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4536/",
+  "extractedAt": "2025-12-06T17:53:53.920Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "gundam-decal",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3674",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1264",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1269",
+        "targetType": "item"
+      }
+    ]
+  }
+}

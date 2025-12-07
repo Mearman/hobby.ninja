@@ -1,0 +1,78 @@
+{
+  "id": "01_1907",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ユニコーンガンダム 3号機 フェネクス(ユニコーンモード) ゴールドコーティングVer.",
+    "en": "HG 1/144 Unicorn Gundam Unit 3 Phenex (Unicorn Mode) Gold Coating Ver."
+  },
+  "price": {
+    "amount": 5500,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2016年11月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
+      "en": "Event-limited Gunpla sold at various event venues."
+    },
+    {
+      "ja": "HG ユニコーンガンダム 3号機 フェネクス(ユニコーンモード)のイベント限定ゴールドコーティングVer.です。",
+      "en": "HG Unicorn Gundam Unit 3 Phenex (Unicorn Mode) event limited gold coating Ver."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2841_s_tfzofssaaxeifcnzt0rglr8bl3mq.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1907/",
+  "extractedAt": "2025-12-06T17:48:20.879Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-uc-unicorn",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5527",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4986",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000163998",
+        "targetType": "item"
+      }
+    ]
+  }
+}

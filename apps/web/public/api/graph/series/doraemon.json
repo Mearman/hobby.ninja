@@ -1,0 +1,44 @@
+{
+  "id": "doraemon",
+  "type": "series",
+  "name": {
+    "ja": "ドラえもん",
+    "en": "Doraemon"
+  },
+  "url": "https://bandai-hobby.net/series/doraemon/",
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_6314",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_2807",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_1885",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_1208",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_1206",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_1207",
+        "targetType": "item"
+      }
+    ],
+    "outbound": []
+  }
+}

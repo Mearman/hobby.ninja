@@ -1,0 +1,75 @@
+{
+  "id": "01_4938",
+  "type": "item",
+  "name": {
+    "ja": "MG 1/100 MS-14A ガトー専用ゲルググ コーティングバージョン",
+    "en": "MG 1/100 MS-14A Gelgoog coating version for Gato"
+  },
+  "price": {
+    "amount": 6050,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1999年10月01日 (金)",
+    "year": 1999,
+    "month": 10,
+    "day": 1
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [
+    {
+      "ja": "MG 1/100 MS-14A ガトー専用ゲルググ コーティングバージョン登場！",
+      "en": "MG 1/100 MS-14A Gelgoog coated version for Gato now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5811_s_a441x10zh32colvanj3zh32z4075.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4938/",
+  "extractedAt": "2025-12-06T17:54:41.466Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-0083-stardust-memory",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000127907",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000127908",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000124942",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000105596",
+        "targetType": "item"
+      }
+    ]
+  }
+}

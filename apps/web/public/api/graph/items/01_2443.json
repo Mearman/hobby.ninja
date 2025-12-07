@@ -1,0 +1,143 @@
+{
+  "id": "01_2443",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 ペーネロペー",
+    "en": "HGUC 1/144 Penelope"
+  },
+  "price": {
+    "amount": 7700,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2019年10月26日 (土)",
+    "year": 2019,
+    "month": 10,
+    "day": 26
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "『機動戦士ガンダム 閃光のハサウェイ』より、レーン・エイム中尉が搭乗するMSペーネロペーが遂にHG化！",
+      "en": "From \"Mobile Suit Gundam: Flash Hathaway\", MS Penelope piloted by Lieutenant Lane Aim is finally transformed into HG!"
+    },
+    {
+      "ja": "• カトキハジメ氏による監修のもと、ペーネロペーの複雑な機構をHG最新フォーマットへ落とし込み、その特徴を再現。",
+      "en": "• Under the supervision of Hajime Katoki, Penelope's complex mechanism has been translated into the latest HG format and its characteristics have been reproduced."
+    },
+    {
+      "ja": "• 各部装甲の成形色再現に加え、キャノピーにはクリアパーツを採用。",
+      "en": "• In addition to reproducing the molding colors of each part of the armor, clear parts are used for the canopy."
+    },
+    {
+      "ja": "• 肩アーマーとテール・スタビライザー、脚部バーニアの形状など、背面からのボリュームも圧倒的。",
+      "en": "• The volume from the back is overwhelming, such as the shape of the shoulder armor, tail stabilizer, and leg vernier."
+    },
+    {
+      "ja": "• 肩部アーマーは差し込み位置を変えることで開閉状態を再現可能。",
+      "en": "• Shoulder armor can be recreated in open/closed state by changing the insertion position."
+    },
+    {
+      "ja": "• 各部武装、装甲にはビーム・サーベルが装着できる。",
+      "en": "• Each part is armed, and a beam saber can be attached to the armor."
+    },
+    {
+      "ja": "• ディスプレイ台座が付属。フライトユニットとオデュッセウスガンダムを分離状態でディスプレイすることが可能。",
+      "en": "• Display pedestal included. It is possible to display the flight unit and Odysseus Gundam separately."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "ビーム・ライフル×1",
+      "en": "Beam rifle x1"
+    },
+    {
+      "ja": "ビーム・サーベル×2",
+      "en": "Beam saber x2"
+    },
+    {
+      "ja": "シールド×2",
+      "en": "Seal × 2"
+    },
+    {
+      "ja": "ディスプレイ台座×1",
+      "en": "Display pedestal x 1"
+    }
+  ],
+  "contents": [
+    {
+      "ja": "成形品×20",
+      "en": "Molded product x 20"
+    },
+    {
+      "ja": "取扱説明書×1",
+      "en": "Handling manual×1"
+    },
+    {
+      "ja": "ホイルシール×1",
+      "en": "Foil Seal×1"
+    }
+  ],
+  "images": [
+    "https://bandai-hobby.net/images/153_3372_s_b5v8q5fdj96xz2wcoc4de12lsfm4.jpg",
+    "https://bandai-hobby.net/images/155_3372_s_61wkfsv4whkgrpor4p0n8necs15k.jpg",
+    "https://bandai-hobby.net/images/156_3372_s_c2o0wbnq3sup8ttb7seapxvamzym.jpg",
+    "https://bandai-hobby.net/images/157_3372_s_7o00b69big1uoeno9o9teipwzdav.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2443/",
+  "extractedAt": "2025-12-06T17:49:23.478Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0491",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-flash-hathaway",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5594",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4269",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000157737",
+        "targetType": "item"
+      }
+    ]
+  }
+}

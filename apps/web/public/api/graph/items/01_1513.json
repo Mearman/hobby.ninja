@@ -1,0 +1,70 @@
+{
+  "id": "01_1513",
+  "type": "item",
+  "name": {
+    "ja": "1/60 Ｖ２ガンダム",
+    "en": "1/60 V2 Gundam"
+  },
+  "price": {
+    "amount": 3300,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1993年10月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/60",
+  "description": [
+    {
+      "ja": "ＴＶ「機動戦士Ｖガンダム」に登場した、V ガンダムの後継機を1/60スケールで立体化しました。コア・ファイター、トップ・ファイター、ボトム・ファイター各形態への分離・変形・合体機構をパーツの差替えなしで再現可能です。頭部はボールジョイント関節により可動します。カメラアイはクリアパーツ成形です。頭部を胴体へ収納し、機首の伸縮・折りたたみ機構を再現できます。ひじのビーム・シールド基部は可動し、シールドの着脱が可能になっています。手首関節部にはボールジョイントを使用、指は可動します。ビーム・ライフル、ビーム・サーベル2本が付いています。",
+      "en": "The successor to V Gundam that appeared on the TV \"Mobile Suit V Gundam\" is three-dimensionalized in 1/60 scale. Separation, transformation, and combination mechanisms into Core Fighter, Top Fighter, and Bottom Fighter forms can be reproduced without replacing parts. The head is movable using a ball joint. The camera eye is made of clear parts. The head can be stored in the fuselage and the extension/folding mechanism of the nose can be reproduced. The elbow beam and base of the seal are movable, making it possible to attach and remove the seal. A ball joint is used for the wrist joint, and the fingers are movable. Comes with a beam rifle and two beam sabers."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2431_s_0cwd5xne81t3g2qrqd7lh5evbkhu.jpg",
+    "https://bandai-hobby.net/images/155_2431_s_2qrnlcddw4i5ognmwl7zr8bd584j.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1513/",
+  "extractedAt": "2025-12-06T17:28:35.453Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-v-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4978",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3311",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2835",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000142101",
+        "targetType": "item"
+      }
+    ]
+  }
+}

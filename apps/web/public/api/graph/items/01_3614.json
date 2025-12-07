@@ -1,0 +1,76 @@
+{
+  "id": "01_3614",
+  "type": "item",
+  "name": {
+    "ja": "HG アルトアイゼン",
+    "en": "HG Alt Eisen"
+  },
+  "price": {
+    "amount": 4400,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2021年12月04日 (土)",
+    "year": 2021,
+    "month": 12,
+    "day": 4
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4569_s_bvv67qe53n24jvnuwpmgexbl1p0s.jpg",
+    "https://bandai-hobby.net/images/155_4569_s_65oxzc33kz9qaaqdk6bcooms2kva.jpg",
+    "https://bandai-hobby.net/images/156_4569_s_qo588qra33atf3gr17ucw6g44rp9.jpg",
+    "https://bandai-hobby.net/images/157_4569_s_k2jaojmn6wiodd7zjrr7c4fr1zn1.jpg",
+    "https://bandai-hobby.net/images/158_4569_s_nymj3e1ksrca5il5sqlmrf8te1tp.jpg",
+    "https://bandai-hobby.net/images/159_4569_s_mnfwzsqoh62dwufwb54sbgwj8t93.jpg",
+    "https://bandai-hobby.net/images/189_4569_s_zr65y3jkuzkwxp58gaescvkbr5kr.jpg",
+    "https://bandai-hobby.net/images/190_4569_s_ihielqhoyscr6ykdrqgffdea0o9s.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3614/",
+  "extractedAt": "2025-12-06T17:51:50.112Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "super-robot-wars-og",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5578",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5491",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000214961",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5369",
+        "targetType": "item"
+      }
+    ]
+  }
+}

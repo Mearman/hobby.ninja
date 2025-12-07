@@ -1,0 +1,116 @@
+{
+  "id": "01_2478",
+  "type": "item",
+  "name": {
+    "ja": "HGBD:R 1/144 ガンダムジャスティスナイト",
+    "en": "HGBD:R 1/144 Gundam Justice Knight"
+  },
+  "price": {
+    "amount": 2200,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2019年10月19日 (土)",
+    "year": 2019,
+    "month": 10,
+    "day": 19
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "2019年10月からガンダムチャンネルで配信スタートの『ガンダムビルドダイバーズRe:RISE』 より、インフィニットジャスティスガンダムをベースとした機体が登場！",
+      "en": "From \"Gundam Build Divers Re:RISE\", which will be distributed on Gundam channel from 201910, an aircraft based on Infinite Justice Gundam has appeared!"
+    },
+    {
+      "ja": "• 騎士風のカスタムが施され、ショットランサーと円形シールド、マント風ウイングを備える。",
+      "en": "• Customized to look like a knight, equipped with a shot lancer, circular seal, and cloak-like wings."
+    },
+    {
+      "ja": "• HGでは新規となる股関節機構により、脚部を大きく広げたダイナミックなポージングが可能。",
+      "en": "• The HG's new hip joint mechanism allows for dynamic posing with the legs spread wide."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "片手剣×1",
+      "en": "One-handed sword x1"
+    },
+    {
+      "ja": "ランス×1",
+      "en": "Lance x1"
+    },
+    {
+      "ja": "背部ウイング×1",
+      "en": "Back wing x 1"
+    },
+    {
+      "ja": "シールド×1",
+      "en": "Seal × 1"
+    },
+    {
+      "ja": "ホイルシール×1",
+      "en": "Foil Seal×1"
+    }
+  ],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3406_s_jqztuyfyuljnt5rqhi4d88q8bslf.jpg",
+    "https://bandai-hobby.net/images/155_3406_s_lalm8g0e8260atc24h38vpnbsn0q.jpg",
+    "https://bandai-hobby.net/images/156_3406_s_5vzkwdygln6td6fldc63kzbkdz4r.jpg",
+    "https://bandai-hobby.net/images/157_3406_s_4fmhg951fdmt8xzpgwu7ky1zqyzw.jpg",
+    "https://bandai-hobby.net/images/158_3406_s_ztagguud8pc3mqlucctgad22ejgj.jpg",
+    "https://bandai-hobby.net/images/159_3406_s_iu8pln1emfpbtlbt2wjz5gb4531h.jpg",
+    "https://bandai-hobby.net/images/189_3406_s_zd2d6jksjjaq8oewkg30evtnny93.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2478/",
+  "extractedAt": "2025-12-06T17:49:27.245Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0070",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "gundam-build-divers-rerise",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5054",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3562",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3565",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3291",
+        "targetType": "item"
+      }
+    ]
+  }
+}

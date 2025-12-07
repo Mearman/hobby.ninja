@@ -1,0 +1,85 @@
+{
+  "id": "01_1252",
+  "type": "item",
+  "name": {
+    "ja": "ＨＧ 1/144 アトラスガンダム（GUNDAM THUNDERBOLT BANDIT FLOWER Ver.）",
+    "en": "HG 1/144 Atlas Gundam (GUNDAM THUNDERBOLT BANDIT FLOWER Ver.)"
+  },
+  "price": {
+    "amount": 2640,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2018年01月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2184_o_1bu7ruege5e174qn92isrquh23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1252/",
+  "extractedAt": "2025-12-06T17:04:26.367Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "2631",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-thunderbolt",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-gradepreban-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4287",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000115181",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000115178",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_998",
+        "targetType": "item"
+      }
+    ]
+  }
+}

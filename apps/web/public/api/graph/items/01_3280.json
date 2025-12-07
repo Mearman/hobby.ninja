@@ -1,0 +1,65 @@
+{
+  "id": "01_3280",
+  "type": "item",
+  "name": {
+    "ja": "ＢＢ戦士 44 頑駄無大将軍",
+    "en": "BB Senshi 44 Gundam udaishōgun"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1989年11月20日 (月)",
+    "year": 1989,
+    "month": 11,
+    "day": 20
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4230_s_q1ppdjhy3k1hbdl7ath9s8rs0b0s.jpg",
+    "https://bandai-hobby.net/images/155_4230_s_72mn3m2w4hfh77exm043toh0y4l7.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3280/",
+  "extractedAt": "2025-12-06T17:51:06.162Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-senshi",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

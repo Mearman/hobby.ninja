@@ -1,0 +1,40 @@
+{
+  "id": "2501",
+  "type": "manual",
+  "name": {
+    "ja": "ＨＧ 1/144 ガンダムルブリスアノクタ",
+    "en": "HG 1/144 Gundam Rubris Anokta"
+  },
+  "productNumber": "2675535",
+  "releaseDate": {
+    "ja": "2023年12月",
+    "year": 2023,
+    "month": 12
+  },
+  "productImage": "https://bandai-hobby.net/images/153_5974_s_35g5pnrt3sube3eexve2rr4g7mw5.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/153_5974_s_35g5pnrt3sube3eexve2rr4g7mw5.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/2501/",
+  "extractedAt": "2025-12-05T23:09:48.687Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/2501.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-witch-of-mercury",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5111",
+        "targetType": "item"
+      }
+    ]
+  }
+}

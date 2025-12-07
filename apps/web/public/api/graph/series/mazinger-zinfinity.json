@@ -1,0 +1,29 @@
+{
+  "id": "mazinger-zinfinity",
+  "type": "series",
+  "name": {
+    "ja": "マジンガーZ／INFINITY",
+    "en": "Mazinger Z/INFINITY"
+  },
+  "url": "https://bandai-hobby.net/series/mazingerz-infinity/",
+  "edges": {
+    "inbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_4355",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_2631",
+        "targetType": "item"
+      },
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "01_2558",
+        "targetType": "item"
+      }
+    ],
+    "outbound": []
+  }
+}

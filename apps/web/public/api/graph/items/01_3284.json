@@ -1,0 +1,69 @@
+{
+  "id": "01_3284",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 GPB-04B ベアッガイ",
+    "en": "HG 1/144 GPB-04B Beargguy"
+  },
+  "price": {
+    "amount": 1980,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2010年12月05日 (日)",
+    "year": 2010,
+    "month": 12,
+    "day": 5
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_4234_s_rlcwrvod1izzkhjhcgjh46vcxw5y.jpg",
+    "https://bandai-hobby.net/images/155_4234_s_t0ikz5usfw87s5c0o6fvk949wxpk.jpg",
+    "https://bandai-hobby.net/images/156_4234_s_7njsv22rd5ispbxd1iudejlobvt8.jpg",
+    "https://bandai-hobby.net/images/157_4234_s_a71f6syx3d5lctjflfgyhd08pmav.jpg",
+    "https://bandai-hobby.net/images/158_4234_s_y9a33koxk6cu09cmcdhcqm3grgz8.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3284/",
+  "extractedAt": "2025-12-06T17:51:06.152Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5986",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5963",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5961",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5951",
+        "targetType": "item"
+      }
+    ]
+  }
+}

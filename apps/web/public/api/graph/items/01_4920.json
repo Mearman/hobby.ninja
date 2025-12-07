@@ -1,0 +1,70 @@
+{
+  "id": "01_4920",
+  "type": "item",
+  "name": {
+    "ja": "Figure-rise Standard ノワール",
+    "en": "Figure-rise Standard Noir"
+  },
+  "price": {
+    "amount": 4620,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2023年08月11日 (金)",
+    "year": 2023,
+    "month": 8,
+    "day": 11
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5795_s_mx96t9g5x32nvewrl3iwkiudce0a.jpg",
+    "https://bandai-hobby.net/images/155_5795_s_jenzt7lrvviiyulek1xxdtyq4jdg.jpg",
+    "https://bandai-hobby.net/images/156_5795_s_1tl4r89ung66fus8rcqyytzzbgjr.jpg",
+    "https://bandai-hobby.net/images/157_5795_s_dpvebg8o1gmpf608hqdxkx252ojx.jpg",
+    "https://bandai-hobby.net/images/158_5795_s_94fb24kydjn3ffylzu0tcys111u8.jpg",
+    "https://bandai-hobby.net/images/159_5795_s_falsvm9l2oam5wgwjrzoxkro5w5c.jpg",
+    "https://bandai-hobby.net/images/189_5795_s_cb2jijnkcn96dbfyibtewzuluiem.jpg",
+    "https://bandai-hobby.net/images/190_5795_s_7f06d9w6z88mfo411tyi3prsqlcw.jpg",
+    "https://bandai-hobby.net/images/191_5795_s_mjq5cclif5pbhs28oc9z6zooac7e.jpg",
+    "https://bandai-hobby.net/images/192_5795_s_29f2mh0dutgc2tbd0syjwu8jte80.jpg",
+    "https://bandai-hobby.net/images/193_5795_s_6joifd01q8iaxpar3pe9amiobwe1.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4920/",
+  "extractedAt": "2025-12-06T17:54:39.187Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5176",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "synduality",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "figure-rise-standard",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5176",
+        "targetType": "item"
+      }
+    ]
+  }
+}

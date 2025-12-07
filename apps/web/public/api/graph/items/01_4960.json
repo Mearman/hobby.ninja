@@ -1,0 +1,77 @@
+{
+  "id": "01_4960",
+  "type": "item",
+  "name": {
+    "ja": "MG 1/100 ガンダム Ver.3.0 メカニカルクリア",
+    "en": "MG 1/100 Gundam Ver.3.0 Mechanical Clear"
+  },
+  "price": {
+    "amount": 4992,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2014年07月12日 (土)",
+    "year": 2014,
+    "month": 7,
+    "day": 12
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [
+    {
+      "ja": "MG 1/100 ガンダム Ver.3.0 メカニカルクリア登場！",
+      "en": "MG 1/100 Gundam Ver.3.0 Mechanical Clear now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5831_s_7kkxgjimkah6emj3njpej69hmjyq.jpg",
+    "https://bandai-hobby.net/images/155_5831_s_3mytw9up77wqhhbkyynwilrxotis.jpg",
+    "https://bandai-hobby.net/images/156_5831_s_0g6fwv5gkkscytgha8l34lsbiko9.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4960/",
+  "extractedAt": "2025-12-06T17:54:46.712Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5509",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4977",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3772",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3754",
+        "targetType": "item"
+      }
+    ]
+  }
+}

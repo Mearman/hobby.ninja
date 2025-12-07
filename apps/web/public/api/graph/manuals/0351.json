@@ -1,0 +1,41 @@
+{
+  "id": "0351",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 ガンダム AGE-3 オービタル",
+    "en": "HG 1/144 Gundam AGE-3 Orbital"
+  },
+  "productNumber": "2165084",
+  "releaseDate": {
+    "ja": "2012年8月8日",
+    "year": 2012,
+    "month": 8,
+    "day": 8
+  },
+  "productImage": "https://bandai-hobby.net/images/157_4558_s_uorsyjlkqrzb7lm1t3962p87o8gl.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_4558_s_uorsyjlkqrzb7lm1t3962p87o8gl.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/351/",
+  "extractedAt": "2025-12-05T23:09:46.913Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/351.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-age",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_3603",
+        "targetType": "item"
+      }
+    ]
+  }
+}

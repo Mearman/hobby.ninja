@@ -1,0 +1,40 @@
+{
+  "id": "0884",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 ギャプラン",
+    "en": "HGUC 1/144 Gaplan"
+  },
+  "productNumber": "1122717",
+  "releaseDate": {
+    "ja": "2003年11月",
+    "year": 2003,
+    "month": 11
+  },
+  "productImage": "https://bandai-hobby.net/images/157_385_s_pfr3hfok62fwwu82jm5f7fsqopj1.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_385_s_pfr3hfok62fwwu82jm5f7fsqopj1.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/884/",
+  "extractedAt": "2025-12-05T23:09:47.720Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/884.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2879",
+        "targetType": "item"
+      }
+    ]
+  }
+}

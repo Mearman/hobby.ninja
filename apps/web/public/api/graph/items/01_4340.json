@@ -1,0 +1,88 @@
+{
+  "id": "01_4340",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ソードインパルスガンダム",
+    "en": "HG 1/144 Sword Impulse Gundam"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2005年02月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「機動戦士ガンダム SEED DESTINY」に登場する主役機「ソードインパルスガンダム」の1/144スケール、HG仕様のプラモデル。背部の大型ソードは片手持ちと両手持ちの2パターンを再現可能です。ビームブーメランは着脱式、ビーム部分はクリアパーツで再現、手にも装備可能です。飛行形態のコアスプレンダーが付属します。1/144HGフォースインパルスガンダムのフライヤーユニットにバックパックを装着することで、ソードシルエットを再現可能です。",
+      "en": "A 1/144 Scale, HG plastic model of the main character \"Sword Impulse Gundam \" that appears in \" Mobile Suit Gundam SEED DESTINY\". The large sword on the back can be held in two patterns, one-handed and two-handed. The beam boomerang is removable, the beam part is reproduced with clear parts, and it can also be equipped on the hand. Core Splendor in flight form is included. By attaching a backpack to the flyer unit of 1/144HG Force Impulse Gundam, you can reproduce the sword silhouette."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_524_s_86abw8kk77zxp4ti368qjhge3odk.jpg",
+    "https://bandai-hobby.net/images/155_524_s_7jks5yzgz0o2p62mpkn96fwmkc57.jpg",
+    "https://bandai-hobby.net/images/156_524_s_mirwvj73pd2dxrjd9gmn4gnhkpwk.jpg",
+    "https://bandai-hobby.net/images/157_524_s_jp05nelyozbo2bf0mpmcom3dnp5s.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4340/",
+  "extractedAt": "2025-12-06T17:53:28.981Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "2813",
+        "targetType": "manual"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0164",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed-destiny",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000203308",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5097",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3739",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000157417",
+        "targetType": "item"
+      }
+    ]
+  }
+}

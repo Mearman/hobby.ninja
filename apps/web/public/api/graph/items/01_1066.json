@@ -1,0 +1,80 @@
+{
+  "id": "01_1066",
+  "type": "item",
+  "name": {
+    "ja": "SD ガンダム Gジェネレーション60 キュベレイ",
+    "en": "SD Gundam G Generation 60 Qubeley"
+  },
+  "price": {
+    "amount": 440,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2001年05月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "ゲームソフト「ジージェネレーションＦ」に登場するユニット「キュベレイ」をプラモデルで商品化。シールを使うことで、カラフルに組立が可能です。武器に、ビームサーベル，ファンネルが付属します。",
+      "en": "The unit \"Qubeley \" that appears in the game software \" G Generation F\" is commercialized as a plastic model. By using Seal, you can assemble it colorfully. Beam saber and funnel are included as weapons."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_199_s_32txf0chnfohmvgjmes0l4kl0xsq.jpg",
+    "https://bandai-hobby.net/images/155_199_s_y5j7cf7qivmoa8bwu3ut53n6zx8v.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1066/",
+  "extractedAt": "2025-12-06T16:47:13.892Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1321",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1108",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-series",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1108",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_645",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1321",
+        "targetType": "item"
+      }
+    ]
+  }
+}

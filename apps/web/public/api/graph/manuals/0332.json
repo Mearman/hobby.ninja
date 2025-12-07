@@ -1,0 +1,41 @@
+{
+  "id": "0332",
+  "type": "manual",
+  "name": {
+    "ja": "HG 1/144 R03 バスターガンダム",
+    "en": "HG 1/144 R03 Buster Gundam"
+  },
+  "productNumber": "2156314",
+  "releaseDate": {
+    "ja": "2011年11月19日",
+    "year": 2011,
+    "month": 11,
+    "day": 19
+  },
+  "productImage": "https://bandai-hobby.net/images/156_5478_s_uivx7oawst51l9crf9ngisiath0e.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/156_5478_s_uivx7oawst51l9crf9ngisiath0e.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/332/",
+  "extractedAt": "2025-12-05T23:09:46.889Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/332.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_4580",
+        "targetType": "item"
+      }
+    ]
+  }
+}

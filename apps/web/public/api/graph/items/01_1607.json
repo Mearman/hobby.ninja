@@ -1,0 +1,74 @@
+{
+  "id": "01_1607",
+  "type": "item",
+  "name": {
+    "ja": "BB戦士 196武者サンドロック",
+    "en": "BB Senshi 196 Musha Sandrock"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1999年05月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "description": [
+    {
+      "ja": "BB戦士 196武者サンドロック登場！！",
+      "en": "BB Senshi 196 Musha Sandrock is here! !"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2519_s_57xmg80tkwzxoxww8p8s622gz5a6.jpg",
+    "https://bandai-hobby.net/images/155_2519_s_79uxelziw5t01ghfbr7f3g1f4a0j.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1607/",
+  "extractedAt": "2025-12-06T17:34:50.824Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-series",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-bb-warrior",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5456",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5442",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5395",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5378",
+        "targetType": "item"
+      }
+    ]
+  }
+}

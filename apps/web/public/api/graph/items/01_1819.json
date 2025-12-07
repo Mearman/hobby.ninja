@@ -1,0 +1,88 @@
+{
+  "id": "01_1819",
+  "type": "item",
+  "name": {
+    "ja": "ガンダムデカールNo.3 MG 1/100 フリーダムガンダム用",
+    "en": "Gundam Decal No.3 MG 1/100 Freedom Gundam"
+  },
+  "price": {
+    "amount": 440,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2005年03月26日 (土)",
+    "year": 2005,
+    "month": 3,
+    "day": 26
+  },
+  "targetAge": 8,
+  "scale": "1/100",
+  "description": [
+    {
+      "ja": "100点以上のラインナップを誇る、大人気ガンダムデカールのシリーズ商品が登場。",
+      "en": "Introducing the popular Gundam decal series, which boasts a lineup of over 100 items."
+    },
+    {
+      "ja": "MG 1/100 フリーダムガンダム用のデカールです。",
+      "en": "Decal for MG 1/100 Freedom Gundam."
+    },
+    {
+      "ja": "水転写式デカール",
+      "en": "water transfer decal"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2757_s_zf29nty4u0grb5i3sqg2s2jjkwfl.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1819/",
+  "extractedAt": "2025-12-06T17:48:10.090Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "gundam-decal",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5994",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5221",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4272",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4195",
+        "targetType": "item"
+      }
+    ]
+  }
+}

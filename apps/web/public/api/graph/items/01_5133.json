@@ -1,0 +1,69 @@
+{
+  "id": "01_5133",
+  "type": "item",
+  "name": {
+    "ja": "ポケモンプラモコレクションNo.10 セレクトシリーズ ライコウ",
+    "en": "Pokemon Plastic Model Collection No.10 Select Series Raikou"
+  },
+  "price": {
+    "amount": 836,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2010年06月10日 (木)",
+    "year": 2010,
+    "month": 6,
+    "day": 10
+  },
+  "targetAge": 6,
+  "description": [
+    {
+      "ja": "ポケモンプラモコレクションNo.10 セレクトシリーズ ライコウ登場！",
+      "en": "Pokemon Plastic Model Collection No.10 Select Series Raikou is here!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5995_o_1hdvsnksb1mdi1o9cerkefepfv23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_5133/",
+  "extractedAt": "2025-12-06T17:55:15.512Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "pocket-monster",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5984",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5958",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5947",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5568",
+        "targetType": "item"
+      }
+    ]
+  }
+}

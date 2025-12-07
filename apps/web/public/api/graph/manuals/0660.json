@@ -1,0 +1,41 @@
+{
+  "id": "0660",
+  "type": "manual",
+  "name": {
+    "ja": "RG 1/144 RX-178 ガンダム Mk-II（ティターンズ仕様）",
+    "en": "RG 1/144 RX-178 Gundam Mk-II (Titans specification)"
+  },
+  "productNumber": "2166337",
+  "releaseDate": {
+    "ja": "2012年4月28日",
+    "year": 2012,
+    "month": 4,
+    "day": 28
+  },
+  "productImage": "https://bandai-hobby.net/images/157_3861_s_aknsdpc25apmvvpkkssshy6m3wm0.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/157_3861_s_aknsdpc25apmvvpkkssshy6m3wm0.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/660/",
+  "extractedAt": "2025-12-05T23:09:47.380Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/660.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "rg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_2881",
+        "targetType": "item"
+      }
+    ]
+  }
+}

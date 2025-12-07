@@ -1,0 +1,84 @@
+{
+  "id": "01_4310",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ティックバラン",
+    "en": "HG 1/144 Tikbalan"
+  },
+  "price": {
+    "amount": 1430,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2023年02月11日 (土)",
+    "year": 2023,
+    "month": 2,
+    "day": 11
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5222_s_cv14ckwpubcqy0r58tsxxmllgusg.jpg",
+    "https://bandai-hobby.net/images/155_5222_s_22pnzi5pyb67vu56gfqdh0y2665f.jpg",
+    "https://bandai-hobby.net/images/156_5222_s_eimh342xfurkthx6rfkn1368rahc.jpg",
+    "https://bandai-hobby.net/images/157_5222_s_80uko54n0e7peibqgkgq4vy8xj46.jpg",
+    "https://bandai-hobby.net/images/158_5222_s_ofgunln07ty9c7up94w0abhtd41q.jpg",
+    "https://bandai-hobby.net/images/159_5222_s_oq8298dsqux9u8p6nheq487f65jn.jpg",
+    "https://bandai-hobby.net/images/189_5222_s_yex7n5r3gar7m04ebeg7tvsgkl33.jpg",
+    "https://bandai-hobby.net/images/190_5222_s_0sg8o6wy38caxzep0jaa3svbxqyb.jpg",
+    "https://bandai-hobby.net/images/191_5222_s_n3drjw7p47hifw6rbdrnuclr9p56.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4310/",
+  "extractedAt": "2025-12-06T17:53:25.335Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0144",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-witch-of-mercury",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000216474",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000211616",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5422",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000203129",
+        "targetType": "item"
+      }
+    ]
+  }
+}

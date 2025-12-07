@@ -1,0 +1,81 @@
+{
+  "id": "01_2126",
+  "type": "item",
+  "name": {
+    "ja": "HGUC スーパーガンダム",
+    "en": "HGUC Super Gundam"
+  },
+  "price": {
+    "amount": 2420,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2002年11月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "「機動戦士Z ガンダム」に登場する「スーパーガンダム」のHGUC仕様のプラモデル。ガンダム Mk-IIとGディフェンサーがセットになって登場です。スーパーガンダムへの合体変形はもちろん、Gディフェンサーのみの飛行モードも再現できます。武器は専用ビームライフル、バズーカ、ビームサーベル、シールドが付属します。",
+      "en": "An HGUC plastic model of the \"Super Gundam \" that appears in \" Mobile Suit Z Gundam\". Gundam Mk-II and G Defensor are now available as a set. Not only can it be combined into Super Gundam, but it can also reproduce the flight mode of G Defenser alone. Weapons include a special beam rifle, bazooka, beam saber, and seal."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074432_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074432_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074432_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000074432_4.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2126/",
+  "extractedAt": "2025-12-06T17:48:42.282Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5468",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5375",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5162",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      }
+    ]
+  }
+}

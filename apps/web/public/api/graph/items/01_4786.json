@@ -1,0 +1,82 @@
+{
+  "id": "01_4786",
+  "type": "item",
+  "name": {
+    "ja": "HGUC 1/144 MSM-04 アッガイ Ver.GFT トリコロールペイント",
+    "en": "HGUC 1/144 MSM-04 Acguy Ver.GFT Tricolor Paint"
+  },
+  "price": {
+    "amount": 1781,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2013年05月03日 (金)",
+    "year": 2013,
+    "month": 5,
+    "day": 3
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "HGUC 1/144 MSM-04 アッガイ Ver.GFT トリコロールペイント　登場！",
+      "en": "HGUC 1/144 MSM-04 Acguy Ver.GFT tricolor paint now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_5668_s_wki5rnppnsdj3q8i48ygsa9gwo99.jpg",
+    "https://bandai-hobby.net/images/155_5668_s_2bs14eubg7mi2s7jbp59yo3q5a8n.jpg",
+    "https://bandai-hobby.net/images/156_5668_s_vk9s53jnf1cucd2wavm8c02eonjs.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4786/",
+  "extractedAt": "2025-12-06T17:54:24.538Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-universal-century",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4971",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4365",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_3669",
+        "targetType": "item"
+      }
+    ]
+  }
+}

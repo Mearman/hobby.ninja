@@ -1,0 +1,83 @@
+{
+  "id": "01_2868",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 レイダーガンダム",
+    "en": "HG 1/144 Raider Gundam"
+  },
+  "price": {
+    "amount": 1650,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2003年11月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「機動戦士ガンダム SEED」に登場するライバル機「レイダーガンダム」の1/144スケールHG仕様のプラモデル。特徴的なバックパックのウイングは可動により展開し、飛行形態を再現可能です。腰部のクローアームはABS製アームで可動式、各関節も従来のHGシリーズ同様広範囲に可動します。ビーム砲付きシールドを右腕に装備出来ます。",
+      "en": "A 1/144 Scale HG plastic model of the rival machine \"Raider Gundam \" that appears in \" Mobile Suit Gundam SEED\". The distinctive wings of the backpack can be moved and expanded to recreate the flying form. The claw arm on the waist is movable with an ABS arm, and each joint can move over a wide range like the conventional HG series. A Seal with a beam cannon can be equipped on the right arm."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_384_s_lbsu8lglf43p1rymxg0n1x8xkgtn.jpg",
+    "https://bandai-hobby.net/images/155_384_s_4ndvky8rugykzm1c4qh6l5m370lr.jpg",
+    "https://bandai-hobby.net/images/156_384_s_ouadau8shmp4uim22n516mvl5ulo.jpg",
+    "https://bandai-hobby.net/images/157_384_s_ru6r4g356r5n5i1f3xalql9314d2.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2868/",
+  "extractedAt": "2025-12-06T17:50:17.175Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "0883",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000181726",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_1930",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_384",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_83",
+        "targetType": "item"
+      }
+    ]
+  }
+}

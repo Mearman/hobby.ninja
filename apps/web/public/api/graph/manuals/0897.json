@@ -1,0 +1,41 @@
+{
+  "id": "0897",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 ガザC ハマーン専用機",
+    "en": "HGUC 1/144 Gaza C Haman special machine"
+  },
+  "productNumber": "1141907",
+  "releaseDate": {
+    "ja": "2006年4月8日",
+    "year": 2006,
+    "month": 4,
+    "day": 8
+  },
+  "productImage": "https://bandai-hobby.net/images/158_633_s_gzo5x320jup2ur1zbvjanb7po3mk.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/158_633_s_gzo5x320jup2ur1zbvjanb7po3mk.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/897/",
+  "extractedAt": "2025-12-05T23:09:47.737Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/897.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_5499",
+        "targetType": "item"
+      }
+    ]
+  }
+}

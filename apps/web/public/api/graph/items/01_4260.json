@@ -1,0 +1,104 @@
+{
+  "id": "01_4260",
+  "type": "item",
+  "name": {
+    "ja": "SD ガンダム EXスタンダード ガンダムエアリアル",
+    "en": "SD Gundam EX Standard Gundam Aerial"
+  },
+  "price": {
+    "amount": 660,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2022年10月15日 (土)",
+    "year": 2022,
+    "month": 10,
+    "day": 15
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、主人公機ガンダム・エアリアルを、SDEXスタンダードシリーズで立体化！",
+      "en": "From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", the main character Gundam Aerial has been made into a three-dimensional version of the SDEX Standard Series!"
+    },
+    {
+      "ja": "• SD ガンダム EXスタンダードならではのデザインアレンジ。",
+      "en": "• Design arrangement unique to SD Gundam EX Standard."
+    },
+    {
+      "ja": "• 大胆なアクションポーズを実現する可動範囲を確保。",
+      "en": "• Ensures a range of motion that allows for bold action poses."
+    },
+    {
+      "ja": "• ディテールや造形の密度感をスタイリッシュに演出。",
+      "en": "• Stylishly creates a sense of detail and density."
+    },
+    {
+      "ja": "• ビームライフル、ビームサーベル、シールドが付属。ライフルは背中に組み付け可能。シールドは分離させて本体肩に接続可能。",
+      "en": "• Beam rifle, beam saber, and Seal are included. The rifle can be attached to the back. Seal can be separated and connected to the main body shoulder."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "ビームサーベル×１",
+      "en": "Beam saber x1"
+    },
+    {
+      "ja": "ビームライフル×１",
+      "en": "Beam rifle x1"
+    },
+    {
+      "ja": "シールド×１",
+      "en": "Seal de x1"
+    },
+    {
+      "ja": "シール×１",
+      "en": "Seal×1"
+    }
+  ],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000180057_7.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_4260/",
+  "extractedAt": "2025-12-06T17:53:19.148Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2924",
+        "targetType": "item"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1052",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-witch-of-mercury",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sdex-standard",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      }
+    ]
+  }
+}

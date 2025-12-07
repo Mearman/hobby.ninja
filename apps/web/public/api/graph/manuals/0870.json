@@ -1,0 +1,40 @@
+{
+  "id": "0870",
+  "type": "manual",
+  "name": {
+    "ja": "HGUC 1/144 ガンダム GP03 デンドロビウム",
+    "en": "HGUC 1/144 Gundam GP03 Dendrobium"
+  },
+  "productNumber": "1107985",
+  "releaseDate": {
+    "ja": "2002年3月",
+    "year": 2002,
+    "month": 3
+  },
+  "productImage": "https://bandai-hobby.net/images/158_252_s_7lmcx6i39tbm4e0d18bzjij9frgh.jpg",
+  "thumbnailImage": "https://bandai-hobby.net/images/158_252_s_7lmcx6i39tbm4e0d18bzjij9frgh.jpg",
+  "sourceUrl": "https://manual.bandai-hobby.net/menus/detail/870/",
+  "extractedAt": "2025-12-05T23:09:47.700Z",
+  "scale": "1/144",
+  "pdfUrl": "https://manual.bandai-hobby.net/pdf/870.pdf",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-0083-stardust-memory",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg",
+        "targetType": "brand"
+      },
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "01_1618",
+        "targetType": "item"
+      }
+    ]
+  }
+}

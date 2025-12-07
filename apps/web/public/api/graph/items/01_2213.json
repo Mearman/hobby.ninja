@@ -1,0 +1,101 @@
+{
+  "id": "01_2213",
+  "type": "item",
+  "name": {
+    "ja": "LBXアキレス",
+    "en": "LBX Achilles"
+  },
+  "price": {
+    "amount": 1100,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2019年04月13日 (土)",
+    "year": 2019,
+    "month": 4,
+    "day": 13
+  },
+  "targetAge": 6,
+  "description": [
+    {
+      "ja": "主人公山野バンが操るLBXが登場！",
+      "en": "Introducing the LBX operated by the main character Ban Yamano!"
+    },
+    {
+      "ja": "• アキレスランス、アキレスシールド が付属",
+      "en": "• Achilles Lance and Achilles Seal are included."
+    }
+  ],
+  "accessories": [
+    {
+      "ja": "アキレスランス×1",
+      "en": "Achilles Lance x1"
+    },
+    {
+      "ja": "アキレスシールド×1",
+      "en": "Achilles Seal × 1"
+    }
+  ],
+  "contents": [
+    {
+      "ja": "成型品×6",
+      "en": "Molded product x 6"
+    },
+    {
+      "ja": "ホイルシール×1",
+      "en": "Foil Seal×1"
+    },
+    {
+      "ja": "取扱説明書×1",
+      "en": "Handling manual×1"
+    }
+  ],
+  "images": [
+    "https://bandai-hobby.net/images/153_3158_s_9cq5u2nw4f8u8zfa0l0mg0g2k6t4.jpg",
+    "https://bandai-hobby.net/images/155_3158_s_9xa1yoh0tshsufids99xux71dz36.jpg",
+    "https://bandai-hobby.net/images/156_3158_s_mh6v0t0z6h4f5h3pwl21b5ethkxi.jpg",
+    "https://bandai-hobby.net/images/157_3158_s_ydfpo5065od94hr2vklpcbbuelv3.jpg",
+    "https://bandai-hobby.net/images/158_3158_s_j5z8vxfgfojtnkryf0hq8chl514o.jpg",
+    "https://bandai-hobby.net/images/159_3158_s_emd32zzusjeubee4lub7rpvxg2wb.jpg",
+    "https://bandai-hobby.net/images/189_3158_s_18khioy4fl4lpoz9hemgmrhj24d9.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2213/",
+  "extractedAt": "2025-12-06T17:48:53.354Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "danball-senki",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000215196",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000215197",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000210042",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000210041",
+        "targetType": "item"
+      }
+    ]
+  }
+}

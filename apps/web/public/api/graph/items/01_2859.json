@@ -1,0 +1,75 @@
+{
+  "id": "01_2859",
+  "type": "item",
+  "name": {
+    "ja": "30MM 1/144 無人偵察用オプションアーマー[ラビオット用/パープル]",
+    "en": "30MM 1/144 Optional armor for unmanned reconnaissance [for Rabiot/Purple]"
+  },
+  "price": {
+    "amount": 440,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2020年09月26日 (土)",
+    "year": 2020,
+    "month": 9,
+    "day": 26
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3841_s_hi764re1a7zb0p4fw3y65fbop7ir.jpg",
+    "https://bandai-hobby.net/images/155_3841_s_8llr76kpzc8179udqclct4c3pfv2.jpg",
+    "https://bandai-hobby.net/images/156_3841_s_76aeru6urkniv7zi51m0dsn1f03r.jpg",
+    "https://bandai-hobby.net/images/157_3841_s_itaxgf4uzrc3ttf2vr1xae01myfr.jpg",
+    "https://bandai-hobby.net/images/158_3841_s_z9vkobedxs5r45xro9nvsd2fyref.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2859/",
+  "extractedAt": "2025-12-06T17:50:16.351Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "3698",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-missions",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "30-minutes-label",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5972",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5973",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5974",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5964",
+        "targetType": "item"
+      }
+    ]
+  }
+}

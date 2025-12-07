@@ -1,0 +1,74 @@
+{
+  "id": "01_1232",
+  "type": "item",
+  "name": {
+    "ja": "ＭＧ 1/100 MS-14B ユーマ・ライトニング専用高機動型ゲルググ",
+    "en": "MG 1/100 MS-14B High Mobility Type Gelgoog for Yuma Lightning"
+  },
+  "price": {
+    "amount": 6050,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2018年01月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2165_o_1bt3n4ce1m5r1044m241dl9idl23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1232/",
+  "extractedAt": "2025-12-06T17:02:51.961Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-gradepreban-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5994",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000220190",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000220189",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000216105",
+        "targetType": "item"
+      }
+    ]
+  }
+}

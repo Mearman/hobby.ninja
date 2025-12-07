@@ -1,0 +1,74 @@
+{
+  "id": "01_2938",
+  "type": "item",
+  "name": {
+    "ja": "1/144 マラサイ",
+    "en": "1/144 Marasai"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1985年07月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "『機動戦士Z ガンダム』より、1/144スケールで、マラサイが登場。",
+      "en": "From \"Mobile Suit Z Gundam\", Marasai appears in 1/144 scale."
+    },
+    {
+      "ja": "シールドは右肩への脱着が可能で、折りたたみ機構を設定どおり再現しています。ビーム・ライフルのエネルギーパックが脱着可能です。ビーム・サーベルは展開形態１本と、収納形態２本が付いています。収納形態２本はシールド内にホールドできます。",
+      "en": "The Seal can be attached to and removed from the right shoulder, and the folding mechanism is reproduced as set. The beam rifle's energy pack is removable. The beam saber comes with one expanded form and two stored forms. Storage form: Two bottles can be held inside the seal."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3914_s_ybo8bc127f6268lwb60v8f9imbau.jpg",
+    "https://bandai-hobby.net/images/155_3914_s_6ed7jh9pboela0wy2w0j9l9vfouc.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2938/",
+  "extractedAt": "2025-12-06T17:50:25.425Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5468",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5375",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5162",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      }
+    ]
+  }
+}

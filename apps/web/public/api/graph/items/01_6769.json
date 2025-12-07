@@ -1,0 +1,88 @@
+{
+  "id": "01_6769",
+  "type": "item",
+  "name": {
+    "ja": "30MF カスタマイズストラクチャー1",
+    "en": "30MF Customized Structure 1"
+  },
+  "price": {
+    "amount": 1100,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2025年11月15日 (土)",
+    "year": 2025,
+    "month": 11,
+    "day": 15
+  },
+  "targetAge": 15,
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://d3bk8pkqsprcvh.cloudfront.net/hobby/jp/product/2025/11/yWN9H7lIx38c5LbN/VshrVFNv9GpOa11T.jpeg?Expires=1765044174&Key-Pair-Id=K7AVJM1114TH7&Signature=RBoWL2MzHq7XOj-k7ZJaP8Sj2~Uf0g2sM7Z0eEG9zgr3HLqCXoo9otnin2D3244I3wqRoKu47EC6gHNdO8DN56SYRVhD~AUB0i~sv9llWoQBTsFyMnkXgiKrdP08S-IKwE3JHQPLWyNPOVwDk4eUwIKul537Fp4NBSXACkPejF0n6WA9sCLxDmCQ9Dmy8LdhunCQT14P~27p~uxfVkR5DrOPmomjZUoLtoTlvCz92Da9m-yCQz8pVy1yXlyzrU8m-jbRdKsflVW9BGIFOoQv2sruoFclrJXR7x0Zktr5BWOp9kdVllYJQcACvuOO-OCzLjfb6nfbEh~252ZbDkzAOw__",
+    "https://d3bk8pkqsprcvh.cloudfront.net/hobby/jp/product/2025/11/j7jTrlZoalFN1nfk/pEneCqvMtsJnNMvO.jpeg?Expires=1765044174&Key-Pair-Id=K7AVJM1114TH7&Signature=dU8vm7Gbkf-59JhZKwkmPb~NJK2l5~QMzIY98DJVplEm7~kHUf~C87tO~gTdB7o8PAT3nzfhU2ojXdIpRYI9vffG8cUQOSFyXfDX7nuCMbiik3~KHRbYNkhAg1cZ28iA8mh9-jaLKkj7uumdULTZ89xwjXoBeTdKdCx1-xwKzPuN0up4CqEqR6X6-K2JYyitNrWvbCVr3RcUr9loWZ4JAJz7eCgXPfMgephQyBvyxDE9iSFWBeSMFfiTRwswR29lTsD79G3Qo1yjeCKfM5WByaD5702yFRxSCmhFpc7c3XgS1WbAg32DZff58sQFa~4u73AchjN31y0s2oQKSwdNPQ__",
+    "https://d3bk8pkqsprcvh.cloudfront.net/hobby/jp/product/2025/11/CcvgHPEwOGiDAe4O/4YYmvsGQQ1g42w3O.jpeg?Expires=1765044174&Key-Pair-Id=K7AVJM1114TH7&Signature=NMewz~JwjYc9O8Q598j2Ex-5lmfymV37PB53vVttDdEoa8toSGMP1cybTLdcgo7ZS0pjBa0DUe7gP2b4wqL0hs3PHYHdpJn8CfRU-SlXYFeni0VSkE1G46gn6W1FmDoW7V~7OUoU3aE6KcAYa6XejF9hhhGA1OhQK5ljWPmKaBnmqeYIA5riL1kioh2lFV7iPfYt59TVY-HsIlexFfu3gC2QaydxV4uu9c7DWfRhrjbsenkUsoVHwjPZvR55dnCEYl44rfN7RYNA1c-gg-tpnlprCrHAyPRXpf-nYFMRQGGCIEF~zo2JADziobv54vs44xAdMUMXXYSwPYtAdPKmyw__",
+    "https://d3bk8pkqsprcvh.cloudfront.net/hobby/jp/product/2025/11/TUgvnZha8ObVQWey/uPmXGai6PfIBq6K0.jpeg?Expires=1765044174&Key-Pair-Id=K7AVJM1114TH7&Signature=k2gNroEugj3-ZoggNXFL-FZjwPfAIeGXqzeiYbA556K2ln-jx2uxwrDhrsfFiQpdG70nA~XVnA~~KL7MS6toy1Z6kkdTbcUB69pcXOPG6UVib1iecQz8PLRL~HmhFX0YaNfjUnwr5ssVHmgNsp8eL4vhaSkfxkZteohDAXxA2KPfr5UfxN1B5ze2vJG21fDKwuUv2AOk7RASKjWSc0eOb4Z2jlSxUYYVKpkfiy6Ya8GuL4295rPcP1jVmEiTOVV7s~NYOfgZuG9-Th6OCACoyuswRlM9gJ6isY3kDyZIWx~9Tbl9xyoLQD1HuJBinH-BAp1CkHgEB55KzgGLIm~Mcg__",
+    "https://d3bk8pkqsprcvh.cloudfront.net/hobby/jp/product/2025/11/CDH1TnhTK6Rh2cHy/3vVgw9yH4DnuIKGH.jpeg?Expires=1765044174&Key-Pair-Id=K7AVJM1114TH7&Signature=DycERnOqyVyofK2VUpxE4mjM~lF4AuSBJy0o3LqAcSOaiPkwiM~Ch663oF9hEk2F8dJnJt5Ps-UoSak9flPeuy9z6P5oIEhnDyU7s0FQKeFZc41aFaVVCMT-A8FuCMXSYsBNTVpJOId9hIWzbJZPU3wIeCKI6juVkJyNZftQ2MHcHd5oFZNGPwGKIs8reHoWpBXwECWfXQHubYNtwsEcicBtbcUT8BS1VxaHe5mMa2ZumNRMk9arBU8EKNfRjWXSFOabTlIlwh0GVtznNa-dPDm7N-jDtdhMqtOYqidfeDUaUPwFIwQ3zLjEEITSXsAVe2Avku3udoS5fEF9uobYAA__",
+    "https://d3bk8pkqsprcvh.cloudfront.net/hobby/jp/product/2025/11/KASJg4YhCazVEgtU/Vd64FsFftpqB8NHy.jpeg?Expires=1765044174&Key-Pair-Id=K7AVJM1114TH7&Signature=Lj62diNvO04H5HvWhwZZWLsM5NJyobmrXKGHBBLnuxuP-2tlHS0FLe69KptZYPD6Kch0UOSQTLOEpnusV2G2ms30iMGJSAmcXINUkGxdXTT6E7cG3LqQwP5Qw6aH3OLGg6NUNjfwqXkITxpje3M3r5XGN8wHmKymTBibt3rBIV0z-XPOnW9H8W8oUaGPla6OM9arCKxBg89wc419ELE4fItXuvkIInLQA~87N1GmnGE4QgPrDSd0cYKkJ6FlAIfYzKnWcE-7~f8MuQpTScyfploNsNpTXNXaMZmGZUC3icguT~YnV~Co7rfpGx4xZvogJlfHAgC30lWDol0fWajoYA__",
+    "https://d3bk8pkqsprcvh.cloudfront.net/hobby/jp/product/2025/11/XUlx8NwQGGI1DdhS/2YHwqS7LSygOQfh9.jpeg?Expires=1765044174&Key-Pair-Id=K7AVJM1114TH7&Signature=MlLrcY0ZHWBzvVsNH21bpsGz5KwqBUbAKsV45oMlSJtaOQcFFRMgty~ydDp2i9sEIqitsc-MbcR3zU~Dj5vKWrm60OUflWH3PpMKw0MgjYAhRPnLH-96JJ-z2L3L6TUU5rdz46nXIx8aFv7E1VoLOvz82Lfcqqf1eDxYiL6W5xxpvVkM8h6StG0Lv2M0i5DWD3Q7C7gjtGJyYXW9~9hOWPjk8vqrh92z7QL503ShGxszeaMLRwiePKIdmNXvK6Y8eql-PxgEcTktaKxzApxy1Xdown9rZZBdsYxKoLU1Zj53y1GOljildhsv0x4Zaqw-V~rAHc7PAXHFV2WrOaoE5g__",
+    "https://d3bk8pkqsprcvh.cloudfront.net/hobby/jp/product/2025/11/5kPSnUoDnjTNZzzl/XfcPIChWmxX4UQaK.jpeg?Expires=1765044174&Key-Pair-Id=K7AVJM1114TH7&Signature=WPRaRmrR3iNQwSFV1TYh4lLilSYptVMufVpzqFLdswEeTpCVOwYmaOVKneA~xu2EJ-27WYcowShDvSbIbi6fX8QKpwvB2dERXfOEzRMP058Xi8eKiAxB4SMC0sIMg-3xIcSoXWopdo2LXE0XJcQ25gGrnnlP5rJO5TzOzuOrHZnBuNdAOqgbyH1TauprI2hmjfxf4D6mFyaMMF0sJYHEms-jsjPtyIprBISEHVwTphmeY1Ig5EYTVT84o62BM6RAYpv25fERrik0ZKATPYbZtMQ1jfhSSINsztRSEUrn-OLpbHyv5stVrFP1X4sQsPwVAqq22sV0WhXAfD7K-ImJ0g__",
+    "https://d3bk8pkqsprcvh.cloudfront.net/hobby/jp/product/2025/11/xaueZWZnoJQj1vzh/mxQ4rnRgjK9XyicB.jpg?Expires=1765044174&Key-Pair-Id=K7AVJM1114TH7&Signature=WlB31miGXi6KtTxYDNu8J9oOfYxgwckFAqgMeAKgaWPHOV4HXozU4gf9tZ58kZqryA68BKsfa~aPEGaI~MCGJCHcW-3oodaeXqFbMdcjN9AqhjoAXOkQ4bnUzydGvQt0L0mpsNWHO9sRwZKfA-Y9q~V6n3h13N7GAlVt~U4MwOpRuyrSr5RQ3VqdH6zQZoOWIzLHbfAjnF7YjD5DhtkXw87ATTM8aiJCLSmTLECsbowmPhLbzWk3~Lgmu8S3p-6Rr-7Izd9hnxnYMuVkxVWgixGbdRhHD5Dj5uU9zV-dBiuhCT6kLfLTTaSw-mL7ocNPmM3bXATFKgSb9FmmbvMIrg__"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_6769/",
+  "extractedAt": "2025-12-06T17:57:56.245Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6931",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6932",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6776",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "30-minutes-fantasy",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "character-plastic-model",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_6768",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5978",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5979",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5980",
+        "targetType": "item"
+      }
+    ]
+  }
+}

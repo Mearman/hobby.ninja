@@ -1,0 +1,79 @@
+{
+  "id": "01_1469",
+  "type": "item",
+  "name": {
+    "ja": "HG 1/144 ガンダム MK2",
+    "en": "HG 1/144 Gundam MK2"
+  },
+  "price": {
+    "amount": 1100,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1990年07月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "『機動戦士Z ガンダム』より、1/144スケールで、HGシリーズ　ガンダム Mk-2が登場。",
+      "en": "From \"Mobile Suit Z Gundam\", the HG series Gundam Mk-2 appears in 1/144 scale."
+    },
+    {
+      "ja": "頭部バルカンポッドは脱着可能です。バックパックのスラスターが左右に可動し、ビーム・サーベルが収納できます。武器はビーム・ライフル、ハイパー・バズーカ、ビーム・サーベル、シールドが、各武器専用の握り手とともに付いています。",
+      "en": "The head vulcan pod is removable. The thruster of the backpack can move left and right, and the beam saber can be stored. Weapons include a beam rifle, hyper bazooka, beam saber, and seal, with each weapon's own grip."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_2391_s_h562kyq112mmhw5w2v5rpsltk20y.jpg",
+    "https://bandai-hobby.net/images/155_2391_s_q0z8t4gn4uc9nvyllsvicwwhj7vu.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_1469/",
+  "extractedAt": "2025-12-06T17:25:27.386Z",
+  "edges": {
+    "inbound": [],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-z-gundam",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "hg-high-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5468",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5375",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5162",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_4985",
+        "targetType": "item"
+      }
+    ]
+  }
+}

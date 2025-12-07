@@ -1,0 +1,71 @@
+{
+  "id": "01_2884",
+  "type": "item",
+  "name": {
+    "ja": "SD ガンダム Gジェネレーション8 ザク3改",
+    "en": "SD Gundam G Generation 8 Zaku 3 Kai"
+  },
+  "price": {
+    "amount": 440,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "1999年06月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "description": [
+    {
+      "ja": "「ＳＤガンダムＧジェネレーション８ ザク３改」が登場！",
+      "en": "\"SD Gundam G Generation 8 Zaku 3 Kai\" is now available!"
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_3864_s_4t1lbzw9weprhtbejbe0z7pxwim7.jpg",
+    "https://bandai-hobby.net/images/155_3864_s_nfti87rqs9h2ekf17d9z2l6jxa7j.jpg",
+    "https://bandai-hobby.net/images/156_3864_s_l5trrj7g0zkuv80ig463ue9p4v7q.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2884/",
+  "extractedAt": "2025-12-06T17:50:18.780Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2886",
+        "targetType": "item"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-zz",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "sd-gundam-series",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_2886",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_814",
+        "targetType": "item"
+      }
+    ]
+  }
+}

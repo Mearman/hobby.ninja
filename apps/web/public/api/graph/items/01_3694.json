@@ -1,0 +1,89 @@
+{
+  "id": "01_3694",
+  "type": "item",
+  "name": {
+    "ja": "ＭＧ 1/100 トールギスＦ ＥＷ",
+    "en": "MG 1/100 Tallgeese F EW"
+  },
+  "price": {
+    "amount": 7040,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2021年10月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 15,
+  "scale": "1/100",
+  "description": [],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_1.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_2.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_3.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_4.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_5.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_6.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_7.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_8.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_9.jpg",
+    "https://bandai-a.akamaihd.net/bc/img/model/xl/1000160952_10.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_3694/",
+  "extractedAt": "2025-12-06T17:52:01.044Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "2360",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-gradepreban-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "prevan-gunpla",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_BRAND",
+        "targetId": "mg-master-grade",
+        "targetType": "brand"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5994",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000220190",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000220189",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "item-1000216105",
+        "targetType": "item"
+      }
+    ]
+  }
+}

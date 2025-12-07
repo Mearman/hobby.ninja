@@ -1,0 +1,76 @@
+{
+  "id": "01_2857",
+  "type": "item",
+  "name": {
+    "ja": "1/144 モビルディン",
+    "en": "1/144 Mobile Din"
+  },
+  "price": {
+    "amount": 550,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "taxRate": 10
+  },
+  "releaseDate": {
+    "ja": "2003年11月",
+    "year": 0,
+    "month": 0
+  },
+  "targetAge": 8,
+  "scale": "1/144",
+  "description": [
+    {
+      "ja": "「機動戦士ガンダム SEED」に登場するライバル機「ディン」の1/144スケールのプラモデル。低年齢層でも簡単に組み立てられるように、パーツはシンプルに構成しています。サイドアーマーのガンホルスター、背部ウイングをリアルに再現しています。また、頭部カバーの差し替えで飛行状態も再現出来ます。武器は76?重突撃機銃と90?対空散弾銃が付属します。",
+      "en": "A 1/144 scale plastic model of the rival machine \"Din \" that appears in \" Mobile Suit Gundam SEED\". The parts are designed in a simple manner so that even younger people can easily assemble it. The side armor gun holster and back wing are realistically reproduced. Also, by replacing the head cover, you can recreate the flight condition. Weapons include a 76? heavy assault machine gun and a 90? anti-aircraft shotgun."
+    }
+  ],
+  "accessories": [],
+  "contents": [],
+  "images": [
+    "https://bandai-hobby.net/images/153_383_s_11rmff2s3ag8gez5nkvu64ztx4lj.jpg",
+    "https://bandai-hobby.net/images/155_383_o_1hgi5gnhb1gcstfb1jm21sbk1rpn23.jpg"
+  ],
+  "sourceUrl": "https://bandai-hobby.net/item/01_2857/",
+  "extractedAt": "2025-12-06T17:50:16.148Z",
+  "edges": {
+    "inbound": [
+      {
+        "type": "MANUAL_FOR",
+        "targetId": "1123",
+        "targetType": "manual"
+      }
+    ],
+    "outbound": [
+      {
+        "type": "BELONGS_TO_SERIES",
+        "targetId": "mobile-suit-gundam-seed",
+        "targetType": "series"
+      },
+      {
+        "type": "BELONGS_TO_CATEGORY",
+        "targetId": "gunpla",
+        "targetType": "category"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5994",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5440",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5441",
+        "targetType": "item"
+      },
+      {
+        "type": "RELATED_TO",
+        "targetId": "01_5365",
+        "targetType": "item"
+      }
+    ]
+  }
+}
