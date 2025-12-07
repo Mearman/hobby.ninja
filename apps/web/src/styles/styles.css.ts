@@ -1,4 +1,4 @@
-import { style, globalStyle } from "@vanilla-extract/css";
+import { style, globalStyle, keyframes } from "@vanilla-extract/css";
 
 /**
  * Vanilla Extract styles for custom styling beyond Mantine components.
@@ -47,10 +47,12 @@ export const featureCard = style({
 	height: "100%",
 	transition: "all 0.2s ease",
 	border: "1px solid var(--mantine-color-gray-3)",
-	"&:hover": {
-		transform: "translateY(-2px)",
-		boxShadow: "var(--mantine-shadow-lg)",
-		borderColor: "var(--mantine-color-blue-6)",
+	selectors: {
+		"&:hover": {
+			transform: "translateY(-2px)",
+			boxShadow: "var(--mantine-shadow-lg)",
+			borderColor: "var(--mantine-color-blue-6)",
+		},
 	},
 });
 export const aboutContainer = style({});
@@ -330,43 +332,43 @@ export const statusIndicatorDiscontinued = style({
 	color: "var(--mantine-color-red-8)",
 });
 
+// Animation keyframes
+const skeletonLoading = keyframes({
+	"0%": { backgroundPosition: "200% 0" },
+	"100%": { backgroundPosition: "-200% 0" },
+});
+
+const fadeIn = keyframes({
+	"0%": { opacity: 0 },
+	"100%": { opacity: 1 },
+});
+
+const slideUp = keyframes({
+	"0%": {
+		opacity: 0,
+		transform: "translateY(20px)",
+	},
+	"100%": {
+		opacity: 1,
+		transform: "translateY(0)",
+	},
+});
+
 // Loading states
 export const loadingSkeleton = style({
 	background: "linear-gradient(90deg, var(--mantine-color-gray-1) 25%, var(--mantine-color-gray-2) 50%, var(--mantine-color-gray-1) 75%)",
 	backgroundSize: "200% 100%",
-	animation: "skeleton-loading 1.5s infinite",
+	animation: `${skeletonLoading} 1.5s infinite`,
 	borderRadius: "var(--mantine-radius-sm)",
 });
 
-// Animation keyframes
-export const fadeIn = style({
-	animation: "fade-in 0.3s ease-out",
+// Animation classes
+export const fadeInClass = style({
+	animation: `${fadeIn} 0.3s ease-out`,
 });
 
-export const slideUp = style({
-	animation: "slide-up 0.3s ease-out",
-});
-
-// Define animations
-globalStyle("@keyframes skeleton-loading", {
-	0: { backgroundPosition: "200% 0" },
-	100: { backgroundPosition: "-200% 0" },
-});
-
-globalStyle("@keyframes fade-in", {
-	0: { opacity: 0 },
-	100: { opacity: 1 },
-});
-
-globalStyle("@keyframes slide-up", {
-	0: {
-		opacity: 0,
-		transform: "translateY(20px)",
-	},
-	100: {
-		opacity: 1,
-		transform: "translateY(0)",
-	},
+export const slideUpClass = style({
+	animation: `${slideUp} 0.3s ease-out`,
 });
 
 // Mobile responsiveness
