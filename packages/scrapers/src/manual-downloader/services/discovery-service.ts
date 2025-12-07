@@ -5,7 +5,7 @@
  * when the range is unknown and may contain gaps.
  */
 
-import { DiscoveryResult, GapPattern, IdValidationResult, RangeExpansionResult } from "../types";
+import { DiscoveryResult, GapPattern, IdValidationResult, RangeExpansionResult } from "../types/types";
 
 import { ErrorFactory, NetworkError } from "./errors";
 import { HttpClient } from "./http-client";

@@ -1,5 +1,7 @@
-import type { GundamData } from "@hobby-ninja/types";
-import { LanguageDetector, ProfileManager, RenderingDetector } from "@hobby-ninja/utils";
+import type { GundamData } from "@hobby-ninja/types/product";
+import { LanguageDetector } from "@hobby-ninja/utils/language";
+import { ProfileManager } from "@hobby-ninja/utils/profile";
+import { RenderingDetector } from "@hobby-ninja/utils/rendering";
 import type { CheerioAPI, Cheerio } from "cheerio";
 import type { Element } from "domhandler";
 
