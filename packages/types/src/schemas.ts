@@ -7,11 +7,11 @@ import { z } from "zod";
 
 // Base schema patterns
 export const TimestampSchema = z.object({
-	createdAt: z.string().datetime(),
-	updatedAt: z.string().datetime().optional(),
+	createdAt: z.iso.datetime(),
+	updatedAt: z.iso.datetime().optional(),
 });
 
-export const IdSchema = z.string().uuid();
+export const IdSchema = z.uuid();
 
 // Bandai SKU pattern (e.g., "HG-1/144-RX-78-2", "MG-1/100-MSN-04")
 export const BandaiSKUSchema = z.string()
@@ -39,7 +39,7 @@ export const RatingSchema = z.number()
 	.max(10, { message: "Rating cannot exceed 10" });
 
 // URL validation
-export const URLSchema = z.string().url({ message: "Invalid URL format" });
+export const URLSchema = z.url({ message: "Invalid URL format" });
 
 // User data schemas for IndexedDB storage
 export const UserSettingsSchema = z.object({
@@ -50,19 +50,19 @@ export const UserSettingsSchema = z.object({
 	showDiscontinued: z.boolean().default(false),
 	defaultSort: z.enum(["name", "release_date", "grade", "price"]).default("name"),
 	notifications: z.boolean().default(true),
-}).merge(TimestampSchema);
+}).extend(TimestampSchema.shape);
 
 export const CollectionEntrySchema = z.object({
 	id: IdSchema,
 	sku: BandaiSKUSchema,
 	quantity: z.number().min(1).default(1),
 	condition: z.enum(["new", "used", "damaged", "box_only"]).default("new"),
-	purchaseDate: z.string().datetime().optional(),
+	purchaseDate: z.iso.datetime().optional(),
 	purchasePrice: PriceSchema.optional(),
 	notes: z.string().max(1000).optional(),
-	addedAt: z.string().datetime(),
-	updatedAt: z.string().datetime().optional(),
-}).merge(TimestampSchema);
+	addedAt: z.iso.datetime(),
+	updatedAt: z.iso.datetime().optional(),
+}).extend(TimestampSchema.shape);
 
 export const WishlistEntrySchema = z.object({
 	id: IdSchema,
@@ -70,9 +70,9 @@ export const WishlistEntrySchema = z.object({
 	priority: z.enum(["low", "medium", "high"]).default("medium"),
 	targetPrice: PriceSchema.optional(),
 	notes: z.string().max(1000).optional(),
-	addedAt: z.string().datetime(),
-	updatedAt: z.string().datetime().optional(),
-}).merge(TimestampSchema);
+	addedAt: z.iso.datetime(),
+	updatedAt: z.iso.datetime().optional(),
+}).extend(TimestampSchema.shape);
 
 export const BuildLogSchema = z.object({
 	id: IdSchema,
@@ -81,13 +81,13 @@ export const BuildLogSchema = z.object({
 	content: z.string().min(1).max(10_000),
 	status: z.enum(["planning", "in_progress", "completed", "on_hold"]).default("planning"),
 	progress: z.number().min(0).max(100).default(0),
-	startDate: z.string().datetime().optional(),
-	completionDate: z.string().datetime().optional(),
+	startDate: z.iso.datetime().optional(),
+	completionDate: z.iso.datetime().optional(),
 	images: z.array(URLSchema).default([]),
 	tags: z.array(z.string().max(50)).default([]),
-	addedAt: z.string().datetime(),
-	updatedAt: z.string().datetime().optional(),
-}).merge(TimestampSchema);
+	addedAt: z.iso.datetime(),
+	updatedAt: z.iso.datetime().optional(),
+}).extend(TimestampSchema.shape);
 
 // CLI configuration schemas
 export const CLISchema = z.object({
@@ -105,7 +105,7 @@ export const APIResponseSchema = z.object({
 	success: z.boolean(),
 	data: z.unknown(),
 	error: z.string().optional(),
-	timestamp: z.string().datetime(),
+	timestamp: z.iso.datetime(),
 });
 
 // Security and monitoring schemas
@@ -115,12 +115,12 @@ export const SecurityEventSchema = z.object({
 	severity: z.enum(["low", "medium", "high", "critical"]),
 	message: z.string().min(1).max(1000),
 	details: z.record(z.string(), z.unknown()).optional(),
-	timestamp: z.string().datetime(),
+	timestamp: z.iso.datetime(),
 	resolved: z.boolean().default(false),
 });
 
 export const PerformanceMetricsSchema = z.object({
-	timestamp: z.string().datetime(),
+	timestamp: z.iso.datetime(),
 	lcp: z.number().min(0), // Largest Contentful Paint
 	fid: z.number().min(0), // First Input Delay
 	cls: z.number().min(0), // Cumulative Layout Shift
