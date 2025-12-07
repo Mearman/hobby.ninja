@@ -1,8 +1,11 @@
-import { Container, Title, Text, Card, Badge, Button, Group, Stack, SimpleGrid, Grid, Center, Space, ThemeIcon } from "@mantine/core";
+import { Container, Title, Text, Card, Badge, Button, Group, Stack, SimpleGrid, Grid, Center, Space, ThemeIcon, Skeleton } from "@mantine/core";
 import { IconClipboardList, IconHeart, IconPlus, IconSearch, IconStar, IconFolderOpen, IconPackage, IconChartBar, IconTag, IconSettings } from "@tabler/icons-react";
 import { Link } from "@tanstack/react-router";
 import React, { useState, useEffect } from "react";
+
 import { collectionService } from "../services/collectionService";
+import { hobbyTypeService } from "../services/hobbyTypeService";
+import { HobbyType } from "../types/hobby";
 
 interface CollectionStats {
 	totalCollections: number;
@@ -23,45 +26,24 @@ export function CollectionPage(): React.ReactElement {
 		recentlyAdded: 0,
 	});
 	const [loading, setLoading] = useState(true);
-
-	const hobbyTypes = [
-		{
-			id: "model_kits",
-			name: "Model Kits",
-			icon: "🤖",
-			description: "Plastic models, gunpla, aircraft",
-			color: "blue",
-		},
-		{
-			id: "trading_cards",
-			name: "Trading Cards",
-			icon: "🃏",
-			description: "Pokémon, Magic, sports cards",
-			color: "purple",
-		},
-		{
-			id: "miniatures",
-			name: "Miniatures",
-			icon: "🎭",
-			description: "Warhammer, D&D, gaming miniatures",
-			color: "red",
-		},
-		{
-			id: "other",
-			name: "Other",
-			icon: "📦",
-			description: "Custom hobby types",
-			color: "gray",
-		},
-	];
+	const [hobbyTypes, setHobbyTypes] = useState<HobbyType[]>([]);
+	const [hobbyTypeStats, setHobbyTypeStats] = useState<Record<string, { totalCollections: number; totalItems: number; recentItems: number }>>({});
 
 	useEffect(() => {
-		const loadStats = async () => {
+		const loadData = async () => {
 			try {
+				setLoading(true);
+
+				// Load dynamic hobby types
+				const types = await hobbyTypeService.getHobbyTypes();
+				setHobbyTypes(types);
+
+				// Load collection stats
 				const collections = await collectionService.getCollections();
 				const items = await collectionService.getItems();
 
-				setStats({
+				// Calculate overall stats
+				const overallStats = {
 					totalCollections: collections.length,
 					totalItems: items.length,
 					totalValue: 0, // TODO: Calculate from items
@@ -71,15 +53,27 @@ export function CollectionPage(): React.ReactElement {
 						weekAgo.setDate(weekAgo.getDate() - 7);
 						return addedDate > weekAgo;
 					}).length,
+				};
+				setStats(overallStats);
+
+				// Load stats for each hobby type
+				const statsPromises = types.map(async (type) => {
+					const typeStats = await hobbyTypeService.getHobbyTypeStats(type.id);
+					return { [type.id]: typeStats };
 				});
+
+				const statsResults = await Promise.all(statsPromises);
+				const combinedStats = statsResults.reduce((acc, curr) => ({ ...acc, ...curr }), {});
+				setHobbyTypeStats(combinedStats);
+
 			} catch (error) {
-				console.error("Failed to load collection stats:", error);
+				console.error("Failed to load collection data:", error);
 			} finally {
 				setLoading(false);
 			}
 		};
 
-		loadStats();
+		loadData();
 	}, []);
 
 	const features = [
@@ -109,6 +103,40 @@ export function CollectionPage(): React.ReactElement {
 		},
 	];
 
+	// Loading state
+	if (loading) {
+		return (
+			<Container size="lg" py="xl">
+				<Stack gap="xl">
+					<Skeleton height={48} width={300} />
+					<Card p="xl" radius="lg" withBorder={true}>
+						<Stack gap="md">
+							{[1, 2, 3, 4, 5, 6].map((i) => (
+								<Skeleton key={i} height={40} radius="md" />
+							))}
+						</Stack>
+					</Card>
+					{/* Hobby Types Loading Skeleton */}
+					<Title order={2} size={36} mb="md" ta="center" c="gray.9">
+						Start a Collection
+					</Title>
+					<SimpleGrid cols={{ base: 1, sm: 2 }} spacing="xl">
+						{[1, 2, 3, 4].map((i) => (
+							<Card key={i} p="xl" radius="lg" shadow="md" withBorder={true}>
+								<Stack gap="lg" align="center">
+									<Skeleton width={80} height={80} radius="xl" />
+									<Skeleton height={24} width={120} />
+									<Skeleton height={16} width={200} />
+									<Skeleton height={36} width={150} />
+								</Stack>
+							</Card>
+						))}
+					</SimpleGrid>
+				</Stack>
+			</Container>
+		);
+	}
+
 	return (
 		<>
 			{/* Hero Section */}
@@ -116,7 +144,7 @@ export function CollectionPage(): React.ReactElement {
 				background: "linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%)",
 				color: "white",
 				padding: "4rem 0",
-				textAlign: "center"
+				textAlign: "center",
 			}}>
 				<Container size="lg">
 					<Stack gap="xl">
@@ -248,7 +276,7 @@ export function CollectionPage(): React.ReactElement {
 							withBorder={true}
 							style={{
 								transition: "all 0.2s ease",
-								border: "1px solid var(--mantine-color-gray-3)"
+								border: "1px solid var(--mantine-color-gray-3)",
 							}}
 							component={Link}
 							to={`/collection/${hobby.id}`}

@@ -2,6 +2,7 @@ import { Container, Title, Text, Card, Button, Group, Stack, TextInput, Select, 
 import { IconSave, IconArrowLeft, IconPhoto, IconPlus, IconX } from "@tabler/icons-react";
 import { Link, useParams, useNavigate } from "@tanstack/react-router";
 import React, { useState, useEffect } from "react";
+
 import { collectionService } from "../services/collectionService";
 import { UniversalItem, ItemStatus } from "../types/hobby";
 
@@ -101,8 +102,8 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 						notes: itemData.notes || "",
 						tags: itemData.tags || [],
 					});
-				} catch (err) {
-					console.error("Failed to load item:", err);
+				} catch (error_) {
+					console.error("Failed to load item:", error_);
 					setError("Failed to load item. Please try again.");
 				} finally {
 					setLoading(false);
@@ -153,40 +154,36 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 				series: formData.series.trim(),
 				grade: formData.grade,
 				scale: formData.scale,
-				price: formData.price ? parseFloat(formData.price) : undefined,
+				price: formData.price ? Number.parseFloat(formData.price) : undefined,
 			};
 
 			const metadata = {
 				source: "manual" as const,
-				confidence: 1.0,
+				confidence: 1,
 			};
 
-			if (isEditing) {
-				await collectionService.updateItem(itemId, {
-					data: itemData,
-					status: formData.status,
-					tags: formData.tags,
-					notes: formData.notes.trim(),
-					metadata,
-				});
-			} else {
-				await collectionService.createItem({
-					hobbyType,
-					data: itemData,
-					status: formData.status,
-					tags: formData.tags,
-					notes: formData.notes.trim(),
-					metadata,
-				});
-			}
+			await (isEditing ? collectionService.updateItem(itemId, {
+				data: itemData,
+				status: formData.status,
+				tags: formData.tags,
+				notes: formData.notes.trim(),
+				metadata,
+			}) : collectionService.createItem({
+				hobbyType,
+				data: itemData,
+				status: formData.status,
+				tags: formData.tags,
+				notes: formData.notes.trim(),
+				metadata,
+			}));
 
 			// Navigate back to the collection (would need collectionId for proper navigation)
 			navigate({
 				to: "/collection/$hobbyType",
 				params: { hobbyType },
 			});
-		} catch (err) {
-			console.error("Failed to save item:", err);
+		} catch (error_) {
+			console.error("Failed to save item:", error_);
 			setError("Failed to save item. Please try again.");
 		} finally {
 			setSaving(false);
@@ -275,7 +272,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 									placeholder="Enter item name"
 									value={formData.name}
 									onChange={(e) => handleInputChange("name", e.target.value)}
-									required
+									required={true}
 								/>
 								<TextInput
 									label="Brand/Manufacturer"
@@ -296,14 +293,14 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 										data={gradeOptions}
 										value={formData.grade}
 										onChange={(value) => handleInputChange("grade", value || "")}
-										clearable
+										clearable={true}
 									/>
 									<Select
 										label="Scale"
 										data={scaleOptions}
 										value={formData.scale}
 										onChange={(value) => handleInputChange("scale", value || "")}
-										clearable
+										clearable={true}
 									/>
 									<TextInput
 										label="Series"
