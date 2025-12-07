@@ -136,18 +136,18 @@ function BrandDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Brand Description */}
-			{data.description && (
+			{data["description"] && (
 				<Stack gap="xs">
 					<Text weight={600} size="sm">About:</Text>
-					<Text size="sm">{data.description}</Text>
+					<Text size="sm">{data["description"]}</Text>
 				</Stack>
 			)}
 
 			{/* Founded Date */}
-			{data.founded && (
+			{data["founded"] && (
 				<Group>
 					<Text weight={600} size="sm">Founded:</Text>
-					<Text size="sm">{data.founded}</Text>
+					<Text size="sm">{data["founded"]}</Text>
 				</Group>
 			)}
 
@@ -195,10 +195,10 @@ function CategoryDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Category Description */}
-			{data.description && (
+			{data["description"] && (
 				<Stack gap="xs">
 					<Text weight={600} size="sm">Description:</Text>
-					<Text size="sm">{data.description}</Text>
+					<Text size="sm">{data["description"]}</Text>
 				</Stack>
 			)}
 
@@ -301,10 +301,10 @@ function SeriesDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Series Description */}
-			{data.description && (
+			{data["description"] && (
 				<Stack gap="xs">
 					<Text weight={600} size="sm">About:</Text>
-					<Text size="sm">{data.description}</Text>
+					<Text size="sm">{data["description"]}</Text>
 				</Stack>
 			)}
 
@@ -360,7 +360,7 @@ function SeriesDetails({ node }: { node: GraphNode }) {
  * Common relationships display
  */
 function CommonRelationships({ node }: { node: GraphNode }) {
-	const edges = node.data.edges || [];
+	const edges = node.data["edges"] || [];
 
 	if (edges.length === 0) return null;
 
@@ -432,7 +432,7 @@ export function GraphNodeDetails({ node }: GraphNodeDetailsProps) {
 			<CommonRelationships node={node} />
 
 			{/* Raw data for debugging (remove in production) */}
-			{process.env.NODE_ENV === "development" && (
+			{process.env["NODE_ENV"] === "development" && (
 				<>
 					<Divider label="Debug Info" labelPosition="center" />
 					<Text size="xs" c="dimmed" component="pre">
