@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react-swc';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import { VitePWA } from 'vite-plugin-pwa';
+import { dataIndexPlugin } from './vite-plugins/data-index-plugin';
 
 export default defineConfig({
   root: __dirname,
@@ -19,6 +20,7 @@ export default defineConfig({
     react(),
     nxViteTsPaths(),
     vanillaExtractPlugin(),
+    dataIndexPlugin(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt', 'offline.html'],
