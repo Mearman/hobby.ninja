@@ -11,7 +11,7 @@ const TOKEN_THRESHOLD = 40_000;
 console.log("🔍 Analyzing CLAUDE.md and all merged content...\n");
 
 // Build file tree
-const buildFileTree = (filePath: string, visited = new Set<string>, depth = 0) => {
+const buildFileTree = (filePath: string, visited = new Set<string>(), depth = 0) => {
 	const absolutePath = resolve(filePath);
 	if (visited.has(absolutePath)) return null;
 

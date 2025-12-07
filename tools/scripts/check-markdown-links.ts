@@ -152,7 +152,7 @@ function checkFileLinks(
  * Check all markdown files in a directory
  */
 function checkDirectory(
-	pattern: string = "**/*.md",
+	pattern = "**/*.md",
 	options: { ignore?: string[] } = {},
 ): ValidationReport {
 	const files = globSync(pattern, {
