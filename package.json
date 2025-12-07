@@ -40,7 +40,8 @@
 		"knip:fix": "nx run hobby-ninja:knip:fix",
 		"validate": "nx run hobby-ninja:validate",
 		"validate:affected": "nx run hobby-ninja:validate-affected",
-		"validate:ci": "nx run-many -t lint typecheck test --parallel=1"
+		"validate:ci": "nx run-many -t lint typecheck test --parallel=1",
+		"check": "nx run hobby-ninja:check"
 	},
 	"workspaces": [
 		"apps/*",
