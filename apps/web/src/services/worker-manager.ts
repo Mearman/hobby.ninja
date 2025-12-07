@@ -10,7 +10,7 @@ import type {
 	FilterOptions,
 	UnifiedItem,
 	ManualItem,
-	DatabaseCatalogItem,
+	CatalogItem,
 } from "@workspace/types";
 
 // ============================================================================
@@ -141,7 +141,7 @@ export class WorkerManager {
 	async aggregateData(
 		unifiedItems: UnifiedItem[],
 		manualItems: ManualItem[],
-		catalogItems: DatabaseCatalogItem[],
+		catalogItems: CatalogItem[],
 		options: {
       onProgress?: (progress: any) => void;
       timeout?: number;

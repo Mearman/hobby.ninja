@@ -10,7 +10,7 @@ import type {
 	FilterOptions,
 	UnifiedItem,
 	ManualItem,
-	DatabaseCatalogItem,
+	CatalogItem,
 	DataSourceType,
 } from "@workspace/types";
 
@@ -42,7 +42,7 @@ interface AggregateMessage extends WorkerMessage {
   payload: {
     unifiedItems: UnifiedItem[];
     manualItems: ManualItem[];
-    catalogItems: DatabaseCatalogItem[];
+    catalogItems: CatalogItem[];
   };
 }
 
@@ -298,7 +298,7 @@ class DataAggregator {
 	async aggregateData(
 		unifiedItems: UnifiedItem[],
 		manualItems: ManualItem[],
-		catalogItems: DatabaseCatalogItem[],
+		catalogItems: CatalogItem[],
 	): Promise<{
     aggregated: UnifiedItem[];
     conflicts: Array<{ id: string; field: string; unified: unknown; manual: unknown; catalog: unknown }>;
@@ -336,7 +336,7 @@ class DataAggregator {
 	private async processBatch(
 		batch: UnifiedItem[],
 		manualItems: ManualItem[],
-		catalogItems: DatabaseCatalogItem[],
+		catalogItems: CatalogItem[],
 		conflicts: Array<{ id: string; field: string; unified: any; manual: any; catalog: any }>,
 	): Promise<UnifiedItem[]> {
 		return batch.map(unifiedItem => {

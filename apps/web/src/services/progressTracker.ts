@@ -638,7 +638,12 @@ export async function executeWithProgress<T>(
 
 	return tracker.startOperation(operationId, async ({ updateProgress }) => {
 		return executor((current, total, message) => {
-			updateProgress({ current, total: total || 100, message });
+			updateProgress({
+				current,
+				total: total || 100,
+				percentage: Math.round((current / (total || 100)) * 100),
+				message
+			});
 		});
 	});
 }
