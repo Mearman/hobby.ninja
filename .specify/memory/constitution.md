@@ -40,10 +40,7 @@ Implementations MUST be simple, direct, and programmatic. YAGNI (You Aren't Gonn
 ### XI. Persistence and Resilience in Problem Solving
 When encountering technical challenges, implementation obstacles, or configuration issues, solutions MUST be pursued to completion with proper investigation and research. Online documentation, official documentation, and community solutions MUST be researched before declaring a problem unsolvable. **SIMPLE, TEMPORARY, OR MOCK IMPLEMENTATIONS ARE ABSOLUTELY FORBIDDEN.** All implementations MUST be complete, production-ready solutions that fully address the requirements. Simplified fallbacks, placeholder implementations, and "minimum viable" approaches are PROHIBITED unless explicitly documented as technical debt with an approved remediation plan and timeline. Root cause analysis MUST be performed for all blocking issues.
 
-### XII. Automated Barrel Export Management
-Index files (index.ts) MUST NEVER be manually modified or contain manual content. All barrel exports MUST be generated and managed exclusively by barrelsby automation. Manual entries in index files are FORBIDDEN. Content MUST be organized in properly named files within appropriate directories, allowing barrelsby to generate clean, consistent export structures. This ensures maintainable module boundaries and prevents merge conflicts.
-
-### XIII. Security by Default
+### XII. Security by Default
 Content Security Policy headers implemented. XSS protection via React. Input validation via Zod schemas. Client-side data encryption for sensitive IndexedDB storage. Regular security scanning in CI/CD. No external dependencies without security review.
 
 ## Technology Standards
@@ -68,17 +65,14 @@ This constitution supersedes all other development practices. Amendments require
 
 Template files (plan.md, spec.md, tasks.md) MUST align with constitutional principles. Regular constitution reviews scheduled quarterly or when major architectural changes occur.
 
-**Version**: 1.9.1 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-07
+**Version**: 1.10.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-07
 
 <!--
 Sync Impact Report:
-Version change: 1.9.0 → 1.9.1 (PATCH - enhanced Red-Green-Refactor TDD cycle documentation)
-Modified principles: I. Test-First Development → I. Test-First Development (Red-Green-Refactor TDD)
+Version change: 1.9.1 → 1.10.0 (MINOR - removed barrelsby automation principle)
+Modified principles: XIII. Security by Default → XII. Security by Default (renumbered)
 Added sections: None
-Removed sections: None
-Templates updated:
-  ✅ .specify/templates/tasks-template.md - Already includes "Write tests FIRST, ensure they FAIL before implementation"
-  ✅ .specify/templates/spec-template.md - Already includes testable acceptance scenarios
-  ✅ .specify/templates/plan-template.md - No changes needed (references constitution check)
-Follow-up TODOs: None - all templates already aligned with TDD workflow
+Removed sections: XII. Automated Barrel Export Management (barrelsby removed from project)
+Templates updated: None needed
+Follow-up TODOs: None
 -->
