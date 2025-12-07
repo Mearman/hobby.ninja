@@ -8,18 +8,13 @@ import {
 	MultiSelect,
 	Select,
 	NumberInput,
-	DatePicker,
 	RangeSlider,
-	Switch,
-	Divider,
 	Accordion,
 	Badge,
 	ActionIcon,
 	ScrollArea,
 	Alert,
 	TextInput,
-	Tooltip,
-	Box,
 	Grid,
 	Card,
 	Flex,
@@ -27,7 +22,6 @@ import {
 import {
 	IconX,
 	IconDeviceFloppy,
-	IconFolder,
 	IconShare,
 	IconFilter,
 	IconRefresh,
@@ -36,6 +30,11 @@ import {
 	IconUpload,
 } from "@tabler/icons-react";
 import React, { useState, useEffect, useCallback } from "react";
+
+// eslint-disable-next-line no-undef
+const globalAlert = alert;
+// eslint-disable-next-line no-undef
+const globalBtoa = btoa;
 
 import { FilterOptions, FilterPreset } from "../../services/dataService";
 
@@ -228,20 +227,20 @@ export function AdvancedFilters({
 		try {
 			// Compress and encode filters for URL
 			const filterString = JSON.stringify(localFilters);
-			const compressed = btoa(filterString);
+			const compressed = globalBtoa(filterString);
 			const shareUrl = `${globalThis.location.origin}${globalThis.location.pathname}?filters=${compressed}`;
 
 			// Copy to clipboard
 			navigator.clipboard.writeText(shareUrl).then(() => {
 				// Show success notification
-				alert("Share URL copied to clipboard!");
+				globalAlert("Share URL copied to clipboard!");
 			}).catch(() => {
 				// Fallback: show URL in alert
-				alert(`Share URL: ${shareUrl}`);
+				globalAlert(`Share URL: ${shareUrl}`);
 			});
 		} catch (error) {
 			console.error("Failed to create share URL:", error);
-			alert("Failed to create share URL");
+			globalAlert("Failed to create share URL");
 		}
 	};
 
@@ -268,25 +267,21 @@ export function AdvancedFilters({
 	};
 
 	// Import filters
-	const handleImportFilters = (event: React.ChangeEvent<HTMLInputElement>) => {
+	const handleImportFilters = async (event: React.ChangeEvent<HTMLInputElement>) => {
 		const file = event.target.files?.[0];
 		if (!file) return;
 
-		const reader = new FileReader();
-		reader.addEventListener("load", (e) => {
-			try {
-				const content = e.target?.result as string;
-				const data = JSON.parse(content);
+		try {
+			const content = await file.text();
+			const data = JSON.parse(content);
 
-				if (data.filters) {
-					setLocalFilters(data.filters);
-				}
-			} catch (error) {
-				console.error("Failed to import filters:", error);
-				alert("Failed to import filters from file");
+			if (data.filters) {
+				setLocalFilters(data.filters);
 			}
-		});
-		reader.readAsText(file);
+		} catch (error) {
+			console.error("Failed to import filters:", error);
+			globalAlert("Failed to import filters from file");
+		}
 	};
 
 	// Get active filter count

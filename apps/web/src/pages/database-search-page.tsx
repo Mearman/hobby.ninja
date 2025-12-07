@@ -31,10 +31,10 @@ import {
 import { useNavigate, useSearch } from "@tanstack/react-router";
 import React, { useState, useEffect, useCallback } from "react";
 
-import { AdvancedFilters } from "../components/database/AdvancedFilters";
+import { AdvancedFilters } from "../components/database/advanced-filters";
 import { SearchAndFilter } from "../components/database/SearchAndFilter";
 import { dataService, FilterOptions, SearchResult } from "../services/dataService";
-import { parseFiltersFromUrl, copyShareableUrl } from "../utils/urlUtils";
+import { parseFiltersFromUrl, copyShareableUrl } from "../utils/url-utils";
 
 /**
  * Database search results page

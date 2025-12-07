@@ -4,13 +4,39 @@ import { FilterOptions } from "../services/dataService";
  * URL utilities for sharing filters and search parameters
  */
 
-// Simple base64 compression for filter sharing
-// In a production app, you might want to use a proper compression library like pako
+// eslint-disable-next-line no-undef
+const globalBtoa = btoa;
+// eslint-disable-next-line no-undef
+const globalAtob = atob;
+
+// Helper function for base64 encoding in browser environment
+const safeBtoa = (str: string): string => {
+	if (globalBtoa !== undefined) {
+		return globalBtoa(str);
+	}
+	// Fallback for Node.js environment
+	return Buffer.from(str, "binary").toString("base64");
+};
+
+// Helper function for base64 decoding in browser environment
+const safeAtob = (str: string): string => {
+	if (globalAtob !== undefined) {
+		return globalAtob(str);
+	}
+	// Fallback for Node.js environment
+	return Buffer.from(str, "base64").toString("binary");
+};
+
+/**
+ * Simple base64 compression for filter sharing
+ * In a production app, you might want to use a proper compression library like pako
+ */
 export const compressFilters = (filters: FilterOptions): string => {
 	try {
 		const filterString = JSON.stringify(filters);
-		return btoa(encodeURIComponent(filterString));
+		return safeBtoa(encodeURIComponent(filterString));
 	} catch (error) {
+		// eslint-disable-next-line no-console
 		console.error("Failed to compress filters:", error);
 		return "";
 	}
@@ -18,9 +44,10 @@ export const compressFilters = (filters: FilterOptions): string => {
 
 export const decompressFilters = (compressed: string): FilterOptions | null => {
 	try {
-		const filterString = decodeURIComponent(atob(compressed));
+		const filterString = decodeURIComponent(safeAtob(compressed));
 		return JSON.parse(filterString) as FilterOptions;
 	} catch (error) {
+		// eslint-disable-next-line no-console
 		console.error("Failed to decompress filters:", error);
 		return null;
 	}
@@ -66,6 +93,7 @@ export const parseFiltersFromUrl = (
 
 		return { query, filters: filters || {} };
 	} catch (error) {
+		// eslint-disable-next-line no-console
 		console.error("Failed to parse URL:", error);
 		return { query: "", filters: {} };
 	}

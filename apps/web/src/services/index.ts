@@ -5,7 +5,7 @@
  */
 
 export { DataService, dataService } from "./dataService";
-export { WorkerManager, workerManager } from "./workerManager";
+export { WorkerManager, workerManager } from "./worker-manager";
 export { ProgressTracker, progressTracker, createProgressTracker, executeWithProgress } from "./progressTracker";
 
 // Re-export types from @workspace/types for convenience

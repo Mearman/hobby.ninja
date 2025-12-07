@@ -12,3 +12,14 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+declare global {
+  interface Window {
+    // Add any additional window properties here if needed
+  }
+
+  var alert: (message: string) => void;
+  var btoa: (data: string) => string;
+  var atob: (data: string) => string;
+}
+

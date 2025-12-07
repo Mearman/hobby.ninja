@@ -11,7 +11,6 @@ import type {
 	UnifiedItem,
 	ManualItem,
 	DatabaseCatalogItem,
-	DataSourceType,
 } from "@workspace/types";
 
 // ============================================================================
@@ -220,7 +219,12 @@ export class WorkerManager {
    */
 	getStats() {
 		const busyWorkers = this.workers.filter(w => w.busy).length;
-		const totalQueuedTasks = this.workers.reduce((sum, w) => sum + w.taskQueue.length, 0);
+
+		// Calculate total queued tasks using a for loop instead of reduce
+		let totalQueuedTasks = 0;
+		for (const worker of this.workers) {
+			totalQueuedTasks += worker.taskQueue.length;
+		}
 
 		return {
 			poolSize: this.config.poolSize,
@@ -311,10 +315,18 @@ export class WorkerManager {
 		if (availableWorker) {
 			this.executeTask(availableWorker, taskId);
 		} else {
-			// Add to queue of least busy worker
-			const leastBusyWorker = this.workers.reduce((min, current) =>
-				current.taskQueue.length < min.taskQueue.length ? current : min,
-			);
+			// Add to queue of least busy worker using for loop instead of reduce
+			let leastBusyWorker = this.workers[0];
+			let minQueueLength = leastBusyWorker.taskQueue.length;
+
+			for (let i = 1; i < this.workers.length; i++) {
+				const currentWorker = this.workers[i];
+				if (currentWorker.taskQueue.length < minQueueLength) {
+					leastBusyWorker = currentWorker;
+					minQueueLength = currentWorker.taskQueue.length;
+				}
+			}
+
 			leastBusyWorker.taskQueue.push(taskId);
 		}
 	}
@@ -522,7 +534,20 @@ export class WorkerManager {
 /** Global worker manager instance */
 export const workerManager = new WorkerManager();
 
-// Auto-initialize when imported
-workerManager.initialize().catch(error => {
-	console.warn("Failed to auto-initialize worker manager:", error);
-});
+/** Initialize promise - tracks if initialization is in progress */
+let initPromise: Promise<void> | null = null;
+
+/**
+ * Get worker manager instance, initializing if necessary
+ */
+export function getWorkerManager(): WorkerManager {
+	// Start initialization if not already done or in progress
+	if (!initPromise) {
+		initPromise = workerManager.initialize().catch(error => {
+			console.warn("Failed to auto-initialize worker manager:", error);
+			// Reset promise so initialization can be retried
+			initPromise = null;
+		});
+	}
+	return workerManager;
+}
