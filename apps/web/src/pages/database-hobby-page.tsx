@@ -31,20 +31,24 @@ import { dataService, type FilterOptions } from "../services/dataService";
 import { databaseContainer, heroSection, statsCard } from "../styles/styles.css";
 
 const getItemType = (item: unknown): "unified" | "manual" | "catalog" => {
-	if (!item || typeof item !== 'object' || !('type' in item)) {
+	if (!item || typeof item !== "object" || !("type" in item)) {
 		return "unified";
 	}
 
 	const typedItem = item as { type: string };
 	switch (typedItem.type) {
-		case "unified_item":
+		case "unified_item": {
 			return "unified";
-		case "manual_item":
+		}
+		case "manual_item": {
 			return "manual";
-		case "catalog_item":
+		}
+		case "catalog_item": {
 			return "catalog";
-		default:
+		}
+		default: {
 			return "unified";
+		}
 	}
 };
 

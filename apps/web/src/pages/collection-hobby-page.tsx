@@ -262,7 +262,7 @@ export function CollectionHobbyPage({}: CollectionHobbyPageProps): React.ReactEl
 										<Button
 											onClick={() => navigate({
 												to: "/collection/$hobbyType/$collectionId",
-												params: { hobbyType, collectionId: collection.id }
+												params: { hobbyType, collectionId: collection.id },
 											})}
 											variant="outline"
 											flex={1}

@@ -38,80 +38,78 @@ import { parseFiltersFromUrl, copyShareableUrl } from "../utils/url-utils";
 
 // Type guards for item data
 function isUnifiedItem(item: unknown): item is UnifiedItem {
-  return (
-    typeof item === 'object' &&
+	return (
+		typeof item === "object" &&
     item !== null &&
     item !== undefined &&
-    'type' in item &&
-    (item as { type: string }).type === 'unified_item'
-  );
+    "type" in item &&
+    (item as { type: string }).type === "unified_item"
+	);
 }
 
 function isManualItem(item: unknown): item is ManualItem {
-  return (
-    typeof item === 'object' &&
+	return (
+		typeof item === "object" &&
     item !== null &&
     item !== undefined &&
-    'type' in item &&
-    (item as { type: string }).type === 'manual_item'
-  );
+    "type" in item &&
+    (item as { type: string }).type === "manual_item"
+	);
 }
 
 function isCatalogItem(item: unknown): item is CatalogItem {
-  return (
-    typeof item === 'object' &&
+	return (
+		typeof item === "object" &&
     item !== null &&
     item !== undefined &&
-    'type' in item &&
-    (item as { type: string }).type === 'catalog_item'
-  );
+    "type" in item &&
+    (item as { type: string }).type === "catalog_item"
+	);
 }
 
 function getItemName(item: UnifiedItem | ManualItem | CatalogItem): string {
-  if ('properties' in item && item.properties?.name) {
-    const name = item.properties.name;
-    if (typeof name === 'string') return name;
-    if (name && typeof name === 'object' && 'en' in name) return name.en || name.ja || 'Unknown Item';
-  }
-  if ('name' in item && typeof item.name === 'string') return item.name;
-  return item.id || 'Unknown Item';
+	if ("properties" in item && item.properties?.name) {
+		const name = item.properties.name;
+		if (typeof name === "string") return name;
+		if (name && typeof name === "object" && "en" in name) return name.en || name.ja || "Unknown Item";
+	}
+	if ("name" in item && typeof item.name === "string") return item.name;
+	return item.id || "Unknown Item";
 }
 
 function getItemSeries(item: UnifiedItem | ManualItem | CatalogItem): string | undefined {
-  if ('properties' in item && item.properties?.series) {
-    const series = item.properties.series;
-    if (typeof series === 'string') return series;
-    if (series && typeof series === 'object' && 'en' in series) return series.en || series.ja;
-  }
-  return undefined;
+	if ("properties" in item && item.properties?.series) {
+		const series = item.properties.series;
+		if (typeof series === "string") return series;
+		if (series && typeof series === "object" && "en" in series) return series.en || series.ja;
+	}
+	return undefined;
 }
 
 function getItemGrade(item: UnifiedItem | ManualItem | CatalogItem): string | undefined {
-  if ('properties' in item && item.properties) {
-    // Handle UnifiedItem with grade object
-    if ('grade' in item.properties && item.properties.grade) {
-      const grade = item.properties.grade;
-      if (grade && typeof grade === 'object' && 'code' in grade) {
-        return grade.code;
-      }
-      if (typeof grade === 'string') {
-        return grade;
-      }
-    }
-  }
-  // Handle CatalogItem with direct grade property
-  if ('grade' in item && typeof item.grade === 'string') {
-    return item.grade;
-  }
-  return undefined;
+	if ("properties" in item && item.properties && // Handle UnifiedItem with grade object
+    "grade" in item.properties && item.properties.grade) {
+		const grade = item.properties.grade;
+		if (grade && typeof grade === "object" && "code" in grade) {
+			return grade.code;
+		}
+		if (typeof grade === "string") {
+			return grade;
+		}
+	}
+	// Handle CatalogItem with direct grade property
+	if ("grade" in item && typeof item.grade === "string") {
+		return item.grade;
+	}
+	return undefined;
 }
 
 function getItemScale(item: UnifiedItem | ManualItem | CatalogItem): string | undefined {
-  if ('properties' in item && item.properties?.scale) {
-    return item.properties.scale;
-  }
-  if ('scale' in item && typeof item.scale === 'string') return item.scale;
-  return undefined;
+	if ("properties" in item && item.properties?.scale) {
+		return item.properties.scale;
+	}
+	if ("scale" in item && typeof item.scale === "string") return item.scale;
+	return undefined;
 }
 
 /**
