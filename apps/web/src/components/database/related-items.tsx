@@ -273,7 +273,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 				if (!item.id) return false;
 
 				const itemSeriesRaw = "series" in item
-					? getSafeSeries(item.series as SeriesInfo | undefined)
+					? getSafeSeries(item["series"] as SeriesInfo | undefined)
 					: getSafeSeries(getItemProperties(item)?.series as SeriesInfo | undefined);
 
 				const itemSeriesStr = itemSeriesRaw ?? "";
@@ -291,11 +291,11 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					id: item.id!,
 					type: item.type,
 					name: getSafeName(item),
-					grade: (("grade" in item ? item.grade : undefined) ??
+					grade: (("grade" in item ? item["grade"] : undefined) ??
                         itemProps?.grade) as string | undefined,
-					scale: (("scale" in item ? item.scale : undefined) ??
+					scale: (("scale" in item ? item["scale"] : undefined) ??
                         itemProps?.scale) as string | undefined,
-					series: getSafeSeries((("series" in item ? item.series : undefined) ??
+					series: getSafeSeries((("series" in item ? item["series"] : undefined) ??
                             itemProps?.series) as SeriesInfo | undefined),
 					thumbnail: getThumbnail(item),
 					relationType: "series" as const,
@@ -313,7 +313,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			.filter(item => {
 				if (!item.id) return false;
 				const itemProps = getItemProperties(item);
-				const itemGrade = ("grade" in item ? item.grade : undefined) ??
+				const itemGrade = ("grade" in item ? item["grade"] : undefined) ??
                     itemProps?.grade;
 				return itemGrade && itemGrade === currentItemProps.grade;
 			})
@@ -324,11 +324,11 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					id: item.id!,
 					type: item.type,
 					name: getSafeName(item),
-					grade: (("grade" in item ? item.grade : undefined) ??
+					grade: (("grade" in item ? item["grade"] : undefined) ??
                         itemProps?.grade) as string | undefined,
-					scale: (("scale" in item ? item.scale : undefined) ??
+					scale: (("scale" in item ? item["scale"] : undefined) ??
                         itemProps?.scale) as string | undefined,
-					series: getSafeSeries((("series" in item ? item.series : undefined) ??
+					series: getSafeSeries((("series" in item ? item["series"] : undefined) ??
                             itemProps?.series) as SeriesInfo | undefined),
 					thumbnail: getThumbnail(item),
 					relationType: "grade" as const,
@@ -346,7 +346,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			.filter(item => {
 				if (!item.id) return false;
 				const itemProps = getItemProperties(item);
-				const itemScale = ("scale" in item ? item.scale : undefined) ??
+				const itemScale = ("scale" in item ? item["scale"] : undefined) ??
                     itemProps?.scale;
 				return itemScale && itemScale === currentItemProps.scale;
 			})
@@ -357,11 +357,11 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					id: item.id!,
 					type: item.type,
 					name: getSafeName(item),
-					grade: (("grade" in item ? item.grade : undefined) ??
+					grade: (("grade" in item ? item["grade"] : undefined) ??
                         itemProps?.grade) as string | undefined,
-					scale: (("scale" in item ? item.scale : undefined) ??
+					scale: (("scale" in item ? item["scale"] : undefined) ??
                         itemProps?.scale) as string | undefined,
-					series: getSafeSeries((("series" in item ? item.series : undefined) ??
+					series: getSafeSeries((("series" in item ? item["series"] : undefined) ??
                             itemProps?.series) as SeriesInfo | undefined),
 					thumbnail: getThumbnail(item),
 					relationType: "scale" as const,
@@ -397,11 +397,11 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					id: item.id!,
 					type: item.type,
 					name: getSafeName(item),
-					grade: (("grade" in item ? item.grade : undefined) ??
+					grade: (("grade" in item ? item["grade"] : undefined) ??
                         itemProps?.grade) as string | undefined,
-					scale: (("scale" in item ? item.scale : undefined) ??
+					scale: (("scale" in item ? item["scale"] : undefined) ??
                         itemProps?.scale) as string | undefined,
-					series: getSafeSeries((("series" in item ? item.series : undefined) ??
+					series: getSafeSeries((("series" in item ? item["series"] : undefined) ??
                             itemProps?.series) as SeriesInfo | undefined),
 					thumbnail: getThumbnail(item),
 					relationType: "similarity" as const,
@@ -438,11 +438,11 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					id: item.id!,
 					type: item.type,
 					name: getSafeName(item),
-					grade: (("grade" in item ? item.grade : undefined) ??
+					grade: (("grade" in item ? item["grade"] : undefined) ??
                         itemProps?.grade) as string | undefined,
-					scale: (("scale" in item ? item.scale : undefined) ??
+					scale: (("scale" in item ? item["scale"] : undefined) ??
                         itemProps?.scale) as string | undefined,
-					series: getSafeSeries((("series" in item ? item.series : undefined) ??
+					series: getSafeSeries((("series" in item ? item["series"] : undefined) ??
                             itemProps?.series) as SeriesInfo | undefined),
 					thumbnail: getThumbnail(item),
 					relationType: "variant" as const,
@@ -461,7 +461,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			.filter(item => {
 				if (!item.id) return false;
 				const itemProps = getItemProperties(item);
-				const itemReleaseDate = ("releaseDate" in item ? item.releaseDate : undefined) ??
+				const itemReleaseDate = ("releaseDate" in item ? item["releaseDate"] : undefined) ??
                     (itemProps?.releaseDate);
 				const releaseYear = (itemReleaseDate)?.year;
 				return releaseYear && releaseYear >= twoYearsAgo;
@@ -480,18 +480,18 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			.slice(0, MAX_ITEMS_PER_CATEGORY)
 			.map(item => {
 				const itemProps = getItemProperties(item);
-				const itemReleaseDate = ("releaseDate" in item ? item.releaseDate : undefined) ??
+				const itemReleaseDate = ("releaseDate" in item ? item["releaseDate"] : undefined) ??
                     (itemProps?.releaseDate);
 				const releaseYear = (itemReleaseDate)?.year ?? 0;
 				return {
 					id: item.id!,
 					type: item.type,
 					name: getSafeName(item),
-					grade: (("grade" in item ? item.grade : undefined) ??
+					grade: (("grade" in item ? item["grade"] : undefined) ??
                         itemProps?.grade) as string | undefined,
-					scale: (("scale" in item ? item.scale : undefined) ??
+					scale: (("scale" in item ? item["scale"] : undefined) ??
                         itemProps?.scale) as string | undefined,
-					series: getSafeSeries((("series" in item ? item.series : undefined) ??
+					series: getSafeSeries((("series" in item ? item["series"] : undefined) ??
                             itemProps?.series) as SeriesInfo | undefined),
 					thumbnail: getThumbnail(item),
 					relationType: "recent" as const,
@@ -749,21 +749,21 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 										</Text>
 
 										<Group gap="xs" wrap="nowrap">
-											{item.grade && (
+											{item["grade"] && (
 												<Badge size="xs" variant="light" color="blue">
-													{item.grade}
+													{item["grade"]}
 												</Badge>
 											)}
-											{item.scale && (
+											{item["scale"] && (
 												<Badge size="xs" variant="light" color="orange">
-													{item.scale}
+													{item["scale"]}
 												</Badge>
 											)}
 										</Group>
 
-										{item.series && (
+										{item["series"] && (
 											<Text size="xs" c="dimmed" truncate={true}>
-												{item.series}
+												{item["series"]}
 											</Text>
 										)}
 
