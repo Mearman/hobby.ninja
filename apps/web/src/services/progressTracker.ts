@@ -299,7 +299,7 @@ export class ProgressTracker {
 
 			const classification = ErrorClassifier.classify(error as Error);
 
-			if (classification.shouldRetry && operation.retryCount < operation.config?.retry?.maxAttempts) {
+			if (classification.shouldRetry && operation.retryCount < (operation.config?.retry?.maxAttempts ?? 0)) {
 				return this.retryOperation(id, error as Error);
 			}
 
@@ -421,8 +421,8 @@ export class ProgressTracker {
 
 		// Calculate backoff delay
 		const backoffMs = Math.min(
-			operation.config.retry?.backoffMs * Math.pow(2, operation.retryCount - 1),
-			operation.config.retry?.maxBackoffMs || 30000,
+			(operation.config.retry?.backoffMs ?? 1000) * Math.pow(2, operation.retryCount - 1),
+			operation.config.retry?.maxBackoffMs ?? 30000,
 		);
 
 		this.emit("operationRetry", { id, operation, error, backoffMs });
