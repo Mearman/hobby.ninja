@@ -10,8 +10,8 @@ import { createWriteStream, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderToString } from 'react-dom/server';
-import { createStaticHandler } from '@tanstack/react-router';
-import { staticRouter } from '../src/router';
+import { renderRouterToString } from '@tanstack/react-router/ssr/server';
+import { ssrRouter } from './ssg-router.tsx';
 import { getGraphPreloader } from './ssg-utils/graph-preloader';
 import { generateGraphRoutes } from './ssg-utils/graph-routes-generator';
 import { generateSEOFiles } from './sitemap-generator';
@@ -35,20 +35,23 @@ interface SSGOptions {
  */
 async function generateRouteHTML(
 	route: string,
-	staticHandler: any,
 	preloader: any
 ): Promise<{ route: string; html: string; error?: string }> {
 	try {
 		console.log(`Generating route: ${route}`);
 
-		// Generate route using TanStack Router's static handler
-		const routeResult = await staticHandler.generateRoute(route);
+		// Create a mock request for the route
+		const request = new Request(`http://localhost:3000${route}`, {
+			headers: {
+				'Content-Type': 'text/html',
+			},
+		});
 
-		// Get the rendered component
-		const rendered = await staticHandler.renderRoute(routeResult);
-
-		// Create HTML document with the rendered content
-		const html = createHTMLDocument(route, rendered.html || '');
+		// Generate route using TanStack Router's SSR API
+		const html = await renderRouterToString(ssrRouter, {
+			request,
+			context: {},
+		});
 
 		return { route, html };
 	} catch (error) {
@@ -210,7 +213,6 @@ function writeHTMLFile(route: string, html: string, outputDir: string): void {
  */
 async function processRouteChunk(
 	routes: string[],
-	staticHandler: any,
 	preloader: any,
 	outputDir: string,
 	verbose: boolean = false
@@ -219,7 +221,7 @@ async function processRouteChunk(
 	let failed = 0;
 
 	const promises = routes.map(async (route) => {
-		const result = await generateRouteHTML(route, staticHandler, preloader);
+		const result = await generateRouteHTML(route, preloader);
 
 		if (result.error) {
 			failed++;
@@ -270,8 +272,7 @@ export async function buildSSG(options: SSGOptions = {}): Promise<void> {
 			mkdirSync(OUTPUT_DIR, { recursive: true });
 		}
 
-		// Initialize static handler
-		const staticHandler = createStaticHandler(staticRouter);
+		// Static handler no longer needed with new SSR API
 
 		// Initialize preloader and load graph data
 		if (verbose) {
@@ -316,7 +317,6 @@ export async function buildSSG(options: SSGOptions = {}): Promise<void> {
 
 			const { success, failed } = await processRouteChunk(
 				chunk,
-				staticHandler,
 				preloader,
 				OUTPUT_DIR,
 				verbose
