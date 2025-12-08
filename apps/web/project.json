@@ -129,14 +129,14 @@
       "cache": true,
       "options": {
         "outputPath": "dist/apps/web",
-        "script": "./scripts/ssg-build.ts"
+        "script": "./apps/web/scripts/ssg-build.ts"
       },
       "configurations": {
         "development": {
-          "script": "./scripts/ssg-build.ts --verbose"
+          "script": "./apps/web/scripts/ssg-build.ts --verbose"
         },
         "production": {
-          "script": "./scripts/ssg-build.ts --chunk-size 100"
+          "script": "./apps/web/scripts/ssg-build.ts --chunk-size 100"
         }
       },
       "dependsOn": ["build"]
@@ -160,7 +160,7 @@
       "cache": true,
       "options": {
         "outputPath": "dist/apps/web",
-        "script": "./scripts/ssg-build.ts --chunk-size 50 --verbose"
+        "script": "./apps/web/scripts/ssg-build.ts --chunk-size 50 --verbose"
       },
       "dependsOn": ["build"]
     },
