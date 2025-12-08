@@ -1,4 +1,4 @@
-import { readdir, writeFile, stat } from "node:fs/promises";
+import { readdir, writeFile, stat, readFile } from "node:fs/promises";
 import { join, relative, extname } from "node:path";
 
 import type { Plugin } from "vite";
@@ -168,6 +168,61 @@ async function generateHierarchicalIndex(
 	return index;
 }
 
+/**
+ * Compare two indices to check if content has changed (excluding timestamps)
+ */
+function hasIndexContentChanged(oldIndex: HierarchicalIndex, newIndex: HierarchicalIndex): boolean {
+	// Remove timestamp fields before comparison
+	const { generated: oldGenerated, ...oldContent } = oldIndex;
+	const { generated: newGenerated, ...newContent } = newIndex;
+
+	// Deep comparison of content
+	return JSON.stringify(oldContent) !== JSON.stringify(newContent);
+}
+
+/**
+ * Write index file only if content has changed or file doesn't exist
+ */
+async function writeIndexIfNeeded(
+	filePath: string,
+	index: HierarchicalIndex,
+): Promise<boolean> {
+	try {
+		// Try to read existing index
+		const existingContent = await readFile(filePath, 'utf-8');
+		const existingIndex: HierarchicalIndex = JSON.parse(existingContent);
+
+		// Check if content has changed (excluding timestamps)
+		if (!hasIndexContentChanged(existingIndex, index)) {
+			// Only update timestamps if content is the same
+			const updatedIndex = {
+				...existingIndex,
+				generated: index.generated,
+				// Update lastModified in entries if timestamps changed
+				entries: existingIndex.entries.map((existingEntry, i) => {
+					const newEntry = index.entries[i];
+					if (newEntry && existingEntry.lastModified !== newEntry.lastModified) {
+						return {
+							...existingEntry,
+							lastModified: newEntry.lastModified,
+						};
+					}
+					return existingEntry;
+				}),
+			};
+
+			await writeFile(filePath, JSON.stringify(updatedIndex, null, 2), "utf-8");
+			return false; // No content change
+		}
+	} catch {
+		// File doesn't exist or is invalid, need to write
+	}
+
+	// Write full index if content changed or file doesn't exist
+	await writeFile(filePath, JSON.stringify(index, null, 2), "utf-8");
+	return true; // Content changed
+}
+
 
 async function generateHierarchicalIndices(dataDir: string): Promise<void> {
 	console.log("🚀 Generating hierarchical data indices...");
@@ -182,14 +237,26 @@ async function generateHierarchicalIndices(dataDir: string): Promise<void> {
 			return;
 		}
 
+		let hasChanges = false;
+		let totalFiles = 0;
+		let totalDirectories = 0;
+		let totalSize = 0;
+
 		// Generate master index for the entire data directory
 		console.log(`📁 Scanning data directory: ${dataDir}`);
 		const masterIndex = await generateHierarchicalIndex(dataDir, dataDir, "master");
-		await writeFile(
+		const masterIndexChanged = await writeIndexIfNeeded(
 			join(dataDir, "index.json"),
-			JSON.stringify(masterIndex, null, 2),
-			"utf-8",
+			masterIndex
 		);
+		if (masterIndexChanged) {
+			hasChanges = true;
+		}
+
+		// Update totals from master index
+		totalFiles = masterIndex.summary.totalFiles;
+		totalDirectories = masterIndex.summary.totalDirectories;
+		totalSize = masterIndex.summary.totalSize;
 
 		// Generate indexes for all subdirectories that contain JSON files
 		const entries = masterIndex.entries.filter(entry => entry.type === "directory");
@@ -209,11 +276,13 @@ async function generateHierarchicalIndices(dataDir: string): Promise<void> {
 					const hasSubdirs = subIndex.entries.some(e => e.type === "directory");
 
 					if (hasJsonFiles || hasSubdirs) {
-						await writeFile(
+						const subIndexChanged = await writeIndexIfNeeded(
 							join(subDirPath, "index.json"),
-							JSON.stringify(subIndex, null, 2),
-							"utf-8",
+							subIndex
 						);
+						if (subIndexChanged) {
+							hasChanges = true;
+						}
 					}
 				}
 			} catch (error) {
@@ -221,10 +290,15 @@ async function generateHierarchicalIndices(dataDir: string): Promise<void> {
 			}
 		}
 
-		console.log("✅ Hierarchical data indices generated successfully!");
-		console.log(`   Master index: ${masterIndex.summary.totalFiles.toLocaleString()} files`);
-		console.log(`   Directories: ${masterIndex.summary.totalDirectories.toLocaleString()}`);
-		console.log(`   Total size: ${(masterIndex.summary.totalSize / 1024 / 1024).toFixed(1)} MB`);
+		if (hasChanges) {
+			console.log("✅ Hierarchical data indices generated successfully!");
+		} else {
+			console.log("📝 Index files updated with new timestamps (no content changes)");
+		}
+
+		console.log(`   Master index: ${totalFiles.toLocaleString()} files`);
+		console.log(`   Directories: ${totalDirectories.toLocaleString()}`);
+		console.log(`   Total size: ${(totalSize / 1024 / 1024).toFixed(1)} MB`);
 
 	} catch (error) {
 		console.error("❌ Error generating hierarchical data indices:", error);
