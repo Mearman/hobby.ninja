@@ -9,8 +9,8 @@ import { Title, Text, Container, Breadcrumbs, Anchor, Group, Stack, Card, Grid }
 import { Link, useLoaderData } from "@tanstack/react-router";
 
 import { StructuredDataGenerator } from "../../scripts/structured-data-generator";
-import { GraphNodeDetails } from "../components/graph/GraphNodeDetails";
-import { RelatedNodesGrid } from "../components/graph/RelatedNodesGrid";
+import { GraphNodeDetails } from "../components/graph/graph-node-details";
+import { RelatedNodesGrid } from "../components/graph/related-nodes-grid";
 import type { GraphNode } from "../utils/graph-client";
 
 interface GraphNodePageLoader {

@@ -12,17 +12,17 @@ export const documents = {
 	},
 
 	// Get all documents for a specific schema type
-	async getBySchema<T>(schemaId: string): Promise<Array<{ data: T; id: string }>> {
-		return await storage.getTyped<T>(schemaId);
+	async getBySchema(schemaId: string): Promise<Array<{ data: unknown; id: string }>> {
+		return await storage.getTyped(schemaId);
 	},
 
 	// Create a new document with schema validation
-	async create<T>(data: T, schemaId: string, id?: string): Promise<{ success: true; id: string } | { success: false; error: string }> {
+	async create(data: unknown, schemaId: string, id?: string): Promise<{ success: true; id: string } | { success: false; error: string }> {
 		return await storage.create(schemaId, data, id);
 	},
 
 	// Update an existing document
-	async update<T>(id: string, data: T): Promise<{ success: true } | { success: false; error: string }> {
+	async update(id: string, data: unknown): Promise<{ success: true } | { success: false; error: string }> {
 		return await storage.update(id, data);
 	},
 

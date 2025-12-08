@@ -1,7 +1,7 @@
 import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet, createHashHistory, createBrowserHistory } from "@tanstack/react-router";
 import { Suspense, lazy, useState } from "react";
 
-import { Header } from "./components/layout/Header";
+import { Header } from "./components/layout/header";
 import { getGraphNodeDetails } from "./utils/graph-client";
 import type { GraphNode } from "./utils/graph-client";
 
