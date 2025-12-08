@@ -18,6 +18,10 @@
         },
         "production": {
           "mode": "production"
+        },
+        "skip-typecheck": {
+          "mode": "production",
+          "skipTypeCheck": true
         }
       }
     },

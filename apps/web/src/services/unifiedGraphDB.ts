@@ -276,8 +276,9 @@ export class UnifiedGraphDB {
 		// Apply ordering
 		if (options?.orderBy) {
 			nodes.sort((a, b) => {
-				const aValue = (a.properties[options.orderBy!] || a[options.orderBy!]);
-				const bValue = (b.properties[options.orderBy!] || b[options.orderBy!]);
+				const orderBy = options.orderBy!;
+				const aValue = (a.properties as any)[orderBy] || (a as any)[orderBy];
+				const bValue = (b.properties as any)[orderBy] || (b as any)[orderBy];
 				const direction = options.orderDirection === "desc" ? -1 : 1;
 				return aValue > bValue ? direction : -direction;
 			});

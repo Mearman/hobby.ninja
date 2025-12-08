@@ -6,12 +6,27 @@
  */
 
 import type {
-	SearchResult,
-	FilterOptions,
-	UnifiedItem,
-	ManualItem,
-	CatalogItem,
-} from "@workspace/types";
+	UnifiedItemNodeType,
+	ManualItemNodeType,
+	CatalogItemNodeType,
+} from "../schemas/universal-graph-schema";
+
+// Local type definitions
+export interface FilterOptions {
+	[key: string]: any;
+}
+
+export interface SearchResult<T = any> {
+	items: T[];
+	total: number;
+	hasMore: boolean;
+	offset?: number;
+}
+
+// Type aliases for compatibility
+export type UnifiedItem = UnifiedItemNodeType;
+export type ManualItem = ManualItemNodeType;
+export type CatalogItem = CatalogItemNodeType;
 
 // ============================================================================
 // WORKER MANAGER TYPES
@@ -247,7 +262,7 @@ export class WorkerManager {
    */
 	async terminate(): Promise<void> {
 		// Cancel all pending tasks
-		for (const task of this.tasks) {
+		for (const [, task] of this.tasks) {
 			task.reject(new Error("Worker pool terminated"));
 		}
 		this.tasks.clear();
