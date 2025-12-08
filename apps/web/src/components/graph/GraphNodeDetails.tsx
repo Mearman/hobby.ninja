@@ -380,29 +380,29 @@ function CommonRelationships({ node }: { node: GraphNode }) {
 			{Object.entries(groupedEdges).map(([relationType, relationEdges]) => {
 				const edges = relationEdges as any[];
 				return (
-				<Stack key={relationType} gap="xs">
-					<Text fw={600} size="sm" style={{ textTransform: 'capitalize' }}>
-						{relationType} ({edges.length}):
-					</Text>
-					<List size="sm" spacing="xs">
-						{edges.slice(0, 10).map((edge, index) => (
-							<List.Item key={index}>
-								{edge.node?.name?.en || edge.node?.name?.ja || edge.node?.id}
-								{edge.node?.type && (
-									<Text size="xs" c="dimmed">
-										{" "}({edge.node.type})
-									</Text>
-								)}
-							</List.Item>
-						))}
-						{edges.length > 10 && (
-							<Text size="xs" c="dimmed">
+					<Stack key={relationType} gap="xs">
+						<Text fw={600} size="sm" style={{ textTransform: "capitalize" }}>
+							{relationType} ({edges.length}):
+						</Text>
+						<List size="sm" spacing="xs">
+							{edges.slice(0, 10).map((edge, index) => (
+								<List.Item key={index}>
+									{edge.node?.name?.en || edge.node?.name?.ja || edge.node?.id}
+									{edge.node?.type && (
+										<Text size="xs" c="dimmed">
+											{" "}({edge.node.type})
+										</Text>
+									)}
+								</List.Item>
+							))}
+							{edges.length > 10 && (
+								<Text size="xs" c="dimmed">
 								...and {edges.length - 10} more
-							</Text>
-						)}
-					</List>
-				</Stack>
-			);
+								</Text>
+							)}
+						</List>
+					</Stack>
+				);
 			})}
 		</Stack>
 	);
@@ -419,7 +419,7 @@ export function GraphNodeDetails({ node }: GraphNodeDetailsProps) {
 			{/* Node Type Header */}
 			<Group>
 				<IconComponent size={20} color="var(--mantine-color-blue-6)" />
-				<Text fw={600} style={{ textTransform: 'capitalize' }}>
+				<Text fw={600} style={{ textTransform: "capitalize" }}>
 					{node.type} Information
 				</Text>
 			</Group>
