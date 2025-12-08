@@ -68,7 +68,7 @@ const rootRoute = createRootRoute({
 
 		return (
 			<div className="app-layout">
-				<Header opened={opened} toggle={() => setOpened(!opened)} />
+				<Header opened={opened} toggle={() => { setOpened(!opened); }} />
 				<main className="app-main">
 					<Suspense fallback={<RouteLoadingFallback />}>
 						<Outlet />
@@ -200,7 +200,7 @@ const createGraphNodeRoute = (nodeType: string) =>
 				nodeType,
 				nodeId: params.id,
 				relatedNodes,
-				error: nodeData ? null : `${nodeType} with ID ${params.id} not found`
+				error: nodeData ? null : `${nodeType} with ID ${params.id} not found`,
 			};
 		},
 		component: GraphNodePage,
@@ -213,11 +213,11 @@ const createGraphNodeRoute = (nodeType: string) =>
 	});
 
 // Create routes for all graph node types
-const brandRoute = createGraphNodeRoute('brand');
-const categoryRoute = createGraphNodeRoute('category');
-const itemRoute = createGraphNodeRoute('item');
-const manualRoute = createGraphNodeRoute('manual');
-const seriesRoute = createGraphNodeRoute('series');
+const brandRoute = createGraphNodeRoute("brand");
+const categoryRoute = createGraphNodeRoute("category");
+const itemRoute = createGraphNodeRoute("item");
+const manualRoute = createGraphNodeRoute("manual");
+const seriesRoute = createGraphNodeRoute("series");
 
 /**
  * 404 catch-all route
