@@ -92,6 +92,9 @@ export default defineConfig({
 
     // Viewport size
     viewport: { width: 1280, height: 720 },
+
+    // Wait for navigation timeout
+    navigationTimeout: 60000, // 60 seconds
   },
 
   // Configure projects for major browsers and testing scenarios
@@ -109,12 +112,13 @@ export default defineConfig({
     },
   ],
 
-  // Enhanced web server configuration (serve built app for e2e tests)
+  // Enhanced web server configuration (serve dev server for e2e tests)
   webServer: {
-    command: 'cd apps/web && pnpm vite --port 3000',
-    url: 'http://localhost:3000/',
+    command: 'pnpm run dev',
+    cwd: './apps/web', // Set working directory properly
+    port: 3000, // Explicitly set the expected port
     reuseExistingServer: !process.env.CI,
-    timeout: 120 * 1000, // 2 minutes
+    timeout: 180 * 1000, // 3 minutes - increased for Vite startup
     stdout: 'pipe',
     stderr: 'pipe',
   },
