@@ -9,6 +9,9 @@ import {
   getNodePrice,
   getNodeReleaseYear,
   getNodeImages,
+  getNodeDescription,
+  getNodeAccessories,
+  getNodeEdges,
   type ItemNode
 } from '@/lib/schemas';
 
@@ -41,11 +44,14 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
   const displayName = getNodeDisplayName(item);
   const releaseYear = getNodeReleaseYear(item);
 
+  const itemDescription = getNodeDescription(item);
+  const truncatedDesc = itemDescription
+    ? `${itemDescription.substring(0, 160).replace(/\n/g, ' ')}...`
+    : `Details about ${displayName}${releaseYear ? ` (${releaseYear})` : ''} from the hobby.ninja database`;
+
   return {
     title: `${displayName} - hobby.ninja`,
-    description: item.description
-      ? `${item.description.substring(0, 160)}...`
-      : `Details about ${displayName}${releaseYear ? ` (${releaseYear})` : ''} from the hobby.ninja database`,
+    description: truncatedDesc,
     keywords: [
       'gunpla', 'gundam', 'model kit',
       item.brand, item.category, item.series, item.grade,
@@ -66,6 +72,8 @@ export default async function ItemPage({ params }: ItemPageProps) {
   const price = getNodePrice(item);
   const releaseYear = getNodeReleaseYear(item);
   const images = getNodeImages(item);
+  const description = getNodeDescription(item);
+  const accessories = getNodeAccessories(item);
 
   return (
     <div>
@@ -89,10 +97,25 @@ export default async function ItemPage({ params }: ItemPageProps) {
           </div>
         </header>
 
-        {item.description && (
+        {description && (
           <section>
             <h2>Description</h2>
-            <p>{item.description}</p>
+            <div>
+              {description.split('\n').map((line, index) => (
+                <p key={index}>{line}</p>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {accessories.length > 0 && (
+          <section>
+            <h2>Accessories</h2>
+            <ul>
+              {accessories.map((accessory, index) => (
+                <li key={index}>{accessory}</li>
+              ))}
+            </ul>
           </section>
         )}
 
