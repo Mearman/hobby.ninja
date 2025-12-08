@@ -1,23 +1,20 @@
+// UI Constants
 import {
 	Container,
 	Title,
 	Text,
-	Grid,
 	Card,
 	Button,
 	Group,
 	Badge,
-	Image,
 	SimpleGrid,
 	Stack,
 	Center,
 	Loader,
 	Alert,
 	Pagination,
-	Flex,
 	Box,
 	Paper,
-	Divider,
 } from "@mantine/core";
 import {
 	IconSearch,
@@ -26,69 +23,60 @@ import {
 	IconPhoto,
 	IconBook,
 	IconStar,
-	IconClock,
 } from "@tabler/icons-react";
-import { useNavigate, useSearch } from "@tanstack/react-router";
+import { useNavigate } from "@tanstack/react-router";
 import React, { useState, useEffect, useCallback } from "react";
 
 import { AdvancedFilters } from "../components/database/advanced-filters";
-import { SearchAndFilter } from "../components/database/SearchAndFilter";
+import { SearchAndFilter } from "../components/database/search-and-filter";
 import { dataService, FilterOptions, SearchResult, UnifiedItem, ManualItem, CatalogItem } from "../services/dataService";
 import { parseFiltersFromUrl, copyShareableUrl } from "../utils/url-utils";
 
-// Type guards for item data
-function isUnifiedItem(item: unknown): item is UnifiedItem {
-	return (
-		typeof item === "object" &&
-    item !== null &&
-    item !== undefined &&
-    "type" in item &&
-    (item as { type: string }).type === "unified_item"
-	);
-}
+const PAGE_SIZE = 12;
+const SEARCH_LIMIT = 50;
+const MAX_ITEMS_PER_PAGE = 4;
+const IMAGE_HEIGHT = 160;
+const ICON_SIZE_SMALL = 16;
+const ICON_SIZE_STAR = 12;
+const ICON_SIZE_MEDIUM = 48;
+const RATING_MULTIPLIER = 5;
 
-function isManualItem(item: unknown): item is ManualItem {
-	return (
-		typeof item === "object" &&
-    item !== null &&
-    item !== undefined &&
-    "type" in item &&
-    (item as { type: string }).type === "manual_item"
-	);
-}
-
-function isCatalogItem(item: unknown): item is CatalogItem {
-	return (
-		typeof item === "object" &&
-    item !== null &&
-    item !== undefined &&
-    "type" in item &&
-    (item as { type: string }).type === "catalog_item"
-	);
+// Utility function to get item type color
+function getItemTypeColor(type: string): string {
+	switch (type) {
+		case "manual": {
+			return "red";
+		}
+		case "catalog": {
+			return "gray";
+		}
+		default: {
+			return "blue";
+		}
+	}
 }
 
 function getItemName(item: UnifiedItem | ManualItem | CatalogItem): string {
-	if ("properties" in item && item.properties?.name) {
+	if ("properties" in item && item.properties.name) {
 		const name = item.properties.name;
 		if (typeof name === "string") return name;
-		if (name && typeof name === "object" && "en" in name) return name.en || name.ja || "Unknown Item";
+		if (typeof name === "object" && "en" in name) return name.en ?? name.ja ?? "Unknown Item";
 	}
 	if ("name" in item && typeof item.name === "string") return item.name;
-	return item.id || "Unknown Item";
+	return item.id ?? "Unknown Item";
 }
 
 function getItemSeries(item: UnifiedItem | ManualItem | CatalogItem): string | undefined {
-	if ("properties" in item && item.properties?.series) {
+	if ("properties" in item && item.properties.series) {
 		const series = item.properties.series;
 		if (typeof series === "string") return series;
-		if (series && typeof series === "object" && "en" in series) return series.en || series.ja;
+		if (typeof series === "object" && "en" in series) return series.en ?? series.ja;
 	}
 	return undefined;
 }
 
 function getItemGrade(item: UnifiedItem | ManualItem | CatalogItem): string | undefined {
-	if ("properties" in item && item.properties && // Handle UnifiedItem with grade object
-    "grade" in item.properties && item.properties.grade) {
+	if ("properties" in item && item.properties && "grade" in item.properties && item.properties.grade) {
 		const grade = item.properties.grade;
 		if (grade && typeof grade === "object" && "code" in grade) {
 			return grade.code;
@@ -105,7 +93,7 @@ function getItemGrade(item: UnifiedItem | ManualItem | CatalogItem): string | un
 }
 
 function getItemScale(item: UnifiedItem | ManualItem | CatalogItem): string | undefined {
-	if ("properties" in item && item.properties?.scale) {
+	if ("properties" in item && item.properties.scale) {
 		return item.properties.scale;
 	}
 	if ("scale" in item && typeof item.scale === "string") return item.scale;
@@ -117,7 +105,6 @@ function getItemScale(item: UnifiedItem | ManualItem | CatalogItem): string | un
  */
 export function DatabaseSearchPage(): React.ReactElement {
 	const navigate = useNavigate();
-	const searchParams = useSearch({ from: "/database/search" });
 	const [searchQuery, setSearchQuery] = useState("");
 	const [filters, setFilters] = useState<FilterOptions>({});
 	const [results, setResults] = useState<SearchResult | null>(null);
@@ -129,7 +116,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 	// Parse URL parameters on mount
 	useEffect(() => {
 		const urlParams = new URLSearchParams(globalThis.location.search);
-		const query = urlParams.get("q") || "";
+		const query = urlParams.get("q") ?? "";
 		const filtersParam = urlParams.get("filters");
 
 		setSearchQuery(query);
@@ -146,7 +133,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 		}
 
 		if (query || Object.keys(filters).length > 0) {
-			performSearch(query, filters);
+			void performSearch(query, filters);
 		}
 	}, []);
 
@@ -157,7 +144,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 			setError(null);
 
 			const searchResults = await dataService.searchItems(query, searchFilters, {
-				limit: 50,
+				limit: SEARCH_LIMIT,
 			});
 
 			setResults(searchResults);
@@ -175,7 +162,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 	const handleSearch = useCallback((query: string, searchFilters: FilterOptions) => {
 		setSearchQuery(query);
 		setFilters(searchFilters);
-		performSearch(query, searchFilters);
+		void performSearch(query, searchFilters);
 
 		// Update URL
 		const url = new URL(globalThis.location.href);
@@ -206,8 +193,6 @@ export function DatabaseSearchPage(): React.ReactElement {
 		setCurrentPage(page);
 		if (results) {
 			// Simulate pagination - in a real app, you'd fetch the specific page
-			const startIndex = (page - 1) * 12;
-			const endIndex = startIndex + 12;
 			// This would typically be a separate API call
 		}
 	}, [results]);
@@ -227,28 +212,13 @@ export function DatabaseSearchPage(): React.ReactElement {
 	const getItemIcon = (type: string) => {
 		switch (type) {
 			case "manual": {
-				return <IconBook size={16} />;
+				return <IconBook size={ICON_SIZE_SMALL} />;
 			}
 			case "catalog": {
-				return <IconDatabase size={16} />;
+				return <IconDatabase size={ICON_SIZE_SMALL} />;
 			}
 			default: {
-				return <IconPhoto size={16} />;
-			}
-		}
-	};
-
-	// Get item type color
-	const getItemTypeColor = (type: string) => {
-		switch (type) {
-			case "manual": {
-				return "red";
-			}
-			case "catalog": {
-				return "gray";
-			}
-			default: {
-				return "blue";
+				return <IconPhoto size={ICON_SIZE_SMALL} />;
 			}
 		}
 	};
@@ -301,8 +271,8 @@ export function DatabaseSearchPage(): React.ReactElement {
 					{results && (
 						<Button
 							variant="outline"
-							leftSection={<IconFilter size={16} />}
-							onClick={handleShare}
+							leftSection={<IconFilter size={ICON_SIZE_SMALL} />}
+							onClick={() => { void handleShare(); }}
 						>
               Share
 						</Button>
@@ -356,8 +326,8 @@ export function DatabaseSearchPage(): React.ReactElement {
 				{/* Search Results */}
 				{results && results.items.length > 0 ? (
 					<>
-						<SimpleGrid cols={{ base: 1, sm: 2, lg: 3, xl: 4 }} spacing="lg">
-							{results.items.slice((currentPage - 1) * 12, currentPage * 12).map((item) => (
+						<SimpleGrid cols={{ base: 1, sm: 2, lg: 3, xl: MAX_ITEMS_PER_PAGE }} spacing="lg">
+							{results.items.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE).map((item) => (
 								<Card
 									key={item.id}
 									shadow="sm"
@@ -376,9 +346,9 @@ export function DatabaseSearchPage(): React.ReactElement {
 								>
 									<Stack gap="md" h="100%">
 										{/* Item Image Placeholder */}
-										<Box h={160} bg="gray.1" style={{ borderRadius: "4px" }}>
+										<Box h={IMAGE_HEIGHT} bg="gray.1" style={{ borderRadius: "4px" }}>
 											<Center h="100%">
-												<IconPhoto size={48} color="var(--mantine-color-gray-4)" />
+												<IconPhoto size={ICON_SIZE_MEDIUM} color="var(--mantine-color-gray-4)" />
 											</Center>
 										</Box>
 
@@ -395,9 +365,9 @@ export function DatabaseSearchPage(): React.ReactElement {
 												</Badge>
 												{item.score && (
 													<Group gap="xs">
-														<IconStar size={12} color="var(--mantine-color-yellow)" />
+														<IconStar size={ICON_SIZE_STAR} color="var(--mantine-color-yellow)" />
 														<Text size="xs" color="dimmed">
-															{(item.score * 5).toFixed(1)}
+															{(item.score * RATING_MULTIPLIER).toFixed(1)}
 														</Text>
 													</Group>
 												)}
@@ -471,12 +441,12 @@ export function DatabaseSearchPage(): React.ReactElement {
 						<Paper p="xl" radius="md" withBorder={true} bg="gray.0">
 							<Center>
 								<Stack align="center" gap="md">
-									<IconSearch size={48} color="var(--mantine-color-gray-4)" />
+									<IconSearch size={ICON_SIZE_MEDIUM} color="var(--mantine-color-gray-4)" />
 									<Title order={4} c="dimmed">
                     No results found
 									</Title>
 									<Text color="dimmed" ta="center">
-                    Try adjusting your search terms or filters to find what you're looking for.
+                    Try adjusting your search terms or filters to find what you&apos;re looking for.
 									</Text>
 									<Button
 										variant="outline"
@@ -500,7 +470,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 					<Paper p="xl" radius="md" withBorder={true} bg="gray.0">
 						<Center>
 							<Stack align="center" gap="md" maw={500}>
-								<IconDatabase size={48} color="var(--mantine-color-gray-4)" />
+								<IconDatabase size={ICON_SIZE_MEDIUM} color="var(--mantine-color-gray-4)" />
 								<Title order={4} c="dimmed">
                   Start searching
 								</Title>
@@ -514,7 +484,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 										variant="light"
 										onClick={() => { handleSearch("Gundam", {}); }}
 									>
-                    Try "Gundam"
+                    Try &quot;Gundam&quot;
 									</Button>
 									<Button
 										variant="light"
