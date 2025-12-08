@@ -7,7 +7,7 @@ import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataSe
 export const mockUnifiedItems: UnifiedItem[] = [
 	{
 		id: "up_00001",
-		type: "unified_item",
+		$type: "unified_item",
 		category: "data" as const,
 		schemaId: "unified_item_schema_v1",
 		properties: {
@@ -33,7 +33,7 @@ export const mockUnifiedItems: UnifiedItem[] = [
 	},
 	{
 		id: "up_00002",
-		type: "unified_item",
+		$type: "unified_item",
 		category: "data" as const,
 		schemaId: "unified_item_schema_v1",
 		properties: {
@@ -62,7 +62,7 @@ export const mockManualItems: ManualItem[] = [
 	{
 		id: "0001",
 		category: "data",
-		type: "manual_item",
+		$type: "manual_item",
 		schemaId: "manual_item_schema_001",
 		properties: {
 			name: {
@@ -96,7 +96,6 @@ export const mockCatalogItems: CatalogItem[] = [
 	{
 		id: "cat_001",
 		name: "Strike Freedom Gundam",
-		series: "Mobile Suit Gundam SEED Destiny",
 		grade: "PG",
 		scale: "1/60",
 		productNumber: "1114204",
