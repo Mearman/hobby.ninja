@@ -116,9 +116,8 @@ export function ItemCard({
 
 	// Extract release date
 	const getReleaseDate = useCallback(() => {
-		if (item.properties.releaseDate) {
-			const date = item.properties.releaseDate;
-			if (date && typeof date === "object") {
+		const date = item.properties.releaseDate;
+		if (date && typeof date === "object") {
 				if ("ja" in date && date.ja) {
 					return date.ja;
 				}
@@ -141,19 +140,20 @@ export function ItemCard({
 		// For unified items, prioritize catalog images
 		if (itemType === "unified") {
 			const properties = item.properties as UnifiedItem["properties"];
-			if (properties?.sources?.catalog) {
+			if (properties.sources.catalog) {
 				// Try to get catalog image
-				return `/data/bandai/items/${item.id}/image.jpg`;
+				const itemId = getItemId(item);
+				return `/data/bandai/items/${itemId}/image.jpg`;
 			}
-			if (properties?.sources?.manual) {
+			if (properties.sources.manual) {
 				// Try manual image
-				return `/data/bandai/manuals/${item.id}/image.jpg`;
+				const itemId = getItemId(item);
+				return `/data/bandai/manuals/${itemId}/image.jpg`;
 			}
 		}
 
 		// For catalog items - note: catalog items don't have images property in the schema
 		if (itemType === "catalog") {
-			const properties = item.properties as CatalogItem["properties"];
 			// Catalog items don't have images property in schema, fall back to placeholder
 			return null;
 		}
@@ -161,22 +161,22 @@ export function ItemCard({
 		// For manual items, use product image or thumbnail image
 		if (itemType === "manual") {
 			const properties = item.properties as ManualItem["properties"];
-			if (properties?.productImage) {
+			if (properties.productImage) {
 				return properties.productImage;
 			}
-			if (properties?.thumbnailImage) {
+			if (properties.thumbnailImage) {
 				return properties.thumbnailImage;
 			}
 		}
 
 		return null;
-	}, [item, itemType]);
+	}, [item, itemType, getItemId]);
 
 	// Get source confidence for unified items
 	const getMatchConfidence = useCallback(() => {
 		if (itemType === "unified") {
 			const properties = item.properties as UnifiedItem["properties"];
-			if (properties?.matchStage !== undefined) {
+			if (properties.matchStage !== undefined) {
 				return properties.matchStage;
 			}
 		}
@@ -188,8 +188,8 @@ export function ItemCard({
 		if (itemType === "unified") {
 			const properties = item.properties as UnifiedItem["properties"];
 			return {
-				hasCatalog: Boolean(properties?.sources?.catalog),
-				hasManual: Boolean(properties?.sources?.manual),
+				hasCatalog: Boolean(properties.sources.catalog),
+				hasManual: Boolean(properties.sources.manual),
 			};
 		}
 		return {
@@ -197,6 +197,11 @@ export function ItemCard({
 			hasManual: itemType === "manual",
 		};
 	}, [item, itemType]);
+
+	// Get unique item ID
+	const getItemId = useCallback((itemData: UnifiedItem | ManualItem | CatalogItem): string => {
+		return itemData.id ?? itemData._id ?? itemData.$id ?? "unknown";
+	}, []);
 
 	// Image loading handlers
 	const handleImageLoad = useCallback(() => {
@@ -241,11 +246,6 @@ export function ItemCard({
 			navigator.clipboard.writeText(globalThis.location.href);
 		}
 	}, [getDisplayName]);
-
-	// Get unique item ID
-	const getItemId = useCallback((itemData: any): string => {
-		return itemData.id ?? itemData.title ?? "unknown";
-	}, []);
 
 	// Render confidence badge
 	const renderConfidenceBadge = () => {
