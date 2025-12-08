@@ -461,6 +461,157 @@ export const scaleIn = style({
   animation: `${scaleInKeyframe} 0.2s ease-out`,
 });
 
+// Database hub page styles
+export const databaseStatCard = style({
+  transition: 'all 0.2s ease-in-out',
+  border: '1px solid var(--mantine-color-gray-2)',
+
+  selectors: {
+    '&:hover': {
+      transform: 'translateY(-2px)',
+      boxShadow: 'var(--mantine-shadow-md)',
+      borderColor: 'var(--mantine-color-blue-3)',
+    },
+  },
+});
+
+export const databaseStatIcon = style({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '48px',
+  height: '48px',
+  borderRadius: 'var(--mantine-radius-md)',
+  backgroundColor: 'var(--mantine-color-blue-0)',
+  color: 'var(--mantine-color-blue-6)',
+});
+
+export const categoryCard = style({
+  textDecoration: 'none',
+  color: 'inherit',
+  transition: 'all 0.2s ease-in-out',
+  backgroundColor: 'var(--mantine-color-white)',
+
+  selectors: {
+    '&:hover': {
+      transform: 'translateY(-4px)',
+      boxShadow: 'var(--mantine-shadow-lg)',
+      borderColor: 'var(--mantine-color-blue-4)',
+    },
+  },
+});
+
+export const brandLogo = style({
+  borderRadius: 'var(--mantine-radius-md)',
+  overflow: 'hidden',
+  backgroundColor: 'var(--mantine-color-gray-0)',
+  border: '1px solid var(--mantine-color-gray-2)',
+});
+
+export const categoryIcon = style({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '64px',
+  height: '64px',
+  borderRadius: 'var(--mantine-radius-lg)',
+  backgroundColor: 'var(--mantine-color-blue-1)',
+  color: 'var(--mantine-color-blue-6)',
+});
+
+export const seriesCard = style({
+  textDecoration: 'none',
+  color: 'inherit',
+  transition: 'all 0.2s ease-in-out',
+  backgroundColor: 'var(--mantine-color-white)',
+
+  selectors: {
+    '&:hover': {
+      transform: 'translateY(-4px)',
+      boxShadow: 'var(--mantine-shadow-lg)',
+      borderColor: 'var(--mantine-color-blue-4)',
+    },
+  },
+});
+
+export const seriesImage = style({
+  borderRadius: 'var(--mantine-radius-sm)',
+  overflow: 'hidden',
+});
+
+export const searchCard = style({
+  textDecoration: 'none',
+  color: 'inherit',
+  backgroundColor: 'var(--mantine-color-gray-0)',
+  border: '2px dashed var(--mantine-color-gray-3)',
+  cursor: 'pointer',
+  transition: 'all 0.2s ease-in-out',
+
+  selectors: {
+    '&:hover': {
+      backgroundColor: 'var(--mantine-color-blue-0)',
+      borderColor: 'var(--mantine-color-blue-4)',
+      transform: 'translateY(-2px)',
+    },
+  },
+});
+
+export const actionCard = style({
+  textDecoration: 'none',
+  color: 'inherit',
+  transition: 'all 0.2s ease-in-out',
+  backgroundColor: 'var(--mantine-color-white)',
+
+  selectors: {
+    '&:hover': {
+      backgroundColor: 'var(--mantine-color-blue-0)',
+      borderColor: 'var(--mantine-color-blue-4)',
+      transform: 'translateX(4px)',
+    },
+  },
+});
+
+// Item detail page styles
+export const itemDetailHeader = style({
+  marginBottom: 'var(--mantine-spacing-xl)',
+});
+
+export const itemDetailTitle = style({
+  marginBottom: 'var(--mantine-spacing-sm)',
+});
+
+export const itemDetailSubtitle = style({
+  color: 'var(--mantine-color-gray-6)',
+  marginBottom: 'var(--mantine-spacing-lg)',
+});
+
+export const itemDetailImage = style({
+  borderRadius: 'var(--mantine-radius-lg)',
+  overflow: 'hidden',
+  border: '1px solid var(--mantine-color-gray-3)',
+  marginBottom: 'var(--mantine-spacing-xl)',
+});
+
+export const itemDetailMetadata = style({
+  display: 'grid',
+  gap: '16px',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+
+  selectors: {
+    '& dt': {
+      fontWeight: 600,
+      color: 'var(--mantine-color-gray-6)',
+      fontSize: '12px',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+    },
+    '& dd': {
+      marginLeft: 0,
+      fontSize: '14px',
+    },
+  },
+});
+
 // Assign CSS variables
 export const themeVars = {
   [borderRadiusVar]: 'var(--mantine-radius-lg)',
