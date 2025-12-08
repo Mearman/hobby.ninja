@@ -463,18 +463,26 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 				const itemProps = getItemProperties(item);
 				const itemReleaseDate = ("releaseDate" in item ? item["releaseDate"] : undefined) ??
                     (itemProps?.["releaseDate"]);
-				const releaseYear = (itemReleaseDate)?.["year"];
+				const releaseYear = itemReleaseDate && typeof itemReleaseDate === 'object' && 'year' in itemReleaseDate
+					? (itemReleaseDate as { year?: number }).year
+					: undefined;
 				return releaseYear && releaseYear >= twoYearsAgo;
 			})
-			.sort((a, b) => {
+			.sort((a, b): number => {
 				const propsA = getItemProperties(a);
 				const propsB = getItemProperties(b);
 				const releaseDateA = ("releaseDate" in a ? a["releaseDate"] : undefined) ??
                     (propsA?.["releaseDate"]);
 				const releaseDateB = ("releaseDate" in b ? b["releaseDate"] : undefined) ??
                     (propsB?.["releaseDate"]);
-				const yearA = (releaseDateA (releaseDateA)?.year(releaseDateA)?.year "year" in releaseDateA ? (releaseDateA as any)["year"] : 0) ?? 0;
-				const yearB = (releaseDateB (releaseDateB)?.year(releaseDateB)?.year "year" in releaseDateB ? (releaseDateB as any)["year"] : 0) ?? 0;
+
+				const yearA = releaseDateA && typeof releaseDateA === 'object' && 'year' in releaseDateA
+					? (releaseDateA as { year?: number }).year ?? 0
+					: 0;
+				const yearB = releaseDateB && typeof releaseDateB === 'object' && 'year' in releaseDateB
+					? (releaseDateB as { year?: number }).year ?? 0
+					: 0;
+
 				return yearB - yearA;
 			})
 			.slice(0, MAX_ITEMS_PER_CATEGORY)
@@ -482,7 +490,9 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 				const itemProps = getItemProperties(item);
 				const itemReleaseDate = ("releaseDate" in item ? item["releaseDate"] : undefined) ??
                     (itemProps?.["releaseDate"]);
-				const releaseYear = (itemReleaseDate)?.["year"] ?? 0;
+				const releaseYear = itemReleaseDate && typeof itemReleaseDate === 'object' && 'year' in itemReleaseDate
+					? (itemReleaseDate as { year?: number }).year
+					: 0;
 				return {
 					id: item.id!,
 					type: item.type,
