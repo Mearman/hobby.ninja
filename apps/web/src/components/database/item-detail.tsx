@@ -43,7 +43,7 @@ import {
 	IconPrinter,
 	IconBookmark,
 } from "@tabler/icons-react";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../../services/dataService";
 
@@ -146,7 +146,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 	const [rotation, setRotation] = useState(0);
 	const [scale, setScale] = useState(1);
 
-	if (!images || images.length === 0) {
+	if (!images.length) {
 		return (
 			<Card h={IMAGE_HEIGHT} withBorder={true}>
 				<Flex align="center" justify="center" h="100%">
@@ -374,9 +374,9 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	useEffect(() => {
 		void loadItem();
-	}, [itemId, preferSource]);
+	}, [itemId, preferSource, loadItem]);
 
-	const loadItem = async () => {
+	const loadItem = useCallback(async () => {
 		setLoading(true);
 		setError(null);
 
@@ -396,14 +396,13 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 			// Create a proper DetailItem from unified item
 			const unifiedItem = loadedItem;
-			const [catalogData, manualData] = await Promise.all([
-				unifiedItem.properties?.sources?.catalog
-					? dataService.getItemById(unifiedItem.properties.sources.catalog.id, "catalog")
-					: Promise.resolve(null),
-				unifiedItem.properties?.sources?.manual
-					? dataService.getItemById(unifiedItem.properties.sources.manual.id, "manual")
-					: Promise.resolve(null),
-			]);
+			const catalogDataPromise = unifiedItem.properties?.sources?.catalog
+				? dataService.getItemById(unifiedItem.properties.sources.catalog.id, "catalog")
+				: Promise.resolve(null);
+			const manualDataPromise = unifiedItem.properties?.sources?.manual
+				? dataService.getItemById(unifiedItem.properties.sources.manual.id, "manual")
+				: Promise.resolve(null);
+			const [catalogData, manualData] = await Promise.all([catalogDataPromise, manualDataPromise]);
 
 			// Type the results properly
 			const catalogDataTyped = catalogData as CatalogItem | null;
@@ -421,7 +420,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 		} finally {
 			setLoading(false);
 		}
-	};
+	}, [itemId, preferSource]);
 
 	const handleShare = () => {
 		setShowSharing(true);
@@ -451,7 +450,8 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			URL.revokeObjectURL(url);
 
 			setShareSuccess(true);
-			setTimeout(() => { setShareSuccess(false); }, SHARE_SUCCESS_TIMEOUT);
+			await new Promise(resolve => setTimeout(resolve, SHARE_SUCCESS_TIMEOUT));
+			setShareSuccess(false);
 		} catch (error_) {
 			console.error("Export failed:", error_);
 		}
@@ -465,7 +465,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			return item.properties.name;
 		}
 
-		return item.properties.name.ja ?? item.properties.name.en ?? "Unknown Item";
+		return item.properties.name.en ?? item.properties.name.ja ?? "Unknown Item";
 	};
 
 	// Helper function to get item properties safely
@@ -495,7 +495,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 		if (typeof series === "string") return series;
 
-		return series.ja ?? series.en ?? null;
+		return series.en ?? series.ja ?? null;
 	};
 
 	// Helper function to get match method safely
@@ -520,7 +520,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 		const sources: SourceMetadata[] = [];
 
 		// Check if it's a unified item with sources
-		if (item.$type === "unified_item" && "properties" in item && item.properties?.sources) {
+		if (item.$type === "unified_item" && item.properties?.sources) {
 			const unifiedItem = item;
 
 			if (unifiedItem.properties.sources.catalog) {
