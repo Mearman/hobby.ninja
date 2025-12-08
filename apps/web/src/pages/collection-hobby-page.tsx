@@ -207,7 +207,7 @@ export function CollectionHobbyPage(): React.ReactElement {
 									<Group justify="space-between" align="flex-start">
 										<Stack gap="xs" style={{ flex: 1 }}>
 											<Group gap="xs">
-												<IconFolderOpen size={16} c={config.color} />
+												<IconFolderOpen size={16} color={`var(--mantine-color-${config.color})`} />
 												<Title order={4} size={18} lineClamp={1}>
 													{collection.name}
 												</Title>
@@ -236,7 +236,7 @@ export function CollectionHobbyPage(): React.ReactElement {
 									{/* Collection Stats */}
 									<Group>
 										<Stack gap={0} align="center">
-											<IconPackage size={16} c="gray" />
+											<IconPackage size={16} color="var(--mantine-color-gray)" />
 											<Text size="lg" fw={600}>
 												{collection.statistics.totalItems}
 											</Text>

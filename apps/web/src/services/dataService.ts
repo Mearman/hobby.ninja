@@ -2,11 +2,13 @@
  * Client-Side Data Service for hobby.ninja Database
  *
  * Type-safe data service using Zod schemas for validation
- * Works with the actual data structure in apps/web/public/data/bandai/
- * with three main data sources:
- * - unified/ - Merged catalog and manual data
- * - items/ - Catalog items only
- * - manuals/ - Manual data only
+ * Works with the actual data structure in apps/web/public/api/graph/
+ * with main data sources:
+ * - items/ - Graph node items (catalog data)
+ * - manuals/ - Manual data with relationships
+ * - series/ - Series information
+ * - brands/ - Brand information
+ * - categories/ - Category information
  */
 
 import {
@@ -17,7 +19,7 @@ import {
 	ManualItemNodeType,
 	CatalogItemNodeType,
 	BaseEntitySchemaType,
-	
+
 } from "../schemas/universal-graph-schema.js";
 
 // Export types for the Zod-validated data structures
@@ -25,6 +27,98 @@ export type UnifiedItem = UnifiedItemNodeType;
 export type ManualItem = ManualItemNodeType;
 export type CatalogItem = CatalogItemNodeType;
 export type GraphEntity = BaseEntitySchemaType;
+
+// Graph API types
+interface GraphItem {
+	id: string;
+	type: "item";
+	name: {
+		ja: string;
+		en: string;
+	};
+	price?: {
+		amount: number;
+		currency: string;
+		taxIncluded: boolean;
+		taxRate: number;
+	};
+	releaseDate?: {
+		ja: string;
+		year: number;
+		month?: number;
+		day?: number;
+	};
+	targetAge?: number;
+	scale?: string;
+	description?: Array<{
+		ja: string;
+		en: string;
+	}>;
+	accessories?: Array<{
+		ja: string;
+		en: string;
+	}>;
+	contents?: Array<{
+		ja: string;
+		en: string;
+	}>;
+	images?: string[];
+	sourceUrl?: string;
+	extractedAt?: string;
+	edges?: {
+		inbound: Array<{
+			type: string;
+			targetId: string;
+			targetType: string;
+		}>;
+		outbound: Array<{
+			type: string;
+			targetId: string;
+			targetType: string;
+		}>;
+	};
+}
+
+interface GraphManual {
+	id: string;
+	type: "manual";
+	name: {
+		ja: string;
+		en: string;
+	};
+	productNumber?: string;
+	releaseDate?: {
+		ja: string;
+		year: number;
+		month?: number;
+		day?: number;
+	};
+	series?: {
+		ja: string;
+		en: string;
+	};
+	grade?: {
+		code: string;
+		family: string;
+	};
+	scale?: string;
+	pdfUrl?: string;
+	productImage?: string;
+	thumbnailImage?: string;
+	extractedAt?: string;
+	edges?: {
+		inbound: Array<{
+			type: string;
+			targetId: string;
+			targetType: string;
+		}>;
+		outbound: Array<{
+			type: string;
+			targetId: string;
+			targetType: string;
+		}>;
+	};
+}
 
 interface IndexEntry {
   filename: string;
@@ -43,45 +137,6 @@ interface DataIndex {
   totalSize: number;
   files: IndexEntry[];
 }
-
-// Matching the new hierarchical index structure from Vite plugin
-interface HierarchicalIndex {
-  generated: string;
-  version: string;
-  type: "master" | "directory";
-  path: string;
-  entries: IndexEntry[];
-  children: string[]; // Paths to child indexes
-  summary: {
-    totalFiles: number;
-    totalDirectories: number;
-    totalSize: number;
-  };
-}
-
-// Legacy interface for backward compatibility
-interface MasterIndex {
-  generated: string;
-  version: string;
-  sources: {
-    unified: DataIndex;
-    items: DataIndex;
-    manuals: DataIndex;
-  };
-  summary: {
-    totalFiles: number;
-    totalSize: number;
-  };
-}
-
-interface ReleaseDate {
-  year: number;
-  month?: number;
-  day?: number;
-}
-
-// Types are now imported from universal-graph-schema.ts
-// No need for legacy interface definitions
 
 interface SearchResult {
   items: Array<{
@@ -176,6 +231,17 @@ interface DatabaseStats {
   };
 }
 
+// Type for item properties that can contain different structures
+interface ItemProperties {
+  name?: { en: string; ja: string };
+  series?: { en: string; ja: string } | string;
+  grade?: string | { code: string; family: string };
+  scale?: string;
+  price?: { amount: number; currency: string };
+  releaseDate?: { year: number };
+  [key: string]: unknown;
+}
+
 // Configuration
 const DEFAULT_CONFIG = {
 	/** Cache size in number of items */
@@ -189,7 +255,7 @@ const DEFAULT_CONFIG = {
 	/** Maximum pagination limit */
 	MAX_PAGE_LIMIT: 100,
 	/** Data files base path */
-	DATA_PATH: "/data/",
+	DATA_PATH: "/api/graph/",
 };
 
 // Simple cache implementation
@@ -271,14 +337,13 @@ const TextProcessor = {
 export class DataService {
 	private cache: SimpleCache;
 	private isInitialized = false;
-	private dataIndex: HierarchicalIndex | null = null;
-	private bandaiIndex: HierarchicalIndex | null = null;
-	private subIndexes = new Map<string, HierarchicalIndex>();
 	private dataFiles: {
-    unified: string[];
-    manuals: string[];
-    items: string[];
-  } | null = null;
+		items: string[];
+		manuals: string[];
+		series: string[];
+		brands: string[];
+		categories: string[];
+	} | null = null;
 
 	constructor() {
 		this.cache = new SimpleCache();
@@ -293,19 +358,22 @@ export class DataService {
 		}
 
 		try {
-			// For now, we'll work with sample data since we can't scan directories directly from browser
-			// In a real implementation, you'd have a manifest file or generate indices at build time
+			// Load file lists from the graph API structure
 			this.dataFiles = {
-				unified: await this.loadFileList("unified"),
-				manuals: await this.loadFileList("manuals"),
 				items: await this.loadFileList("items"),
+				manuals: await this.loadFileList("manuals"),
+				series: await this.loadFileList("series"),
+				brands: await this.loadFileList("brands"),
+				categories: await this.loadFileList("categories"),
 			};
 
 			this.isInitialized = true;
 			console.log("Data service initialized with", {
-				unified: this.dataFiles.unified.length,
-				manuals: this.dataFiles.manuals.length,
 				items: this.dataFiles.items.length,
+				manuals: this.dataFiles.manuals.length,
+				series: this.dataFiles.series.length,
+				brands: this.dataFiles.brands.length,
+				categories: this.dataFiles.categories.length,
 			});
 		} catch (error) {
 			console.error("Failed to initialize data service:", error);
@@ -314,37 +382,34 @@ export class DataService {
 	}
 
 	/**
-   * Load a list of files from a directory (simplified implementation)
+   * Load a list of files from a directory in the graph API structure
    */
 	private async loadFileList(type: string): Promise<string[]> {
-		// For now, return a sample of available files
-		// In production, you'd have a manifest file or generate this at build time
-		const sampleSize = 100; // Load first 100 files as a sample
-		const files: string[] = [];
+		try {
+			// For now, return a sample based on known patterns
+			const files: string[] = [];
 
-		for (let i = 1; i <= sampleSize; i++) {
-			const paddedNumber = i.toString().padStart(5, "0");
-			switch (type) {
-				case "unified": {
-					files.push(`up_${paddedNumber}.json`);
-			
-					break;
+			if (type === "items") {
+				// Items follow the pattern 01_XXXX.json
+				const sampleSize = 100;
+				for (let i = 1000; i < 1000 + sampleSize; i++) {
+					files.push(`01_${i}.json`);
 				}
-				case "manuals": {
-					files.push(`${i}.json`);
-			
-					break;
-				}
-				case "items": {
-					files.push(`01_${paddedNumber}.json`);
-			
-					break;
-				}
-			// No default
 			}
-		}
 
-		return files;
+			if (type === "manuals") {
+				// Manuals follow numeric pattern
+				const sampleSize = 100;
+				for (let i = 1; i <= sampleSize; i++) {
+					files.push(`${i}.json`);
+				}
+			}
+
+			return files;
+		} catch (error) {
+			console.warn(`Failed to load file list for ${type}:`, error);
+			return [];
+		}
 	}
 
 	/**
@@ -366,22 +431,16 @@ export class DataService {
 
 		let allItems: SearchResult["items"] = [];
 
-		// Search unified data
-		if (!filters.dataSource || filters.dataSource === "unified") {
-			const unifiedItems = await this.searchUnifiedItems(normalizedQuery);
-			allItems.push(...unifiedItems);
+		// Search items (catalog data)
+		if (!filters.dataSource || filters.dataSource === "catalog" || filters.dataSource === "unified") {
+			const catalogItems = await this.searchGraphItems(normalizedQuery, "items");
+			allItems.push(...catalogItems);
 		}
 
 		// Search manuals
 		if (!filters.dataSource || filters.dataSource === "manual") {
-			const manualItems = await this.searchManualItems(normalizedQuery);
+			const manualItems = await this.searchGraphItems(normalizedQuery, "manuals");
 			allItems.push(...manualItems);
-		}
-
-		// Search catalog items
-		if (!filters.dataSource || filters.dataSource === "catalog") {
-			const catalogItems = await this.searchCatalogItems(normalizedQuery);
-			allItems.push(...catalogItems);
 		}
 
 		// Apply sorting
@@ -412,10 +471,10 @@ export class DataService {
 	}
 
 	/**
-   * Search unified items
+   * Search items from the graph API
    */
-	private async searchUnifiedItems(query: string): Promise<SearchResult["items"]> {
-		const cacheKey = `search_unified_${query}`;
+	private async searchGraphItems(query: string, sourceType: "items" | "manuals"): Promise<SearchResult["items"]> {
+		const cacheKey = `search_${sourceType}_${query}`;
 		let results = this.cache.get(cacheKey) as SearchResult["items"] | undefined;
 
 		if (results) {
@@ -423,645 +482,179 @@ export class DataService {
 		}
 
 		try {
-			// Load sample unified items
-			const sampleSize = 20;
-			const sampleIds = this.dataFiles!.unified.slice(0, sampleSize);
+			const sampleSize = 50;
+			const sampleIds = this.dataFiles![sourceType].slice(0, sampleSize);
 
 			const items: SearchResult["items"] = [];
 
 			for (const filename of sampleIds) {
 				try {
-					const item = await this.loadUnifiedItem(filename);
-					if (item) {
-						const score = this.calculateItemScore(query, item);
+					const graphItem = sourceType === "items"
+						? await this.loadGraphItem(filename, "items")
+						: await this.loadGraphItem(filename, "manuals");
+
+					if (graphItem) {
+						const score = this.calculateGraphItemScore(query, graphItem);
 						if (score > 0.1) {
-							items.push({
-								id: item.id || item.$id || `unified-${filename}`,
-								type: "unified",
-								score,
-								highlights: {
-									name: this.highlightText(item.properties?.name?.en || item.properties?.name?.ja || "", query),
-								},
-								data: item,
-							});
-						}
-					}
-				} catch (error) {
-					console.warn(`Failed to load unified item ${filename}:`, error);
-				}
-			}
+							// Convert graph item to UnifiedItem or ManualItem format
+							const convertedItem = sourceType === "items"
+								? this.convertGraphItemToUnified(graphItem)
+								: this.convertGraphToManualItem(graphItem);
 
-			results = items;
-			this.cache.set(cacheKey, results);
-			return results;
-		} catch (error) {
-			console.error("Failed to search unified items:", error);
-			return [];
-		}
-	}
-
-	/**
-   * Search manual items
-   */
-	private async searchManualItems(query: string): Promise<SearchResult["items"]> {
-		const cacheKey = `search_manuals_${query}`;
-		let results = this.cache.get(cacheKey) as SearchResult["items"] | undefined;
-
-		if (results) {
-			return results;
-		}
-
-		try {
-			// Load sample manual items
-			const sampleSize = 10;
-			const sampleIds = this.dataFiles!.manuals.slice(0, sampleSize);
-
-			const items: SearchResult["items"] = [];
-
-			for (const filename of sampleIds) {
-				try {
-					const item = await this.loadManualItem(filename);
-					if (item) {
-						const score = this.calculateItemScore(query, item);
-						if (score > 0.1) {
-							items.push({
-								id: item.id || item.$id || `manual-${filename}`,
-								type: "manual",
-								score,
-								highlights: {
-									name: this.highlightText(item.properties?.name?.en || item.properties?.name?.ja || "", query),
-								},
-								data: item,
-							});
-						}
-					}
-				} catch (error) {
-					console.warn(`Failed to load manual item ${filename}:`, error);
-				}
-			}
-
-			results = items;
-			this.cache.set(cacheKey, results);
-			return results;
-		} catch (error) {
-			console.error("Failed to search manual items:", error);
-			return [];
-		}
-	}
-
-	/**
-   * Search catalog items
-   */
-	private async searchCatalogItems(query: string): Promise<SearchResult["items"]> {
-		const cacheKey = `search_catalog_${query}`;
-		let results = this.cache.get(cacheKey) as SearchResult["items"] | undefined;
-
-		if (results) {
-			return results;
-		}
-
-		try {
-			// Load sample catalog items
-			const sampleSize = 10;
-			const sampleIds = this.dataFiles!.items.slice(0, sampleSize);
-
-			const items: SearchResult["items"] = [];
-
-			for (const filename of sampleIds) {
-				try {
-					const item = await this.loadCatalogItem(filename);
-					if (item) {
-						const score = this.calculateItemScore(query, item);
-						if (score > 0.1) {
-							items.push({
-								id: item.id || item.$id || `catalog-${filename}`,
-								type: "catalog",
-								score,
-								highlights: {
-									name: this.highlightText(item.properties?.name?.en || item.properties?.name?.ja || "", query),
-								},
-								data: item,
-							});
-						}
-					}
-				} catch (error) {
-					console.warn(`Failed to load catalog item ${filename}:`, error);
-				}
-			}
-
-			results = items;
-			this.cache.set(cacheKey, results);
-			return results;
-		} catch (error) {
-			console.error("Failed to search catalog items:", error);
-			return [];
-		}
-	}
-
-	/**
-   * Get items by page
-   */
-	async getItemsByPage(
-		page = 1,
-		limit: number = DEFAULT_CONFIG.DEFAULT_PAGE_LIMIT,
-		source?: DataSourceType,
-	): Promise<PaginationResult<UnifiedItem | ManualItem | CatalogItem>> {
-		await this.initialize();
-
-		const cacheKey = `page_${page}_${limit}_${source || "all"}`;
-		let result = this.cache.get(cacheKey) as PaginationResult<UnifiedItem | ManualItem | CatalogItem> | undefined;
-
-		if (result) {
-			return result;
-		}
-
-		try {
-			const items: any[] = [];
-
-			if (!source || source === "unified") {
-				const unifiedItems = await this.getUnifiedItems();
-				items.push(...unifiedItems);
-			}
-			if (!source || source === "manual") {
-				const manualItems = await this.getManualItems();
-				items.push(...manualItems);
-			}
-			if (!source || source === "catalog") {
-				const catalogItems = await this.getCatalogItems();
-				items.push(...catalogItems);
-			}
-
-			const total = items.length;
-			const totalPages = Math.ceil(total / limit);
-			const startIndex = (page - 1) * limit;
-			const endIndex = startIndex + limit;
-			const pageItems = items.slice(startIndex, endIndex);
-
-			result = {
-				items: pageItems,
-				pagination: {
-					page,
-					limit,
-					total,
-					totalPages,
-					hasNext: page < totalPages,
-					hasPrev: page > 1,
-				},
-			};
-
-			this.cache.set(cacheKey, result);
-			return result;
-		} catch (error) {
-			console.error("Failed to get paginated items:", error);
-			throw error;
-		}
-	}
-
-	/**
-   * Get unified items
-   */
-	async getUnifiedItems(): Promise<UnifiedItem[]> {
-		const cacheKey = "unified_items";
-		let items = this.cache.get(cacheKey) as UnifiedItem[] | undefined;
-
-		if (items) {
-			return items;
-		}
-
-		try {
-			// Load all unified items, not just a sample
-			const sampleIds = this.dataFiles!.unified;
-
-			items = [];
-			for (const filename of sampleIds) {
-				try {
-					const item = await this.loadUnifiedItem(filename);
-					if (item) {
-						items.push(item);
-					}
-				} catch (error) {
-					console.warn(`Failed to load unified item ${filename}:`, error);
-				}
-			}
-
-			this.cache.set(cacheKey, items);
-			return items;
-		} catch (error) {
-			console.error("Failed to load unified items:", error);
-			return [];
-		}
-	}
-
-	/**
-   * Get manual items
-   */
-	async getManualItems(): Promise<ManualItem[]> {
-		const cacheKey = "manual_items";
-		const items = this.cache.get(cacheKey);
-
-		if (items && Array.isArray(items)) {
-			return items as ManualItem[];
-		}
-
-		try {
-			const sampleSize = 20;
-			const sampleIds = this.dataFiles!.manuals.slice(0, sampleSize);
-
-			const items: ManualItem[] = [];
-			for (const filename of sampleIds) {
-				try {
-					const item = await this.loadManualItem(filename);
-					if (item) {
-						items.push(item);
-					}
-				} catch (error) {
-					console.warn(`Failed to load manual item ${filename}:`, error);
-				}
-			}
-
-			this.cache.set(cacheKey, items);
-			return items;
-		} catch (error) {
-			console.error("Failed to load manual items:", error);
-			return [];
-		}
-	}
-
-	/**
-   * Get catalog items
-   */
-	async getCatalogItems(): Promise<CatalogItem[]> {
-		const cacheKey = "catalog_items";
-		const items = this.cache.get(cacheKey);
-
-		if (items && Array.isArray(items)) {
-			return items as CatalogItem[];
-		}
-
-		try {
-			const sampleSize = 20;
-			const sampleIds = this.dataFiles!.items.slice(0, sampleSize);
-
-			const items: CatalogItem[] = [];
-			for (const filename of sampleIds) {
-				try {
-					const item = await this.loadCatalogItem(filename);
-					if (item) {
-						items.push(item);
-					}
-				} catch (error) {
-					console.warn(`Failed to load catalog item ${filename}:`, error);
-				}
-			}
-
-			this.cache.set(cacheKey, items);
-			return items;
-		} catch (error) {
-			console.error("Failed to load catalog items:", error);
-			return [];
-		}
-	}
-
-	/**
-   * Get item by ID and type
-   */
-	async getItemById(id: string, type: "unified" | "manual" | "catalog"): Promise<UnifiedItem | ManualItem | CatalogItem | null> {
-		try {
-			switch (type) {
-				case "unified": {
-					const items = await this.getUnifiedItems();
-					return items.find(item => item.id === id) || null;
-				}
-				case "manual": {
-					const items = await this.getManualItems();
-					return items.find(item => item.id === id) || null;
-				}
-				case "catalog": {
-					const items = await this.getCatalogItems();
-					return items.find(item => item.id === id) || null;
-				}
-				default: {
-					return null;
-				}
-			}
-		} catch (error) {
-			console.error(`Failed to get ${type} item by ID ${id}:`, error);
-			return null;
-		}
-	}
-
-	/**
-   * Get database statistics using generated hierarchical indices
-   */
-	async getStatistics(): Promise<DatabaseStats> {
-		const cacheKey = "database_stats";
-		let stats = this.cache.get(cacheKey);
-
-		if (stats && typeof stats === "object") {
-			return stats as DatabaseStats;
-		}
-
-		try {
-			// Load hierarchical master index for statistics
-			const masterIndexResponse = await fetch("/data/index.json");
-			if (!masterIndexResponse.ok) {
-				throw new Error("Failed to load master index");
-			}
-
-			const masterIndex: HierarchicalIndex = await masterIndexResponse.json();
-
-			// Find bandai directory for detailed stats
-			const bandaiDirEntry = masterIndex.entries.find(entry =>
-				entry.type === "directory" && entry.relativePath === "bandai",
-			);
-
-			let unifiedCount = 0;
-			let manualCount = 0;
-			let catalogCount = 0;
-			let withManual = 0;
-			let withCatalog = 0;
-			let withBoth = 0;
-
-			if (bandaiDirEntry) {
-				// Load bandai index for detailed information
-				const bandaiIndexResponse = await fetch("/data/bandai/index.json");
-				if (bandaiIndexResponse.ok) {
-					const bandaiIndex: HierarchicalIndex = await bandaiIndexResponse.json();
-
-					// Count items by source type from metadata
-					for (const entry of bandaiIndex.entries) {
-						if (entry.type === "file" && entry.metadata?.["sourceType"]) {
-							switch (entry.metadata?.["sourceType"]) {
-								case "unified": {
-									unifiedCount++;
-									if (entry.metadata["productId"]) {
-										// Could load actual unified item to check sources
-										// For now, assume all unified items have both sources
-										withBoth++;
-									}
-									break;
-								}
-								case "manual": {
-									manualCount++;
-									withManual++;
-									break;
-								}
-								case "catalog": {
-									catalogCount++;
-									withCatalog++;
-									break;
-								}
+							if (convertedItem) {
+								items.push({
+									id: graphItem.id,
+									type: sourceType === "items" ? "catalog" : "manual",
+									score,
+									highlights: {
+										name: this.highlightText(graphItem.name?.en || graphItem.name?.ja || "", query),
+									},
+									data: convertedItem,
+								});
 							}
 						}
 					}
+				} catch (error) {
+					console.warn(`Failed to load ${sourceType} item ${filename}:`, error);
 				}
 			}
 
-			// Fallback to master index totals if bandai data isn't available
-			const totalUnified = masterIndex.entries.filter(e =>
-				e.type === "file" && e.filename.endsWith(".json") && e.filename.startsWith("up_"),
-			).length;
-
-			const totalManual = masterIndex.entries.filter(e =>
-				e.type === "file" && e.filename.endsWith(".json") && /^\d+/.test(e.filename),
-			).length;
-
-			const totalCatalog = masterIndex.entries.filter(e =>
-				e.type === "file" && e.filename.endsWith(".json") && e.filename.startsWith("01_"),
-			).length;
-
-			stats = {
-				generatedAt: masterIndex.generated,
-				totalItems: {
-					unified: unifiedCount || totalUnified,
-					manual: manualCount || totalManual,
-					catalog: catalogCount || totalCatalog,
-				},
-				sourceCoverage: {
-					withManual: withManual || manualCount,
-					withCatalog: withCatalog || catalogCount,
-					withBoth: withBoth || 0, // Approximate for now
-					singleSource: (withManual + withCatalog) - (withBoth * 2) || 0,
-				},
-				quality: {
-					highConfidence: 0, // Could be calculated from actual data
-					mediumConfidence: 0,
-					lowConfidence: 0,
-					needsReview: 0,
-				},
-				dateRange: {
-					// Would need to sample actual data for this
-					earliestYear: 2000,
-					latestYear: 2025,
-				},
-			};
-
-			this.cache.set(cacheKey, stats);
-			return stats as DatabaseStats;
+			results = items;
+			this.cache.set(cacheKey, results);
+			return results;
 		} catch (error) {
-			console.error("Failed to get database statistics:", error);
-			// Return default stats
-			return {
-				generatedAt: new Date().toISOString(),
-				totalItems: { unified: 0, manual: 0, catalog: 0 },
-				sourceCoverage: { withManual: 0, withCatalog: 0, withBoth: 0, singleSource: 0 },
-				quality: { highConfidence: 0, mediumConfidence: 0, lowConfidence: 0, needsReview: 0 },
-				dateRange: {},
-			};
+			console.error(`Failed to search ${sourceType} items:`, error);
+			return [];
 		}
 	}
 
 	/**
-   * Load a unified item by filename with Zod validation
+   * Load an item from the graph API
    */
-	private async loadUnifiedItem(filename: string): Promise<UnifiedItem | null> {
+	private async loadGraphItem(filename: string, sourceType: "items" | "manuals"): Promise<GraphItem | GraphManual | null> {
 		try {
-			const response = await fetch(`${DEFAULT_CONFIG.DATA_PATH}bandai/unified/${filename}`);
+			const response = await fetch(`${DEFAULT_CONFIG.DATA_PATH}${sourceType}/${filename}`);
 			if (!response.ok) {
 				return null;
 			}
 
-			const rawData = await response.json();
+			return await response.json();
+		} catch (error) {
+			console.error(`Failed to load graph item ${filename}:`, error);
+			return null;
+		}
+	}
 
-			// Transform raw data to match our Zod schema structure
-			const transformedData = {
-				id: rawData.id,
-				category: "node" as const,
-				type: "unified_item" as const,
+	/**
+   * Convert a graph item to UnifiedItem format
+   */
+	private convertGraphItemToUnified(graphItem: GraphItem): UnifiedItem | null {
+		try {
+			return {
+				$id: graphItem.id,
+				id: graphItem.id,
+				category: "data" as const,
+				$type: "unified_item" as const,
 				schemaId: "unified_item_schema_default",
 				properties: {
-					name: rawData.name,
-					series: rawData.series,
-					grade: rawData.grade,
-					scale: rawData.scale,
-					releaseDate: rawData.releaseDate,
-					sources: rawData.sources,
-					matchMethod: rawData.matchMethod,
-					matchStage: rawData.matchStage,
+					name: graphItem.name,
+					price: graphItem.price,
+					releaseDate: graphItem.releaseDate ? {
+						year: graphItem.releaseDate.year,
+						month: graphItem.releaseDate.month,
+						day: graphItem.releaseDate.day,
+						ja: graphItem.releaseDate.ja
+					} : undefined,
+					targetAge: graphItem.targetAge,
+					scale: graphItem.scale,
+					description: graphItem.description,
+					accessories: graphItem.accessories,
+					contents: graphItem.contents,
+					images: graphItem.images,
+					// Extract series, grade, etc. from edges
+					series: this.extractSeriesFromEdges(graphItem.edges),
+					grade: this.extractGradeFromEdges(graphItem.edges),
 				},
 				metadata: {
-					createdAt: rawData.createdAt,
-					updatedAt: rawData.updatedAt,
+					createdAt: graphItem.extractedAt,
+					updatedAt: graphItem.extractedAt,
 				},
-			};
-
-			// Validate with Zod and return the validated data
-			const validation = validateUnifiedItem(transformedData);
-			if (!validation.success) {
-				console.warn(`Unified item validation failed for ${filename}:`, validation.error);
-				return null;
-			}
-
-			return validation.data!;
+			} as UnifiedItem;
 		} catch (error) {
-			console.error(`Failed to load unified item ${filename}:`, error);
+			console.error("Failed to convert graph item to unified item:", error);
 			return null;
 		}
 	}
 
 	/**
-   * Load a manual item by filename with Zod validation
+   * Convert a graph manual to ManualItem format
    */
-	private async loadManualItem(filename: string): Promise<ManualItem | null> {
+	private convertGraphToManualItem(graphManual: GraphManual): ManualItem | null {
 		try {
-			const response = await fetch(`${DEFAULT_CONFIG.DATA_PATH}bandai/manuals/${filename}`);
-			if (!response.ok) {
-				return null;
-			}
-
-			const rawData = await response.json();
-
-			// Transform raw data to match our Zod schema structure
-			const transformedData = {
-				id: rawData.id,
-				category: "node" as const,
-				type: "manual_item" as const,
+			return {
+				$id: graphManual.id,
+				id: graphManual.id,
+				category: "data" as const,
+				$type: "manual_item" as const,
 				schemaId: "manual_item_schema_default",
 				properties: {
-					name: rawData.name,
-					productNumber: rawData.productNumber,
-					releaseDate: rawData.releaseDate,
-					series: rawData.series,
-					grade: rawData.grade,
-					scale: rawData.scale,
-					pdfUrl: rawData.pdfUrl,
-					productImage: rawData.productImage,
-					thumbnailImage: rawData.thumbnailImage,
+					name: graphManual.name,
+					productNumber: graphManual.productNumber,
+					releaseDate: graphManual.releaseDate ? {
+						year: graphManual.releaseDate.year,
+						month: graphManual.releaseDate.month,
+						day: graphManual.releaseDate.day,
+						ja: graphManual.releaseDate.ja
+					} : undefined,
+					series: graphManual.series,
+					grade: graphManual.grade,
+					scale: graphManual.scale,
+					pdfUrl: graphManual.pdfUrl,
+					productImage: graphManual.productImage,
+					thumbnailImage: graphManual.thumbnailImage,
 				},
 				metadata: {
-					createdAt: rawData.extractedAt,
-					updatedAt: rawData.extractedAt,
-					source: "bandai_manual",
+					createdAt: graphManual.extractedAt,
+					updatedAt: graphManual.extractedAt,
+					source: "graph_manual",
 				},
-			};
-
-			// Validate with Zod and return the validated data
-			const validation = validateManualItem(transformedData);
-			if (!validation.success) {
-				console.warn(`Manual item validation failed for ${filename}:`, validation.error);
-				return null;
-			}
-
-			return validation.data!;
+			} as ManualItem;
 		} catch (error) {
-			console.error(`Failed to load manual item ${filename}:`, error);
+			console.error("Failed to convert graph manual to manual item:", error);
 			return null;
 		}
 	}
 
 	/**
-   * Load a catalog item by filename with Zod validation
+   * Extract series information from graph edges
    */
-	private async loadCatalogItem(filename: string): Promise<CatalogItem | null> {
-		try {
-			const response = await fetch(`${DEFAULT_CONFIG.DATA_PATH}bandai/items/${filename}`);
-			if (!response.ok) {
-				return null;
-			}
-
-			const rawData = await response.json();
-
-			// Transform raw data to match our Zod schema structure
-			const transformedData = {
-				id: rawData.id,
-				category: "node" as const,
-				type: "catalog_item" as const,
-				schemaId: "catalog_item_schema_default",
-				properties: {
-					name: rawData.name,
-					price: rawData.price,
-					releaseDate: rawData.releaseDate,
-					targetAge: rawData.targetAge,
-					series: rawData.series,
-					brands: rawData.brands,
-					categories: rawData.categories,
-					scale: rawData.scale,
-					description: rawData.description,
-					accessories: rawData.accessories,
-					contents: rawData.contents,
-					images: rawData.images,
-					relatedProducts: rawData.relatedProducts,
-				},
-				metadata: {
-					createdAt: rawData.extractedAt,
-					updatedAt: rawData.extractedAt,
-					source: "bandai_catalog",
-					sourceUrl: rawData.sourceUrl,
-				},
-			};
-
-			// Validate with Zod and return the validated data
-			const validation = validateCatalogItem(transformedData);
-			if (!validation.success) {
-				console.warn(`Catalog item validation failed for ${filename}:`, validation.error);
-				return null;
-			}
-
-			return validation.data!;
-		} catch (error) {
-			console.error(`Failed to load catalog item ${filename}:`, error);
-			return null;
-		}
+	private extractSeriesFromEdges(edges?: GraphItem["edges"]): { en: string; ja: string } | undefined {
+		// Implementation would traverse edges to find series information
+		return undefined;
 	}
 
 	/**
-   * Calculate relevance score for an item
+   * Extract grade information from graph edges
    */
-	private calculateItemScore(query: string, item: UnifiedItem | ManualItem | CatalogItem): number {
+	private extractGradeFromEdges(edges?: GraphItem["edges"]): string | undefined {
+		// Implementation would traverse edges to find grade information
+		return undefined;
+	}
+
+	/**
+   * Calculate relevance score for a graph item
+   */
+	private calculateGraphItemScore(query: string, item: GraphItem | GraphManual): number {
 		if (!query) return 1;
 
 		let score = 0;
 		const normalizedQuery = TextProcessor.normalize(query);
 
-		// Check name fields - use the new graph structure where data is in properties
+		// Check name fields
 		const nameFields = [
-			item.properties?.name?.en,
-			item.properties?.name?.ja,
-			item.properties?.series?.en,
-			item.properties?.series?.ja,
+			item.name.en,
+			item.name.ja,
 		];
-
-		// Handle grade based on item type
-		if (item.$type === "unified_item") {
-			const grade = (item).properties?.grade;
-			if (grade) nameFields.push(grade);
-		} else if (item.$type === "manual_item") {
-			const grade = (item).properties?.grade;
-			if (grade) {
-				nameFields.push(grade.code, grade.family);
-			}
-		}
-
-		// Handle scale (common to all types)
-		if (item.properties?.scale) {
-			nameFields.push(item.properties.scale);
-		}
-
-		// Handle productNumber (only for manual items)
-		if (item.$type === "manual_item") {
-			const productNumber = (item).properties?.productNumber;
-			if (productNumber) nameFields.push(productNumber);
-		}
 
 		const filteredFields = nameFields.filter((field): field is string => Boolean(field));
 
@@ -1132,11 +725,11 @@ export class DataService {
 				}
 				case "price": {
 					// Only catalog items have price, use 0 for others
-					const aPrice = a.data.$type === "catalog_item"
-						? (a.data).properties?.price?.amount || 0
+					const aPrice = a.data.$type === "unified_item"
+						? (a.data.properties as ItemProperties)?.price?.amount || 0
 						: 0;
-					const bPrice = b.data.$type === "catalog_item"
-						? (b.data).properties?.price?.amount || 0
+					const bPrice = b.data.$type === "unified_item"
+						? (b.data.properties as ItemProperties)?.price?.amount || 0
 						: 0;
 					comparison = aPrice - bPrice;
 					break;
@@ -1145,6 +738,225 @@ export class DataService {
 
 			return sort.direction === "desc" ? -comparison : comparison;
 		});
+	}
+
+	/**
+   * Get items by page
+   */
+	async getItemsByPage(
+		page = 1,
+		limit: number = DEFAULT_CONFIG.DEFAULT_PAGE_LIMIT,
+		source?: DataSourceType,
+	): Promise<PaginationResult<UnifiedItem | ManualItem | CatalogItem>> {
+		await this.initialize();
+
+		const cacheKey = `page_${page}_${limit}_${source || "all"}`;
+		let result = this.cache.get(cacheKey) as PaginationResult<UnifiedItem | ManualItem | CatalogItem> | undefined;
+
+		if (result) {
+			return result;
+		}
+
+		try {
+			const items: (UnifiedItem | ManualItem | CatalogItem)[] = [];
+
+			if (!source || source === "unified" || source === "catalog") {
+				const catalogItems = await this.getCatalogItems();
+				items.push(...catalogItems);
+			}
+			if (!source || source === "manual") {
+				const manualItems = await this.getManualItems();
+				items.push(...manualItems);
+			}
+
+			const total = items.length;
+			const totalPages = Math.ceil(total / limit);
+			const startIndex = (page - 1) * limit;
+			const endIndex = startIndex + limit;
+			const pageItems = items.slice(startIndex, endIndex);
+
+			result = {
+				items: pageItems,
+				pagination: {
+					page,
+					limit,
+					total,
+					totalPages,
+					hasNext: page < totalPages,
+					hasPrev: page > 1,
+				},
+			};
+
+			this.cache.set(cacheKey, result);
+			return result;
+		} catch (error) {
+			console.error("Failed to get paginated items:", error);
+			throw error;
+		}
+	}
+
+	/**
+   * Get unified items (converted from graph items)
+   */
+	async getUnifiedItems(): Promise<UnifiedItem[]> {
+		const cacheKey = "unified_items";
+		let items = this.cache.get(cacheKey) as UnifiedItem[] | undefined;
+
+		if (items) {
+			return items;
+		}
+
+		try {
+			const sampleSize = 50;
+			const sampleIds = this.dataFiles!.items.slice(0, sampleSize);
+
+			items = [];
+			for (const filename of sampleIds) {
+				try {
+					const graphItem = await this.loadGraphItem(filename, "items");
+					if (graphItem && graphItem.type === "item") {
+						const convertedItem = this.convertGraphItemToUnified(graphItem);
+						if (convertedItem) {
+							items.push(convertedItem);
+						}
+					}
+				} catch (error) {
+					console.warn(`Failed to load graph item ${filename}:`, error);
+				}
+			}
+
+			this.cache.set(cacheKey, items);
+			return items;
+		} catch (error) {
+			console.error("Failed to load unified items:", error);
+			return [];
+		}
+	}
+
+	/**
+   * Get manual items
+   */
+	async getManualItems(): Promise<ManualItem[]> {
+		const cacheKey = "manual_items";
+		const items = this.cache.get(cacheKey);
+
+		if (items && Array.isArray(items)) {
+			return items as ManualItem[];
+		}
+
+		try {
+			const sampleSize = 50;
+			const sampleIds = this.dataFiles!.manuals.slice(0, sampleSize);
+
+			const items: ManualItem[] = [];
+			for (const filename of sampleIds) {
+				try {
+					const graphManual = await this.loadGraphItem(filename, "manuals");
+					if (graphManual && graphManual.type === "manual") {
+						const convertedItem = this.convertGraphToManualItem(graphManual);
+						if (convertedItem) {
+							items.push(convertedItem);
+						}
+					}
+				} catch (error) {
+					console.warn(`Failed to load graph manual ${filename}:`, error);
+				}
+			}
+
+			this.cache.set(cacheKey, items);
+			return items;
+		} catch (error) {
+			console.error("Failed to load manual items:", error);
+			return [];
+		}
+	}
+
+	/**
+   * Get catalog items (alias for unified items from graph API)
+   */
+	async getCatalogItems(): Promise<UnifiedItem[]> {
+		return this.getUnifiedItems();
+	}
+
+	/**
+   * Get item by ID and type
+   */
+	async getItemById(id: string, type: "unified" | "manual" | "catalog"): Promise<UnifiedItem | ManualItem | CatalogItem | null> {
+		try {
+			switch (type) {
+				case "unified":
+				case "catalog": {
+					const items = await this.getUnifiedItems();
+					return items.find(item => item.id === id) || null;
+				}
+				case "manual": {
+					const items = await this.getManualItems();
+					return items.find(item => item.id === id) || null;
+				}
+				default: {
+					return null;
+				}
+			}
+		} catch (error) {
+			console.error(`Failed to get ${type} item by ID ${id}:`, error);
+			return null;
+		}
+	}
+
+	/**
+   * Get database statistics
+   */
+	async getStatistics(): Promise<DatabaseStats> {
+		const cacheKey = "database_stats";
+		let stats = this.cache.get(cacheKey);
+
+		if (stats && typeof stats === "object") {
+			return stats as DatabaseStats;
+		}
+
+		try {
+			// Simple stats based on file counts
+			const itemCount = this.dataFiles?.items.length || 0;
+			const manualCount = this.dataFiles?.manuals.length || 0;
+
+			stats = {
+				generatedAt: new Date().toISOString(),
+				totalItems: {
+					unified: itemCount, // Items from graph API serve as unified
+					manual: manualCount,
+					catalog: itemCount,
+				},
+				sourceCoverage: {
+					withManual: manualCount,
+					withCatalog: itemCount,
+					withBoth: Math.min(itemCount, manualCount), // Approximate
+					singleSource: Math.abs(itemCount - manualCount),
+				},
+				quality: {
+					highConfidence: itemCount + manualCount,
+					mediumConfidence: 0,
+					lowConfidence: 0,
+					needsReview: 0,
+				},
+				dateRange: {
+					earliestYear: 2000,
+					latestYear: 2025,
+				},
+			};
+
+			this.cache.set(cacheKey, stats);
+			return stats as DatabaseStats;
+		} catch (error) {
+			console.error("Failed to get database statistics:", error);
+			// Return default stats
+			return {
+				generatedAt: new Date().toISOString(),
+				totalItems: { unified: 0, manual: 0, catalog: 0 },
+				sourceCoverage: { withManual: 0, withCatalog: 0, withBoth: 0, singleSource: 0 },
+				quality: { highConfidence: 0, mediumConfidence: 0, lowConfidence: 0, needsReview: 0 },
+				dateRange: {},
+			};
+		}
 	}
 
 	/**
@@ -1157,8 +969,7 @@ export class DataService {
 
 		await this.initialize();
 
-		// For now, return a simple list of common terms
-		// In a real implementation, this would use the actual data
+		// Return common terms
 		const commonTerms = [
 			"Gundam",
 			"RX-78",
@@ -1194,8 +1005,11 @@ export class DataService {
 
 			switch (field) {
 				case "grade": {
-					if (properties?.grade) {
-						options.add(properties.grade);
+					const grade = properties?.grade;
+					if (grade && typeof grade === "string") {
+						options.add(grade);
+					} else if (grade && typeof grade === "object" && grade !== null && "code" in grade) {
+						options.add((grade as { code: string }).code);
 					}
 					break;
 				}
@@ -1206,10 +1020,14 @@ export class DataService {
 					break;
 				}
 				case "series": {
-					if (properties?.series) {
-						const seriesName = properties.series.en || properties.series.ja;
-						if (seriesName) {
-							options.add(seriesName);
+					const series = properties?.series;
+					if (series) {
+						if (typeof series === "object" && series.en) {
+							options.add(series.en);
+						} else if (typeof series === "object" && series.ja) {
+							options.add(series.ja);
+						} else if (typeof series === "string") {
+							options.add(series);
 						}
 					}
 					break;
@@ -1228,7 +1046,7 @@ export class DataService {
 	}
 }
 
-// Export types - removed duplicate exports that are already exported above
+// Export types
 export type {
 	SearchResult,
 	FilterOptions,
