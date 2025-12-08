@@ -20,7 +20,7 @@ import { IconSearch, IconFilter, IconStar, IconClock, IconTrendingUp, IconDataba
 import { useNavigate } from "@tanstack/react-router";
 import React, { useState, useEffect, useCallback } from "react";
 
-import { dataService } from "../services/dataService";
+import { dataService, type DatabaseStats, type UnifiedItem, type SearchResult } from "../services/dataService";
 import { databaseContainer, heroSection, statsCard, hobbyTypeCard, featuredSection } from "../styles/styles.css";
 
 /**
@@ -29,9 +29,9 @@ import { databaseContainer, heroSection, statsCard, hobbyTypeCard, featuredSecti
 export function DatabasePage(): React.ReactElement {
 	const navigate = useNavigate();
 	const [searchQuery, setSearchQuery] = useState("");
-	const [stats, setStats] = useState<any>(null);
-	const [recentItems, setRecentItems] = useState<any[]>([]);
-	const [popularItems, setPopularItems] = useState<any[]>([]);
+	const [stats, setStats] = useState<DatabaseStats | null>(null);
+	const [recentItems, setRecentItems] = useState<UnifiedItem[]>([]);
+	const [popularItems, setPopularItems] = useState<SearchResult["items"]>([]);
 	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
 
@@ -166,7 +166,7 @@ export function DatabasePage(): React.ReactElement {
 					<Center h="50vh">
 						<Alert color="red" variant="light" w="100%" maw={500}>
 							<Text ta="center">{error}</Text>
-							<Button variant="outline" onClick={() => { globalThis.location.reload(); }} mt="md">
+							<Button variant="outline" onClick={() => { void globalThis.location.reload(); }} mt="md">
 								Try Again
 							</Button>
 						</Alert>
@@ -393,23 +393,23 @@ export function DatabasePage(): React.ReactElement {
 
 							{recentItems.length > 0 ? (
 								<Stack gap="sm">
-									{recentItems.slice(0, 4).map((item: any) => (
+									{recentItems.slice(0, 4).map((item) => (
 										<Card key={item.id} p="sm" radius="sm" withBorder={true} bg="var(--mantine-color-body)">
 											<Group justify="space-between" align="center">
 												<div style={{ flex: 1, minWidth: 0 }}>
 													<Text size="sm" fw={500} truncate={true}>
-														{item.name?.en || item.name || "Unknown"}
+														{item.properties?.name?.en || item.properties?.name?.ja || "Unknown"}
 													</Text>
-													{item.grade && (
+													{item.properties?.grade && (
 														<Badge size="xs" variant="light" mt="2">
-															{item.grade}
+															{item.properties.grade}
 														</Badge>
 													)}
 												</div>
-												{item.images && item.images.length > 0 && (
+												{item.properties?.sources?.images && item.properties.sources.images.length > 0 && (
 													<Image
-														src={item.images[0]}
-														alt={item.name?.en || item.name}
+														src={item.properties.sources.images[0]}
+														alt={item.properties?.name?.en || item.properties?.name?.ja}
 														w={40}
 														h={40}
 														radius="sm"
@@ -447,12 +447,12 @@ export function DatabasePage(): React.ReactElement {
 
 							{popularItems.length > 0 ? (
 								<Stack gap="sm">
-									{popularItems.slice(0, 4).map((item: any) => (
+									{popularItems.slice(0, 4).map((item) => (
 										<Card key={item.id} p="sm" radius="sm" withBorder={true} bg="var(--mantine-color-body)">
 											<Group justify="space-between" align="center">
 												<div style={{ flex: 1, minWidth: 0 }}>
 													<Text size="sm" fw={500} truncate={true}>
-														{item.data?.name?.en || item.data?.name || "Unknown"}
+														{item.data?.properties?.name?.en || item.data?.properties?.name?.ja || "Unknown"}
 													</Text>
 													<Badge size="xs" variant="light" color="yellow" mt="2">
 														Popular
