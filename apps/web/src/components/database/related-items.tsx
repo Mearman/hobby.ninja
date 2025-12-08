@@ -274,7 +274,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 
 				const itemSeriesRaw = "series" in item
 					? getSafeSeries(item["series"] as SeriesInfo | undefined)
-					: getSafeSeries(getItemProperties(item)?.series as SeriesInfo | undefined);
+					: getSafeSeries(getItemProperties(item)?.["series"] as SeriesInfo | undefined);
 
 				const itemSeriesStr = itemSeriesRaw ?? "";
 
@@ -469,12 +469,12 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			.sort((a, b) => {
 				const propsA = getItemProperties(a);
 				const propsB = getItemProperties(b);
-				const releaseDateA = ("releaseDate" in a ? a.releaseDate : undefined) ??
-                    (propsA?.releaseDate);
-				const releaseDateB = ("releaseDate" in b ? b.releaseDate : undefined) ??
-                    (propsB?.releaseDate);
-				const yearA = (releaseDateA)?.year ?? 0;
-				const yearB = (releaseDateB)?.year ?? 0;
+				const releaseDateA = ("releaseDate" in a ? a["releaseDate"] : undefined) ??
+                    (propsA?.["releaseDate"]);
+				const releaseDateB = ("releaseDate" in b ? b["releaseDate"] : undefined) ??
+                    (propsB?.["releaseDate"]);
+				const yearA = (releaseDateA (releaseDateA)?.year(releaseDateA)?.year "year" in releaseDateA ? (releaseDateA as any)["year"] : 0) ?? 0;
+				const yearB = (releaseDateB (releaseDateB)?.year(releaseDateB)?.year "year" in releaseDateB ? (releaseDateB as any)["year"] : 0) ?? 0;
 				return yearB - yearA;
 			})
 			.slice(0, MAX_ITEMS_PER_CATEGORY)
