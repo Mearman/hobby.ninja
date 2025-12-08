@@ -11,7 +11,7 @@ import { Link, useLoaderData } from "@tanstack/react-router";
 import { StructuredDataGenerator } from "../../scripts/structured-data-generator";
 import { GraphNodeDetails } from "../components/graph/GraphNodeDetails";
 import { RelatedNodesGrid } from "../components/graph/RelatedNodesGrid";
-import type { GraphNode } from "../utils/graph-routes-generator";
+import type { GraphNode } from "../utils/graph-client";
 
 interface GraphNodePageLoader {
 	nodeData: GraphNode | null;

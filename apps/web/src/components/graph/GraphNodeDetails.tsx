@@ -8,7 +8,7 @@
 import { Title, Text, Stack, Group, Divider, Badge, List, Anchor } from "@mantine/core";
 import { IconPackage, IconTag, IconFileText, IconBooks, IconBuildingFactory } from "@tabler/icons-react";
 
-import type { GraphNode } from "../../utils/graph-routes-generator";
+import type { GraphNode } from "../../utils/graph-client";
 
 interface GraphNodeDetailsProps {
 	node: GraphNode;

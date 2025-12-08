@@ -2,8 +2,8 @@ import { RouterProvider, createRouter, createRoute, createRootRoute, Outlet, cre
 import { Suspense, lazy, useState } from "react";
 
 import { Header } from "./components/layout/Header";
-import { loadGraphNode, getRelatedNodes } from "./utils/graph-routes-generator";
-import type { GraphNode } from "./utils/graph-routes-generator";
+import { getGraphNodeDetails } from "./utils/graph-client";
+import type { GraphNode } from "./utils/graph-client";
 
 // Lazy load route components for code splitting
 const HomePage = lazy(() => import("./pages/home-page").then(module => ({

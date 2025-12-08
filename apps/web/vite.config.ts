@@ -119,9 +119,6 @@ export default defineConfig({
           database: ['dexie'],
           icons: ['@tabler/icons-react'],
           vanillaExtract: ['@vanilla-extract/css'],
-          // Graph-specific chunks for better caching
-          graphUtils: ['src/utils/graph-routes-generator', 'src/utils/graph-preloader'],
-          graphComponents: ['src/components/graph/GraphNodeDetails', 'src/components/graph/RelatedNodesGrid'],
         },
         // Generate asset filenames with hashes for caching
         chunkFileNames: '[name]-[hash].js',
