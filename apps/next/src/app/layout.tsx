@@ -1,9 +1,13 @@
 import type { Metadata } from 'next';
-import { MantineThemeProvider } from '@/providers/mantine-provider';
+import { LayoutClient } from '@/components/layout/layout-client';
 
 export const metadata: Metadata = {
-  title: 'hobby.ninja - Static',
-  description: 'Static HTML generation for hobby.ninja graph data',
+  title: 'hobby.ninja - Static Collection Management',
+  description: 'Comprehensive hobby collection management with 8,485+ items, search, and tracking features',
+  keywords: ['gunpla', 'hobby', 'collection', 'database', 'model kits', 'figure-rise'],
+  authors: [{ name: 'hobby.ninja' }],
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#1976d2',
 };
 
 export default function RootLayout({
@@ -13,16 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
       <body>
-        <MantineThemeProvider>
-          <div id="root">
-            {children}
-          </div>
-        </MantineThemeProvider>
+        <LayoutClient>{children}</LayoutClient>
       </body>
     </html>
   );
