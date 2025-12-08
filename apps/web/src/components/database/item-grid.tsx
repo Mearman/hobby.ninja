@@ -19,18 +19,17 @@ import {
 	Loader,
 	Button,
 	Container,
-	Flex,
 	Badge,
-	useMantineTheme, rem } from "@mantine/core";
+	useMantineTheme,
+} from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import {
 	IconGridDots,
 	IconList,
-	IconAdjustmentsHorizontal,
 	IconRefresh,
 	IconFilter,
 } from "@tabler/icons-react";
-import { useVirtualizer, useWindowVirtualizer } from "@tanstack/react-virtual";
+import { useWindowVirtualizer } from "@tanstack/react-virtual";
 import React, { useState, useCallback, useMemo, useRef, useEffect } from "react";
 
 import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
@@ -43,6 +42,16 @@ type ItemType = "unified" | "manual" | "catalog";
 type ViewMode = "grid" | "list";
 type SortField = "name" | "releaseDate" | "grade" | "relevance";
 type SortDirection = "asc" | "desc";
+
+// Constants for magic numbers
+const DEFAULT_ITEMS_PER_PAGE = 50;
+const MOBILE_COLUMN_COUNT = 2;
+const TABLET_COLUMN_COUNT = 3;
+const COMPACT_COLUMN_COUNT = 4;
+const DEFAULT_COLUMN_COUNT = 5;
+const LIST_ITEM_HEIGHT = 120;
+const COMPACT_GRID_ITEM_HEIGHT = 180;
+const DEFAULT_GRID_ITEM_HEIGHT = 280;
 
 interface ItemGridProps {
   /** Array of items to display */
@@ -98,7 +107,7 @@ export function ItemGrid({
 	error = null,
 	page = 1,
 	total = 0,
-	limit = 50,
+	limit = DEFAULT_ITEMS_PER_PAGE,
 	selectedItems = new Set(),
 	onSelectionChange,
 	onPageChange,
@@ -128,10 +137,10 @@ export function ItemGrid({
 	// Calculate responsive columns
 	const getColumnCount = useCallback(() => {
 		if (viewMode === "list") return 1;
-		if (isMobile) return 2;
-		if (isTablet) return 3;
-		if (compact) return 4;
-		return 5;
+		if (isMobile) return MOBILE_COLUMN_COUNT;
+		if (isTablet) return TABLET_COLUMN_COUNT;
+		if (compact) return COMPACT_COLUMN_COUNT;
+		return DEFAULT_COLUMN_COUNT;
 	}, [viewMode, isMobile, isTablet, compact]);
 
 	// Determine item type
@@ -144,7 +153,19 @@ export function ItemGrid({
 
 	// Get unique item ID
 	const getItemId = useCallback((item: ItemData): string => {
-		return item.id || (item as any).title || "unknown";
+		if (item.id) return item.id;
+
+		// Type guard to safely access title property
+		if ("title" in item && typeof item.title === "string") {
+			return item.title;
+		}
+
+		// Fallback to name if available
+		if ("name" in item && typeof item.name === "string") {
+			return item.name;
+		}
+
+		return "unknown";
 	}, []);
 
 	// Handle selection toggle
@@ -164,7 +185,7 @@ export function ItemGrid({
 	const handleSelectAll = useCallback(() => {
 		if (!onSelectionChange) return;
 
-		const allIds = new Set(items.map(getItemId));
+		const allIds = new Set(items.map((item) => getItemId(item)));
 		onSelectionChange(allIds);
 	}, [items, getItemId, onSelectionChange]);
 
@@ -182,6 +203,11 @@ export function ItemGrid({
 		onSortChange?.(field, newDirection);
 	}, [sortField, sortDirection, onSortChange]);
 
+	// Handle sort toggle (for button click)
+	const handleSortToggle = useCallback(() => {
+		handleSortChange(sortField);
+	}, [sortField, handleSortChange]);
+
 	// Handle view mode change
 	const handleViewModeChange = useCallback((mode: ViewMode) => {
 		setViewMode(mode);
@@ -189,67 +215,73 @@ export function ItemGrid({
 	}, [onViewModeChange]);
 
 	// Handle refresh
-	const handleRefresh = useCallback(async () => {
+	const handleRefresh = useCallback(() => {
 		if (!onRefresh || isRefreshing) return;
 
 		setIsRefreshing(true);
-		try {
-			await onRefresh();
-		} finally {
+		onRefresh();
+		setTimeout(() => {
 			setIsRefreshing(false);
-		}
+		}, 0);
 	}, [onRefresh, isRefreshing]);
 
 	// Sort items
 	const sortedItems = useMemo(() => {
 		if (items.length === 0) return [];
 
-		const sorted = [...items].sort((a, b) => {
+		const getName = (item: ItemData): string => {
+			if ("name" in item) {
+				const name = item.name as { en?: string; ja?: string } | string;
+				if (typeof name === "string") return name;
+				return name.en ?? name.ja ?? "";
+			}
+			// Type guard to safely access title property
+			if ("title" in item && typeof item.title === "string") {
+				return item.title;
+			}
+			return "";
+		};
+
+		const getYear = (item: ItemData): number => {
+			if ("releaseDate" in item && item.releaseDate) {
+				const date = item.releaseDate as { year?: number };
+				return date.year ?? 0;
+			}
+			return 0;
+		};
+
+		const getGrade = (item: ItemData): string => {
+			if ("grade" in item && item.grade) {
+				const grade = item.grade;
+				if (typeof grade === "string") return grade;
+				if (typeof grade === "number") return grade.toString();
+				return JSON.stringify(grade);
+			}
+			return "";
+		};
+
+		return [...items].toSorted((a, b) => {
 			let comparison = 0;
 
 			switch (sortField) {
 				case "name": {
-					const getName = (item: ItemData) => {
-						if ("name" in item) {
-							const name = item.name as { en?: string; ja?: string } | string;
-							return typeof name === "string" ? name : name.en || name.ja || "";
-						}
-						return (item as any).title || "";
-					};
-
-					comparison = getName(a).localeCompare(getName(b)) || 0;
+					comparison = getName(a).localeCompare(getName(b));
 					break;
 				}
 
 				case "releaseDate": {
-					const getYear = (item: ItemData) => {
-						if ("releaseDate" in item && item.releaseDate) {
-							const date = item.releaseDate as any;
-							return date.year || 0;
-						}
-						return 0;
-					};
-
 					comparison = getYear(a) - getYear(b);
 					break;
 				}
 
 				case "grade": {
-					const getGrade = (item: ItemData) => {
-						if ("grade" in item) {
-							return item.grade || "";
-						}
-						return "";
-					};
-
 					const gradeA = getGrade(a);
 					const gradeB = getGrade(b);
-					comparison = String(gradeA || "").localeCompare(String(gradeB || "")) || 0;
+					comparison = gradeA.localeCompare(gradeB);
 					break;
 				}
 
-				case "relevance":
-				default: {
+				case "relevance": {
 					// For now, maintain original order (could be enhanced with actual relevance scoring)
 					comparison = 0;
 					break;
@@ -258,14 +290,12 @@ export function ItemGrid({
 
 			return sortDirection === "desc" ? -comparison : comparison;
 		});
-
-		return sorted;
 	}, [items, sortField, sortDirection]);
 
 	// Setup virtualizer
 	const virtualizer = useWindowVirtualizer({
 		count: sortedItems.length,
-		estimateSize: () => viewMode === "list" ? 120 : (compact ? 180 : 280),
+		estimateSize: () => viewMode === "list" ? LIST_ITEM_HEIGHT : (compact ? COMPACT_GRID_ITEM_HEIGHT : DEFAULT_GRID_ITEM_HEIGHT),
 		overscan: 5,
 		scrollMargin: parentRef.current?.offsetTop ?? 0,
 	});
@@ -401,14 +431,18 @@ export function ItemGrid({
 					<Select
 						data={SORT_OPTIONS}
 						value={sortField}
-						onChange={(value) => value && handleSortChange(value as SortField)}
+						onChange={(value) => {
+							if (value) {
+								handleSortChange(value as SortField);
+							}
+						}}
 						size="sm"
 						w={120}
 						rightSection={
 							<ActionIcon
 								size="xs"
 								variant="subtle"
-								onClick={() => { handleSortChange(sortField); }}
+								onClick={handleSortToggle}
 							>
 								{sortDirection === "asc" ? "↑" : "↓"}
 							</ActionIcon>
@@ -505,7 +539,6 @@ export function ItemGrid({
 					>
 						{virtualizer.getVirtualItems().map((virtualItem) => {
 							const item = sortedItems[virtualItem.index];
-							if (!item) return null;
 
 							return (
 								<div
@@ -556,4 +589,3 @@ export function ItemGrid({
 	);
 }
 
-export default ItemGrid;
