@@ -3,15 +3,15 @@ import { ModalsProvider } from "@mantine/modals";
 import { Notifications } from "@mantine/notifications";
 import React, { createContext, useContext } from "react";
 
-import { theme } from "../lib/theme";
 import { useTheme } from "../hooks/useTheme";
+import { theme } from "../lib/theme";
 
 // Create context for theme functions
 const ThemeContext = createContext<{
-	colorScheme: 'light' | 'dark' | 'system';
-	effectiveColorScheme: 'light' | 'dark';
+	colorScheme: "light" | "dark" | "system";
+	effectiveColorScheme: "light" | "dark";
 	cycleTheme: () => void;
-} | null>(null);
+		} | null>(null);
 
 interface MantineThemeProviderProps {
 	children: React.ReactNode;
@@ -21,7 +21,7 @@ interface MantineThemeProviderProps {
 export function useThemeContext() {
 	const context = useContext(ThemeContext);
 	if (!context) {
-		throw new Error('useThemeContext must be used within MantineThemeProvider');
+		throw new Error("useThemeContext must be used within MantineThemeProvider");
 	}
 	return context;
 }

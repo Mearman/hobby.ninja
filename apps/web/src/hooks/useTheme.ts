@@ -1,24 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-export type ColorScheme = 'light' | 'dark' | 'system';
+export type ColorScheme = "light" | "dark" | "system";
 
-const THEME_STORAGE_KEY = 'hobby-ninja-theme';
+const THEME_STORAGE_KEY = "hobby-ninja-theme";
 
 /**
  * Get the system's preferred color scheme
  */
-function getSystemColorScheme(): 'light' | 'dark' {
-	if (typeof window !== 'undefined') {
-		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+function getSystemColorScheme(): "light" | "dark" {
+	if (globalThis.window !== undefined) {
+		return globalThis.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 	}
-	return 'light';
+	return "light";
 }
 
 /**
  * Get the effective color scheme (resolving 'system' to actual preference)
  */
-function getEffectiveColorScheme(scheme: ColorScheme): 'light' | 'dark' {
-	if (scheme === 'system') {
+function getEffectiveColorScheme(scheme: ColorScheme): "light" | "dark" {
+	if (scheme === "system") {
 		return getSystemColorScheme();
 	}
 	return scheme;
@@ -30,31 +30,31 @@ function getEffectiveColorScheme(scheme: ColorScheme): 'light' | 'dark' {
  */
 export function useTheme() {
 	const [colorScheme, setColorScheme] = useState<ColorScheme>(() => {
-		if (typeof window !== 'undefined') {
+		if (globalThis.window !== undefined) {
 			const stored = localStorage.getItem(THEME_STORAGE_KEY);
-			return (stored as ColorScheme) || 'system';
+			return (stored as ColorScheme) || "system";
 		}
-		return 'system';
+		return "system";
 	});
 
-	const [effectiveColorScheme, setEffectiveColorScheme] = useState<'light' | 'dark'>(() =>
-		getEffectiveColorScheme(colorScheme)
+	const [effectiveColorScheme, setEffectiveColorScheme] = useState<"light" | "dark">(() =>
+		getEffectiveColorScheme(colorScheme),
 	);
 
 	// Listen for system theme changes when using 'system' scheme
 	useEffect(() => {
-		if (typeof window === 'undefined') return;
+		if (globalThis.window === undefined) return;
 
-		const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+		const mediaQuery = globalThis.matchMedia("(prefers-color-scheme: dark)");
 
 		const handleChange = () => {
-			if (colorScheme === 'system') {
+			if (colorScheme === "system") {
 				setEffectiveColorScheme(getSystemColorScheme());
 			}
 		};
 
-		mediaQuery.addEventListener('change', handleChange);
-		return () => mediaQuery.removeEventListener('change', handleChange);
+		mediaQuery.addEventListener("change", handleChange);
+		return () => { mediaQuery.removeEventListener("change", handleChange); };
 	}, [colorScheme]);
 
 	// Update effective scheme when color scheme changes
@@ -64,7 +64,7 @@ export function useTheme() {
 
 	// Persist theme preference
 	useEffect(() => {
-		if (typeof window !== 'undefined') {
+		if (globalThis.window !== undefined) {
 			localStorage.setItem(THEME_STORAGE_KEY, colorScheme);
 		}
 	}, [colorScheme]);
@@ -75,14 +75,18 @@ export function useTheme() {
 	const cycleTheme = () => {
 		setColorScheme((current) => {
 			switch (current) {
-				case 'system':
-					return 'dark';
-				case 'dark':
-					return 'light';
-				case 'light':
-					return 'system';
-				default:
-					return 'system';
+				case "system": {
+					return "dark";
+				}
+				case "dark": {
+					return "light";
+				}
+				case "light": {
+					return "system";
+				}
+				default: {
+					return "system";
+				}
 			}
 		});
 	};
@@ -92,15 +96,19 @@ export function useTheme() {
 	 */
 	const getThemeIcon = () => {
 		switch (colorScheme) {
-			case 'system':
+			case "system": {
 				// Show what the system currently is NOT
-				return getSystemColorScheme() === 'dark' ? 'IconSun' : 'IconMoon';
-			case 'dark':
-				return 'IconSun';
-			case 'light':
-				return 'IconMoon';
-			default:
-				return 'IconSun';
+				return getSystemColorScheme() === "dark" ? "IconSun" : "IconMoon";
+			}
+			case "dark": {
+				return "IconSun";
+			}
+			case "light": {
+				return "IconMoon";
+			}
+			default: {
+				return "IconSun";
+			}
 		}
 	};
 
@@ -109,16 +117,20 @@ export function useTheme() {
 	 */
 	const getThemeTooltip = () => {
 		switch (colorScheme) {
-			case 'system':
+			case "system": {
 				const systemPref = getSystemColorScheme();
-				const nextScheme = systemPref === 'dark' ? 'dark' : 'light';
+				const nextScheme = systemPref === "dark" ? "dark" : "light";
 				return `Currently: System (${systemPref}) → Next: ${nextScheme}`;
-			case 'dark':
-				return 'Currently: Dark → Next: Light';
-			case 'light':
-				return 'Currently: Light → Next: System';
-			default:
-				return 'Cycle theme';
+			}
+			case "dark": {
+				return "Currently: Dark → Next: Light";
+			}
+			case "light": {
+				return "Currently: Light → Next: System";
+			}
+			default: {
+				return "Cycle theme";
+			}
 		}
 	};
 
