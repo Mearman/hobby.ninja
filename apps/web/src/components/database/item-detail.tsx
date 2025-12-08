@@ -378,7 +378,7 @@ const getCatalogDescription = (item: ItemDetailData): string | undefined => {
 	const catalogData = unifiedItem.catalogData;
 	if (!catalogData?.properties?.description) return undefined;
 	const desc = catalogData.properties.description;
-	return Array.isArray(desc) && desc.length > 0 ? desc[0].en : undefined;
+	return Array.isArray(desc) && desc.length > 0 && typeof desc[0] === 'object' && desc[0] !== null && 'en' in desc[0] ? (desc[0] as { en?: string }).en : undefined;
 };
 
 const getManualName = (item: ItemDetailData): string => {
@@ -791,15 +791,15 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												<Text fw={500}>Quick Info</Text>
 											</Card.Section>
 											<Stack gap="xs" p="md">
-												{item.properties.releaseDate ? (
+												{item.properties.releaseDate && (
 													<Group>
 														<Text size="sm" c="dimmed">Release:</Text>
 														<Text size="sm" fw={500}>
 															{item.properties.releaseDate.month ? `${item.properties.releaseDate.year}/${item.properties.releaseDate.month}` : item.properties.releaseDate.year}
 														</Text>
 													</Group>
-											)}
-											{item.$type === "unified_item" && hasManualData(item) && item.manualData?.properties?.productNumber && (
+												)}
+												{item.$type === "unified_item" && hasManualData(item) && item.manualData?.properties?.productNumber && (
 													<Group>
 														<Text size="sm" c="dimmed">Product No:</Text>
 														<Text size="sm" fw={500}>{item.manualData.properties.productNumber}</Text>

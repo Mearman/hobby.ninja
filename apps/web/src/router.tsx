@@ -182,8 +182,7 @@ const aboutRoute = createRoute({
 });
 
 /**
- * Graph node routes for static generation
- * These routes support both hash routing and clean paths for hybrid approach
+ * Graph node routes
  */
 
 // Helper function to create graph node routes with data loading
@@ -253,27 +252,15 @@ const hashHistory = createHashHistory();
 
 /**
  * Router instance with hash-based routing for static hosting compatibility
- * This maintains existing functionality while supporting clean paths for SSG
  */
 export const router = createRouter({
 	routeTree,
-	history: hashHistory, // Keep hash routing for dynamic features
+	history: hashHistory,
 	defaultPreload: "intent",
 	defaultComponent: NotFoundPage,
 	caseSensitive: false,
 });
 
-/**
- * Static handler for SSG generation
- * Uses browser history for clean paths during static generation
- */
-export const staticRouter = createRouter({
-	routeTree,
-	history: createBrowserHistory(), // Clean paths for static generation
-	defaultPreload: "intent",
-	defaultComponent: NotFoundPage,
-	caseSensitive: false,
-});
 
 /**
  * Router provider component for use in main.tsx

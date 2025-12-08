@@ -8,7 +8,6 @@
 import { Title, Text, Container, Breadcrumbs, Anchor, Group, Stack, Card, Grid } from "@mantine/core";
 import { Link, useLoaderData } from "@tanstack/react-router";
 
-import { StructuredDataGenerator } from "../../scripts/structured-data-generator";
 import { GraphNodeDetails } from "../components/graph/graph-node-details";
 import { RelatedNodesGrid } from "../components/graph/related-nodes-grid";
 import type { GraphNode } from "../utils/graph-client";
@@ -93,14 +92,13 @@ function GraphNodeMeta({ nodeData, nodeType }: { nodeData: GraphNode | null; nod
 	const title = nodeData.name?.en ?? nodeData.name?.ja ?? "Graph Node";
 	const description = `${nodeType.charAt(0).toUpperCase() + nodeType.slice(1)}: ${title}`;
 
-	// Generate structured data
-	const structuredDataGenerator = new StructuredDataGenerator();
-	const structuredData = structuredDataGenerator.generateStructuredData(nodeData);
-	const breadcrumbData = structuredDataGenerator.generateBreadcrumbData(
-		nodeType,
-		nodeData.id,
-		nodeData.name?.en ?? nodeData.name?.ja,
-	);
+	// TODO: Add structured data generation when needed
+	// const structuredData = {
+	//   "@context": "https://schema.org",
+	//   "@type": "Thing",
+	//   name: title,
+	//   description
+	// };
 
 	return (
 		<>
@@ -111,9 +109,7 @@ function GraphNodeMeta({ nodeData, nodeType }: { nodeData: GraphNode | null; nod
 			<meta property="og:type" content="website" />
 			<link rel="canonical" href={`https://hobby.ninja/${nodeType}/${nodeData.id}`} />
 
-			{/* Safe Structured Data for SEO */}
-			{structuredData && <StructuredDataScript data={structuredData} />}
-			{breadcrumbData && <StructuredDataScript data={breadcrumbData} />}
+			{/* Structured Data for SEO - TODO: Add when needed */}
 		</>
 	);
 }
