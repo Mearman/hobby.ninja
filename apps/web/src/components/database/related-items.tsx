@@ -1,6 +1,5 @@
 import {
 	Card,
-	Grid,
 	Image,
 	Title,
 	Text,
@@ -9,12 +8,10 @@ import {
 	Stack,
 	Button,
 	ActionIcon,
-	Tooltip,
 	Alert,
 	Skeleton,
 	SimpleGrid,
 	Box,
-	Anchor,
 	ThemeIcon,
 	Progress,
 	Divider,
@@ -22,15 +19,11 @@ import {
 	ScrollArea,
 } from "@mantine/core";
 import {
-	IconArrowRight,
 	IconRefresh,
 	IconInfoCircle,
-	IconExternalLink,
-	IconClock,
 	IconSearch,
 	IconScale,
 	IconStar,
-	IconTrendingUp,
 	IconNetwork,
 	IconComponents,
 	IconCalendar,
@@ -39,7 +32,12 @@ import React, { useState, useEffect, useMemo } from "react";
 
 import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../../services/dataService";
 
-import { ItemCard } from "./item-card";
+// Constants
+const DEFAULT_MAX_ITEMS = 12;
+const MAX_ITEMS_PER_CATEGORY = 8;
+const VARIANT_ITEMS_LIMIT = 6;
+const SIMILARITY_MIN_WORD_LENGTH = 3;
+const VARIANT_NAME_COMPARE_LENGTH = 10;
 
 // Types for related items
 interface RelatedItem {
@@ -50,17 +48,58 @@ interface RelatedItem {
   scale?: string;
   series?: string;
   thumbnail?: string;
-  relationType: "series" | "grade" | "scale" | "similarity" | "accessory" | "variant";
+  relationType: "series" | "grade" | "scale" | "similarity" | "accessory" | "variant" | "recent";
   score: number; // 0-1, higher is more related
   reason: string;
 }
 
+// Type for items with type discriminator
+type TypedItem = (UnifiedItem | ManualItem | CatalogItem) & {
+  type: "unified" | "manual" | "catalog";
+};
+
+// Type guard for UnifiedItem - simplified since we can't guarantee type compatibility
+function isUnifiedItem(item: TypedItem): boolean {
+	return item.type === "unified";
+}
+
+// Helper to safely get item properties
+const getItemProperties = (item: TypedItem): any => {
+	return "properties" in item ? item.properties : undefined;
+};
+
+// Type for series information
+type SeriesInfo = string | { ja?: string; en?: string };
+
+// Type for release date
+type ReleaseDate = { year: number; month?: number; day?: number } | undefined;
+
+// Helper function to safely access name
+const getSafeName = (item: TypedItem): string => {
+	if ("name" in item && item.name) {
+		if (typeof item.name === "string") {
+			return item.name;
+		} else if (item.name.ja || item.name.en) {
+			return item.name.ja ?? item.name.en ?? "Unknown";
+		}
+	}
+	return "Unknown";
+};
+
+// Helper function to safely access series
+const getSafeSeries = (series: SeriesInfo | undefined): string | undefined => {
+	if (!series) return undefined;
+	if (typeof series === "string") return series;
+	return series.ja ?? series.en;
+};
+
 interface RelationType {
-  id: string;
+  id: RelatedItem["relationType"] | "all";
   label: string;
   icon: React.ReactNode;
   description: string;
   color: string;
+  count?: number;
 }
 
 interface RelatedItemsProps {
@@ -118,7 +157,7 @@ const RELATION_TYPES: RelationType[] = [
 export const RelatedItems: React.FC<RelatedItemsProps> = ({
 	currentItem,
 	onItemClick,
-	maxItems = 12,
+	maxItems = DEFAULT_MAX_ITEMS,
 	showControls = true,
 }) => {
 	const [relatedItems, setRelatedItems] = useState<RelatedItem[]>([]);
@@ -131,29 +170,23 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 	const currentItemProps = useMemo(() => {
 		const baseProps = {
 			id: currentItem.id,
-			name: "name" in currentItem
-				? (typeof currentItem.name === "object" && currentItem.name !== null
-					? (currentItem.name.ja || currentItem.name.en)
-					: currentItem.name)
-				: "Unknown",
-			grade: ("grade" in currentItem && currentItem.grade) ||
-              (currentItem.$type === "unified_item" && currentItem.properties?.grade) ||
-              (currentItem.$type === "manual_item" && currentItem.properties?.grade),
-			scale: ("scale" in currentItem && currentItem.scale) ||
-              (currentItem.$type === "catalog_item" && currentItem.properties?.scale) ||
-              (currentItem.$type === "unified_item" && currentItem.properties?.scale) ||
-              (currentItem.$type === "manual_item" && currentItem.properties?.scale),
-			series: (("series" in currentItem && typeof currentItem.series === "object" && currentItem.series !== null)
-				? ((currentItem.series as { ja?: string; en?: string }).ja || (currentItem.series as { ja?: string; en?: string }).en)
-				: (currentItem.properties?.series && typeof currentItem.properties.series === "object"
-					? ((currentItem.properties.series as { ja?: string; en?: string }).ja || (currentItem.properties.series as { ja?: string; en?: string }).en)
-					: currentItem.properties?.series)),
-			releaseDate: ("releaseDate" in currentItem ? currentItem.releaseDate : currentItem.properties?.releaseDate),
+			name: "name" in currentItem && typeof currentItem.name === "object" && currentItem.name !== null
+				? (currentItem.name.ja ?? currentItem.name.en)
+				: ("name" in currentItem && typeof currentItem.name === "string" ? currentItem.name : "Unknown"),
+			grade: ("grade" in currentItem ? currentItem.grade : undefined) ??
+              (currentItem.properties as any)?.grade,
+			scale: ("scale" in currentItem ? currentItem.scale : undefined) ??
+              (currentItem.properties as any)?.scale,
+			series: getSafeSeries(
+				("series" in currentItem ? currentItem.series : undefined) ??
+                (currentItem.properties as any)?.series,
+			),
+			releaseDate: ("releaseDate" in currentItem ? currentItem.releaseDate : (currentItem.properties as any)?.releaseDate),
 		};
 
 		// For unified items, extract additional source data
 		if (currentItem.$type === "unified_item") {
-			const unified = currentItem as UnifiedItem;
+			const unified = currentItem;
 			return {
 				...baseProps,
 				matchMethod: unified.properties?.matchMethod,
@@ -186,7 +219,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			const catalogItems: CatalogItem[] = [];
 
 			// Get all available items
-			const allItems = [
+			const allItems: TypedItem[] = [
 				...unifiedItems.map((item: UnifiedItem) => ({ ...item, type: "unified" as const })),
 				...manualItems.map((item: ManualItem) => ({ ...item, type: "manual" as const })),
 				...catalogItems.map((item: CatalogItem) => ({ ...item, type: "catalog" as const })),
@@ -229,22 +262,21 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 	};
 
 	// Find items from the same series
-	const findSeriesRelated = (items: any[]): RelatedItem[] => {
+	const findSeriesRelated = (items: TypedItem[]): RelatedItem[] => {
 		if (!currentItemProps.series) return [];
 
-		const currentSeriesStr = typeof currentItemProps.series === "string"
-			? currentItemProps.series
-			: (currentItemProps.series.ja || currentItemProps.series.en || "");
+		const currentSeriesStr = getSafeSeries(currentItemProps.series) ?? "";
 
 		return items
 			.filter(item => {
-				const itemSeriesRaw = "series" in item
-					? (item.series?.ja || item.series?.en)
-					: ("metadata" in item ? item.metadata?.product?.series : undefined);
+				// Ensure item has valid ID
+				if (!item.id) return false;
 
-				const itemSeriesStr = typeof itemSeriesRaw === "string"
-					? itemSeriesRaw
-					: (itemSeriesRaw?.ja || itemSeriesRaw?.en || "");
+				const itemSeriesRaw = "series" in item
+					? getSafeSeries(item.series as SeriesInfo | undefined)
+					: getSafeSeries(getItemProperties(item)?.series as SeriesInfo | undefined);
+
+				const itemSeriesStr = itemSeriesRaw ?? "";
 
 				return itemSeriesStr && currentSeriesStr && (
 					itemSeriesStr.toLowerCase() === currentSeriesStr.toLowerCase() ||
@@ -252,120 +284,142 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
           currentSeriesStr.includes(itemSeriesStr)
 				);
 			})
-			.slice(0, 8)
-			.map(item => ({
-				id: item.id,
-				type: item.type,
-				name: "name" in item ? (item.name.ja || item.name.en || item.name) : item.title,
-				grade: ("grade" in item && item.grade) || ("metadata" in item && item.metadata?.product?.grade),
-				scale: ("scale" in item && item.scale) || ("metadata" in item && item.metadata?.product?.scale),
-				series: ("series" in item && (item.series?.ja || item.series?.en)) ||
-                ("metadata" in item && item.metadata?.product?.series),
-				thumbnail: getThumbnail(item),
-				relationType: "series" as const,
-				score: 0.8,
-				reason: `Same series: ${currentItemProps.series}`,
-			}));
+			.slice(0, MAX_ITEMS_PER_CATEGORY)
+			.map(item => {
+				const itemProps = getItemProperties(item);
+				return {
+					id: item.id!,
+					type: item.type,
+					name: getSafeName(item),
+					grade: (("grade" in item ? item.grade : undefined) ??
+                        itemProps?.grade) as string | undefined,
+					scale: (("scale" in item ? item.scale : undefined) ??
+                        itemProps?.scale) as string | undefined,
+					series: getSafeSeries((("series" in item ? item.series : undefined) ??
+                            itemProps?.series) as SeriesInfo | undefined),
+					thumbnail: getThumbnail(item),
+					relationType: "series" as const,
+					score: 0.8,
+					reason: `Same series: ${currentSeriesStr}`,
+				} as RelatedItem;
+			});
 	};
 
 	// Find items with the same grade
-	const findGradeRelated = (items: any[]): RelatedItem[] => {
+	const findGradeRelated = (items: TypedItem[]): RelatedItem[] => {
 		if (!currentItemProps.grade) return [];
 
 		return items
 			.filter(item => {
-				const itemGrade = "grade" in item ? item.grade :
-					("metadata" in item ? item.metadata?.product?.grade : undefined);
+				if (!item.id) return false;
+				const itemProps = getItemProperties(item);
+				const itemGrade = ("grade" in item ? item.grade : undefined) ??
+                    itemProps?.grade;
 				return itemGrade && itemGrade === currentItemProps.grade;
 			})
-			.slice(0, 8)
-			.map(item => ({
-				id: item.id,
-				type: item.type,
-				name: "name" in item ? (item.name.ja || item.name.en || item.name) : item.title,
-				grade: ("grade" in item && item.grade) || ("metadata" in item && item.metadata?.product?.grade),
-				scale: ("scale" in item && item.scale) || ("metadata" in item && item.metadata?.product?.scale),
-				series: ("series" in item && (item.series?.ja || item.series?.en)) ||
-                ("metadata" in item && item.metadata?.product?.series),
-				thumbnail: getThumbnail(item),
-				relationType: "grade" as const,
-				score: 0.7,
-				reason: `Same grade: ${currentItemProps.grade}`,
-			}));
+			.slice(0, MAX_ITEMS_PER_CATEGORY)
+			.map(item => {
+				const itemProps = getItemProperties(item);
+				return {
+					id: item.id!,
+					type: item.type,
+					name: getSafeName(item),
+					grade: (("grade" in item ? item.grade : undefined) ??
+                        itemProps?.grade) as string | undefined,
+					scale: (("scale" in item ? item.scale : undefined) ??
+                        itemProps?.scale) as string | undefined,
+					series: getSafeSeries((("series" in item ? item.series : undefined) ??
+                            itemProps?.series) as SeriesInfo | undefined),
+					thumbnail: getThumbnail(item),
+					relationType: "grade" as const,
+					score: 0.7,
+					reason: `Same grade: ${currentItemProps.grade}`,
+				} as RelatedItem;
+			});
 	};
 
 	// Find items with the same scale
-	const findScaleRelated = (items: any[]): RelatedItem[] => {
+	const findScaleRelated = (items: TypedItem[]): RelatedItem[] => {
 		if (!currentItemProps.scale) return [];
 
 		return items
 			.filter(item => {
-				const itemScale = "scale" in item ? item.scale :
-					("metadata" in item ? item.metadata?.product?.scale : undefined);
+				if (!item.id) return false;
+				const itemProps = getItemProperties(item);
+				const itemScale = ("scale" in item ? item.scale : undefined) ??
+                    itemProps?.scale;
 				return itemScale && itemScale === currentItemProps.scale;
 			})
-			.slice(0, 8)
-			.map(item => ({
-				id: item.id,
-				type: item.type,
-				name: "name" in item ? (item.name.ja || item.name.en || item.name) : item.title,
-				grade: ("grade" in item && item.grade) || ("metadata" in item && item.metadata?.product?.grade),
-				scale: ("scale" in item && item.scale) || ("metadata" in item && item.metadata?.product?.scale),
-				series: ("series" in item && (item.series?.ja || item.series?.en)) ||
-                ("metadata" in item && item.metadata?.product?.series),
-				thumbnail: getThumbnail(item),
-				relationType: "scale" as const,
-				score: 0.6,
-				reason: `Same scale: ${currentItemProps.scale}`,
-			}));
+			.slice(0, MAX_ITEMS_PER_CATEGORY)
+			.map(item => {
+				const itemProps = getItemProperties(item);
+				return {
+					id: item.id!,
+					type: item.type,
+					name: getSafeName(item),
+					grade: (("grade" in item ? item.grade : undefined) ??
+                        itemProps?.grade) as string | undefined,
+					scale: (("scale" in item ? item.scale : undefined) ??
+                        itemProps?.scale) as string | undefined,
+					series: getSafeSeries((("series" in item ? item.series : undefined) ??
+                            itemProps?.series) as SeriesInfo | undefined),
+					thumbnail: getThumbnail(item),
+					relationType: "scale" as const,
+					score: 0.6,
+					reason: `Same scale: ${currentItemProps.scale}`,
+				} as RelatedItem;
+			});
 	};
 
 	// Find similar items based on name characteristics
-	const findSimilarItems = (items: any[]): RelatedItem[] => {
-		const currentName = (currentItemProps.name || "").toLowerCase();
+	const findSimilarItems = (items: TypedItem[]): RelatedItem[] => {
+		const currentName = currentItemProps.name.toLowerCase();
 
 		return items
 			.filter(item => {
-				const itemName = "name" in item
-					? (item.name.ja || item.name.en || item.name).toLowerCase()
-					: item.title.toLowerCase();
+				if (!item.id) return false;
+				const itemName = getSafeName(item).toLowerCase();
 
 				// Simple similarity check - items with similar words in names
 				const currentWords = currentName.split(/\s+/);
 				const itemWords = itemName.split(/\s+/);
 
 				return currentWords.some((word: string) =>
-					word.length > 2 && itemWords.some((itemWord: string) =>
+					word.length > SIMILARITY_MIN_WORD_LENGTH && itemWords.some((itemWord: string) =>
 						itemWord.includes(word) || word.includes(itemWord),
 					),
 				);
 			})
-			.slice(0, 8)
-			.map(item => ({
-				id: item.id,
-				type: item.type,
-				name: "name" in item ? (item.name.ja || item.name.en || item.name) : item.title,
-				grade: ("grade" in item && item.grade) || ("metadata" in item && item.metadata?.product?.grade),
-				scale: ("scale" in item && item.scale) || ("metadata" in item && item.metadata?.product?.scale),
-				series: ("series" in item && (item.series?.ja || item.series?.en)) ||
-                ("metadata" in item && item.metadata?.product?.series),
-				thumbnail: getThumbnail(item),
-				relationType: "similarity" as const,
-				score: 0.5,
-				reason: "Similar characteristics",
-			}));
+			.slice(0, MAX_ITEMS_PER_CATEGORY)
+			.map(item => {
+				const itemProps = getItemProperties(item);
+				return {
+					id: item.id!,
+					type: item.type,
+					name: getSafeName(item),
+					grade: (("grade" in item ? item.grade : undefined) ??
+                        itemProps?.grade) as string | undefined,
+					scale: (("scale" in item ? item.scale : undefined) ??
+                        itemProps?.scale) as string | undefined,
+					series: getSafeSeries((("series" in item ? item.series : undefined) ??
+                            itemProps?.series) as SeriesInfo | undefined),
+					thumbnail: getThumbnail(item),
+					relationType: "similarity" as const,
+					score: 0.5,
+					reason: "Similar characteristics",
+				} as RelatedItem;
+			});
 	};
 
 	// Find variants (this would need more sophisticated logic)
-	const findVariants = (items: any[]): RelatedItem[] => {
+	const findVariants = (items: TypedItem[]): RelatedItem[] => {
 		// Simple variant detection - similar names with different qualifiers
-		const currentName = (currentItemProps.name || "").toLowerCase();
+		const currentName = currentItemProps.name.toLowerCase();
 
 		return items
 			.filter(item => {
-				const itemName = "name" in item
-					? (item.name.ja || item.name.en || item.name).toLowerCase()
-					: item.title.toLowerCase();
+				if (!item.id) return false;
+				const itemName = getSafeName(item).toLowerCase();
 
 				// Check for variant indicators
 				const variantPatterns = [
@@ -373,80 +427,103 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					/metallic/i, /chrome/i, /special/i, /limited/i,
 				];
 
-				return (itemName.includes(currentName.slice(0, 10)) || currentName.includes(itemName.slice(0, 10))) &&
+				return (itemName.includes(currentName.slice(0, VARIANT_NAME_COMPARE_LENGTH)) || currentName.includes(itemName.slice(0, VARIANT_NAME_COMPARE_LENGTH))) &&
                (variantPatterns.some(pattern => pattern.test(itemName)) ||
                 variantPatterns.some(pattern => pattern.test(currentName)));
 			})
-			.slice(0, 6)
-			.map(item => ({
-				id: item.id,
-				type: item.type,
-				name: "name" in item ? (item.name.ja || item.name.en || item.name) : item.title,
-				grade: ("grade" in item && item.grade) || ("metadata" in item && item.metadata?.product?.grade),
-				scale: ("scale" in item && item.scale) || ("metadata" in item && item.metadata?.product?.scale),
-				series: ("series" in item && (item.series?.ja || item.series?.en)) ||
-                ("metadata" in item && item.metadata?.product?.series),
-				thumbnail: getThumbnail(item),
-				relationType: "variant" as const,
-				score: 0.9,
-				reason: "Variant or special edition",
-			}));
+			.slice(0, VARIANT_ITEMS_LIMIT)
+			.map(item => {
+				const itemProps = getItemProperties(item);
+				return {
+					id: item.id!,
+					type: item.type,
+					name: getSafeName(item),
+					grade: (("grade" in item ? item.grade : undefined) ??
+                        itemProps?.grade) as string | undefined,
+					scale: (("scale" in item ? item.scale : undefined) ??
+                        itemProps?.scale) as string | undefined,
+					series: getSafeSeries((("series" in item ? item.series : undefined) ??
+                            itemProps?.series) as SeriesInfo | undefined),
+					thumbnail: getThumbnail(item),
+					relationType: "variant" as const,
+					score: 0.9,
+					reason: "Variant or special edition",
+				} as RelatedItem;
+			});
 	};
 
 	// Find recent releases
-	const findRecentReleases = (items: any[]): RelatedItem[] => {
+	const findRecentReleases = (items: TypedItem[]): RelatedItem[] => {
 		const currentYear = new Date().getFullYear();
 		const twoYearsAgo = currentYear - 2;
 
 		return items
 			.filter(item => {
-				const releaseYear = "releaseDate" in item ? item.releaseDate?.year :
-					("metadata" in item ? item.metadata?.product?.releaseDate?.year : undefined);
+				if (!item.id) return false;
+				const itemProps = getItemProperties(item);
+				const itemReleaseDate = ("releaseDate" in item ? item.releaseDate : undefined) ??
+                    (itemProps?.releaseDate);
+				const releaseYear = (itemReleaseDate)?.year;
 				return releaseYear && releaseYear >= twoYearsAgo;
 			})
 			.sort((a, b) => {
-				const yearA = "releaseDate" in a ? a.releaseDate?.year :
-					("metadata" in a ? a.metadata?.product?.releaseDate?.year : 0);
-				const yearB = "releaseDate" in b ? b.releaseDate?.year :
-					("metadata" in b ? b.metadata?.product?.releaseDate?.year : 0);
-				return (yearB || 0) - (yearA || 0);
+				const propsA = getItemProperties(a);
+				const propsB = getItemProperties(b);
+				const releaseDateA = ("releaseDate" in a ? a.releaseDate : undefined) ??
+                    (propsA?.releaseDate);
+				const releaseDateB = ("releaseDate" in b ? b.releaseDate : undefined) ??
+                    (propsB?.releaseDate);
+				const yearA = (releaseDateA)?.year ?? 0;
+				const yearB = (releaseDateB)?.year ?? 0;
+				return yearB - yearA;
 			})
-			.slice(0, 8)
-			.map(item => ({
-				id: item.id,
-				type: item.type,
-				name: "name" in item ? (item.name.ja || item.name.en || item.name) : item.title,
-				grade: ("grade" in item && item.grade) || ("metadata" in item && item.metadata?.product?.grade),
-				scale: ("scale" in item && item.scale) || ("metadata" in item && item.metadata?.product?.scale),
-				series: ("series" in item && (item.series?.ja || item.series?.en)) ||
-                ("metadata" in item && item.metadata?.product?.series),
-				thumbnail: getThumbnail(item),
-				relationType: "similarity" as const,
-				score: 0.4,
-				reason: `Recent release (${("releaseDate" in item ? item.releaseDate?.year :
-					("metadata" in item ? item.metadata?.product?.releaseDate?.year : 0))})`,
-			}));
+			.slice(0, MAX_ITEMS_PER_CATEGORY)
+			.map(item => {
+				const itemProps = getItemProperties(item);
+				const itemReleaseDate = ("releaseDate" in item ? item.releaseDate : undefined) ??
+                    (itemProps?.releaseDate);
+				const releaseYear = (itemReleaseDate)?.year ?? 0;
+				return {
+					id: item.id!,
+					type: item.type,
+					name: getSafeName(item),
+					grade: (("grade" in item ? item.grade : undefined) ??
+                        itemProps?.grade) as string | undefined,
+					scale: (("scale" in item ? item.scale : undefined) ??
+                        itemProps?.scale) as string | undefined,
+					series: getSafeSeries((("series" in item ? item.series : undefined) ??
+                            itemProps?.series) as SeriesInfo | undefined),
+					thumbnail: getThumbnail(item),
+					relationType: "recent" as const,
+					score: 0.4,
+					reason: `Recent release (${releaseYear})`,
+				} as RelatedItem;
+			});
 	};
 
 	// Get thumbnail for item
-	const getThumbnail = (item: any): string | undefined => {
+	const getThumbnail = (item: TypedItem): string | undefined => {
 		// Try different sources for thumbnails
-		if ("sources" in item) {
-			const unified = item as UnifiedItem;
-			if (unified.properties?.sources?.catalog) {
-				return `/data/images/catalog/${unified.properties.sources.catalog.id}/thumb.jpg`;
+		if (isUnifiedItem(item) && item.properties) {
+			const props = item.properties as any;
+			if (props.sources?.catalog) {
+				return `/data/images/catalog/${props.sources.catalog.id}/thumb.jpg`;
 			}
-			if (unified.properties?.sources?.manual) {
-				return `/data/images/manual/${unified.properties.sources.manual.id}/thumb.jpg`;
+			if (props.sources?.manual) {
+				return `/data/images/manual/${props.sources.manual.id}/thumb.jpg`;
 			}
 		}
 
 		if ("images" in item && Array.isArray(item.images) && item.images.length > 0) {
-			return item.images[0];
+			const firstImage = item.images[0];
+			return typeof firstImage === "string" ? firstImage : undefined;
 		}
 
-		if ("assets" in item && item.assets?.thumbnails?.length > 0) {
-			return item.assets.thumbnails[0].src;
+		if ("assets" in item && item.assets) {
+			const assets = item.assets as { thumbnails?: Array<{ src?: string }> };
+			if (assets.thumbnails && assets.thumbnails.length > 0 && assets.thumbnails[0]?.src) {
+				return assets.thumbnails[0].src;
+			}
 		}
 
 		return undefined;
@@ -538,10 +615,14 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 
 	// Get available relation types from items
 	const availableTabs = useMemo(() => {
-		const tabs = new Set(relatedItems.map(item => item.relationType));
+		const relationTypeSet = new Set(relatedItems.map(item => item.relationType));
+		const filteredRelationTypes = RELATION_TYPES.filter(type =>
+			relationTypeSet.has(type.id as RelatedItem["relationType"]),
+		);
+
 		return [
 			{ id: "all", label: "All", count: relatedItems.length },
-			...RELATION_TYPES.filter(type => tabs.has(type.id as any)).map(type => ({
+			...filteredRelationTypes.map(type => ({
 				...type,
 				count: relatedItems.filter(item => item.relationType === type.id).length,
 			})),
