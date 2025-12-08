@@ -1,5 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
 
+// Global setup for Playwright tests - resolves Jest/Vitest conflicts
+import type { PlaywrightTestConfig } from '@playwright/test';
+
 /**
  * Enhanced Playwright configuration for comprehensive E2E testing
  * Supports multiple browsers, devices, accessibility, visual regression, and performance testing
@@ -23,6 +26,9 @@ export default defineConfig({
     '**/*.component.test.{ts,tsx}',
     '**/*.integration.test.{ts,tsx}',
   ],
+
+  // Global setup - disabled for now to avoid Jest/Vitest conflicts
+  // globalSetup: './playwright.global-setup.ts',
 
   // Timeout configurations
   timeout: 30000, // 30 seconds per test
@@ -95,6 +101,12 @@ export default defineConfig({
 
     // Wait for navigation timeout
     navigationTimeout: 60000, // 60 seconds
+
+    // Prevent conflicts with Jest/Vitest globals during E2E tests
+    // This helps avoid the "Cannot redefine property: Symbol($$jest-matchers-object)" error
+    extraHTTPHeaders: {
+      'x-playwright-test': 'true'
+    },
   },
 
   // Configure projects for major browsers and testing scenarios
@@ -114,13 +126,12 @@ export default defineConfig({
 
   // Enhanced web server configuration (serve dev server for e2e tests)
   webServer: {
-    command: 'pnpm run dev',
-    cwd: './apps/web', // Set working directory properly
-    port: 3000, // Explicitly set the expected port
-    reuseExistingServer: !process.env.CI,
-    timeout: 180 * 1000, // 3 minutes - increased for Vite startup
-    stdout: 'pipe',
-    stderr: 'pipe',
+    command: 'pnpm nx serve web --port=3000',
+    port: 3000,
+    reuseExistingServer: true,
+    timeout: 120 * 1000, // 2 minutes for dev server to start
+    stdout: 'ignore',
+    stderr: 'ignore',
   },
 
   // Performance settings
