@@ -18,7 +18,6 @@ import {
 import { useDebouncedValue } from "@mantine/hooks";
 import {
 	IconSearch,
-	IconFilter,
 	IconAdjustmentsHorizontal,
 	IconHistory,
 	IconX,
@@ -27,6 +26,16 @@ import {
 import React, { useState, useEffect, useCallback, useRef } from "react";
 
 import { dataService, FilterOptions } from "../../services/dataService";
+
+// Constants for magic numbers
+const DEBOUNCE_DELAY = 300;
+const MAX_SEARCH_HISTORY = 10;
+const MAX_RECENT_MATCHES = 3;
+const API_DELAY = 100;
+const MAX_AUTO_COMPLETE_SUGGESTIONS = 5;
+const MAX_SERIES_OPTIONS = 20;
+const MAX_DROPDOWN_HEIGHT = 200;
+const POPOVER_WIDTH = 300;
 
 interface SearchAndFilterProps {
   onSearch: (query: string, filters: FilterOptions) => void;
@@ -59,7 +68,7 @@ export function SearchAndFilter({
 	className,
 }: SearchAndFilterProps): React.ReactElement {
 	const [query, setQuery] = useState(initialQuery);
-	const [debouncedQuery] = useDebouncedValue(query, 300);
+	const [debouncedQuery] = useDebouncedValue(query, DEBOUNCE_DELAY);
 	const [filters, setFilters] = useState<FilterOptions>(initialFilters);
 	const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
 	const [searchHistory, setSearchHistory] = useState<string[]>([]);
@@ -97,13 +106,16 @@ export function SearchAndFilter({
 		const history = localStorage.getItem("hobby_db_search_history");
 		if (history) {
 			try {
-				setSearchHistory(JSON.parse(history));
+				const parsedHistory = JSON.parse(history) as string[];
+				if (Array.isArray(parsedHistory) && parsedHistory.every(item => typeof item === "string")) {
+					setSearchHistory(parsedHistory);
+				}
 			} catch {
 				// Ignore invalid history
 			}
 		}
 
-		loadOptions();
+		void loadOptions();
 	}, []);
 
 	// Handle debounced search
@@ -121,7 +133,7 @@ export function SearchAndFilter({
 		const updatedHistory = [
 			newQuery.trim(),
 			...searchHistory.filter(item => item !== newQuery.trim()),
-		].slice(0, 10); // Keep only 10 most recent
+		].slice(0, MAX_SEARCH_HISTORY); // Keep only most recent
 
 		setSearchHistory(updatedHistory);
 		localStorage.setItem("hobby_db_search_history", JSON.stringify(updatedHistory));
@@ -138,7 +150,7 @@ export function SearchAndFilter({
 
 		// Generate suggestions if query is long enough
 		if (value.length >= 2) {
-			generateSuggestions(value);
+			void generateSuggestions(value);
 		} else {
 			setSuggestions([]);
 		}
@@ -151,7 +163,7 @@ export function SearchAndFilter({
 		// Add recent searches
 		const recentMatches = searchHistory
 			.filter(item => item.toLowerCase().includes(input.toLowerCase()))
-			.slice(0, 3)
+			.slice(0, MAX_RECENT_MATCHES)
 			.map((text, index) => ({
 				id: `recent_${index}`,
 				text,
@@ -176,7 +188,7 @@ export function SearchAndFilter({
 	// Mock autocomplete suggestions (replace with real API call)
 	const generateMockSuggestions = async (input: string): Promise<SearchSuggestion[]> => {
 		// Simulate API delay
-		await new Promise(resolve => setTimeout(resolve, 100));
+		await new Promise(resolve => setTimeout(resolve, API_DELAY));
 
 		const mockTerms = [
 			"Gundam RX-78-2",
@@ -189,7 +201,7 @@ export function SearchAndFilter({
 
 		return mockTerms
 			.filter(term => term.toLowerCase().includes(input.toLowerCase()))
-			.slice(0, 5)
+			.slice(0, MAX_AUTO_COMPLETE_SUGGESTIONS)
 			.map((text, index) => ({
 				id: `autocomplete_${index}`,
 				text,
@@ -212,7 +224,7 @@ export function SearchAndFilter({
 		onFiltersChange(updatedFilters);
 
 		// Trigger search with new filters
-		if (debouncedQuery || Object.keys(updatedFilters).length > 0) {
+		if (debouncedQuery ?? Object.keys(updatedFilters).length > 0) {
 			performSearch(debouncedQuery, updatedFilters);
 		}
 	}, [filters, debouncedQuery, performSearch, onFiltersChange]);
@@ -261,7 +273,7 @@ export function SearchAndFilter({
 		<Popover
 			opened={quickFiltersOpened}
 			onChange={setQuickFiltersOpened}
-			width={300}
+			width={POPOVER_WIDTH}
 			position="bottom-end"
 			withArrow={true}
 			shadow="md"
@@ -312,7 +324,7 @@ export function SearchAndFilter({
 							label="Grade"
 							placeholder="Select grades..."
 							data={gradeOptions}
-							value={filters.grade || []}
+							value={filters.grade ?? []}
 							onChange={(value) => { handleFilterChange({ grade: value }); }}
 							size="xs"
 							searchable={true}
@@ -328,7 +340,7 @@ export function SearchAndFilter({
 							label="Scale"
 							placeholder="Select scales..."
 							data={scaleOptions}
-							value={filters.scale || []}
+							value={filters.scale ?? []}
 							onChange={(value) => { handleFilterChange({ scale: value }); }}
 							size="xs"
 							searchable={true}
@@ -343,13 +355,13 @@ export function SearchAndFilter({
 						<MultiSelect
 							label="Series"
 							placeholder="Select series..."
-							data={seriesOptions.slice(0, 20)} // Limit options for performance
-							value={filters.series || []}
+							data={seriesOptions.slice(0, MAX_SERIES_OPTIONS)} // Limit options for performance
+							value={filters.series ?? []}
 							onChange={(value) => { handleFilterChange({ series: value }); }}
 							size="xs"
 							searchable={true}
 							clearable={true}
-							maxDropdownHeight={200}
+							maxDropdownHeight={MAX_DROPDOWN_HEIGHT}
 						/>
 					)}
 				</Stack>
@@ -412,7 +424,7 @@ export function SearchAndFilter({
 						</Popover.Target>
 
 						<Popover.Dropdown p={0}>
-							<ScrollArea.Autosize mah={300} type="always">
+							<ScrollArea.Autosize mah={POPOVER_WIDTH} type="always">
 								<Stack gap={0}>
 									{suggestions.map((suggestion) => (
 										<Button
@@ -461,8 +473,8 @@ export function SearchAndFilter({
 									{ value: "manual", label: "Manuals Only" },
 									{ value: "catalog", label: "Catalog Only" },
 								]}
-								value={filters.dataSource as any || "unified"}
-								onChange={(value) => { handleFilterChange({ dataSource: value as any }); }}
+								value={filters.dataSource ?? "unified"}
+								onChange={(value) => { handleFilterChange({ dataSource: value as "unified" | "manual" | "catalog" }); }}
 								size="xs"
 								w={120}
 								clearable={true}
@@ -478,12 +490,15 @@ export function SearchAndFilter({
 									{ value: "releaseDate_desc", label: "Newest First" },
 									{ value: "releaseDate_asc", label: "Oldest First" },
 								]}
-								value={`${filters.sort?.field || "relevance"}_${filters.sort?.direction || "desc"}`}
+								value={`${filters.sort?.field ?? "relevance"}_${filters.sort?.direction ?? "desc"}`}
 								onChange={(value) => {
 									if (value) {
 										const [field, direction] = value.split("_");
 										handleFilterChange({
-											sort: { field: field as any, direction: direction as any },
+											sort: {
+												field: field as "name" | "releaseDate" | "price" | "relevance",
+												direction: direction as "asc" | "desc",
+											},
 										});
 									}
 								}}
@@ -520,7 +535,7 @@ export function SearchAndFilter({
 										<ActionIcon
 											size="xs"
 											onClick={() => {
-												const newGrades = filters.grade?.filter(g => g !== grade) || [];
+												const newGrades = filters.grade?.filter(g => g !== grade) ?? [];
 												handleFilterChange({ grade: newGrades });
 											}}
 										>
@@ -540,7 +555,7 @@ export function SearchAndFilter({
 										<ActionIcon
 											size="xs"
 											onClick={() => {
-												const newScales = filters.scale?.filter(s => s !== scale) || [];
+												const newScales = filters.scale?.filter(s => s !== scale) ?? [];
 												handleFilterChange({ scale: newScales });
 											}}
 										>
@@ -560,7 +575,7 @@ export function SearchAndFilter({
 										<ActionIcon
 											size="xs"
 											onClick={() => {
-												const newSeries = filters.series?.filter(s => s !== series) || [];
+												const newSeries = filters.series?.filter(s => s !== series) ?? [];
 												handleFilterChange({ series: newSeries });
 											}}
 										>
