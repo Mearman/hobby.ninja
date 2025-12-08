@@ -6,13 +6,28 @@
  */
 
 import type {
-	SearchResult,
 	FilterOptions,
 	UnifiedItem,
 	ManualItem,
 	CatalogItem,
-	DataSourceType,
-} from "@workspace/types";
+} from "./dataService";
+
+// Local type for worker use
+interface SearchResult {
+  items: Array<{
+    id: string;
+    type: "unified" | "manual" | "catalog";
+    score: number;
+    highlights: {
+      name?: string;
+      series?: string;
+      description?: string;
+    };
+    data: UnifiedItem | ManualItem | CatalogItem | null;
+  }>;
+}
+
+type DataSourceType = "unified" | "manual" | "catalog";
 
 // ============================================================================
 // WORKER MESSAGE TYPES
@@ -323,11 +338,11 @@ class DataAggregator {
 		// Calculate statistics
 		const statistics = {
 			totalUnified: unifiedItems.length,
-			manualOnly: manualItems.length - unifiedItems.filter(u => u.sources.manual).length,
-			catalogOnly: catalogItems.length - unifiedItems.filter(u => u.sources.catalog).length,
-			withManual: unifiedItems.filter(u => u.sources.manual).length,
-			withCatalog: unifiedItems.filter(u => u.sources.catalog).length,
-			withBoth: unifiedItems.filter(u => u.sources.manual && u.sources.catalog).length,
+			manualOnly: manualItems.length - unifiedItems.filter(u => u.properties.sources.manual).length,
+			catalogOnly: catalogItems.length - unifiedItems.filter(u => u.properties.sources.catalog).length,
+			withManual: unifiedItems.filter(u => u.properties.sources.manual).length,
+			withCatalog: unifiedItems.filter(u => u.properties.sources.catalog).length,
+			withBoth: unifiedItems.filter(u => u.properties.sources.manual && u.properties.sources.catalog).length,
 		};
 
 		return { aggregated, conflicts, statistics };
@@ -343,8 +358,8 @@ class DataAggregator {
 			const conflictsForItem: Array<{ field: string; unified: any; manual: any; catalog: any }> = [];
 
 			// Check for conflicts with manual data
-			if (unifiedItem.sources.manual) {
-				const manualItem = manualItems.find(m => m.id === unifiedItem.sources.manual?.id);
+			if (unifiedItem.properties.sources.manual) {
+				const manualItem = manualItems.find(m => m.id === unifiedItem.properties.sources.manual?.id);
 				if (manualItem) {
 					// Compare fields and detect conflicts
 					this.compareAndRecordConflicts(unifiedItem, manualItem, "manual", conflictsForItem);
@@ -352,8 +367,8 @@ class DataAggregator {
 			}
 
 			// Check for conflicts with catalog data
-			if (unifiedItem.sources.catalog) {
-				const catalogItem = catalogItems.find(c => c.id === unifiedItem.sources.catalog?.id);
+			if (unifiedItem.properties.sources.catalog) {
+				const catalogItem = catalogItems.find(c => c.id === unifiedItem.properties.sources.catalog?.id);
 				if (catalogItem) {
 					this.compareAndRecordConflicts(unifiedItem, catalogItem, "catalog", conflictsForItem);
 				}
@@ -362,7 +377,7 @@ class DataAggregator {
 			// Record conflicts
 			for (const conflict of conflictsForItem) {
 				conflicts.push({
-					id: unifiedItem.id,
+					id: unifiedItem.id!,
 					...conflict,
 				});
 			}
@@ -378,42 +393,42 @@ class DataAggregator {
 		conflicts: Array<{ field: string; unified: any; manual: any; catalog: any }>,
 	): void {
 		// Compare names
-		if (sourceItem.name && sourceItem.name !== (unifiedItem.name.en || unifiedItem.name.ja)) {
+		if (sourceItem.properties.name && sourceItem.properties.name !== (unifiedItem.properties.name.en || unifiedItem.properties.name.ja)) {
 			conflicts.push({
 				field: "name",
-				unified: unifiedItem.name,
-				manual: sourceType === "manual" ? sourceItem.name : undefined,
-				catalog: sourceType === "catalog" ? sourceItem.name : undefined,
+				unified: unifiedItem.properties.name,
+				manual: sourceType === "manual" ? sourceItem.properties.name : undefined,
+				catalog: sourceType === "catalog" ? sourceItem.properties.name : undefined,
 			});
 		}
 
 		// Compare series
-		if (sourceItem.series && sourceItem.series !== unifiedItem.series?.en && sourceItem.series !== unifiedItem.series?.ja) {
+		if (sourceItem.properties.series && sourceItem.properties.series !== unifiedItem.properties.series?.en && sourceItem.properties.series !== unifiedItem.properties.series?.ja) {
 			conflicts.push({
 				field: "series",
-				unified: unifiedItem.series,
-				manual: sourceType === "manual" ? sourceItem.series : undefined,
-				catalog: sourceType === "catalog" ? sourceItem.series : undefined,
+				unified: unifiedItem.properties.series,
+				manual: sourceType === "manual" ? sourceItem.properties.series : undefined,
+				catalog: sourceType === "catalog" ? sourceItem.properties.series : undefined,
 			});
 		}
 
 		// Compare grade
-		if (sourceItem.grade && sourceItem.grade !== unifiedItem.grade) {
+		if (sourceItem.properties.grade && sourceItem.properties.grade !== unifiedItem.properties.grade) {
 			conflicts.push({
 				field: "grade",
-				unified: unifiedItem.grade,
-				manual: sourceType === "manual" ? sourceItem.grade : undefined,
-				catalog: sourceType === "catalog" ? sourceItem.grade : undefined,
+				unified: unifiedItem.properties.grade,
+				manual: sourceType === "manual" ? sourceItem.properties.grade : undefined,
+				catalog: sourceType === "catalog" ? sourceItem.properties.grade : undefined,
 			});
 		}
 
 		// Compare scale
-		if (sourceItem.scale && sourceItem.scale !== unifiedItem.scale) {
+		if (sourceItem.properties.scale && sourceItem.properties.scale !== unifiedItem.properties.scale) {
 			conflicts.push({
 				field: "scale",
-				unified: unifiedItem.scale,
-				manual: sourceType === "manual" ? sourceItem.scale : undefined,
-				catalog: sourceType === "catalog" ? sourceItem.scale : undefined,
+				unified: unifiedItem.properties.scale,
+				manual: sourceType === "manual" ? sourceItem.properties.scale : undefined,
+				catalog: sourceType === "catalog" ? sourceItem.properties.scale : undefined,
 			});
 		}
 	}
@@ -469,30 +484,30 @@ class StatisticsCalculator {
 
 			for (const item of batch) {
 				// Grade statistics
-				if (item.grade) {
-					stats.byGrade[item.grade] = (stats.byGrade[item.grade] || 0) + 1;
+				if (item.properties?.grade) {
+					stats.byGrade[item.properties.grade] = (stats.byGrade[item.properties.grade] || 0) + 1;
 				}
 
 				// Scale statistics
-				if (item.scale) {
-					stats.byScale[item.scale] = (stats.byScale[item.scale] || 0) + 1;
+				if (item.properties?.scale) {
+					stats.byScale[item.properties.scale] = (stats.byScale[item.properties.scale] || 0) + 1;
 				}
 
 				// Series statistics
-				const seriesName = item.series?.en || item.series?.ja;
+				const seriesName = item.properties?.series?.en || item.properties?.series?.ja;
 				if (seriesName) {
 					stats.bySeries[seriesName] = (stats.bySeries[seriesName] || 0) + 1;
 				}
 
 				// Release year statistics
-				if (item.releaseDate?.year) {
-					const year = item.releaseDate.year.toString();
+				if (item.properties?.releaseDate?.year) {
+					const year = item.properties.releaseDate.year.toString();
 					stats.byReleaseYear[year] = (stats.byReleaseYear[year] || 0) + 1;
 				}
 
 				// Source coverage
-				const hasManual = Boolean(item.sources.manual);
-				const hasCatalog = Boolean(item.sources.catalog);
+				const hasManual = Boolean(item.properties?.sources?.manual);
+				const hasCatalog = Boolean(item.properties?.sources?.catalog);
 
 				if (hasManual) stats.sourceCoverage.withManual++;
 				if (hasCatalog) stats.sourceCoverage.withCatalog++;
@@ -502,15 +517,15 @@ class StatisticsCalculator {
 				}
 
 				// Quality metrics
-				if (item.matchStage && item.matchStage >= 4) {
+				if (item.properties?.matchStage && item.properties?.matchStage >= 4) {
 					stats.qualityMetrics.highConfidence++;
-				} else if (item.matchStage && item.matchStage >= 2) {
+				} else if (item.properties?.matchStage && item.properties?.matchStage >= 2) {
 					stats.qualityMetrics.mediumConfidence++;
-				} else if (item.matchStage && item.matchStage < 2) {
+				} else if (item.properties?.matchStage && item.properties?.matchStage < 2) {
 					stats.qualityMetrics.lowConfidence++;
 				}
 
-				if (item.matchMethod === "manual_override") {
+				if (item.properties?.matchMethod === "partial") {
 					stats.qualityMetrics.needsReview++;
 				}
 			}

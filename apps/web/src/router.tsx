@@ -192,15 +192,14 @@ const createGraphNodeRoute = (nodeType: string) =>
 		getParentRoute: () => rootRoute,
 		path: `/${nodeType}/$id`,
 		loader: async ({ params }) => {
-			const nodeData = await loadGraphNode(nodeType, params.id);
-			const relatedNodes = nodeData ? await getRelatedNodes(nodeData) : [];
+			const nodeDetails = await getGraphNodeDetails(nodeType, params.id);
 
 			return {
-				nodeData,
+				nodeData: nodeDetails?.data,
 				nodeType,
 				nodeId: params.id,
-				relatedNodes,
-				error: nodeData ? null : `${nodeType} with ID ${params.id} not found`,
+				relatedNodes: nodeDetails?.relatedNodes || [],
+				error: nodeDetails ? null : `${nodeType} with ID ${params.id} not found`,
 			};
 		},
 		component: GraphNodePage,

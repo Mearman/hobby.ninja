@@ -12,6 +12,7 @@ import {
 	GraphNodeType,
 	GraphNodeTypeType,
 	GraphRelationshipType,
+	GraphRelationshipTypeType,
 	validateHobbyGraph,
 } from "../schemas/hobby-schema";
 
@@ -57,7 +58,7 @@ export interface HobbyTypeStats {
 
 export interface GraphSearchResult {
   node: GraphNodeTypeType;
-  relationships: (typeof GraphRelationshipType)[];
+  relationships: GraphRelationshipTypeType[];
   connectedNodes: GraphNodeTypeType[];
 }
 
