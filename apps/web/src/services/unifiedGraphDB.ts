@@ -190,8 +190,8 @@ export class UnifiedGraphDB {
 		// Apply ordering
 		if (options?.orderBy) {
 			schemas.sort((a, b) => {
-				const aValue = (a)[options.orderBy || "name"];
-				const bValue = (b)[options.orderBy || "name"];
+				const aValue = (a as any)[options.orderBy || "name"];
+				const bValue = (b as any)[options.orderBy || "name"];
 				const direction = options.orderDirection === "desc" ? -1 : 1;
 				return aValue > bValue ? direction : -direction;
 			});

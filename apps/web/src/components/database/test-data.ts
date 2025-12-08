@@ -6,7 +6,7 @@ import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataSe
 
 export const mockUnifiedItems: UnifiedItem[] = [
 	{
-		id: "up_00001",
+		$id: "up_00001",
 		$type: "unified_item",
 		category: "data" as const,
 		schemaId: "unified_item_schema_v1",
@@ -32,7 +32,7 @@ export const mockUnifiedItems: UnifiedItem[] = [
 		},
 	},
 	{
-		id: "up_00002",
+		$id: "up_00002",
 		$type: "unified_item",
 		category: "data" as const,
 		schemaId: "unified_item_schema_v1",
@@ -60,7 +60,7 @@ export const mockUnifiedItems: UnifiedItem[] = [
 
 export const mockManualItems: ManualItem[] = [
 	{
-		id: "0001",
+		$id: "0001",
 		category: "data",
 		$type: "manual_item",
 		schemaId: "manual_item_schema_001",
@@ -94,17 +94,20 @@ export const mockManualItems: ManualItem[] = [
 
 export const mockCatalogItems: CatalogItem[] = [
 	{
-		id: "cat_001",
-		name: "Strike Freedom Gundam",
-		grade: "PG",
-		scale: "1/60",
-		productNumber: "1114204",
-		releaseDate: { year: 2004, month: 11, day: 27 },
-		price: { amount: 25_000, currency: "JPY" },
-		images: [
-			"https://bandai-hobby.net/images/strike-freedom-pg.jpg",
-		],
-		status: "available",
+		$id: "cat_001",
+		$type: "catalog_item",
+		category: "data" as const,
+		schemaId: "catalog_item_schema_001",
+		properties: {
+			name: { en: "Strike Freedom Gundam", ja: "ストライクフリーダムガンダム" },
+			price: { amount: 25_000, currency: "JPY" },
+			releaseDate: { year: 2004, month: 11, day: 27 },
+			scale: "1/60",
+			series: { en: "Mobile Suit Gundam SEED Destiny", ja: "機動戦士ガンダムSEED DESTINY" },
+			images: [
+				"https://bandai-hobby.net/images/strike-freedom-pg.jpg",
+			],
+		},
 	},
 ];
 
@@ -122,12 +125,8 @@ export function getMockItems(count = 50) {
 		const baseItem = allItems[i % allItems.length];
 		const itemWithId = { ...baseItem };
 
-		if ("id" in itemWithId) {
-			itemWithId.id = `${itemWithId.id}_${i}`;
-		}
-
-		if ("title" in itemWithId) {
-			itemWithId.title = `${itemWithId.title} #${i + 1}`;
+		if ("$id" in itemWithId) {
+			itemWithId.$id = `${itemWithId.$id}_${i}`;
 		}
 
 		if ("properties" in itemWithId && itemWithId.properties?.name) {
