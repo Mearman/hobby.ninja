@@ -11,7 +11,7 @@ import {
 	Stack,
 	Box,
 } from "@mantine/core";
-import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { useMediaQuery } from "@mantine/hooks";
 import {
 	IconSearch,
 	IconDatabase,
@@ -72,7 +72,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 	// Handle search submission
 	const handleSearch = (query: string) => {
 		if (query.trim()) {
-			navigate({
+			void navigate({
 				to: "/search",
 				search: { q: query.trim() },
 			});
@@ -164,7 +164,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 									<Menu.Dropdown>
 										<Menu.Item
 											leftSection={<IconDatabase size={14} />}
-											onClick={() => navigate({ to: "/database" })}
+											onClick={() => void navigate({ to: "/database" })}
 										>
 											Database Home
 										</Menu.Item>
@@ -175,7 +175,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 											<Menu.Item
 												key={type.id}
 												onClick={() =>
-													navigate({
+													void navigate({
 														to: "/database/$hobbyType",
 														params: { hobbyType: type.id },
 													})
@@ -196,7 +196,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 
 										<Menu.Item
 											leftSection={<IconAdjustmentsHorizontal size={14} />}
-											onClick={() => navigate({ to: "/search" })}
+											onClick={() => void navigate({ to: "/search" })}
 										>
 											Advanced Search
 										</Menu.Item>
@@ -246,7 +246,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								w={300}
 								value={searchQuery}
 								onChange={(event) => { setSearchQuery(event.currentTarget.value); }}
-								onKeyPress={(event) => {
+								onKeyDown={(event) => {
 									if (event.key === "Enter") {
 										handleSearch(searchQuery);
 									}
@@ -269,7 +269,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								<ActionIcon
 									variant="default"
 									size={36}
-									onClick={() => navigate({ to: "/search" })}
+									onClick={() => void navigate({ to: "/search" })}
 								>
 									<IconSearch size={18} />
 								</ActionIcon>
@@ -294,7 +294,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								leftSection={<IconSearch size={16} />}
 								value={searchQuery}
 								onChange={(event) => { setSearchQuery(event.currentTarget.value); }}
-								onKeyPress={(event) => {
+								onKeyDown={(event) => {
 									if (event.key === "Enter") {
 										handleSearch(searchQuery);
 										toggle();
@@ -307,7 +307,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								justify="start"
 								leftSection={<IconHome size={16} />}
 								onClick={() => {
-									navigate({ to: "/" });
+									void navigate({ to: "/" });
 									toggle();
 								}}
 							>
@@ -319,7 +319,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								justify="start"
 								leftSection={<IconDatabase size={16} />}
 								onClick={() => {
-									navigate({ to: "/database" });
+									void navigate({ to: "/database" });
 									toggle();
 								}}
 							>
@@ -332,7 +332,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 									variant="subtle"
 									justify="start"
 									onClick={() => {
-										navigate({
+										void navigate({
 											to: "/database/$hobbyType",
 											params: { hobbyType: type.id },
 										});
@@ -349,7 +349,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								justify="start"
 								leftSection={<IconAdjustmentsHorizontal size={16} />}
 								onClick={() => {
-									navigate({ to: "/search" });
+									void navigate({ to: "/search" });
 									toggle();
 								}}
 							>
@@ -361,7 +361,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								justify="start"
 								leftSection={<IconClipboardList size={16} />}
 								onClick={() => {
-									navigate({ to: "/collection" });
+									void navigate({ to: "/collection" });
 									toggle();
 								}}
 							>
@@ -373,7 +373,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								justify="start"
 								leftSection={<IconInfoCircle size={16} />}
 								onClick={() => {
-									navigate({ to: "/about" });
+									void navigate({ to: "/about" });
 									toggle();
 								}}
 							>
@@ -385,9 +385,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								variant="subtle"
 								justify="start"
 								leftSection={getThemeIcon()}
-								onClick={() => {
-									cycleTheme();
-								}}
+								onClick={cycleTheme}
 							>
 								Theme
 							</Button>
