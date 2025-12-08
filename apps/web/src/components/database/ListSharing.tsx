@@ -20,7 +20,7 @@ import {
 	Modal,
 	ScrollArea,
 	CopyButton,
-	} from "@mantine/core";
+} from "@mantine/core";
 import { notifications } from "@mantine/notifications";
 import {
 	IconShare,
@@ -100,14 +100,14 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 
 	// Convert items to shareable format
 	const shareableItems = useMemo((): ShareableItem[] => {
-		return items.slice(0, shareOptions.maxItems).map((item) => {
+		return items.slice(0, shareOptions.maxItems).map((item): ShareableItem => {
 			const baseItem = {
-				id: item.id,
-				name: "properties" in item && item.properties?.name
+				id: item.id || '',
+				name: String("properties" in item && item.properties?.name
 					? (item.properties.name.ja || item.properties.name.en || item.properties.name)
 					: "title" in item
 						? item.title
-						: item.id,
+						: item.id),
 			};
 
 			if ("sources" in item) {
@@ -138,9 +138,8 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 				return {
 					...baseItem,
 					type: "catalog" as const,
-					grade: catalog.properties.grade,
 					scale: catalog.properties.scale,
-					series: catalog.properties.series,
+					series: catalog.properties.series?.ja || catalog.properties.series?.en,
 					thumbnail: getCatalogThumbnail(catalog),
 				};
 			}
@@ -172,7 +171,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 
 	// Get thumbnail from catalog item
 	const getCatalogThumbnail = (item: CatalogItem): string | undefined => {
-		if (item.properties.images?.length > 0) {
+		if (item.properties?.images?.length > 0) {
 			return item.properties.images[0];
 		}
 		return undefined;
@@ -416,7 +415,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 											min={1}
 											max={100}
 											value={shareOptions.maxItems}
-											onChange={(value) => { setShareOptions({ ...shareOptions, maxItems: typeof value === 'number' ? value : 50 }); }}
+											onChange={(value) => { setShareOptions({ ...shareOptions, maxItems: typeof value === "number" ? value : 50 }); }}
 										/>
 
 										<Group>

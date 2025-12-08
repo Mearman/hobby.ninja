@@ -186,7 +186,7 @@ export class GraphPreloader {
    */
 	async getRelatedNodes(node: GraphNode): Promise<GraphNode[]> {
 		const relatedNodes: GraphNode[] = [];
-		const edges = node.data.edges || [];
+		const edges = node.data["edges"] || [];
 
 		for (const edge of edges) {
 			if (edge.node?.type && edge.node.id) {
