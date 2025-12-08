@@ -135,12 +135,10 @@ export function SearchPage(): React.ReactElement {
 				max: filterState.priceRange[1],
 			};
 		}
-		if (filterState.features && filterState.features.length > 0) {
-			// features is not part of FilterOptions interface, so we'll handle it differently
+		if (filterState.features && filterState.features.length > 0 && // features is not part of FilterOptions interface, so we'll handle it differently
 			// For now, we can skip it or add it to query
-			if (!filterOptions.query) {
-				filterOptions.query = filterState.features.join(" ");
-			}
+			!filterOptions.query) {
+			filterOptions.query = filterState.features.join(" ");
 		}
 
 		// Handle sort option
@@ -470,7 +468,7 @@ export function SearchPage(): React.ReactElement {
 					</>
 				) : searchQuery || Object.keys(filters).length > 0 ? (
 					<Paper p="xl" radius="md" withBorder={true} mb="xl" ta="center">
-						<IconSearch size={48} color="var(--mantine-color-dimmed)" style={{ marginBottom: 'var(--mantine-spacing-md)' }} />
+						<IconSearch size={48} color="var(--mantine-color-dimmed)" style={{ marginBottom: "var(--mantine-spacing-md)" }} />
 						<Text size="lg" mb="sm">
 							No results found
 						</Text>

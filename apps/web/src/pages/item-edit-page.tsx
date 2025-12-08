@@ -92,12 +92,12 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 
 					// Populate form with existing data
 					setFormData({
-						name: itemData.data['name'] || "",
-						brand: itemData.data['brand'] || "",
-						series: itemData.data['series'] || "",
-						grade: itemData.data['grade'] || "",
-						scale: itemData.data['scale'] || "",
-						price: itemData.data['price']?.toString() || "",
+						name: itemData.data["name"] || "",
+						brand: itemData.data["brand"] || "",
+						series: itemData.data["series"] || "",
+						grade: itemData.data["grade"] || "",
+						scale: itemData.data["scale"] || "",
+						price: itemData.data["price"]?.toString() || "",
 						status: itemData.status,
 						notes: itemData.notes || "",
 						tags: itemData.tags || [],
