@@ -64,8 +64,8 @@ function isUnifiedItem(item: TypedItem): boolean {
 }
 
 // Helper to safely get item properties
-const getItemProperties = (item: TypedItem): any => {
-	return "properties" in item ? item.properties : undefined;
+const getItemProperties = (item: TypedItem): Record<string, unknown> | undefined => {
+	return "properties" in item ? item.properties as Record<string, unknown> : undefined;
 };
 
 // Type for series information
@@ -645,7 +645,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			<Card.Section p="md">
 				{/* Tabs for filtering */}
 				{availableTabs.length > 2 && (
-					<Tabs value={activeTab} onChange={(value) => { setActiveTab(value || "all"); }} mb="md">
+					<Tabs value={activeTab} onChange={(value) => { setActiveTab(value ?? "all"); }} mb="md">
 						<Tabs.List>
 							{availableTabs.map(tab => (
 								<Tabs.Tab
@@ -722,7 +722,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 											right={8}
 											size="xs"
 											variant="light"
-											color={RELATION_TYPES.find(t => t.id === item.relationType)?.color || "gray"}
+											color={RELATION_TYPES.find(t => t.id === item.relationType)?.color ?? "gray"}
 										>
 											{item.relationType}
 										</Badge>

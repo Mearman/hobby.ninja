@@ -146,7 +146,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 	const [rotation, setRotation] = useState(0);
 	const [scale, setScale] = useState(1);
 
-	if (!images.length) {
+	if (images.length === 0) {
 		return (
 			<Card h={IMAGE_HEIGHT} withBorder={true}>
 				<Flex align="center" justify="center" h="100%">
@@ -459,18 +459,19 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	// Helper function to get item name safely
 	const getItemName = (): string => {
-		if (!item || !item.properties?.name) return "Unknown Item";
+		const name = item?.properties?.name;
+		if (!name) return "Unknown Item";
 
-		if (typeof item.properties.name === "string") {
-			return item.properties.name;
+		if (typeof name === "string") {
+			return name;
 		}
 
-		return item.properties.name.en ?? item.properties.name.ja ?? "Unknown Item";
+		return name.en ?? name.ja ?? "Unknown Item";
 	};
 
 	// Helper function to get item properties safely
 	const getCommonProperty = (propertyName: "grade" | "scale"): string | null => {
-		if (!item || !item.properties) return null;
+		if (!item?.properties) return null;
 
 		const props = item.properties as ExtendedItemProperties;
 		const value = props[propertyName];
