@@ -22,7 +22,7 @@ import {
 	Anchor,
 } from "@mantine/core";
 import { IconSearch, IconFilter, IconChevronRight, IconAdjustmentsHorizontal } from "@tabler/icons-react";
-import { useNavigate, useParams, Link } from "@tanstack/react-router";
+import { useNavigate, useParams, useSearch, Link } from "@tanstack/react-router";
 import React, { useState, useEffect, useCallback } from "react";
 
 import { AdvancedFilters } from "../components/database/advanced-filters";
@@ -62,11 +62,22 @@ interface FilterState {
 }
 
 /**
+ * Search parameters type for the hobby page
+ */
+interface DatabaseHobbyPageSearch {
+	q?: string;
+	grade?: string;
+	recent?: string;
+	popular?: string;
+}
+
+/**
  * Hobby-specific database browsing page
  */
 export function DatabaseHobbyPage(): React.ReactElement {
 	const { hobbyType } = useParams({ from: "/database/$hobbyType" });
 	const navigate = useNavigate();
+	const search = useSearch({ from: "/database/$hobbyType" }) as DatabaseHobbyPageSearch;
 
 	// State management
 	const [searchQuery, setSearchQuery] = useState("");
@@ -112,6 +123,22 @@ export function DatabaseHobbyPage(): React.ReactElement {
 		// Return loading state while redirecting
 		return <Container>Loading...</Container>;
 	}
+
+	// Initialize state from URL search parameters
+	useEffect(() => {
+		if (search.q) {
+			setSearchQuery(search.q);
+		}
+		if (search.grade) {
+			setFilters({ grade: search.grade });
+		}
+		if (search.recent) {
+			setSortBy("newest");
+		}
+		if (search.popular) {
+			setSortBy("popular");
+		}
+	}, [search.q, search.grade, search.recent, search.popular]);
 
 	// Load items based on current state
 	useEffect(() => {

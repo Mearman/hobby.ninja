@@ -104,17 +104,17 @@ export function DatabasePage(): React.ReactElement {
 		loadData();
 	}, []);
 
-	// Handle search
+	// Handle search - navigate to gunpla page with search query
 	const handleSearch = useCallback((query: string) => {
 		if (query.trim()) {
 			navigate({
-				to: "/database/search",
+				to: "/database/gunpla",
 				search: { q: query.trim() },
 			});
 		}
 	}, [navigate]);
 
-	// Handle filter selection
+	// Handle filter selection - navigate to gunpla page with filter
 	const handleFilterSelect = useCallback((filter: typeof quickFilters[0]) => {
 		const searchParams: Record<string, string> = {};
 
@@ -127,16 +127,15 @@ export function DatabasePage(): React.ReactElement {
 		}
 
 		navigate({
-			to: "/database/browse",
+			to: "/database/gunpla",
 			search: searchParams,
 		});
 	}, [navigate]);
 
-	// Handle hobby type selection
+	// Handle hobby type selection - navigate directly to the hobby type page
 	const handleHobbyTypeSelect = useCallback((typeId: string) => {
 		navigate({
-			to: "/database/browse",
-			search: { type: typeId },
+			to: `/database/${typeId}`,
 		});
 	}, [navigate]);
 
@@ -226,14 +225,14 @@ export function DatabasePage(): React.ReactElement {
 								<Button
 									variant="outline"
 									leftSection={<IconFilter size={16} />}
-									onClick={() => navigate({ to: "/database/search" })}
+									onClick={() => navigate({ to: "/database/gunpla" })}
 								>
 									Advanced Search
 								</Button>
 								<Button
 									variant="outline"
 									leftSection={<IconTrendingUp size={16} />}
-									onClick={() => navigate({ to: "/database/browse" })}
+									onClick={() => navigate({ to: "/database/gunpla" })}
 								>
 									Browse All
 								</Button>
@@ -420,7 +419,7 @@ export function DatabasePage(): React.ReactElement {
 								variant="outline"
 								w="100%"
 								mt="md"
-								onClick={() => navigate({ to: "/database/browse", search: { recent: "true" } })}
+								onClick={() => navigate({ to: "/database/gunpla", search: { recent: "true" } })}
 							>
 								View All Recent
 							</Button>
@@ -468,7 +467,7 @@ export function DatabasePage(): React.ReactElement {
 								variant="outline"
 								w="100%"
 								mt="md"
-								onClick={() => navigate({ to: "/database/browse", search: { popular: "true" } })}
+								onClick={() => navigate({ to: "/database/gunpla", search: { popular: "true" } })}
 							>
 								View All Popular
 							</Button>
