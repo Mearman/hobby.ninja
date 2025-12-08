@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run lint-staged to lint and fix staged files
+echo "🔧 Running pre-commit lint and fix..."
+
+npx lint-staged
+
+# Check the exit code
+exit_code=$?
+
+if [ $exit_code -eq 0 ]; then
+    echo "✅ Pre-commit lint completed successfully"
+else
+    echo "❌ Pre-commit lint failed"
+    echo "Please fix the linting errors and try again"
+    exit $exit_code
+fi
