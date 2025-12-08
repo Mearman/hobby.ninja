@@ -171,7 +171,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 
 	// Get thumbnail from catalog item
 	const getCatalogThumbnail = (item: CatalogItem): string | undefined => {
-		if (item.properties?.images?.length > 0) {
+		if (item.properties?.images && item.properties.images.length > 0) {
 			return item.properties.images[0];
 		}
 		return undefined;

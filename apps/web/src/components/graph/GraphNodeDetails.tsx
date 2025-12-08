@@ -138,7 +138,7 @@ function BrandDetails({ node }: { node: GraphNode }) {
 			{/* Brand Description */}
 			{data["description"] && (
 				<Stack gap="xs">
-					<Text weight={600} size="sm">About:</Text>
+					<Text size="sm" fw={600}>About:</Text>
 					<Text size="sm">{data["description"]}</Text>
 				</Stack>
 			)}

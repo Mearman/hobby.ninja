@@ -132,19 +132,27 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 		const baseProps = {
 			id: currentItem.id,
 			name: "name" in currentItem
-				? (currentItem.name.ja || currentItem.name.en || currentItem.name)
-				: currentItem.title,
+				? (typeof currentItem.name === "object" && currentItem.name !== null
+					? (currentItem.name.ja || currentItem.name.en)
+					: currentItem.name)
+				: "Unknown",
 			grade: ("grade" in currentItem && currentItem.grade) ||
-              ("metadata" in currentItem && currentItem.metadata?.product?.grade),
+              (currentItem.$type === "unified_item" && currentItem.properties?.grade) ||
+              (currentItem.$type === "manual_item" && currentItem.properties?.grade),
 			scale: ("scale" in currentItem && currentItem.scale) ||
-              ("metadata" in currentItem && currentItem.metadata?.product?.scale),
-			series: ("series" in currentItem && (currentItem.series?.ja || currentItem.series?.en)) ||
-               ("metadata" in currentItem && currentItem.metadata?.product?.series),
-			releaseDate: "releaseDate" in currentItem ? currentItem.releaseDate : undefined,
+              (currentItem.$type === "catalog_item" && currentItem.properties?.scale) ||
+              (currentItem.$type === "unified_item" && currentItem.properties?.scale) ||
+              (currentItem.$type === "manual_item" && currentItem.properties?.scale),
+			series: (("series" in currentItem && typeof currentItem.series === "object" && currentItem.series !== null)
+				? ((currentItem.series as { ja?: string; en?: string }).ja || (currentItem.series as { ja?: string; en?: string }).en)
+				: (currentItem.properties?.series && typeof currentItem.properties.series === "object"
+					? ((currentItem.properties.series as { ja?: string; en?: string }).ja || (currentItem.properties.series as { ja?: string; en?: string }).en)
+					: currentItem.properties?.series)),
+			releaseDate: ("releaseDate" in currentItem ? currentItem.releaseDate : currentItem.properties?.releaseDate),
 		};
 
 		// For unified items, extract additional source data
-		if (currentItem.type === "unified_item") {
+		if (currentItem.$type === "unified_item") {
 			const unified = currentItem as UnifiedItem;
 			return {
 				...baseProps,
@@ -224,16 +232,24 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 	const findSeriesRelated = (items: any[]): RelatedItem[] => {
 		if (!currentItemProps.series) return [];
 
+		const currentSeriesStr = typeof currentItemProps.series === "string"
+			? currentItemProps.series
+			: (currentItemProps.series.ja || currentItemProps.series.en || "");
+
 		return items
 			.filter(item => {
-				const itemSeries = "series" in item
+				const itemSeriesRaw = "series" in item
 					? (item.series?.ja || item.series?.en)
 					: ("metadata" in item ? item.metadata?.product?.series : undefined);
 
-				return itemSeries && (
-					itemSeries.toLowerCase() === currentItemProps.series!.toLowerCase() ||
-          itemSeries.includes(currentItemProps.series) ||
-          currentItemProps.series!.includes(itemSeries)
+				const itemSeriesStr = typeof itemSeriesRaw === "string"
+					? itemSeriesRaw
+					: (itemSeriesRaw?.ja || itemSeriesRaw?.en || "");
+
+				return itemSeriesStr && currentSeriesStr && (
+					itemSeriesStr.toLowerCase() === currentSeriesStr.toLowerCase() ||
+          itemSeriesStr.includes(currentSeriesStr) ||
+          currentSeriesStr.includes(itemSeriesStr)
 				);
 			})
 			.slice(0, 8)
@@ -306,7 +322,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 
 	// Find similar items based on name characteristics
 	const findSimilarItems = (items: any[]): RelatedItem[] => {
-		const currentName = currentItemProps.name.toLowerCase();
+		const currentName = (currentItemProps.name || "").toLowerCase();
 
 		return items
 			.filter(item => {
@@ -343,7 +359,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 	// Find variants (this would need more sophisticated logic)
 	const findVariants = (items: any[]): RelatedItem[] => {
 		// Simple variant detection - similar names with different qualifiers
-		const currentName = currentItemProps.name.toLowerCase();
+		const currentName = (currentItemProps.name || "").toLowerCase();
 
 		return items
 			.filter(item => {
