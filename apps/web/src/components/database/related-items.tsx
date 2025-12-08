@@ -76,6 +76,11 @@ const getItemProperties = (item: TypedItem): Record<string, unknown> | undefined
 	return "properties" in item ? item.properties as Record<string, unknown> : undefined;
 };
 
+// Helper to safely access properties from unknown record
+const getPropertySafely = <T = unknown>(props: Record<string, unknown> | undefined, key: string): T | undefined => {
+	return props?.[key] as T | undefined;
+};
+
 // Type for series information
 type SeriesInfo = string | { ja?: string; en?: string };
 
@@ -192,11 +197,11 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 
 		const extractGrade = (item: typeof currentItem): string | undefined => {
 			if ("grade" in item && item.grade) {
-				return typeof item.grade === "string" ? item.grade : item.grade.code ?? String(item.grade);
+				return typeof item.grade === "string" ? item.grade : String(item.grade);
 			}
 			if (item.properties && "grade" in item.properties) {
 				const grade = item.properties.grade;
-				return typeof grade === "string" ? grade : grade.code ?? String(grade);
+				return typeof grade === "string" ? grade : String(grade);
 			}
 			return undefined;
 		};
@@ -214,10 +219,10 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 
 		const extractSeries = (item: typeof currentItem): string | undefined => {
 			if ("series" in item) {
-				return getSafeSeries(item.series);
+				return getSafeSeries(item.series as SeriesInfo | undefined);
 			}
 			if (item.properties && "series" in item.properties) {
-				return getSafeSeries(item.properties.series);
+				return getSafeSeries(item.properties.series as SeriesInfo | undefined);
 			}
 			return undefined;
 		};
@@ -334,7 +339,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					itemSeriesStr = getSafeSeries(item.series as SeriesInfo | undefined) ?? "";
 				} else {
 					const itemProps = getItemProperties(item);
-					itemSeriesStr = getSafeSeries(itemProps?.series as SeriesInfo | undefined) ?? "";
+					itemSeriesStr = getSafeSeries(getPropertySafely<SeriesInfo>(itemProps, 'series')) ?? "";
 				}
 
 				return itemSeriesStr && currentSeriesStr && (
@@ -353,21 +358,21 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					grade = item.grade as string | undefined;
 				} else {
 					const itemProps = getItemProperties(item);
-					grade = itemProps?.grade as string | undefined;
+					grade = getPropertySafely<string>(itemProps, 'grade');
 				}
 
 				if ("scale" in item) {
 					scale = item.scale as string | undefined;
 				} else {
 					const itemProps = getItemProperties(item);
-					scale = itemProps?.scale as string | undefined;
+					scale = getPropertySafely<string>(itemProps, 'scale');
 				}
 
 				if ("series" in item) {
 					series = getSafeSeries(item.series as SeriesInfo | undefined);
 				} else {
 					const itemProps = getItemProperties(item);
-					series = getSafeSeries(itemProps?.series as SeriesInfo | undefined);
+					series = getSafeSeries(getPropertySafely<SeriesInfo>(itemProps, 'series'));
 				}
 
 				return {
@@ -398,7 +403,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					itemGrade = item.grade as string | undefined;
 				} else {
 					const itemProps = getItemProperties(item);
-					itemGrade = itemProps?.grade as string | undefined;
+					itemGrade = getPropertySafely<string>(itemProps, 'grade');
 				}
 
 				return itemGrade && itemGrade === currentItemProps.grade;
@@ -413,21 +418,21 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					grade = item.grade as string | undefined;
 				} else {
 					const itemProps = getItemProperties(item);
-					grade = itemProps?.grade as string | undefined;
+					grade = getPropertySafely<string>(itemProps, 'grade');
 				}
 
 				if ("scale" in item) {
 					scale = item.scale as string | undefined;
 				} else {
 					const itemProps = getItemProperties(item);
-					scale = itemProps?.scale as string | undefined;
+					scale = getPropertySafely<string>(itemProps, 'scale');
 				}
 
 				if ("series" in item) {
 					series = getSafeSeries(item.series as SeriesInfo | undefined);
 				} else {
 					const itemProps = getItemProperties(item);
-					series = getSafeSeries(itemProps?.series as SeriesInfo | undefined);
+					series = getSafeSeries(getPropertySafely<SeriesInfo>(itemProps, 'series'));
 				}
 
 				return {
@@ -455,21 +460,21 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			grade = item.grade as string | undefined;
 		} else {
 			const itemProps = getItemProperties(item);
-			grade = itemProps?.grade as string | undefined;
+			grade = getPropertySafely<string>(itemProps, 'grade');
 		}
 
 		if ("scale" in item) {
 			scale = item.scale as string | undefined;
 		} else {
 			const itemProps = getItemProperties(item);
-			scale = itemProps?.scale as string | undefined;
+			scale = getPropertySafely<string>(itemProps, 'scale');
 		}
 
 		if ("series" in item) {
 			series = getSafeSeries(item.series as SeriesInfo | undefined);
 		} else {
 			const itemProps = getItemProperties(item);
-			series = getSafeSeries(itemProps?.series as SeriesInfo | undefined);
+			series = getSafeSeries(getPropertySafely<SeriesInfo>(itemProps, 'series'));
 		}
 
 		return { grade, scale, series };
@@ -488,7 +493,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					itemScale = item.scale as string | undefined;
 				} else {
 					const itemProps = getItemProperties(item);
-					itemScale = itemProps?.scale as string | undefined;
+					itemScale = getPropertySafely<string>(itemProps, 'scale');
 				}
 
 				return itemScale && itemScale === currentItemProps.scale;
@@ -598,7 +603,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 				itemReleaseDate = item.releaseDate as ReleaseDate;
 			} else {
 				const itemProps = getItemProperties(item);
-				itemReleaseDate = itemProps?.releaseDate as ReleaseDate;
+				itemReleaseDate = getPropertySafely<ReleaseDate>(itemProps, 'releaseDate');
 			}
 
 			return itemReleaseDate?.year ?? 0;

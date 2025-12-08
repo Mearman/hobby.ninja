@@ -497,8 +497,13 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 	};
 
 	// Helper function to get match method safely
-	const getMatchMethod = (): "exact" | "fuzzy" | "manual" | null => {
-		return item?.$type === "unified_item" ? item.properties.matchMethod ?? null : null;
+	const getMatchMethod = (): "exact" | "fuzzy" | "manual_override" | null => {
+		if (item?.$type !== "unified_item") return null;
+		const method = item.properties.matchMethod as string;
+		if (method === "exact" || method === "fuzzy" || method === "manual_override") {
+			return method as "exact" | "fuzzy" | "manual_override";
+		}
+		return null;
 	};
 
 	// Helper function to get match stage safely
@@ -538,14 +543,14 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 				sources.push({
 					type: "catalog",
 					confidence: 1,
-					lastUpdated: item.metadata?.updatedAt ?? new Date().toISOString(),
+					lastUpdated: new Date().toISOString(), // Use current timestamp for catalog items
 					completeness: CATALOG_ITEM_COMPLETENESS,
 				});
 			} else if (item.$type === "manual_item") {
 				sources.push({
 					type: "manual",
 					confidence: 1,
-					lastUpdated: item.metadata?.updatedAt ?? new Date().toISOString(),
+					lastUpdated: new Date().toISOString(), // Use current timestamp for manual items
 					completeness: MANUAL_ITEM_COMPLETENESS,
 				});
 			} else {
@@ -553,7 +558,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 				sources.push({
 					type: "manual",
 					confidence: 1,
-					lastUpdated: item.metadata?.updatedAt ?? new Date().toISOString(),
+					lastUpdated: new Date().toISOString(), // Use current timestamp as fallback
 					completeness: MANUAL_ITEM_COMPLETENESS,
 				});
 			}

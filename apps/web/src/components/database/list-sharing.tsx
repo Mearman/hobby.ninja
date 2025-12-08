@@ -93,16 +93,13 @@ const BYTES_IN_KB = 1024;
 const BYTES_IN_MB = BYTES_IN_KB * BYTES_IN_KB;
 const PERCENTAGE_MULTIPLIER = 100;
 
-// Type definition for Pako dynamic import
-interface PakoModule {
-	deflate: (data: string, options?: { to?: string }) => string;
-}
-
 // Lazy load Pako for compression
-let PakoPromise: Promise<PakoModule> | null = null;
+let PakoPromise: Promise<typeof import("pako")> | null = null;
 
-const loadPako = async (): Promise<PakoModule> => {
-	PakoPromise ??= import("pako").then((module: PakoModule) => module);
+const loadPako = async (): Promise<typeof import("pako")> => {
+	if (!PakoPromise) {
+		PakoPromise = import("pako");
+	}
 	return PakoPromise;
 };
 
@@ -165,8 +162,9 @@ const getManualThumbnail = (item: ManualItem): string | undefined => {
 
 // Get thumbnail from catalog item
 const getCatalogThumbnail = (item: CatalogItem): string | undefined => {
-	if (item.properties.images.length > 0) {
-		return item.properties.images[0];
+	const images = item.properties.images;
+	if (images && images.length > 0) {
+		return images[0];
 	}
 	return undefined;
 };
@@ -277,9 +275,10 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 			if (shareOptions.compressData && shareOptions.format === "json") {
 				try {
 					const pako = await loadPako();
-					const compressed = pako.deflate(jsonString, { to: "string" });
-					compressedData = compressed;
-					compressedSize = new Blob([compressed]).size;
+					const compressed = pako.deflate(jsonString);
+					// Convert Uint8Array to base64 string for easier handling
+					compressedData = btoa(String.fromCharCode(...compressed));
+					compressedSize = compressed.byteLength;
 				} catch (error) {
 					// eslint-disable-next-line no-console
 					console.warn("Compression failed, using uncompressed data", error);
