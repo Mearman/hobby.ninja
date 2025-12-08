@@ -37,7 +37,7 @@ import {
 import { useNavigate, useSearch } from "@tanstack/react-router";
 import React, { useState, useEffect, useCallback } from "react";
 
-import { ItemCard } from "../components/database/ItemCard";
+import { ItemCard } from "../components/database/item-card";
 import { dataService, type FilterOptions } from "../services/dataService";
 import { databaseContainer } from "../styles/styles.css";
 

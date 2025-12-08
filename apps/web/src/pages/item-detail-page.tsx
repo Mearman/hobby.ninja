@@ -30,7 +30,7 @@ import {
 import { useParams, useNavigate, useLocation } from "@tanstack/react-router";
 import React, { useState, useEffect } from "react";
 
-import { ItemDetail } from "../components/database/ItemDetail";
+import { ItemDetail } from "../components/database/item-detail";
 import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../services/dataService";
 
 // Types for page state

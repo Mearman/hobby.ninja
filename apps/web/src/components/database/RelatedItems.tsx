@@ -39,7 +39,7 @@ import React, { useState, useEffect, useMemo } from "react";
 
 import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../../services/dataService";
 
-import { ItemCard } from "./ItemCard";
+import { ItemCard } from "./item-card";
 
 // Types for related items
 interface RelatedItem {

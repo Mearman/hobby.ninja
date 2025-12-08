@@ -14,19 +14,14 @@ import {
 	Tooltip,
 	Modal,
 	Alert,
-	Divider,
 	SimpleGrid,
-	ScrollArea,
 	Box,
 	Flex,
 	Anchor,
 	Progress,
-	List,
 	ThemeIcon,
-	CopyButton,
 	Affix,
 	Transition,
-	rem,
 } from "@mantine/core";
 import {
 	IconExternalLink,
@@ -47,8 +42,6 @@ import {
 	IconZoomIn,
 	IconZoomOut,
 	IconRotate,
-	IconRefresh,
-	IconScale,
 	IconHeart,
 } from "@tabler/icons-react";
 import React, { useState, useEffect } from "react";
@@ -63,6 +56,20 @@ interface DetailItem extends UnifiedItem {
   catalogData?: CatalogItem;
   manualData?: ManualItem;
 }
+
+// Constants for magic numbers
+const SCALE_FACTOR_RESET = 1.5;
+const ROTATION_DEGREES = 90;
+const SCALE_STEP = 0.2;
+const MIN_SCALE = 0.5;
+const MAX_SCALE = 3;
+const IMAGE_HEIGHT = 400;
+const HIGH_CONFIDENCE = 0.8;
+const MEDIUM_CONFIDENCE = 0.6;
+const SHARE_SUCCESS_TIMEOUT = 3000;
+const HIGH_CONFIDENCE_PERCENTAGE = 85;
+const MEDIUM_CONFIDENCE_PERCENTAGE = 60;
+const PROGRESS_BAR_WIDTH = 200;
 
 // Union type for all possible item types
 type ItemDetailData = DetailItem | CatalogItem | ManualItem;
@@ -87,7 +94,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 
 	if (!images || images.length === 0) {
 		return (
-			<Card h={400} withBorder={true}>
+			<Card h={IMAGE_HEIGHT} withBorder={true}>
 				<Flex align="center" justify="center" h="100%">
 					<Stack align="center" gap="sm">
 						<ThemeIcon size="xl" variant="light">
@@ -108,17 +115,17 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 			setScale(1);
 			setRotation(0);
 		} else {
-			setScale(1.5);
+			setScale(SCALE_FACTOR_RESET);
 			setRotation(0);
 		}
 	};
 
 	const handleRotate = () => {
-		setRotation((prev) => (prev + 90) % 360);
+		setRotation((prev) => (prev + ROTATION_DEGREES) % 360);
 	};
 
 	const handleScale = (delta: number) => {
-		setScale((prev) => Math.max(0.5, Math.min(3, prev + delta)));
+		setScale((prev) => Math.max(MIN_SCALE, Math.min(MAX_SCALE, prev + delta)));
 	};
 
 	return (
@@ -140,12 +147,12 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 							</ActionIcon>
 						</Tooltip>
 						<Tooltip label="Zoom In">
-							<ActionIcon variant="subtle" onClick={() => { handleScale(0.2); }}>
+							<ActionIcon variant="subtle" onClick={() => { handleScale(SCALE_STEP); }}>
 								<IconZoomIn size={16} />
 							</ActionIcon>
 						</Tooltip>
 						<Tooltip label="Zoom Out">
-							<ActionIcon variant="subtle" onClick={() => { handleScale(-0.2); }}>
+							<ActionIcon variant="subtle" onClick={() => { handleScale(-SCALE_STEP); }}>
 								<IconZoomOut size={16} />
 							</ActionIcon>
 						</Tooltip>
@@ -154,7 +161,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 			</Card.Section>
 
 			<Box
-				h={400}
+				h={IMAGE_HEIGHT}
 				pos="relative"
 				style={{
 					overflow: isZoomed ? "auto" : "hidden",
@@ -263,14 +270,14 @@ interface ConfidenceIndicatorProps {
 
 const ConfidenceIndicator: React.FC<ConfidenceIndicatorProps> = ({ confidence, label }) => {
 	const getColor = () => {
-		if (confidence >= 0.8) return "green";
-		if (confidence >= 0.6) return "yellow";
+		if (confidence >= HIGH_CONFIDENCE) return "green";
+		if (confidence >= MEDIUM_CONFIDENCE) return "yellow";
 		return "red";
 	};
 
 	const getIcon = () => {
-		if (confidence >= 0.8) return <IconCheck size={12} />;
-		if (confidence >= 0.6) return <IconAlertTriangle size={12} />;
+		if (confidence >= HIGH_CONFIDENCE) return <IconCheck size={12} />;
+		if (confidence >= MEDIUM_CONFIDENCE) return <IconAlertTriangle size={12} />;
 		return <IconX size={12} />;
 	};
 
@@ -385,7 +392,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			URL.revokeObjectURL(url);
 
 			setShareSuccess(true);
-			setTimeout(() => { setShareSuccess(false); }, 3000);
+			setTimeout(() => { setShareSuccess(false); }, SHARE_SUCCESS_TIMEOUT);
 		} catch (error_) {
 			console.error("Export failed:", error_);
 		}
@@ -428,7 +435,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 					type: "catalog",
 					confidence: unifiedItem.properties.sources.catalog.confidence,
 					lastUpdated: unifiedItem.properties.sources.catalog.linkedAt,
-					completeness: unifiedItem.catalogData ? 85 : 60,
+					completeness: unifiedItem.catalogData ? HIGH_CONFIDENCE_PERCENTAGE : MEDIUM_CONFIDENCE_PERCENTAGE,
 				});
 			}
 
@@ -832,8 +839,8 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												</Text>
 												<Badge
 													color={
-														source.confidence >= 0.8 ? "green" :
-															(source.confidence >= 0.6 ? "yellow" : "red")
+														source.confidence >= HIGH_CONFIDENCE ? "green" :
+															(source.confidence >= MEDIUM_CONFIDENCE ? "yellow" : "red")
 													}
 												>
 													{Math.round(source.confidence * 100)}% confidence
@@ -847,7 +854,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 											</Group>
 											<Group>
 												<Text size="sm" c="dimmed">Completeness:</Text>
-												<Progress value={source.completeness} size="sm" w={200} />
+												<Progress value={source.completeness} size="sm" w={PROGRESS_BAR_WIDTH} />
 											</Group>
 										</Stack>
 									</Card>
