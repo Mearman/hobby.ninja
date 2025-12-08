@@ -194,24 +194,8 @@ async function writeIndexIfNeeded(
 
 		// Check if content has changed (excluding timestamps)
 		if (!hasIndexContentChanged(existingIndex, index)) {
-			// Only update timestamps if content is the same
-			const updatedIndex = {
-				...existingIndex,
-				generated: index.generated,
-				// Update lastModified in entries if timestamps changed
-				entries: existingIndex.entries.map((existingEntry, i) => {
-					const newEntry = index.entries[i];
-					if (newEntry && existingEntry.lastModified !== newEntry.lastModified) {
-						return {
-							...existingEntry,
-							lastModified: newEntry.lastModified,
-						};
-					}
-					return existingEntry;
-				}),
-			};
-
-			await writeFile(filePath, JSON.stringify(updatedIndex, null, 2), "utf-8");
+			// No content changes detected - don't write anything to avoid triggering watchers
+			console.log(`📝 ${filePath.replace(process.cwd(), '')}: Only timestamps changed, skipping write`);
 			return false; // No content change
 		}
 	} catch {
