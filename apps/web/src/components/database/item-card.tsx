@@ -147,7 +147,7 @@ export function ItemCard({
 
 	// Get unique item ID - moved before getImageSrc to fix circular dependency
 	const getItemId = useCallback((itemData: UnifiedItem | ManualItem | CatalogItem): string => {
-		return itemData.id ?? itemData._id ?? itemData.$id ?? "unknown";
+		return itemData.id ?? "unknown";
 	}, []);
 
 	// Get image source
