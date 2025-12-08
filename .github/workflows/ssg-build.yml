@@ -65,8 +65,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build Application
-        run: pnpm nx build web
+      - name: Build SSG
+        run: pnpm nx build:ssg web
 
       - name: Verify Build
         run: |

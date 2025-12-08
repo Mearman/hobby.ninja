@@ -10,6 +10,7 @@ export interface GraphNode {
     en?: string;
     ja?: string;
   };
+  data: Record<string, any>;
   properties: Record<string, any>;
   metadata?: Record<string, any>;
 }
