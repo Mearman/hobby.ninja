@@ -274,7 +274,7 @@ export class CollectionService {
 		}
 
 		await this.saveToStorage(storage);
-		logger.info(`Created item: ${newItem.data?.['name'] || newItem.id}`);
+		logger.info(`Created item: ${newItem.data?.["name"] || newItem.id}`);
 		return newItem;
 	}
 
@@ -419,7 +419,7 @@ export class CollectionService {
 
 				// Search in item data fields
 				const dataString = JSON.stringify(item.data).toLowerCase();
-				const nameMatch = item.data['name']?.toString().toLowerCase().includes(queryLower);
+				const nameMatch = item.data["name"]?.toString().toLowerCase().includes(queryLower);
 				const tagsMatch = item.tags.some(tag => tag.toLowerCase().includes(queryLower));
 
 				return dataString.includes(queryLower) || nameMatch || tagsMatch;

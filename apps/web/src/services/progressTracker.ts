@@ -421,8 +421,8 @@ export class ProgressTracker {
 
 		// Calculate backoff delay
 		const backoffMs = Math.min(
-			operation.config.retry.backoffMs * Math.pow(2, operation.retryCount - 1),
-			operation.config.retry.maxBackoffMs,
+			operation.config.retry?.backoffMs * Math.pow(2, operation.retryCount - 1),
+			operation.config.retry?.maxBackoffMs || 30000,
 		);
 
 		this.emit("operationRetry", { id, operation, error, backoffMs });
@@ -642,7 +642,7 @@ export async function executeWithProgress<T>(
 				current,
 				total: total || 100,
 				percentage: Math.round((current / (total || 100)) * 100),
-				message
+				message,
 			});
 		});
 	});
