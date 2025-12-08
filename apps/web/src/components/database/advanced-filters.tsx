@@ -89,7 +89,7 @@ export function AdvancedFilters({
 	}, [filters]);
 
 	// Load filter options
-	const loadOptions = async () => {
+	const loadOptions = () => {
 		try {
 			setLoadingOptions(true);
 			// In a real app, these would come from the dataService
@@ -119,7 +119,7 @@ export function AdvancedFilters({
 	};
 
 	// Load filter presets
-	const loadPresets = async () => {
+	const loadPresets = () => {
 		try {
 			setLoadingPresets(true);
 			// In a real app, these would come from the dataService
@@ -182,7 +182,7 @@ export function AdvancedFilters({
 	};
 
 	// Save preset
-	const handleSavePreset = async () => {
+	const handleSavePreset = () => {
 		if (!presetForm.name.trim()) return;
 
 		const newPreset: FilterPreset = {
@@ -213,7 +213,7 @@ export function AdvancedFilters({
 	};
 
 	// Delete preset
-	const handleDeletePreset = async (presetId: string) => {
+	const handleDeletePreset = (presetId: string) => {
 		try {
 			// In a real app, delete via dataService
 			setPresets(prev => prev.filter(p => p.id !== presetId));
@@ -273,7 +273,7 @@ export function AdvancedFilters({
 
 		try {
 			const content = await file.text();
-			const data = JSON.parse(content);
+			const data: { filters?: FilterOptions } = JSON.parse(content) as { filters?: FilterOptions };
 
 			if (data.filters) {
 				setLocalFilters(data.filters);
@@ -324,7 +324,7 @@ export function AdvancedFilters({
 									<input
 										type="file"
 										accept=".json"
-										onChange={handleImportFilters}
+										onChange={(e) => { void handleImportFilters(e); }}
 										style={{ display: "none" }}
 									/>
 								</Button>

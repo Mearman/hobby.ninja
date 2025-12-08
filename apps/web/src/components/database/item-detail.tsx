@@ -24,32 +24,32 @@ import {
 	Transition,
 } from "@mantine/core";
 import {
-	IconExternalLink,
 	IconShare,
 	IconDownload,
-	IconEye,
-	IconSearch,
-	IconPhoto,
 	IconFile,
-	IconInfoCircle,
-	IconCheck,
-	IconAlertTriangle,
-	IconClock,
-	IconStar,
-	IconBookmark,
-	IconPrinter,
-	IconX,
+	IconHeart,
+	IconPhoto,
+	IconSearch,
+	IconRotate,
 	IconZoomIn,
 	IconZoomOut,
-	IconRotate,
-	IconHeart,
+	IconCheck,
+	IconAlertTriangle,
+	IconX,
+	IconClock,
+	IconEye,
+	IconInfoCircle,
+	IconExternalLink,
+	IconStar,
+	IconPrinter,
+	IconBookmark,
 } from "@tabler/icons-react";
 import React, { useState, useEffect } from "react";
 
 import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../../services/dataService";
 
-import { ListSharing } from "./ListSharing";
-import { RelatedItems } from "./RelatedItems";
+import { ListSharing } from "./list-sharing";
+import { RelatedItems } from "./related-items";
 
 // Enhanced types for better data handling
 interface DetailItem extends UnifiedItem {
@@ -71,6 +71,39 @@ const HIGH_CONFIDENCE_PERCENTAGE = 85;
 const MEDIUM_CONFIDENCE_PERCENTAGE = 60;
 const PROGRESS_BAR_WIDTH = 200;
 
+// UI constants
+const THUMBNAIL_HEIGHT = 60;
+const LOADING_ICON_SIZE = 48;
+const THUMBNAIL_GRID_COLS = 4;
+const TRANSITION_DURATION = 300;
+const AFFIX_OFFSET = 20;
+
+// Icon sizes
+const ICON_SIZE_SM = 12;
+const ICON_SIZE_MD = 16;
+const ICON_SIZE_LG = 24;
+const ICON_SIZE_XL = 24;
+
+// Mantine spacing constants
+const SPACING_XS = "xs";
+const SPACING_SM = "sm";
+const SPACING_MD = "md";
+const SPACING_LG = "lg";
+const SPACING_XL = "xl";
+
+// Container sizes
+const CONTAINER_SIZE_LG = "lg";
+const CONTAINER_SIZE_XL = "xl";
+
+// Width constants
+const LABEL_WIDTH = 100;
+
+// Completeness percentages
+const MANUAL_DATA_COMPLETENESS_HIGH = 90;
+const MANUAL_DATA_COMPLETENESS_LOW = 50;
+const CATALOG_ITEM_COMPLETENESS = 85;
+const MANUAL_ITEM_COMPLETENESS = 90;
+
 // Union type for all possible item types
 type ItemDetailData = DetailItem | CatalogItem | ManualItem;
 
@@ -79,6 +112,43 @@ interface SourceMetadata {
   confidence: number;
   lastUpdated: string;
   completeness: number; // 0-100
+}
+
+// Extended item properties interface for common properties
+interface ExtendedItemProperties {
+	grade?: string;
+	scale?: string;
+	series?: string | { ja?: string; en?: string };
+	releaseDate?: {
+		year?: number;
+		month?: number;
+		day?: number;
+	};
+	productNumber?: string;
+	name?: string | { ja?: string; en?: string };
+	pdfUrl?: string;
+	thumbnailImage?: string;
+	productImage?: string;
+	matchMethod?: "exact" | "fuzzy" | "manual";
+	matchStage?: number;
+}
+
+// Extended unified item properties
+interface UnifiedItemProperties extends ExtendedItemProperties {
+	sources?: {
+		catalog?: {
+			id: string;
+			confidence: number;
+			linkedAt: string;
+		};
+		manual?: {
+			id: string;
+			confidence: number;
+			linkedAt: string;
+			productNumber?: string;
+			pdfUrl?: string;
+		};
+	};
 }
 
 interface ImageGalleryProps {
@@ -96,9 +166,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 		return (
 			<Card h={IMAGE_HEIGHT} withBorder={true}>
 				<Flex align="center" justify="center" h="100%">
-					<Stack align="center" gap="sm">
+					<Stack align="center" gap={SPACING_SM}>
 						<ThemeIcon size="xl" variant="light">
-							<IconPhoto size={24} />
+							<IconPhoto size={ICON_SIZE_XL} />
 						</ThemeIcon>
 						<Text c="dimmed">No images available</Text>
 					</Stack>
@@ -131,29 +201,29 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 	return (
 		<Card withBorder={true}>
 			<Card.Section>
-				<Flex justify="space-between" p="xs">
+				<Flex justify="space-between" p={SPACING_XS}>
 					<Text size="sm" fw={500}>
 						{currentImageIndex + 1} / {images.length}
 					</Text>
-					<Group gap="xs">
+					<Group gap={SPACING_XS}>
 						<Tooltip label="Zoom">
 							<ActionIcon variant="subtle" onClick={handleZoomToggle}>
-								<IconSearch size={16} />
+								<IconSearch size={ICON_SIZE_MD} />
 							</ActionIcon>
 						</Tooltip>
 						<Tooltip label="Rotate">
 							<ActionIcon variant="subtle" onClick={handleRotate}>
-								<IconRotate size={16} />
+								<IconRotate size={ICON_SIZE_MD} />
 							</ActionIcon>
 						</Tooltip>
 						<Tooltip label="Zoom In">
 							<ActionIcon variant="subtle" onClick={() => { handleScale(SCALE_STEP); }}>
-								<IconZoomIn size={16} />
+								<IconZoomIn size={ICON_SIZE_MD} />
 							</ActionIcon>
 						</Tooltip>
 						<Tooltip label="Zoom Out">
 							<ActionIcon variant="subtle" onClick={() => { handleScale(-SCALE_STEP); }}>
-								<IconZoomOut size={16} />
+								<IconZoomOut size={ICON_SIZE_MD} />
 							</ActionIcon>
 						</Tooltip>
 					</Group>
@@ -184,8 +254,8 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 			</Box>
 
 			{images.length > 1 && (
-				<Card.Section p="xs">
-					<SimpleGrid cols={Math.min(4, images.length)} spacing="xs">
+				<Card.Section p={SPACING_XS}>
+					<SimpleGrid cols={Math.min(THUMBNAIL_GRID_COLS, images.length)} spacing={SPACING_XS}>
 						{images.map((image, index) => (
 							<Box
 								key={index}
@@ -202,7 +272,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 								<Image
 									src={image}
 									alt={`${title} - Thumbnail ${index + 1}`}
-									h={60}
+									h={THUMBNAIL_HEIGHT}
 									w="100%"
 									fit="cover"
 								/>
@@ -225,7 +295,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
 
 	if (!pdfUrl) {
 		return (
-			<Alert icon={<IconFile size={16} />} title="Manual Not Available">
+			<Alert icon={<IconFile size={ICON_SIZE_MD} />} title="Manual Not Available">
         No PDF manual is available for this item.
 			</Alert>
 		);
@@ -235,7 +305,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl, title }) => {
 		<>
 			<Button
 				variant="outline"
-				leftSection={<IconFile size={16} />}
+				leftSection={<IconFile size={ICON_SIZE_MD} />}
 				onClick={() => { setIsOpened(true); }}
 				fullWidth={true}
 			>
@@ -276,13 +346,13 @@ const ConfidenceIndicator: React.FC<ConfidenceIndicatorProps> = ({ confidence, l
 	};
 
 	const getIcon = () => {
-		if (confidence >= HIGH_CONFIDENCE) return <IconCheck size={12} />;
-		if (confidence >= MEDIUM_CONFIDENCE) return <IconAlertTriangle size={12} />;
-		return <IconX size={12} />;
+		if (confidence >= HIGH_CONFIDENCE) return <IconCheck size={ICON_SIZE_SM} />;
+		if (confidence >= MEDIUM_CONFIDENCE) return <IconAlertTriangle size={ICON_SIZE_SM} />;
+		return <IconX size={ICON_SIZE_SM} />;
 	};
 
 	return (
-		<Group gap="xs" wrap="nowrap">
+		<Group gap={SPACING_XS} wrap="nowrap">
 			<ThemeIcon color={getColor()} size="sm">
 				{getIcon()}
 			</ThemeIcon>
@@ -352,8 +422,8 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 			const detailItem: DetailItem = {
 				...unifiedItem,
-				catalogData: catalogDataTyped || undefined,
-				manualData: manualDataTyped || undefined,
+				catalogData: catalogDataTyped ?? undefined,
+				manualData: manualDataTyped ?? undefined,
 			};
 
 			setItem(detailItem);
@@ -410,15 +480,53 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			return item.properties.name;
 		}
 
-		return item.properties.name.ja || item.properties.name.en || "Unknown Item";
+		return item.properties.name.ja ?? item.properties.name.en ?? "Unknown Item";
 	};
 
 	// Helper function to get item properties safely
-	const getCommonProperty = (propertyName: "grade" | "scale" | "series"): string | null => {
+	const getCommonProperty = (propertyName: "grade" | "scale"): string | null => {
 		if (!item?.properties) return null;
 
-		const props = item.properties as any;
-		return props[propertyName] || null;
+		const props = item.properties as ExtendedItemProperties;
+		const value = props[propertyName];
+
+		if (!value) return null;
+
+		return typeof value === "string" ? value : null;
+	};
+
+	// Helper function to get series property (object type)
+	const getSeriesProperty = (): { ja?: string; en?: string } | string | null => {
+		if (!item?.properties) return null;
+
+		const props = item.properties as ExtendedItemProperties;
+		return props.series ?? null;
+	};
+
+	// Helper function to render series property as string
+	const renderSeriesProperty = (): string | null => {
+		const series = getSeriesProperty();
+		if (!series) return null;
+
+		if (typeof series === "string") return series;
+
+		return series.ja ?? series.en ?? null;
+	};
+
+	// Helper function to get match method safely
+	const getMatchMethod = (): "exact" | "fuzzy" | "manual" | null => {
+		if (!item?.properties) return null;
+
+		const props = item.properties as ExtendedItemProperties;
+		return props.matchMethod ?? null;
+	};
+
+	// Helper function to get match stage safely
+	const getMatchStage = (): number | null => {
+		if (!item?.properties) return null;
+
+		const props = item.properties as ExtendedItemProperties;
+		return props.matchStage ?? null;
 	};
 
 	const getSourcesMetadata = (): SourceMetadata[] => {
@@ -444,7 +552,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 					type: "manual",
 					confidence: unifiedItem.properties.sources.manual.confidence,
 					lastUpdated: unifiedItem.properties.sources.manual.linkedAt,
-					completeness: unifiedItem.manualData ? 90 : 50,
+					completeness: unifiedItem.manualData ? MANUAL_DATA_COMPLETENESS_HIGH : MANUAL_DATA_COMPLETENESS_LOW,
 				});
 			}
 		} else {
@@ -453,23 +561,23 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 				sources.push({
 					type: "catalog",
 					confidence: 1,
-					lastUpdated: item.metadata?.updatedAt || new Date().toISOString(),
-					completeness: 85,
+					lastUpdated: item.metadata?.updatedAt ?? new Date().toISOString(),
+					completeness: CATALOG_ITEM_COMPLETENESS,
 				});
 			} else if (item.$type === "manual_item") {
 				sources.push({
 					type: "manual",
 					confidence: 1,
-					lastUpdated: item.metadata?.updatedAt || new Date().toISOString(),
-					completeness: 90,
+					lastUpdated: item.metadata?.updatedAt ?? new Date().toISOString(),
+					completeness: MANUAL_ITEM_COMPLETENESS,
 				});
 			} else {
 				// Default to manual for unknown types
 				sources.push({
 					type: "manual",
 					confidence: 1,
-					lastUpdated: item.metadata?.updatedAt || new Date().toISOString(),
-					completeness: 90,
+					lastUpdated: item.metadata?.updatedAt ?? new Date().toISOString(),
+					completeness: MANUAL_ITEM_COMPLETENESS,
 				});
 			}
 		}
@@ -533,10 +641,10 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	if (loading) {
 		return (
-			<Container size="lg" py="xl">
-				<Card p="xl" withBorder={true}>
+			<Container size={CONTAINER_SIZE_LG} py={SPACING_XL}>
+				<Card p={SPACING_XL} withBorder={true}>
 					<Stack align="center">
-						<IconClock size={48} />
+						<IconClock size={LOADING_ICON_SIZE} />
 						<Text>Loading item details...</Text>
 					</Stack>
 				</Card>
@@ -546,9 +654,9 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	if (error || !item) {
 		return (
-			<Container size="lg" py="xl">
-				<Alert icon={<IconAlertTriangle size={16} />} color="red" title="Error">
-					{error || "Item not found"}
+			<Container size={CONTAINER_SIZE_LG} py={SPACING_XL}>
+				<Alert icon={<IconAlertTriangle size={ICON_SIZE_MD} />} color="red" title="Error">
+					{error ?? "Item not found"}
 				</Alert>
 			</Container>
 		);
@@ -559,11 +667,11 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 	const title = getItemName();
 
 	return (
-		<Container size="xl" py="md">
+		<Container size={CONTAINER_SIZE_XL} py={SPACING_MD}>
 			{/* Success notification */}
-			<Transition mounted={shareSuccess} transition="fade" duration={300}>
+			<Transition mounted={shareSuccess} transition="fade" duration={TRANSITION_DURATION}>
 				{(styles) => (
-					<Affix position={{ top: 20, right: 20 }} style={styles}>
+					<Affix position={{ top: AFFIX_OFFSET, right: AFFIX_OFFSET }} style={styles}>
 						<Alert color="green" withCloseButton={true} onClose={() => { setShareSuccess(false); }}>
               Item exported successfully!
 						</Alert>
@@ -582,12 +690,9 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 							<Group gap="xs">
 								{getCommonProperty("grade") && <Badge variant="light">{getCommonProperty("grade")}</Badge>}
 								{getCommonProperty("scale") && <Badge variant="light">{getCommonProperty("scale")}</Badge>}
-								{getCommonProperty("series") && (
+								{renderSeriesProperty() && (
 									<Badge variant="outline">
-										{typeof getCommonProperty("series") === "object"
-											? (getCommonProperty("series") as any).ja || (getCommonProperty("series") as any).en
-											: getCommonProperty("series")
-										}
+										{renderSeriesProperty()}
 									</Badge>
 								)}
 							</Group>
@@ -596,22 +701,22 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 						<Group gap="xs">
 							<Tooltip label="Share">
 								<ActionIcon variant="light" onClick={handleShare}>
-									<IconShare size={16} />
+									<IconShare size={ICON_SIZE_MD} />
 								</ActionIcon>
 							</Tooltip>
 							<Tooltip label="Export">
 								<ActionIcon variant="light" onClick={handleExport}>
-									<IconDownload size={16} />
+									<IconDownload size={ICON_SIZE_MD} />
 								</ActionIcon>
 							</Tooltip>
 							<Tooltip label="Print">
 								<ActionIcon variant="light" onClick={handlePrint}>
-									<IconPrinter size={16} />
+									<IconPrinter size={ICON_SIZE_MD} />
 								</ActionIcon>
 							</Tooltip>
 							<Tooltip label="Favorite">
 								<ActionIcon variant="light">
-									<IconHeart size={16} />
+									<IconHeart size={ICON_SIZE_MD} />
 								</ActionIcon>
 							</Tooltip>
 						</Group>
@@ -621,19 +726,19 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 				<Card.Section>
 					<Tabs defaultValue="overview" p="md">
 						<Tabs.List>
-							<Tabs.Tab value="overview" leftSection={<IconEye size={16} />}>
+							<Tabs.Tab value="overview" leftSection={<IconEye size={ICON_SIZE_MD} />}>
                 Overview
 							</Tabs.Tab>
-							<Tabs.Tab value="details" leftSection={<IconInfoCircle size={16} />}>
+							<Tabs.Tab value="details" leftSection={<IconInfoCircle size={ICON_SIZE_MD} />}>
                 Details
 							</Tabs.Tab>
-							<Tabs.Tab value="sources" leftSection={<IconExternalLink size={16} />}>
+							<Tabs.Tab value="sources" leftSection={<IconExternalLink size={ICON_SIZE_MD} />}>
                 Sources
 							</Tabs.Tab>
-							<Tabs.Tab value="manual" leftSection={<IconFile size={16} />}>
+							<Tabs.Tab value="manual" leftSection={<IconFile size={ICON_SIZE_MD} />}>
                 Manual
 							</Tabs.Tab>
-							<Tabs.Tab value="related" leftSection={<IconStar size={16} />}>
+							<Tabs.Tab value="related" leftSection={<IconStar size={ICON_SIZE_MD} />}>
                 Related Items
 							</Tabs.Tab>
 						</Tabs.List>
@@ -733,7 +838,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												/>
 												<Button
 													variant="outline"
-													leftSection={<IconBookmark size={16} />}
+													leftSection={<IconBookmark size={ICON_SIZE_MD} />}
 													fullWidth={true}
 												>
                           Add to Collection
@@ -755,30 +860,27 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 										<Stack gap="sm" p="md">
 											{getCommonProperty("grade") && (
 												<Group>
-													<Text size="sm" c="dimmed" w={100}>Grade:</Text>
+													<Text size="sm" c="dimmed" w={LABEL_WIDTH}>Grade:</Text>
 													<Text size="sm">{getCommonProperty("grade")}</Text>
 												</Group>
 											)}
 											{getCommonProperty("scale") && (
 												<Group>
-													<Text size="sm" c="dimmed" w={100}>Scale:</Text>
+													<Text size="sm" c="dimmed" w={LABEL_WIDTH}>Scale:</Text>
 													<Text size="sm">{getCommonProperty("scale")}</Text>
 												</Group>
 											)}
-											{getCommonProperty("series") && (
+											{renderSeriesProperty() && (
 												<Group>
-													<Text size="sm" c="dimmed" w={100}>Series:</Text>
+													<Text size="sm" c="dimmed" w={LABEL_WIDTH}>Series:</Text>
 													<Text size="sm">
-														{typeof getCommonProperty("series") === "object"
-															? (getCommonProperty("series") as any).ja || (getCommonProperty("series") as any).en
-															: getCommonProperty("series")
-														}
+														{renderSeriesProperty()}
 													</Text>
 												</Group>
 											)}
 											{item.properties?.releaseDate && (
 												<Group>
-													<Text size="sm" c="dimmed" w={100}>Release Date:</Text>
+													<Text size="sm" c="dimmed" w={LABEL_WIDTH}>Release Date:</Text>
 													<Text size="sm">
 														{item.properties?.releaseDate.year}年
 														{item.properties?.releaseDate.month && `${item.properties?.releaseDate.month}月`}
@@ -796,29 +898,29 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 											<Text fw={500}>Match Information</Text>
 										</Card.Section>
 										<Stack gap="sm" p="md">
-											{item.properties && "matchMethod" in item.properties && (
+											{getMatchMethod() && (
 												<Group>
-													<Text size="sm" c="dimmed" w={100}>Match Method:</Text>
+													<Text size="sm" c="dimmed" w={LABEL_WIDTH}>Match Method:</Text>
 													<Badge
 														color={
-															(item.properties as any).matchMethod === "exact" ? "green" :
-																((item.properties as any).matchMethod === "fuzzy" ? "yellow" : "blue")
+															getMatchMethod() === "exact" ? "green" :
+																(getMatchMethod() === "fuzzy" ? "yellow" : "blue")
 														}
 													>
-														{(item.properties as any).matchMethod}
+														{getMatchMethod()}
 													</Badge>
 												</Group>
 											)}
-											{'matchStage' in item.properties && item.properties.matchStage && (
+											{getMatchStage() && (
 												<Group>
-													<Text size="sm" c="dimmed" w={100}>Match Stage:</Text>
-													<Text size="sm">{item.properties.matchStage}/5</Text>
+													<Text size="sm" c="dimmed" w={LABEL_WIDTH}>Match Stage:</Text>
+													<Text size="sm">{getMatchStage()}/5</Text>
 												</Group>
 											)}
 											<Group>
-												<Text size="sm" c="dimmed" w={100}>Last Updated:</Text>
+												<Text size="sm" c="dimmed" w={LABEL_WIDTH}>Last Updated:</Text>
 												<Text size="sm">
-													{new Date(item.metadata?.updatedAt || Date.now()).toLocaleDateString()}
+													{new Date(item.metadata?.updatedAt ?? Date.now()).toLocaleDateString()}
 												</Text>
 											</Group>
 										</Stack>
@@ -907,7 +1009,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 										/>
 									</>
 								) : (
-									<Alert icon={<IconFile size={16} />}>
+									<Alert icon={<IconFile size={ICON_SIZE_MD} />}>
                     No manual data is available for this item.
 									</Alert>
 								)}

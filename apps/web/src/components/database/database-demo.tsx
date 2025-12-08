@@ -19,13 +19,20 @@ import {
 import { IconSearch, IconRefresh, IconAlertCircle } from "@tabler/icons-react";
 import React, { useState, useEffect, useCallback } from "react";
 
-
 import { dataService } from "../../services/dataService";
 import type { UnifiedItem, ManualItem, CatalogItem, FilterOptions } from "../../services/dataService";
 
-import { ItemGrid } from "./ItemGrid";
+type SortField = "name" | "releaseDate" | "price" | "relevance" | "grade";
+
+import { ItemGrid } from "./item-grid";
+
+// Constants
+const PAGE_SIZE = 50;
+const INITIAL_PAGE = 1;
 
 type ItemData = UnifiedItem | ManualItem | CatalogItem;
+
+type SortDirection = "asc" | "desc";
 
 export function DatabaseDemo() {
 	const [items, setItems] = useState<ItemData[]>([]);
@@ -33,11 +40,11 @@ export function DatabaseDemo() {
 	const [error, setError] = useState<string | null>(null);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [selectedItems, setSelectedItems] = useState<Set<string>>(new Set());
-	const [page, setPage] = useState(1);
+	const [page, setPage] = useState(INITIAL_PAGE);
 	const [total, setTotal] = useState(0);
 	const [infiniteScroll, setInfiniteScroll] = useState(false);
 	const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
-	const [sortBy, setSortBy] = useState("relevance");
+	const [sortBy, setSortBy] = useState<SortField>("relevance");
 
 	// Load initial data
 	const loadData = useCallback(async (query = "", isNew = false) => {
@@ -48,8 +55,8 @@ export function DatabaseDemo() {
 			const filters: FilterOptions = {
 				query,
 				sort: {
-					field: sortBy as any,
-					direction: "desc",
+					field: sortBy,
+					direction: "desc" as SortDirection,
 				},
 			};
 
@@ -60,7 +67,7 @@ export function DatabaseDemo() {
 				setTotal(result.total);
 			} else {
 				// Use pagination for browsing
-				const result = await dataService.getItemsByPage(isNew ? 1 : page, 50);
+				const result = await dataService.getItemsByPage(isNew ? INITIAL_PAGE : page, PAGE_SIZE);
 				setItems(result.items);
 				setTotal(result.pagination.total);
 			}
@@ -73,18 +80,18 @@ export function DatabaseDemo() {
 
 	// Initial load
 	useEffect(() => {
-		loadData();
-	}, []);
+		void loadData();
+	}, [loadData]);
 
 	// Handle search
 	const handleSearch = useCallback(() => {
-		setPage(1);
-		loadData(searchQuery, true);
+		setPage(INITIAL_PAGE);
+		void loadData(searchQuery, true);
 	}, [searchQuery, loadData]);
 
 	// Handle refresh
 	const handleRefresh = useCallback(() => {
-		loadData(searchQuery);
+		void loadData(searchQuery);
 	}, [searchQuery, loadData]);
 
 	// Handle page change
@@ -93,9 +100,9 @@ export function DatabaseDemo() {
 	}, []);
 
 	// Handle sort change
-	const handleSortChange = useCallback((field: any, direction: any) => {
+	const handleSortChange = useCallback((field: SortField, _direction: SortDirection) => {
 		setSortBy(field);
-		loadData(searchQuery, true);
+		void loadData(searchQuery, true);
 	}, [searchQuery, loadData]);
 
 	// Handle view mode change
@@ -125,7 +132,9 @@ export function DatabaseDemo() {
 						<Button
 							variant={infiniteScroll ? "filled" : "light"}
 							size="sm"
-							onClick={() => { setInfiniteScroll(!infiniteScroll); }}
+							onClick={() => {
+								setInfiniteScroll(!infiniteScroll);
+							}}
 						>
 							{infiniteScroll ? "Infinite Scroll" : "Pagination"}
 						</Button>
@@ -140,7 +149,11 @@ export function DatabaseDemo() {
 						onChange={(e) => { setSearchQuery(e.target.value); }}
 						leftSection={<IconSearch size={16} />}
 						style={{ flex: 1 }}
-						onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+						onKeyDown={(e) => {
+							if (e.key === "Enter") {
+								handleSearch();
+							}
+						}}
 					/>
 					<Button onClick={handleSearch} disabled={loading}>
             Search
@@ -177,7 +190,9 @@ export function DatabaseDemo() {
 						title="Error"
 						color="red"
 						withCloseButton={true}
-						onClose={() => { setError(null); }}
+						onClose={() => {
+							setError(null);
+						}}
 					>
 						{error}
 					</Alert>
@@ -208,4 +223,3 @@ export function DatabaseDemo() {
 	);
 }
 
-export default DatabaseDemo;
