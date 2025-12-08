@@ -140,7 +140,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
             <h2>Manuals</h2>
             <ul>
               {item.manuals.map((manual, index) => {
-                const manualId = typeof manual === 'string' ? manual : manual.id;
+                const manualId = typeof manual === 'string' ? manual : (manual as any).id;
                 return (
                   <li key={index}>
                     <a href={`/manual/${manualId}`}>
@@ -250,7 +250,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
             <div className="tags">
               {item.tags.map((tag, index) => (
                 <span key={index} className="tag">
-                  {tag}
+                  {String(tag)}
                 </span>
               ))}
             </div>

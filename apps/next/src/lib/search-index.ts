@@ -4,6 +4,8 @@ import {
   BrandNodeSchema,
   CategoryNodeSchema,
   SeriesNodeSchema,
+  LocalizedDescriptionSchema,
+  ManualSchema,
   type ItemNode,
   type BrandNode,
   type CategoryNode,
@@ -18,19 +20,33 @@ function getLocalizedString(text: string | { ja: string; en?: string } | undefin
   return text.ja || text.en || '';
 }
 
-// Helper function to extract string from localized description array
-function getLocalizedDescription(desc: Array<{ ja: string; en: string }> | undefined): string {
-  if (!desc || !Array.isArray(desc) || desc.length === 0) return '';
-  return desc.map(d => d.ja || d.en).join(' ');
+// Helper function to extract string from localized description array using Zod validation
+function getLocalizedDescription(desc: unknown): string {
+  // Use Zod to validate the description structure
+  const descResult = LocalizedDescriptionSchema.safeParse(desc);
+  if (!descResult.success) return '';
+
+  const validatedDesc = descResult.data;
+  return validatedDesc.map(d => d.ja || d.en).join(' ');
 }
 
-// Helper function to extract manual identifier
-function getManualId(manuals: Array<string | { id: string; [key: string]: any }> | undefined): string | undefined {
-  if (!manuals || !Array.isArray(manuals) || manuals.length === 0) return undefined;
-  const manual = manuals[0];
+// Helper function to extract manual identifier using Zod validation
+function getManualId(manuals: unknown): string | undefined {
+  // Use Zod to validate the manuals structure
+  const manualsResult = ItemNodeSchema.shape.manuals.safeParse(manuals);
+  if (!manualsResult.success || !manualsResult.data || manualsResult.data.length === 0) return undefined;
+
+  const validatedManuals = manualsResult.data;
+  const manual = validatedManuals[0];
   if (typeof manual === 'string') return manual;
-  if (manual && typeof manual === 'object' && 'id' in manual) return manual.id;
-  return undefined;
+
+  // Use Zod to validate the individual manual structure
+  const manualResult = ManualSchema.safeParse(manual);
+  if (!manualResult.success) return undefined;
+
+  const validatedManual = manualResult.data;
+  if (typeof validatedManual === 'string') return validatedManual;
+  return validatedManual.id;
 }
 
 export interface SearchableItem {

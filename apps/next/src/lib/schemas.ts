@@ -13,6 +13,9 @@ export const BaseNodeSchema = z.object({
   ]),
   created: z.string().optional(),
   modified: z.string().optional(),
+  sourceUrl: z.string().url().optional(),
+  extractedAt: z.string().datetime().optional(),
+  contents: z.array(z.unknown()).optional(),
   metadata: z.record(z.string(), z.unknown()).optional(),
 });
 
@@ -56,9 +59,9 @@ export const PriceSchema = z.object({
 // Release date schema
 export const ReleaseDateSchema = z.object({
   ja: z.string(),
-  year: z.number(),
-  month: z.number(),
-  day: z.number(),
+  year: z.number().nullable().optional(),
+  month: z.number().nullable().optional(),
+  day: z.number().nullable().optional(),
 });
 
 // Accessory schema
@@ -79,6 +82,9 @@ export const ImageSchema = z.union([
   })
 ]);
 
+// Empty array schema helper
+const EmptyArraySchema = z.array(z.unknown()).length(0);
+
 // Edge schema for graph connections
 export const EdgeSchema = z.object({
   type: z.string(),
@@ -91,8 +97,8 @@ export const EdgeSchema = z.object({
 
 // Edges container schema
 export const EdgesSchema = z.object({
-  inbound: z.array(EdgeSchema).optional(),
-  outbound: z.array(EdgeSchema).optional(),
+  inbound: z.union([z.array(EdgeSchema), EmptyArraySchema]).optional(),
+  outbound: z.union([z.array(EdgeSchema), EmptyArraySchema]).optional(),
 });
 
 // Manual schema
@@ -117,12 +123,12 @@ export const ItemNodeSchema = BaseNodeSchema.extend({
   scale: z.string().optional(),
   price: PriceSchema.optional(),
   releaseDate: ReleaseDateSchema.optional(),
-  description: LocalizedDescriptionSchema.optional(),
-  accessories: z.array(AccessorySchema).optional(),
-  images: z.array(ImageSchema).optional(),
-  manuals: z.array(z.union([ManualSchema, z.string()])).optional(),
+  description: z.union([LocalizedDescriptionSchema, EmptyArraySchema]).optional(),
+  accessories: z.union([z.array(AccessorySchema), EmptyArraySchema]).optional(),
+  images: z.union([z.array(ImageSchema), EmptyArraySchema]).optional(),
+  manuals: z.union([z.array(z.union([ManualSchema, z.string()])), EmptyArraySchema]).optional(),
   targetAge: z.number().optional(),
-  tags: z.array(z.string()).optional(),
+  tags: z.union([z.array(z.string()), EmptyArraySchema]).optional(),
   specifications: z.record(z.string(), z.unknown()).optional(),
   edges: EdgesSchema.optional(),
 });
@@ -209,6 +215,7 @@ export type Price = z.infer<typeof PriceSchema>;
 export type ReleaseDate = z.infer<typeof ReleaseDateSchema>;
 export type Image = z.infer<typeof ImageSchema>;
 export type Manual = z.infer<typeof ManualSchema>;
+export type EdgesSchemaType = z.infer<typeof EdgesSchema>;
 
 export type ItemNode = z.infer<typeof ItemNodeSchema>;
 export type BrandNode = z.infer<typeof BrandNodeSchema>;
@@ -295,33 +302,57 @@ export const getNodeReleaseYear = (node: ItemNode): number | null => {
 
 export const getNodeImages = (node: ItemNode): string[] => {
   if (!node.images) return [];
-  return node.images.map(img =>
-    typeof img === 'string' ? img : img.url || String(img)
-  );
+  return node.images.map(img => {
+    // Use Zod parsing to validate the image structure
+    if (typeof img === 'string') return img;
+
+    const imageResult = ImageSchema.safeParse(img);
+    if (!imageResult.success) return String(img);
+
+    // Handle the union type from ImageSchema
+    const imageData = imageResult.data;
+    if (typeof imageData === 'string') return imageData;
+    return imageData.url;
+  });
 };
 
 export const getNodeDescription = (node: ItemNode): string => {
-  if (!node.description || !Array.isArray(node.description)) return '';
+  if (!node.description) return '';
+
+  // Use Zod parsing to validate the description structure
+  const descResult = LocalizedDescriptionSchema.safeParse(node.description);
+  if (!descResult.success) return '';
 
   // Get English description if available, fallback to Japanese
-  const englishDesc = node.description.find(d => d.en)?.en;
-  const japaneseDesc = node.description.find(d => d.ja)?.ja;
+  const englishDesc = descResult.data.find(d => d.en)?.en;
+  const japaneseDesc = descResult.data.find(d => d.ja)?.ja;
 
   return englishDesc || japaneseDesc || '';
 };
 
 export const getNodeAccessories = (node: ItemNode): string[] => {
-  if (!node.accessories || !Array.isArray(node.accessories)) return [];
+  if (!node.accessories) return [];
 
   return node.accessories.map(acc => {
+    // Use Zod parsing to validate the accessory structure
     if (typeof acc === 'string') return acc;
-    if (typeof acc === 'object' && acc !== null) {
-      return (acc as any).en || (acc as any).ja || JSON.stringify(acc);
-    }
-    return String(acc);
+
+    const accessoryResult = AccessorySchema.safeParse(acc);
+    if (!accessoryResult.success) return String(acc);
+
+    const accessory = accessoryResult.data;
+    if (typeof accessory === 'string') return accessory;
+
+    // Handle localized accessory name
+    return accessory.en || accessory.ja || JSON.stringify(accessory);
   });
 };
 
-export const getNodeEdges = (node: GraphNode): any => {
-  return (node as any).edges || { inbound: [], outbound: [] };
+export const getNodeEdges = (node: GraphNode): EdgesSchemaType => {
+  // Only ItemNode should have edges according to our schema
+  if (!isItemNode(node)) return { inbound: [], outbound: [] };
+
+  // Use Zod parsing to validate edges structure
+  const edgesResult = EdgesSchema.safeParse(node.edges);
+  return edgesResult.success ? edgesResult.data : { inbound: [], outbound: [] };
 };
