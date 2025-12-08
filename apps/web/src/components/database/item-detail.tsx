@@ -17,7 +17,6 @@ import {
 	SimpleGrid,
 	Box,
 	Flex,
-	Anchor,
 	Progress,
 	ThemeIcon,
 	Affix,
@@ -70,6 +69,10 @@ const SHARE_SUCCESS_TIMEOUT = 3000;
 const HIGH_CONFIDENCE_PERCENTAGE = 85;
 const MEDIUM_CONFIDENCE_PERCENTAGE = 60;
 const PROGRESS_BAR_WIDTH = 200;
+const FULL_ROTATION_DEGREES = 360;
+const THUMBNAIL_ACTIVE_OPACITY = 1;
+const THUMBNAIL_INACTIVE_OPACITY = 0.6;
+const PERCENTAGE_MULTIPLIER = 100;
 
 // UI constants
 const THUMBNAIL_HEIGHT = 60;
@@ -81,14 +84,12 @@ const AFFIX_OFFSET = 20;
 // Icon sizes
 const ICON_SIZE_SM = 12;
 const ICON_SIZE_MD = 16;
-const ICON_SIZE_LG = 24;
 const ICON_SIZE_XL = 24;
 
 // Mantine spacing constants
 const SPACING_XS = "xs";
 const SPACING_SM = "sm";
 const SPACING_MD = "md";
-const SPACING_LG = "lg";
 const SPACING_XL = "xl";
 
 // Container sizes
@@ -191,7 +192,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 	};
 
 	const handleRotate = () => {
-		setRotation((prev) => (prev + ROTATION_DEGREES) % 360);
+		setRotation((prev) => (prev + ROTATION_DEGREES) % FULL_ROTATION_DEGREES);
 	};
 
 	const handleScale = (delta: number) => {
@@ -261,7 +262,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 								key={index}
 								pos="relative"
 								style={{
-									opacity: index === currentImageIndex ? 1 : 0.6,
+									opacity: index === currentImageIndex ? THUMBNAIL_ACTIVE_OPACITY : THUMBNAIL_INACTIVE_OPACITY,
 									border: index === currentImageIndex ? "2px solid var(--mantine-primary-color-filled)" : "none",
 									borderRadius: "4px",
 									overflow: "hidden",
@@ -360,7 +361,7 @@ const ConfidenceIndicator: React.FC<ConfidenceIndicatorProps> = ({ confidence, l
 				<Text size="xs" fw={500}>
 					{label}
 				</Text>
-				<Progress value={confidence * 100} size="xs" color={getColor()} />
+				<Progress value={confidence * PERCENTAGE_MULTIPLIER} size="xs" color={getColor()} />
 			</div>
 		</Group>
 	);
@@ -384,7 +385,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 	const [shareSuccess, setShareSuccess] = useState(false);
 
 	useEffect(() => {
-		loadItem();
+		void loadItem();
 	}, [itemId, preferSource]);
 
 	const loadItem = async () => {
@@ -945,7 +946,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 															(source.confidence >= MEDIUM_CONFIDENCE ? "yellow" : "red")
 													}
 												>
-													{Math.round(source.confidence * 100)}% confidence
+													{Math.round(source.confidence * PERCENTAGE_MULTIPLIER)}% confidence
 												</Badge>
 											</Group>
 										</Card.Section>

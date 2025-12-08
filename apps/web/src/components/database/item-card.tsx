@@ -33,6 +33,33 @@ import React, { useState, useRef, useCallback } from "react";
 
 import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
+// Constants
+const CONFIDENCE_HIGH_THRESHOLD = 4;
+const CONFIDENCE_MEDIUM_THRESHOLD = 2;
+const CARD_HEIGHT_COMPACT = 140;
+const CARD_HEIGHT_LIST_COMPACT = 80;
+const CARD_HEIGHT_REGULAR = 200;
+const CARD_HEIGHT_LIST_IMAGE = 80;
+const THUMBNAIL_HEIGHT_COMPACT = 80;
+const THUMBNAIL_HEIGHT_LIST = 80;
+const THUMBNAIL_HEIGHT_REGULAR = 200;
+const SKELETON_HEIGHT_COMPACT = 80;
+const SKELETON_HEIGHT_REGULAR = 200;
+const SKELETON_HEIGHT_SMALL = 16;
+const SKELETON_WIDTH_PERCENT = 70;
+const SKELETON_WIDTH_SMALL = 40;
+const ICON_SIZE_SMALL = 10;
+const ICON_SIZE_CARD = 12;
+const ICON_SIZE_PHOTO = 32;
+const SELECTION_INDICATOR_SIZE = 20;
+const OVERLAY_POSITION = 8;
+const BORDER_RADIUS = 4;
+const GRID_COLS_THUMBNAILS = 4;
+
+// Mantine spacing values
+const SPACING_XS = "xs";
+const SPACING_SM = "sm";
+
 interface ItemCardProps {
   /** Item data from any source */
   item: UnifiedItem | ManualItem | CatalogItem;
@@ -83,7 +110,7 @@ export function ItemCard({
 
 	// Extract series information
 	const getSeries = useCallback(() => {
-		if (item.properties?.series) {
+		if (item.properties.series) {
 			const series = item.properties.series as { ja?: string; en?: string } | string;
 			if (typeof series === "string") {
 				return series;
@@ -97,11 +124,11 @@ export function ItemCard({
 	const getGrade = useCallback(() => {
 		if (itemType === "unified") {
 			const properties = item.properties as UnifiedItem["properties"];
-			return properties?.grade;
+			return properties.grade;
 		}
 		if (itemType === "manual") {
 			const properties = item.properties as ManualItem["properties"];
-			if (properties?.grade && "code" in properties.grade) {
+			if (properties.grade && "code" in properties.grade) {
 				return properties.grade.code;
 			}
 		}

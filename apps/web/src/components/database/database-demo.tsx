@@ -21,6 +21,7 @@ import React, { useState, useEffect, useCallback } from "react";
 
 import { dataService } from "../../services/dataService";
 import type { UnifiedItem, ManualItem, CatalogItem, FilterOptions } from "../../services/dataService";
+
 import { ItemGrid } from "./item-grid";
 
 type SortField = "name" | "releaseDate" | "price" | "relevance" | "grade";
