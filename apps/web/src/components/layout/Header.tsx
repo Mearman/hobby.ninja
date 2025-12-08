@@ -53,14 +53,18 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 	// Get the appropriate icon based on current theme
 	const getThemeIcon = () => {
 		switch (colorScheme) {
-			case 'system':
+			case "system": {
 				return <IconDeviceDesktop size={18} />;
-			case 'dark':
+			}
+			case "dark": {
 				return <IconSun size={18} />;
-			case 'light':
+			}
+			case "light": {
 				return <IconMoon size={18} />;
-			default:
+			}
+			default: {
 				return <IconDeviceDesktop size={18} />;
+			}
 		}
 	};
 
