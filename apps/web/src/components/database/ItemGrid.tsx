@@ -242,7 +242,9 @@ export function ItemGrid({
 						return "";
 					};
 
-					comparison = getGrade(a).localeCompare(getGrade(b)) || 0;
+					const gradeA = getGrade(a);
+					const gradeB = getGrade(b);
+					comparison = String(gradeA || "").localeCompare(String(gradeB || "")) || 0;
 					break;
 				}
 

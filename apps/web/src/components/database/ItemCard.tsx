@@ -107,11 +107,11 @@ export function ItemCard({
 			}
 		}
 		// Catalog items don't have grade
-		return undefined;
+		return;
 	}, [item, itemType]);
 
 	const getScale = useCallback(() => {
-		return item.properties?.scale as string;
+		return item.properties?.scale;
 	}, [item]);
 
 	// Extract release date
