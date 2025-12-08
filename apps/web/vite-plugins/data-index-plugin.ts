@@ -172,12 +172,45 @@ async function generateHierarchicalIndex(
  * Compare two indices to check if content has changed (excluding timestamps)
  */
 function hasIndexContentChanged(oldIndex: HierarchicalIndex, newIndex: HierarchicalIndex): boolean {
-	// Remove timestamp fields before comparison
-	const { generated: oldGenerated, ...oldContent } = oldIndex;
-	const { generated: newGenerated, ...newContent } = newIndex;
+	// Check basic properties first
+	if (oldIndex.version !== newIndex.version ||
+		oldIndex.type !== newIndex.type ||
+		oldIndex.path !== newIndex.path ||
+		oldIndex.summary.totalFiles !== newIndex.summary.totalFiles ||
+		oldIndex.summary.totalDirectories !== newIndex.summary.totalDirectories ||
+		oldIndex.summary.totalSize !== newIndex.summary.totalSize ||
+		oldIndex.children.length !== newIndex.children.length) {
+		return true;
+	}
 
-	// Deep comparison of content
-	return JSON.stringify(oldContent) !== JSON.stringify(newContent);
+	// Deep compare children arrays
+	for (let i = 0; i < oldIndex.children.length; i++) {
+		if (oldIndex.children[i] !== newIndex.children[i]) {
+			return true;
+		}
+	}
+
+	// Deep compare entries array
+	if (oldIndex.entries.length !== newIndex.entries.length) {
+		return true;
+	}
+
+	for (let i = 0; i < oldIndex.entries.length; i++) {
+		const oldEntry = oldIndex.entries[i];
+		const newEntry = newIndex.entries[i];
+
+		// Compare entry properties (excluding lastModified)
+		if (oldEntry.filename !== newEntry.filename ||
+			oldEntry.relativePath !== newEntry.relativePath ||
+			oldEntry.size !== newEntry.size ||
+			oldEntry.type !== newEntry.type ||
+			oldEntry.id !== newEntry.id ||
+			JSON.stringify(oldEntry.metadata) !== JSON.stringify(newEntry.metadata)) {
+			return true;
+		}
+	}
+
+	return false; // No changes detected
 }
 
 /**
