@@ -33,9 +33,15 @@ import React, { useState, useEffect, useCallback } from "react";
 
 import { FilterOptions, FilterPreset } from "../../services/dataService";
 
- 
+// Constants
+const MIN_RELEASE_YEAR = 1970;
+const MAX_PRICE_YEN = 50_000;
+const PRICE_STEP = 500;
+const DEFAULT_SORT_FIELD = "name";
+const DEFAULT_SORT_DIRECTION = "asc";
+const FUTURE_YEAR_OFFSET = 5;
+
 const globalAlert = alert;
- 
 const globalBtoa = btoa;
 
 interface AdvancedFiltersProps {
@@ -433,7 +439,7 @@ export function AdvancedFilters({
 							<Accordion.Control icon={<IconFilter size={16} />}>
                 Basic Filters
 								<Badge size="xs" ml="xs" variant="light">
-									{(localFilters.grade?.length || 0) + (localFilters.scale?.length || 0) + (localFilters.series?.length || 0)} active
+									{(localFilters.grade?.length ?? 0) + (localFilters.scale?.length ?? 0) + (localFilters.series?.length ?? 0)} active
 								</Badge>
 							</Accordion.Control>
 							<Accordion.Panel>
@@ -443,7 +449,7 @@ export function AdvancedFilters({
 											label="Grade"
 											placeholder="Select grades..."
 											data={gradeOptions}
-											value={localFilters.grade || []}
+											value={localFilters.grade ?? []}
 											onChange={(value) => { handleFilterChange({ grade: value }); }}
 											searchable={true}
 											clearable={true}
@@ -455,7 +461,7 @@ export function AdvancedFilters({
 											label="Scale"
 											placeholder="Select scales..."
 											data={scaleOptions}
-											value={localFilters.scale || []}
+											value={localFilters.scale ?? []}
 											onChange={(value) => { handleFilterChange({ scale: value }); }}
 											searchable={true}
 											clearable={true}
@@ -467,7 +473,7 @@ export function AdvancedFilters({
 											label="Series"
 											placeholder="Select series..."
 											data={seriesOptions}
-											value={localFilters.series || []}
+											value={localFilters.series ?? []}
 											onChange={(value) => { handleFilterChange({ series: value }); }}
 											searchable={true}
 											clearable={true}
@@ -493,8 +499,8 @@ export function AdvancedFilters({
 										<NumberInput
 											label="Release Year From"
 											placeholder="e.g., 2020"
-											min={1970}
-											max={new Date().getFullYear() + 5}
+											min={MIN_RELEASE_YEAR}
+											max={new Date().getFullYear() + FUTURE_YEAR_OFFSET}
 											value={localFilters.releaseDateRange?.start}
 											onChange={(value) => { handleFilterChange({
 												releaseDateRange: {
@@ -508,8 +514,8 @@ export function AdvancedFilters({
 										<NumberInput
 											label="Release Year To"
 											placeholder="e.g., 2024"
-											min={1970}
-											max={new Date().getFullYear() + 5}
+											min={MIN_RELEASE_YEAR}
+											max={new Date().getFullYear() + FUTURE_YEAR_OFFSET}
 											value={localFilters.releaseDateRange?.end}
 											onChange={(value) => { handleFilterChange({
 												releaseDateRange: {
@@ -536,11 +542,11 @@ export function AdvancedFilters({
 									<RangeSlider
 										label="Price Range (¥)"
 										min={0}
-										max={50_000}
-										step={500}
+										max={MAX_PRICE_YEN}
+										step={PRICE_STEP}
 										value={[
-											localFilters.priceRange?.min || 0,
-											localFilters.priceRange?.max || 50_000,
+											localFilters.priceRange?.min ?? 0,
+											localFilters.priceRange?.max ?? MAX_PRICE_YEN,
 										]}
 										onChange={([min, max]) => { handleFilterChange({
 											priceRange: { min, max },
@@ -550,7 +556,7 @@ export function AdvancedFilters({
 											{ value: 10_000, label: "¥10k" },
 											{ value: 20_000, label: "¥20k" },
 											{ value: 30_000, label: "¥30k" },
-											{ value: 50_000, label: "¥50k+" },
+											{ value: MAX_PRICE_YEN, label: "¥50k+" },
 										]}
 									/>
 
@@ -569,7 +575,7 @@ export function AdvancedFilters({
 										/>
 										<NumberInput
 											label="Maximum Price"
-											placeholder="50000"
+											placeholder={MAX_PRICE_YEN.toString()}
 											min={0}
 											value={localFilters.priceRange?.max}
 											onChange={(value) => { handleFilterChange({
@@ -601,7 +607,7 @@ export function AdvancedFilters({
 										{ value: "discontinued", label: "Discontinued" },
 										{ value: "preorder", label: "Pre-order" },
 									]}
-									value={localFilters.availability || []}
+									value={localFilters.availability ?? []}
 									onChange={(value) => { handleFilterChange({ availability: value as Array<"available" | "discontinued" | "preorder"> }); }}
 									placeholder="Select availability status..."
 									clearable={true}
@@ -632,7 +638,7 @@ export function AdvancedFilters({
 											sort: {
 												...localFilters.sort,
 												field: value as "name" | "releaseDate" | "price" | "relevance",
-												direction: localFilters.sort?.direction || "asc",
+												direction: localFilters.sort?.direction ?? DEFAULT_SORT_DIRECTION,
 											},
 										}); }}
 									/>
@@ -646,7 +652,7 @@ export function AdvancedFilters({
 										onChange={(value) => { handleFilterChange({
 											sort: {
 												...localFilters.sort,
-												field: localFilters.sort?.field || "name",
+												field: localFilters.sort?.field ?? DEFAULT_SORT_FIELD,
 												direction: value as "asc" | "desc",
 											},
 										}); }}
