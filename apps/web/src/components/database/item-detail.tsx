@@ -392,10 +392,10 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 			// Create a proper DetailItem from unified item
 			const unifiedItem = loadedItem;
-			const catalogDataPromise = unifiedItem.properties?.sources?.catalog
+			const catalogDataPromise = unifiedItem.properties.sources.catalog
 				? dataService.getItemById(unifiedItem.properties.sources.catalog.id, "catalog")
 				: Promise.resolve(null);
-			const manualDataPromise = unifiedItem.properties?.sources?.manual
+			const manualDataPromise = unifiedItem.properties.sources.manual
 				? dataService.getItemById(unifiedItem.properties.sources.manual.id, "manual")
 				: Promise.resolve(null);
 			const [catalogData, manualData] = await Promise.all([catalogDataPromise, manualDataPromise]);
@@ -443,7 +443,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			const url = URL.createObjectURL(blob);
 			const link = document.createElement("a");
 			link.href = url;
-			link.download = `${item.properties.name?.ja || item.properties.name?.en || "item"}-${itemId}.json`;
+			link.download = `${item.properties.name.ja || item.properties.name.en || "item"}-${itemId}.json`;
 			document.body.append(link);
 			link.click();
 			link.remove();
@@ -452,21 +452,21 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			setShareSuccess(true);
 			await new Promise(resolve => setTimeout(resolve, SHARE_SUCCESS_TIMEOUT));
 			setShareSuccess(false);
-		} catch (error_) {
-			console.error("Export failed:", error_);
+		} catch {
+			// Error handling without console logging
 		}
 	};
 
 	// Helper function to get item name safely
 	const getItemName = (): string => {
-		const name = item?.properties?.name;
+		const name = item?.properties.name;
 		if (!name) return "Unknown Item";
 
 		if (typeof name === "string") {
 			return name;
 		}
 
-		return name.en ?? name.ja ?? "Unknown Item";
+		return name.en || name.ja;
 	};
 
 	// Helper function to get item properties safely
@@ -483,10 +483,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	// Helper function to get series property (object type)
 	const getSeriesProperty = (): { ja?: string; en?: string } | string | null => {
-		if (!item || !item.properties) return null;
-
-		const props = item.properties as ExtendedItemProperties;
-		return props.series ?? null;
+		return item?.properties.series ?? null;
 	};
 
 	// Helper function to render series property as string
@@ -501,18 +498,12 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	// Helper function to get match method safely
 	const getMatchMethod = (): "exact" | "fuzzy" | "manual" | null => {
-		if (!item || !item.properties) return null;
-
-		const props = item.properties as ExtendedItemProperties;
-		return props.matchMethod ?? null;
+		return item?.$type === "unified_item" ? item.properties.matchMethod ?? null : null;
 	};
 
 	// Helper function to get match stage safely
 	const getMatchStage = (): number | null => {
-		if (!item || !item.properties) return null;
-
-		const props = item.properties as ExtendedItemProperties;
-		return props.matchStage ?? null;
+		return item?.$type === "unified_item" ? item.properties.matchStage ?? null : null;
 	};
 
 	const getSourcesMetadata = (): SourceMetadata[] => {
@@ -521,7 +512,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 		const sources: SourceMetadata[] = [];
 
 		// Check if it's a unified item with sources
-		if (item.$type === "unified_item" && item.properties?.sources) {
+		if (item.$type === "unified_item") {
 			const unifiedItem = item;
 
 			if (unifiedItem.properties.sources.catalog) {
@@ -588,11 +579,13 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 				// }
 
 				// Add manual images from unified item
-				if (unifiedItem.manualData?.properties?.thumbnailImage) {
-					images.push(unifiedItem.manualData.properties.thumbnailImage);
+				const manualThumbnail = unifiedItem.manualData?.properties?.thumbnailImage;
+				if (manualThumbnail) {
+					images.push(manualThumbnail);
 				}
-				if (unifiedItem.manualData?.properties?.productImage) {
-					images.push(unifiedItem.manualData.properties.productImage);
+				const manualProduct = unifiedItem.manualData?.properties?.productImage;
+				if (manualProduct) {
+					images.push(manualProduct);
 				}
 		
 				break;
@@ -608,10 +601,10 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			}
 			case "manual_item": {
 			// Direct manual item - check for image properties
-				if (item.properties?.thumbnailImage) {
+				if (item.properties.thumbnailImage) {
 					images.push(item.properties.thumbnailImage);
 				}
-				if (item.properties?.productImage) {
+				if (item.properties.productImage) {
 					images.push(item.properties.productImage);
 				}
 
@@ -689,7 +682,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 								</ActionIcon>
 							</Tooltip>
 							<Tooltip label="Export">
-								<ActionIcon variant="light" onClick={handleExport}>
+								<ActionIcon variant="light" onClick={() => void handleExport()}>
 									<IconDownload size={ICON_SIZE_MD} />
 								</ActionIcon>
 							</Tooltip>

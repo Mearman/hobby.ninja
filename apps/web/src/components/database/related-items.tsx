@@ -38,6 +38,14 @@ const MAX_ITEMS_PER_CATEGORY = 8;
 const VARIANT_ITEMS_LIMIT = 6;
 const SIMILARITY_MIN_WORD_LENGTH = 3;
 const VARIANT_NAME_COMPARE_LENGTH = 10;
+const HIGH_SCORE_THRESHOLD = 0.7;
+const MEDIUM_SCORE_THRESHOLD = 0.5;
+const SCORE_MULTIPLIER = 100;
+const TWO_YEARS_BACK = 2;
+const TAB_LIST_MIN_LENGTH = 2;
+const CARD_HEIGHT = 120;
+const BADGE_POSITION = 8;
+const SCROLL_AREA_MAX_HEIGHT = 600;
 
 // Types for related items
 interface RelatedItem {
@@ -80,7 +88,7 @@ const getSafeName = (item: TypedItem): string => {
 		if (typeof item.name === "string") {
 			return item.name;
 		} else if (item.name.ja || item.name.en) {
-			return item.name.ja ?? item.name.en ?? "Unknown";
+			return item.name.ja || item.name.en || "Unknown";
 		}
 	}
 	return "Unknown";
@@ -168,25 +176,74 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 
 	// Extract current item properties
 	const currentItemProps = useMemo(() => {
+		const extractName = (item: typeof currentItem): string => {
+			if ("name" in item && typeof item.name === "object" && item.name !== null) {
+				const nameObj = item.name as { ja?: string; en?: string };
+				return nameObj.ja ?? nameObj.en ?? "Unknown";
+			}
+			if ("name" in item && typeof item.name === "string") {
+				return item.name;
+			}
+			if ("title" in item && typeof item.title === "string") {
+				return item.title;
+			}
+			return "Unknown";
+		};
+
+		const extractGrade = (item: typeof currentItem): string | undefined => {
+			if ("grade" in item && item.grade) {
+				return typeof item.grade === "string" ? item.grade : item.grade.code ?? String(item.grade);
+			}
+			if (item.properties && "grade" in item.properties) {
+				const grade = item.properties.grade;
+				return typeof grade === "string" ? grade : grade.code ?? String(grade);
+			}
+			return undefined;
+		};
+
+		const extractScale = (item: typeof currentItem): string | undefined => {
+			if ("scale" in item && item.scale) {
+				return typeof item.scale === "string" ? item.scale : String(item.scale);
+			}
+			if (item.properties && "scale" in item.properties) {
+				const scale = item.properties.scale;
+				return typeof scale === "string" ? scale : String(scale);
+			}
+			return undefined;
+		};
+
+		const extractSeries = (item: typeof currentItem): string | undefined => {
+			if ("series" in item) {
+				return getSafeSeries(item.series);
+			}
+			if (item.properties && "series" in item.properties) {
+				return getSafeSeries(item.properties.series);
+			}
+			return undefined;
+		};
+
+		const extractReleaseDate = (item: typeof currentItem): ReleaseDate => {
+			if ("releaseDate" in item) {
+				return item.releaseDate as ReleaseDate;
+			}
+			if (item.properties && "releaseDate" in item.properties) {
+				return item.properties.releaseDate as ReleaseDate;
+			}
+			return undefined;
+		};
+
 		const baseProps = {
 			id: currentItem.id,
-			name: "name" in currentItem && typeof currentItem.name === "object" && currentItem.name !== null
-				? (currentItem.name.ja ?? currentItem.name.en)
-				: ("name" in currentItem && typeof currentItem.name === "string" ? currentItem.name : "Unknown"),
-			grade: ("grade" in currentItem ? currentItem.grade : undefined) ??
-              (currentItem.properties as any)?.grade,
-			scale: ("scale" in currentItem ? currentItem.scale : undefined) ??
-              (currentItem.properties as any)?.scale,
-			series: getSafeSeries(
-				("series" in currentItem ? currentItem.series : undefined) ??
-                (currentItem.properties as any)?.series,
-			),
-			releaseDate: ("releaseDate" in currentItem ? currentItem.releaseDate : (currentItem.properties as any)?.releaseDate),
+			name: extractName(currentItem),
+			grade: extractGrade(currentItem),
+			scale: extractScale(currentItem),
+			series: extractSeries(currentItem),
+			releaseDate: extractReleaseDate(currentItem),
 		};
 
 		// For unified items, extract additional source data
-		if (currentItem.$type === "unified_item") {
-			const unified = currentItem;
+		if ("sources" in currentItem) {
+			const unified = currentItem as UnifiedItem;
 			return {
 				...baseProps,
 				matchMethod: unified.properties?.matchMethod,
@@ -272,11 +329,13 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 				// Ensure item has valid ID
 				if (!item.id) return false;
 
-				const itemSeriesRaw = "series" in item
-					? getSafeSeries(item["series"] as SeriesInfo | undefined)
-					: getSafeSeries(getItemProperties(item)?.["series"] as SeriesInfo | undefined);
-
-				const itemSeriesStr = itemSeriesRaw ?? "";
+				let itemSeriesStr = "";
+				if ("series" in item) {
+					itemSeriesStr = getSafeSeries(item.series as SeriesInfo | undefined) ?? "";
+				} else {
+					const itemProps = getItemProperties(item);
+					itemSeriesStr = getSafeSeries(itemProps?.series as SeriesInfo | undefined) ?? "";
+				}
 
 				return itemSeriesStr && currentSeriesStr && (
 					itemSeriesStr.toLowerCase() === currentSeriesStr.toLowerCase() ||
@@ -286,17 +345,38 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			})
 			.slice(0, MAX_ITEMS_PER_CATEGORY)
 			.map(item => {
-				const itemProps = getItemProperties(item);
+				let grade: string | undefined;
+				let scale: string | undefined;
+				let series: string | undefined;
+
+				if ("grade" in item) {
+					grade = item.grade as string | undefined;
+				} else {
+					const itemProps = getItemProperties(item);
+					grade = itemProps?.grade as string | undefined;
+				}
+
+				if ("scale" in item) {
+					scale = item.scale as string | undefined;
+				} else {
+					const itemProps = getItemProperties(item);
+					scale = itemProps?.scale as string | undefined;
+				}
+
+				if ("series" in item) {
+					series = getSafeSeries(item.series as SeriesInfo | undefined);
+				} else {
+					const itemProps = getItemProperties(item);
+					series = getSafeSeries(itemProps?.series as SeriesInfo | undefined);
+				}
+
 				return {
 					id: item.id!,
 					type: item.type,
 					name: getSafeName(item),
-					grade: (("grade" in item ? item["grade"] : undefined) ??
-                        itemProps?.["grade"]) as string | undefined,
-					scale: (("scale" in item ? item["scale"] : undefined) ??
-                        itemProps?.["scale"]) as string | undefined,
-					series: getSafeSeries((("series" in item ? item["series"] : undefined) ??
-                            itemProps?.["series"]) as SeriesInfo | undefined),
+					grade,
+					scale,
+					series,
 					thumbnail: getThumbnail(item),
 					relationType: "series" as const,
 					score: 0.8,
@@ -312,30 +392,87 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 		return items
 			.filter(item => {
 				if (!item.id) return false;
-				const itemProps = getItemProperties(item);
-				const itemGrade = ("grade" in item ? item["grade"] : undefined) ??
-                    itemProps?.["grade"];
+				let itemGrade: string | undefined;
+
+				if ("grade" in item) {
+					itemGrade = item.grade as string | undefined;
+				} else {
+					const itemProps = getItemProperties(item);
+					itemGrade = itemProps?.grade as string | undefined;
+				}
+
 				return itemGrade && itemGrade === currentItemProps.grade;
 			})
 			.slice(0, MAX_ITEMS_PER_CATEGORY)
 			.map(item => {
-				const itemProps = getItemProperties(item);
+				let grade: string | undefined;
+				let scale: string | undefined;
+				let series: string | undefined;
+
+				if ("grade" in item) {
+					grade = item.grade as string | undefined;
+				} else {
+					const itemProps = getItemProperties(item);
+					grade = itemProps?.grade as string | undefined;
+				}
+
+				if ("scale" in item) {
+					scale = item.scale as string | undefined;
+				} else {
+					const itemProps = getItemProperties(item);
+					scale = itemProps?.scale as string | undefined;
+				}
+
+				if ("series" in item) {
+					series = getSafeSeries(item.series as SeriesInfo | undefined);
+				} else {
+					const itemProps = getItemProperties(item);
+					series = getSafeSeries(itemProps?.series as SeriesInfo | undefined);
+				}
+
 				return {
 					id: item.id!,
 					type: item.type,
 					name: getSafeName(item),
-					grade: (("grade" in item ? item["grade"] : undefined) ??
-                        itemProps?.["grade"]) as string | undefined,
-					scale: (("scale" in item ? item["scale"] : undefined) ??
-                        itemProps?.["scale"]) as string | undefined,
-					series: getSafeSeries((("series" in item ? item["series"] : undefined) ??
-                            itemProps?.["series"]) as SeriesInfo | undefined),
+					grade,
+					scale,
+					series,
 					thumbnail: getThumbnail(item),
 					relationType: "grade" as const,
 					score: 0.7,
 					reason: `Same grade: ${currentItemProps.grade}`,
 				} as RelatedItem;
 			});
+	};
+
+	// Helper to extract item properties safely
+	const extractItemProperties = (item: TypedItem) => {
+		let grade: string | undefined;
+		let scale: string | undefined;
+		let series: string | undefined;
+
+		if ("grade" in item) {
+			grade = item.grade as string | undefined;
+		} else {
+			const itemProps = getItemProperties(item);
+			grade = itemProps?.grade as string | undefined;
+		}
+
+		if ("scale" in item) {
+			scale = item.scale as string | undefined;
+		} else {
+			const itemProps = getItemProperties(item);
+			scale = itemProps?.scale as string | undefined;
+		}
+
+		if ("series" in item) {
+			series = getSafeSeries(item.series as SeriesInfo | undefined);
+		} else {
+			const itemProps = getItemProperties(item);
+			series = getSafeSeries(itemProps?.series as SeriesInfo | undefined);
+		}
+
+		return { grade, scale, series };
 	};
 
 	// Find items with the same scale
@@ -345,24 +482,27 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 		return items
 			.filter(item => {
 				if (!item.id) return false;
-				const itemProps = getItemProperties(item);
-				const itemScale = ("scale" in item ? item["scale"] : undefined) ??
-                    itemProps?.["scale"];
+				let itemScale: string | undefined;
+
+				if ("scale" in item) {
+					itemScale = item.scale as string | undefined;
+				} else {
+					const itemProps = getItemProperties(item);
+					itemScale = itemProps?.scale as string | undefined;
+				}
+
 				return itemScale && itemScale === currentItemProps.scale;
 			})
 			.slice(0, MAX_ITEMS_PER_CATEGORY)
 			.map(item => {
-				const itemProps = getItemProperties(item);
+				const { grade, scale, series } = extractItemProperties(item);
 				return {
 					id: item.id!,
 					type: item.type,
 					name: getSafeName(item),
-					grade: (("grade" in item ? item["grade"] : undefined) ??
-                        itemProps?.["grade"]) as string | undefined,
-					scale: (("scale" in item ? item["scale"] : undefined) ??
-                        itemProps?.["scale"]) as string | undefined,
-					series: getSafeSeries((("series" in item ? item["series"] : undefined) ??
-                            itemProps?.["series"]) as SeriesInfo | undefined),
+					grade,
+					scale,
+					series,
 					thumbnail: getThumbnail(item),
 					relationType: "scale" as const,
 					score: 0.6,
@@ -392,17 +532,14 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			})
 			.slice(0, MAX_ITEMS_PER_CATEGORY)
 			.map(item => {
-				const itemProps = getItemProperties(item);
+				const { grade, scale, series } = extractItemProperties(item);
 				return {
 					id: item.id!,
 					type: item.type,
 					name: getSafeName(item),
-					grade: (("grade" in item ? item["grade"] : undefined) ??
-                        itemProps?.["grade"]) as string | undefined,
-					scale: (("scale" in item ? item["scale"] : undefined) ??
-                        itemProps?.["scale"]) as string | undefined,
-					series: getSafeSeries((("series" in item ? item["series"] : undefined) ??
-                            itemProps?.["series"]) as SeriesInfo | undefined),
+					grade,
+					scale,
+					series,
 					thumbnail: getThumbnail(item),
 					relationType: "similarity" as const,
 					score: 0.5,
@@ -433,17 +570,14 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			})
 			.slice(0, VARIANT_ITEMS_LIMIT)
 			.map(item => {
-				const itemProps = getItemProperties(item);
+				const { grade, scale, series } = extractItemProperties(item);
 				return {
 					id: item.id!,
 					type: item.type,
 					name: getSafeName(item),
-					grade: (("grade" in item ? item["grade"] : undefined) ??
-                        itemProps?.["grade"]) as string | undefined,
-					scale: (("scale" in item ? item["scale"] : undefined) ??
-                        itemProps?.["scale"]) as string | undefined,
-					series: getSafeSeries((("series" in item ? item["series"] : undefined) ??
-                            itemProps?.["series"]) as SeriesInfo | undefined),
+					grade,
+					scale,
+					series,
 					thumbnail: getThumbnail(item),
 					relationType: "variant" as const,
 					score: 0.9,
@@ -455,54 +589,43 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 	// Find recent releases
 	const findRecentReleases = (items: TypedItem[]): RelatedItem[] => {
 		const currentYear = new Date().getFullYear();
-		const twoYearsAgo = currentYear - 2;
+		const twoYearsAgo = currentYear - TWO_YEARS_BACK;
+
+		const getReleaseYear = (item: TypedItem): number => {
+			let itemReleaseDate: ReleaseDate | undefined;
+
+			if ("releaseDate" in item) {
+				itemReleaseDate = item.releaseDate as ReleaseDate;
+			} else {
+				const itemProps = getItemProperties(item);
+				itemReleaseDate = itemProps?.releaseDate as ReleaseDate;
+			}
+
+			return itemReleaseDate?.year ?? 0;
+		};
 
 		return items
 			.filter(item => {
 				if (!item.id) return false;
-				const itemProps = getItemProperties(item);
-				const itemReleaseDate = ("releaseDate" in item ? item["releaseDate"] : undefined) ??
-                    (itemProps?.["releaseDate"]);
-				const releaseYear = itemReleaseDate && typeof itemReleaseDate === 'object' && 'year' in itemReleaseDate
-					? (itemReleaseDate as { year?: number }).year
-					: undefined;
-				return releaseYear && releaseYear >= twoYearsAgo;
+				const releaseYear = getReleaseYear(item);
+				return releaseYear >= twoYearsAgo;
 			})
 			.sort((a, b): number => {
-				const propsA = getItemProperties(a);
-				const propsB = getItemProperties(b);
-				const releaseDateA = ("releaseDate" in a ? a["releaseDate"] : undefined) ??
-                    (propsA?.["releaseDate"]);
-				const releaseDateB = ("releaseDate" in b ? b["releaseDate"] : undefined) ??
-                    (propsB?.["releaseDate"]);
-
-				const yearA = releaseDateA && typeof releaseDateA === 'object' && 'year' in releaseDateA
-					? (releaseDateA as { year?: number }).year ?? 0
-					: 0;
-				const yearB = releaseDateB && typeof releaseDateB === 'object' && 'year' in releaseDateB
-					? (releaseDateB as { year?: number }).year ?? 0
-					: 0;
-
+				const yearA = getReleaseYear(a);
+				const yearB = getReleaseYear(b);
 				return yearB - yearA;
 			})
 			.slice(0, MAX_ITEMS_PER_CATEGORY)
 			.map(item => {
-				const itemProps = getItemProperties(item);
-				const itemReleaseDate = ("releaseDate" in item ? item["releaseDate"] : undefined) ??
-                    (itemProps?.["releaseDate"]);
-				const releaseYear = itemReleaseDate && typeof itemReleaseDate === 'object' && 'year' in itemReleaseDate
-					? (itemReleaseDate as { year?: number }).year
-					: 0;
+				const { grade, scale, series } = extractItemProperties(item);
+				const releaseYear = getReleaseYear(item);
 				return {
 					id: item.id!,
 					type: item.type,
 					name: getSafeName(item),
-					grade: (("grade" in item ? item["grade"] : undefined) ??
-                        itemProps?.["grade"]) as string | undefined,
-					scale: (("scale" in item ? item["scale"] : undefined) ??
-                        itemProps?.["scale"]) as string | undefined,
-					series: getSafeSeries((("series" in item ? item["series"] : undefined) ??
-                            itemProps?.["series"]) as SeriesInfo | undefined),
+					grade,
+					scale,
+					series,
 					thumbnail: getThumbnail(item),
 					relationType: "recent" as const,
 					score: 0.4,
@@ -515,7 +638,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 	const getThumbnail = (item: TypedItem): string | undefined => {
 		// Try different sources for thumbnails
 		if (isUnifiedItem(item) && item.properties) {
-			const props = item.properties as any;
+			const props = item.properties as { sources?: { catalog?: { id: string }; manual?: { id: string } } };
 			if (props.sources?.catalog) {
 				return `/data/images/catalog/${props.sources.catalog.id}/thumb.jpg`;
 			}
@@ -654,7 +777,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 
 			<Card.Section p="md">
 				{/* Tabs for filtering */}
-				{availableTabs.length > 2 && (
+				{availableTabs.length > TAB_LIST_MIN_LENGTH && (
 					<Tabs value={activeTab} onChange={(value) => { setActiveTab(value ?? "all"); }} mb="md">
 						<Tabs.List>
 							{availableTabs.map(tab => (
@@ -676,7 +799,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 				)}
 
 				{/* Related items grid */}
-				<ScrollArea.Autosize mah={600} offsetScrollbars={true}>
+				<ScrollArea.Autosize mah={SCROLL_AREA_MAX_HEIGHT} offsetScrollbars={true}>
 					<SimpleGrid cols={{ base: 2, sm: 3, md: 4 }} spacing="md">
 						{filteredItems.map((item) => (
 							<Card
@@ -699,18 +822,18 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 							>
 								<Stack gap="xs">
 									{/* Thumbnail */}
-									<Box h={120} pos="relative">
+									<Box h={CARD_HEIGHT} pos="relative">
 										{item.thumbnail ? (
 											<Image
 												src={item.thumbnail}
 												alt={item.name}
-												h={120}
+												h={CARD_HEIGHT}
 												fit="cover"
 												radius="sm"
 											/>
 										) : (
 											<Box
-												h={120}
+												h={CARD_HEIGHT}
 												bg="var(--mantine-color-gray-0)"
 												style={{
 													display: "flex",
@@ -728,8 +851,8 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 										{/* Relation badge */}
 										<Badge
 											pos="absolute"
-											top={8}
-											right={8}
+											top={BADGE_POSITION}
+											right={BADGE_POSITION}
 											size="xs"
 											variant="light"
 											color={RELATION_TYPES.find(t => t.id === item.relationType)?.color ?? "gray"}
@@ -738,11 +861,11 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 										</Badge>
 
 										{/* Score indicator */}
-										{item.score > 0.7 && (
+										{item.score > HIGH_SCORE_THRESHOLD && (
 											<Badge
 												pos="absolute"
-												top={8}
-												left={8}
+												top={BADGE_POSITION}
+												left={BADGE_POSITION}
 												size="xs"
 												color="green"
 												variant="filled"
@@ -759,21 +882,21 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 										</Text>
 
 										<Group gap="xs" wrap="nowrap">
-											{item["grade"] && (
+											{item.grade && (
 												<Badge size="xs" variant="light" color="blue">
-													{item["grade"]}
+													{item.grade}
 												</Badge>
 											)}
-											{item["scale"] && (
+											{item.scale && (
 												<Badge size="xs" variant="light" color="orange">
-													{item["scale"]}
+													{item.scale}
 												</Badge>
 											)}
 										</Group>
 
-										{item["series"] && (
+										{item.series && (
 											<Text size="xs" c="dimmed" truncate={true}>
-												{item["series"]}
+												{item.series}
 											</Text>
 										)}
 
@@ -789,9 +912,9 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 
 										{/* Match quality */}
 										<Progress
-											value={item.score * 100}
+											value={item.score * SCORE_MULTIPLIER}
 											size="xs"
-											color={item.score > 0.7 ? "green" : (item.score > 0.5 ? "yellow" : "gray")}
+											color={item.score > HIGH_SCORE_THRESHOLD ? "green" : (item.score > MEDIUM_SCORE_THRESHOLD ? "yellow" : "gray")}
 										/>
 									</Stack>
 								</Stack>
