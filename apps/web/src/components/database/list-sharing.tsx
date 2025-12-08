@@ -93,11 +93,16 @@ const BYTES_IN_KB = 1024;
 const BYTES_IN_MB = BYTES_IN_KB * BYTES_IN_KB;
 const PERCENTAGE_MULTIPLIER = 100;
 
-// Lazy load Pako for compression
-let PakoPromise: Promise<any> | null = null;
+// Type definition for Pako dynamic import
+interface PakoModule {
+	deflate: (data: string, options?: { to?: string }) => string;
+}
 
-const loadPako = async (): Promise<any> => {
-	PakoPromise ??= import("pako").then((module) => module.default);
+// Lazy load Pako for compression
+let PakoPromise: Promise<PakoModule> | null = null;
+
+const loadPako = async (): Promise<PakoModule> => {
+	PakoPromise ??= import("pako").then((module: PakoModule) => module);
 	return PakoPromise;
 };
 
@@ -110,12 +115,10 @@ const convertToCSV = (items: ShareableItem[]): string => {
 
 	for (const item of items) {
 		// Get name from the flattened structure used in ShareableItem
-		const name = item.name;
-		const nameStr = `"${name.replaceAll('"', '""')}"`;
+		const nameStr = `"${item.name.replaceAll('"', '""')}"`;
 		const grade = item.grade ?? "";
 		const scale = item.scale ?? "";
-		const series = item.series;
-		const seriesStr = series ? `"${series.replaceAll('"', '""')}"` : "";
+		const seriesStr = item.series ? `"${item.series.replaceAll('"', '""')}"` : "";
 
 		const values = [
 			item.id,
@@ -140,10 +143,10 @@ const formatFileSize = (bytes: number): string => {
 // Get thumbnail from unified item
 const getThumbnail = (item: UnifiedItem): string | undefined => {
 	// Try to get thumbnail from catalog or manual data
-	if (item.properties?.sources?.catalog) {
+	if (item.properties.sources.catalog) {
 		return `/data/images/catalog/${item.properties.sources.catalog.id}/thumb.jpg`;
 	}
-	if (item.properties?.sources?.manual) {
+	if (item.properties.sources.manual) {
 		return `/data/images/manual/${item.properties.sources.manual.id}/thumb.jpg`;
 	}
 	return undefined;
@@ -162,7 +165,7 @@ const getManualThumbnail = (item: ManualItem): string | undefined => {
 
 // Get thumbnail from catalog item
 const getCatalogThumbnail = (item: CatalogItem): string | undefined => {
-	if (item.properties.images && item.properties.images.length > 0) {
+	if (item.properties.images.length > 0) {
 		return item.properties.images[0];
 	}
 	return undefined;
@@ -185,7 +188,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 	const shareableItems = useMemo((): ShareableItem[] => {
 		return items.slice(0, shareOptions.maxItems).map((item): ShareableItem => {
 			const baseItem = {
-				id: item.id ?? "",
+				id: item.id!,
 				name: String("properties" in item && item.properties?.name
 					? (item.properties.name.ja ?? item.properties.name.en ?? item.properties.name)
 					: "title" in item
@@ -204,7 +207,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 					series: unified.properties.series?.ja ?? unified.properties.series?.en,
 					thumbnail: getThumbnail(unified),
 				};
-			} else if ("metadata" in item) {
+			} else if ("content" in item) {
 				// ManualItem
 				const manual = item as ManualItem;
 				return {
@@ -258,7 +261,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 					.filter((item) => item.thumbnail)
 					.map((item) => ({
 						id: item.id,
-						thumbnail: item.thumbnail as string,
+						thumbnail: item.thumbnail!,
 					}));
 			}
 
@@ -277,8 +280,9 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 					const compressed = pako.deflate(jsonString, { to: "string" });
 					compressedData = compressed;
 					compressedSize = new Blob([compressed]).size;
-				} catch {
-					console.warn("Compression failed, using uncompressed data");
+				} catch (error) {
+					// eslint-disable-next-line no-console
+					console.warn("Compression failed, using uncompressed data", error);
 					notifications.show({
 						title: "Compression Failed",
 						message: "Using uncompressed data instead",
@@ -321,6 +325,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 				icon: <IconCheck size={16} />,
 			});
 		} catch (error) {
+			// eslint-disable-next-line no-console
 			console.error("Failed to generate share data:", error);
 			notifications.show({
 				title: "Generation Failed",
@@ -346,6 +351,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 				icon: <IconCheck size={16} />,
 			});
 		} catch (error) {
+			// eslint-disable-next-line no-console
 			console.error("Failed to copy:", error);
 			notifications.show({
 				title: "Copy Failed",

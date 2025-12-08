@@ -96,6 +96,7 @@ export function SearchAndFilter({
 				setScaleOptions(scales);
 				setSeriesOptions(series);
 			} catch (error) {
+				// eslint-disable-next-line no-console
 				console.error("Failed to load filter options:", error);
 			} finally {
 				setLoadingOptions(false);
@@ -179,6 +180,7 @@ export function SearchAndFilter({
 			const mockSuggestions = await generateMockSuggestions(input);
 			suggestions.push(...mockSuggestions);
 		} catch (error) {
+			// eslint-disable-next-line no-console
 			console.error("Failed to generate suggestions:", error);
 		}
 
@@ -224,7 +226,7 @@ export function SearchAndFilter({
 		onFiltersChange(updatedFilters);
 
 		// Trigger search with new filters
-		if (debouncedQuery ?? Object.keys(updatedFilters).length > 0) {
+		if (debouncedQuery || Object.keys(updatedFilters).length > 0) {
 			performSearch(debouncedQuery, updatedFilters);
 		}
 	}, [filters, debouncedQuery, performSearch, onFiltersChange]);

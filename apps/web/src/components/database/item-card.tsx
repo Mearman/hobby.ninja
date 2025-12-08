@@ -128,14 +128,12 @@ export function ItemCard({
 	// Extract release date
 	const getReleaseDate = useCallback(() => {
 		const date = item.properties.releaseDate;
-		if (typeof date === "object" && date !== null && "ja" in date) {
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+		if (date) {
 			const year = date.year;
 			const month = date.month;
 			const day = date.day;
-			if (month && day) {
-				return `${year}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}`;
-			}
-			return year.toString();
+			return month && day ? `${year}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}` : year.toString();
 		}
 		return null;
 	}, [item]);
@@ -241,14 +239,14 @@ export function ItemCard({
 	const handleShare = useCallback((e: React.MouseEvent) => {
 		e.stopPropagation();
 		void (async () => {
-			if (navigator.share) {
+			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, unicorn/prefer-ternary
+			if (typeof navigator !== "undefined" && "share" in navigator && navigator.share) {
 				await navigator.share({
 					title: getDisplayName(),
 					text: `Check out this model: ${getDisplayName() ?? "unknown model"}`,
 					url: globalThis.location.href,
 				});
 			} else {
-				// Fallback: copy to clipboard
 				await navigator.clipboard.writeText(globalThis.location.href);
 			}
 		})();
