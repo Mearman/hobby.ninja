@@ -4,15 +4,14 @@ import { FilterOptions } from "../services/dataService";
  * URL utilities for sharing filters and search parameters
  */
 
- 
-const globalBtoa = btoa;
- 
-const globalAtob = atob;
+// Constants for year validation
+const MIN_VALID_YEAR = 1970;
+const MAX_FUTURE_YEARS = 5;
 
 // Helper function for base64 encoding in browser environment
 const safeBtoa = (str: string): string => {
-	if (globalBtoa !== undefined) {
-		return globalBtoa(str);
+	if (typeof btoa !== "undefined") {
+		return btoa(str);
 	}
 	// Fallback for Node.js environment
 	return Buffer.from(str, "binary").toString("base64");
@@ -20,8 +19,8 @@ const safeBtoa = (str: string): string => {
 
 // Helper function for base64 decoding in browser environment
 const safeAtob = (str: string): string => {
-	if (globalAtob !== undefined) {
-		return globalAtob(str);
+	if (typeof atob !== "undefined") {
+		return atob(str);
 	}
 	// Fallback for Node.js environment
 	return Buffer.from(str, "base64").toString("binary");
@@ -87,11 +86,11 @@ export const parseFiltersFromUrl = (
 ): { query: string; filters: FilterOptions } => {
 	try {
 		const urlObj = new URL(url);
-		const query = urlObj.searchParams.get("q") || "";
+		const query = urlObj.searchParams.get("q") ?? "";
 		const compressedFilters = urlObj.searchParams.get("filters");
 		const filters = compressedFilters ? decompressFilters(compressedFilters) : {};
 
-		return { query, filters: filters || {} };
+		return { query, filters: filters ?? {} };
 	} catch (error) {
 		// eslint-disable-next-line no-console
 		console.error("Failed to parse URL:", error);
@@ -109,20 +108,23 @@ export const copyShareableUrl = async (
 	try {
 		const shareableUrl = buildShareableUrl(globalThis.location.href, query, filters);
 
-		if (navigator.clipboard && globalThis.isSecureContext) {
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+		if (navigator.clipboard) {
 			await navigator.clipboard.writeText(shareableUrl);
 			return true;
 		} else {
-			// Fallback for older browsers
+			// Fallback for older browsers - suppress deprecation warning as this is intentional fallback
 			const textArea = document.createElement("textarea");
 			textArea.value = shareableUrl;
 			document.body.append(textArea);
 			textArea.select();
+			// eslint-disable-next-line @typescript-eslint/no-deprecated
 			const success = document.execCommand("copy");
 			textArea.remove();
 			return success;
 		}
 	} catch (error) {
+		// eslint-disable-next-line no-console
 		console.error("Failed to copy URL:", error);
 		return false;
 	}
@@ -147,14 +149,14 @@ export const getFilterSummary = (filters: FilterOptions): string[] => {
 	}
 
 	if (filters.releaseDateRange?.start || filters.releaseDateRange?.end) {
-		const start = filters.releaseDateRange.start || "any";
-		const end = filters.releaseDateRange.end || "present";
+		const start = filters.releaseDateRange.start ?? "any";
+		const end = filters.releaseDateRange.end ?? "present";
 		summary.push(`Years: ${start}-${end}`);
 	}
 
 	if (filters.priceRange?.min || filters.priceRange?.max) {
-		const min = filters.priceRange.min || 0;
-		const max = filters.priceRange.max || "∞";
+		const min = filters.priceRange.min ?? 0;
+		const max = filters.priceRange.max ?? "∞";
 		summary.push(`Price: ¥${min}-${max}`);
 	}
 
@@ -194,10 +196,10 @@ export const validateFilters = (filters: FilterOptions): boolean => {
 				return false;
 			}
 			const currentYear = new Date().getFullYear();
-			if (start !== undefined && (start < 1970 || start > currentYear + 5)) {
+			if (start !== undefined && (start < MIN_VALID_YEAR || start > currentYear + MAX_FUTURE_YEARS)) {
 				return false;
 			}
-			if (end !== undefined && (end < 1970 || end > currentYear + 5)) {
+			if (end !== undefined && (end < MIN_VALID_YEAR || end > currentYear + MAX_FUTURE_YEARS)) {
 				return false;
 			}
 		}
