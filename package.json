@@ -4,9 +4,8 @@
 	"private": true,
 	"description": "Nx monorepo for hobby collection management",
 	"scripts": {
-		"prebuild": "pnpm copy-data",
-		"build": "pnpm copy-data && nx run hobby-ninja:build",
-		"build:prod": "pnpm copy-data && nx run hobby-ninja:build:prod",
+		"build": "nx run hobby-ninja:build",
+		"build:prod": "nx run hobby-ninja:build:prod",
 		"copy-data": "tsx scripts/copy-database.ts",
 		"dev": "pnpm --filter @hobby-ninja/webapp dev",
 		"serve": "nx serve web",

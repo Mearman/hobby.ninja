@@ -4,8 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "pnpm copy-data && vite build",
-    "copy-data": "tsx ../../scripts/copy-database.ts",
+    "build": "vite build",
     "dev": "vite",
     "serve": "vite preview",
     "test": "vitest",
