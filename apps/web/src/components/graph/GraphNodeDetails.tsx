@@ -146,7 +146,7 @@ function BrandDetails({ node }: { node: GraphNode }) {
 			{/* Founded Date */}
 			{data["founded"] && (
 				<Group>
-					<Text weight={600} size="sm">Founded:</Text>
+					<Text fw={600} size="sm">Founded:</Text>
 					<Text size="sm">{data["founded"]}</Text>
 				</Group>
 			)}
@@ -197,7 +197,7 @@ function CategoryDetails({ node }: { node: GraphNode }) {
 			{/* Category Description */}
 			{data["description"] && (
 				<Stack gap="xs">
-					<Text weight={600} size="sm">Description:</Text>
+					<Text fw={600} size="sm">Description:</Text>
 					<Text size="sm">{data["description"]}</Text>
 				</Stack>
 			)}
@@ -303,7 +303,7 @@ function SeriesDetails({ node }: { node: GraphNode }) {
 			{/* Series Description */}
 			{data["description"] && (
 				<Stack gap="xs">
-					<Text weight={600} size="sm">About:</Text>
+					<Text fw={600} size="sm">About:</Text>
 					<Text size="sm">{data["description"]}</Text>
 				</Stack>
 			)}
@@ -365,7 +365,7 @@ function CommonRelationships({ node }: { node: GraphNode }) {
 	if (edges.length === 0) return null;
 
 	// Group relationships by type
-	const groupedEdges = edges.reduce((acc, edge) => {
+	const groupedEdges = edges.reduce((acc: Record<string, any>, edge: any) => {
 		const relationType = edge.relation || "related";
 		if (!acc[relationType]) {
 			acc[relationType] = [];
@@ -377,9 +377,9 @@ function CommonRelationships({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="md">
 			<Divider label="Relationships" labelPosition="center" />
-			{Object.entries(groupedEdges).map(([relationType, relationEdges]) => (
+			{Object.entries(groupedEdges).map(([relationType, relationEdges]: [string, any[]]) => (
 				<Stack key={relationType} gap="xs">
-					<Text weight={600} size="sm" transform="capitalize">
+					<Text fw={600} size="sm" style={{ textTransform: 'capitalize' }}>
 						{relationType} ({relationEdges.length}):
 					</Text>
 					<List size="sm" spacing="xs">
@@ -416,7 +416,7 @@ export function GraphNodeDetails({ node }: GraphNodeDetailsProps) {
 			{/* Node Type Header */}
 			<Group>
 				<IconComponent size={20} color="var(--mantine-color-blue-6)" />
-				<Text weight={600} transform="capitalize">
+				<Text fw={600} style={{ textTransform: 'capitalize' }}>
 					{node.type} Information
 				</Text>
 			</Group>

@@ -5,6 +5,7 @@
 
 import {
 	HobbyGraph,
+	HobbyGraphType,
 	HobbyGraphManager,
 	NodeTypeEnum,
 	RelationshipType,
@@ -56,13 +57,13 @@ export interface HobbyTypeStats {
 
 export interface GraphSearchResult {
   node: GraphNodeTypeType;
-  relationships: GraphRelationshipType[];
+  relationships: (typeof GraphRelationshipType)[];
   connectedNodes: GraphNodeTypeType[];
 }
 
 export class HobbyGraphService {
 	private cache = new Map<string, HobbyType[]>();
-	private graphCache: HobbyGraph | null = null;
+	private graphCache: HobbyGraphType | null = null;
 	private manager: HobbyGraphManager | null = null;
 	private lastFetch = 0;
 	private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
@@ -70,7 +71,7 @@ export class HobbyGraphService {
 	/**
    * Load and parse the hobby graph configuration
    */
-	async loadHobbyGraph(): Promise<HobbyGraph> {
+	async loadHobbyGraph(): Promise<HobbyGraphType> {
 		if (this.graphCache) {
 			return this.graphCache;
 		}
@@ -90,7 +91,7 @@ export class HobbyGraphService {
 			}
 
 			// Extract validated data from the validation result
-			const validatedGraphData = (validationResult as { data?: HobbyGraph }).data || graphData;
+			const validatedGraphData = (validationResult as { data?: HobbyGraphType }).data || graphData;
 			this.graphCache = validatedGraphData;
 			this.manager = new HobbyGraphManager(validatedGraphData);
 
@@ -197,7 +198,7 @@ export class HobbyGraphService {
 			}
 
 			return details.brands
-				.map(brand => brand.properties["name"] as string)
+				.map(brand => brand.properties?.["name"] as string)
 				.filter(Boolean);
 		} catch (error) {
 			console.error(`Failed to get brands for hobby type ${hobbyTypeId}:`, error);
@@ -216,7 +217,7 @@ export class HobbyGraphService {
 			}
 
 			return details.scales
-				.map(scale => scale.properties["name"] as string)
+				.map(scale => scale.properties?.["name"] as string)
 				.filter(Boolean);
 		} catch (error) {
 			console.error(`Failed to get scales for hobby type ${hobbyTypeId}:`, error);
@@ -255,7 +256,7 @@ export class HobbyGraphService {
 
 			// Simple text search across node names and properties
 			const allNodes = nodeType
-				? this.manager.getNodesByType(nodeType)
+				? this.manager.getNodesByType(nodeType as any)
 				: graph.nodes;
 
 			const matchingNodes = allNodes.filter((node: any) => {
