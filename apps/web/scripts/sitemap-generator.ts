@@ -8,7 +8,7 @@
 import { createWriteStream, existsSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
-import { generateGraphRoutes } from "../src/utils/graph-routes-generator";
+import { generateGraphRoutes } from "./ssg-utils/graph-routes-generator";
 
 interface SitemapEntry {
 	url: string;
