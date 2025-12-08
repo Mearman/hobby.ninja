@@ -150,7 +150,7 @@ class WorkerTextProcessor {
 			queryMagnitude += qCount * qCount;
 		}
 
-		for (const tCount of textFreq) {
+		for (const [, tCount] of textFreq) {
 			textMagnitude += tCount * tCount;
 		}
 
@@ -264,12 +264,12 @@ class SearchProcessor {
 						score += seriesRelevance * fieldWeights["series"];
 					}
 
-					if (fieldWeights.description && item.metadata.description) {
+					if (fieldWeights["description"] && item.metadata["description"]) {
 						const descRelevance = WorkerTextProcessor.calculateRelevance(
 							normalizedQuery,
-							item.metadata.description,
+							item.metadata["description"],
 						);
-						score += descRelevance * fieldWeights.description;
+						score += descRelevance * fieldWeights["description"];
 					}
 				}
 			} else {
@@ -302,7 +302,7 @@ class DataAggregator {
 	): Promise<{
     aggregated: UnifiedItem[];
     conflicts: Array<{ id: string; field: string; unified: unknown; manual: unknown; catalog: unknown }>;
-    statistics: { totalUnified; manualOnly; catalogOnly; withManual; withCatalog; withBoth };
+    statistics: { totalUnified: number; manualOnly: number; catalogOnly: number; withManual: number; withCatalog: number; withBoth: number };
   }> {
 		const conflicts: Array<{ id: string; field: string; unified: unknown; manual: unknown; catalog: unknown }> = [];
 		const processedIds = new Set<string>();

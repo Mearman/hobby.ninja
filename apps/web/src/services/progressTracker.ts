@@ -299,7 +299,7 @@ export class ProgressTracker {
 
 			const classification = ErrorClassifier.classify(error as Error);
 
-			if (classification.shouldRetry && operation.retryCount < operation.config.retry.maxAttempts) {
+			if (classification.shouldRetry && operation.retryCount < operation.config?.retry?.maxAttempts) {
 				return this.retryOperation(id, error as Error);
 			}
 

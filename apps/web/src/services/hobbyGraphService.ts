@@ -197,7 +197,7 @@ export class HobbyGraphService {
 			}
 
 			return details.brands
-				.map(brand => brand.properties.name as string)
+				.map(brand => brand.properties["name"] as string)
 				.filter(Boolean);
 		} catch (error) {
 			console.error(`Failed to get brands for hobby type ${hobbyTypeId}:`, error);
@@ -216,7 +216,7 @@ export class HobbyGraphService {
 			}
 
 			return details.scales
-				.map(scale => scale.properties.name as string)
+				.map(scale => scale.properties["name"] as string)
 				.filter(Boolean);
 		} catch (error) {
 			console.error(`Failed to get scales for hobby type ${hobbyTypeId}:`, error);
@@ -246,7 +246,7 @@ export class HobbyGraphService {
 	/**
    * Search the graph for nodes and relationships
    */
-	async searchGraph(query: string, nodeType?: NodeTypeEnum): Promise<GraphSearchResult[]> {
+	async searchGraph(query: string, nodeType?: typeof NodeTypeEnum): Promise<GraphSearchResult[]> {
 		try {
 			const graph = await this.loadHobbyGraph();
 			if (!this.manager) {
@@ -258,7 +258,7 @@ export class HobbyGraphService {
 				? this.manager.getNodesByType(nodeType)
 				: graph.nodes;
 
-			const matchingNodes = allNodes.filter(node => {
+			const matchingNodes = allNodes.filter((node: any) => {
 				const name = node.properties?.name as string || "";
 				const description = node.properties?.description as string || "";
 
@@ -275,7 +275,7 @@ export class HobbyGraphService {
 				];
 
 				const connectedNodes = relationships
-					.map(rel => graph.nodes.find(n => n.id === rel.fromNode || n.id === rel.toNode))
+					.map(rel => graph.nodes.find((n: any) => n.id === rel.fromNode || n.id === rel.toNode))
 					.filter((n): n is GraphNodeTypeType => n !== undefined && n.id !== node.id)
 					.slice(0, 10); // Limit to prevent excessive results
 
