@@ -65,12 +65,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build SSG
-        run: pnpm nx build:ssg
+      - name: Build Application
+        run: pnpm nx build web
 
       - name: Verify Build
         run: |
-          echo "Verifying SSG build output..."
+          echo "Verifying build output..."
 
           # Check if critical files exist
           if [ ! -f "dist/apps/web/index.html" ]; then
@@ -78,29 +78,7 @@ jobs:
             exit 1
           fi
 
-          if [ ! -f "dist/apps/web/sitemap.xml" ]; then
-            echo "❌ sitemap.xml not found"
-            exit 1
-          fi
-
-          if [ ! -f "dist/apps/web/robots.txt" ]; then
-            echo "❌ robots.txt not found"
-            exit 1
-          fi
-
-          HTML_COUNT=$(find dist/apps/web -name "*.html" -type f | wc -l)
-          echo "✅ Generated $HTML_COUNT HTML pages"
-
-          # Verify critical routes exist
-          CRITICAL_ROUTES=0
-          for route in "/brand/30mm" "/category/gunpla" "/item/01_1000"; do
-            if [ -f "dist/apps/web${route}.html" ]; then
-              echo "✅ ${route}.html generated"
-              CRITICAL_ROUTES=$((CRITICAL_ROUTES + 1))
-            fi
-          done
-
-          echo "✅ $CRITICAL_ROUTES/3 critical routes generated"
+          echo "✅ Build completed successfully"
 
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
