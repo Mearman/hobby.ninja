@@ -71,15 +71,15 @@ export function ItemCard({
 
 	// Extract display name with fallbacks
 	const getDisplayName = useCallback(() => {
-		if (item.properties?.name) {
-			const name = item.properties.name as { ja?: string; en?: string } | string;
-			if (typeof name === "string") {
-				return name;
-			}
-			return name.en || name.ja || "Unknown";
+		const name = item.properties.name as { ja?: string; en?: string } | string | undefined;
+		if (!name) {
+			return item.id;
 		}
-		return item.id;
-	}, [item]);
+		if (typeof name === "string") {
+			return name;
+		}
+		return name.en ?? name.ja ?? "Unknown";
+	}, [item.properties.name, item.id]);
 
 	// Extract series information
 	const getSeries = useCallback(() => {
@@ -88,7 +88,7 @@ export function ItemCard({
 			if (typeof series === "string") {
 				return series;
 			}
-			return series.en || series.ja;
+			return series.en ?? series.ja;
 		}
 		return null;
 	}, [item]);
