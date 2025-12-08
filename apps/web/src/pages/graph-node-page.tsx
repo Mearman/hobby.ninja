@@ -51,7 +51,7 @@ function GraphNodeBreadcrumbs({ nodeType, nodeId, nodeData }: { nodeType: string
 			href: `/database/${nodeType}s`,
 		},
 		{
-			title: nodeData?.name?.en || nodeData?.name?.ja || nodeId,
+			title: nodeData?.name?.en ?? nodeData?.name?.ja ?? nodeId,
 			href: `/${nodeType}/${nodeId}`,
 		},
 	].map((item, index) => (
@@ -90,7 +90,7 @@ function StructuredDataScript({ data }: { data: Record<string, unknown> }) {
 function GraphNodeMeta({ nodeData, nodeType }: { nodeData: GraphNode | null; nodeType: string }) {
 	if (!nodeData) return null;
 
-	const title = nodeData.name?.en || nodeData.name?.ja || "Graph Node";
+	const title = nodeData.name?.en ?? nodeData.name?.ja ?? "Graph Node";
 	const description = `${nodeType.charAt(0).toUpperCase() + nodeType.slice(1)}: ${title}`;
 
 	// Generate structured data
@@ -99,7 +99,7 @@ function GraphNodeMeta({ nodeData, nodeType }: { nodeData: GraphNode | null; nod
 	const breadcrumbData = structuredDataGenerator.generateBreadcrumbData(
 		nodeType,
 		nodeData.id,
-		nodeData.name?.en || nodeData.name?.ja,
+		nodeData.name?.en ?? nodeData.name?.ja,
 	);
 
 	return (
@@ -138,8 +138,8 @@ export function GraphNodePage() {
 		return (
 			<Container size="lg" py="md">
 				<Title order={1}>Node Not Found</Title>
-				<Text color="red" mb="md">
-					{error || `${nodeType} with ID ${nodeId} not found`}
+				<Text c="red" mb="md">
+					{error ?? `${nodeType} with ID ${nodeId} not found`}
 				</Text>
 				<Anchor href="/">Return to Home</Anchor>
 			</Container>
@@ -162,7 +162,7 @@ export function GraphNodePage() {
 			{/* Page Header */}
 			<Stack gap="lg" mb="xl">
 				<Title order={1}>
-					{nodeData.name?.en || nodeData.name?.ja}
+					{nodeData.name?.en ?? nodeData.name?.ja}
 				</Title>
 
 				{nodeData.name?.en && nodeData.name?.ja && (
