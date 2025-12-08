@@ -91,7 +91,7 @@ export function DatabasePage(): React.ReactElement {
 				]);
 
 				setStats(statsData);
-				setRecentItems(recentData.items || []);
+				setRecentItems(recentData.items.filter((item): item is UnifiedItem => item.$type === 'unified_item'));
 				setPopularItems(popularData.items || []);
 			} catch (error_) {
 				console.error("Failed to load database data:", error_);
@@ -406,17 +406,7 @@ export function DatabasePage(): React.ReactElement {
 														</Badge>
 													)}
 												</div>
-												{item.properties?.sources?.images && item.properties.sources.images.length > 0 && (
-													<Image
-														src={item.properties.sources.images[0]}
-														alt={item.properties?.name?.en || item.properties?.name?.ja}
-														w={40}
-														h={40}
-														radius="sm"
-														fit="cover"
-													/>
-												)}
-											</Group>
+												</Group>
 										</Card>
 									))}
 								</Stack>

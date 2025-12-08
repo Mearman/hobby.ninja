@@ -498,8 +498,8 @@ export class DataService {
 						if (score > 0.1) {
 							// Convert graph item to UnifiedItem or ManualItem format
 							const convertedItem = sourceType === "items"
-								? this.convertGraphItemToUnified(graphItem)
-								: this.convertGraphToManualItem(graphItem);
+								? this.convertGraphItemToUnified(graphItem as GraphItem)
+								: this.convertGraphToManualItem(graphItem as GraphManual);
 
 							if (convertedItem) {
 								items.push({
@@ -558,22 +558,29 @@ export class DataService {
 				schemaId: "unified_item_schema_default",
 				properties: {
 					name: graphItem.name,
-					price: graphItem.price,
+					grade: this.extractGradeFromEdges(graphItem.edges) || graphItem.scale || "",
+					scale: graphItem.scale || "",
 					releaseDate: graphItem.releaseDate ? {
 						year: graphItem.releaseDate.year,
-						month: graphItem.releaseDate.month,
-						day: graphItem.releaseDate.day,
+						month: graphItem.releaseDate.month || 1,
+						day: graphItem.releaseDate.day || 1,
 						ja: graphItem.releaseDate.ja
-					} : undefined,
+					} : {
+						year: 0,
+						month: 1,
+						day: 1
+					},
+					sources: {}, // Required but empty for graph items
+					matchMethod: "exact" as const,
+					confidence: 1,
+					price: graphItem.price,
 					targetAge: graphItem.targetAge,
-					scale: graphItem.scale,
 					description: graphItem.description,
 					accessories: graphItem.accessories,
 					contents: graphItem.contents,
 					images: graphItem.images,
-					// Extract series, grade, etc. from edges
+					// Extract series from edges
 					series: this.extractSeriesFromEdges(graphItem.edges),
-					grade: this.extractGradeFromEdges(graphItem.edges),
 				},
 				metadata: {
 					createdAt: graphItem.extractedAt,
