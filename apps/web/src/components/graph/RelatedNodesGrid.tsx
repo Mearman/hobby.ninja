@@ -16,7 +16,7 @@ import {
 } from "@tabler/icons-react";
 import { Link } from "@tanstack/react-router";
 
-import type { GraphNode } from "../../utils/graph-routes-generator";
+import type { GraphNode } from "../../utils/graph-client";
 
 interface RelatedNodesGridProps {
 	nodes: GraphNode[];
