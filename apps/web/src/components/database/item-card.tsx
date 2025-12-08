@@ -557,4 +557,3 @@ export function ItemCard({
 	);
 }
 
-export { ItemCard };

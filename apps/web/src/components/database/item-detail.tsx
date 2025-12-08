@@ -372,10 +372,6 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 	const [showSharing, setShowSharing] = useState(false);
 	const [shareSuccess, setShareSuccess] = useState(false);
 
-	useEffect(() => {
-		void loadItem();
-	}, [itemId, preferSource, loadItem]);
-
 	const loadItem = useCallback(async () => {
 		setLoading(true);
 		setError(null);
@@ -421,6 +417,10 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			setLoading(false);
 		}
 	}, [itemId, preferSource]);
+
+	useEffect(() => {
+		void loadItem();
+	}, [itemId, preferSource, loadItem]);
 
 	const handleShare = () => {
 		setShowSharing(true);

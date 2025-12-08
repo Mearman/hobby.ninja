@@ -34,7 +34,7 @@ import React, { useState, useCallback, useMemo, useRef, useEffect } from "react"
 
 import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
-import ItemCard from "./item-card";
+import { ItemCard } from "./item-card";
 
 
 type ItemData = UnifiedItem | ManualItem | CatalogItem;
