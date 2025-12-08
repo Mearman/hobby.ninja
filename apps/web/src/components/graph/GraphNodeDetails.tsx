@@ -377,13 +377,15 @@ function CommonRelationships({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="md">
 			<Divider label="Relationships" labelPosition="center" />
-			{Object.entries(groupedEdges).map(([relationType, relationEdges]: [string, any[]]) => (
+			{Object.entries(groupedEdges).map(([relationType, relationEdges]) => {
+				const edges = relationEdges as any[];
+				return (
 				<Stack key={relationType} gap="xs">
 					<Text fw={600} size="sm" style={{ textTransform: 'capitalize' }}>
-						{relationType} ({relationEdges.length}):
+						{relationType} ({edges.length}):
 					</Text>
 					<List size="sm" spacing="xs">
-						{relationEdges.slice(0, 10).map((edge, index) => (
+						{edges.slice(0, 10).map((edge, index) => (
 							<List.Item key={index}>
 								{edge.node?.name?.en || edge.node?.name?.ja || edge.node?.id}
 								{edge.node?.type && (
@@ -393,14 +395,15 @@ function CommonRelationships({ node }: { node: GraphNode }) {
 								)}
 							</List.Item>
 						))}
-						{relationEdges.length > 10 && (
+						{edges.length > 10 && (
 							<Text size="xs" c="dimmed">
-								...and {relationEdges.length - 10} more
+								...and {edges.length - 10} more
 							</Text>
 						)}
 					</List>
 				</Stack>
-			))}
+			);
+			})}
 		</Stack>
 	);
 }
@@ -409,7 +412,7 @@ function CommonRelationships({ node }: { node: GraphNode }) {
  * Main component that renders appropriate details based on node type
  */
 export function GraphNodeDetails({ node }: GraphNodeDetailsProps) {
-	const IconComponent = NodeTypeIcons[node.type] || IconPackage;
+	const IconComponent = (NodeTypeIcons as any)[node.type] || IconPackage;
 
 	return (
 		<Stack gap="md">

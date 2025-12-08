@@ -436,7 +436,7 @@ export class DataService {
 						const score = this.calculateItemScore(query, item);
 						if (score > 0.1) {
 							items.push({
-								id: item.id,
+								id: item.id || item.$id || `unified-${filename}`,
 								type: "unified",
 								score,
 								highlights: {
@@ -485,7 +485,7 @@ export class DataService {
 						const score = this.calculateItemScore(query, item);
 						if (score > 0.1) {
 							items.push({
-								id: item.id,
+								id: item.id || item.$id || `manual-${filename}`,
 								type: "manual",
 								score,
 								highlights: {
@@ -534,7 +534,7 @@ export class DataService {
 						const score = this.calculateItemScore(query, item);
 						if (score > 0.1) {
 							items.push({
-								id: item.id,
+								id: item.id || item.$id || `catalog-${filename}`,
 								type: "catalog",
 								score,
 								highlights: {
@@ -912,7 +912,7 @@ export class DataService {
 				return null;
 			}
 
-			return validation.data;
+			return validation.data as UnifiedItem;
 		} catch (error) {
 			console.error(`Failed to load unified item ${filename}:`, error);
 			return null;
@@ -962,7 +962,7 @@ export class DataService {
 				return null;
 			}
 
-			return validation.data;
+			return validation.data as ManualItem;
 		} catch (error) {
 			console.error(`Failed to load manual item ${filename}:`, error);
 			return null;
@@ -1017,7 +1017,7 @@ export class DataService {
 				return null;
 			}
 
-			return validation.data;
+			return validation.data as CatalogItem;
 		} catch (error) {
 			console.error(`Failed to load catalog item ${filename}:`, error);
 			return null;
@@ -1039,17 +1039,38 @@ export class DataService {
 			item.properties?.name?.ja,
 			item.properties?.series?.en,
 			item.properties?.series?.ja,
-			item.properties?.grade,
-			item.properties?.scale,
-			item.properties?.productNumber, // For manual items
-		].filter(Boolean);
+		];
 
-		for (const field of nameFields) {
+		// Handle grade based on item type
+		if (item.$type === 'unified_item') {
+			const grade = (item as UnifiedItem).properties?.grade;
+			if (grade) nameFields.push(grade);
+		} else if (item.$type === 'manual_item') {
+			const grade = (item as ManualItem).properties?.grade;
+			if (grade) {
+				nameFields.push(grade.code, grade.family);
+			}
+		}
+
+		// Handle scale (common to all types)
+		if (item.properties?.scale) {
+			nameFields.push(item.properties.scale);
+		}
+
+		// Handle productNumber (only for manual items)
+		if (item.$type === 'manual_item') {
+			const productNumber = (item as ManualItem).properties?.productNumber;
+			if (productNumber) nameFields.push(productNumber);
+		}
+
+		const filteredFields = nameFields.filter((field): field is string => Boolean(field));
+
+		for (const field of filteredFields) {
 			score += TextProcessor.calculateRelevance(normalizedQuery, field);
 		}
 
 		// Boost exact matches
-		if (nameFields.some(field => TextProcessor.normalize(field) === normalizedQuery)) {
+		if (filteredFields.some(field => TextProcessor.normalize(field) === normalizedQuery)) {
 			score += 1;
 		}
 
@@ -1085,6 +1106,10 @@ export class DataService {
    * Apply sorting to results
    */
 	private applySorting(results: SearchResult["items"], sort: FilterOptions["sort"]): SearchResult["items"] {
+		if (!sort) {
+			return results;
+		}
+
 		return results.sort((a, b) => {
 			let comparison = 0;
 
@@ -1106,8 +1131,13 @@ export class DataService {
 					break;
 				}
 				case "price": {
-					const aPrice = a.data?.price?.amount || 0;
-					const bPrice = b.data?.price?.amount || 0;
+					// Only catalog items have price, use 0 for others
+					const aPrice = a.data.$type === 'catalog_item'
+						? (a.data as CatalogItem).properties?.price?.amount || 0
+						: 0;
+					const bPrice = b.data.$type === 'catalog_item'
+						? (b.data as CatalogItem).properties?.price?.amount || 0
+						: 0;
 					comparison = aPrice - bPrice;
 					break;
 				}
@@ -1198,13 +1228,8 @@ export class DataService {
 	}
 }
 
-// Export types
+// Export types - removed duplicate exports that are already exported above
 export type {
-	
-	ReleaseDate,
-	ManualItem,
-	CatalogItem,
-	UnifiedItem,
 	SearchResult,
 	FilterOptions,
 	FilterPreset,

@@ -60,7 +60,7 @@ const NodeTypeConfig = {
  * Individual node card component
  */
 function NodeCard({ node, currentNodeType }: { node: GraphNode; currentNodeType?: string }) {
-	const config = NodeTypeConfig[node.type];
+	const config = (NodeTypeConfig as any)[node.type];
 	const IconComponent = config.icon;
 	const displayName = node.name?.en || node.name?.ja || node.id;
 
@@ -325,7 +325,7 @@ export function RelatedNodesCompact({
 	return (
 		<Stack gap="xs">
 			{filteredNodes.map((node) => {
-				const config = NodeTypeConfig[node.type];
+				const config = (NodeTypeConfig as any)[node.type];
 				const IconComponent = config.icon;
 				const displayName = node.name?.en || node.name?.ja || node.id;
 

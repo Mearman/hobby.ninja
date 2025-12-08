@@ -214,10 +214,7 @@ export const ItemDetailPage: React.FC = () => {
 			const updated = [
 				{
 					id: item.id,
-					name: "name" in item ?
-						(typeof item.name === "string" ? item.name :
-							(item.name as any)?.ja || (item.name as any)?.en || (item.name as any)) :
-						item.title,
+					name: item.properties?.name?.ja || item.properties?.name?.en || item.id,
 					timestamp: Date.now(),
 					type: "sources" in item ? "unified" : ("metadata" in item ? "manual" : "catalog"),
 				},
@@ -266,9 +263,7 @@ export const ItemDetailPage: React.FC = () => {
 	const getItemTitle = () => {
 		if (!pageState.item) return "Loading...";
 
-		return "name" in pageState.item
-			? (pageState.item.name.ja || pageState.item.name.en || pageState.item.name)
-			: pageState.item.title;
+		return pageState.item.properties?.name?.ja || pageState.item.properties?.name?.en || pageState.item.id;
 	};
 
 	// Get item type badge
