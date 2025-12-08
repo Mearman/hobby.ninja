@@ -26,7 +26,6 @@ import {
 	IconHeart,
 	IconShare,
 	IconEye,
-	IconStar,
 	IconPhotoOff,
 	IconLink,
 } from "@tabler/icons-react";
