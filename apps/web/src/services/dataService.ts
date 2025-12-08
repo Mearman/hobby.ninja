@@ -119,7 +119,7 @@ interface FilterOptions {
     max?: number;
   };
   sort?: {
-    field: "name" | "releaseDate" | "price" | "relevance";
+    field: "name" | "releaseDate" | "price" | "relevance" | "grade";
     direction: "asc" | "desc";
   };
   dataSource?: "unified" | "manual" | "catalog";
@@ -912,7 +912,7 @@ export class DataService {
 				return null;
 			}
 
-			return validation.data as UnifiedItem;
+			return validation.data!;
 		} catch (error) {
 			console.error(`Failed to load unified item ${filename}:`, error);
 			return null;
@@ -962,7 +962,7 @@ export class DataService {
 				return null;
 			}
 
-			return validation.data as ManualItem;
+			return validation.data!;
 		} catch (error) {
 			console.error(`Failed to load manual item ${filename}:`, error);
 			return null;
@@ -1017,7 +1017,7 @@ export class DataService {
 				return null;
 			}
 
-			return validation.data as CatalogItem;
+			return validation.data!;
 		} catch (error) {
 			console.error(`Failed to load catalog item ${filename}:`, error);
 			return null;
@@ -1042,11 +1042,11 @@ export class DataService {
 		];
 
 		// Handle grade based on item type
-		if (item.$type === 'unified_item') {
-			const grade = (item as UnifiedItem).properties?.grade;
+		if (item.$type === "unified_item") {
+			const grade = (item).properties?.grade;
 			if (grade) nameFields.push(grade);
-		} else if (item.$type === 'manual_item') {
-			const grade = (item as ManualItem).properties?.grade;
+		} else if (item.$type === "manual_item") {
+			const grade = (item).properties?.grade;
 			if (grade) {
 				nameFields.push(grade.code, grade.family);
 			}
@@ -1058,8 +1058,8 @@ export class DataService {
 		}
 
 		// Handle productNumber (only for manual items)
-		if (item.$type === 'manual_item') {
-			const productNumber = (item as ManualItem).properties?.productNumber;
+		if (item.$type === "manual_item") {
+			const productNumber = (item).properties?.productNumber;
 			if (productNumber) nameFields.push(productNumber);
 		}
 
@@ -1132,11 +1132,11 @@ export class DataService {
 				}
 				case "price": {
 					// Only catalog items have price, use 0 for others
-					const aPrice = a.data.$type === 'catalog_item'
-						? (a.data as CatalogItem).properties?.price?.amount || 0
+					const aPrice = a.data.$type === "catalog_item"
+						? (a.data).properties?.price?.amount || 0
 						: 0;
-					const bPrice = b.data.$type === 'catalog_item'
-						? (b.data as CatalogItem).properties?.price?.amount || 0
+					const bPrice = b.data.$type === "catalog_item"
+						? (b.data).properties?.price?.amount || 0
 						: 0;
 					comparison = aPrice - bPrice;
 					break;
