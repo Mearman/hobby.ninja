@@ -94,11 +94,11 @@ const BYTES_IN_MB = BYTES_IN_KB * BYTES_IN_KB;
 const PERCENTAGE_MULTIPLIER = 100;
 
 // Lazy load Pako for compression
-let PakoPromise: Promise<typeof import("pako").default> | null = null;
+let PakoPromise: Promise<any> | null = null;
 
-const loadPako = async (): Promise<typeof import("pako").default> => {
+const loadPako = async (): Promise<any> => {
 	PakoPromise ??= import("pako").then((module) => module.default);
-	return PakoPromise!;
+	return PakoPromise;
 };
 
 // Convert items to CSV format
@@ -258,7 +258,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 					.filter((item) => item.thumbnail)
 					.map((item) => ({
 						id: item.id,
-						thumbnail: item.thumbnail,
+						thumbnail: item.thumbnail as string,
 					}));
 			}
 
