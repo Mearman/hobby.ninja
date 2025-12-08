@@ -5,7 +5,7 @@
  * Supports filtering, sorting, and type-aware display for different node relationships.
  */
 
-import { Grid, Card, Text, Group, Badge, Anchor, Avatar, SimpleGrid, Stack, Title } from "@mantine/core";
+import { Card, Text, Group, Badge, Anchor, Avatar, SimpleGrid, Stack, Title } from "@mantine/core";
 import {
 	IconPackage,
 	IconTag,
@@ -24,6 +24,11 @@ interface RelatedNodesGridProps {
 	maxVisible?: number;
 	showAll?: boolean;
 }
+
+// Constants for magic numbers
+const DEFAULT_MAX_VISIBLE = 12;
+const GROUP_THRESHOLD = 6;
+const DEFAULT_COMPACT_MAX_VISIBLE = 5;
 
 /**
  * Icon and color mapping for different node types
@@ -60,9 +65,10 @@ const NodeTypeConfig = {
  * Individual node card component
  */
 function NodeCard({ node, currentNodeType }: { node: GraphNode; currentNodeType?: string }) {
-	const config = (NodeTypeConfig as any)[node.type];
+	const configKey = node.type as keyof typeof NodeTypeConfig;
+	const config = NodeTypeConfig[configKey];
 	const IconComponent = config.icon;
-	const displayName = node.name?.en || node.name?.ja || node.id;
+	const displayName = node.name?.en ?? node.name?.ja ?? node.id ?? "Unknown";
 
 	return (
 		<Card
@@ -148,11 +154,11 @@ function NodeCard({ node, currentNodeType }: { node: GraphNode; currentNodeType?
 function EmptyState() {
 	return (
 		<Stack align="center" py="xl">
-			<Text color="dimmed" size="sm">
+			<Text c="dimmed" size="sm">
 				No related nodes found
 			</Text>
-			<Text color="dimmed" size="xs">
-				This node doesn't have any connections in the graph
+			<Text c="dimmed" size="xs">
+				This node doesn&apos;t have any connections in the graph
 			</Text>
 		</Stack>
 	);
@@ -172,7 +178,7 @@ function filterAndSortNodes(
 		: nodes;
 
 	// Sort by priority: different types first, then by name
-	const sortedNodes = filteredNodes.sort((a, b) => {
+	const sortedNodes = filteredNodes.toSorted((a, b) => {
 		// Different types get priority
 		if (currentNodeType) {
 			const aDifferentType = a.type === currentNodeType ? 1 : 0;
@@ -187,8 +193,8 @@ function filterAndSortNodes(
 		if (typeCompare !== 0) return typeCompare;
 
 		// Finally sort by display name
-		const aName = a.name?.en || a.name?.ja || a.id;
-		const bName = b.name?.en || b.name?.ja || b.id;
+		const aName = a.name?.en ?? a.name?.ja ?? a.id;
+		const bName = b.name?.en ?? b.name?.ja ?? b.id;
 		return aName.localeCompare(bName);
 	});
 
@@ -200,13 +206,14 @@ function filterAndSortNodes(
  * Group nodes by type for organized display
  */
 function groupNodesByType(nodes: GraphNode[]): Record<string, GraphNode[]> {
-	return nodes.reduce<Record<string, GraphNode[]>>((groups, node) => {
+	const groups: Record<string, GraphNode[]> = {};
+	for (const node of nodes) {
 		if (!groups[node.type]) {
 			groups[node.type] = [];
 		}
 		groups[node.type].push(node);
-		return groups;
-	}, {});
+	}
+	return groups;
 }
 
 /**
@@ -215,7 +222,7 @@ function groupNodesByType(nodes: GraphNode[]): Record<string, GraphNode[]> {
 export function RelatedNodesGrid({
 	nodes,
 	currentNodeType,
-	maxVisible = 12,
+	maxVisible = DEFAULT_MAX_VISIBLE,
 	showAll = false,
 }: RelatedNodesGridProps) {
 	const filteredNodes = filterAndSortNodes(nodes, currentNodeType, showAll ? undefined : maxVisible);
@@ -226,7 +233,7 @@ export function RelatedNodesGrid({
 	}
 
 	// Decide whether to show grouped or flat view
-	const shouldGroup = filteredNodes.length > 6 && !showAll;
+	const shouldGroup = filteredNodes.length > GROUP_THRESHOLD && !showAll;
 
 	if (shouldGroup) {
 		const groupedNodes = groupNodesByType(filteredNodes);
@@ -314,7 +321,7 @@ export function RelatedNodesGrid({
 export function RelatedNodesCompact({
 	nodes,
 	currentNodeType,
-	maxVisible = 5,
+	maxVisible = DEFAULT_COMPACT_MAX_VISIBLE,
 }: Omit<RelatedNodesGridProps, "showAll">) {
 	const filteredNodes = filterAndSortNodes(nodes, currentNodeType, maxVisible);
 
@@ -325,9 +332,10 @@ export function RelatedNodesCompact({
 	return (
 		<Stack gap="xs">
 			{filteredNodes.map((node) => {
-				const config = (NodeTypeConfig as any)[node.type];
+				const configKey = node.type as keyof typeof NodeTypeConfig;
+				const config = NodeTypeConfig[configKey];
 				const IconComponent = config.icon;
-				const displayName = node.name?.en || node.name?.ja || node.id;
+				const displayName = node.name?.en ?? node.name?.ja ?? node.id ?? "Unknown";
 
 				return (
 					<Anchor
