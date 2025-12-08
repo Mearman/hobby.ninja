@@ -27,7 +27,7 @@ test.describe('Application Routes and Navigation', () => {
 
   test.describe('Core Routes', () => {
     test('home page loads and renders correctly', async ({ page }) => {
-      await page.goto('/');
+      await page.goto('http://localhost:3000/');
       await waitForReactApp(page);
 
       // Check page title
