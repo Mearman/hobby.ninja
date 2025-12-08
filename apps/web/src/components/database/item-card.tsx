@@ -128,10 +128,7 @@ export function ItemCard({
 	// Extract release date
 	const getReleaseDate = useCallback(() => {
 		const date = item.properties.releaseDate;
-		if (date && typeof date === "object" && "ja" in date) {
-			if (date.ja) {
-				return date.ja;
-			}
+		if (typeof date === "object" && date && "ja" in date) {
 			const year = date.year;
 			const month = date.month;
 			const day = date.day;
