@@ -5,7 +5,7 @@
  * Implements schema.org markup for products, brands, and series
  */
 
-import { GraphNode } from "../src/utils/graph-routes-generator";
+import { GraphNode } from "../src/utils/graph-client";
 
 export interface StructuredData {
 	"@context": string;
