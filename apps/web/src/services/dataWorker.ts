@@ -248,20 +248,20 @@ class SearchProcessor {
 
 				// Apply field weights
 				if (fieldWeights && item.metadata) {
-					if (fieldWeights['name'] && item.metadata['name']) {
+					if (fieldWeights["name"] && item.metadata["name"]) {
 						const nameRelevance = WorkerTextProcessor.calculateRelevance(
 							normalizedQuery,
-							item.metadata['name'],
+							item.metadata["name"],
 						);
-						score += nameRelevance * fieldWeights['name'];
+						score += nameRelevance * fieldWeights["name"];
 					}
 
-					if (fieldWeights['series'] && item.metadata['series']) {
+					if (fieldWeights["series"] && item.metadata["series"]) {
 						const seriesRelevance = WorkerTextProcessor.calculateRelevance(
 							normalizedQuery,
-							item.metadata['series'],
+							item.metadata["series"],
 						);
-						score += seriesRelevance * fieldWeights['series'];
+						score += seriesRelevance * fieldWeights["series"];
 					}
 
 					if (fieldWeights.description && item.metadata.description) {
