@@ -443,7 +443,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			const url = URL.createObjectURL(blob);
 			const link = document.createElement("a");
 			link.href = url;
-			link.download = `${item.properties.name?.ja ?? item.properties.name?.en ?? "item"}-${itemId}.json`;
+			link.download = `${item.properties.name?.ja || item.properties.name?.en || "item"}-${itemId}.json`;
 			document.body.append(link);
 			link.click();
 			link.remove();
