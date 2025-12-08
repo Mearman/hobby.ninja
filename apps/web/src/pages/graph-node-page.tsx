@@ -8,9 +8,9 @@
 import { Title, Text, Container, Breadcrumbs, Anchor, Group, Stack, Card, Grid } from "@mantine/core";
 import { Link, useLoaderData } from "@tanstack/react-router";
 
+import { StructuredDataGenerator } from "../../scripts/structured-data-generator";
 import { GraphNodeDetails } from "../components/graph/GraphNodeDetails";
 import { RelatedNodesGrid } from "../components/graph/RelatedNodesGrid";
-import { StructuredDataGenerator } from "../../scripts/structured-data-generator";
 import type { GraphNode } from "../utils/graph-routes-generator";
 
 interface GraphNodePageLoader {
@@ -72,7 +72,7 @@ function GraphNodeBreadcrumbs({ nodeType, nodeId, nodeData }: { nodeType: string
  */
 function StructuredDataScript({ data }: { data: Record<string, unknown> }) {
 	// Sanitize structured data to ensure no script injection
-	const sanitizedData = JSON.stringify(data).replace(/</g, "\\u003c").replace(/>/g, "\\u003e");
+	const sanitizedData = JSON.stringify(data).replaceAll("<", String.raw`\u003c`).replaceAll(">", String.raw`\u003e`);
 
 	return (
 		<script
@@ -99,7 +99,7 @@ function GraphNodeMeta({ nodeData, nodeType }: { nodeData: GraphNode | null; nod
 	const breadcrumbData = structuredDataGenerator.generateBreadcrumbData(
 		nodeType,
 		nodeData.id,
-		nodeData.name?.en || nodeData.name?.ja
+		nodeData.name?.en || nodeData.name?.ja,
 	);
 
 	return (
