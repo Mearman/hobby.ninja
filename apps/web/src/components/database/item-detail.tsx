@@ -134,23 +134,6 @@ interface ExtendedItemProperties {
 	matchStage?: number;
 }
 
-// Extended unified item properties
-interface UnifiedItemProperties extends ExtendedItemProperties {
-	sources?: {
-		catalog?: {
-			id: string;
-			confidence: number;
-			linkedAt: string;
-		};
-		manual?: {
-			id: string;
-			confidence: number;
-			linkedAt: string;
-			productNumber?: string;
-			pdfUrl?: string;
-		};
-	};
-}
 
 interface ImageGalleryProps {
   images: string[];
@@ -476,7 +459,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	// Helper function to get item name safely
 	const getItemName = (): string => {
-		if (!item.properties?.name) return "Unknown Item";
+		if (!item || !item.properties?.name) return "Unknown Item";
 
 		if (typeof item.properties.name === "string") {
 			return item.properties.name;
@@ -487,7 +470,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	// Helper function to get item properties safely
 	const getCommonProperty = (propertyName: "grade" | "scale"): string | null => {
-		if (!item.properties) return null;
+		if (!item || !item.properties) return null;
 
 		const props = item.properties as ExtendedItemProperties;
 		const value = props[propertyName];
@@ -499,7 +482,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	// Helper function to get series property (object type)
 	const getSeriesProperty = (): { ja?: string; en?: string } | string | null => {
-		if (!item.properties) return null;
+		if (!item || !item.properties) return null;
 
 		const props = item.properties as ExtendedItemProperties;
 		return props.series ?? null;
@@ -517,7 +500,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	// Helper function to get match method safely
 	const getMatchMethod = (): "exact" | "fuzzy" | "manual" | null => {
-		if (!item.properties) return null;
+		if (!item || !item.properties) return null;
 
 		const props = item.properties as ExtendedItemProperties;
 		return props.matchMethod ?? null;
@@ -525,7 +508,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	// Helper function to get match stage safely
 	const getMatchStage = (): number | null => {
-		if (!item.properties) return null;
+		if (!item || !item.properties) return null;
 
 		const props = item.properties as ExtendedItemProperties;
 		return props.matchStage ?? null;

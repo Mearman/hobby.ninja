@@ -33,6 +33,17 @@ import React, { useState, useRef, useCallback } from "react";
 
 import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
+// Constants for magic numbers
+const COMPACT_HEIGHT = 140;
+const THUMBNAIL_HEIGHT = 80;
+const SKELETON_HEIGHT = 200;
+const CONFIDENCE_THRESHOLD_HIGH = 4;
+const CONFIDENCE_THRESHOLD_MEDIUM = 2;
+const ICON_SIZE_XS = 10;
+const ICON_SIZE_SM = 12;
+const SELECTED_INDICATOR_SIZE = 20;
+const OVERLAY_OFFSET = 8;
+const REM_SIZE = 32;
 
 interface ItemCardProps {
   /** Item data from any source */
@@ -102,7 +113,7 @@ export function ItemCard({
 		}
 		if (itemType === "manual") {
 			const properties = item.properties as ManualItem["properties"];
-			if ("grade" in properties && properties.grade && "code" in properties.grade) {
+			if ("grade" in properties && "code" in properties.grade) {
 				return properties.grade.code;
 			}
 		}
@@ -118,22 +129,26 @@ export function ItemCard({
 	const getReleaseDate = useCallback(() => {
 		const date = item.properties.releaseDate;
 		if (date && typeof date === "object") {
-				if ("ja" in date && date.ja) {
-					return date.ja;
+			if ("ja" in date && date.ja) {
+				return date.ja;
+			}
+			if ("year" in date) {
+				const year = date.year;
+				const month = date.month;
+				const day = date.day;
+				if (month && day) {
+					return `${year}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}`;
 				}
-				if ("year" in date) {
-					const year = date.year;
-					const month = date.month;
-					const day = date.day;
-					if (month && day) {
-						return `${year}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}`;
-					}
-					return year.toString();
-				}
+				return year.toString();
 			}
 		}
 		return null;
 	}, [item]);
+
+	// Get unique item ID - moved before getImageSrc to fix circular dependency
+	const getItemId = useCallback((itemData: UnifiedItem | ManualItem | CatalogItem): string => {
+		return itemData.id ?? itemData._id ?? itemData.$id ?? "unknown";
+	}, []);
 
 	// Get image source
 	const getImageSrc = useCallback(() => {
@@ -198,11 +213,6 @@ export function ItemCard({
 		};
 	}, [item, itemType]);
 
-	// Get unique item ID
-	const getItemId = useCallback((itemData: UnifiedItem | ManualItem | CatalogItem): string => {
-		return itemData.id ?? itemData._id ?? itemData.$id ?? "unknown";
-	}, []);
-
 	// Image loading handlers
 	const handleImageLoad = useCallback(() => {
 		setImageLoaded(true);
@@ -236,14 +246,14 @@ export function ItemCard({
 	const handleShare = useCallback((e: React.MouseEvent) => {
 		e.stopPropagation();
 		if (navigator.share) {
-			navigator.share({
+			void navigator.share({
 				title: getDisplayName(),
-				text: `Check out this model: ${getDisplayName()}`,
+				text: `Check out this model: ${getDisplayName() ?? "unknown model"}`,
 				url: globalThis.location.href,
 			});
 		} else {
 			// Fallback: copy to clipboard
-			navigator.clipboard.writeText(globalThis.location.href);
+			void navigator.clipboard.writeText(globalThis.location.href);
 		}
 	}, [getDisplayName]);
 
@@ -255,10 +265,10 @@ export function ItemCard({
 		let color = "gray";
 		let label = "Unknown";
 
-		if (confidence >= 4) {
+		if (confidence >= CONFIDENCE_THRESHOLD_HIGH) {
 			color = "green";
 			label = "High";
-		} else if (confidence >= 2) {
+		} else if (confidence >= CONFIDENCE_THRESHOLD_MEDIUM) {
 			color = "yellow";
 			label = "Medium";
 		} else {
@@ -281,14 +291,14 @@ export function ItemCard({
 			<Group gap={4}>
 				{hasCatalog && (
 					<Tooltip label="Catalog data available">
-						<Badge size="xs" color="blue" variant="light" leftSection={<IconLink size={10} />}>
+						<Badge size="xs" color="blue" variant="light" leftSection={<IconLink size={ICON_SIZE_XS} />}>
               Cat
 						</Badge>
 					</Tooltip>
 				)}
 				{hasManual && (
 					<Tooltip label="Manual data available">
-						<Badge size="xs" color="orange" variant="light" leftSection={<IconLink size={10} />}>
+						<Badge size="xs" color="orange" variant="light" leftSection={<IconLink size={ICON_SIZE_XS} />}>
               Man
 						</Badge>
 					</Tooltip>
@@ -305,10 +315,10 @@ export function ItemCard({
 				padding="sm"
 				radius="md"
 				withBorder={true}
-				h={compact ? 140 : "100%"}
+				h={compact ? COMPACT_HEIGHT : "100%"}
 			>
 				<Stack gap="xs">
-					<Skeleton height={compact ? 80 : 200} radius="md" />
+					<Skeleton height={compact ? THUMBNAIL_HEIGHT : SKELETON_HEIGHT} radius="md" />
 					<Skeleton height={16} width="70%" radius="sm" />
 					<Skeleton height={12} width="40%" radius="sm" />
 					<Group gap="xs">
@@ -326,10 +336,9 @@ export function ItemCard({
 	const scale = getScale();
 	const releaseDate = getReleaseDate();
 	const imageSrc = getImageSrc();
-	const { hasCatalog, hasManual } = getSourceIndicators();
 
 	const isListMode = viewMode === "list";
-	const cardHeight = isListMode ? "auto" : (compact ? 140 : "100%");
+	const cardHeight = isListMode ? "auto" : (compact ? COMPACT_HEIGHT : "100%");
 
 	return (
 		<Card
@@ -347,7 +356,7 @@ export function ItemCard({
 			onClick={handleCardClick}
 			tabIndex={0}
 			role="button"
-			aria-label={`View details for ${displayName}`}
+			aria-label={`View details for ${displayName ?? "unknown item"}`}
 			onKeyDown={(e) => {
 				if (e.key === "Enter" || e.key === " ") {
 					e.preventDefault();
@@ -357,7 +366,7 @@ export function ItemCard({
 		>
 			<Stack gap={compact ? "xs" : "sm"}>
 				{/* Image Section */}
-				<Box pos="relative" h={isListMode ? 80 : (compact ? 80 : 200)}>
+				<Box pos="relative" h={isListMode ? THUMBNAIL_HEIGHT : (compact ? THUMBNAIL_HEIGHT : SKELETON_HEIGHT)}>
 					{!imageSrc || imageError ? (
 						<Flex
 							align="center"
@@ -369,7 +378,7 @@ export function ItemCard({
 								borderRadius: theme.radius.md,
 							}}
 						>
-							<IconPhotoOff size={rem(32)} color={theme.colors.gray[4]} />
+							<IconPhotoOff size={rem(REM_SIZE)} color={theme.colors.gray[4]} />
 						</Flex>
 					) : (
 						<Image
@@ -409,8 +418,8 @@ export function ItemCard({
 					{hovered && (
 						<Group
 							pos="absolute"
-							top={8}
-							right={8}
+							top={OVERLAY_OFFSET}
+							right={OVERLAY_OFFSET}
 							gap={4}
 							style={{ zIndex: 2 }}
 						>
@@ -422,10 +431,10 @@ export function ItemCard({
 					{selected && (
 						<Box
 							pos="absolute"
-							top={8}
-							left={8}
-							w={20}
-							h={20}
+							top={OVERLAY_OFFSET}
+							left={OVERLAY_OFFSET}
+							w={SELECTED_INDICATOR_SIZE}
+							h={SELECTED_INDICATOR_SIZE}
 							bg="blue.6"
 							style={{
 								borderRadius: "50%",
@@ -433,11 +442,11 @@ export function ItemCard({
 								alignItems: "center",
 								justifyContent: "center",
 								color: "white",
-								fontSize: "12px",
+								fontSize: `${ICON_SIZE_SM}px`,
 								fontWeight: "bold",
 							}}
 						>
-							<IconCheck size={12} />
+							<IconCheck size={ICON_SIZE_SM} />
 						</Box>
 					)}
 				</Box>
@@ -501,8 +510,8 @@ export function ItemCard({
 				{hovered && (
 					<Group
 						pos={isListMode ? "static" : "absolute"}
-						bottom={isListMode ? "auto" : 8}
-						right={isListMode ? "auto" : 8}
+						bottom={isListMode ? "auto" : OVERLAY_OFFSET}
+						right={isListMode ? "auto" : OVERLAY_OFFSET}
 						gap={4}
 						style={{
 							...(isListMode ? {} : { zIndex: 2 }),
@@ -516,7 +525,7 @@ export function ItemCard({
 									color="blue"
 									onClick={handleSelectToggle}
 								>
-									<IconEye size={12} />
+									<IconEye size={ICON_SIZE_SM} />
 								</ActionIcon>
 							</Tooltip>
 						)}
@@ -528,7 +537,7 @@ export function ItemCard({
 								color={isFavorite ? "red" : "gray"}
 								onClick={handleFavoriteToggle}
 							>
-								<IconHeart size={12} />
+								<IconHeart size={ICON_SIZE_SM} />
 							</ActionIcon>
 						</Tooltip>
 
@@ -538,7 +547,7 @@ export function ItemCard({
 								variant="light"
 								onClick={handleShare}
 							>
-								<IconShare size={12} />
+								<IconShare size={ICON_SIZE_SM} />
 							</ActionIcon>
 						</Tooltip>
 					</Group>
