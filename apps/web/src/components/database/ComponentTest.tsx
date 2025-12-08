@@ -90,7 +90,7 @@ export function ComponentTest() {
 								item={item}
 								itemType={getItemType(item)}
 								compact={false}
-								selected={selectedItems.has(item.id || '')}
+								selected={selectedItems.has(item.id || "")}
 								onSelect={handleSelectionChange ? (id, selected) => {
 									const newSelection = new Set(selectedItems);
 									if (selected) {

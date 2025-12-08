@@ -427,7 +427,7 @@ export function AdvancedFilters({
 					</Card>
 
 					{/* Filter options */}
-					<Accordion variant="separated" multiple defaultValue={["basic", "dates", "pricing"]}>
+					<Accordion variant="separated" multiple={true} defaultValue={["basic", "dates", "pricing"]}>
 						{/* Basic filters */}
 						<Accordion.Item value="basic">
 							<Accordion.Control icon={<IconFilter size={16} />}>
@@ -499,7 +499,7 @@ export function AdvancedFilters({
 											onChange={(value) => { handleFilterChange({
 												releaseDateRange: {
 													...localFilters.releaseDateRange,
-													start: typeof value === 'number' ? value : value ? parseInt(value, 10) || undefined : undefined,
+													start: typeof value === "number" ? value : value ? Number.parseInt(value, 10) || undefined : undefined,
 												},
 											}); }}
 										/>
@@ -514,7 +514,7 @@ export function AdvancedFilters({
 											onChange={(value) => { handleFilterChange({
 												releaseDateRange: {
 													...localFilters.releaseDateRange,
-													end: typeof value === 'number' ? value : value ? parseInt(value, 10) || undefined : undefined,
+													end: typeof value === "number" ? value : value ? Number.parseInt(value, 10) || undefined : undefined,
 												},
 											}); }}
 										/>
@@ -563,7 +563,7 @@ export function AdvancedFilters({
 											onChange={(value) => { handleFilterChange({
 												priceRange: {
 													...localFilters.priceRange,
-													min: typeof value === 'number' ? value : value ? parseInt(value, 10) || undefined : undefined,
+													min: typeof value === "number" ? value : value ? Number.parseInt(value, 10) || undefined : undefined,
 												},
 											}); }}
 										/>
@@ -575,7 +575,7 @@ export function AdvancedFilters({
 											onChange={(value) => { handleFilterChange({
 												priceRange: {
 													...localFilters.priceRange,
-													max: typeof value === 'number' ? value : value ? parseInt(value, 10) || undefined : undefined,
+													max: typeof value === "number" ? value : value ? Number.parseInt(value, 10) || undefined : undefined,
 												},
 											}); }}
 										/>
