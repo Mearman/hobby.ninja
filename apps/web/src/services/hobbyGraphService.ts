@@ -55,9 +55,9 @@ export interface HobbyTypeStats {
 }
 
 export interface GraphSearchResult {
-  node: GraphNodeType;
+  node: GraphNodeTypeType;
   relationships: GraphRelationshipType[];
-  connectedNodes: GraphNodeType[];
+  connectedNodes: GraphNodeTypeType[];
 }
 
 export class HobbyGraphService {
@@ -276,7 +276,7 @@ export class HobbyGraphService {
 
 				const connectedNodes = relationships
 					.map(rel => graph.nodes.find(n => n.id === rel.fromNode || n.id === rel.toNode))
-					.filter((n): n is GraphNodeType => n !== undefined && n.id !== node.id)
+					.filter((n): n is GraphNodeTypeType => n !== undefined && n.id !== node.id)
 					.slice(0, 10); // Limit to prevent excessive results
 
 				results.push({
@@ -296,10 +296,10 @@ export class HobbyGraphService {
 	/**
    * Get all brands across all hobby types
    */
-	async getAllBrands(): Promise<GraphNodeType[]> {
+	async getAllBrands(): Promise<GraphNodeTypeType[]> {
 		try {
 			const graph = await this.loadHobbyGraph();
-			return graph.nodes.filter((node: GraphNodeType) => node.type === "brand");
+			return graph.nodes.filter((node: GraphNodeTypeType) => node.type === "brand");
 		} catch (error) {
 			console.error("Failed to get all brands:", error);
 			return [];
@@ -309,10 +309,10 @@ export class HobbyGraphService {
 	/**
    * Get all scales across all hobby types
    */
-	async getAllScales(): Promise<GraphNodeType[]> {
+	async getAllScales(): Promise<GraphNodeTypeType[]> {
 		try {
 			const graph = await this.loadHobbyGraph();
-			return graph.nodes.filter((node: GraphNodeType) => node.type === "scale");
+			return graph.nodes.filter((node: GraphNodeTypeType) => node.type === "scale");
 		} catch (error) {
 			console.error("Failed to get all scales:", error);
 			return [];
@@ -382,13 +382,13 @@ export class HobbyGraphService {
 			.map(fieldNode => this.convertGraphNodeToField(fieldNode));
 
 		// Safely extract properties with proper type casting
-		const name = typeof properties['name'] === 'string' ? properties['name'] : "Unknown";
-		const description = typeof properties['description'] === 'string' ? properties['description'] : "";
-		const icon = typeof properties['icon'] === 'string' ? properties['icon'] : "📦";
-		const color = typeof properties['color'] === 'string' ? properties['color'] : "gray";
-		const isActive = typeof properties['isActive'] === 'boolean' ? properties['isActive'] : true;
-		const createdAt = typeof properties['createdAt'] === 'string' ? properties['createdAt'] : new Date().toISOString();
-		const updatedAt = typeof properties['updatedAt'] === 'string' ? properties['updatedAt'] : new Date().toISOString();
+		const name = typeof properties["name"] === "string" ? properties["name"] : "Unknown";
+		const description = typeof properties["description"] === "string" ? properties["description"] : "";
+		const icon = typeof properties["icon"] === "string" ? properties["icon"] : "📦";
+		const color = typeof properties["color"] === "string" ? properties["color"] : "gray";
+		const isActive = typeof properties["isActive"] === "boolean" ? properties["isActive"] : true;
+		const createdAt = typeof properties["createdAt"] === "string" ? properties["createdAt"] : new Date().toISOString();
+		const updatedAt = typeof properties["updatedAt"] === "string" ? properties["updatedAt"] : new Date().toISOString();
 
 		return {
 			id: node.id.replace("hobby_", ""),
@@ -414,21 +414,21 @@ export class HobbyGraphService {
 		const properties = fieldNode.properties || {};
 
 		// Safely extract properties with proper type casting
-		const name = typeof properties['name'] === 'string' ? properties['name'] : "Unknown";
-		const fieldType = typeof properties['fieldType'] === 'string' ? properties['fieldType'] : "text";
-		const required = typeof properties['required'] === 'boolean' ? properties['required'] : false;
-		const searchable = typeof properties['searchable'] === 'boolean' ? properties['searchable'] : false;
-		const filterable = typeof properties['filterable'] === 'boolean' ? properties['filterable'] : false;
-		const displayInList = typeof properties['displayInList'] === 'boolean' ? properties['displayInList'] : true;
-		const displayInDetail = typeof properties['displayInDetail'] === 'boolean' ? properties['displayInDetail'] : true;
-		const order = typeof properties['order'] === 'number' ? properties['order'] : 0;
-		const description = typeof properties['description'] === 'string' ? properties['description'] : undefined;
+		const name = typeof properties["name"] === "string" ? properties["name"] : "Unknown";
+		const fieldType = typeof properties["fieldType"] === "string" ? properties["fieldType"] : "text";
+		const required = typeof properties["required"] === "boolean" ? properties["required"] : false;
+		const searchable = typeof properties["searchable"] === "boolean" ? properties["searchable"] : false;
+		const filterable = typeof properties["filterable"] === "boolean" ? properties["filterable"] : false;
+		const displayInList = typeof properties["displayInList"] === "boolean" ? properties["displayInList"] : true;
+		const displayInDetail = typeof properties["displayInDetail"] === "boolean" ? properties["displayInDetail"] : true;
+		const order = typeof properties["order"] === "number" ? properties["order"] : 0;
+		const description = typeof properties["description"] === "string" ? properties["description"] : undefined;
 
 		return {
 			id: fieldNode.id,
 			name,
 			key: fieldNode.id,
-			type: fieldType as FieldConfig['type'],
+			type: fieldType as FieldConfig["type"],
 			required,
 			searchable,
 			filterable,

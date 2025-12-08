@@ -42,7 +42,7 @@ import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from
 import { ItemCard } from "./ItemCard";
 
 // Types for related items
-interface RelatedItem extends Partial<UnifiedItem | ManualItem | CatalogItem> {
+interface RelatedItem {
   id: string;
   type: "unified" | "manual" | "catalog";
   name: string;
@@ -554,7 +554,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 								<Tabs.Tab
 									key={tab.id}
 									value={tab.id}
-									leftSection={'icon' in tab ? tab.icon : undefined}
+									leftSection={"icon" in tab ? tab.icon : undefined}
 									rightSection={
 										<Badge size="xs" variant="light">
 											{tab.count}

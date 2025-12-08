@@ -92,7 +92,7 @@ export async function getRelatedNodes(node: GraphNode): Promise<GraphNode[]> {
 
 	try {
 		// Extract relationships from node data
-		const edges = node.data.edges || [];
+		const edges = node.data["edges"] || [];
 
 		for (const edge of edges) {
 			if (edge.node?.type && edge.node.id) {
