@@ -7,6 +7,7 @@ import {
   CategoryNode,
   SeriesNode,
   ManualNode,
+  LocalizedDescriptionSchema,
   isItemNode,
   isBrandNode,
   isCategoryNode,
