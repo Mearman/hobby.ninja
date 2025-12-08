@@ -128,19 +128,17 @@ export function ItemCard({
 	// Extract release date
 	const getReleaseDate = useCallback(() => {
 		const date = item.properties.releaseDate;
-		if (date && typeof date === "object") {
-			if ("ja" in date && date.ja) {
+		if (date && typeof date === "object" && "ja" in date) {
+			if (date.ja) {
 				return date.ja;
 			}
-			if ("year" in date) {
-				const year = date.year;
-				const month = date.month;
-				const day = date.day;
-				if (month && day) {
-					return `${year}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}`;
-				}
-				return year.toString();
+			const year = date.year;
+			const month = date.month;
+			const day = date.day;
+			if (month && day) {
+				return `${year}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}`;
 			}
+			return year.toString();
 		}
 		return null;
 	}, [item]);
@@ -236,7 +234,7 @@ export function ItemCard({
 		if (onSelect) {
 			onSelect(getItemId(item), !selected);
 		}
-	}, [onSelect, selected, item]);
+	}, [onSelect, selected, item, getItemId]);
 
 	const handleFavoriteToggle = useCallback((e: React.MouseEvent) => {
 		e.stopPropagation();
@@ -245,16 +243,18 @@ export function ItemCard({
 
 	const handleShare = useCallback((e: React.MouseEvent) => {
 		e.stopPropagation();
-		if (navigator.share) {
-			void navigator.share({
-				title: getDisplayName(),
-				text: `Check out this model: ${getDisplayName() ?? "unknown model"}`,
-				url: globalThis.location.href,
-			});
-		} else {
-			// Fallback: copy to clipboard
-			void navigator.clipboard.writeText(globalThis.location.href);
-		}
+		void (async () => {
+			if (navigator.share) {
+				await navigator.share({
+					title: getDisplayName(),
+					text: `Check out this model: ${getDisplayName() ?? "unknown model"}`,
+					url: globalThis.location.href,
+				});
+			} else {
+				// Fallback: copy to clipboard
+				await navigator.clipboard.writeText(globalThis.location.href);
+			}
+		})();
 	}, [getDisplayName]);
 
 	// Render confidence badge
@@ -557,4 +557,4 @@ export function ItemCard({
 	);
 }
 
-export default ItemCard;
+export { ItemCard };
