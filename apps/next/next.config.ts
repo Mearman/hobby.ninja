@@ -1,5 +1,8 @@
 import type { NextConfig } from 'next';
 
+// Import Vanilla Extract plugin
+import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
+
 const nextConfig: NextConfig = {
   // Enable static export for GitHub Pages deployment
   output: 'export',
@@ -21,15 +24,42 @@ const nextConfig: NextConfig = {
   // Use src directory
   pageExtensions: ['ts', 'tsx', 'js', 'jsx'],
 
-  // Custom webpack configuration for handling graph data
-  webpack: (config, { isServer }) => {
-    // Add custom rules if needed for processing graph data
-    return config;
+  // Transpile Vanilla Extract packages (required for Next.js 15)
+  transpilePackages: ['@vanilla-extract'],
+
+  // Configure experimental features for Mantine
+  experimental: {
+    optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   },
 
   // Enable strict mode for better error detection
   reactStrictMode: true,
 
-  };
+  // Additional webpack configuration for Vanilla Extract (if needed)
+  webpack: (config, { isServer }) => {
+    // Add CSS file extension alias
+    config.resolve.extensionAlias = {
+      '.css': ['.css.ts', '.css'],
+      ...config.resolve.extensionAlias,
+    };
 
-export default nextConfig;
+    // Add optimization for Vanilla Extract chunks
+    config.optimization.splitChunks = {
+      ...config.optimization.splitChunks,
+      cacheGroups: {
+        vanilla: {
+          test: /[\\/]node_modules[\\/]@vanilla-extract[\\/]/,
+          name: 'vanilla',
+          chunks: 'all',
+        },
+      },
+    };
+
+    return config;
+  },
+};
+
+// Create Vanilla Extract plugin instance
+const withVanillaExtract = createVanillaExtractPlugin();
+
+export default withVanillaExtract(nextConfig);
