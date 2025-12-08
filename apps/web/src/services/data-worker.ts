@@ -12,6 +12,19 @@ import type {
 	CatalogItem,
 } from "./dataService";
 
+// Constants for magic numbers
+const SEARCH_BATCH_SIZE = 1000;
+const AGGREGATION_BATCH_SIZE = 500;
+const STATISTICS_BATCH_SIZE = 1000;
+const YIELD_INTERVAL_MULTIPLIER = 5;
+const MIN_TERM_LENGTH = 2;
+const EXACT_MATCH_BONUS = 0.3;
+const DENSITY_BONUS_MAX = 0.2;
+const MIN_SCORE_THRESHOLD = 0.1;
+const POPULAR_TERM_BONUS = 0.3;
+const HIGH_CONFIDENCE_THRESHOLD = 4;
+const MEDIUM_CONFIDENCE_THRESHOLD = 2;
+
 // Local type for worker use
 interface SearchResult {
   items: Array<{
@@ -37,7 +50,7 @@ type DataSourceType = "unified" | "manual" | "catalog";
 interface WorkerMessage {
   id: string;
   type: string;
-  payload: any;
+  payload: unknown;
 }
 
 /** Search operation message */
@@ -70,22 +83,10 @@ interface StatsMessage extends WorkerMessage {
 }
 
 /** Response message from worker */
-interface WorkerResponse<T = any> {
+interface WorkerResponse<T = unknown> {
   id: string;
   type: "SUCCESS" | "ERROR" | "PROGRESS";
   payload: T;
-}
-
-/** Progress message for long-running operations */
-interface ProgressMessage {
-  id: string;
-  type: "PROGRESS";
-  payload: {
-    current: number;
-    total: number;
-    message?: string;
-    percentage: number;
-  };
 }
 
 // Local type for worker use
@@ -97,45 +98,61 @@ interface SearchIndexItem {
   type: DataSourceType;
   sourceIds: string[];
   popularTerms?: string[];
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
+}
+
+// Type guards and utility types
+interface SearchResultItem {
+  id: string;
+  type: "unified" | "manual" | "catalog";
+  score: number;
+  highlights: {
+    name?: string;
+    series?: string;
+    description?: string;
+  };
+  data: UnifiedItem | ManualItem | CatalogItem | null;
+}
+
+interface ConflictRecord {
+  id: string;
+  field: string;
+  unified: unknown;
+  manual: unknown;
+  catalog: unknown;
+}
+
+interface SourceItem {
+  properties: {
+    name?: string | { ja?: string; en?: string };
+    series?: string | { ja?: string; en?: string };
+    grade?: string | { code?: string; family?: string };
+    scale?: string;
+  };
 }
 
 // ============================================================================
 // TEXT PROCESSING UTILITIES (Worker-Side)
 // ============================================================================
 
-class WorkerTextProcessor {
-	static normalize(text: string): string {
+const WorkerTextProcessor = {
+	normalize(text: string): string {
 		return text
 			.toLowerCase()
 			.replaceAll(/[^\w\s\u3040-\u9FAF]/g, " ")
 			.replaceAll(/\s+/g, " ")
 			.trim();
-	}
+	},
 
-	static tokenize(text: string): string[] {
+	tokenize(text: string): string[] {
 		const normalized = this.normalize(text);
 		return normalized
 			.split(" ")
-			.filter(term => term.length >= 2)
-			.filter(term => !this.isStopWord(term));
-	}
+			.filter(term => term.length >= MIN_TERM_LENGTH)
+			.filter(term => isStopWord(term));
+	},
 
-	private static isStopWord(term: string): boolean {
-		const stopWords = new Set([
-			"the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for",
-			"of", "with", "by", "from", "up", "about", "into", "through", "during",
-			"before", "after", "above", "below", "between", "among", "is", "are",
-			"was", "were", "be", "been", "being", "have", "has", "had", "do",
-			"does", "did", "will", "would", "could", "should", "may", "might",
-			"must", "can", "this", "that", "these", "those", "が", "の", "を",
-			"に", "は", "と", "も", "で", "た", "だ", "です", "ます", "である",
-		]);
-
-		return stopWords.has(term);
-	}
-
-	static calculateRelevance(query: string, text: string): number {
+	calculateRelevance(query: string, text: string): number {
 		const queryTerms = this.tokenize(query);
 		const textTerms = this.tokenize(text);
 
@@ -147,11 +164,11 @@ class WorkerTextProcessor {
 		const textFreq = new Map<string, number>();
 
 		for (const term of queryTerms) {
-			queryFreq.set(term, (queryFreq.get(term) || 0) + 1);
+			queryFreq.set(term, (queryFreq.get(term) ?? 0) + 1);
 		}
 
 		for (const term of textTerms) {
-			textFreq.set(term, (textFreq.get(term) || 0) + 1);
+			textFreq.set(term, (textFreq.get(term) ?? 0) + 1);
 		}
 
 		// Cosine similarity
@@ -160,7 +177,7 @@ class WorkerTextProcessor {
 		let textMagnitude = 0;
 
 		for (const [term, qCount] of queryFreq.entries()) {
-			const tCount = textFreq.get(term) || 0;
+			const tCount = textFreq.get(term) ?? 0;
 			dotProduct += qCount * tCount;
 			queryMagnitude += qCount * qCount;
 		}
@@ -174,32 +191,46 @@ class WorkerTextProcessor {
 		const similarity = dotProduct / (Math.sqrt(queryMagnitude) * Math.sqrt(textMagnitude));
 
 		// Boost for exact phrase matches
-		const exactMatchBonus = text.toLowerCase().includes(query.toLowerCase()) ? 0.3 : 0;
+		const exactMatchBonus = text.toLowerCase().includes(query.toLowerCase()) ? EXACT_MATCH_BONUS : 0;
 
 		// Boost for term density
 		const density = textTerms.length / Math.max(text.split(" ").length, 1);
-		const densityBonus = Math.min(density * 0.2, 0.2);
+		const densityBonus = Math.min(density * DENSITY_BONUS_MAX, DENSITY_BONUS_MAX);
 
 		return Math.min(similarity + exactMatchBonus + densityBonus, 1);
-	}
+	},
 
-	static highlightMatches(text: string, query: string): string {
+	highlightMatches(text: string, query: string): string {
 		const queryTerms = this.tokenize(query);
 		if (queryTerms.length === 0) return text;
 
 		let highlighted = text;
 
 		for (const term of queryTerms) {
-			const regex = new RegExp(`(${this.escapeRegex(term)})`, "gi");
+			const regex = new RegExp(`(${escapeRegex(term)})`, "gi");
 			highlighted = highlighted.replace(regex, "<mark>$1</mark>");
 		}
 
 		return highlighted;
-	}
+	},
+};
 
-	private static escapeRegex(string: string): string {
-		return string.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`);
-	}
+function isStopWord(term: string): boolean {
+	const stopWords = new Set([
+		"the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for",
+		"of", "with", "by", "from", "up", "about", "into", "through", "during",
+		"before", "after", "above", "below", "between", "among", "is", "are",
+		"was", "were", "be", "been", "being", "have", "has", "had", "do",
+		"does", "did", "will", "would", "could", "should", "may", "might",
+		"must", "can", "this", "that", "these", "those", "が", "の", "を",
+		"に", "は", "と", "も", "で", "た", "だ", "です", "ます", "である",
+	]);
+
+	return stopWords.has(term);
+}
+
+function escapeRegex(stringToEscape: string): string {
+	return stringToEscape.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`);
 }
 
 // ============================================================================
@@ -217,24 +248,23 @@ class SearchProcessor {
 		const queryTerms = WorkerTextProcessor.tokenize(query);
 
 		// Process in batches to avoid blocking
-		const batchSize = 1000;
 		const results: SearchResult["items"] = [];
 
-		for (let i = 0; i < searchIndex.length; i += batchSize) {
-			const batch = searchIndex.slice(i, i + batchSize);
+		for (let i = 0; i < searchIndex.length; i += SEARCH_BATCH_SIZE) {
+			const batch = searchIndex.slice(i, i + SEARCH_BATCH_SIZE);
 
 			const batchResults = this.processBatch(batch, query, normalizedQuery, queryTerms, fieldWeights);
 			results.push(...batchResults);
 
 			// Yield control periodically
-			if (i % (batchSize * 5) === 0) {
+			if (i % (SEARCH_BATCH_SIZE * YIELD_INTERVAL_MULTIPLIER) === 0) {
 				await new Promise(resolve => setTimeout(resolve, 0));
 			}
 		}
 
 		return results
-			.filter((item: any) => item.score > 0.1)
-			.sort((a: any, b: any) => b.score - a.score);
+			.filter((item: SearchResultItem) => item.score > MIN_SCORE_THRESHOLD)
+			.toSorted((a: SearchResultItem, b: SearchResultItem) => b.score - a.score);
 	}
 
 	private processBatch(
@@ -256,35 +286,41 @@ class SearchProcessor {
 				}
 
 				// Boost popular terms
-				if (item.popularTerms) {
-					const popularMatches = queryTerms.filter(term => item.popularTerms!.includes(term));
-					score += popularMatches.length * 0.3;
+				if (item.popularTerms && item.popularTerms.length > 0) {
+					const popularMatches = queryTerms.filter(term => item.popularTerms?.includes(term));
+					score += popularMatches.length * POPULAR_TERM_BONUS;
 				}
 
 				// Apply field weights
 				if (fieldWeights && item.metadata) {
-					if (fieldWeights["name"] && item.metadata["name"]) {
+					const nameField = fieldWeights["name"];
+					const nameMetadata = item.metadata["name"];
+					if (nameField && nameMetadata && typeof nameMetadata === "string") {
 						const nameRelevance = WorkerTextProcessor.calculateRelevance(
 							normalizedQuery,
-							item.metadata["name"],
+							nameMetadata,
 						);
-						score += nameRelevance * fieldWeights["name"];
+						score += nameRelevance * nameField;
 					}
 
-					if (fieldWeights["series"] && item.metadata["series"]) {
+					const seriesField = fieldWeights["series"];
+					const seriesMetadata = item.metadata["series"];
+					if (seriesField && seriesMetadata && typeof seriesMetadata === "string") {
 						const seriesRelevance = WorkerTextProcessor.calculateRelevance(
 							normalizedQuery,
-							item.metadata["series"],
+							seriesMetadata,
 						);
-						score += seriesRelevance * fieldWeights["series"];
+						score += seriesRelevance * seriesField;
 					}
 
-					if (fieldWeights["description"] && item.metadata["description"]) {
+					const descriptionField = fieldWeights["description"];
+					const descriptionMetadata = item.metadata["description"];
+					if (descriptionField && descriptionMetadata && typeof descriptionMetadata === "string") {
 						const descRelevance = WorkerTextProcessor.calculateRelevance(
 							normalizedQuery,
-							item.metadata["description"],
+							descriptionMetadata,
 						);
-						score += descRelevance * fieldWeights["description"];
+						score += descRelevance * descriptionField;
 					}
 				}
 			} else {
@@ -316,19 +352,17 @@ class DataAggregator {
 		catalogItems: CatalogItem[],
 	): Promise<{
     aggregated: UnifiedItem[];
-    conflicts: Array<{ id: string; field: string; unified: unknown; manual: unknown; catalog: unknown }>;
+    conflicts: ConflictRecord[];
     statistics: { totalUnified: number; manualOnly: number; catalogOnly: number; withManual: number; withCatalog: number; withBoth: number };
   }> {
-		const conflicts: Array<{ id: string; field: string; unified: unknown; manual: unknown; catalog: unknown }> = [];
-		const processedIds = new Set<string>();
+		const conflicts: ConflictRecord[] = [];
 
 		// Process items in batches
-		const batchSize = 500;
 		const aggregated: UnifiedItem[] = [];
 
-		for (let i = 0; i < unifiedItems.length; i += batchSize) {
-			const batch = unifiedItems.slice(i, i + batchSize);
-			const batchResults = await this.processBatch(batch, manualItems, catalogItems, conflicts);
+		for (let i = 0; i < unifiedItems.length; i += AGGREGATION_BATCH_SIZE) {
+			const batch = unifiedItems.slice(i, i + AGGREGATION_BATCH_SIZE);
+			const batchResults = this.processBatch(batch, manualItems, catalogItems, conflicts);
 			aggregated.push(...batchResults);
 
 			// Yield control periodically
@@ -348,14 +382,14 @@ class DataAggregator {
 		return { aggregated, conflicts, statistics };
 	}
 
-	private async processBatch(
+	private processBatch(
 		batch: UnifiedItem[],
 		manualItems: ManualItem[],
 		catalogItems: CatalogItem[],
-		conflicts: Array<{ id: string; field: string; unified: any; manual: any; catalog: any }>,
-	): Promise<UnifiedItem[]> {
+		conflicts: ConflictRecord[],
+	): UnifiedItem[] {
 		return batch.map(unifiedItem => {
-			const conflictsForItem: Array<{ field: string; unified: any; manual: any; catalog: any }> = [];
+			const conflictsForItem: Array<Omit<ConflictRecord, "id">> = [];
 
 			// Check for conflicts with manual data
 			if (unifiedItem.properties.sources.manual) {
@@ -377,7 +411,7 @@ class DataAggregator {
 			// Record conflicts
 			for (const conflict of conflictsForItem) {
 				conflicts.push({
-					id: unifiedItem.id!,
+					id: unifiedItem.id ?? "unknown",
 					...conflict,
 				});
 			}
@@ -388,47 +422,65 @@ class DataAggregator {
 
 	private compareAndRecordConflicts(
 		unifiedItem: UnifiedItem,
-		sourceItem: any,
+		sourceItem: SourceItem,
 		sourceType: "manual" | "catalog",
-		conflicts: Array<{ field: string; unified: any; manual: any; catalog: any }>,
+		conflicts: Array<Omit<ConflictRecord, "id">>,
 	): void {
 		// Compare names
-		if (sourceItem.properties.name && sourceItem.properties.name !== (unifiedItem.properties.name.en || unifiedItem.properties.name.ja)) {
+		const sourceName = sourceItem.properties.name;
+		const unifiedName = unifiedItem.properties.name.en ?? unifiedItem.properties.name.ja;
+		let sourceNameStr: string | undefined;
+
+		if (sourceName !== undefined) {
+			if (typeof sourceName === "string") {
+				sourceNameStr = sourceName;
+			} else {
+				sourceNameStr = sourceName.en ?? sourceName.ja;
+			}
+		}
+
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+		if (sourceNameStr !== undefined && sourceNameStr !== unifiedName) {
 			conflicts.push({
 				field: "name",
 				unified: unifiedItem.properties.name,
-				manual: sourceType === "manual" ? sourceItem.properties.name : undefined,
-				catalog: sourceType === "catalog" ? sourceItem.properties.name : undefined,
+				manual: sourceType === "manual" ? sourceNameStr : undefined,
+				catalog: sourceType === "catalog" ? sourceNameStr : undefined,
 			});
 		}
 
 		// Compare series
-		if (sourceItem.properties.series && sourceItem.properties.series !== unifiedItem.properties.series?.en && sourceItem.properties.series !== unifiedItem.properties.series?.ja) {
+		const sourceSeries = sourceItem.properties.series;
+		const unifiedSeriesEn = unifiedItem.properties.series?.en;
+		const unifiedSeriesJa = unifiedItem.properties.series?.ja;
+		if (sourceSeries && sourceSeries !== unifiedSeriesEn && sourceSeries !== unifiedSeriesJa) {
 			conflicts.push({
 				field: "series",
 				unified: unifiedItem.properties.series,
-				manual: sourceType === "manual" ? sourceItem.properties.series : undefined,
-				catalog: sourceType === "catalog" ? sourceItem.properties.series : undefined,
+				manual: sourceType === "manual" ? sourceSeries : undefined,
+				catalog: sourceType === "catalog" ? sourceSeries : undefined,
 			});
 		}
 
 		// Compare grade
-		if (sourceItem.properties.grade && sourceItem.properties.grade !== unifiedItem.properties.grade) {
+		const sourceGrade = sourceItem.properties.grade;
+		if (sourceGrade && sourceGrade !== unifiedItem.properties.grade) {
 			conflicts.push({
 				field: "grade",
 				unified: unifiedItem.properties.grade,
-				manual: sourceType === "manual" ? sourceItem.properties.grade : undefined,
-				catalog: sourceType === "catalog" ? sourceItem.properties.grade : undefined,
+				manual: sourceType === "manual" ? sourceGrade : undefined,
+				catalog: sourceType === "catalog" ? sourceGrade : undefined,
 			});
 		}
 
 		// Compare scale
-		if (sourceItem.properties.scale && sourceItem.properties.scale !== unifiedItem.properties.scale) {
+		const sourceScale = sourceItem.properties.scale;
+		if (sourceScale && sourceScale !== unifiedItem.properties.scale) {
 			conflicts.push({
 				field: "scale",
 				unified: unifiedItem.properties.scale,
-				manual: sourceType === "manual" ? sourceItem.properties.scale : undefined,
-				catalog: sourceType === "catalog" ? sourceItem.properties.scale : undefined,
+				manual: sourceType === "manual" ? sourceScale : undefined,
+				catalog: sourceType === "catalog" ? sourceScale : undefined,
 			});
 		}
 	}
@@ -476,38 +528,37 @@ class StatisticsCalculator {
 			},
 		};
 
-		// Process items in batches
-		const batchSize = 1000;
-
-		for (let i = 0; i < items.length; i += batchSize) {
-			const batch = items.slice(i, i + batchSize);
+		for (let i = 0; i < items.length; i += STATISTICS_BATCH_SIZE) {
+			const batch = items.slice(i, i + STATISTICS_BATCH_SIZE);
 
 			for (const item of batch) {
+				const properties = item.properties;
+
 				// Grade statistics
-				if (item.properties?.grade) {
-					stats.byGrade[item.properties.grade] = (stats.byGrade[item.properties.grade] || 0) + 1;
+				if (properties.grade) {
+					stats.byGrade[properties.grade] = (stats.byGrade[properties.grade] ?? 0) + 1;
 				}
 
 				// Scale statistics
-				if (item.properties?.scale) {
-					stats.byScale[item.properties.scale] = (stats.byScale[item.properties.scale] || 0) + 1;
+				if (properties.scale) {
+					stats.byScale[properties.scale] = (stats.byScale[properties.scale] ?? 0) + 1;
 				}
 
 				// Series statistics
-				const seriesName = item.properties?.series?.en || item.properties?.series?.ja;
+				const seriesName = properties.series?.en ?? properties.series?.ja;
 				if (seriesName) {
-					stats.bySeries[seriesName] = (stats.bySeries[seriesName] || 0) + 1;
+					stats.bySeries[seriesName] = (stats.bySeries[seriesName] ?? 0) + 1;
 				}
 
 				// Release year statistics
-				if (item.properties?.releaseDate?.year) {
-					const year = item.properties.releaseDate.year.toString();
-					stats.byReleaseYear[year] = (stats.byReleaseYear[year] || 0) + 1;
+				if (properties.releaseDate?.year) {
+					const year = properties.releaseDate.year.toString();
+					stats.byReleaseYear[year] = (stats.byReleaseYear[year] ?? 0) + 1;
 				}
 
 				// Source coverage
-				const hasManual = Boolean(item.properties?.sources?.manual);
-				const hasCatalog = Boolean(item.properties?.sources?.catalog);
+				const hasManual = Boolean(properties.sources?.manual);
+				const hasCatalog = Boolean(properties.sources?.catalog);
 
 				if (hasManual) stats.sourceCoverage.withManual++;
 				if (hasCatalog) stats.sourceCoverage.withCatalog++;
@@ -517,21 +568,24 @@ class StatisticsCalculator {
 				}
 
 				// Quality metrics
-				if (item.properties?.matchStage && item.properties?.matchStage >= 4) {
-					stats.qualityMetrics.highConfidence++;
-				} else if (item.properties?.matchStage && item.properties?.matchStage >= 2) {
-					stats.qualityMetrics.mediumConfidence++;
-				} else if (item.properties?.matchStage && item.properties?.matchStage < 2) {
-					stats.qualityMetrics.lowConfidence++;
+				const matchStage = properties.matchStage;
+				if (matchStage !== undefined && matchStage !== null) {
+					if (matchStage >= HIGH_CONFIDENCE_THRESHOLD) {
+						stats.qualityMetrics.highConfidence++;
+					} else if (matchStage >= MEDIUM_CONFIDENCE_THRESHOLD) {
+						stats.qualityMetrics.mediumConfidence++;
+					} else {
+						stats.qualityMetrics.lowConfidence++;
+					}
 				}
 
-				if (item.properties?.matchMethod === "partial") {
+				if (properties.matchMethod === "partial") {
 					stats.qualityMetrics.needsReview++;
 				}
 			}
 
 			// Yield control periodically
-			if (i % (batchSize * 5) === 0) {
+			if (i % (STATISTICS_BATCH_SIZE * YIELD_INTERVAL_MULTIPLIER) === 0) {
 				await new Promise(resolve => setTimeout(resolve, 0));
 			}
 		}
@@ -549,7 +603,11 @@ const dataAggregator = new DataAggregator();
 const statisticsCalculator = new StatisticsCalculator();
 
 // Handle messages from main thread
-self.addEventListener("message", async (event: MessageEvent<WorkerMessage>) => {
+const workerSelf = globalThis as {
+	addEventListener: (type: "message", listener: (event: MessageEvent<WorkerMessage>) => void) => void;
+	postMessage: (message: WorkerResponse) => void;
+};
+workerSelf.addEventListener("message", async (event: MessageEvent<WorkerMessage>) => {
 	const { id, type, payload } = event.data;
 
 	try {
@@ -563,7 +621,7 @@ self.addEventListener("message", async (event: MessageEvent<WorkerMessage>) => {
 					id,
 					type: "SUCCESS",
 					payload: results,
-				} as WorkerResponse);
+				} satisfies WorkerResponse<SearchResult["items"]>);
 				break;
 			}
 
@@ -572,11 +630,11 @@ self.addEventListener("message", async (event: MessageEvent<WorkerMessage>) => {
 
 				const result = await dataAggregator.aggregateData(unifiedItems, manualItems, catalogItems);
 
-				self.postMessage({
+				workerSelf.postMessage({
 					id,
 					type: "SUCCESS",
 					payload: result,
-				} as WorkerResponse);
+				} satisfies WorkerResponse);
 				break;
 			}
 
@@ -585,24 +643,25 @@ self.addEventListener("message", async (event: MessageEvent<WorkerMessage>) => {
 
 				const stats = await statisticsCalculator.calculateStatistics(items);
 
-				self.postMessage({
+				workerSelf.postMessage({
 					id,
 					type: "SUCCESS",
 					payload: stats,
-				} as WorkerResponse);
+				} satisfies WorkerResponse);
 				break;
 			}
 
 			default: {
-				throw new Error(`Unknown message type: ${type}`);
+				const unknownType = (type);
+				throw new Error(`Unknown message type: ${unknownType}`);
 			}
 		}
 	} catch (error) {
-		self.postMessage({
+		workerSelf.postMessage({
 			id,
 			type: "ERROR",
 			payload: error instanceof Error ? error.message : "Unknown error",
-		} as WorkerResponse);
+		} satisfies WorkerResponse<string>);
 	}
 });
 
