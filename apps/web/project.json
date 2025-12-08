@@ -135,6 +135,7 @@
         "outputPath": "dist/apps/web",
         "script": "./apps/web/scripts/ssg-build.ts"
       },
+      "dependsOn": ["build"],
       "configurations": {
         "development": {
           "script": "./apps/web/scripts/ssg-build.ts --verbose"
