@@ -12,9 +12,7 @@ import type {
 } from "../schemas/universal-graph-schema";
 
 // Local type definitions
-export interface FilterOptions {
-	[key: string]: any;
-}
+export type FilterOptions = Record<string, any>;
 
 export interface SearchResult<T = any> {
 	items: T[];

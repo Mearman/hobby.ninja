@@ -64,14 +64,14 @@ export class SchemaNodeRegistry {
    * Get all registered schemas
    */
 	public getAll(): SchemaNodeType[] {
-		return Array.from(this.schemas.values());
+		return [...this.schemas.values()];
 	}
 
 	/**
    * Get schemas by strict type (e.g. node_schema, unified_item_schema)
    */
 	public getByType(type: string): SchemaNodeType[] {
-		return Array.from(this.schemas.values()).filter(s => s.$type === type); // Mapped to $type in v2
+		return [...this.schemas.values()].filter(s => s.$type === type); // Mapped to $type in v2
 	}
 
 	/**
@@ -135,7 +135,7 @@ export class SchemaNodeRegistry {
    */
 	public export(): Record<string, any> {
 		const exported: Record<string, any> = {};
-		for (const [id, schema] of Array.from(this.schemas.entries())) {
+		for (const [id, schema] of this.schemas.entries()) {
 			exported[id] = schema;
 		}
 		return exported;
@@ -147,7 +147,7 @@ export class SchemaNodeRegistry {
 	public import(schemas: Record<string, any>): void {
 		for (const [id, schema] of Object.entries(schemas)) {
 			// Validate that it looks like a schema node before registering
-			if (schema && typeof schema === 'object' && schema.category === 'schema') {
+			if (schema && typeof schema === "object" && schema.category === "schema") {
 				this.register(schema);
 			}
 		}
@@ -171,7 +171,7 @@ export class SchemaNodeRegistry {
 		return {
 			totalSchemas: schemas.length,
 			byType: schemas.reduce<Record<string, number>>((acc, schema) => {
-				const type = schema.$type || 'unknown';
+				const type = schema.$type || "unknown";
 				acc[type] = (acc[type] || 0) + 1;
 				return acc;
 			}, {}),

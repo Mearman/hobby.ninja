@@ -422,7 +422,7 @@ export class ProgressTracker {
 		// Calculate backoff delay
 		const backoffMs = Math.min(
 			(operation.config.retry?.backoffMs ?? 1000) * Math.pow(2, operation.retryCount - 1),
-			operation.config.retry?.maxBackoffMs ?? 30000,
+			operation.config.retry?.maxBackoffMs ?? 30_000,
 		);
 
 		this.emit("operationRetry", { id, operation, error, backoffMs });

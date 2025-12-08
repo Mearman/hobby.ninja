@@ -92,9 +92,9 @@ export class UnifiedGraphDB {
 			throw new Error(`Invalid graph data: ${validation.error}`);
 		}
 
-		this.graph = validation.data as ArbitraryGraphType;
+		this.graph = validation.data!;
 		this.manager = new ArbitraryGraphManager(this.graph);
-	// Note: Schema registry integration disabled for now due to schema format incompatibility
+		// Note: Schema registry integration disabled for now due to schema format incompatibility
 		// TODO: Create proper adapter between arbitrary graph schema and universal graph schema
 		this.initialized = true;
 	}
@@ -352,7 +352,7 @@ export class UnifiedGraphDB {
     // Remove associated relationships
     this.graph!.nodes = this.graph!.nodes.filter(node => {
     	if (node.category === "relationship") {
-    		const rel = node as z.infer<typeof Relationship>;
+    		const rel = node;
     		return rel.fromNode !== id && rel.toNode !== id;
     	}
     	return true;
@@ -447,13 +447,13 @@ export class UnifiedGraphDB {
 			if (node.id.toLowerCase().includes(lowerQuery)) return true;
 
 			if (node.category === "schema") {
-				const schemaNode = node as z.infer<typeof SchemaNode>;
+				const schemaNode = node;
 				return schemaNode.name.toLowerCase().includes(lowerQuery) ||
                (schemaNode.description?.toLowerCase().includes(lowerQuery) || false);
 			}
 
 			if (node.category === "data") {
-				const dataNode = node as z.infer<typeof DataNode>;
+				const dataNode = node;
 				return Object.values(dataNode.properties).some(value =>
 					String(value).toLowerCase().includes(lowerQuery),
 				);
