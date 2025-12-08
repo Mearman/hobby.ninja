@@ -7,7 +7,7 @@ import React, { useState } from "react";
 
 import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
-import { ItemCard } from "./ItemCard";
+import { ItemCard } from "./item-card";
 import { ItemGrid } from "./ItemGrid";
 import { getMockItems } from "./test-data";
 

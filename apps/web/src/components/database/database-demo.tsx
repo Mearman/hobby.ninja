@@ -104,15 +104,15 @@ export function DatabaseDemo() {
 	}, []);
 
 	// Handle item click
-	const handleItemClick = useCallback((item: ItemData) => {
-		console.log("Item clicked:", item);
-		// In a real app, this would navigate to item details
+	const handleItemClick = useCallback((_item: ItemData) => {
+		// TODO: Navigate to item details page
+		// TODO: Add analytics tracking for item clicks
 	}, []);
 
 	// Handle filters click
 	const handleFiltersClick = useCallback(() => {
-		console.log("Filters clicked");
-		// In a real app, this would open a filters modal
+		// TODO: Open filters modal
+		// TODO: Add analytics tracking for filter usage
 	}, []);
 
 	return (

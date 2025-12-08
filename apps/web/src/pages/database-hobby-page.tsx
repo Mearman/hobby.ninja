@@ -26,7 +26,7 @@ import { useNavigate, useParams, Link } from "@tanstack/react-router";
 import React, { useState, useEffect, useCallback } from "react";
 
 import { AdvancedFilters } from "../components/database/advanced-filters";
-import { ItemCard } from "../components/database/ItemCard";
+import { ItemCard } from "../components/database/item-card";
 import { dataService, type FilterOptions } from "../services/dataService";
 import { databaseContainer, heroSection, statsCard } from "../styles/styles.css";
 
