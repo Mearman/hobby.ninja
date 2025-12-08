@@ -373,6 +373,11 @@ interface ItemDetailProps {
   onRelatedItemClick?: (itemId: string) => void;
 }
 
+// Print handler moved to outer scope to avoid recreation on every render
+const handlePrint = () => {
+	globalThis.print();
+};
+
 export const ItemDetail: React.FC<ItemDetailProps> = ({
 	itemId,
 	preferSource = "unified",
@@ -456,7 +461,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			const url = URL.createObjectURL(blob);
 			const link = document.createElement("a");
 			link.href = url;
-			link.download = `${item.properties?.name?.ja || item.properties?.name?.en || "item"}-${itemId}.json`;
+			link.download = `${item.properties.name?.ja ?? item.properties.name?.en ?? "item"}-${itemId}.json`;
 			document.body.append(link);
 			link.click();
 			link.remove();
@@ -469,13 +474,9 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 		}
 	};
 
-	const handlePrint = () => {
-		globalThis.print();
-	};
-
 	// Helper function to get item name safely
 	const getItemName = (): string => {
-		if (!item?.properties?.name) return "Unknown Item";
+		if (!item.properties?.name) return "Unknown Item";
 
 		if (typeof item.properties.name === "string") {
 			return item.properties.name;
@@ -486,7 +487,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	// Helper function to get item properties safely
 	const getCommonProperty = (propertyName: "grade" | "scale"): string | null => {
-		if (!item?.properties) return null;
+		if (!item.properties) return null;
 
 		const props = item.properties as ExtendedItemProperties;
 		const value = props[propertyName];
@@ -498,7 +499,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	// Helper function to get series property (object type)
 	const getSeriesProperty = (): { ja?: string; en?: string } | string | null => {
-		if (!item?.properties) return null;
+		if (!item.properties) return null;
 
 		const props = item.properties as ExtendedItemProperties;
 		return props.series ?? null;
@@ -516,7 +517,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	// Helper function to get match method safely
 	const getMatchMethod = (): "exact" | "fuzzy" | "manual" | null => {
-		if (!item?.properties) return null;
+		if (!item.properties) return null;
 
 		const props = item.properties as ExtendedItemProperties;
 		return props.matchMethod ?? null;
@@ -524,7 +525,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 
 	// Helper function to get match stage safely
 	const getMatchStage = (): number | null => {
-		if (!item?.properties) return null;
+		if (!item.properties) return null;
 
 		const props = item.properties as ExtendedItemProperties;
 		return props.matchStage ?? null;
@@ -614,24 +615,22 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 			}
 			case "catalog_item": {
 			// Direct catalog item - check for image properties
-				const catalogItem = item;
 				// Note: thumbnailImage property doesn't exist in current schema
-				// if (catalogItem.properties?.thumbnailImage) {
-				// 	images.push(catalogItem.properties.thumbnailImage);
+				// if (item.properties?.thumbnailImage) {
+				// 	images.push(item.properties.thumbnailImage);
 				// }
-		
+
 				break;
 			}
 			case "manual_item": {
 			// Direct manual item - check for image properties
-				const manualItem = item;
-				if (manualItem.properties?.thumbnailImage) {
-					images.push(manualItem.properties.thumbnailImage);
+				if (item.properties?.thumbnailImage) {
+					images.push(item.properties.thumbnailImage);
 				}
-				if (manualItem.properties?.productImage) {
-					images.push(manualItem.properties.productImage);
+				if (item.properties?.productImage) {
+					images.push(item.properties.productImage);
 				}
-		
+
 				break;
 			}
 		// No default
@@ -685,7 +684,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 					<Group justify="space-between" wrap="nowrap">
 						<Stack gap="xs">
 							<Title order={1}>{title}</Title>
-							{item.properties?.name && typeof item.properties.name === "object" && item.properties.name.en && (
+							{item.properties.name && typeof item.properties.name === "object" && item.properties.name.en && (
 								<Text c="dimmed">{item.properties.name.en}</Text>
 							)}
 							<Group gap="xs">
@@ -765,7 +764,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 													)}
 													{(item).manualData?.properties?.name && (
 														<Text size="sm">
-                              Manual: {(item).manualData.properties.name.ja || (item).manualData.properties.name.en}
+                              Manual: {(item).manualData.properties.name.ja ?? (item).manualData.properties.name.en}
 														</Text>
 													)}
 												</Stack>
@@ -977,7 +976,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												<Group>
 													<Text size="sm" c="dimmed">Title:</Text>
 													<Text size="sm">
-														{(item).manualData.properties?.name?.ja || (item).manualData.properties?.name?.en || "Unknown"}
+														{(item).manualData.properties?.name?.ja ?? (item).manualData.properties?.name?.en ?? "Unknown"}
 													</Text>
 												</Group>
 											</Stack>
@@ -998,7 +997,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												<Group>
 													<Text size="sm" c="dimmed">Title:</Text>
 													<Text size="sm">
-														{(item).properties?.name?.ja || (item).properties?.name?.en || "Unknown"}
+														{(item).properties?.name?.ja ?? (item).properties?.name?.en ?? "Unknown"}
 													</Text>
 												</Group>
 											</Stack>

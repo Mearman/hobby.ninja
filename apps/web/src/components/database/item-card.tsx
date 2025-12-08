@@ -102,7 +102,7 @@ export function ItemCard({
 		}
 		if (itemType === "manual") {
 			const properties = item.properties as ManualItem["properties"];
-			if (properties.grade && "code" in properties.grade) {
+			if ("grade" in properties && properties.grade && "code" in properties.grade) {
 				return properties.grade.code;
 			}
 		}
@@ -111,12 +111,12 @@ export function ItemCard({
 	}, [item, itemType]);
 
 	const getScale = useCallback(() => {
-		return item.properties?.scale;
+		return item.properties.scale;
 	}, [item]);
 
 	// Extract release date
 	const getReleaseDate = useCallback(() => {
-		if (item.properties?.releaseDate) {
+		if (item.properties.releaseDate) {
 			const date = item.properties.releaseDate;
 			if (date && typeof date === "object") {
 				if ("ja" in date && date.ja) {
@@ -244,7 +244,7 @@ export function ItemCard({
 
 	// Get unique item ID
 	const getItemId = useCallback((itemData: any): string => {
-		return itemData.id || itemData.title || "unknown";
+		return itemData.id ?? itemData.title ?? "unknown";
 	}, []);
 
 	// Render confidence badge
