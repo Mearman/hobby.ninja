@@ -18,6 +18,8 @@ const withPWAConfig = withPWA({
   disable: process.env.NODE_ENV === 'development',
   register: true,
   skipWaiting: true,
+  // Increase maximum file size for precaching to handle large chunks
+  maximumFileSizeToCacheInBytes: 20 * 1024 * 1024, // 20MB to handle graph data
   runtimeCaching: [
     {
       urlPattern: /^https?.*/,
@@ -115,7 +117,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
 
-  // Additional webpack configuration for Vanilla Extract (if needed)
+  // Additional webpack configuration for Vanilla Extract and bundle optimization
   webpack: (config, { isServer }) => {
     // Use environment variable or fall back to configured default
     const buildDataStrategy = process.env.BUILD_DATA_STRATEGY || DEFAULT_BUILD_DATA_STRATEGY;
@@ -132,17 +134,47 @@ const nextConfig: NextConfig = {
       ...config.resolve.extensionAlias,
     };
 
-    // Add optimization for Vanilla Extract chunks
-    config.optimization.splitChunks = {
-      ...config.optimization.splitChunks,
-      cacheGroups: {
-        vanilla: {
-          test: /[\\/]node_modules[\\/]@vanilla-extract[\\/]/,
-          name: 'solved',
-          chunks: 'all',
+    // Optimize chunk splitting to prevent large bundles
+    if (!isServer) {
+      config.optimization.splitChunks = {
+        ...config.optimization.splitChunks,
+        chunks: 'all',
+        maxSize: 244000, // ~244KB chunks
+        cacheGroups: {
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true,
+          },
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            priority: -10,
+            chunks: 'all',
+          },
+          vanilla: {
+            test: /[\\/]node_modules[\\/]@vanilla-extract[\\/]/,
+            name: 'vanilla-extract',
+            priority: 10,
+            chunks: 'all',
+          },
+          // Separate graph data into its own chunk
+          graphData: {
+            test: /[\\/](graph-data|data)[\\/]/,
+            name: 'graph-data',
+            priority: 20,
+            chunks: 'all',
+          },
+          // Large UI libraries
+          mantine: {
+            test: /[\\/]node_modules[\\/]@mantine[\\/]/,
+            name: 'mantine',
+            priority: 15,
+            chunks: 'all',
+          },
         },
-      },
-    };
+      };
+    }
 
     return config;
   },
