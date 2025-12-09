@@ -26,16 +26,31 @@ import itemsData from '../data/items.json';
 import brandsData from '../data/brands.json';
 import categoriesData from '../data/categories.json';
 import seriesData from '../data/series.json';
+import manualsData from '../data/manuals.json';
+
+// Type guard for the new JSON structure
+function isGraphDataFile(data: unknown): data is { nodes: unknown[]; edges: Record<string, Record<string, never>> } {
+	return (
+		typeof data === 'object' && data !== null &&
+		'nodes' in data && Array.isArray((data as any).nodes) &&
+		'edges' in data && typeof (data as any).edges === 'object'
+	);
+}
 
 // Parse and validate the imported data
-function parseJSONData<T>(schema: any, data: unknown[]): T[] {
-	return data.filter(item => {
+function parseJSONData<T>(schema: any, data: unknown): T[] {
+	if (!isGraphDataFile(data)) {
+		console.error('Invalid data file format: expected {nodes: [], edges: {}}');
+		return [];
+	}
+
+	return data.nodes.filter(item => {
 		const result = schema.safeParse(item);
 		return result.success;
 	}).map(item => {
 		const result = schema.safeParse(item);
 		return result.success ? result.data : null;
-	}).filter(Boolean) as T[];
+	}).filter((item): item is T => item !== null);
 }
 
 // Pre-validated data loaded at build time
@@ -43,6 +58,7 @@ const parsedItems = parseJSONData<ItemNode>(ItemNodeSchema, itemsData);
 const parsedBrands = parseJSONData<BrandNode>(BrandNodeSchema, brandsData);
 const parsedCategories = parseJSONData<CategoryNode>(CategoryNodeSchema, categoriesData);
 const parsedSeries = parseJSONData<SeriesNode>(SeriesNodeSchema, seriesData);
+const parsedManuals = parseJSONData<ManualNode>(ManualNodeSchema, manualsData);
 
 // Cache for loaded data (synchronous since data is pre-built)
 const staticData = {
@@ -50,7 +66,7 @@ const staticData = {
 	brands: parsedBrands,
 	categories: parsedCategories,
 	series: parsedSeries,
-	manuals: [] as ManualNode[],
+	manuals: parsedManuals,
 };
 
 console.log('Loaded static graph data:', {
