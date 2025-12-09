@@ -1,5 +1,6 @@
 import { mkdirSync } from 'fs';
 import { discoverCatalogItems, generateCatalogRanges } from './catalog-discovery.js';
+import { DEFAULT_TIMEOUTS, CATALOG_DISCOVERY, DISPLAY } from '../constants/cli-constants.js';
 
 export interface ScrapeOptions {
 	source: string;
@@ -16,7 +17,7 @@ export interface ScrapeOptions {
 
 export async function scrapeData(options: ScrapeOptions): Promise<void> {
 	const { source, output } = options;
-	const delayMs = options.delayMs ?? options.delay ?? 1000;
+	const delayMs = options.delayMs ?? options.delay ?? DEFAULT_TIMEOUTS.SHORT;
 
 	console.log(`🚀 Starting scrape from source: ${source}`);
 	console.log(`📁 Output directory: ${output}`);
@@ -44,9 +45,9 @@ export async function scrapeData(options: ScrapeOptions): Promise<void> {
 
 async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 	const { output } = options;
-	const delayMs = options.delayMs ?? options.delay ?? 1000;
-	const startId = options.startId ?? '00_0000';
-	const count = options.count ?? 10;
+	const delayMs = options.delayMs ?? options.delay ?? DEFAULT_TIMEOUTS.SHORT;
+	const startId = options.startId ?? CATALOG_DISCOVERY.DEFAULT_START_ID;
+	const count = options.count ?? CATALOG_DISCOVERY.DEFAULT_COUNT;
 	const verbose = options.verbose ?? false;
 
 	console.log('🔍 Starting Bandai catalog discovery...');

@@ -11,20 +11,28 @@ import type {
   ExportResult,
   ProgressCallback,
   ExporterConfig,
-  ValidationResult
+  ValidationResult,
+  ExportProgress,
+  TransformedData
 } from './types.js';
 import { JsonExporter } from './exporters/json-exporter.js';
 import { CsvExporter } from './exporters/csv-exporter.js';
 import { ExcelExporter } from './exporters/excel-exporter.js';
 import { DataTransformer } from './data-transformer.js';
+import {
+  EXPORT_CONSTANTS,
+  ENCODING_CONSTANTS,
+  FORMAT_CONSTANTS,
+  MEMORY_UNITS
+} from '../constants/export-constants.js';
 
 export class ExportManager {
   private config: ExporterConfig;
 
   constructor(config?: Partial<ExporterConfig>) {
     this.config = {
-      batchSize: 1000,
-      maxMemoryUsage: 512 * 1024 * 1024, // 512MB
+      batchSize: EXPORT_CONSTANTS.DEFAULT_BATCH_SIZE,
+      maxMemoryUsage: EXPORT_CONSTANTS.MAX_MEMORY_USAGE_BYTES,
       tempDir: os.tmpdir(),
       ...config
     };
@@ -94,7 +102,7 @@ export class ExportManager {
 
       // Update progress to show which format is being processed
       const formatProgressCallback = progressCallback
-        ? (progress: any) => {
+        ? (progress: ExportProgress) => {
             progressCallback({
               ...progress,
               stage: `${format.toUpperCase()} - ${progress.stage} (${i + 1}/${totalFormats})`
@@ -122,9 +130,9 @@ export class ExportManager {
   async preview(
     data: GundamData[],
     options: ExportOptions,
-    maxRecords: number = 10
+    maxRecords: number = EXPORT_CONSTANTS.DEFAULT_PREVIEW_RECORDS
   ): Promise<{
-    transformedData: any[];
+    transformedData: TransformedData[];
     summary: Record<string, unknown>;
     estimatedFileSize: number;
     validation: ValidationResult;
@@ -211,12 +219,12 @@ export class ExportManager {
       throw new Error('Output path is required');
     }
 
-    if (!['json', 'csv', 'excel', 'ndjson'].includes(options.format)) {
-      throw new Error(`Invalid format: ${options.format}. Supported formats: json, csv, excel, ndjson`);
+    if (!FORMAT_CONSTANTS.SUPPORTED_FORMATS.includes(options.format)) {
+      throw new Error(`Invalid format: ${options.format}. Supported formats: ${FORMAT_CONSTANTS.SUPPORTED_FORMATS.join(', ')}`);
     }
 
-    if (options.encoding && !['utf-8', 'shift-jis'].includes(options.encoding)) {
-      throw new Error(`Invalid encoding: ${options.encoding}. Supported encodings: utf-8, shift-jis`);
+    if (options.encoding && !ENCODING_CONSTANTS.SUPPORTED_ENCODINGS.includes(options.encoding)) {
+      throw new Error(`Invalid encoding: ${options.encoding}. Supported encodings: ${ENCODING_CONSTANTS.SUPPORTED_ENCODINGS.join(', ')}`);
     }
   }
 
@@ -278,11 +286,11 @@ export class ExportManager {
   /**
    * Estimate file size for preview
    */
-  private estimateFileSize(data: any[], format: string): number {
+  private estimateFileSize(data: TransformedData[], format: string): number {
     if (data.length === 0) return 0;
 
     // Sample size estimation
-    const sampleSize = Math.min(data.length, 100);
+    const sampleSize = Math.min(data.length, EXPORT_CONSTANTS.SIZE_ESTIMATION_SAMPLE_SIZE);
     const sample = data.slice(0, sampleSize);
 
     let bytesPerRecord = 0;
@@ -291,7 +299,7 @@ export class ExportManager {
       case 'json':
       case 'ndjson':
         const jsonString = JSON.stringify(sample[0]);
-        bytesPerRecord = jsonString.length + 2; // +2 for comma/newline
+        bytesPerRecord = jsonString.length + EXPORT_CONSTANTS.CSV_NEWLINE_BYTES;
         break;
 
       case 'csv':
@@ -301,17 +309,17 @@ export class ExportManager {
 
       case 'excel':
         // Rough estimation: Excel is more memory intensive
-        bytesPerRecord = JSON.stringify(sample[0]).length * 1.5;
+        bytesPerRecord = JSON.stringify(sample[0]).length * EXPORT_CONSTANTS.EXCEL_SIZE_MULTIPLIER;
         break;
 
       default:
-        bytesPerRecord = 200; // Conservative estimate
+        bytesPerRecord = EXPORT_CONSTANTS.CONSERVATIVE_BYTES_PER_RECORD;
     }
 
     const estimatedSize = bytesPerRecord * data.length;
 
     // Add overhead for metadata and structure
-    const overhead = format === 'excel' ? 50000 : 1000;
+    const overhead = format === 'excel' ? EXPORT_CONSTANTS.EXCEL_OVERHEAD_BYTES : EXPORT_CONSTANTS.DEFAULT_OVERHEAD_BYTES;
 
     return estimatedSize + overhead;
   }
@@ -332,11 +340,13 @@ export class ExportManager {
           await fs.unlink(filePath);
         } catch (error) {
           // Ignore cleanup errors
-          console.warn(`Failed to cleanup temp file ${filePath}:`, error);
+          const errorMessage = error instanceof Error ? error.message : String(error);
+          console.warn(`Failed to cleanup temp file ${filePath}:`, errorMessage);
         }
       }
     } catch (error) {
-      console.warn('Failed to cleanup temp directory:', error);
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      console.warn('Failed to cleanup temp directory:', errorMessage);
     }
   }
 
@@ -384,10 +394,10 @@ export class ExportManager {
     let bestFormat = 'json';
     let reason = 'Flexible format with full data preservation and easy processing';
 
-    if (recordCount > 10000) {
+    if (recordCount > EXPORT_CONSTANTS.LARGE_DATASET_THRESHOLD) {
       bestFormat = 'csv';
       reason = 'Large dataset - CSV is memory efficient and widely supported';
-    } else if (hasSpecifications && hasImages && recordCount < 5000) {
+    } else if (hasSpecifications && hasImages && recordCount < EXPORT_CONSTANTS.EXCEL_RICH_DATA_THRESHOLD) {
       bestFormat = 'excel';
       reason = 'Rich data with images and specifications - Excel provides best visualization';
     } else if (hasMultipleLanguages && hasSpecifications) {
@@ -404,14 +414,14 @@ export class ExportManager {
       });
     }
 
-    if (bestFormat !== 'csv' && recordCount < 50000) {
+    if (bestFormat !== 'csv' && recordCount < EXPORT_CONSTANTS.CSV_ALTERNATIVE_THRESHOLD) {
       alternatives.push({
         format: 'csv',
         reason: 'Easy to open in spreadsheet applications'
       });
     }
 
-    if (bestFormat !== 'excel' && recordCount < 1000) {
+    if (bestFormat !== 'excel' && recordCount < EXPORT_CONSTANTS.EXCEL_ALTERNATIVE_THRESHOLD) {
       alternatives.push({
         format: 'excel',
         reason: 'Rich formatting and analysis capabilities'

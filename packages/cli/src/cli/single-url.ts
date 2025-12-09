@@ -1,5 +1,7 @@
 import { ScraperRegistry, type ScraperType } from '@hobby-ninja/scrapers';
 import { LanguageDetector } from '@hobby-ninja/utils/language';
+import type { GundamData } from '@hobby-ninja/types/product';
+import type { LanguageDetection } from '@hobby-ninja/types/language';
 import { promises as fs } from 'fs';
 import path from 'path';
 
@@ -12,8 +14,8 @@ export interface SingleUrlOptions {
 export interface SingleUrlResult {
   url: string;
   success: boolean;
-  data?: any;
-  language?: any;
+  data?: GundamData;
+  language?: LanguageDetection;
   skus?: string[];
   error?: string;
   outputFile?: string;
@@ -143,7 +145,7 @@ export class SingleUrlCommand {
     }
   }
 
-  private extractSKUsFromData(data: any): string[] {
+  private extractSKUsFromData(data: GundamData): string[] {
     const skus = new Set<string>();
 
     // Extract from name
@@ -166,9 +168,9 @@ export class SingleUrlCommand {
   }
 
   private async saveScrapedData(
-    data: any,
+    data: GundamData,
     url: string,
-    language: any,
+    language: LanguageDetection,
     identifiedSKUs: string[],
     outputDir: string
   ): Promise<string> {

@@ -1,3 +1,5 @@
+import type { RenderingDetection } from './rendering-detection.js';
+
 export type CompressionMethod = 'none' | 'gzip' | 'deflate' | 'brotli';
 
 export type CachePriority = 'low' | 'medium' | 'high';
@@ -14,7 +16,7 @@ export interface PageCache {
     staticContentAvailable: boolean;
     dynamicContentCaptured: boolean;
     jsDependencies: string[];
-    detectionInfo?: any; // RenderingDetection
+    detectionInfo?: RenderingDetection;
     playwrightUsed: boolean;
     cheerioUsed: boolean;
   };

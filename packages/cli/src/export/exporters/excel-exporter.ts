@@ -5,6 +5,66 @@
 import * as path from 'path';
 import type { TransformedData, ExporterConfig, ExportOptions, ExcelColumn } from '../types.js';
 import { BaseExporter } from './base-exporter.js';
+import { EXPORT_CONSTANTS, DATA_PROCESSING_CONSTANTS } from '../../constants/export-constants.js';
+
+// XLSX library interface definitions
+interface XLSXUtils {
+  book_new(): WorkBook;
+  book_append_sheet(workbook: WorkBook, worksheet: WorkSheet, name: string): void;
+  aoa_to_sheet(data: unknown[][]): WorkSheet;
+  json_to_sheet(data: Record<string, unknown>[]): WorkSheet;
+  sheet_add_aoa(worksheet: WorkSheet, data: unknown[][], options?: { origin?: number | string }): void;
+  sheet_to_json(worksheet: WorkSheet, options?: { header?: number }): Record<string, unknown>[];
+  range_add(range: string, delta: number): string;
+  encode_range(range: [number, number, number, number]): string;
+  decode_range(range: string): [number, number, number, number];
+  encode_col(col: number): string;
+  encode_row(row: number): string;
+}
+
+interface XLSXStyle {
+  Font?: {
+    Bold?: boolean;
+    Sz?: number;
+    Color?: string;
+  };
+  Fill?: {
+    PatternColor?: string;
+    FgColor?: string;
+  };
+  Alignment?: {
+    Horizontal?: string;
+    Vertical?: string;
+  };
+}
+
+interface WorkSheet {
+  '!ref'?: string;
+  '!cols'?: Array<{ wch?: number; hidden?: boolean }>;
+  '!rows'?: Array<{ hpt?: number; hidden?: boolean }>;
+  '!merges'?: Array<{ s: { c: number; r: number }; e: { c: number; r: number } }>;
+  [key: string]: WorkSheetCell | undefined;
+}
+
+interface WorkSheetCell {
+  v?: string | number | boolean;
+  t?: string;
+  f?: string;
+  w?: string;
+  s?: XLSXStyle;
+}
+
+interface WorkBook {
+  SheetNames: string[];
+  Sheets: Record<string, WorkSheet>;
+}
+
+interface XLSXLibrary {
+  utils: XLSXUtils;
+  write(workbook: WorkBook, filename: string, options?: { bookType?: string }): void;
+  writeFile(workbook: WorkBook, filename: string, options?: { bookType?: string }): void;
+  read(data: ArrayBuffer | string, options?: { type?: string }): WorkBook;
+}
 
 export class ExcelExporter extends BaseExporter {
   constructor(options: ExportOptions, config: ExporterConfig) {
@@ -17,9 +77,9 @@ export class ExcelExporter extends BaseExporter {
   protected async exportToFile(data: TransformedData[]): Promise<string> {
     try {
       // Dynamically import xlsx library to avoid build issues
-      let XLSX: any;
+      let XLSX: XLSXLibrary;
       try {
-        XLSX = await import('xlsx' as any); // Dynamic import of optional dependency
+        XLSX = await import('xlsx') as XLSXLibrary; // Dynamic import of optional dependency
       } catch (error) {
         throw new Error('Excel export requires the xlsx package. Please install it with: npm install xlsx');
       }
@@ -67,7 +127,7 @@ export class ExcelExporter extends BaseExporter {
   /**
    * Create main data worksheet
    */
-  private createMainWorksheet(data: TransformedData[], XLSX: any): any {
+  private createMainWorksheet(data: TransformedData[], XLSX: XLSXLibrary): WorkSheet {
     const columns = this.determineColumns();
     const wsData = this.formatDataForExcel(data, columns);
 
@@ -90,11 +150,11 @@ export class ExcelExporter extends BaseExporter {
   /**
    * Create summary worksheet with statistics
    */
-  private createSummaryWorksheet(data: TransformedData[], XLSX: any): any {
+  private createSummaryWorksheet(data: TransformedData[], XLSX: XLSXLibrary): WorkSheet {
     const summaryData = this.generateSummaryData(data);
 
     // Create two-column format for summary
-    const wsData: any[][] = [
+    const wsData: (string | number)[][] = [
       ['Metric', 'Value'],
       ['Total Records', data.length],
       ['Export Date', new Date().toLocaleDateString()],
@@ -131,7 +191,7 @@ export class ExcelExporter extends BaseExporter {
   /**
    * Create category-specific worksheet
    */
-  private createCategoryWorksheet(data: TransformedData[], category: string, XLSX: any): any {
+  private createCategoryWorksheet(data: TransformedData[], category: string, XLSX: XLSXLibrary): WorkSheet {
     const columns = this.determineColumnsForCategory(category);
     const wsData = this.formatDataForExcel(data, columns);
 
@@ -211,9 +271,9 @@ export class ExcelExporter extends BaseExporter {
   /**
    * Format data for Excel export
    */
-  private formatDataForExcel(data: TransformedData[], columns: ExcelColumn[]): any[] {
+  private formatDataForExcel(data: TransformedData[], columns: ExcelColumn[]): Record<string, unknown>[] {
     return data.map(item => {
-      const row: any = {};
+      const row: Record<string, unknown> = {};
 
       columns.forEach(col => {
         row[col.key] = this.extractExcelValue(item, col.key);
@@ -226,7 +286,7 @@ export class ExcelExporter extends BaseExporter {
   /**
    * Extract and format value for Excel
    */
-  private extractExcelValue(item: TransformedData, key: string): any {
+  private extractExcelValue(item: TransformedData, key: string): string | number | boolean | null | undefined {
     try {
       // Handle specification keys
       if (key.startsWith('spec_')) {
@@ -265,7 +325,7 @@ export class ExcelExporter extends BaseExporter {
   /**
    * Apply column formatting to worksheet
    */
-  private applyColumnFormatting(worksheet: any, columns: ExcelColumn[], XLSX: any): void {
+  private applyColumnFormatting(worksheet: WorkSheet, columns: ExcelColumn[], XLSX: XLSXLibrary): void {
     // Set column widths
     worksheet['!cols'] = columns.map(col => ({
       width: col.width || 15
@@ -288,12 +348,12 @@ export class ExcelExporter extends BaseExporter {
   /**
    * Generate summary statistics data
    */
-  private generateSummaryData(data: TransformedData[]): any[][] {
+  private generateSummaryData(data: TransformedData[]): (string | number)[][] {
     const categories = this.getCategories(data);
     const languages = this.getLanguages(data);
     const brands = this.getBrands(data);
 
-    const summary: any[][] = [
+    const summary: (string | number)[][] = [
       ['', ''], // Spacing
       ['Data Quality', ''],
       ['Items with Images', data.filter(item => item.images && item.images.length > 0).length],
@@ -384,11 +444,11 @@ export class ExcelExporter extends BaseExporter {
   /**
    * Create workbook with custom styling
    */
-  protected async createStyledWorkbook(data: TransformedData[]): Promise<any> {
+  protected async createStyledWorkbook(data: TransformedData[]): Promise<WorkBook> {
     try {
-      let XLSX: any;
+      let XLSX: XLSXLibrary;
       try {
-        XLSX = await import('xlsx' as any); // Dynamic import of optional dependency
+        XLSX = await import('xlsx') as XLSXLibrary; // Dynamic import of optional dependency
       } catch (error) {
         throw new Error('Excel export requires the xlsx package. Please install it with: npm install xlsx');
       }
@@ -420,7 +480,7 @@ export class ExcelExporter extends BaseExporter {
   /**
    * Apply advanced Excel styling
    */
-  private applyAdvancedStyling(worksheet: any, headerStyle: any, alternateRowStyle: any, XLSX: any): void {
+  private applyAdvancedStyling(worksheet: WorkSheet, headerStyle: XLSXStyle, alternateRowStyle: XLSXStyle, XLSX: XLSXLibrary): void {
     const range = XLSX.utils.decode_range(worksheet['!ref'] || 'A1:A1');
 
     // Apply header style

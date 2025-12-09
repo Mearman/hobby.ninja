@@ -1,6 +1,8 @@
 import { promises as fs } from 'fs';
 import * as path from 'path';
 import { validateProductDataBatch } from '../schemas/validation.js';
+import type { ProductData } from '../types/product-data.js';
+import { EXIT_CODES, DIRECTORIES, FILE_PATTERNS, PROGRESS_PERCENTAGES } from '../constants/cli-constants.js';
 
 export interface ValidateCommandOptions {
   source?: string;
@@ -30,7 +32,7 @@ export class ValidateCommand {
         result = await this.validateSourceOutput(options.source, !!options.fix);
       } else {
         console.log('Please specify either --file or --source to validate');
-        process.exit(1);
+        process.exit(EXIT_CODES.INVALID_ARGS);
       }
 
       console.log('\n📊 Validation Results:');
@@ -48,14 +50,14 @@ export class ValidateCommand {
 
       if (result.invalid === 0) {
         console.log('\n✅ All data is valid!');
-        process.exit(0);
+        process.exit(EXIT_CODES.SUCCESS);
       } else {
         console.log('\n⚠️ Validation completed with errors');
-        process.exit(1);
+        process.exit(EXIT_CODES.VALIDATION_ERROR);
       }
     } catch (error) {
       console.error('❌ Validation failed:', error instanceof Error ? error.message : 'Unknown error');
-      process.exit(1);
+      process.exit(EXIT_CODES.GENERAL_ERROR);
     }
   }
 
@@ -64,10 +66,10 @@ export class ValidateCommand {
 
     try {
       const data = await fs.readFile(filePath, 'utf-8');
-      let parsedData: any[];
+      let parsedData: unknown[];
 
       // Try to parse as JSON
-      if (filePath.endsWith('.ndjson')) {
+      if (filePath.endsWith(FILE_PATTERNS.NDJSON_EXTENSION)) {
         // NDJSON format
         parsedData = data.split('\n')
           .filter(line => line.trim())
@@ -87,14 +89,14 @@ export class ValidateCommand {
   }
 
   private async validateSourceOutput(source: string, fix: boolean): Promise<ValidationResult> {
-    const outputDir = './output';
+    const outputDir = DIRECTORIES.OUTPUT;
     const sourcePattern = source === 'all' ? '' : source;
 
     // Find files in output directory
     try {
       const files = await fs.readdir(outputDir);
       const relevantFiles = files
-        .filter(file => file.endsWith('.json') || file.endsWith('.ndjson'))
+        .filter(file => file.endsWith(FILE_PATTERNS.JSON_EXTENSION) || file.endsWith(FILE_PATTERNS.NDJSON_EXTENSION))
         .filter(file => sourcePattern === '' || file.includes(sourcePattern));
 
       if (relevantFiles.length === 0) {
@@ -128,7 +130,7 @@ export class ValidateCommand {
     }
   }
 
-  private async validateData(data: any[], filePath: string, fix: boolean): Promise<ValidationResult> {
+  private async validateData(data: unknown[], filePath: string, fix: boolean): Promise<ValidationResult> {
     const validationResult = validateProductDataBatch(data);
     let fixed = 0;
 
@@ -137,34 +139,36 @@ export class ValidateCommand {
 
       // Simple fixes that can be applied
       const fixedData = validationResult.invalid.map(item => {
-        const fixedItem = { ...item.data };
+        // Cast to object to allow property access
+        const dataObj = item.data as Record<string, unknown>;
+        const fixedItem: Record<string, unknown> = { ...dataObj };
         let wasFixed = false;
 
         // Fix missing required fields
-        if (!fixedItem.name || fixedItem.name === '') {
-          fixedItem.name = 'Unknown Product';
+        if (!fixedItem['name'] || fixedItem['name'] === '') {
+          fixedItem['name'] = 'Unknown Product';
           wasFixed = true;
         }
 
-        if (!fixedItem.sku || fixedItem.sku === '') {
-          fixedItem.sku = 'unknown-sku';
+        if (!fixedItem['sku'] || fixedItem['sku'] === '') {
+          fixedItem['sku'] = 'unknown-sku';
           wasFixed = true;
         }
 
         // Fix type issues
-        if (typeof fixedItem.price === 'string') {
+        if (typeof fixedItem['price'] === 'string') {
           try {
-            const price = parseFloat(fixedItem.price.replace(/[^0-9.]/g, ''));
+            const price = parseFloat(String(fixedItem['price']).replace(/[^0-9.]/g, ''));
             if (!isNaN(price)) {
-              fixedItem.price = {
+              fixedItem['price'] = {
                 amount: price,
                 currency: 'USD',
-                originalText: fixedItem.price
+                originalText: String(fixedItem['price'])
               };
               wasFixed = true;
             }
           } catch (e) {
-            delete fixedItem.price;
+            delete fixedItem['price'];
             wasFixed = true;
           }
         }
@@ -174,7 +178,7 @@ export class ValidateCommand {
         }
 
         return {
-          data: fixedItem,
+          data: fixedItem as unknown as ProductData,
           wasFixed
         };
       });
@@ -184,11 +188,11 @@ export class ValidateCommand {
         const validFixedData = fixedData.filter(item => item.wasFixed).map(item => item.data);
         const outputPath = filePath.replace(/\.(json|ndjson)$/, '-fixed.$1');
 
-        if (filePath.endsWith('.ndjson')) {
+        if (filePath.endsWith(FILE_PATTERNS.NDJSON_EXTENSION)) {
           const ndjsonContent = validFixedData.map(item => JSON.stringify(item)).join('\n');
           await fs.writeFile(outputPath, ndjsonContent);
         } else {
-          await fs.writeFile(outputPath, JSON.stringify(validFixedData, null, 2));
+          await fs.writeFile(outputPath, JSON.stringify(validFixedData, null, PROGRESS_PERCENTAGES.COMPLETE));
         }
 
         console.log(`Fixed data saved to: ${outputPath}`);

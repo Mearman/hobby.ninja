@@ -4,6 +4,8 @@ import { getScraper } from '@hobby-ninja/scrapers';
 import { CacheManager } from '../utils/cache-manager.js';
 import { BandaiRateLimiter } from '../utils/rate-limiter.js';
 import { validateProductData } from '../schemas/validation.js';
+import type { BaseScraper } from '@hobby-ninja/scrapers/base-scraper';
+import type { ProductData } from '../types/product-data.js';
 
 export interface ScrapeOptions {
   source: string;
@@ -28,7 +30,7 @@ export interface ScrapeResult {
 export class ScrapeCommand {
   private cacheManager: CacheManager;
   private rateLimiter: BandaiRateLimiter;
-  private scraper: any;
+  private scraper: BaseScraper;
   private checkpointFile: string;
 
   constructor() {
@@ -115,7 +117,7 @@ export class ScrapeCommand {
   }
 
   private async processUrls(urls: string[], options: ScrapeOptions): Promise<ScrapeResult> {
-    const results: any[] = [];
+    const results: ProductData[] = [];
     const errors: string[] = [];
     let cached = 0;
     let newItems = 0;
@@ -224,7 +226,7 @@ export class ScrapeCommand {
     return await response.text();
   }
 
-  private async saveResults(results: any[], outputDir: string): Promise<void> {
+  private async saveResults(results: ProductData[], outputDir: string): Promise<void> {
     try {
       await fs.mkdir(outputDir, { recursive: true });
 

@@ -171,7 +171,7 @@ describe('ScraperError', () => {
 
   it('should detect HTTP status codes in generic errors', () => {
     const httpError = new Error('Request failed');
-    (httpError as any).status = 404;
+    (httpError as Error & { status?: number }).status = 404;
 
     const scraperError = ScraperError.fromError(httpError);
 

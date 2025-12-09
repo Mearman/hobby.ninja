@@ -1,4 +1,4 @@
-import { SimpleCatalogScraper } from "./simple-catalog-scraper";
+import { SimpleCatalogScraper, type SimpleCatalogResult } from "./simple-catalog-scraper";
 import { BandaiCatalogParser } from "./bandai-catalog-parser";
 import { CatalogTranslator } from "./catalog-translator";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
@@ -366,7 +366,7 @@ export async function processCatalogRange(
 	range: string,
 	options: CatalogDiscoveryOptions,
 	scraper?: SimpleCatalogScraper
-): Promise<{ success: boolean; error?: string; data?: any }> {
+): Promise<{ success: boolean; error?: string; data?: SimpleCatalogResult }> {
 	const ownsScraper = !scraper;
 	const activeScraper = scraper ?? new SimpleCatalogScraper();
 

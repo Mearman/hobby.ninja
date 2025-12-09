@@ -1,8 +1,9 @@
 import { promises as fs } from 'fs';
 import * as path from 'path';
 import { homedir } from 'os';
+import { LOG_LEVELS, LOGGING, EXIT_CODES, DIRECTORIES, FILE_PATTERNS } from '../constants/cli-constants.js';
 
-export type LogLevel = 'error' | 'warn' | 'info' | 'debug';
+export type LogLevel = typeof LOG_LEVELS[keyof typeof LOG_LEVELS];
 
 export interface LogEntry {
   timestamp: string;
@@ -35,8 +36,8 @@ export class Logger {
     this.options = {
       includeTimestamp: true,
       prettyPrint: true,
-      maxFileSize: 10 * 1024 * 1024, // 10MB
-      maxFiles: 5,
+      maxFileSize: LOGGING.DEFAULT_MAX_FILE_SIZE, // 10MB
+      maxFiles: LOGGING.DEFAULT_MAX_FILES,
       ...options
     };
   }
@@ -44,7 +45,7 @@ export class Logger {
   static getInstance(options?: Partial<LoggerOptions>): Logger {
     if (!Logger.instance) {
       const defaultOptions: LoggerOptions = {
-        level: 'info',
+        level: LOG_LEVELS.INFO,
         logToFile: false,
         logToConsole: true
       };
@@ -68,28 +69,28 @@ export class Logger {
    * Log an error message
    */
   error(message: string, error?: Error, context?: Record<string, any>): void {
-    this.log('error', message, error, context);
+    this.log(LOG_LEVELS.ERROR, message, error, context);
   }
 
   /**
    * Log a warning message
    */
   warn(message: string, context?: Record<string, any>): void {
-    this.log('warn', message, undefined, context);
+    this.log(LOG_LEVELS.WARN, message, undefined, context);
   }
 
   /**
    * Log an info message
    */
   info(message: string, context?: Record<string, any>): void {
-    this.log('info', message, undefined, context);
+    this.log(LOG_LEVELS.INFO, message, undefined, context);
   }
 
   /**
    * Log a debug message
    */
   debug(message: string, context?: Record<string, any>): void {
-    this.log('debug', message, undefined, context);
+    this.log(LOG_LEVELS.DEBUG, message, undefined, context);
   }
 
   /**
@@ -186,13 +187,13 @@ export class Logger {
    */
   private logToConsole(entry: LogEntry): void {
     const levelColors: Record<LogLevel, string> = {
-      error: '\x1b[31m', // Red
-      warn: '\x1b[33m',  // Yellow
-      info: '\x1b[36m',  // Blue
-      debug: '\x1b[37m'  // White
+      error: LOGGING.ANSI_COLORS.RED,
+      warn: LOGGING.ANSI_COLORS.YELLOW,
+      info: LOGGING.ANSI_COLORS.BLUE,
+      debug: LOGGING.ANSI_COLORS.WHITE
     };
 
-    const resetColor = '\x1b[0m';
+    const resetColor = LOGGING.ANSI_COLORS.RESET;
     const color = levelColors[entry.level];
 
     let logMessage = '';
@@ -208,7 +209,7 @@ export class Logger {
     }
 
     if (entry.context && Object.keys(entry.context).length > 0) {
-      logMessage += `\n${color}Context:${resetColor} ${JSON.stringify(entry.context, null, 2)}`;
+      logMessage += `\n${color}Context:${resetColor} ${JSON.stringify(entry.context, null, PROGRESS_PERCENTAGES.COMPLETE)}`;
     }
 
     if (entry.error) {
@@ -220,13 +221,13 @@ export class Logger {
 
     // Choose appropriate console method
     switch (entry.level) {
-      case 'error':
+      case LOG_LEVELS.ERROR:
         console.error(logMessage);
         break;
-      case 'warn':
+      case LOG_LEVELS.WARN:
         console.warn(logMessage);
         break;
-      case 'debug':
+      case LOG_LEVELS.DEBUG:
         console.debug(logMessage);
         break;
       default:
@@ -248,7 +249,7 @@ export class Logger {
       };
 
       if (this.options.prettyPrint) {
-        return JSON.stringify(logData, null, 2);
+        return JSON.stringify(logData, null, PROGRESS_PERCENTAGES.COMPLETE);
       } else {
         return JSON.stringify(logData);
       }
@@ -270,7 +271,7 @@ export class Logger {
       this.logFile = customPath;
     } else {
       // Create default log file path
-      const logDir = path.join(homedir(), '.gundam-scraper', 'logs');
+      const logDir = path.join(homedir(), DIRECTORIES.LOGS);
       await fs.mkdir(logDir, { recursive: true });
 
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
@@ -319,7 +320,7 @@ export class Logger {
 
       const fileStats = await Promise.all(
         files
-          .filter(file => file.endsWith('.log'))
+          .filter(file => file.endsWith(FILE_PATTERNS.LOG_EXTENSION))
           .map(file => path.join(logDir, file))
           .map(async (filePath) => {
             try {
@@ -358,14 +359,7 @@ export class Logger {
    * Check if a log level should be processed
    */
   private shouldLog(level: LogLevel): boolean {
-    const levels: Record<LogLevel, number> = {
-      error: 0,
-      warn: 1,
-      info: 2,
-      debug: 3
-    };
-
-    return levels[level] <= levels[this.options.level];
+    return LOGGING.LOG_LEVEL_PRIORITIES[level] <= LOGGING.LOG_LEVEL_PRIORITIES[this.options.level];
   }
 
   /**
@@ -373,7 +367,7 @@ export class Logger {
    */
   async flush(): Promise<void> {
     while (this.logQueue.length > 0 || this.isWriting) {
-      await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise(resolve => setTimeout(resolve, LOGGING.FLUSH_DELAY));
     }
   }
 

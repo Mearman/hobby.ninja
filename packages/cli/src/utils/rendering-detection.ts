@@ -219,7 +219,7 @@ export class RenderingDetector {
     return 'dynamic';
   }
 
-  private static calculateConfidence(html: string, _analysis: any): number {
+  private static calculateConfidence(html: string, _analysis: RenderingDetection): number {
     let confidence = 0.5; // Base confidence
 
     // High confidence indicators
@@ -231,7 +231,7 @@ export class RenderingDetector {
     return Math.min(confidence, 1.0);
   }
 
-  private static getIndicators(html: string, _analysis: any) {
+  private static getIndicators(html: string, _analysis: RenderingDetection): RenderingDetection['indicators'] {
     return {
       hasDynamicContent: this.hasDynamicIndicators(html),
       hasLazyLoading: this.LAZY_LOADING_PATTERNS.some(pattern => pattern.test(html)),
@@ -242,7 +242,7 @@ export class RenderingDetector {
     };
   }
 
-  private static getRecommendation(staticAnalysis: any, dynamicAnalysis: any): 'static-only' | 'dynamic-required' | 'hybrid-approach' {
+  private static getRecommendation(staticAnalysis: ProgressiveEnhancementResult['staticAnalysis'], dynamicAnalysis: ProgressiveEnhancementResult['dynamicAnalysis']): 'static-only' | 'dynamic-required' | 'hybrid-approach' {
     if (staticAnalysis.sufficient && !dynamicAnalysis.required) {
       return 'static-only';
     }

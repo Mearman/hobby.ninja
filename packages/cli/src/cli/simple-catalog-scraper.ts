@@ -1,4 +1,4 @@
-import { chromium } from 'playwright';
+import { chromium, Browser, BrowserContext, Route } from 'playwright';
 
 /**
  * Minimal catalog scraper for Bandai Hobby pages
@@ -14,8 +14,8 @@ export interface SimpleCatalogResult {
 }
 
 export class SimpleCatalogScraper {
-	private browser: any;
-	private context: any;
+	private browser: Browser | null = null;
+	private context: BrowserContext | null = null;
 
 	async initialize() {
 		this.browser = await chromium.launch({
@@ -35,7 +35,7 @@ export class SimpleCatalogScraper {
 
 		// Block unnecessary resources to speed up page loads (we only need HTML)
 		// Note: Don't block 'script' as some pages need JS for initial render
-		await this.context.route('**/*', (route: any) => {
+		await this.context.route('**/*', (route: Route) => {
 			const resourceType = route.request().resourceType();
 			if (['image', 'stylesheet', 'font', 'media'].includes(resourceType)) {
 				return route.abort();
@@ -54,6 +54,9 @@ export class SimpleCatalogScraper {
 	}
 
 	async extractFromPage(range: string, url: string): Promise<SimpleCatalogResult> {
+		if (!this.context) {
+			throw new Error('Browser context not initialized. Call initialize() first.');
+		}
 		const page = await this.context.newPage();
 
 		try {

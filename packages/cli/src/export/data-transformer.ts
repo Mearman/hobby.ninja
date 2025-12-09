@@ -4,6 +4,7 @@
 
 import type { GundamData } from '../types/product-data.js';
 import type { TransformedData, ExportFilters, ValidationResult, ValidationError, ValidationWarning } from './types.js';
+import { EXPORT_CONSTANTS, DATA_PROCESSING_CONSTANTS } from '../constants/export-constants.js';
 
 export class DataTransformer {
   /**
@@ -32,13 +33,13 @@ export class DataTransformer {
     } = {}
   ): TransformedData {
     const transformed: TransformedData = {
-      id: item.id || this.generateId(item),
-      name: this.getLocalizedName(item.name, options.language || 'all'),
-      brand: item.brand || 'Unknown',
+      id: item.id ?? this.generateId(item),
+      name: this.getLocalizedName(item.name, options.language ?? 'all'),
+      brand: item.brand ?? 'Unknown',
       language: item.language,
-      source: item.source || 'Unknown',
-      scrapedAt: item.scrapedAt || new Date().toISOString(),
-      images: options.includeImages ? this.transformImages(item.images || []) : []
+      source: item.source ?? 'Unknown',
+      scrapedAt: item.scrapedAt ?? new Date().toISOString(),
+      images: options.includeImages ? this.transformImages(item.images ?? []) : []
     };
 
     // Add optional fields if they exist
@@ -248,8 +249,8 @@ export class DataTransformer {
 
     return images.map(img => {
       const transformed: TransformedData['images'][0] = {
-        type: img.type || 'unknown',
-        url: img.url || '',
+        type: img.type ?? 'unknown',
+        url: img.url ?? '',
         alt: img.alt
       };
       return transformed;
@@ -261,9 +262,9 @@ export class DataTransformer {
    */
   private static generateId(item: GundamData): string {
     const name = typeof item.name === 'string' ? item.name : 'unknown';
-    const brand = item.brand || 'unknown';
-    const hash = Buffer.from(`${brand}-${name}-${item.source || 'unknown'}`).toString('base64');
-    return hash.replace(/[^a-zA-Z0-9]/g, '').substring(0, 16);
+    const brand = item.brand ?? 'unknown';
+    const hash = Buffer.from(`${brand}-${name}-${item.source ?? 'unknown'}`).toString('base64');
+    return hash.replace(/[^a-zA-Z0-9]/g, '').substring(0, EXPORT_CONSTANTS.HASH_SUBSTRING_LENGTH);
   }
 
   /**
@@ -313,11 +314,11 @@ export class DataTransformer {
 
       // Language distribution
       const lang = item.language.language;
-      summary.languageDistribution[lang] = (summary.languageDistribution[lang] || 0) + 1;
+      summary.languageDistribution[lang] = (summary.languageDistribution[lang] ?? 0) + 1;
 
       // Category distribution
       if (item.category) {
-        summary.categoryDistribution[item.category] = (summary.categoryDistribution[item.category] || 0) + 1;
+        summary.categoryDistribution[item.category] = (summary.categoryDistribution[item.category] ?? 0) + 1;
       }
 
       // Price data

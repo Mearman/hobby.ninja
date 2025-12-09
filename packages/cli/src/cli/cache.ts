@@ -1,4 +1,5 @@
 import { CacheManager } from '../utils/cache-manager.js';
+import { EXIT_CODES, FILE_SIZE_LIMITS } from '../constants/cli-constants.js';
 
 export interface CacheCommandOptions {
   clear?: boolean;
@@ -28,7 +29,7 @@ export class CacheCommand {
       }
     } catch (error) {
       console.error('❌ Cache command failed:', error instanceof Error ? error.message : 'Unknown error');
-      process.exit(1);
+      process.exit(EXIT_CODES.GENERAL_ERROR);
     }
   }
 
@@ -43,7 +44,7 @@ export class CacheCommand {
     const stats = await this.cacheManager.getStats();
 
     console.log(`Total files: ${stats.totalFiles}`);
-    console.log(`Total size: ${(stats.totalSize / 1024 / 1024).toFixed(2)} MB`);
+    console.log(`Total size: ${(stats.totalSize / FILE_SIZE_LIMITS.MEGABYTE).toFixed(2)} MB`);
     console.log(`Compression ratio: ${(stats.compressionRatio * 100).toFixed(1)}%`);
     console.log(`Hit rate: ${(stats.hitRate * 100).toFixed(1)}%`);
     console.log(`Oldest entry: ${new Date(stats.oldestEntry).toLocaleString()}`);
