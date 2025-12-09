@@ -3,7 +3,6 @@ import path from "node:path";
 
 import type { CacheManager } from "@hobby-ninja/types/profile";
 
-import { logger } from "./logger";
 import {
 	DEFAULT_CACHE_TTL,
 	DEFAULT_CACHE_MAX_SIZE,
@@ -11,6 +10,7 @@ import {
 	PROFILE_ANALYSIS_TTL,
 	DEFAULT_PROFILE_CACHE_MAX_SIZE,
 } from "./constants";
+import { logger } from "./logger";
 
 export interface CacheOptions {
 	ttl?: number; // Time to live in milliseconds
@@ -119,7 +119,7 @@ export class FileSystemCacheManager implements CacheManager {
 
 		// Sort by last accessed time and remove the least recently used items
 		const entries: Array<[string, CacheItem]> = [...this.memoryCache.entries()];
-		const items = entries.sort(
+		const items = entries.toSorted(
 			(a, b) => a[1].lastAccessed - b[1].lastAccessed,
 		);
 
@@ -261,7 +261,7 @@ export class FileSystemCacheManager implements CacheManager {
 		maxSize: number;
 		hitRate: number;
 		memoryUsage: number;
-	} {
+		} {
 		let totalAccess = 0;
 		let memoryUsage = 0;
 
@@ -281,12 +281,12 @@ export class FileSystemCacheManager implements CacheManager {
 	}
 
 	// Additional methods for URL-based caching
-	async getByUrl(url: string): Promise<unknown> {
+	getByUrl(url: string): unknown {
 		const urlKey = `url:${url}`;
 		return this.get(urlKey);
 	}
 
-	async setByUrl(url: string, value: unknown, type: string): Promise<void> {
+	setByUrl(url: string, value: unknown, type: string): void {
 		const urlKey = `url:${url}:${type}`;
 		const ttl = type === "profile-analysis" ? PROFILE_ANALYSIS_TTL : this.options.ttl;
 		this.set(urlKey, { rawHtml: value }, ttl);

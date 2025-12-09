@@ -24,9 +24,7 @@ export interface ProductImage {
 }
 
 // Gundam-specific data interface for scraped data
-export interface ProductSpecification {
-  [key: string]: string | number | boolean | undefined;
-}
+export type ProductSpecification = Record<string, string | number | boolean | undefined>;
 
 export interface GundamProductImage {
   type: string;

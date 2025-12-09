@@ -48,9 +48,7 @@ export interface BlockMetadata {
   footnote?: string;
 }
 
-export interface SpecificationData {
-  [key: string]: string | number | boolean | string[] | undefined;
-}
+export type SpecificationData = Record<string, string | number | boolean | string[] | undefined>;
 
 export interface BlockData {
   text?: string;
@@ -216,10 +214,10 @@ export interface BatchProcessingResult {
   total: number;
   successful: number;
   failed: number;
-  errors: Array<{
+  errors: {
     file: string;
     error: string;
-  }>;
+  }[];
   totalTime: number;
   averageRate: number;
 }

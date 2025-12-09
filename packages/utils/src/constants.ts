@@ -11,10 +11,10 @@
 export const DEFAULT_COMMAND_TIMEOUT = 30_000;
 
 /** Default timeout for network operations in milliseconds (5 seconds) */
-export const DEFAULT_NETWORK_TIMEOUT = 5_000;
+export const DEFAULT_NETWORK_TIMEOUT = 5000;
 
 /** Minimum timeout in milliseconds */
-export const MINIMUM_TIMEOUT = 1_000;
+export const MINIMUM_TIMEOUT = 1000;
 
 /** Cleanup interval for cache management in milliseconds (1 minute) */
 export const CACHE_CLEANUP_INTERVAL = 60_000;
@@ -28,15 +28,27 @@ export const DEFAULT_CACHE_TTL = 3_600_000;
 /** Default update interval for profiles in hours */
 export const DEFAULT_UPDATE_INTERVAL_HOURS = 24;
 
+/** Hours in a day */
+export const HOURS_PER_DAY = 24;
+
+/** Minutes per hour */
+export const MINUTES_PER_HOUR = 60;
+
+/** Seconds per minute */
+export const SECONDS_PER_MINUTE = 60;
+
+/** Milliseconds per second */
+export const MS_PER_SECOND = 1000;
+
 /** Update interval in milliseconds (24 hours) */
-export const DEFAULT_UPDATE_INTERVAL_MS = 24 * 60 * 60 * 1_000;
+export const DEFAULT_UPDATE_INTERVAL_MS = HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE * MS_PER_SECOND;
 
 // =============================================================================
 // CACHE AND STORAGE CONSTANTS
 // =============================================================================
 
 /** Default maximum size for memory cache */
-export const DEFAULT_CACHE_MAX_SIZE = 1_000;
+export const DEFAULT_CACHE_MAX_SIZE = 1000;
 
 /** Default maximum size for profile cache */
 export const DEFAULT_PROFILE_CACHE_MAX_SIZE = 500;
@@ -83,7 +95,7 @@ export const INITIAL_SUCCESS_RATE_ESTIMATE = 0.95;
 // =============================================================================
 
 /** Minimum HTML content length for static analysis */
-export const MIN_HTML_CONTENT_LENGTH = 2_000;
+export const MIN_HTML_CONTENT_LENGTH = 2000;
 
 /** Minimum text content length */
 export const MIN_TEXT_CONTENT_LENGTH = 500;
@@ -92,7 +104,7 @@ export const MIN_TEXT_CONTENT_LENGTH = 500;
 export const DEFAULT_RETRY_COUNT = 3;
 
 /** Maximum DOM complexity score */
-export const MAX_DOM_COMPLEXITY = 1_000;
+export const MAX_DOM_COMPLEXITY = 1000;
 
 /** Default DOM complexity score when none is provided */
 export const DEFAULT_DOM_COMPLEXITY = 50;
@@ -104,7 +116,7 @@ export const EMPTY_DIV_THRESHOLD = 5;
 export const EMPTY_SPAN_THRESHOLD = 10;
 
 /** Additional content estimate for dynamic analysis */
-export const ADDITIONAL_CONTENT_ESTIMATE = 5_000;
+export const ADDITIONAL_CONTENT_ESTIMATE = 5000;
 
 /** Timer intervals for async operations */
 export const TIMER_INTERVAL_10MS = 10;
@@ -165,7 +177,7 @@ export const DYNAMIC_MULTIPLIER_RANGE = 2;
 export const PERCENTAGE_MULTIPLIER = 100;
 
 /** Hour to millisecond conversion factor */
-export const HOUR_TO_MS = 1_000 * 60 * 60;
+export const HOUR_TO_MS = MS_PER_SECOND * SECONDS_PER_MINUTE * MINUTES_PER_HOUR;
 
 /** Default attempt frequency in hours (for profile updates) */
 export const DEFAULT_ATTEMPT_FREQUENCY_HOURS = 2;

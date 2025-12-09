@@ -1,7 +1,6 @@
 import type { RenderingDetection, ProgressiveEnhancementResult, RenderingType } from "@hobby-ninja/types/profile";
 
 import {
-	DEFAULT_NETWORK_TIMEOUT,
 	MIN_HTML_CONTENT_LENGTH,
 	MIN_TEXT_CONTENT_LENGTH,
 	MAX_DOM_COMPLEXITY,

@@ -5,9 +5,6 @@ import type { LanguageDetection } from "@hobby-ninja/types/language";
 import type { CacheManager, ProfileCache, ProfileGenerationResult, PageTypeProfile, RenderingDetection } from "@hobby-ninja/types/profile";
 
 import { cacheManager } from "./cache-manager";
-import { detectFromHtml } from "./languageDetection";
-import { logger } from "./logger";
-import { detectRenderingStrategy } from "./renderingDetection";
 import {
 	DEFAULT_UPDATE_INTERVAL_HOURS,
 	DEFAULT_RETRY_COUNT,
@@ -20,12 +17,17 @@ import {
 	CONSISTENT_ANALYSIS_INCREMENT,
 	MULTIPLE_SAMPLES_INCREMENT,
 	HIGH_CONFIDENCE_LANGUAGE_RATIO,
-	HOUR_TO_MS,
 	DEFAULT_ATTEMPT_FREQUENCY_HOURS,
 	TIMEOUT_MULTIPLIER,
 	INITIAL_SUCCESS_RATE_ESTIMATE,
 	DEFAULT_DOM_COMPLEXITY,
+	MS_PER_SECOND,
+	SECONDS_PER_MINUTE,
+	MINUTES_PER_HOUR,
 } from "./constants";
+import { detectFromHtml } from "./languageDetection";
+import { logger } from "./logger";
+import { detectRenderingStrategy } from "./renderingDetection";
 
 export interface ProfileManagerOptions {
   profileCachePath?: string;
@@ -413,13 +415,13 @@ export class ProfileManager {
 
   
 	private isProfileExpired(profile: PageTypeProfile): boolean {
-		const ageHours = (Date.now() - (profile.metadata?.lastUpdated ?? 0)) / (1000 * 60 * 60);
+		const ageHours = (Date.now() - (profile.metadata?.lastUpdated ?? 0)) / (MS_PER_SECOND * SECONDS_PER_MINUTE * MINUTES_PER_HOUR);
 		return ageHours > this.updateInterval;
 	}
 
 	private estimateTotalAttempts(profile: PageTypeProfile): number {
 		// Rough estimate based on when the profile was last updated
-		const ageHours = (Date.now() - (profile.performance?.lastAnalyzed ?? 0)) / (1000 * 60 * 60);
+		const ageHours = (Date.now() - (profile.performance?.lastAnalyzed ?? 0)) / (MS_PER_SECOND * SECONDS_PER_MINUTE * MINUTES_PER_HOUR);
 		return Math.max(1, ageHours / DEFAULT_ATTEMPT_FREQUENCY_HOURS); // Assume 1 attempt every 2 hours
 	}
 
