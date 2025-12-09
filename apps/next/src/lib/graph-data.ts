@@ -20,94 +20,45 @@ import {
 	ManualNodeSchema,
 } from "./schemas";
 
-// Static data fallback for development when external JSON files aren't available
-// In production with static export, this would be replaced with actual data
+// Static data imports for build-time embedding
+// This replaces runtime fetching with build-time imports
+import itemsData from '../data/items.json';
+import brandsData from '../data/brands.json';
+import categoriesData from '../data/categories.json';
+import seriesData from '../data/series.json';
+
+// Parse and validate the imported data
+function parseJSONData<T>(schema: any, data: unknown[]): T[] {
+	return data.filter(item => {
+		const result = schema.safeParse(item);
+		return result.success;
+	}).map(item => {
+		const result = schema.safeParse(item);
+		return result.success ? result.data : null;
+	}).filter(Boolean) as T[];
+}
+
+// Pre-validated data loaded at build time
+const parsedItems = parseJSONData<ItemNode>(ItemNodeSchema, itemsData);
+const parsedBrands = parseJSONData<BrandNode>(BrandNodeSchema, brandsData);
+const parsedCategories = parseJSONData<CategoryNode>(CategoryNodeSchema, categoriesData);
+const parsedSeries = parseJSONData<SeriesNode>(SeriesNodeSchema, seriesData);
+
+// Cache for loaded data (synchronous since data is pre-built)
 const staticData = {
-	items: [
-		// Sample item for demonstration - replace with actual data
-		{
-			id: "sample-item-1",
-			name: "RX-78-2 Gundam",
-			type: "item" as const,
-			grade: "MG",
-			scale: "1/100",
-			brand: "Bandai",
-			series: "Mobile Suit Gundam",
-			category: "Gunpla"
-		}
-	],
-	brands: [
-		{
-			id: "bandai",
-			name: "Bandai",
-			type: "brand" as const
-		}
-	],
-	categories: [
-		{
-			id: "gunpla",
-			name: "Gunpla",
-			type: "category" as const
-		}
-	],
-	series: [
-		{
-			id: "mobile-suit-gundam",
-			name: "Mobile Suit Gundam",
-			type: "series" as const
-		}
-	],
-	manuals: []
+	items: parsedItems,
+	brands: parsedBrands,
+	categories: parsedCategories,
+	series: parsedSeries,
+	manuals: [] as ManualNode[],
 };
 
-// Process and validate data at build time
-const items: ItemNode[] = [];
-const brands: BrandNode[] = [];
-const categories: CategoryNode[] = [];
-const series: SeriesNode[] = [];
-const manuals: ManualNode[] = [];
-
-// Process items data
-for (const itemData of staticData.items) {
-	const result = ItemNodeSchema.safeParse(itemData);
-	if (result.success && isItemNode(result.data)) {
-		items.push(result.data);
-	}
-}
-
-// Process brands data
-for (const brandData of staticData.brands) {
-	const result = BrandNodeSchema.safeParse(brandData);
-	if (result.success && isBrandNode(result.data)) {
-		brands.push(result.data);
-	}
-}
-
-// Process categories data
-for (const categoryData of staticData.categories) {
-	const result = CategoryNodeSchema.safeParse(categoryData);
-	if (result.success && isCategoryNode(result.data)) {
-		categories.push(result.data);
-	}
-}
-
-// Process series data
-for (const seriesDataItem of staticData.series) {
-	const result = SeriesNodeSchema.safeParse(seriesDataItem);
-	if (result.success && isSeriesNode(result.data)) {
-		series.push(result.data);
-	}
-}
-
-// Process manuals data
-for (const manualData of staticData.manuals) {
-	const result = ManualNodeSchema.safeParse(manualData);
-	if (result.success && isManualNode(result.data)) {
-		manuals.push(result.data);
-	}
-}
-
-console.log(`✅ Loaded static data: ${items.length} items, ${brands.length} brands, ${categories.length} categories, ${series.length} series, ${manuals.length} manuals`);
+console.log('Loaded static graph data:', {
+	items: staticData.items.length,
+	brands: staticData.brands.length,
+	categories: staticData.categories.length,
+	series: staticData.series.length,
+});
 
 // Sort data by display name
 const sortByName = <T extends BaseNode>(a: T, b: T): number => {
@@ -116,77 +67,79 @@ const sortByName = <T extends BaseNode>(a: T, b: T): number => {
 	return nameA.localeCompare(nameB);
 };
 
-// Export functions that return validated data (synchronous for static build)
+// Export synchronous functions that return pre-validated data
 export function getAllItems(): ItemNode[] {
-	return [...items].sort(sortByName);
+	return [...staticData.items].sort(sortByName);
 }
 
 export function getAllBrands(): BrandNode[] {
-	return [...brands].sort(sortByName);
+	return [...staticData.brands].sort(sortByName);
 }
 
 export function getAllCategories(): CategoryNode[] {
-	return [...categories].sort(sortByName);
+	return [...staticData.categories].sort(sortByName);
 }
 
 export function getAllSeries(): SeriesNode[] {
-	return [...series].sort(sortByName);
+	return [...staticData.series].sort(sortByName);
 }
 
 export function getAllManuals(): ManualNode[] {
-	return [...manuals].sort(sortByName);
+	return [...staticData.manuals].sort(sortByName);
 }
 
-// Get specific node by ID with type safety
+// Get specific node by ID with type safety (synchronous)
 export function getItemById(id: string): ItemNode | null {
-	return items.find(item => item.id === id) ?? null;
+	return staticData.items.find(item => item.id === id) ?? null;
 }
 
 export function getBrandById(id: string): BrandNode | null {
-	return brands.find(brand => brand.id === id) ?? null;
+	return staticData.brands.find(brand => brand.id === id) ?? null;
 }
 
 export function getCategoryById(id: string): CategoryNode | null {
-	return categories.find(category => category.id === id) ?? null;
+	return staticData.categories.find(category => category.id === id) ?? null;
 }
 
 export function getSeriesById(id: string): SeriesNode | null {
-	return series.find(s => s.id === id) ?? null;
+	return staticData.series.find(s => s.id === id) ?? null;
 }
 
 export function getManualById(id: string): ManualNode | null {
-	return manuals.find(manual => manual.id === id) ?? null;
+	return staticData.manuals.find(manual => manual.id === id) ?? null;
 }
 
 // Get all nodes combined
 export function getAllNodes(): GraphNode[] {
-	return [...items, ...brands, ...categories, ...series, ...manuals];
+	return [...staticData.items, ...staticData.brands, ...staticData.categories, ...staticData.series, ...staticData.manuals];
 }
 
 // Get nodes by type
-export async function getNodesByType<T extends GraphNode>(
+export function getNodesByType<T extends GraphNode>(
 	type: string,
 	typeGuard: (data: unknown) => data is T,
-): Promise<T[]> {
-	const allNodes = await getAllNodes();
+): T[] {
+	const allNodes = getAllNodes();
 	return allNodes.filter((node): node is T => node.type === type && typeGuard(node));
 }
 
 // Get node by any type
-export async function getNodeByIdAny(id: string): Promise<GraphNode | null> {
+export function getNodeByIdAny(id: string): GraphNode | null {
 	return (
-		items.find(item => item.id === id) ??
-		brands.find(brand => brand.id === id) ??
-		categories.find(category => category.id === id) ??
-		series.find(s => s.id === id) ??
-		manuals.find(manual => manual.id === id) ??
+		staticData.items.find(item => item.id === id) ??
+		staticData.brands.find(brand => brand.id === id) ??
+		staticData.categories.find(category => category.id === id) ??
+		staticData.series.find(s => s.id === id) ??
+		staticData.manuals.find(manual => manual.id === id) ??
 		null
 	);
 }
 
-// Validate that required data is available
-export async function validateGraphData(): Promise<boolean> {
-	// For static export, validation is done at build time
+// Validate that required data is available (synchronous)
+export function validateGraphData(): boolean {
 	// Return true if data was successfully loaded and validated
-	return items.length > 0 && brands.length > 0 && categories.length > 0 && series.length > 0;
+	return staticData.items.length > 0 && staticData.brands.length > 0 && staticData.categories.length > 0 && staticData.series.length > 0;
 }
+
+// Export the static data for direct access in other modules
+export { staticData as graphData };
