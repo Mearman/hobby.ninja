@@ -30,6 +30,7 @@ import {
 import Link from "next/link";
 import { getNodeDisplayName, getNodeImages, isItemNode, CategoryNode, ItemNode } from "@/lib/schemas";
 import { PAGINATION } from "@/lib/constants";
+import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import {
 	itemCard,
 	itemCardImage,
@@ -69,6 +70,10 @@ function ItemCard({ item }: { item: ItemNode }) {
 	const itemImages = getNodeImages(item);
 	const primaryImage = itemImages.length > 0 ? itemImages[0] : null;
 
+	// Generate local placeholder images
+	const placeholderSrc = createPlaceholderSvg(getNodeDisplayName(item));
+	const errorPlaceholderSrc = createErrorPlaceholderSvg();
+
 	return (
 		<Card
 			component={Link}
@@ -80,15 +85,15 @@ function ItemCard({ item }: { item: ItemNode }) {
 		>
 			<Box className={itemCardImage}>
 				<Image
-					src={primaryImage || `https://via.placeholder.com/280x200/f5f5f5/666666?text=${encodeURIComponent(getNodeDisplayName(item))}`}
+					src={primaryImage || placeholderSrc}
 					alt={getNodeDisplayName(item)}
 					fit="cover"
 					height={200}
-					fallbackSrc="https://via.placeholder.com/280x200/e0e0e0/999999?text=No+Image"
+					fallbackSrc={errorPlaceholderSrc}
 					// Add error handling for failed image loads
 					onError={(e) => {
-						// If the primary image fails, try a placeholder
-						e.currentTarget.src = `https://via.placeholder.com/280x200/e0e0e0/999999?text=${encodeURIComponent('Image+Not+Available')}`;
+						// If the primary image fails, use local error placeholder
+						e.currentTarget.src = errorPlaceholderSrc;
 					}}
 				/>
 			</Box>
