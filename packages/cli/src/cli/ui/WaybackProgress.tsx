@@ -4,14 +4,14 @@
  * Uses @inkjs/ui components (ProgressBar, Spinner) for rich CLI output.
  */
 
-import React from 'react';
-import { render, Box, Text } from 'ink';
-import { ProgressBar, Spinner } from '@inkjs/ui';
+import { ProgressBar, Spinner } from "@inkjs/ui";
+import { render, Box, Text } from "ink";
+import React from "react";
 
 /** A single log entry for the scrolling log */
 export interface LogEntry {
 	url: string;
-	status: 'success' | 'failed' | 'skipped' | 'cached' | 'retrying' | 'requeued' | 'auth_fallback';
+	status: "success" | "failed" | "skipped" | "cached" | "retrying" | "requeued" | "auth_fallback";
 	message?: string;
 	/** Number of retry attempts (0 = first try succeeded) */
 	retryCount?: number;
@@ -50,7 +50,7 @@ export interface WaybackStats {
 	};
 	/** Current item being processed */
 	currentItem?: {
-		sourceType: 'manual' | 'catalog';
+		sourceType: "manual" | "catalog";
 		itemId: string;
 		field: string;
 	};
@@ -82,10 +82,10 @@ function formatDuration(ms: number): string {
 
 function WaybackProgressUI({ stats }: WaybackProgressProps) {
 	const progress = stats.total > 0 ? Math.round((stats.processed / stats.total) * 100) : 0;
-	const elapsed = stats.elapsedMs ? formatDuration(stats.elapsedMs) : '0s';
+	const elapsed = stats.elapsedMs ? formatDuration(stats.elapsedMs) : "0s";
 
 	// Estimate remaining time
-	let eta = '';
+	let eta = "";
 	if (stats.processed > 0 && stats.elapsedMs && !stats.isComplete) {
 		const avgTimePerItem = stats.elapsedMs / stats.processed;
 		const remaining = (stats.total - stats.processed) * avgTimePerItem;
@@ -97,7 +97,7 @@ function WaybackProgressUI({ stats }: WaybackProgressProps) {
 			{/* Header with spinner or completion status */}
 			<Box marginBottom={1}>
 				{stats.isComplete ? (
-					<Text color="green" bold>
+					<Text color="green" bold={true}>
 						Wayback Submission Complete!
 					</Text>
 				) : (
@@ -113,12 +113,12 @@ function WaybackProgressUI({ stats }: WaybackProgressProps) {
 					<ProgressBar value={progress} />
 				</Box>
 				<Text>
-					{' '}
+					{" "}
 					{stats.processed}/{stats.total} ({progress}%)
 				</Text>
 				{eta && (
 					<Text color="gray">
-						{' '}
+						{" "}
 						ETA: {eta}
 					</Text>
 				)}
@@ -139,7 +139,7 @@ function WaybackProgressUI({ stats }: WaybackProgressProps) {
 				<Text> </Text>
 				<Text color="yellow">Skipped: {stats.skipped}</Text>
 				<Text> </Text>
-				<Text color={stats.failed > 0 ? 'red' : 'gray'}>Failed: {stats.failed}</Text>
+				<Text color={stats.failed > 0 ? "red" : "gray"}>Failed: {stats.failed}</Text>
 			</Box>
 
 			{/* Age analysis row */}
@@ -178,28 +178,28 @@ function WaybackProgressUI({ stats }: WaybackProgressProps) {
 			{/* Scrolling log of recent URLs */}
 			{stats.recentLogs && stats.recentLogs.length > 0 && (
 				<Box marginTop={1} flexDirection="column" borderStyle="single" borderColor="gray" paddingX={1}>
-					<Text color="gray" dimColor>Recent activity:</Text>
+					<Text color="gray" dimColor={true}>Recent activity:</Text>
 					{stats.recentLogs.map((log, i) => {
-						const statusIcon = log.status === 'success' ? '✓' :
-							log.status === 'failed' ? '✗' :
-							log.status === 'cached' ? '⚡' :
-							log.status === 'retrying' ? '↻' :
-							log.status === 'requeued' ? '⟳' :
-							log.status === 'auth_fallback' ? '🔓' : '○';
-						const statusColor = log.status === 'success' ? 'green' :
-							log.status === 'failed' ? 'red' :
-							log.status === 'cached' ? 'cyan' :
-							log.status === 'retrying' ? 'magenta' :
-							log.status === 'requeued' ? 'blue' :
-							log.status === 'auth_fallback' ? 'yellow' : 'yellow';
+						const statusIcon = log.status === "success" ? "✓" :
+							log.status === "failed" ? "✗" :
+								log.status === "cached" ? "⚡" :
+									log.status === "retrying" ? "↻" :
+										log.status === "requeued" ? "⟳" :
+											log.status === "auth_fallback" ? "🔓" : "○";
+						const statusColor = log.status === "success" ? "green" :
+							log.status === "failed" ? "red" :
+								log.status === "cached" ? "cyan" :
+									log.status === "retrying" ? "magenta" :
+										log.status === "requeued" ? "blue" :
+											log.status === "auth_fallback" ? "yellow" : "yellow";
 						// Truncate URL to fit in terminal
 						const maxUrlLen = 50;
 						const displayUrl = log.url.length > maxUrlLen
-							? '...' + log.url.slice(-maxUrlLen + 3)
+							? "..." + log.url.slice(-maxUrlLen + 3)
 							: log.url;
 						// Build detail string with extra info
 						const details: string[] = [];
-						if (log.status === 'retrying' && log.retryCount) {
+						if (log.status === "retrying" && log.retryCount) {
 							const delaySec = log.retryDelayMs ? Math.round(log.retryDelayMs / 1000) : 0;
 							details.push(`retry #${log.retryCount}, wait ${delaySec}s`);
 						} else if (log.retryCount && log.retryCount > 0) {
@@ -209,23 +209,23 @@ function WaybackProgressUI({ stats }: WaybackProgressProps) {
 							details.push(`age: ${log.archiveAge}`);
 						}
 						if (log.fromCache) {
-							details.push('cached');
+							details.push("cached");
 						}
-						if (log.message && !log.archiveAge && log.status !== 'retrying') {
+						if (log.message && !log.archiveAge && log.status !== "retrying") {
 							details.push(log.message);
 						}
 						// For retrying status, show the error message separately
-						if (log.status === 'retrying' && log.message) {
-							details.push(log.message.substring(0, 30));
+						if (log.status === "retrying" && log.message) {
+							details.push(log.message.slice(0, 30));
 						}
-						const detailStr = details.length > 0 ? ` (${details.join(', ')})` : '';
+						const detailStr = details.length > 0 ? ` (${details.join(", ")})` : "";
 						return (
 							<Box key={i}>
 								<Text color={statusColor}>{statusIcon}</Text>
 								<Text> </Text>
 								<Text color="gray">{displayUrl}</Text>
 								{detailStr && (
-									<Text color="gray" dimColor>{detailStr}</Text>
+									<Text color="gray" dimColor={true}>{detailStr}</Text>
 								)}
 							</Box>
 						);
@@ -246,7 +246,7 @@ export class WaybackProgressRenderer {
 	private rerender: ((node: React.ReactNode) => void) | null = null;
 	private unmount: (() => void) | null = null;
 	private stats: WaybackStats;
-	private startTime: number = 0;
+	private startTime = 0;
 	private logEntries: LogEntry[] = [];
 
 	constructor(total: number) {

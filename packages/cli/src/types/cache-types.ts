@@ -1,18 +1,18 @@
-import type { RenderingDetection } from './rendering-detection.js';
+import type { RenderingDetection } from "./rendering-detection.js";
 
-export type CompressionMethod = 'none' | 'gzip' | 'deflate' | 'brotli';
+export type CompressionMethod = "none" | "gzip" | "deflate" | "brotli";
 
-export type CachePriority = 'low' | 'medium' | 'high';
+export type CachePriority = "low" | "medium" | "high";
 
 export interface PageCache {
   url: string;
   cacheKey: string;
-  source: 'bandai-hobby' | 'bandai-manual' | 'gundam-info';
+  source: "bandai-hobby" | "bandai-manual" | "gundam-info";
   rawHtml: string;
   compressedHtml?: Buffer;
 
   renderingStrategy: {
-    type: 'static' | 'dynamic' | 'hybrid' | 'unknown';
+    type: "static" | "dynamic" | "hybrid" | "unknown";
     staticContentAvailable: boolean;
     dynamicContentCaptured: boolean;
     jsDependencies: string[];
@@ -29,11 +29,11 @@ export interface PageCache {
 
   contentType: string;
   encoding: string;
-  language: 'ja' | 'en' | 'mixed' | 'unknown';
+  language: "ja" | "en" | "mixed" | "unknown";
 
   integrity: {
     checksum: string;
-    validationStatus: 'valid' | 'corrupted' | 'partial';
+    validationStatus: "valid" | "corrupted" | "partial";
     lastValidated: number;
   };
 }
@@ -44,7 +44,7 @@ export interface CacheConfig {
   compressionMethod: CompressionMethod;
   compressionLevel: number; // 1-9
   enableIntegrityCheck: boolean;
-  cleanupPolicy: 'lru' | 'lfu' | 'ttl-only';
+  cleanupPolicy: "lru" | "lfu" | "ttl-only";
 }
 
 export interface CacheStats {

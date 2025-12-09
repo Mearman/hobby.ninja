@@ -5,16 +5,17 @@
  * Japanese and English text fields.
  */
 
-import { promises as fs } from 'node:fs';
-import { join } from 'node:path';
-import { normalizeText } from '@hobby-ninja/translation/text-normalizer';
+import { promises as fs } from "node:fs";
+import { join } from "node:path";
 
-const DEFAULT_CATALOG_DIR = 'data/bandai/items';
-const DEFAULT_MANUALS_DIR = 'data/bandai/manuals';
+import { normalizeText } from "@hobby-ninja/translation/text-normalizer";
+
+const DEFAULT_CATALOG_DIR = "data/bandai/items";
+const DEFAULT_MANUALS_DIR = "data/bandai/manuals";
 
 export interface NormalizeOptions {
 	/** Data source to normalize: 'all', 'bandai-catalog', 'bandai-manuals' */
-	source: 'all' | 'bandai-catalog' | 'bandai-manuals';
+	source: "all" | "bandai-catalog" | "bandai-manuals";
 	/** Input directory (overrides default for source) */
 	input?: string;
 	/** Preview changes without writing */
@@ -35,10 +36,10 @@ interface NormalizeProgress {
 export async function normalizeData(options: NormalizeOptions): Promise<void> {
 	const { source, dryRun = false, verbose = false } = options;
 
-	console.log('Text Normalization Configuration:');
+	console.log("Text Normalization Configuration:");
 	console.log(`  Source: ${source}`);
 	console.log(`  Dry run: ${dryRun}`);
-	console.log('');
+	console.log("");
 
 	const totalProgress: NormalizeProgress = {
 		filesProcessed: 0,
@@ -47,9 +48,9 @@ export async function normalizeData(options: NormalizeOptions): Promise<void> {
 	};
 
 	// Normalize catalog items
-	if (source === 'all' || source === 'bandai-catalog') {
+	if (source === "all" || source === "bandai-catalog") {
 		const catalogDir =
-			options.input && source === 'bandai-catalog'
+			options.input && source === "bandai-catalog"
 				? options.input
 				: DEFAULT_CATALOG_DIR;
 		const result = await normalizeCatalogItems({
@@ -63,9 +64,9 @@ export async function normalizeData(options: NormalizeOptions): Promise<void> {
 	}
 
 	// Normalize manual files
-	if (source === 'all' || source === 'bandai-manuals') {
+	if (source === "all" || source === "bandai-manuals") {
 		const manualsDir =
-			options.input && source === 'bandai-manuals'
+			options.input && source === "bandai-manuals"
 				? options.input
 				: DEFAULT_MANUALS_DIR;
 		const result = await normalizeManualFiles({
@@ -78,14 +79,14 @@ export async function normalizeData(options: NormalizeOptions): Promise<void> {
 		totalProgress.fieldsNormalized += result.fieldsNormalized;
 	}
 
-	console.log('\n' + '='.repeat(60));
-	console.log('Normalization Summary:');
+	console.log("\n" + "=".repeat(60));
+	console.log("Normalization Summary:");
 	console.log(`  Files processed: ${totalProgress.filesProcessed}`);
 	console.log(`  Files modified: ${totalProgress.filesModified}`);
 	console.log(`  Fields normalized: ${totalProgress.fieldsNormalized}`);
 
 	if (dryRun) {
-		console.log('\n[DRY RUN] No files were modified.');
+		console.log("\n[DRY RUN] No files were modified.");
 	}
 }
 
@@ -100,14 +101,14 @@ interface CatalogNormalizeOptions {
 }
 
 async function normalizeCatalogItems(
-	options: CatalogNormalizeOptions
+	options: CatalogNormalizeOptions,
 ): Promise<NormalizeProgress> {
 	const { inputDir, dryRun, verbose } = options;
 
-	console.log('='.repeat(60));
-	console.log('Normalizing Bandai catalog items...');
+	console.log("=".repeat(60));
+	console.log("Normalizing Bandai catalog items...");
 	console.log(`  Input directory: ${inputDir}`);
-	console.log('');
+	console.log("");
 
 	const progress: NormalizeProgress = {
 		filesProcessed: 0,
@@ -129,7 +130,7 @@ async function normalizeCatalogItems(
 	}
 
 	if (entries.length === 0) {
-		console.log('No catalog items found.');
+		console.log("No catalog items found.");
 		return progress;
 	}
 
@@ -139,7 +140,7 @@ async function normalizeCatalogItems(
 		const jsonPath = join(inputDir, dirName, `${dirName}.json`);
 
 		try {
-			const content = await fs.readFile(jsonPath, 'utf-8');
+			const content = await fs.readFile(jsonPath, "utf8");
 			const data = JSON.parse(content);
 
 			const { modified, fieldsChanged } = normalizeObject(data);
@@ -151,7 +152,7 @@ async function normalizeCatalogItems(
 				progress.fieldsNormalized += fieldsChanged;
 
 				if (!dryRun) {
-					await fs.writeFile(jsonPath, JSON.stringify(data, null, 2) + '\n');
+					await fs.writeFile(jsonPath, JSON.stringify(data, null, 2) + "\n");
 				}
 
 				if (verbose) {
@@ -165,13 +166,13 @@ async function normalizeCatalogItems(
 		// Progress indicator every 500 items
 		if (progress.filesProcessed % 500 === 0) {
 			console.log(
-				`Progress: ${progress.filesProcessed}/${entries.length} | Modified: ${progress.filesModified}`
+				`Progress: ${progress.filesProcessed}/${entries.length} | Modified: ${progress.filesModified}`,
 			);
 		}
 	}
 
 	console.log(
-		`\nCatalog complete: ${progress.filesModified}/${progress.filesProcessed} files modified, ${progress.fieldsNormalized} fields normalized`
+		`\nCatalog complete: ${progress.filesModified}/${progress.filesProcessed} files modified, ${progress.fieldsNormalized} fields normalized`,
 	);
 
 	return progress;
@@ -188,14 +189,14 @@ interface ManualNormalizeOptions {
 }
 
 async function normalizeManualFiles(
-	options: ManualNormalizeOptions
+	options: ManualNormalizeOptions,
 ): Promise<NormalizeProgress> {
 	const { inputDir, dryRun, verbose } = options;
 
-	console.log('='.repeat(60));
-	console.log('Normalizing Bandai manual files...');
+	console.log("=".repeat(60));
+	console.log("Normalizing Bandai manual files...");
 	console.log(`  Input directory: ${inputDir}`);
-	console.log('');
+	console.log("");
 
 	const progress: NormalizeProgress = {
 		filesProcessed: 0,
@@ -217,7 +218,7 @@ async function normalizeManualFiles(
 	}
 
 	if (entries.length === 0) {
-		console.log('No manual files found.');
+		console.log("No manual files found.");
 		return progress;
 	}
 
@@ -227,7 +228,7 @@ async function normalizeManualFiles(
 		const jsonPath = join(inputDir, dirName, `${dirName}.json`);
 
 		try {
-			const content = await fs.readFile(jsonPath, 'utf-8');
+			const content = await fs.readFile(jsonPath, "utf8");
 			const data = JSON.parse(content);
 
 			const { modified, fieldsChanged } = normalizeObject(data);
@@ -239,7 +240,7 @@ async function normalizeManualFiles(
 				progress.fieldsNormalized += fieldsChanged;
 
 				if (!dryRun) {
-					await fs.writeFile(jsonPath, JSON.stringify(data, null, 2) + '\n');
+					await fs.writeFile(jsonPath, JSON.stringify(data, null, 2) + "\n");
 				}
 
 				if (verbose) {
@@ -252,7 +253,7 @@ async function normalizeManualFiles(
 	}
 
 	console.log(
-		`\nManuals complete: ${progress.filesModified}/${progress.filesProcessed} files modified, ${progress.fieldsNormalized} fields normalized`
+		`\nManuals complete: ${progress.filesModified}/${progress.filesProcessed} files modified, ${progress.fieldsNormalized} fields normalized`,
 	);
 
 	return progress;
@@ -274,20 +275,20 @@ function normalizeObject(obj: unknown): NormalizeResult {
 	let modified = false;
 	let fieldsChanged = 0;
 
-	if (typeof obj !== 'object' || obj === null) {
+	if (typeof obj !== "object" || obj === null) {
 		return { modified, fieldsChanged };
 	}
 
 	if (Array.isArray(obj)) {
 		for (let i = 0; i < obj.length; i++) {
-			if (typeof obj[i] === 'string') {
+			if (typeof obj[i] === "string") {
 				const normalized = normalizeText(obj[i]);
 				if (normalized !== obj[i]) {
 					obj[i] = normalized;
 					modified = true;
 					fieldsChanged++;
 				}
-			} else if (typeof obj[i] === 'object' && obj[i] !== null) {
+			} else if (typeof obj[i] === "object" && obj[i] !== null) {
 				const result = normalizeObject(obj[i]);
 				if (result.modified) {
 					modified = true;
@@ -300,14 +301,14 @@ function normalizeObject(obj: unknown): NormalizeResult {
 			const record = obj as Record<string, unknown>;
 			const value = record[key];
 
-			if (typeof value === 'string') {
+			if (typeof value === "string") {
 				const normalized = normalizeText(value);
 				if (normalized !== value) {
 					record[key] = normalized;
 					modified = true;
 					fieldsChanged++;
 				}
-			} else if (typeof value === 'object' && value !== null) {
+			} else if (typeof value === "object" && value !== null) {
 				const result = normalizeObject(value);
 				if (result.modified) {
 					modified = true;

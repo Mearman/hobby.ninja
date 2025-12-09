@@ -10,9 +10,11 @@
  * - Statistics
  */
 
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from "node:fs";
+import * as path from "node:path";
 
+import type { CatalogItem } from "@hobby-ninja/types/catalog";
+import type { LocalizedText } from "@hobby-ninja/types/manual";
 import type {
 	UnifiedProduct,
 	UnifiedIndex,
@@ -22,8 +24,6 @@ import type {
 	MatchCandidate,
 	UnifyOptions,
 } from "@hobby-ninja/types/unified";
-import type { LocalizedText } from "@hobby-ninja/types/manual";
-import type { CatalogItem } from "@hobby-ninja/types/catalog";
 
 import { matchAll, type CatalogMatchItem, type ManualMatchItem } from "./matcher";
 import { extractGrade, normalizeGrade } from "./normalizer";
@@ -53,7 +53,7 @@ interface ManualData {
  * Load all catalog items from the data directory.
  */
 export async function loadCatalogItems(
-	itemsDir: string
+	itemsDir: string,
 ): Promise<Map<string, CatalogItem>> {
 	const items = new Map<string, CatalogItem>();
 
@@ -66,7 +66,7 @@ export async function loadCatalogItems(
 		if (!fs.existsSync(jsonPath)) continue;
 
 		try {
-			const content = fs.readFileSync(jsonPath, "utf-8");
+			const content = fs.readFileSync(jsonPath, "utf8");
 			const item = JSON.parse(content) as CatalogItem;
 			items.set(item.id, item);
 		} catch {
@@ -81,7 +81,7 @@ export async function loadCatalogItems(
  * Load all manuals from the data directory.
  */
 export async function loadManuals(
-	manualsDir: string
+	manualsDir: string,
 ): Promise<Map<string, ManualData>> {
 	const manuals = new Map<string, ManualData>();
 
@@ -94,7 +94,7 @@ export async function loadManuals(
 		if (!fs.existsSync(jsonPath)) continue;
 
 		try {
-			const content = fs.readFileSync(jsonPath, "utf-8");
+			const content = fs.readFileSync(jsonPath, "utf8");
 			const manual = JSON.parse(content) as ManualData;
 			manuals.set(manual.id, manual);
 		} catch {
@@ -139,10 +139,10 @@ function catalogToMatchItem(item: CatalogItem): CatalogMatchItem {
 		grade,
 		releaseDate: item.releaseDate
 			? {
-					year: item.releaseDate.year,
-					month: item.releaseDate.month || undefined,
-					day: item.releaseDate.day,
-				}
+				year: item.releaseDate.year,
+				month: item.releaseDate.month || undefined,
+				day: item.releaseDate.day,
+			}
 			: undefined,
 	};
 }
@@ -160,10 +160,10 @@ function manualToMatchItem(manual: ManualData): ManualMatchItem {
 		grade: manual.grade?.code,
 		releaseDate: manual.releaseDate?.year
 			? {
-					year: manual.releaseDate.year,
-					month: manual.releaseDate.month,
-					day: manual.releaseDate.day,
-				}
+				year: manual.releaseDate.year,
+				month: manual.releaseDate.month,
+				day: manual.releaseDate.day,
+			}
 			: undefined,
 	};
 }
@@ -182,7 +182,7 @@ function createUnifiedProduct(
 	id: string,
 	catalog: CatalogItem,
 	manual: ManualData,
-	match: MatchCandidate
+	match: MatchCandidate,
 ): UnifiedProduct {
 	const now = new Date().toISOString();
 
@@ -201,16 +201,16 @@ function createUnifiedProduct(
 		scale: catalog.scale || manual.scale,
 		releaseDate: catalog.releaseDate
 			? {
-					year: catalog.releaseDate.year,
-					month: catalog.releaseDate.month || undefined,
-					day: catalog.releaseDate.day,
-				}
+				year: catalog.releaseDate.year,
+				month: catalog.releaseDate.month || undefined,
+				day: catalog.releaseDate.day,
+			}
 			: manual.releaseDate?.year
 				? {
-						year: manual.releaseDate.year,
-						month: manual.releaseDate.month,
-						day: manual.releaseDate.day,
-					}
+					year: manual.releaseDate.year,
+					month: manual.releaseDate.month,
+					day: manual.releaseDate.day,
+				}
 				: undefined,
 		sources: {
 			catalog: {
@@ -238,7 +238,7 @@ function createUnifiedProduct(
  */
 function createCatalogOnlyProduct(
 	id: string,
-	catalog: CatalogItem
+	catalog: CatalogItem,
 ): UnifiedProduct {
 	const now = new Date().toISOString();
 
@@ -252,15 +252,15 @@ function createCatalogOnlyProduct(
 		scale: catalog.scale,
 		releaseDate: catalog.releaseDate
 			? {
-					year: catalog.releaseDate.year,
-					month: catalog.releaseDate.month || undefined,
-					day: catalog.releaseDate.day,
-				}
+				year: catalog.releaseDate.year,
+				month: catalog.releaseDate.month || undefined,
+				day: catalog.releaseDate.day,
+			}
 			: undefined,
 		sources: {
 			catalog: {
 				id: catalog.id,
-				confidence: 1.0,
+				confidence: 1,
 				linkedAt: now,
 			},
 		},
@@ -275,7 +275,7 @@ function createCatalogOnlyProduct(
  */
 function createManualOnlyProduct(
 	id: string,
-	manual: ManualData
+	manual: ManualData,
 ): UnifiedProduct {
 	const now = new Date().toISOString();
 
@@ -287,17 +287,17 @@ function createManualOnlyProduct(
 		scale: manual.scale,
 		releaseDate: manual.releaseDate?.year
 			? {
-					year: manual.releaseDate.year,
-					month: manual.releaseDate.month,
-					day: manual.releaseDate.day,
-				}
+				year: manual.releaseDate.year,
+				month: manual.releaseDate.month,
+				day: manual.releaseDate.day,
+			}
 			: undefined,
 		sources: {
 			manual: {
 				id: manual.id,
 				productNumber: manual.productNumber,
 				pdfUrl: manual.pdfUrl,
-				confidence: 1.0,
+				confidence: 1,
 				linkedAt: now,
 			},
 		},
@@ -312,7 +312,7 @@ function createManualOnlyProduct(
  */
 export async function runUnification(
 	dataDir: string,
-	options: UnifyOptions
+	options: UnifyOptions,
 ): Promise<UnifyStats> {
 	const startTime = Date.now();
 	const itemsDir = path.join(dataDir, "items");
@@ -329,17 +329,17 @@ export async function runUnification(
 	console.log(`Loaded ${manuals.size} manuals`);
 
 	// Convert to match items
-	const catalogMatchItems = Array.from(catalogItems.values()).map(
-		catalogToMatchItem
+	const catalogMatchItems = [...catalogItems.values()].map(
+		catalogToMatchItem,
 	);
-	const manualMatchItems = Array.from(manuals.values()).map(manualToMatchItem);
+	const manualMatchItems = [...manuals.values()].map(manualToMatchItem);
 
 	console.log("Running matching algorithm...");
 
 	// Run matching
 	const { matches, unmatchedCatalogIds, unmatchedManualIds } = matchAll(
 		catalogMatchItems,
-		manualMatchItems
+		manualMatchItems,
 	);
 
 	console.log(`Found ${matches.length} matches`);
@@ -348,12 +348,12 @@ export async function runUnification(
 
 	// Separate matches by confidence
 	const highConfidenceMatches = matches.filter(
-		(m) => m.confidence >= options.thresholds.autoAccept
+		(m) => m.confidence >= options.thresholds.autoAccept,
 	);
 	const reviewQueueMatches = matches.filter(
 		(m) =>
 			m.confidence >= options.thresholds.reviewCutoff &&
-			m.confidence < options.thresholds.autoAccept
+			m.confidence < options.thresholds.autoAccept,
 	);
 
 	console.log(`High confidence matches: ${highConfidenceMatches.length}`);
@@ -480,7 +480,14 @@ export async function runUnification(
 	}
 
 	// Write output if not dry run
-	if (!options.dryRun) {
+	if (options.dryRun) {
+		console.log("\n[DRY RUN] Would write:");
+		console.log(`  - ${unifiedProducts.length} unified products`);
+		console.log(`  - index.json`);
+		console.log(`  - review-queue.json (${reviewQueue.items.length} items)`);
+		console.log(`  - orphans.json`);
+		console.log(`  - stats.json`);
+	} else {
 		console.log(`Writing ${unifiedProducts.length} unified products...`);
 
 		// Write individual product files
@@ -493,35 +500,28 @@ export async function runUnification(
 		// Write index
 		fs.writeFileSync(
 			path.join(outputDir, "index.json"),
-			JSON.stringify(index, null, 2)
+			JSON.stringify(index, null, 2),
 		);
 
 		// Write review queue
 		fs.writeFileSync(
 			path.join(outputDir, "review-queue.json"),
-			JSON.stringify(reviewQueue, null, 2)
+			JSON.stringify(reviewQueue, null, 2),
 		);
 
 		// Write orphans
 		fs.writeFileSync(
 			path.join(outputDir, "orphans.json"),
-			JSON.stringify(orphans, null, 2)
+			JSON.stringify(orphans, null, 2),
 		);
 
 		// Write stats
 		fs.writeFileSync(
 			path.join(outputDir, "stats.json"),
-			JSON.stringify(stats, null, 2)
+			JSON.stringify(stats, null, 2),
 		);
 
 		console.log(`Output written to ${outputDir}`);
-	} else {
-		console.log("\n[DRY RUN] Would write:");
-		console.log(`  - ${unifiedProducts.length} unified products`);
-		console.log(`  - index.json`);
-		console.log(`  - review-queue.json (${reviewQueue.items.length} items)`);
-		console.log(`  - orphans.json`);
-		console.log(`  - stats.json`);
 	}
 
 	return stats;

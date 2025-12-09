@@ -4,9 +4,9 @@
  * Uses @inkjs/ui components (ProgressBar, Spinner) for rich CLI output.
  */
 
-import React from 'react';
-import { render, Box, Text } from 'ink';
-import { ProgressBar, Spinner } from '@inkjs/ui';
+import { ProgressBar, Spinner } from "@inkjs/ui";
+import { render, Box, Text } from "ink";
+import React from "react";
 
 export interface TranslationStats {
 	/** Source being translated (e.g., 'Catalog', 'Manuals') */
@@ -41,7 +41,7 @@ function TranslationProgressUI({ stats }: TranslationProgressProps) {
 		<Box flexDirection="column" paddingX={1}>
 			<Box marginBottom={1}>
 				{stats.isComplete ? (
-					<Text color="green" bold>
+					<Text color="green" bold={true}>
 						[{stats.source}] Complete!
 					</Text>
 				) : (
@@ -63,7 +63,7 @@ function TranslationProgressUI({ stats }: TranslationProgressProps) {
 				<Text> ({stats.fieldsTranslated} fields) </Text>
 				<Text color="yellow">Skipped: {stats.skipped}</Text>
 				<Text> </Text>
-				<Text color={stats.errors > 0 ? 'red' : 'gray'}>Errors: {stats.errors}</Text>
+				<Text color={stats.errors > 0 ? "red" : "gray"}>Errors: {stats.errors}</Text>
 			</Box>
 
 			{(stats.cacheHits !== undefined || stats.cacheMisses !== undefined) && (
