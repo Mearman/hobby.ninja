@@ -29,12 +29,20 @@ export function useThemeContext() {
 
 // Simple theme hook for Next.js (static build)
 function useTheme() {
-	// For static builds, we'll use a simple system preference detection
+	// Initialize with system preference but allow client-side switching
 	const [colorScheme, setColorScheme] = React.useState<"light" | "dark" | "system">("system");
+	const [mounted, setMounted] = React.useState(false);
+
+	// Mark when component is mounted on client
+	React.useEffect(() => {
+		setMounted(true);
+	}, []);
 
 	const getEffectiveColorScheme = (): "light" | "dark" => {
+		if (!mounted) return "light"; // Default for SSR
+
 		if (colorScheme === "system") {
-			return typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches
+			return globalThis.window !== undefined && globalThis.matchMedia("(prefers-color-scheme: dark)").matches
 				? "dark"
 				: "light";
 		}
@@ -48,6 +56,20 @@ function useTheme() {
 			return "light";
 		});
 	};
+
+	// Listen for system preference changes when in "system" mode
+	React.useEffect(() => {
+		if (!mounted || colorScheme !== "system") return;
+
+		const mediaQuery = globalThis.matchMedia("(prefers-color-scheme: dark)");
+		const handleChange = () => {
+			// Force re-render when system preference changes
+			setColorScheme(prev => prev);
+		};
+
+		mediaQuery.addEventListener("change", handleChange);
+		return () => mediaQuery.removeEventListener("change", handleChange);
+	}, [mounted, colorScheme]);
 
 	return {
 		colorScheme,
