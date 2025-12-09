@@ -5,6 +5,7 @@ import { ModalsProvider } from "@mantine/modals";
 import { Notifications } from "@mantine/notifications";
 import React, { createContext, useContext } from "react";
 
+import { Z_INDEX, UI } from "../lib/constants";
 import { theme } from "../lib/theme";
 
 // Create context for theme functions
@@ -42,7 +43,7 @@ function useTheme() {
 		if (!mounted) return "light"; // Default for SSR
 
 		if (colorScheme === "system") {
-			return globalThis.window !== undefined && globalThis.matchMedia("(prefers-color-scheme: dark)").matches
+			return globalThis.window?.matchMedia?.("(prefers-color-scheme: dark)").matches
 				? "dark"
 				: "light";
 		}
@@ -68,7 +69,7 @@ function useTheme() {
 		};
 
 		mediaQuery.addEventListener("change", handleChange);
-		return () => mediaQuery.removeEventListener("change", handleChange);
+		return () => { mediaQuery.removeEventListener("change", handleChange); };
 	}, [mounted, colorScheme]);
 
 	return {
@@ -92,8 +93,8 @@ export function MantineThemeProvider({ children }: MantineThemeProviderProps) {
 					<Notifications
 						position="top-right"
 						limit={5}
-						zIndex={9999}
-						containerWidth={400}
+						zIndex={Z_INDEX.MODAL}
+						containerWidth={UI.CONTAINER_WIDTH}
 					/>
 					{children}
 				</ModalsProvider>
