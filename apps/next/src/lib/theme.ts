@@ -45,6 +45,6 @@ export const theme = createTheme({
 		gunplaRed,
 		gunplaGray,
 	},
-	fontFamily: "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
+	fontFamily: "var(--font-inter), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
 	defaultRadius: "md",
 });
