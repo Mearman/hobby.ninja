@@ -5,7 +5,7 @@
  * It provides instant lookups without API calls or file I/O.
  */
 
-import { promises as fs } from 'node:fs';
+import { promises as fs, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 // ============================================================================
@@ -66,6 +66,9 @@ export async function loadDictionary(dictionaryPath?: string): Promise<Translati
   }
 
   const path = dictionaryPath || findDictionaryPath();
+  if (!path) {
+    throw new Error('Dictionary file not found. Please ensure a dictionary file exists at one of the expected locations.');
+  }
   const content = await fs.readFile(path, 'utf-8');
   cachedDictionary = JSON.parse(content) as TranslationDictionary;
 
@@ -86,7 +89,7 @@ export async function loadDictionary(dictionaryPath?: string): Promise<Translati
 /**
  * Find the dictionary path based on common locations
  */
-function findDictionaryPath(): string {
+function findDictionaryPath(): string | undefined {
   // Try common locations
   const locations = [
     'data/translations/dictionary.json',
@@ -95,8 +98,15 @@ function findDictionaryPath(): string {
     join(process.cwd(), 'data/translations/dictionary.json'),
   ];
 
-  // Return first location (will error if not found)
-  return locations[0];
+  // Check each location to see if file exists
+  for (const location of locations) {
+    if (existsSync(location)) {
+      return location;
+    }
+  }
+
+  // No valid location found
+  return undefined;
 }
 
 /**

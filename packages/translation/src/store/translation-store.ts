@@ -10,7 +10,7 @@ import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import { z } from 'zod';
 import { JSONStorage, type JSONStorageConfig, type FileOperationResult } from './json-storage';
-import { generateKey, generateTextHash, validateKey, extractKeyComponents, type HashingError } from './hashing';
+import { generateKey, validateKey, extractKeyComponents } from './hashing';
 import { SupportedLanguage } from '../types';
 
 /**
@@ -247,7 +247,6 @@ export class TranslationStore {
 	private readonly METADATA_FILENAME = 'metadata.json';
 	private readonly STORE_VERSION = '1.0.0';
 	private readonly HASH_ALGORITHM = 'sha256';
-	private readonly SHARD_DEPTH = 2;
 
 	/**
 	 * Create a new TranslationStore instance.
@@ -566,7 +565,6 @@ export class TranslationStore {
 			await fs.access(this.config.storagePath, fs.constants.W_OK);
 
 			// Get disk space (simplified - in production you'd use more sophisticated methods)
-			const stats = await fs.stat(this.config.storagePath);
 			this.health.diskSpaceAvailable = Number.MAX_SAFE_INTEGER; // Placeholder
 
 			this.health.status = 'healthy';

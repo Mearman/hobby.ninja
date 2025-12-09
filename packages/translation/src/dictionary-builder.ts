@@ -8,8 +8,8 @@
 
 import { promises as fs } from 'node:fs';
 import { join } from 'node:path';
-import { TRANSLATION_STORE_DIR, TRANSLATION_CACHE_DIR, TRANSLATION_DICTIONARY_PATH } from './constants';
-import type { TranslationDictionary, PhraseMapping, WordMapping, DiscoveredPattern, DictionaryStats } from './dictionary';
+import { TRANSLATION_CACHE_DIR, TRANSLATION_DICTIONARY_PATH } from './constants';
+import type { TranslationDictionary, PhraseMapping, WordMapping, DiscoveredPattern } from './dictionary';
 
 // ============================================================================
 // Types
@@ -217,14 +217,16 @@ function discoverPatterns(entries: TranslationCacheEntry[]): DiscoveredPattern[]
 		const normalized = normalizeText(entry.originalText);
 		const match = normalized.match(gradeRegex);
 		if (match) {
-			const grade = match[1].toUpperCase();
-			if (!gradeCounter.has(grade)) {
-				gradeCounter.set(grade, { count: 0, examples: [] });
-			}
-			const data = gradeCounter.get(grade)!;
-			data.count++;
-			if (data.examples.length < 3) {
-				data.examples.push({ ja: entry.originalText, en: entry.translatedText });
+			const grade = match[1]?.toUpperCase() || '';
+			if (grade) {
+				if (!gradeCounter.has(grade)) {
+					gradeCounter.set(grade, { count: 0, examples: [] });
+				}
+				const data = gradeCounter.get(grade)!;
+				data.count++;
+				if (data.examples.length < 3) {
+					data.examples.push({ ja: entry.originalText, en: entry.translatedText });
+				}
 			}
 		}
 	}
