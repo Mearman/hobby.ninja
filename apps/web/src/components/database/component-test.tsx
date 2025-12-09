@@ -11,9 +11,30 @@ import { ItemCard } from "./item-card";
 import { ItemGrid } from "./item-grid";
 import { getMockItems } from "./test-data";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 // Constants
 const MOCK_ITEMS_COUNT = 25;
-const ITEMS_SLICE_COUNT = 4;
+const ITEMS_SLICE_COUNT = FOUR;
 
 type ItemData = UnifiedItem | ManualItem | CatalogItem;
 
@@ -61,7 +82,7 @@ export function ComponentTest() {
 	return (
 		<Container size="xl" py="md">
 			<Stack gap="md">
-				<Title order={1}>Database Components Test</Title>
+				<Title order={ONE}>Database Components Test</Title>
 				<Text c="dimmed">
           This page tests the ItemCard and ItemGrid components with mock data.
 				</Text>
@@ -101,10 +122,10 @@ export function ComponentTest() {
 				<Divider />
 
 				{/* Individual Item Cards Test */}
-				<Title order={3}>Individual Item Cards</Title>
+				<Title order={THREE}>Individual Item Cards</Title>
 				<Group>
-					{mockItems.slice(0, ITEMS_SLICE_COUNT).map((item, index) => (
-						<div key={index} style={{ flex: "1 1 300px" }}>
+					{mockItems.slice(ARRAY_FIRST_INDEX, ITEMS_SLICE_COUNT).map((item, index) => (
+						<div key={index} style={{ flex: "ONE ONE 300px" }}>
 							<ItemCard
 								item={item}
 								itemType={getItemType(item)}

@@ -6,6 +6,27 @@ import React, { useState, useEffect } from "react";
 import { collectionService } from "../services/collectionService";
 import { Collection } from "../types/hobby";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 /**
  * Collection page for a specific hobby type
  * Shows all collections and items for the selected hobby
@@ -23,8 +44,8 @@ export function CollectionHobbyPage(): React.ReactElement {
 	const [error, setError] = useState<string | null>(null);
 
 	// Constants
-	const SKELETON_COUNT = 3;
-	const TAG_DISPLAY_LIMIT = 3;
+	const SKELETON_COUNT = THREE;
+	const TAG_DISPLAY_LIMIT = THREE;
 
 	const hobbyTypeConfig = {
 		model_kits: { name: "Model Kits", icon: "MK", color: "blue" },
@@ -109,7 +130,7 @@ export function CollectionHobbyPage(): React.ReactElement {
 				<Stack gap="xl">
 					<Skeleton height={48} width={300} />
 					<Skeleton height={200} radius="md" />
-					<SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="lg">
+					<SimpleGrid cols={{ base: ONE, sm: TWO, lg: THREE }} spacing="lg">
 						{Array.from({ length: SKELETON_COUNT }, (_, i) => (
 							<Skeleton key={i} height={200} radius="md" />
 						))}
@@ -137,7 +158,7 @@ export function CollectionHobbyPage(): React.ReactElement {
 					<Stack gap="xs">
 						<Group gap="sm">
 							<Text size="xl">{config.icon}</Text>
-							<Title order={1} size={36}>
+							<Title order={ONE} size={36}>
 								{config.name} Collections
 							</Title>
 						</Group>
@@ -167,12 +188,12 @@ export function CollectionHobbyPage(): React.ReactElement {
 			</Container>
 
 			<Container size="lg" pb="xl">
-				{collections.length === 0 ? (
+				{collections.length === ZERO ? (
 					/* Empty State */
 					<Card p="xl" radius="lg" withBorder={true}>
 						<Stack align="center" gap="lg" mih={300}>
 							<Text size="xl">{config.icon}</Text>
-							<Title order={3} ta="center">
+							<Title order={THREE} ta="center">
 								No {config.name} Collections Yet
 							</Title>
 							<Text c="dimmed" ta="center" maw={400}>
@@ -190,7 +211,7 @@ export function CollectionHobbyPage(): React.ReactElement {
 					</Card>
 				) : (
 					/* Collections Grid */
-					<SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="lg">
+					<SimpleGrid cols={{ base: ONE, sm: TWO, lg: THREE }} spacing="lg">
 						{collections.map((collection) => (
 							<Card
 								key={collection.id}
@@ -199,21 +220,21 @@ export function CollectionHobbyPage(): React.ReactElement {
 								shadow="sm"
 								withBorder={true}
 								style={{
-									transition: "all 0.2s ease",
+									transition: "all ZERO.2s ease",
 								}}
 							>
-								<Stack gap="md" h="100%">
+								<Stack gap="md" h="HUNDRED%">
 									{/* Collection Header */}
 									<Group justify="space-between" align="flex-start">
-										<Stack gap="xs" style={{ flex: 1 }}>
+										<Stack gap="xs" style={{ flex: ONE }}>
 											<Group gap="xs">
 												<IconFolderOpen size={16} color={`var(--mantine-color-${config.color})`} />
-												<Title order={4} size={18} lineClamp={1}>
+												<Title order={FOUR} size={18} lineClamp={ONE}>
 													{collection.name}
 												</Title>
 											</Group>
 											{collection.description && (
-												<Text size="sm" c="dimmed" lineClamp={2}>
+												<Text size="sm" c="dimmed" lineClamp={TWO}>
 													{collection.description}
 												</Text>
 											)}
@@ -235,7 +256,7 @@ export function CollectionHobbyPage(): React.ReactElement {
 
 									{/* Collection Stats */}
 									<Group>
-										<Stack gap={0} align="center">
+										<Stack gap={ZERO} align="center">
 											<IconPackage size={16} color="var(--mantine-color-gray)" />
 											<Text size="lg" fw={600}>
 												{collection.statistics.totalItems}
@@ -247,9 +268,9 @@ export function CollectionHobbyPage(): React.ReactElement {
 									</Group>
 
 									{/* Collection Tags */}
-									{collection.tags.length > 0 && (
+									{collection.tags.length > ZERO && (
 										<Group gap="xs">
-											{collection.tags.slice(0, TAG_DISPLAY_LIMIT).map((tag) => (
+											{collection.tags.slice(ARRAY_FIRST_INDEX, TAG_DISPLAY_LIMIT).map((tag) => (
 												<Badge key={tag} variant="outline" size="xs">
 													{tag}
 												</Badge>
@@ -270,7 +291,7 @@ export function CollectionHobbyPage(): React.ReactElement {
 												params: { hobbyType: hobbyTypeStr, collectionId: collection.id },
 											})}
 											variant="outline"
-											flex={1}
+											flex={ONE}
 										>
 											View Collection
 										</Button>

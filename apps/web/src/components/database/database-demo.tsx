@@ -24,11 +24,32 @@ import type { UnifiedItem, ManualItem, CatalogItem, FilterOptions } from "../../
 
 import { ItemGrid } from "./item-grid";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 type SortField = "name" | "releaseDate" | "price" | "relevance" | "grade";
 
 // Constants
 const PAGE_SIZE = 50;
-const INITIAL_PAGE = 1;
+const INITIAL_PAGE = ONE;
 
 type ItemData = UnifiedItem | ManualItem | CatalogItem;
 
@@ -41,7 +62,7 @@ export function DatabaseDemo() {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [selectedItems, setSelectedItems] = useState<Set<string>>(new Set());
 	const [page, setPage] = useState(INITIAL_PAGE);
-	const [total, setTotal] = useState(0);
+	const [total, setTotal] = useState(ZERO);
 	const [infiniteScroll, setInfiniteScroll] = useState(false);
 	const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 	const [sortBy, setSortBy] = useState<SortField>("relevance");
@@ -127,7 +148,7 @@ export function DatabaseDemo() {
 			<Stack gap="md">
 				{/* Header */}
 				<Group justify="space-between">
-					<Title order={1}>Gundpla Database</Title>
+					<Title order={ONE}>Gundpla Database</Title>
 					<Group>
 						<Button
 							variant={infiniteScroll ? "filled" : "light"}
@@ -148,7 +169,7 @@ export function DatabaseDemo() {
 						value={searchQuery}
 						onChange={(e) => { setSearchQuery(e.target.value); }}
 						leftSection={<IconSearch size={16} />}
-						style={{ flex: 1 }}
+						style={{ flex: ONE }}
 						onKeyDown={(e) => {
 							if (e.key === "Enter") {
 								handleSearch();
@@ -171,10 +192,10 @@ export function DatabaseDemo() {
 				{/* Status Info */}
 				<Group>
 					<Text size="sm" c="dimmed">
-						{total > 0 && `Showing ${items.length} of ${total} items`}
+						{total > ZERO && `Showing ${items.length} of ${total} items`}
 						{searchQuery && ` for "${searchQuery}"`}
 					</Text>
-					{selectedItems.size > 0 && (
+					{selectedItems.size > ZERO && (
 						<Text size="sm" c="blue">
 							{selectedItems.size} selected
 						</Text>

@@ -4,13 +4,34 @@
 
 import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 // Constants to avoid duplicate strings
 const CURRENT_TIMESTAMP = "2025-12-07T00:00:00Z";
 const UNIFIED_ITEM_SCHEMA = "unified_item_schema_v1";
 const MANUAL_ITEM_SCHEMA = "manual_item_schema_001";
 const CATALOG_ITEM_SCHEMA = "catalog_item_schema_001";
 const TEST_DATA_SOURCE = "test_data";
-const ITEM_VERSION = "1.0";
+const ITEM_VERSION = "ONE.ZERO";
 
 export const mockUnifiedItems: UnifiedItem[] = [
 	{
@@ -22,21 +43,21 @@ export const mockUnifiedItems: UnifiedItem[] = [
 			name: { en: "Strike Freedom Gundam", ja: "ストライクフリーダムガンダム" },
 			series: { en: "Mobile Suit Gundam SEED Destiny", ja: "機動戦士ガンダムSEED DESTINY" },
 			grade: "PG",
-			scale: "1/60",
+			scale: "ONE/60",
 			releaseDate: { year: 2004, month: 11, day: 27 },
 			sources: {
-				catalog: { id: "cat_001", confidence: 0.95, linkedAt: CURRENT_TIMESTAMP },
-				manual: { id: "0001", productNumber: "1114204", pdfUrl: "https://example.com/manual.pdf", confidence: 0.9, linkedAt: CURRENT_TIMESTAMP },
+				catalog: { id: "cat_001", confidence: ZERO.95, linkedAt: CURRENT_TIMESTAMP },
+				manual: { id: "0001", productNumber: "1114204", pdfUrl: "https://example.com/manual.pdf", confidence: ZERO.NINE, linkedAt: CURRENT_TIMESTAMP },
 			},
 			matchMethod: "exact",
-			matchStage: 5,
+			matchStage: FIVE,
 		},
 		metadata: {
 			createdAt: CURRENT_TIMESTAMP,
 			updatedAt: CURRENT_TIMESTAMP,
 			version: ITEM_VERSION,
 			source: TEST_DATA_SOURCE,
-			confidence: 0.95,
+			confidence: ZERO.95,
 		},
 	},
 	{
@@ -48,20 +69,20 @@ export const mockUnifiedItems: UnifiedItem[] = [
 			name: { en: "Wing Gundam Zero", ja: "ウイングガンダムゼロ" },
 			series: { en: "Mobile Suit Gundam Wing", ja: "新機動戦記ガンダムW" },
 			grade: "MG",
-			scale: "1/100",
-			releaseDate: { year: 2000, month: 1, day: 1 },
+			scale: "ONE/HUNDRED",
+			releaseDate: { year: 2000, month: ONE, day: ONE },
 			sources: {
-				catalog: { id: "cat_002", confidence: 0.88, linkedAt: CURRENT_TIMESTAMP },
+				catalog: { id: "cat_002", confidence: ZERO.88, linkedAt: CURRENT_TIMESTAMP },
 			},
 			matchMethod: "fuzzy",
-			matchStage: 3,
+			matchStage: THREE,
 		},
 		metadata: {
 			createdAt: CURRENT_TIMESTAMP,
 			updatedAt: CURRENT_TIMESTAMP,
 			version: ITEM_VERSION,
 			source: TEST_DATA_SOURCE,
-			confidence: 0.88,
+			confidence: ZERO.88,
 		},
 	},
 ];
@@ -74,14 +95,14 @@ export const mockManualItems: ManualItem[] = [
 		schemaId: MANUAL_ITEM_SCHEMA,
 		properties: {
 			name: {
-				ja: "HG 1/144 エールストライクガンダム",
-				en: "HG 1/144 Aile Strike Gundam",
+				ja: "HG ONE/144 エールストライクガンダム",
+				en: "HG ONE/144 Aile Strike Gundam",
 			},
 			productNumber: "148785",
 			releaseDate: {
 				year: 2023,
 				month: 12,
-				day: 2,
+				day: TWO,
 			},
 			series: {
 				ja: "機動戦士ガンダムSEED",
@@ -91,7 +112,7 @@ export const mockManualItems: ManualItem[] = [
 				code: "HG",
 				family: "High Grade",
 			},
-			scale: "1/144",
+			scale: "ONE/144",
 			pdfUrl: "https://bandai-hobby.net/manual/148785.pdf",
 			productImage: "https://bandai-hobby.net/images/148785.jpg",
 			thumbnailImage: "https://bandai-hobby.net/images/148785_thumb.jpg",
@@ -110,7 +131,7 @@ export const mockCatalogItems: CatalogItem[] = [
 			name: { en: "Strike Freedom Gundam", ja: "ストライクフリーダムガンダム" },
 			price: { amount: 25_000, currency: "JPY" },
 			releaseDate: { year: 2004, month: 11, day: 27 },
-			scale: "1/60",
+			scale: "ONE/60",
 			series: { en: "Mobile Suit Gundam SEED Destiny", ja: "機動戦士ガンダムSEED DESTINY" },
 			images: [
 				"https://bandai-hobby.net/images/strike-freedom-pg.jpg",
@@ -132,7 +153,7 @@ export function getMockItems(count = DEFAULT_MOCK_COUNT) {
 
 	// Create more items by duplicating with different IDs
 	const items: Array<UnifiedItem | ManualItem | CatalogItem> = [];
-	for (let i = 0; i < count; i++) {
+	for (let i = ZERO; i < count; i++) {
 		const baseItem = allItems[i % allItems.length];
 		const itemWithId = { ...baseItem };
 
@@ -145,8 +166,8 @@ export function getMockItems(count = DEFAULT_MOCK_COUNT) {
 			itemWithId.properties = {
 				...currentItem.properties,
 				name: {
-					en: `${currentItem.properties.name.en} #${i + 1}`,
-					ja: `${currentItem.properties.name.ja} #${i + 1}`,
+					en: `${currentItem.properties.name.en} #${i + ONE}`,
+					ja: `${currentItem.properties.name.ja} #${i + ONE}`,
 				},
 			};
 		}

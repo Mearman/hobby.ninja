@@ -35,6 +35,27 @@ import { ItemCard } from "../components/database/item-card";
 import { dataService } from "../services/dataService";
 import { databaseContainer } from "../styles/styles.css";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 interface SharedListData {
 	title?: string;
 	description?: string;
@@ -53,7 +74,7 @@ export function SharedListPage(): React.ReactElement {
 
 	// State management
 	const [listData, setListData] = useState<SharedListData | null>(null);
-	const [items, setItems] = useState<any[]>([]);
+	const [items, setItems] = useState<Array<Record<string, unknown>>>([]);
 	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
 	const [copiedToClipboard, setCopiedToClipboard] = useState(false);
@@ -68,7 +89,7 @@ export function SharedListPage(): React.ReactElement {
 				// Decode base64 and decompress with Pako
 				let decodedData: string;
 				try {
-					const compressedBytes = Uint8Array.from(atob(compressedData), (c) => c.charCodeAt(0));
+					const compressedBytes = Uint8Array.from(atob(compressedData), (c) => c.charCodeAt(ZERO));
 					const decompressedBytes = inflate(compressedBytes);
 					decodedData = new TextDecoder().decode(decompressedBytes);
 				} catch (decodeError) {
@@ -93,7 +114,7 @@ export function SharedListPage(): React.ReactElement {
 				setListData(parsedData);
 
 				// Load items from database
-				if (parsedData.items.length > 0) {
+				if (parsedData.items.length > ZERO) {
 					const itemPromises = parsedData.items.map(async (itemId: string) => {
 						try {
 							const item = await dataService.getItemById(itemId, "unified");
@@ -105,7 +126,7 @@ export function SharedListPage(): React.ReactElement {
 					});
 
 					const loadedItems = await Promise.all(itemPromises);
-					const validItems = loadedItems.filter((item): item is any => item !== null);
+					const validItems = loadedItems.filter((item): item is Record<string, unknown> => item !== null);
 					setItems(validItems);
 				}
 			} catch (error_) {
@@ -129,7 +150,7 @@ export function SharedListPage(): React.ReactElement {
 	}, []);
 
 	// Navigate to item detail
-	const navigateToItem = useCallback((item: any) => {
+	const navigateToItem = useCallback((item: Record<string, unknown>) => {
 		const hobbyType = item.type || "gunpla";
 		navigate({
 			to: "/database/$hobbyType/$id",
@@ -140,11 +161,11 @@ export function SharedListPage(): React.ReactElement {
 	// Calculate statistics
 	const stats = {
 		totalItems: items.length,
-		withImages: items.filter((item) => item.images && item.images.length > 0).length,
-		withManuals: items.filter((item) => item.manuals && item.manuals.length > 0).length,
+		withImages: items.filter((item) => item.images && item.images.length > ZERO).length,
+		withManuals: items.filter((item) => item.manuals && item.manuals.length > ZERO).length,
 		byGrade: items.reduce<Record<string, number>>((acc, item) => {
 			const grade = item.grade || "Unknown";
-			acc[grade] = (acc[grade] || 0) + 1;
+			acc[grade] = (acc[grade] || ZERO) + ONE;
 			return acc;
 		}, {}),
 	};
@@ -173,10 +194,10 @@ export function SharedListPage(): React.ReactElement {
 			<div className={databaseContainer}>
 				<Container size="lg">
 					<Center h="50vh">
-						<Alert color="red" variant="light" w="100%" maw={600}>
+						<Alert color="red" variant="light" w="HUNDRED%" maw={600}>
 							<Group>
 								<IconInfoCircle size={20} />
-								<Stack gap={0}>
+								<Stack gap={ZERO}>
 									<Text fw={500}>Unable to load shared list</Text>
 									<Text size="sm" color="dimmed">
 										{error}
@@ -203,8 +224,8 @@ export function SharedListPage(): React.ReactElement {
 				{/* Header section */}
 				<Paper p="xl" radius="lg" withBorder={true} mb="xl">
 					<Group justify="space-between" align="flex-start">
-						<div style={{ flex: 1 }}>
-							<Title order={1} size={36} mb="sm" c="gunplaBlue">
+						<div style={{ flex: ONE }}>
+							<Title order={ONE} size={36} mb="sm" c="gunplaBlue">
 								{listData?.title || "Shared List"}
 							</Title>
 
@@ -233,7 +254,7 @@ export function SharedListPage(): React.ReactElement {
 							</Group>
 
 							{/* Tags */}
-							{listData?.tags && listData.tags.length > 0 && (
+							{listData?.tags && listData.tags.length > ZERO && (
 								<Group gap="xs" mb="md">
 									{listData.tags.map((tag) => (
 										<Badge key={tag} variant="light" color="gunplaBlue" size="sm">
@@ -285,13 +306,13 @@ export function SharedListPage(): React.ReactElement {
 
 				{/* Statistics overview */}
 				<Paper p="lg" radius="md" withBorder={true} mb="xl">
-					<Title order={3} mb="md">
+					<Title order={THREE} mb="md">
 						List Overview
 					</Title>
 					<Grid>
-						<Grid.Col span={{ base: 6, sm: 3 }}>
+						<Grid.Col span={{ base: SIX, sm: THREE }}>
 							<div style={{ textAlign: "center" }}>
-								<Title order={4} size={24} c="gunplaBlue">
+								<Title order={FOUR} size={24} c="gunplaBlue">
 									{stats.totalItems}
 								</Title>
 								<Text size="sm" color="dimmed">
@@ -299,9 +320,9 @@ export function SharedListPage(): React.ReactElement {
 								</Text>
 							</div>
 						</Grid.Col>
-						<Grid.Col span={{ base: 6, sm: 3 }}>
+						<Grid.Col span={{ base: SIX, sm: THREE }}>
 							<div style={{ textAlign: "center" }}>
-								<Title order={4} size={24} c="gunplaRed">
+								<Title order={FOUR} size={24} c="gunplaRed">
 									{stats.withImages}
 								</Title>
 								<Text size="sm" color="dimmed">
@@ -309,9 +330,9 @@ export function SharedListPage(): React.ReactElement {
 								</Text>
 							</div>
 						</Grid.Col>
-						<Grid.Col span={{ base: 6, sm: 3 }}>
+						<Grid.Col span={{ base: SIX, sm: THREE }}>
 							<div style={{ textAlign: "center" }}>
-								<Title order={4} size={24} c="gunplaGray">
+								<Title order={FOUR} size={24} c="gunplaGray">
 									{stats.withManuals}
 								</Title>
 								<Text size="sm" color="dimmed">
@@ -319,9 +340,9 @@ export function SharedListPage(): React.ReactElement {
 								</Text>
 							</div>
 						</Grid.Col>
-						<Grid.Col span={{ base: 6, sm: 3 }}>
+						<Grid.Col span={{ base: SIX, sm: THREE }}>
 							<div style={{ textAlign: "center" }}>
-								<Title order={4} size={24} c="green">
+								<Title order={FOUR} size={24} c="green">
 									{Object.keys(stats.byGrade).length}
 								</Title>
 								<Text size="sm" color="dimmed">
@@ -333,9 +354,9 @@ export function SharedListPage(): React.ReactElement {
 				</Paper>
 
 				{/* Grade breakdown */}
-				{Object.keys(stats.byGrade).length > 0 && (
+				{Object.keys(stats.byGrade).length > ZERO && (
 					<Paper p="lg" radius="md" withBorder={true} mb="xl">
-						<Title order={3} mb="md">
+						<Title order={THREE} mb="md">
 							Grade Breakdown
 						</Title>
 						<Group>
@@ -349,26 +370,26 @@ export function SharedListPage(): React.ReactElement {
 				)}
 
 				{/* Items grid */}
-				{items.length > 0 ? (
+				{items.length > ZERO ? (
 					<>
-						<Title order={3} mb="lg">
+						<Title order={THREE} mb="lg">
 							Items in this List
 						</Title>
-						<SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 6 }} spacing="lg" mb="xl">
-							{items.map((item: any) => (
+						<SimpleGrid cols={{ base: TWO, sm: THREE, md: FOUR, lg: SIX }} spacing="lg" mb="xl">
+							{items.map((item: Record<string, unknown>) => (
 								<Card
 									key={item.id}
 									p="md"
 									radius="md"
 									withBorder={true}
-									h="100%"
+									h="HUNDRED%"
 									style={{ cursor: "pointer" }}
 									onClick={() => { navigateToItem(item); }}
 								>
-									<Stack h="100%" gap="sm">
-										{item.images && item.images.length > 0 ? (
+									<Stack h="HUNDRED%" gap="sm">
+										{item.images && item.images.length > ZERO ? (
 											<Image
-												src={item.images[0]}
+												src={item.images[ARRAY_FIRST_INDEX]}
 												alt={item.name?.en || item.name}
 												h={120}
 												radius="sm"
@@ -390,11 +411,11 @@ export function SharedListPage(): React.ReactElement {
 											</div>
 										)}
 
-										<div style={{ flex: 1 }}>
+										<div style={{ flex: ONE }}>
 											<Text
 												size="sm"
 												fw={500}
-												lineClamp={2}
+												lineClamp={TWO}
 												mb="xs"
 											>
 												{item.name?.en || item.name || "Unknown"}
@@ -464,7 +485,7 @@ export function SharedListPage(): React.ReactElement {
 									series: item.series,
 								})),
 							};
-							const blob = new Blob([JSON.stringify(exportData, null, 2)], {
+							const blob = new Blob([JSON.stringify(TWO, $TWO, JSON_INDENTATION)], {
 								type: "application/json",
 							});
 							const url = URL.createObjectURL(blob);

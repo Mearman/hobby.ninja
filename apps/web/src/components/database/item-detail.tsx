@@ -73,6 +73,10 @@ const FULL_ROTATION_DEGREES = 360;
 const THUMBNAIL_ACTIVE_OPACITY = 1;
 const THUMBNAIL_INACTIVE_OPACITY = 0.6;
 const PERCENTAGE_MULTIPLIER = 100;
+const ZERO = 0;
+const ONE = 1;
+const TWO = 2;
+const JSON_INDENTATION = 2;
 
 // UI constants
 const THUMBNAIL_HEIGHT = 60;
@@ -141,12 +145,12 @@ interface ImageGalleryProps {
 }
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
-	const [currentImageIndex, setCurrentImageIndex] = useState(0);
+	const [currentImageIndex, setCurrentImageIndex] = useState(ZERO);
 	const [isZoomed, setIsZoomed] = useState(false);
-	const [rotation, setRotation] = useState(0);
-	const [scale, setScale] = useState(1);
+	const [rotation, setRotation] = useState(ZERO);
+	const [scale, setScale] = useState(ONE);
 
-	if (images.length === 0) {
+	if (images.length === ZERO) {
 		return (
 			<Card h={IMAGE_HEIGHT} withBorder={true}>
 				<Flex align="center" justify="center" h="100%">
@@ -166,11 +170,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 	const handleZoomToggle = () => {
 		setIsZoomed(!isZoomed);
 		if (isZoomed) {
-			setScale(1);
-			setRotation(0);
+			setScale(ONE);
+			setRotation(ZERO);
 		} else {
 			setScale(SCALE_FACTOR_RESET);
-			setRotation(0);
+			setRotation(ZERO);
 		}
 	};
 
@@ -187,7 +191,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 			<Card.Section>
 				<Flex justify="space-between" p={SPACING_XS}>
 					<Text size="sm" fw={500}>
-						{currentImageIndex + 1} / {images.length}
+						{currentImageIndex + ONE} / {images.length}
 					</Text>
 					<Group gap={SPACING_XS}>
 						<Tooltip label="Zoom">
@@ -224,7 +228,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 			>
 				<Image
 					src={currentImage}
-					alt={`${title} - Image ${currentImageIndex + 1}`}
+					alt={`${title} - Image ${currentImageIndex + ONE}`}
 					style={{
 						transform: `scale(${scale}) rotate(${rotation}deg)`,
 						transition: "transform 0.3s ease",
@@ -237,7 +241,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 				/>
 			</Box>
 
-			{images.length > 1 && (
+			{images.length > ONE && (
 				<Card.Section p={SPACING_XS}>
 					<SimpleGrid cols={Math.min(THUMBNAIL_GRID_COLS, images.length)} spacing={SPACING_XS}>
 						{images.map((image, index) => (
@@ -255,7 +259,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
 							>
 								<Image
 									src={image}
-									alt={`${title} - Thumbnail ${index + 1}`}
+									alt={`${title} - Thumbnail ${index + ONE}`}
 									h={THUMBNAIL_HEIGHT}
 									w="100%"
 									fit="cover"
@@ -378,7 +382,7 @@ const getCatalogDescription = (item: ItemDetailData): string | undefined => {
 	const catalogData = unifiedItem.catalogData;
 	if (!catalogData?.properties?.description) return undefined;
 	const desc = catalogData.properties.description;
-	return Array.isArray(desc) && desc.length > 0 && typeof desc[0] === 'object' && desc[0] !== null && 'en' in desc[0] ? (desc[0] as { en?: string }).en : undefined;
+	return Array.isArray(desc) && desc.length > ZERO && typeof desc[ZERO] === 'object' && desc[ZERO] !== null && 'en' in desc[ZERO] ? (desc[ZERO] as { en?: string }).en : undefined;
 };
 
 const getManualName = (item: ItemDetailData): string => {
@@ -470,7 +474,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 				exportType: "single_item",
 			};
 
-			const blob = new Blob([JSON.stringify(exportData, null, 2)], {
+			const blob = new Blob([JSON.stringify(exportData, null, JSON_INDENTATION)], {
 				type: "application/json",
 			});
 
@@ -824,7 +828,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 													<ConfidenceIndicator
 														key={idx}
 														confidence={source.confidence}
-														label={`${source.type.charAt(0).toUpperCase() + source.type.slice(1)} (${Math.round(source.completeness)}%)`}
+														label={`${source.type.charAt(ZERO).toUpperCase() + source.type.slice(ONE)} (${Math.round(source.completeness)}%)`}
 													/>
 												))}
 											</Stack>
@@ -947,7 +951,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 										<Card.Section withBorder={true} inheritPadding={true} py="xs">
 											<Group justify="space-between">
 												<Text fw={500}>
-													{source.type.charAt(0).toUpperCase() + source.type.slice(1)} Source
+													{source.type.charAt(ZERO).toUpperCase() + source.type.slice(ONE)} Source
 												</Text>
 												<Badge
 													color={

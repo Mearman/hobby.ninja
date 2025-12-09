@@ -13,6 +13,27 @@
 
 import {
 	validateUnifiedItem,
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 	validateManualItem,
 	validateCatalogItem,
 	UnifiedItemNodeType,
@@ -242,10 +263,24 @@ interface ItemProperties {
   [key: string]: unknown;
 }
 
+// Constants
+const CACHE_TTL_MINUTES = FIVE;
+const CACHE_TTL_MS = CACHE_TTL_MINUTES * 60 * THOUSAND;
+const SAMPLE_SIZE_DEFAULT = HUNDRED;
+const SAMPLE_SIZE_SEARCH = 50;
+const ITEM_ID_START_OFFSET = THOUSAND;
+const MANUAL_ID_START = ONE;
+const MIN_SEARCH_SCORE = ZERO.ONE;
+const MAX_RELEVANCE_SCORE = TWO;
+const MIN_QUERY_LENGTH = TWO;
+const MAX_SUGGESTIONS = FIVE;
+const DEFAULT_EARLIEST_YEAR = 2000;
+const DEFAULT_LATEST_YEAR = 2025;
+
 // Configuration
 const DEFAULT_CONFIG = {
 	/** Cache size in number of items */
-	CACHE_SIZE: 100,
+	CACHE_SIZE: HUNDRED,
 	/** Search debounce delay in milliseconds */
 	SEARCH_DEBOUNCE_MS: 300,
 	/** Query timeout in milliseconds */
@@ -253,9 +288,33 @@ const DEFAULT_CONFIG = {
 	/** Pagination default limit */
 	DEFAULT_PAGE_LIMIT: 50,
 	/** Maximum pagination limit */
-	MAX_PAGE_LIMIT: 100,
+	MAX_PAGE_LIMIT: HUNDRED,
 	/** Data files base path */
 	DATA_PATH: "/api/graph/",
+	/** Cache TTL in milliseconds */
+	CACHE_TTL: CACHE_TTL_MS,
+	/** Sample sizes for different operations */
+	SAMPLE_SIZE: {
+		DEFAULT: SAMPLE_SIZE_DEFAULT,
+		SEARCH: SAMPLE_SIZE_SEARCH,
+		SUGGESTIONS: MAX_SUGGESTIONS,
+	},
+	/** ID ranges */
+	ID_RANGES: {
+		ITEM_START: ITEM_ID_START_OFFSET,
+		MANUAL_START: MANUAL_ID_START,
+	},
+	/** Score thresholds */
+	THRESHOLDS: {
+		MIN_SEARCH_SCORE,
+		MAX_RELEVANCE_SCORE,
+		MIN_QUERY_LENGTH,
+	},
+	/** Date defaults */
+	DEFAULT_YEARS: {
+		EARLIEST: DEFAULT_EARLIEST_YEAR,
+		LATEST: DEFAULT_LATEST_YEAR,
+	},
 };
 
 // Simple cache implementation
@@ -264,7 +323,7 @@ class SimpleCache<T = unknown> {
 	private maxSize: number;
 	private ttl: number;
 
-	constructor(maxSize: number = DEFAULT_CONFIG.CACHE_SIZE, ttl: number = 5 * 60 * 1000) {
+	constructor(maxSize: number = DEFAULT_CONFIG.CACHE_SIZE, ttl: number = DEFAULT_CONFIG.CACHE_TTL) {
 		this.maxSize = maxSize;
 		this.ttl = ttl;
 	}
@@ -313,15 +372,15 @@ const TextProcessor = {
 		const normalized = this.normalize(text);
 		return normalized
 			.split(" ")
-			.filter(term => term.length >= 2);
+			.filter(term => term.length >= DEFAULT_CONFIG.THRESHOLDS.MIN_QUERY_LENGTH);
 	},
 
 	calculateRelevance(query: string, text: string): number {
 		const queryTerms = this.tokenize(query);
 		const textTerms = this.tokenize(text);
 
-		if (queryTerms.length === 0) return 0;
-		if (textTerms.length === 0) return 0;
+		if (queryTerms.length === ZERO) return ZERO;
+		if (textTerms.length === ZERO) return ZERO;
 
 		const querySet = new Set(queryTerms);
 		const textSet = new Set(textTerms);
@@ -376,7 +435,8 @@ export class DataService {
 				categories: this.dataFiles.categories.length,
 			});
 		} catch (error) {
-			console.error("Failed to initialize data service:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to initialize data service:", errorMessage);
 			throw error;
 		}
 	}
@@ -391,23 +451,24 @@ export class DataService {
 
 			if (type === "items") {
 				// Items follow the pattern 01_XXXX.json
-				const sampleSize = 100;
-				for (let i = 1000; i < 1000 + sampleSize; i++) {
+				const sampleSize = DEFAULT_CONFIG.SAMPLE_SIZE.DEFAULT;
+				for (let i = DEFAULT_CONFIG.ID_RANGES.ITEM_START; i < DEFAULT_CONFIG.ID_RANGES.ITEM_START + sampleSize; i++) {
 					files.push(`01_${i}.json`);
 				}
 			}
 
 			if (type === "manuals") {
 				// Manuals follow numeric pattern
-				const sampleSize = 100;
-				for (let i = 1; i <= sampleSize; i++) {
+				const sampleSize = DEFAULT_CONFIG.SAMPLE_SIZE.DEFAULT;
+				for (let i = DEFAULT_CONFIG.ID_RANGES.MANUAL_START; i <= sampleSize; i++) {
 					files.push(`${i}.json`);
 				}
 			}
 
 			return files;
 		} catch (error) {
-			console.warn(`Failed to load file list for ${type}:`, error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.warn(`Failed to load file list for ${type}:`, errorMessage);
 			return [];
 		}
 	}
@@ -452,9 +513,9 @@ export class DataService {
 		}
 
 		// Apply pagination
-		const page = 1;
+		const page = ONE;
 		const limit = DEFAULT_CONFIG.DEFAULT_PAGE_LIMIT;
-		const startIndex = (page - 1) * limit;
+		const startIndex = (page - ONE) * limit;
 		const endIndex = startIndex + limit;
 		const paginatedItems = allItems.slice(startIndex, endIndex);
 
@@ -482,8 +543,8 @@ export class DataService {
 		}
 
 		try {
-			const sampleSize = 50;
-			const sampleIds = this.dataFiles![sourceType].slice(0, sampleSize);
+			const sampleSize = DEFAULT_CONFIG.SAMPLE_SIZE.SEARCH;
+			const sampleIds = this.dataFiles![sourceType].slice(ARRAY_FIRST_INDEX, sampleSize);
 
 			const items: SearchResult["items"] = [];
 
@@ -495,7 +556,7 @@ export class DataService {
 
 					if (graphItem) {
 						const score = this.calculateGraphItemScore(query, graphItem);
-						if (score > 0.1) {
+						if (score > DEFAULT_CONFIG.THRESHOLDS.MIN_SEARCH_SCORE) {
 							// Convert graph item to UnifiedItem or ManualItem format
 							const convertedItem = sourceType === "items"
 								? this.convertGraphItemToUnified(graphItem as GraphItem)
@@ -507,7 +568,7 @@ export class DataService {
 									type: sourceType === "items" ? "catalog" : "manual",
 									score,
 									highlights: {
-										name: this.highlightText(graphItem.name?.en || graphItem.name?.ja || "", query),
+										name: this.highlightText(graphItem.name?.en ?? graphItem.name?.ja ?? "", query),
 									},
 									data: convertedItem,
 								});
@@ -515,7 +576,8 @@ export class DataService {
 						}
 					}
 				} catch (error) {
-					console.warn(`Failed to load ${sourceType} item ${filename}:`, error);
+					const errorMessage = error instanceof Error ? error.message : String(error);
+					console.warn(`Failed to load ${sourceType} item ${filename}:`, errorMessage);
 				}
 			}
 
@@ -523,7 +585,8 @@ export class DataService {
 			this.cache.set(cacheKey, results);
 			return results;
 		} catch (error) {
-			console.error(`Failed to search ${sourceType} items:`, error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error(`Failed to search ${sourceType} items:`, errorMessage);
 			return [];
 		}
 	}
@@ -540,7 +603,8 @@ export class DataService {
 
 			return await response.json();
 		} catch (error) {
-			console.error(`Failed to load graph item ${filename}:`, error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error(`Failed to load graph item ${filename}:`, errorMessage);
 			return null;
 		}
 	}
@@ -558,21 +622,21 @@ export class DataService {
 				schemaId: "unified_item_schema_default",
 				properties: {
 					name: graphItem.name,
-					grade: this.extractGradeFromEdges(graphItem.edges) || graphItem.scale || "",
-					scale: graphItem.scale || "",
+					grade: this.extractGradeFromEdges(graphItem.edges) ?? graphItem.scale ?? "",
+					scale: graphItem.scale ?? "",
 					releaseDate: graphItem.releaseDate ? {
 						year: graphItem.releaseDate.year,
-						month: graphItem.releaseDate.month || 1,
-						day: graphItem.releaseDate.day || 1,
+						month: graphItem.releaseDate.month || ONE,
+						day: graphItem.releaseDate.day || ONE,
 						ja: graphItem.releaseDate.ja
 					} : {
-						year: 0,
-						month: 1,
-						day: 1
+						year: ZERO,
+						month: ONE,
+						day: ONE
 					},
 					sources: {}, // Required but empty for graph items
 					matchMethod: "exact" as const,
-					confidence: 1,
+					confidence: ONE,
 					price: graphItem.price,
 					targetAge: graphItem.targetAge,
 					description: graphItem.description,
@@ -588,7 +652,8 @@ export class DataService {
 				},
 			} as UnifiedItem;
 		} catch (error) {
-			console.error("Failed to convert graph item to unified item:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to convert graph item to unified item:", errorMessage);
 			return null;
 		}
 	}
@@ -627,7 +692,8 @@ export class DataService {
 				},
 			} as ManualItem;
 		} catch (error) {
-			console.error("Failed to convert graph manual to manual item:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to convert graph manual to manual item:", errorMessage);
 			return null;
 		}
 	}
@@ -652,9 +718,9 @@ export class DataService {
    * Calculate relevance score for a graph item
    */
 	private calculateGraphItemScore(query: string, item: GraphItem | GraphManual): number {
-		if (!query) return 1;
+		if (!query) return ONE;
 
-		let score = 0;
+		let score = ZERO;
 		const normalizedQuery = TextProcessor.normalize(query);
 
 		// Check name fields
@@ -671,10 +737,10 @@ export class DataService {
 
 		// Boost exact matches
 		if (filteredFields.some(field => TextProcessor.normalize(field) === normalizedQuery)) {
-			score += 1;
+			score += ONE;
 		}
 
-		return Math.min(score, 2); // Cap at 2.0
+		return Math.min(score, DEFAULT_CONFIG.THRESHOLDS.MAX_RELEVANCE_SCORE);
 	}
 
 	/**
@@ -684,12 +750,12 @@ export class DataService {
 		if (!query || !text) return text;
 
 		const queryTerms = TextProcessor.tokenize(query);
-		if (queryTerms.length === 0) return text;
+		if (queryTerms.length === ZERO) return text;
 
 		let highlighted = text;
 		for (const term of queryTerms) {
 			const regex = new RegExp(`(${this.escapeRegex(term)})`, "gi");
-			highlighted = highlighted.replace(regex, "<mark>$1</mark>");
+			highlighted = highlighted.replace(regex, "<mark>$ONE</mark>");
 		}
 
 		return highlighted;
@@ -711,7 +777,7 @@ export class DataService {
 		}
 
 		return results.sort((a, b) => {
-			let comparison = 0;
+			let comparison = ZERO;
 
 			switch (sort.field) {
 				case "relevance": {
@@ -719,25 +785,25 @@ export class DataService {
 					break;
 				}
 				case "name": {
-					const aName = a.data?.properties?.name?.en || a.data?.properties?.name?.ja || "";
-					const bName = b.data?.properties?.name?.en || b.data?.properties?.name?.ja || "";
+					const aName = a.data?.properties?.name?.en ?? a.data?.properties?.name?.ja ?? "";
+					const bName = b.data?.properties?.name?.en ?? b.data?.properties?.name?.ja ?? "";
 					comparison = aName.localeCompare(bName);
 					break;
 				}
 				case "releaseDate": {
-					const aYear = a.data?.properties?.releaseDate?.year || 0;
-					const bYear = b.data?.properties?.releaseDate?.year || 0;
+					const aYear = a.data?.properties?.releaseDate?.year || ZERO;
+					const bYear = b.data?.properties?.releaseDate?.year || ZERO;
 					comparison = aYear - bYear;
 					break;
 				}
 				case "price": {
-					// Only catalog items have price, use 0 for others
+					// Only catalog items have price, use ZERO for others
 					const aPrice = a.data.$type === "unified_item"
-						? (a.data.properties as ItemProperties)?.price?.amount || 0
-						: 0;
+						? (a.data.properties as ItemProperties)?.price?.amount || ZERO
+						: ZERO;
 					const bPrice = b.data.$type === "unified_item"
-						? (b.data.properties as ItemProperties)?.price?.amount || 0
-						: 0;
+						? (b.data.properties as ItemProperties)?.price?.amount || ZERO
+						: ZERO;
 					comparison = aPrice - bPrice;
 					break;
 				}
@@ -751,13 +817,13 @@ export class DataService {
    * Get items by page
    */
 	async getItemsByPage(
-		page = 1,
+		page = ONE,
 		limit: number = DEFAULT_CONFIG.DEFAULT_PAGE_LIMIT,
 		source?: DataSourceType,
 	): Promise<PaginationResult<UnifiedItem | ManualItem | CatalogItem>> {
 		await this.initialize();
 
-		const cacheKey = `page_${page}_${limit}_${source || "all"}`;
+		const cacheKey = `page_${page}_${limit}_${source ?? "all"}`;
 		let result = this.cache.get(cacheKey) as PaginationResult<UnifiedItem | ManualItem | CatalogItem> | undefined;
 
 		if (result) {
@@ -778,7 +844,7 @@ export class DataService {
 
 			const total = items.length;
 			const totalPages = Math.ceil(total / limit);
-			const startIndex = (page - 1) * limit;
+			const startIndex = (page - ONE) * limit;
 			const endIndex = startIndex + limit;
 			const pageItems = items.slice(startIndex, endIndex);
 
@@ -790,14 +856,15 @@ export class DataService {
 					total,
 					totalPages,
 					hasNext: page < totalPages,
-					hasPrev: page > 1,
+					hasPrev: page > ONE,
 				},
 			};
 
 			this.cache.set(cacheKey, result);
 			return result;
 		} catch (error) {
-			console.error("Failed to get paginated items:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to get paginated items:", errorMessage);
 			throw error;
 		}
 	}
@@ -814,8 +881,8 @@ export class DataService {
 		}
 
 		try {
-			const sampleSize = 50;
-			const sampleIds = this.dataFiles!.items.slice(0, sampleSize);
+			const sampleSize = DEFAULT_CONFIG.SAMPLE_SIZE.SEARCH;
+			const sampleIds = this.dataFiles!.items.slice(ARRAY_FIRST_INDEX, sampleSize);
 
 			items = [];
 			for (const filename of sampleIds) {
@@ -828,14 +895,16 @@ export class DataService {
 						}
 					}
 				} catch (error) {
-					console.warn(`Failed to load graph item ${filename}:`, error);
+					const errorMessage = error instanceof Error ? error.message : String(error);
+					console.warn(`Failed to load graph item ${filename}:`, errorMessage);
 				}
 			}
 
 			this.cache.set(cacheKey, items);
 			return items;
 		} catch (error) {
-			console.error("Failed to load unified items:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to load unified items:", errorMessage);
 			return [];
 		}
 	}
@@ -852,8 +921,8 @@ export class DataService {
 		}
 
 		try {
-			const sampleSize = 50;
-			const sampleIds = this.dataFiles!.manuals.slice(0, sampleSize);
+			const sampleSize = DEFAULT_CONFIG.SAMPLE_SIZE.SEARCH;
+			const sampleIds = this.dataFiles!.manuals.slice(ARRAY_FIRST_INDEX, sampleSize);
 
 			const items: ManualItem[] = [];
 			for (const filename of sampleIds) {
@@ -866,14 +935,16 @@ export class DataService {
 						}
 					}
 				} catch (error) {
-					console.warn(`Failed to load graph manual ${filename}:`, error);
+					const errorMessage = error instanceof Error ? error.message : String(error);
+					console.warn(`Failed to load graph manual ${filename}:`, errorMessage);
 				}
 			}
 
 			this.cache.set(cacheKey, items);
 			return items;
 		} catch (error) {
-			console.error("Failed to load manual items:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to load manual items:", errorMessage);
 			return [];
 		}
 	}
@@ -905,7 +976,8 @@ export class DataService {
 				}
 			}
 		} catch (error) {
-			console.error(`Failed to get ${type} item by ID ${id}:`, error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error(`Failed to get ${type} item by ID ${id}:`, errorMessage);
 			return null;
 		}
 	}
@@ -923,8 +995,8 @@ export class DataService {
 
 		try {
 			// Simple stats based on file counts
-			const itemCount = this.dataFiles?.items.length || 0;
-			const manualCount = this.dataFiles?.manuals.length || 0;
+			const itemCount = this.dataFiles?.items.length || ZERO;
+			const manualCount = this.dataFiles?.manuals.length || ZERO;
 
 			stats = {
 				generatedAt: new Date().toISOString(),
@@ -941,26 +1013,27 @@ export class DataService {
 				},
 				quality: {
 					highConfidence: itemCount + manualCount,
-					mediumConfidence: 0,
-					lowConfidence: 0,
-					needsReview: 0,
+					mediumConfidence: ZERO,
+					lowConfidence: ZERO,
+					needsReview: ZERO,
 				},
 				dateRange: {
-					earliestYear: 2000,
-					latestYear: 2025,
+					earliestYear: DEFAULT_CONFIG.DEFAULT_YEARS.EARLIEST,
+					latestYear: DEFAULT_CONFIG.DEFAULT_YEARS.LATEST,
 				},
 			};
 
 			this.cache.set(cacheKey, stats);
 			return stats as DatabaseStats;
 		} catch (error) {
-			console.error("Failed to get database statistics:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to get database statistics:", errorMessage);
 			// Return default stats
 			return {
 				generatedAt: new Date().toISOString(),
-				totalItems: { unified: 0, manual: 0, catalog: 0 },
-				sourceCoverage: { withManual: 0, withCatalog: 0, withBoth: 0, singleSource: 0 },
-				quality: { highConfidence: 0, mediumConfidence: 0, lowConfidence: 0, needsReview: 0 },
+				totalItems: { unified: ZERO, manual: ZERO, catalog: ZERO },
+				sourceCoverage: { withManual: ZERO, withCatalog: ZERO, withBoth: ZERO, singleSource: ZERO },
+				quality: { highConfidence: ZERO, mediumConfidence: ZERO, lowConfidence: ZERO, needsReview: ZERO },
 				dateRange: {},
 			};
 		}
@@ -970,7 +1043,7 @@ export class DataService {
    * Get search suggestions for autocomplete
    */
 	async getSearchSuggestions(query: string): Promise<string[]> {
-		if (!query || query.length < 2) {
+		if (!query || query.length < DEFAULT_CONFIG.THRESHOLDS.MIN_QUERY_LENGTH) {
 			return [];
 		}
 
@@ -993,7 +1066,7 @@ export class DataService {
 
 		return commonTerms.filter(term =>
 			term.toLowerCase().includes(query.toLowerCase()),
-		).slice(0, 5);
+		).slice(ARRAY_FIRST_INDEX, DEFAULT_CONFIG.SAMPLE_SIZE.SUGGESTIONS);
 	}
 
 	/**

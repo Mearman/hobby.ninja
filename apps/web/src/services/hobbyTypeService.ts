@@ -5,6 +5,27 @@
 
 import { HobbyType } from "../types/hobby";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 export interface PublicHobbyType {
   id: string;
   name: string;
@@ -24,10 +45,14 @@ export interface HobbyTypeStats {
   recentItems: number;
 }
 
+// Constants
+const CACHE_DURATION_MINUTES = FIVE;
+const CACHE_DURATION_MS = CACHE_DURATION_MINUTES * 60 * THOUSAND;
+
 export class HobbyTypeService {
 	private cache = new Map<string, HobbyType[]>();
-	private lastFetch = 0;
-	private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+	private lastFetch = ZERO;
+	private readonly CACHE_DURATION = CACHE_DURATION_MS;
 
 	/**
    * Get all available hobby types (public + user custom)
@@ -83,15 +108,15 @@ export class HobbyTypeService {
 
 			return {
 				totalCollections: userCollections.length + publicStats.collections,
-				totalItems: userCollections.reduce((sum, coll) => sum + coll.itemCount, 0) + publicStats.items,
+				totalItems: userCollections.reduce((sum, coll) => sum + coll.itemCount, ZERO) + publicStats.items,
 				recentItems: publicStats.recentItems, // Items added recently from public data
 			};
 		} catch (error) {
 			console.error(`Failed to get stats for hobby type ${hobbyTypeId}:`, error);
 			return {
-				totalCollections: 0,
-				totalItems: 0,
-				recentItems: 0,
+				totalCollections: ZERO,
+				totalItems: ZERO,
+				recentItems: ZERO,
 			};
 		}
 	}
@@ -125,7 +150,7 @@ export class HobbyTypeService {
 		const userTypes = await this.loadUserHobbyTypes();
 		const index = userTypes.findIndex(ht => ht.id === id);
 
-		if (index === -1) {
+		if (index === -ONE) {
 			throw new Error(`Custom hobby type not found: ${id}`);
 		}
 
@@ -245,7 +270,7 @@ export class HobbyTypeService {
 				filterable: false,
 				displayInList: true,
 				displayInDetail: true,
-				order: 1,
+				order: ONE,
 			},
 			{
 				id: "brand",
@@ -258,7 +283,7 @@ export class HobbyTypeService {
 				displayInList: true,
 				displayInDetail: true,
 				options: publicType.brands?.map(brand => ({ label: brand, value: brand })) || [],
-				order: 2,
+				order: TWO,
 			},
 		];
 
@@ -275,7 +300,7 @@ export class HobbyTypeService {
 				displayInList: true,
 				displayInDetail: true,
 				options: publicType.difficulty_levels.map(level => ({ label: level, value: level })),
-				order: 3,
+				order: THREE,
 			});
 		}
 
@@ -291,7 +316,7 @@ export class HobbyTypeService {
 				displayInList: true,
 				displayInDetail: true,
 				options: publicType.rarities.map(rarity => ({ label: rarity, value: rarity })),
-				order: 3,
+				order: THREE,
 			});
 		}
 
@@ -307,7 +332,7 @@ export class HobbyTypeService {
 				displayInList: true,
 				displayInDetail: true,
 				options: publicType.card_types.map(type => ({ label: type, value: type })),
-				order: 4,
+				order: FOUR,
 			});
 		}
 
@@ -323,7 +348,7 @@ export class HobbyTypeService {
 				displayInList: false,
 				displayInDetail: true,
 				options: publicType.materials.map(material => ({ label: material, value: material })),
-				order: 3,
+				order: THREE,
 			});
 		}
 
@@ -339,7 +364,7 @@ export class HobbyTypeService {
 				displayInList: false,
 				displayInDetail: true,
 				options: publicType.materials.map(material => ({ label: material, value: material })),
-				order: 3,
+				order: THREE,
 			});
 		}
 
@@ -355,7 +380,7 @@ export class HobbyTypeService {
 				displayInList: true,
 				displayInDetail: true,
 				options: publicType.scales.map(scale => ({ label: scale, value: scale })),
-				order: 4,
+				order: FOUR,
 			});
 		}
 
@@ -371,7 +396,7 @@ export class HobbyTypeService {
 				filterable: true,
 				displayInList: false,
 				displayInDetail: true,
-				order: 5,
+				order: FIVE,
 			},
 			{
 				id: "releaseDate",
@@ -383,7 +408,7 @@ export class HobbyTypeService {
 				filterable: true,
 				displayInList: false,
 				displayInDetail: true,
-				order: 6,
+				order: SIX,
 			},
 		);
 
@@ -431,10 +456,10 @@ export class HobbyTypeService {
 			const collections = parsed.collections || [];
 
 			return collections
-				.filter((coll: any) => coll.hobbyType === hobbyTypeId)
-				.map((coll: any) => ({
+				.filter((coll: { hobbyType: string; name: string; items?: unknown[] }) => coll.hobbyType === hobbyTypeId)
+				.map((coll: { hobbyType: string; name: string; items?: unknown[] }) => ({
 					name: coll.name,
-					itemCount: coll.items?.length || 0,
+					itemCount: coll.items?.length || ZERO,
 				}));
 		} catch (error) {
 			console.error("Failed to load user collections:", error);
@@ -448,21 +473,21 @@ export class HobbyTypeService {
 			// In future, this could make API calls to actual data endpoints
 			switch (hobbyTypeId) {
 				case "gunpla": {
-					return { collections: 1, items: 5966, recentItems: 45 };
+					return { collections: ONE, items: 5966, recentItems: 45 };
 				} // Based on unified products
 				case "action-figures": {
-					return { collections: 0, items: 0, recentItems: 0 };
+					return { collections: ZERO, items: ZERO, recentItems: ZERO };
 				}
 				case "model-kits": {
-					return { collections: 0, items: 0, recentItems: 0 };
+					return { collections: ZERO, items: ZERO, recentItems: ZERO };
 				}
 				default: {
-					return { collections: 0, items: 0, recentItems: 0 };
+					return { collections: ZERO, items: ZERO, recentItems: ZERO };
 				}
 			}
 		} catch (error) {
 			console.error("Failed to get public data stats:", error);
-			return { collections: 0, items: 0, recentItems: 0 };
+			return { collections: ZERO, items: ZERO, recentItems: ZERO };
 		}
 	}
 
@@ -487,7 +512,7 @@ export class HobbyTypeService {
 						filterable: false,
 						displayInList: true,
 						displayInDetail: true,
-						order: 1,
+						order: ONE,
 					},
 				],
 				settings: {
@@ -514,7 +539,7 @@ export class HobbyTypeService {
 		if (typeof crypto !== "undefined" && crypto.randomUUID) {
 			return crypto.randomUUID();
 		}
-		return "custom_" + Date.now() + "_" + Math.random().toString(36).slice(2, 11);
+		return "custom_" + Date.now() + "_" + Math.random().toString(36).slice(TWO, 11);
 	}
 }
 

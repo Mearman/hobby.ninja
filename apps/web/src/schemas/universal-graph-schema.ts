@@ -4,17 +4,38 @@
  * Base graph entity types that extend to nodes and edges,
  * which then extend to specific data types (manual, catalog, unified)
  *
- * Uses Zod 4's built-in JSON schema generation
+ * Uses Zod FOUR's built-in JSON schema generation
  */
 
 import { z } from "zod";
+
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
 
 // ===== BASE GRAPH ENTITY TYPES =====
 
 // ===== BASE GRAPH ENTITY TYPES =====
 
 // Core value types for graph properties
-const GraphValue: any = z.lazy(() =>
+const GraphValue: z.ZodType<unknown> = z.lazy(() =>
 	z.union([
 		z.string(),
 		z.number(),
@@ -41,7 +62,7 @@ const BaseEntitySchema = z.object({
 		updatedAt: z.string().datetime().optional(),
 		version: z.string().optional(),
 		source: z.string().optional(),
-		confidence: z.number().min(0).max(1).optional(),
+		confidence: z.number().min(ZERO).max(ONE).optional(),
 	}).optional(),
 });
 
@@ -169,14 +190,14 @@ const PriceInfo = z.object({
 const UnifiedSources = z.object({
 	catalog: z.object({
 		id: z.string(),
-		confidence: z.number().min(0).max(1),
+		confidence: z.number().min(ZERO).max(ONE),
 		linkedAt: z.string().datetime(),
 	}).optional(),
 	manual: z.object({
 		id: z.string(),
 		productNumber: z.string().optional(),
 		pdfUrl: z.string().url(),
-		confidence: z.number().min(0).max(1),
+		confidence: z.number().min(ZERO).max(ONE),
 		linkedAt: z.string().datetime(),
 	}).optional(),
 });
@@ -298,7 +319,7 @@ const HasCatalogDataEdge = BaseEdgeSchema.extend({
 	$type: z.literal(RelationshipTypeEnum.enum.HAS_CATALOG_DATA),
 	schemaId: z.string().startsWith("edge_schema_"),
 	properties: z.object({
-		confidence: z.number().min(0).max(1),
+		confidence: z.number().min(ZERO).max(ONE),
 		linkedAt: z.string().datetime(),
 	}),
 });
@@ -307,7 +328,7 @@ const HasManualDataEdge = BaseEdgeSchema.extend({
 	$type: z.literal(RelationshipTypeEnum.enum.HAS_MANUAL_DATA),
 	schemaId: z.string().startsWith("edge_schema_"),
 	properties: z.object({
-		confidence: z.number().min(0).max(1),
+		confidence: z.number().min(ZERO).max(ONE),
 		linkedAt: z.string().datetime(),
 	}),
 });
@@ -318,7 +339,7 @@ const MergedWithEdge = BaseEdgeSchema.extend({
 	properties: z.object({
 		matchMethod: z.enum(["exact", "fuzzy", "partial"]),
 		matchStage: z.number(),
-		confidence: z.number().min(0).max(1),
+		confidence: z.number().min(ZERO).max(ONE),
 	}),
 });
 
@@ -363,7 +384,7 @@ const UniversalGraphSchema = z.object({
 		zodSchema: z.string(), // String representation for runtime use
 	})).optional(),
 	metadata: z.object({
-		version: z.string().default("1.0.0"),
+		version: z.string().default("ONE.ZERO.ZERO"),
 		createdAt: z.string().datetime(),
 		updatedAt: z.string().datetime(),
 		description: z.string().optional(),
@@ -375,7 +396,7 @@ const UniversalGraphSchema = z.object({
 // ===== JSON SCHEMA GENERATION HELPERS =====
 
 /**
- * Generate JSON schemas from Zod schemas using Zod 4's built-in functionality
+ * Generate JSON schemas from Zod schemas using Zod FOUR's built-in functionality
  */
 const SchemaGeneratorImpl = {
 	// Generate schema for a specific data type

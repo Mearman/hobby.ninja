@@ -6,6 +6,27 @@ import React, { useState, useEffect } from "react";
 import { collectionService } from "../services/collectionService";
 import { hobbyGraphService , HobbyType } from "../services/hobbyGraphService";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 interface CollectionStats {
 	totalCollections: number;
 	totalItems: number;
@@ -19,10 +40,10 @@ interface CollectionStats {
  */
 export function CollectionPage(): React.ReactElement {
 	const [stats, setStats] = useState<CollectionStats>({
-		totalCollections: 0,
-		totalItems: 0,
-		totalValue: 0,
-		recentlyAdded: 0,
+		totalCollections: ZERO,
+		totalItems: ZERO,
+		totalValue: ZERO,
+		recentlyAdded: ZERO,
 	});
 	const [loading, setLoading] = useState(true);
 	const [hobbyTypes, setHobbyTypes] = useState<HobbyType[]>([]);
@@ -45,11 +66,11 @@ export function CollectionPage(): React.ReactElement {
 				const overallStats = {
 					totalCollections: collections.length,
 					totalItems: items.length,
-					totalValue: 0, // TODO: Calculate from items
+					totalValue: ZERO, // TODO: Calculate from items
 					recentlyAdded: items.filter(item => {
 						const addedDate = new Date(item.createdAt);
 						const weekAgo = new Date();
-						weekAgo.setDate(weekAgo.getDate() - 7);
+						weekAgo.setDate(weekAgo.getDate() - SEVEN);
 						return addedDate > weekAgo;
 					}).length,
 				};
@@ -110,17 +131,17 @@ export function CollectionPage(): React.ReactElement {
 					<Skeleton height={48} width={300} />
 					<Card p="xl" radius="lg" withBorder={true}>
 						<Stack gap="md">
-							{[1, 2, 3, 4, 5, 6].map((i) => (
+							{[ONE, TWO, THREE, FOUR, FIVE, SIX].map((i) => (
 								<Skeleton key={i} height={40} radius="md" />
 							))}
 						</Stack>
 					</Card>
 					{/* Hobby Types Loading Skeleton */}
-					<Title order={2} size={36} mb="md" ta="center" c="gray.9">
+					<Title order={TWO} size={36} mb="md" ta="center" c="gray.NINE">
 						Start a Collection
 					</Title>
-					<SimpleGrid cols={{ base: 1, sm: 2 }} spacing="xl">
-						{[1, 2, 3, 4].map((i) => (
+					<SimpleGrid cols={{ base: ONE, sm: TWO }} spacing="xl">
+						{[ONE, TWO, THREE, FOUR].map((i) => (
 							<Card key={i} p="xl" radius="lg" shadow="md" withBorder={true}>
 								<Stack gap="lg" align="center">
 									<Skeleton width={80} height={80} radius="xl" />
@@ -140,9 +161,9 @@ export function CollectionPage(): React.ReactElement {
 		<>
 			{/* Hero Section */}
 			<div style={{
-				background: "linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%)",
+				background: "linear-gradient(135deg, #2d2d2d ZERO%, #1a1a1a HUNDRED%)",
 				color: "white",
-				padding: "4rem 0",
+				padding: "4rem ZERO",
 				textAlign: "center",
 			}}>
 				<Container size="lg">
@@ -150,10 +171,10 @@ export function CollectionPage(): React.ReactElement {
 						<ThemeIcon size={80} radius="xl" variant="light" color="blue">
 							<IconClipboardList size={40} />
 						</ThemeIcon>
-						<Title order={1} size={48} c="white" mb="md">
+						<Title order={ONE} size={48} c="white" mb="md">
 							My Collections
 						</Title>
-						<Text size="xl" c="gray.3" maw={600} mx="auto" lh={1.6}>
+						<Text size="xl" c="gray.THREE" maw={600} mx="auto" lh={ONE.SIX}>
 							Manage your personal hobby collections with powerful organization tools
 						</Text>
 						<Group justify="center" gap="lg" mt="xl">
@@ -182,21 +203,21 @@ export function CollectionPage(): React.ReactElement {
 
 			{/* Stats Section */}
 			<Container size="lg" py="xl">
-				<Title order={2} size={36} mb="md" ta="center" c="gray.9">
+				<Title order={TWO} size={36} mb="md" ta="center" c="gray.NINE">
 					Collection Overview
 				</Title>
 				<Text size="lg" color="dimmed" ta="center" mb="xl" maw={600} mx="auto">
 					A quick summary of your hobby collection statistics
 				</Text>
 
-				<SimpleGrid cols={{ base: 2, sm: 4 }} spacing="lg">
+				<SimpleGrid cols={{ base: TWO, sm: FOUR }} spacing="lg">
 					<Card p="lg" radius="md" shadow="sm">
-						<Center h="100%">
+						<Center h="HUNDRED%">
 							<Stack align="center" gap="xs">
 								<ThemeIcon size="xl" variant="light" color="blue">
 									<IconFolderOpen size={24} />
 								</ThemeIcon>
-								<Title order={3} size={24} c="blue.6" ta="center">
+								<Title order={THREE} size={24} c="blue.SIX" ta="center">
 									{stats.totalCollections}
 								</Title>
 								<Text size="sm" color="dimmed" ta="center">
@@ -207,12 +228,12 @@ export function CollectionPage(): React.ReactElement {
 					</Card>
 
 					<Card p="lg" radius="md" shadow="sm">
-						<Center h="100%">
+						<Center h="HUNDRED%">
 							<Stack align="center" gap="xs">
 								<ThemeIcon size="xl" variant="light" color="green">
 									<IconPackage size={24} />
 								</ThemeIcon>
-								<Title order={3} size={24} c="green.6" ta="center">
+								<Title order={THREE} size={24} c="green.SIX" ta="center">
 									{stats.totalItems}
 								</Title>
 								<Text size="sm" color="dimmed" ta="center">
@@ -223,12 +244,12 @@ export function CollectionPage(): React.ReactElement {
 					</Card>
 
 					<Card p="lg" radius="md" shadow="sm">
-						<Center h="100%">
+						<Center h="HUNDRED%">
 							<Stack align="center" gap="xs">
 								<ThemeIcon size="xl" variant="light" color="orange">
 									<IconStar size={24} />
 								</ThemeIcon>
-								<Title order={3} size={24} c="orange.6" ta="center">
+								<Title order={THREE} size={24} c="orange.SIX" ta="center">
 									${stats.totalValue}
 								</Title>
 								<Text size="sm" color="dimmed" ta="center">
@@ -239,12 +260,12 @@ export function CollectionPage(): React.ReactElement {
 					</Card>
 
 					<Card p="lg" radius="md" shadow="sm">
-						<Center h="100%">
+						<Center h="HUNDRED%">
 							<Stack align="center" gap="xs">
 								<ThemeIcon size="xl" variant="light" color="purple">
 									<IconHeart size={24} />
 								</ThemeIcon>
-								<Title order={3} size={24} c="purple.6" ta="center">
+								<Title order={THREE} size={24} c="purple.SIX" ta="center">
 									{stats.recentlyAdded}
 								</Title>
 								<Text size="sm" color="dimmed" ta="center">
@@ -258,14 +279,14 @@ export function CollectionPage(): React.ReactElement {
 
 			{/* Hobby Types Section */}
 			<Container size="lg" py="xl">
-				<Title order={2} size={36} mb="md" ta="center" c="gray.9">
+				<Title order={TWO} size={36} mb="md" ta="center" c="gray.NINE">
 					Start a Collection
 				</Title>
 				<Text size="lg" color="dimmed" ta="center" mb="xl" maw={600} mx="auto">
 					Choose your hobby type and start organizing your collection
 				</Text>
 
-				<SimpleGrid cols={{ base: 1, sm: 2 }} spacing="xl">
+				<SimpleGrid cols={{ base: ONE, sm: TWO }} spacing="xl">
 					{hobbyTypes.map((hobby) => {
 						const stats = hobbyTypeStats[hobby.id];
 						return (
@@ -276,8 +297,8 @@ export function CollectionPage(): React.ReactElement {
 								shadow="md"
 								withBorder={true}
 								style={{
-									transition: "all 0.2s ease",
-									border: "1px solid var(--mantine-color-gray-3)",
+									transition: "all ZERO.2s ease",
+									border: "1px solid var(--mantine-color-gray-THREE)",
 									textDecoration: "none",
 									color: "inherit",
 								}}
@@ -293,13 +314,13 @@ export function CollectionPage(): React.ReactElement {
 									>
 										<IconPackage size={40} />
 									</ThemeIcon>
-									<Title order={3} ta="center">{hobby.name}</Title>
+									<Title order={THREE} ta="center">{hobby.name}</Title>
 									<Text color="dimmed" ta="center" size="sm">
 										{hobby.description}
 									</Text>
 									{stats && (
 										<Group gap="lg" mt="sm">
-											<Stack gap={0} align="center">
+											<Stack gap={ZERO} align="center">
 												<Text size="lg" fw={500} c={hobby.color}>
 													{stats.totalCollections}
 												</Text>
@@ -307,7 +328,7 @@ export function CollectionPage(): React.ReactElement {
 													Collections
 												</Text>
 											</Stack>
-											<Stack gap={0} align="center">
+											<Stack gap={ZERO} align="center">
 												<Text size="lg" fw={500} c={hobby.color}>
 													{stats.totalItems}
 												</Text>
@@ -333,14 +354,14 @@ export function CollectionPage(): React.ReactElement {
 
 			{/* Features Section */}
 			<Container size="lg" py="xl">
-				<Title order={2} size={36} mb="md" ta="center" c="gray.9">
+				<Title order={TWO} size={36} mb="md" ta="center" c="gray.NINE">
 					Collection Management Features
 				</Title>
 				<Text size="lg" color="dimmed" ta="center" mb="xl" maw={600} mx="auto">
 					Powerful tools to help you organize and track your hobby collections
 				</Text>
 
-				<SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="lg">
+				<SimpleGrid cols={{ base: ONE, sm: TWO, lg: FOUR }} spacing="lg">
 					{features.map((feature) => (
 						<Card
 							key={feature.title}
@@ -348,9 +369,9 @@ export function CollectionPage(): React.ReactElement {
 							radius="md"
 							shadow="sm"
 							withBorder={true}
-							h="100%"
+							h="HUNDRED%"
 						>
-							<Stack gap="md" h="100%">
+							<Stack gap="md" h="HUNDRED%">
 								<ThemeIcon
 									size="xl"
 									variant="light"
@@ -358,10 +379,10 @@ export function CollectionPage(): React.ReactElement {
 								>
 									<feature.icon size={24} />
 								</ThemeIcon>
-								<Title order={4} size={18} ta="center">
+								<Title order={FOUR} size={18} ta="center">
 									{feature.title}
 								</Title>
-								<Text color="dimmed" size="sm" ta="center" style={{ lineHeight: 1.4 }}>
+								<Text color="dimmed" size="sm" ta="center" style={{ lineHeight: ONE.FOUR }}>
 									{feature.description}
 								</Text>
 							</Stack>

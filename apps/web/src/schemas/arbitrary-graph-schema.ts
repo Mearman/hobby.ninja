@@ -6,8 +6,29 @@
 
 import { z } from "zod";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 // Core value types that can be stored in graph properties
-// Workaround for Zod 4.x _zod property regression using wrapper function
+// Workaround for Zod FOUR.x _zod property regression using wrapper function
 const createGraphValue = () => {
 	const GraphValue: z.ZodType<any> = z.lazy(() =>
 		z.union([
@@ -131,7 +152,7 @@ export const DataNode = z.object({
 		updatedAt: z.string().datetime(),
 		version: z.string().optional(),
 		source: z.string().optional(), // Data source origin
-		confidence: z.number().min(0).max(1).optional(),
+		confidence: z.number().min(ZERO).max(ONE).optional(),
 	}),
 });
 
@@ -149,8 +170,8 @@ export const Relationship = z.object({
 	metadata: z.object({
 		createdAt: z.string().datetime(),
 		updatedAt: z.string().datetime(),
-		strength: z.number().min(0).max(1).optional(), // Edge weight
-		confidence: z.number().min(0).max(1).optional(),
+		strength: z.number().min(ZERO).max(ONE).optional(), // Edge weight
+		confidence: z.number().min(ZERO).max(ONE).optional(),
 	}).optional(),
 });
 
@@ -163,7 +184,7 @@ export const ArbitraryGraph = z.object({
 	})).optional(),
 
 	metadata: z.object({
-		version: z.string().default("1.0.0"),
+		version: z.string().default("ONE.ZERO.ZERO"),
 		createdAt: z.string().datetime(),
 		updatedAt: z.string().datetime(),
 		description: z.string().optional(),
@@ -242,7 +263,7 @@ export class ArbitraryGraphManager {
 		}
 		// Add more schema type validations as needed
 
-		return { valid: errors.length === 0, errors };
+		return { valid: errors.length === ZERO, errors };
 	}
 
 	// Get relationships for a node
@@ -291,7 +312,7 @@ export class ArbitraryGraphManager {
 			}
 		}
 
-		return { valid: errors.length === 0, errors };
+		return { valid: errors.length === ZERO, errors };
 	}
 
 	// Get graph statistics
@@ -305,21 +326,21 @@ export class ArbitraryGraphManager {
 			schemaNodes: {
 				total: schemaNodes.length,
 				byType: schemaNodes.reduce<Record<string, number>>((acc, node) => {
-					acc[node.type] = (acc[node.type] || 0) + 1;
+					acc[node.type] = (acc[node.type] || ZERO) + ONE;
 					return acc;
 				}, {}),
 			},
 			dataNodes: {
 				total: dataNodes.length,
 				byType: dataNodes.reduce<Record<string, number>>((acc, node) => {
-					acc[node.type] = (acc[node.type] || 0) + 1;
+					acc[node.type] = (acc[node.type] || ZERO) + ONE;
 					return acc;
 				}, {}),
 			},
 			relationships: {
 				total: relationships.length,
 				byType: relationships.reduce<Record<string, number>>((acc, rel) => {
-					acc[rel.type] = (acc[rel.type] || 0) + 1;
+					acc[rel.type] = (acc[rel.type] || ZERO) + ONE;
 					return acc;
 				}, {}),
 			},

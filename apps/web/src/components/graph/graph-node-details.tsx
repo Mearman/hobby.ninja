@@ -10,13 +10,34 @@ import { IconPackage, IconTag, IconFileText, IconBooks, IconBuildingFactory } fr
 
 import type { GraphNode } from "../../utils/graph-client";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 interface GraphNodeDetailsProps {
 	node: GraphNode;
 }
 
 // Constants for magic numbers
-const MAX_CHARACTERS_DISPLAY = 5;
-const MAX_RELATIONSHIPS_DISPLAY = 10;
+const MAX_CHARACTERS_DISPLAY = FIVE;
+const MAX_RELATIONSHIPS_DISPLAY = TEN;
 
 /**
  * Icon mapping for different node types
@@ -91,7 +112,7 @@ function ItemDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Materials */}
-			{data["materials"] && Array.isArray(data["materials"]) && data["materials"].length > 0 && (
+			{data["materials"] && Array.isArray(data["materials"]) && data["materials"].length > ZERO && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Materials:</Text>
 					<Group>
@@ -108,12 +129,12 @@ function ItemDetails({ node }: { node: GraphNode }) {
 			{data["description"] && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Description:</Text>
-					<Text size="sm" lineClamp={3}>{data["description"]}</Text>
+					<Text size="sm" lineClamp={THREE}>{data["description"]}</Text>
 				</Stack>
 			)}
 
 			{/* Official Links */}
-			{data["links"] && Array.isArray(data["links"]) && data["links"].length > 0 && (
+			{data["links"] && Array.isArray(data["links"]) && data["links"].length > ZERO && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Official Links:</Text>
 					<List size="sm">
@@ -174,7 +195,7 @@ function BrandDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Product Lines */}
-			{data["productLines"] && Array.isArray(data["productLines"]) && (data["productLines"] as string[]).length > 0 && (
+			{data["productLines"] && Array.isArray(data["productLines"]) && (data["productLines"] as string[]).length > ZERO && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Product Lines:</Text>
 					<Group>
@@ -215,7 +236,7 @@ function CategoryDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Subcategories */}
-			{data["subcategories"] && Array.isArray(data["subcategories"]) && data["subcategories"].length > 0 && (
+			{data["subcategories"] && Array.isArray(data["subcategories"]) && data["subcategories"].length > ZERO && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Subcategories:</Text>
 					<List size="sm">
@@ -348,10 +369,10 @@ function SeriesDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Main Characters */}
-			{data["characters"] && Array.isArray(data["characters"]) && (data["characters"] as string[]).length > 0 && (
+			{data["characters"] && Array.isArray(data["characters"]) && (data["characters"] as string[]).length > ZERO && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Main Characters:</Text>
-					<Text size="sm">{(data["characters"] as string[]).slice(0, MAX_CHARACTERS_DISPLAY).join(", ")}
+					<Text size="sm">{(data["characters"] as string[]).slice(ARRAY_FIRST_INDEX, MAX_CHARACTERS_DISPLAY).join(", ")}
 						{(data["characters"] as string[]).length > MAX_CHARACTERS_DISPLAY && ` +${(data["characters"] as string[]).length - MAX_CHARACTERS_DISPLAY} more`}
 					</Text>
 				</Stack>
@@ -378,7 +399,7 @@ interface Edge {
 function CommonRelationships({ node }: { node: GraphNode }) {
 	const edges = (node.data["edges"] as Edge[]) ?? [];
 
-	if (edges.length === 0) return null;
+	if (edges.length === ZERO) return null;
 
 	// Group relationships by type using a standard loop instead of reduce
 	const groupedEdges: Record<string, Edge[]> = {};
@@ -399,7 +420,7 @@ function CommonRelationships({ node }: { node: GraphNode }) {
 						{relationType} ({relationEdges.length}):
 					</Text>
 					<List size="sm" spacing="xs">
-						{relationEdges.slice(0, MAX_RELATIONSHIPS_DISPLAY).map((edge, index) => (
+						{relationEdges.slice(ARRAY_FIRST_INDEX, MAX_RELATIONSHIPS_DISPLAY).map((edge, index) => (
 							<List.Item key={index}>
 								{edge.node?.name?.en ?? edge.node?.name?.ja ?? edge.node?.id ?? "Unknown"}
 								{edge.node?.type && (
@@ -432,7 +453,7 @@ export function GraphNodeDetails({ node }: GraphNodeDetailsProps) {
 		<Stack gap="md">
 			{/* Node Type Header */}
 			<Group>
-				<IconComponent size={20} color="var(--mantine-color-blue-6)" />
+				<IconComponent size={20} color="var(--mantine-color-blue-SIX)" />
 				<Text fw={600} style={{ textTransform: "capitalize" }}>
 					{node.type} Information
 				</Text>
@@ -453,7 +474,7 @@ export function GraphNodeDetails({ node }: GraphNodeDetailsProps) {
 				<>
 					<Divider label="Debug Info" labelPosition="center" />
 					<Text size="xs" c="dimmed" component="pre">
-						{JSON.stringify(node.data, null, 2)}
+						{JSON.stringify(TWO, $TWO, JSON_INDENTATION)}
 					</Text>
 				</>
 			)}

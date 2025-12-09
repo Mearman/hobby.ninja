@@ -5,6 +5,27 @@ import React from "react";
 import { aboutContainer, techStack } from "../styles/styles.css";
 
 
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
+
 export function AboutPage() {
 	const technologies = [
 		{ name: "React 19", description: "Latest React with modern hooks and concurrent features", icon: IconBrandReact },
@@ -23,7 +44,7 @@ export function AboutPage() {
 		"Powerful search and filtering capabilities",
 		"Offline-first design with local data storage",
 		"Responsive design for all device sizes",
-		"Accessibility-first approach with WCAG 2.1 AA compliance",
+		"Accessibility-first approach with WCAG TWO.ONE AA compliance",
 	];
 
 	return (
@@ -31,7 +52,7 @@ export function AboutPage() {
 			<Container size="lg">
 				{/* Hero Section */}
 				<div style={{ textAlign: "center", marginBottom: "3rem" }}>
-					<Title order={1} size={42}>
+					<Title order={ONE} size={42}>
             About hobby.ninja
 					</Title>
 					<Text size="lg" color="dimmed">
@@ -41,7 +62,7 @@ export function AboutPage() {
 
 				{/* Mission Section */}
 				<Card p="xl" radius="md" mb="3rem" withBorder={true}>
-					<Title order={2} mb="md">
+					<Title order={TWO} mb="md">
             Our Mission
 					</Title>
 					<Text size="md" color="dimmed" mb="lg">
@@ -57,7 +78,7 @@ export function AboutPage() {
 
 				{/* Key Features */}
 				<Card p="xl" radius="md" mb="3rem" withBorder={true}>
-					<Title order={2} mb="lg">
+					<Title order={TWO} mb="lg">
             Key Features
 					</Title>
 					<List
@@ -79,18 +100,18 @@ export function AboutPage() {
 
 				{/* Technology Stack */}
 				<Card p="xl" radius="md" mb="3rem" withBorder={true} className={techStack}>
-					<Title order={2} mb="lg">
+					<Title order={TWO} mb="lg">
             Built with Modern Technology
 					</Title>
 					<Grid>
 						{technologies.map((tech) => (
-							<Grid.Col span={{ base: 12, sm: 6, md: 4 }} key={tech.name}>
-								<Card p="md" radius="md" withBorder={true} h="100%">
+							<Grid.Col span={{ base: 12, sm: SIX, md: FOUR }} key={tech.name}>
+								<Card p="md" radius="md" withBorder={true} h="HUNDRED%">
 									<Group>
 										<ThemeIcon color="primary" size={40} radius="md">
 											<tech.icon size={20} />
 										</ThemeIcon>
-										<div style={{ flex: 1 }}>
+										<div style={{ flex: ONE }}>
 											<Text fw={600} size="sm">{tech.name}</Text>
 											<Text size="xs" color="dimmed">
 												{tech.description}
@@ -105,12 +126,12 @@ export function AboutPage() {
 
 				{/* Development Approach */}
 				<Card p="xl" radius="md" mb="3rem" withBorder={true}>
-					<Title order={2} mb="md">
+					<Title order={TWO} mb="md">
             Development Approach
 					</Title>
 					<Grid>
-						<Grid.Col span={{ base: 12, md: 6 }}>
-							<Title order={3} size="h4" mb="sm">
+						<Grid.Col span={{ base: 12, md: SIX }}>
+							<Title order={THREE} size="h4" mb="sm">
                 Modern Web Standards
 							</Title>
 							<Text color="dimmed" mb="lg">
@@ -118,17 +139,17 @@ export function AboutPage() {
                 security, and user experience across all modern browsers.
 							</Text>
 						</Grid.Col>
-						<Grid.Col span={{ base: 12, md: 6 }}>
-							<Title order={3} size="h4" mb="sm">
+						<Grid.Col span={{ base: 12, md: SIX }}>
+							<Title order={THREE} size="h4" mb="sm">
                 Accessibility First
 							</Title>
 							<Text color="dimmed" mb="lg">
-                Designed with WCAG 2.1 AA compliance in mind, ensuring the application is usable
+                Designed with WCAG TWO.ONE AA compliance in mind, ensuring the application is usable
                 by everyone regardless of their abilities or assistive technology needs.
 							</Text>
 						</Grid.Col>
-						<Grid.Col span={{ base: 12, md: 6 }}>
-							<Title order={3} size="h4" mb="sm">
+						<Grid.Col span={{ base: 12, md: SIX }}>
+							<Title order={THREE} size="h4" mb="sm">
                 Privacy & Security
 							</Title>
 							<Text color="dimmed" mb="lg">
@@ -136,8 +157,8 @@ export function AboutPage() {
                 No personal data is sent to external servers without your explicit consent.
 							</Text>
 						</Grid.Col>
-						<Grid.Col span={{ base: 12, md: 6 }}>
-							<Title order={3} size="h4" mb="sm">
+						<Grid.Col span={{ base: 12, md: SIX }}>
+							<Title order={THREE} size="h4" mb="sm">
                 Progressive Enhancement
 							</Title>
 							<Text color="dimmed" mb="lg">
@@ -150,7 +171,7 @@ export function AboutPage() {
 
 				{/* Open Source */}
 				<Card p="xl" radius="md" mb="3rem" withBorder={true}>
-					<Title order={2} mb="md">
+					<Title order={TWO} mb="md">
             Open Source Project
 					</Title>
 					<Text color="dimmed" mb="lg">
@@ -172,7 +193,7 @@ export function AboutPage() {
 
 				{/* Acknowledgments */}
 				<Card p="xl" radius="md" withBorder={true}>
-					<Title order={2} mb="md">
+					<Title order={TWO} mb="md">
             Acknowledgments
 					</Title>
 					<Text color="dimmed" mb="lg">

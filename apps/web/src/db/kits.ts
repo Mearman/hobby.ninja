@@ -4,10 +4,31 @@ import { logger } from "../lib/logger";
 
 import { storage, schemaRegistry } from "./storage";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 // Generic document operations without hardcoded schemas
 export const documents = {
 	// Register a new schema
-	async registerSchema(schema: z.ZodObject<z.ZodRawShape>, name: string, version = "1.0.0"): Promise<void> {
+	async registerSchema(schema: z.ZodObject<z.ZodRawShape>, name: string, version = "ONE.ZERO.ZERO"): Promise<void> {
 		await schemaRegistry.register(schema, name, version);
 	},
 

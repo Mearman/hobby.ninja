@@ -30,6 +30,27 @@ import { ItemCard } from "../components/database/item-card";
 import { dataService, type FilterOptions } from "../services/dataService";
 import { databaseContainer, heroSection, statsCard } from "../styles/styles.css";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 const getItemType = (item: unknown): "unified" | "manual" | "catalog" => {
 	if (!item || typeof item !== "object" || !("type" in item)) {
 		return "unified";
@@ -83,10 +104,10 @@ export function DatabaseHobbyPage(): React.ReactElement {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [filters, setFilters] = useState<FilterState>({});
 	const [showFilters, setShowFilters] = useState(false);
-	const [currentPage, setCurrentPage] = useState(1);
+	const [currentPage, setCurrentPage] = useState(ONE);
 	const [sortBy, setSortBy] = useState("name");
-	const [items, setItems] = useState<any[]>([]);
-	const [totalItems, setTotalItems] = useState(0);
+	const [items, setItems] = useState<Array<Record<string, unknown>>>([]);
+	const [totalItems, setTotalItems] = useState(ZERO);
 	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
 
@@ -96,7 +117,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 			name: "Gunpla",
 			description: "Gundam model kits and accessories",
 			color: "gunplaBlue" as const,
-			grades: ["HG", "RG", "MG", "PG", "EG", "SD", "RE/100"],
+			grades: ["HG", "RG", "MG", "PG", "EG", "SD", "RE/HUNDRED"],
 			series: ["Mobile Suit Gundam", "Wing", "Seed", "00", "Thunderbolt", "Iron-Blooded Orphans"],
 		},
 		"figure-rise": {
@@ -110,7 +131,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 			name: "Model Kits",
 			description: "Other anime and sci-fi model kits",
 			color: "gunplaGray" as const,
-			grades: ["1/144", "1/100", "1/72", "1/48", "1/35"],
+			grades: ["ONE/144", "ONE/HUNDRED", "ONE/72", "ONE/48", "ONE/35"],
 			series: ["Macross", "Patlabor", "Armored Core", "Votoms"],
 		},
 	};
@@ -171,7 +192,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 				});
 
 				setItems(result.items || []);
-				setTotalItems(result.total || 0);
+				setTotalItems(result.total || ZERO);
 			} catch (error_) {
 				console.error("Failed to load items:", error_);
 				setError("Failed to load items. Please try again.");
@@ -186,19 +207,19 @@ export function DatabaseHobbyPage(): React.ReactElement {
 	// Handle search
 	const handleSearch = useCallback((query: string) => {
 		setSearchQuery(query);
-		setCurrentPage(1);
+		setCurrentPage(ONE);
 	}, []);
 
 	// Handle filter changes
 	const handleFilterChange = useCallback((newFilters: Partial<FilterState>) => {
 		setFilters((prev) => ({ ...prev, ...newFilters }));
-		setCurrentPage(1);
+		setCurrentPage(ONE);
 	}, []);
 
 	// Clear filters
 	const clearFilters = useCallback(() => {
 		setFilters({});
-		setCurrentPage(1);
+		setCurrentPage(ONE);
 	}, []);
 
 	// Breadcrumb items
@@ -213,7 +234,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 	));
 
 	// Render loading state
-	if (isLoading && currentPage === 1) {
+	if (isLoading && currentPage === ONE) {
 		return (
 			<div className={databaseContainer}>
 				<Container size="lg">
@@ -236,7 +257,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 			<div className={databaseContainer}>
 				<Container size="lg">
 					<Center h="50vh">
-						<Alert color="red" variant="light" w="100%" maw={500}>
+						<Alert color="red" variant="light" w="HUNDRED%" maw={500}>
 							<Text ta="center">{error}</Text>
 							<Button variant="outline" onClick={() => { globalThis.location.reload(); }} mt="md">
 								Try Again
@@ -248,7 +269,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 		);
 	}
 
-	const totalPages = Math.ceil(totalItems / 24);
+	const totalPages = Math.ceil(totalItems / TWO4);
 
 	return (
 		<div className={databaseContainer}>
@@ -260,7 +281,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 							{breadcrumbItems}
 						</Breadcrumbs>
 
-						<Title order={1} size={36} mb="sm" c={config.color}>
+						<Title order={ONE} size={36} mb="sm" c={config.color}>
 							{config.name}
 						</Title>
 						<Text size="lg" color="dimmed" mb="xl">
@@ -274,7 +295,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 								leftSection={<IconSearch size={16} />}
 								value={searchQuery}
 								onChange={(event) => { handleSearch(event.currentTarget.value); }}
-								style={{ flex: 1, maxWidth: 400 }}
+								style={{ flex: ONE, maxWidth: 400 }}
 							/>
 
 							<Select
@@ -297,7 +318,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 								onClick={() => { setShowFilters(!showFilters); }}
 							>
 								Filters
-								{Object.keys(filters).length > 0 && (
+								{Object.keys(filters).length > ZERO && (
 									<Badge size="xs" color={config.color} ml="xs">
 										{Object.keys(filters).length}
 									</Badge>
@@ -306,7 +327,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 						</Group>
 
 						{/* Active filters */}
-						{Object.keys(filters).length > 0 && (
+						{Object.keys(filters).length > ZERO && (
 							<Group mb="md">
 								<Text size="sm" color="dimmed">
 									Active filters:
@@ -346,16 +367,16 @@ export function DatabaseHobbyPage(): React.ReactElement {
 								series: filters.series ? [filters.series] : undefined,
 								grade: filters.grade ? [filters.grade] : undefined,
 								scale: filters.scale ? [filters.scale] : undefined,
-								priceRange: filters.priceRange ? { min: filters.priceRange[0], max: filters.priceRange[1] } : undefined,
+								priceRange: filters.priceRange ? { min: filters.priceRange[ARRAY_FIRST_INDEX], max: filters.priceRange[ARRAY_SECOND_INDEX] } : undefined,
 								availability: filters.availability ? [filters.availability as "available" | "discontinued" | "preorder"] : undefined,
 							}}
-							onFiltersChange={(newFilters: any) => {
+							onFiltersChange={(newFilters: Record<string, unknown>) => {
 								handleFilterChange({
-									series: newFilters.series?.[0],
-									grade: newFilters.grade?.[0],
-									scale: newFilters.scale?.[0],
+									series: newFilters.series?.[ARRAY_FIRST_INDEX],
+									grade: newFilters.grade?.[ARRAY_FIRST_INDEX],
+									scale: newFilters.scale?.[ARRAY_FIRST_INDEX],
 									priceRange: newFilters.priceRange,
-									availability: newFilters.availability?.[0],
+									availability: newFilters.availability?.[ARRAY_FIRST_INDEX],
 								});
 							}}
 						/>
@@ -368,20 +389,20 @@ export function DatabaseHobbyPage(): React.ReactElement {
 						Showing {items.length} of {totalItems.toLocaleString()} items
 					</Text>
 
-					{totalPages > 1 && (
+					{totalPages > ONE && (
 						<Pagination
 							total={totalPages}
 							value={currentPage}
 							onChange={setCurrentPage}
-							boundaries={1}
-							siblings={1}
+							boundaries={ONE}
+							siblings={ONE}
 						/>
 					)}
 				</Group>
 
 				{/* Items grid */}
-				{items.length > 0 ? (
-					<SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 6 }} spacing="lg" mb="xl">
+				{items.length > ZERO ? (
+					<SimpleGrid cols={{ base: TWO, sm: THREE, md: FOUR, lg: SIX }} spacing="lg" mb="xl">
 						{items.map((item) => (
 							<Card
 								key={item.id}
@@ -424,14 +445,14 @@ export function DatabaseHobbyPage(): React.ReactElement {
 				)}
 
 				{/* Pagination at bottom */}
-				{totalPages > 1 && (
+				{totalPages > ONE && (
 					<Group justify="center" mb="xl">
 						<Pagination
 							total={totalPages}
 							value={currentPage}
 							onChange={setCurrentPage}
-							boundaries={2}
-							siblings={2}
+							boundaries={TWO}
+							siblings={TWO}
 							size="lg"
 						/>
 					</Group>

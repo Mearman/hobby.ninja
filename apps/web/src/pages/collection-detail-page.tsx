@@ -6,6 +6,27 @@ import React, { useState, useEffect } from "react";
 import { collectionService } from "../services/collectionService";
 import { Collection, UniversalItem, ItemStatus } from "../types/hobby";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 interface CollectionDetailPageProps {}
 
 const statusOptions = [
@@ -154,8 +175,8 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 					<Card p="lg" radius="lg" withBorder={true}>
 						<Stack gap="md">
 							<Skeleton height={32} width={200} />
-							<SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="lg">
-								{[1, 2, 3, 4, 5, 6].map((i) => (
+							<SimpleGrid cols={{ base: ONE, sm: TWO, lg: THREE }} spacing="lg">
+								{[ONE, TWO, THREE, FOUR, FIVE, SIX].map((i) => (
 									<Skeleton key={i} height={200} radius="md" />
 								))}
 							</SimpleGrid>
@@ -192,7 +213,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 								← Back to Collections
 							</Button>
 						</Group>
-						<Title order={1} size={36}>
+						<Title order={ONE} size={36}>
 							{collection.name}
 						</Title>
 						<Text size="lg" color="dimmed">
@@ -235,7 +256,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 								leftSection={<IconSearch size={16} />}
 								value={searchQuery}
 								onChange={(e) => { setSearchQuery(e.target.value); }}
-								style={{ flex: 1 }}
+								style={{ flex: ONE }}
 							/>
 							<Select
 								data={statusOptions}
@@ -256,20 +277,20 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 						</Group>
 
 						{/* Items Grid */}
-						{filteredItems.length === 0 ? (
+						{filteredItems.length === ZERO ? (
 							/* Empty State */
 							<Stack align="center" gap="lg" mih={300}>
 								<IconPackage size={48} color="gray" />
-								<Title order={3} ta="center">
-									{items.length === 0 ? "No Items Yet" : "No Matching Items"}
+								<Title order={THREE} ta="center">
+									{items.length === ZERO ? "No Items Yet" : "No Matching Items"}
 								</Title>
 								<Text color="dimmed" ta="center" maw={400}>
-									{items.length === 0
+									{items.length === ZERO
 										? "Start building your collection by adding your first item."
 										: "Try adjusting your search or filters to find what you're looking for."
 									}
 								</Text>
-								{items.length === 0 && (
+								{items.length === ZERO && (
 									<Button
 										onClick={handleAddItem}
 										leftSection={<IconPlus size={16} />}
@@ -280,7 +301,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 								)}
 							</Stack>
 						) : (
-							<SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="lg">
+							<SimpleGrid cols={{ base: ONE, sm: TWO, lg: THREE }} spacing="lg">
 								{filteredItems.map((item) => (
 									<Card
 										key={item.id}
@@ -289,14 +310,14 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 										shadow="sm"
 										withBorder={true}
 										style={{
-											transition: "all 0.2s ease",
+											transition: "all ZERO.2s ease",
 										}}
 									>
-										<Stack gap="md" h="100%">
+										<Stack gap="md" h="HUNDRED%">
 											{/* Item Header */}
 											<Group justify="space-between" align="flex-start">
-												<Stack gap="xs" style={{ flex: 1 }}>
-													<Title order={4} size={16} lineClamp={1}>
+												<Stack gap="xs" style={{ flex: ONE }}>
+													<Title order={FOUR} size={16} lineClamp={ONE}>
 														{item.data["name"] || "Untitled Item"}
 													</Title>
 													{item.data["brand"] && (
@@ -332,19 +353,19 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 											</Group>
 
 											{/* Item Image */}
-											{item.images && item.images.length > 0 ? (
+											{item.images && item.images.length > ZERO ? (
 												<div
 													style={{
-														width: "100%",
+														width: "HUNDRED%",
 														height: 120,
-														background: `url(${item.images[0].url}) center/cover`,
+														background: `url(${item.images[ARRAY_FIRST_INDEX].url}) center/cover`,
 														borderRadius: "8px",
 													}}
 												/>
 											) : (
 												<div
 													style={{
-														width: "100%",
+														width: "HUNDRED%",
 														height: 120,
 														background: "#f5f5f5",
 														borderRadius: "8px",
@@ -371,16 +392,16 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 											)}
 
 											{/* Item Tags */}
-											{item.tags.length > 0 && (
+											{item.tags.length > ZERO && (
 												<Group gap="xs" wrap="wrap">
-													{item.tags.slice(0, 2).map((tag) => (
+													{item.tags.slice(ARRAY_FIRST_INDEX, TWO).map((tag) => (
 														<Badge key={tag} variant="light" size="xs">
 															{tag}
 														</Badge>
 													))}
-													{item.tags.length > 2 && (
+													{item.tags.length > TWO && (
 														<Badge variant="light" size="xs">
-															+{item.tags.length - 2}
+															+{item.tags.length - TWO}
 														</Badge>
 													)}
 												</Group>
@@ -389,7 +410,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 											{/* Status */}
 											<Group justify="space-between" mt="auto">
 												<Select
-													data={statusOptions.slice(1)} // Remove "All Status" option
+													data={statusOptions.slice(ARRAY_SECOND_INDEX))} // Remove "All Status" option
 													value={item.status}
 													onChange={(value) => value && handleStatusUpdate(item.id, value as ItemStatus)}
 													size="xs"

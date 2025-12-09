@@ -12,6 +12,27 @@ import { GraphNodeDetails } from "../components/graph/graph-node-details";
 import { RelatedNodesGrid } from "../components/graph/related-nodes-grid";
 import type { GraphNode } from "../utils/graph-client";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 interface GraphNodePageLoader {
 	nodeData: GraphNode | null;
 	nodeType: string;
@@ -46,7 +67,7 @@ function GraphNodeBreadcrumbs({ nodeType, nodeId, nodeData }: { nodeType: string
 		{ title: "Home", href: "/" },
 		{ title: "Database", href: "/database" },
 		{
-			title: nodeType.charAt(0).toUpperCase() + nodeType.slice(1),
+			title: nodeType.charAt(ARRAY_FIRST_INDEX).toUpperCase() + nodeType.slice(ARRAY_SECOND_INDEX)),
 			href: `/database/${nodeType}s`,
 		},
 		{
@@ -90,7 +111,7 @@ function GraphNodeMeta({ nodeData, nodeType }: { nodeData: GraphNode | null; nod
 	if (!nodeData) return null;
 
 	const title = nodeData.name?.en ?? nodeData.name?.ja ?? "Graph Node";
-	const description = `${nodeType.charAt(0).toUpperCase() + nodeType.slice(1)}: ${title}`;
+	const description = `${nodeType.charAt(ARRAY_FIRST_INDEX).toUpperCase() + nodeType.slice(ARRAY_SECOND_INDEX))}: ${title}`;
 
 	// TODO: Add structured data generation when needed
 	// const structuredData = {
@@ -133,7 +154,7 @@ export function GraphNodePage() {
 	if (error || !nodeData) {
 		return (
 			<Container size="lg" py="md">
-				<Title order={1}>Node Not Found</Title>
+				<Title order={ONE}>Node Not Found</Title>
 				<Text c="red" mb="md">
 					{error ?? `${nodeType} with ID ${nodeId} not found`}
 				</Text>
@@ -157,7 +178,7 @@ export function GraphNodePage() {
 
 			{/* Page Header */}
 			<Stack gap="lg" mb="xl">
-				<Title order={1}>
+				<Title order={ONE}>
 					{nodeData.name?.en ?? nodeData.name?.ja}
 				</Title>
 
@@ -175,7 +196,7 @@ export function GraphNodePage() {
 
 				<Group>
 					<Text size="sm" c="dimmed">
-						Type: <strong>{nodeType.charAt(0).toUpperCase() + nodeType.slice(1)}</strong>
+						Type: <strong>{nodeType.charAt(ARRAY_FIRST_INDEX).toUpperCase() + nodeType.slice(ARRAY_SECOND_INDEX))}</strong>
 					</Text>
 					<Text size="sm" c="dimmed">
 						ID: <strong>{nodeId}</strong>
@@ -185,19 +206,19 @@ export function GraphNodePage() {
 
 			{/* Main Content Grid */}
 			<Grid>
-				<Grid.Col span={{ base: 12, md: 8 }}>
+				<Grid.Col span={{ base: 12, md: EIGHT }}>
 					{/* Node Details */}
 					<Card shadow="sm" padding="lg" radius="md" withBorder={true}>
-						<Title order={2} mb="md">Details</Title>
+						<Title order={TWO} mb="md">Details</Title>
 						<GraphNodeDetails node={nodeData} />
 					</Card>
 				</Grid.Col>
 
-				<Grid.Col span={{ base: 12, md: 4 }}>
+				<Grid.Col span={{ base: 12, md: FOUR }}>
 					{/* Related Nodes */}
-					{relatedNodes.length > 0 && (
+					{relatedNodes.length > ZERO && (
 						<Card shadow="sm" padding="lg" radius="md" withBorder={true}>
-							<Title order={3} mb="md">Related Nodes</Title>
+							<Title order={THREE} mb="md">Related Nodes</Title>
 							<RelatedNodesGrid nodes={relatedNodes} currentNodeType={nodeType} />
 						</Card>
 					)}

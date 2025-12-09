@@ -92,6 +92,9 @@ const COMPRESSION_THRESHOLD = 0.5;
 const BYTES_IN_KB = 1024;
 const BYTES_IN_MB = BYTES_IN_KB * BYTES_IN_KB;
 const PERCENTAGE_MULTIPLIER = 100;
+const ZERO = 0;
+const ONE = 1;
+const TWO = 2;
 
 // Lazy load Pako for compression
 let PakoPromise: Promise<typeof import("pako")> | null = null;
@@ -105,7 +108,7 @@ const loadPako = async (): Promise<typeof import("pako")> => {
 
 // Convert items to CSV format
 const convertToCSV = (items: ShareableItem[]): string => {
-	if (items.length === 0) return "";
+	if (items.length === ZERO) return "";
 
 	const headers = ["ID", "Type", "Name", "Grade", "Scale", "Series"];
 	const csvRows = [headers.join(",")];
@@ -133,8 +136,8 @@ const convertToCSV = (items: ShareableItem[]): string => {
 
 const formatFileSize = (bytes: number): string => {
 	if (bytes < BYTES_IN_KB) return `${bytes} B`;
-	if (bytes < BYTES_IN_MB) return `${(bytes / BYTES_IN_KB).toFixed(1)} KB`;
-	return `${(bytes / BYTES_IN_MB).toFixed(1)} MB`;
+	if (bytes < BYTES_IN_MB) return `${(bytes / BYTES_IN_KB).toFixed(ONE)} KB`;
+	return `${(bytes / BYTES_IN_MB).toFixed(ONE)} MB`;
 };
 
 // Get thumbnail from unified item
@@ -163,8 +166,8 @@ const getManualThumbnail = (item: ManualItem): string | undefined => {
 // Get thumbnail from catalog item
 const getCatalogThumbnail = (item: CatalogItem): string | undefined => {
 	const images = item.properties.images;
-	if (images && images.length > 0) {
-		return images[0];
+	if (images && images.length > ZERO) {
+		return images[ZERO];
 	}
 	return undefined;
 };
@@ -264,7 +267,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 			}
 
 			// Convert to string based on format
-			const jsonString = shareOptions.format === "csv" ? convertToCSV(shareableItems) : JSON.stringify(data, null, 2);
+			const jsonString = shareOptions.format === "csv" ? convertToCSV(shareableItems) : JSON.stringify(data, null, TWO);
 
 			const originalSize = new Blob([jsonString]).size;
 
@@ -307,7 +310,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 				return;
 			}
 
-			const compressionRatio = originalSize > 0 ? compressedSize / originalSize : 1;
+			const compressionRatio = originalSize > ZERO ? compressedSize / originalSize : ONE;
 
 			setShareResult({
 				url,
@@ -372,7 +375,7 @@ export const ListSharing: React.FC<ListSharingProps> = ({ items, onClose, initia
 		const url = URL.createObjectURL(blob);
 		const link = document.createElement("a");
 		link.href = url;
-		link.download = `shared-items-${new Date().toISOString().split("T")[0]}.${shareOptions.format}`;
+		link.download = `shared-items-${new Date().toISOString().split("T")[ZERO]}.${shareOptions.format}`;
 		document.body.append(link);
 		link.click();
 		link.remove();

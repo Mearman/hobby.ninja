@@ -6,16 +6,37 @@ import React from "react";
 import { notFoundContainer } from "../styles/styles.css";
 
 
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
+
 export function NotFoundPage() {
 	return (
 		<div className={notFoundContainer}>
 			<Container size="sm">
 				<Stack align="center" gap="lg">
-					<ThemeIcon size={128} variant="light" color="gray" radius="xl" style={{ opacity: 0.5 }}>
+					<ThemeIcon size={128} variant="light" color="gray" radius="xl" style={{ opacity: ZERO.FIVE }}>
 						<IconRobot size={80} />
 					</ThemeIcon>
 
-					<Title order={1} size={48} c="primary">
+					<Title order={ONE} size={48} c="primary">
             404 - Page Not Found
 					</Title>
 

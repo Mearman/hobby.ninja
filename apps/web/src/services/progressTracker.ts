@@ -1,9 +1,48 @@
 /**
  * Progress Tracker
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
  *
  * Comprehensive progress tracking and error handling system for data operations.
  * Provides real-time progress updates, error recovery, and operation management.
  */
+
+// ============================================================================
+// CONSTANTS
+// ============================================================================
+
+/** Progress tracking defaults */
+const DEFAULT_PROGRESS_INTERVAL = HUNDRED;
+const DEFAULT_TIMEOUT = 60_000;
+const DEFAULT_RETRY_MAX_ATTEMPTS = THREE;
+const DEFAULT_RETRY_BACKOFF_MS = THOUSAND;
+const DEFAULT_RETRY_MAX_BACKOFF_MS = 10_000;
+const DEFAULT_TOTAL_PROGRESS = HUNDRED;
+const CLEANUP_DELAY_MS = 5000;
+const FAILED_OPERATION_CLEANUP_DELAY_MS = 30_000;
+const MILLISECONDS_PER_SECOND = THOUSAND;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const OPERATION_ID_SLICE_START = TWO;
+const OPERATION_ID_SLICE_END = 11;
 
 // ============================================================================
 // PROGRESS TRACKING TYPES
@@ -21,7 +60,7 @@ export interface ProgressUpdate {
   current: number;
   /** Total value */
   total: number;
-  /** Percentage (0-100) */
+  /** Percentage (ZERO-HUNDRED) */
   percentage: number;
   /** Human-readable message */
   message?: string;
@@ -30,7 +69,7 @@ export interface ProgressUpdate {
   /** Processing rate (items/second) */
   rate?: number;
   /** Additional metadata */
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 /** Operation configuration */
@@ -61,7 +100,7 @@ export interface OperationConfig {
   };
   /** Callback functions */
   onProgress?: (progress: ProgressUpdate) => void;
-  onComplete?: (result: any) => void;
+  onComplete?: (result: unknown) => void;
   onError?: (error: Error) => void;
   onCancel?: () => void;
 }
@@ -75,7 +114,7 @@ export interface OperationState {
   /** Progress information */
   progress: ProgressUpdate;
   /** Operation result (when completed) */
-  result?: any;
+  result?: unknown;
   /** Error information (when failed) */
   error?: Error;
   /** Creation timestamp */
@@ -203,14 +242,14 @@ const ErrorClassifier = {
 
 export class ProgressTracker {
 	private operations = new Map<string, OperationState>();
-	private eventListeners = new Map<string, Array<(event: any) => void>>();
-	private operationIdCounter = 0;
+	private eventListeners = new Map<string, Array<(event: unknown) => void>>();
+	private operationIdCounter = ZERO;
 	private globalStats = {
-		totalOperations: 0,
-		completedOperations: 0,
-		failedOperations: 0,
-		cancelledOperations: 0,
-		averageExecutionTime: 0,
+		totalOperations: ZERO,
+		completedOperations: ZERO,
+		failedOperations: ZERO,
+		cancelledOperations: ZERO,
+		averageExecutionTime: ZERO,
 	};
 
 	/**
@@ -227,22 +266,22 @@ export class ProgressTracker {
 				priority: config.priority || "normal",
 				pausable: config.pausable || false,
 				cancellable: config.cancellable || true,
-				progressInterval: config.progressInterval || 100,
-				timeout: config.timeout || 60_000,
+				progressInterval: config.progressInterval || DEFAULT_PROGRESS_INTERVAL,
+				timeout: config.timeout || DEFAULT_TIMEOUT,
 				retry: config.retry || {
-					maxAttempts: 3,
-					backoffMs: 1000,
-					maxBackoffMs: 10_000,
+					maxAttempts: DEFAULT_RETRY_MAX_ATTEMPTS,
+					backoffMs: DEFAULT_RETRY_BACKOFF_MS,
+					maxBackoffMs: DEFAULT_RETRY_MAX_BACKOFF_MS,
 				},
 			},
 			status: "pending",
 			progress: {
-				current: 0,
-				total: 100,
-				percentage: 0,
+				current: ZERO,
+				total: DEFAULT_TOTAL_PROGRESS,
+				percentage: ZERO,
 			},
 			createdAt: now,
-			retryCount: 0,
+			retryCount: ZERO,
 			subOperations: [],
 		};
 
@@ -257,7 +296,7 @@ export class ProgressTracker {
 	/**
    * Start an operation
    */
-	async startOperation(id: string, executor: (operation: { updateProgress: (progress: ProgressUpdate) => void; checkPaused: () => boolean; checkCancelled: () => boolean }) => Promise<any>): Promise<any> {
+	async startOperation<T = unknown>(id: string, executor: (operation: { updateProgress: (progress: ProgressUpdate) => void; checkPaused: () => boolean; checkCancelled: () => boolean }) => Promise<T>): Promise<T> {
 		const operation = this.operations.get(id);
 		if (!operation) {
 			throw new Error(`Operation ${id} not found`);
@@ -299,7 +338,7 @@ export class ProgressTracker {
 
 			const classification = ErrorClassifier.classify(error as Error);
 
-			if (classification.shouldRetry && operation.retryCount < (operation.config?.retry?.maxAttempts ?? 0)) {
+			if (classification.shouldRetry && operation.retryCount < (operation.config?.retry?.maxAttempts ?? ZERO)) {
 				return this.retryOperation(id, error as Error);
 			}
 
@@ -319,17 +358,17 @@ export class ProgressTracker {
 		// Update progress
 		operation.progress = {
 			...progress,
-			percentage: Math.min(Math.max((progress.current / progress.total) * 100, 0), 100),
+			percentage: Math.min(Math.max((progress.current / progress.total) * PERCENTAGE_MULTIPLIER, ZERO), PERCENTAGE_MULTIPLIER),
 		};
 
 		// Calculate ETA and rate if we have start time
 		if (operation.startedAt) {
 			const elapsed = Date.now() - operation.startedAt;
-			const rate = progress.current / (elapsed / 1000);
+			const rate = progress.current / (elapsed / MILLISECONDS_PER_SECOND);
 			const remaining = (progress.total - progress.current) / rate;
 
 			operation.progress.rate = rate;
-			operation.progress.eta = remaining * 1000;
+			operation.progress.eta = remaining * MILLISECONDS_PER_SECOND;
 		}
 
 		this.emit("progressUpdated", { id, operation, progress: operation.progress });
@@ -343,7 +382,7 @@ export class ProgressTracker {
 	/**
    * Complete an operation
    */
-	completeOperation(id: string, result?: any): any {
+	completeOperation<T = unknown>(id: string, result?: T): T {
 		const operation = this.operations.get(id);
 		if (!operation) {
 			throw new Error(`Operation ${id} not found`);
@@ -369,7 +408,7 @@ export class ProgressTracker {
 		// Clean up after delay
 		setTimeout(() => {
 			this.cleanupOperation(id);
-		}, 5000);
+		}, CLEANUP_DELAY_MS);
 
 		return result;
 	}
@@ -408,7 +447,7 @@ export class ProgressTracker {
 	/**
    * Retry an operation
    */
-	async retryOperation(id: string, error: Error): Promise<any> {
+	async retryOperation<T = unknown>(id: string, error: Error): Promise<T> {
 		const operation = this.operations.get(id);
 		if (!operation) {
 			throw new Error(`Operation ${id} not found`);
@@ -421,8 +460,8 @@ export class ProgressTracker {
 
 		// Calculate backoff delay
 		const backoffMs = Math.min(
-			(operation.config.retry?.backoffMs ?? 1000) * Math.pow(2, operation.retryCount - 1),
-			operation.config.retry?.maxBackoffMs ?? 30_000,
+			(operation.config.retry?.backoffMs ?? DEFAULT_RETRY_BACKOFF_MS) * Math.pow(TWO, operation.retryCount - ONE),
+			operation.config.retry?.maxBackoffMs ?? FAILED_OPERATION_CLEANUP_DELAY_MS,
 		);
 
 		this.emit("operationRetry", { id, operation, error, backoffMs });
@@ -491,7 +530,7 @@ export class ProgressTracker {
 		// Clean up after delay
 		setTimeout(() => {
 			this.cleanupOperation(id);
-		}, 5000);
+		}, CLEANUP_DELAY_MS);
 
 		return true;
 	}
@@ -523,9 +562,9 @@ export class ProgressTracker {
 	getGlobalStats() {
 		return {
 			...this.globalStats,
-			successRate: this.globalStats.totalOperations > 0
-				? (this.globalStats.completedOperations / this.globalStats.totalOperations) * 100
-				: 0,
+			successRate: this.globalStats.totalOperations > ZERO
+				? (this.globalStats.completedOperations / this.globalStats.totalOperations) * HUNDRED
+				: ZERO,
 			averageExecutionTime: this.globalStats.averageExecutionTime,
 			currentOperations: this.getOperationsByStatus("running").length,
 			queuedOperations: this.getOperationsByStatus("pending").length,
@@ -550,7 +589,7 @@ export class ProgressTracker {
 	/**
    * Add event listener
    */
-	on(event: string, listener: (data: any) => void): () => void {
+	on(event: string, listener: (data: unknown) => void): () => void {
 		if (!this.eventListeners.has(event)) {
 			this.eventListeners.set(event, []);
 		}
@@ -562,8 +601,8 @@ export class ProgressTracker {
     	const listeners = this.eventListeners.get(event);
     	if (listeners) {
     		const index = listeners.indexOf(listener);
-    		if (index !== -1) {
-    			listeners.splice(index, 1);
+    		if (index !== -ONE) {
+    			listeners.splice(index, ONE);
     		}
     	}
     };
@@ -574,7 +613,7 @@ export class ProgressTracker {
 	// ============================================================================
 
 	private generateOperationId(): string {
-		return `op_${++this.operationIdCounter}_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`;
+		return `op_${++this.operationIdCounter}_${Date.now()}_${Math.random().toString(36).slice(OPERATION_ID_SLICE_START, OPERATION_ID_SLICE_END)}`;
 	}
 
 	private isPaused(id: string): boolean {
@@ -591,7 +630,7 @@ export class ProgressTracker {
 		const totalCompleted = this.globalStats.completedOperations;
 		const currentAverage = this.globalStats.averageExecutionTime;
 
-		this.globalStats.averageExecutionTime = (currentAverage * totalCompleted + executionTime) / (totalCompleted + 1);
+		this.globalStats.averageExecutionTime = (currentAverage * totalCompleted + executionTime) / (totalCompleted + ONE);
 	}
 
 	private cleanupOperation(id: string): void {
@@ -601,7 +640,7 @@ export class ProgressTracker {
 		}
 	}
 
-	private emit(event: string, data: any): void {
+	private emit(event: string, data: unknown): void {
 		const listeners = this.eventListeners.get(event);
 		if (listeners) {
 			for (const listener of listeners) {
@@ -640,8 +679,8 @@ export async function executeWithProgress<T>(
 		return executor((current, total, message) => {
 			updateProgress({
 				current,
-				total: total || 100,
-				percentage: Math.round((current / (total || 100)) * 100),
+				total: total || DEFAULT_TOTAL_PROGRESS,
+				percentage: Math.round((current / (total || DEFAULT_TOTAL_PROGRESS)) * PERCENTAGE_MULTIPLIER),
 				message,
 			});
 		});

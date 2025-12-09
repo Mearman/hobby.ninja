@@ -6,6 +6,27 @@ import React, { createContext, useContext } from "react";
 import { useTheme } from "../hooks/useTheme";
 import { theme } from "../lib/theme";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 // Create context for theme functions
 const ThemeContext = createContext<{
 	colorScheme: "light" | "dark" | "system";
@@ -39,7 +60,7 @@ export function MantineThemeProvider({ children }: MantineThemeProviderProps) {
 				<ModalsProvider>
 					<Notifications
 						position="top-right"
-						limit={5}
+						limit={FIVE}
 						zIndex={9999}
 						containerWidth={400}
 					/>

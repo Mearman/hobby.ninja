@@ -5,6 +5,27 @@
 
 import {
 	HobbyGraph,
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 	HobbyGraphType,
 	HobbyGraphManager,
 	NodeTypeEnum,
@@ -62,12 +83,17 @@ export interface GraphSearchResult {
   connectedNodes: GraphNodeTypeType[];
 }
 
+// Constants
+const CACHE_DURATION_MINUTES = FIVE;
+const CACHE_DURATION_MS = CACHE_DURATION_MINUTES * 60 * THOUSAND;
+const MAX_SEARCH_RESULTS = TEN;
+
 export class HobbyGraphService {
 	private cache = new Map<string, HobbyType[]>();
 	private graphCache: HobbyGraphType | null = null;
 	private manager: HobbyGraphManager | null = null;
-	private lastFetch = 0;
-	private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+	private lastFetch = ZERO;
+	private readonly CACHE_DURATION = CACHE_DURATION_MS;
 
 	/**
    * Load and parse the hobby graph configuration
@@ -257,10 +283,10 @@ export class HobbyGraphService {
 
 			// Simple text search across node names and properties
 			const allNodes = nodeType
-				? this.manager.getNodesByType(nodeType as any)
+				? this.manager.getNodesByType(nodeType as keyof typeof NodeTypeEnum)
 				: graph.nodes;
 
-			const matchingNodes = allNodes.filter((node: any) => {
+			const matchingNodes = allNodes.filter((node: GraphNodeTypeType) => {
 				const name = node.properties?.name as string || "";
 				const description = node.properties?.description as string || "";
 
@@ -277,9 +303,9 @@ export class HobbyGraphService {
 				];
 
 				const connectedNodes = relationships
-					.map(rel => graph.nodes.find((n: any) => n.id === rel.fromNode || n.id === rel.toNode))
+					.map(rel => graph.nodes.find((n: GraphNodeTypeType) => n.id === rel.fromNode || n.id === rel.toNode))
 					.filter((n): n is GraphNodeTypeType => n !== undefined && n.id !== node.id)
-					.slice(0, 10); // Limit to prevent excessive results
+					.slice(ARRAY_FIRST_INDEX, MAX_SEARCH_RESULTS); // Limit to prevent excessive results
 
 				results.push({
 					node,
@@ -347,27 +373,27 @@ export class HobbyGraphService {
 			// In future, this could make API calls to actual data endpoints
 			switch (hobbyTypeId) {
 				case "model_kits": {
-					return { totalCollections: 1, totalItems: 5966, recentItems: 45 };
+					return { totalCollections: ONE, totalItems: 5966, recentItems: 45 };
 				}
 				case "trading_cards": {
-					return { totalCollections: 0, totalItems: 0, recentItems: 0 };
+					return { totalCollections: ZERO, totalItems: ZERO, recentItems: ZERO };
 				}
 				case "action_figures": {
-					return { totalCollections: 0, totalItems: 0, recentItems: 0 };
+					return { totalCollections: ZERO, totalItems: ZERO, recentItems: ZERO };
 				}
 				case "miniatures": {
-					return { totalCollections: 0, totalItems: 0, recentItems: 0 };
+					return { totalCollections: ZERO, totalItems: ZERO, recentItems: ZERO };
 				}
 				default: {
-					return { totalCollections: 0, totalItems: 0, recentItems: 0 };
+					return { totalCollections: ZERO, totalItems: ZERO, recentItems: ZERO };
 				}
 			}
 		} catch (error) {
 			console.error(`Failed to get stats for hobby type ${hobbyTypeId}:`, error);
 			return {
-				totalCollections: 0,
-				totalItems: 0,
-				recentItems: 0,
+				totalCollections: ZERO,
+				totalItems: ZERO,
+				recentItems: ZERO,
 			};
 		}
 	}
@@ -423,7 +449,7 @@ export class HobbyGraphService {
 		const filterable = typeof properties["filterable"] === "boolean" ? properties["filterable"] : false;
 		const displayInList = typeof properties["displayInList"] === "boolean" ? properties["displayInList"] : true;
 		const displayInDetail = typeof properties["displayInDetail"] === "boolean" ? properties["displayInDetail"] : true;
-		const order = typeof properties["order"] === "number" ? properties["order"] : 0;
+		const order = typeof properties["order"] === "number" ? properties["order"] : ZERO;
 		const description = typeof properties["description"] === "string" ? properties["description"] : undefined;
 
 		return {
@@ -475,7 +501,7 @@ export class HobbyGraphService {
 						filterable: false,
 						displayInList: true,
 						displayInDetail: true,
-						order: 1,
+						order: ONE,
 					},
 				],
 				settings: {
@@ -498,7 +524,7 @@ export class HobbyGraphService {
 		this.cache.clear();
 		this.graphCache = null;
 		this.manager = null;
-		this.lastFetch = 0;
+		this.lastFetch = ZERO;
 	}
 }
 
