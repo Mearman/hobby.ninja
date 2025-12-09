@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "@mantine/core/styles.css";
 
 import { LayoutClient } from "@/components/layout/layout-client";
@@ -8,8 +8,6 @@ export const metadata: Metadata = {
 	description: "Comprehensive hobby collection management with 8,485+ items, search, and tracking features",
 	keywords: ["gunpla", "hobby", "collection", "database", "model kits", "figure-rise"],
 	authors: [{ name: "hobby.ninja" }],
-	viewport: "width=device-width, initial-scale=1",
-	themeColor: "#339af0",
 	manifest: "/manifest.json",
 	appleWebApp: {
 		capable: true,
@@ -40,6 +38,12 @@ export const metadata: Metadata = {
 			{ url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" }
 		]
 	}
+};
+
+export const viewport: Viewport = {
+	width: "device-width",
+	initialScale: 1,
+	themeColor: "#339af0",
 };
 
 export default function RootLayout({
