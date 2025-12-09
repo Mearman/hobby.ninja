@@ -21,13 +21,11 @@ import {
 	IconDatabase,
 	IconHeart,
 	IconDownload,
-	IconRocket,
 	IconShield,
 	IconDeviceMobile,
 	IconSun,
 	IconMoon,
 } from "@tabler/icons-react";
-import { useRouter } from "@tanstack/react-router";
 import { useSearch } from "@/lib/fuse-search";
 import { useThemeContext } from "@/providers/mantine-provider";
 import { FuseSearch } from "@/components/search/fuse-search";
@@ -42,7 +40,6 @@ interface SearchResult {
 
 export default function HomePage() {
 	const { effectiveColorScheme, cycleTheme } = useThemeContext();
-	const router = useRouter();
 	const { getStats } = useSearch();
 	const stats = getStats();
 
@@ -69,10 +66,8 @@ export default function HomePage() {
 	};
 
 	const handleSearchResult = (result: SearchResult) => {
-		router.navigate({
-			to: `/item/${result.item.id}`,
-			replace: false
-		});
+		// Navigate to item detail page
+		window.location.href = `/item/${result.item.id}`;
 	};
 
 	const features = [
@@ -180,7 +175,8 @@ export default function HomePage() {
 							variant="filled"
 							size="lg"
 							radius="md"
-							onClick={() => router.navigate({ to: "/database" })}
+							component={Link}
+							href="/database"
 							leftSection={<IconDatabase size={UI.BUTTON_ICON_SIZE} />}
 						>
 							Browse Database
@@ -189,7 +185,8 @@ export default function HomePage() {
 							variant="outline"
 							size="lg"
 							radius="md"
-							onClick={() => router.navigate({ to: "/search" })}
+							component={Link}
+							href="/search"
 							leftSection={<IconSearch size={UI.BUTTON_ICON_SIZE} />}
 						>
 							Advanced Search
@@ -293,7 +290,8 @@ export default function HomePage() {
 								variant="white"
 								size="lg"
 								radius="md"
-								onClick={() => router.navigate({ to: "/collection" })}
+								component={Link}
+							href="/collection"
 								leftSection={<IconHeart size={UI.BUTTON_ICON_SIZE} />}
 							>
 								My Collection
@@ -303,8 +301,9 @@ export default function HomePage() {
 								size="lg"
 								radius="md"
 								color="white"
-								onClick={() => router.navigate({ to: "/database" })}
-								leftSection={<IconRocket size={UI.BUTTON_ICON_SIZE} />}
+								component={Link}
+							href="/database"
+								leftSection={<IconDatabase size={UI.BUTTON_ICON_SIZE} />}
 							>
 								Explore Database
 							</Button>
