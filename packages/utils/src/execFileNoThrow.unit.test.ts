@@ -3,6 +3,9 @@
  * Tests edge cases, error scenarios, and boundary conditions
  */
 
+/* eslint-disable @typescript-eslint/no-magic-numbers */
+/* eslint-disable sonarjs/no-duplicate-string */
+
 import { execFile } from "node:child_process";
 
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
@@ -17,6 +20,19 @@ vi.mock("node:child_process", () => ({
 // Store original process.cwd
 const originalCwd = process.cwd;
 
+// Test constants to avoid duplicate string literals
+const TEST_CWD = "/test/current/directory";
+const TEST_OUTPUT = "test output";
+const STDOUT_OUTPUT = "stdout output";
+
+// Test constants that are actually used
+const TIMEOUT_1000MS = 1000;
+const TIMEOUT_5000MS = 5000;
+
+// Error message constants
+const TIMEOUT_1000MS_MESSAGE = "Command timed out after 1000ms";
+const TIMEOUT_5000MS_MESSAGE = "Command timed out after 5000ms";
+
 // Helper to create a mock child process
 function createMockChildProcess() {
 	return {
@@ -30,7 +46,7 @@ describe("execFileNoThrow", () => {
 	beforeEach(() => {
 		vi.clearAllMocks();
 		// Mock process.cwd
-		process.cwd = vi.fn().mockReturnValue("/test/current/directory");
+		process.cwd = vi.fn().mockReturnValue(TEST_CWD);
 	});
 
 	afterEach(() => {
@@ -41,7 +57,7 @@ describe("execFileNoThrow", () => {
 	describe("Basic functionality", () => {
 		it("should execute successful command and return success result", async () => {
 			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
-				callback(null, "stdout output", "");
+				callback(null, STDOUT_OUTPUT, "");
 				return createMockChildProcess();
 			});
 
@@ -49,21 +65,21 @@ describe("execFileNoThrow", () => {
 
 			expect(result).toEqual({
 				success: true,
-				stdout: "stdout output",
+				stdout: STDOUT_OUTPUT,
 				stderr: "",
 				exitCode: 0,
 			});
 			expect(execFile).toHaveBeenCalledWith(
 				"echo",
 				["hello"],
-				expect.objectContaining({ cwd: "/test/current/directory" }),
+				expect.objectContaining({ cwd: TEST_CWD }),
 				expect.any(Function),
 			);
 		});
 
 		it("should handle command with no arguments", async () => {
 			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
-				callback(null, "test output", "");
+				callback(null, TEST_OUTPUT, "");
 				return createMockChildProcess();
 			});
 
@@ -75,7 +91,7 @@ describe("execFileNoThrow", () => {
 
 		it("should handle empty args array explicitly", async () => {
 			(execFile as ReturnType<typeof vi.fn>).mockImplementation((_command, _args, _options, callback) => {
-				callback(null, "test output", "");
+				callback(null, TEST_OUTPUT, "");
 				return createMockChildProcess();
 			});
 
@@ -172,17 +188,17 @@ describe("execFileNoThrow", () => {
 				return mockChildProcess;
 			});
 
-			const resultPromise = execFileNoThrow("sleep", ["60"], { timeout: 1000 });
+			const resultPromise = execFileNoThrow("sleep", ["60"], { timeout: TIMEOUT_1000MS });
 
 			// Fast-forward timers
-			vi.advanceTimersByTime(1000);
+			vi.advanceTimersByTime(TIMEOUT_1000MS);
 
 			const result = await resultPromise;
 
 			expect(result).toEqual({
 				success: false,
 				stdout: "",
-				stderr: "Command timed out after 1000ms",
+				stderr: TIMEOUT_1000MS_MESSAGE,
 				exitCode: null,
 			});
 			expect(mockChildProcess.kill).toHaveBeenCalledWith("SIGTERM");
@@ -203,13 +219,13 @@ describe("execFileNoThrow", () => {
 				return mockChildProcess;
 			});
 
-			const resultPromise = execFileNoThrow("long-command", [], { timeout: 5000 });
+			const resultPromise = execFileNoThrow("long-command", [], { timeout: TIMEOUT_5000MS });
 
-			vi.advanceTimersByTime(5000);
+			vi.advanceTimersByTime(TIMEOUT_5000MS);
 
 			const result = await resultPromise;
 
-			expect(result.stderr).toBe("Command timed out after 5000ms");
+			expect(result.stderr).toBe(TIMEOUT_5000MS_MESSAGE);
 		});
 
 		it("should not timeout when timeout is set to 0", async () => {
@@ -269,7 +285,7 @@ describe("execFileNoThrow", () => {
 			expect(execFile).toHaveBeenCalledWith(
 				"test",
 				[],
-				expect.objectContaining({ cwd: "/test/current/directory" }),
+				expect.objectContaining({ cwd: TEST_CWD }),
 				expect.any(Function),
 			);
 		});
@@ -302,7 +318,7 @@ describe("execFileNoThrow", () => {
 				"test",
 				[],
 				expect.objectContaining({
-					cwd: "/test/current/directory",
+					cwd: TEST_CWD,
 					timeout: 30_000,
 					encoding: "utf8",
 				}),

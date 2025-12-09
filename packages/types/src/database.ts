@@ -118,7 +118,7 @@ export interface ManualItem {
   /** Parsed content blocks */
   content: {
     /** Array of content blocks with type and content */
-    blocks: Array<{
+    blocks: {
       /** Block type (body, header, text, img, etc.) */
       type: string;
       /** Content with text and optional Japanese text */
@@ -132,7 +132,7 @@ export interface ManualItem {
         /** Link href */
         href?: string;
       };
-    }>;
+    }[];
   };
   /** Asset references */
   assets: {
@@ -184,7 +184,7 @@ export interface DatabaseCatalogItem {
  */
 export interface SearchResult {
   /** Result items */
-  items: Array<{
+  items: {
     /** Item identifier */
     id: string;
     /** Item type */
@@ -202,7 +202,7 @@ export interface SearchResult {
     };
     /** Source data */
     data: UnifiedItem | ManualItem | DatabaseCatalogItem;
-  }>;
+  }[];
   /** Total result count */
   total: number;
   /** Query execution time in milliseconds */
@@ -238,7 +238,7 @@ export interface FilterOptions {
     end?: number;
   };
   /** Filter by availability */
-  availability?: Array<"available" | "discontinued" | "preorder">;
+  availability?: ("available" | "discontinued" | "preorder")[];
   /** Filter by price range */
   priceRange?: {
     /** Minimum price */
@@ -258,9 +258,7 @@ export interface FilterOptions {
 /**
  * Custom filter configuration for hobby types
  */
-export interface HobbyFilterConfig {
-  [key: string]: string | number | boolean | string[] | undefined;
-}
+export type HobbyFilterConfig = Record<string, string | number | boolean | string[] | undefined>;
 
 /**
  * Hobby type configuration
@@ -563,7 +561,7 @@ export interface CustomFieldDefinition {
   /** Is this field required? */
   required: boolean;
   /** Default value */
-  defaultValue?: string | number | boolean | Date | Array<unknown> | Record<string, unknown>;
+  defaultValue?: string | number | boolean | Date | unknown[] | Record<string, unknown>;
   /** Validation rules */
   validation?: {
     /** Minimum value (for numbers) */
@@ -571,7 +569,7 @@ export interface CustomFieldDefinition {
     /** Maximum value (for numbers) */
     max?: number;
     /** Allowed values (for enums) */
-    allowedValues?: Array<string | number | boolean>;
+    allowedValues?: (string | number | boolean)[];
     /** Regular expression pattern */
     pattern?: string;
   };
