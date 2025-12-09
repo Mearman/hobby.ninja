@@ -32,7 +32,6 @@ import {
 import { useWindowVirtualizer } from "@tanstack/react-virtual";
 import React, { useState, useCallback, useMemo, useRef, useEffect } from "react";
 
-import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 import {
 	ZERO,
 	ONE,
@@ -41,6 +40,7 @@ import {
 	FOUR,
 	FIVE,
 } from "../../constants/index.js";
+import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
 import { ItemCard } from "./item-card";
 

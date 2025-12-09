@@ -45,13 +45,13 @@ import {
 } from "@tabler/icons-react";
 import React, { useState, useEffect, useCallback } from "react";
 
-import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../../services/dataService";
 import {
 	ZERO,
 	ONE,
 	JSON_INDENTATION,
 	PERCENTAGE_MULTIPLIER,
 } from "../../constants/index.js";
+import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../../services/dataService";
 
 import { ListSharing } from "./list-sharing";
 import { RelatedItems } from "./related-items";

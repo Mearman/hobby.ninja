@@ -31,7 +31,6 @@ import {
 } from "@tabler/icons-react";
 import React, { useState, useRef, useCallback } from "react";
 
-import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 import {
 	ZERO,
 	ONE,
@@ -39,8 +38,6 @@ import {
 	THREE,
 	FOUR,
 	SIX,
-	EIGHT,
-	TEN,
 	THIRTY,
 	COMPACT_HEIGHT,
 	THUMBNAIL_HEIGHT,
@@ -58,6 +55,7 @@ import {
 	PERCENTAGE_WIDTH_SMALL,
 	FONT_WEIGHT_NORMAL,
 } from "../../constants/index.js";
+import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
 interface ItemCardProps {
   /** Item data from any source */
