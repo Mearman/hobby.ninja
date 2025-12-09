@@ -31,6 +31,7 @@ import {
 } from "@tabler/icons-react";
 import React, { useState, useEffect, useCallback } from "react";
 
+import { logger } from "../../lib/logger";
 import { FilterOptions, FilterPreset } from "../../services/dataService";
 
 // Constants
@@ -43,9 +44,6 @@ const FUTURE_YEAR_OFFSET = 5;
 const ZERO = 0;
 const ONE = 1;
 const TWO = 2;
-const DEBOUNCE_DELAY = 300;
-const PRESET_NAME_MIN_LENGTH = 3;
-const CACHE_EXPIRY_HOURS = 24;
 
 const globalAlert = alert;
 const globalBtoa = btoa;
@@ -124,7 +122,7 @@ export function AdvancedFilters({
 			setScaleOptions(mockScales);
 			setSeriesOptions(mockSeries);
 		} catch (error) {
-			console.error("Failed to load filter options:", error);
+			logger.error("Failed to load filter options:", error);
 		} finally {
 			setLoadingOptions(false);
 		}
@@ -170,7 +168,7 @@ export function AdvancedFilters({
 
 			setPresets(mockPresets);
 		} catch (error) {
-			console.error("Failed to load presets:", error);
+			logger.error("Failed to load presets:", error);
 		} finally {
 			setLoadingPresets(false);
 		}
@@ -215,7 +213,7 @@ export function AdvancedFilters({
 			setShowPresetForm(false);
 			setPresetForm({ name: "", description: "", isPublic: false });
 		} catch (error) {
-			console.error("Failed to save preset:", error);
+			logger.error("Failed to save preset:", error);
 		}
 	};
 
@@ -230,7 +228,7 @@ export function AdvancedFilters({
 			// In a real app, delete via dataService
 			setPresets(prev => prev.filter(p => p.id !== presetId));
 		} catch (error) {
-			console.error("Failed to delete preset:", error);
+			logger.error("Failed to delete preset:", error);
 		}
 	};
 
@@ -251,7 +249,7 @@ export function AdvancedFilters({
 				globalAlert(`Share URL: ${shareUrl}`);
 			});
 		} catch (error) {
-			console.error("Failed to create share URL:", error);
+			logger.error("Failed to create share URL:", error);
 			globalAlert("Failed to create share URL");
 		}
 	};
@@ -291,7 +289,7 @@ export function AdvancedFilters({
 				setLocalFilters(data.filters);
 			}
 		} catch (error) {
-			console.error("Failed to import filters:", error);
+			logger.error("Failed to import filters:", error);
 			globalAlert("Failed to import filters from file");
 		}
 	};

@@ -32,39 +32,32 @@ import {
 import React, { useState, useRef, useCallback } from "react";
 
 import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
-
-
-// Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
-
-// Constants for magic numbers
-const COMPACT_HEIGHT = 140;
-const THUMBNAIL_HEIGHT = 80;
-const SKELETON_HEIGHT = 200;
-const CONFIDENCE_THRESHOLD_HIGH = FOUR;
-const CONFIDENCE_THRESHOLD_MEDIUM = TWO;
-const ICON_SIZE_XS = TEN;
-const ICON_SIZE_SM = 12;
-const SELECTED_INDICATOR_SIZE = 20;
-const OVERLAY_OFFSET = EIGHT;
-const REM_SIZE = 32;
+import {
+	ZERO,
+	ONE,
+	TWO,
+	THREE,
+	FOUR,
+	SIX,
+	EIGHT,
+	TEN,
+	THIRTY,
+	COMPACT_HEIGHT,
+	THUMBNAIL_HEIGHT,
+	SKELETON_HEIGHT,
+	CONFIDENCE_THRESHOLD_HIGH,
+	CONFIDENCE_THRESHOLD_MEDIUM,
+	ICON_SIZE_XS,
+	ICON_SIZE_SM,
+	SELECTED_INDICATOR_SIZE,
+	OVERLAY_OFFSET,
+	REM_SIZE,
+	SKELETON_SMALL_HEIGHT,
+	SKELETON_LARGE_HEIGHT,
+	PERCENTAGE_WIDTH_LARGE,
+	PERCENTAGE_WIDTH_SMALL,
+	FONT_WEIGHT_NORMAL,
+} from "../../constants/index.js";
 
 interface ItemCardProps {
   /** Item data from any source */
@@ -104,24 +97,33 @@ export function ItemCard({
 
 	// Extract display name with fallbacks
 	const getDisplayName = useCallback(() => {
-		const name = item.properties.name as { ja?: string; en?: string } | string | undefined;
+		const name = item.properties.name;
 		if (!name) {
 			return item.id;
 		}
 		if (typeof name === "string") {
 			return name;
 		}
-		return name.en ?? name.ja ?? "Unknown";
+		// Type guard for localized name object
+		if (typeof name === "object" && name !== null) {
+			const localizedName = name as { ja?: string; en?: string };
+			return localizedName.en ?? localizedName.ja ?? "Unknown";
+		}
+		return "Unknown";
 	}, [item.properties.name, item.id]);
 
 	// Extract series information
 	const getSeries = useCallback(() => {
 		if (item.properties.series) {
-			const series = item.properties.series as { ja?: string; en?: string } | string;
+			const series = item.properties.series;
 			if (typeof series === "string") {
 				return series;
 			}
-			return series.en ?? series.ja;
+			// Type guard for localized series object
+			if (typeof series === "object" && series !== null) {
+				const localizedSeries = series as { ja?: string; en?: string };
+				return localizedSeries.en ?? localizedSeries.ja;
+			}
 		}
 		return null;
 	}, [item]);
@@ -129,17 +131,17 @@ export function ItemCard({
 	// Extract grade and scale
 	const getGrade = useCallback(() => {
 		if (itemType === "unified") {
-			const properties = item.properties as UnifiedItem["properties"];
-			return properties.grade;
+			const unifiedItem = item as UnifiedItem;
+			return unifiedItem.properties.grade;
 		}
 		if (itemType === "manual") {
-			const properties = item.properties as ManualItem["properties"];
-			if ("grade" in properties && "code" in properties.grade) {
-				return properties.grade.code;
+			const manualItem = item as ManualItem;
+			if ("grade" in manualItem.properties && "code" in manualItem.properties.grade) {
+				return manualItem.properties.grade.code;
 			}
 		}
 		// Catalog items don't have grade
-		return;
+		return undefined;
 	}, [item, itemType]);
 
 	const getScale = useCallback(() => {
@@ -335,11 +337,11 @@ export function ItemCard({
 			>
 				<Stack gap="xs">
 					<Skeleton height={compact ? THUMBNAIL_HEIGHT : SKELETON_HEIGHT} radius="md" />
-					<Skeleton height={16} width="70%" radius="sm" />
-					<Skeleton height={12} width="40%" radius="sm" />
+					<Skeleton height={SKELETON_SMALL_HEIGHT} width={`${PERCENTAGE_WIDTH_LARGE}%`} radius="sm" />
+					<Skeleton height={SKELETON_LARGE_HEIGHT} width="40%" radius="sm" />
 					<Group gap="xs">
-						<Skeleton height={16} width={40} radius="sm" />
-						<Skeleton height={16} width={30} radius="sm" />
+						<Skeleton height={SKELETON_SMALL_HEIGHT} width={PERCENTAGE_WIDTH_SMALL} radius="sm" />
+						<Skeleton height={SKELETON_SMALL_HEIGHT} width={THIRTY} radius="sm" />
 					</Group>
 				</Stack>
 			</Card>
@@ -366,7 +368,7 @@ export function ItemCard({
 			h={cardHeight}
 			style={{
 				cursor: onClick ? "pointer" : "default",
-				transition: "all ZERO.2s ease",
+				transition: "all 0.2s ease",
 				border: selected ? `2px solid ${theme.colors.blue[SIX]}` : undefined,
 			}}
 			onClick={handleCardClick}
@@ -387,8 +389,8 @@ export function ItemCard({
 						<Flex
 							align="center"
 							justify="center"
-							h="HUNDRED%"
-							bg="gray.ONE"
+							h="100%"
+							bg="gray.1"
 							style={{
 								border: `1px dashed ${theme.colors.gray[THREE]}`,
 								borderRadius: theme.radius.md,
@@ -401,7 +403,7 @@ export function ItemCard({
 							ref={imgRef}
 							src={imageSrc}
 							alt={displayName}
-							height="HUNDRED%"
+							height="100%"
 							fit="cover"
 							radius="md"
 							onLoad={handleImageLoad}
@@ -417,16 +419,16 @@ export function ItemCard({
 						<Flex
 							align="center"
 							justify="center"
-							h="HUNDRED%"
+							h="100%"
 							pos="absolute"
 							top={ZERO}
 							left={ZERO}
 							right={ZERO}
 							bottom={ZERO}
-							bg="gray.ONE"
+							bg="gray.1"
 							style={{ borderRadius: theme.radius.md }}
 						>
-							<Skeleton height="HUNDRED%" width="HUNDRED%" radius="md" />
+							<Skeleton height="100%" width="100%" radius="md" />
 						</Flex>
 					)}
 
@@ -451,7 +453,7 @@ export function ItemCard({
 							left={OVERLAY_OFFSET}
 							w={SELECTED_INDICATOR_SIZE}
 							h={SELECTED_INDICATOR_SIZE}
-							bg="blue.SIX"
+							bg="blue.6"
 							style={{
 								borderRadius: "50%",
 								display: "flex",
@@ -472,7 +474,7 @@ export function ItemCard({
 					{/* Title */}
 					<Text
 						size={compact ? "sm" : "md"}
-						fw={500}
+						fw={FONT_WEIGHT_NORMAL}
 						lineClamp={isListMode ? ONE : TWO}
 						style={{
 							fontFamily: theme.fontFamily,

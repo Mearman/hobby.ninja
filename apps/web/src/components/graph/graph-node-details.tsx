@@ -470,7 +470,7 @@ export function GraphNodeDetails({ node }: GraphNodeDetailsProps) {
 			<CommonRelationships node={node} />
 
 			{/* Raw data for debugging (remove in production) */}
-			{process.env["NODE_ENV"] === "development" && (
+			{process.env.NODE_ENV === "development" && (
 				<>
 					<Divider label="Debug Info" labelPosition="center" />
 					<Text size="xs" c="dimmed" component="pre">

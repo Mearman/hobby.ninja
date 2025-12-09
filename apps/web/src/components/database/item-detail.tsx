@@ -46,6 +46,12 @@ import {
 import React, { useState, useEffect, useCallback } from "react";
 
 import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../../services/dataService";
+import {
+	ZERO,
+	ONE,
+	JSON_INDENTATION,
+	PERCENTAGE_MULTIPLIER,
+} from "../../constants/index.js";
 
 import { ListSharing } from "./list-sharing";
 import { RelatedItems } from "./related-items";
@@ -56,7 +62,7 @@ interface DetailItem extends UnifiedItem {
   manualData?: ManualItem;
 }
 
-// Constants for magic numbers
+// Constants for magic numbers specific to this component
 const SCALE_FACTOR_RESET = 1.5;
 const ROTATION_DEGREES = 90;
 const SCALE_STEP = 0.2;
@@ -72,11 +78,6 @@ const PROGRESS_BAR_WIDTH = 200;
 const FULL_ROTATION_DEGREES = 360;
 const THUMBNAIL_ACTIVE_OPACITY = 1;
 const THUMBNAIL_INACTIVE_OPACITY = 0.6;
-const PERCENTAGE_MULTIPLIER = 100;
-const ZERO = 0;
-const ONE = 1;
-const TWO = 2;
-const JSON_INDENTATION = 2;
 
 // UI constants
 const THUMBNAIL_HEIGHT = 60;
@@ -378,16 +379,16 @@ const hasManualData = (item: ItemDetailData): item is DetailItem => {
 
 const getCatalogDescription = (item: ItemDetailData): string | undefined => {
 	if (item.$type !== "unified_item") return undefined;
-	const unifiedItem = item as DetailItem;
+	const unifiedItem = item;
 	const catalogData = unifiedItem.catalogData;
 	if (!catalogData?.properties?.description) return undefined;
 	const desc = catalogData.properties.description;
-	return Array.isArray(desc) && desc.length > ZERO && typeof desc[ZERO] === 'object' && desc[ZERO] !== null && 'en' in desc[ZERO] ? (desc[ZERO] as { en?: string }).en : undefined;
+	return Array.isArray(desc) && desc.length > ZERO && typeof desc[ZERO] === "object" && desc[ZERO] !== null && "en" in desc[ZERO] ? (desc[ZERO] as { en?: string }).en : undefined;
 };
 
 const getManualName = (item: ItemDetailData): string => {
 	if (item.$type !== "unified_item") return "";
-	const unifiedItem = item as DetailItem;
+	const unifiedItem = item;
 	const manualData = unifiedItem.manualData;
 	if (!manualData?.properties.name) return "";
 	const name = manualData.properties.name;
@@ -812,7 +813,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												{item.$type === "manual_item" && "productNumber" in item.properties && item.properties.productNumber && (
 													<Group>
 														<Text size="sm" c="dimmed">Product No:</Text>
-														<Text size="sm" fw={500}>{item.properties.productNumber as string}</Text>
+														<Text size="sm" fw={500}>{item.properties.productNumber}</Text>
 													</Group>
 												)}
 											</Stack>
@@ -845,7 +846,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 														item.$type === "unified_item"
 															? item.properties.sources?.manual?.pdfUrl
 															: item.$type === "manual_item" && "pdfUrl" in item.properties
-																? item.properties.pdfUrl as string
+																? item.properties.pdfUrl
 																: undefined
 													}
 													title={title}
@@ -997,7 +998,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 										</Card>
 
 										<PDFViewer
-											pdfUrl={(item as DetailItem).properties.sources?.manual?.pdfUrl}
+											pdfUrl={(item).properties.sources?.manual?.pdfUrl}
 											title={title}
 										/>
 									</>

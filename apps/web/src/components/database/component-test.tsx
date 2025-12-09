@@ -5,6 +5,7 @@
 import { Title, Divider, Switch, Group, Text, Container, Stack } from "@mantine/core";
 import React, { useState } from "react";
 
+import { logger } from "../../lib/logger";
 import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
 import { ItemCard } from "./item-card";
@@ -13,24 +14,10 @@ import { getMockItems } from "./test-data";
 
 
 // Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
+const ONE = 1;
+const THREE = 3;
+const FOUR = 4;
+const ARRAY_FIRST_INDEX = 0;
 
 // Constants
 const MOCK_ITEMS_COUNT = 25;
@@ -47,23 +34,19 @@ const getItemType = (item: ItemData): "unified" | "manual" | "catalog" => {
 };
 
 const handleItemClick = (item: ItemData) => {
-	// eslint-disable-next-line no-console
-	console.log("Item clicked:", item);
+	logger.info("Item clicked:", item);
 };
 
 const handleSortChange = (field: string, _direction: string) => {
-	// eslint-disable-next-line no-console
-	console.log("Sort:", field, _direction);
+	logger.info("Sort:", field, _direction);
 };
 
 const handleRefresh = () => {
-	// eslint-disable-next-line no-console
-	console.log("Refresh");
+	logger.info("Refresh");
 };
 
 const handleFiltersClick = () => {
-	// eslint-disable-next-line no-console
-	console.log("Filters");
+	logger.info("Filters");
 };
 
 export function ComponentTest() {

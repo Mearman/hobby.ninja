@@ -33,30 +33,16 @@ import { useWindowVirtualizer } from "@tanstack/react-virtual";
 import React, { useState, useCallback, useMemo, useRef, useEffect } from "react";
 
 import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
+import {
+	ZERO,
+	ONE,
+	TWO,
+	THREE,
+	FOUR,
+	FIVE,
+} from "../../constants/index.js";
 
 import { ItemCard } from "./item-card";
-
-
-// Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
-
 
 type ItemData = UnifiedItem | ManualItem | CatalogItem;
 type ItemType = "unified" | "manual" | "catalog";
