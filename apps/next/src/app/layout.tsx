@@ -1,7 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import "@mantine/core/styles.css";
+import { Inter } from "next/font/google";
 
 import { LayoutClient } from "@/components/layout/layout-client";
+
+// Load Inter font
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
 	title: "hobby.ninja - Static Collection Management",
@@ -52,8 +60,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
-			<body>
+		<html lang="en" className={inter.variable}>
+			<body className={inter.className}>
 				<LayoutClient>{children}</LayoutClient>
 			</body>
 		</html>
