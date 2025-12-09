@@ -1,10 +1,12 @@
-import { Title, Text, Badge, Group, Stack, Card, SimpleGrid, Container, Image, Box } from "@mantine/core";
+"use client";
+
+import { Title, Text, Badge, Group, Stack, Card, SimpleGrid, Container, Image, Box, Skeleton } from "@mantine/core";
 import { IconFolder, IconBox, IconTag, IconSearch, IconTrendingUp } from "@tabler/icons-react";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { getAllItems, getAllBrands, getAllCategories, getAllSeries } from "@/lib/graph-data";
-import { getNodeDisplayName } from "@/lib/schemas";
+import { getNodeDisplayName, BaseEdge, isBaseEdge } from "@/lib/schemas";
 import * as styles from "@/styles/components.css";
 import { UI, TYPOGRAPHY, PAGINATION } from "@/lib/constants";
 
@@ -19,8 +21,30 @@ const getCategoryStyle = (categoryId: string): string => {
 	return stylesWithCategories[styleKey] ?? "";
 };
 
-// Static data fetching
-const getDatabaseStats = async () => {
+// Type for database stats
+interface DatabaseStats {
+	totalItems: number;
+	totalBrands: number;
+	totalCategories: number;
+	totalSeries: number;
+	brands: Array<any>;
+	categories: Array<any>;
+	series: Array<any>;
+}
+
+// Initial loading state
+const initialStats: DatabaseStats = {
+	totalItems: 0,
+	totalBrands: 0,
+	totalCategories: 0,
+	totalSeries: 0,
+	brands: [],
+	categories: [],
+	series: [],
+};
+
+// Client-side data fetching function
+const loadDatabaseStats = async (): Promise<DatabaseStats> => {
 	try {
 		const [items, brands, categories, series] = await Promise.all([
 			getAllItems(),
@@ -29,31 +53,57 @@ const getDatabaseStats = async () => {
 			getAllSeries(),
 		]);
 
+		// Add itemCount to brands, categories, and series based on the loaded data
+		const brandsWithCounts = brands.map(brand => ({
+			...brand,
+			itemCount: items.filter(item =>
+				item.edges?.outbound?.some((edge: unknown) =>
+					isBaseEdge(edge) && edge.type === "BELONGS_TO_BRAND" && edge.target === brand.id
+				) ?? false
+			).length
+		}));
+
+		const categoriesWithCounts = categories.map(category => ({
+			...category,
+			itemCount: items.filter(item =>
+				item.edges?.outbound?.some((edge: unknown) =>
+					isBaseEdge(edge) && edge.type === "BELONGS_TO_CATEGORY" && edge.target === category.id
+				) ?? false
+			).length
+		}));
+
+		const seriesWithCounts = series.map(seriesItem => ({
+			...seriesItem,
+			itemCount: items.filter(item =>
+				item.edges?.outbound?.some((edge: unknown) =>
+					isBaseEdge(edge) && edge.type === "BELONGS_TO_SERIES" && edge.target === seriesItem.id
+				) ?? false
+			).length
+		}));
+
 		return {
 			totalItems: items.length,
 			totalBrands: brands.length,
 			totalCategories: categories.length,
 			totalSeries: series.length,
-			brands: brands.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT), // Show top brands
-			categories: categories.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT), // Show top categories
-			series: series.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT), // Show top series
+			brands: brandsWithCounts
+				.sort((a, b) => b.itemCount - a.itemCount)
+				.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT),
+			categories: categoriesWithCounts
+				.sort((a, b) => b.itemCount - a.itemCount)
+				.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT),
+			series: seriesWithCounts
+				.sort((a, b) => b.itemCount - a.itemCount)
+				.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT),
 		};
 	} catch (error) {
 		console.error("Failed to load database stats:", error);
-		return {
-			totalItems: 0,
-			totalBrands: 0,
-			totalCategories: 0,
-			totalSeries: 0,
-			brands: [],
-			categories: [],
-			series: [],
-		};
+		return initialStats;
 	}
 };
 
 // Component for database statistics
-function DatabaseStats({ stats }: { stats: Awaited<ReturnType<typeof getDatabaseStats>> }) {
+function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 	return (
 		<SimpleGrid
 			cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
@@ -127,7 +177,7 @@ function DatabaseStats({ stats }: { stats: Awaited<ReturnType<typeof getDatabase
 }
 
 // Component for brand grid
-function BrandsGrid({ brands }: { brands: Awaited<ReturnType<typeof getDatabaseStats>>["brands"] }) {
+function BrandsGrid({ brands }: { brands: Awaited<ReturnType<typeof loadDatabaseStats>>["brands"] }) {
 	if (brands.length === 0) return null;
 
 	return (
@@ -186,7 +236,7 @@ function BrandsGrid({ brands }: { brands: Awaited<ReturnType<typeof getDatabaseS
 }
 
 // Component for category grid
-function CategoriesGrid({ categories }: { categories: Awaited<ReturnType<typeof getDatabaseStats>>["categories"] }) {
+function CategoriesGrid({ categories }: { categories: Awaited<ReturnType<typeof loadDatabaseStats>>["categories"] }) {
 	if (categories.length === 0) return null;
 
 	return (
@@ -239,7 +289,7 @@ function CategoriesGrid({ categories }: { categories: Awaited<ReturnType<typeof 
 }
 
 // Component for series grid
-function SeriesGrid({ series }: { series: Awaited<ReturnType<typeof getDatabaseStats>>["series"] }) {
+function SeriesGrid({ series }: { series: Awaited<ReturnType<typeof loadDatabaseStats>>["series"] }) {
 	if (series.length === 0) return null;
 
 	return (
@@ -300,8 +350,60 @@ function SeriesGrid({ series }: { series: Awaited<ReturnType<typeof getDatabaseS
 }
 
 // Main page component
-export default async function DatabasePage() {
-	const stats = await getDatabaseStats();
+export default function DatabasePage() {
+	const [stats, setStats] = useState<DatabaseStats>(initialStats);
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		const loadData = async () => {
+			try {
+				const databaseStats = await loadDatabaseStats();
+				setStats(databaseStats);
+			} catch (error) {
+				console.error("Failed to load database stats:", error);
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		void loadData();
+	}, []);
+
+	if (loading) {
+		return (
+			<Container size="xl" py="xl">
+				<Stack gap="xl">
+					{/* Header */}
+					<Box>
+						<Title order={1} mb="sm">
+							Hobby Database
+						</Title>
+						<Text size="lg" color="dimmed">
+							Browse our comprehensive collection of hobby items, including Gundam models, figures, and accessories
+						</Text>
+					</Box>
+
+					{/* Loading skeleton */}
+					<SimpleGrid
+						cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
+						spacing={{ base: "sm", md: "lg" }}
+					>
+						{[1, 2, 3, 4].map((i) => (
+							<Card key={i} p="lg" radius="md">
+								<Group>
+									<Skeleton height={48} width={48} radius="md" />
+									<div>
+										<Skeleton height={16} width={80} mb={4} />
+										<Skeleton height={24} width={40} />
+									</div>
+								</Group>
+							</Card>
+						))}
+					</SimpleGrid>
+				</Stack>
+			</Container>
+		);
+	}
 
 	return (
 		<Container size="xl" py="xl">

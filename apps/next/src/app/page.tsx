@@ -1,5 +1,3 @@
-"use client";
-
 import {
 	Title,
 	Text,
@@ -7,14 +5,12 @@ import {
 	Card,
 	Stack,
 	Group,
-	ThemeIcon,
-	rem,
-	ActionIcon,
-	Tooltip,
 	Button,
 	Badge,
 	SimpleGrid,
 	Box,
+	rem,
+	ThemeIcon,
 } from "@mantine/core";
 import {
 	IconSearch,
@@ -23,12 +19,9 @@ import {
 	IconDownload,
 	IconShield,
 	IconDeviceMobile,
-	IconSun,
-	IconMoon,
 } from "@tabler/icons-react";
-import { useSearch } from "@/lib/fuse-search";
-import { useThemeContext } from "@/providers/mantine-provider";
-import { FuseSearch } from "@/components/search/fuse-search";
+import Link from "next/link";
+import { getAllItems, getAllBrands, getAllCategories, getAllSeries } from "@/lib/server-graph-data";
 import { UI } from "@/lib/constants";
 
 interface SearchResult {
@@ -38,38 +31,38 @@ interface SearchResult {
 	};
 }
 
-export default function HomePage() {
-	const { effectiveColorScheme, cycleTheme } = useThemeContext();
-	const { getStats } = useSearch();
-	const stats = getStats();
+// Build-time stats computation
+async function getBuildTimeStats() {
+	try {
+		const [items, brands, categories, series] = await Promise.all([
+			getAllItems(),
+			getAllBrands(),
+			getAllCategories(),
+			getAllSeries(),
+		]);
 
-	const getThemeIcon = () => {
-		switch (effectiveColorScheme) {
-			case "light":
-				return <IconSun style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
-			case "dark":
-				return <IconMoon style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
-			default:
-				return <IconSun style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
-		}
-	};
+		return {
+			totalItems: items.length,
+			totalBrands: brands.length,
+			totalCategories: categories.length,
+			totalSeries: series.length,
+		};
+	} catch (error) {
+		console.error("Failed to compute build-time stats:", error);
+		// Fallback to reasonable defaults
+		return {
+			totalItems: 6000,
+			totalBrands: 78,
+			totalCategories: 5,
+			totalSeries: 135,
+		};
+	}
+}
 
-	const getThemeLabel = () => {
-		switch (effectiveColorScheme) {
-			case "light":
-				return "Switch to dark mode";
-			case "dark":
-				return "Switch to system mode";
-			default:
-				return "Switch to light mode";
-		}
-	};
+export default async function HomePage() {
+	const stats = await getBuildTimeStats();
 
-	const handleSearchResult = (result: SearchResult) => {
-		// Navigate to item detail page
-		window.location.href = `/item/${result.item.id}`;
-	};
-
+	
 	const features = [
 	{
 			icon: IconSearch,
@@ -111,35 +104,23 @@ export default function HomePage() {
 
 	const displayStats = [
 		{ label: "Items", value: stats.totalItems.toLocaleString() },
-		{ label: "Brands", value: stats.brands.length.toString() },
-		{ label: "Series", value: stats.series.length.toString() },
-		{ label: "Grades", value: stats.grades.length.toString() }
+		{ label: "Brands", value: stats.totalBrands.toLocaleString() },
+		{ label: "Categories", value: stats.totalCategories.toLocaleString() },
+		{ label: "Series", value: stats.totalSeries.toLocaleString() }
 	];
 
 	return (
 		<>
 			{/* Hero Section */}
-			<Container size="xl" py={{ base: "xl", md: "xl" }}>
-				<Group justify="space-between" w="100%">
-					<Title order={1} size={{ base: "h2", md: "h1" }} c="blue.6" fw={800}>
-						hobby.ninja
-					</Title>
-					<Tooltip label={getThemeLabel()}>
-						<ActionIcon
-							variant="light"
-							size="lg"
-							onClick={cycleTheme}
-							aria-label="Toggle theme"
-						>
-							{getThemeIcon()}
-						</ActionIcon>
-					</Tooltip>
-				</Group>
+			<Container size="xl" py="xl">
+				<Title order={1} size="h1" c="blue.6" fw={800}>
+				hobby.ninja
+			</Title>
 
-				<Stack gap={{ base: "md", md: "xl" }} mt={{ base: "md", md: "xl" }}>
+				<Stack gap="xl" mt="xl">
 					<Title
 						order={2}
-						size={{ base: "h3", md: "h2" }}
+						size="h2"
 						c="dimmed"
 						fw={400}
 						ta="center"
@@ -148,7 +129,7 @@ export default function HomePage() {
 					</Title>
 
 					<Text
-						size={{ base: "md", md: "lg" }}
+						size="lg"
 						c="dimmed"
 						ta="center"
 						maw={600}
@@ -161,12 +142,18 @@ export default function HomePage() {
 
 					{/* Search Integration */}
 					<Box maw={600} mx="auto" w="100%">
-						<FuseSearch
-							onResultClick={handleSearchResult}
-							placeholder="Search for Gundam models, brands, series..."
-							maxResults={UI.HOMEPAGE_SEARCH_RESULTS}
-							showFilters={false}
-						/>
+						<Button
+							variant="light"
+							size="lg"
+							radius="md"
+							component={Link}
+							href="/search"
+							leftSection={<IconSearch size={UI.BUTTON_ICON_SIZE} />}
+							w="100%"
+							justify="start"
+						>
+							Search for Gundam models, brands, series...
+						</Button>
 					</Box>
 
 					{/* Quick Actions */}
@@ -196,11 +183,11 @@ export default function HomePage() {
 			</Container>
 
 			{/* Stats Section */}
-			<Box py={{ base: "lg", md: "xl" }} bg={effectiveColorScheme === "dark" ? "dark.8" : "gray.0"}>
+			<Box py="xl" bg="gray.0">
 				<Container size="xl">
 					<SimpleGrid
-						cols={{ base: 2, sm: 4 }}
-						spacing={{ base: "md", md: "xl" }}
+						cols={4}
+						spacing="xl"
 					>
 						{displayStats.map((stat, index) => (
 							<Card key={index} p="lg" radius="md" withBorder>
@@ -219,9 +206,9 @@ export default function HomePage() {
 			</Box>
 
 			{/* Features Section */}
-			<Container size="xl" py={{ base: "xl", md: "xl" }}>
+			<Container size="xl" py="xl">
 				<Stack gap="xl">
-					<Title order={2} size={{ base: "h3", md: "h2" }} ta="center" fw={600}>
+					<Title order={2} size="h2" ta="center" fw={600}>
 						Powerful Features for Hobby Enthusiasts
 					</Title>
 
@@ -238,8 +225,8 @@ export default function HomePage() {
 					</Text>
 
 					<SimpleGrid
-						cols={{ base: 1, sm: 2, lg: 3 }}
-						spacing={{ base: "md", md: "xl" }}
+						cols={3}
+						spacing="xl"
 						mt="xl"
 					>
 						{features.map((feature, index) => (
@@ -270,14 +257,14 @@ export default function HomePage() {
 
 			{/* CTA Section */}
 			<Box
-				py={{ base: "xl", md: "xl" }}
+				py="xl"
 				style={{
 					background: 'linear-gradient(to right, var(--mantine-color-blue-6), var(--mantine-color-cyan-6))'
 				}}
 			>
 				<Container size="lg">
 					<Stack align="center" gap="xl">
-						<Title order={2} size={{ base: "h3", md: "h2" }} c="white" ta="center" fw={700}>
+						<Title order={2} size="h2" c="white" ta="center" fw={700}>
 							Start Building Your Collection Today
 						</Title>
 
