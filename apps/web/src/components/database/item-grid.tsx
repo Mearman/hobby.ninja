@@ -318,7 +318,7 @@ export function ItemGrid({
 					onLoadMore();
 				}
 			},
-			{ threshold: ZERO.ONE },
+			{ threshold: 0.1 },
 		);
 
 		if (loadMoreRef.current) {

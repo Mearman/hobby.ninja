@@ -6,24 +6,24 @@ import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataSe
 
 
 // Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
+const ZERO = 0;
+const ONE = 1;
+const TWO = 2;
+const THREE = 3;
+const FOUR = 4;
+const FIVE = 5;
+const SIX = 6;
+const SEVEN = 7;
+const EIGHT = 8;
+const NINE = 9;
+const TEN = 10;
+const HUNDRED = 100;
+const THOUSAND = 1000;
+const JSON_INDENTATION = 2;
+const PERCENTAGE_MULTIPLIER = 100;
+const ARRAY_FIRST_INDEX = 0;
+const ARRAY_SECOND_INDEX = 1;
+const ARRAY_THIRD_INDEX = 2;
 
 // Constants to avoid duplicate strings
 const CURRENT_TIMESTAMP = "2025-12-07T00:00:00Z";
@@ -31,7 +31,7 @@ const UNIFIED_ITEM_SCHEMA = "unified_item_schema_v1";
 const MANUAL_ITEM_SCHEMA = "manual_item_schema_001";
 const CATALOG_ITEM_SCHEMA = "catalog_item_schema_001";
 const TEST_DATA_SOURCE = "test_data";
-const ITEM_VERSION = "ONE.ZERO";
+const ITEM_VERSION = "1.0";
 
 export const mockUnifiedItems: UnifiedItem[] = [
 	{
@@ -43,11 +43,11 @@ export const mockUnifiedItems: UnifiedItem[] = [
 			name: { en: "Strike Freedom Gundam", ja: "ストライクフリーダムガンダム" },
 			series: { en: "Mobile Suit Gundam SEED Destiny", ja: "機動戦士ガンダムSEED DESTINY" },
 			grade: "PG",
-			scale: "ONE/60",
+			scale: "1/60",
 			releaseDate: { year: 2004, month: 11, day: 27 },
 			sources: {
-				catalog: { id: "cat_001", confidence: ZERO.95, linkedAt: CURRENT_TIMESTAMP },
-				manual: { id: "0001", productNumber: "1114204", pdfUrl: "https://example.com/manual.pdf", confidence: ZERO.NINE, linkedAt: CURRENT_TIMESTAMP },
+				catalog: { id: "cat_001", confidence: 0.95, linkedAt: CURRENT_TIMESTAMP },
+				manual: { id: "0001", productNumber: "1114204", pdfUrl: "https://example.com/manual.pdf", confidence: 0.9, linkedAt: CURRENT_TIMESTAMP },
 			},
 			matchMethod: "exact",
 			matchStage: FIVE,
@@ -57,7 +57,7 @@ export const mockUnifiedItems: UnifiedItem[] = [
 			updatedAt: CURRENT_TIMESTAMP,
 			version: ITEM_VERSION,
 			source: TEST_DATA_SOURCE,
-			confidence: ZERO.95,
+			confidence: 0.95,
 		},
 	},
 	{
@@ -69,10 +69,10 @@ export const mockUnifiedItems: UnifiedItem[] = [
 			name: { en: "Wing Gundam Zero", ja: "ウイングガンダムゼロ" },
 			series: { en: "Mobile Suit Gundam Wing", ja: "新機動戦記ガンダムW" },
 			grade: "MG",
-			scale: "ONE/HUNDRED",
+			scale: "1/100",
 			releaseDate: { year: 2000, month: ONE, day: ONE },
 			sources: {
-				catalog: { id: "cat_002", confidence: ZERO.88, linkedAt: CURRENT_TIMESTAMP },
+				catalog: { id: "cat_002", confidence: 0.88, linkedAt: CURRENT_TIMESTAMP },
 			},
 			matchMethod: "fuzzy",
 			matchStage: THREE,
@@ -82,7 +82,7 @@ export const mockUnifiedItems: UnifiedItem[] = [
 			updatedAt: CURRENT_TIMESTAMP,
 			version: ITEM_VERSION,
 			source: TEST_DATA_SOURCE,
-			confidence: ZERO.88,
+			confidence: 0.88,
 		},
 	},
 ];
@@ -112,7 +112,7 @@ export const mockManualItems: ManualItem[] = [
 				code: "HG",
 				family: "High Grade",
 			},
-			scale: "ONE/144",
+			scale: "1/144",
 			pdfUrl: "https://bandai-hobby.net/manual/148785.pdf",
 			productImage: "https://bandai-hobby.net/images/148785.jpg",
 			thumbnailImage: "https://bandai-hobby.net/images/148785_thumb.jpg",
@@ -131,7 +131,7 @@ export const mockCatalogItems: CatalogItem[] = [
 			name: { en: "Strike Freedom Gundam", ja: "ストライクフリーダムガンダム" },
 			price: { amount: 25_000, currency: "JPY" },
 			releaseDate: { year: 2004, month: 11, day: 27 },
-			scale: "ONE/60",
+			scale: "1/60",
 			series: { en: "Mobile Suit Gundam SEED Destiny", ja: "機動戦士ガンダムSEED DESTINY" },
 			images: [
 				"https://bandai-hobby.net/images/strike-freedom-pg.jpg",
