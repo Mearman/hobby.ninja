@@ -125,6 +125,4 @@ export interface ProcessMetadata {
 }
 
 // Generic metadata type for checkpoint operations
-export interface CheckpointMetadata {
-  [key: string]: string | number | boolean | string[] | undefined;
-}
+export type CheckpointMetadata = Record<string, string | number | boolean | string[] | undefined>;

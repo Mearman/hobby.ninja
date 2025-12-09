@@ -1,4 +1,4 @@
-export type RenderingType = "static" | "dynamic" | "hybrid" | "unknown";
+export type RenderingType = "static" | "dynamic" | "hybrid" | "unknown" | "ssr-with-hydration" | "csr-with-framework" | "vanilla-csr" | "static-html";
 
 export type RenderingDetectionMethod =
   | "content-analysis"
@@ -37,7 +37,7 @@ export interface ProgressiveEnhancementResult {
     frameworkDetected?: string;
     waitForSelectors: string[];
   };
-  recommendation: "static-only" | "dynamic-required" | "hybrid-approach";
+  recommendation: "static-only" | "dynamic-required" | "hybrid-approach" | "requires-javascript-first" | "progressive-enhancement" | "static-scraping-sufficient";
 }
 
 export interface RenderingConfig {

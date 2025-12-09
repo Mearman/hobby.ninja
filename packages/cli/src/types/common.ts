@@ -22,12 +22,12 @@ export type KeyValueStore = Record<string, unknown>;
  * Type guard to check if a value is a valid Context object
  */
 export function isContext(value: unknown): value is Context {
-	return typeof value === 'object' && value !== null && !Array.isArray(value);
+	return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
 /**
  * Type guard to check if a value is a valid Metadata object
  */
 export function isMetadata(value: unknown): value is Metadata {
-	return typeof value === 'object' && value !== null && !Array.isArray(value);
+	return typeof value === "object" && value !== null && !Array.isArray(value);
 }
