@@ -1,94 +1,96 @@
 {
-  "name": "@hobby-ninja/cli",
-  "version": "0.0.1",
-  "type": "module",
-  "description": "CLI tool for scraping Gundam/Gunpla data from various sources",
-  "main": "dist/cli/main.js",
-  "types": "dist/cli/main.d.ts",
-  "bin": {
-    "gundam-scraper": "dist/bin/cli.js"
-  },
-  "scripts": {
-    "build": "vite build",
-    "dev": "tsx src/bin/cli.ts",
-    "start": "node ./dist/bin/cli.js",
-    "test": "vitest",
-    "test:watch": "vitest --watch",
-    "test:coverage": "vitest --coverage",
-    "lint": "eslint src/**/*.ts --fix",
-    "clean": "rm -rf dist .cache",
-    "scrape": "node ./dist/bin/cli.js scrape",
-    "scrape:bandai": "node ./dist/bin/cli.js scrape --scrapers bandai",
-    "scrape:gundam-info": "node ./dist/bin/cli.js scrape --scrapers gundam-info",
-    "scrape:dalong": "node ./dist/bin/cli.js scrape --scrapers dalong",
-    "clear-cache": "node ./dist/bin/cli.js cache clear",
-    "status": "node ./dist/bin/cli.js status --cache-stats"
-  },
-  "keywords": [
-    "gundam",
-    "gunpla",
-    "scraping",
-    "cli",
-    "data",
-    "bandai"
-  ],
-  "author": "hobby-ninja Team",
-  "license": "MIT",
-  "dependencies": {
-    "@inkjs/ui": "^2.0.0",
-    "@hobby-ninja/scrapers": "workspace:*",
-    "@hobby-ninja/translation": "workspace:*",
-    "@hobby-ninja/types": "workspace:*",
-    "@hobby-ninja/utils": "workspace:*",
-    "cheerio": "latest",
-    "commander": "latest",
-    "dotenv": "^17.2.3",
-    "ink": "^6.5.1",
-    "inquirer": "latest",
-    "playwright": "latest",
-    "react": "19.2.1",
-    "zod": "4.2.0-canary.20251202T062120"
-  },
-  "devDependencies": {
-    "@types/cheerio": "latest",
-    "@types/inquirer": "latest",
-    "@types/node": "latest",
-    "eslint": "latest",
-    "rimraf": "latest",
-    "typescript": "latest",
-    "vite": "*",
-    "vite-plugin-dts": "^4.5.4",
-    "vitest": "latest"
-  },
-  "engines": {
-    "node": ">=20.0.0",
-    "pnpm": ">=10.0.0"
-  },
-  "nx": {
-    "targets": {
-      "build": {
-        "executor": "@nx/vite:build",
-        "outputs": ["{options.outputPath}"],
-        "options": {
-          "outputPath": "packages/cli/dist",
-          "configFile": "packages/cli/vite.config.ts"
-        }
-      },
-      "test": {
-        "executor": "@nx/vite:test",
-        "outputs": [
-          "{workspaceRoot}/coverage/packages/cli"
-        ],
-        "options": {
-          "passWithNoTests": true
-        }
-      },
-      "lint": {
-        "executor": "@nx/eslint:lint",
-        "outputs": [
-          "{options.outputFile}"
-        ]
-      }
-    }
-  }
+	"name": "@hobby-ninja/cli",
+	"description": "CLI tool for scraping Gundam/Gunpla data from various sources",
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"clean": "rm -rf dist .cache",
+		"clear-cache": "node ./dist/bin/cli.js cache clear",
+		"dev": "tsx src/bin/cli.ts",
+		"lint": "eslint src/**/*.ts --fix",
+		"scrape": "node ./dist/bin/cli.js scrape",
+		"scrape:bandai": "node ./dist/bin/cli.js scrape --scrapers bandai",
+		"scrape:dalong": "node ./dist/bin/cli.js scrape --scrapers dalong",
+		"scrape:gundam-info": "node ./dist/bin/cli.js scrape --scrapers gundam-info",
+		"start": "node ./dist/bin/cli.js",
+		"status": "node ./dist/bin/cli.js status --cache-stats",
+		"test": "vitest",
+		"test:coverage": "vitest --coverage",
+		"test:watch": "vitest --watch"
+	},
+	"dependencies": {
+		"@hobby-ninja/scrapers": "workspace:*",
+		"@hobby-ninja/translation": "workspace:*",
+		"@hobby-ninja/types": "workspace:*",
+		"@hobby-ninja/utils": "workspace:*",
+		"@inkjs/ui": "2.0.0",
+		"cheerio": "1.1.2",
+		"commander": "14.0.2",
+		"dotenv": "17.2.3",
+		"ink": "6.5.1",
+		"inquirer": "13.0.2",
+		"playwright": "1.57.0",
+		"react": "19.2.1",
+		"zod": "4.1.13"
+	},
+	"devDependencies": {
+		"@types/cheerio": "1.0.0",
+		"@types/inquirer": "9.0.9",
+		"@types/node": "24.10.2",
+		"eslint": "9.39.1",
+		"rimraf": "6.1.2",
+		"typescript": "5.9.3",
+		"vite": "7.2.7",
+		"vite-plugin-dts": "4.5.4",
+		"vitest": "4.0.15"
+	},
+	"author": "hobby-ninja Team",
+	"bin": {
+		"gundam-scraper": "dist/bin/cli.js"
+	},
+	"engines": {
+		"node": ">=20.0.0",
+		"pnpm": ">=10.0.0"
+	},
+	"keywords": [
+		"bandai",
+		"cli",
+		"data",
+		"gundam",
+		"gunpla",
+		"scraping"
+	],
+	"license": "MIT",
+	"main": "dist/cli/main.js",
+	"nx": {
+		"targets": {
+			"build": {
+				"executor": "@nx/vite:build",
+				"outputs": [
+					"{options.outputPath}"
+				],
+				"options": {
+					"outputPath": "packages/cli/dist",
+					"configFile": "packages/cli/vite.config.ts"
+				}
+			},
+			"test": {
+				"executor": "@nx/vite:test",
+				"outputs": [
+					"{workspaceRoot}/coverage/packages/cli"
+				],
+				"options": {
+					"passWithNoTests": true
+				}
+			},
+			"lint": {
+				"executor": "@nx/eslint:lint",
+				"outputs": [
+					"{options.outputFile}"
+				]
+			}
+		}
+	},
+	"types": "dist/cli/main.d.ts"
 }

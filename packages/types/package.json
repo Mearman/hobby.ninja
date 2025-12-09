@@ -1,57 +1,57 @@
 {
-  "name": "@hobby-ninja/types",
-  "version": "0.0.1",
-  "private": true,
-  "type": "module",
-  "main": "./src/database.ts",
-  "types": "./src/database.ts",
-  "exports": {
-    "./catalog": {
-      "types": "./src/catalogData.ts",
-      "import": "./src/catalogData.ts"
-    },
-    "./database": {
-      "types": "./src/database.ts",
-      "import": "./src/database.ts"
-    },
-    "./language": {
-      "types": "./src/languageDetection.ts",
-      "import": "./src/languageDetection.ts"
-    },
-    "./manual": {
-      "types": "./src/manualData.ts",
-      "import": "./src/manualData.ts"
-    },
-    "./product": {
-      "types": "./src/productData.ts",
-      "import": "./src/productData.ts"
-    },
-    "./profile": {
-      "types": "./src/profileManagement.ts",
-      "import": "./src/profileManagement.ts"
-    },
-    "./schemas": {
-      "types": "./src/schemas.ts",
-      "import": "./src/schemas.ts"
-    },
-    "./unified": {
-      "types": "./src/unifiedData.ts",
-      "import": "./src/unifiedData.ts"
-    }
-  },
-  "scripts": {
-    "build": "tsc",
-    "test": "vitest",
-    "lint": "eslint src --ext ts --report-unused-disable-directives --max-warnings 0",
-    "lint:fix": "eslint src --ext ts --fix"
-  },
-  "devDependencies": {
-    "@nx/js": "22.1.3",
-    "typescript": "*",
-    "vitest": "*",
-    "zod": "4.2.0-canary.20251202T062120"
-  },
-  "peerDependencies": {
-    "zod": "4.2.0-canary.20251202T062120"
-  }
+	"name": "@hobby-ninja/types",
+	"version": "0.0.1",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"build": "tsc",
+		"lint": "eslint src --ext ts --report-unused-disable-directives --max-warnings 0",
+		"lint:fix": "eslint src --ext ts --fix",
+		"test": "vitest"
+	},
+	"devDependencies": {
+		"@nx/js": "22.2.0",
+		"typescript": "5.9.3",
+		"vitest": "4.0.15",
+		"zod": "4.1.13"
+	},
+	"peerDependencies": {
+		"zod": "4.1.13"
+	},
+	"exports": {
+		"./catalog": {
+			"types": "./src/catalogData.ts",
+			"import": "./src/catalogData.ts"
+		},
+		"./database": {
+			"types": "./src/database.ts",
+			"import": "./src/database.ts"
+		},
+		"./language": {
+			"types": "./src/languageDetection.ts",
+			"import": "./src/languageDetection.ts"
+		},
+		"./manual": {
+			"types": "./src/manualData.ts",
+			"import": "./src/manualData.ts"
+		},
+		"./product": {
+			"types": "./src/productData.ts",
+			"import": "./src/productData.ts"
+		},
+		"./profile": {
+			"types": "./src/profileManagement.ts",
+			"import": "./src/profileManagement.ts"
+		},
+		"./schemas": {
+			"types": "./src/schemas.ts",
+			"import": "./src/schemas.ts"
+		},
+		"./unified": {
+			"types": "./src/unifiedData.ts",
+			"import": "./src/unifiedData.ts"
+		}
+	},
+	"main": "./src/database.ts",
+	"types": "./src/database.ts"
 }

@@ -1,42 +1,38 @@
 {
 	"name": "@hobby-ninja/translation",
+	"description": "Translation utilities for Gunpla data with caching and error handling",
 	"version": "0.0.1",
 	"type": "module",
-	"description": "Translation utilities for Gunpla data with caching and error handling",
-	"main": "./dist/mod.js",
-	"types": "./dist/mod.d.ts",
-	"exports": {
-		".": {
-			"import": "./dist/mod.js",
-			"types": "./dist/mod.d.ts"
-		}
-	},
 	"scripts": {
 		"build": "tsc",
 		"dev": "tsc --watch",
+		"lint": "eslint src --ext .ts,.tsx",
 		"test": "vitest",
-		"test:coverage": "vitest --coverage",
-		"lint": "eslint src --ext .ts,.tsx"
+		"test:coverage": "vitest --coverage"
 	},
 	"dependencies": {
-		"proper-lockfile": "^4.1.2",
-		"zod": "4.2.0-canary.20251202T062120"
+		"proper-lockfile": "4.1.2",
+		"zod": "4.1.13"
 	},
 	"devDependencies": {
-		"@nx/eslint": "22.1.3",
-		"@nx/js": "22.1.3",
-		"@nx/vite": "22.1.3",
-		"@types/proper-lockfile": "^4.1.4",
+		"@nx/eslint": "22.2.0",
+		"@nx/js": "22.2.0",
+		"@nx/vite": "22.2.0",
+		"@types/proper-lockfile": "4.1.4",
 		"@vitest/coverage-v8": "4.0.15",
 		"@vitest/ui": "4.0.15",
-		"eslint": "*",
-		"jsdom": "^27.2.0",
-		"typescript": "*",
-		"vitest": "*"
+		"eslint": "9.39.1",
+		"jsdom": "27.3.0",
+		"typescript": "5.9.3",
+		"vitest": "4.0.15"
 	},
-	"publishConfig": {
-		"access": "restricted"
+	"exports": {
+		".": {
+			"types": "./dist/mod.d.ts",
+			"import": "./dist/mod.js"
+		}
 	},
+	"main": "./dist/mod.js",
 	"nx": {
 		"targets": {
 			"build": {
@@ -64,5 +60,9 @@
 				"executor": "@nx/eslint:lint"
 			}
 		}
-	}
+	},
+	"publishConfig": {
+		"access": "restricted"
+	},
+	"types": "./dist/mod.d.ts"
 }
