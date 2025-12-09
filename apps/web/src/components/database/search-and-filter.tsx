@@ -26,29 +26,28 @@ import {
 import React, { useState, useEffect, useCallback, useRef } from "react";
 
 import { dataService, FilterOptions } from "../../services/dataService";
+import {
+	ZERO,
+	ONE,
+	TWO,
+	THREE,
+	FOUR,
+	FIVE,
+	SIX,
+	SEVEN,
+	EIGHT,
+	NINE,
+	TEN,
+	HUNDRED,
+	THOUSAND,
+	JSON_INDENTATION,
+	PERCENTAGE_MULTIPLIER,
+	ARRAY_FIRST_INDEX,
+	ARRAY_SECOND_INDEX,
+	ARRAY_THIRD_INDEX,
+} from "../../constants/index.js";
 
-
-// Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
-
-// Constants for magic numbers
+// Constants for magic numbers specific to this component
 const DEBOUNCE_DELAY = 300;
 const MAX_SEARCH_HISTORY = TEN;
 const MAX_RECENT_MATCHES = THREE;
