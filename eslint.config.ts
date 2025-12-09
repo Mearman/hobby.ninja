@@ -144,7 +144,7 @@ export default [
 				"error",
 				{ argsIgnorePattern: "^_" },
 			],
-			"@typescript-eslint/no-explicit-any": "warn", // Keep as warn for gradual migration
+			"@typescript-eslint/no-explicit-any": "error", // Forbid any types - only allowed in test files
 			"@typescript-eslint/no-non-null-assertion": "warn",
 			"@typescript-eslint/ban-ts-comment": [
 				"error",

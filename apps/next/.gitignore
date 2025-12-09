@@ -1,0 +1,57 @@
+# Next.js build outputs
+.next/
+out/
+build/
+dist/
+
+# PWA generated files (don't commit - these are built by next-pwa)
+public/sw.js
+public/workbox-*.js
+public/precache-manifest.*.js
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+.Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+
+# Coverage
+coverage/
+*.lcov
+
+# TypeScript
+*.tsbuildinfo
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Static data files (generated during build)
+src/data/items.json
+src/data/brands.json
+src/data/categories.json
+src/data/series.json
+src/data/manuals.json
