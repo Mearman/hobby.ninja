@@ -101,6 +101,14 @@ const nextConfig: NextConfig = {
   // Enable strict mode for better error detection
   reactStrictMode: true,
 
+  // TypeScript configuration
+  typescript: {
+    // Disable TypeScript build checking - we'll handle type checking separately with nx typecheck
+    tsconfigPath: './tsconfig.json',
+    // Completely ignore build errors for both dev and prod builds
+    ignoreBuildErrors: true,
+  },
+
   // Additional webpack configuration for Vanilla Extract (if needed)
   webpack: (config, { isServer }) => {
     // Add CSS file extension alias
