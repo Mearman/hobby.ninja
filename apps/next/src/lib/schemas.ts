@@ -1,85 +1,85 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 // Base schemas for graph nodes and edges
 export const BaseNodeSchema = z.object({
-  id: z.string(),
-  type: z.string(),
-  name: z.union([
-    z.string(),
-    z.object({
-      ja: z.string(),
-      en: z.string().optional(),
-    }),
-  ]),
-  created: z.string().optional(),
-  modified: z.string().optional(),
-  sourceUrl: z.string().url().optional(),
-  extractedAt: z.string().datetime().optional(),
-  contents: z.array(z.unknown()).optional(),
-  metadata: z.record(z.string(), z.unknown()).optional(),
+	id: z.string(),
+	type: z.string(),
+	name: z.union([
+		z.string(),
+		z.object({
+			ja: z.string(),
+			en: z.string().optional(),
+		}),
+	]),
+	created: z.string().optional(),
+	modified: z.string().optional(),
+	sourceUrl: z.string().url().optional(),
+	extractedAt: z.string().datetime().optional(),
+	contents: z.array(z.unknown()).optional(),
+	metadata: z.record(z.string(), z.unknown()).optional(),
 });
 
 export const BaseEdgeSchema = z.object({
-  id: z.string(),
-  source: z.string(),
-  target: z.string(),
-  type: z.string(),
-  weight: z.number().optional(),
-  created: z.string().optional(),
-  modified: z.string().optional(),
-  metadata: z.record(z.string(), z.unknown()).optional(),
+	id: z.string(),
+	source: z.string(),
+	target: z.string(),
+	type: z.string(),
+	weight: z.number().optional(),
+	created: z.string().optional(),
+	modified: z.string().optional(),
+	metadata: z.record(z.string(), z.unknown()).optional(),
 });
 
 // Localized string schema
 export const LocalizedNameSchema = z.object({
-  ja: z.string(),
-  en: z.string().optional(),
+	ja: z.string(),
+	en: z.string().optional(),
 });
 
 // Localized description schema (array of objects)
 export const LocalizedDescriptionSchema = z.array(z.object({
-  ja: z.string(),
-  en: z.string(),
+	ja: z.string(),
+	en: z.string(),
 }));
 
 // Localized text schema (string or object with ja/en)
 export const LocalizedTextSchema = z.union([
-  z.string(),
-  LocalizedNameSchema
+	z.string(),
+	LocalizedNameSchema,
 ]);
 
 // Price schema
 export const PriceSchema = z.object({
-  amount: z.number(),
-  currency: z.string(),
-  taxIncluded: z.boolean().optional(),
-  taxRate: z.number().optional(),
+	amount: z.number(),
+	currency: z.string(),
+	taxIncluded: z.boolean().optional(),
+	taxRate: z.number().optional(),
 });
 
 // Release date schema
 export const ReleaseDateSchema = z.object({
-  ja: z.string(),
-  year: z.number().nullable().optional(),
-  month: z.number().nullable().optional(),
-  day: z.number().nullable().optional(),
+	ja: z.string(),
+	year: z.number().nullable().optional(),
+	month: z.number().nullable().optional(),
+	day: z.number().nullable().optional(),
 });
 
 // Accessory schema
 export const AccessorySchema = z.union([
-  z.string(),
-  LocalizedNameSchema,
-  LocalizedTextSchema
+	z.string(),
+	LocalizedNameSchema,
+	LocalizedTextSchema,
 ]);
 
 // Image schema
 export const ImageSchema = z.union([
-  z.string().url(),
-  z.object({
-    url: z.string().url(),
-    alt: z.string().optional(),
-    width: z.number().optional(),
-    height: z.number().optional(),
-  })
+	z.string().url(),
+	z.object({
+		url: z.string().url(),
+		alt: z.string().optional(),
+		width: z.number().optional(),
+		height: z.number().optional(),
+	}),
 ]);
 
 // Empty array schema helper
@@ -87,124 +87,126 @@ const EmptyArraySchema = z.array(z.unknown()).length(0);
 
 // Edge schema for graph connections
 export const EdgeSchema = z.object({
-  type: z.string(),
-  targetId: z.string(),
-  targetType: z.string(),
-  sourceId: z.string().optional(),
-  weight: z.number().optional(),
-  metadata: z.record(z.string(), z.unknown()).optional(),
+	type: z.string(),
+	targetId: z.string(),
+	targetType: z.string(),
+	sourceId: z.string().optional(),
+	weight: z.number().optional(),
+	metadata: z.record(z.string(), z.unknown()).optional(),
 });
 
 // Edges container schema
 export const EdgesSchema = z.object({
-  inbound: z.union([z.array(EdgeSchema), EmptyArraySchema]).optional(),
-  outbound: z.union([z.array(EdgeSchema), EmptyArraySchema]).optional(),
+	inbound: z.union([z.array(EdgeSchema), EmptyArraySchema]).optional(),
+	outbound: z.union([z.array(EdgeSchema), EmptyArraySchema]).optional(),
 });
 
 // Manual schema
 export const ManualSchema = z.union([
-  z.string(),
-  z.object({
-    id: z.string(),
-    url: z.string().url().optional(),
-    pages: z.number().optional(),
-    language: z.string().optional(),
-    size: z.string().optional(),
-  })
+	z.string(),
+	z.object({
+		id: z.string(),
+		url: z.string().url().optional(),
+		pages: z.number().optional(),
+		language: z.string().optional(),
+		size: z.string().optional(),
+	}),
 ]);
+
+export type ItemManual = z.infer<typeof ManualSchema> extends string | infer T ? T : never;
 
 // Enhanced item schema with generic base
 export const ItemNodeSchema = BaseNodeSchema.extend({
-  type: z.literal('item'),
-  brand: z.string().optional(),
-  category: z.string().optional(),
-  series: z.string().optional(),
-  grade: z.string().optional(),
-  scale: z.string().optional(),
-  price: PriceSchema.optional(),
-  releaseDate: ReleaseDateSchema.optional(),
-  description: z.union([LocalizedDescriptionSchema, EmptyArraySchema]).optional(),
-  accessories: z.union([z.array(AccessorySchema), EmptyArraySchema]).optional(),
-  images: z.union([z.array(ImageSchema), EmptyArraySchema]).optional(),
-  manuals: z.union([z.array(z.union([ManualSchema, z.string()])), EmptyArraySchema]).optional(),
-  targetAge: z.number().optional(),
-  tags: z.union([z.array(z.string()), EmptyArraySchema]).optional(),
-  specifications: z.record(z.string(), z.unknown()).optional(),
-  edges: EdgesSchema.optional(),
+	type: z.literal("item"),
+	brand: z.string().optional(),
+	category: z.string().optional(),
+	series: z.string().optional(),
+	grade: z.string().optional(),
+	scale: z.string().optional(),
+	price: PriceSchema.optional(),
+	releaseDate: ReleaseDateSchema.optional(),
+	description: z.union([LocalizedDescriptionSchema, EmptyArraySchema]).optional(),
+	accessories: z.union([z.array(AccessorySchema), EmptyArraySchema]).optional(),
+	images: z.union([z.array(ImageSchema), EmptyArraySchema]).optional(),
+	manuals: z.union([z.array(z.union([ManualSchema, z.string()])), EmptyArraySchema]).optional(),
+	targetAge: z.number().optional(),
+	tags: z.union([z.array(z.string()), EmptyArraySchema]).optional(),
+	specifications: z.record(z.string(), z.unknown()).optional(),
+	edges: EdgesSchema.optional(),
 });
 
 // Brand node schema
 export const BrandNodeSchema = BaseNodeSchema.extend({
-  type: z.literal('brand'),
-  country: z.string().optional(),
-  founded: z.union([z.string(), z.number()]).optional(),
-  website: z.string().url().optional(),
-  description: z.string().optional(),
-  itemCount: z.number().optional(),
-  edges: EdgesSchema.optional(),
+	type: z.literal("brand"),
+	country: z.string().optional(),
+	founded: z.union([z.string(), z.number()]).optional(),
+	website: z.string().url().optional(),
+	description: z.string().optional(),
+	itemCount: z.number().optional(),
+	edges: EdgesSchema.optional(),
 });
 
 // Category node schema
 export const CategoryNodeSchema = BaseNodeSchema.extend({
-  type: z.literal('category'),
-  description: z.string().optional(),
-  itemCount: z.number().optional(),
-  parentId: z.string().optional(),
+	type: z.literal("category"),
+	description: z.string().optional(),
+	itemCount: z.number().optional(),
+	parentId: z.string().optional(),
 });
 
 // Series node schema
 export const SeriesNodeSchema = BaseNodeSchema.extend({
-  type: z.literal('series'),
-  description: z.string().optional(),
-  franchise: z.string().optional(),
-  itemCount: z.number().optional(),
-  parentId: z.string().optional(),
+	type: z.literal("series"),
+	description: z.string().optional(),
+	franchise: z.string().optional(),
+	itemCount: z.number().optional(),
+	parentId: z.string().optional(),
 });
 
 // Manual node schema
 export const ManualNodeSchema = BaseNodeSchema.extend({
-  type: z.literal('manual'),
-  url: z.string().url().optional(),
-  pages: z.number().optional(),
-  language: z.string().optional(),
-  size: z.string().optional(),
-  itemId: z.string().optional(),
-  itemName: z.union([z.string(), LocalizedNameSchema]).optional(),
+	type: z.literal("manual"),
+	url: z.string().url().optional(),
+	pages: z.number().optional(),
+	language: z.string().optional(),
+	size: z.string().optional(),
+	itemId: z.string().optional(),
+	itemName: z.union([z.string(), LocalizedNameSchema]).optional(),
 });
 
 // Union of all node types
-export const GraphNodeSchema = z.discriminatedUnion('type', [
-  ItemNodeSchema,
-  BrandNodeSchema,
-  CategoryNodeSchema,
-  SeriesNodeSchema,
-  ManualNodeSchema,
+export const GraphNodeSchema = z.discriminatedUnion("type", [
+	ItemNodeSchema,
+	BrandNodeSchema,
+	CategoryNodeSchema,
+	SeriesNodeSchema,
+	ManualNodeSchema,
 ]);
 
 // Union of all edge types
-export const GraphEdgeSchema = z.discriminatedUnion('type', [
-  BaseEdgeSchema.extend({ type: z.literal('brand_item') }),
-  BaseEdgeSchema.extend({ type: z.literal('item_category') }),
-  BaseEdgeSchema.extend({ type: z.literal('item_series') }),
-  BaseEdgeSchema.extend({ type: z.literal('item_manual') }),
-  BaseEdgeSchema.extend({ type: z.literal('series_franchise') }),
-  BaseEdgeSchema.extend({ type: z.literal('category_parent') }),
+export const GraphEdgeSchema = z.discriminatedUnion("type", [
+	BaseEdgeSchema.extend({ type: z.literal("brand_item") }),
+	BaseEdgeSchema.extend({ type: z.literal("item_category") }),
+	BaseEdgeSchema.extend({ type: z.literal("item_series") }),
+	BaseEdgeSchema.extend({ type: z.literal("item_manual") }),
+	BaseEdgeSchema.extend({ type: z.literal("series_franchise") }),
+	BaseEdgeSchema.extend({ type: z.literal("category_parent") }),
 ]);
 
 // Graph data schema
 export const GraphDataSchema = z.object({
-  nodes: z.array(GraphNodeSchema),
-  edges: z.array(GraphEdgeSchema),
-  metadata: z.object({
-    version: z.string(),
-    created: z.string(),
-    modified: z.string(),
-    itemCount: z.number(),
-    brandCount: z.number(),
-    categoryCount: z.number(),
-    seriesCount: z.number(),
-    manualCount: z.number(),
-  }).optional(),
+	nodes: z.array(GraphNodeSchema),
+	edges: z.array(GraphEdgeSchema),
+	metadata: z.object({
+		version: z.string(),
+		created: z.string(),
+		modified: z.string(),
+		itemCount: z.number(),
+		brandCount: z.number(),
+		categoryCount: z.number(),
+		seriesCount: z.number(),
+		manualCount: z.number(),
+	}).optional(),
 });
 
 // Infer TypeScript types from Zod schemas
@@ -229,130 +231,147 @@ export type GraphData = z.infer<typeof GraphDataSchema>;
 
 // Type guards for runtime validation
 export const isBaseNode = (data: unknown): data is BaseNode => {
-  return BaseNodeSchema.safeParse(data).success;
+	return BaseNodeSchema.safeParse(data).success;
 };
 
 export const isItemNode = (data: unknown): data is ItemNode => {
-  return ItemNodeSchema.safeParse(data).success;
+	return ItemNodeSchema.safeParse(data).success;
 };
 
 export const isBrandNode = (data: unknown): data is BrandNode => {
-  return BrandNodeSchema.safeParse(data).success;
+	return BrandNodeSchema.safeParse(data).success;
 };
 
 export const isCategoryNode = (data: unknown): data is CategoryNode => {
-  return CategoryNodeSchema.safeParse(data).success;
+	return CategoryNodeSchema.safeParse(data).success;
 };
 
 export const isSeriesNode = (data: unknown): data is SeriesNode => {
-  return SeriesNodeSchema.safeParse(data).success;
+	return SeriesNodeSchema.safeParse(data).success;
 };
 
 export const isManualNode = (data: unknown): data is ManualNode => {
-  return ManualNodeSchema.safeParse(data).success;
+	return ManualNodeSchema.safeParse(data).success;
 };
 
 export const isGraphNode = (data: unknown): data is GraphNode => {
-  return GraphNodeSchema.safeParse(data).success;
+	return GraphNodeSchema.safeParse(data).success;
 };
 
 export const isBaseEdge = (data: unknown): data is BaseEdge => {
-  return BaseEdgeSchema.safeParse(data).success;
+	return BaseEdgeSchema.safeParse(data).success;
 };
 
 export const isGraphEdge = (data: unknown): data is GraphEdge => {
-  return GraphEdgeSchema.safeParse(data).success;
+	return GraphEdgeSchema.safeParse(data).success;
 };
 
 export const isGraphData = (data: unknown): data is GraphData => {
-  return GraphDataSchema.safeParse(data).success;
+	return GraphDataSchema.safeParse(data).success;
 };
 
 // Utility functions for safe data parsing
 export const parseNode = (data: unknown): GraphNode | null => {
-  const result = GraphNodeSchema.safeParse(data);
-  return result.success ? result.data : null;
+	const result = GraphNodeSchema.safeParse(data);
+	return result.success ? result.data : null;
 };
 
 export const parseEdge = (data: unknown): GraphEdge | null => {
-  const result = GraphEdgeSchema.safeParse(data);
-  return result.success ? result.data : null;
+	const result = GraphEdgeSchema.safeParse(data);
+	return result.success ? result.data : null;
 };
 
 export const parseGraphData = (data: unknown): GraphData | null => {
-  const result = GraphDataSchema.safeParse(data);
-  return result.success ? result.data : null;
+	const result = GraphDataSchema.safeParse(data);
+	return result.success ? result.data : null;
 };
 
 // Type-specific getters with validation
 export const getNodeDisplayName = (node: BaseNode): string => {
-  if (typeof node.name === 'string') return node.name;
-  return node.name?.en || node.name?.ja || node.id;
+	if (typeof node.name === "string") return node.name;
+	return node.name?.en || node.name?.ja || node.id;
 };
 
 export const getNodePrice = (node: ItemNode): string | null => {
-  if (!node.price) return null;
-  const { amount, currency } = node.price;
-  return `${currency === 'JPY' ? '¥' : currency}${amount.toLocaleString()}`;
+	if (!node.price) return null;
+	const { amount, currency } = node.price;
+	return `${currency === "JPY" ? "¥" : currency}${amount.toLocaleString()}`;
 };
 
 export const getNodeReleaseYear = (node: ItemNode): number | null => {
-  return node.releaseDate?.year || null;
+	return node.releaseDate?.year || null;
 };
 
 export const getNodeImages = (node: ItemNode): string[] => {
-  if (!node.images) return [];
-  return node.images.map(img => {
-    // Use Zod parsing to validate the image structure
-    if (typeof img === 'string') return img;
+	if (!node.images) return [];
+	return node.images.map(img => {
+		// Use Zod parsing to validate the image structure
+		if (typeof img === "string") return img;
 
-    const imageResult = ImageSchema.safeParse(img);
-    if (!imageResult.success) return String(img);
+		const imageResult = ImageSchema.safeParse(img);
+		if (!imageResult.success) return String(img);
 
-    // Handle the union type from ImageSchema
-    const imageData = imageResult.data;
-    if (typeof imageData === 'string') return imageData;
-    return imageData.url;
-  });
+		// Handle the union type from ImageSchema
+		const imageData = imageResult.data;
+		if (typeof imageData === "string") return imageData;
+		return imageData.url;
+	});
 };
 
 export const getNodeDescription = (node: ItemNode): string => {
-  if (!node.description) return '';
+	if (!node.description) return "";
 
-  // Use Zod parsing to validate the description structure
-  const descResult = LocalizedDescriptionSchema.safeParse(node.description);
-  if (!descResult.success) return '';
+	// Use Zod parsing to validate the description structure
+	const descResult = LocalizedDescriptionSchema.safeParse(node.description);
+	if (!descResult.success) return "";
 
-  // Get English description if available, fallback to Japanese
-  const englishDesc = descResult.data.find(d => d.en)?.en;
-  const japaneseDesc = descResult.data.find(d => d.ja)?.ja;
+	// Get English description if available, fallback to Japanese
+	const englishDesc = descResult.data.find(d => d.en)?.en;
+	const japaneseDesc = descResult.data.find(d => d.ja)?.ja;
 
-  return englishDesc || japaneseDesc || '';
+	return englishDesc || japaneseDesc || "";
 };
 
 export const getNodeAccessories = (node: ItemNode): string[] => {
-  if (!node.accessories) return [];
+	if (!node.accessories) return [];
 
-  return node.accessories.map(acc => {
-    // Use Zod parsing to validate the accessory structure
-    if (typeof acc === 'string') return acc;
+	return node.accessories.map(acc => {
+		// Use Zod parsing to validate the accessory structure
+		if (typeof acc === "string") return acc;
 
-    const accessoryResult = AccessorySchema.safeParse(acc);
-    if (!accessoryResult.success) return String(acc);
+		const accessoryResult = AccessorySchema.safeParse(acc);
+		if (!accessoryResult.success) return String(acc);
 
-    const accessory = accessoryResult.data;
-    if (typeof accessory === 'string') return accessory;
+		const accessory = accessoryResult.data;
+		if (typeof accessory === "string") return accessory;
 
-    // Handle localized accessory name
-    return accessory.en || accessory.ja || JSON.stringify(accessory);
-  });
+		// Handle localized accessory name
+		return accessory.en || accessory.ja || JSON.stringify(accessory);
+	});
+};
+
+export const getNodeManuals = (node: ItemNode): (string | ItemManual)[] => {
+	if (!node.manuals) return [];
+
+	return node.manuals.map(manual => {
+		// Use Zod parsing to validate the manual structure
+		if (typeof manual === "string") return manual;
+
+		const manualResult = ManualSchema.safeParse(manual);
+		if (!manualResult.success) return String(manual);
+
+		const manualData = manualResult.data;
+		if (typeof manualData === "string") return manualData;
+
+		return manualData;
+	});
 };
 
 export const getNodeEdges = (node: GraphNode): EdgesSchemaType => {
-  // Only ItemNode should have edges according to our schema
-  if (!isItemNode(node)) return { inbound: [], outbound: [] };
+	// Only ItemNode should have edges according to our schema
+	if (!isItemNode(node)) return { inbound: [], outbound: [] };
 
-  // Use Zod parsing to validate edges structure
-  const edgesResult = EdgesSchema.safeParse(node.edges);
-  return edgesResult.success ? edgesResult.data : { inbound: [], outbound: [] };
+	// Use Zod parsing to validate edges structure
+	const edgesResult = EdgesSchema.safeParse(node.edges);
+	return edgesResult.success ? edgesResult.data : { inbound: [], outbound: [] };
 };
