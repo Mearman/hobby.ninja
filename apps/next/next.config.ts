@@ -7,6 +7,9 @@ import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
 // Import PWA configuration
 import withPWA from 'next-pwa';
 
+// Import our custom build data plugin
+import BuildDataPlugin from './scripts/build-data-plugin';
+
 const withPWAConfig = withPWA({
   dest: 'public',
   disable: process.env.NODE_ENV === 'development',
@@ -111,6 +114,11 @@ const nextConfig: NextConfig = {
 
   // Additional webpack configuration for Vanilla Extract (if needed)
   webpack: (config, { isServer }) => {
+    // Add our custom build data plugin for server-side builds
+    if (isServer) {
+      config.plugins.push(new BuildDataPlugin());
+    }
+
     // Add CSS file extension alias
     config.resolve.extensionAlias = {
       '.css': ['.css.ts', '.css'],
