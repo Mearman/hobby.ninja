@@ -316,7 +316,7 @@ export class ErrorHandler {
     handled: boolean;
     shouldContinue: boolean;
   }> {
-		this.logger.warn("Data processing error", error);
+		this.logger.warn("Data processing error", { error: { code: error.code, message: error.message, category: error.category } });
 
 		// Log user-friendly message
 		this.logger.error(error.userMessage);
@@ -331,7 +331,7 @@ export class ErrorHandler {
     handled: boolean;
     shouldContinue: boolean;
   }> {
-		this.logger.warn("Validation error", error);
+		this.logger.warn("Validation error", { error: { code: error.code, message: error.message, category: error.category } });
 
 		// Log specific validation issues
 		if (error.context["fieldName"]) {
@@ -350,7 +350,7 @@ export class ErrorHandler {
   }> {
 		const delay = error.getRetryDelay();
 
-		this.logger.warn(`Rate limit exceeded - waiting ${delay}ms before continuing`, error);
+		this.logger.warn(`Rate limit exceeded - waiting ${delay}ms before continuing`, { error: { code: error.code, message: error.message, category: error.category } });
 		await this.sleep(delay);
 
 		return {

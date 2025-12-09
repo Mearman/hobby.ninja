@@ -210,8 +210,8 @@ export function validateKey(key: string): boolean {
 	}
 
 	// Validate Base64 hash component
-	const hashComponent = match[5];
-	return HEX_REGEX.test(hashComponent);
+	const hashComponent = match[3];
+	return hashComponent ? HEX_REGEX.test(hashComponent) : false;
 }
 
 /**
@@ -240,10 +240,11 @@ export function extractKeyComponents(key: string): KeyComponents {
 		throw new HashingError(`Invalid key format: ${key}. Expected format: source:target:base64hash`);
 	}
 
-	const [, sourceLang, , targetLang, , hash] = match;
+	const [fullMatch, sourceLang, , targetLang] = match;
+	const hash = sourceLang && targetLang && fullMatch ? fullMatch.split(':').pop() : '';
 
 	// Additional validation of hash component
-	if (!HEX_REGEX.test(hash)) {
+	if (!hash || !HEX_REGEX.test(hash)) {
 		throw new HashingError(`Invalid Base64 hash component in key: ${key}`);
 	}
 

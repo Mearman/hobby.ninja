@@ -1,10 +1,10 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
-import { ScraperRegistry, type ScraperType } from "@hobby-ninja/scrapers";
+import { ScraperRegistry } from "@hobby-ninja/scrapers";
 import type { LanguageDetection } from "@hobby-ninja/types/language";
 import type { GundamData } from "@hobby-ninja/types/product";
-import { LanguageDetector } from "@hobby-ninja/utils/language";
+import { LanguageDetector } from "../utils/language-detection.js";
 
 export interface SingleUrlOptions {
   url: string;
@@ -75,9 +75,8 @@ export class SingleUrlCommand {
 
 			// Detect language
 			const languageDetection = LanguageDetector.detectFromHtml(html, url);
-			const language = languageDetection.language;
 			if (verbose) {
-				console.log(`🌍 Language: ${language} (${(languageDetection.confidence * 100).toFixed(1)}% confidence)`);
+				console.log(`🌍 Language: ${languageDetection.language} (${(languageDetection.confidence * 100).toFixed(1)}% confidence)`);
 			}
 
 			// Scrape data using the appropriate scraper
@@ -90,7 +89,7 @@ export class SingleUrlCommand {
 				const result: SingleUrlResult = {
 					url,
 					success: true,
-					language,
+					language: languageDetection,
 					skus: [],
 				};
 				if (verbose) {
@@ -122,7 +121,7 @@ export class SingleUrlCommand {
 			}
 
 			// Save the data
-			const outputFile = await this.saveScrapedData(scrapedData, url, language, identifiedSKUs, output);
+			const outputFile = await this.saveScrapedData(scrapedData, url, languageDetection, identifiedSKUs, output);
 
 			if (verbose) {
 				console.log(`\n💾 Data saved to: ${outputFile}`);
@@ -132,7 +131,7 @@ export class SingleUrlCommand {
 				url,
 				success: true,
 				data: scrapedData,
-				language,
+				language: languageDetection,
 				skus: identifiedSKUs,
 				outputFile,
 			};

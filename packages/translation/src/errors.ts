@@ -277,7 +277,6 @@ export class CircuitBreaker {
 	constructor(
     private failureThreshold: number = 5,
     private recoveryTimeout: number = 60_000, // 1 minute
-    private monitoringPeriod: number = 300_000, // 5 minutes
 	) {}
 
 	/**

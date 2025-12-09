@@ -307,6 +307,19 @@ export default [
 			"import/no-amd": "error",
 			"import/no-webpack-loader-syntax": "error",
 
+			// Enforce workspace package imports for internal packages
+			"no-restricted-imports": [
+				"error",
+				{
+					patterns: [
+						{
+							group: ["../utils/*", "../types/*", "../scrapers/*", "../cli/*", "../translation/*"],
+							message: "Use @hobby-ninja/ workspace package imports instead of relative imports",
+						},
+					],
+				},
+			],
+
 			// JSX A11y rules (enhanced from Nx flat/react-jsx)
 			...jsxA11y.configs.recommended.rules,
 			"jsx-a11y/anchor-is-valid": [

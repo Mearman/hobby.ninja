@@ -5,7 +5,7 @@ import { PageTypeProfile, ProfileCache, ProfileGenerationResult } from "../types
 
 import { CacheManager } from "./cache-manager.js";
 import { LanguageDetector } from "./language-detection.js";
-import { RenderingDetector } from "./rendering-detection.js";
+import { RenderingDetector, RenderingDetection } from "./rendering-detection.js";
 
 export interface ProfileManagerOptions {
   profileCachePath?: string;
@@ -113,19 +113,20 @@ export class ProfileManager {
 			LanguageDetector.detectFromHtml(html, url),
 		);
 
+		const detector = new RenderingDetector();
 		const renderingAnalyses = await Promise.all(
 			sampleHtmls.map(html =>
-				RenderingDetector.detectRenderingStrategy(html, { testWithPlaywright: false }),
+				detector.detectRenderingStrategy(html, { testWithPlaywright: false }),
 			),
 		);
 
 		// Determine optimal extraction strategy
-		const requiresPlaywright = renderingAnalyses.some(analysis =>
+		const requiresPlaywright = renderingAnalyses.some((analysis: RenderingDetection) =>
 			analysis.requiresJavaScript || analysis.renderingType === "dynamic",
 		);
 
 		const extractionMethod = requiresPlaywright ?
-			(renderingAnalyses.every(analysis => analysis.renderingType === "dynamic") ? "playwright" : "hybrid")
+			(renderingAnalyses.every((analysis: RenderingDetection) => analysis.renderingType === "dynamic") ? "playwright" : "hybrid")
 			: "cheerio";
 
 		// Build the profile
@@ -280,7 +281,7 @@ export class ProfileManager {
 		};
 	}
 
-	private extractWaitForSelectors(analyses: Array<Awaited<ReturnType<typeof RenderingDetector.detectRenderingStrategy>>>): string[] {
+	private extractWaitForSelectors(analyses: Array<Awaited<ReturnType<typeof RenderingDetector.prototype.detectRenderingStrategy>>>): string[] {
 		// Extract selectors that might need to wait for dynamic content
 		const waitForSelectors: string[] = [];
 
@@ -296,19 +297,19 @@ export class ProfileManager {
 		return [...new Set(waitForSelectors)];
 	}
 
-	private calculateOptimalTimeout(analyses: Array<Awaited<ReturnType<typeof RenderingDetector.detectRenderingStrategy>>>): number {
+	private calculateOptimalTimeout(analyses: Array<Awaited<ReturnType<typeof RenderingDetector.prototype.detectRenderingStrategy>>>): number {
 		const avgJsTime = analyses.reduce((sum, analysis) => sum + (analysis.jsExecutionTime || 0), 0) / analyses.length;
 		return Math.max(5000, avgJsTime * 2); // At least 5 seconds, or 2x average JS time
 	}
 
-	private estimateExtractionTime(analyses: Array<Awaited<ReturnType<typeof RenderingDetector.detectRenderingStrategy>>>): number {
+	private estimateExtractionTime(analyses: Array<Awaited<ReturnType<typeof RenderingDetector.prototype.detectRenderingStrategy>>>): number {
 		const totalTime = analyses.reduce((sum, analysis) => sum + (analysis.jsExecutionTime || 1000), 0);
 		return totalTime / analyses.length;
 	}
 
 	private inferDefaultLanguage(detections: Array<ReturnType<typeof LanguageDetector.detectFromHtml>>): "ja" | "en" | "mixed" {
 		const langCounts = detections.reduce<Record<string, number>>((counts, detection) => {
-			const lang = detection.primaryLanguage?.code || "unknown";
+			const lang = detection.language || "unknown";
 			counts[lang] = (counts[lang] || 0) + 1;
 			return counts;
 		}, {});
@@ -324,7 +325,7 @@ export class ProfileManager {
 
 	private extractLanguagePatterns(detections: Array<ReturnType<typeof LanguageDetector.detectFromHtml>>): string[] {
 		// Extract common language detection patterns
-		return detections.map(detection => detection.confidence).filter(Boolean);
+		return detections.map(detection => detection.method).filter(Boolean);
 	}
 
 	private inferContentType(url: string): "product" | "manual" | "series" | "character" | "mecha" {
@@ -334,17 +335,17 @@ export class ProfileManager {
 		return "product";
 	}
 
-	private calculateConfidence(renderingAnalyses: Array<Awaited<ReturnType<typeof RenderingDetector.detectRenderingStrategy>>>, languageDetections: Array<ReturnType<typeof LanguageDetector.detectFromHtml>>): number {
+	private calculateConfidence(renderingAnalyses: Array<Awaited<ReturnType<typeof RenderingDetector.prototype.detectRenderingStrategy>>>, languageDetections: Array<ReturnType<typeof LanguageDetector.detectFromHtml>>): number {
 		let confidence = 0.5; // Base confidence
 
 		// Increase confidence based on consistent analysis results
-		const consistentRendering = renderingAnalyses.every(analysis =>
-			analysis.renderingType === renderingAnalyses[0].renderingType,
+		const consistentRendering = renderingAnalyses.length > 0 && renderingAnalyses.every((analysis: RenderingDetection) =>
+			analysis.renderingType === renderingAnalyses[0]?.renderingType,
 		);
 		if (consistentRendering) confidence += 0.2;
 
-		const consistentLanguage = languageDetections.every(detection =>
-			detection.primaryLanguage?.code === languageDetections[0].primaryLanguage?.code,
+		const consistentLanguage = languageDetections.length > 0 && languageDetections.every(detection =>
+			detection.language === languageDetections[0]?.language,
 		);
 		if (consistentLanguage) confidence += 0.2;
 
@@ -354,7 +355,7 @@ export class ProfileManager {
 		return Math.min(confidence, 1);
 	}
 
-	private generateRecommendations(profile: PageTypeProfile, analyses: Array<Awaited<ReturnType<typeof RenderingDetector.detectRenderingStrategy>>>): string[] {
+	private generateRecommendations(profile: PageTypeProfile, analyses: Array<Awaited<ReturnType<typeof RenderingDetector.prototype.detectRenderingStrategy>>>): string[] {
 		const recommendations: string[] = [];
 
 		if (profile.requiresPlaywright) {
