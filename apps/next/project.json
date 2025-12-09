@@ -11,12 +11,23 @@
       "options": {
         "outputPath": "dist/apps/next"
       },
+      "dependsOn": ["typecheck"],
       "configurations": {
         "development": {
           "outputPath": "dist/apps/next"
         },
         "production": {
           "outputPath": "dist/apps/next"
+        }
+      }
+    },
+    "build:dev": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/next",
+        "env": {
+          "NODE_ENV": "development"
         }
       }
     },
@@ -27,9 +38,10 @@
         "port": 3001,
         "hostname": "localhost"
       },
+      "dependsOn": ["build:dev"],
       "configurations": {
         "development": {
-          "buildTarget": "next:build:development",
+          "buildTarget": "next:build:dev",
           "dev": true,
           "watch": true
         },
@@ -37,19 +49,6 @@
           "buildTarget": "next:build:production",
           "dev": false
         }
-      }
-    },
-    "export": {
-      "executor": "@nx/next:export",
-      "options": {
-        "buildTarget": "next:build:production"
-      }
-    },
-    "serve-static": {
-      "executor": "@nx/workspace:run-commands",
-      "options": {
-        "command": "next start",
-        "cwd": "apps/next"
       }
     },
     "test": {
@@ -74,11 +73,10 @@
       }
     },
     "typecheck": {
-      "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
       "options": {
-        "tsConfig": "apps/next/tsconfig.json",
-        "noEmit": true
+        "command": "tsc --noEmit",
+        "cwd": "apps/next"
       }
     }
   },
