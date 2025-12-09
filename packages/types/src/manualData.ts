@@ -48,12 +48,16 @@ export interface BlockMetadata {
   footnote?: string;
 }
 
+export interface SpecificationData {
+  [key: string]: string | number | boolean | string[] | undefined;
+}
+
 export interface BlockData {
   text?: string;
   items?: string[];
   rows?: string[][];
   image?: ImageReference;
-  specifications?: Record<string, unknown>;
+  specifications?: SpecificationData;
 }
 
 export interface ContentBlock {
@@ -183,6 +187,13 @@ export interface ProcessingOptions {
   enableGC?: boolean;
 }
 
+export interface MemoryUsage {
+  heapUsed: number;
+  heapTotal: number;
+  rss: number;
+  external: number;
+}
+
 export interface ProcessingProgress {
   processed: number;
   total: number;
@@ -190,7 +201,7 @@ export interface ProcessingProgress {
   errors: number;
   rate: string;
   eta: string;
-  memory: { heapUsed: number; heapTotal: number; rss: number; external: number };
+  memory: MemoryUsage;
 }
 
 export interface ProcessingResult {

@@ -8,6 +8,24 @@ import { cacheManager } from "./cache-manager";
 import { detectFromHtml } from "./languageDetection";
 import { logger } from "./logger";
 import { detectRenderingStrategy } from "./renderingDetection";
+import {
+	DEFAULT_UPDATE_INTERVAL_HOURS,
+	DEFAULT_RETRY_COUNT,
+	ESTIMATED_MEMORY_PER_PROFILE,
+	DEFAULT_NETWORK_TIMEOUT,
+	MINIMUM_TIMEOUT,
+	PROFILE_CONFIDENCE_THRESHOLD,
+	DEFAULT_PROFILE_CONFIDENCE,
+	BASE_CONFIDENCE,
+	CONSISTENT_ANALYSIS_INCREMENT,
+	MULTIPLE_SAMPLES_INCREMENT,
+	HIGH_CONFIDENCE_LANGUAGE_RATIO,
+	HOUR_TO_MS,
+	DEFAULT_ATTEMPT_FREQUENCY_HOURS,
+	TIMEOUT_MULTIPLIER,
+	INITIAL_SUCCESS_RATE_ESTIMATE,
+	DEFAULT_DOM_COMPLEXITY,
+} from "./constants";
 
 export interface ProfileManagerOptions {
   profileCachePath?: string;
@@ -28,7 +46,7 @@ export class ProfileManager {
 		this.profileCachePath = options.profileCachePath ??
       path.join(process.cwd(), ".gundam-scraper-profiles.json");
 		this.enableAutoUpdate = options.enableAutoUpdate ?? true;
-		this.updateInterval = options.updateInterval ?? 24; // 24 hours
+		this.updateInterval = options.updateInterval ?? DEFAULT_UPDATE_INTERVAL_HOURS;
 		this.fallbackToPlaywright = options.fallbackToPlaywright ?? true;
 		this.cacheManager = cacheManager;
 		this.profileCache = this.initializeProfileCache();
@@ -83,7 +101,8 @@ export class ProfileManager {
 			await fs.writeFile(this.profileCachePath, JSON.stringify(cacheData, null, 2));
 			logger.info(`Saved ${this.profileCache.profiles.size} profiles to cache`);
 		} catch (error) {
-			logger.error("Failed to save profile cache:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			logger.error("Failed to save profile cache:", errorMessage);
 		}
 	}
 
@@ -108,7 +127,7 @@ export class ProfileManager {
 					extractionSuccess: 0,
 					extractionFailures: 0,
 				},
-				confidence: 0.9,
+				confidence: DEFAULT_PROFILE_CONFIDENCE,
 				recommendations: ["Existing profile is still valid"],
 				requiresPlaywright: existingProfile.requiresPlaywright,
 				sampleUrls,
@@ -146,13 +165,13 @@ export class ProfileManager {
 			selectors: this.extractSelectors(sampleHtmls[0] ?? ""),
 			waitForSelectors: this.extractWaitForSelectors(renderingAnalyses),
 			timeout: this.calculateOptimalTimeout(renderingAnalyses),
-			retryCount: 3,
+			retryCount: DEFAULT_RETRY_COUNT,
 			performance: {
 				estimatedLoadTime: this.calculateOptimalTimeout(renderingAnalyses),
 				averageJsExecutionTime: this.calculateMaxJsExecutionTime(renderingAnalyses),
 				averageExtractionTime: this.estimateExtractionTime(renderingAnalyses),
-				successRate: 0.95, // Initial estimate
-				memoryUsage: 50_000, // Estimated memory usage in bytes
+				successRate: INITIAL_SUCCESS_RATE_ESTIMATE,
+				memoryUsage: ESTIMATED_MEMORY_PER_PROFILE,
 				domComplexity: this.calculateDomComplexity(renderingAnalyses),
 				lastAnalyzed: Date.now(),
 			},
@@ -251,7 +270,8 @@ export class ProfileManager {
 					await this.cacheManager.setByUrl?.(url, html, "profile-analysis");
 				}
 			} catch (error) {
-				logger.warn(`Failed to fetch ${url}:`, error);
+				const errorMessage = error instanceof Error ? error.message : String(error);
+				logger.warn(`Failed to fetch ${url}:`, errorMessage);
 			}
 		}
 
@@ -313,30 +333,30 @@ export class ProfileManager {
 	}
 
 	private calculateOptimalTimeout(analyses: RenderingDetection[]): number {
-		if (analyses.length === 0) return 5000;
+		if (analyses.length === 0) return DEFAULT_NETWORK_TIMEOUT;
 		let sum = 0;
 		for (const analysis of analyses) {
 			sum += analysis.jsExecutionTime ?? 0;
 		}
 		const avgJsTime = sum / analyses.length;
-		return Math.max(5000, avgJsTime * 2); // At least 5 seconds, or 2x average JS time
+		return Math.max(DEFAULT_NETWORK_TIMEOUT, avgJsTime * TIMEOUT_MULTIPLIER); // At least 5 seconds, or 2x average JS time
 	}
 
 	private calculateMaxJsExecutionTime(analyses: RenderingDetection[]): number {
-		if (analyses.length === 0) return 1000;
+		if (analyses.length === 0) return MINIMUM_TIMEOUT;
 		let maxTime = 0;
 		for (const analysis of analyses) {
-			const time = analysis.jsExecutionTime ?? 1000;
+			const time = analysis.jsExecutionTime ?? MINIMUM_TIMEOUT;
 			if (time > maxTime) maxTime = time;
 		}
 		return maxTime;
 	}
 
 	private estimateExtractionTime(analyses: RenderingDetection[]): number {
-		if (analyses.length === 0) return 1000;
+		if (analyses.length === 0) return MINIMUM_TIMEOUT;
 		let totalTime = 0;
 		for (const analysis of analyses) {
-			totalTime += analysis.jsExecutionTime ?? 1000;
+			totalTime += analysis.jsExecutionTime ?? MINIMUM_TIMEOUT;
 		}
 		return totalTime / analyses.length;
 	}
@@ -354,8 +374,8 @@ export class ProfileManager {
 		const jaCount = langCounts["ja"] ?? 0;
 		const enCount = langCounts["en"] ?? 0;
 
-		if (jaCount / totalDetections > 0.8) return "ja";
-		if (enCount / totalDetections > 0.8) return "en";
+		if (jaCount / totalDetections > HIGH_CONFIDENCE_LANGUAGE_RATIO) return "ja";
+		if (enCount / totalDetections > HIGH_CONFIDENCE_LANGUAGE_RATIO) return "en";
 		return "mixed";
 	}
 
@@ -372,21 +392,21 @@ export class ProfileManager {
 	}
 
 	private calculateConfidence(renderingAnalyses: RenderingDetection[], languageDetections: LanguageDetection[]): number {
-		let confidence = 0.5; // Base confidence
+		let confidence = BASE_CONFIDENCE; // Base confidence
 
 		// Increase confidence based on consistent analysis results
 		const consistentRendering = renderingAnalyses.every(analysis =>
 			analysis.renderingType === renderingAnalyses[0]?.renderingType,
 		);
-		if (consistentRendering) confidence += 0.2;
+		if (consistentRendering) confidence += CONSISTENT_ANALYSIS_INCREMENT;
 
 		const consistentLanguage = languageDetections.every(detection =>
 			detection.language === languageDetections[0]?.language,
 		);
-		if (consistentLanguage) confidence += 0.2;
+		if (consistentLanguage) confidence += CONSISTENT_ANALYSIS_INCREMENT;
 
 		// High confidence if we have multiple samples
-		if (renderingAnalyses.length > 1) confidence += 0.1;
+		if (renderingAnalyses.length > 1) confidence += MULTIPLE_SAMPLES_INCREMENT;
 
 		return Math.min(confidence, 1);
 	}
@@ -400,7 +420,7 @@ export class ProfileManager {
 	private estimateTotalAttempts(profile: PageTypeProfile): number {
 		// Rough estimate based on when the profile was last updated
 		const ageHours = (Date.now() - (profile.performance?.lastAnalyzed ?? 0)) / (1000 * 60 * 60);
-		return Math.max(1, ageHours / 2); // Assume 1 attempt every 2 hours
+		return Math.max(1, ageHours / DEFAULT_ATTEMPT_FREQUENCY_HOURS); // Assume 1 attempt every 2 hours
 	}
 
 	private updateStatistics(): void {
@@ -447,7 +467,7 @@ export class ProfileManager {
 		// Simple heuristic based on analysis complexity
 		let complexity = 0;
 		for (const analysis of renderingAnalyses) {
-			complexity += analysis.domComplexity ?? 50;
+			complexity += analysis.domComplexity ?? DEFAULT_DOM_COMPLEXITY;
 		}
 		return complexity;
 	}
@@ -459,7 +479,7 @@ export class ProfileManager {
 			recommendations.push("Consider using Playwright for dynamic content");
 		}
 
-		if (profile.confidence < 0.8) {
+		if (profile.confidence < PROFILE_CONFIDENCE_THRESHOLD) {
 			recommendations.push("Profile confidence is low, consider manual review");
 		}
 

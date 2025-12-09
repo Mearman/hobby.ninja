@@ -16,7 +16,7 @@ export async function parseManual(htmlFilePath: string): Promise<any> {
 	const result = await parser.parse(content);
 
 	if (!result.success) {
-		throw new Error(result.error || "Failed to parse manual");
+		throw new Error(result.error ?? "Failed to parse manual");
 	}
 
 	return result.data;
@@ -29,7 +29,7 @@ export async function parseHtmlContent(htmlContent: string): Promise<any> {
 	const result = await parser.parse(htmlContent);
 
 	if (!result.success) {
-		throw new Error(result.error || "Failed to parse HTML content");
+		throw new Error(result.error ?? "Failed to parse HTML content");
 	}
 
 	return result.data;

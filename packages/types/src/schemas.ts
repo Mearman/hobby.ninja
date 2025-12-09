@@ -5,6 +5,38 @@ import { z } from "zod";
  * These schemas provide runtime validation for all data structures
  */
 
+// Constants for validation to avoid magic numbers
+const MAX_PRICE = 999_999;
+const MAX_RATING = 10;
+const MIN_RATING = 1;
+const MIN_ITEMS_PER_PAGE = 10;
+const MAX_ITEMS_PER_PAGE = 100;
+const MIN_STRING_LENGTH = 2;
+const MAX_STRING_LENGTH = 10;
+const MAX_NOTES_LENGTH = 1000;
+const MAX_TITLE_LENGTH = 200;
+const MAX_DESCRIPTION_LENGTH = 2000;
+const MAX_PROGRESS = 100;
+const MAX_TAG_LENGTH = 50;
+const DEFAULT_CONCURRENCY = 3;
+const MAX_CONCURRENCY = 10;
+const DEFAULT_RETRY_ATTEMPTS = 3;
+const MAX_RETRY_ATTEMPTS = 5;
+const DEFAULT_RETRY_DELAY = 1000;
+const MAX_RETRY_DELAY = 10_000;
+const MIN_PERFORMANCE_METRIC = 0;
+
+// Additional constants for commonly used values
+const DEFAULT_ITEMS_PER_PAGE = 20;
+const DEFAULT_QUANTITY = 1;
+const MIN_QUANTITY = 1;
+const DEFAULT_PROGRESS = 0;
+const MIN_PROGRESS = 0;
+const MIN_STRING_CONTENT_LENGTH = 1;
+const MIN_CONCURRENCY = 1;
+const MIN_RETRY_ATTEMPTS = 0;
+const MIN_RETRY_DELAY = 100;
+
 // Base schema patterns
 export const TimestampSchema = z.object({
 	createdAt: z.iso.datetime(),
@@ -31,12 +63,12 @@ export const ReleaseStatusSchema = z.enum(["released", "upcoming", "discontinued
 // Price range validation
 export const PriceSchema = z.number()
 	.min(0, { message: "Price cannot be negative" })
-	.max(999_999, { message: "Price seems unreasonably high" });
+	.max(MAX_PRICE, { message: "Price seems unreasonably high" });
 
 // Rating validation (1-10 scale)
 export const RatingSchema = z.number()
-	.min(1, { message: "Rating must be at least 1" })
-	.max(10, { message: "Rating cannot exceed 10" });
+	.min(MIN_RATING, { message: "Rating must be at least 1" })
+	.max(MAX_RATING, { message: "Rating cannot exceed 10" });
 
 // URL validation
 export const URLSchema = z.url({ message: "Invalid URL format" });
@@ -45,8 +77,8 @@ export const URLSchema = z.url({ message: "Invalid URL format" });
 export const UserSettingsSchema = z.object({
 	id: z.string(),
 	theme: z.enum(["light", "dark", "auto"]).default("auto"),
-	language: z.string().min(2).max(10).default("en"),
-	itemsPerPage: z.number().min(10).max(100).default(20),
+	language: z.string().min(MIN_STRING_LENGTH).max(MAX_STRING_LENGTH).default("en"),
+	itemsPerPage: z.number().min(MIN_ITEMS_PER_PAGE).max(MAX_ITEMS_PER_PAGE).default(DEFAULT_ITEMS_PER_PAGE),
 	showDiscontinued: z.boolean().default(false),
 	defaultSort: z.enum(["name", "release_date", "grade", "price"]).default("name"),
 	notifications: z.boolean().default(true),
@@ -55,11 +87,11 @@ export const UserSettingsSchema = z.object({
 export const CollectionEntrySchema = z.object({
 	id: IdSchema,
 	sku: BandaiSKUSchema,
-	quantity: z.number().min(1).default(1),
+	quantity: z.number().min(MIN_QUANTITY).default(DEFAULT_QUANTITY),
 	condition: z.enum(["new", "used", "damaged", "box_only"]).default("new"),
 	purchaseDate: z.iso.datetime().optional(),
 	purchasePrice: PriceSchema.optional(),
-	notes: z.string().max(1000).optional(),
+	notes: z.string().max(MAX_NOTES_LENGTH).optional(),
 	addedAt: z.iso.datetime(),
 	updatedAt: z.iso.datetime().optional(),
 }).extend(TimestampSchema.shape);
@@ -69,7 +101,7 @@ export const WishlistEntrySchema = z.object({
 	sku: BandaiSKUSchema,
 	priority: z.enum(["low", "medium", "high"]).default("medium"),
 	targetPrice: PriceSchema.optional(),
-	notes: z.string().max(1000).optional(),
+	notes: z.string().max(MAX_NOTES_LENGTH).optional(),
 	addedAt: z.iso.datetime(),
 	updatedAt: z.iso.datetime().optional(),
 }).extend(TimestampSchema.shape);
@@ -77,14 +109,14 @@ export const WishlistEntrySchema = z.object({
 export const BuildLogSchema = z.object({
 	id: IdSchema,
 	sku: BandaiSKUSchema,
-	title: z.string().min(1).max(200),
-	content: z.string().min(1).max(10_000),
+	title: z.string().min(MIN_STRING_CONTENT_LENGTH).max(MAX_TITLE_LENGTH),
+	content: z.string().min(MIN_STRING_CONTENT_LENGTH).max(MAX_DESCRIPTION_LENGTH),
 	status: z.enum(["planning", "in_progress", "completed", "on_hold"]).default("planning"),
-	progress: z.number().min(0).max(100).default(0),
+	progress: z.number().min(MIN_PROGRESS).max(MAX_PROGRESS).default(DEFAULT_PROGRESS),
 	startDate: z.iso.datetime().optional(),
 	completionDate: z.iso.datetime().optional(),
 	images: z.array(URLSchema).default([]),
-	tags: z.array(z.string().max(50)).default([]),
+	tags: z.array(z.string().max(MAX_TAG_LENGTH)).default([]),
 	addedAt: z.iso.datetime(),
 	updatedAt: z.iso.datetime().optional(),
 }).extend(TimestampSchema.shape);
@@ -95,15 +127,38 @@ export const CLISchema = z.object({
 	verbose: z.boolean().default(false),
 	cacheDir: z.string().default(".cache"),
 	outputDir: z.string().default("apps/webapp/public/data"),
-	concurrency: z.number().min(1).max(10).default(3),
-	retryAttempts: z.number().min(0).max(5).default(3),
-	retryDelay: z.number().min(100).max(10_000).default(1000),
+	concurrency: z.number().min(MIN_CONCURRENCY).max(MAX_CONCURRENCY).default(DEFAULT_CONCURRENCY),
+	retryAttempts: z.number().min(MIN_RETRY_ATTEMPTS).max(MAX_RETRY_ATTEMPTS).default(DEFAULT_RETRY_ATTEMPTS),
+	retryDelay: z.number().min(MIN_RETRY_DELAY).max(MAX_RETRY_DELAY).default(DEFAULT_RETRY_DELAY),
 });
+
+// Security event details interface for specific security event information
+export interface SecurityEventDetails {
+	[key: string]: string | number | boolean | undefined;
+	ipAddress?: string;
+	userAgent?: string;
+	requestUrl?: string;
+	requestMethod?: string;
+	attemptedPayload?: string;
+	blockReason?: string;
+	userId?: string;
+	sessionId?: string;
+	severity?: number;
+	category?: string;
+}
+
+// Generic API response type that can work with any data type
+export interface APIResponse<T = unknown> {
+	success: boolean;
+	data?: T;
+	error?: string;
+	timestamp: string;
+}
 
 // API response schemas
 export const APIResponseSchema = z.object({
 	success: z.boolean(),
-	data: z.unknown(),
+	data: z.unknown(), // Generic data - actual typing handled by APIResponse<T>
 	error: z.string().optional(),
 	timestamp: z.iso.datetime(),
 });
@@ -113,19 +168,19 @@ export const SecurityEventSchema = z.object({
 	id: IdSchema,
 	type: z.enum(["xss_attempt", "injection_attempt", "suspicious_activity", "rate_limit"]),
 	severity: z.enum(["low", "medium", "high", "critical"]),
-	message: z.string().min(1).max(1000),
-	details: z.record(z.string(), z.unknown()).optional(),
+	message: z.string().min(MIN_STRING_LENGTH).max(MAX_NOTES_LENGTH),
+	details: z.record(z.string(), z.union([z.string(), z.number(), z.boolean()])).optional(),
 	timestamp: z.iso.datetime(),
 	resolved: z.boolean().default(false),
 });
 
 export const PerformanceMetricsSchema = z.object({
 	timestamp: z.iso.datetime(),
-	lcp: z.number().min(0), // Largest Contentful Paint
-	fid: z.number().min(0), // First Input Delay
-	cls: z.number().min(0), // Cumulative Layout Shift
-	fcp: z.number().min(0), // First Contentful Paint
-	ttfb: z.number().min(0), // Time to First Byte
+	lcp: z.number().min(MIN_PERFORMANCE_METRIC), // Largest Contentful Paint
+	fid: z.number().min(MIN_PERFORMANCE_METRIC), // First Input Delay
+	cls: z.number().min(MIN_PERFORMANCE_METRIC), // Cumulative Layout Shift
+	fcp: z.number().min(MIN_PERFORMANCE_METRIC), // First Contentful Paint
+	ttfb: z.number().min(MIN_PERFORMANCE_METRIC), // Time to First Byte
 });
 
 // Export all schemas for easy importing

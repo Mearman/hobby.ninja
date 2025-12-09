@@ -256,6 +256,13 @@ export interface FilterOptions {
 }
 
 /**
+ * Custom filter configuration for hobby types
+ */
+export interface HobbyFilterConfig {
+  [key: string]: string | number | boolean | string[] | undefined;
+}
+
+/**
  * Hobby type configuration
  */
 export interface HobbyType {
@@ -268,7 +275,7 @@ export interface HobbyType {
   /** Default data sources */
   defaultSources: string[];
   /** Specific filters for this hobby */
-  hobbyFilters?: Record<string, unknown>;
+  hobbyFilters?: HobbyFilterConfig;
   /** Icon identifier */
   icon?: string;
   /** Color theme */
@@ -309,7 +316,7 @@ export interface MasterIndexItem {
   /** File size */
   fileSize?: number;
   /** Additional metadata */
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string, string | number | boolean | undefined>;
 }
 
 /**
@@ -556,7 +563,7 @@ export interface CustomFieldDefinition {
   /** Is this field required? */
   required: boolean;
   /** Default value */
-  defaultValue?: unknown;
+  defaultValue?: string | number | boolean | Date | Array<unknown> | Record<string, unknown>;
   /** Validation rules */
   validation?: {
     /** Minimum value (for numbers) */
@@ -564,12 +571,30 @@ export interface CustomFieldDefinition {
     /** Maximum value (for numbers) */
     max?: number;
     /** Allowed values (for enums) */
-    allowedValues?: unknown[];
+    allowedValues?: Array<string | number | boolean>;
     /** Regular expression pattern */
     pattern?: string;
   };
   /** Field description */
   description?: string;
+}
+
+/**
+ * Plugin data processor functions
+ */
+export interface PluginProcessors {
+  /** Pre-processing hook */
+  beforeSave?: (data: Record<string, unknown>) => Promise<Record<string, unknown>>;
+  /** Post-processing hook */
+  afterLoad?: (data: Record<string, unknown>) => Promise<Record<string, unknown>>;
+}
+
+/**
+ * Plugin search handlers
+ */
+export interface PluginSearchHandlers {
+  /** Custom search implementation */
+  search?: (query: string, options: QueryOptions) => Promise<SearchResult>;
 }
 
 /**
@@ -587,15 +612,7 @@ export interface DatabasePlugin {
   /** Custom field definitions */
   customFields?: CustomFieldDefinition[];
   /** Custom data processors */
-  processors?: {
-    /** Pre-processing hook */
-    beforeSave?: (data: unknown) => Promise<unknown>;
-    /** Post-processing hook */
-    afterLoad?: (data: unknown) => Promise<unknown>;
-  };
+  processors?: PluginProcessors;
   /** Custom search handlers */
-  searchHandlers?: {
-    /** Custom search implementation */
-    search?: (query: string, options: QueryOptions) => Promise<SearchResult>;
-  };
+  searchHandlers?: PluginSearchHandlers;
 }

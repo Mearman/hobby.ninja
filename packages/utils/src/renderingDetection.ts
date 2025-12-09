@@ -1,5 +1,23 @@
 import type { RenderingDetection, ProgressiveEnhancementResult, RenderingType } from "@hobby-ninja/types/profile";
 
+import {
+	DEFAULT_NETWORK_TIMEOUT,
+	MIN_HTML_CONTENT_LENGTH,
+	MIN_TEXT_CONTENT_LENGTH,
+	MAX_DOM_COMPLEXITY,
+	EMPTY_DIV_THRESHOLD,
+	EMPTY_SPAN_THRESHOLD,
+	ADDITIONAL_CONTENT_ESTIMATE,
+	NESTED_DIV_MULTIPLIER,
+	DYNAMIC_MULTIPLIER_MIN,
+	DYNAMIC_MULTIPLIER_RANGE,
+	BASE_CONFIDENCE,
+	LANG_ATTRIBUTE_INCREMENT,
+	FRAMEWORK_DETECTION_INCREMENT,
+	SUFFICIENT_CONTENT_INCREMENT,
+	DYNAMIC_INDICATORS_INCREMENT,
+} from "./constants";
+
 const FRAMEWORK_PATTERNS: Record<string, RegExp> = {
 	react: /react|React|createElement|useState|useEffect/i,
 	vue: /vue|Vue|v-if|v-for|@click/i,
@@ -79,7 +97,7 @@ function calculateDomComplexity(html: string): number {
 	// Simple heuristic based on HTML structure
 	const tagCount = (html.match(/<[a-z]/gi) ?? []).length;
 	const nestedDivs = (html.match(/<div[^>]*>/gi) ?? []).length;
-	return Math.min(tagCount + nestedDivs * 2, 1000);
+	return Math.min(tagCount + nestedDivs * NESTED_DIV_MULTIPLIER, MAX_DOM_COMPLEXITY);
 }
 
 export function analyzeProgressiveEnhancement(html: string): ProgressiveEnhancementResult {
@@ -122,7 +140,7 @@ function analyzeStaticContent(html: string): StaticAnalysis {
 	return {
 		sufficient,
 		missingFields,
-		minimalStaticContent: html.length < 2000,
+		minimalStaticContent: html.length < MIN_HTML_CONTENT_LENGTH,
 		hasFrameworkSignals: detectFrameworkSignals(html),
 	};
 }
@@ -134,7 +152,7 @@ function analyzeDynamicContent(html: string): DynamicAnalysis {
 
 	return {
 		required,
-		additionalContent: required ? 5000 : 0,
+		additionalContent: required ? ADDITIONAL_CONTENT_ESTIMATE : 0,
 		framework,
 		waitForSelectors,
 	};
@@ -142,7 +160,7 @@ function analyzeDynamicContent(html: string): DynamicAnalysis {
 
 function hasMinimalContent(html: string): boolean {
 	const textContent = extractTextContent(html);
-	return textContent.length < 500;
+	return textContent.length < MIN_TEXT_CONTENT_LENGTH;
 }
 
 function hasDynamicIndicators(html: string): boolean {
@@ -154,7 +172,7 @@ function hasDynamicIndicators(html: string): boolean {
 function hasEmptyContainers(html: string): boolean {
 	const emptyDivs = (html.match(/<div[^>]*>\s*<\/div>/gi) ?? []).length;
 	const emptySpans = (html.match(/<span[^>]*>\s*<\/span>/gi) ?? []).length;
-	return emptyDivs > 5 || emptySpans > 10;
+	return emptyDivs > EMPTY_DIV_THRESHOLD || emptySpans > EMPTY_SPAN_THRESHOLD;
 }
 
 function detectFramework(html: string): string | undefined {
@@ -248,12 +266,12 @@ function determineRenderingType(html: string, requiresJS: boolean): RenderingTyp
 }
 
 function calculateConfidence(html: string): number {
-	let confidence = 0.5;
+	let confidence = BASE_CONFIDENCE;
 
-	if (html.includes('lang="') || html.includes("lang='")) confidence += 0.2;
-	if (detectFramework(html)) confidence += 0.15;
-	if (!hasMinimalContent(html)) confidence += 0.1;
-	if (hasDynamicIndicators(html)) confidence += 0.05;
+	if (html.includes('lang="') || html.includes("lang='")) confidence += LANG_ATTRIBUTE_INCREMENT;
+	if (detectFramework(html)) confidence += FRAMEWORK_DETECTION_INCREMENT;
+	if (!hasMinimalContent(html)) confidence += SUFFICIENT_CONTENT_INCREMENT;
+	if (hasDynamicIndicators(html)) confidence += DYNAMIC_INDICATORS_INCREMENT;
 
 	return Math.min(confidence, 1);
 }
@@ -285,6 +303,6 @@ function getRecommendation(staticAnalysis: { sufficient: boolean }, dynamicAnaly
 
 function simulateDynamicContent(html: string): number {
 	const baseLength = html.length;
-	const dynamicMultiplier = Math.random() * 2 + 1;
+	const dynamicMultiplier = Math.random() * DYNAMIC_MULTIPLIER_RANGE + DYNAMIC_MULTIPLIER_MIN;
 	return Math.floor(baseLength * dynamicMultiplier);
 }

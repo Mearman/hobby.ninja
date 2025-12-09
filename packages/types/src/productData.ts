@@ -24,6 +24,16 @@ export interface ProductImage {
 }
 
 // Gundam-specific data interface for scraped data
+export interface ProductSpecification {
+  [key: string]: string | number | boolean | undefined;
+}
+
+export interface GundamProductImage {
+  type: string;
+  url: string;
+  alt: string;
+}
+
 export interface GundamData {
   id: string;
   name: string;
@@ -34,8 +44,8 @@ export interface GundamData {
   releaseDate?: string;
   sku?: string;
   description?: string;
-  specifications?: Record<string, unknown>;
-  images: Array<{ type: string; url: string; alt: string }>;
+  specifications?: ProductSpecification;
+  images: GundamProductImage[];
   language: LanguageDetection;
   url?: string;
   source: string;
