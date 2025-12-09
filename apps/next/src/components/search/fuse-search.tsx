@@ -101,7 +101,7 @@ export function FuseSearch({
     };
 
     performSearch();
-  }, [debouncedQuery, isInitialized, search, getSuggestions, maxResults]);
+  }, [debouncedQuery, isInitialized, maxResults]); // Remove search and getSuggestions from deps
 
   // Handle search input
   const handleInputChange = useCallback((value: string) => {
