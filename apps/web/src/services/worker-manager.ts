@@ -400,7 +400,7 @@ export class WorkerManager {
 		});
 
 		// Store timeout ID for cleanup
-	(task as WorkerTask & { timeoutId?: number }).timeoutId = timeoutId;
+		(task as WorkerTask & { timeoutId?: number }).timeoutId = timeoutId;
 	}
 
 	/**

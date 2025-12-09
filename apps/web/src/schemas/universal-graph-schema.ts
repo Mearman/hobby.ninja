@@ -35,7 +35,7 @@ const ARRAY_THIRD_INDEX = TWO;
 // ===== BASE GRAPH ENTITY TYPES =====
 
 // Core value types for graph properties
-const GraphValue: z.ZodType<unknown> = z.lazy(() =>
+const GraphValue: z.ZodType = z.lazy(() =>
 	z.union([
 		z.string(),
 		z.number(),

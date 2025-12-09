@@ -13,35 +13,33 @@
 
 import {
 	validateUnifiedItem,
-
-// Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
-
 	validateManualItem,
 	validateCatalogItem,
 	UnifiedItemNodeType,
 	ManualItemNodeType,
 	CatalogItemNodeType,
 	BaseEntitySchemaType,
-
 } from "../schemas/universal-graph-schema.js";
+import {
+	ZERO,
+	ONE,
+	TWO,
+	THREE,
+	FOUR,
+	FIVE,
+	SIX,
+	SEVEN,
+	EIGHT,
+	NINE,
+	TEN,
+	HUNDRED,
+	THOUSAND,
+	JSON_INDENTATION,
+	PERCENTAGE_MULTIPLIER,
+	ARRAY_FIRST_INDEX,
+	ARRAY_SECOND_INDEX,
+	ARRAY_THIRD_INDEX,
+} from "../constants/index.js";
 
 // Export types for the Zod-validated data structures
 export type UnifiedItem = UnifiedItemNodeType;

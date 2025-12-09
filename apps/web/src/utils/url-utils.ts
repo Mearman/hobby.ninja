@@ -56,7 +56,7 @@ export const compressFilters = (filters: FilterOptions): string => {
 		const filterString = JSON.stringify(filters);
 		return safeBtoa(encodeURIComponent(filterString));
 	} catch (error) {
-		// eslint-disable-next-line no-console
+		 
 		const errorMessage = error instanceof Error ? error.message : String(error);
 		console.error("Failed to compress filters:", errorMessage);
 		return "";
@@ -68,7 +68,7 @@ export const decompressFilters = (compressed: string): FilterOptions | null => {
 		const filterString = decodeURIComponent(safeAtob(compressed));
 		return JSON.parse(filterString) as FilterOptions;
 	} catch (error) {
-		// eslint-disable-next-line no-console
+		 
 		const errorMessage = error instanceof Error ? error.message : String(error);
 		console.error("Failed to decompress filters:", errorMessage);
 		return null;
@@ -115,7 +115,7 @@ export const parseFiltersFromUrl = (
 
 		return { query, filters: filters ?? {} };
 	} catch (error) {
-		// eslint-disable-next-line no-console
+		 
 		const errorMessage = error instanceof Error ? error.message : String(error);
 		console.error("Failed to parse URL:", errorMessage);
 		return { query: "", filters: {} };
@@ -148,7 +148,7 @@ export const copyShareableUrl = async (
 			return success;
 		}
 	} catch (error) {
-		// eslint-disable-next-line no-console
+		 
 		const errorMessage = error instanceof Error ? error.message : String(error);
 		console.error("Failed to copy URL:", errorMessage);
 		return false;

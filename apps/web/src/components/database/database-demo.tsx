@@ -21,35 +21,11 @@ import React, { useState, useEffect, useCallback } from "react";
 
 import { dataService } from "../../services/dataService";
 import type { UnifiedItem, ManualItem, CatalogItem, FilterOptions } from "../../services/dataService";
+import { PAGE_SIZE, INITIAL_PAGE, ZERO, ONE } from "../../constants/index.js";
 
 import { ItemGrid } from "./item-grid";
 
-
-// Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
-
 type SortField = "name" | "releaseDate" | "price" | "relevance" | "grade";
-
-// Constants
-const PAGE_SIZE = 50;
-const INITIAL_PAGE = ONE;
 
 type ItemData = UnifiedItem | ManualItem | CatalogItem;
 

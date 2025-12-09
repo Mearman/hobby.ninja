@@ -340,7 +340,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					itemSeriesStr = getSafeSeries(item.series as SeriesInfo | undefined) ?? "";
 				} else {
 					const itemProps = getItemProperties(item);
-					itemSeriesStr = getSafeSeries(getPropertySafely<SeriesInfo>(itemProps, 'series')) ?? "";
+					itemSeriesStr = getSafeSeries(getPropertySafely<SeriesInfo>(itemProps, "series")) ?? "";
 				}
 
 				return itemSeriesStr && currentSeriesStr && (
@@ -359,21 +359,21 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					grade = item.grade as string | undefined;
 				} else {
 					const itemProps = getItemProperties(item);
-					grade = getPropertySafely<string>(itemProps, 'grade');
+					grade = getPropertySafely<string>(itemProps, "grade");
 				}
 
 				if ("scale" in item) {
 					scale = item.scale as string | undefined;
 				} else {
 					const itemProps = getItemProperties(item);
-					scale = getPropertySafely<string>(itemProps, 'scale');
+					scale = getPropertySafely<string>(itemProps, "scale");
 				}
 
 				if ("series" in item) {
 					series = getSafeSeries(item.series as SeriesInfo | undefined);
 				} else {
 					const itemProps = getItemProperties(item);
-					series = getSafeSeries(getPropertySafely<SeriesInfo>(itemProps, 'series'));
+					series = getSafeSeries(getPropertySafely<SeriesInfo>(itemProps, "series"));
 				}
 
 				return {
@@ -404,7 +404,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					itemGrade = item.grade as string | undefined;
 				} else {
 					const itemProps = getItemProperties(item);
-					itemGrade = getPropertySafely<string>(itemProps, 'grade');
+					itemGrade = getPropertySafely<string>(itemProps, "grade");
 				}
 
 				return itemGrade && itemGrade === currentItemProps.grade;
@@ -419,21 +419,21 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					grade = item.grade as string | undefined;
 				} else {
 					const itemProps = getItemProperties(item);
-					grade = getPropertySafely<string>(itemProps, 'grade');
+					grade = getPropertySafely<string>(itemProps, "grade");
 				}
 
 				if ("scale" in item) {
 					scale = item.scale as string | undefined;
 				} else {
 					const itemProps = getItemProperties(item);
-					scale = getPropertySafely<string>(itemProps, 'scale');
+					scale = getPropertySafely<string>(itemProps, "scale");
 				}
 
 				if ("series" in item) {
 					series = getSafeSeries(item.series as SeriesInfo | undefined);
 				} else {
 					const itemProps = getItemProperties(item);
-					series = getSafeSeries(getPropertySafely<SeriesInfo>(itemProps, 'series'));
+					series = getSafeSeries(getPropertySafely<SeriesInfo>(itemProps, "series"));
 				}
 
 				return {
@@ -461,21 +461,21 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			grade = item.grade as string | undefined;
 		} else {
 			const itemProps = getItemProperties(item);
-			grade = getPropertySafely<string>(itemProps, 'grade');
+			grade = getPropertySafely<string>(itemProps, "grade");
 		}
 
 		if ("scale" in item) {
 			scale = item.scale as string | undefined;
 		} else {
 			const itemProps = getItemProperties(item);
-			scale = getPropertySafely<string>(itemProps, 'scale');
+			scale = getPropertySafely<string>(itemProps, "scale");
 		}
 
 		if ("series" in item) {
 			series = getSafeSeries(item.series as SeriesInfo | undefined);
 		} else {
 			const itemProps = getItemProperties(item);
-			series = getSafeSeries(getPropertySafely<SeriesInfo>(itemProps, 'series'));
+			series = getSafeSeries(getPropertySafely<SeriesInfo>(itemProps, "series"));
 		}
 
 		return { grade, scale, series };
@@ -494,7 +494,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					itemScale = item.scale as string | undefined;
 				} else {
 					const itemProps = getItemProperties(item);
-					itemScale = getPropertySafely<string>(itemProps, 'scale');
+					itemScale = getPropertySafely<string>(itemProps, "scale");
 				}
 
 				return itemScale && itemScale === currentItemProps.scale;
@@ -604,7 +604,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 				itemReleaseDate = item.releaseDate as ReleaseDate;
 			} else {
 				const itemProps = getItemProperties(item);
-				itemReleaseDate = getPropertySafely<ReleaseDate>(itemProps, 'releaseDate');
+				itemReleaseDate = getPropertySafely<ReleaseDate>(itemProps, "releaseDate");
 			}
 
 			return itemReleaseDate?.year ?? ZERO;

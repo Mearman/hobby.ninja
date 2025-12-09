@@ -98,7 +98,7 @@ interface DatabaseHobbyPageSearch {
 export function DatabaseHobbyPage(): React.ReactElement {
 	const { hobbyType } = useParams({ from: "/database/$hobbyType" });
 	const navigate = useNavigate();
-	const search = useSearch({ from: "/database/$hobbyType" }) as DatabaseHobbyPageSearch;
+	const search = useSearch({ from: "/database/$hobbyType" });
 
 	// State management
 	const [searchQuery, setSearchQuery] = useState("");
