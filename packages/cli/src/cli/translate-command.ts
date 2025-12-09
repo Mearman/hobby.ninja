@@ -7,25 +7,27 @@
  * Supports sources: 'all' (default), 'bandai-catalog', 'bandai-manuals'
  */
 
-import { promises as fs } from 'node:fs';
-import { join } from 'node:path';
-import { CatalogTranslator } from './catalog-translator';
+import { promises as fs } from "node:fs";
+import { join } from "node:path";
+
 import {
 	TranslationService,
 	createServerTranslationStore,
 	loadDictionary,
 	rebuildAndReloadDictionary,
 	TRANSLATION_STORE_DIR,
-} from '@hobby-ninja/translation';
-import type { CatalogItem } from '@hobby-ninja/types/catalog';
-import { TranslationProgressRenderer } from './ui/TranslationProgress';
+} from "@hobby-ninja/translation";
+import type { CatalogItem } from "@hobby-ninja/types/catalog";
+
+import { CatalogTranslator } from "./catalog-translator";
+import { TranslationProgressRenderer } from "./ui/TranslationProgress";
 
 const BATCH_SIZE = 50;
 
-const DEFAULT_CATALOG_DIR = 'data/bandai/items';
-const DEFAULT_MANUALS_DIR = 'data/bandai/manuals';
+const DEFAULT_CATALOG_DIR = "data/bandai/items";
+const DEFAULT_MANUALS_DIR = "data/bandai/manuals";
 
-export type TranslateSource = 'all' | 'bandai-catalog' | 'bandai-manuals';
+export type TranslateSource = "all" | "bandai-catalog" | "bandai-manuals";
 
 export interface TranslateOptions {
 	/** Data source to translate: 'all', 'bandai-catalog', 'bandai-manuals' */
@@ -67,24 +69,24 @@ export async function translateCatalogData(options: TranslateOptions): Promise<v
 		verbose = false,
 	} = options;
 
-	const validSources: TranslateSource[] = ['all', 'bandai-catalog', 'bandai-manuals'];
-	if (!validSources.includes(source as TranslateSource)) {
+	const validSources: TranslateSource[] = ["all", "bandai-catalog", "bandai-manuals"];
+	if (!validSources.includes(source)) {
 		console.error(`Unknown source: ${source}`);
-		console.error('Supported sources: all, bandai-catalog, bandai-manuals');
+		console.error("Supported sources: all, bandai-catalog, bandai-manuals");
 		process.exit(1);
 	}
 
-	console.log('Translation Configuration:');
+	console.log("Translation Configuration:");
 	console.log(`  Source: ${source}`);
 	console.log(`  Cache directory: ${cacheDir}`);
 	console.log(`  Dry run: ${dryRun}`);
-	console.log('');
+	console.log("");
 
 	let totalTranslated = 0;
 
 	// Translate catalog items
-	if (source === 'all' || source === 'bandai-catalog') {
-		const catalogDir = options.input && source === 'bandai-catalog' ? options.input : DEFAULT_CATALOG_DIR;
+	if (source === "all" || source === "bandai-catalog") {
+		const catalogDir = options.input && source === "bandai-catalog" ? options.input : DEFAULT_CATALOG_DIR;
 		const result = await translateCatalogItems({
 			inputDir: catalogDir,
 			cacheDir,
@@ -95,8 +97,8 @@ export async function translateCatalogData(options: TranslateOptions): Promise<v
 	}
 
 	// Translate manual files
-	if (source === 'all' || source === 'bandai-manuals') {
-		const manualsDir = options.input && source === 'bandai-manuals' ? options.input : DEFAULT_MANUALS_DIR;
+	if (source === "all" || source === "bandai-manuals") {
+		const manualsDir = options.input && source === "bandai-manuals" ? options.input : DEFAULT_MANUALS_DIR;
 		const result = await translateManualFiles({
 			inputDir: manualsDir,
 			cacheDir,
@@ -108,7 +110,7 @@ export async function translateCatalogData(options: TranslateOptions): Promise<v
 
 	// Rebuild dictionary once at the end if any translations were made
 	if (!dryRun && totalTranslated > 0) {
-		console.log('\nRebuilding dictionary with new translations...');
+		console.log("\nRebuilding dictionary with new translations...");
 		const result = await rebuildAndReloadDictionary({ verbose });
 		if (result.success && result.dictionary) {
 			console.log(`Dictionary rebuilt: ${result.dictionary.stats.uniquePhrases} phrases`);
@@ -118,7 +120,7 @@ export async function translateCatalogData(options: TranslateOptions): Promise<v
 	}
 
 	if (dryRun) {
-		console.log('\n[DRY RUN] No files were modified.');
+		console.log("\n[DRY RUN] No files were modified.");
 	}
 
 	// Exit cleanly - Ink keeps the event loop alive otherwise
@@ -144,10 +146,10 @@ interface TranslateResult {
 async function translateCatalogItems(options: CatalogTranslateOptions): Promise<TranslateResult> {
 	const { inputDir, cacheDir, dryRun, verbose } = options;
 
-	console.log('='.repeat(60));
-	console.log('Translating Bandai catalog items...');
+	console.log("=".repeat(60));
+	console.log("Translating Bandai catalog items...");
 	console.log(`  Input directory: ${inputDir}`);
-	console.log('');
+	console.log("");
 
 	// Initialize translator (without auto-rebuild - we do it once at the end)
 	const translator = new CatalogTranslator({
@@ -159,7 +161,7 @@ async function translateCatalogItems(options: CatalogTranslateOptions): Promise<
 	try {
 		await translator.initialize();
 	} catch (error) {
-		console.error('Failed to initialize translation service:', error);
+		console.error("Failed to initialize translation service:", error);
 		return { translated: 0, fieldsTranslated: 0 };
 	}
 
@@ -177,12 +179,12 @@ async function translateCatalogItems(options: CatalogTranslateOptions): Promise<
 	}
 
 	if (entries.length === 0) {
-		console.log('No catalog items found to translate.');
+		console.log("No catalog items found to translate.");
 		return { translated: 0, fieldsTranslated: 0 };
 	}
 
 	// Initialize Ink progress renderer
-	const progressRenderer = new TranslationProgressRenderer('Catalog', entries.length);
+	const progressRenderer = new TranslationProgressRenderer("Catalog", entries.length);
 	progressRenderer.start();
 
 	const progress: TranslationProgress = {
@@ -201,7 +203,7 @@ async function translateCatalogItems(options: CatalogTranslateOptions): Promise<
 			batch.map(async (id) => {
 				const itemPath = join(inputDir, id, `${id}.json`);
 				return translateCatalogItem(itemPath, translator, dryRun, verbose);
-			})
+			}),
 		);
 
 		for (const result of results) {
@@ -247,10 +249,10 @@ async function translateCatalogItem(
 	itemPath: string,
 	translator: CatalogTranslator,
 	dryRun: boolean,
-	verbose: boolean
+	verbose: boolean,
 ): Promise<TranslateItemResult> {
 	try {
-		const content = await fs.readFile(itemPath, 'utf-8');
+		const content = await fs.readFile(itemPath, "utf8");
 		const item: CatalogItem = JSON.parse(content);
 
 		const result = await translator.translateItem(item);
@@ -267,7 +269,7 @@ async function translateCatalogItem(
 		}
 
 		if (result.translated && !dryRun) {
-			await fs.writeFile(itemPath, JSON.stringify(item, null, 2), 'utf-8');
+			await fs.writeFile(itemPath, JSON.stringify(item, null, 2), "utf-8");
 		}
 
 		if (verbose && result.translated) {
@@ -302,14 +304,14 @@ interface ManualTranslateOptions {
 async function translateManualFiles(options: ManualTranslateOptions): Promise<TranslateResult> {
 	const { inputDir, cacheDir, dryRun, verbose } = options;
 
-	console.log('='.repeat(60));
-	console.log('Translating Bandai manual files...');
+	console.log("=".repeat(60));
+	console.log("Translating Bandai manual files...");
 	console.log(`  Input directory: ${inputDir}`);
-	console.log('');
+	console.log("");
 
 	// Initialize translation service with persistent store
 	if (verbose) {
-		console.log('Initializing translation service with persistent cache...');
+		console.log("Initializing translation service with persistent cache...");
 	}
 
 	// Load dictionary for fast O(1) lookups
@@ -320,12 +322,12 @@ async function translateManualFiles(options: ManualTranslateOptions): Promise<Tr
 		}
 	} catch {
 		if (verbose) {
-			console.log('  Dictionary not found, will use API/store only');
+			console.log("  Dictionary not found, will use API/store only");
 		}
 	}
 
 	const store = await createServerTranslationStore(cacheDir, {
-		maxEntries: 10000,
+		maxEntries: 10_000,
 	});
 	const translator = new TranslationService({}, undefined, store);
 
@@ -343,12 +345,12 @@ async function translateManualFiles(options: ManualTranslateOptions): Promise<Tr
 	}
 
 	if (entries.length === 0) {
-		console.log('No manual files found to translate.');
+		console.log("No manual files found to translate.");
 		return { translated: 0, fieldsTranslated: 0 };
 	}
 
 	// Initialize Ink progress renderer
-	const progressRenderer = new TranslationProgressRenderer('Manuals', entries.length);
+	const progressRenderer = new TranslationProgressRenderer("Manuals", entries.length);
 	progressRenderer.start();
 
 	const progress: TranslationProgress = {
@@ -367,7 +369,7 @@ async function translateManualFiles(options: ManualTranslateOptions): Promise<Tr
 			batch.map(async (id) => {
 				const manualPath = join(inputDir, id, `${id}.json`);
 				return translateManualItem(manualPath, translator, dryRun, verbose);
-			})
+			}),
 		);
 
 		for (const result of results) {
@@ -407,10 +409,10 @@ async function translateManualItem(
 	manualPath: string,
 	translator: TranslationService,
 	dryRun: boolean,
-	verbose: boolean
+	verbose: boolean,
 ): Promise<TranslateItemResult> {
 	try {
-		const content = await fs.readFile(manualPath, 'utf-8');
+		const content = await fs.readFile(manualPath, "utf8");
 		const manual: FilteredManualData = JSON.parse(content);
 
 		let fieldsTranslated = 0;
@@ -418,12 +420,12 @@ async function translateManualItem(
 		// Translate name if not already translated
 		if (manual.name.ja && !manual.name.en) {
 			try {
-				const result = await translator.translateText(manual.name.ja, 'en', 'ja');
+				const result = await translator.translateText(manual.name.ja, "en", "ja");
 				manual.name.en = result.translated;
 				fieldsTranslated++;
-			} catch (err) {
+			} catch (error) {
 				if (verbose) {
-					console.error(`  Failed to translate name for ${manual.id}:`, err);
+					console.error(`  Failed to translate name for ${manual.id}:`, error);
 				}
 			}
 		}
@@ -431,18 +433,18 @@ async function translateManualItem(
 		// Translate series if not already translated
 		if (manual.series.ja && !manual.series.en) {
 			try {
-				const result = await translator.translateText(manual.series.ja, 'en', 'ja');
+				const result = await translator.translateText(manual.series.ja, "en", "ja");
 				manual.series.en = result.translated;
 				fieldsTranslated++;
-			} catch (err) {
+			} catch (error) {
 				if (verbose) {
-					console.error(`  Failed to translate series for ${manual.id}:`, err);
+					console.error(`  Failed to translate series for ${manual.id}:`, error);
 				}
 			}
 		}
 
 		if (fieldsTranslated > 0 && !dryRun) {
-			await fs.writeFile(manualPath, JSON.stringify(manual, null, 2), 'utf-8');
+			await fs.writeFile(manualPath, JSON.stringify(manual, null, 2), "utf-8");
 		}
 
 		if (verbose && fieldsTranslated > 0) {

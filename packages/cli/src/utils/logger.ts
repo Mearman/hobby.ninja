@@ -1,7 +1,9 @@
-import { promises as fs } from 'fs';
-import * as path from 'path';
-import { homedir } from 'os';
-import { LOG_LEVELS, LOGGING, EXIT_CODES, DIRECTORIES, FILE_PATTERNS } from '../constants/cli-constants.js';
+import { promises as fs } from "node:fs";
+import { homedir } from "node:os";
+import * as path from "node:path";
+
+import { LOG_LEVELS, LOGGING, EXIT_CODES, DIRECTORIES, FILE_PATTERNS, PROGRESS_PERCENTAGES } from "../constants/cli-constants.js";
+import type { Context } from "../types/common.js";
 
 export type LogLevel = typeof LOG_LEVELS[keyof typeof LOG_LEVELS];
 
@@ -9,7 +11,7 @@ export interface LogEntry {
   timestamp: string;
   level: LogLevel;
   message: string;
-  context?: Record<string, any>;
+  context?: Context;
   error?: Error;
   duration?: number;
 }
@@ -26,364 +28,364 @@ export interface LoggerOptions {
 }
 
 export class Logger {
-  private static instance: Logger;
-  private options: LoggerOptions;
-  private logFile: string | null = null;
-  private logQueue: LogEntry[] = [];
-  private isWriting: boolean = false;
+	private static instance: Logger;
+	private options: LoggerOptions;
+	private logFile: string | null = null;
+	private logQueue: LogEntry[] = [];
+	private isWriting = false;
 
-  private constructor(options: LoggerOptions) {
-    this.options = {
-      includeTimestamp: true,
-      prettyPrint: true,
-      maxFileSize: LOGGING.DEFAULT_MAX_FILE_SIZE, // 10MB
-      maxFiles: LOGGING.DEFAULT_MAX_FILES,
-      ...options
-    };
-  }
+	private constructor(options: LoggerOptions) {
+		this.options = {
+			includeTimestamp: true,
+			prettyPrint: true,
+			maxFileSize: LOGGING.DEFAULT_MAX_FILE_SIZE, // 10MB
+			maxFiles: LOGGING.DEFAULT_MAX_FILES,
+			...options,
+		};
+	}
 
-  static getInstance(options?: Partial<LoggerOptions>): Logger {
-    if (!Logger.instance) {
-      const defaultOptions: LoggerOptions = {
-        level: LOG_LEVELS.INFO,
-        logToFile: false,
-        logToConsole: true
-      };
-      Logger.instance = new Logger({ ...defaultOptions, ...options });
-    }
-    return Logger.instance;
-  }
+	static getInstance(options?: Partial<LoggerOptions>): Logger {
+		if (!Logger.instance) {
+			const defaultOptions: LoggerOptions = {
+				level: LOG_LEVELS.INFO,
+				logToFile: false,
+				logToConsole: true,
+			};
+			Logger.instance = new Logger({ ...defaultOptions, ...options });
+		}
+		return Logger.instance;
+	}
 
-  /**
+	/**
    * Configure the logger
    */
-  configure(options: Partial<LoggerOptions>): void {
-    this.options = { ...this.options, ...options };
+	configure(options: Partial<LoggerOptions>): void {
+		this.options = { ...this.options, ...options };
 
-    if (options.logFilePath || (options.logToFile && !this.logFile)) {
-      this.setupLogFile(options.logFilePath);
-    }
-  }
+		if (options.logFilePath || (options.logToFile && !this.logFile)) {
+			this.setupLogFile(options.logFilePath);
+		}
+	}
 
-  /**
+	/**
    * Log an error message
    */
-  error(message: string, error?: Error, context?: Record<string, any>): void {
-    this.log(LOG_LEVELS.ERROR, message, error, context);
-  }
+	error(message: string, error?: Error, context?: Context): void {
+		this.log(LOG_LEVELS.ERROR, message, error, context);
+	}
 
-  /**
+	/**
    * Log a warning message
    */
-  warn(message: string, context?: Record<string, any>): void {
-    this.log(LOG_LEVELS.WARN, message, undefined, context);
-  }
+	warn(message: string, context?: Context): void {
+		this.log(LOG_LEVELS.WARN, message, undefined, context);
+	}
 
-  /**
+	/**
    * Log an info message
    */
-  info(message: string, context?: Record<string, any>): void {
-    this.log(LOG_LEVELS.INFO, message, undefined, context);
-  }
+	info(message: string, context?: Context): void {
+		this.log(LOG_LEVELS.INFO, message, undefined, context);
+	}
 
-  /**
+	/**
    * Log a debug message
    */
-  debug(message: string, context?: Record<string, any>): void {
-    this.log(LOG_LEVELS.DEBUG, message, undefined, context);
-  }
+	debug(message: string, context?: Context): void {
+		this.log(LOG_LEVELS.DEBUG, message, undefined, context);
+	}
 
-  /**
+	/**
    * Log a message with timing
    */
-  async time<T>(label: string, fn: () => Promise<T> | T): Promise<T> {
-    const start = Date.now();
+	async time<T>(label: string, fn: () => Promise<T> | T): Promise<T> {
+		const start = Date.now();
 
-    this.debug(`Starting: ${label}`);
+		this.debug(`Starting: ${label}`);
 
-    try {
-      const result = await fn();
-      const duration = Date.now() - start;
+		try {
+			const result = await fn();
+			const duration = Date.now() - start;
 
-      this.info(`Completed: ${label}`, { duration });
-      return result;
-    } catch (error) {
-      const duration = Date.now() - start;
+			this.info(`Completed: ${label}`, { duration });
+			return result;
+		} catch (error) {
+			const duration = Date.now() - start;
 
-      this.error(`Failed: ${label}`, error as Error, { duration });
-      throw error;
-    }
-  }
+			this.error(`Failed: ${label}`, error as Error, { duration });
+			throw error;
+		}
+	}
 
-  /**
+	/**
    * Log a message
    */
-  private log(level: LogLevel, message: string, error?: Error, context?: Record<string, any>): void {
-    // Skip if level is below configured minimum
-    if (!this.shouldLog(level)) {
-      return;
-    }
+	private log(level: LogLevel, message: string, error?: Error, context?: Context): void {
+		// Skip if level is below configured minimum
+		if (!this.shouldLog(level)) {
+			return;
+		}
 
-    const logEntry: LogEntry = {
-      timestamp: new Date().toISOString(),
-      level,
-      message,
-      ...(context && { context }),
-      ...(error && {
-        error: {
-          name: error.name,
-          message: error.message,
-          stack: error.stack
-        } as Error
-      })
-    };
+		const logEntry: LogEntry = {
+			timestamp: new Date().toISOString(),
+			level,
+			message,
+			...(context && { context }),
+			...(error && {
+				error: {
+					name: error.name,
+					message: error.message,
+					stack: error.stack,
+				} as Error,
+			}),
+		};
 
-    // Add to queue
-    this.logQueue.push(logEntry);
+		// Add to queue
+		this.logQueue.push(logEntry);
 
-    // Process queue
-    this.processLogQueue();
-  }
+		// Process queue
+		this.processLogQueue();
+	}
 
-  /**
+	/**
    * Process the log queue
    */
-  private async processLogQueue(): Promise<void> {
-    if (this.isWriting || this.logQueue.length === 0) {
-      return;
-    }
+	private async processLogQueue(): Promise<void> {
+		if (this.isWriting || this.logQueue.length === 0) {
+			return;
+		}
 
-    this.isWriting = true;
-    const entriesToProcess = [...this.logQueue];
-    this.logQueue = [];
+		this.isWriting = true;
+		const entriesToProcess = [...this.logQueue];
+		this.logQueue = [];
 
-    try {
-      // Console logging
-      if (this.options.logToConsole) {
-        for (const entry of entriesToProcess) {
-          this.logToConsole(entry);
-        }
-      }
+		try {
+			// Console logging
+			if (this.options.logToConsole) {
+				for (const entry of entriesToProcess) {
+					this.logToConsole(entry);
+				}
+			}
 
-      // File logging
-      if (this.options.logToFile && this.logFile) {
-        await this.logToFile(entriesToProcess);
-      }
-    } catch (error) {
-      // Fallback to console if file logging fails
-      console.error('Logger error:', error);
-    } finally {
-      this.isWriting = false;
+			// File logging
+			if (this.options.logToFile && this.logFile) {
+				await this.logToFile(entriesToProcess);
+			}
+		} catch (error) {
+			// Fallback to console if file logging fails
+			console.error("Logger error:", error);
+		} finally {
+			this.isWriting = false;
 
-      // Process any remaining entries
-      if (this.logQueue.length > 0) {
-        setImmediate(() => this.processLogQueue());
-      }
-    }
-  }
+			// Process any remaining entries
+			if (this.logQueue.length > 0) {
+				setImmediate(() => this.processLogQueue());
+			}
+		}
+	}
 
-  /**
+	/**
    * Log to console
    */
-  private logToConsole(entry: LogEntry): void {
-    const levelColors: Record<LogLevel, string> = {
-      error: LOGGING.ANSI_COLORS.RED,
-      warn: LOGGING.ANSI_COLORS.YELLOW,
-      info: LOGGING.ANSI_COLORS.BLUE,
-      debug: LOGGING.ANSI_COLORS.WHITE
-    };
+	private logToConsole(entry: LogEntry): void {
+		const levelColors: Record<LogLevel, string> = {
+			error: LOGGING.ANSI_COLORS.RED,
+			warn: LOGGING.ANSI_COLORS.YELLOW,
+			info: LOGGING.ANSI_COLORS.BLUE,
+			debug: LOGGING.ANSI_COLORS.WHITE,
+		};
 
-    const resetColor = LOGGING.ANSI_COLORS.RESET;
-    const color = levelColors[entry.level];
+		const resetColor = LOGGING.ANSI_COLORS.RESET;
+		const color = levelColors[entry.level];
 
-    let logMessage = '';
+		let logMessage = "";
 
-    if (this.options.includeTimestamp) {
-      logMessage += `${color}[${entry.timestamp}]${resetColor} `;
-    }
+		if (this.options.includeTimestamp) {
+			logMessage += `${color}[${entry.timestamp}]${resetColor} `;
+		}
 
-    logMessage += `${color}[${entry.level.toUpperCase()}]${resetColor} ${entry.message}`;
+		logMessage += `${color}[${entry.level.toUpperCase()}]${resetColor} ${entry.message}`;
 
-    if (entry.duration !== undefined) {
-      logMessage += ` ${color}(${entry.duration}ms)${resetColor}`;
-    }
+		if (entry.duration !== undefined) {
+			logMessage += ` ${color}(${entry.duration}ms)${resetColor}`;
+		}
 
-    if (entry.context && Object.keys(entry.context).length > 0) {
-      logMessage += `\n${color}Context:${resetColor} ${JSON.stringify(entry.context, null, PROGRESS_PERCENTAGES.COMPLETE)}`;
-    }
+		if (entry.context && Object.keys(entry.context).length > 0) {
+			logMessage += `\n${color}Context:${resetColor} ${JSON.stringify(entry.context, null, PROGRESS_PERCENTAGES.COMPLETE)}`;
+		}
 
-    if (entry.error) {
-      logMessage += `\n${color}Error:${resetColor} ${entry.error.message}`;
-      if (entry.error.stack) {
-        logMessage += `\n${color}Stack:${resetColor} ${entry.error.stack}`;
-      }
-    }
+		if (entry.error) {
+			logMessage += `\n${color}Error:${resetColor} ${entry.error.message}`;
+			if (entry.error.stack) {
+				logMessage += `\n${color}Stack:${resetColor} ${entry.error.stack}`;
+			}
+		}
 
-    // Choose appropriate console method
-    switch (entry.level) {
-      case LOG_LEVELS.ERROR:
-        console.error(logMessage);
-        break;
-      case LOG_LEVELS.WARN:
-        console.warn(logMessage);
-        break;
-      case LOG_LEVELS.DEBUG:
-        console.debug(logMessage);
-        break;
-      default:
-        console.log(logMessage);
-    }
-  }
+		// Choose appropriate console method
+		switch (entry.level) {
+			case LOG_LEVELS.ERROR: {
+				console.error(logMessage);
+				break;
+			}
+			case LOG_LEVELS.WARN: {
+				console.warn(logMessage);
+				break;
+			}
+			case LOG_LEVELS.DEBUG: {
+				console.debug(logMessage);
+				break;
+			}
+			default: {
+				console.log(logMessage);
+			}
+		}
+	}
 
-  /**
+	/**
    * Log to file
    */
-  private async logToFile(entries: LogEntry[]): Promise<void> {
-    if (!this.logFile) return;
+	private async logToFile(entries: LogEntry[]): Promise<void> {
+		if (!this.logFile) return;
 
-    const logLines = entries.map(entry => {
-      const logData = {
-        ...entry,
-        context: entry.context,
-        error: entry.error
-      };
+		const logLines = entries.map(entry => {
+			const logData = {
+				...entry,
+				context: entry.context,
+				error: entry.error,
+			};
 
-      if (this.options.prettyPrint) {
-        return JSON.stringify(logData, null, PROGRESS_PERCENTAGES.COMPLETE);
-      } else {
-        return JSON.stringify(logData);
-      }
-    });
+			return this.options.prettyPrint ? JSON.stringify(logData, null, PROGRESS_PERCENTAGES.COMPLETE) : JSON.stringify(logData);
+		});
 
-    const logContent = logLines.join('\n') + '\n';
+		const logContent = logLines.join("\n") + "\n";
 
-    // Check file size and rotate if necessary
-    await this.rotateLogFileIfNeeded();
+		// Check file size and rotate if necessary
+		await this.rotateLogFileIfNeeded();
 
-    await fs.appendFile(this.logFile, logContent, 'utf-8');
-  }
+		await fs.appendFile(this.logFile, logContent, "utf-8");
+	}
 
-  /**
+	/**
    * Setup log file
    */
-  private async setupLogFile(customPath?: string): Promise<void> {
-    if (customPath) {
-      this.logFile = customPath;
-    } else {
-      // Create default log file path
-      const logDir = path.join(homedir(), DIRECTORIES.LOGS);
-      await fs.mkdir(logDir, { recursive: true });
+	private async setupLogFile(customPath?: string): Promise<void> {
+		if (customPath) {
+			this.logFile = customPath;
+		} else {
+			// Create default log file path
+			const logDir = path.join(homedir(), DIRECTORIES.LOGS);
+			await fs.mkdir(logDir, { recursive: true });
 
-      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-      this.logFile = path.join(logDir, `scraping-${timestamp}.log`);
-    }
+			const timestamp = new Date().toISOString().replaceAll(/[:.]/g, "-");
+			this.logFile = path.join(logDir, `scraping-${timestamp}.log`);
+		}
 
-    // Ensure log directory exists
-    const logDir = path.dirname(this.logFile);
-    await fs.mkdir(logDir, { recursive: true });
-  }
+		// Ensure log directory exists
+		const logDir = path.dirname(this.logFile);
+		await fs.mkdir(logDir, { recursive: true });
+	}
 
-  /**
+	/**
    * Rotate log file if it gets too large
    */
-  private async rotateLogFileIfNeeded(): Promise<void> {
-    if (!this.logFile) return;
+	private async rotateLogFileIfNeeded(): Promise<void> {
+		if (!this.logFile) return;
 
-    try {
-      const stats = await fs.stat(this.logFile);
-      if (stats.size < this.options.maxFileSize!) {
-        return;
-      }
+		try {
+			const stats = await fs.stat(this.logFile);
+			if (stats.size < this.options.maxFileSize!) {
+				return;
+			}
 
-      // File is too large, rotate it
-      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-      const rotatedFile = this.logFile.replace(/\.log$/, `-${timestamp}.log`);
+			// File is too large, rotate it
+			const timestamp = new Date().toISOString().replaceAll(/[:.]/g, "-");
+			const rotatedFile = this.logFile.replace(/\.log$/, `-${timestamp}.log`);
 
-      await fs.rename(this.logFile, rotatedFile);
+			await fs.rename(this.logFile, rotatedFile);
 
-      // Clean up old log files
-      await this.cleanupOldLogFiles();
-    } catch (error) {
-      console.warn('Warning: Failed to rotate log file:', error);
-    }
-  }
+			// Clean up old log files
+			await this.cleanupOldLogFiles();
+		} catch (error) {
+			console.warn("Warning: Failed to rotate log file:", error);
+		}
+	}
 
-  /**
+	/**
    * Clean up old log files
    */
-  private async cleanupOldLogFiles(): Promise<void> {
-    if (!this.logFile) return;
+	private async cleanupOldLogFiles(): Promise<void> {
+		if (!this.logFile) return;
 
-    try {
-      const logDir = path.dirname(this.logFile);
-      const files = await fs.readdir(logDir);
+		try {
+			const logDir = path.dirname(this.logFile);
+			const files = await fs.readdir(logDir);
 
-      const fileStats = await Promise.all(
-        files
-          .filter(file => file.endsWith(FILE_PATTERNS.LOG_EXTENSION))
-          .map(file => path.join(logDir, file))
-          .map(async (filePath) => {
-            try {
-              const stats = await fs.stat(filePath);
-              return {
-                path: filePath,
-                mtime: stats.mtime
-              };
-            } catch {
-              return null;
-            }
-          })
-      );
+			const fileStats = await Promise.all(
+				files
+					.filter(file => file.endsWith(FILE_PATTERNS.LOG_EXTENSION))
+					.map(file => path.join(logDir, file))
+					.map(async (filePath) => {
+						try {
+							const stats = await fs.stat(filePath);
+							return {
+								path: filePath,
+								mtime: stats.mtime,
+							};
+						} catch {
+							return null;
+						}
+					}),
+			);
 
-      const logFiles = fileStats.filter(Boolean) as Array<{ path: string; mtime: Date }>;
+			const logFiles = fileStats.filter(Boolean) as Array<{ path: string; mtime: Date }>;
 
-      // Sort by modification time (newest first)
-      logFiles.sort((a, b) => b.mtime.getTime() - a.mtime.getTime());
+			// Sort by modification time (newest first)
+			logFiles.sort((a, b) => b.mtime.getTime() - a.mtime.getTime());
 
-      // Keep only the most recent files
-      const filesToDelete = logFiles.slice(this.options.maxFiles!);
+			// Keep only the most recent files
+			const filesToDelete = logFiles.slice(this.options.maxFiles);
 
-      for (const file of filesToDelete) {
-        try {
-          await fs.unlink(file.path);
-        } catch (error) {
-          console.warn(`Warning: Failed to delete old log file ${file.path}:`, error);
-        }
-      }
-    } catch (error) {
-      console.warn('Warning: Failed to cleanup old log files:', error);
-    }
-  }
+			for (const file of filesToDelete) {
+				try {
+					await fs.unlink(file.path);
+				} catch (error) {
+					console.warn(`Warning: Failed to delete old log file ${file.path}:`, error);
+				}
+			}
+		} catch (error) {
+			console.warn("Warning: Failed to cleanup old log files:", error);
+		}
+	}
 
-  /**
+	/**
    * Check if a log level should be processed
    */
-  private shouldLog(level: LogLevel): boolean {
-    return LOGGING.LOG_LEVEL_PRIORITIES[level] <= LOGGING.LOG_LEVEL_PRIORITIES[this.options.level];
-  }
+	private shouldLog(level: LogLevel): boolean {
+		return LOGGING.LOG_LEVEL_PRIORITIES[level] <= LOGGING.LOG_LEVEL_PRIORITIES[this.options.level];
+	}
 
-  /**
+	/**
    * Flush any pending logs
    */
-  async flush(): Promise<void> {
-    while (this.logQueue.length > 0 || this.isWriting) {
-      await new Promise(resolve => setTimeout(resolve, LOGGING.FLUSH_DELAY));
-    }
-  }
+	async flush(): Promise<void> {
+		while (this.logQueue.length > 0 || this.isWriting) {
+			await new Promise(resolve => setTimeout(resolve, LOGGING.FLUSH_DELAY));
+		}
+	}
 
-  /**
+	/**
    * Get current log file path
    */
-  getLogFilePath(): string | null {
-    return this.logFile;
-  }
+	getLogFilePath(): string | null {
+		return this.logFile;
+	}
 
-  /**
+	/**
    * Get current log level
    */
-  getLogLevel(): LogLevel {
-    return this.options.level;
-  }
+	getLogLevel(): LogLevel {
+		return this.options.level;
+	}
 }
 
 export default Logger;

@@ -18,15 +18,15 @@ import {
 	rebuildAndReloadDictionary,
 	normalizeText,
 	TRANSLATION_STORE_DIR,
-} from '@hobby-ninja/translation';
-import type { TranslationStore } from '@hobby-ninja/translation';
+} from "@hobby-ninja/translation";
+import type { TranslationStore } from "@hobby-ninja/translation";
 import type {
 	CatalogItem,
 	CatalogBrand,
 	CatalogCategory,
 	CatalogRelatedProduct,
-} from '@hobby-ninja/types/catalog';
-import type { LocalizedText } from '@hobby-ninja/types/manual';
+} from "@hobby-ninja/types/catalog";
+import type { LocalizedText } from "@hobby-ninja/types/manual";
 
 export interface CatalogTranslatorOptions {
 	/** Directory for persistent translation cache (default: data/translations) */
@@ -89,19 +89,19 @@ export class CatalogTranslator {
 			}
 		} catch {
 			if (this.verbose) {
-				console.log('[CatalogTranslator] Dictionary not found, will use API/store only');
+				console.log("[CatalogTranslator] Dictionary not found, will use API/store only");
 			}
 		}
 
 		this.store = await createServerTranslationStore(this.storeDir, {
-			maxEntries: 10000,
+			maxEntries: 10_000,
 		});
 
 		this.translator = new TranslationService({}, undefined, this.store);
 		this.initialized = true;
 
 		if (this.verbose) {
-			console.log('[CatalogTranslator] Translation service ready');
+			console.log("[CatalogTranslator] Translation service ready");
 		}
 	}
 
@@ -114,7 +114,7 @@ export class CatalogTranslator {
 			return {
 				translated: false,
 				fieldsTranslated: 0,
-				error: 'CatalogTranslator not initialized. Call initialize() first.',
+				error: "CatalogTranslator not initialized. Call initialize() first.",
 			};
 		}
 
@@ -202,7 +202,7 @@ export class CatalogTranslator {
 		}
 
 		if (this.verbose) {
-			console.log('[CatalogTranslator] Rebuilding dictionary from cache...');
+			console.log("[CatalogTranslator] Rebuilding dictionary from cache...");
 		}
 
 		const result = await rebuildAndReloadDictionary({ verbose: this.verbose });
@@ -226,7 +226,7 @@ export class CatalogTranslator {
 		try {
 			// Normalize input (Japanese) before translation
 			const normalizedInput = normalizeText(text);
-			const result = await this.translator.translateText(normalizedInput, 'en', 'ja');
+			const result = await this.translator.translateText(normalizedInput, "en", "ja");
 			// Normalize output (English) after translation
 			return normalizeText(result.translated);
 		} catch (error) {

@@ -1,19 +1,23 @@
 #!/usr/bin/env node
 
-import { config } from "dotenv";
-import { Command } from "commander";
-import { readFileSync } from "fs";
-import { dirname, join, resolve } from "path";
-import { fileURLToPath } from "url";
+import { readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
 import { TRANSLATION_STORE_DIR } from "@hobby-ninja/translation";
+import { Command } from "commander";
+import { config } from "dotenv";
+
+
+import { CLI_COMMANDS, MESSAGES, FILES, NETWORK } from "../constants/index.js";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.dirname(__filename);
 
 // Load .env from repo root (packages/cli/src/bin -> repo root is 4 levels up)
-config({ path: resolve(__dirname, "../../../../.env") });
+config({ path: path.resolve(__dirname, "../../../../.env") });
 
-const packageJson = JSON.parse(readFileSync(join(__dirname, "../../package.json"), "utf8"));
+const packageJson: { version: string } = JSON.parse(readFileSync(path.join(__dirname, "../../package.json"), "utf8"));
 const version = packageJson.version;
 
 const program = new Command();
@@ -25,15 +29,15 @@ program
 
 // Scrape command implementation
 program
-	.command("scrape")
+	.command(CLI_COMMANDS.SCRAPE)
 	.description("Scrape data from various sources")
 	.option("-s, --source <source>", "Data source to scrape (manuals, bandai-catalog)")
-	.option("-o, --output <dir>", "Output directory", "./data")
+	.option("-o, --output <dir>", "Output directory", FILES.OUTPUT_DIR)
 	.option("-c, --cache", "Enable caching", true)
 	.option("-r, --resume", "Resume from previous run", false)
-	.option("-v, --verbose", "Verbose output", false)
+	.option("-v, --verbose", MESSAGES.VERBOSE_OUTPUT, false)
 	.option("-t, --translate", "Translate Japanese text to English", false)
-	.option("-d, --delay <ms>", "Delay between requests in ms", "1000")
+	.option("-d, --delay <ms>", "Delay between requests in ms", String(NETWORK.DEFAULT_DELAY))
 	.option("--start-id <id>", "Starting ID for catalog discovery", "00_0000")
 	.option("--count <number>", "Number of IDs to process", "10")
 	.action(async (options) => {
@@ -42,7 +46,7 @@ program
 			await scrapeData(options);
 		} catch (error) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
-			console.error("❌ Error in scrape command:", errorMessage);
+			console.error(`❌ ${MESSAGES.ERROR_OCCURRED} in scrape command:`, errorMessage);
 			if (options.verbose) {
 				const errorStack = error instanceof Error ? error.stack : String(error);
 				console.error(errorStack);
@@ -160,8 +164,8 @@ program
 				source: options.source,
 				manualsDir: options.manualsDir,
 				catalogDir: options.catalogDir,
-				concurrency: parseInt(options.concurrency, 10),
-				delayMs: parseInt(options.delay, 10),
+				concurrency: Number.parseInt(options.concurrency, 10),
+				delayMs: Number.parseInt(options.delay, 10),
 				dryRun: options.dryRun,
 				verbose: options.verbose,
 			});
@@ -175,10 +179,10 @@ program
 
 			if (result.errors.length > 0 && result.errors.length <= 10) {
 				console.log("\nErrors:");
-				result.errors.forEach((error) => console.log(`  - ${error}`));
+				for (const error of result.errors) console.log(`  - ${error}`);
 			} else if (result.errors.length > 10) {
 				console.log(`\n${result.errors.length} errors occurred (showing first 10):`);
-				result.errors.slice(0, 10).forEach((error) => console.log(`  - ${error}`));
+				for (const error of result.errors.slice(0, 10)) console.log(`  - ${error}`);
 			}
 
 			process.exit(result.failed === 0 ? 0 : 1);
@@ -241,9 +245,9 @@ program
 				dryRun: options.dryRun,
 				resume: options.resume,
 				verbose: options.verbose,
-				retries: parseInt(options.retries, 10),
-				delayMs: parseFloat(options.delay) * 1000,
-				rateLimitDelayMs: parseFloat(options.rateLimitDelay) * 1000,
+				retries: Number.parseInt(options.retries, 10),
+				delayMs: Number.parseFloat(options.delay) * 1000,
+				rateLimitDelayMs: Number.parseFloat(options.rateLimitDelay) * 1000,
 				accessKey,
 				secretKey,
 				output: options.output,
@@ -268,7 +272,7 @@ program
 
 			if (result.errors.length > 0 && result.errors.length <= 10) {
 				console.log("\nErrors:");
-				result.errors.forEach((error) => console.log(`  - ${error}`));
+				for (const error of result.errors) console.log(`  - ${error}`);
 			} else if (result.errors.length > 10) {
 				console.log(`\n${result.errors.length} errors (see results file for details)`);
 			}
@@ -329,7 +333,7 @@ program
 
 				console.log("Failed by error type:");
 				for (const [error, count] of Object.entries(errorGroups).sort((a, b) => b[1] - a[1])) {
-					console.log(`  ${count}x: ${error.substring(0, 80)}`);
+					console.log(`  ${count}x: ${error.slice(0, 80)}`);
 				}
 				console.log("");
 
@@ -342,7 +346,7 @@ program
 
 			// Show failed URLs if requested
 			if (options.showFailed && checkpoint.failedSubmissions?.length > 0) {
-				const limit = parseInt(options.limit, 10);
+				const limit = Number.parseInt(options.limit, 10);
 				console.log(`Failed URLs (showing ${Math.min(limit, checkpoint.failedSubmissions.length)} of ${checkpoint.failedSubmissions.length}):`);
 				for (const sub of checkpoint.failedSubmissions.slice(0, limit)) {
 					console.log(`  [${sub.sourceType || "manual"}:${sub.itemId || sub.manualId}] ${sub.field}: ${sub.url}`);
@@ -355,7 +359,7 @@ program
 
 			// Show successful URLs if requested
 			if (options.showSuccessful && checkpoint.successfulSubmissions?.length > 0) {
-				const limit = parseInt(options.limit, 10);
+				const limit = Number.parseInt(options.limit, 10);
 				console.log(`Successful URLs (showing ${Math.min(limit, checkpoint.successfulSubmissions.length)} of ${checkpoint.successfulSubmissions.length}):`);
 				for (const sub of checkpoint.successfulSubmissions.slice(0, limit)) {
 					console.log(`  [${sub.sourceType || "manual"}:${sub.itemId || sub.manualId}] ${sub.field}: ${sub.url}`);
@@ -370,7 +374,7 @@ program
 			if (options.exportFailed && checkpoint.failedSubmissions?.length > 0) {
 				const exportPath = resolve(process.cwd(), options.exportFailed);
 				const failedUrls = checkpoint.failedSubmissions.map((sub: { url: string }) => sub.url);
-				const { writeFileSync } = await import("fs");
+				const { writeFileSync } = await import("node:fs");
 				writeFileSync(exportPath, failedUrls.join("\n"), "utf8");
 				console.log(`Exported ${failedUrls.length} failed URLs to ${exportPath}`);
 			}
@@ -397,7 +401,7 @@ program
 	.action(async (options) => {
 		try {
 			const { runUnification, printStats } = await import("../unify/unifier.js");
-			const { resolve } = await import("path");
+			const { resolve } = await import("node:path");
 
 			const dataDir = resolve(process.cwd(), options.dataDir);
 			const outputDir = resolve(process.cwd(), options.output);
@@ -412,8 +416,8 @@ program
 
 			const stats = await runUnification(dataDir, {
 				thresholds: {
-					autoAccept: parseFloat(options.minConfidence),
-					reviewCutoff: parseFloat(options.reviewThreshold),
+					autoAccept: Number.parseFloat(options.minConfidence),
+					reviewCutoff: Number.parseFloat(options.reviewThreshold),
 				},
 				dryRun: options.dryRun,
 				outputDir,
@@ -447,8 +451,8 @@ program
 				"Web scraping with caching",
 				"Data export functionality",
 				"Progress tracking",
-				"Error handling and retries"
-			]
+				"Error handling and retries",
+			],
 		}, null, 2));
 	});
 

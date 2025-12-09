@@ -3,7 +3,6 @@
  * Extracts structured product data from Bandai Hobby catalog pages
  */
 
-import * as cheerio from 'cheerio';
 import type {
 	CatalogItem,
 	CatalogPrice,
@@ -11,8 +10,9 @@ import type {
 	CatalogBrand,
 	CatalogSeries,
 	CatalogCategory,
-	CatalogRelatedProduct
-} from '@hobby-ninja/types/catalog';
+	CatalogRelatedProduct,
+} from "@hobby-ninja/types/catalog";
+import * as cheerio from "cheerio";
 
 export interface ParseResult {
 	success: boolean;
@@ -27,7 +27,7 @@ export class BandaiCatalogParser {
 
 			const name = this.extractName($);
 			if (!name) {
-				return { success: false, error: 'Could not extract product name' };
+				return { success: false, error: "Could not extract product name" };
 			}
 
 			const item: CatalogItem = {
@@ -46,55 +46,55 @@ export class BandaiCatalogParser {
 				images: this.extractImages($),
 				relatedProducts: this.extractRelatedProducts($),
 				sourceUrl,
-				extractedAt: new Date().toISOString()
+				extractedAt: new Date().toISOString(),
 			};
 
 			return { success: true, data: item };
 		} catch (error) {
 			return {
 				success: false,
-				error: error instanceof Error ? error.message : String(error)
+				error: error instanceof Error ? error.message : String(error),
 			};
 		}
 	}
 
 	private extractName($: cheerio.CheerioAPI): string | undefined {
-		return $('h1.p-heading__h1-product').first().text().trim() || undefined;
+		return $("h1.p-heading__h1-product").first().text().trim() || undefined;
 	}
 
 	private extractPrice($: cheerio.CheerioAPI): CatalogPrice | undefined {
 		const priceLabel = $('dt.pg-products__label:contains("価格")');
-		const priceText = priceLabel.next('dd.pg-products__labelTxt').text().trim();
+		const priceText = priceLabel.next("dd.pg-products__labelTxt").text().trim();
 
 		if (!priceText) return undefined;
 
 		// Parse "1,650 円(税10%込)" format
-		const amountMatch = priceText.match(/([0-9,]+)\s*円/);
-		const taxMatch = priceText.match(/税(\d+)%込/);
+		const amountMatch = /([0-9,]+)\s*円/.exec(priceText);
+		const taxMatch = /税(\d+)%込/.exec(priceText);
 
 		const amountStr = amountMatch?.[1];
 		if (!amountStr) return undefined;
 
-		const amount = Number.parseInt(amountStr.replace(/,/g, ''), 10);
+		const amount = Number.parseInt(amountStr.replaceAll(",", ""), 10);
 		const taxStr = taxMatch?.[1];
 		const taxRate = taxStr ? Number.parseInt(taxStr, 10) : 10;
 
 		return {
 			amount,
-			currency: 'JPY',
+			currency: "JPY",
 			taxIncluded: true,
-			taxRate
+			taxRate,
 		};
 	}
 
 	private extractReleaseDate($: cheerio.CheerioAPI): CatalogReleaseDate | undefined {
 		const dateLabel = $('dt.pg-products__label:contains("発売日")');
-		const dateText = dateLabel.next('dd.pg-products__labelTxt').text().trim();
+		const dateText = dateLabel.next("dd.pg-products__labelTxt").text().trim();
 
 		if (!dateText) return undefined;
 
 		// Parse "2017年05月20日 (土)" format
-		const match = dateText.match(/(\d{4})年(\d{2})月(\d{2})日/);
+		const match = /(\d{4})年(\d{2})月(\d{2})日/.exec(dateText);
 		const yearStr = match?.[1];
 		const monthStr = match?.[2];
 		const dayStr = match?.[3];
@@ -106,18 +106,18 @@ export class BandaiCatalogParser {
 			ja: dateText,
 			year: Number.parseInt(yearStr, 10),
 			month: Number.parseInt(monthStr, 10),
-			day: Number.parseInt(dayStr, 10)
+			day: Number.parseInt(dayStr, 10),
 		};
 	}
 
 	private extractTargetAge($: cheerio.CheerioAPI): number | undefined {
 		const ageLabel = $('dt.pg-products__label:contains("対象年齢")');
-		const ageText = ageLabel.next('dd.pg-products__labelTxt').text().trim();
+		const ageText = ageLabel.next("dd.pg-products__labelTxt").text().trim();
 
 		if (!ageText) return undefined;
 
 		// Parse "8歳以上" format
-		const match = ageText.match(/(\d+)歳/);
+		const match = /(\d+)歳/.exec(ageText);
 		const ageStr = match?.[1];
 		return ageStr ? Number.parseInt(ageStr, 10) : undefined;
 	}
@@ -129,7 +129,7 @@ export class BandaiCatalogParser {
 
 		return {
 			ja: seriesLink.text().trim(),
-			url: seriesLink.attr('href')
+			url: seriesLink.attr("href"),
 		};
 	}
 
@@ -141,14 +141,14 @@ export class BandaiCatalogParser {
 			const $el = $(el);
 			brands.push({
 				ja: $el.text().trim(),
-				url: $el.attr('href')
+				url: $el.attr("href"),
 			});
 		});
 
 		// Also check the card links section for brand logos
 		$('.p-card__links a[href*="/brand/"] .p-card__flatTit').each((_, el) => {
 			const text = $(el).text().trim();
-			const url = $(el).closest('a').attr('href');
+			const url = $(el).closest("a").attr("href");
 			if (text && !brands.some(b => b.ja === text)) {
 				brands.push({ ja: text, url });
 			}
@@ -162,17 +162,17 @@ export class BandaiCatalogParser {
 
 		// Categories are typically the second item in breadcrumbs (after TOP)
 		// Look for gunpla, characterplastic, etc.
-		$('ul.p-breadcrumb').first().find('a').each((i, el) => {
+		$("ul.p-breadcrumb").first().find("a").each((i, el) => {
 			if (i === 0) return; // Skip TOP link
 
 			const $el = $(el);
-			const href = $el.attr('href') || '';
+			const href = $el.attr("href") || "";
 
 			// Only include category-level links (not brand or series)
-			if (!href.includes('/brand/') && !href.includes('/series/') && !href.includes('/item/')) {
+			if (!href.includes("/brand/") && !href.includes("/series/") && !href.includes("/item/")) {
 				categories.push({
 					ja: $el.text().trim(),
-					url: href
+					url: href,
 				});
 			}
 		});
@@ -182,26 +182,26 @@ export class BandaiCatalogParser {
 
 	private extractScale(name: string): string | undefined {
 		// Extract scale from product name like "HGUC 1/144 バーザム"
-		const match = name.match(/1\/(\d+)/);
+		const match = /1\/(\d+)/.exec(name);
 		const scaleNum = match?.[1];
 		return scaleNum ? `1/${scaleNum}` : undefined;
 	}
 
 	private extractDescription($: cheerio.CheerioAPI): Array<{ ja: string }> {
-		const descriptionEl = $('.pg-products__instructionTxt p').first();
+		const descriptionEl = $(".pg-products__instructionTxt p").first();
 		const text = descriptionEl.text().trim();
 
 		if (!text) return [];
 
 		// Clean up the description - remove accessories/contents sections
 		const cleanTextPart = text.split(/【付属品】|【商品内容】/)[0];
-		const cleanText = cleanTextPart?.trim() ?? '';
+		const cleanText = cleanTextPart?.trim() ?? "";
 
 		if (!cleanText) return [];
 
 		// Split by newline and return as array of localized strings
 		return cleanText
-			.split('\n')
+			.split("\n")
 			.map(line => line.trim())
 			.filter(line => line.length > 0)
 			.map(line => ({ ja: line }));
@@ -209,16 +209,16 @@ export class BandaiCatalogParser {
 
 	private extractAccessories($: cheerio.CheerioAPI): Array<{ ja: string }> {
 		const accessories: Array<{ ja: string }> = [];
-		const descText = $('.pg-products__instructionTxt p').text();
+		const descText = $(".pg-products__instructionTxt p").text();
 
 		// Find text between 【付属品】 and 【商品内容】 or end
-		const accessoriesMatch = descText.match(/【付属品】([\s\S]*?)(?:【商品内容】|$)/);
+		const accessoriesMatch = /【付属品】([\s\S]*?)(?:【商品内容】|$)/.exec(descText);
 		const accessoriesText = accessoriesMatch?.[1];
 		if (accessoriesText) {
 			// Split on newlines or ■ at start of line, keep items intact
 			const items = accessoriesText
 				.split(/\n■|^■/m)
-				.map(s => s.replace(/^■/, '').trim())
+				.map(s => s.replace(/^■/, "").trim())
 				.filter(s => s.length > 0);
 
 			for (const item of items) {
@@ -231,16 +231,16 @@ export class BandaiCatalogParser {
 
 	private extractContents($: cheerio.CheerioAPI): Array<{ ja: string }> {
 		const contents: Array<{ ja: string }> = [];
-		const descText = $('.pg-products__instructionTxt p').text();
+		const descText = $(".pg-products__instructionTxt p").text();
 
 		// Find text after 【商品内容】
-		const contentsMatch = descText.match(/【商品内容】([\s\S]*?)$/);
+		const contentsMatch = /【商品内容】([\s\S]*?)$/.exec(descText);
 		const contentsText = contentsMatch?.[1];
 		if (contentsText) {
 			// Split on newlines or ■ at start of line, keep items intact
 			const items = contentsText
 				.split(/\n■|^■/m)
-				.map(s => s.replace(/^■/, '').trim())
+				.map(s => s.replace(/^■/, "").trim())
 				.filter(s => s.length > 0);
 
 			for (const item of items) {
@@ -257,17 +257,17 @@ export class BandaiCatalogParser {
 
 		// Product images from the slider
 		$('.pg-products__sliderMain .swiper-slide a[data-fancybox="images"] img').each((_, el) => {
-			const src = $(el).attr('src');
-			if (src && !seen.has(src) && !src.includes('common/')) {
+			const src = $(el).attr("src");
+			if (src && !seen.has(src) && !src.includes("common/")) {
 				seen.add(src);
 				images.push(src);
 			}
 		});
 
 		// Also check thumbnail images
-		$('.pg-products__sliderThumbnail .swiper-slide img').each((_, el) => {
-			const src = $(el).attr('src');
-			if (src && !seen.has(src) && !src.includes('common/')) {
+		$(".pg-products__sliderThumbnail .swiper-slide img").each((_, el) => {
+			const src = $(el).attr("src");
+			if (src && !seen.has(src) && !src.includes("common/")) {
 				seen.add(src);
 				images.push(src);
 			}
@@ -281,25 +281,25 @@ export class BandaiCatalogParser {
 
 		// Related products are in p-card__wrap following h2:contains("関連商品")
 		// Find the section containing "関連商品" and then its card links
-		$('h2.p-heading__h2:contains("関連商品")').next('.p-card__wrap').find('a[href*="/item/"]').each((_, el) => {
+		$('h2.p-heading__h2:contains("関連商品")').next(".p-card__wrap").find('a[href*="/item/"]').each((_, el) => {
 			const $el = $(el);
-			const href = $el.attr('href') || '';
+			const href = $el.attr("href") || "";
 
 			// Extract ID from URL like "/item/01_5468/"
-			const idMatch = href.match(/\/item\/([^/]+)\/?/);
+			const idMatch = /\/item\/([^/]+)\/?/.exec(href);
 			if (!idMatch) return;
 
 			const id = idMatch[1];
 			if (!id) return;
-			const name = $el.find('.p-card__tit').text().trim();
-			const imageUrl = $el.find('.p-card__img img').attr('src');
+			const name = $el.find(".p-card__tit").text().trim();
+			const imageUrl = $el.find(".p-card__img img").attr("src");
 
 			if (name) {
 				related.push({
 					id,
 					name: { ja: name },
 					url: href,
-					imageUrl
+					imageUrl,
 				});
 			}
 		});

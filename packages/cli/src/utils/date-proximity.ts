@@ -26,7 +26,7 @@ export function dateToTimestamp(date: UnifiedReleaseDate): number {
  */
 export function dateDifferenceInDays(
 	date1: UnifiedReleaseDate,
-	date2: UnifiedReleaseDate
+	date2: UnifiedReleaseDate,
 ): number {
 	const ts1 = dateToTimestamp(date1);
 	const ts2 = dateToTimestamp(date2);
@@ -41,7 +41,7 @@ export function dateDifferenceInDays(
 export function datesWithinDays(
 	date1?: UnifiedReleaseDate,
 	date2?: UnifiedReleaseDate,
-	maxDays: number = 90
+	maxDays = 90,
 ): boolean {
 	if (!date1 || !date2) return false;
 	if (!date1.year || !date2.year) return false;
@@ -60,7 +60,7 @@ export function datesWithinDays(
 export function dateProximityScore(
 	date1?: UnifiedReleaseDate,
 	date2?: UnifiedReleaseDate,
-	halfLife: number = 60
+	halfLife = 60,
 ): number {
 	if (!date1 || !date2) return 0.5; // Unknown = neutral
 	if (!date1.year || !date2.year) return 0.5;
@@ -76,10 +76,10 @@ export function dateProximityScore(
  * Handles formats like "2017年05月20日 (土)" or "2002年11月16日"
  */
 export function parseJapaneseDate(
-	dateStr: string
+	dateStr: string,
 ): UnifiedReleaseDate | undefined {
 	// Match year, month, day pattern
-	const match = dateStr.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
+	const match = /(\d{4})年(\d{1,2})月(\d{1,2})日/.exec(dateStr);
 	if (match?.[1] && match[2] && match[3]) {
 		return {
 			year: Number.parseInt(match[1], 10),
@@ -89,7 +89,7 @@ export function parseJapaneseDate(
 	}
 
 	// Match year and month only
-	const yearMonthMatch = dateStr.match(/(\d{4})年(\d{1,2})月/);
+	const yearMonthMatch = /(\d{4})年(\d{1,2})月/.exec(dateStr);
 	if (yearMonthMatch?.[1] && yearMonthMatch[2]) {
 		return {
 			year: Number.parseInt(yearMonthMatch[1], 10),
@@ -98,7 +98,7 @@ export function parseJapaneseDate(
 	}
 
 	// Match year only
-	const yearMatch = dateStr.match(/(\d{4})年/);
+	const yearMatch = /(\d{4})年/.exec(dateStr);
 	if (yearMatch?.[1]) {
 		return {
 			year: Number.parseInt(yearMatch[1], 10),

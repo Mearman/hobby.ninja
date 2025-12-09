@@ -6,10 +6,10 @@
  * and catalog items (images array).
  */
 
-import { promises as fs } from 'node:fs';
-import { join, basename } from 'node:path';
+import { promises as fs } from "node:fs";
+import { join, basename } from "node:path";
 
-export type DownloadSource = 'all' | 'manuals' | 'catalog';
+export type DownloadSource = "all" | "manuals" | "catalog";
 
 export interface DownloadOptions {
 	source: DownloadSource;
@@ -43,11 +43,11 @@ interface CatalogItemJson {
 }
 
 const HEADERS = {
-	'User-Agent':
-		'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-	Accept: 'image/webp,image/apng,image/*,*/*;q=0.8',
-	'Accept-Language': 'en-US,en;q=0.9,ja;q=0.8',
-	Referer: 'https://bandai-hobby.net/',
+	"User-Agent":
+		"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+	Accept: "image/webp,image/apng,image/*,*/*;q=0.8",
+	"Accept-Language": "en-US,en;q=0.9,ja;q=0.8",
+	Referer: "https://bandai-hobby.net/",
 };
 
 async function fileExists(path: string): Promise<boolean> {
@@ -62,7 +62,7 @@ async function fileExists(path: string): Promise<boolean> {
 async function downloadFile(
 	url: string,
 	destPath: string,
-	verbose: boolean
+	verbose: boolean,
 ): Promise<{ downloaded: boolean; error?: string }> {
 	if (await fileExists(destPath)) {
 		if (verbose) {
@@ -92,14 +92,14 @@ async function downloadFile(
 function getImageExtension(url: string): string {
 	try {
 		const urlPath = new URL(url).pathname;
-		const ext = urlPath.split('.').pop()?.toLowerCase();
-		if (ext && ['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext)) {
+		const ext = urlPath.split(".").pop()?.toLowerCase();
+		if (ext && ["jpg", "jpeg", "png", "gif", "webp"].includes(ext)) {
 			return ext;
 		}
 	} catch {
 		// Invalid URL, use default
 	}
-	return 'jpg';
+	return "jpg";
 }
 
 function sleep(ms: number): Promise<void> {
@@ -109,7 +109,7 @@ function sleep(ms: number): Promise<void> {
 async function downloadManualAssets(
 	manualDir: string,
 	manual: ManualJson,
-	options: DownloadOptions
+	options: DownloadOptions,
 ): Promise<{ downloaded: number; skipped: number; failed: number; errors: string[] }> {
 	const stats = { downloaded: 0, skipped: 0, failed: 0, errors: [] as string[] };
 
@@ -180,7 +180,7 @@ async function downloadManualAssets(
 async function downloadCatalogAssets(
 	itemDir: string,
 	item: CatalogItemJson,
-	options: DownloadOptions
+	options: DownloadOptions,
 ): Promise<{ downloaded: number; skipped: number; failed: number; errors: string[] }> {
 	const stats = { downloaded: 0, skipped: 0, failed: 0, errors: [] as string[] };
 
@@ -249,7 +249,7 @@ async function processManuals(options: DownloadOptions): Promise<DownloadResult>
 					const jsonPath = join(manualDir, `${id}.json`);
 
 					try {
-						const content = await fs.readFile(jsonPath, 'utf-8');
+						const content = await fs.readFile(jsonPath, "utf8");
 						const manual: ManualJson = JSON.parse(content);
 
 						if (options.verbose) {
@@ -261,7 +261,7 @@ async function processManuals(options: DownloadOptions): Promise<DownloadResult>
 						const msg = error instanceof Error ? error.message : String(error);
 						return { downloaded: 0, skipped: 0, failed: 1, errors: [`${id}: ${msg}`] };
 					}
-				})
+				}),
 			);
 
 			for (const batchResult of batchResults) {
@@ -274,7 +274,7 @@ async function processManuals(options: DownloadOptions): Promise<DownloadResult>
 			const processed = Math.min(i + options.concurrency, ids.length);
 			if (processed % 100 === 0 || processed === ids.length) {
 				console.log(
-					`Progress: ${processed}/${ids.length} | Downloaded: ${result.downloaded} | Skipped: ${result.skipped} | Failed: ${result.failed}`
+					`Progress: ${processed}/${ids.length} | Downloaded: ${result.downloaded} | Skipped: ${result.skipped} | Failed: ${result.failed}`,
 				);
 			}
 
@@ -320,7 +320,7 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 					const jsonPath = join(itemDir, `${id}.json`);
 
 					try {
-						const content = await fs.readFile(jsonPath, 'utf-8');
+						const content = await fs.readFile(jsonPath, "utf8");
 						const item: CatalogItemJson = JSON.parse(content);
 
 						if (options.verbose) {
@@ -332,7 +332,7 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 						const msg = error instanceof Error ? error.message : String(error);
 						return { downloaded: 0, skipped: 0, failed: 1, errors: [`${id}: ${msg}`] };
 					}
-				})
+				}),
 			);
 
 			for (const batchResult of batchResults) {
@@ -345,7 +345,7 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 			const processed = Math.min(i + options.concurrency, ids.length);
 			if (processed % 100 === 0 || processed === ids.length) {
 				console.log(
-					`Progress: ${processed}/${ids.length} | Downloaded: ${result.downloaded} | Skipped: ${result.skipped} | Failed: ${result.failed}`
+					`Progress: ${processed}/${ids.length} | Downloaded: ${result.downloaded} | Skipped: ${result.skipped} | Failed: ${result.failed}`,
 				);
 			}
 
@@ -374,8 +374,8 @@ export async function downloadAssets(options: DownloadOptions): Promise<Download
 
 	const startTime = Date.now();
 
-	if (options.source === 'all' || options.source === 'manuals') {
-		console.log('\n--- Downloading Manual Assets ---');
+	if (options.source === "all" || options.source === "manuals") {
+		console.log("\n--- Downloading Manual Assets ---");
 		const manualsResult = await processManuals(options);
 		combinedResult.totalItems += manualsResult.totalItems;
 		combinedResult.downloaded += manualsResult.downloaded;
@@ -384,8 +384,8 @@ export async function downloadAssets(options: DownloadOptions): Promise<Download
 		combinedResult.errors.push(...manualsResult.errors);
 	}
 
-	if (options.source === 'all' || options.source === 'catalog') {
-		console.log('\n--- Downloading Catalog Assets ---');
+	if (options.source === "all" || options.source === "catalog") {
+		console.log("\n--- Downloading Catalog Assets ---");
 		const catalogResult = await processCatalog(options);
 		combinedResult.totalItems += catalogResult.totalItems;
 		combinedResult.downloaded += catalogResult.downloaded;

@@ -1,13 +1,14 @@
-import { SimpleCatalogScraper, type SimpleCatalogResult } from "./simple-catalog-scraper";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { writeFile, mkdir } from "node:fs/promises";
+import { join } from "node:path";
+
 import { BandaiCatalogParser } from "./bandai-catalog-parser";
 import { CatalogTranslator } from "./catalog-translator";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
-import { writeFile, mkdir } from 'fs/promises';
-import { join } from 'path';
+import { SimpleCatalogScraper, type SimpleCatalogResult } from "./simple-catalog-scraper";
 import type { CatalogDiscoveryOptions, CatalogDiscoveryResult, CatalogRangeStats, CatalogIndex, CatalogIndexEntry } from "./types/catalog-discovery";
 
 // Fast HTTP client for discovery phase
-const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+const USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
 
 // Read only 2KB to extract title (95% bandwidth reduction from ~47KB full page)
 const PARTIAL_READ_BYTES = 2048;
@@ -22,8 +23,8 @@ async function quickCheckUrl(url: string): Promise<{ isValid: boolean; title?: s
 
 	try {
 		const response = await fetch(url, {
-			headers: { 'User-Agent': USER_AGENT },
-			signal: controller.signal
+			headers: { "User-Agent": USER_AGENT },
+			signal: controller.signal,
 		});
 
 		if (!response.ok) {
@@ -37,7 +38,7 @@ async function quickCheckUrl(url: string): Promise<{ isValid: boolean; title?: s
 		}
 
 		const decoder = new TextDecoder();
-		let html = '';
+		let html = "";
 		let bytesRead = 0;
 
 		// Read chunks until we have enough to find title or hit our limit
@@ -49,12 +50,12 @@ async function quickCheckUrl(url: string): Promise<{ isValid: boolean; title?: s
 			bytesRead += value.length;
 
 			// Check if we have the complete title tag yet
-			const titleMatch = html.match(/<title>([^<]+)<\/title>/i);
+			const titleMatch = /<title>([^<]+)<\/title>/i.exec(html);
 			const matchedTitle = titleMatch?.[1];
 			if (matchedTitle) {
 				// Found title - abort the connection and return result
 				controller.abort();
-				const isValid = !matchedTitle.includes('404');
+				const isValid = !matchedTitle.includes("404");
 				return { isValid, title: matchedTitle };
 			}
 		}
@@ -63,17 +64,17 @@ async function quickCheckUrl(url: string): Promise<{ isValid: boolean; title?: s
 		controller.abort();
 
 		// Check for title in what we read
-		const titleMatch = html.match(/<title>([^<]+)<\/title>/i);
-		const title = titleMatch?.[1] || '';
+		const titleMatch = /<title>([^<]+)<\/title>/i.exec(html);
+		const title = titleMatch?.[1] || "";
 
-		if (title.includes('404')) {
+		if (title.includes("404")) {
 			return { isValid: false, title };
 		}
 
 		return { isValid: true, title };
 	} catch (error) {
 		// AbortError is expected when we abort after finding title
-		if (error instanceof Error && error.name === 'AbortError') {
+		if (error instanceof Error && error.name === "AbortError") {
 			return { isValid: false };
 		}
 		// Network error - treat as invalid
@@ -87,7 +88,7 @@ async function quickCheckUrl(url: string): Promise<{ isValid: boolean; title?: s
  */
 export async function discoverValidIds(
 	ranges: string[],
-	_options: CatalogDiscoveryOptions
+	_options: CatalogDiscoveryOptions,
 ): Promise<{ validIds: string[]; invalidIds: string[]; skippedIds: string[] }> {
 	const validIds: string[] = [];
 	const invalidIds: string[] = [];
@@ -140,7 +141,7 @@ export async function discoverValidIds(
 					const url = buildCatalogUrl(range);
 					const result = await quickCheckUrl(url);
 					return { range, result };
-				})
+				}),
 			);
 
 			// Process results (no per-item logging)
@@ -171,7 +172,7 @@ export async function discoverValidIds(
 
 // Module-level index state
 let catalogIndex: CatalogIndex = createEmptyIndex();
-let indexPath: string = '';
+let indexPath = "";
 
 /**
  * Creates an empty catalog index
@@ -182,7 +183,7 @@ function createEmptyIndex(): CatalogIndex {
 		invalidRanges: [],
 		invalidSingles: [],
 		totalChecked: 0,
-		lastUpdated: new Date().toISOString()
+		lastUpdated: new Date().toISOString(),
 	};
 }
 
@@ -190,11 +191,11 @@ function createEmptyIndex(): CatalogIndex {
  * Loads the catalog index from disk
  */
 export function loadCatalogIndex(outputDir: string): CatalogIndex {
-	indexPath = join(outputDir, 'index.json');
+	indexPath = join(outputDir, "index.json");
 
 	try {
 		if (existsSync(indexPath)) {
-			const data = readFileSync(indexPath, 'utf8');
+			const data = readFileSync(indexPath, "utf8");
 			catalogIndex = JSON.parse(data);
 			return catalogIndex;
 		}
@@ -214,7 +215,7 @@ export function saveCatalogIndex(): void {
 
 	try {
 		catalogIndex.lastUpdated = new Date().toISOString();
-		writeFileSync(indexPath, JSON.stringify(catalogIndex, null, 2), 'utf8');
+		writeFileSync(indexPath, JSON.stringify(catalogIndex, null, 2), "utf8");
 	} catch (error) {
 		console.warn(`⚠️  Failed to save index: ${error}`);
 	}
@@ -248,12 +249,12 @@ export function isIdIndexed(id: string): { indexed: boolean; isValid?: boolean; 
  * Compare two catalog IDs (e.g., "01_1000" vs "01_1001")
  */
 function compareIds(a: string, b: string): number {
-	const partsA = a.split('_');
-	const partsB = b.split('_');
-	const prefixA = partsA[0] ?? '';
-	const prefixB = partsB[0] ?? '';
-	const suffixA = partsA[1] ?? '0';
-	const suffixB = partsB[1] ?? '0';
+	const partsA = a.split("_");
+	const partsB = b.split("_");
+	const prefixA = partsA[0] ?? "";
+	const prefixB = partsB[0] ?? "";
+	const suffixA = partsA[1] ?? "0";
+	const suffixB = partsB[1] ?? "0";
 
 	if (prefixA !== prefixB) {
 		return prefixA.localeCompare(prefixB);
@@ -275,7 +276,7 @@ export function recordValidId(id: string, hasContent: boolean, productName?: str
 		hasContent,
 		lastChecked: new Date().toISOString(),
 		hasFile: hasContent, // hasFile = true only if we have content
-		productName
+		productName,
 	};
 
 	// Remove from invalid lists if present
@@ -321,15 +322,15 @@ export function recordInvalidId(id: string): void {
 export function getIndexStats(): { valid: number; invalid: number; totalChecked: number } {
 	const invalidCount = catalogIndex.invalidSingles.length +
 		catalogIndex.invalidRanges.reduce((sum, r) => {
-			const [, startSuffix = '0'] = r.start.split('_');
-			const [, endSuffix = '0'] = r.end.split('_');
-			return sum + (parseInt(endSuffix) - parseInt(startSuffix) + 1);
+			const [, startSuffix = "0"] = r.start.split("_");
+			const [, endSuffix = "0"] = r.end.split("_");
+			return sum + (Number.parseInt(endSuffix) - Number.parseInt(startSuffix) + 1);
 		}, 0);
 
 	return {
 		valid: Object.keys(catalogIndex.valid).length,
 		invalid: invalidCount,
-		totalChecked: catalogIndex.totalChecked
+		totalChecked: catalogIndex.totalChecked,
 	};
 }
 
@@ -343,7 +344,7 @@ export function generateCatalogRanges(count: number): string[] {
 		// Generate IDs in format 00_0000, 00_0001, 00_0002, etc.
 		// This follows the pattern observed on bandai-hobby.net
 		const id = 0 + i;
-		const formattedId = id.toString().padStart(4, '0');
+		const formattedId = id.toString().padStart(4, "0");
 		ranges.push(`00_${formattedId}`);
 	}
 
@@ -365,7 +366,7 @@ export function buildCatalogUrl(range: string): string {
 export async function processCatalogRange(
 	range: string,
 	options: CatalogDiscoveryOptions,
-	scraper?: SimpleCatalogScraper
+	scraper?: SimpleCatalogScraper,
 ): Promise<{ success: boolean; error?: string; data?: SimpleCatalogResult }> {
 	const ownsScraper = !scraper;
 	const activeScraper = scraper ?? new SimpleCatalogScraper();
@@ -389,7 +390,7 @@ export async function processCatalogRange(
 
 		return {
 			success: true,
-			data: result
+			data: result,
 		};
 
 	} catch (error) {
@@ -401,7 +402,7 @@ export async function processCatalogRange(
 
 		return {
 			success: false,
-			error: `${range}: ${errorMessage}`
+			error: `${range}: ${errorMessage}`,
 		};
 	} finally {
 		// Only cleanup if we created the scraper (not shared)
@@ -438,9 +439,9 @@ export async function processCatalogRanges(ranges: string[], options: CatalogDis
 			const result = await processCatalogRange(range, options);
 
 			rangeStats[range] = {
-				status: result.success ? 'success' : 'error',
+				status: result.success ? "success" : "error",
 				urlCount: result.success ? 1 : 0,
-				error: result.error
+				error: result.error,
 			};
 
 			if (result.success) {
@@ -459,9 +460,9 @@ export async function processCatalogRanges(ranges: string[], options: CatalogDis
 			errors.push(`${range}: ${errorMessage}`);
 
 			rangeStats[range] = {
-				status: 'error',
+				status: "error",
 				urlCount: 0,
-				error: errorMessage
+				error: errorMessage,
 			};
 		}
 	}
@@ -472,7 +473,7 @@ export async function processCatalogRanges(ranges: string[], options: CatalogDis
 		totalUrls: urls.length,
 		urls,
 		errors,
-		rangeStats
+		rangeStats,
 	};
 }
 
@@ -498,10 +499,10 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 	let catalogTranslator: CatalogTranslator | undefined;
 	if (options.translate) {
 		console.log(`🌐 Translation enabled - initializing translation service...`);
-		const translationCacheDir = join(options.outputDir, '..', 'translations');
+		const translationCacheDir = join(options.outputDir, "..", "translations");
 		catalogTranslator = new CatalogTranslator({
 			storeDir: translationCacheDir,
-			verbose: options.verbose
+			verbose: options.verbose,
 		});
 		await catalogTranslator.initialize();
 		console.log(`✅ Translation service ready`);
@@ -520,8 +521,8 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 			totalRanges: options.ranges.length,
 			completedRanges: 0,
 			failedRanges: 0,
-			averageProcessingTime: 0
-		}
+			averageProcessingTime: 0,
+		},
 	};
 
 	// Phase 1: Fast HTTP discovery
@@ -569,7 +570,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 					const catalogResult = catalogParser.parse(
 						processResult.data.html,
 						range,
-						buildCatalogUrl(range)
+						buildCatalogUrl(range),
 					);
 
 					const productName = catalogResult.success && catalogResult.data?.name?.ja
@@ -586,8 +587,8 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 					await mkdir(itemDir, { recursive: true });
 
 					// Write HTML and JSON in parallel
-					const writePromises: Promise<void>[] = [
-						writeFile(join(itemDir, `${range}.html`), processResult.data.html, 'utf8')
+					const writePromises: Array<Promise<void>> = [
+						writeFile(join(itemDir, `${range}.html`), processResult.data.html, "utf8"),
 					];
 
 					if (catalogResult.success && catalogResult.data) {
@@ -607,7 +608,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 						}
 
 						writePromises.push(
-							writeFile(join(itemDir, `${range}.json`), JSON.stringify(catalogResult.data, null, 2), 'utf8')
+							writeFile(join(itemDir, `${range}.json`), JSON.stringify(catalogResult.data, null, 2), "utf8"),
 						);
 					}
 
@@ -672,7 +673,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 		totalRanges: options.ranges.length,
 		completedRanges: result.completedRanges,
 		failedRanges: result.failedRanges,
-		averageProcessingTime: result.processingTime / Math.max(1, options.ranges.length)
+		averageProcessingTime: result.processingTime / Math.max(1, options.ranges.length),
 	};
 
 	console.log(`\n📊 Done! ${finalStats.valid} products found, ${finalStats.invalid} IDs with no page`);

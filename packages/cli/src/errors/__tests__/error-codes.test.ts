@@ -2,99 +2,100 @@
  * Tests for error codes and registry
  */
 
-import { describe, it, expect } from 'vitest';
-import { ErrorCode, ErrorCategory, ErrorRegistry } from '../error-codes.js';
+import { describe, it, expect } from "vitest";
 
-describe('Error Codes', () => {
-  it('should have valid error codes for all categories', () => {
-    const allErrors = ErrorRegistry.getAllErrors();
+import { ErrorCode, ErrorCategory, ErrorRegistry } from "../error-codes.js";
 
-    expect(allErrors.length).toBeGreaterThan(0);
+describe("Error Codes", () => {
+	it("should have valid error codes for all categories", () => {
+		const allErrors = ErrorRegistry.getAllErrors();
 
-    // Check that all errors have required properties
-    allErrors.forEach(error => {
-      expect(error).toHaveProperty('code');
-      expect(error).toHaveProperty('category');
-      expect(error).toHaveProperty('message');
-      expect(error).toHaveProperty('userMessage');
-      expect(error).toHaveProperty('suggestions');
-      expect(error).toHaveProperty('retryable');
-      expect(error).toHaveProperty('severity');
+		expect(allErrors.length).toBeGreaterThan(0);
 
-      expect(error.suggestions).toBeInstanceOf(Array);
-      expect(['low', 'medium', 'high', 'critical']).toContain(error.severity);
-      expect(typeof error.retryable).toBe('boolean');
-    });
-  });
+		// Check that all errors have required properties
+		for (const error of allErrors) {
+			expect(error).toHaveProperty("code");
+			expect(error).toHaveProperty("category");
+			expect(error).toHaveProperty("message");
+			expect(error).toHaveProperty("userMessage");
+			expect(error).toHaveProperty("suggestions");
+			expect(error).toHaveProperty("retryable");
+			expect(error).toHaveProperty("severity");
 
-  it('should retrieve error info by code', () => {
-    const errorInfo = ErrorRegistry.getErrorInfo(ErrorCode.NETWORK_TIMEOUT);
+			expect(error.suggestions).toBeInstanceOf(Array);
+			expect(["low", "medium", "high", "critical"]).toContain(error.severity);
+			expect(typeof error.retryable).toBe("boolean");
+		}
+	});
 
-    expect(errorInfo).toBeDefined();
-    expect(errorInfo!.code).toBe(ErrorCode.NETWORK_TIMEOUT);
-    expect(errorInfo!.category).toBe(ErrorCategory.NETWORK);
-    expect(errorInfo!.message).toContain('timeout');
-    expect(errorInfo!.retryable).toBe(true);
-  });
+	it("should retrieve error info by code", () => {
+		const errorInfo = ErrorRegistry.getErrorInfo(ErrorCode.NETWORK_TIMEOUT);
 
-  it('should return undefined for unknown error code', () => {
-    const errorInfo = ErrorRegistry.getErrorInfo('UNKNOWN_CODE' as ErrorCode);
-    expect(errorInfo).toBeUndefined();
-  });
+		expect(errorInfo).toBeDefined();
+		expect(errorInfo!.code).toBe(ErrorCode.NETWORK_TIMEOUT);
+		expect(errorInfo!.category).toBe(ErrorCategory.NETWORK);
+		expect(errorInfo!.message).toContain("timeout");
+		expect(errorInfo!.retryable).toBe(true);
+	});
 
-  it('should filter errors by category', () => {
-    const networkErrors = ErrorRegistry.getErrorsByCategory(ErrorCategory.NETWORK);
-    const configErrors = ErrorRegistry.getErrorsByCategory(ErrorCategory.CONFIGURATION);
+	it("should return undefined for unknown error code", () => {
+		const errorInfo = ErrorRegistry.getErrorInfo("UNKNOWN_CODE" as ErrorCode);
+		expect(errorInfo).toBeUndefined();
+	});
 
-    expect(networkErrors.length).toBeGreaterThan(0);
-    expect(configErrors.length).toBeGreaterThan(0);
+	it("should filter errors by category", () => {
+		const networkErrors = ErrorRegistry.getErrorsByCategory(ErrorCategory.NETWORK);
+		const configErrors = ErrorRegistry.getErrorsByCategory(ErrorCategory.CONFIGURATION);
 
-    // Verify all returned errors belong to the correct category
-    networkErrors.forEach(error => {
-      expect(error.category).toBe(ErrorCategory.NETWORK);
-    });
+		expect(networkErrors.length).toBeGreaterThan(0);
+		expect(configErrors.length).toBeGreaterThan(0);
 
-    configErrors.forEach(error => {
-      expect(error.category).toBe(ErrorCategory.CONFIGURATION);
-    });
-  });
+		// Verify all returned errors belong to the correct category
+		for (const error of networkErrors) {
+			expect(error.category).toBe(ErrorCategory.NETWORK);
+		}
 
-  it('should register custom errors', () => {
-    const customError = {
-      code: 'CUSTOM_001' as ErrorCode,
-      category: ErrorCategory.SYSTEM,
-      message: 'Custom error message',
-      userMessage: 'Custom user message',
-      suggestions: ['Suggestion 1', 'Suggestion 2'],
-      retryable: false,
-      severity: 'medium' as const
-    };
+		for (const error of configErrors) {
+			expect(error.category).toBe(ErrorCategory.CONFIGURATION);
+		}
+	});
 
-    ErrorRegistry.registerCustom(customError);
+	it("should register custom errors", () => {
+		const customError = {
+			code: "CUSTOM_001" as ErrorCode,
+			category: ErrorCategory.SYSTEM,
+			message: "Custom error message",
+			userMessage: "Custom user message",
+			suggestions: ["Suggestion 1", "Suggestion 2"],
+			retryable: false,
+			severity: "medium" as const,
+		};
 
-    const retrievedError = ErrorRegistry.getErrorInfo('CUSTOM_001' as ErrorCode);
-    expect(retrievedError).toEqual(customError);
-  });
+		ErrorRegistry.registerCustom(customError);
 
-  it('should have proper error code format', () => {
-    const allErrors = ErrorRegistry.getAllErrors();
+		const retrievedError = ErrorRegistry.getErrorInfo("CUSTOM_001" as ErrorCode);
+		expect(retrievedError).toEqual(customError);
+	});
 
-    allErrors.forEach(error => {
-      const codePattern = /^[A-Z]+_\d{3}$/;
-      expect(codePattern.test(error.code)).toBe(true);
-    });
-  });
+	it("should have proper error code format", () => {
+		const allErrors = ErrorRegistry.getAllErrors();
 
-  it('should provide meaningful suggestions for retryable errors', () => {
-    const retryableErrors = ErrorRegistry.getAllErrors().filter(error => error.retryable);
+		for (const error of allErrors) {
+			const codePattern = /^[A-Z]+_\d{3}$/;
+			expect(codePattern.test(error.code)).toBe(true);
+		}
+	});
 
-    retryableErrors.forEach(error => {
-      expect(error.suggestions.length).toBeGreaterThan(0);
-      // Suggestions should be actionable
-      error.suggestions.forEach(suggestion => {
-        expect(typeof suggestion).toBe('string');
-        expect(suggestion.trim().length).toBeGreaterThan(0);
-      });
-    });
-  });
+	it("should provide meaningful suggestions for retryable errors", () => {
+		const retryableErrors = ErrorRegistry.getAllErrors().filter(error => error.retryable);
+
+		for (const error of retryableErrors) {
+			expect(error.suggestions.length).toBeGreaterThan(0);
+			// Suggestions should be actionable
+			for (const suggestion of error.suggestions) {
+				expect(typeof suggestion).toBe("string");
+				expect(suggestion.trim().length).toBeGreaterThan(0);
+			}
+		}
+	});
 });

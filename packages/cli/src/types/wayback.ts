@@ -1,6 +1,6 @@
-export type UrlField = 'sourceUrl' | 'pdfUrl' | 'productImage' | 'supplementaryPdfUrl' | 'images';
+export type UrlField = "sourceUrl" | "pdfUrl" | "productImage" | "supplementaryPdfUrl" | "images";
 
-export type WaybackSource = 'all' | 'manuals' | 'catalog';
+export type WaybackSource = "all" | "manuals" | "catalog";
 
 export interface WaybackOptions {
 	source: WaybackSource;
@@ -24,8 +24,8 @@ export interface WaybackSubmission {
 	url: string;
 	field: UrlField;
 	itemId: string;
-	sourceType: 'manual' | 'catalog';
-	status: 'pending' | 'success' | 'failed' | 'skipped' | 'requeued';
+	sourceType: "manual" | "catalog";
+	status: "pending" | "success" | "failed" | "skipped" | "requeued";
 	archiveUrl?: string;
 	error?: string;
 	retryCount: number;
@@ -36,7 +36,7 @@ export interface WaybackSubmission {
 		age: number;
 		url: string;
 	};
-	ageCheckResult?: 'too_new' | 'needs_update' | 'not_archived';
+	ageCheckResult?: "too_new" | "needs_update" | "not_archived";
 	/** Whether the age check came from local cache */
 	ageCheckFromCache?: boolean;
 	/** @deprecated Use itemId instead */
@@ -71,7 +71,7 @@ export interface WaybackResult {
 }
 
 export interface ArchiveAgeCheck {
-	result: 'not_archived' | 'too_new' | 'needs_update';
+	result: "not_archived" | "too_new" | "needs_update";
 	archive?: {
 		timestamp: string;
 		age: number;

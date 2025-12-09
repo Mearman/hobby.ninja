@@ -1,15 +1,15 @@
-export type LanguageCode = 'ja' | 'en' | 'mixed' | 'unknown';
+export type LanguageCode = "ja" | "en" | "mixed" | "unknown";
 
 export type LanguageDetectionMethod =
-  | 'html-lang-attribute'
-  | 'html-meta-content'
-  | 'http-headers'
-  | 'url-pattern'
-  | 'content-analysis'
-  | 'filename-pattern'
-  | 'manual-detection'
-  | 'hybrid'
-  | 'fallback';
+  | "html-lang-attribute"
+  | "html-meta-content"
+  | "http-headers"
+  | "url-pattern"
+  | "content-analysis"
+  | "filename-pattern"
+  | "manual-detection"
+  | "hybrid"
+  | "fallback";
 
 export interface LanguageDetection {
   language: LanguageCode;

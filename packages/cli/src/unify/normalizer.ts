@@ -64,17 +64,17 @@ export function normalizeProductName(name: string): string {
 			// Unicode NFKC normalization (converts full-width to half-width, etc.)
 			.normalize("NFKC")
 			// Normalize all whitespace (including full-width space) to single space
-			.replace(/[\s\u3000]+/g, " ")
+			.replaceAll(/[\s\u3000]+/g, " ")
 			// Normalize Japanese brackets to ASCII
-			.replace(/（/g, "(")
-			.replace(/）/g, ")")
-			.replace(/［/g, "[")
-			.replace(/］/g, "]")
+			.replaceAll("（", "(")
+			.replaceAll("）", ")")
+			.replaceAll("［", "[")
+			.replaceAll("］", "]")
 			// Normalize Japanese punctuation
-			.replace(/、/g, ",")
-			.replace(/。/g, ".")
+			.replaceAll("、", ",")
+			.replaceAll("。", ".")
 			// Remove trademark/copyright symbols
-			.replace(/[®™©]/g, "")
+			.replaceAll(/[®™©]/g, "")
 			// Trim
 			.trim()
 	);
@@ -91,12 +91,12 @@ export function extractCoreName(name: string): string {
 
 	// Remove grade prefixes (case-insensitive)
 	for (const prefix of GRADE_PREFIXES) {
-		const regex = new RegExp(`^${escapeRegex(prefix)}\\s*`, "i");
+		const regex = new RegExp(String.raw`^${escapeRegex(prefix)}\s*`, "i");
 		normalized = normalized.replace(regex, "");
 	}
 
 	// Remove scale (1/144, 1/100, etc.)
-	normalized = normalized.replace(/1\/\d+\s*/g, "");
+	normalized = normalized.replaceAll(/1\/\d+\s*/g, "");
 
 	return normalized.trim();
 }
@@ -109,7 +109,7 @@ export function extractGrade(name: string): string | undefined {
 	const normalized = normalizeProductName(name);
 
 	for (const prefix of GRADE_PREFIXES) {
-		const regex = new RegExp(`^${escapeRegex(prefix)}(?:\\s|$)`, "i");
+		const regex = new RegExp(String.raw`^${escapeRegex(prefix)}(?:\s|$)`, "i");
 		if (regex.test(normalized)) {
 			return prefix;
 		}
@@ -123,7 +123,7 @@ export function extractGrade(name: string): string | undefined {
  * Returns the scale string (e.g., "1/144") or undefined.
  */
 export function extractScale(name: string): string | undefined {
-	const match = name.match(/1\/(\d+)/);
+	const match = /1\/(\d+)/.exec(name);
 	return match ? `1/${match[1]}` : undefined;
 }
 
@@ -133,7 +133,7 @@ export function extractScale(name: string): string | undefined {
  */
 export function normalizeGrade(grade: string): string {
 	// Remove Japanese descriptions in brackets
-	let normalized = grade.replace(/［[^\］]+］/g, "").trim();
+	let normalized = grade.replaceAll(/［[^\］]+］/g, "").trim();
 
 	// Normalize to uppercase
 	normalized = normalized.toUpperCase();
@@ -177,19 +177,19 @@ export function jaroWinklerSimilarity(s1: string, s2: string): number {
 	if (s1.length === 0 || s2.length === 0) return 0;
 
 	const matchDistance = Math.floor(Math.max(s1.length, s2.length) / 2) - 1;
-	const s1Matches = new Array<boolean>(s1.length).fill(false);
-	const s2Matches = new Array<boolean>(s2.length).fill(false);
+	const s1Matches = Array.from({length: s1.length}).fill(false);
+	const s2Matches = Array.from({length: s2.length}).fill(false);
 
 	let matches = 0;
 	let transpositions = 0;
 
 	// Find matches
-	for (let i = 0; i < s1.length; i++) {
+	for (const [i, element] of s1.entries()) {
 		const start = Math.max(0, i - matchDistance);
 		const end = Math.min(i + matchDistance + 1, s2.length);
 
 		for (let j = start; j < end; j++) {
-			if (s2Matches[j] || s1[i] !== s2[j]) continue;
+			if (s2Matches[j] || element !== s2[j]) continue;
 			s1Matches[i] = true;
 			s2Matches[j] = true;
 			matches++;
@@ -201,10 +201,10 @@ export function jaroWinklerSimilarity(s1: string, s2: string): number {
 
 	// Count transpositions
 	let k = 0;
-	for (let i = 0; i < s1.length; i++) {
+	for (const [i, element] of s1.entries()) {
 		if (!s1Matches[i]) continue;
 		while (!s2Matches[k]) k++;
-		if (s1[i] !== s2[k]) transpositions++;
+		if (element !== s2[k]) transpositions++;
 		k++;
 	}
 
@@ -255,8 +255,8 @@ export function scaleMatch(scale1?: string, scale2?: string): boolean {
 	if (!scale1 || !scale2) return false;
 
 	// Extract just the number for comparison
-	const num1 = scale1.match(/\d+/)?.[0];
-	const num2 = scale2.match(/\d+/)?.[0];
+	const num1 = (/\d+/.exec(scale1))?.[0];
+	const num2 = (/\d+/.exec(scale2))?.[0];
 
 	return num1 === num2;
 }
@@ -272,5 +272,5 @@ export function gradeMatch(grade1?: string, grade2?: string): boolean {
 
 // Helper to escape regex special characters
 function escapeRegex(str: string): string {
-	return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+	return str.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`);
 }

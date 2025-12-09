@@ -2,18 +2,18 @@
  * Type definitions for data export functionality
  */
 
-import type { LanguageDetection } from '../types/product-data.js';
+import type { LanguageDetection } from "../types/product-data.js";
 
 export interface ExportOptions {
-  format: 'json' | 'csv' | 'excel' | 'ndjson';
+  format: "json" | "csv" | "excel" | "ndjson";
   outputPath: string;
   includeImages?: boolean;
   includeSpecifications?: boolean;
   includeCategories?: boolean;
   prettyPrint?: boolean;
   compression?: boolean;
-  encoding?: 'utf-8' | 'shift-jis';
-  language?: 'ja' | 'en' | 'all';
+  encoding?: "utf-8" | "shift-jis";
+  language?: "ja" | "en" | "all";
   filters?: ExportFilters;
 }
 
@@ -21,7 +21,7 @@ export interface ExportFilters {
   categories?: string[];
   minPrice?: number;
   maxPrice?: number;
-  language?: LanguageDetection['language'][];
+  language?: Array<LanguageDetection["language"]>;
   searchText?: string;
 }
 
@@ -54,7 +54,7 @@ export interface ExporterConfig {
 // Excel specific types
 export interface ExcelWorksheet {
   name: string;
-  data: Record<string, unknown>[];
+  data: Array<Record<string, unknown>>;
   columns: ExcelColumn[];
 }
 
@@ -75,8 +75,8 @@ export interface ExcelStyle {
     fgColor?: string;
   };
   alignment?: {
-    horizontal?: 'left' | 'center' | 'right';
-    vertical?: 'top' | 'middle' | 'bottom';
+    horizontal?: "left" | "center" | "right";
+    vertical?: "top" | "middle" | "bottom";
   };
 }
 

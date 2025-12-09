@@ -1,6 +1,6 @@
-import { LanguageDetection } from './language-detection.js';
+import { LanguageDetection } from "./language-detection.js";
 
-export { LanguageDetection };
+
 
 export interface PriceInfo {
   amount: number;
@@ -20,13 +20,13 @@ export interface ProductImage {
   alt?: string;
   width?: number;
   height?: number;
-  type: 'main' | 'gallery' | 'thumbnail' | 'box';
+  type: "main" | "gallery" | "thumbnail" | "box";
 }
 
 export interface DataSourceInfo {
   domain: string;
   section: string;
-  pageType: 'listing' | 'detail' | 'variant';
+  pageType: "listing" | "detail" | "variant";
   version?: string;
 }
 
@@ -53,8 +53,8 @@ export interface ProductData {
 
   // Scraping metadata
   extraction: {
-    method: 'cheerio' | 'playwright' | 'hybrid';
-    renderingType: 'static' | 'dynamic' | 'hybrid';
+    method: "cheerio" | "playwright" | "hybrid";
+    renderingType: "static" | "dynamic" | "hybrid";
     extractedAt: number;
     extractionDuration: number;
     requiresJavaScript: boolean;
@@ -87,3 +87,4 @@ export interface GundamData {
   source: string;
   scrapedAt: string;
 }
+export {LanguageDetection} from "./language-detection.js";

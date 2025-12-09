@@ -1,10 +1,10 @@
-export type RenderingType = 'static' | 'dynamic' | 'hybrid' | 'unknown';
+export type RenderingType = "static" | "dynamic" | "hybrid" | "unknown";
 
 export type RenderingDetectionMethod =
-  | 'content-analysis'
-  | 'network-analysis'
-  | 'dom-monitoring'
-  | 'heuristic';
+  | "content-analysis"
+  | "network-analysis"
+  | "dom-monitoring"
+  | "heuristic";
 
 export interface RenderingDetection {
   renderingType: RenderingType;
@@ -37,7 +37,7 @@ export interface ProgressiveEnhancementResult {
     frameworkDetected?: string;
     waitForSelectors: string[];
   };
-  recommendation: 'static-only' | 'dynamic-required' | 'hybrid-approach';
+  recommendation: "static-only" | "dynamic-required" | "hybrid-approach";
 }
 
 export interface RenderingConfig {

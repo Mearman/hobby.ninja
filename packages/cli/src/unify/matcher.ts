@@ -15,6 +15,8 @@ import type {
 	ReviewQueueItem,
 } from "@hobby-ninja/types/unified";
 
+import { datesWithinDays, dateDifferenceInDays } from "../utils/date-proximity";
+
 import {
 	normalizeProductName,
 	productNameSimilarity,
@@ -23,7 +25,6 @@ import {
 	gradeMatch,
 } from "./normalizer";
 
-import { datesWithinDays, dateDifferenceInDays } from "../utils/date-proximity";
 
 /** Simplified catalog item for matching */
 export interface CatalogMatchItem {
@@ -53,7 +54,7 @@ export interface ManualMatchItem {
 export function findBestMatch(
 	catalog: CatalogMatchItem,
 	manuals: ManualMatchItem[],
-	usedManualIds: Set<string>
+	usedManualIds: Set<string>,
 ): MatchCandidate | undefined {
 	const candidates: MatchCandidate[] = [];
 
@@ -84,7 +85,7 @@ export function findBestMatch(
  */
 export function evaluateMatch(
 	catalog: CatalogMatchItem,
-	manual: ManualMatchItem
+	manual: ManualMatchItem,
 ): MatchCandidate | undefined {
 	const normalizedCatalogName = normalizeProductName(catalog.name);
 	const normalizedManualName = normalizeProductName(manual.name);
@@ -95,7 +96,7 @@ export function evaluateMatch(
 			name: {
 				catalogValue: catalog.name,
 				manualValue: manual.name,
-				similarity: 1.0,
+				similarity: 1,
 			},
 		});
 	}
@@ -150,7 +151,7 @@ export function evaluateMatch(
 				similarity: nameSimilarity,
 			},
 			scale: { matches: true },
-			dateDiff: dateDiff !== undefined ? { days: dateDiff } : undefined,
+			dateDiff: dateDiff === undefined ? undefined : { days: dateDiff },
 		});
 	}
 
@@ -174,7 +175,7 @@ export function evaluateMatch(
 			series: { matches: true },
 			scale: { matches: true },
 			grade: { matches: true },
-			dateDiff: dateDiff !== undefined ? { days: dateDiff } : undefined,
+			dateDiff: dateDiff === undefined ? undefined : { days: dateDiff },
 		});
 	}
 
@@ -200,7 +201,7 @@ function createCandidate(
 	manual: ManualMatchItem,
 	confidence: number,
 	stage: number,
-	matchedFields: ReviewQueueItem["matchedFields"]
+	matchedFields: ReviewQueueItem["matchedFields"],
 ): MatchCandidate {
 	return {
 		catalogId: catalog.id,
@@ -217,7 +218,7 @@ function createCandidate(
  */
 export function matchAll(
 	catalogItems: CatalogMatchItem[],
-	manuals: ManualMatchItem[]
+	manuals: ManualMatchItem[],
 ): {
 	matches: MatchCandidate[];
 	unmatchedCatalogIds: Set<string>;

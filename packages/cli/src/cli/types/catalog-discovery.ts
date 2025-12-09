@@ -33,7 +33,7 @@ export interface CatalogDiscoveryOptions {
  */
 export interface CatalogRangeStats {
 	/** Processing status ('success' | 'error') */
-	status: 'success' | 'error';
+	status: "success" | "error";
 
 	/** Number of URLs discovered for this range */
 	urlCount: number;
@@ -93,7 +93,7 @@ export interface CatalogRange {
 	url: string;
 
 	/** Current processing status */
-	status: 'pending' | 'discovering' | 'completed' | 'failed';
+	status: "pending" | "discovering" | "completed" | "failed";
 
 	/** Number of item URLs discovered */
 	itemCount: number;
@@ -106,7 +106,7 @@ export interface CatalogRange {
  * Input validation for catalog discovery CLI command
  */
 export interface CatalogDiscoveryInput {
-	source: 'bandai-items-catalog';
+	source: "bandai-items-catalog";
 	ranges?: string[];           // Parsed from --ranges option
 	output?: string;             // Existing --output option
 	cache?: boolean;             // Existing --cache option

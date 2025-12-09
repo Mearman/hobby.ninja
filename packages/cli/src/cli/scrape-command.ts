@@ -1,6 +1,8 @@
-import { mkdirSync } from 'fs';
-import { discoverCatalogItems, generateCatalogRanges } from './catalog-discovery.js';
-import { DEFAULT_TIMEOUTS, CATALOG_DISCOVERY, DISPLAY } from '../constants/cli-constants.js';
+import { mkdirSync } from "node:fs";
+
+import { DEFAULT_TIMEOUTS, CATALOG_DISCOVERY, DISPLAY } from "../constants/cli-constants.js";
+
+import { discoverCatalogItems, generateCatalogRanges } from "./catalog-discovery.js";
 
 export interface ScrapeOptions {
 	source: string;
@@ -27,20 +29,23 @@ export async function scrapeData(options: ScrapeOptions): Promise<void> {
 	mkdirSync(output, { recursive: true });
 
 	switch (source.toLowerCase()) {
-		case 'bandai-catalog':
+		case "bandai-catalog": {
 			await scrapeBandaiCatalog(options);
 			break;
+		}
 
-		case 'manuals':
-			console.log('📋 Manual scraping is already implemented separately');
-			console.log('Use the existing manual scraper workflow');
+		case "manuals": {
+			console.log("📋 Manual scraping is already implemented separately");
+			console.log("Use the existing manual scraper workflow");
 			break;
+		}
 
-		default:
+		default: {
 			throw new Error(`Unknown data source: ${source}. Available: bandai-catalog, manuals`);
+		}
 	}
 
-	console.log('✅ Scraping completed successfully!');
+	console.log("✅ Scraping completed successfully!");
 }
 
 async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
@@ -50,19 +55,19 @@ async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 	const count = options.count ?? CATALOG_DISCOVERY.DEFAULT_COUNT;
 	const verbose = options.verbose ?? false;
 
-	console.log('🔍 Starting Bandai catalog discovery...');
+	console.log("🔍 Starting Bandai catalog discovery...");
 
 	// Generate ranges starting from startId
-	const [prefix, suffix] = startId.split('_');
-	const startIndex = parseInt(suffix || '0');
+	const [prefix, suffix] = startId.split("_");
+	const startIndex = Number.parseInt(suffix || "0");
 	const ranges = generateCatalogRanges(count).map((_, index) => {
 		const id = startIndex + index;
-		const formattedId = id.toString().padStart(4, '0');
+		const formattedId = id.toString().padStart(4, "0");
 		return `${prefix}_${formattedId}`;
 	});
 
 	if (verbose) {
-		console.log(`📋 Processing ${ranges.length} ranges: ${ranges.slice(0, 5).join(', ')}${ranges.length > 5 ? '...' : ''}`);
+		console.log(`📋 Processing ${ranges.length} ranges: ${ranges.slice(0, 5).join(", ")}${ranges.length > 5 ? "..." : ""}`);
 	}
 
 	// Prepare catalog discovery options
@@ -73,14 +78,14 @@ async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 		resume: options.resume ?? false,
 		verbose,
 		delayMs,
-		translate: options.translate ?? false
+		translate: options.translate ?? false,
 	};
 
 	// Execute catalog discovery
 	const result = await discoverCatalogItems(catalogOptions);
 
 	// Display results
-	console.log('\n📊 Catalog Discovery Results:');
+	console.log("\n📊 Catalog Discovery Results:");
 	console.log(`✅ Total ranges: ${result.totalRanges}`);
 	console.log(`✅ Completed: ${result.completedRanges}`);
 	console.log(`❌ Failed: ${result.failedRanges}`);
@@ -90,15 +95,15 @@ async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 	console.log(`⚡ Average time per range: ${result.stats.averageProcessingTime.toFixed(0)}ms`);
 
 	if (result.errors.length > 0) {
-		console.log('\n❌ Errors encountered:');
-		result.errors.forEach((error, index) => {
+		console.log("\n❌ Errors encountered:");
+		for (const [index, error] of result.errors.entries()) {
 			console.log(`  ${index + 1}. ${error}`);
-		});
+		}
 	}
 
 	if (result.successful) {
-		console.log('\n🎉 Catalog discovery completed successfully!');
+		console.log("\n🎉 Catalog discovery completed successfully!");
 	} else {
-		console.log('\n⚠️  Catalog discovery completed with some errors.');
+		console.log("\n⚠️  Catalog discovery completed with some errors.");
 	}
 }
