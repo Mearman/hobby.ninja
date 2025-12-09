@@ -4,6 +4,13 @@ import path from "node:path";
 import type { CacheManager } from "@hobby-ninja/types/profile";
 
 import { logger } from "./logger";
+import {
+	DEFAULT_CACHE_TTL,
+	DEFAULT_CACHE_MAX_SIZE,
+	CACHE_CLEANUP_INTERVAL,
+	PROFILE_ANALYSIS_TTL,
+	DEFAULT_PROFILE_CACHE_MAX_SIZE,
+} from "./constants";
 
 export interface CacheOptions {
 	ttl?: number; // Time to live in milliseconds
@@ -27,8 +34,8 @@ export class FileSystemCacheManager implements CacheManager {
 
 	constructor(options: CacheOptions = {}) {
 		this.options = {
-			ttl: options.ttl ?? 3_600_000, // 1 hour default
-			maxSize: options.maxSize ?? 1000,
+			ttl: options.ttl ?? DEFAULT_CACHE_TTL,
+			maxSize: options.maxSize ?? DEFAULT_CACHE_MAX_SIZE,
 			persistToFile: options.persistToFile ?? false,
 			cacheDir: options.cacheDir ?? path.join(process.cwd(), ".cache"),
 		};
@@ -41,14 +48,15 @@ export class FileSystemCacheManager implements CacheManager {
 		// Start cleanup interval
 		this.cleanupInterval = setInterval(() => {
 			this.cleanup();
-		}, 60_000); // Cleanup every minute
+		}, CACHE_CLEANUP_INTERVAL);
 	}
 
 	private async ensureCacheDirectory(): Promise<void> {
 		try {
 			await fs.mkdir(this.options.cacheDir, { recursive: true });
 		} catch (error) {
-			logger.warn("Failed to create cache directory:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			logger.warn("Failed to create cache directory:", errorMessage);
 		}
 	}
 
@@ -89,7 +97,8 @@ export class FileSystemCacheManager implements CacheManager {
 			const data = JSON.stringify(item);
 			await fs.writeFile(filePath, data, "utf8");
 		} catch (error) {
-			logger.warn("Failed to save cache item to file:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			logger.warn("Failed to save cache item to file:", errorMessage);
 		}
 	}
 
@@ -279,7 +288,7 @@ export class FileSystemCacheManager implements CacheManager {
 
 	async setByUrl(url: string, value: unknown, type: string): Promise<void> {
 		const urlKey = `url:${url}:${type}`;
-		const ttl = type === "profile-analysis" ? 1_800_000 : this.options.ttl; // 30 minutes for profile analysis
+		const ttl = type === "profile-analysis" ? PROFILE_ANALYSIS_TTL : this.options.ttl;
 		this.set(urlKey, { rawHtml: value }, ttl);
 	}
 
@@ -291,8 +300,8 @@ export class FileSystemCacheManager implements CacheManager {
 
 // Create a singleton instance with default options
 export const cacheManager = new FileSystemCacheManager({
-	ttl: 3_600_000, // 1 hour
-	maxSize: 500,
+	ttl: DEFAULT_CACHE_TTL,
+	maxSize: DEFAULT_PROFILE_CACHE_MAX_SIZE,
 	persistToFile: true,
 	cacheDir: path.join(process.cwd(), ".cache", "profiles"),
 });

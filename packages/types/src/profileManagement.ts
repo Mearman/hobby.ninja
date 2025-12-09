@@ -72,13 +72,13 @@ export interface ProfileGenerationResult {
   sampleUrls: string[];
 }
 
-export interface CacheManager {
-  get(key: string): unknown;
-  set(key: string, value: unknown, ttl?: number): void;
+export interface CacheManager<T = unknown> {
+  get(key: string): T | undefined;
+  set(key: string, value: T, ttl?: number): void;
   clear(): void;
   delete(key: string): boolean;
-  getByUrl?(url: string): Promise<unknown>;
-  setByUrl?(url: string, value: unknown, type: string): Promise<void>;
+  getByUrl?(url: string): Promise<T | undefined>;
+  setByUrl?(url: string, value: T, type: string): Promise<void>;
 }
 
 // Rendering detection types

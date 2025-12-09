@@ -1,5 +1,7 @@
 import { execFile } from "node:child_process";
 
+import { DEFAULT_COMMAND_TIMEOUT } from "./constants";
+
 /**
  * Result of executing a command safely
  */
@@ -41,7 +43,7 @@ export async function execFileNoThrow(
 	return new Promise((resolve) => {
 		const {
 			cwd = process.cwd(),
-			timeout = 30_000,
+			timeout = DEFAULT_COMMAND_TIMEOUT,
 			encoding = "utf8",
 		} = options;
 
@@ -61,7 +63,7 @@ export async function execFileNoThrow(
 				success: !error,
 				stdout: stdoutBuffer,
 				stderr: stderrBuffer,
-				exitCode: typeof error?.code === "number" ? error.code : 0,
+				exitCode: error && typeof error === "object" && "code" in error && typeof error.code === "number" ? error.code : 0,
 			};
 
 			resolve(result);

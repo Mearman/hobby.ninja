@@ -1,5 +1,13 @@
 import type { LanguageDetection, LanguageAnalysisResult, LanguageCode } from "@hobby-ninja/types/language";
 
+import {
+	LANGUAGE_DETECTION_THRESHOLD,
+	MIXED_LANGUAGE_THRESHOLD,
+	LANGUAGE_SIMILARITY_THRESHOLD,
+	MIN_CONTENT_RATIO_THRESHOLD,
+	PERCENTAGE_MULTIPLIER,
+} from "./constants";
+
 const JAPANESE_CHARACTER_PATTERN = /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF]/g;
 const ENGLISH_CHARACTER_PATTERN = /[a-zA-Z]/g;
 
@@ -104,12 +112,9 @@ function calculateLanguageScore(evidence: { japaneseRatio: number; englishRatio:
 }
 
 function determineLanguage(score: { ja: number; en: number; mixed: number }): LanguageCode {
-	const threshold = 0.6;
-	const mixedThreshold = 0.4;
-
-	if (score.ja >= threshold && score.ja > score.en) return "ja";
-	if (score.en >= threshold && score.en > score.ja) return "en";
-	if (score.mixed >= mixedThreshold && Math.abs(score.ja - score.en) < 0.2) return "mixed";
+	if (score.ja >= LANGUAGE_DETECTION_THRESHOLD && score.ja > score.en) return "ja";
+	if (score.en >= LANGUAGE_DETECTION_THRESHOLD && score.en > score.ja) return "en";
+	if (score.mixed >= MIXED_LANGUAGE_THRESHOLD && Math.abs(score.ja - score.en) < LANGUAGE_SIMILARITY_THRESHOLD) return "mixed";
 
 	return "unknown";
 }
@@ -124,12 +129,12 @@ function calculateConfidence(score: { ja: number; en: number; mixed: number }): 
 function buildEvidence(analysis: LanguageAnalysisResult): string[] {
 	const evidence: string[] = [];
 
-	if (analysis.evidence.japaneseRatio > 0.01) {
-		evidence.push(`Japanese character ratio: ${(analysis.evidence.japaneseRatio * 100).toFixed(1)}%`);
+	if (analysis.evidence.japaneseRatio > MIN_CONTENT_RATIO_THRESHOLD) {
+		evidence.push(`Japanese character ratio: ${(analysis.evidence.japaneseRatio * PERCENTAGE_MULTIPLIER).toFixed(1)}%`);
 	}
 
-	if (analysis.evidence.englishRatio > 0.01) {
-		evidence.push(`English character ratio: ${(analysis.evidence.englishRatio * 100).toFixed(1)}%`);
+	if (analysis.evidence.englishRatio > MIN_CONTENT_RATIO_THRESHOLD) {
+		evidence.push(`English character ratio: ${(analysis.evidence.englishRatio * PERCENTAGE_MULTIPLIER).toFixed(1)}%`);
 	}
 
 	return evidence;

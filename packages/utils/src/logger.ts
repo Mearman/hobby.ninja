@@ -3,6 +3,8 @@
  * Provides structured logging that satisfies no-console ESLint rule
  */
 
+import { LOG_LEVEL_VALUES } from "./constants";
+
 type LogLevel = "debug" | "info" | "warn" | "error";
 
 interface LoggerOptions {
@@ -10,12 +12,7 @@ interface LoggerOptions {
 	minLevel?: LogLevel;
 }
 
-const LOG_LEVELS: Record<LogLevel, number> = {
-	debug: 0,
-	info: 1,
-	warn: 2,
-	error: 3,
-};
+const LOG_LEVELS = LOG_LEVEL_VALUES;
 
 class Logger {
 	private enabled: boolean;
