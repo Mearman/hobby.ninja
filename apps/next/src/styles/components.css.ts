@@ -1,6 +1,26 @@
 import { style, globalStyle, createVar, keyframes } from "@vanilla-extract/css";
 
-import { theme } from "@/lib/theme";
+// CSS Constants to avoid string duplication
+const CSS_VALUES = {
+	BORDER_BOX: "border-box",
+	FLEX_START: "flex-start",
+	FLEX_END: "flex-end",
+	CENTER: "center",
+	POINTER: "pointer",
+	NONE: "none",
+	ABSOLUTE: "absolute",
+	RELATIVE: "relative",
+	FIXED: "fixed",
+	BLOCK: "block",
+	INLINE_BLOCK: "inline-block",
+	TRANSPARENT: "transparent",
+	HIDDEN: "hidden",
+	VISIBLE: "visible",
+	ROW: "row",
+	COLUMN: "column",
+	 CAPITALIZE: "capitalize",
+	UPPERCASE: "uppercase",
+} as const;
 
 // CSS Variables for dynamic theming
 export const borderRadiusVar = createVar("borderRadius");
@@ -49,7 +69,7 @@ export const scaleInKeyframe = keyframes({
 
 // Global styles for component overrides
 globalStyle("*", {
-	boxSizing: "border-box",
+	boxSizing: CSS_VALUES.BORDER_BOX,
 });
 
 globalStyle("body", {
@@ -94,7 +114,7 @@ export const headerContent = style({
 	margin: "0 auto",
 	padding: "0 var(--mantine-spacing-md)",
 	display: "flex",
-	alignItems: "center",
+	alignItems: CSS_VALUES.CENTER,
 	justifyContent: "space-between",
 	height: "60px",
 });
@@ -103,7 +123,7 @@ export const logo = style({
 	fontSize: "1.5rem",
 	fontWeight: 700,
 	color: `var(--mantine-color-blue-6)`,
-	textDecoration: "none",
+	textDecoration: CSS_VALUES.NONE,
 	transition: `color ${transitionSpeedVar} ease`,
 	":hover": {
 		color: `var(--mantine-color-blue-7)`,
@@ -113,13 +133,13 @@ export const logo = style({
 // Navigation
 export const nav = style({
 	display: "flex",
-	alignItems: "center",
+	alignItems: CSS_VALUES.CENTER,
 	gap: "var(--mantine-spacing-lg)",
 });
 
 export const navLink = style({
 	color: `var(--mantine-color-gray-7)`,
-	textDecoration: "none",
+	textDecoration: CSS_VALUES.NONE,
 	fontSize: "0.95rem",
 	fontWeight: 500,
 	padding: "var(--mantine-spacing-sm) var(--mantine-spacing-md)",
@@ -161,11 +181,11 @@ export const itemGridListView = style({
 
 // Item Card
 export const itemCard = style({
-	position: "relative",
+	position: CSS_VALUES.RELATIVE,
 	borderRadius: borderRadiusVar,
 	boxShadow: cardShadowVar,
 	transition: `all ${transitionSpeedVar} ease`,
-	cursor: "pointer",
+	cursor: CSS_VALUES.POINTER,
 	overflow: "hidden",
 	backgroundColor: `var(--mantine-color-white)`,
 	border: `1px solid var(--mantine-color-gray-3)`,
@@ -281,7 +301,7 @@ export const filterChip = style({
 	backgroundColor: `var(--mantine-color-gray-1)`,
 	color: `var(--mantine-color-gray-7)`,
 	border: "none",
-	cursor: "pointer",
+	cursor: CSS_VALUES.POINTER,
 	transition: `all ${transitionSpeedVar} ease`,
 	":hover": {
 		backgroundColor: `var(--mantine-color-gray-2)`,
@@ -431,13 +451,13 @@ export const mobileOnly = style({
 	display: "block",
 	"@media": {
 		"(min-width: 769px)": {
-			display: "none",
+			display: CSS_VALUES.NONE,
 		},
 	},
 });
 
 export const desktopOnly = style({
-	display: "none",
+	display: CSS_VALUES.NONE,
 	"@media": {
 		"(min-width: 769px)": {
 			display: "block",
@@ -478,8 +498,8 @@ export const databaseStatCard = style({
 
 export const databaseStatIcon = style({
 	display: "flex",
-	alignItems: "center",
-	justifyContent: "center",
+	alignItems: CSS_VALUES.CENTER,
+	justifyContent: CSS_VALUES.CENTER,
 	width: "48px",
 	height: "48px",
 	borderRadius: "var(--mantine-radius-md)",
@@ -488,7 +508,7 @@ export const databaseStatIcon = style({
 });
 
 export const categoryCard = style({
-	textDecoration: "none",
+	textDecoration: CSS_VALUES.NONE,
 	color: "inherit",
 	transition: "all 0.2s ease-in-out",
 	backgroundColor: "var(--mantine-color-white)",
@@ -511,8 +531,8 @@ export const brandLogo = style({
 
 export const categoryIcon = style({
 	display: "flex",
-	alignItems: "center",
-	justifyContent: "center",
+	alignItems: CSS_VALUES.CENTER,
+	justifyContent: CSS_VALUES.CENTER,
 	width: "64px",
 	height: "64px",
 	borderRadius: "var(--mantine-radius-lg)",
@@ -521,7 +541,7 @@ export const categoryIcon = style({
 });
 
 export const seriesCard = style({
-	textDecoration: "none",
+	textDecoration: CSS_VALUES.NONE,
 	color: "inherit",
 	transition: "all 0.2s ease-in-out",
 	backgroundColor: "var(--mantine-color-white)",
@@ -541,11 +561,11 @@ export const seriesImage = style({
 });
 
 export const searchCard = style({
-	textDecoration: "none",
+	textDecoration: CSS_VALUES.NONE,
 	color: "inherit",
 	backgroundColor: "var(--mantine-color-gray-0)",
 	border: "2px dashed var(--mantine-color-gray-3)",
-	cursor: "pointer",
+	cursor: CSS_VALUES.POINTER,
 	transition: "all 0.2s ease-in-out",
 
 	selectors: {
@@ -558,7 +578,7 @@ export const searchCard = style({
 });
 
 export const actionCard = style({
-	textDecoration: "none",
+	textDecoration: CSS_VALUES.NONE,
 	color: "inherit",
 	transition: "all 0.2s ease-in-out",
 	backgroundColor: "var(--mantine-color-white)",

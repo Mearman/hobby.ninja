@@ -588,6 +588,7 @@ export default [
 		files: ["packages/types/src/*.ts"],
 		rules: {
 			"unicorn/filename-case": "off",
+			"@typescript-eslint/array-type": ["error", { default: "array" }],
 		},
 	},
 	{

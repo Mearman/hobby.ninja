@@ -31,6 +31,7 @@ import React from "react";
 import { getAllCategories, getAllItems } from "@/lib/graph-data";
 import { generateCategoryParams } from "@/lib/data-loader";
 import { getNodeDisplayName, isItemNode, CategoryNode, ItemNode } from "@/lib/schemas";
+import { PAGINATION } from "@/lib/constants";
 import {
 	itemCard,
 	itemCardImage,
@@ -47,8 +48,6 @@ interface PageProps {
   searchParams: Promise<{ page?: string; q?: string; sort?: string; brand?: string }>;
 }
 
-const ITEMS_PER_PAGE = 24;
-const STATIC_PARAMS_COUNT = 20;
 
 
 const getCategory = async (categoryId: string): Promise<CategoryNode | null> => {
@@ -64,7 +63,7 @@ const getCategory = async (categoryId: string): Promise<CategoryNode | null> => 
 const getCategoryItems = async (
 	categoryId: string,
 	page = 1,
-	limit = ITEMS_PER_PAGE,
+	limit = PAGINATION.ITEMS_PER_PAGE,
 	searchQuery?: string,
 	sortBy?: string,
 	brandFilter?: string,
@@ -368,7 +367,7 @@ export default async function CategoryPage({ params, searchParams }: PageProps) 
 						<Text size="sm" c="dimmed">
               Showing {Math.min((page - 1) * ITEMS_PER_PAGE + 1, itemsData.total)}-{Math.min(page * ITEMS_PER_PAGE, itemsData.total)} of {itemsData.total.toLocaleString()} items
 						</Text>
-						{(searchQuery || brandFilter) && (
+						{(searchQuery ?? brandFilter) && (
 							<Button
 								variant="light"
 								size="sm"
@@ -401,12 +400,12 @@ export default async function CategoryPage({ params, searchParams }: PageProps) 
                 No items found
 							</Title>
 							<Text c="dimmed" mb="lg">
-								{searchQuery || brandFilter
+								{searchQuery ?? brandFilter
 									? "Try adjusting your search or filters"
 									: "There are no items in this category yet."
 								}
 							</Text>
-							{(searchQuery || brandFilter) && (
+							{(searchQuery ?? brandFilter) && (
 								<Button
 									variant="light"
 									onClick={() => {

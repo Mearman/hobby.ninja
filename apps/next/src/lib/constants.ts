@@ -53,6 +53,16 @@ export const UI = {
   SKELETON_HEIGHT_XL: 24,
   SKELETON_HEIGHT_XXL: 32,
   SKELETON_HEIGHT_XXXL: 48,
+
+  // Feature icon sizes
+  FEATURE_ICON_SIZE: 48,
+  FEATURE_ICON_INNER_SIZE: 24,
+
+  // Button icon sizes
+  BUTTON_ICON_SIZE: 18,
+
+  // Search results
+  HOMEPAGE_SEARCH_RESULTS: 8,
 } as const;
 
 // Typography
