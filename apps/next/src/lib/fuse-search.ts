@@ -1,6 +1,7 @@
 import React, { useCallback, useMemo } from 'react';
 import Fuse from 'fuse.js';
-import { ItemNode, getAllItems } from './graph-data';
+import { ItemNode } from './schemas';
+import { getAllItems } from './graph-data';
 
 // Define search result type
 export interface SearchResult {

@@ -152,6 +152,7 @@ export const CategoryNodeSchema = BaseNodeSchema.extend({
 	description: z.string().optional(),
 	itemCount: z.number().optional(),
 	parentId: z.string().optional(),
+	edges: EdgesSchema.optional(),
 });
 
 // Series node schema
@@ -161,6 +162,7 @@ export const SeriesNodeSchema = BaseNodeSchema.extend({
 	franchise: z.string().optional(),
 	itemCount: z.number().optional(),
 	parentId: z.string().optional(),
+	edges: EdgesSchema.optional(),
 });
 
 // Manual node schema

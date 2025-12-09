@@ -58,7 +58,7 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
   }, [getStats]);
 
   const handleSearch = useCallback(() => {
-    if (query.trim() || filters.brands.length || filters.categories.length) {
+    if (query.trim() || filters.brands?.length || filters.categories?.length) {
       const results = advancedSearch(query, filters);
       onSearch(results);
     }
@@ -250,38 +250,38 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 
         {/* Active Filters Display */}
         {(query.trim() ||
-          filters.brands.length ||
-          filters.categories.length ||
-          filters.series.length ||
-          filters.grades.length ||
-          filters.scales.length) && (
+          filters.brands?.length ||
+          filters.categories?.length ||
+          filters.series?.length ||
+          filters.grades?.length ||
+          filters.scales?.length) && (
           <Group gap="xs" wrap="wrap">
             {query.trim() && (
               <Badge size="sm" variant="light" color="blue">
                 "{query}"
               </Badge>
             )}
-            {filters.brands.map(brand => (
+            {filters.brands?.map(brand => (
               <Badge key={brand} size="sm" variant="light">
                 {brand}
               </Badge>
             ))}
-            {filters.categories.map(category => (
+            {filters.categories?.map(category => (
               <Badge key={category} size="sm" variant="light" color="green">
                 {category}
               </Badge>
             ))}
-            {filters.series.map(serie => (
+            {filters.series?.map(serie => (
               <Badge key={serie} size="sm" variant="light" color="orange">
                 {serie}
               </Badge>
             ))}
-            {filters.grades.map(grade => (
+            {filters.grades?.map(grade => (
               <Badge key={grade} size="sm" variant="light" color="purple">
                 {grade}
               </Badge>
             ))}
-            {filters.scales.map(scale => (
+            {filters.scales?.map(scale => (
               <Badge key={scale} size="sm" variant="light" color="cyan">
                 {scale}
               </Badge>
