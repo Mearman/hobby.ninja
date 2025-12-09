@@ -11,7 +11,7 @@
       "options": {
         "outputPath": "dist/apps/next"
       },
-      "dependsOn": ["typecheck"],
+      "dependsOn": ["typecheck", "build-data"],
       "configurations": {
         "development": {
           "outputPath": "dist/apps/next"
@@ -77,6 +77,31 @@
       "options": {
         "command": "tsc --noEmit",
         "cwd": "apps/next"
+      }
+    },
+    "build-data": {
+      "executor": "nx:run-commands",
+      "outputs": ["{projectRoot}/src/data"],
+      "options": {
+        "command": "npx tsx scripts/build-data-cli.ts",
+        "cwd": "{projectRoot}",
+        "cache": true
+      },
+      "inputs": [
+        "default",
+        "^default",
+        "{workspaceRoot}/data/api/graph/**/*"
+      ],
+      "configurations": {
+        "development": {
+          "command": "npx tsx scripts/build-data-cli.ts --output-dir src/data"
+        },
+        "production": {
+          "command": "npx tsx scripts/build-data-cli.ts --output-dir src/data"
+        },
+        "custom": {
+          "command": "npx tsx scripts/build-data-cli.ts {args}"
+        }
       }
     }
   },
