@@ -6,8 +6,40 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+interface GraphNode {
+  id: string;
+  type: 'item' | 'brand' | 'category' | 'series' | 'manual';
+  name: {
+    ja: string;
+    en: string;
+  };
+  description?: string[];
+  accessories?: string[];
+  contents?: string[];
+  images?: string[];
+  sourceUrl?: string;
+  url?: string;
+  extractedAt?: string;
+}
+
+interface UnifiedEdge {
+  id: string;
+  type: string;
+  sourceId: string;
+  targetId: string;
+  sourceType: string;
+  targetType: string;
+}
+
+interface UnifiedData {
+  nodes: GraphNode[];
+  edges: UnifiedEdge[];
+}
+
 interface BuildResults {
   [category: string]: number;
+  nodes: number;
+  edges: number;
 }
 
 export interface DataProcessorOptions {
@@ -27,7 +59,7 @@ export class DataProcessor {
   constructor(options: DataProcessorOptions = {}) {
     this.sourceDir = options.sourceDir || path.join(process.cwd(), 'data', 'api', 'graph');
     this.outputDir = options.outputDir || path.join(process.cwd(), 'apps', 'next', 'src', 'data');
-    this.categories = options.categories || ['items', 'brands', 'categories', 'series'] as const;
+    this.categories = options.categories || ['items', 'brands', 'categories', 'series', 'manuals'] as const;
   }
 
   /**
@@ -54,7 +86,7 @@ export class DataProcessor {
   }
 
   /**
-   * Build data files by combining individual JSON files into single index files
+   * Build data files by combining individual JSON files and deduplicating edges
    */
   buildDataFiles(): BuildResults {
     // Validate source directories exist first
@@ -65,13 +97,20 @@ export class DataProcessor {
       fs.mkdirSync(this.outputDir, { recursive: true });
     }
 
-    const results: BuildResults = {};
+    const results: BuildResults = {
+      nodes: 0,
+      edges: 0
+    };
 
-    console.log('🔧 Building static data files...');
+    console.log('🔧 Building unified graph data with deduplicated edges...');
+
+    // Step 1: Collect all nodes
+    const allNodes: GraphNode[] = [];
+    const edgesSet = new Set<string>(); // For deduplication
+    const allEdges: UnifiedEdge[] = [];
 
     for (const category of this.categories) {
       const categoryDir = path.join(this.sourceDir, category);
-      const outputFile = path.join(this.outputDir, `${category}.json`);
 
       try {
         // Read all JSON files in the category directory
@@ -83,29 +122,132 @@ export class DataProcessor {
           throw new Error(`❌ CRITICAL: No JSON files found in ${categoryDir} for category '${category}'`);
         }
 
-        const allData: unknown[] = [];
-
         for (const file of files) {
           const filePath = path.join(categoryDir, file);
           const content = fs.readFileSync(filePath, 'utf-8');
-          const data = JSON.parse(content);
-          allData.push(data);
+          const rawData = JSON.parse(content) as any;
+
+          // Create unified node without edges
+          const node: GraphNode = {
+            id: rawData.id,
+            type: rawData.type,
+            name: rawData.name,
+            ...(rawData.description && { description: rawData.description }),
+            ...(rawData.accessories && { accessories: rawData.accessories }),
+            ...(rawData.contents && { contents: rawData.contents }),
+            ...(rawData.images && { images: rawData.images }),
+            ...(rawData.sourceUrl && { sourceUrl: rawData.sourceUrl }),
+            ...(rawData.url && { url: rawData.url }),
+            ...(rawData.extractedAt && { extractedAt: rawData.extractedAt })
+          };
+
+          allNodes.push(node);
+
+          // Process edges if they exist
+          if (rawData.edges) {
+            // Process outbound edges (source -> target)
+            if (rawData.edges.outbound) {
+              for (const edge of rawData.edges.outbound) {
+                const edgeKey = `${rawData.id}-${edge.targetId}-${edge.type}`;
+                if (!edgesSet.has(edgeKey)) {
+                  edgesSet.add(edgeKey);
+                  allEdges.push({
+                    id: edgeKey,
+                    type: edge.type,
+                    sourceId: rawData.id,
+                    targetId: edge.targetId,
+                    sourceType: rawData.type,
+                    targetType: edge.targetType
+                  });
+                }
+              }
+            }
+
+            // Process inbound edges (target <- source)
+            if (rawData.edges.inbound) {
+              for (const edge of rawData.edges.inbound) {
+                const edgeKey = `${edge.targetId}-${rawData.id}-${edge.type}`;
+                if (!edgesSet.has(edgeKey)) {
+                  edgesSet.add(edgeKey);
+                  allEdges.push({
+                    id: edgeKey,
+                    type: edge.type,
+                    sourceId: edge.targetId,
+                    targetId: rawData.id,
+                    sourceType: edge.targetType,
+                    targetType: rawData.type
+                  });
+                }
+              }
+            }
+          }
         }
 
-        // Write combined data as JSON
-        fs.writeFileSync(outputFile, JSON.stringify(allData, null, 2));
-        results[category] = allData.length;
+        results[category] = files.length;
 
-        console.log(`✅ Generated ${category}.json with ${allData.length} items from ${files.length} files`);
       } catch (error) {
         throw new Error(`❌ CRITICAL: Failed to process category '${category}': ${error instanceof Error ? error.message : String(error)}`);
       }
     }
 
-    console.log('\n📊 Build Summary:');
+    // Step 2: Write unified graph file with all nodes and edges
+    const unifiedGraphData: UnifiedData = {
+      nodes: allNodes,
+      edges: allEdges
+    };
+
+    const unifiedOutputFile = path.join(this.outputDir, 'graph.json');
+    fs.writeFileSync(unifiedOutputFile, JSON.stringify(unifiedGraphData, null, 2));
+    console.log(`✅ Generated graph.json with ${allNodes.length} nodes and ${allEdges.length} edges`);
+
+    // Step 3: Write category-specific files with nodes and deduplicated edges
+    for (const category of this.categories) {
+      const categoryNodes = allNodes.filter(node => {
+        if (category === 'items') return node.type === 'item';
+        if (category === 'brands') return node.type === 'brand';
+        if (category === 'categories') return node.type === 'category';
+        if (category === 'series') return node.type === 'series';
+        if (category === 'manuals') return node.type === 'manual';
+        return false;
+      });
+
+      // Get edges that involve nodes in this category
+      const categoryEdges = allEdges.filter(edge =>
+        categoryNodes.some(node => node.id === edge.sourceId || node.id === edge.targetId)
+      );
+
+      const categoryData: UnifiedData = {
+        nodes: categoryNodes,
+        edges: categoryEdges
+      };
+
+      const categoryOutputFile = path.join(this.outputDir, `${category}.json`);
+      fs.writeFileSync(categoryOutputFile, JSON.stringify(categoryData, null, 2));
+
+      console.log(`✅ Generated ${category}.json with ${categoryNodes.length} nodes and ${categoryEdges.length} edges`);
+    }
+
+    results.nodes = allNodes.length;
+    results.edges = allEdges.length;
+
+    console.log('\n📊 Unified Graph Build Summary:');
+    console.log(`   Total nodes: ${allNodes.length}`);
+    console.log(`   Total deduplicated edges: ${allEdges.length}`);
     Object.entries(results).forEach(([category, count]) => {
-      console.log(`   ${category}: ${count} items`);
+      if (category !== 'nodes' && category !== 'edges') {
+        const categoryNodes = allNodes.filter(node => {
+          if (category === 'items') return node.type === 'item';
+          if (category === 'brands') return node.type === 'brand';
+          if (category === 'categories') return node.type === 'category';
+          if (category === 'series') return node.type === 'series';
+          if (category === 'manuals') return node.type === 'manual';
+          return false;
+        });
+        console.log(`   ${category}: ${categoryNodes.length} nodes`);
+      }
     });
+
+    console.log(`\n✅ Generated category-specific JSON files with deduplicated edges`);
 
     return results;
   }
