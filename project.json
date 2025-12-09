@@ -6,8 +6,27 @@
   "tags": ["scope:root", "type:workspace"],
   "targets": {
     "typecheck": {
-      "dependsOn": ["types:typecheck", "utils:typecheck", "cli:typecheck", "scripts:typecheck", "web:typecheck"],
-      "cache": true
+      "dependsOn": ["types:typecheck", "utils:typecheck", "cli:typecheck", "web:typecheck"],
+      "executor": "@nx/js:tsc",
+      "options": {
+        "tsConfigPath": "./tsconfig.json",
+        "noEmit": true
+      },
+      "inputs": [
+        "default",
+        "{projectRoot}/*.config.ts",
+        "{projectRoot}/*.config.js",
+        "{projectRoot}/eslint.config.{ts,js}",
+        "{projectRoot}/playwright*.config.{ts,js}",
+        "{projectRoot}/vitest.config.{ts,js}",
+        "{projectRoot}/knip.config.{ts,js}",
+        "{projectRoot}/syncpack.config.{ts,js}"
+      ],
+      "cache": true,
+      "metadata": {
+        "description": "TypeScript type checking for root configuration files and workspace packages",
+        "technologies": ["typescript"]
+      }
     },
     "typecheck-root": {
       "executor": "@nx/js:tsc",
