@@ -1,6 +1,6 @@
 import { mkdirSync } from "node:fs";
 
-import { DEFAULT_TIMEOUTS, CATALOG_DISCOVERY, DISPLAY } from "../constants/cli-constants.js";
+import { DEFAULT_TIMEOUTS, CATALOG_DISCOVERY } from "../constants/cli-constants.js";
 
 import { discoverCatalogItems, generateCatalogRanges } from "./catalog-discovery.js";
 

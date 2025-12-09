@@ -3,6 +3,7 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { resolve } from "node:path";
 
 import { TRANSLATION_STORE_DIR } from "@hobby-ninja/translation";
 import { Command } from "commander";
