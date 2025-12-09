@@ -10,6 +10,9 @@ import withPWA from 'next-pwa';
 // Import our custom build data plugin
 import BuildDataPlugin from './scripts/build-data-plugin';
 
+// Default build data strategy configuration
+const DEFAULT_BUILD_DATA_STRATEGY = 'nx'; // Change to 'webpack' or 'disabled' to change default behavior
+
 const withPWAConfig = withPWA({
   dest: 'public',
   disable: process.env.NODE_ENV === 'development',
@@ -114,12 +117,12 @@ const nextConfig: NextConfig = {
 
   // Additional webpack configuration for Vanilla Extract (if needed)
   webpack: (config, { isServer }) => {
-    // Add our custom build data plugin for server-side builds (if enabled)
-    const enableWebpackPlugin = process.env.ENABLE_WEBPACK_DATA_PLUGIN !== 'false';
+    // Use environment variable or fall back to configured default
+    const buildDataStrategy = process.env.BUILD_DATA_STRATEGY || DEFAULT_BUILD_DATA_STRATEGY;
 
-    if (isServer && enableWebpackPlugin) {
+    if (isServer) {
       config.plugins.push(new BuildDataPlugin({
-        enabled: enableWebpackPlugin
+        strategy: buildDataStrategy
       }));
     }
 
