@@ -317,7 +317,7 @@ export class ScraperError extends Error {
 			if (status === 404) return ErrorCode.SCRAPE_PAGE_NOT_FOUND;
 			if (status === 403) return ErrorCode.SCRAPE_ACCESS_DENIED;
 			if (status === 429) return ErrorCode.SCRAPE_RATE_LIMITED;
-			if (status >= 500) return ErrorCode.NETWORK_CONNECTION_FAILED;
+			if (status && status >= 500) return ErrorCode.NETWORK_CONNECTION_FAILED;
 		}
 
 		// Configuration errors

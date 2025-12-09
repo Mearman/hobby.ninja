@@ -10,7 +10,6 @@ import {
 	EXPORT_CONSTANTS,
 	ENCODING_CONSTANTS,
 	FORMAT_CONSTANTS,
-	MEMORY_UNITS,
 } from "../constants/export-constants.js";
 import type { GundamData } from "../types/product-data.js";
 
