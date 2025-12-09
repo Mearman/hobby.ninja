@@ -268,21 +268,21 @@ export default function ItemsPage() {
 		updateUrl({ search: value });
 	};
 
-	const handleSortChange = (value: string) => {
-		setSortBy(value);
-		updateUrl({ sort: value });
+	const handleSortChange = (value: string | null) => {
+		setSortBy(value ?? "");
+		updateUrl({ sort: value ?? "" });
 	};
 
-	const handleBrandChange = (value: string) => {
-		setBrandFilter(value);
+	const handleBrandChange = (value: string | null) => {
+		setBrandFilter(value ?? "");
 		setPage(1);
-		updateUrl({ brand: value });
+		updateUrl({ brand: value ?? "" });
 	};
 
-	const handleCategoryChange = (value: string) => {
-		setCategoryFilter(value);
+	const handleCategoryChange = (value: string | null) => {
+		setCategoryFilter(value ?? "");
 		setPage(1);
-		updateUrl({ category: value });
+		updateUrl({ category: value ?? "" });
 	};
 
 	const handlePageChange = (newPage: number) => {
