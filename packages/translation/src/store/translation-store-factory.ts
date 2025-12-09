@@ -3,7 +3,6 @@
  */
 
 import { TranslationStore, type StoreConfiguration, TranslationStoreError } from './translation-store';
-import { JSONStorage } from './json-storage';
 
 /**
  * Default configuration for TranslationStore
