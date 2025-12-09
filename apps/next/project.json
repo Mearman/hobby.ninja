@@ -30,7 +30,8 @@
       "configurations": {
         "development": {
           "buildTarget": "next:build:development",
-          "dev": true
+          "dev": true,
+          "watch": true
         },
         "production": {
           "buildTarget": "next:build:production",
@@ -42,6 +43,13 @@
       "executor": "@nx/next:export",
       "options": {
         "buildTarget": "next:build:production"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/workspace:run-commands",
+      "options": {
+        "command": "next start",
+        "cwd": "apps/next"
       }
     },
     "test": {
@@ -69,8 +77,8 @@
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/next",
-        "tsConfig": "apps/next/tsconfig.json"
+        "tsConfig": "apps/next/tsconfig.json",
+        "noEmit": true
       }
     }
   },
