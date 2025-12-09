@@ -1,188 +1,193 @@
-import type { SyncpackConfig } from 'syncpack';
+import type { RcFile } from "syncpack";
 
-const config: SyncpackConfig = {
-  // Sort exports condition keys (source before import/require for bundler support)
-  sortExports: [
-    'types',
-    'source',
-    'node-addons',
-    'node',
-    'browser',
-    'module',
-    'import',
-    'require',
-    'development',
-    'production',
-    'script',
-    'default',
-  ],
+const config: RcFile = {
+	// Sort exports condition keys (source before import/require for bundler support)
+	sortExports: [
+		"types",
+		"source",
+		"node-addons",
+		"node",
+		"browser",
+		"module",
+		"import",
+		"require",
+		"development",
+		"production",
+		"script",
+		"default",
+	],
 
-  // Sort package.json properties
-  sortFirst: [
-    'name',
-    'description',
-    'version',
-    'type',
-    'private',
-    'packageManager',
-    'workspaces',
-    'repository',
-    'scripts',
-    'dependencies',
-    'devDependencies',
-    'peerDependencies',
-    'optionalDependencies',
-  ],
+	// Sort package.json properties
+	sortFirst: [
+		"name",
+		"description",
+		"version",
+		"type",
+		"private",
+		"packageManager",
+		"workspaces",
+		"repository",
+		"scripts",
+		"dependencies",
+		"devDependencies",
+		"peerDependencies",
+		"optionalDependencies",
+	],
 
-  // Source files to analyze
-  source: [
-    'package.json',
-    'apps/*/package.json',
-    'packages/*/package.json',
-    'tools/*/package.json',
-  ],
+	// Source files to analyze
+	source: [
+		"package.json",
+		"apps/*/package.json",
+		"packages/*/package.json",
+		"tools/*/package.json",
+	],
 
-  versionGroups: [
-    // Local workspace packages must use workspace:* protocol
-    {
-      label: 'Local workspace packages',
-      packages: ['**/*'],
-      dependencies: ['@workspace/*'],
-      dependencyTypes: ['prod', 'dev'],
-      pinVersion: 'workspace:*',
-    },
-    // Pin all dependencies to exact versions (no ^ or ~)
-    {
-      label: 'Use exact versions for all dependencies',
-      packages: ['**/*'],
-      dependencyTypes: [
-        'dev',
-        'peer',
-        'prod',
-        'optional',
-        'overrides',
-        'resolutions',
-        'pnpmOverrides',
-      ],
-      pinVersion: true,
-      dependencyTypesStrategy: 'lock',
-    },
-    // React ecosystem - same range across all packages
-    {
-      label: 'React packages',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['react', 'react-dom'],
-      policy: 'sameRange',
-    },
-    {
-      label: 'React types',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['@types/react', '@types/react-dom'],
-      policy: 'sameRange',
-    },
-    // TypeScript ecosystem
-    {
-      label: 'TypeScript compiler',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['typescript'],
-      policy: 'sameRange',
-    },
-    {
-      label: 'TypeScript ESLint packages',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['@typescript-eslint/*'],
-      policy: 'sameRange',
-    },
-    // Nx ecosystem
-    {
-      label: 'Nx packages',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['nx', '@nx/*'],
-      policy: 'sameRange',
-    },
-    // Vite ecosystem
-    {
-      label: 'Vite packages',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['vite', '@vitejs/*', 'vite-*'],
-      policy: 'sameRange',
-    },
-    // Mantine UI ecosystem
-    {
-      label: 'Mantine packages',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['@mantine/*'],
-      policy: 'sameRange',
-    },
-    // TanStack ecosystem
-    {
-      label: 'TanStack packages',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['@tanstack/*'],
-      policy: 'sameRange',
-    },
-    // Testing ecosystem
-    {
-      label: 'Vitest packages',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['vitest', '@vitest/*'],
-      policy: 'sameRange',
-    },
-    {
-      label: 'Testing Library packages',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['@testing-library/*'],
-      policy: 'sameRange',
-    },
-    {
-      label: 'Playwright packages',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['@playwright/*'],
-      policy: 'sameRange',
-    },
-    // ESLint ecosystem
-    {
-      label: 'ESLint core packages',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['eslint', '@eslint/*'],
-      policy: 'sameRange',
-    },
-    // Vanilla Extract ecosystem
-    {
-      label: 'Vanilla Extract packages',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['@vanilla-extract/*'],
-      policy: 'sameRange',
-    },
-    // General type definitions
-    {
-      label: 'Type definitions',
-      packages: ['**/*'],
-      dependencyTypes: ['dev', 'peer', 'prod'],
-      dependencies: ['@types/*'],
-      policy: 'highest',
-    },
-    // Everything else: use highest semver version found across all packages
-    {
-      label: 'Use highest version across all packages',
-      packages: ['**/*'],
-      dependencies: ['**'],
-      policy: 'highest',
-    },
-  ],
+	// Configure semver groups to enforce exact versions
+	semverGroups: [
+		// Production, overrides, and resolutions should use exact versions
+		{
+			label: "Production and overrides use exact versions",
+			dependencyTypes: ["prod", "resolutions", "overrides", "pnpmOverrides"],
+			range: "", // Exact versions
+		},
+		// Development dependencies use exact versions
+		{
+			label: "Development dependencies use exact versions",
+			dependencyTypes: ["dev"],
+			range: "", // Exact versions
+		},
+		// Peer dependencies should also use exact versions
+		{
+			label: "Peer dependencies use exact versions",
+			dependencyTypes: ["peer"],
+			range: "", // Exact versions
+		},
+	],
+
+	// Version groups for aligning specific packages
+	versionGroups: [
+		// Local workspace packages must use workspace:* protocol
+		{
+			label: "Local workspace packages",
+			packages: ["**/*"],
+			dependencies: ["@hobby-ninja/*"],
+			dependencyTypes: ["prod", "dev"],
+			pinVersion: "workspace:*",
+		},
+		// Nx ecosystem packages
+		{
+			label: "Nx ecosystem",
+			packages: ["**/*"],
+			dependencies: ["@nx/*"],
+		},
+		// React ecosystem packages
+		{
+			label: "React ecosystem",
+			packages: ["**/*"],
+			dependencies: [
+				"react",
+				"react-dom",
+				"@types/react",
+				"@types/react-dom",
+			],
+		},
+		// TypeScript ecosystem packages
+		{
+			label: "TypeScript ecosystem",
+			packages: ["**/*"],
+			dependencies: [
+				"typescript",
+				"@types/node",
+				"tslib",
+			],
+		},
+		// ESLint ecosystem packages
+		{
+			label: "ESLint ecosystem",
+			packages: ["**/*"],
+			dependencies: [
+				"eslint",
+				"@typescript-eslint/*",
+				"@eslint/*",
+			],
+		},
+		// Vite ecosystem packages
+		{
+			label: "Vite ecosystem",
+			packages: ["**/*"],
+			dependencies: [
+				"vite",
+				"@vitejs/*",
+			],
+		},
+		// Vitest ecosystem packages
+		{
+			label: "Vitest ecosystem",
+			packages: ["**/*"],
+			dependencies: [
+				"vitest",
+				"@vitest/*",
+			],
+		},
+		// Playwright ecosystem packages
+		{
+			label: "Playwright ecosystem",
+			packages: ["**/*"],
+			dependencies: [
+				"@playwright/test",
+				"playwright",
+			],
+		},
+		// Testing Library ecosystem
+		{
+			label: "Testing Library ecosystem",
+			packages: ["**/*"],
+			dependencies: [
+				"@testing-library/*",
+			],
+		},
+		// Zod ecosystem
+		{
+			label: "Zod ecosystem",
+			packages: ["**/*"],
+			dependencies: [
+				"zod",
+			],
+		},
+		// Mantine UI ecosystem
+		{
+			label: "Mantine UI ecosystem",
+			packages: ["**/*"],
+			dependencies: [
+				"@mantine/*",
+			],
+		},
+		// TanStack ecosystem
+		{
+			label: "TanStack ecosystem",
+			packages: ["**/*"],
+			dependencies: [
+				"@tanstack/*",
+			],
+		},
+		// Tabler Icons ecosystem
+		{
+			label: "Tabler Icons ecosystem",
+			packages: ["**/*"],
+			dependencies: [
+				"@tabler/*",
+			],
+		},
+		// Ink CLI ecosystem
+		{
+			label: "Ink CLI ecosystem",
+			packages: ["**/*"],
+			dependencies: [
+				"ink",
+				"@inkjs/ui",
+			],
+		},
+	],
 };
 
 export default config;
