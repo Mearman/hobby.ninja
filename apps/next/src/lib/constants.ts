@@ -11,6 +11,11 @@ export const PAGINATION = {
   DEFAULT_SUGGESTION_LIMIT: 10,
   RANDOM_ITEMS_COUNT: 12,
   CATEGORY_PREVIEW_COUNT: 12,
+  // Grid layout columns
+  MOBILE_GRID_COLS: 1,
+  SMALL_SCREEN_GRID_COLS: 2,
+  TABLET_GRID_COLS: 3,
+  DESKTOP_GRID_COLS: 4,
 } as const;
 
 // UI Sizing and Dimensions
@@ -76,6 +81,14 @@ export const FILTER = {
   PRICE_STEP: 1_000,
   FUZZY_SEARCH_DISTANCE: 100,
   FUZZY_THRESHOLD: 0.05,
+  // Calculated year markers for sliders
+  YEAR_MARK_1990: 1990,
+  YEAR_MARK_2000: 2000,
+  YEAR_MARK_2010: 2010,
+  YEAR_MARK_2020: 2020,
+  // Calculated price markers for sliders (percentages of MAX_PRICE)
+  PRICE_MARK_20_PERCENT: 10_000, // 20% of MAX_PRICE
+  PRICE_MARK_50_PERCENT: 25_000, // 50% of MAX_PRICE
 } as const;
 
 // Z-Index layers
