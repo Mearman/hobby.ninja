@@ -12,15 +12,7 @@
 import * as crypto from 'node:crypto';
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
-import * as zlib from 'node:zlib';
-import { promisify } from 'node:util';
 import * as lockfile from 'proper-lockfile';
-
-// Promisify zlib functions
-const brotliCompress = promisify(zlib.brotliCompress);
-const brotliDecompress = promisify(zlib.brotliDecompress);
-const gzipCompress = promisify(zlib.gzip);
-const gunzip = promisify(zlib.gunzip);
 
 /**
  * Compression format options for stored data.
@@ -53,25 +45,6 @@ export interface JSONStorageConfig {
 	cleanupStaleLocks: boolean;
 }
 
-/**
- * File metadata header for integrity verification.
- */
-interface FileMetadata {
-	/** Original file checksum */
-	checksum: string;
-
-	/** Compression format used */
-	compression: CompressionFormat;
-
-	/** Original uncompressed size */
-	originalSize: number;
-
-	/** Creation timestamp */
-	createdAt: number;
-
-	/** Storage format version */
-	version: string;
-}
 
 /**
  * File operation result with metadata.
@@ -190,12 +163,6 @@ export class JSONStorage {
 	private readonly config: JSONStorageConfig;
 	private statistics: StorageStatistics;
 
-	// Storage format version for compatibility
-	private readonly STORAGE_VERSION = '1.0.0';
-
-	// File metadata header magic bytes for identification
-	private readonly METADATA_MAGIC = '\u0000JSM\u0000'; // JSON Storage Metadata
-
 	/**
 	 * Create a new JSONStorage instance.
 	 *
@@ -232,7 +199,6 @@ export class JSONStorage {
 	 * @throws {JSONStorageError} If write operation fails
 	 */
 	async writeJSON(filePath: string, data: unknown): Promise<FileOperationResult> {
-		const startTime = Date.now();
 		let tempFilePath: string | null = null;
 		let lockRelease: (() => Promise<void>) | null = null;
 
@@ -472,164 +438,6 @@ export class JSONStorage {
 	}
 
 	/**
-	 * Determine compression format based on file size.
-	 *
-	 * @param fileSize - Size of uncompressed data in bytes
-	 * @returns Compression format to use
-	 * @private
-	 */
-	private determineCompression(fileSize: number): CompressionFormat {
-		if (fileSize > this.config.compressionThreshold) {
-			return 'brotli'; // Better compression for larger files (>100 bytes in tests)
-		} else if (fileSize > 50) {
-			return 'gzip'; // Fast compression for medium files (>50 bytes)
-		}
-		return 'none'; // No compression for very small files
-	}
-
-	/**
-	 * Compress data using specified format.
-	 *
-	 * @param data - Data to compress
-	 * @param format - Compression format
-	 * @returns Compressed data and compression flag
-	 * @private
-	 */
-	private async compressData(data: Buffer, format: CompressionFormat): Promise<{ data: Buffer; compressed: boolean }> {
-		if (format === 'none') {
-			return { data, compressed: false };
-		}
-
-		try {
-			let compressedData: Buffer;
-
-			if (format === 'brotli') {
-				compressedData = await brotliCompress(data, {
-					params: {
-						[zlib.constants.BROTLI_PARAM_QUALITY]: 4, // Balanced compression
-						[zlib.constants.BROTLI_PARAM_MODE]: zlib.constants.BROTLI_MODE_TEXT
-					}
-				});
-			} else if (format === 'gzip') {
-				compressedData = await gzipCompress(data, { level: 6 }); // Balanced compression
-			} else {
-				throw new JSONStorageError(
-					'UNSUPPORTED_COMPRESSION',
-					`Unsupported compression format: ${format}`
-				);
-			}
-
-			return { data: compressedData, compressed: true };
-
-		} catch (error) {
-			throw new JSONStorageError(
-				'COMPRESSION_FAILED',
-				`Compression failed with format: ${format}`,
-				undefined,
-				error
-			);
-		}
-	}
-
-	/**
-	 * Decompress data using specified format.
-	 *
-	 * @param data - Data to decompress
-	 * @param format - Compression format
-	 * @returns Decompressed data
-	 * @private
-	 */
-	private async decompressData(data: Buffer, format: CompressionFormat): Promise<Buffer> {
-		if (format === 'none') {
-			return data;
-		}
-
-		try {
-			if (format === 'brotli') {
-				return await brotliDecompress(data);
-			} else if (format === 'gzip') {
-				return await gunzip(data);
-			} else {
-				throw new JSONStorageError(
-					'UNSUPPORTED_COMPRESSION',
-					`Unsupported compression format: ${format}`
-				);
-			}
-		} catch (error) {
-			throw new JSONStorageError(
-				'DECOMPRESSION_FAILED',
-				`Decompression failed with format: ${format}`,
-				undefined,
-				error
-			);
-		}
-	}
-
-	/**
-	 * Create file buffer with metadata header.
-	 *
-	 * @param metadata - File metadata
-	 * @param data - File data
-	 * @returns Complete file buffer
-	 * @private
-	 */
-	private createFileBuffer(metadata: FileMetadata, data: Buffer): Buffer {
-		const metadataJson = JSON.stringify(metadata);
-		const metadataBuffer = Buffer.from(metadataJson, 'utf8');
-
-		// Create file structure:
-		// [MAGIC_BYTES][METADATA_LENGTH][METADATA][DATA]
-		const magicBuffer = Buffer.from(this.METADATA_MAGIC, 'utf8');
-		const lengthBuffer = Buffer.allocUnsafe(4);
-		lengthBuffer.writeUInt32BE(metadataBuffer.length, 0);
-
-		return Buffer.concat([magicBuffer, lengthBuffer, metadataBuffer, data]);
-	}
-
-	/**
-	 * Parse file buffer and extract metadata and data.
-	 *
-	 * @param fileBuffer - Complete file buffer
-	 * @returns Parsed metadata and data
-	 * @private
-	 */
-	private parseFileBuffer(fileBuffer: Buffer): { metadata: FileMetadata; dataBuffer: Buffer } {
-		try {
-			// Check magic bytes
-			const magicBytes = fileBuffer.subarray(0, this.METADATA_MAGIC.length);
-			if (magicBytes.toString('utf8') !== this.METADATA_MAGIC) {
-				throw new JSONStorageError(
-					'INVALID_FILE_FORMAT',
-					'Invalid file format - missing magic bytes'
-				);
-			}
-
-			// Read metadata length
-			const metadataLength = fileBuffer.readUInt32BE(this.METADATA_MAGIC.length);
-
-			// Extract metadata
-			const metadataStart = this.METADATA_MAGIC.length + 4;
-			const metadataEnd = metadataStart + metadataLength;
-			const metadataBuffer = fileBuffer.subarray(metadataStart, metadataEnd);
-			const metadataJson = metadataBuffer.toString('utf8');
-			const metadata = JSON.parse(metadataJson) as FileMetadata;
-
-			// Extract data
-			const dataBuffer = fileBuffer.subarray(metadataEnd);
-
-			return { metadata, dataBuffer };
-
-		} catch (error) {
-			throw new JSONStorageError(
-				'FILE_PARSE_FAILED',
-				'Failed to parse file buffer',
-				undefined,
-				error
-			);
-		}
-	}
-
-	/**
 	 * Acquire file lock with retry logic.
 	 *
 	 * @param filePath - File path to lock
@@ -673,86 +481,6 @@ export class JSONStorage {
 			`Unexpected lock acquisition failure: ${filePath}`,
 			filePath
 		);
-	}
-
-	/**
-	 * Verify file integrity by reading and checksumming.
-	 *
-	 * @param filePath - File path to verify
-	 * @param expectedMetadata - Expected metadata for verification
-	 * @private
-	 */
-	private async verifyFileIntegrity(filePath: string, expectedMetadata: FileMetadata): Promise<void> {
-		try {
-			const fileBuffer = await fs.readFile(filePath);
-			const { metadata, dataBuffer } = this.parseFileBuffer(fileBuffer);
-
-			// Verify metadata matches
-			if (metadata.checksum !== expectedMetadata.checksum) {
-				throw new JSONStorageError(
-					'INTEGRITY_CHECK_FAILED',
-					'Metadata checksum mismatch during verification',
-					filePath
-				);
-			}
-
-			// Verify data integrity
-			const decompressedBuffer = await this.decompressData(dataBuffer, metadata.compression);
-			const actualChecksum = this.calculateChecksum(decompressedBuffer);
-
-			if (actualChecksum !== metadata.checksum) {
-				throw new JSONStorageError(
-					'INTEGRITY_CHECK_FAILED',
-					'Data checksum mismatch during verification',
-					filePath
-				);
-			}
-
-			this.statistics.integrityVerifications++;
-
-		} catch (error) {
-			if (error instanceof JSONStorageError) {
-				throw error;
-			}
-
-			throw new JSONStorageError(
-				'VERIFICATION_FAILED',
-				`File integrity verification failed: ${filePath}`,
-				filePath,
-				error
-			);
-		}
-	}
-
-	/**
-	 * Validate metadata compatibility and format.
-	 *
-	 * @param metadata - Metadata to validate
-	 * @private
-	 */
-	private validateMetadata(metadata: FileMetadata): void {
-		if (!metadata.checksum || !metadata.version || !metadata.createdAt) {
-			throw new JSONStorageError(
-				'INVALID_METADATA',
-				'File metadata missing required fields'
-			);
-		}
-
-		// Check version compatibility
-		if (metadata.version !== this.STORAGE_VERSION) {
-			throw new JSONStorageError(
-				'VERSION_MISMATCH',
-				`File version ${metadata.version} is not compatible with storage version ${this.STORAGE_VERSION}`
-			);
-		}
-
-		// Validate timestamp
-		if (typeof metadata.createdAt !== 'number' || metadata.createdAt <= 0) {
-			throw new JSONStorageError(
-				'INVALID_METADATA',
-				'Invalid creation timestamp in metadata'
-			);
-		}
 	}
 
 	/**

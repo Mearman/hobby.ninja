@@ -1,5 +1,5 @@
 import { CONTENT_DETECTION, RENDERING_DETECTION } from "../constants/index.js";
-import { RenderingDetection, RenderingType, ProgressiveEnhancementResult } from "../types/rendering-detection.js";
+import { RenderingType, ProgressiveEnhancementResult, RenderingDetection } from "../types/rendering-detection.js";
 
 
 // Framework detection patterns
@@ -121,6 +121,14 @@ function extractTextContent(html: string): string {
 	return html.replaceAll(/<[^>]*>/g, "").trim();
 }
 
+function hasAjaxCalls(html: string): boolean {
+	return /fetch\(|XMLHttpRequest|\.ajax\(|axios\./i.test(html);
+}
+
+function hasCSPRestrictions(html: string): boolean {
+	return /content-security-policy|CSP|script-src/i.test(html);
+}
+
 function determineRenderingType(html: string, requiresJS: boolean): RenderingType {
 	const framework = detectFramework(html);
 
@@ -137,23 +145,29 @@ function determineRenderingType(html: string, requiresJS: boolean): RenderingTyp
 
 function getIndicators(html: string, staticAnalysis: { minimalStaticContent: boolean }) {
 	return {
-		hasFramework: detectFrameworkSignals(html),
+		hasDynamicContent: hasDynamicIndicators(html),
 		hasLazyLoading: LAZY_LOADING_PATTERNS.some(pattern => pattern.test(html)),
-		minimalContent: staticAnalysis.minimalStaticContent,
-		hasEmptyContainers: hasEmptyContainers(html),
+		hasAjaxCalls: hasAjaxCalls(html),
+		hasFrameworkSignals: detectFrameworkSignals(html),
+		hasCSPRestrictions: hasCSPRestrictions(html),
+		minimalStaticContent: staticAnalysis.minimalStaticContent,
 	};
 }
 
-function getRecommendation(staticAnalysis: { minimalStaticContent: boolean }, dynamicAnalysis: { required: boolean }): string {
+function getRecommendation(staticAnalysis: { minimalStaticContent: boolean }, dynamicAnalysis: { required: boolean }): ProgressiveEnhancementResult["recommendation"] {
 	if (dynamicAnalysis.required && staticAnalysis.minimalStaticContent) {
 		return "requires-javascript-first";
 	}
 
 	if (dynamicAnalysis.required) {
-		return "progressive-enhancement";
+		return "dynamic-required";
 	}
 
-	return "static-scraping-sufficient";
+	if (staticAnalysis.minimalStaticContent) {
+		return "hybrid-approach";
+	}
+
+	return "static-only";
 }
 
 function calculateConfidence(html: string, _analysis: RenderingDetection): number {
@@ -195,19 +209,27 @@ export function detectRenderingStrategy(html: string, options: {
 		}
 	}
 
+	const detectionTime = Date.now() - startTime;
+
 	return {
 		renderingType: determineRenderingType(html, requiresJS),
+		detectionMethod: "content-analysis",
+		initialContentLength: html.length,
+		finalContentLength: html.length,
 		requiresJavaScript: requiresJS,
+		jsExecutionTime: requiresJS ? detectionTime : 0,
+		detectedAt: Date.now(),
 		confidence: calculateConfidence(html, {
 			renderingType: determineRenderingType(html, requiresJS),
+			detectionMethod: "content-analysis",
+			initialContentLength: html.length,
+			finalContentLength: html.length,
 			requiresJavaScript: requiresJS,
+			jsExecutionTime: 0,
+			detectedAt: Date.now(),
 			confidence: 0,
-			staticAnalysis,
-			dynamicAnalysis: analyzeDynamicContent(html),
 			indicators: getIndicators(html, staticAnalysis),
 		}),
-		staticAnalysis,
-		dynamicAnalysis: analyzeDynamicContent(html),
 		indicators: getIndicators(html, staticAnalysis),
 	};
 }
@@ -224,8 +246,27 @@ export function analyzeProgressiveEnhancement(html: string): ProgressiveEnhancem
 		},
 		dynamicAnalysis: {
 			required: dynamicAnalysis.required,
+			additionalContent: dynamicAnalysis.additionalContent,
 			waitForSelectors: dynamicAnalysis.waitForSelectors,
 		},
 		recommendation: getRecommendation(staticAnalysis, dynamicAnalysis),
 	};
 }
+
+export class RenderingDetector {
+	detect(html: string, options?: { testWithPlaywright?: boolean; timeout?: number }): RenderingDetection {
+		return detectRenderingStrategy(html, options);
+	}
+
+	detectRenderingStrategy(html: string, options?: { testWithPlaywright?: boolean; timeout?: number }): RenderingDetection {
+		return detectRenderingStrategy(html, options);
+	}
+
+	analyzeProgressiveEnhancement(html: string): ProgressiveEnhancementResult {
+		return analyzeProgressiveEnhancement(html);
+	}
+}
+
+// Export the type for use in other modules
+export type { RenderingDetection } from "../types/rendering-detection.js";
+

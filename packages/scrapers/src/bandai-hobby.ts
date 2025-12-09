@@ -1,18 +1,9 @@
 import type { LanguageDetection } from "@hobby-ninja/types/language";
-import type { GundamData, PriceInfo, ProductImage } from "@hobby-ninja/types/product";
+import type { GundamData, PriceInfo, ProductImage, ProductSpecification } from "@hobby-ninja/types/product";
 import * as cheerio from "cheerio";
 import type { Element } from "domhandler";
 
 import { BaseScraper } from "./base-scraper";
-
-interface Specification {
-  value: string | number | boolean;
-  unit?: string;
-  originalText: string;
-}
-
-type SpecificationData = Record<string, Specification>;
-
 
 export class BandaiHobbyScraper extends BaseScraper {
 	constructor() {
@@ -170,8 +161,8 @@ export class BandaiHobbyScraper extends BaseScraper {
 		return "";
 	}
 
-	private extractSpecifications($: cheerio.CheerioAPI): SpecificationData {
-		const specs: SpecificationData = {};
+	private extractSpecifications($: cheerio.CheerioAPI): ProductSpecification {
+		const specs: ProductSpecification = {};
 
 		// Look for specification tables or lists
 		const specTable = $(".specifications table, .spec-table, .product-specs table");
@@ -183,11 +174,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 				const value = this.extractTextContentFromElement($row.find("td, .spec-value, .value"));
 
 				if (label && value) {
-					specs[this.normalizeSpecKey(label)] = {
-						value: this.parseSpecValue(value),
-						unit: this.extractUnit(value),
-						originalText: value,
-					};
+					specs[this.normalizeSpecKey(label)] = this.parseSpecValue(value);
 				}
 			});
 		}
@@ -200,11 +187,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 			const value = this.extractTextContentFromElement($element.find(".spec-value, .value"));
 
 			if (label && value) {
-				specs[this.normalizeSpecKey(label)] = {
-					value: this.parseSpecValue(value),
-					unit: this.extractUnit(value),
-					originalText: value,
-				};
+				specs[this.normalizeSpecKey(label)] = this.parseSpecValue(value);
 			}
 		});
 
@@ -276,11 +259,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 		return value;
 	}
 
-	private extractUnit(value: string): string | undefined {
-		const unitMatch = /(mm|cm|m|g|kg|%|deg|°)/.exec(value);
-		return unitMatch?.[1] || undefined;
-	}
-
+	
 	private extractImages($: cheerio.CheerioAPI): ProductImage[] {
 		const images: ProductImage[] = [];
 
@@ -335,15 +314,4 @@ export class BandaiHobbyScraper extends BaseScraper {
 		// Remove duplicates while preserving order
 		return [...new Set(categories)];
 	}
-
-	private determinePageType(url: string): "listing" | "detail" | "variant" {
-		if (url.includes("/category/") || url.includes("/list/")) {
-			return "listing";
-		} else if (url.includes("/site/") || url.includes("/product/") || url.includes("/item/")) {
-			return "detail";
-		} else {
-			return "variant";
-		}
-	}
-
 }

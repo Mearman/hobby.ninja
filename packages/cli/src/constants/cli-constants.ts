@@ -133,6 +133,7 @@ export const RATE_LIMITING = {
 // Logging constants
 export const LOGGING = {
 	DEFAULT_MAX_FILES: 5,
+	DEFAULT_MAX_FILE_SIZE: 10 * 1024 * 1024, // 10MB
 	FLUSH_DELAY: 100, // ms to wait when flushing logs
 	LOG_LEVEL_PRIORITIES: {
 		error: 0,
@@ -159,6 +160,8 @@ export const VALIDATION_LIMITS = {
 	MAX_TIMEOUT_MS: 300_000,
 	MIN_CACHE_EXPIRY_HOURS: 1,
 	MAX_CACHE_EXPIRY_HOURS: 168,
+	MIN_REQUESTS_PER_SECOND: 0.1,
+	MAX_REQUESTS_PER_SECOND: 100,
 } as const;
 
 // Catalog discovery constants
