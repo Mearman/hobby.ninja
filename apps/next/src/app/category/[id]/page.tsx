@@ -1,4 +1,4 @@
-import { getAllCategories, getAllItems, getCategoryById } from "@/lib/server-graph-data";
+import { getAllCategories, getItemsByCategory, getCategoryById } from "@/lib/server-graph-data";
 import { generateCategoryParams } from "@/lib/data-loader";
 import CategoryPageClient from "./CategoryPageClient";
 
@@ -9,7 +9,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
 	// Load data at build time
 	const [categories, items, category] = await Promise.all([
 		getAllCategories(),
-		getAllItems(),
+		getItemsByCategory(id),
 		getCategoryById(id),
 	]);
 

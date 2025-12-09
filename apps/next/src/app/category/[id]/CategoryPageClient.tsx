@@ -138,10 +138,8 @@ export default function CategoryPageClient({
 
 	// Filter and process items
 	const processedItems = useMemo(() => {
-		// Filter items by category
-		let filteredItems = initialItems.filter(item =>
-			isItemNode(item) && item.category === categoryId,
-		);
+		// Items are already filtered by category on the server
+		let filteredItems = initialItems.filter(item => isItemNode(item));
 
 		// Apply search filter
 		if (searchQuery) {
@@ -190,18 +188,18 @@ export default function CategoryPageClient({
 		}
 
 		return filteredItems;
-	}, [initialItems, categoryId, searchQuery, brandFilter, sortBy]);
+	}, [initialItems, searchQuery, brandFilter, sortBy]);
 
 	// Get available brands for the current category
 	const availableBrands = useMemo(() => {
 		const brands = new Set<string>();
-		for (const item of initialItems.filter(item => isItemNode(item) && item.category === categoryId)) {
+		for (const item of initialItems.filter(item => isItemNode(item))) {
 			if (item.brand) {
 				brands.add(item.brand);
 			}
 		}
 		return [...brands].sort();
-	}, [initialItems, categoryId]);
+	}, [initialItems]);
 
 	// Pagination calculations
 	const total = processedItems.length;
