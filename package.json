@@ -2,6 +2,7 @@
 	"name": "hobby-ninja",
 	"version": "0.0.1",
 	"private": true,
+	"type": "module",
 	"description": "Nx monorepo for hobby collection management",
 	"scripts": {
 		"build": "nx run hobby-ninja:build",
