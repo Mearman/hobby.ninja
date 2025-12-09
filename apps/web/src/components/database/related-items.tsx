@@ -30,9 +30,10 @@ import {
 } from "@tabler/icons-react";
 import React, { useState, useEffect, useMemo } from "react";
 
+import { ZERO } from "../../constants/index.js";
 import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../../services/dataService";
 
-// Constants
+// Constants specific to this component
 const DEFAULT_MAX_ITEMS = 12;
 const MAX_ITEMS_PER_CATEGORY = 8;
 const VARIANT_ITEMS_LIMIT = 6;
@@ -46,7 +47,6 @@ const TAB_LIST_MIN_LENGTH = 2;
 const CARD_HEIGHT = 120;
 const BADGE_POSITION = 8;
 const SCROLL_AREA_MAX_HEIGHT = 600;
-const ZERO = 0;
 
 // Types for related items
 interface RelatedItem {
