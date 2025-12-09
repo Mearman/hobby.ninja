@@ -1,7 +1,8 @@
 import Dexie, { type EntityTable } from 'dexie';
+import { PAGINATION } from './constants';
 
 export interface CollectionItem {
-  id?: number;
+  id: string;
   collectionId: string;
   itemId: string;
   category: string;
@@ -20,10 +21,16 @@ export interface CollectionItem {
   tags: string[];
   added: Date;
   modified: Date;
+  hidden?: boolean;
+  dateAdded?: string;
+  lastModified?: string;
+  price?: number;
+  location?: string;
+  metadata?: Record<string, unknown>;
 }
 
 export interface Collection {
-  id?: number;
+  id: string;
   name: string;
   category: string;
   description: string;
@@ -41,7 +48,7 @@ export interface Collection {
 }
 
 export interface UserPreferences {
-  id?: number;
+  id: string;
   theme: 'light' | 'dark' | 'auto';
   language: 'en' | 'ja';
   defaultCurrency: 'JPY' | 'USD' | 'EUR';
@@ -49,6 +56,20 @@ export interface UserPreferences {
   itemsPerPage: number;
   showAdvancedFilters: boolean;
   autoSaveSearch: boolean;
+}
+
+export interface CollectionStats {
+  totalItems: number;
+  totalValue: number;
+  statusBreakdown: Record<CollectionItem['status'], number>;
+  conditionBreakdown: Record<CollectionItem['condition'], number>;
+}
+
+export interface CollectionListResponse {
+  collections: Collection[];
+  total: number;
+  page: number;
+  pageSize: number;
 }
 
 export class CollectionDatabase extends Dexie {
@@ -60,8 +81,8 @@ export class CollectionDatabase extends Dexie {
     super('hobby-ninja-collection-db');
 
     this.version(1).stores({
-      collections: '++id, category, name, isPublic, createdAt, modifiedAt',
-      collectionItems: '++id, collectionId, itemId, category, status, added, modified',
+      collections: 'id, category, name, isPublic, createdAt, modifiedAt',
+      collectionItems: 'id, collectionId, itemId, category, status, added, modified',
       userPreferences: '++id, theme, language, defaultCurrency'
     });
   }
@@ -77,47 +98,48 @@ export class CollectionDatabase extends Dexie {
     return [];
   }
 
-  async createCollection(collection: Omit<Collection, 'id'>): Promise<number> {
+  async createCollection(collection: Omit<Collection, 'id'>): Promise<string> {
     // Temporary implementation - can be enhanced later
-    return 1;
+    return 'collection-id-' + Date.now();
   }
 
-  async addItemToCollection(item: Omit<CollectionItem, 'id'>): Promise<number> {
+  async addItemToCollection(item: Omit<CollectionItem, 'id'>): Promise<string> {
     // Temporary implementation - can be enhanced later
-    return 1;
+    return 'item-id-' + Date.now();
   }
 
   async getPreferences(): Promise<UserPreferences> {
     // Return default preferences
     return {
+      id: 'default-user-preferences',
       theme: 'auto',
       language: 'en',
       defaultCurrency: 'JPY',
       gridView: 'grid',
-      itemsPerPage: 24,
+      itemsPerPage: PAGINATION.ITEMS_PER_PAGE,
       showAdvancedFilters: false,
       autoSaveSearch: true
     };
   }
 
   // Placeholder for other methods - will be implemented as needed
-  async getCollection(id: number): Promise<Collection | undefined> {
+  async getCollection(id: string): Promise<Collection | undefined> {
     return undefined;
   }
 
-  async updateCollection(id: number, updates: Partial<Collection>): Promise<number> {
-    return 1;
+  async updateCollection(id: string, updates: Partial<Collection>): Promise<string> {
+    return id;
   }
 
-  async deleteCollection(id: number): Promise<void> {
+  async deleteCollection(id: string): Promise<void> {
     // Placeholder
   }
 
-  async updateCollectionItem(id: number, updates: Partial<CollectionItem>): Promise<number> {
-    return 1;
+  async updateCollectionItem(id: string, updates: Partial<CollectionItem>): Promise<string> {
+    return id;
   }
 
-  async removeItemFromCollection(id: number): Promise<void> {
+  async removeItemFromCollection(id: string): Promise<void> {
     // Placeholder
   }
 
@@ -155,23 +177,23 @@ export class CollectionDatabase extends Dexie {
     // Placeholder
   }
 
-  async exportCollection(collectionId: string): Promise<any> {
+  async exportCollection(collectionId: string): Promise<Record<string, unknown>> {
     return {};
   }
 
-  async importCollection(data: any): Promise<void> {
+  async importCollection(data: Record<string, unknown>): Promise<void> {
     // Placeholder
   }
 
-  async exportAllData(): Promise<any> {
+  async exportAllData(): Promise<Record<string, unknown>> {
     return {};
   }
 
-  async importAllData(data: any): Promise<void> {
+  async importAllData(data: Record<string, unknown>): Promise<void> {
     // Placeholder
   }
 
-  async restoreAllData(data: any): Promise<void> {
+  async restoreAllData(data: Record<string, unknown>): Promise<void> {
     // Placeholder
   }
 }
@@ -187,5 +209,45 @@ export async function initializeDatabase() {
     throw error;
   }
 }
+
+// Export functions for context provider
+export const getCollections = async (): Promise<CollectionListResponse> => {
+  const collections = await db.getAllCollections();
+  return {
+    collections,
+    total: collections.length,
+    page: 1,
+    pageSize: collections.length
+  };
+};
+
+export const getCollection = db.getCollection.bind(db);
+export const createCollection = db.createCollection.bind(db);
+export const updateCollection = db.updateCollection.bind(db);
+export const deleteCollection = db.deleteCollection.bind(db);
+export const getStats = db.getCollectionStats.bind(db);
+export const addItem = db.addItemToCollection.bind(db);
+export const updateItem = db.updateCollectionItem.bind(db);
+export const removeItem = db.removeItemFromCollection.bind(db);
+
+// Add missing functions that context expects
+export const getCollectionItems = db.getItemsByCollection.bind(db);
+
+export const bulkAddItems = async (items: Omit<CollectionItem, 'id'>[]): Promise<CollectionItem[]> => {
+  // Placeholder implementation that returns items with generated IDs
+  return items.map((item, index) => ({
+    ...item,
+    id: `bulk-item-id-${Date.now()}-${index}`
+  }));
+};
+
+export const bulkUpdateItems = async (items: { id: string; updates: Partial<CollectionItem> }[]): Promise<string[]> => {
+  // Placeholder implementation
+  return items.map(() => 'updated');
+};
+
+export const bulkRemoveItems = async (ids: string[]): Promise<void> => {
+  // Placeholder implementation
+};
 
 export default db;
