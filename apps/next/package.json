@@ -6,6 +6,11 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
+		"build:webpack": "ENABLE_WEBPACK_DATA_PLUGIN=true next build",
+		"build:no-webpack": "ENABLE_WEBPACK_DATA_PLUGIN=false next build",
+		"dev:webpack": "ENABLE_WEBPACK_DATA_PLUGIN=true next dev",
+		"dev:no-webpack": "ENABLE_WEBPACK_DATA_PLUGIN=false next dev",
+		"build-data": "tsx ./scripts/data-processor.ts",
 		"start": "next start",
 		"lint": "next lint",
 		"export": "next build && next export",
