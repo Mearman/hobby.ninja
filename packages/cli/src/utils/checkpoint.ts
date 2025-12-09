@@ -1,8 +1,8 @@
 import { promises as fs } from "node:fs";
 import * as path from "node:path";
 
-import { CheckpointData, CheckpointMetadata, ScrapeMetadata } from "../types/profile-types.js";
 import { DEFAULT_VALUES } from "../constants/cli-constants.js";
+import { CheckpointData, CheckpointMetadata, ScrapeMetadata } from "../types/profile-types.js";
 
 export interface CheckpointOptions {
   checkpointFile?: string;

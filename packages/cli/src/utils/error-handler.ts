@@ -17,9 +17,7 @@ export enum ErrorCategory {
   UNKNOWN = "unknown"
 }
 
-export interface ErrorContext {
-  [key: string]: string | number | boolean | undefined;
-}
+export type ErrorContext = Record<string, string | number | boolean | undefined>;
 
 export interface ScraperError {
   message: string;
