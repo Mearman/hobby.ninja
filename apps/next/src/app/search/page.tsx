@@ -9,7 +9,7 @@ import {
 	Stack,
 } from "@mantine/core";
 import React from "react";
-import FuseSearch from "@/components/search/fuse-search";
+import { FuseSearch } from "@/components/search/fuse-search";
 import type { SearchResult } from "@/lib/fuse-search";
 
 export default function SearchPage() {

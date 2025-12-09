@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import Fuse from 'fuse.js';
 import { ItemNode, getAllItems } from './graph-data';
 
@@ -211,11 +211,16 @@ export interface SearchStats {
 
 // Export hook for React components
 export function useSearch() {
-  return {
+  const search = useCallback((query: string, options?: SearchOptions) => searchService.search(query, options), []);
+  const getSuggestions = useCallback((query: string, limit?: number) => searchService.getSuggestions(query, limit), []);
+  const advancedSearch = useCallback((query: string, filters: SearchFilters) => searchService.advancedSearch(query, filters), []);
+  const getStats = useCallback((): SearchStats => searchService.getStats(), []);
+
+  return useMemo(() => ({
     isInitialized: true, // This is handled by SearchProvider
-    search: (query: string, options?: SearchOptions) => searchService.search(query, options),
-    getSuggestions: (query: string, limit?: number) => searchService.getSuggestions(query, limit),
-    advancedSearch: (query: string, filters: SearchFilters) => searchService.advancedSearch(query, filters),
-    getStats: (): SearchStats => searchService.getStats(),
-  };
+    search,
+    getSuggestions,
+    advancedSearch,
+    getStats,
+  }), [search, getSuggestions, advancedSearch, getStats]);
 }
