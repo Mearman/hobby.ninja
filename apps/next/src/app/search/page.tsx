@@ -1,3 +1,5 @@
+"use client";
+
 import {
 	Title,
 	Text,
@@ -47,22 +49,43 @@ import {
 	itemCardMetadata,
 	itemCardBadge,
 } from "@/styles/components.css";
+import {
+	FILTER,
+	UI,
+	PAGINATION,
+	TYPOGRAPHY,
+	TIMING,
+} from "@/lib/constants";
 
-// Constants
-const MIN_YEAR = 1980;
-const MAX_YEAR = 2024;
-const MIN_PRICE = 0;
-const MAX_PRICE = 50_000;
-const PRICE_STEP = 1000;
-const LOADING_SKELETON_COUNT = 9;
-const DEFAULT_GRID_COLS = 3;
-const SMALL_SCREEN_GRID_COLS = 2;
-const MOBILE_GRID_COLS = 1;
+// Constants from centralized config
+const {
+	MIN_YEAR,
+	MAX_YEAR,
+	MIN_PRICE,
+	MAX_PRICE,
+	PRICE_STEP,
+	YEAR_MARK_1990,
+	YEAR_MARK_2000,
+	YEAR_MARK_2010,
+	YEAR_MARK_2020,
+	PRICE_MARK_20_PERCENT,
+	PRICE_MARK_50_PERCENT,
+} = FILTER;
+const {
+	SKELETON_COUNT,
+	STICKY_TOP_POSITION,
+	SELECT_WIDTH,
+	THUMBNAIL_WIDTH,
+	THUMBNAIL_HEIGHT,
+} = UI;
+const {
+	ITEMS_PER_PAGE: DEFAULT_GRID_COLS,
+	MOBILE_GRID_COLS,
+	SMALL_SCREEN_GRID_COLS,
+} = PAGINATION;
 const MD_BREAKPOINT = "md";
 const SM_BREAKPOINT = "sm";
 const LG_BREAKPOINT = "lg";
-const STICKY_TOP_POSITION = 20;
-const SELECT_WIDTH = 150;
 
 // Static data fetching
 const getSearchData = async () => {
@@ -111,11 +134,11 @@ function ItemCard({ item }: { item: ItemNode }) {
 		>
 			<Box className={itemCardImage}>
 				<Image
-					src={`https://via.placeholder.com/280x200/f5f5f5/666666?text=${encodeURIComponent(getNodeDisplayName(item))}`}
+					src={`https://via.placeholder.com/${THUMBNAIL_WIDTH}x${THUMBNAIL_HEIGHT}/f5f5f5/666666?text=${encodeURIComponent(getNodeDisplayName(item))}`}
 					alt={getNodeDisplayName(item)}
 					fit="cover"
-					height={200}
-					fallbackSrc="https://via.placeholder.com/280x200/e0e0e0/999999?text=No+Image"
+					height={THUMBNAIL_HEIGHT}
+					fallbackSrc={`https://via.placeholder.com/${THUMBNAIL_WIDTH}x${THUMBNAIL_HEIGHT}/e0e0e0/999999?text=No+Image`}
 				/>
 			</Box>
 			<Box className={itemCardContent}>
@@ -174,13 +197,13 @@ function SearchForm({
 		<Card p="lg" radius="md" withBorder={true}>
 			<Group justify="space-between" mb="md">
 				<Group>
-					<IconAdjustmentsHorizontal size={20} />
-					<Text fw={500}>Advanced Search</Text>
+					<IconAdjustmentsHorizontal size={UI.ICON_SIZE_LG} />
+					<Text fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>Advanced Search</Text>
 				</Group>
 				<Button
 					variant="subtle"
 					size="sm"
-					leftSection={<IconX size={14} />}
+					leftSection={<IconX size={UI.ICON_SIZE_SM} />}
 					onClick={() => {
 						onFiltersChange({
 							search: "",
@@ -209,7 +232,7 @@ function SearchForm({
 								placeholder="Search by name, brand, series, grade..."
 								value={filters.search ?? ""}
 								onChange={(e) => { onFiltersChange({ search: e.target.value }); }}
-								leftSection={<IconSearch size={16} />}
+								leftSection={<IconSearch size={UI.ICON_SIZE_MD} />}
 							/>
 
 							<Select
@@ -327,7 +350,7 @@ function SearchForm({
 							<div>
 								<Group justify="space-between" mb="xs">
 									<Text size="sm">Release Year</Text>
-									<Text size="sm" fw={500}>
+									<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
 										{/* Extract year range from dateRange if available */}
 										{filters.dateRange
 											? `${new Date(filters.dateRange.start).getFullYear()} - ${new Date(filters.dateRange.end).getFullYear()}`
@@ -349,12 +372,12 @@ function SearchForm({
 										});
 									}}
 									marks={[
-										{ value: MIN_YEAR, label: "1980" },
-										{ value: 1990, label: "1990" },
-										{ value: 2000, label: "2000" },
-										{ value: 2010, label: "2010" },
-										{ value: 2020, label: "2020" },
-										{ value: MAX_YEAR, label: "2024" },
+										{ value: MIN_YEAR, label: MIN_YEAR.toString() },
+										{ value: YEAR_MARK_1990, label: YEAR_MARK_1990.toString() },
+										{ value: YEAR_MARK_2000, label: YEAR_MARK_2000.toString() },
+										{ value: YEAR_MARK_2010, label: YEAR_MARK_2010.toString() },
+										{ value: YEAR_MARK_2020, label: YEAR_MARK_2020.toString() },
+										{ value: MAX_YEAR, label: MAX_YEAR.toString() },
 									]}
 								/>
 							</div>
@@ -362,7 +385,7 @@ function SearchForm({
 							<div>
 								<Group justify="space-between" mb="xs">
 									<Text size="sm">Price Range (¥)</Text>
-									<Text size="sm" fw={500}>
+									<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
 										¥{priceRangeValue[0].toLocaleString()} - ¥{priceRangeValue[1].toLocaleString()}
 									</Text>
 								</Group>
@@ -379,8 +402,8 @@ function SearchForm({
 									}}
 									marks={[
 										{ value: MIN_PRICE, label: "¥0" },
-										{ value: 10_000, label: "¥10k" },
-										{ value: 25_000, label: "¥25k" },
+										{ value: PRICE_MARK_20_PERCENT, label: "¥10k" },
+										{ value: PRICE_MARK_50_PERCENT, label: "¥25k" },
 										{ value: MAX_PRICE, label: "¥50k" },
 									]}
 								/>
@@ -432,7 +455,7 @@ export default async function SearchPage() {
 // Client-side wrapper for search form
 function SearchFormWrapper({ searchData }: { searchData: Awaited<ReturnType<typeof getSearchData>> }) {
 	const { filters, setFilters } = useSearch();
-	const { setState } = useUrlState<Record<string, any>>({}, { debounceMs: 300 });
+	const { setState } = useUrlState<Record<string, any>>({}, { debounceMs: TIMING.DEBOUNCE_DEFAULT });
 
 	const handleFiltersChange = (newFilters: Partial<ShareableFilters>) => {
 		const updatedFilters = { ...filters, ...newFilters };
@@ -476,7 +499,7 @@ function SearchResultsWrapper({ searchData }: { searchData: Awaited<ReturnType<t
 			{/* Results Header */}
 			<Group justify="space-between" mb="lg">
 				<Box>
-					<Text size="lg" fw={500}>
+					<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
             Search Results
 					</Text>
 					<Text size="sm" color="dimmed">
@@ -520,15 +543,15 @@ function SearchResultsWrapper({ searchData }: { searchData: Awaited<ReturnType<t
 						}}
 						spacing={{ base: "sm", md: "md" }}
 					>
-						{Array.from({length: LOADING_SKELETON_COUNT}).map((_, index) => (
+						{Array.from({length: SKELETON_COUNT}).map((_, index) => (
 							<Card key={index} p={0} radius="md" withBorder={true}>
-								<Skeleton height={200} />
+								<Skeleton height={THUMBNAIL_HEIGHT} />
 								<Box p="md">
-									<Skeleton height={20} mb="xs" />
-									<Skeleton height={16} mb="md" width="60%" />
+									<Skeleton height={UI.SKELETON_HEIGHT_LARGE} mb="xs" />
+									<Skeleton height={UI.SKELETON_HEIGHT_MEDIUM} mb="md" width="60%" />
 									<Group gap="xs">
-										<Skeleton width={40} height={20} radius="sm" />
-										<Skeleton width={50} height={20} radius="sm" />
+										<Skeleton width={UI.SKELETON_HEIGHT_XXL} height={UI.SKELETON_HEIGHT_LARGE} radius="sm" />
+										<Skeleton width={UI.SKELETON_HEIGHT_XXXL} height={UI.SKELETON_HEIGHT_LARGE} radius="sm" />
 									</Group>
 								</Box>
 							</Card>
@@ -556,7 +579,7 @@ function SearchResultsWrapper({ searchData }: { searchData: Awaited<ReturnType<t
 			{/* No Results */}
 			{!isLoading && results.length === 0 && filters.search && (
 				<Box ta="center" py="xl">
-					<IconSearch size={64} color="var(--mantine-color-gray-4)" />
+					<IconSearch size={UI.ICON_SIZE_XXL * 2} color="var(--mantine-color-gray-4)" />
 					<Title order={3} mt="md" mb="sm">
             No results found
 					</Title>
@@ -572,7 +595,7 @@ function SearchResultsWrapper({ searchData }: { searchData: Awaited<ReturnType<t
 			{/* Initial State */}
 			{!isLoading && results.length === 0 && !filters.search && (
 				<Box ta="center" py="xl">
-					<IconSearch size={64} color="var(--mantine-color-gray-4)" />
+					<IconSearch size={UI.ICON_SIZE_XXL * 2} color="var(--mantine-color-gray-4)" />
 					<Title order={3} mt="md" mb="sm">
             Start Searching
 					</Title>

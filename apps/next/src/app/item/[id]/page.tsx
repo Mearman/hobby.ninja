@@ -5,6 +5,7 @@ import {
 	getItemById,
 	getAllItems,
 } from "@/lib/graph-data";
+import { generateItemParams } from "@/lib/data-loader";
 import {
 	getNodeDisplayName,
 	getNodePrice,
@@ -23,15 +24,9 @@ interface ItemPageProps {
   params: Promise<{ id: string }>;
 }
 
-// Generate static params for all items (limited for testing)
+// Generate static params for items from JSON files
 export async function generateStaticParams() {
-	const items = await getAllItems();
-
-	// Limit to first 100 items for testing
-	// Remove this slice to generate all 6,009+ items
-	return items.slice(0, 100).map((item) => ({
-		id: item.id,
-	}));
+	return await generateItemParams();
 }
 
 // Generate metadata for each item with type-safe data
