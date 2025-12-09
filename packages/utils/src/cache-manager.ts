@@ -281,15 +281,25 @@ export class FileSystemCacheManager implements CacheManager {
 	}
 
 	// Additional methods for URL-based caching
-	getByUrl(url: string): unknown {
+	async getByUrl(url: string): Promise<unknown> {
 		const urlKey = `url:${url}`;
-		return this.get(urlKey);
+		const result = this.get(urlKey);
+
+		// Handle the case where get() returns a Promise (from file loading)
+		if (result instanceof Promise) {
+			return await result;
+		}
+
+		return result;
 	}
 
-	setByUrl(url: string, value: unknown, type: string): void {
+	async setByUrl(url: string, value: unknown, type: string): Promise<void> {
 		const urlKey = `url:${url}:${type}`;
 		const ttl = type === "profile-analysis" ? PROFILE_ANALYSIS_TTL : this.options.ttl;
 		this.set(urlKey, { rawHtml: value }, ttl);
+
+		// Ensure any async file operations are completed
+		await new Promise(resolve => setTimeout(resolve, 0));
 	}
 
 	// Cleanup method to be called when shutting down
