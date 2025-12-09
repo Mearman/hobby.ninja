@@ -107,7 +107,7 @@ export class SingleUrlCommand {
 				console.log(`   ✅ Name: ${scrapedData.name}`);
 				console.log(`   ✅ Brand: ${scrapedData.brand}`);
 				console.log(`   ✅ Source: ${scrapedData.source}`);
-				console.log(`   ✅ Language: ${language}`);
+				console.log(`   ✅ Language: ${languageDetection.language}`);
 
 				if (scrapedData.images && scrapedData.images.length > 0) {
 					console.log(`   ✅ Images: ${scrapedData.images.length} found`);

@@ -2,7 +2,7 @@ import { promises as fs } from "node:fs";
 import { homedir } from "node:os";
 import * as path from "node:path";
 
-import { LOG_LEVELS, LOGGING, EXIT_CODES, DIRECTORIES, FILE_PATTERNS, PROGRESS_PERCENTAGES } from "../constants/cli-constants.js";
+import { LOG_LEVELS, LOGGING, DIRECTORIES, FILE_PATTERNS, PROGRESS_PERCENTAGES } from "../constants/cli-constants.js";
 import type { Context } from "../types/common.js";
 
 export type LogLevel = typeof LOG_LEVELS[keyof typeof LOG_LEVELS];
