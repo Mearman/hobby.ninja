@@ -114,9 +114,13 @@ const nextConfig: NextConfig = {
 
   // Additional webpack configuration for Vanilla Extract (if needed)
   webpack: (config, { isServer }) => {
-    // Add our custom build data plugin for server-side builds
-    if (isServer) {
-      config.plugins.push(new BuildDataPlugin());
+    // Add our custom build data plugin for server-side builds (if enabled)
+    const enableWebpackPlugin = process.env.ENABLE_WEBPACK_DATA_PLUGIN !== 'false';
+
+    if (isServer && enableWebpackPlugin) {
+      config.plugins.push(new BuildDataPlugin({
+        enabled: enableWebpackPlugin
+      }));
     }
 
     // Add CSS file extension alias

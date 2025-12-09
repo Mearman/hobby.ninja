@@ -1,78 +1,55 @@
 import type { Compiler } from 'webpack';
-import fs from 'fs';
 import path from 'path';
+import { DataProcessor } from './data-processor';
 
-interface BuildResults {
-  [category: string]: number;
+interface WebpackPluginOptions {
+  // Options specific to webpack plugin behavior
+  sourceDir?: string;
+  outputDir?: string;
+  categories?: readonly string[];
+  enabled?: boolean; // Toggle for enabling/disabling the plugin
 }
 
 class BuildDataPlugin {
   private hasRun = false;
+  private dataProcessor: DataProcessor;
+  private enabled: boolean;
+
+  constructor(options: WebpackPluginOptions = {}) {
+    // Check if plugin is explicitly disabled
+    this.enabled = options.enabled !== false; // Default to enabled
+
+    // Set up default paths relative to monorepo root when running from webpack
+    const defaultOptions = {
+      sourceDir: options.sourceDir || path.join(process.cwd(), '../../data/api/graph'),
+      outputDir: options.outputDir || path.join(process.cwd(), 'src/data'),
+      categories: options.categories
+    };
+
+    // Initialize data processor with corrected paths
+    this.dataProcessor = new DataProcessor(defaultOptions);
+  }
 
   /**
-   * Build data files by combining individual JSON files into single index files
+   * Get data processor instance stats
    */
-  private buildDataFiles(): BuildResults {
-    const sourceDir = path.join(process.cwd(), 'data', 'api', 'graph');
-    const outputDir = path.join(process.cwd(), 'apps', 'next', 'src', 'data');
+  getStats() {
+    return this.dataProcessor.getStats();
+  }
 
-    // Create output directory
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
-    }
-
-    // Categories to process
-    const categories: readonly string[] = ['items', 'brands', 'categories', 'series'] as const;
-    const results: BuildResults = {};
-
-    console.log('🔧 Building static data files...');
-
-    for (const category of categories) {
-      const categoryDir = path.join(sourceDir, category);
-      const outputFile = path.join(outputDir, `${category}.json`);
-
-      try {
-        if (fs.existsSync(categoryDir)) {
-          // Read all JSON files in the category directory
-          const files = fs.readdirSync(categoryDir).filter((file: string): file is `${string}.json` =>
-            file.endsWith('.json')
-          );
-          const allData: unknown[] = [];
-
-          for (const file of files) {
-            const filePath = path.join(categoryDir, file);
-            const content = fs.readFileSync(filePath, 'utf-8');
-            const data = JSON.parse(content);
-            allData.push(data);
-          }
-
-          // Write combined data as JSON
-          fs.writeFileSync(outputFile, JSON.stringify(allData, null, 2));
-          results[category] = allData.length;
-
-          console.log(`✅ Generated ${category}.json with ${allData.length} items`);
-        } else {
-          console.log(`⚠️  No data directory found for ${category}`);
-          results[category] = 0;
-
-          // Create empty file for consistency
-          fs.writeFileSync(outputFile, JSON.stringify([], null, 2));
-        }
-      } catch (error) {
-        console.error(`❌ Failed to process ${category}:`, error);
-        results[category] = 0;
-      }
-    }
-
-    console.log('\n📊 Build Summary:');
-    Object.entries(results).forEach(([category, count]) => {
-      console.log(`   ${category}: ${count} items`);
-    });
-
-    return results;
+  /**
+   * Check if plugin is enabled
+   */
+  isEnabled(): boolean {
+    return this.enabled;
   }
 
   apply(compiler: Compiler): void {
+    if (!this.enabled) {
+      console.log('🔧 BuildDataPlugin is disabled - data processing will not run during webpack compilation');
+      return;
+    }
+
     // Hook into compilation start to generate data files
     // Use compile hook to avoid interfering with Next.js initialization
     compiler.hooks.compile.tap('BuildDataPlugin', () => {
@@ -81,10 +58,12 @@ class BuildDataPlugin {
         this.hasRun = true;
 
         try {
-          const results = this.buildDataFiles();
-          console.log('✅ Build data files completed successfully');
+          const results = this.dataProcessor.buildDataFiles();
+          console.log('✅ Build data files completed successfully via webpack plugin');
         } catch (error) {
-          console.error('❌ Failed to build data files:', error);
+          console.error('❌ CRITICAL: Data processing failed:', error instanceof Error ? error.message : String(error));
+          // Re-throw to fail the build properly when data processing fails
+          throw error;
         }
       }
     });
