@@ -38,18 +38,14 @@ export interface ProfileManagerOptions {
 
 export class ProfileManager {
 	private profileCachePath: string;
-	private enableAutoUpdate: boolean;
 	private updateInterval: number;
-	private fallbackToPlaywright: boolean;
 	private cacheManager: CacheManager;
 	private profileCache: ProfileCache;
 
 	constructor(options: ProfileManagerOptions = {}) {
 		this.profileCachePath = options.profileCachePath ??
       path.join(process.cwd(), ".gundam-scraper-profiles.json");
-		this.enableAutoUpdate = options.enableAutoUpdate ?? true;
 		this.updateInterval = options.updateInterval ?? DEFAULT_UPDATE_INTERVAL_HOURS;
-		this.fallbackToPlaywright = options.fallbackToPlaywright ?? true;
 		this.cacheManager = cacheManager;
 		this.profileCache = this.initializeProfileCache();
 	}
