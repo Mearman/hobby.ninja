@@ -23,7 +23,7 @@ interface GraphNode {
   extractedAt?: string;
 }
 
-interface UnifiedEdge {
+export interface UnifiedEdge {
   id: string;
   type: string;
   sourceId: string;
@@ -32,7 +32,7 @@ interface UnifiedEdge {
   targetType: string;
 }
 
-interface UnifiedEdge {
+export interface UnifiedEdge {
   id: string;
   type: string;
   sourceId: string;
