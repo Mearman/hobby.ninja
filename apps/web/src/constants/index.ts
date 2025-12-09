@@ -14,6 +14,10 @@ export const SEVEN = 7;
 export const EIGHT = 8;
 export const NINE = 9;
 export const TEN = 10;
+export const TWENTY = 20;
+export const THIRTY = 30;
+export const FORTY = 40;
+export const FIFTY = 50;
 export const HUNDRED = 100;
 export const THOUSAND = 1000;
 

@@ -38,7 +38,7 @@ const handleItemClick = (item: ItemData) => {
 };
 
 const handleSortChange = (field: string, _direction: string) => {
-	logger.info("Sort:", field, _direction);
+	logger.info(`Sort: ${field}, ${_direction}`);
 };
 
 const handleRefresh = () => {
