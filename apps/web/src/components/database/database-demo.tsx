@@ -19,9 +19,9 @@ import {
 import { IconSearch, IconRefresh, IconAlertCircle } from "@tabler/icons-react";
 import React, { useState, useEffect, useCallback } from "react";
 
+import { PAGE_SIZE, INITIAL_PAGE, ZERO, ONE } from "../../constants/index.js";
 import { dataService } from "../../services/dataService";
 import type { UnifiedItem, ManualItem, CatalogItem, FilterOptions } from "../../services/dataService";
-import { PAGE_SIZE, INITIAL_PAGE, ZERO, ONE } from "../../constants/index.js";
 
 import { ItemGrid } from "./item-grid";
 
