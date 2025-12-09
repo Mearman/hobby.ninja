@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { transformEdgesToUltraCompact, parseUltraCompactEdgeKey } from './edge-transformer';
 
 // Get current directory for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -31,9 +32,22 @@ interface UnifiedEdge {
   targetType: string;
 }
 
+interface UnifiedEdge {
+  id: string;
+  type: string;
+  sourceId: string;
+  targetId: string;
+  sourceType: string;
+  targetType: string;
+}
+
+interface UltraCompactEdgeMap {
+  [edgeKey: string]: Record<string, never>;
+}
+
 interface UnifiedData {
   nodes: GraphNode[];
-  edges: UnifiedEdge[];
+  edges: UltraCompactEdgeMap; // Using ultra-compact object format
 }
 
 interface BuildResults {
@@ -190,17 +204,22 @@ export class DataProcessor {
       }
     }
 
-    // Step 2: Write unified graph file with all nodes and edges
+    // Step 2: Transform edges to ultra-compact format
+    console.log('🗜️  Transforming edges to ultra-compact format...');
+    const ultraCompactEdges = transformEdgesToUltraCompact(allEdges);
+    const spaceSavings = Math.round((1 - JSON.stringify(ultraCompactEdges).length / JSON.stringify(allEdges).length) * 100);
+
+    // Step 3: Write unified graph file with ultra-compact edges
     const unifiedGraphData: UnifiedData = {
       nodes: allNodes,
-      edges: allEdges
+      edges: ultraCompactEdges
     };
 
     const unifiedOutputFile = path.join(this.outputDir, 'graph.json');
     fs.writeFileSync(unifiedOutputFile, JSON.stringify(unifiedGraphData, null, 2));
-    console.log(`✅ Generated graph.json with ${allNodes.length} nodes and ${allEdges.length} edges`);
+    console.log(`✅ Generated graph.json with ${allNodes.length} nodes and ${Object.keys(ultraCompactEdges).length} edges (${spaceSavings}% space reduction)`);
 
-    // Step 3: Write category-specific files with nodes and deduplicated edges
+    // Step 4: Write category-specific files with ultra-compact edges
     for (const category of this.categories) {
       const categoryNodes = allNodes.filter(node => {
         if (category === 'items') return node.type === 'item';
@@ -216,15 +235,18 @@ export class DataProcessor {
         categoryNodes.some(node => node.id === edge.sourceId || node.id === edge.targetId)
       );
 
+      // Transform category edges to ultra-compact format
+      const categoryUltraCompactEdges = transformEdgesToUltraCompact(categoryEdges);
+
       const categoryData: UnifiedData = {
         nodes: categoryNodes,
-        edges: categoryEdges
+        edges: categoryUltraCompactEdges
       };
 
       const categoryOutputFile = path.join(this.outputDir, `${category}.json`);
       fs.writeFileSync(categoryOutputFile, JSON.stringify(categoryData, null, 2));
 
-      console.log(`✅ Generated ${category}.json with ${categoryNodes.length} nodes and ${categoryEdges.length} edges`);
+      console.log(`✅ Generated ${category}.json with ${categoryNodes.length} nodes and ${Object.keys(categoryUltraCompactEdges).length} ultra-compact edges`);
     }
 
     results.nodes = allNodes.length;
@@ -233,6 +255,7 @@ export class DataProcessor {
     console.log('\n📊 Unified Graph Build Summary:');
     console.log(`   Total nodes: ${allNodes.length}`);
     console.log(`   Total deduplicated edges: ${allEdges.length}`);
+    console.log(`   Ultra-compact edges: ${Object.keys(ultraCompactEdges).length} (${spaceSavings}% space reduction)`);
     Object.entries(results).forEach(([category, count]) => {
       if (category !== 'nodes' && category !== 'edges') {
         const categoryNodes = allNodes.filter(node => {
@@ -247,7 +270,8 @@ export class DataProcessor {
       }
     });
 
-    console.log(`\n✅ Generated category-specific JSON files with deduplicated edges`);
+    console.log(`\n✅ Generated category-specific JSON files with ultra-compact edges`);
+    console.log(`💾 Overall space savings: ${spaceSavings}% reduction in edge storage`);
 
     return results;
   }
