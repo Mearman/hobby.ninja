@@ -28,6 +28,12 @@ export default [
 	prettier,
 	unicorn.configs.recommended,
 
+	// Override deprecated ESLint options that might come from Nx
+	{
+		// These settings override any deprecated useEslintrc or extensions options
+		settings: {},
+	},
+
 	// Nx flat configs for TypeScript
 	...nx.configs["flat/typescript"],
 
