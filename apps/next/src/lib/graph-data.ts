@@ -53,12 +53,24 @@ function parseJSONData<T>(schema: any, data: unknown): T[] {
 	}).filter((item): item is T => item !== null);
 }
 
+// Extract edges from data files
+function parseEdges(data: unknown): Record<string, Record<string, never>> {
+	if (!isGraphDataFile(data)) {
+		console.error('Invalid data file format: expected {nodes: [], edges: {}}');
+		return {};
+	}
+	return data.edges;
+}
+
 // Pre-validated data loaded at build time
 const parsedItems = parseJSONData<ItemNode>(ItemNodeSchema, itemsData);
 const parsedBrands = parseJSONData<BrandNode>(BrandNodeSchema, brandsData);
 const parsedCategories = parseJSONData<CategoryNode>(CategoryNodeSchema, categoriesData);
 const parsedSeries = parseJSONData<SeriesNode>(SeriesNodeSchema, seriesData);
 const parsedManuals = parseJSONData<ManualNode>(ManualNodeSchema, manualsData);
+
+// Parse edges from items data (where category relationships are stored)
+const parsedEdges = parseEdges(itemsData);
 
 // Cache for loaded data (synchronous since data is pre-built)
 const staticData = {
@@ -67,6 +79,7 @@ const staticData = {
 	categories: parsedCategories,
 	series: parsedSeries,
 	manuals: parsedManuals,
+	edges: parsedEdges,
 };
 
 console.log('Loaded static graph data:', {
@@ -74,6 +87,7 @@ console.log('Loaded static graph data:', {
 	brands: staticData.brands.length,
 	categories: staticData.categories.length,
 	series: staticData.series.length,
+	edges: Object.keys(staticData.edges).length,
 });
 
 // Sort data by display name
@@ -123,6 +137,25 @@ export function getSeriesById(id: string): SeriesNode | null {
 
 export function getManualById(id: string): ManualNode | null {
 	return staticData.manuals.find(manual => manual.id === id) ?? null;
+}
+
+// Get items by category using edges
+export function getItemsByCategory(categoryId: string): ItemNode[] {
+	const categoryEdgePrefix = `item:`;
+	const categoryEdgeSuffix = `:BELONGS_TO_CATEGORY:category:${categoryId}`;
+
+	const itemIds: string[] = [];
+
+	// Find all edges that connect items to this category
+	for (const edgeKey of Object.keys(staticData.edges)) {
+		if (edgeKey.startsWith(categoryEdgePrefix) && edgeKey.endsWith(categoryEdgeSuffix)) {
+			const itemId = edgeKey.split(':')[1]; // Extract item ID from "item:ITEM_ID:BELONGS_TO_CATEGORY:category:CATEGORY_ID"
+			itemIds.push(itemId);
+		}
+	}
+
+	// Return the items that match the found IDs
+	return staticData.items.filter(item => itemIds.includes(item.id)).sort(sortByName);
 }
 
 // Get all nodes combined
