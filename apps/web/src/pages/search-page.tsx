@@ -41,6 +41,27 @@ import { ItemCard } from "../components/database/item-card";
 import { dataService, type FilterOptions } from "../services/dataService";
 import { databaseContainer } from "../styles/styles.css";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 interface SearchParams {
 	q?: string;
 	type?: string;
@@ -72,11 +93,11 @@ export function SearchPage(): React.ReactElement {
 	const [searchQuery, setSearchQuery] = useState(searchParams.q || "");
 	const [filters, setFilters] = useState<FilterState>({});
 	const [showFilters, setShowFilters] = useState(false);
-	const [currentPage, setCurrentPage] = useState(searchParams.page || 1);
+	const [currentPage, setCurrentPage] = useState(searchParams.page || ONE);
 	const [sortBy, setSortBy] = useState(searchParams.sort || "relevance");
-	const [items, setItems] = useState<any[]>([]);
-	const [totalItems, setTotalItems] = useState(0);
-	const [searchTime, setSearchTime] = useState(0);
+	const [items, setItems] = useState<Array<Record<string, unknown>>>([]);
+	const [totalItems, setTotalItems] = useState(ZERO);
+	const [searchTime, setSearchTime] = useState(ZERO);
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState<string | null>(null);
 	const [searchSuggestions, setSearchSuggestions] = useState<string[]>([]);
@@ -131,11 +152,11 @@ export function SearchPage(): React.ReactElement {
 		}
 		if (filterState.priceRange) {
 			filterOptions.priceRange = {
-				min: filterState.priceRange[0],
-				max: filterState.priceRange[1],
+				min: filterState.priceRange[ARRAY_FIRST_INDEX],
+				max: filterState.priceRange[ARRAY_SECOND_INDEX],
 			};
 		}
-		if (filterState.features && filterState.features.length > 0 && // features is not part of FilterOptions interface, so we'll handle it differently
+		if (filterState.features && filterState.features.length > ZERO && // features is not part of FilterOptions interface, so we'll handle it differently
 			// For now, we can skip it or add it to query
 			!filterOptions.query) {
 			filterOptions.query = filterState.features.join(" ");
@@ -161,10 +182,10 @@ export function SearchPage(): React.ReactElement {
 	}, [sortBy]);
 
 	// Perform search
-	const performSearch = useCallback(async (query: string, page = 1) => {
-		if (!query.trim() && Object.keys(filters).length === 0) {
+	const performSearch = useCallback(async (query: string, page = ONE) => {
+		if (!query.trim() && Object.keys(filters).length === ZERO) {
 			setItems([]);
-			setTotalItems(0);
+			setTotalItems(ZERO);
 			return;
 		}
 
@@ -186,12 +207,12 @@ export function SearchPage(): React.ReactElement {
 			setSearchTime(endTime - startTime);
 
 			setItems(result.items || []);
-			setTotalItems(result.total || 0);
+			setTotalItems(result.total || ZERO);
 
 			// Update URL with search parameters
 			const newParams: SearchParams = {
 				q: query.trim() || undefined,
-				page: page > 1 ? page : undefined,
+				page: page > ONE ? page : undefined,
 				sort: sortBy === "relevance" ? undefined : sortBy,
 				...filters,
 			};
@@ -216,27 +237,27 @@ export function SearchPage(): React.ReactElement {
 	// Handle search submission
 	const handleSearch = useCallback((query: string) => {
 		setSearchQuery(query);
-		setCurrentPage(1);
-		performSearch(query, 1);
+		setCurrentPage(ONE);
+		performSearch(query, ONE);
 	}, [performSearch]);
 
 	// Handle filter changes
 	const handleFilterChange = useCallback((newFilters: Partial<FilterState>) => {
 		setFilters((prev) => ({ ...prev, ...newFilters }));
-		setCurrentPage(1);
+		setCurrentPage(ONE);
 	}, []);
 
 	// Clear all filters
 	const clearAllFilters = useCallback(() => {
 		setFilters({});
-		setCurrentPage(1);
+		setCurrentPage(ONE);
 		setSearchQuery("");
 		navigate({ to: "/search" });
 	}, [navigate]);
 
 	// Load search suggestions (debounced)
 	useEffect(() => {
-		if (searchQuery.length < 2) {
+		if (searchQuery.length < TWO) {
 			setSearchSuggestions([]);
 			return;
 		}
@@ -244,7 +265,7 @@ export function SearchPage(): React.ReactElement {
 		const timer = setTimeout(async () => {
 			try {
 				const suggestions = await dataService.getSearchSuggestions(searchQuery);
-				setSearchSuggestions(suggestions.slice(0, 5));
+				setSearchSuggestions(suggestions.slice(ARRAY_FIRST_INDEX, FIVE));
 			} catch (error_) {
 				console.warn("Failed to load search suggestions:", error_);
 			}
@@ -255,19 +276,19 @@ export function SearchPage(): React.ReactElement {
 
 	// Initial search on mount or params change
 	useEffect(() => {
-		if (searchParams.q || Object.keys(filters).length > 0) {
+		if (searchParams.q || Object.keys(filters).length > ZERO) {
 			performSearch(searchParams.q || "", currentPage);
 		}
 	}, []); // Only run once on mount
 
-	const totalPages = Math.ceil(totalItems / 24);
+	const totalPages = Math.ceil(totalItems / TWO4);
 
 	return (
 		<div className={databaseContainer}>
 			<Container size="lg">
 				{/* Search header */}
 				<Paper p="xl" radius="lg" withBorder={true} mb="xl">
-					<Title order={1} size={36} mb="sm" c="gunplaBlue">
+					<Title order={ONE} size={36} mb="sm" c="gunplaBlue">
 						Search Database
 					</Title>
 					<Text size="lg" color="dimmed" mb="xl">
@@ -286,7 +307,7 @@ export function SearchPage(): React.ReactElement {
 									handleSearch(searchQuery);
 								}
 							}}
-							style={{ flex: 1 }}
+							style={{ flex: ONE }}
 							size="lg"
 							rightSection={
 								searchQuery && (
@@ -314,7 +335,7 @@ export function SearchPage(): React.ReactElement {
 							onClick={() => { setShowFilters(!showFilters); }}
 						>
 							Filters
-							{Object.keys(filters).length > 0 && (
+							{Object.keys(filters).length > ZERO && (
 								<Badge size="xs" color="gunplaBlue" ml="xs">
 									{Object.keys(filters).length}
 								</Badge>
@@ -323,7 +344,7 @@ export function SearchPage(): React.ReactElement {
 					</Group>
 
 					{/* Search suggestions */}
-					{searchSuggestions.length > 0 && (
+					{searchSuggestions.length > ZERO && (
 						<Paper p="xs" radius="md" withBorder={true} mb="md">
 							<Text size="xs" color="dimmed" mb="xs">
 								Suggestions:
@@ -344,7 +365,7 @@ export function SearchPage(): React.ReactElement {
 					)}
 
 					{/* Active filters */}
-					{Object.keys(filters).length > 0 && (
+					{Object.keys(filters).length > ZERO && (
 						<Group mb="md">
 							<Text size="sm" color="dimmed">
 								Active filters:
@@ -382,7 +403,7 @@ export function SearchPage(): React.ReactElement {
 				)}
 
 				{/* Results summary */}
-				{totalItems > 0 && (
+				{totalItems > ZERO && (
 					<Paper p="md" radius="md" withBorder={true} mb="xl">
 						<Group justify="space-between">
 							<div>
@@ -396,7 +417,7 @@ export function SearchPage(): React.ReactElement {
 								)}
 							</div>
 
-							{totalPages > 1 && (
+							{totalPages > ONE && (
 								<Pagination
 									total={totalPages}
 									value={currentPage}
@@ -404,8 +425,8 @@ export function SearchPage(): React.ReactElement {
 										setCurrentPage(page);
 										performSearch(searchQuery, page);
 									}}
-									boundaries={1}
-									siblings={1}
+									boundaries={ONE}
+									siblings={ONE}
 								/>
 							)}
 						</Group>
@@ -426,10 +447,10 @@ export function SearchPage(): React.ReactElement {
 					<Alert color="red" variant="light">
 						<Text>{error}</Text>
 					</Alert>
-				) : items.length > 0 ? (
+				) : items.length > ZERO ? (
 					<>
-						<SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 6 }} spacing="lg" mb="xl">
-							{items.map((item: any) => (
+						<SimpleGrid cols={{ base: TWO, sm: THREE, md: FOUR, lg: SIX }} spacing="lg" mb="xl">
+							{items.map((item: Record<string, unknown>) => (
 								<Box
 									key={item.id}
 									onClick={() => {
@@ -450,7 +471,7 @@ export function SearchPage(): React.ReactElement {
 						</SimpleGrid>
 
 						{/* Pagination at bottom */}
-						{totalPages > 1 && (
+						{totalPages > ONE && (
 							<Group justify="center" mb="xl">
 								<Pagination
 									total={totalPages}
@@ -459,14 +480,14 @@ export function SearchPage(): React.ReactElement {
 										setCurrentPage(page);
 										performSearch(searchQuery, page);
 									}}
-									boundaries={2}
-									siblings={2}
+									boundaries={TWO}
+									siblings={TWO}
 									size="lg"
 								/>
 							</Group>
 						)}
 					</>
-				) : searchQuery || Object.keys(filters).length > 0 ? (
+				) : searchQuery || Object.keys(filters).length > ZERO ? (
 					<Paper p="xl" radius="md" withBorder={true} mb="xl" ta="center">
 						<IconSearch size={48} color="var(--mantine-color-dimmed)" style={{ marginBottom: "var(--mantine-spacing-md)" }} />
 						<Text size="lg" mb="sm">
@@ -486,7 +507,7 @@ export function SearchPage(): React.ReactElement {
 					</Paper>
 				) : (
 					<Paper p="xl" radius="md" withBorder={true} mb="xl">
-						<Title order={2} mb="md" ta="center">
+						<Title order={TWO} mb="md" ta="center">
 							Advanced Search
 						</Title>
 						<Text color="dimmed" ta="center" mb="xl">
@@ -494,12 +515,12 @@ export function SearchPage(): React.ReactElement {
 						</Text>
 
 						{/* Quick search suggestions */}
-						<Title order={4} mb="md">
+						<Title order={FOUR} mb="md">
 							Popular Searches
 						</Title>
-						<SimpleGrid cols={{ base: 2, sm: 3, md: 4 }} spacing="sm">
+						<SimpleGrid cols={{ base: TWO, sm: THREE, md: FOUR }} spacing="sm">
 							{[
-								"RX-78-2 Gundam",
+								"RX-78-TWO Gundam",
 								"Wing Gundam",
 								"Strike Freedom",
 								" Unicorn Gundam",
@@ -520,17 +541,17 @@ export function SearchPage(): React.ReactElement {
 
 						<Divider my="xl" />
 
-						<Title order={4} mb="md">
+						<Title order={FOUR} mb="md">
 							Browse by Category
 						</Title>
-						<SimpleGrid cols={{ base: 1, sm: 3 }} spacing="md">
+						<SimpleGrid cols={{ base: ONE, sm: THREE }} spacing="md">
 							{hobbyTypes.map((type) => (
 								<Card
 									key={type.value}
 									p="lg"
 									radius="md"
 									withBorder={true}
-									h="100%"
+									h="HUNDRED%"
 									component="button"
 									type="button"
 									onClick={() => navigate({

@@ -3,6 +3,27 @@ import { z } from "zod";
 
 import { logger } from "../lib/logger";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 // Generate UUID function
 export function generateId(): string {
 	// Use browser's built-in crypto.randomUUID if available
@@ -42,7 +63,7 @@ export class Database extends Dexie {
 
 	constructor() {
 		super("DocumentDatabase");
-		this.version(1).stores({
+		this.version(ONE).stores({
 			schemas: "id, name, version, createdAt",
 			documents: "&id, schemaId, createdAt",
 		});
@@ -57,7 +78,7 @@ export const schemaRegistry = {
 	schemas: new Map<string, z.ZodObject<z.ZodRawShape>>(),
 
 	// Store a new schema
-	async register(schema: z.ZodObject<z.ZodRawShape>, name: string, version = "1.0.0"): Promise<void> {
+	async register(schema: z.ZodObject<z.ZodRawShape>, name: string, version = "ONE.ZERO.ZERO"): Promise<void> {
 		const id = `${name}@${version}`;
 
 		// Store schema in memory

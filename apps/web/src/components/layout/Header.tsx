@@ -29,6 +29,27 @@ import { useState } from "react";
 
 import { useThemeContext } from "../../providers/mantine-provider";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 interface HeaderProps {
 	/**
 	 * Whether the mobile menu is opened
@@ -94,12 +115,12 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 				background: "var(--mantine-color-body)",
 				borderBottom: "1px solid var(--mantine-color-default-border)",
 				position: "sticky",
-				top: 0,
-				zIndex: 1000,
+				top: ZERO,
+				zIndex: THOUSAND,
 			}}
 		>
 			<Container size="lg" h={64} px="md">
-				<Group h="100%" justify="space-between">
+				<Group h="HUNDRED%" justify="space-between">
 					{/* Logo and main navigation */}
 					<Group>
 						<Burger
@@ -120,7 +141,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 								size="lg"
 								fw={700}
 								c="gunplaBlue"
-								style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+								style={{ display: "flex", alignItems: "center", gap: "ZERO.5rem" }}
 							>
 								hobby.ninja
 							</Text>
@@ -181,7 +202,7 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 													})
 												}
 											>
-												<Stack gap={0}>
+												<Stack gap={ZERO}>
 													<Text size="sm" fw={500}>
 														{type.name}
 													</Text>

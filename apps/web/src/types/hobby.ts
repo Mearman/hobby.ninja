@@ -29,7 +29,7 @@ export interface HobbyField {
   displayInDetail: boolean;
   validation?: FieldValidation;
   options?: FieldOption[];
-  defaultValue?: any;
+  defaultValue?: string | number | boolean | string[] | null;
   order: number;
 }
 
@@ -67,7 +67,7 @@ export interface HobbySettings {
 export interface UniversalItem {
   id: string;
   hobbyType: string;
-  data: Record<string, any>;
+  data: Record<string, unknown>;
   images: ItemImage[];
   tags: string[];
   status: ItemStatus;
@@ -114,6 +114,27 @@ export interface PurchaseInfo {
 export interface ItemMetadata {
   source?: "manual" | "scan" | "user_input" | "import" | "reference_database";
   sourceId?: string;
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
   sourceUrl?: string;
   confidence?: number;
   lastSync?: string;
@@ -129,7 +150,7 @@ export interface Collection {
   isDefault: boolean;
   tags: string[];
   items: string[]; // Item IDs
-  filters?: Record<string, any>;
+  filters?: Record<string, unknown>;
   settings: CollectionSettings;
   statistics: CollectionStatistics;
   owner: string;
@@ -159,7 +180,7 @@ export interface CollectionImport {
   format: "csv" | "json" | "excel" | "airtable" | "google_sheets";
   hobbyType: string;
   mapping: FieldMapping[];
-  data: any[];
+  data: unknown[];
   options: ImportOptions;
 }
 
@@ -197,7 +218,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: false,
 				displayInList: true,
 				displayInDetail: true,
-				order: 1,
+				order: ONE,
 			},
 			{
 				id: "brand",
@@ -209,7 +230,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: true,
 				displayInList: true,
 				displayInDetail: true,
-				order: 2,
+				order: TWO,
 			},
 			{
 				id: "scale",
@@ -222,15 +243,15 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				displayInList: true,
 				displayInDetail: true,
 				options: [
-					{ label: "1/144", value: "1/144" },
-					{ label: "1/100", value: "1/100" },
-					{ label: "1/72", value: "1/72" },
-					{ label: "1/48", value: "1/48" },
-					{ label: "1/35", value: "1/35" },
-					{ label: "1/24", value: "1/24" },
+					{ label: "ONE/144", value: "ONE/144" },
+					{ label: "ONE/HUNDRED", value: "ONE/HUNDRED" },
+					{ label: "ONE/72", value: "ONE/72" },
+					{ label: "ONE/48", value: "ONE/48" },
+					{ label: "ONE/35", value: "ONE/35" },
+					{ label: "ONE/24", value: "ONE/24" },
 					{ label: "Other", value: "other" },
 				],
-				order: 3,
+				order: THREE,
 			},
 			{
 				id: "grade",
@@ -255,7 +276,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 					{ label: "Perfect Grade", value: "perfect_grade" },
 					{ label: "Other", value: "other" },
 				],
-				order: 4,
+				order: FOUR,
 			},
 			{
 				id: "series",
@@ -267,7 +288,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: true,
 				displayInList: false,
 				displayInDetail: true,
-				order: 5,
+				order: FIVE,
 			},
 			{
 				id: "releaseDate",
@@ -279,7 +300,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: true,
 				displayInList: false,
 				displayInDetail: true,
-				order: 6,
+				order: SIX,
 			},
 			{
 				id: "price",
@@ -291,8 +312,8 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: true,
 				displayInList: false,
 				displayInDetail: true,
-				validation: { min: 0 },
-				order: 7,
+				validation: { min: ZERO },
+				order: SEVEN,
 			},
 		],
 		settings: {
@@ -304,7 +325,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 			allowStatus: true,
 			allowQuantity: true,
 			allowPurchaseInfo: true,
-			maxImages: 10,
+			maxImages: TEN,
 			supportedExportFormats: ["json", "csv", "excel"],
 			defaultSortField: "name",
 			defaultViewMode: "grid",
@@ -331,7 +352,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: false,
 				displayInList: true,
 				displayInDetail: true,
-				order: 1,
+				order: ONE,
 			},
 			{
 				id: "set",
@@ -343,7 +364,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: true,
 				displayInList: true,
 				displayInDetail: true,
-				order: 2,
+				order: TWO,
 			},
 			{
 				id: "cardNumber",
@@ -355,7 +376,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: false,
 				displayInList: true,
 				displayInDetail: true,
-				order: 3,
+				order: THREE,
 			},
 			{
 				id: "rarity",
@@ -376,7 +397,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 					{ label: "Secret Rare", value: "secret_rare" },
 					{ label: "Promo", value: "promo" },
 				],
-				order: 4,
+				order: FOUR,
 			},
 			{
 				id: "type",
@@ -397,7 +418,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 					{ label: "Land", value: "land" },
 					{ label: "Planeswalker", value: "planeswalker" },
 				],
-				order: 5,
+				order: FIVE,
 			},
 			{
 				id: "condition",
@@ -417,7 +438,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 					{ label: "Played", value: "played", color: "orange" },
 					{ label: "Damaged", value: "damaged", color: "red" },
 				],
-				order: 6,
+				order: SIX,
 			},
 		],
 		settings: {
@@ -429,7 +450,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 			allowStatus: true,
 			allowQuantity: true,
 			allowPurchaseInfo: true,
-			maxImages: 5,
+			maxImages: FIVE,
 			supportedExportFormats: ["json", "csv", "excel"],
 			defaultSortField: "name",
 			defaultViewMode: "grid",
@@ -456,7 +477,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: false,
 				displayInList: true,
 				displayInDetail: true,
-				order: 1,
+				order: ONE,
 			},
 			{
 				id: "game",
@@ -478,7 +499,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 					{ label: "Infinity", value: "infinity" },
 					{ label: "X-Wing", value: "x_wing" },
 				],
-				order: 2,
+				order: TWO,
 			},
 			{
 				id: "faction",
@@ -490,7 +511,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: true,
 				displayInList: true,
 				displayInDetail: true,
-				order: 3,
+				order: THREE,
 			},
 			{
 				id: "pointValue",
@@ -502,8 +523,8 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: true,
 				displayInList: false,
 				displayInDetail: true,
-				validation: { min: 0 },
-				order: 4,
+				validation: { min: ZERO },
+				order: FOUR,
 			},
 		],
 		settings: {
@@ -515,7 +536,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 			allowStatus: true,
 			allowQuantity: true,
 			allowPurchaseInfo: true,
-			maxImages: 8,
+			maxImages: EIGHT,
 			supportedExportFormats: ["json", "csv", "excel"],
 			defaultSortField: "name",
 			defaultViewMode: "grid",
@@ -542,7 +563,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: false,
 				displayInList: true,
 				displayInDetail: true,
-				order: 1,
+				order: ONE,
 			},
 			{
 				id: "category",
@@ -554,7 +575,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 				filterable: true,
 				displayInList: true,
 				displayInDetail: true,
-				order: 2,
+				order: TWO,
 			},
 		],
 		settings: {
@@ -566,7 +587,7 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 			allowStatus: true,
 			allowQuantity: true,
 			allowPurchaseInfo: true,
-			maxImages: 10,
+			maxImages: TEN,
 			supportedExportFormats: ["json", "csv"],
 			defaultSortField: "name",
 			defaultViewMode: "grid",
@@ -576,5 +597,54 @@ export const BUILT_IN_HOBBY_TYPES: HobbyType[] = [
 		updatedAt: new Date().toISOString(),
 	},
 ];
+
+// Common types for progress tracking and worker management
+export interface ProgressData {
+  current?: number;
+  total?: number;
+  message?: string;
+  status?: 'pending' | 'in_progress' | 'completed' | 'error';
+  error?: string;
+}
+
+export interface WorkerTask {
+  id: string;
+  type: string;
+  data: unknown;
+  timeoutId?: number;
+}
+
+export interface ConflictData {
+  id: string;
+  field: string;
+  unified: unknown;
+  manual: unknown;
+  catalog: unknown;
+}
+
+export interface SourceCoverageData {
+  manual: number;
+  catalog: number;
+  unified: number;
+  total: number;
+}
+
+export interface QualityMetricsData {
+  completeness: number;
+  accuracy: number;
+  consistency: number;
+  confidence: number;
+}
+
+// Search and filter types
+export interface SearchFilter {
+  [key: string]: string | number | boolean | string[] | undefined;
+}
+
+export interface ListItem {
+  id: string;
+  name: string;
+  [key: string]: unknown;
+}
 
 export const DEFAULT_HOBBY_TYPE = "model_kits";

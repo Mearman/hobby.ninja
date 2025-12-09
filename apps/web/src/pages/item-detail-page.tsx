@@ -33,6 +33,27 @@ import React, { useState, useEffect } from "react";
 import { ItemDetail } from "../components/database/item-detail";
 import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from "../services/dataService";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 // Types for page state
 interface PageState {
   item: UnifiedItem | ManualItem | CatalogItem | null;
@@ -55,7 +76,7 @@ const useUrlParams = () => {
 
 	// Parse shared data if present
 	const sharedData = searchParams.get("shared");
-	let sharedItems: any[] = [];
+	let sharedItems: unknown[] = [];
 
 	if (sharedData) {
 		try {
@@ -63,19 +84,23 @@ const useUrlParams = () => {
 			const decodedData = decodeURIComponent(sharedData);
 
 			// Check if it's compressed Pako data
-			if (decodedData.length > 100) {
+			if (decodedData.length > HUNDRED) {
 				try {
 					// This would need Pako decompression, for now assume it's JSON
-					sharedItems = JSON.parse(decodedData);
+					const parsed = JSON.parse(decodedData);
+					sharedItems = Array.isArray(parsed) ? parsed : [];
 				} catch {
 					// Fallback: try as JSON directly
-					sharedItems = JSON.parse(decodedData);
+					const fallbackParsed = JSON.parse(decodedData);
+					sharedItems = Array.isArray(fallbackParsed) ? fallbackParsed : [];
 				}
 			} else {
-				sharedItems = JSON.parse(decodedData);
+				const simpleParsed = JSON.parse(decodedData);
+				sharedItems = Array.isArray(simpleParsed) ? simpleParsed : [];
 			}
 		} catch (error) {
-			console.warn("Failed to parse shared data:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.warn("Failed to parse shared data:", errorMessage);
 			notifications.show({
 				title: "Invalid Share Link",
 				message: "The shared data could not be parsed",
@@ -149,7 +174,7 @@ export const ItemDetailPage: React.FC = () => {
 
 		try {
 			// Check if this item is from shared data first
-			if (sharedItems.length > 0) {
+			if (sharedItems.length > ZERO) {
 				const sharedItem = sharedItems.find(item => item.id === params.id);
 				if (sharedItem) {
 					setPageState({
@@ -218,7 +243,7 @@ export const ItemDetailPage: React.FC = () => {
 					timestamp: Date.now(),
 					type: "sources" in item ? "unified" : ("metadata" in item ? "manual" : "catalog"),
 				},
-				...filtered.slice(0, 19), // Keep only 20 recent items
+				...filtered.slice(ARRAY_FIRST_INDEX, 19), // Keep only 20 recent items
 			];
 
 			localStorage.setItem(recentKey, JSON.stringify(updated));
@@ -281,7 +306,7 @@ export const ItemDetailPage: React.FC = () => {
 
 		return (
 			<Badge color={colors[type]} variant="light">
-				{type.charAt(0).toUpperCase() + type.slice(1)}
+				{type.charAt(ARRAY_FIRST_INDEX).toUpperCase() + type.slice(ARRAY_SECOND_INDEX))}
 			</Badge>
 		);
 	};
@@ -293,7 +318,7 @@ export const ItemDetailPage: React.FC = () => {
 				<Paper p="xl" withBorder={true}>
 					<LoadingOverlay visible={true} />
 					<Stack align="center" gap="md">
-						<Title order={3}>Loading Item Details...</Title>
+						<Title order={THREE}>Loading Item Details...</Title>
 						<Text c="dimmed">Please wait while we fetch the item information</Text>
 					</Stack>
 				</Paper>

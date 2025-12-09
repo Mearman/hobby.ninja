@@ -10,11 +10,39 @@ import type {
 	ManualItemNodeType,
 	CatalogItemNodeType,
 } from "../schemas/universal-graph-schema";
+import type { SearchFilter } from "../types/hobby";
+
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
+// Constants
+const DEFAULT_POOL_SIZE_LIMIT = FOUR;
+const DEFAULT_POOL_SIZE_FALLBACK = FOUR;
+const DEFAULT_TASK_TIMEOUT = 30_000;
+const DEFAULT_MAX_CONCURRENT_TASKS = TEN;
 
 // Local type definitions
-export type FilterOptions = Record<string, any>;
+export type FilterOptions = Record<string, unknown>;
 
-export interface SearchResult<T = any> {
+export interface SearchResult<T = unknown> {
 	items: T[];
 	total: number;
 	hasMore: boolean;
@@ -31,11 +59,11 @@ export type CatalogItem = CatalogItemNodeType;
 // ============================================================================
 
 /** Worker task configuration */
-interface WorkerTask<T = any> {
+interface WorkerTask<T = unknown> {
   id: string;
   type: "SEARCH" | "AGGREGATE" | "STATISTICS";
   payload: T;
-  resolve: (result: any) => void;
+  resolve: (result: unknown) => void;
   reject: (error: Error) => void;
   timeout?: number;
   onProgress?: (progress: { current: number; total: number; percentage: number; message?: string }) => void;
@@ -69,14 +97,14 @@ export class WorkerManager {
 	private workers: WorkerInstance[] = [];
 	private tasks = new Map<string, WorkerTask>();
 	private config: WorkerPoolConfig;
-	private taskIdCounter = 0;
+	private taskIdCounter = ZERO;
 	private isInitialized = false;
 
 	constructor(config: Partial<WorkerPoolConfig> = {}) {
 		this.config = {
-			poolSize: config.poolSize || Math.min(navigator.hardwareConcurrency || 4, 4),
-			taskTimeout: config.taskTimeout || 30_000, // 30 seconds
-			maxConcurrentTasks: config.maxConcurrentTasks || 10,
+			poolSize: config.poolSize || Math.min(navigator.hardwareConcurrency || DEFAULT_POOL_SIZE_FALLBACK, DEFAULT_POOL_SIZE_LIMIT),
+			taskTimeout: config.taskTimeout || DEFAULT_TASK_TIMEOUT,
+			maxConcurrentTasks: config.maxConcurrentTasks || DEFAULT_MAX_CONCURRENT_TASKS,
 			...config,
 		};
 	}
@@ -91,20 +119,21 @@ export class WorkerManager {
 
 		try {
 			// Create worker instances
-			for (let i = 0; i < this.config.poolSize; i++) {
+			for (let i = ZERO; i < this.config.poolSize; i++) {
 				const worker = await this.createWorker();
 				this.workers.push({
 					worker,
 					busy: false,
 					taskQueue: [],
-					totalTasksProcessed: 0,
+					totalTasksProcessed: ZERO,
 					lastActivity: Date.now(),
 				});
 			}
 
 			this.isInitialized = true;
 		} catch (error) {
-			console.error("Failed to initialize worker pool:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to initialize worker pool:", errorMessage);
 			throw error;
 		}
 	}
@@ -113,12 +142,12 @@ export class WorkerManager {
    * Perform search operation in worker
    */
 	async performSearch(
-		searchIndex: any[],
+		searchIndex: unknown[],
 		query: string,
 		filters: FilterOptions = {},
 		options: {
       fieldWeights?: Record<string, number>;
-      onProgress?: (progress: any) => void;
+      onProgress?: (progress: { current: number; total: number; percentage: number; message?: string }) => void;
       timeout?: number;
     } = {},
 	): Promise<SearchResult["items"]> {
@@ -156,13 +185,13 @@ export class WorkerManager {
 		manualItems: ManualItem[],
 		catalogItems: CatalogItem[],
 		options: {
-      onProgress?: (progress: any) => void;
+      onProgress?: (progress: { current: number; total: number; percentage: number; message?: string }) => void;
       timeout?: number;
     } = {},
 	): Promise<{
     aggregated: UnifiedItem[];
-    conflicts: Array<{ id: string; field: string; unified: any; manual: any; catalog: any }>;
-    statistics: any;
+    conflicts: Array<{ id: string; field: string; unified: unknown; manual: unknown; catalog: unknown }>;
+    statistics: Record<string, unknown>;
   }> {
 		const taskId = this.generateTaskId();
 
@@ -195,7 +224,7 @@ export class WorkerManager {
 	async calculateStatistics(
 		items: UnifiedItem[],
 		options: {
-      onProgress?: (progress: any) => void;
+      onProgress?: (progress: { current: number; total: number; percentage: number; message?: string }) => void;
       timeout?: number;
     } = {},
 	): Promise<{
@@ -203,8 +232,8 @@ export class WorkerManager {
     byScale: Record<string, number>;
     bySeries: Record<string, number>;
     byReleaseYear: Record<string, number>;
-    sourceCoverage: any;
-    qualityMetrics: any;
+    sourceCoverage: { manual: number; catalog: number; unified: number; total: number };
+    qualityMetrics: { completeness: number; accuracy: number; consistency: number; confidence: number };
   }> {
 		const taskId = this.generateTaskId();
 
@@ -234,7 +263,7 @@ export class WorkerManager {
 		const busyWorkers = this.workers.filter(w => w.busy).length;
 
 		// Calculate total queued tasks using a for loop instead of reduce
-		let totalQueuedTasks = 0;
+		let totalQueuedTasks = ZERO;
 		for (const worker of this.workers) {
 			totalQueuedTasks += worker.taskQueue.length;
 		}
@@ -285,7 +314,7 @@ export class WorkerManager {
    * Generate unique task ID
    */
 	private generateTaskId(): string {
-		return `task_${++this.taskIdCounter}_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`;
+		return `task_${++this.taskIdCounter}_${Date.now()}_${Math.random().toString(36).slice(TWO, 11)}`;
 	}
 
 	/**
@@ -309,7 +338,8 @@ export class WorkerManager {
 
 			return worker;
 		} catch (error) {
-			console.error("Failed to create worker:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to create worker:", errorMessage);
 			throw error;
 		}
 	}
@@ -329,10 +359,10 @@ export class WorkerManager {
 			this.executeTask(availableWorker, taskId);
 		} else {
 			// Add to queue of least busy worker using for loop instead of reduce
-			let leastBusyWorker = this.workers[0];
+			let leastBusyWorker = this.workers[ARRAY_FIRST_INDEX];
 			let minQueueLength = leastBusyWorker.taskQueue.length;
 
-			for (let i = 1; i < this.workers.length; i++) {
+			for (let i = ONE; i < this.workers.length; i++) {
 				const currentWorker = this.workers[i];
 				if (currentWorker.taskQueue.length < minQueueLength) {
 					leastBusyWorker = currentWorker;
@@ -370,7 +400,7 @@ export class WorkerManager {
 		});
 
 		// Store timeout ID for cleanup
-		(task as any).timeoutId = timeoutId;
+	(task as WorkerTask & { timeoutId?: number }).timeoutId = timeoutId;
 	}
 
 	/**
@@ -396,8 +426,8 @@ export class WorkerManager {
 
 		// Clear timeout
 		const task = this.tasks.get(id);
-		if (task && (task as any).timeoutId) {
-			clearTimeout((task as any).timeoutId);
+		if (task && (task as WorkerTask & { timeoutId?: number }).timeoutId) {
+			clearTimeout((task as WorkerTask & { timeoutId?: number }).timeoutId);
 		}
 
 		// Mark worker as available
@@ -426,11 +456,12 @@ export class WorkerManager {
    * Handle worker error
    */
 	private handleWorkerError(event: ErrorEvent): void {
-		console.error("Worker error:", event.error);
+		const errorMessage = event.error instanceof Error ? event.error.message : String(event.error);
+		console.error("Worker error:", errorMessage);
 
 		// Find affected worker and reset it
 		const workerIndex = this.workers.findIndex(w => w.worker === event.target);
-		if (workerIndex !== -1) {
+		if (workerIndex !== -ONE) {
 			const workerInstance = this.workers[workerIndex];
 
 			// Fail current task
@@ -490,7 +521,8 @@ export class WorkerManager {
 				taskQueue: [],
 			};
 		} catch (error) {
-			console.error("Failed to recreate worker:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to recreate worker:", errorMessage);
 		}
 	}
 
@@ -529,10 +561,11 @@ export class WorkerManager {
               throw new Error('Unknown task type: ' + type);
           }
         } catch (error) {
+          const errorMessage = error instanceof Error ? error.message : String(error);
           self.postMessage({
             id,
             type: 'ERROR',
-            payload: error.message
+            payload: errorMessage
           });
         }
       });
@@ -557,7 +590,8 @@ export function getWorkerManager(): WorkerManager {
 	// Start initialization if not already done or in progress
 	if (!initPromise) {
 		initPromise = workerManager.initialize().catch(error => {
-			console.warn("Failed to auto-initialize worker manager:", error);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.warn("Failed to auto-initialize worker manager:", errorMessage);
 			// Reset promise so initialization can be retried
 			initPromise = null;
 		});

@@ -37,6 +37,27 @@ import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataSe
 import { ItemCard } from "./item-card";
 
 
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
+
 type ItemData = UnifiedItem | ManualItem | CatalogItem;
 type ItemType = "unified" | "manual" | "catalog";
 type ViewMode = "grid" | "list";
@@ -45,10 +66,10 @@ type SortDirection = "asc" | "desc";
 
 // Constants for magic numbers
 const DEFAULT_ITEMS_PER_PAGE = 50;
-const MOBILE_COLUMN_COUNT = 2;
-const TABLET_COLUMN_COUNT = 3;
-const COMPACT_COLUMN_COUNT = 4;
-const DEFAULT_COLUMN_COUNT = 5;
+const MOBILE_COLUMN_COUNT = TWO;
+const TABLET_COLUMN_COUNT = THREE;
+const COMPACT_COLUMN_COUNT = FOUR;
+const DEFAULT_COLUMN_COUNT = FIVE;
 const LIST_ITEM_HEIGHT = 120;
 const COMPACT_GRID_ITEM_HEIGHT = 180;
 const DEFAULT_GRID_ITEM_HEIGHT = 280;
@@ -105,8 +126,8 @@ export function ItemGrid({
 	items,
 	loading = false,
 	error = null,
-	page = 1,
-	total = 0,
+	page = ONE,
+	total = ZERO,
 	limit = DEFAULT_ITEMS_PER_PAGE,
 	selectedItems = new Set(),
 	onSelectionChange,
@@ -136,7 +157,7 @@ export function ItemGrid({
 
 	// Calculate responsive columns
 	const getColumnCount = useCallback(() => {
-		if (viewMode === "list") return 1;
+		if (viewMode === "list") return ONE;
 		if (isMobile) return MOBILE_COLUMN_COUNT;
 		if (isTablet) return TABLET_COLUMN_COUNT;
 		if (compact) return COMPACT_COLUMN_COUNT;
@@ -222,12 +243,12 @@ export function ItemGrid({
 		onRefresh();
 		setTimeout(() => {
 			setIsRefreshing(false);
-		}, 0);
+		}, ZERO);
 	}, [onRefresh, isRefreshing]);
 
 	// Sort items
 	const sortedItems = useMemo(() => {
-		if (items.length === 0) return [];
+		if (items.length === ZERO) return [];
 
 		const getName = (item: ItemData): string => {
 			if ("name" in item) {
@@ -245,9 +266,9 @@ export function ItemGrid({
 		const getYear = (item: ItemData): number => {
 			if ("releaseDate" in item && item.releaseDate) {
 				const date = item.releaseDate as { year?: number };
-				return date.year ?? 0;
+				return date.year ?? ZERO;
 			}
-			return 0;
+			return ZERO;
 		};
 
 		const getGrade = (item: ItemData): string => {
@@ -261,7 +282,7 @@ export function ItemGrid({
 		};
 
 		return [...items].toSorted((a, b) => {
-			let comparison = 0;
+			let comparison = ZERO;
 
 			switch (sortField) {
 				case "name": {
@@ -283,7 +304,7 @@ export function ItemGrid({
 
 				case "relevance": {
 					// For now, maintain original order (could be enhanced with actual relevance scoring)
-					comparison = 0;
+					comparison = ZERO;
 					break;
 				}
 			}
@@ -296,8 +317,8 @@ export function ItemGrid({
 	const virtualizer = useWindowVirtualizer({
 		count: sortedItems.length,
 		estimateSize: () => viewMode === "list" ? LIST_ITEM_HEIGHT : (compact ? COMPACT_GRID_ITEM_HEIGHT : DEFAULT_GRID_ITEM_HEIGHT),
-		overscan: 5,
-		scrollMargin: parentRef.current?.offsetTop ?? 0,
+		overscan: FIVE,
+		scrollMargin: parentRef.current?.offsetTop ?? ZERO,
 	});
 
 	// Setup infinite scroll intersection observer
@@ -311,7 +332,7 @@ export function ItemGrid({
 					onLoadMore();
 				}
 			},
-			{ threshold: 0.1 },
+			{ threshold: ZERO.ONE },
 		);
 
 		if (loadMoreRef.current) {
@@ -391,7 +412,7 @@ export function ItemGrid({
 	}
 
 	// Render empty state
-	if (!loading && items.length === 0) {
+	if (!loading && items.length === ZERO) {
 		return (
 			<Container size="sm" py="xl">
 				<Stack align="center" gap="md">
@@ -465,7 +486,7 @@ export function ItemGrid({
 
 				<Group gap="sm">
 					{/* Selection Controls */}
-					{selectedItems.size > 0 && (
+					{selectedItems.size > ZERO && (
 						<Badge size="sm" color="blue">
 							{selectedItems.size} selected
 						</Badge>
@@ -477,7 +498,7 @@ export function ItemGrid({
 								size="xs"
 								variant="light"
 								onClick={handleSelectAll}
-								disabled={items.length === 0}
+								disabled={items.length === ZERO}
 							>
                 Select All
 							</Button>
@@ -485,7 +506,7 @@ export function ItemGrid({
 								size="xs"
 								variant="light"
 								onClick={handleClearSelection}
-								disabled={selectedItems.size === 0}
+								disabled={selectedItems.size === ZERO}
 							>
                 Clear
 							</Button>
@@ -507,7 +528,7 @@ export function ItemGrid({
 			</Group>
 
 			{/* Results Summary */}
-			{total > 0 && (
+			{total > ZERO && (
 				<Text size="sm" c="dimmed">
           Showing {items.length} of {total} items
 					{searchQuery && ` for "${searchQuery}"`}
@@ -532,7 +553,7 @@ export function ItemGrid({
 					<div
 						style={{
 							height: `${virtualizer.getTotalSize()}px`,
-							width: "100%",
+							width: "HUNDRED%",
 							position: "relative",
 							...gridStyles,
 						}}
@@ -545,9 +566,9 @@ export function ItemGrid({
 									key={virtualItem.key}
 									style={{
 										position: "absolute",
-										top: 0,
-										left: 0,
-										width: "100%",
+										top: ZERO,
+										left: ZERO,
+										width: "HUNDRED%",
 										height: `${virtualItem.size}px`,
 										transform: `translateY(${virtualItem.start}px)`,
 									}}

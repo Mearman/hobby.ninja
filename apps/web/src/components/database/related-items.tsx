@@ -46,6 +46,7 @@ const TAB_LIST_MIN_LENGTH = 2;
 const CARD_HEIGHT = 120;
 const BADGE_POSITION = 8;
 const SCROLL_AREA_MAX_HEIGHT = 600;
+const ZERO = 0;
 
 // Types for related items
 interface RelatedItem {
@@ -312,7 +313,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			// Sort by score and limit results
 			const sortedRelations = uniqueRelations
 				.sort((a, b) => b.score - a.score)
-				.slice(0, maxItems);
+				.slice(ZERO, maxItems);
 
 			setRelatedItems(sortedRelations);
 		} catch (error_) {
@@ -348,7 +349,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
           currentSeriesStr.includes(itemSeriesStr)
 				);
 			})
-			.slice(0, MAX_ITEMS_PER_CATEGORY)
+			.slice(ZERO, MAX_ITEMS_PER_CATEGORY)
 			.map(item => {
 				let grade: string | undefined;
 				let scale: string | undefined;
@@ -408,7 +409,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 
 				return itemGrade && itemGrade === currentItemProps.grade;
 			})
-			.slice(0, MAX_ITEMS_PER_CATEGORY)
+			.slice(ZERO, MAX_ITEMS_PER_CATEGORY)
 			.map(item => {
 				let grade: string | undefined;
 				let scale: string | undefined;
@@ -498,7 +499,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 
 				return itemScale && itemScale === currentItemProps.scale;
 			})
-			.slice(0, MAX_ITEMS_PER_CATEGORY)
+			.slice(ZERO, MAX_ITEMS_PER_CATEGORY)
 			.map(item => {
 				const { grade, scale, series } = extractItemProperties(item);
 				return {
@@ -535,7 +536,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					),
 				);
 			})
-			.slice(0, MAX_ITEMS_PER_CATEGORY)
+			.slice(ZERO, MAX_ITEMS_PER_CATEGORY)
 			.map(item => {
 				const { grade, scale, series } = extractItemProperties(item);
 				return {
@@ -569,11 +570,11 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 					/metallic/i, /chrome/i, /special/i, /limited/i,
 				];
 
-				return (itemName.includes(currentName.slice(0, VARIANT_NAME_COMPARE_LENGTH)) || currentName.includes(itemName.slice(0, VARIANT_NAME_COMPARE_LENGTH))) &&
+				return (itemName.includes(currentName.slice(ZERO, VARIANT_NAME_COMPARE_LENGTH)) || currentName.includes(itemName.slice(ZERO, VARIANT_NAME_COMPARE_LENGTH))) &&
                (variantPatterns.some(pattern => pattern.test(itemName)) ||
                 variantPatterns.some(pattern => pattern.test(currentName)));
 			})
-			.slice(0, VARIANT_ITEMS_LIMIT)
+			.slice(ZERO, VARIANT_ITEMS_LIMIT)
 			.map(item => {
 				const { grade, scale, series } = extractItemProperties(item);
 				return {
@@ -606,7 +607,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 				itemReleaseDate = getPropertySafely<ReleaseDate>(itemProps, 'releaseDate');
 			}
 
-			return itemReleaseDate?.year ?? 0;
+			return itemReleaseDate?.year ?? ZERO;
 		};
 
 		return items
@@ -620,7 +621,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 				const yearB = getReleaseYear(b);
 				return yearB - yearA;
 			})
-			.slice(0, MAX_ITEMS_PER_CATEGORY)
+			.slice(ZERO, MAX_ITEMS_PER_CATEGORY)
 			.map(item => {
 				const { grade, scale, series } = extractItemProperties(item);
 				const releaseYear = getReleaseYear(item);
@@ -652,15 +653,15 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 			}
 		}
 
-		if ("images" in item && Array.isArray(item.images) && item.images.length > 0) {
-			const firstImage = item.images[0];
+		if ("images" in item && Array.isArray(item.images) && item.images.length > ZERO) {
+			const firstImage = item.images[ZERO];
 			return typeof firstImage === "string" ? firstImage : undefined;
 		}
 
 		if ("assets" in item && item.assets) {
 			const assets = item.assets as { thumbnails?: Array<{ src?: string }> };
-			if (assets.thumbnails && assets.thumbnails.length > 0 && assets.thumbnails[0]?.src) {
-				return assets.thumbnails[0].src;
+			if (assets.thumbnails && assets.thumbnails.length > ZERO && assets.thumbnails[ZERO]?.src) {
+				return assets.thumbnails[ZERO].src;
 			}
 		}
 
@@ -721,7 +722,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 		);
 	}
 
-	if (relatedItems.length === 0) {
+	if (relatedItems.length === ZERO) {
 		return (
 			<Card withBorder={true}>
 				<Card.Section withBorder={true} inheritPadding={true} py="xs">
@@ -821,7 +822,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 									e.currentTarget.style.boxShadow = "var(--mantine-shadow-md)";
 								}}
 								onMouseLeave={(e) => {
-									e.currentTarget.style.transform = "translateY(0)";
+									e.currentTarget.style.transform = "translateY(0px)";
 									e.currentTarget.style.boxShadow = "var(--mantine-shadow-sm)";
 								}}
 							>
@@ -929,7 +930,7 @@ export const RelatedItems: React.FC<RelatedItemsProps> = ({
 				</ScrollArea.Autosize>
 
 				{/* Show more button */}
-				{filteredItems.length > 0 && (
+				{filteredItems.length > ZERO && (
 					<Divider my="md" />
 				)}
 

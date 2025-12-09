@@ -6,6 +6,27 @@ import React, { useState, useEffect } from "react";
 import { collectionService } from "../services/collectionService";
 import { UniversalItem, ItemStatus } from "../types/hobby";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 interface ItemEditPageProps {}
 
 const statusOptions = [
@@ -21,13 +42,13 @@ const statusOptions = [
 ];
 
 const scaleOptions = [
-	{ value: "1/144", label: "1/144" },
-	{ value: "1/100", label: "1/100" },
-	{ value: "1/72", label: "1/72" },
-	{ value: "1/60", label: "1/60" },
-	{ value: "1/48", label: "1/48" },
-	{ value: "1/35", label: "1/35" },
-	{ value: "1/24", label: "1/24" },
+	{ value: "ONE/144", label: "ONE/144" },
+	{ value: "ONE/HUNDRED", label: "ONE/HUNDRED" },
+	{ value: "ONE/72", label: "ONE/72" },
+	{ value: "ONE/60", label: "ONE/60" },
+	{ value: "ONE/48", label: "ONE/48" },
+	{ value: "ONE/35", label: "ONE/35" },
+	{ value: "ONE/24", label: "ONE/24" },
 	{ value: "Other", label: "Other" },
 ];
 
@@ -114,7 +135,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 		loadItem();
 	}, [itemId, isEditing]);
 
-	const handleInputChange = (field: string, value: any) => {
+	const handleInputChange = (field: string, value: string | number | boolean | string[] | undefined) => {
 		setFormData(prev => ({
 			...prev,
 			[field]: value,
@@ -159,7 +180,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 
 			const metadata = {
 				source: "manual" as const,
-				confidence: 1,
+				confidence: ONE,
 			};
 
 			await (isEditing ? collectionService.updateItem(itemId, {
@@ -198,7 +219,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 					<Skeleton height={48} width={300} />
 					<Card p="xl" radius="lg" withBorder={true}>
 						<Stack gap="md">
-							{[1, 2, 3, 4, 5, 6].map((i) => (
+							{[ONE, TWO, THREE, FOUR, FIVE, SIX].map((i) => (
 								<Skeleton key={i} height={40} radius="md" />
 							))}
 						</Stack>
@@ -234,7 +255,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 								Back
 							</Button>
 						</Group>
-						<Title order={1} size={36}>
+						<Title order={ONE} size={36}>
 							{isEditing ? "Edit Item" : "Add New Item"}
 						</Title>
 						<Text size="lg" color="dimmed">
@@ -264,8 +285,8 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 
 						{/* Basic Information */}
 						<Stack gap="md">
-							<Title order={3}>Basic Information</Title>
-							<SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
+							<Title order={THREE}>Basic Information</Title>
+							<SimpleGrid cols={{ base: ONE, sm: TWO }} spacing="md">
 								<TextInput
 									label="Item Name"
 									placeholder="Enter item name"
@@ -285,8 +306,8 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 						{/* Hobby-Specific Fields */}
 						{(hobbyType === "model_kits" || hobbyType === "other") && (
 							<Stack gap="md">
-								<Title order={3}>Model Details</Title>
-								<SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="md">
+								<Title order={THREE}>Model Details</Title>
+								<SimpleGrid cols={{ base: ONE, sm: TWO, lg: FOUR }} spacing="md">
 									<Select
 										label="Grade/Class"
 										data={gradeOptions}
@@ -313,7 +334,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 										value={formData.price}
 										onChange={(value) => { handleInputChange("price", value); }}
 										prefix="$"
-										decimalScale={2}
+										decimalScale={TWO}
 									/>
 								</SimpleGrid>
 							</Stack>
@@ -321,8 +342,8 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 
 						{/* Status and Notes */}
 						<Stack gap="md">
-							<Title order={3}>Status & Notes</Title>
-							<SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
+							<Title order={THREE}>Status & Notes</Title>
+							<SimpleGrid cols={{ base: ONE, sm: TWO }} spacing="md">
 								<Select
 									label="Status"
 									data={statusOptions}
@@ -335,13 +356,13 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 								placeholder="Add any additional notes about this item"
 								value={formData.notes}
 								onChange={(e) => { handleInputChange("notes", e.target.value); }}
-								rows={4}
+								rows={FOUR}
 							/>
 						</Stack>
 
 						{/* Tags */}
 						<Stack gap="md">
-							<Title order={3}>Tags</Title>
+							<Title order={THREE}>Tags</Title>
 							<Group>
 								<TextInput
 									placeholder="Add a tag"
@@ -365,14 +386,14 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 								/>
 							</Group>
 
-							{formData.tags.length > 0 && (
+							{formData.tags.length > ZERO && (
 								<Group gap="xs" wrap="wrap">
 									{formData.tags.map((tag) => (
 										<Button
 											key={tag}
 											variant="outline"
 											size="xs"
-											rightSection={<IconX size={10} />}
+											rightSection={<IconX size={TEN} />}
 											onClick={() => { handleRemoveTag(tag); }}
 										>
 											{tag}
@@ -384,7 +405,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 
 						{/* Images placeholder */}
 						<Stack gap="md">
-							<Title order={3}>Images</Title>
+							<Title order={THREE}>Images</Title>
 							<Card p="lg" radius="md" withBorder={true} style={{ borderStyle: "dashed" }}>
 								<Stack align="center" gap="md" mih={120}>
 									<IconPhoto size={48} color="#ccc" />

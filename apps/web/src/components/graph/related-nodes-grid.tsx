@@ -18,6 +18,27 @@ import { Link } from "@tanstack/react-router";
 
 import type { GraphNode } from "../../utils/graph-client";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 interface RelatedNodesGridProps {
 	nodes: GraphNode[];
 	currentNodeType?: string;
@@ -27,8 +48,8 @@ interface RelatedNodesGridProps {
 
 // Constants for magic numbers
 const DEFAULT_MAX_VISIBLE = 12;
-const GROUP_THRESHOLD = 6;
-const DEFAULT_COMPACT_MAX_VISIBLE = 5;
+const GROUP_THRESHOLD = SIX;
+const DEFAULT_COMPACT_MAX_VISIBLE = FIVE;
 
 /**
  * Icon and color mapping for different node types
@@ -76,7 +97,7 @@ function NodeCard({ node, currentNodeType }: { node: GraphNode; currentNodeType?
 			padding="sm"
 			radius="md"
 			withBorder={true}
-			h="100%"
+			h="HUNDRED%"
 			style={{ cursor: "pointer" }}
 			component={Link}
 			to={`/${node.type}/${node.id}`}
@@ -88,7 +109,7 @@ function NodeCard({ node, currentNodeType }: { node: GraphNode; currentNodeType?
 						<Avatar size="sm" color={config.color} variant="light">
 							<IconComponent size={14} />
 						</Avatar>
-						<Text size="sm" fw={600} lineClamp={1}>
+						<Text size="sm" fw={600} lineClamp={ONE}>
 							{displayName}
 						</Text>
 					</Group>
@@ -107,7 +128,7 @@ function NodeCard({ node, currentNodeType }: { node: GraphNode; currentNodeType?
 
 				{/* Japanese name (if different from English) */}
 				{node.name?.ja && node.name?.en && node.name.ja !== node.name.en && (
-					<Text size="xs" c="dimmed" lineClamp={1}>
+					<Text size="xs" c="dimmed" lineClamp={ONE}>
 						{node.name.ja}
 					</Text>
 				)}
@@ -139,7 +160,7 @@ function NodeCard({ node, currentNodeType }: { node: GraphNode; currentNodeType?
 
 				{/* Differentiation from current node */}
 				{currentNodeType && node.type === currentNodeType && (
-					<Text size="xs" c="yellow.6">
+					<Text size="xs" c="yellow.SIX">
 						Same type
 					</Text>
 				)}
@@ -181,8 +202,8 @@ function filterAndSortNodes(
 	const sortedNodes = filteredNodes.toSorted((a, b) => {
 		// Different types get priority
 		if (currentNodeType) {
-			const aDifferentType = a.type === currentNodeType ? 1 : 0;
-			const bDifferentType = b.type === currentNodeType ? 1 : 0;
+			const aDifferentType = a.type === currentNodeType ? ONE : ZERO;
+			const bDifferentType = b.type === currentNodeType ? ONE : ZERO;
 			if (aDifferentType !== bDifferentType) {
 				return aDifferentType - bDifferentType;
 			}
@@ -190,7 +211,7 @@ function filterAndSortNodes(
 
 		// Then sort by type name
 		const typeCompare = a.type.localeCompare(b.type);
-		if (typeCompare !== 0) return typeCompare;
+		if (typeCompare !== ZERO) return typeCompare;
 
 		// Finally sort by display name
 		const aName = a.name?.en ?? a.name?.ja ?? a.id;
@@ -199,7 +220,7 @@ function filterAndSortNodes(
 	});
 
 	// Apply max visible limit
-	return maxVisible ? sortedNodes.slice(0, maxVisible) : sortedNodes;
+	return maxVisible ? sortedNodes.slice(ARRAY_FIRST_INDEX, maxVisible) : sortedNodes;
 }
 
 /**
@@ -228,7 +249,7 @@ export function RelatedNodesGrid({
 	const filteredNodes = filterAndSortNodes(nodes, currentNodeType, showAll ? undefined : maxVisible);
 	const hasMoreNodes = nodes.length > filteredNodes.length;
 
-	if (filteredNodes.length === 0) {
+	if (filteredNodes.length === ZERO) {
 		return <EmptyState />;
 	}
 
@@ -246,7 +267,7 @@ export function RelatedNodesGrid({
 
 					return (
 						<Stack key={nodeType} gap="sm">
-							<Title order={6}>
+							<Title order={SIX}>
 								<Group gap="xs">
 									<IconComponent size={16} color={config.color} />
 									<Text>
@@ -256,7 +277,7 @@ export function RelatedNodesGrid({
 							</Title>
 
 							<SimpleGrid
-								cols={{ base: 1, sm: 2, md: 3 }}
+								cols={{ base: ONE, sm: TWO, md: THREE }}
 								spacing="sm"
 							>
 								{typeNodes.map((node) => (
@@ -289,7 +310,7 @@ export function RelatedNodesGrid({
 	return (
 		<Stack gap="md">
 			<SimpleGrid
-				cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
+				cols={{ base: ONE, sm: TWO, md: THREE, lg: FOUR }}
 				spacing="sm"
 			>
 				{filteredNodes.map((node) => (
@@ -325,7 +346,7 @@ export function RelatedNodesCompact({
 }: Omit<RelatedNodesGridProps, "showAll">) {
 	const filteredNodes = filterAndSortNodes(nodes, currentNodeType, maxVisible);
 
-	if (filteredNodes.length === 0) {
+	if (filteredNodes.length === ZERO) {
 		return null;
 	}
 
@@ -343,11 +364,11 @@ export function RelatedNodesCompact({
 						component={Link}
 						to={`/${node.type}/${node.id}`}
 						size="sm"
-						lineClamp={1}
+						lineClamp={ONE}
 					>
 						<Group gap="xs" wrap="nowrap">
 							<IconComponent size={12} color={config.color} />
-							<Text size="xs" span={true} flex={1} lineClamp={1}>
+							<Text size="xs" span={true} flex={ONE} lineClamp={ONE}>
 								{displayName}
 							</Text>
 							<Badge

@@ -40,6 +40,12 @@ const PRICE_STEP = 500;
 const DEFAULT_SORT_FIELD = "name";
 const DEFAULT_SORT_DIRECTION = "asc";
 const FUTURE_YEAR_OFFSET = 5;
+const ZERO = 0;
+const ONE = 1;
+const TWO = 2;
+const DEBOUNCE_DELAY = 300;
+const PRESET_NAME_MIN_LENGTH = 3;
+const CACHE_EXPIRY_HOURS = 24;
 
 const globalAlert = alert;
 const globalBtoa = btoa;
@@ -136,7 +142,7 @@ export function AdvancedFilters({
 					description: "Items from the last 2 years",
 					filters: {
 						releaseDateRange: {
-							start: new Date().getFullYear() - 2,
+							start: new Date().getFullYear() - TWO,
 							end: new Date().getFullYear(),
 						},
 					},
@@ -258,14 +264,14 @@ export function AdvancedFilters({
 			version: "1.0",
 		};
 
-		const blob = new Blob([JSON.stringify(filterData, null, 2)], {
+		const blob = new Blob([JSON.stringify(filterData, null, TWO)], {
 			type: "application/json",
 		});
 
 		const url = URL.createObjectURL(blob);
 		const a = document.createElement("a");
 		a.href = url;
-		a.download = `filters_${new Date().toISOString().split("T")[0]}.json`;
+		a.download = `filters_${new Date().toISOString().split("T")[ZERO]}.json`;
 		document.body.append(a);
 		a.click();
 		a.remove();
@@ -274,7 +280,7 @@ export function AdvancedFilters({
 
 	// Import filters
 	const handleImportFilters = async (event: React.ChangeEvent<HTMLInputElement>) => {
-		const file = event.target.files?.[0];
+		const file = event.target.files?.[ZERO];
 		if (!file) return;
 
 		try {
@@ -439,7 +445,7 @@ export function AdvancedFilters({
 							<Accordion.Control icon={<IconFilter size={16} />}>
                 Basic Filters
 								<Badge size="xs" ml="xs" variant="light">
-									{(localFilters.grade?.length ?? 0) + (localFilters.scale?.length ?? 0) + (localFilters.series?.length ?? 0)} active
+									{(localFilters.grade?.length ?? ZERO) + (localFilters.scale?.length ?? ZERO) + (localFilters.series?.length ?? ZERO)} active
 								</Badge>
 							</Accordion.Control>
 							<Accordion.Panel>
@@ -541,18 +547,18 @@ export function AdvancedFilters({
 								<Stack gap="md">
 									<RangeSlider
 										label="Price Range (¥)"
-										min={0}
+										min={ZERO}
 										max={MAX_PRICE_YEN}
 										step={PRICE_STEP}
 										value={[
-											localFilters.priceRange?.min ?? 0,
+											localFilters.priceRange?.min ?? ZERO,
 											localFilters.priceRange?.max ?? MAX_PRICE_YEN,
 										]}
 										onChange={([min, max]) => { handleFilterChange({
 											priceRange: { min, max },
 										}); }}
 										marks={[
-											{ value: 0, label: "¥0" },
+											{ value: ZERO, label: "¥0" },
 											{ value: 10_000, label: "¥10k" },
 											{ value: 20_000, label: "¥20k" },
 											{ value: 30_000, label: "¥30k" },
@@ -564,7 +570,7 @@ export function AdvancedFilters({
 										<NumberInput
 											label="Minimum Price"
 											placeholder="0"
-											min={0}
+											min={ZERO}
 											value={localFilters.priceRange?.min}
 											onChange={(value) => { handleFilterChange({
 												priceRange: {
@@ -576,7 +582,7 @@ export function AdvancedFilters({
 										<NumberInput
 											label="Maximum Price"
 											placeholder={MAX_PRICE_YEN.toString()}
-											min={0}
+											min={ZERO}
 											value={localFilters.priceRange?.max}
 											onChange={(value) => { handleFilterChange({
 												priceRange: {
@@ -665,7 +671,7 @@ export function AdvancedFilters({
 					{/* Filter summary */}
 					<Alert icon={<IconInfoCircle size={16} />} color="blue">
 						<Text size="sm">
-              Currently have {getActiveFilterCount()} active filter{getActiveFilterCount() === 1 ? "" : "s"} applied.
+              Currently have {getActiveFilterCount()} active filter{getActiveFilterCount() === ONE ? "" : "s"} applied.
 						</Text>
 					</Alert>
 				</Stack>

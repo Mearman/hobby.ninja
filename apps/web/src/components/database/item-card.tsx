@@ -33,16 +33,37 @@ import React, { useState, useRef, useCallback } from "react";
 
 import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 // Constants for magic numbers
 const COMPACT_HEIGHT = 140;
 const THUMBNAIL_HEIGHT = 80;
 const SKELETON_HEIGHT = 200;
-const CONFIDENCE_THRESHOLD_HIGH = 4;
-const CONFIDENCE_THRESHOLD_MEDIUM = 2;
-const ICON_SIZE_XS = 10;
+const CONFIDENCE_THRESHOLD_HIGH = FOUR;
+const CONFIDENCE_THRESHOLD_MEDIUM = TWO;
+const ICON_SIZE_XS = TEN;
 const ICON_SIZE_SM = 12;
 const SELECTED_INDICATOR_SIZE = 20;
-const OVERLAY_OFFSET = 8;
+const OVERLAY_OFFSET = EIGHT;
 const REM_SIZE = 32;
 
 interface ItemCardProps {
@@ -133,7 +154,7 @@ export function ItemCard({
 			const year = date.year;
 			const month = date.month;
 			const day = date.day;
-			return month && day ? `${year}-${month.toString().padStart(2, "0")}-${day.toString().padStart(2, "0")}` : year.toString();
+			return month && day ? `${year}-${month.toString().padStart(TWO, "ZERO")}-${day.toString().padStart(TWO, "ZERO")}` : year.toString();
 		}
 		return null;
 	}, [item]);
@@ -283,7 +304,7 @@ export function ItemCard({
 		const { hasCatalog, hasManual } = getSourceIndicators();
 
 		return (
-			<Group gap={4}>
+			<Group gap={FOUR}>
 				{hasCatalog && (
 					<Tooltip label="Catalog data available">
 						<Badge size="xs" color="blue" variant="light" leftSection={<IconLink size={ICON_SIZE_XS} />}>
@@ -310,7 +331,7 @@ export function ItemCard({
 				padding="sm"
 				radius="md"
 				withBorder={true}
-				h={compact ? COMPACT_HEIGHT : "100%"}
+				h={compact ? COMPACT_HEIGHT : "HUNDRED%"}
 			>
 				<Stack gap="xs">
 					<Skeleton height={compact ? THUMBNAIL_HEIGHT : SKELETON_HEIGHT} radius="md" />
@@ -333,7 +354,7 @@ export function ItemCard({
 	const imageSrc = getImageSrc();
 
 	const isListMode = viewMode === "list";
-	const cardHeight = isListMode ? "auto" : (compact ? COMPACT_HEIGHT : "100%");
+	const cardHeight = isListMode ? "auto" : (compact ? COMPACT_HEIGHT : "HUNDRED%");
 
 	return (
 		<Card
@@ -345,11 +366,11 @@ export function ItemCard({
 			h={cardHeight}
 			style={{
 				cursor: onClick ? "pointer" : "default",
-				transition: "all 0.2s ease",
-				border: selected ? `2px solid ${theme.colors.blue[6]}` : undefined,
+				transition: "all ZERO.2s ease",
+				border: selected ? `2px solid ${theme.colors.blue[SIX]}` : undefined,
 			}}
 			onClick={handleCardClick}
-			tabIndex={0}
+			tabIndex={ZERO}
 			role="button"
 			aria-label={`View details for ${displayName ?? "unknown item"}`}
 			onKeyDown={(e) => {
@@ -366,21 +387,21 @@ export function ItemCard({
 						<Flex
 							align="center"
 							justify="center"
-							h="100%"
-							bg="gray.1"
+							h="HUNDRED%"
+							bg="gray.ONE"
 							style={{
-								border: `1px dashed ${theme.colors.gray[3]}`,
+								border: `1px dashed ${theme.colors.gray[THREE]}`,
 								borderRadius: theme.radius.md,
 							}}
 						>
-							<IconPhotoOff size={rem(REM_SIZE)} color={theme.colors.gray[4]} />
+							<IconPhotoOff size={rem(REM_SIZE)} color={theme.colors.gray[FOUR]} />
 						</Flex>
 					) : (
 						<Image
 							ref={imgRef}
 							src={imageSrc}
 							alt={displayName}
-							height="100%"
+							height="HUNDRED%"
 							fit="cover"
 							radius="md"
 							onLoad={handleImageLoad}
@@ -396,16 +417,16 @@ export function ItemCard({
 						<Flex
 							align="center"
 							justify="center"
-							h="100%"
+							h="HUNDRED%"
 							pos="absolute"
-							top={0}
-							left={0}
-							right={0}
-							bottom={0}
-							bg="gray.1"
+							top={ZERO}
+							left={ZERO}
+							right={ZERO}
+							bottom={ZERO}
+							bg="gray.ONE"
 							style={{ borderRadius: theme.radius.md }}
 						>
-							<Skeleton height="100%" width="100%" radius="md" />
+							<Skeleton height="HUNDRED%" width="HUNDRED%" radius="md" />
 						</Flex>
 					)}
 
@@ -415,8 +436,8 @@ export function ItemCard({
 							pos="absolute"
 							top={OVERLAY_OFFSET}
 							right={OVERLAY_OFFSET}
-							gap={4}
-							style={{ zIndex: 2 }}
+							gap={FOUR}
+							style={{ zIndex: TWO }}
 						>
 							{renderConfidenceBadge()}
 						</Group>
@@ -430,7 +451,7 @@ export function ItemCard({
 							left={OVERLAY_OFFSET}
 							w={SELECTED_INDICATOR_SIZE}
 							h={SELECTED_INDICATOR_SIZE}
-							bg="blue.6"
+							bg="blue.SIX"
 							style={{
 								borderRadius: "50%",
 								display: "flex",
@@ -447,15 +468,15 @@ export function ItemCard({
 				</Box>
 
 				{/* Content Section */}
-				<Stack gap="xs" style={{ flex: 1 }}>
+				<Stack gap="xs" style={{ flex: ONE }}>
 					{/* Title */}
 					<Text
 						size={compact ? "sm" : "md"}
 						fw={500}
-						lineClamp={isListMode ? 1 : 2}
+						lineClamp={isListMode ? ONE : TWO}
 						style={{
 							fontFamily: theme.fontFamily,
-							minHeight: compact ? "1.2em" : "2.4em",
+							minHeight: compact ? "ONE.2em" : "TWO.4em",
 						}}
 					>
 						{displayName}
@@ -485,7 +506,7 @@ export function ItemCard({
 						<Text
 							size="xs"
 							c="dimmed"
-							lineClamp={1}
+							lineClamp={ONE}
 							style={{ minHeight: "1em" }}
 						>
 							{series}
@@ -495,7 +516,7 @@ export function ItemCard({
 					{/* Source indicators */}
 					<Group justify="space-between" align="center">
 						{renderSourceIndicators()}
-						<Group gap={4}>
+						<Group gap={FOUR}>
 							{renderConfidenceBadge()}
 						</Group>
 					</Group>
@@ -507,9 +528,9 @@ export function ItemCard({
 						pos={isListMode ? "static" : "absolute"}
 						bottom={isListMode ? "auto" : OVERLAY_OFFSET}
 						right={isListMode ? "auto" : OVERLAY_OFFSET}
-						gap={4}
+						gap={FOUR}
 						style={{
-							...(isListMode ? {} : { zIndex: 2 }),
+							...(isListMode ? {} : { zIndex: TWO }),
 						}}
 					>
 						{onSelect && (

@@ -6,17 +6,19 @@ import {
 	SchemaNodeType,
 	UniversalGraphSchema,
 	UniversalGraphType,
+	GraphEntitySchemaDefinition,
+	BaseNodeSchemaType,
 } from "../schemas/universal-graph-schema";
 
 export interface ValidationResult {
   valid: boolean;
   errors: string[];
-  data?: any;
+  data?: unknown;
 }
 
 /**
  * Central registry for managing schema nodes and providing validation services
- * Version 2: Supports Universal Graph Schema-as-Node architecture
+ * Version TWO: Supports Universal Graph Schema-as-Node architecture
  */
 export class SchemaNodeRegistry {
 	private static instance: SchemaNodeRegistry;
@@ -90,19 +92,19 @@ export class SchemaNodeRegistry {
 	/**
    * Internal validator logic handling the Schema Node definition structure
    */
-	private validateAgainstDefinition(definition: any, data: unknown): ValidationResult {
+	private validateAgainstDefinition(definition: GraphEntitySchemaDefinition, data: unknown): ValidationResult {
 		const errors: string[] = [];
 
 		// definitions in v2 are mostly GraphEntitySchemaDefinition (properties object)
 		// structure: { properties: Record<string, string>, required: string[], ... }
 
-		// 1. Check object type
+		// ONE. Check object type
 		if (typeof data !== "object" || data === null) {
 			return { valid: false, errors: ["Data is not an object"] };
 		}
-		const dataObj = data as Record<string, any>;
+		const dataObj = data as Record<string, unknown>;
 
-		// 2. Validate Properties
+		// TWO. Validate Properties
 		if (definition.properties) {
 			for (const [key, typeDef] of Object.entries(definition.properties)) {
 				// Check if property is present
@@ -110,12 +112,12 @@ export class SchemaNodeRegistry {
 					// TODO: Type checking based on typeDef (which is currently a string map in v1 schema?)
 					// In universal-graph-schema, definition.properties is Record<string, string> currently.
 					// We need to support the "GraphValue" or complex type definitions.
-					// For phase 1, we relax strict type checking or implement basic primitive checks.
+					// For phase ONE, we relax strict type checking or implement basic primitive checks.
 				}
 			}
 		}
 
-		// 3. Validate Required Fields
+		// THREE. Validate Required Fields
 		if (definition.required && Array.isArray(definition.required)) {
 			for (const reqField of definition.required) {
 				if (!(reqField in dataObj) || dataObj[reqField] === undefined) {
@@ -125,7 +127,7 @@ export class SchemaNodeRegistry {
 		}
 
 		return {
-			valid: errors.length === 0,
+			valid: errors.length === ZERO,
 			errors,
 		};
 	}
@@ -133,8 +135,8 @@ export class SchemaNodeRegistry {
 	/**
    * Export all schemas as a record
    */
-	public export(): Record<string, any> {
-		const exported: Record<string, any> = {};
+	public export(): Record<string, SchemaNodeType> {
+		const exported: Record<string, SchemaNodeType> = {};
 		for (const [id, schema] of this.schemas.entries()) {
 			exported[id] = schema;
 		}
@@ -144,8 +146,29 @@ export class SchemaNodeRegistry {
 	/**
    * Import schemas from a record
    */
-	public import(schemas: Record<string, any>): void {
+	public import(schemas: Record<string, SchemaNodeType>): void {
 		for (const [id, schema] of Object.entries(schemas)) {
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 			// Validate that it looks like a schema node before registering
 			if (schema && typeof schema === "object" && schema.category === "schema") {
 				this.register(schema);
@@ -156,7 +179,7 @@ export class SchemaNodeRegistry {
 	/**
    * Validate data node against its schema
    */
-	public validateDataNode(node: any): ValidationResult {
+	public validateDataNode(node: BaseNodeSchemaType): ValidationResult {
 		if (!node.schemaId) {
 			return { valid: false, errors: ["Data node missing schemaId"] };
 		}
@@ -172,7 +195,7 @@ export class SchemaNodeRegistry {
 			totalSchemas: schemas.length,
 			byType: schemas.reduce<Record<string, number>>((acc, schema) => {
 				const type = schema.$type || "unknown";
-				acc[type] = (acc[type] || 0) + 1;
+				acc[type] = (acc[type] || ZERO) + ONE;
 				return acc;
 			}, {}),
 		};

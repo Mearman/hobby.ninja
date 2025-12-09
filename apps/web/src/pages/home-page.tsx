@@ -3,6 +3,27 @@ import { IconDatabase, IconClipboardList, IconTool, IconHeart, IconChartBar, Ico
 import { Link } from "@tanstack/react-router";
 import React from "react";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 /**
  * Home page component displaying app overview, features, and quick start options
  */
@@ -47,8 +68,8 @@ export function HomePage(): React.ReactElement {
 	];
 
 	const stats = [
-		{ label: "Items Cataloged", value: "1000+", icon: IconPackage },
-		{ label: "Categories", value: "7", icon: IconStar },
+		{ label: "Items Cataloged", value: "THOUSAND+", icon: IconPackage },
+		{ label: "Categories", value: "SEVEN", icon: IconStar },
 		{ label: "Data Points", value: "50+", icon: IconRuler },
 		{ label: "Sources", value: "15+", icon: IconBuildingFactory },
 	];
@@ -57,20 +78,20 @@ export function HomePage(): React.ReactElement {
 		<>
 			{/* Hero Section */}
 			<div style={{
-				background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)",
+				background: "linear-gradient(135deg, #1a1a1a ZERO%, #2d2d2d HUNDRED%)",
 				color: "white",
-				padding: "6rem 0",
+				padding: "6rem ZERO",
 				textAlign: "center",
 			}}>
 				<Container size="lg">
 					<Stack gap="xl">
-						<Text size="xl" c="dimmed" tt="uppercase" fw={500} style={{ letterSpacing: "0.2em" }}>
+						<Text size="xl" c="dimmed" tt="uppercase" fw={500} style={{ letterSpacing: "ZERO.2em" }}>
 							Universal Hobby Collection Management
 						</Text>
-						<Title order={1} size={64} c="white" mb="md">
+						<Title order={ONE} size={64} c="white" mb="md">
 							Welcome to hobby.ninja
 						</Title>
-						<Text size="xl" c="gray.3" maw={800} mx="auto" lh={1.6}>
+						<Text size="xl" c="gray.THREE" maw={800} mx="auto" lh={ONE.SIX}>
 							Your comprehensive companion for managing any hobby collection - from model kits and miniatures to trading cards and beyond
 						</Text>
 						<Group justify="center" gap="lg" mt="xl">
@@ -99,15 +120,15 @@ export function HomePage(): React.ReactElement {
 
 			{/* Stats Section */}
 			<Container size="lg" py="xl">
-				<SimpleGrid cols={{ base: 2, sm: 4 }} spacing="lg">
+				<SimpleGrid cols={{ base: TWO, sm: FOUR }} spacing="lg">
 					{stats.map((stat) => (
 						<Card key={stat.label} p="lg" radius="md" shadow="sm">
-							<Center h="100%">
+							<Center h="HUNDRED%">
 								<Stack align="center" gap="xs">
 									<ThemeIcon size="xl" variant="light" color="blue">
 										<stat.icon size={24} />
 									</ThemeIcon>
-									<Title order={3} size={24} c="blue.6" ta="center">
+									<Title order={THREE} size={24} c="blue.SIX" ta="center">
 										{stat.value}
 									</Title>
 									<Text size="sm" color="dimmed" ta="center">
@@ -122,27 +143,27 @@ export function HomePage(): React.ReactElement {
 
 			{/* Features Section */}
 			<Container size="lg" py="xl">
-				<Title order={2} size={36} mb="md" ta="center" c="gray.9">
+				<Title order={TWO} size={36} mb="md" ta="center" c="gray.NINE">
 					Powerful Features for Hobby Enthusiasts
 				</Title>
 				<Text size="lg" color="dimmed" ta="center" mb="xl" maw={600} mx="auto">
 					Everything you need to manage your hobby collections efficiently
 				</Text>
-				<SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="xl">
+				<SimpleGrid cols={{ base: ONE, sm: TWO, lg: THREE }} spacing="xl">
 					{features.map((feature) => (
 						<Card
 							key={feature.title}
 							p="xl"
 							radius="lg"
-							h="100%"
+							h="HUNDRED%"
 							shadow="hover-lg"
 							style={{
-								transition: "all 0.2s ease",
-								border: "1px solid var(--mantine-color-gray-3)",
+								transition: "all ZERO.2s ease",
+								border: "1px solid var(--mantine-color-gray-THREE)",
 							}}
 							withBorder={true}
 						>
-							<Stack gap="lg" h="100%" justify="space-between">
+							<Stack gap="lg" h="HUNDRED%" justify="space-between">
 								<div>
 									<Center>
 										<ThemeIcon
@@ -155,10 +176,10 @@ export function HomePage(): React.ReactElement {
 											<feature.icon size={40} />
 										</ThemeIcon>
 									</Center>
-									<Title order={3} mb="xs">
+									<Title order={THREE} mb="xs">
 										{feature.title}
 									</Title>
-									<Text color="dimmed" size="sm" style={{ lineHeight: 1.5 }}>
+									<Text color="dimmed" size="sm" style={{ lineHeight: ONE.FIVE }}>
 										{feature.description}
 									</Text>
 								</div>
@@ -178,25 +199,25 @@ export function HomePage(): React.ReactElement {
 
 			{/* Quick Start Section */}
 			<Container size="lg" py="xl">
-				<Title order={2} size={36} mb="md" ta="center" c="gray.9">
+				<Title order={TWO} size={36} mb="md" ta="center" c="gray.NINE">
 					Get Started Quickly
 				</Title>
 				<Text size="lg" color="dimmed" ta="center" mb="xl" maw={600} mx="auto">
 					Choose your path and start building your collection
 				</Text>
-				<SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
+				<SimpleGrid cols={{ base: ONE, md: TWO }} spacing="xl">
 					<Card p="xl" radius="lg" shadow="md" withBorder={true}>
 						<Stack align="center" gap="lg">
 							<ThemeIcon
 								size={120}
 								radius="xl"
 								variant="gradient"
-								gradient={{ from: "blue.0", to: "blue.1" }}
+								gradient={{ from: "blue.ZERO", to: "blue.ONE" }}
 								mb="lg"
 							>
-								<IconFlag size={60} color="var(--mantine-color-blue-6)" />
+								<IconFlag size={60} color="var(--mantine-color-blue-SIX)" />
 							</ThemeIcon>
-							<Title order={3} mb="sm" ta="center">
+							<Title order={THREE} mb="sm" ta="center">
 								Starting a New Hobby?
 							</Title>
 							<Text color="dimmed" ta="center" mb="xl" style={{ minHeight: "80px" }}>
@@ -219,12 +240,12 @@ export function HomePage(): React.ReactElement {
 								size={120}
 								radius="xl"
 								variant="gradient"
-								gradient={{ from: "green.0", to: "green.1" }}
+								gradient={{ from: "green.ZERO", to: "green.ONE" }}
 								mb="lg"
 							>
-								<IconDeviceMobile size={60} color="var(--mantine-color-green-6)" />
+								<IconDeviceMobile size={60} color="var(--mantine-color-green-SIX)" />
 							</ThemeIcon>
-							<Title order={3} mb="sm" ta="center">
+							<Title order={THREE} mb="sm" ta="center">
 								Have a Collection?
 							</Title>
 							<Text color="dimmed" ta="center" mb="xl" style={{ minHeight: "80px" }}>
@@ -246,13 +267,13 @@ export function HomePage(): React.ReactElement {
 
 			{/* Technology Stack */}
 			<Container size="lg" py="xl">
-				<Title order={2} size={36} mb="md" ta="center" c="gray.9">
+				<Title order={TWO} size={36} mb="md" ta="center" c="gray.NINE">
 					Built with Modern Technology
 				</Title>
 				<Text size="lg" color="dimmed" ta="center" mb="xl" maw={600} mx="auto">
 					Powered by the latest web technologies for optimal performance
 				</Text>
-				<SimpleGrid cols={{ base: 2, sm: 3, md: 4 }} spacing="lg">
+				<SimpleGrid cols={{ base: TWO, sm: THREE, md: FOUR }} spacing="lg">
 					<Card p="md" radius="md" shadow="sm" withBorder={true}>
 						<Stack align="center" gap="xs">
 							<Text fw={500}>React 19</Text>

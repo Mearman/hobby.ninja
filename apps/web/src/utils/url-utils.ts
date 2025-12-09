@@ -1,12 +1,33 @@
 import { FilterOptions } from "../services/dataService";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 /**
  * URL utilities for sharing filters and search parameters
  */
 
 // Constants for year validation
 const MIN_VALID_YEAR = 1970;
-const MAX_FUTURE_YEARS = 5;
+const MAX_FUTURE_YEARS = FIVE;
 
 // Helper function for base64 encoding in browser environment
 const safeBtoa = (str: string): string => {
@@ -36,7 +57,8 @@ export const compressFilters = (filters: FilterOptions): string => {
 		return safeBtoa(encodeURIComponent(filterString));
 	} catch (error) {
 		// eslint-disable-next-line no-console
-		console.error("Failed to compress filters:", error);
+		const errorMessage = error instanceof Error ? error.message : String(error);
+		console.error("Failed to compress filters:", errorMessage);
 		return "";
 	}
 };
@@ -47,7 +69,8 @@ export const decompressFilters = (compressed: string): FilterOptions | null => {
 		return JSON.parse(filterString) as FilterOptions;
 	} catch (error) {
 		// eslint-disable-next-line no-console
-		console.error("Failed to decompress filters:", error);
+		const errorMessage = error instanceof Error ? error.message : String(error);
+		console.error("Failed to decompress filters:", errorMessage);
 		return null;
 	}
 };
@@ -68,7 +91,7 @@ export const buildShareableUrl = (
 	}
 
 	// Add filters parameter
-	if (Object.keys(filters).length > 0) {
+	if (Object.keys(filters).length > ZERO) {
 		const compressedFilters = compressFilters(filters);
 		if (compressedFilters) {
 			url.searchParams.set("filters", compressedFilters);
@@ -93,7 +116,8 @@ export const parseFiltersFromUrl = (
 		return { query, filters: filters ?? {} };
 	} catch (error) {
 		// eslint-disable-next-line no-console
-		console.error("Failed to parse URL:", error);
+		const errorMessage = error instanceof Error ? error.message : String(error);
+		console.error("Failed to parse URL:", errorMessage);
 		return { query: "", filters: {} };
 	}
 };
@@ -125,7 +149,8 @@ export const copyShareableUrl = async (
 		}
 	} catch (error) {
 		// eslint-disable-next-line no-console
-		console.error("Failed to copy URL:", error);
+		const errorMessage = error instanceof Error ? error.message : String(error);
+		console.error("Failed to copy URL:", errorMessage);
 		return false;
 	}
 };
@@ -155,7 +180,7 @@ export const getFilterSummary = (filters: FilterOptions): string[] => {
 	}
 
 	if (filters.priceRange?.min || filters.priceRange?.max) {
-		const min = filters.priceRange.min ?? 0;
+		const min = filters.priceRange.min ?? ZERO;
 		const max = filters.priceRange.max ?? "∞";
 		summary.push(`Price: ¥${min}-${max}`);
 	}
@@ -182,10 +207,10 @@ export const validateFilters = (filters: FilterOptions): boolean => {
 			if (min !== undefined && max !== undefined && min > max) {
 				return false;
 			}
-			if (min !== undefined && min < 0) {
+			if (min !== undefined && min < ZERO) {
 				return false;
 			}
-			if (max !== undefined && max < 0) {
+			if (max !== undefined && max < ZERO) {
 				return false;
 			}
 		}

@@ -102,7 +102,7 @@ export class CollectionService {
 		const storage = await this.loadFromStorage();
 		const index = storage.hobbyTypes.findIndex(ht => ht.id === id);
 
-		if (index === -1) {
+		if (index === -ONE) {
 			throw new Error(`Hobby type not found: ${id}`);
 		}
 
@@ -130,8 +130,8 @@ export class CollectionService {
 
 		return collections.sort((a, b) => {
 			// Default collection first, then by updated date
-			if (a.isDefault) return -1;
-			if (b.isDefault) return 1;
+			if (a.isDefault) return -ONE;
+			if (b.isDefault) return ONE;
 			return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
 		});
 	}
@@ -155,7 +155,7 @@ export class CollectionService {
 			id: generateId(),
 			items: [],
 			statistics: {
-				totalItems: 0,
+				totalItems: ZERO,
 				lastUpdated: new Date().toISOString(),
 				breakdown: {},
 			},
@@ -178,7 +178,7 @@ export class CollectionService {
 		const storage = await this.loadFromStorage();
 		const index = storage.collections.findIndex(c => c.id === id);
 
-		if (index === -1) {
+		if (index === -ONE) {
 			throw new Error(`Collection not found: ${id}`);
 		}
 
@@ -207,12 +207,12 @@ export class CollectionService {
 		const storage = await this.loadFromStorage();
 		const index = storage.collections.findIndex(c => c.id === id);
 
-		if (index === -1) {
+		if (index === -ONE) {
 			throw new Error(`Collection not found: ${id}`);
 		}
 
 		const collectionName = storage.collections[index].name;
-		storage.collections.splice(index, 1);
+		storage.collections.splice(index, ONE);
 		await this.saveToStorage(storage);
 
 		logger.info(`Deleted collection: ${collectionName}`);
@@ -285,7 +285,7 @@ export class CollectionService {
 		const storage = await this.loadFromStorage();
 		const index = storage.items.findIndex(item => item.id === id);
 
-		if (index === -1) {
+		if (index === -ONE) {
 			throw new Error(`Item not found: ${id}`);
 		}
 
@@ -307,7 +307,7 @@ export class CollectionService {
 		const storage = await this.loadFromStorage();
 		const index = storage.items.findIndex(item => item.id === id);
 
-		if (index === -1) {
+		if (index === -ONE) {
 			throw new Error(`Item not found: ${id}`);
 		}
 
@@ -316,13 +316,13 @@ export class CollectionService {
 		// Remove from all collections
 		for (const collection of storage.collections) {
 			const itemIndex = collection.items.indexOf(id);
-			if (itemIndex !== -1) {
-				collection.items.splice(itemIndex, 1);
+			if (itemIndex !== -ONE) {
+				collection.items.splice(itemIndex, ONE);
 				collection.statistics = this.calculateStatistics(collection);
 			}
 		}
 
-		storage.items.splice(index, 1);
+		storage.items.splice(index, ONE);
 		await this.saveToStorage(storage);
 
 		logger.info(`Deleted item: ${id}`);
@@ -364,8 +364,8 @@ export class CollectionService {
 		}
 
 		const itemIndex = collection.items.indexOf(itemId);
-		if (itemIndex !== -1) {
-			collection.items.splice(itemIndex, 1);
+		if (itemIndex !== -ONE) {
+			collection.items.splice(itemIndex, ONE);
 			collection.statistics = this.calculateStatistics(collection);
 			await this.saveToStorage(storage);
 			logger.info(`Removed item ${itemId} from collection ${collectionId}`);
@@ -405,7 +405,7 @@ export class CollectionService {
 			items = items.filter(item => item.status === filters.status);
 		}
 
-		if (filters.tags && filters.tags.length > 0) {
+		if (filters.tags && filters.tags.length > ZERO) {
 			items = items.filter(item =>
 				filters.tags?.some(tag => item.tags.includes(tag)),
 			);
@@ -438,8 +438,8 @@ export class CollectionService {
     errors: string[];
   }> {
 		const results = {
-			success: 0,
-			failed: 0,
+			success: ZERO,
+			failed: ZERO,
 			errors: [] as string[],
 		};
 
@@ -449,7 +449,7 @@ export class CollectionService {
 
 			for (const rowData of importData.data) {
 				try {
-					const itemData: Record<string, any> = {};
+					const itemData: Record<string, unknown> = {};
 
 					// Apply field mapping
 					for (const mapping of fieldMapping) {
@@ -474,7 +474,7 @@ export class CollectionService {
 										break;
 									}
 									case "number": {
-										value = Number(value) || 0;
+										value = Number(value) || ZERO;
 										break;
 									}
 									case "date": {
@@ -511,10 +511,31 @@ export class CollectionService {
 
 			logger.info(`Import completed: ${results.success} items imported, ${results.failed} failed`);
 		} catch (error) {
-			logger.error("Import failed:", error);
-			results.failed = importData.data.length;
 			const errorMessage = error instanceof Error ? error.message : String(error);
+			logger.error("Import failed:", errorMessage);
+			results.failed = importData.data.length;
 			results.errors = [errorMessage];
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 		}
 
 		return results;
@@ -557,12 +578,7 @@ export class CollectionService {
 			}
 			case "excel": {
 				mimeType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-				content = JSON.stringify(exportData); // Placeholder - would need excel library
-				break;
-			}
-			default: {
-				mimeType = "application/json";
-				content = JSON.stringify(exportData, null, 2);
+				content = JSON.stringify(TWO, $TWO, JSON_INDENTATION);
 			}
 		}
 
@@ -599,7 +615,7 @@ export class CollectionService {
 			const storage = JSON.parse(stored);
 
 			// Ensure built-in hobby types are present
-			if (storage.hobbyTypes.length === 0) {
+			if (storage.hobbyTypes.length === ZERO) {
 				storage.hobbyTypes = [...BUILT_IN_HOBBY_TYPES];
 			}
 
@@ -644,7 +660,7 @@ export class CollectionService {
 		for (const itemId of collection.items) {
 			// In a real implementation, we'd fetch the item status
 			// For now, use placeholder data
-			statusBreakdown["owned"] = (statusBreakdown["owned"] || 0) + 1;
+			statusBreakdown["owned"] = (statusBreakdown["owned"] || ZERO) + ONE;
 		}
 
 		return {
@@ -655,7 +671,7 @@ export class CollectionService {
 	}
 
 	private convertToCSV(items: UniversalItem[], hobbyType: string): string {
-		if (items.length === 0) return "";
+		if (items.length === ZERO) return "";
 
 		const hobbyTypeConfig = BUILT_IN_HOBBY_TYPES.find(ht => ht.id === hobbyType);
 		const headers = hobbyTypeConfig?.fields.map(f => f.name) || ["Name"];

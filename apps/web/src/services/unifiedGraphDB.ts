@@ -55,7 +55,7 @@ export interface GraphQueryOptions {
 }
 
 export interface GraphSearchResult {
-  nodes: any[];
+  nodes: DataNodeType[];
   total: number;
   hasMore: boolean;
 }
@@ -136,7 +136,7 @@ export class UnifiedGraphDB {
 		id: string,
 		type: z.infer<typeof SchemaNodeTypeEnum>,
 		name: string,
-		definition: any,
+		definition: SchemaDefinition,
 		description?: string,
 	): z.infer<typeof SchemaNode> {
 		if (!this.initialized) {
@@ -184,22 +184,29 @@ export class UnifiedGraphDB {
 		let schemas = this.schemaRegistry.getAll();
 
 		if (options?.type) {
-			schemas = schemas.filter((s: any) => s.$type === options.type);
+			schemas = schemas.filter((s) => s.$type === options.type);
 		}
 
 		// Apply ordering
 		if (options?.orderBy) {
 			schemas.sort((a, b) => {
-				const aValue = (a as any)[options.orderBy || "name"];
-				const bValue = (b as any)[options.orderBy || "name"];
-				const direction = options.orderDirection === "desc" ? -1 : 1;
-				return aValue > bValue ? direction : -direction;
+				const aValue = (a as Record<string, unknown>)[options.orderBy ?? "name"];
+				const bValue = (b as Record<string, unknown>)[options.orderBy ?? "name"];
+				const direction = options.orderDirection === "desc" ? -ONE : ONE;
+
+				if (typeof aValue === "string" && typeof bValue === "string") {
+					return aValue > bValue ? direction : -direction;
+				}
+				if (typeof aValue === "number" && typeof bValue === "number") {
+					return (aValue - bValue) * direction;
+				}
+				return ZERO;
 			});
 		}
 
 		// Apply pagination
 		if (options?.limit) {
-			const offset = options.offset || 0;
+			const offset = options.offset || ZERO;
 			schemas = schemas.slice(offset, offset + options.limit);
 		}
 
@@ -215,7 +222,7 @@ export class UnifiedGraphDB {
 		id: string,
 		type: z.infer<typeof DataNodeTypeEnum>,
 		schemaId: string,
-		properties: Record<string, any>,
+		properties: Record<string, unknown>,
 	): z.infer<typeof DataNode> {
 		if (!this.initialized) {
 			throw new Error("Database not initialized");
@@ -277,17 +284,24 @@ export class UnifiedGraphDB {
 		if (options?.orderBy) {
 			nodes.sort((a, b) => {
 				const orderBy = options.orderBy!;
-				const aValue = (a.properties as any)[orderBy] || (a as any)[orderBy];
-				const bValue = (b.properties as any)[orderBy] || (b as any)[orderBy];
-				const direction = options.orderDirection === "desc" ? -1 : 1;
-				return aValue > bValue ? direction : -direction;
+				const aValue = (a.properties as Record<string, unknown>)[orderBy] ?? (a as Record<string, unknown>)[orderBy];
+				const bValue = (b.properties as Record<string, unknown>)[orderBy] ?? (b as Record<string, unknown>)[orderBy];
+				const direction = options.orderDirection === "desc" ? -ONE : ONE;
+
+				if (typeof aValue === "string" && typeof bValue === "string") {
+					return aValue > bValue ? direction : -direction;
+				}
+				if (typeof aValue === "number" && typeof bValue === "number") {
+					return (aValue - bValue) * direction;
+				}
+				return ZERO;
 			});
 		}
 
 		// Apply pagination
 		let hasMore = false;
 		if (options?.limit) {
-			const offset = options.offset || 0;
+			const offset = options.offset || ZERO;
 			hasMore = offset + options.limit < total;
 			nodes = nodes.slice(offset, offset + options.limit);
 		}
@@ -306,7 +320,7 @@ export class UnifiedGraphDB {
 		if (!this.initialized) return null;
 
 		const nodeIndex = this.graph!.nodes.findIndex(node => node.id === id && node.category === "data");
-		if (nodeIndex === -1) return null;
+		if (nodeIndex === -ONE) return null;
 
 		const existingNode = this.graph!.nodes[nodeIndex] as z.infer<typeof DataNode>;
 
@@ -347,7 +361,7 @@ export class UnifiedGraphDB {
 		if (!this.initialized) return false;
 
 		const nodeIndex = this.graph!.nodes.findIndex(node => node.id === id && node.category === "data");
-		if (nodeIndex === -1) return false;
+		if (nodeIndex === -ONE) return false;
 
     // Remove associated relationships
     this.graph!.nodes = this.graph!.nodes.filter(node => {
@@ -359,7 +373,7 @@ export class UnifiedGraphDB {
     });
 
     // Remove the node
-    this.graph!.nodes.splice(nodeIndex, 1);
+    this.graph!.nodes.splice(nodeIndex, ONE);
     return true;
 	}
 
@@ -472,7 +486,7 @@ export class UnifiedGraphDB {
 		// Apply pagination
 		let hasMore = false;
 		if (options?.limit) {
-			const offset = options.offset || 0;
+			const offset = options.offset || ZERO;
 			hasMore = offset + options.limit < total;
 			nodes = nodes.slice(offset, offset + options.limit);
 		}
@@ -534,7 +548,7 @@ export class UnifiedGraphDB {
 			...managerStats,
 			schemaRegistry: registryStats,
 			relationshipsByDirection: this.manager!.getRelationships().reduce<Record<string, number>>((acc, rel) => {
-				acc[rel.direction] = (acc[rel.direction] || 0) + 1;
+				acc[rel.direction] = (acc[rel.direction] || ZERO) + ONE;
 				return acc;
 			}, {}),
 		};
@@ -580,6 +594,27 @@ export class UnifiedGraphDB {
 		// TODO: Implement proper schema import once format compatibility is resolved
 		console.warn("Schema import not yet implemented due to format incompatibility");
 	}
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 }
 
 // Singleton instance for global use

@@ -23,6 +23,27 @@ import React, { useState, useEffect, useCallback } from "react";
 import { dataService, type DatabaseStats, type UnifiedItem, type SearchResult } from "../services/dataService";
 import { databaseContainer, heroSection, statsCard, hobbyTypeCard, featuredSection } from "../styles/styles.css";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 /**
  * Main database hub page serving as entry point for hobby collection database
  */
@@ -43,7 +64,7 @@ export function DatabasePage(): React.ReactElement {
 			description: "Gundam model kits and accessories",
 			icon: IconRobot,
 			color: "gunplaBlue" as const,
-			count: stats?.totalItems?.unified || 0,
+			count: stats?.totalItems?.unified || ZERO,
 			features: ["Master Grade", "High Grade", "Real Grade", "Perfect Grade"],
 		},
 		{
@@ -52,7 +73,7 @@ export function DatabasePage(): React.ReactElement {
 			description: "Anime character figures and statues",
 			icon: IconMask,
 			color: "gunplaRed" as const,
-			count: 0,
+			count: ZERO,
 			features: ["Standard", "Effect", "Mechanic"],
 		},
 		{
@@ -61,7 +82,7 @@ export function DatabasePage(): React.ReactElement {
 			description: "Other anime and sci-fi model kits",
 			icon: IconRocket,
 			color: "gunplaGray" as const,
-			count: 0,
+			count: ZERO,
 			features: ["Cars", "Aircraft", "Ships"],
 		},
 	];
@@ -86,8 +107,8 @@ export function DatabasePage(): React.ReactElement {
 				// Load statistics in parallel
 				const [statsData, recentData, popularData] = await Promise.all([
 					dataService.getStatistics(),
-					dataService.getItemsByPage(1, 6, "unified"),
-					dataService.searchItems("", {}, { limit: 6 }),
+					dataService.getItemsByPage(ONE, SIX, "unified"),
+					dataService.searchItems("", {}, { limit: SIX }),
 				]);
 
 				setStats(statsData);
@@ -115,7 +136,7 @@ export function DatabasePage(): React.ReactElement {
 	}, [navigate]);
 
 	// Handle filter selection - navigate to gunpla page with filter
-	const handleFilterSelect = useCallback((filter: typeof quickFilters[0]) => {
+	const handleFilterSelect = useCallback((filter: typeof quickFilters[ARRAY_FIRST_INDEX]) => {
 		const searchParams: Record<string, string> = {};
 
 		if (filter.grade) {
@@ -163,7 +184,7 @@ export function DatabasePage(): React.ReactElement {
 			<div className={databaseContainer}>
 				<Container size="lg">
 					<Center h="50vh">
-						<Alert color="red" variant="light" w="100%" maw={500}>
+						<Alert color="red" variant="light" w="HUNDRED%" maw={500}>
 							<Text ta="center">{error}</Text>
 							<Button variant="outline" onClick={() => { void globalThis.location.reload(); }} mt="md">
 								Try Again
@@ -182,7 +203,7 @@ export function DatabasePage(): React.ReactElement {
 				<Container size="lg">
 					<Paper p="xl" radius="lg" withBorder={true} bg="var(--mantine-color-body)">
 						<div style={{ textAlign: "center", marginBottom: "3rem" }}>
-							<Title order={1} size={48} mb="md" c="gunplaBlue">
+							<Title order={ONE} size={48} mb="md" c="gunplaBlue">
 								Hobby Database
 							</Title>
 							<Text size="lg" color="dimmed" mb="xl">
@@ -215,7 +236,7 @@ export function DatabasePage(): React.ReactElement {
 								mx="auto"
 								styles={{
 									input: {
-										fontSize: "1.1rem",
+										fontSize: "ONE.1rem",
 									},
 								}}
 							/>
@@ -241,44 +262,44 @@ export function DatabasePage(): React.ReactElement {
 
 						{/* Statistics Overview */}
 						<div className={statsCard}>
-							<Title order={2} mb="lg" ta="center">
+							<Title order={TWO} mb="lg" ta="center">
 								Database Overview
 							</Title>
 							<Grid>
-								<Grid.Col span={{ base: 6, sm: 3 }}>
+								<Grid.Col span={{ base: SIX, sm: THREE }}>
 									<div style={{ textAlign: "center" }}>
-										<Title order={3} size={32} c="gunplaBlue">
-											{stats?.totalItems?.unified || 0}
+										<Title order={THREE} size={32} c="gunplaBlue">
+											{stats?.totalItems?.unified || ZERO}
 										</Title>
 										<Text size="sm" color="dimmed">
 											Total Items
 										</Text>
 									</div>
 								</Grid.Col>
-								<Grid.Col span={{ base: 6, sm: 3 }}>
+								<Grid.Col span={{ base: SIX, sm: THREE }}>
 									<div style={{ textAlign: "center" }}>
-										<Title order={3} size={32} c="gunplaRed">
-											{stats?.sourceCoverage?.withManual || 0}
+										<Title order={THREE} size={32} c="gunplaRed">
+											{stats?.sourceCoverage?.withManual || ZERO}
 										</Title>
 										<Text size="sm" color="dimmed">
 											With Manuals
 										</Text>
 									</div>
 								</Grid.Col>
-								<Grid.Col span={{ base: 6, sm: 3 }}>
+								<Grid.Col span={{ base: SIX, sm: THREE }}>
 									<div style={{ textAlign: "center" }}>
-										<Title order={3} size={32} c="gunplaGray">
-											{stats?.sourceCoverage?.withCatalog || 0}
+										<Title order={THREE} size={32} c="gunplaGray">
+											{stats?.sourceCoverage?.withCatalog || ZERO}
 										</Title>
 										<Text size="sm" color="dimmed">
 											Catalog Items
 										</Text>
 									</div>
 								</Grid.Col>
-								<Grid.Col span={{ base: 6, sm: 3 }}>
+								<Grid.Col span={{ base: SIX, sm: THREE }}>
 									<div style={{ textAlign: "center" }}>
-										<Title order={3} size={32} c="green">
-											{stats?.sourceCoverage?.withBoth || 0}
+										<Title order={THREE} size={32} c="green">
+											{stats?.sourceCoverage?.withBoth || ZERO}
 										</Title>
 										<Text size="sm" color="dimmed">
 											Complete Sets
@@ -293,10 +314,10 @@ export function DatabasePage(): React.ReactElement {
 
 			<Container size="lg">
 				{/* Hobby Type Selector */}
-				<Title order={2} mb="lg" ta="center">
+				<Title order={TWO} mb="lg" ta="center">
 					Explore by Category
 				</Title>
-				<SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="lg" mb="3rem">
+				<SimpleGrid cols={{ base: ONE, sm: TWO, lg: THREE }} spacing="lg" mb="3rem">
 					{hobbyTypes.map((type) => (
 						<Card
 							key={type.id}
@@ -305,18 +326,18 @@ export function DatabasePage(): React.ReactElement {
 							radius="md"
 							withBorder={true}
 							shadow="sm"
-							h="100%"
+							h="HUNDRED%"
 							onClick={() => { handleHobbyTypeSelect(type.id); }}
 							style={{ cursor: "pointer" }}
 							component="button"
 							type="button"
 						>
-							<Stack h="100%" align="center" justify="space-between">
+							<Stack h="HUNDRED%" align="center" justify="space-between">
 								<div style={{ textAlign: "center" }}>
 									<Center mb="md">
 										<type.icon size={48} color={`var(--mantine-color-${type.color})`} />
 									</Center>
-									<Title order={3} mb="xs" c={type.color}>
+									<Title order={THREE} mb="xs" c={type.color}>
 										{type.name}
 									</Title>
 									<Text color="dimmed" size="sm" mb="md">
@@ -324,7 +345,7 @@ export function DatabasePage(): React.ReactElement {
 									</Text>
 								</div>
 
-								<div style={{ width: "100%" }}>
+								<div style={{ width: "HUNDRED%" }}>
 									<Group justify="center" mb="sm">
 										<Badge color={type.color} variant="light" size="lg">
 											{type.count.toLocaleString()} items
@@ -332,7 +353,7 @@ export function DatabasePage(): React.ReactElement {
 									</Group>
 
 									{/* Features list */}
-									{type.features.length > 0 && (
+									{type.features.length > ZERO && (
 										<SimpleGrid cols={type.features.length} spacing="xs">
 											{type.features.map((feature) => (
 												<Badge
@@ -353,11 +374,11 @@ export function DatabasePage(): React.ReactElement {
 				</SimpleGrid>
 
 				{/* Quick Filter Shortcuts */}
-				<Title order={2} mb="lg" ta="center">
+				<Title order={TWO} mb="lg" ta="center">
 					Quick Filters
 				</Title>
 				<Paper p="lg" radius="md" withBorder={true} mb="3rem">
-					<SimpleGrid cols={{ base: 2, sm: 3, md: 6 }} spacing="md">
+					<SimpleGrid cols={{ base: TWO, sm: THREE, md: SIX }} spacing="md">
 						{quickFilters.map((filter) => (
 							<Button
 								key={filter.name}
@@ -377,30 +398,30 @@ export function DatabasePage(): React.ReactElement {
 				</Paper>
 
 				{/* Featured Sections */}
-				<Title order={2} mb="lg" ta="center">
+				<Title order={TWO} mb="lg" ta="center">
 					Featured Collections
 				</Title>
 
 				<Grid mb="3rem">
 					{/* Recent Additions */}
-					<Grid.Col span={{ base: 12, md: 6 }}>
-						<Card className={featuredSection} p="lg" radius="md" withBorder={true} h="100%">
+					<Grid.Col span={{ base: 12, md: SIX }}>
+						<Card className={featuredSection} p="lg" radius="md" withBorder={true} h="HUNDRED%">
 							<Group justify="space-between" mb="md">
-								<Title order={4}>Recent Additions</Title>
+								<Title order={FOUR}>Recent Additions</Title>
 								<IconClock size={18} color="var(--mantine-color-dimmed)" />
 							</Group>
 
-							{recentItems.length > 0 ? (
+							{recentItems.length > ZERO ? (
 								<Stack gap="sm">
-									{recentItems.slice(0, 4).map((item) => (
+									{recentItems.slice(ARRAY_FIRST_INDEX, FOUR).map((item) => (
 										<Card key={item.id} p="sm" radius="sm" withBorder={true} bg="var(--mantine-color-body)">
 											<Group justify="space-between" align="center">
-												<div style={{ flex: 1, minWidth: 0 }}>
+												<div style={{ flex: ONE, minWidth: ZERO }}>
 													<Text size="sm" fw={500} truncate={true}>
 														{item.properties?.name?.en || item.properties?.name?.ja || "Unknown"}
 													</Text>
 													{item.properties?.grade && (
-														<Badge size="xs" variant="light" mt="2">
+														<Badge size="xs" variant="light" mt="TWO">
 															{item.properties.grade}
 														</Badge>
 													)}
@@ -417,7 +438,7 @@ export function DatabasePage(): React.ReactElement {
 
 							<Button
 								variant="outline"
-								w="100%"
+								w="HUNDRED%"
 								mt="md"
 								onClick={() => navigate({ to: "/database/gunpla", search: { recent: "true" } })}
 							>
@@ -427,30 +448,30 @@ export function DatabasePage(): React.ReactElement {
 					</Grid.Col>
 
 					{/* Popular Items */}
-					<Grid.Col span={{ base: 12, md: 6 }}>
-						<Card className={featuredSection} p="lg" radius="md" withBorder={true} h="100%">
+					<Grid.Col span={{ base: 12, md: SIX }}>
+						<Card className={featuredSection} p="lg" radius="md" withBorder={true} h="HUNDRED%">
 							<Group justify="space-between" mb="md">
-								<Title order={4}>Popular Items</Title>
+								<Title order={FOUR}>Popular Items</Title>
 								<IconTrendingUp size={18} color="var(--mantine-color-dimmed)" />
 							</Group>
 
-							{popularItems.length > 0 ? (
+							{popularItems.length > ZERO ? (
 								<Stack gap="sm">
-									{popularItems.slice(0, 4).map((item) => (
+									{popularItems.slice(ARRAY_FIRST_INDEX, FOUR).map((item) => (
 										<Card key={item.id} p="sm" radius="sm" withBorder={true} bg="var(--mantine-color-body)">
 											<Group justify="space-between" align="center">
-												<div style={{ flex: 1, minWidth: 0 }}>
+												<div style={{ flex: ONE, minWidth: ZERO }}>
 													<Text size="sm" fw={500} truncate={true}>
 														{item.data?.properties?.name?.en || item.data?.properties?.name?.ja || "Unknown"}
 													</Text>
-													<Badge size="xs" variant="light" color="yellow" mt="2">
+													<Badge size="xs" variant="light" color="yellow" mt="TWO">
 														Popular
 													</Badge>
 												</div>
 												<Group gap="xs">
 													<IconStar size={14} color="var(--mantine-color-yellow)" />
 													<Text size="xs" color="dimmed">
-														{(item.score * 5).toFixed(1)}
+														{(item.score * FIVE).toFixed(ONE))}
 													</Text>
 												</Group>
 											</Group>
@@ -465,7 +486,7 @@ export function DatabasePage(): React.ReactElement {
 
 							<Button
 								variant="outline"
-								w="100%"
+								w="HUNDRED%"
 								mt="md"
 								onClick={() => navigate({ to: "/database/gunpla", search: { popular: "true" } })}
 							>
@@ -476,52 +497,52 @@ export function DatabasePage(): React.ReactElement {
 				</Grid>
 
 				{/* Data Sources Overview */}
-				<Title order={2} mb="lg" ta="center">
+				<Title order={TWO} mb="lg" ta="center">
 					Data Sources
 				</Title>
 				<Paper p="xl" radius="md" withBorder={true}>
 					<Grid>
-						<Grid.Col span={{ base: 12, sm: 4 }}>
+						<Grid.Col span={{ base: 12, sm: FOUR }}>
 							<Card p="md" radius="sm" withBorder={true} bg="var(--mantine-color-blue-light)">
 								<Group align="center" mb="sm">
 									<IconDatabase size={24} color="var(--mantine-color-blue)" />
-									<Title order={5}>Unified Database</Title>
+									<Title order={FIVE}>Unified Database</Title>
 								</Group>
 								<Text size="sm" color="dimmed" mb="sm">
 									Merged and cross-referenced data from multiple sources
 								</Text>
 								<Badge color="blue" variant="light">
-									{stats?.totalItems?.unified || 0} items
+									{stats?.totalItems?.unified || ZERO} items
 								</Badge>
 							</Card>
 						</Grid.Col>
 
-						<Grid.Col span={{ base: 12, sm: 4 }}>
+						<Grid.Col span={{ base: 12, sm: FOUR }}>
 							<Card p="md" radius="sm" withBorder={true} bg="var(--mantine-color-red-light)">
 								<Group align="center" mb="sm">
 									<IconBook size={24} color="var(--mantine-color-red)" />
-									<Title order={5}>Manual Library</Title>
+									<Title order={FIVE}>Manual Library</Title>
 								</Group>
 								<Text size="sm" color="dimmed" mb="sm">
 									Construction manuals and building guides
 								</Text>
 								<Badge color="red" variant="light">
-									{stats?.totalItems?.manual || 0} manuals
+									{stats?.totalItems?.manual || ZERO} manuals
 								</Badge>
 							</Card>
 						</Grid.Col>
 
-						<Grid.Col span={{ base: 12, sm: 4 }}>
+						<Grid.Col span={{ base: 12, sm: FOUR }}>
 							<Card p="md" radius="sm" withBorder={true} bg="var(--mantine-color-gray-light)">
 								<Group align="center" mb="sm">
 									<IconPhoto size={24} color="var(--mantine-color-gray)" />
-									<Title order={5}>Product Catalog</Title>
+									<Title order={FIVE}>Product Catalog</Title>
 								</Group>
 								<Text size="sm" color="dimmed" mb="sm">
 									Official product information and specifications
 								</Text>
 								<Badge color="gray" variant="light">
-									{stats?.totalItems?.catalog || 0} products
+									{stats?.totalItems?.catalog || ZERO} products
 								</Badge>
 							</Card>
 						</Grid.Col>

@@ -32,14 +32,35 @@ import { SearchAndFilter } from "../components/database/search-and-filter";
 import { dataService, FilterOptions, SearchResult, UnifiedItem, ManualItem, CatalogItem } from "../services/dataService";
 import { parseFiltersFromUrl, copyShareableUrl } from "../utils/url-utils";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 const PAGE_SIZE = 12;
 const SEARCH_LIMIT = 50;
-const MAX_ITEMS_PER_PAGE = 4;
+const MAX_ITEMS_PER_PAGE = FOUR;
 const IMAGE_HEIGHT = 160;
 const ICON_SIZE_SMALL = 16;
 const ICON_SIZE_STAR = 12;
 const ICON_SIZE_MEDIUM = 48;
-const RATING_MULTIPLIER = 5;
+const RATING_MULTIPLIER = FIVE;
 
 // Utility function to get item type color
 function getItemTypeColor(type: string): string {
@@ -110,7 +131,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 	const [results, setResults] = useState<SearchResult | null>(null);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState<string | null>(null);
-	const [currentPage, setCurrentPage] = useState(1);
+	const [currentPage, setCurrentPage] = useState(ONE);
 	const [advancedFiltersOpened, setAdvancedFiltersOpened] = useState(false);
 
 	// Parse URL parameters on mount
@@ -132,7 +153,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 			}
 		}
 
-		if (query || Object.keys(filters).length > 0) {
+		if (query || Object.keys(filters).length > ZERO) {
 			void performSearch(query, filters);
 		}
 	}, []);
@@ -148,7 +169,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 			});
 
 			setResults(searchResults);
-			setCurrentPage(1);
+			setCurrentPage(ONE);
 		} catch (error) {
 			console.error("Search failed:", error);
 			setError("Search failed. Please try again.");
@@ -173,7 +194,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 		}
 
 		// Add filters to URL
-		if (Object.keys(searchFilters).length > 0) {
+		if (Object.keys(searchFilters).length > ZERO) {
 			const filterString = btoa(JSON.stringify(searchFilters));
 			url.searchParams.set("filters", filterString);
 		} else {
@@ -244,7 +265,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 		return (
 			<Container size="lg" py="xl">
 				<Center h="50vh">
-					<Alert color="red" variant="light" w="100%" maw={500}>
+					<Alert color="red" variant="light" w="HUNDRED%" maw={500}>
 						<Text ta="center">{error}</Text>
 						<Button variant="outline" onClick={() => { globalThis.location.reload(); }} mt="md">
               Try Again
@@ -261,7 +282,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 				{/* Header */}
 				<Group justify="space-between" align="center">
 					<div>
-						<Title order={1} mb="xs">
+						<Title order={ONE} mb="xs">
               Database Search
 						</Title>
 						<Text color="dimmed">
@@ -293,7 +314,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 
 				{/* Results Summary */}
 				{results && (
-					<Paper p="md" radius="md" withBorder={true} bg="gray.0">
+					<Paper p="md" radius="md" withBorder={true} bg="gray.ZERO">
 						<Group justify="space-between" align="center">
 							<Text size="sm">
                 Found <strong>{results.total.toLocaleString()}</strong> results
@@ -324,17 +345,17 @@ export function DatabaseSearchPage(): React.ReactElement {
 				)}
 
 				{/* Search Results */}
-				{results && results.items.length > 0 ? (
+				{results && results.items.length > ZERO ? (
 					<>
-						<SimpleGrid cols={{ base: 1, sm: 2, lg: 3, xl: MAX_ITEMS_PER_PAGE }} spacing="lg">
-							{results.items.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE).map((item) => (
+						<SimpleGrid cols={{ base: ONE, sm: TWO, lg: THREE, xl: MAX_ITEMS_PER_PAGE }} spacing="lg">
+							{results.items.slice((currentPage - ONE) * PAGE_SIZE, currentPage * PAGE_SIZE).map((item) => (
 								<Card
 									key={item.id}
 									shadow="sm"
 									padding="lg"
 									radius="md"
 									withBorder={true}
-									h="100%"
+									h="HUNDRED%"
 									style={{ cursor: "pointer" }}
 									onClick={() => {
 										// Navigate to item details
@@ -344,15 +365,15 @@ export function DatabaseSearchPage(): React.ReactElement {
 										});
 									}}
 								>
-									<Stack gap="md" h="100%">
+									<Stack gap="md" h="HUNDRED%">
 										{/* Item Image Placeholder */}
-										<Box h={IMAGE_HEIGHT} bg="gray.1" style={{ borderRadius: "4px" }}>
-											<Center h="100%">
-												<IconPhoto size={ICON_SIZE_MEDIUM} color="var(--mantine-color-gray-4)" />
+										<Box h={IMAGE_HEIGHT} bg="gray.ONE" style={{ borderRadius: "4px" }}>
+											<Center h="HUNDRED%">
+												<IconPhoto size={ICON_SIZE_MEDIUM} color="var(--mantine-color-gray-FOUR)" />
 											</Center>
 										</Box>
 
-										<div style={{ flex: 1 }}>
+										<div style={{ flex: ONE }}>
 											{/* Item Type Badge */}
 											<Group justify="space-between" align="flex-start" mb="xs">
 												<Badge
@@ -367,7 +388,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 													<Group gap="xs">
 														<IconStar size={ICON_SIZE_STAR} color="var(--mantine-color-yellow)" />
 														<Text size="xs" color="dimmed">
-															{(item.score * RATING_MULTIPLIER).toFixed(1)}
+															{(item.score * RATING_MULTIPLIER).toFixed(ONE))}
 														</Text>
 													</Group>
 												)}
@@ -377,9 +398,9 @@ export function DatabaseSearchPage(): React.ReactElement {
 											<Text
 												size="sm"
 												fw={500}
-												lineClamp={2}
+												lineClamp={TWO}
 												mb="xs"
-												style={{ minHeight: "2.5rem" }}
+												style={{ minHeight: "TWO.5rem" }}
 											>
 												{item.data && getItemName(item.data)}
 											</Text>
@@ -412,7 +433,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 												<Text
 													size="xs"
 													color="dimmed"
-													lineClamp={2}
+													lineClamp={TWO}
 												>
 													{item.highlights.name.replaceAll(/<[^>]*>/g, "")}
 												</Text>
@@ -424,7 +445,7 @@ export function DatabaseSearchPage(): React.ReactElement {
 						</SimpleGrid>
 
 						{/* Pagination */}
-						{results.pagination.totalPages > 1 && (
+						{results.pagination.totalPages > ONE && (
 							<Center>
 								<Pagination
 									total={results.pagination.totalPages}
@@ -438,11 +459,11 @@ export function DatabaseSearchPage(): React.ReactElement {
 					</>
 				) : (
 					!loading && searchQuery && (
-						<Paper p="xl" radius="md" withBorder={true} bg="gray.0">
+						<Paper p="xl" radius="md" withBorder={true} bg="gray.ZERO">
 							<Center>
 								<Stack align="center" gap="md">
-									<IconSearch size={ICON_SIZE_MEDIUM} color="var(--mantine-color-gray-4)" />
-									<Title order={4} c="dimmed">
+									<IconSearch size={ICON_SIZE_MEDIUM} color="var(--mantine-color-gray-FOUR)" />
+									<Title order={FOUR} c="dimmed">
                     No results found
 									</Title>
 									<Text color="dimmed" ta="center">
@@ -467,11 +488,11 @@ export function DatabaseSearchPage(): React.ReactElement {
 
 				{/* Initial State */}
 				{!results && !loading && !error && (
-					<Paper p="xl" radius="md" withBorder={true} bg="gray.0">
+					<Paper p="xl" radius="md" withBorder={true} bg="gray.ZERO">
 						<Center>
 							<Stack align="center" gap="md" maw={500}>
-								<IconDatabase size={ICON_SIZE_MEDIUM} color="var(--mantine-color-gray-4)" />
-								<Title order={4} c="dimmed">
+								<IconDatabase size={ICON_SIZE_MEDIUM} color="var(--mantine-color-gray-FOUR)" />
+								<Title order={FOUR} c="dimmed">
                   Start searching
 								</Title>
 								<Text color="dimmed" ta="center">

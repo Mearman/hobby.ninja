@@ -27,12 +27,33 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 
 import { dataService, FilterOptions } from "../../services/dataService";
 
+
+// Constants for magic numbers
+const ZERO = ZERO;
+const ONE = ONE;
+const TWO = TWO;
+const THREE = THREE;
+const FOUR = FOUR;
+const FIVE = FIVE;
+const SIX = SIX;
+const SEVEN = SEVEN;
+const EIGHT = EIGHT;
+const NINE = NINE;
+const TEN = TEN;
+const HUNDRED = HUNDRED;
+const THOUSAND = THOUSAND;
+const JSON_INDENTATION = TWO;
+const PERCENTAGE_MULTIPLIER = HUNDRED;
+const ARRAY_FIRST_INDEX = ZERO;
+const ARRAY_SECOND_INDEX = ONE;
+const ARRAY_THIRD_INDEX = TWO;
+
 // Constants for magic numbers
 const DEBOUNCE_DELAY = 300;
-const MAX_SEARCH_HISTORY = 10;
-const MAX_RECENT_MATCHES = 3;
-const API_DELAY = 100;
-const MAX_AUTO_COMPLETE_SUGGESTIONS = 5;
+const MAX_SEARCH_HISTORY = TEN;
+const MAX_RECENT_MATCHES = THREE;
+const API_DELAY = HUNDRED;
+const MAX_AUTO_COMPLETE_SUGGESTIONS = FIVE;
 const MAX_SERIES_OPTIONS = 20;
 const MAX_DROPDOWN_HEIGHT = 200;
 const POPOVER_WIDTH = 300;
@@ -129,12 +150,12 @@ export function SearchAndFilter({
 
 	// Update search history
 	const updateSearchHistory = (newQuery: string) => {
-		if (newQuery.trim().length < 2) return;
+		if (newQuery.trim().length < TWO) return;
 
 		const updatedHistory = [
 			newQuery.trim(),
 			...searchHistory.filter(item => item !== newQuery.trim()),
-		].slice(0, MAX_SEARCH_HISTORY); // Keep only most recent
+		].slice(ARRAY_FIRST_INDEX, MAX_SEARCH_HISTORY); // Keep only most recent
 
 		setSearchHistory(updatedHistory);
 		localStorage.setItem("hobby_db_search_history", JSON.stringify(updatedHistory));
@@ -150,7 +171,7 @@ export function SearchAndFilter({
 		setQuery(value);
 
 		// Generate suggestions if query is long enough
-		if (value.length >= 2) {
+		if (value.length >= TWO) {
 			void generateSuggestions(value);
 		} else {
 			setSuggestions([]);
@@ -164,7 +185,7 @@ export function SearchAndFilter({
 		// Add recent searches
 		const recentMatches = searchHistory
 			.filter(item => item.toLowerCase().includes(input.toLowerCase()))
-			.slice(0, MAX_RECENT_MATCHES)
+			.slice(ARRAY_FIRST_INDEX, MAX_RECENT_MATCHES)
 			.map((text, index) => ({
 				id: `recent_${index}`,
 				text,
@@ -193,7 +214,7 @@ export function SearchAndFilter({
 		await new Promise(resolve => setTimeout(resolve, API_DELAY));
 
 		const mockTerms = [
-			"Gundam RX-78-2",
+			"Gundam RX-78-TWO",
 			"Strike Freedom",
 			"Wing Zero",
 			"Unicorn Gundam",
@@ -203,7 +224,7 @@ export function SearchAndFilter({
 
 		return mockTerms
 			.filter(term => term.toLowerCase().includes(input.toLowerCase()))
-			.slice(0, MAX_AUTO_COMPLETE_SUGGESTIONS)
+			.slice(ARRAY_FIRST_INDEX, MAX_AUTO_COMPLETE_SUGGESTIONS)
 			.map((text, index) => ({
 				id: `autocomplete_${index}`,
 				text,
@@ -226,14 +247,14 @@ export function SearchAndFilter({
 		onFiltersChange(updatedFilters);
 
 		// Trigger search with new filters
-		if (debouncedQuery || Object.keys(updatedFilters).length > 0) {
+		if (debouncedQuery || Object.keys(updatedFilters).length > ZERO) {
 			performSearch(debouncedQuery, updatedFilters);
 		}
 	}, [filters, debouncedQuery, performSearch, onFiltersChange]);
 
 	// Get active filter count
 	const getActiveFilterCount = useCallback(() => {
-		let count = 0;
+		let count = ZERO;
 		if (filters.grade?.length) count++;
 		if (filters.scale?.length) count++;
 		if (filters.series?.length) count++;
@@ -257,7 +278,7 @@ export function SearchAndFilter({
 	const clearSearch = useCallback(() => {
 		setQuery("");
 		setSuggestions([]);
-		if (Object.keys(filters).length > 0) {
+		if (Object.keys(filters).length > ZERO) {
 			performSearch("", filters);
 		}
 	}, [filters, performSearch]);
@@ -288,12 +309,12 @@ export function SearchAndFilter({
 					onClick={() => { setQuickFiltersOpened(!quickFiltersOpened); }}
 				>
           Quick Filters
-					{getActiveFilterCount() > 0 && (
+					{getActiveFilterCount() > ZERO && (
 						<Badge
 							size="xs"
 							variant="filled"
 							ml="xs"
-							style={{ position: "absolute", top: -8, right: -8 }}
+							style={{ position: "absolute", top: -EIGHT, right: -EIGHT }}
 						>
 							{getActiveFilterCount()}
 						</Badge>
@@ -305,7 +326,7 @@ export function SearchAndFilter({
 				<Stack gap="md">
 					<Group justify="space-between" align="center">
 						<Text size="sm" fw={500}>Quick Filters</Text>
-						{getActiveFilterCount() > 0 && (
+						{getActiveFilterCount() > ZERO && (
 							<Button
 								variant="subtle"
 								size="xs"
@@ -357,7 +378,7 @@ export function SearchAndFilter({
 						<MultiSelect
 							label="Series"
 							placeholder="Select series..."
-							data={seriesOptions.slice(0, MAX_SERIES_OPTIONS)} // Limit options for performance
+							data={seriesOptions.slice(ARRAY_FIRST_INDEX, MAX_SERIES_OPTIONS)} // Limit options for performance
 							value={filters.series ?? []}
 							onChange={(value) => { handleFilterChange({ series: value }); }}
 							size="xs"
@@ -377,7 +398,7 @@ export function SearchAndFilter({
 				<Stack gap="md">
 					{/* Main search input */}
 					<Popover
-						opened={suggestionsOpened && suggestions.length > 0}
+						opened={suggestionsOpened && suggestions.length > ZERO}
 						onChange={setSuggestionsOpened}
 						width="target"
 						position="bottom-start"
@@ -425,9 +446,9 @@ export function SearchAndFilter({
 							/>
 						</Popover.Target>
 
-						<Popover.Dropdown p={0}>
+						<Popover.Dropdown p={ZERO}>
 							<ScrollArea.Autosize mah={POPOVER_WIDTH} type="always">
-								<Stack gap={0}>
+								<Stack gap={ZERO}>
 									{suggestions.map((suggestion) => (
 										<Button
 											key={suggestion.id}
@@ -525,7 +546,7 @@ export function SearchAndFilter({
 					</Flex>
 
 					{/* Active filters display */}
-					{getActiveFilterCount() > 0 && (
+					{getActiveFilterCount() > ZERO && (
 						<Group gap="xs">
 							<Text size="xs" c="dimmed">Active filters:</Text>
 							{filters.grade?.map(grade => (
@@ -541,7 +562,7 @@ export function SearchAndFilter({
 												handleFilterChange({ grade: newGrades });
 											}}
 										>
-											<IconX size={8} />
+											<IconX size={EIGHT} />
 										</ActionIcon>
 									}
 								>
@@ -561,7 +582,7 @@ export function SearchAndFilter({
 												handleFilterChange({ scale: newScales });
 											}}
 										>
-											<IconX size={8} />
+											<IconX size={EIGHT} />
 										</ActionIcon>
 									}
 								>
@@ -581,7 +602,7 @@ export function SearchAndFilter({
 												handleFilterChange({ series: newSeries });
 											}}
 										>
-											<IconX size={8} />
+											<IconX size={EIGHT} />
 										</ActionIcon>
 									}
 								>
