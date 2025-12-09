@@ -4,23 +4,35 @@
  */
 
 import type { ValidatedConfig } from './validators.js';
+import {
+  SCRAPER_TYPES,
+  LANGUAGE_CODES,
+  EXPORT_FORMATS,
+  DIRECTORIES,
+  CONCURRENCY_LIMITS,
+  DEFAULT_TIMEOUTS,
+  RETRY_CONFIG,
+  TIME_HOURS,
+  RATE_LIMITING,
+  LOG_LEVELS
+} from '../constants/cli-constants.js';
 
 export type ScrapingConfig = ValidatedConfig;
 
 export const DEFAULT_CONFIG: ScrapingConfig = {
-  source: 'bandai-hobby',
-  language: 'all',
+  source: SCRAPER_TYPES.BANDAI_HOBBY,
+  language: LANGUAGE_CODES.ALL,
 
-  output: './output',
-  format: 'json',
+  output: DIRECTORIES.OUTPUT,
+  format: EXPORT_FORMATS.JSON,
 
-  concurrency: 3,
-  delayMs: 2000,
-  timeout: 30000,
-  retries: 3,
+  concurrency: CONCURRENCY_LIMITS.DEFAULT,
+  delayMs: DEFAULT_TIMEOUTS.DEFAULT_DELAY,
+  timeout: DEFAULT_TIMEOUTS.REQUEST_TIMEOUT,
+  retries: RETRY_CONFIG.DEFAULT_RETRIES,
 
   cache: true,
-  cacheExpiry: 24,
+  cacheExpiry: TIME_HOURS.TWENTY_FOUR,
 
   resume: false,
   checkpointsEnabled: true,
@@ -30,13 +42,13 @@ export const DEFAULT_CONFIG: ScrapingConfig = {
 
   verbose: false,
   dryRun: false,
-  logLevel: 'info',
+  logLevel: LOG_LEVELS.INFO,
   logToFile: false,
 
   rateLimiting: {
     enabled: true,
-    requestsPerSecond: 2,
-    burstSize: 5
+    requestsPerSecond: RATE_LIMITING.DEFAULT_REQUESTS_PER_SECOND,
+    burstSize: RATE_LIMITING.DEFAULT_BURST_CAPACITY
   },
 
   filters: {},

@@ -16,6 +16,7 @@ import type {
   ExporterConfig
 } from '../types.js';
 import { DataTransformer } from '../data-transformer.js';
+import { EXPORT_CONSTANTS, MEMORY_UNITS } from '../../constants/export-constants.js';
 
 const pipelineAsync = promisify(pipeline);
 
@@ -47,11 +48,11 @@ export abstract class BaseExporter {
 
       // Transform and filter data
       const transformedData = this.prepareData(data);
-      this.updateProgress(data.length * 0.2, data.length, 'Exporting data');
+      this.updateProgress(data.length * EXPORT_CONSTANTS.EXPORTING_PROGRESS, data.length, 'Exporting data');
 
       // Export to format
       const outputPath = await this.exportToFile(transformedData);
-      this.updateProgress(data.length * 0.9, data.length, 'Finalizing');
+      this.updateProgress(data.length * EXPORT_CONSTANTS.FINALIZING_PROGRESS, data.length, 'Finalizing');
 
       // Apply compression if requested
       const finalPath = this.options.compression
@@ -62,7 +63,7 @@ export abstract class BaseExporter {
       const stats = await fs.stat(finalPath);
       const duration = Date.now() - startTime;
 
-      this.updateProgress(data.length, data.length, 'Complete');
+      this.updateProgress(data.length * EXPORT_CONSTANTS.COMPLETE_PROGRESS, data.length, 'Complete');
 
       return {
         success: true,
@@ -152,7 +153,7 @@ export abstract class BaseExporter {
    */
   protected updateProgress(current: number, total: number, stage: string, message?: string): void {
     if (this.progressCallback) {
-      const progress: any = {
+      const progress: ExportProgress = {
         current,
         total,
         stage
@@ -219,12 +220,12 @@ export abstract class BaseExporter {
    * Format file size for display
    */
   protected formatFileSize(bytes: number): string {
-    const units = ['B', 'KB', 'MB', 'GB'];
+    const units = MEMORY_UNITS.UNIT_NAMES;
     let size = bytes;
     let unitIndex = 0;
 
-    while (size >= 1024 && unitIndex < units.length - 1) {
-      size /= 1024;
+    while (size >= MEMORY_UNITS.BYTES_PER_KILOBYTE && unitIndex < MEMORY_UNITS.UNIT_NAMES.length - 1) {
+      size /= MEMORY_UNITS.BYTES_PER_KILOBYTE;
       unitIndex++;
     }
 

@@ -92,7 +92,7 @@ export class JsonExporter extends BaseExporter {
     }
 
     // Validate each item
-    (exportData['data'] as any[]).forEach((item, index) => {
+    (exportData['data'] as TransformedData[]).forEach((item, index) => {
       if (!item.id) {
         throw new Error(`Item at index ${index} is missing required field: id`);
       }

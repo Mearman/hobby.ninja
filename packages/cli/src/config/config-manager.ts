@@ -183,12 +183,13 @@ export class ConfigManager {
         // Special validation for ScraperType
         if (configKey === 'source') {
           if (value && ScraperRegistry.isValidType(value as string)) {
-            (envConfig as any)[configKey] = value as ScraperType;
+            envConfig.source = value as ScraperType;
           } else if (value) {
             console.warn(`Warning: Invalid scraper type '${value}' for ${envKey}. Available types: ${ScraperRegistry.getAvailableTypes().join(', ')}`);
           }
         } else {
-          (envConfig as any)[configKey] = value;
+          // Use type assertion to safely assign dynamic property
+          (envConfig as Record<string, unknown>)[configKey] = value;
         }
       }
     });

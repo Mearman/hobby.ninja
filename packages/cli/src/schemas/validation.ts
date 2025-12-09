@@ -1,4 +1,6 @@
 import { z } from 'zod';
+import type { ProductData, GundamData } from '../types/product-data.js';
+import type { LanguageDetection } from '../types/language-detection.js';
 
 export const PriceInfoSchema = z.object({
   amount: z.number().positive(),
@@ -35,7 +37,7 @@ export const ProductDataSchema = z.object({
   price: PriceInfoSchema.optional(),
   description: z.string().max(2000).optional(),
   specifications: z.record(z.string(), SpecificationValueSchema),
-  detectedLanguage: z.any(), // Will be validated separately
+  detectedLanguage: z.custom<LanguageDetection>(), // Will be validated separately
   source: DataSourceInfoSchema,
   url: z.string().url(),
   extractedAt: z.number().int().positive(),
@@ -66,7 +68,7 @@ export const CompleteProductDataSchema = z.object({
 });
 
 // Validation function
-export function validateProductData(data: any): {
+export function validateProductData(data: unknown): {
   isValid: boolean;
   errors: string[];
 } {
@@ -88,17 +90,17 @@ export function validateProductData(data: any): {
 }
 
 // Batch validation function
-export function validateProductDataBatch(dataArray: any[]): {
-  valid: any[];
-  invalid: { data: any; errors: string[] }[];
+export function validateProductDataBatch(dataArray: unknown[]): {
+  valid: ProductData[];
+  invalid: { data: unknown; errors: string[] }[];
 } {
-  const valid: any[] = [];
-  const invalid: { data: any; errors: string[] }[] = [];
+  const valid: ProductData[] = [];
+  const invalid: { data: unknown; errors: string[] }[] = [];
 
   for (const data of dataArray) {
     const validation = validateProductData(data);
     if (validation.isValid) {
-      valid.push(data);
+      valid.push(data as ProductData);
     } else {
       invalid.push({ data, errors: validation.errors });
     }

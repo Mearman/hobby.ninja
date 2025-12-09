@@ -278,7 +278,7 @@ export class ProfileManager {
     };
   }
 
-  private extractWaitForSelectors(analyses: any[]): string[] {
+  private extractWaitForSelectors(analyses: Awaited<ReturnType<typeof RenderingDetector.detectRenderingStrategy>>[]): string[] {
     // Extract selectors that might need to wait for dynamic content
     const waitForSelectors: string[] = [];
 
@@ -294,17 +294,17 @@ export class ProfileManager {
     return [...new Set(waitForSelectors)];
   }
 
-  private calculateOptimalTimeout(analyses: any[]): number {
+  private calculateOptimalTimeout(analyses: Awaited<ReturnType<typeof RenderingDetector.detectRenderingStrategy>>[]): number {
     const avgJsTime = analyses.reduce((sum, analysis) => sum + (analysis.jsExecutionTime || 0), 0) / analyses.length;
     return Math.max(5000, avgJsTime * 2); // At least 5 seconds, or 2x average JS time
   }
 
-  private estimateExtractionTime(analyses: any[]): number {
+  private estimateExtractionTime(analyses: Awaited<ReturnType<typeof RenderingDetector.detectRenderingStrategy>>[]): number {
     const totalTime = analyses.reduce((sum, analysis) => sum + (analysis.jsExecutionTime || 1000), 0);
     return totalTime / analyses.length;
   }
 
-  private inferDefaultLanguage(detections: any[]): 'ja' | 'en' | 'mixed' {
+  private inferDefaultLanguage(detections: ReturnType<typeof LanguageDetector.detectFromHtml>[]): 'ja' | 'en' | 'mixed' {
     const langCounts = detections.reduce((counts, detection) => {
       const lang = detection.primaryLanguage?.code || 'unknown';
       counts[lang] = (counts[lang] || 0) + 1;
@@ -320,7 +320,7 @@ export class ProfileManager {
     return 'mixed';
   }
 
-  private extractLanguagePatterns(detections: any[]): string[] {
+  private extractLanguagePatterns(detections: ReturnType<typeof LanguageDetector.detectFromHtml>[]): string[] {
     // Extract common language detection patterns
     return detections.map(detection => detection.confidence).filter(Boolean);
   }
@@ -332,7 +332,7 @@ export class ProfileManager {
     return 'product';
   }
 
-  private calculateConfidence(renderingAnalyses: any[], languageDetections: any[]): number {
+  private calculateConfidence(renderingAnalyses: Awaited<ReturnType<typeof RenderingDetector.detectRenderingStrategy>>[], languageDetections: ReturnType<typeof LanguageDetector.detectFromHtml>[]): number {
     let confidence = 0.5; // Base confidence
 
     // Increase confidence based on consistent analysis results
@@ -352,7 +352,7 @@ export class ProfileManager {
     return Math.min(confidence, 1.0);
   }
 
-  private generateRecommendations(profile: PageTypeProfile, analyses: any[]): string[] {
+  private generateRecommendations(profile: PageTypeProfile, analyses: Awaited<ReturnType<typeof RenderingDetector.detectRenderingStrategy>>[]): string[] {
     const recommendations: string[] = [];
 
     if (profile.requiresPlaywright) {

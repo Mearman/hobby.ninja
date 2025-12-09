@@ -1,3 +1,10 @@
+import {
+  TIME_MILLISECONDS,
+  TIME_HOURS,
+  DEFAULT_TIMEOUTS,
+  RATE_LIMITING
+} from '../constants/cli-constants.js';
+
 export interface RateLimiterConfig {
   requestsPerSecond: number;
   requestsPerMinute: number;
@@ -19,10 +26,10 @@ export class RateLimiter {
 
   constructor(config: Partial<RateLimiterConfig> = {}) {
     this.config = {
-      requestsPerSecond: 2,
-      requestsPerMinute: 60,
-      requestsPerHour: 1000,
-      burstCapacity: 5,
+      requestsPerSecond: RATE_LIMITING.DEFAULT_REQUESTS_PER_SECOND,
+      requestsPerMinute: RATE_LIMITING.DEFAULT_REQUESTS_PER_MINUTE,
+      requestsPerHour: RATE_LIMITING.DEFAULT_REQUESTS_PER_HOUR,
+      burstCapacity: RATE_LIMITING.DEFAULT_BURST_CAPACITY,
       ...config
     };
   }
@@ -32,35 +39,35 @@ export class RateLimiter {
     this.cleanup(now);
 
     // Check per-second limit
-    const recentSecond = this.requestLog.filter(time => now - time < 1000);
+    const recentSecond = this.requestLog.filter(time => now - time < TIME_MILLISECONDS.SECOND);
     if (recentSecond.length >= this.config.requestsPerSecond) {
       return {
         allowed: false,
         remainingRequests: 0,
-        resetTime: Math.min(...recentSecond) + 1000,
-        retryAfter: Math.max(0, Math.min(...recentSecond) + 1000 - now)
+        resetTime: Math.min(...recentSecond) + TIME_MILLISECONDS.SECOND,
+        retryAfter: Math.max(0, Math.min(...recentSecond) + TIME_MILLISECONDS.SECOND - now)
       };
     }
 
     // Check per-minute limit
-    const recentMinute = this.requestLog.filter(time => now - time < 60000);
+    const recentMinute = this.requestLog.filter(time => now - time < TIME_MILLISECONDS.MINUTE);
     if (recentMinute.length >= this.config.requestsPerMinute) {
       return {
         allowed: false,
         remainingRequests: 0,
-        resetTime: Math.min(...recentMinute) + 60000,
-        retryAfter: Math.max(0, Math.min(...recentMinute) + 60000 - now)
+        resetTime: Math.min(...recentMinute) + TIME_MILLISECONDS.MINUTE,
+        retryAfter: Math.max(0, Math.min(...recentMinute) + TIME_MILLISECONDS.MINUTE - now)
       };
     }
 
     // Check per-hour limit
-    const recentHour = this.requestLog.filter(time => now - time < 3600000);
+    const recentHour = this.requestLog.filter(time => now - time < TIME_MILLISECONDS.HOUR);
     if (recentHour.length >= this.config.requestsPerHour) {
       return {
         allowed: false,
         remainingRequests: 0,
-        resetTime: Math.min(...recentHour) + 3600000,
-        retryAfter: Math.max(0, Math.min(...recentHour) + 3600000 - now)
+        resetTime: Math.min(...recentHour) + TIME_MILLISECONDS.HOUR,
+        retryAfter: Math.max(0, Math.min(...recentHour) + TIME_MILLISECONDS.HOUR - now)
       };
     }
 
@@ -69,8 +76,8 @@ export class RateLimiter {
       return {
         allowed: false,
         remainingRequests: 0,
-        resetTime: this.getOldestRequest(now) + 3600000,
-        retryAfter: Math.max(0, this.getOldestRequest(now) + 3600000 - now)
+        resetTime: this.getOldestRequest(now) + TIME_MILLISECONDS.HOUR,
+        retryAfter: Math.max(0, this.getOldestRequest(now) + TIME_MILLISECONDS.HOUR - now)
       };
     }
 
@@ -81,7 +88,7 @@ export class RateLimiter {
     return {
       allowed: true,
       remainingRequests: Math.min(remainingPerSecond, remainingPerMinute, remainingPerHour),
-      resetTime: now + 1000
+      resetTime: now + TIME_MILLISECONDS.SECOND
     };
   }
 
@@ -105,16 +112,16 @@ export class RateLimiter {
 
   private cleanup(now: number): void {
     // Only cleanup every 10 seconds to avoid excessive work
-    if (now - this.lastCleanup < 10000) {
+    if (now - this.lastCleanup < DEFAULT_TIMEOUTS.CLEANUP_INTERVAL) {
       return;
     }
 
-    this.requestLog = this.requestLog.filter(time => now - time < 3600000);
+    this.requestLog = this.requestLog.filter(time => now - time < TIME_MILLISECONDS.HOUR);
     this.lastCleanup = now;
   }
 
   private getOldRequests(now: number): number {
-    const oneHourAgo = now - 3600000;
+    const oneHourAgo = now - TIME_MILLISECONDS.HOUR;
     return this.requestLog.filter(time => time < oneHourAgo).length;
   }
 
@@ -136,9 +143,9 @@ export class RateLimiter {
 
     return {
       totalRequests: this.requestLog.length,
-      requestsInLastSecond: this.requestLog.filter(time => now - time < 1000).length,
-      requestsInLastMinute: this.requestLog.filter(time => now - time < 60000).length,
-      requestsInLastHour: this.requestLog.filter(time => now - time < 3600000).length
+      requestsInLastSecond: this.requestLog.filter(time => now - time < TIME_MILLISECONDS.SECOND).length,
+      requestsInLastMinute: this.requestLog.filter(time => now - time < TIME_MILLISECONDS.MINUTE).length,
+      requestsInLastHour: this.requestLog.filter(time => now - time < TIME_MILLISECONDS.HOUR).length
     };
   }
 
@@ -152,10 +159,10 @@ export class RateLimiter {
 export class BandaiRateLimiter extends RateLimiter {
   constructor() {
     super({
-      requestsPerSecond: 1,  // Very conservative for Bandai
-      requestsPerMinute: 30,
-      requestsPerHour: 500,
-      burstCapacity: 3
+      requestsPerSecond: RATE_LIMITING.BANDAI_REQUESTS_PER_SECOND,  // Very conservative for Bandai
+      requestsPerMinute: RATE_LIMITING.BANDAI_REQUESTS_PER_MINUTE,
+      requestsPerHour: RATE_LIMITING.BANDAI_REQUESTS_PER_HOUR,
+      burstCapacity: RATE_LIMITING.BANDAI_BURST_CAPACITY
     });
   }
 }
@@ -163,10 +170,10 @@ export class BandaiRateLimiter extends RateLimiter {
 export class GeneralRateLimiter extends RateLimiter {
   constructor() {
     super({
-      requestsPerSecond: 2,
-      requestsPerMinute: 60,
-      requestsPerHour: 1000,
-      burstCapacity: 5
+      requestsPerSecond: RATE_LIMITING.DEFAULT_REQUESTS_PER_SECOND,
+      requestsPerMinute: RATE_LIMITING.DEFAULT_REQUESTS_PER_MINUTE,
+      requestsPerHour: RATE_LIMITING.DEFAULT_REQUESTS_PER_HOUR,
+      burstCapacity: RATE_LIMITING.DEFAULT_BURST_CAPACITY
     });
   }
 }

@@ -6,6 +6,7 @@ import { promises as fs } from 'fs';
 import * as path from 'path';
 import type { TransformedData, ExporterConfig, ExportOptions, CSVOptions } from '../types.js';
 import { BaseExporter } from './base-exporter.js';
+import { EXPORT_CONSTANTS, DATA_PROCESSING_CONSTANTS } from '../../constants/export-constants.js';
 
 export class CsvExporter extends BaseExporter {
   private csvOptions: CSVOptions;
@@ -72,7 +73,7 @@ export class CsvExporter extends BaseExporter {
       lines.push(row);
 
       // Update progress
-      if (i % 100 === 0) {
+      if (i % EXPORT_CONSTANTS.CSV_PROGRESS_UPDATE_INTERVAL === 0) {
         this.updateProgress(i, data.length, 'Generating CSV');
       }
     }
@@ -158,7 +159,7 @@ export class CsvExporter extends BaseExporter {
 
       // Handle specification keys
       if (key.startsWith('spec_')) {
-        const specKey = key.substring(5);
+        const specKey = key.substring(DATA_PROCESSING_CONSTANTS.SPECIFICATION_KEY_PREFIX_LENGTH);
         if (item.specifications && item.specifications[specKey]) {
           return String(item.specifications[specKey]);
         }

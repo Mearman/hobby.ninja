@@ -314,7 +314,7 @@ export class ScraperError extends Error {
 
     // HTTP status codes
     if ('status' in error) {
-      const status = (error as any).status;
+      const status = (error as { status?: number }).status;
       if (status === 404) return ErrorCode.SCRAPE_PAGE_NOT_FOUND;
       if (status === 403) return ErrorCode.SCRAPE_ACCESS_DENIED;
       if (status === 429) return ErrorCode.SCRAPE_RATE_LIMITED;
@@ -353,7 +353,10 @@ export function withErrorHandling<T extends unknown[], R>(
     try {
       return await fn(...args);
     } catch (error) {
-      throw ScraperError.fromError(error as Error, context);
+      if (error instanceof Error) {
+        throw ScraperError.fromError(error, context);
+      }
+      throw ScraperError.fromError(new Error(String(error)), context);
     }
   };
 }

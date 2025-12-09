@@ -67,5 +67,6 @@ export interface ProfileGenerationResult {
 export interface CheckpointData {
   type: 'scrape' | 'index' | 'process';
   source: string;
-  [key: string]: any; // Allow dynamic properties based on type
+  timestamp: number;
+  [key: string]: unknown; // Allow dynamic properties based on type
 }

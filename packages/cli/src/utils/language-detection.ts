@@ -1,5 +1,15 @@
 import { LanguageCode, LanguageDetection, LanguageAnalysisResult } from '../types/language-detection.js';
 
+interface LanguageEvidence {
+  htmlLang?: string;
+  contentLanguage?: string;
+  urlPattern?: string;
+  japaneseCharacters: string[];
+  englishWords: string[];
+  japaneseRatio: number;
+  englishRatio: number;
+}
+
 export class LanguageDetector {
   private static readonly JAPANESE_CHARACTER_PATTERN = /[\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf]/g;
   private static readonly ENGLISH_WORD_PATTERN = /[a-zA-Z]+/g;
@@ -95,7 +105,7 @@ export class LanguageDetector {
     return [...new Set(matches.map(word => word.toLowerCase()))];
   }
 
-  private static calculateLanguageScore(evidence: any): { ja: number; en: number; mixed: number } {
+  private static calculateLanguageScore(evidence: LanguageEvidence): { ja: number; en: number; mixed: number } {
     let jaScore = 0;
     let enScore = 0;
 
@@ -144,7 +154,7 @@ export class LanguageDetector {
     return 'unknown';
   }
 
-  private static calculateConfidence(score: { ja: number; en: number; mixed: number }, evidence: any): number {
+  private static calculateConfidence(score: { ja: number; en: number; mixed: number }, evidence: LanguageEvidence): number {
     let confidence = 0;
     let evidenceCount = 0;
 

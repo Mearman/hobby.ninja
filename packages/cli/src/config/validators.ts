@@ -1,17 +1,26 @@
 import { z } from 'zod';
+import {
+  LANGUAGE_CODES,
+  EXPORT_FORMATS,
+  LOG_LEVELS,
+  SCRAPER_TYPES,
+  VALIDATION_LIMITS,
+  RATE_LIMITING,
+  RETRY_CONFIG
+} from '../constants/cli-constants.js';
 
-const LanguageCodeSchema = z.enum(['ja', 'en', 'mixed', 'unknown']);
+const LanguageCodeSchema = z.enum(Object.values(LANGUAGE_CODES) as [string, ...string[]]);
 
-const OutputFormatSchema = z.enum(['json', 'csv', 'excel', 'ndjson']);
+const OutputFormatSchema = z.enum(Object.values(EXPORT_FORMATS) as [string, ...string[]]);
 
-const LogLevelSchema = z.enum(['error', 'warn', 'info', 'debug']);
+const LogLevelSchema = z.enum(Object.values(LOG_LEVELS) as [string, ...string[]]);
 
-const ScraperTypeSchema = z.enum(['bandai-hobby', 'gundam-info', 'hobbylink']);
+const ScraperTypeSchema = z.enum(Object.values(SCRAPER_TYPES) as [string, ...string[]]);
 
 const RateLimitingSchema = z.object({
   enabled: z.boolean(),
-  requestsPerSecond: z.number().min(0.1).max(100),
-  burstSize: z.number().min(1).max(100)
+  requestsPerSecond: z.number().min(VALIDATION_LIMITS.MIN_REQUESTS_PER_SECOND).max(VALIDATION_LIMITS.MAX_REQUESTS_PER_SECOND),
+  burstSize: z.number().min(RATE_LIMITING.MIN_BURST_SIZE).max(RATE_LIMITING.MAX_BURST_SIZE)
 });
 
 const FiltersSchema = z.object({
@@ -47,13 +56,13 @@ export const ScrapingConfigSchema = z.object({
   output: z.string().min(1),
   format: OutputFormatSchema,
 
-  concurrency: z.number().min(1).max(10),
-  delayMs: z.number().min(0).max(60000),
-  timeout: z.number().min(1000).max(300000),
-  retries: z.number().min(0).max(10),
+  concurrency: z.number().min(VALIDATION_LIMITS.MIN_CONCURRENCY).max(VALIDATION_LIMITS.MAX_CONCURRENCY),
+  delayMs: z.number().min(VALIDATION_LIMITS.MIN_DELAY_MS).max(VALIDATION_LIMITS.MAX_DELAY_MS),
+  timeout: z.number().min(VALIDATION_LIMITS.MIN_TIMEOUT_MS).max(VALIDATION_LIMITS.MAX_TIMEOUT_MS),
+  retries: z.number().min(RETRY_CONFIG.MIN_RETRIES).max(RETRY_CONFIG.MAX_RETRIES),
 
   cache: z.boolean(),
-  cacheExpiry: z.number().min(1).max(168), // 1 hour to 1 week
+  cacheExpiry: z.number().min(VALIDATION_LIMITS.MIN_CACHE_EXPIRY_HOURS).max(VALIDATION_LIMITS.MAX_CACHE_EXPIRY_HOURS), // 1 hour to 1 week
 
   resume: z.boolean(),
   checkpointsEnabled: z.boolean(),
@@ -90,7 +99,7 @@ export class ConfigValidator {
     const errors: ValidationError[] = result.error.issues.map((issue) => ({
       field: issue.path.join('.'),
       message: issue.message,
-      value: (issue as any).received || issue.code
+      value: (issue as { received?: unknown }).received || issue.code
     }));
 
     return { success: false, errors };
@@ -106,7 +115,7 @@ export class ConfigValidator {
     const errors: ValidationError[] = result.error.issues.map((issue) => ({
       field: issue.path.join('.'),
       message: issue.message,
-      value: (issue as any).received || issue.code
+      value: (issue as { received?: unknown }).received || issue.code
     }));
 
     return { success: false, errors };

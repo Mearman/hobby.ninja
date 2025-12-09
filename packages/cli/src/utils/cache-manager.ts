@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 import * as path from 'path';
 import * as crypto from 'crypto';
 import { PageCache, CacheStats } from '../types/cache-types.js';
+import { CACHE_CONFIG, PROGRESS_PERCENTAGES } from '../constants/cli-constants.js';
 
 interface CacheEntry {
   url: string;
@@ -22,8 +23,8 @@ export class CacheManager {
     cacheDir?: string;
     defaultTtl?: number;
   } = {}) {
-    this.cacheDir = options.cacheDir || path.join(process.cwd(), '.cache', 'gundam-scraper');
-    this.defaultTtl = options.defaultTtl || 24 * 60 * 60 * 1000; // 24 hours
+    this.cacheDir = options.cacheDir || path.join(process.cwd(), CACHE_CONFIG.DEFAULT_CACHE_DIR);
+    this.defaultTtl = options.defaultTtl || CACHE_CONFIG.DEFAULT_TTL_MILLISECONDS;
   }
 
   async initialize(): Promise<void> {
@@ -73,7 +74,7 @@ export class CacheManager {
     const entry: PageCache = {
       url,
       cacheKey: key,
-      source: source as any,
+      source: source as PageCache['source'],
       rawHtml: html,
       renderingStrategy: {
         type: 'static',
@@ -100,7 +101,7 @@ export class CacheManager {
 
     try {
       const cachePath = this.getCachePath(key);
-      await fs.writeFile(cachePath, JSON.stringify(entry, null, 2));
+      await fs.writeFile(cachePath, JSON.stringify(entry, null, PROGRESS_PERCENTAGES.COMPLETE));
     } catch (error) {
       throw new Error(`Failed to cache data: ${error}`);
     }
@@ -209,7 +210,7 @@ export class CacheManager {
   private async updateAccessMetadata(key: string, entry: PageCache): Promise<void> {
     try {
       const cachePath = this.getCachePath(key);
-      await fs.writeFile(cachePath, JSON.stringify(entry, null, 2));
+      await fs.writeFile(cachePath, JSON.stringify(entry, null, PROGRESS_PERCENTAGES.COMPLETE));
     } catch (error) {
       // Ignore metadata update failures
     }
