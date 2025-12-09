@@ -8,7 +8,8 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"export": "next build && next export"
+		"export": "next build && next export",
+		"serve-static": "serve -s dist/apps/next -l 3001"
 	},
 	"dependencies": {
 		"@hobby-ninja/types": "workspace:*",
@@ -27,6 +28,7 @@
 		"next-pwa": "^5.6.0",
 		"pako": "^2.1.0",
 		"react": "^19.0.0",
+		"serve": "^14.2.4",
 		"react-dom": "^19.0.0",
 		"workbox-webpack-plugin": "^7.4.0",
 		"zod": "4.2.0-canary.20251202T062120"
