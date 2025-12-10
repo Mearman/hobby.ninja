@@ -381,9 +381,9 @@ const getCatalogDescription = (item: ItemDetailData): string | undefined => {
 	if (item.$type !== "unified_item") return undefined;
 	const unifiedItem = item;
 	const catalogData = unifiedItem.catalogData;
-	if (!catalogData?.properties?.description) return undefined;
+	if (!catalogData?.properties.description) return undefined;
 	const desc = catalogData.properties.description;
-	return Array.isArray(desc) && desc.length > ZERO && typeof desc[ZERO] === "object" && desc[ZERO] !== null && "en" in desc[ZERO] ? (desc[ZERO] as { en?: string }).en : undefined;
+	return Array.isArray(desc) && desc.length > ZERO && typeof desc[ZERO] === "object" && "en" in desc[ZERO] ? (desc[ZERO] as { en?: string }).en : undefined;
 };
 
 const getManualName = (item: ItemDetailData): string => {
@@ -582,19 +582,12 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 					lastUpdated: new Date().toISOString(), // Use current timestamp for catalog items
 					completeness: CATALOG_ITEM_COMPLETENESS,
 				});
-			} else if (item.$type === "manual_item") {
+			} else {
+				// Default to manual for other types
 				sources.push({
 					type: "manual",
 					confidence: 1,
 					lastUpdated: new Date().toISOString(), // Use current timestamp for manual items
-					completeness: MANUAL_ITEM_COMPLETENESS,
-				});
-			} else {
-				// Default to manual for unknown types
-				sources.push({
-					type: "manual",
-					confidence: 1,
-					lastUpdated: new Date().toISOString(), // Use current timestamp as fallback
 					completeness: MANUAL_ITEM_COMPLETENESS,
 				});
 			}
@@ -796,15 +789,15 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												<Text fw={500}>Quick Info</Text>
 											</Card.Section>
 											<Stack gap="xs" p="md">
-												{item.properties.releaseDate && (
+												{
 													<Group>
 														<Text size="sm" c="dimmed">Release:</Text>
 														<Text size="sm" fw={500}>
 															{item.properties.releaseDate.month ? `${item.properties.releaseDate.year}/${item.properties.releaseDate.month}` : item.properties.releaseDate.year}
 														</Text>
 													</Group>
-												)}
-												{item.$type === "unified_item" && hasManualData(item) && item.manualData?.properties?.productNumber && (
+												}
+												{item.$type === "unified_item" && hasManualData(item) && item.manualData?.properties.productNumber && (
 													<Group>
 														<Text size="sm" c="dimmed">Product No:</Text>
 														<Text size="sm" fw={500}>{item.manualData.properties.productNumber}</Text>
@@ -844,7 +837,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												<PDFViewer
 													pdfUrl={
 														item.$type === "unified_item"
-															? item.properties.sources?.manual?.pdfUrl
+															? item.properties.sources.manual?.pdfUrl
 															: item.$type === "manual_item" && "pdfUrl" in item.properties
 																? item.properties.pdfUrl
 																: undefined
@@ -893,16 +886,16 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 													</Text>
 												</Group>
 											)}
-											{item.properties?.releaseDate && (
+											{
 												<Group>
 													<Text size="sm" c="dimmed" w={LABEL_WIDTH}>Release Date:</Text>
 													<Text size="sm">
-														{item.properties?.releaseDate.year}年
-														{item.properties?.releaseDate.month && `${item.properties?.releaseDate.month}月`}
-														{item.properties?.releaseDate.day && `${item.properties?.releaseDate.day}日`}
+														{item.properties.releaseDate.year}年
+														{item.properties.releaseDate.month && `${item.properties.releaseDate.month}月`}
+														{item.properties.releaseDate.day && `${item.properties.releaseDate.day}日`}
 													</Text>
 												</Group>
-											)}
+											}
 										</Stack>
 									</Card>
 								</Grid.Col>
@@ -998,7 +991,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 										</Card>
 
 										<PDFViewer
-											pdfUrl={(item).properties.sources?.manual?.pdfUrl}
+											pdfUrl={item.properties.sources.manual?.pdfUrl}
 											title={title}
 										/>
 									</>
@@ -1012,7 +1005,7 @@ export const ItemDetail: React.FC<ItemDetailProps> = ({
 												<Group>
 													<Text size="sm" c="dimmed">Title:</Text>
 													<Text size="sm">
-														{item.properties.name.ja ?? item.properties.name.en ?? "Unknown"}
+														{item.properties.name.ja || item.properties.name.en || "Unknown"}
 													</Text>
 												</Group>
 											</Stack>

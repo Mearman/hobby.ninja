@@ -9,30 +9,11 @@ import { Text, Stack, Group, Divider, Badge, List, Anchor } from "@mantine/core"
 import { IconPackage, IconTag, IconFileText, IconBooks, IconBuildingFactory } from "@tabler/icons-react";
 import type { ReactNode } from "react";
 
+import { ZERO } from "../../types/hobby";
 import type { GraphNode } from "../../utils/graph-client";
-import { ZERO, ONE } from "../../types/hobby";
 
-// Helper to safely render conditional content
-function renderConditional<T>(
-	data: Record<string, unknown>,
-	key: string,
-	render: (value: T) => ReactNode
-): ReactNode {
-	const value = data[key] as T | undefined;
-	return value != null ? render(value) : null;
-}
-const SIX = 6;
-const SEVEN = 7;
-const EIGHT = 8;
-const NINE = 9;
-const TEN = 10;
-const HUNDRED = 100;
-const THOUSAND = 1000;
-const JSON_INDENTATION = 2;
-const PERCENTAGE_MULTIPLIER = 100;
 const ARRAY_FIRST_INDEX = 0;
-const ARRAY_SECOND_INDEX = 1;
-const ARRAY_THIRD_INDEX = 2;
+const JSON_INDENTATION = 2;
 
 interface GraphNodeDetailsProps {
 	node: GraphNode;
@@ -81,40 +62,38 @@ function ItemDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Scale/Grade */}
-			{((data["scale"] != null) && (
+			{data.scale && (
 				<Group>
 					<Text fw={600} size="sm">Scale:</Text>
-					<Badge color="blue" variant="light">{String(data["scale"] as string)}</Badge>
+					<Badge color="blue" variant="light">{data.scale}</Badge>
 				</Group>
-			)) as ReactNode}
+			)}
 
-			{(data["series"] != null ? (
+			{data.series && (
 				<Group>
 					<Text fw={600} size="sm">Series:</Text>
-					<Text size="sm">{String(data["series"])}</Text>
+					<Text size="sm">{data.series}</Text>
 				</Group>
-			) : null) as ReactNode}
+			)}
 
 			{(() => {
-				const height = data["height"];
-				const width = data["width"];
-				const depth = data["depth"];
+				const { height, width, depth } = data;
 				return (height != null || width != null || depth != null) ? (
 					<Stack gap="xs">
 						<Text fw={600} size="sm">Dimensions:</Text>
-						{height != null && <Text size="sm">Height: {String(height)}mm</Text>}
-						{width != null && <Text size="sm">Width: {String(width)}mm</Text>}
-						{depth != null && <Text size="sm">Depth: {String(depth)}mm</Text>}
+						{height != null && <Text size="sm">Height: {height}mm</Text>}
+						{width != null && <Text size="sm">Width: {width}mm</Text>}
+						{depth != null && <Text size="sm">Depth: {depth}mm</Text>}
 					</Stack>
 				) : null;
 			})()}
 
-		{(data["weight"] != null ? (
-			<Group>
-				<Text fw={600} size="sm">Weight:</Text>
-				<Text size="sm">{String(data["weight"])}g</Text>
-			</Group>
-		) : null) as ReactNode}
+			{data.weight && (
+				<Group>
+					<Text fw={600} size="sm">Weight:</Text>
+					<Text size="sm">{data.weight}g</Text>
+				</Group>
+			)}
 
 			{/* Materials */}
 			{data["materials"] && Array.isArray(data["materials"]) && data["materials"].length > ZERO && (
@@ -131,12 +110,12 @@ function ItemDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Description */}
-			{(data["description"] != null ? (
+			{data.description && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Description:</Text>
-					<Text size="sm" lineClamp={3}>{String(data["description"])}</Text>
+					<Text size="sm" lineClamp={3}>{data.description}</Text>
 				</Stack>
-			) : null) as ReactNode}
+			)}
 
 			{/* Official Links */}
 			{data["links"] && Array.isArray(data["links"]) && data["links"].length > ZERO && (
@@ -166,35 +145,35 @@ function BrandDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Brand Description */}
-			{(data["description"] != null ? (
+			{data.description && (
 				<Stack gap="xs">
 					<Text size="sm" fw={600}>About:</Text>
-					<Text size="sm">{String(data["description"])}</Text>
+					<Text size="sm">{data.description}</Text>
 				</Stack>
-			) : null) as ReactNode}
+			)}
 
-			{(data["founded"] != null ? (
+			{data.founded && (
 				<Group>
 					<Text fw={600} size="sm">Founded:</Text>
-					<Text size="sm">{String(data["founded"])}</Text>
+					<Text size="sm">{data.founded}</Text>
 				</Group>
-			) : null) as ReactNode}
+			)}
 
-			{(data["country"] != null ? (
+			{data.country && (
 				<Group>
 					<Text fw={600} size="sm">Country:</Text>
-					<Text size="sm">{String(data["country"])}</Text>
+					<Text size="sm">{data.country}</Text>
 				</Group>
-			) : null) as ReactNode}
+			)}
 
-			{(data["website"] != null ? (
-			<Group>
-				<Text fw={600} size="sm">Website:</Text>
-				<Anchor href={data["website"] as string} target="_blank" rel="noopener noreferrer">
-					{data["website"] as string}
-				</Anchor>
-			</Group>
-		) : null) as ReactNode}
+			{data.website && (
+				<Group>
+					<Text fw={600} size="sm">Website:</Text>
+					<Anchor href={data.website} target="_blank" rel="noopener noreferrer">
+						{data.website}
+					</Anchor>
+				</Group>
+			)}
 
 			{/* Product Lines */}
 			{data["productLines"] && Array.isArray(data["productLines"]) && (data["productLines"] as string[]).length > ZERO && (
@@ -222,19 +201,19 @@ function CategoryDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Category Description */}
-			{(data["description"] != null ? (
+			{data.description && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Description:</Text>
-					<Text size="sm">{String(data["description"])}</Text>
+					<Text size="sm">{data.description}</Text>
 				</Stack>
-			) : null) as ReactNode}
+			)}
 
-			{data["itemCount"] !== undefined ? (
-			<Group>
-				<Text fw={600} size="sm">Items:</Text>
-				<Text size="sm">{Number(data["itemCount"]).toLocaleString()} items</Text>
-			</Group>
-		) : null}
+			{data.itemCount !== undefined && (
+				<Group>
+					<Text fw={600} size="sm">Items:</Text>
+					<Text size="sm">{Number(data.itemCount).toLocaleString()} items</Text>
+				</Group>
+			)}
 
 			{/* Subcategories */}
 			{data["subcategories"] && Array.isArray(data["subcategories"]) && data["subcategories"].length > ZERO && (
@@ -260,33 +239,33 @@ function ManualDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Manual Type */}
-			{((data["type"] != null) && (
+			{data.type && (
 				<Group>
 					<Text fw={600} size="sm">Type:</Text>
-					<Badge color="orange" variant="light">{String(data["type"] as string)}</Badge>
-				</Group>
-			)) as ReactNode}
-
-			{/* Page Count */}
-			{(data["pages"] != null) as ReactNode && (
-				<Group>
-					<Text fw={600} size="sm">Pages:</Text>
-					<Text size="sm">{String(data["pages"] as string)}</Text>
+					<Badge color="orange" variant="light">{data.type}</Badge>
 				</Group>
 			)}
 
-			{(data["language"] != null ? (
+			{/* Page Count */}
+			{data.pages != null && (
+				<Group>
+					<Text fw={600} size="sm">Pages:</Text>
+					<Text size="sm">{data.pages}</Text>
+				</Group>
+			)}
+
+			{data.language && (
 				<Group>
 					<Text fw={600} size="sm">Language:</Text>
-					<Text size="sm">{String(data["language"])}</Text>
+					<Text size="sm">{data.language}</Text>
 				</Group>
-			) : null) as ReactNode}
+			)}
 
 			{/* Format */}
-			{(data["format"] != null) as ReactNode && (
+			{data.format != null && (
 				<Group>
 					<Text fw={600} size="sm">Format:</Text>
-					<Text size="sm">{String(data["format"])}</Text>
+					<Text size="sm">{data.format}</Text>
 				</Group>
 			)}
 
@@ -326,43 +305,43 @@ function SeriesDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Series Description */}
-			{(data["description"] != null) as ReactNode && (
+			{data.description != null && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">About:</Text>
-					<Text size="sm">{String(data["description"])}</Text>
+					<Text size="sm">{data.description}</Text>
 				</Stack>
 			)}
 
 			{/* Start/End Dates */}
-			{(data["startYear"] ?? data["endYear"]) && (
+			{(data.startYear ?? data.endYear) && (
 				<Group>
 					<Text fw={600} size="sm">Period:</Text>
 					<Text size="sm">
-						{String(data["startYear"])}{data["endYear"] ? ` - ${String(data["endYear"])}` : ""}
+						{(data.startYear as string | number)}{data.endYear ? ` - ${(data.endYear as string | number)}` : ""}
 					</Text>
 				</Group>
 			)}
 
 			{/* Episode Count */}
-			{(data["episodes"] != null) as ReactNode && (
+			{data.episodes != null && (
 				<Group>
 					<Text fw={600} size="sm">Episodes:</Text>
-					<Text size="sm">{String(data["episodes"])}</Text>
+					<Text size="sm">{data.episodes}</Text>
 				</Group>
 			)}
 
 			{/* Genre */}
-			{(data["genre"] != null) as ReactNode && (
+			{data.genre != null && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Genre:</Text>
 					<Group>
-						{Array.isArray(data["genre"])
-							? (data["genre"] as string[]).map((g: string, index: number) => (
+						{Array.isArray(data.genre)
+							? data.genre.map((g: string, index: number) => (
 								<Badge key={index} color="pink" variant="light" size="sm">
 									{g}
 								</Badge>
 							))
-							: <Badge color="pink" variant="light" size="sm">{String(data["genre"] as string)}</Badge>
+							: <Badge color="pink" variant="light" size="sm">{data.genre}</Badge>
 						}
 					</Group>
 				</Stack>
@@ -397,7 +376,7 @@ interface Edge {
 }
 
 function CommonRelationships({ node }: { node: GraphNode }) {
-	const edges = (node.data["edges"] as Edge[]) ?? [];
+	const edges = node.data.edges as Edge[];
 
 	if (edges.length === ZERO) return null;
 
@@ -405,10 +384,7 @@ function CommonRelationships({ node }: { node: GraphNode }) {
 	const groupedEdges: Record<string, Edge[]> = {};
 	for (const edge of edges) {
 		const relationType = edge.relation ?? "related";
-		if (!groupedEdges[relationType]) {
-			groupedEdges[relationType] = [];
-		}
-		groupedEdges[relationType].push(edge);
+		(groupedEdges[relationType] ??= []).push(edge);
 	}
 
 	return (
@@ -446,8 +422,7 @@ function CommonRelationships({ node }: { node: GraphNode }) {
  * Main component that renders appropriate details based on node type
  */
 export function GraphNodeDetails({ node }: GraphNodeDetailsProps) {
-	const iconComponentKey = node.type as keyof typeof NodeTypeIcons;
-	const IconComponent = NodeTypeIcons[iconComponentKey] || IconPackage;
+	const { [node.type]: IconComponent = IconPackage } = NodeTypeIcons;
 
 	return (
 		<Stack gap="md">
@@ -470,7 +445,7 @@ export function GraphNodeDetails({ node }: GraphNodeDetailsProps) {
 			<CommonRelationships node={node} />
 
 			{/* Raw data for debugging (remove in production) */}
-			{process.env["NODE_ENV"] === "development" && (
+			{process.env.NODE_ENV === "development" && (
 				<>
 					<Divider label="Debug Info" labelPosition="center" />
 					<Text size="xs" c="dimmed" component="pre">
