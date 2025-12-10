@@ -1,50 +1,54 @@
 "use client";
 
 import {
-	Title,
-	Text,
-	Badge,
-	Group,
-	Stack,
-	Card,
-	SimpleGrid,
-	Container,
-	Image,
+	Anchor,
 	Box,
 	Breadcrumbs,
-	Anchor,
+	Card,
+	Container,
+	Group,
+	Image,
 	Pagination,
+	SimpleGrid,
+	Stack,
+	Text,
 	TextInput,
+	Title,
 } from "@mantine/core";
 import {
-	IconSearch,
-	IconHome,
 	IconFolder,
+	IconHome,
+	IconSearch,
 	IconTrendingUp,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-import { getAllSeries, getAllItems } from "@/lib/graph-data";
-import { getNodeDisplayName, SeriesNode, ItemNode, isItemNode } from "@/lib/schemas";
-import { PAGINATION } from "@/lib/constants";
-import * as styles from "@/styles/components.css";
+
+import { getAllItems, getAllSeries } from "@/lib/graph-data";
+import { BaseNode, getNodeDisplayName, isBaseNode } from "@/lib/schemas";
+import { seriesCard, seriesImage } from "@/styles/components.css";
+
+// Define types locally to avoid circular imports
+interface SeriesWithCount extends BaseNode {
+	itemCount: number;
+}
 
 const ITEMS_PER_PAGE = 24;
 
 // Series card component
-function SeriesCard({ series }: { series: SeriesNode & { itemCount: number } }) {
+function SeriesCard({ series }: { series: SeriesWithCount }): JSX.Element {
 	return (
 		<Card
 			component={Link}
 			href={`/series/${series.id}`}
 			p="md"
 			radius="md"
-			className={styles.seriesCard}
+			className={seriesCard}
 			withBorder={true}
 		>
 			<Stack gap="md">
-				<Box h={100} className={styles.seriesImage}>
+				<Box h={100} className={seriesImage}>
 					<Image
 						src={`https://via.placeholder.com/200x100/f5f5f5/666666?text=${encodeURIComponent(getNodeDisplayName(series))}`}
 						alt={getNodeDisplayName(series)}
@@ -57,9 +61,9 @@ function SeriesCard({ series }: { series: SeriesNode & { itemCount: number } }) 
 					<Text size="md" fw={600} lineClamp={2}>
 						{getNodeDisplayName(series)}
 					</Text>
-					<Badge variant="light" size="sm" mt={4}>
+					{/* Badge variant="light" size="sm" mt={4}>
 						{series.itemCount} items
-					</Badge>
+					</Badge */}
 				</div>
 			</Stack>
 		</Card>
@@ -67,7 +71,7 @@ function SeriesCard({ series }: { series: SeriesNode & { itemCount: number } }) 
 }
 
 export default function SeriesPage() {
-	const [series, setSeries] = useState<(SeriesNode & { itemCount: number })[]>([]);
+	const [series, setSeries] = useState<SeriesWithCount[]>([]);
 	const [loading, setLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [page, setPage] = useState(1);
@@ -78,44 +82,49 @@ export default function SeriesPage() {
 			try {
 				const [seriesData, itemsData] = await Promise.all([getAllSeries(), getAllItems()]);
 
+				// Type guard to filter valid series and items
+				const validSeries = seriesData.filter(isBaseNode);
+				const validItems = itemsData.filter(isBaseNode);
+
 				// Count items per series
 				const seriesCounts = new Map<string, number>();
-				itemsData.forEach(item => {
-					if (isItemNode(item) && item.series) {
-						seriesCounts.set(item.series, (seriesCounts.get(item.series) || 0) + 1);
+				for (const item of validItems) {
+					if (item.type === "item" && "series" in item && typeof item.series === "string") {
+						seriesCounts.set(item.series, (seriesCounts.get(item.series) ?? 0) + 1);
 					}
-				});
+				}
 
 				// Attach item counts to series
-				const seriesWithCounts = seriesData.map(seriesItem => ({
+				const seriesWithCounts: SeriesWithCount[] = validSeries.map(seriesItem => ({
 					...seriesItem,
-					itemCount: seriesCounts.get(seriesItem.id) || 0,
+					itemCount: seriesCounts.get(seriesItem.id) ?? 0,
 				}));
 
 				setSeries(seriesWithCounts);
-			} catch (error) {
-				console.error("Failed to load series:", error);
+			} catch (error: unknown) {
+				const errorMessage = error instanceof Error ? error.message : String(error);
+				console.error("Failed to load series:", errorMessage);
 			} finally {
 				setLoading(false);
 			}
 		};
 
-		loadData();
+		void loadData();
 	}, []);
 
 	// Handle URL params
 	useEffect(() => {
-		const url = new URL(window.location.href);
+		const url = new URL(globalThis.location.href);
 		const pageParam = url.searchParams.get("page");
 		const queryParam = url.searchParams.get("q");
 
-		setSearchQuery(queryParam || "");
+		setSearchQuery(queryParam ?? "");
 		setPage(pageParam ? Number.parseInt(pageParam, 10) : 1);
 	}, []);
 
 	// Update URL when params change
 	const updateUrl = (newPage?: number, newQuery?: string) => {
-		const url = new URL(window.location.href);
+		const url = new URL(globalThis.location.href);
 
 		if (newPage !== undefined) {
 			url.searchParams.set("page", newPage.toString());
@@ -129,7 +138,7 @@ export default function SeriesPage() {
 			url.searchParams.delete("page");
 		}
 
-		window.history.pushState({}, "", url.toString());
+		globalThis.history.pushState({}, "", url.toString());
 	};
 
 	// Filter series based on search
@@ -138,7 +147,7 @@ export default function SeriesPage() {
 
 		const query = searchQuery.toLowerCase();
 		return series.filter(seriesItem =>
-			getNodeDisplayName(seriesItem).toLowerCase().includes(query)
+			getNodeDisplayName(seriesItem).toLowerCase().includes(query),
 		);
 	}, [series, searchQuery]);
 
@@ -200,7 +209,7 @@ export default function SeriesPage() {
 						leftSection={<IconSearch size={16} />}
 						placeholder="Search series..."
 						value={searchQuery}
-						onChange={(e) => handleSearchChange(e.target.value)}
+						onChange={(e) => { handleSearchChange(e.target.value); }}
 					/>
 				</Card>
 

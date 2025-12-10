@@ -1,11 +1,9 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Box, Group, Stack, Text, Title, Anchor } from "@mantine/core";
 
-import {
-	getItemById,
-	getAllItems,
-} from "@/lib/graph-data";
 import { generateItemParams } from "@/lib/data-loader";
+import { getItemById } from "@/lib/graph-data";
 import {
 	getNodeDisplayName,
 	getNodePrice,
@@ -14,9 +12,7 @@ import {
 	getNodeDescription,
 	getNodeAccessories,
 	getNodeManuals,
-	getNodeEdges,
-	type ItemNode,
-	type ItemManual,
+	isItemNode,
 } from "@/lib/schemas";
 
 
@@ -26,7 +22,10 @@ interface ItemPageProps {
 
 // Generate static params for items from JSON files
 export async function generateStaticParams() {
-	return await generateItemParams();
+	const params = await generateItemParams();
+	// For static export, limit to first 50 items to prevent build timeouts
+	const result = Array.isArray(params) ? params.slice(0, 50) : [];
+	return result;
 }
 
 // Generate metadata for each item with type-safe data
@@ -34,7 +33,7 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 	const { id } = await params;
 	const item = await getItemById(id);
 
-	if (!item) {
+	if (!item || !isItemNode(item)) {
 		return {
 			title: "Item Not Found",
 		};
@@ -45,7 +44,7 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 
 	const itemDescription = getNodeDescription(item);
 	const truncatedDesc = itemDescription
-		? `${itemDescription.slice(0, 160).replace(/\n/g, " ")}...`
+		? `${itemDescription.slice(0, 160).replaceAll("\n", " ")}...`
 		: `Details about ${displayName}${releaseYear ? ` (${releaseYear})` : ""} from the hobby.ninja database`;
 
 	return {
@@ -53,8 +52,11 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 		description: truncatedDesc,
 		keywords: [
 			"gunpla", "gundam", "model kit",
-			item.brand, item.category, item.series, item.grade,
-			item.scale,
+			item.brand ?? "",
+			item.category ?? "",
+			item.series ?? "",
+			item.grade ?? "",
+			item.scale ?? "",
 		].filter(Boolean).join(", "),
 	};
 }
@@ -63,7 +65,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 	const { id } = await params;
 	const item = await getItemById(id);
 
-	if (!item) {
+	if (!item || !isItemNode(item)) {
 		notFound();
 	}
 
@@ -76,13 +78,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 	const manuals = getNodeManuals(item);
 
 	return (
-		<div>
-			<nav>
-				<a href="/">← Back to Home</a>
-				<a href="/database/gunpla/">← Gunpla Database</a>
-			</nav>
-
-			<article>
+		<article>
 				<header>
 					<h1>{displayName}</h1>
 					<div className="item-meta">
@@ -200,7 +196,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 						<dl>
 							{Object.entries(item.specifications).map(([key, value]) => (
 								<div key={key}>
-									<dt>{key.replace(/([A-Z])/g, " $1").replace(/^./, str => str.toUpperCase())}</dt>
+									<dt>{key.replaceAll(/([A-Z])/g, " $1").replace(/^./, str => str.toUpperCase())}</dt>
 									<dd>
 										{typeof value === "object"
 											? JSON.stringify(value, null, 2)
@@ -229,7 +225,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
 								return (
 									<div key={key}>
-										<dt>{key.replace(/([A-Z])/g, " $1").replace(/^./, str => str.toUpperCase())}</dt>
+										<dt>{key.replaceAll(/([A-Z])/g, " $1").replace(/^./, str => str.toUpperCase())}</dt>
 										<dd>
 											{typeof value === "object"
 												? JSON.stringify(value, null, 2)
@@ -256,7 +252,6 @@ export default async function ItemPage({ params }: ItemPageProps) {
 						</div>
 					</section>
 				)}
-			</article>
-		</div>
+		</article>
 	);
 }

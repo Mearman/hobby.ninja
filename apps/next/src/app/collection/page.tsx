@@ -1,56 +1,57 @@
 "use client";
 
 import {
-	Title,
-	Text,
-	Badge,
-	Group,
-	Stack,
-	Card,
-	SimpleGrid,
-	Container,
-	Grid,
-	Button,
 	ActionIcon,
-	Modal,
-	TextInput,
-	Textarea,
-	NumberInput,
-	Select,
-	Switch,
-	Progress,
-	Avatar,
+	Anchor,
 	Box,
 	Breadcrumbs,
-	Anchor,
+	Button,
+	Card,
+	Container,
+	Group,
 	Menu,
-	Divider,
+	Modal,
+	SimpleGrid,
 	Skeleton,
+	Stack,
+	Text,
+	Textarea,
+	TextInput,
+	Title,
 } from "@mantine/core";
 import {
-	IconPlus,
-	IconFolder,
 	IconBox,
+	IconChartBar,
 	IconDots,
+	IconDownload,
 	IconEdit,
+	IconFilter,
+	IconFolder,
+	IconHome,
+	IconPlus,
 	IconTrash,
 	IconTrendingUp,
-	IconChevronRight,
-	IconHome,
-	IconChartBar,
-	IconSearch,
-	IconFilter,
-	IconDownload,
-	IconUpload,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import React from "react";
 
+
 import { useCollection } from "@/contexts/collection-context";
-import { getAllItems } from "@/lib/graph-data";
-import { getNodeDisplayName } from "@/lib/schemas";
-import * as styles from "@/styles/components.css";
-import { UI, TYPOGRAPHY, FILTER, CSS } from "@/lib/constants";
+import { CSS, TYPOGRAPHY, UI } from "@/lib/constants";
+import {
+  collectionCard,
+  collectionContent,
+  collectionHeader,
+  statsGrid,
+  statCard,
+  statValue,
+  statLabel,
+  progressBar,
+  progressFill,
+  progressSegments,
+  progressSegment,
+  databaseStatIcon,
+} from "@/styles/components.css";
 
 // Collection card type
 interface CollectionCardType {
@@ -76,12 +77,12 @@ function CollectionCard({ collection, onEdit, onDelete }: {
 		<Card
 			p="lg"
 			radius="md"
-			className={styles.collectionCard}
+			className={collectionCard}
 			withBorder={true}
 		>
 			<Group justify="space-between" mb="md">
 				<Group>
-					<div className={styles.collectionHeader} style={{
+					<div className={collectionHeader} style={{
 						backgroundColor: "var(--mantine-color-blue-6)",
 						width: 48,
 						height: 48,
@@ -98,7 +99,7 @@ function CollectionCard({ collection, onEdit, onDelete }: {
 							{collection.name}
 						</Text>
 						{collection.description && (
-							<Text size="sm" color="dimmed" lineClamp={1}>
+							<Text size="sm" c="dimmed" lineClamp={1}>
 								{collection.description}
 							</Text>
 						)}
@@ -131,46 +132,46 @@ function CollectionCard({ collection, onEdit, onDelete }: {
 				</Menu>
 			</Group>
 
-			<Box className={styles.collectionContent}>
-				<div className={styles.statsGrid}>
-					<div className={styles.statCard}>
-						<Text className={styles.statValue}>{collection.itemCount || 0}</Text>
-						<Text className={styles.statLabel}>Items</Text>
+			<Box className={collectionContent}>
+				<div className={statsGrid}>
+					<div className={statCard}>
+						<Text className={statValue}>{collection.itemCount || 0}</Text>
+						<Text className={statLabel}>Items</Text>
 					</div>
-					<div className={styles.statCard}>
-						<Text className={styles.statValue}>{collection.completedCount || 0}</Text>
-						<Text className={styles.statLabel}>Completed</Text>
+					<div className={statCard}>
+						<Text className={statValue}>{collection.completedCount || 0}</Text>
+						<Text className={statLabel}>Completed</Text>
 					</div>
-					<div className={styles.statCard}>
-						<Text className={styles.statValue}>{collection.wantedCount || 0}</Text>
-						<Text className={styles.statLabel}>Wanted</Text>
+					<div className={statCard}>
+						<Text className={statValue}>{collection.wantedCount || 0}</Text>
+						<Text className={statLabel}>Wanted</Text>
 					</div>
-					<div className={styles.statCard}>
-						<Text className={styles.statValue}>{collection.totalValue || 0}</Text>
-						<Text className={styles.statLabel}>Total Value</Text>
+					<div className={statCard}>
+						<Text className={statValue}>{collection.totalValue || 0}</Text>
+						<Text className={statLabel}>Total Value</Text>
 					</div>
 				</div>
 
 				<Box mt="md">
 					<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} mb="xs">Completion Progress</Text>
-					<div className={styles.progressBar}>
+					<div className={progressBar}>
 						<div
-							className={styles.progressFill}
+							className={progressFill}
 							style={{
 								width: `${collection.completionPercentage || 0}%`,
 								backgroundColor: "var(--mantine-color-blue-6)",
 							}}
 						/>
-						<div className={styles.progressSegments}>
+						<div className={progressSegments}>
 							<div
-								className={styles.progressSegment}
+								className={progressSegment}
 								style={{
 									width: `${(collection.completedCount || 0) / (collection.itemCount || 1) * 100}%`,
 									backgroundColor: "var(--mantine-color-green-6)",
 								}}
 							/>
 							<div
-								className={styles.progressSegment}
+								className={progressSegment}
 								style={{
 									width: `${(collection.inProgressCount || 0) / (collection.itemCount || 1) * 100}%`,
 									backgroundColor: "var(--mantine-color-orange-6)",
@@ -178,13 +179,13 @@ function CollectionCard({ collection, onEdit, onDelete }: {
 							/>
 						</div>
 					</div>
-					<Text size="xs" color="dimmed" mt="xs">
+					<Text size="xs" c="dimmed" mt="xs">
 						{collection.completionPercentage || 0}% Complete
 					</Text>
 				</Box>
 
 				<Group mt="md" justify="space-between">
-					<Text size="sm" color="dimmed">
+					<Text size="sm" c="dimmed">
             Updated {new Date(collection.lastModified).toLocaleDateString()}
 					</Text>
 					<Button
@@ -212,9 +213,9 @@ function QuickStats({ state }: { state: any }) {
 				cols={{ base: 1, sm: 2, lg: 4 }}
 				spacing="md"
 			>
-				<div className={styles.statCard}>
+				<div className={statCard}>
 					<Group>
-						<div className={styles.databaseStatIcon}>
+						<div className={databaseStatIcon}>
 							<IconFolder size={UI.ICON_SIZE_LG} />
 						</div>
 						<div>
@@ -228,9 +229,9 @@ function QuickStats({ state }: { state: any }) {
 					</Group>
 				</div>
 
-				<div className={styles.statCard}>
+				<div className={statCard}>
 					<Group>
-						<div className={styles.databaseStatIcon}>
+						<div className={databaseStatIcon}>
 							<IconBox size={UI.ICON_SIZE_LG} />
 						</div>
 						<div>
@@ -244,9 +245,9 @@ function QuickStats({ state }: { state: any }) {
 					</Group>
 				</div>
 
-				<div className={styles.statCard}>
+				<div className={statCard}>
 					<Group>
-						<div className={styles.databaseStatIcon}>
+						<div className={databaseStatIcon}>
 							<IconTrendingUp size={UI.ICON_SIZE_LG} />
 						</div>
 						<div>
@@ -260,9 +261,9 @@ function QuickStats({ state }: { state: any }) {
 					</Group>
 				</div>
 
-				<div className={styles.statCard}>
+				<div className={statCard}>
 					<Group>
-						<div className={styles.databaseStatIcon}>
+						<div className={databaseStatIcon}>
 							<IconChartBar size={UI.ICON_SIZE_LG} />
 						</div>
 						<div>
@@ -297,9 +298,9 @@ function LoadingSkeleton() {
 						<Skeleton width={UI.SKELETON_HEIGHT_XXL + UI.SKELETON_HEIGHT_SMALL} height={UI.SKELETON_HEIGHT_XXL + UI.SKELETON_HEIGHT_SMALL} radius="sm" />
 					</Group>
 
-					<div className={styles.statsGrid}>
+					<div className={statsGrid}>
 						{Array.from({length: 4}).map((_, i) => (
-							<div key={i} className={styles.statCard}>
+							<div key={i} className={statCard}>
 								<Skeleton width={UI.SKELETON_HEIGHT_XXXL + UI.SKELETON_HEIGHT_SMALL} height={UI.SKELETON_HEIGHT_XXL} mb="xs" />
 								<Skeleton width={UI.SKELETON_HEIGHT_XXXL + UI.SKELETON_HEIGHT_MEDIUM} height={UI.SKELETON_HEIGHT_SMALL} />
 							</div>
@@ -343,8 +344,9 @@ export default function CollectionPage() {
 			await actions.createCollection(formData.name, formData.description);
 			setCreateModalOpen(false);
 			setFormData({ name: "", description: "" });
-		} catch (error) {
-			console.error("Failed to create collection:", error);
+		} catch (error: unknown) {
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to create collection:", errorMessage);
 		}
 	};
 
@@ -356,8 +358,9 @@ export default function CollectionPage() {
 			setEditModalOpen(false);
 			setSelectedCollection(null);
 			setFormData({ name: "", description: "" });
-		} catch (error) {
-			console.error("Failed to update collection:", error);
+		} catch (error: unknown) {
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to update collection:", errorMessage);
 		}
 	};
 
@@ -368,8 +371,9 @@ export default function CollectionPage() {
 			await actions.deleteCollection(selectedCollection.id);
 			setDeleteModalOpen(false);
 			setSelectedCollection(null);
-		} catch (error) {
-			console.error("Failed to delete collection:", error);
+		} catch (error: unknown) {
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Failed to delete collection:", errorMessage);
 		}
 	};
 
@@ -472,7 +476,7 @@ export default function CollectionPage() {
 									key={collection.id}
 									collection={{
 										...collection,
-										lastModified: collection.modifiedAt?.toISOString() || new Date().toISOString()
+										lastModified: collection.modifiedAt?.toISOString() || new Date().toISOString(),
 									}}
 									onEdit={openEditModal}
 									onDelete={openDeleteModal}
