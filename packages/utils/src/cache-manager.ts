@@ -119,7 +119,7 @@ export class FileSystemCacheManager implements CacheManager {
 
 		// Sort by last accessed time and remove the least recently used items
 		const entries: Array<[string, CacheItem]> = [...this.memoryCache.entries()];
-		const items = entries.sort(
+		const items = entries.toSorted(
 			(a: [string, CacheItem], b: [string, CacheItem]) => a[1].lastAccessed - b[1].lastAccessed,
 		);
 
