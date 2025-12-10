@@ -1,6 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { CustomImage } from "@/components/ui/custom-image";
 
 import {
 	Anchor,
@@ -11,7 +12,6 @@ import {
 	Container,
 	Grid,
 	Group,
-	Image,
 	Pagination,
 	Select,
 	SimpleGrid,
@@ -84,7 +84,7 @@ function ItemCard({ item }: { item: ItemNode }) {
 			withBorder={true}
 		>
 			<Box className={itemCardImage}>
-				<Image
+				<CustomImage
 					src={primaryImage ?? placeholderSrc}
 					alt={getNodeDisplayName(item)}
 					fit="cover"

@@ -33,7 +33,7 @@ import React, { useEffect, useState, useMemo } from "react";
 
 import { PAGINATION } from "@/lib/constants";
 import { getAllBrands, getAllCategories, getAllItems, getAllSeries } from "@/lib/graph-data";
-import { BaseNode, getNodeDisplayName, isItemNode, ItemNode } from "@/lib/schemas";
+import { BaseNode, getNodeDisplayName, isItemNode, isBrandNode, isCategoryNode, isSeriesNode, ItemNode } from "@/lib/schemas";
 import {
 	itemCard,
 	itemCardBadge,
@@ -127,9 +127,9 @@ export default function ItemsPage() {
 				setItems(filteredItems);
 
 				// Type-check brand, category, and series data
-				const validBrands = brandsData.filter((b): b is BaseNode => b && typeof b === "object" && "name" in b);
-				const validCategories = categoriesData.filter((c): c is BaseNode => c && typeof c === "object" && "name" in c);
-				const validSeries = seriesData.filter((s): s is BaseNode => s && typeof s === "object" && "name" in s);
+				const validBrands = brandsData.filter(isBrandNode);
+				const validCategories = categoriesData.filter(isCategoryNode);
+				const validSeries = seriesData.filter(isSeriesNode);
 
 				setBrands(validBrands.map(b => getNodeDisplayName(b)));
 				setCategories(validCategories.map(c => getNodeDisplayName(c)));

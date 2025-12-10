@@ -324,9 +324,7 @@ export default async function HomePage() {
 
 						<Badge
 							size="lg"
-							variant="white"
-							color="white"
-							radius="md"
+							variant="light"
 						>
 							100% Free • No Registration Required • Works Offline
 						</Badge>
