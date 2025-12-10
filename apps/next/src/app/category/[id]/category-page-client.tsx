@@ -137,7 +137,7 @@ export function CategoryPageClient({
 }: CategoryPageClientProps) {
 	// State management
 	const [searchQuery, setSearchQuery] = useState("");
-	const [sortBy, setSortBy] = useState("name-asc");
+	const [sortBy, setSortBy] = useState("date-desc");
 	const [brandFilter, setBrandFilter] = useState("");
 	const [page, setPage] = useState(1);
 
@@ -145,7 +145,7 @@ export function CategoryPageClient({
 	useEffect(() => {
 		const urlParams = getUrlParams();
 		setSearchQuery(urlParams.q);
-		setSortBy(urlParams.sort ?? "name-asc");
+		setSortBy(urlParams.sort ?? "date-desc");
 		setBrandFilter(urlParams.brand);
 		setPage(Number(urlParams.page));
 	}, []);
@@ -260,10 +260,10 @@ export function CategoryPageClient({
 
 	const handleClearFilters = () => {
 		setSearchQuery("");
-		setSortBy("name-asc");
+		setSortBy("date-desc");
 		setBrandFilter("");
 		setPage(1);
-		updateUrl({ page: 1, q: "", sort: "name-asc", brand: "" });
+		updateUrl({ page: 1, q: "", sort: "date-desc", brand: "" });
 	};
 
 	return (
