@@ -207,6 +207,24 @@ function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 	);
 }
 
+// UTF-8 safe Base64 encoding function
+const utf8ToBase64 = (str: string): string => {
+	try {
+		// Use TextEncoder for proper UTF-8 encoding
+		const encoder = new TextEncoder();
+		const uint8Array = encoder.encode(str);
+		// Convert binary string to base64
+		let binary = '';
+		for (let i = 0; i < uint8Array.length; i++) {
+			binary += String.fromCharCode(uint8Array[i]);
+		}
+		return btoa(binary);
+	} catch (error) {
+		// Fallback to URL-encoding for problematic characters
+		return btoa(unescape(encodeURIComponent(str)));
+	}
+};
+
 // Generate SVG placeholder for brands
 const generateBrandPlaceholder = (brandName: string): string => {
 	const colors = [
@@ -216,15 +234,24 @@ const generateBrandPlaceholder = (brandName: string): string => {
 	const colorIndex = brandName.length % colors.length;
 	const bgColor = colors[colorIndex];
 
+	// Escape SVG text content to handle special characters
+	const escapedName = brandName.slice(0, 8)
+		.replace(/&/g, '&amp;')
+		.replace(/</g, '&lt;')
+		.replace(/>/g, '&gt;')
+		.replace(/"/g, '&quot;')
+		.replace(/'/g, '&#39;')
+		.toUpperCase();
+
 	const svg = `
 		<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
 			<rect width="60" height="60" fill="${bgColor}"/>
 			<text x="30" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
-				${brandName.slice(0, 8).toUpperCase()}
+				${escapedName}
 			</text>
 		</svg>
 	`;
-	return `data:image/svg+xml;base64,${btoa(svg)}`;
+	return `data:image/svg+xml;base64,${utf8ToBase64(svg)}`;
 };
 
 // Generate SVG placeholder for series
@@ -236,21 +263,32 @@ const generateSeriesPlaceholder = (seriesName: string): string => {
 	const gradientIndex = seriesName.length % gradients.length;
 	const [color1, color2] = gradients[gradientIndex];
 
+	// Escape SVG text content to handle special characters
+	const escapedName = seriesName.slice(0, 12)
+		.replace(/&/g, '&amp;')
+		.replace(/</g, '&lt;')
+		.replace(/>/g, '&gt;')
+		.replace(/"/g, '&quot;')
+		.replace(/'/g, '&#39;')
+		.toUpperCase();
+
+	const gradientId = `grad${Math.abs(seriesName.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0))}`;
+
 	const svg = `
 		<svg width="160" height="80" viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg">
 			<defs>
-				<linearGradient id="grad${seriesName.length}" x1="0%" y1="0%" x2="100%" y2="100%">
+				<linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="100%">
 					<stop offset="0%" style="stop-color:${color1};stop-opacity:1" />
 					<stop offset="100%" style="stop-color:${color2};stop-opacity:1" />
 				</linearGradient>
 			</defs>
-			<rect width="160" height="80" fill="url(#grad${seriesName.length})"/>
+			<rect width="160" height="80" fill="url(#${gradientId})"/>
 			<text x="80" y="45" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
-				${seriesName.slice(0, 12).toUpperCase()}
+				${escapedName}
 			</text>
 		</svg>
 	`;
-	return `data:image/svg+xml;base64,${btoa(svg)}`;
+	return `data:image/svg+xml;base64,${utf8ToBase64(svg)}`;
 };
 
 // Component for brand grid
