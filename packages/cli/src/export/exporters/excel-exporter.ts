@@ -4,69 +4,10 @@
 
 import * as path from "node:path";
 
-import { EXPORT_CONSTANTS, DATA_PROCESSING_CONSTANTS } from "../../constants/export-constants.js";
 import type { TransformedData, ExporterConfig, ExportOptions, ExcelColumn } from "../types.js";
+import type { WorkBook, WorkSheet, XLSXLibrary } from "../xlsx-types.js";
 
 import { BaseExporter } from "./base-exporter.js";
-
-// XLSX library interface definitions
-interface XLSXUtils {
-  book_new(): WorkBook;
-  book_append_sheet(workbook: WorkBook, worksheet: WorkSheet, name: string): void;
-  aoa_to_sheet(data: unknown[][]): WorkSheet;
-  json_to_sheet(data: Array<Record<string, unknown>>): WorkSheet;
-  sheet_add_aoa(worksheet: WorkSheet, data: unknown[][], options?: { origin?: number | string }): void;
-  sheet_to_json(worksheet: WorkSheet, options?: { header?: number }): Array<Record<string, unknown>>;
-  range_add(range: string, delta: number): string;
-  encode_range(range: [number, number, number, number]): string;
-  decode_range(range: string): [number, number, number, number];
-  encode_col(col: number): string;
-  encode_row(row: number): string;
-}
-
-interface XLSXStyle {
-  Font?: {
-    Bold?: boolean;
-    Sz?: number;
-    Color?: string;
-  };
-  Fill?: {
-    PatternColor?: string;
-    FgColor?: string;
-  };
-  Alignment?: {
-    Horizontal?: string;
-    Vertical?: string;
-  };
-}
-
-interface WorkSheet {
-  "!ref"?: string;
-  "!cols"?: Array<{ wch?: number; hidden?: boolean }>;
-  "!rows"?: Array<{ hpt?: number; hidden?: boolean }>;
-  "!merges"?: Array<{ s: { c: number; r: number }; e: { c: number; r: number } }>;
-  [key: string]: WorkSheetCell | undefined;
-}
-
-interface WorkSheetCell {
-  v?: string | number | boolean;
-  t?: string;
-  f?: string;
-  w?: string;
-  s?: XLSXStyle;
-}
-
-interface WorkBook {
-  SheetNames: string[];
-  Sheets: Record<string, WorkSheet>;
-}
-
-interface XLSXLibrary {
-  utils: XLSXUtils;
-  write(workbook: WorkBook, filename: string, options?: { bookType?: string }): void;
-  writeFile(workbook: WorkBook, filename: string, options?: { bookType?: string }): void;
-  read(data: ArrayBuffer | string, options?: { type?: string }): WorkBook;
-}
 
 export class ExcelExporter extends BaseExporter {
 	constructor(options: ExportOptions, config: ExporterConfig) {
@@ -81,7 +22,8 @@ export class ExcelExporter extends BaseExporter {
 			// Dynamically import xlsx library to avoid build issues
 			let XLSX: XLSXLibrary;
 			try {
-				XLSX = await import("xlsx") as XLSXLibrary; // Dynamic import of optional dependency
+				const xlsxModule = await import("xlsx");
+				XLSX = xlsxModule as XLSXLibrary;
 			} catch {
 				throw new Error("Excel export requires the xlsx package. Please install it with: npm install xlsx");
 			}
@@ -171,11 +113,12 @@ export class ExcelExporter extends BaseExporter {
 		for (let row = range.s.r; row <= range.e.r; row++) {
 			for (let col = range.s.c; col <= range.e.c; col++) {
 				const cellAddress = XLSX.utils.encode_cell({ r: row, c: col });
-				if (worksheet[cellAddress]) {
-					worksheet[cellAddress].s = {
-						font: { bold: row === 0 },
-						fill: row === 0 ? { fgColor: { rgb: "E3F2FD" } } : undefined,
-						alignment: { vertical: "center", horizontal: "left" },
+				const cell = worksheet[cellAddress];
+				if (cell && typeof cell === 'object' && 'v' in cell) {
+					cell.s = {
+						Font: { Bold: row === 0 },
+						Fill: row === 0 ? { FgColor: "E3F2FD" } : undefined,
+						Alignment: { Vertical: "center", Horizontal: "left" },
 					};
 				}
 			}
@@ -298,7 +241,8 @@ export class ExcelExporter extends BaseExporter {
 			if (key.startsWith("spec_")) {
 				const specKey = key.slice(5);
 				if (item.specifications?.[specKey]) {
-					return item.specifications[specKey];
+					const specValue = item.specifications[specKey];
+					return typeof specValue === 'string' || typeof specValue === 'number' || typeof specValue === 'boolean' ? specValue : String(specValue);
 				}
 				return null;
 			}
@@ -321,7 +265,14 @@ export class ExcelExporter extends BaseExporter {
 				}
 			}
 
-			return value;
+			// Ensure the return type is valid
+			if (value === null || value === undefined) {
+				return value;
+			}
+			if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+				return value;
+			}
+			return String(value);
 		} catch (error) {
 			console.warn(`Error extracting Excel value for key ${key}:`, error);
 			return null;
@@ -338,14 +289,14 @@ export class ExcelExporter extends BaseExporter {
 		}));
 
 		// Apply header styling
-		const range = XLSX.utils.decode_range(worksheet["!ref"] || "A1:A1");
+		const range = XLSX.utils.decode_range(worksheet["!ref"] || "A1:A1") as unknown as { s: { r: number; c: number }; e: { r: number; c: number } };
 		for (let col = range.s.c; col <= Math.min(range.e.c, columns.length - 1); col++) {
 			const cellAddress = XLSX.utils.encode_cell({ r: 0, c: col });
-			if (worksheet[cellAddress]) {
-				worksheet[cellAddress].s = {
-					font: { bold: true },
-					fill: { fgColor: { rgb: "E3F2FD" } },
-					alignment: { vertical: "center", horizontal: "center" },
+			if (worksheet[cellAddress] && typeof worksheet[cellAddress] === 'object' && 's' in worksheet[cellAddress]) {
+				(worksheet[cellAddress] as any).s = {
+					Font: { Bold: true },
+					Fill: { FgColor: "E3F2FD" },
+					Alignment: { Vertical: "center", Horizontal: "center" },
 				};
 			}
 		}
@@ -409,7 +360,7 @@ export class ExcelExporter extends BaseExporter {
    * Get unique categories from data
    */
 	private getCategories(data: TransformedData[]): string[] {
-		return [...new Set(data.map(item => item.category).filter(Boolean))];
+		return [...new Set(data.map(item => item.category).filter((cat): cat is string => Boolean(cat)))];
 	}
 
 	/**
@@ -454,7 +405,8 @@ export class ExcelExporter extends BaseExporter {
 		try {
 			let XLSX: XLSXLibrary;
 			try {
-				XLSX = await import("xlsx") as XLSXLibrary; // Dynamic import of optional dependency
+				const xlsxModule = await import("xlsx"); // Dynamic import of optional dependency
+				XLSX = xlsxModule as XLSXLibrary;
 			} catch {
 				throw new Error("Excel export requires the xlsx package. Please install it with: npm install xlsx");
 			}
@@ -462,13 +414,13 @@ export class ExcelExporter extends BaseExporter {
 
 			// Define styles
 			const headerStyle = {
-				font: { bold: true, color: { rgb: "FFFFFF" } },
-				fill: { fgColor: { rgb: "4472C4" } },
-				alignment: { vertical: "center", horizontal: "center" },
+				Font: { Bold: true, Color: "FFFFFF" },
+				Fill: { FgColor: "4472C4" },
+				Alignment: { Vertical: "center", Horizontal: "center" },
 			};
 
 			const alternateRowStyle = {
-				fill: { fgColor: { rgb: "F8F9FA" } },
+				Fill: { FgColor: "F8F9FA" },
 			};
 
 			// Apply styles to main worksheet
@@ -486,14 +438,14 @@ export class ExcelExporter extends BaseExporter {
 	/**
    * Apply advanced Excel styling
    */
-	private applyAdvancedStyling(worksheet: WorkSheet, headerStyle: XLSXStyle, alternateRowStyle: XLSXStyle, XLSX: XLSXLibrary): void {
-		const range = XLSX.utils.decode_range(worksheet["!ref"] || "A1:A1");
+	private applyAdvancedStyling(worksheet: WorkSheet, headerStyle: any, alternateRowStyle: any, XLSX: XLSXLibrary): void {
+		const range = XLSX.utils.decode_range(worksheet["!ref"] || "A1:A1") as unknown as { s: { r: number; c: number }; e: { r: number; c: number } };
 
 		// Apply header style
 		for (let col = range.s.c; col <= range.e.c; col++) {
 			const cellAddress = XLSX.utils.encode_cell({ r: 0, c: col });
-			if (worksheet[cellAddress]) {
-				worksheet[cellAddress].s = headerStyle;
+			if (worksheet[cellAddress] && typeof worksheet[cellAddress] === 'object' && 's' in worksheet[cellAddress]) {
+				(worksheet[cellAddress] as any).s = headerStyle;
 			}
 		}
 
@@ -501,8 +453,8 @@ export class ExcelExporter extends BaseExporter {
 		for (let row = range.s.r + 1; row <= range.e.r; row += 2) {
 			for (let col = range.s.c; col <= range.e.c; col++) {
 				const cellAddress = XLSX.utils.encode_cell({ r: row, c: col });
-				if (worksheet[cellAddress]) {
-					worksheet[cellAddress].s = alternateRowStyle;
+				if (worksheet[cellAddress] && typeof worksheet[cellAddress] === 'object' && 's' in worksheet[cellAddress]) {
+					(worksheet[cellAddress] as any).s = alternateRowStyle;
 				}
 			}
 		}

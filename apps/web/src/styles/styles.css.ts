@@ -1,25 +1,9 @@
 import { style, globalStyle, keyframes } from "@vanilla-extract/css";
 
 
-// Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
+// Constants for actual magic numbers (keep meaningful ones)
+const TWO = 2; // Used for JSON indentation
+const HUNDRED = 100; // Used for percentages
 
 /**
  * Vanilla Extract styles for custom styling beyond Mantine components.
@@ -45,7 +29,7 @@ export const exampleCard = style({
 
 // Example of descendant selector using globalStyle
 globalStyle(`${exampleCard} h3`, {
-	marginTop: ZERO,
+	marginTop: 0,
 	marginBottom: "var(--mantine-spacing-xs)",
 });
 
@@ -54,7 +38,7 @@ export const homeContainer = style({
 	minHeight: "100vh",
 	paddingTop: "var(--mantine-spacing-xl)",
 	paddingBottom: "var(--mantine-spacing-xl)",
-	background: "linear-gradient(180deg, var(--mantine-color-gray-ZERO) ZERO%, var(--mantine-color-gray-ONE) HUNDRED%)",
+	background: "linear-gradient(180deg, var(--mantine-color-gray-0) 0%, var(--mantine-color-gray-1) 100%)",
 });
 
 export const featuresGrid = style({
@@ -65,14 +49,14 @@ export const featuresGrid = style({
 });
 
 export const featureCard = style({
-	height: "HUNDRED%",
-	transition: "all ZERO.2s ease",
-	border: "1px solid var(--mantine-color-gray-THREE)",
+	height: "100%",
+	transition: "all 0.2s ease",
+	border: "1px solid var(--mantine-color-gray-3)",
 	selectors: {
 		"&:hover": {
 			transform: "translateY(-2px)",
 			boxShadow: "var(--mantine-shadow-lg)",
-			borderColor: "var(--mantine-color-blue-SIX)",
+			borderColor: "var(--mantine-color-blue-6)",
 		},
 	},
 });
@@ -85,7 +69,7 @@ export const databaseContainer = style({
 	minHeight: "100vh",
 	paddingTop: "var(--mantine-spacing-lg)",
 	paddingBottom: "var(--mantine-spacing-xl)",
-	background: "linear-gradient(180deg, var(--mantine-color-gray-ZERO) ZERO%, var(--mantine-color-gray-ONE) HUNDRED%)",
+	background: "linear-gradient(180deg, var(--mantine-color-gray-0) 0%, var(--mantine-color-gray-1) 100%)",
 });
 
 export const databaseHeader = style({
@@ -96,7 +80,7 @@ export const databaseHeader = style({
 export const heroSection = style({
 	marginBottom: "3rem",
 	position: "relative",
-	background: "linear-gradient(135deg, var(--mantine-color-blue-ONE) ZERO%, var(--mantine-color-blue-ZERO) HUNDRED%)",
+	background: "linear-gradient(135deg, var(--mantine-color-blue-1) 0%, var(--mantine-color-blue-0) 100%)",
 	borderRadius: "var(--mantine-radius-xl)",
 	padding: "var(--mantine-spacing-xl)",
 });
@@ -105,12 +89,12 @@ export const statsCard = style({
 	background: "linear-gradient(135deg, var(--mantine-color-blue-light), var(--mantine-color-gray-light))",
 	borderRadius: "var(--mantine-radius-lg)",
 	padding: "var(--mantine-spacing-xl)",
-	border: "1px solid var(--mantine-color-blue-THREE)",
-	transition: "all ZERO.3s ease",
+	border: "1px solid var(--mantine-color-blue-3)",
+	transition: "all 0.3s ease",
 });
 
 export const hobbyTypeCard = style({
-	transition: "all ZERO.2s ease",
+	transition: "all 0.2s ease",
 	border: "2px solid var(--mantine-color-default-border)",
 	background: "var(--mantine-color-white)",
 	cursor: "pointer",
@@ -120,15 +104,15 @@ export const hobbyTypeCard = style({
 globalStyle(`${hobbyTypeCard}:hover`, {
 	transform: "translateY(-2px)",
 	boxShadow: "var(--mantine-shadow-md)",
-	borderColor: "var(--mantine-color-blue-SIX)",
+	borderColor: "var(--mantine-color-blue-6)",
 });
 
 globalStyle(`${hobbyTypeCard}:active`, {
-	transform: "translateY(ZERO)",
+	transform: "translateY(0)",
 });
 
 export const featuredSection = style({
-	height: "HUNDRED%",
+	height: "100%",
 	display: "flex",
 	flexDirection: "column",
 });
@@ -175,11 +159,11 @@ export const itemGridSpacious = style({
 export const itemCard = style({
 	background: "var(--mantine-color-white)",
 	borderRadius: "var(--mantine-radius-lg)",
-	border: "1px solid var(--mantine-color-gray-THREE)",
+	border: "1px solid var(--mantine-color-gray-3)",
 	overflow: "hidden",
-	transition: "all ZERO.2s ease",
+	transition: "all 0.2s ease",
 	cursor: "pointer",
-	height: "HUNDRED%",
+	height: "100%",
 	display: "flex",
 	flexDirection: "column",
 });
@@ -187,11 +171,11 @@ export const itemCard = style({
 export const itemCardHover = style({
 	background: "var(--mantine-color-white)",
 	borderRadius: "var(--mantine-radius-lg)",
-	border: "1px solid var(--mantine-color-gray-THREE)",
+	border: "1px solid var(--mantine-color-gray-3)",
 	overflow: "hidden",
-	transition: "all ZERO.2s ease",
+	transition: "all 0.2s ease",
 	cursor: "pointer",
-	height: "HUNDRED%",
+	height: "100%",
 	display: "flex",
 	flexDirection: "column",
 });
@@ -199,34 +183,34 @@ export const itemCardHover = style({
 globalStyle(`${itemCardHover}:hover`, {
 	transform: "translateY(-4px)",
 	boxShadow: "var(--mantine-shadow-lg)",
-	borderColor: "var(--mantine-color-blue-SIX)",
+	borderColor: "var(--mantine-color-blue-6)",
 });
 
 export const itemCardSelected = style({
 	background: "var(--mantine-color-white)",
 	borderRadius: "var(--mantine-radius-lg)",
-	border: "1px solid var(--mantine-color-gray-THREE)",
+	border: "1px solid var(--mantine-color-gray-3)",
 	overflow: "hidden",
-	transition: "all ZERO.2s ease",
+	transition: "all 0.2s ease",
 	cursor: "pointer",
-	height: "HUNDRED%",
+	height: "100%",
 	display: "flex",
 	flexDirection: "column",
-	borderColor: "var(--mantine-color-blue-SIX)",
-	boxShadow: "ZERO ZERO ZERO 2px var(--mantine-color-blue-ONE)",
+	borderColor: "var(--mantine-color-blue-6)",
+	boxShadow: "0 0 0 2px var(--mantine-color-blue-1)",
 });
 
 export const itemCardImageContainer = style({
 	position: "relative",
-	width: "HUNDRED%",
+	width: "100%",
 	height: "200px",
 	overflow: "hidden",
-	background: "var(--mantine-color-gray-ONE)",
+	background: "var(--mantine-color-gray-1)",
 });
 
 export const itemCardContent = style({
 	padding: "var(--mantine-spacing-md)",
-	flex: ONE,
+	flex: 1,
 	display: "flex",
 	flexDirection: "column",
 });
@@ -234,16 +218,16 @@ export const itemCardContent = style({
 export const itemCardTitle = style({
 	fontSize: "var(--mantine-font-size-md)",
 	fontWeight: 600,
-	lineHeight: ONE.THREE,
+	lineHeight: 1.3,
 	marginBottom: "var(--mantine-spacing-xs)",
-	color: "var(--mantine-color-gray-NINE)",
+	color: "var(--mantine-color-gray-9)",
 });
 
 export const itemCardDescription = style({
 	fontSize: "var(--mantine-font-size-sm)",
-	color: "var(--mantine-color-gray-SIX)",
-	lineHeight: ONE.FOUR,
-	flex: ONE,
+	color: "var(--mantine-color-gray-6)",
+	lineHeight: 1.4,
+	flex: 1,
 	marginBottom: "var(--mantine-spacing-sm)",
 });
 
@@ -252,7 +236,7 @@ export const itemCardMeta = style({
 	justifyContent: "space-between",
 	alignItems: "center",
 	fontSize: "var(--mantine-font-size-xs)",
-	color: "var(--mantine-color-gray-FIVE)",
+	color: "var(--mantine-color-gray-5)",
 });
 
 // Detail view styles
@@ -278,17 +262,17 @@ export const detailActions = style({
 	gap: "var(--mantine-spacing-sm)",
 	marginTop: "var(--mantine-spacing-md)",
 	paddingTop: "var(--mantine-spacing-md)",
-	borderTop: "1px solid var(--mantine-color-gray-THREE)",
+	borderTop: "1px solid var(--mantine-color-gray-3)",
 });
 
 // Filter and search styles
 export const filterChip = style({
-	transition: "all ZERO.2s ease",
+	transition: "all 0.2s ease",
 	cursor: "pointer",
 });
 
 globalStyle(`${filterChip}:hover`, {
-	backgroundColor: "var(--mantine-color-blue-ONE)",
+	backgroundColor: "var(--mantine-color-blue-1)",
 });
 
 export const activeFilterChip = style({
@@ -298,12 +282,12 @@ export const activeFilterChip = style({
 
 export const searchInput = style({
 	borderColor: "var(--mantine-color-gray-THREE)",
-	transition: "all ZERO.2s ease",
+	transition: "all 0.2s ease",
 });
 
 globalStyle(`${searchInput}:focus`, {
-	borderColor: "var(--mantine-color-blue-SIX)",
-	boxShadow: "ZERO ZERO ZERO 2px var(--mantine-color-blue-ONE)",
+	borderColor: "var(--mantine-color-blue-6)",
+	boxShadow: "0 0 0 2px var(--mantine-color-blue-1)",
 });
 
 // Status indicator styles
@@ -325,8 +309,8 @@ export const statusIndicatorNew = style({
 	fontWeight: 500,
 	padding: "2px var(--mantine-spacing-xs)",
 	borderRadius: "var(--mantine-radius-sm)",
-	backgroundColor: "var(--mantine-color-green-ONE)",
-	color: "var(--mantine-color-green-EIGHT)",
+	backgroundColor: "var(--mantine-color-green-1)",
+	color: "var(--mantine-color-green-8)",
 });
 
 export const statusIndicatorUpdated = style({
@@ -337,8 +321,8 @@ export const statusIndicatorUpdated = style({
 	fontWeight: 500,
 	padding: "2px var(--mantine-spacing-xs)",
 	borderRadius: "var(--mantine-radius-sm)",
-	backgroundColor: "var(--mantine-color-blue-ONE)",
-	color: "var(--mantine-color-blue-EIGHT)",
+	backgroundColor: "var(--mantine-color-blue-1)",
+	color: "var(--mantine-color-blue-8)",
 });
 
 export const statusIndicatorDiscontinued = style({
@@ -349,47 +333,47 @@ export const statusIndicatorDiscontinued = style({
 	fontWeight: 500,
 	padding: "2px var(--mantine-spacing-xs)",
 	borderRadius: "var(--mantine-radius-sm)",
-	backgroundColor: "var(--mantine-color-red-ONE)",
-	color: "var(--mantine-color-red-EIGHT)",
+	backgroundColor: "var(--mantine-color-red-1)",
+	color: "var(--mantine-color-red-8)",
 });
 
 // Animation keyframes
 const skeletonLoading = keyframes({
-	"ZERO%": { backgroundPosition: "200% ZERO" },
-	"HUNDRED%": { backgroundPosition: "-200% ZERO" },
+	"0%": { backgroundPosition: "200% 0" },
+	"100%": { backgroundPosition: "-200% 0" },
 });
 
 const fadeIn = keyframes({
-	"ZERO%": { opacity: ZERO },
-	"HUNDRED%": { opacity: ONE },
+	"0%": { opacity: 0 },
+	"100%": { opacity: 1 },
 });
 
 const slideUp = keyframes({
-	"ZERO%": {
-		opacity: ZERO,
+	"0%": {
+		opacity: 0,
 		transform: "translateY(20px)",
 	},
-	"HUNDRED%": {
-		opacity: ONE,
-		transform: "translateY(ZERO)",
+	"100%": {
+		opacity: 1,
+		transform: "translateY(0)",
 	},
 });
 
 // Loading states
 export const loadingSkeleton = style({
-	background: "linear-gradient(90deg, var(--mantine-color-gray-ONE) 25%, var(--mantine-color-gray-TWO) 50%, var(--mantine-color-gray-ONE) 75%)",
-	backgroundSize: "200% HUNDRED%",
-	animation: `${skeletonLoading} ONE.5s infinite`,
+	background: "linear-gradient(90deg, var(--mantine-color-gray-1) 25%, var(--mantine-color-gray-2) 50%, var(--mantine-color-gray-1) 75%)",
+	backgroundSize: "200% 100%",
+	animation: `${skeletonLoading} 1.5s infinite`,
 	borderRadius: "var(--mantine-radius-sm)",
 });
 
 // Animation classes
 export const fadeInClass = style({
-	animation: `${fadeIn} ZERO.3s ease-out`,
+	animation: `${fadeIn} 0.3s ease-out`,
 });
 
 export const slideUpClass = style({
-	animation: `${slideUp} ZERO.3s ease-out`,
+	animation: `${slideUp} 0.3s ease-out`,
 });
 
 // Mobile responsiveness
@@ -416,18 +400,18 @@ export const sectionTitle = style({
 	fontSize: "var(--mantine-font-size-xl)",
 	fontWeight: 700,
 	marginBottom: "var(--mantine-spacing-md)",
-	color: "var(--mantine-color-gray-NINE)",
+	color: "var(--mantine-color-gray-9)",
 });
 
 export const sectionSubtitle = style({
 	fontSize: "var(--mantine-font-size-sm)",
-	color: "var(--mantine-color-gray-SIX)",
+	color: "var(--mantine-color-gray-6)",
 	marginBottom: "var(--mantine-spacing-lg)",
 });
 
 // Accessibility styles
 export const focusVisible = style({
-	outline: "2px solid var(--mantine-color-blue-SIX)",
+	outline: "2px solid var(--mantine-color-blue-6)",
 	outlineOffset: "2px",
 });
 
@@ -436,7 +420,7 @@ globalStyle(".item-card", {
 	"@media": {
 		"(prefers-contrast: high)": {
 			borderWidth: "2px",
-			borderColor: "var(--mantine-color-gray-SEVEN)",
+			borderColor: "var(--mantine-color-gray-7)",
 		},
 	},
 });
@@ -445,7 +429,7 @@ globalStyle(".filter-chip", {
 	"@media": {
 		"(prefers-contrast: high)": {
 			borderWidth: "2px",
-			borderColor: "var(--mantine-color-gray-SEVEN)",
+			borderColor: "var(--mantine-color-gray-7)",
 		},
 	},
 });
@@ -454,7 +438,7 @@ globalStyle(".search-input", {
 	"@media": {
 		"(prefers-contrast: high)": {
 			borderWidth: "2px",
-			borderColor: "var(--mantine-color-gray-SEVEN)",
+			borderColor: "var(--mantine-color-gray-7)",
 		},
 	},
 });
