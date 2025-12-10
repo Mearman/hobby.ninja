@@ -45,25 +45,18 @@
       "parallelism": true
     },
     "serve": {
-      "executor": "@nx/next:server",
-      "defaultConfiguration": "development",
+      "executor": "nx:run-commands",
       "options": {
-        "port": 3001,
-        "hostname": "localhost",
-        "webpack": true
+        "command": "serve -s out -l 3001",
+        "cwd": "{projectRoot}"
       },
-      "dependsOn": ["build:dev"],
+      "dependsOn": ["build"],
       "configurations": {
         "development": {
-          "buildTarget": "next:build:dev",
-          "dev": true,
-          "watch": true,
-          "webpack": true
+          "buildTarget": "next:build:dev"
         },
         "production": {
-          "buildTarget": "next:build:production",
-          "dev": false,
-          "webpack": true
+          "buildTarget": "next:build:production"
         }
       }
     },
@@ -99,7 +92,7 @@
       "executor": "nx:run-commands",
       "outputs": ["{projectRoot}/src/data"],
       "options": {
-        "command": "npx tsx scripts/build-data-cli.ts",
+        "command": "node ../../node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs scripts/build-data-cli.ts",
         "cwd": "{projectRoot}",
         "cache": true
       },
@@ -110,13 +103,13 @@
       ],
       "configurations": {
         "development": {
-          "command": "npx tsx scripts/build-data-cli.ts --output-dir src/data"
+          "command": "node ../../node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs scripts/build-data-cli.ts --output-dir src/data"
         },
         "production": {
-          "command": "npx tsx scripts/build-data-cli.ts --output-dir src/data"
+          "command": "node ../../node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs scripts/build-data-cli.ts --output-dir src/data"
         },
         "custom": {
-          "command": "npx tsx scripts/build-data-cli.ts {args}"
+          "command": "node ../../node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs scripts/build-data-cli.ts {args}"
         }
       }
     }
