@@ -1,8 +1,8 @@
 import type { NextConfig } from 'next';
 import path from 'path';
 
-// Import Vanilla Extract plugin
-import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
+// Import Vanilla Extract plugin - temporarily disabled for static export
+// import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
 
 // Import PWA configuration
 import withPWA from 'next-pwa';
@@ -84,16 +84,24 @@ const withPWAConfig = withPWA({
 });
 
 
-// Create Vanilla Extract plugin instance
-const withVanillaExtract = createVanillaExtractPlugin();
+// Create Vanilla Extract plugin instance - temporarily disabled
+// const withVanillaExtract = createVanillaExtractPlugin();
 
 const nextConfig: NextConfig = {
   // Enable static export for GitHub Pages deployment
   output: 'export',
 
-  // Disable image optimization for static export
+  // Configure images for external domains and static export
   images: {
-    unoptimized: true
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'bandai-hobby.net',
+        port: '',
+        pathname: '/images/**',
+      },
+    ],
   },
 
   // Set base path for GitHub Pages (adjust if deploying to subdirectory)
@@ -114,11 +122,8 @@ const nextConfig: NextConfig = {
   // Configure experimental features for Mantine and Vanilla Extract
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
-    // Critical for Vanilla Extract static export compatibility
-    // esmExternals: 'loose', // Not supported with Turbopack
-    optimizeCss: true,
-    // Fix for Webpack 5 ESM modules
-    esmExternals: false,
+    // Disable optimizeCss for Vanilla Extract compatibility
+    // optimizeCss: true,
   },
 
   // Enable strict mode for better error detection
@@ -228,5 +233,5 @@ const nextConfig: NextConfig = {
   },
 };
 
-// Apply both PWA and Vanilla Extract plugins
-export default withPWAConfig(withVanillaExtract(nextConfig));
+// Apply PWA plugin only - Vanilla Extract temporarily disabled for static export
+export default withPWAConfig(nextConfig);

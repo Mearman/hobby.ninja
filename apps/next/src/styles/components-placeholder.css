@@ -1,0 +1,173 @@
+/* Placeholder CSS classes to replace Vanilla Extract imports for static generation */
+
+/* Layout Components */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mantine-color-body);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--mantine-color-body);
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+  backdrop-filter: blur(8px);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--mantine-spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--mantine-color-blue-6);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.logo:hover {
+  color: var(--mantine-color-blue-7);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--mantine-spacing-lg);
+}
+
+.nav-link {
+  color: var(--mantine-color-gray-7);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: var(--mantine-spacing-sm) var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-default);
+  transition: all 150ms ease;
+}
+
+.nav-link:hover {
+  background-color: var(--mantine-color-gray-0);
+  color: var(--mantine-color-blue-6);
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Utilities */
+.mobile-only {
+  display: block;
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Card Components */
+.series-card {
+  text-decoration: none;
+  color: inherit;
+  transition: all 200ms ease-in-out;
+  background-color: var(--mantine-color-body);
+  border: 1px solid var(--mantine-color-gray-3);
+}
+
+.series-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--mantine-shadow-lg);
+  border-color: var(--mantine-color-blue-4);
+  background-color: var(--mantine-color-gray-1);
+}
+
+.series-image {
+  border-radius: var(--mantine-radius-sm);
+  overflow: hidden;
+}
+
+/* Category Card */
+.category-card {
+  text-decoration: none;
+  color: inherit;
+  transition: all 200ms ease-in-out;
+  background-color: var(--mantine-color-body);
+  border: 1px solid var(--mantine-color-gray-3);
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--mantine-shadow-lg);
+  border-color: var(--mantine-color-blue-4);
+  background-color: var(--mantine-color-gray-1);
+}
+
+.category-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--mantine-radius-lg);
+  background-color: var(--mantine-color-blue-1);
+  color: var(--mantine-color-blue-6);
+}
+
+/* Brand Components */
+.brand-logo {
+  border-radius: var(--mantine-radius-md);
+  overflow: hidden;
+  background-color: var(--mantine-color-gray-1);
+  border: 1px solid var(--mantine-color-gray-3);
+}
+
+/* Other placeholder classes that might be needed */
+.database-stat-card {
+  transition: all 200ms ease-in-out;
+  border: 1px solid var(--mantine-color-gray-2);
+}
+
+.database-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--mantine-shadow-md);
+  border-color: var(--mantine-color-blue-3);
+}
+
+.database-stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--mantine-radius-md);
+  background-color: var(--mantine-color-blue-0);
+  color: var(--mantine-color-blue-6);
+}
+
+/* Empty placeholder for any missing classes */
+.placeholder-style {
+  /* This will be filled in as needed */
+}
