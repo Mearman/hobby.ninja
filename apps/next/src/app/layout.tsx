@@ -1,14 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import "@mantine/core/styles.css";
 import { Inter } from "next/font/google";
+import { ColorSchemeScript } from "@mantine/core";
 
 import { LayoutClient } from "@/components/layout/layout-client";
 
 // Load Inter font
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+	subsets: ["latin"],
+	variable: "--font-inter",
+	display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -40,12 +40,12 @@ export const metadata: Metadata = {
 		icon: [
 			{ url: "/icons/icon.svg", type: "image/svg+xml" },
 			{ url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
-			{ url: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png" }
+			{ url: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
 		],
 		apple: [
-			{ url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" }
-		]
-	}
+			{ url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
+		],
+	},
 };
 
 export const viewport: Viewport = {
@@ -61,6 +61,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={inter.variable}>
+			<head>
+				<ColorSchemeScript defaultColorScheme="light" />
+			</head>
 			<body className={inter.className}>
 				<LayoutClient>{children}</LayoutClient>
 			</body>
