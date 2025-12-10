@@ -1,8 +1,5 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-import { CustomImage } from "@/components/ui/custom-image";
-
 import {
 	Anchor,
 	Box,
@@ -14,7 +11,6 @@ import {
 	Group,
 	Pagination,
 	Select,
-	SimpleGrid,
 	Stack,
 	Text,
 	TextInput,
@@ -31,17 +27,9 @@ import React, { useState, useEffect, useMemo } from "react";
 
 
 import { PAGINATION } from "@/lib/constants";
-import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
-import { getNodeDisplayName, getNodeImages, isItemNode, CategoryNode, ItemNode } from "@/lib/schemas";
-import {
-	itemCard,
-	itemCardBadge,
-	itemCardImage,
-	itemCardContent,
-	itemCardMetadata,
-	itemCardSubtitle,
-	itemCardTitle,
-} from "@/styles/components.css";
+import { getNodeDisplayName, isItemNode, CategoryNode, ItemNode } from "@/lib/schemas";
+import { ViewSwitcher, useViewMode, type ViewMode } from "@/components/view/view-switcher";
+import { ViewRenderer } from "@/components/view/view-renderers";
 
 // Client-side URL parameter helper
 const getUrlParams = () => {
@@ -52,6 +40,7 @@ const getUrlParams = () => {
 		q: params.get("q") ?? "",
 		sort: params.get("sort") ?? "",
 		brand: params.get("brand") ?? "",
+		view: params.get("view") as ViewMode ?? "grid",
 	};
 };
 
@@ -62,71 +51,6 @@ interface CategoryPageClientProps {
 	categoryId: string;
 }
 
-// Item card component
-function ItemCard({ item }: { item: ItemNode }) {
-	if (!isItemNode(item)) return null;
-
-	// Get actual images from the item data
-	const itemImages = getNodeImages(item);
-	const primaryImage = itemImages.length > 0 ? itemImages[0] : null;
-
-	// Generate local placeholder images
-	const placeholderSrc = createPlaceholderSvg(getNodeDisplayName(item));
-	const errorPlaceholderSrc = createErrorPlaceholderSvg();
-
-	return (
-		<Card
-			component={Link}
-			href={`/item/${item.id}`}
-			p={0}
-			radius="md"
-			className={itemCard}
-			withBorder={true}
-		>
-			<Box className={itemCardImage}>
-				<CustomImage
-					src={primaryImage ?? placeholderSrc}
-					alt={getNodeDisplayName(item)}
-					fit="cover"
-					height={200}
-					fallbackSrc={errorPlaceholderSrc}
-					// Add error handling for failed image loads
-					onError={(e) => {
-						// If the primary image fails, use local error placeholder
-						e.currentTarget.src = errorPlaceholderSrc;
-					}}
-				/>
-			</Box>
-			<Box className={itemCardContent}>
-				<Text className={itemCardTitle} lineClamp={2}>
-					{getNodeDisplayName(item)}
-				</Text>
-				{item.series && (
-					<Text className={itemCardSubtitle} lineClamp={1}>
-						{item.series}
-					</Text>
-				)}
-				<Box className={itemCardMetadata}>
-					{item.grade && (
-						<Badge className={itemCardBadge} variant="light">
-							{item.grade}
-						</Badge>
-					)}
-					{item.scale && (
-						<Badge className={itemCardBadge} variant="light">
-							{item.scale}
-						</Badge>
-					)}
-					{item.brand && (
-						<Badge className={itemCardBadge} variant="outline">
-							{item.brand}
-						</Badge>
-					)}
-				</Box>
-			</Box>
-		</Card>
-	);
-}
 
 // Main client component
 export function CategoryPageClient({
@@ -140,6 +64,7 @@ export function CategoryPageClient({
 	const [sortBy, setSortBy] = useState("date-desc");
 	const [brandFilter, setBrandFilter] = useState("");
 	const [page, setPage] = useState(1);
+	const { viewMode, setViewMode } = useViewMode();
 
 	// Initialize state from URL parameters
 	useEffect(() => {
@@ -351,48 +276,28 @@ export function CategoryPageClient({
 						<Text size="sm" c="dimmed">
               Showing {Math.min((page - 1) * PAGINATION.ITEMS_PER_PAGE + 1, total)}-{Math.min(page * PAGINATION.ITEMS_PER_PAGE, total)} of {total.toLocaleString()} items
 						</Text>
-						{(searchQuery || brandFilter) && (
-							<Button
-								variant="light"
+						<Group gap="md">
+							<ViewSwitcher
+								value={viewMode}
+								onChange={setViewMode}
 								size="sm"
-								onClick={handleClearFilters}
-							>
-                Clear Filters
-							</Button>
-						)}
-					</Group>
-
-					{paginatedItems.length > 0 ? (
-						<SimpleGrid
-							cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
-							spacing="md"
-						>
-							{paginatedItems.map((item) => (
-								<ItemCard key={item.id} item={item} />
-							))}
-						</SimpleGrid>
-					) : (
-						<Box ta="center" py="xl">
-							<IconFolder size={64} color="var(--mantine-color-gray-4)" />
-							<Title order={3} mt="md" mb="sm">
-                No items found
-							</Title>
-							<Text c="dimmed" mb="lg">
-								{searchQuery || brandFilter
-									? "Try adjusting your search or filters"
-									: "There are no items in this category yet."
-								}
-							</Text>
+							/>
 							{(searchQuery || brandFilter) && (
 								<Button
 									variant="light"
+									size="sm"
 									onClick={handleClearFilters}
 								>
-                  Clear Filters
+	                Clear Filters
 								</Button>
 							)}
-						</Box>
-					)}
+						</Group>
+					</Group>
+
+					<ViewRenderer
+						viewMode={viewMode}
+						items={paginatedItems}
+					/>
 				</Box>
 
 				{/* Pagination */}
