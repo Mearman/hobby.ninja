@@ -349,3 +349,11 @@ globalStyle(".slide-up", {
 		},
 	},
 });
+
+// Homepage specific hover styles
+globalStyle(".item-card-hover:hover", {
+	transform: COMMON_VALUES.TRANSFORM_TRANSLATE_Y_NEG_2,
+	boxShadow: COMMON_VALUES.BOX_SHADOW_MD,
+	borderColor: MANTINE_COLORS.BLUE_6,
+	transition: `all ${ANIMATION_DURATIONS.FAST_200} ease`,
+});
