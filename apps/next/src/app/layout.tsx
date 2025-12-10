@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { ColorSchemeScript } from "@mantine/core";
+import "@mantine/core/styles.css";
 
 import { LayoutClient } from "@/components/layout/layout-client";
 
