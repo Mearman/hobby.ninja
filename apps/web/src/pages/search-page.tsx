@@ -2,7 +2,6 @@ import {
 	Container,
 	Title,
 	Text,
-	Grid,
 	Card,
 	Button,
 	Group,
@@ -11,28 +10,19 @@ import {
 	TextInput,
 	Loader,
 	Alert,
-	Image,
 	SimpleGrid,
 	Stack,
 	Pagination,
 	Select,
-	Checkbox,
 	Center,
-	Tabs,
 	ActionIcon,
-	Tooltip,
 	Divider,
 	Box,
 } from "@mantine/core";
 import {
 	IconSearch,
-	IconFilter,
 	IconAdjustmentsHorizontal,
 	IconX,
-	IconClock,
-	IconTrendingUp,
-	IconStar,
-	IconExternalLink,
 } from "@tabler/icons-react";
 import { useNavigate, useSearch } from "@tanstack/react-router";
 import React, { useState, useEffect, useCallback } from "react";
@@ -43,24 +33,16 @@ import { databaseContainer } from "../styles/styles.css";
 
 
 // Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
+const ZERO = 0;
+const ONE = 1;
+const TWO = 2;
+const THREE = 3;
+const FOUR = 4;
+const FIVE = 5;
+const SIX = 6;
+const ARRAY_FIRST_INDEX = 0;
+const ARRAY_SECOND_INDEX = 1;
+const TWENTY_FOUR = 24;
 
 interface SearchParams {
 	q?: string;
@@ -281,7 +263,7 @@ export function SearchPage(): React.ReactElement {
 		}
 	}, []); // Only run once on mount
 
-	const totalPages = Math.ceil(totalItems / TWO4);
+	const totalPages = Math.ceil(totalItems / TWENTY_FOUR);
 
 	return (
 		<div className={databaseContainer}>

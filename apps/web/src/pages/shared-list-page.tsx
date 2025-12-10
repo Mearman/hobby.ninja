@@ -37,24 +37,14 @@ import { databaseContainer } from "../styles/styles.css";
 
 
 // Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
+const ZERO = 0;
+const ONE = 1;
+const TWO = 2;
+const THREE = 3;
+const FOUR = 4;
+const SIX = 6;
+const HUNDRED = 100;
+const ARRAY_FIRST_INDEX = 0;
 
 interface SharedListData {
 	title?: string;
@@ -479,19 +469,19 @@ export function SharedListPage(): React.ReactElement {
 								...listData,
 								items: items.map((item) => ({
 									id: item.id,
-									name: item.name?.en || item.name,
+									name: item.name?.en ?? item.name,
 									grade: item.grade,
 									scale: item.scale,
 									series: item.series,
 								})),
 							};
-							const blob = new Blob([JSON.stringify(TWO, $TWO, JSON_INDENTATION)], {
+							const blob = new Blob([JSON.stringify(exportData, null, JSON_INDENTATION)], {
 								type: "application/json",
 							});
 							const url = URL.createObjectURL(blob);
 							const a = document.createElement("a");
 							a.href = url;
-							a.download = `${listData?.title || "shared-list"}.json`;
+							a.download = `${listData?.title ?? "shared-list"}.json`;
 							a.click();
 							URL.revokeObjectURL(url);
 						}}
