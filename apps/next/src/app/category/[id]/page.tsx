@@ -1,6 +1,7 @@
-import { getAllCategories, getItemsByCategory, getCategoryById } from "@/lib/server-graph-data";
+import { CategoryPageClient } from "./category-page-client";
+
 import { generateCategoryParams } from "@/lib/data-loader";
-import CategoryPageClient from "./CategoryPageClient";
+import { getAllCategories, getItemsByCategory, getCategoryById } from "@/lib/server-graph-data";
 
 // Server component for static generation
 export default async function CategoryPage({ params }: { params: Promise<{ id: string }> }) {
@@ -27,7 +28,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
 		<CategoryPageClient
 			initialCategory={category}
 			initialItems={items}
-			initialCategories={categories}
+			_initialCategories={categories}
 			categoryId={id}
 		/>
 	);

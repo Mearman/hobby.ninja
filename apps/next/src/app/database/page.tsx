@@ -1,24 +1,31 @@
 "use client";
 
-import { Title, Text, Badge, Group, Stack, Card, SimpleGrid, Container, Image, Box, Skeleton } from "@mantine/core";
-import { IconFolder, IconBox, IconTag, IconSearch, IconTrendingUp } from "@tabler/icons-react";
+import { Box, Card, Container, Group, Image, SimpleGrid, Skeleton, Stack, Text, Title } from "@mantine/core";
+import { IconBox, IconFolder, IconSearch, IconTag, IconTrendingUp } from "@tabler/icons-react";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-import { getAllItems, getAllBrands, getAllCategories, getAllSeries } from "@/lib/graph-data";
-import { getNodeDisplayName, BaseEdge, isBaseEdge } from "@/lib/schemas";
-import * as styles from "@/styles/components.css";
-import { UI, TYPOGRAPHY, PAGINATION } from "@/lib/constants";
+
+import { PAGINATION, TYPOGRAPHY, UI } from "@/lib/constants";
+import { getAllBrands, getAllCategories, getAllItems, getAllSeries } from "@/lib/graph-data";
+import { BaseEdge, BrandNode, CategoryNode, getNodeDisplayName, isBaseEdge, SeriesNode } from "@/lib/schemas";
+import {
+	actionCard,
+	brandLogo,
+	categoryCard,
+	categoryIcon,
+	databaseStatCard,
+	databaseStatIcon,
+	searchCard,
+	seriesCard,
+	seriesImage,
+	statCard,
+} from "@/styles/components.css";
 
 // Type-safe CSS class accessor for category-specific styling
-// Define a record type that includes possible category-specific CSS classes
-type StylesWithCategories = typeof styles & Record<`category-${string}`, string | undefined>;
-
-const getCategoryStyle = (categoryId: string): string => {
-	// Use type assertion with proper index signature
-	const stylesWithCategories = styles as StylesWithCategories;
-	const styleKey = `category-${categoryId}` as const;
-	return stylesWithCategories[styleKey] ?? "";
+const getCategoryStyle = (_categoryId: string): string => {
+	// Return empty string - category-specific classes should be handled differently
+	return "";
 };
 
 // Type for database stats
@@ -27,9 +34,9 @@ interface DatabaseStats {
 	totalBrands: number;
 	totalCategories: number;
 	totalSeries: number;
-	brands: Array<any>;
-	categories: Array<any>;
-	series: Array<any>;
+	brands: Array<BrandNode & { itemCount: number }>;
+	categories: Array<CategoryNode & { itemCount: number }>;
+	series: Array<SeriesNode & { itemCount: number }>;
 }
 
 // Initial loading state
@@ -46,40 +53,62 @@ const initialStats: DatabaseStats = {
 // Client-side data fetching function
 const loadDatabaseStats = async (): Promise<DatabaseStats> => {
 	try {
-		const [items, brands, categories, series] = await Promise.all([
+		// Load data as a single result to avoid destructuring type inference issues
+		const allData = await Promise.all([
 			getAllItems(),
 			getAllBrands(),
 			getAllCategories(),
 			getAllSeries(),
 		]);
 
+		// Extract individual arrays with explicit typing
+		const items = allData[0];
+		const brands = allData[1];
+		const categories = allData[2];
+		const series = allData[3];
+
 		// Add itemCount to brands, categories, and series based on the loaded data
-		const brandsWithCounts = brands.map(brand => ({
-			...brand,
-			itemCount: items.filter(item =>
-				item.edges?.outbound?.some((edge: unknown) =>
-					isBaseEdge(edge) && edge.type === "BELONGS_TO_BRAND" && edge.target === brand.id
-				) ?? false
-			).length
-		}));
+		const brandsWithCounts: Array<BrandNode & { itemCount: number }> = brands.map(brand => {
+			const itemCount = items.filter(item => {
+				if (!item.edges?.outbound) return false;
+				return item.edges.outbound.some((edge): edge is BaseEdge =>
+					isBaseEdge(edge) && edge.target === brand.id,
+				);
+			}).length;
 
-		const categoriesWithCounts = categories.map(category => ({
-			...category,
-			itemCount: items.filter(item =>
-				item.edges?.outbound?.some((edge: unknown) =>
-					isBaseEdge(edge) && edge.type === "BELONGS_TO_CATEGORY" && edge.target === category.id
-				) ?? false
-			).length
-		}));
+			return {
+				...brand,
+				itemCount,
+			};
+		});
 
-		const seriesWithCounts = series.map(seriesItem => ({
-			...seriesItem,
-			itemCount: items.filter(item =>
-				item.edges?.outbound?.some((edge: unknown) =>
-					isBaseEdge(edge) && edge.type === "BELONGS_TO_SERIES" && edge.target === seriesItem.id
-				) ?? false
-			).length
-		}));
+		const categoriesWithCounts: Array<CategoryNode & { itemCount: number }> = categories.map(category => {
+			const itemCount = items.filter(item => {
+				if (!item.edges?.outbound) return false;
+				return item.edges.outbound.some((edge): edge is BaseEdge =>
+					isBaseEdge(edge) && edge.target === category.id,
+				);
+			}).length;
+
+			return {
+				...category,
+				itemCount,
+			};
+		});
+
+		const seriesWithCounts: Array<SeriesNode & { itemCount: number }> = series.map(seriesItem => {
+			const itemCount = items.filter(item => {
+				if (!item.edges?.outbound) return false;
+				return item.edges.outbound.some((edge): edge is BaseEdge =>
+					isBaseEdge(edge) && edge.target === seriesItem.id,
+				);
+			}).length;
+
+			return {
+				...seriesItem,
+				itemCount,
+			};
+		});
 
 		return {
 			totalItems: items.length,
@@ -96,8 +125,10 @@ const loadDatabaseStats = async (): Promise<DatabaseStats> => {
 				.sort((a, b) => b.itemCount - a.itemCount)
 				.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT),
 		};
-	} catch (error) {
-		console.error("Failed to load database stats:", error);
+	} catch (error: unknown) {
+		// Failed to load database stats, returning initial stats
+		const errorMessage = error instanceof Error ? error.message : String(error);
+		console.error("Failed to load database stats:", errorMessage);
 		return initialStats;
 	}
 };
@@ -109,9 +140,9 @@ function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 			cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
 			spacing={{ base: "sm", md: "lg" }}
 		>
-			<Card p="lg" radius="md" className={styles.statCard}>
+			<Card p="lg" radius="md" className={statCard}>
 				<Group>
-					<div className={styles.databaseStatIcon}>
+					<div className={databaseStatIcon}>
 						<IconBox size={UI.ICON_SIZE_XL} />
 					</div>
 					<div>
@@ -125,9 +156,9 @@ function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 				</Group>
 			</Card>
 
-			<Card p="lg" radius="md" className={styles.databaseStatCard}>
+			<Card p="lg" radius="md" className={databaseStatCard}>
 				<Group>
-					<div className={styles.databaseStatIcon}>
+					<div className={databaseStatIcon}>
 						<IconFolder size={UI.ICON_SIZE_XL} />
 					</div>
 					<div>
@@ -141,9 +172,9 @@ function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 				</Group>
 			</Card>
 
-			<Card p="lg" radius="md" className={styles.databaseStatCard}>
+			<Card p="lg" radius="md" className={databaseStatCard}>
 				<Group>
-					<div className={styles.databaseStatIcon}>
+					<div className={databaseStatIcon}>
 						<IconTag size={UI.ICON_SIZE_XL} />
 					</div>
 					<div>
@@ -157,9 +188,9 @@ function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 				</Group>
 			</Card>
 
-			<Card p="lg" radius="md" className={styles.databaseStatCard}>
+			<Card p="lg" radius="md" className={databaseStatCard}>
 				<Group>
-					<div className={styles.databaseStatIcon}>
+					<div className={databaseStatIcon}>
 						<IconTrendingUp size={UI.ICON_SIZE_XL} />
 					</div>
 					<div>
@@ -177,7 +208,7 @@ function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 }
 
 // Component for brand grid
-function BrandsGrid({ brands }: { brands: Awaited<ReturnType<typeof loadDatabaseStats>>["brands"] }) {
+function BrandsGrid({ brands }: { brands: DatabaseStats["brands"] }) {
 	if (brands.length === 0) return null;
 
 	return (
@@ -196,11 +227,11 @@ function BrandsGrid({ brands }: { brands: Awaited<ReturnType<typeof loadDatabase
 						href={`/brand/${brand.id}`}
 						p="md"
 						radius="md"
-						className={styles.categoryCard}
+						className={categoryCard}
 						withBorder={true}
 					>
 						<Stack align="center" gap={UI.SKELETON_HEIGHT_SMALL}>
-							<Box w={60} h={60} className={styles.brandLogo}>
+							<Box w={60} h={60} className={brandLogo}>
 								<Image
 									src={`https://via.placeholder.com/60x60/ffffff/666666?text=${encodeURIComponent(getNodeDisplayName(brand))}`}
 									alt={getNodeDisplayName(brand)}
@@ -212,9 +243,9 @@ function BrandsGrid({ brands }: { brands: Awaited<ReturnType<typeof loadDatabase
 							<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} ta="center" lineClamp={2}>
 								{getNodeDisplayName(brand)}
 							</Text>
-							<Badge variant="light" size="xs">
+							{/* Badge  variant="light" size="xs">
 								{brand.itemCount || 0} items
-							</Badge>
+							</Badge */}
 						</Stack>
 					</Card>
 				))}
@@ -236,7 +267,7 @@ function BrandsGrid({ brands }: { brands: Awaited<ReturnType<typeof loadDatabase
 }
 
 // Component for category grid
-function CategoriesGrid({ categories }: { categories: Awaited<ReturnType<typeof loadDatabaseStats>>["categories"] }) {
+function CategoriesGrid({ categories }: { categories: DatabaseStats["categories"] }) {
 	if (categories.length === 0) return null;
 
 	return (
@@ -255,19 +286,19 @@ function CategoriesGrid({ categories }: { categories: Awaited<ReturnType<typeof 
 						href={`/category/${category.id}`}
 						p="lg"
 						radius="md"
-						className={styles.categoryCard}
+						className={categoryCard}
 						withBorder={true}
 					>
 						<Stack align="center" gap={UI.SKELETON_HEIGHT_SMALL}>
-							<div className={`${styles.categoryIcon} ${getCategoryStyle(category.id)}`}>
+							<div className={`${categoryIcon} ${getCategoryStyle(category.id)}`}>
 								<IconFolder size={UI.ICON_SIZE_XXL} />
 							</div>
 							<Text size="md" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} ta="center" lineClamp={1}>
 								{getNodeDisplayName(category)}
 							</Text>
-							<Badge variant="light" size="xs">
+							{/* Badge  variant="light" size="xs">
 								{category.itemCount || 0} items
-							</Badge>
+							</Badge */}
 						</Stack>
 					</Card>
 				))}
@@ -289,7 +320,7 @@ function CategoriesGrid({ categories }: { categories: Awaited<ReturnType<typeof 
 }
 
 // Component for series grid
-function SeriesGrid({ series }: { series: Awaited<ReturnType<typeof loadDatabaseStats>>["series"] }) {
+function SeriesGrid({ series }: { series: DatabaseStats["series"] }) {
 	if (series.length === 0) return null;
 
 	return (
@@ -308,11 +339,11 @@ function SeriesGrid({ series }: { series: Awaited<ReturnType<typeof loadDatabase
 						href={`/series/${seriesItem.id}`}
 						p="md"
 						radius="md"
-						className={styles.seriesCard}
+						className={seriesCard}
 						withBorder={true}
 					>
 						<Stack gap={UI.SKELETON_HEIGHT_SMALL}>
-							<Box h={80} className={styles.seriesImage}>
+							<Box h={80} className={seriesImage}>
 								<Image
 									src={`https://via.placeholder.com/160x80/f5f5f5/666666?text=${encodeURIComponent(getNodeDisplayName(seriesItem))}`}
 									alt={getNodeDisplayName(seriesItem)}
@@ -325,9 +356,9 @@ function SeriesGrid({ series }: { series: Awaited<ReturnType<typeof loadDatabase
 								<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} lineClamp={2}>
 									{getNodeDisplayName(seriesItem)}
 								</Text>
-								<Badge variant="light" size="xs" mt={4}>
+								{/* Badge  variant="light" size="xs" mt={4}>
 									{seriesItem.itemCount || 0} items
-								</Badge>
+								</Badge */}
 							</div>
 						</Stack>
 					</Card>
@@ -359,8 +390,10 @@ export default function DatabasePage() {
 			try {
 				const databaseStats = await loadDatabaseStats();
 				setStats(databaseStats);
-			} catch (error) {
-				console.error("Failed to load database stats:", error);
+			} catch (error: unknown) {
+				// Failed to load database stats, keeping initial values
+				const errorMessage = error instanceof Error ? error.message : String(error);
+				console.error("Failed to load database stats:", errorMessage);
 			} finally {
 				setLoading(false);
 			}
@@ -425,7 +458,7 @@ export default function DatabasePage() {
 						href="/search"
 						p="md"
 						radius="md"
-						className={styles.searchCard}
+						className={searchCard}
 					>
 						<Group>
 							<IconSearch size={UI.ICON_SIZE_LG} />
@@ -460,7 +493,7 @@ export default function DatabasePage() {
 							href="/items"
 							p="md"
 							radius="md"
-							className={styles.actionCard}
+							className={actionCard}
 							withBorder={true}
 						>
 							<Group>
@@ -474,7 +507,7 @@ export default function DatabasePage() {
 							href="/collection"
 							p="md"
 							radius="md"
-							className={styles.actionCard}
+							className={actionCard}
 							withBorder={true}
 						>
 							<Group>
@@ -488,7 +521,7 @@ export default function DatabasePage() {
 							href="/import"
 							p="md"
 							radius="md"
-							className={styles.actionCard}
+							className={actionCard}
 							withBorder={true}
 						>
 							<Group>

@@ -1,5 +1,4 @@
 import {
-	Title,
 	Text,
 	Container,
 	Breadcrumbs,
@@ -9,7 +8,9 @@ import {
 import {
 	IconHome,
 } from "@tabler/icons-react";
+
 import { CollectionDetailClient } from "./CollectionDetailClient";
+
 import { getAllItems } from "@/lib/graph-data";
 
 // Static data fetching
@@ -18,7 +19,7 @@ interface PageProps {
 }
 
 // Generate static params for collection pages
-export async function generateStaticParams() {
+export function generateStaticParams() {
 	// For static export, return basic collection IDs
 	// In a real application, these would come from your data source
 	return [
@@ -33,6 +34,7 @@ export default async function CollectionDetailPage({ params }: PageProps) {
 	const { id } = await params;
 
 	// Load all database items at build time (server-side)
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 	const allDbItems = await getAllItems();
 
 	return (
@@ -52,6 +54,7 @@ export default async function CollectionDetailPage({ params }: PageProps) {
 			</Breadcrumbs>
 
 			{/* Client Component for interactivity */}
+			{ }
 			<CollectionDetailClient
 				collectionId={id}
 				allDbItems={allDbItems}

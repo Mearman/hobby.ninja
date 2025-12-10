@@ -1,21 +1,22 @@
 "use client";
 
 import {
-	Title,
-	Text,
+	Box,
 	Container,
 	Grid,
-	Box,
 	Stack,
+	Text,
+	Title,
 } from "@mantine/core";
 import React from "react";
+
 import { FuseSearch } from "@/components/search/fuse-search";
 import type { SearchResult } from "@/lib/fuse-search";
 
 export default function SearchPage() {
 	const handleResultClick = (result: SearchResult) => {
 		// Navigate to the item detail page
-		window.location.href = `/item/${result.item.id}`;
+		globalThis.location.href = `/item/${result.item.id}`;
 	};
 
 	return (
@@ -24,10 +25,10 @@ export default function SearchPage() {
 				{/* Header */}
 				<Box>
 					<Title order={1} mb="sm">
-            Advanced Search
+						Advanced Search
 					</Title>
 					<Text size="lg" c="dimmed">
-            Search through our comprehensive database with instant results
+						Search through our comprehensive database with instant results
 					</Text>
 				</Box>
 
