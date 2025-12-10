@@ -65,7 +65,7 @@ interface PageState {
 
 interface SearchState {
   query?: string;
-  filters?: any;
+  filters?: Record<string, unknown>;
   fromSearch?: boolean;
 }
 
@@ -87,19 +87,20 @@ const useUrlParams = () => {
 			if (decodedData.length > HUNDRED) {
 				try {
 					// This would need Pako decompression, for now assume it's JSON
-					const parsed = JSON.parse(decodedData);
+					const parsed = JSON.parse(decodedData) as unknown;
 					sharedItems = Array.isArray(parsed) ? parsed : [];
 				} catch {
 					// Fallback: try as JSON directly
-					const fallbackParsed = JSON.parse(decodedData);
+					const fallbackParsed = JSON.parse(decodedData) as unknown;
 					sharedItems = Array.isArray(fallbackParsed) ? fallbackParsed : [];
 				}
 			} else {
-				const simpleParsed = JSON.parse(decodedData);
+				const simpleParsed = JSON.parse(decodedData) as unknown;
 				sharedItems = Array.isArray(simpleParsed) ? simpleParsed : [];
 			}
 		} catch (error) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
+			// eslint-disable-next-line no-console
 			console.warn("Failed to parse shared data:", errorMessage);
 			notifications.show({
 				title: "Invalid Share Link",
@@ -115,14 +116,16 @@ const useUrlParams = () => {
 
 	if (returnState) {
 		try {
-			searchState = JSON.parse(decodeURIComponent(returnState));
+			searchState = JSON.parse(decodeURIComponent(returnState)) as SearchState;
 		} catch {
+			// eslint-disable-next-line no-console
 			console.warn("Failed to parse return state:", returnState);
 		}
 	}
 
 	// Parse preferred source
-	const source = searchParams.get("source") as "unified" | "manual" | "catalog" | "auto" || "auto";
+	const sourceParam = searchParams.get("source");
+	const source = (sourceParam as "unified" | "manual" | "catalog" | "auto") || "auto";
 
 	return {
 		sharedItems,
@@ -157,10 +160,11 @@ export const ItemDetailPage: React.FC = () => {
 	const updateRecentItems = (item: UnifiedItem | ManualItem | CatalogItem) => {
 		try {
 			const recentKey = "hobby_db_recent_items";
-			const recentItems = JSON.parse(localStorage.getItem(recentKey) || "[]");
+			const recentItemsRaw = localStorage.getItem(recentKey);
+			const recentItems = recentItemsRaw ? JSON.parse(recentItemsRaw) as Array<{id: string}> : [];
 
 			// Remove if already exists
-			const filtered = recentItems.filter((i: any) => i.id !== item.id);
+			const filtered = recentItems.filter((i: {id: string}) => i.id !== item.id);
 
 			// Add to beginning
 			const updated = [
@@ -175,6 +179,7 @@ export const ItemDetailPage: React.FC = () => {
 
 			localStorage.setItem(recentKey, JSON.stringify(updated));
 		} catch (error) {
+			// eslint-disable-next-line no-console
 			console.warn("Failed to update recent items:", error);
 		}
 	};
@@ -184,7 +189,7 @@ export const ItemDetailPage: React.FC = () => {
 		void loadItem();
 	}, [params.id, params.hobbyType, preferredSource]);
 
-	const loadItem = async () => {
+	const loadItem = async (): Promise<void> => {
 		if (!params.id) {
 			setPageState({
 				item: null,
@@ -201,10 +206,10 @@ export const ItemDetailPage: React.FC = () => {
 		try {
 			// Check if this item is from shared data first
 			if (sharedItems.length > ZERO) {
-				const sharedItem = sharedItems.find(item => item.id === params.id);
+				const sharedItem = sharedItems.find((item: {id: string}) => item.id === params.id);
 				if (sharedItem) {
 					setPageState({
-						item: sharedItem,
+						item: sharedItem as UnifiedItem | ManualItem | CatalogItem,
 						loading: false,
 						error: null,
 						source: "auto",
@@ -241,6 +246,7 @@ export const ItemDetailPage: React.FC = () => {
 				});
 			}
 		} catch (error) {
+			// eslint-disable-next-line no-console
 			console.error("Failed to load item:", error);
 			setPageState({
 				item: null,
@@ -253,35 +259,35 @@ export const ItemDetailPage: React.FC = () => {
 	};
 
 	// Handle navigation
-	const handleBack = () => {
+	const handleBack = (): void => {
 		if (searchState.fromSearch) {
 			// Return to search results with state
 			const searchUrl = searchState.query
 				? `/search?q=${encodeURIComponent(searchState.query)}`
 				: "/database";
 
-			navigate({ to: searchUrl });
+			void navigate({ to: searchUrl });
 		} else {
 			// Go back to previous page
-			navigate({ to: "/database" });
+			void navigate({ to: "/database" });
 		}
 	};
 
-	const handleRelatedItemClick = (itemId: string) => {
+	const handleRelatedItemClick = (itemId: string): void => {
 		// Navigate to related item while preserving return state
 		const currentUrl = location.pathname + location.search;
 		const returnParam = encodeURIComponent(currentUrl);
 
-		navigate({
+		void navigate({
 			to: "/database/$hobbyType/$id",
 			params: { hobbyType: params.hobbyType || "gunpla", id: itemId },
 			search: { return: returnParam },
 		});
 	};
 
-	const handleRetry = () => {
+	const handleRetry = (): void => {
 		setPageState(prev => ({ ...prev, source: "auto" }));
-		loadItem();
+		void loadItem();
 	};
 
 	// Get item title for breadcrumbs
@@ -333,20 +339,20 @@ export const ItemDetailPage: React.FC = () => {
 				<Stack gap="lg">
 					{/* Breadcrumbs */}
 					<Breadcrumbs>
-						<Anchor href="/" onClick={(e) => { e.preventDefault(); navigate({ to: "/" }); }}>
+						<Anchor href="/" onClick={(e) => { e.preventDefault(); void navigate({ to: "/" }); }}>
 							<Group gap="xs">
 								<IconHome size={14} />
 								<Text size="sm">Home</Text>
 							</Group>
 						</Anchor>
-						<Anchor href="/database" onClick={(e) => { e.preventDefault(); navigate({ to: "/database" }); }}>
+						<Anchor href="/database" onClick={(e) => { e.preventDefault(); void navigate({ to: "/database" }); }}>
 							<Group gap="xs">
 								<IconDatabase size={14} />
 								<Text size="sm">Database</Text>
 							</Group>
 						</Anchor>
 						{params.hobbyType && (
-							<Anchor href={`/database/${params.hobbyType}`} onClick={(e) => { e.preventDefault(); navigate({ to: "/database/$hobbyType", params: { hobbyType: params.hobbyType } }); }}>
+							<Anchor href={`/database/${params.hobbyType}`} onClick={(e) => { e.preventDefault(); void navigate({ to: "/database/$hobbyType", params: { hobbyType: params.hobbyType } }); }}>
 								<Text size="sm" tt="capitalize">{params.hobbyType}</Text>
 							</Anchor>
 						)}
@@ -379,7 +385,7 @@ export const ItemDetailPage: React.FC = () => {
 								</Button>
 								<Button
 									variant="outline"
-									onClick={() => navigate({ to: "/search" })}
+									onClick={() => { void navigate({ to: "/search" }); }}
 								>
 									<Group gap="xs">
 										<IconSearch size={14} />
@@ -401,20 +407,20 @@ export const ItemDetailPage: React.FC = () => {
 				<Stack gap="lg">
 					{/* Breadcrumbs */}
 					<Breadcrumbs>
-						<Anchor href="/" onClick={(e) => { e.preventDefault(); navigate({ to: "/" }); }}>
+						<Anchor href="/" onClick={(e) => { e.preventDefault(); void navigate({ to: "/" }); }}>
 							<Group gap="xs">
 								<IconHome size={14} />
 								<Text size="sm">Home</Text>
 							</Group>
 						</Anchor>
-						<Anchor href="/database" onClick={(e) => { e.preventDefault(); navigate({ to: "/database" }); }}>
+						<Anchor href="/database" onClick={(e) => { e.preventDefault(); void navigate({ to: "/database" }); }}>
 							<Group gap="xs">
 								<IconDatabase size={14} />
 								<Text size="sm">Database</Text>
 							</Group>
 						</Anchor>
 						{params.hobbyType && (
-							<Anchor href={`/database/${params.hobbyType}`} onClick={(e) => { e.preventDefault(); navigate({ to: "/database/$hobbyType", params: { hobbyType: params.hobbyType } }); }}>
+							<Anchor href={`/database/${params.hobbyType}`} onClick={(e) => { e.preventDefault(); void navigate({ to: "/database/$hobbyType", params: { hobbyType: params.hobbyType } }); }}>
 								<Text size="sm" tt="capitalize">{params.hobbyType}</Text>
 							</Anchor>
 						)}

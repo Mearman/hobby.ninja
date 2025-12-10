@@ -32,7 +32,14 @@ import {
 import React, { useState, useEffect, useCallback } from "react";
 
 import { logger } from "../../lib/logger";
-import { FilterOptions, FilterPreset } from "../../services/dataService";
+import { FilterOptions, FilterPreset } from "../../services/data-service";
+
+// Define local filter form interface
+interface LocalFilterPresetForm {
+  name: string;
+  description: string;
+  isPublic: boolean;
+}
 
 // Constants
 const MIN_RELEASE_YEAR = 1970;
@@ -57,11 +64,6 @@ interface AdvancedFiltersProps {
   className?: string;
 }
 
-interface FilterPresetForm {
-  name: string;
-  description: string;
-  isPublic: boolean;
-}
 
 export function AdvancedFilters({
 	opened,
@@ -74,7 +76,7 @@ export function AdvancedFilters({
 	const [localFilters, setLocalFilters] = useState<FilterOptions>(filters);
 	const [presets, setPresets] = useState<FilterPreset[]>([]);
 	const [loadingPresets, setLoadingPresets] = useState(false);
-	const [presetForm, setPresetForm] = useState<FilterPresetForm>({
+	const [presetForm, setPresetForm] = useState<LocalFilterPresetForm>({
 		name: "",
 		description: "",
 		isPublic: false,
@@ -175,7 +177,7 @@ export function AdvancedFilters({
 	};
 
 	// Handle filter changes
-	const handleFilterChange = useCallback((newFilters: Partial<FilterOptions>) => {
+	const handleFilterChange = useCallback((newFilters: Partial<FilterOptions>): void => {
 		setLocalFilters(prev => ({ ...prev, ...newFilters }));
 	}, []);
 
@@ -209,7 +211,7 @@ export function AdvancedFilters({
 
 		try {
 			// In a real app, save via dataService
-			setPresets(prev => [...prev, newPreset]);
+			setPresets((prev: FilterPreset[]): FilterPreset[] => [...prev, newPreset]);
 			setShowPresetForm(false);
 			setPresetForm({ name: "", description: "", isPublic: false });
 		} catch (error) {
@@ -226,7 +228,7 @@ export function AdvancedFilters({
 	const handleDeletePreset = (presetId: string) => {
 		try {
 			// In a real app, delete via dataService
-			setPresets(prev => prev.filter(p => p.id !== presetId));
+			setPresets((prev: FilterPreset[]): FilterPreset[] => prev.filter((p: FilterPreset) => p.id !== presetId));
 		} catch (error) {
 			logger.error("Failed to delete preset:", error);
 		}
@@ -295,7 +297,7 @@ export function AdvancedFilters({
 	};
 
 	// Get active filter count
-	const getActiveFilterCount = () => {
+	const getActiveFilterCount = (): number => {
 		let count = 0;
 		if (localFilters.grade?.length) count++;
 		if (localFilters.scale?.length) count++;
@@ -443,7 +445,7 @@ export function AdvancedFilters({
 							<Accordion.Control icon={<IconFilter size={16} />}>
                 Basic Filters
 								<Badge size="xs" ml="xs" variant="light">
-									{(localFilters.grade?.length ?? ZERO) + (localFilters.scale?.length ?? ZERO) + (localFilters.series?.length ?? ZERO)} active
+									{`${(localFilters.grade?.length ?? ZERO) + (localFilters.scale?.length ?? ZERO) + (localFilters.series?.length ?? ZERO)} active`}
 								</Badge>
 							</Accordion.Control>
 							<Accordion.Panel>
@@ -454,7 +456,7 @@ export function AdvancedFilters({
 											placeholder="Select grades..."
 											data={gradeOptions}
 											value={localFilters.grade ?? []}
-											onChange={(value) => { handleFilterChange({ grade: value }); }}
+											onChange={(value: string[]) => { handleFilterChange({ grade: value }); }}
 											searchable={true}
 											clearable={true}
 											disabled={loadingOptions}
@@ -466,7 +468,7 @@ export function AdvancedFilters({
 											placeholder="Select scales..."
 											data={scaleOptions}
 											value={localFilters.scale ?? []}
-											onChange={(value) => { handleFilterChange({ scale: value }); }}
+											onChange={(value: string[]) => { handleFilterChange({ scale: value }); }}
 											searchable={true}
 											clearable={true}
 											disabled={loadingOptions}
@@ -478,7 +480,7 @@ export function AdvancedFilters({
 											placeholder="Select series..."
 											data={seriesOptions}
 											value={localFilters.series ?? []}
-											onChange={(value) => { handleFilterChange({ series: value }); }}
+											onChange={(value: string[]) => { handleFilterChange({ series: value }); }}
 											searchable={true}
 											clearable={true}
 											maxDropdownHeight={200}
@@ -506,7 +508,7 @@ export function AdvancedFilters({
 											min={MIN_RELEASE_YEAR}
 											max={new Date().getFullYear() + FUTURE_YEAR_OFFSET}
 											value={localFilters.releaseDateRange?.start}
-											onChange={(value) => { handleFilterChange({
+											onChange={(value: string | number) => { handleFilterChange({
 												releaseDateRange: {
 													...localFilters.releaseDateRange,
 													start: typeof value === "number" ? value : value ? Number.parseInt(value, 10) || undefined : undefined,
@@ -521,7 +523,7 @@ export function AdvancedFilters({
 											min={MIN_RELEASE_YEAR}
 											max={new Date().getFullYear() + FUTURE_YEAR_OFFSET}
 											value={localFilters.releaseDateRange?.end}
-											onChange={(value) => { handleFilterChange({
+											onChange={(value: string | number) => { handleFilterChange({
 												releaseDateRange: {
 													...localFilters.releaseDateRange,
 													end: typeof value === "number" ? value : value ? Number.parseInt(value, 10) || undefined : undefined,
@@ -552,7 +554,7 @@ export function AdvancedFilters({
 											localFilters.priceRange?.min ?? ZERO,
 											localFilters.priceRange?.max ?? MAX_PRICE_YEN,
 										]}
-										onChange={([min, max]) => { handleFilterChange({
+										onChange={([min, max]: [number, number]) => { handleFilterChange({
 											priceRange: { min, max },
 										}); }}
 										marks={[
@@ -570,7 +572,7 @@ export function AdvancedFilters({
 											placeholder="0"
 											min={ZERO}
 											value={localFilters.priceRange?.min}
-											onChange={(value) => { handleFilterChange({
+											onChange={(value: string | number) => { handleFilterChange({
 												priceRange: {
 													...localFilters.priceRange,
 													min: typeof value === "number" ? value : value ? Number.parseInt(value, 10) || undefined : undefined,
@@ -582,7 +584,7 @@ export function AdvancedFilters({
 											placeholder={MAX_PRICE_YEN.toString()}
 											min={ZERO}
 											value={localFilters.priceRange?.max}
-											onChange={(value) => { handleFilterChange({
+											onChange={(value: string | number) => { handleFilterChange({
 												priceRange: {
 													...localFilters.priceRange,
 													max: typeof value === "number" ? value : value ? Number.parseInt(value, 10) || undefined : undefined,
@@ -612,7 +614,7 @@ export function AdvancedFilters({
 										{ value: "preorder", label: "Pre-order" },
 									]}
 									value={localFilters.availability ?? []}
-									onChange={(value) => { handleFilterChange({ availability: value as Array<"available" | "discontinued" | "preorder"> }); }}
+									onChange={(value: string[]) => { handleFilterChange({ availability: value as Array<"available" | "discontinued" | "preorder"> }); }}
 									placeholder="Select availability status..."
 									clearable={true}
 								/>
@@ -638,7 +640,7 @@ export function AdvancedFilters({
 											{ value: "relevance", label: "Relevance" },
 										]}
 										value={localFilters.sort?.field}
-										onChange={(value) => { handleFilterChange({
+										onChange={(value: string | null) => { handleFilterChange({
 											sort: {
 												...localFilters.sort,
 												field: value as "name" | "releaseDate" | "price" | "relevance",
@@ -653,7 +655,7 @@ export function AdvancedFilters({
 											{ value: "desc", label: "Descending" },
 										]}
 										value={localFilters.sort?.direction}
-										onChange={(value) => { handleFilterChange({
+										onChange={(value: string | null) => { handleFilterChange({
 											sort: {
 												...localFilters.sort,
 												field: localFilters.sort?.field ?? DEFAULT_SORT_FIELD,

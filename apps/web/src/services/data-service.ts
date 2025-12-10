@@ -12,9 +12,6 @@
  */
 
 import {
-	validateUnifiedItem,
-	validateManualItem,
-	validateCatalogItem,
 	UnifiedItemNodeType,
 	ManualItemNodeType,
 	CatalogItemNodeType,
@@ -243,17 +240,6 @@ interface ItemProperties {
 
 // Constants
 const CACHE_TTL_MINUTES = 5;
-const CACHE_TTL_MS = CACHE_TTL_MINUTES * 60 * 1000;
-const SAMPLE_SIZE_DEFAULT = 100;
-const SAMPLE_SIZE_SEARCH = 50;
-const ITEM_ID_START_OFFSET = 1000;
-const MANUAL_ID_START = 1;
-const MIN_SEARCH_SCORE = 0.1;
-const MAX_RELEVANCE_SCORE = 2;
-const MIN_QUERY_LENGTH = 2;
-const MAX_SUGGESTIONS = 5;
-const DEFAULT_EARLIEST_YEAR = 2000;
-const DEFAULT_LATEST_YEAR = 2025;
 
 // Configuration
 const DEFAULT_CONFIG = {
@@ -270,7 +256,7 @@ const DEFAULT_CONFIG = {
 	/** Data files base path */
 	DATA_PATH: "/api/graph/",
 	/** Cache TTL in milliseconds */
-	CACHE_TTL: 5 * 60 * 1000,
+	CACHE_TTL: CACHE_TTL_MINUTES * 60 * 1000,
 	/** Sample sizes for different operations */
 	SAMPLE_SIZE: {
 		DEFAULT: 100,

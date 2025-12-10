@@ -1,33 +1,47 @@
+import { useState } from "react";
+
+import { Link, useNavigate } from "@tanstack/react-router";
 import {
-	Group,
-	Container,
+	ActionIcon,
+	Box,
 	Burger,
+	Button,
+	Container,
+	Group,
+	Menu,
+	Stack,
 	Text,
 	TextInput,
-	ActionIcon,
 	Tooltip,
-	Menu,
-	Button,
-	Stack,
-	Box,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import {
-	IconSearch,
-	IconDatabase,
-	IconHome,
-	IconInfoCircle,
-	IconChevronDown,
 	IconAdjustmentsHorizontal,
 	IconClipboardList,
-	IconSun,
-	IconMoon,
+	IconDatabase,
 	IconDeviceDesktop,
+	IconHome,
+	IconInfoCircle,
+	IconMoon,
+	IconSearch,
+	IconSun,
+	IconChevronDown,
 } from "@tabler/icons-react";
-import { Link, useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
 
 import { useThemeContext } from "../../providers/mantine-provider";
+
+// Constants
+const MOBILE_BREAKPOINT = 768;
+const DESKTOP_BREAKPOINT = MOBILE_BREAKPOINT + 1;
+const HEADER_HEIGHT = 64;
+const SEARCH_WIDTH = 300;
+const ACTION_ICON_SIZE = 36;
+const THEME_ICON_SIZE = 18;
+const SMALL_ICON_SIZE = 16;
+const EXTRA_SMALL_ICON_SIZE = 14;
+const TINY_ICON_SIZE = 12;
+const DROPDOWN_WIDTH = 200;
+const HEADER_Z_INDEX = 1000;
 
 interface HeaderProps {
 	/**
@@ -43,34 +57,30 @@ interface HeaderProps {
 /**
  * Header component with navigation and search functionality
  */
-export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
+export function Header({ opened, toggle }: HeaderProps): JSX.Element {
 	const navigate = useNavigate();
 	const [searchQuery, setSearchQuery] = useState("");
-	const isMobile = useMediaQuery("(max-width: 768px)");
-	const isDesktop = useMediaQuery("(min-width: 769px)");
+	const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
+	const isDesktop = useMediaQuery(`(min-width: ${DESKTOP_BREAKPOINT}px)`);
 	const { colorScheme, cycleTheme } = useThemeContext();
 
 	// Get the appropriate icon based on current theme
-	const getThemeIcon = () => {
+	const getThemeIcon = (): JSX.Element => {
 		switch (colorScheme) {
-			case "system": {
-				return <IconDeviceDesktop size={18} />;
-			}
-			case "dark": {
-				return <IconSun size={18} />;
-			}
-			case "light": {
-				return <IconMoon size={18} />;
-			}
-			default: {
-				return <IconDeviceDesktop size={18} />;
-			}
+			case "system":
+				return <IconDeviceDesktop size={THEME_ICON_SIZE} />;
+			case "dark":
+				return <IconSun size={THEME_ICON_SIZE} />;
+			case "light":
+				return <IconMoon size={THEME_ICON_SIZE} />;
+			default:
+				return <IconDeviceDesktop size={THEME_ICON_SIZE} />;
 		}
 	};
 
 	
 	// Handle search submission
-	const handleSearch = (query: string) => {
+	const handleSearch = (query: string): void => {
 		if (query.trim()) {
 			void navigate({
 				to: "/search",
@@ -95,10 +105,10 @@ export function Header({ opened, toggle }: HeaderProps): React.ReactElement {
 				borderBottom: "1px solid var(--mantine-color-default-border)",
 				position: "sticky",
 				top: 0,
-				zIndex: 1000,
+				zIndex: HEADER_Z_INDEX,
 			}}
 		>
-			<Container size="lg" h={64} px="md">
+			<Container size="lg" h={HEADER_HEIGHT} px="md">
 				<Group h="100%" justify="space-between">
 					{/* Logo and main navigation */}
 					<Group>

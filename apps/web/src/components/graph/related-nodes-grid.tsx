@@ -27,17 +27,7 @@ const THREE = 3;
 const FOUR = 4;
 const FIVE = 5;
 const SIX = 6;
-const SEVEN = 7;
-const EIGHT = 8;
-const NINE = 9;
-const TEN = 10;
-const HUNDRED = 100;
-const THOUSAND = 1000;
-const JSON_INDENTATION = 2;
-const PERCENTAGE_MULTIPLIER = 100;
 const ARRAY_FIRST_INDEX = 0;
-const ARRAY_SECOND_INDEX = 1;
-const ARRAY_THIRD_INDEX = 2;
 
 interface RelatedNodesGridProps {
 	nodes: GraphNode[];
@@ -97,7 +87,7 @@ function NodeCard({ node, currentNodeType }: { node: GraphNode; currentNodeType?
 			padding="sm"
 			radius="md"
 			withBorder={true}
-			h="HUNDRED%"
+			h="100%"
 			style={{ cursor: "pointer" }}
 			component={Link}
 			to={`/${node.type}/${node.id}`}
