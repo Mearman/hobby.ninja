@@ -57,7 +57,7 @@ const DEFAULT_FILTERS: ShareableFilters = {
 	series: [],
 	status: [],
 	availability: [],
-	sort: { field: "name", direction: "asc" },
+	sort: { field: "releaseDate", direction: "desc" },
 	page: 1,
 	view: "grid",
 };
