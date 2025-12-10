@@ -20,13 +20,9 @@ interface PageProps {
 
 // Generate static params for collection pages
 export function generateStaticParams() {
-	// For static export, return basic collection IDs
-	// In a real application, these would come from your data source
-	return [
-		{ id: "1" },
-		{ id: "2" },
-		{ id: "3" },
-	];
+	// Collections are user-generated and stored in IndexedDB
+	// They are handled entirely client-side, so no static generation needed
+	return [];
 }
 
 // Main collection detail page (Server Component)

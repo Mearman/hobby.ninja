@@ -79,7 +79,7 @@ export function FuseSearch({
 
 	// Save recent searches to localStorage
 	const saveRecentSearch = useCallback((searchQuery: string) => {
-		const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
+		const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 20);
 		setRecentSearches(updated);
 		localStorage.setItem("recent-searches", JSON.stringify(updated));
 	}, [recentSearches]);
@@ -98,7 +98,7 @@ export function FuseSearch({
 			try {
 				const options: SearchOptions = { limit: maxResults * 2 };
 				const searchResults = search(debouncedQuery, options);
-				const searchSuggestions = getSuggestions(debouncedQuery, 5);
+				const searchSuggestions = getSuggestions(debouncedQuery, 20);
 
 				setResults(searchResults);
 				setSuggestions(searchSuggestions);
