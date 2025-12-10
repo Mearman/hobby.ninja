@@ -37,7 +37,7 @@ interface SeriesWithCount extends BaseNode {
 const ITEMS_PER_PAGE = 24;
 
 // Series card component
-function SeriesCard({ series }: { series: SeriesWithCount }): JSX.Element {
+function SeriesCard({ series }: { series: SeriesWithCount }) {
 	return (
 		<Card
 			component={Link}

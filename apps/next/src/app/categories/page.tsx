@@ -52,7 +52,7 @@ interface CategoryWithCount extends Category {
 const ITEMS_PER_PAGE = 24;
 
 // Category card component
-function CategoryCard({ category }: { category: CategoryWithCount }): JSX.Element {
+function CategoryCard({ category }: { category: CategoryWithCount }) {
 	return (
 		<Card
 			component={Link}
