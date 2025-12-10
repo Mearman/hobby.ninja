@@ -76,6 +76,7 @@ export interface XLSXLibrary {
   read(data: ArrayBuffer | string, options?: { type?: string }): WorkBook;
 }
 
+// @ts-ignore - xlsx is an optional dependency
 declare module "xlsx" {
   const xlsx: XLSXLibrary;
   export default xlsx;
