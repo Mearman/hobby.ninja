@@ -59,7 +59,7 @@ interface BrandWithCount extends Brand {
 const ITEMS_PER_PAGE = 24;
 
 // Brand card component
-function BrandCard({ brand }: { brand: BrandWithCount }): JSX.Element {
+function BrandCard({ brand }: { brand: BrandWithCount }) {
 	return (
 		<Card
 			component={Link}
