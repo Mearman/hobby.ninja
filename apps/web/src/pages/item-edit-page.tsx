@@ -1,33 +1,12 @@
+import { UniversalItem, ItemStatus } from "../types/hobby";
 import { Container, Title, Text, Card, Button, Group, Stack, TextInput, Select, Textarea, NumberInput, SimpleGrid, Alert, Skeleton } from "@mantine/core";
-import { IconDeviceFloppy, IconArrowLeft, IconPhoto, IconPlus, IconX } from "@tabler/icons-react";
-import { Link, useParams, useNavigate } from "@tanstack/react-router";
+import { IconDeviceFloppy, IconArrowLeft, IconPhoto, IconX } from "@tabler/icons-react";
+import { useParams, useNavigate } from "@tanstack/react-router";
 import React, { useState, useEffect } from "react";
 
 import { collectionService } from "../services/collectionService";
-import { UniversalItem, ItemStatus } from "../types/hobby";
 
 
-// Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
-
-interface ItemEditPageProps {}
 
 const statusOptions = [
 	{ value: "wanted", label: "Wanted" },
@@ -42,13 +21,13 @@ const statusOptions = [
 ];
 
 const scaleOptions = [
-	{ value: "ONE/144", label: "ONE/144" },
-	{ value: "ONE/HUNDRED", label: "ONE/HUNDRED" },
-	{ value: "ONE/72", label: "ONE/72" },
-	{ value: "ONE/60", label: "ONE/60" },
-	{ value: "ONE/48", label: "ONE/48" },
-	{ value: "ONE/35", label: "ONE/35" },
-	{ value: "ONE/24", label: "ONE/24" },
+	{ value: "1/144", label: "1/144" },
+	{ value: "1/100", label: "1/100" },
+	{ value: "1/72", label: "1/72" },
+	{ value: "1/60", label: "1/60" },
+	{ value: "1/48", label: "1/48" },
+	{ value: "1/35", label: "1/35" },
+	{ value: "1/24", label: "1/24" },
 	{ value: "Other", label: "Other" },
 ];
 
@@ -65,7 +44,7 @@ const gradeOptions = [
 /**
  * Item creation/editing page with dynamic form fields based on hobby type
  */
-export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
+export function ItemEditPage(): React.ReactElement {
 	const { hobbyType, itemId } = useParams({ from: "/collection/$hobbyType/item/$itemId" });
 	const navigate = useNavigate();
 
@@ -89,13 +68,13 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 	});
 
 	const hobbyTypeConfig = {
-		model_kits: { name: "Model Kits", icon: "🤖", color: "blue" },
-		trading_cards: { name: "Trading Cards", icon: "🃏", color: "purple" },
-		miniatures: { name: "Miniatures", icon: "🎭", color: "red" },
-		other: { name: "Other", icon: "📦", color: "gray" },
+		model_kits: { name: "Model Kits", description: "Robot", color: "blue" },
+		trading_cards: { name: "Trading Cards", description: "Card", color: "purple" },
+		miniatures: { name: "Miniatures", description: "Game", color: "red" },
+		other: { name: "Other", description: "Box", color: "gray" },
 	};
 
-	const config = hobbyTypeConfig[hobbyType as keyof typeof hobbyTypeConfig] || { name: "Unknown", icon: "❓", color: "gray" };
+	const config = hobbyTypeConfig[hobbyType as keyof typeof hobbyTypeConfig];
 
 	const isEditing = itemId !== "new";
 
@@ -113,17 +92,18 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 
 					// Populate form with existing data
 					setFormData({
-						name: itemData.data["name"] || "",
-						brand: itemData.data["brand"] || "",
-						series: itemData.data["series"] || "",
-						grade: itemData.data["grade"] || "",
-						scale: itemData.data["scale"] || "",
-						price: itemData.data["price"]?.toString() || "",
+						name: itemData.data.name ?? "",
+						brand: itemData.data.brand ?? "",
+						series: itemData.data.series ?? "",
+						grade: itemData.data.grade ?? "",
+						scale: itemData.data.scale ?? "",
+						price: itemData.data.price?.toString() ?? "",
 						status: itemData.status,
-						notes: itemData.notes || "",
-						tags: itemData.tags || [],
+						notes: itemData.notes ?? "",
+						tags: itemData.tags ?? [],
 					});
 				} catch (error_) {
+					// eslint-disable-next-line no-console
 					console.error("Failed to load item:", error_);
 					setError("Failed to load item. Please try again.");
 				} finally {
@@ -132,10 +112,10 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 			}
 		};
 
-		loadItem();
+		void loadItem();
 	}, [itemId, isEditing]);
 
-	const handleInputChange = (field: string, value: string | number | boolean | string[] | undefined) => {
+	const handleInputChange = (field: keyof typeof formData, value: string | number | boolean | string[]) => {
 		setFormData(prev => ({
 			...prev,
 			[field]: value,
@@ -180,31 +160,36 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 
 			const metadata = {
 				source: "manual" as const,
-				confidence: ONE,
+				confidence: 1,
 			};
 
-			await (isEditing ? collectionService.updateItem(itemId, {
-				data: itemData,
-				status: formData.status,
-				tags: formData.tags,
-				notes: formData.notes.trim(),
-				metadata,
-			}) : collectionService.createItem({
-				hobbyType,
-				data: itemData,
-				images: [],
-				status: formData.status,
-				tags: formData.tags,
-				notes: formData.notes.trim(),
-				metadata,
-			}));
+			if (isEditing) {
+				await collectionService.updateItem(itemId, {
+					data: itemData,
+					status: formData.status,
+					tags: formData.tags,
+					notes: formData.notes.trim(),
+					metadata,
+				});
+			} else {
+				await collectionService.createItem({
+					hobbyType,
+					data: itemData,
+					images: [],
+					status: formData.status,
+					tags: formData.tags,
+					notes: formData.notes.trim(),
+					metadata,
+				});
+			}
 
 			// Navigate back to the collection (would need collectionId for proper navigation)
-			navigate({
+			void navigate({
 				to: "/collection/$hobbyType",
 				params: { hobbyType },
 			});
 		} catch (error_) {
+			// eslint-disable-next-line no-console
 			console.error("Failed to save item:", error_);
 			setError("Failed to save item. Please try again.");
 		} finally {
@@ -219,7 +204,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 					<Skeleton height={48} width={300} />
 					<Card p="xl" radius="lg" withBorder={true}>
 						<Stack gap="md">
-							{[ONE, TWO, THREE, FOUR, FIVE, SIX].map((i) => (
+							{Array.from({ length: 6 }).map((_, i) => (
 								<Skeleton key={i} height={40} radius="md" />
 							))}
 						</Stack>
@@ -232,7 +217,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 	if (error && !item) {
 		return (
 			<Container size="lg" py="xl">
-				<Alert color="red" title="Error">
+				<Alert c="red" title="Error">
 					{error}
 				</Alert>
 			</Container>
@@ -255,11 +240,11 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 								Back
 							</Button>
 						</Group>
-						<Title order={ONE} size={36}>
+						<Title order={1} size={36}>
 							{isEditing ? "Edit Item" : "Add New Item"}
 						</Title>
-						<Text size="lg" color="dimmed">
-							{config.icon} {config.name}
+						<Text size="lg" c="dimmed">
+							{config ? `${config.description} ${config.name}` : "Unknown"}
 						</Text>
 					</Stack>
 
@@ -267,7 +252,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 						onClick={handleSave}
 						loading={saving}
 						leftSection={<IconDeviceFloppy size={16} />}
-						color={config.color}
+						c={config?.color ?? "gray"}
 					>
 						{isEditing ? "Save Changes" : "Add Item"}
 					</Button>
@@ -278,15 +263,15 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 				<Card p="xl" radius="lg" withBorder={true}>
 					<Stack gap="lg">
 						{error && (
-							<Alert color="red" title="Error">
+							<Alert c="red" title="Error">
 								{error}
 							</Alert>
 						)}
 
 						{/* Basic Information */}
 						<Stack gap="md">
-							<Title order={THREE}>Basic Information</Title>
-							<SimpleGrid cols={{ base: ONE, sm: TWO }} spacing="md">
+							<Title order={3}>Basic Information</Title>
+							<SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
 								<TextInput
 									label="Item Name"
 									placeholder="Enter item name"
@@ -306,8 +291,8 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 						{/* Hobby-Specific Fields */}
 						{(hobbyType === "model_kits" || hobbyType === "other") && (
 							<Stack gap="md">
-								<Title order={THREE}>Model Details</Title>
-								<SimpleGrid cols={{ base: ONE, sm: TWO, lg: FOUR }} spacing="md">
+								<Title order={3}>Model Details</Title>
+								<SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="md">
 									<Select
 										label="Grade/Class"
 										data={gradeOptions}
@@ -334,7 +319,7 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 										value={formData.price}
 										onChange={(value) => { handleInputChange("price", value); }}
 										prefix="$"
-										decimalScale={TWO}
+										decimalScale={2}
 									/>
 								</SimpleGrid>
 							</Stack>
@@ -342,8 +327,8 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 
 						{/* Status and Notes */}
 						<Stack gap="md">
-							<Title order={THREE}>Status & Notes</Title>
-							<SimpleGrid cols={{ base: ONE, sm: TWO }} spacing="md">
+							<Title order={3}>Status & Notes</Title>
+							<SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
 								<Select
 									label="Status"
 									data={statusOptions}
@@ -356,19 +341,19 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 								placeholder="Add any additional notes about this item"
 								value={formData.notes}
 								onChange={(e) => { handleInputChange("notes", e.target.value); }}
-								rows={FOUR}
+								rows={4}
 							/>
 						</Stack>
 
 						{/* Tags */}
 						<Stack gap="md">
-							<Title order={THREE}>Tags</Title>
+							<Title order={3}>Tags</Title>
 							<Group>
 								<TextInput
 									placeholder="Add a tag"
 									value={tagInput}
 									onChange={(e) => { setTagInput(e.target.value); }}
-									onKeyPress={(e) => {
+									onKeyDown={(e) => {
 										if (e.key === "Enter") {
 											e.preventDefault();
 											handleAddTag();
@@ -386,14 +371,14 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 								/>
 							</Group>
 
-							{formData.tags.length > ZERO && (
+							{formData.tags.length > 0 && (
 								<Group gap="xs" wrap="wrap">
 									{formData.tags.map((tag) => (
 										<Button
 											key={tag}
 											variant="outline"
 											size="xs"
-											rightSection={<IconX size={TEN} />}
+											rightSection={<IconX size={10} />}
 											onClick={() => { handleRemoveTag(tag); }}
 										>
 											{tag}
@@ -405,11 +390,11 @@ export function ItemEditPage({}: ItemEditPageProps): React.ReactElement {
 
 						{/* Images placeholder */}
 						<Stack gap="md">
-							<Title order={THREE}>Images</Title>
+							<Title order={3}>Images</Title>
 							<Card p="lg" radius="md" withBorder={true} style={{ borderStyle: "dashed" }}>
 								<Stack align="center" gap="md" mih={120}>
 									<IconPhoto size={48} color="#ccc" />
-									<Text color="dimmed">Image upload coming soon</Text>
+									<Text c="dimmed">Image upload coming soon</Text>
 								</Stack>
 							</Card>
 						</Stack>
