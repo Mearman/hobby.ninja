@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
 import { readFileSync } from "node:fs";
-import path from "node:path";
+import path, { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { resolve } from "node:path";
 
 import { TRANSLATION_STORE_DIR } from "@hobby-ninja/translation";
 import { Command } from "commander";
@@ -15,10 +14,29 @@ import { CLI_COMMANDS, MESSAGES, FILES, NETWORK } from "../constants/index.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Constants for repeated strings
+const COMMAND_NOT_IMPLEMENTED = "🚧 %s command is not yet implemented";
+const VERBOSE_OPTION = "-v, --verbose";
+const DRY_RUN_OPTION = "--dry-run";
+const SOURCE_OPTION = "--source <source>";
+const OUTPUT_DIR_OPTION = "--output <dir>";
+const INPUT_DIR_OPTION = "-i, --input <dir>";
+const ALL_SOURCES = "all";
+const PREVIEW_CHANGES = "Preview changes without writing";
+
+// Error handling constants
+const ERROR_PREFIX = "❌ Error in %s command: ";
+const ERROR_OCCURRED_PREFIX = "❌ " + MESSAGES.ERROR_OCCURRED + " in %s command: ";
+const GENERIC_ERROR_PREFIX = "❌ %s failed: ";
+const VERBOSE_STRING = "verbose";
+const AUTHENTICATION_STRING = "Authentication: ";
+const API_KEYS_PROVIDED_STRING = "API keys provided";
+const NO_AUTHENTICATION_STRING = "No authentication";
+
 // Load .env from repo root (packages/cli/src/bin -> repo root is 4 levels up)
 config({ path: path.resolve(__dirname, "../../../../.env") });
 
-const packageJson: { version: string } = JSON.parse(readFileSync(path.join(__dirname, "../../package.json"), "utf8"));
+const packageJson = JSON.parse(readFileSync(path.join(__dirname, "../../package.json"), "utf8")) as { version: string };
 const version = packageJson.version;
 
 const program = new Command();
@@ -36,19 +54,21 @@ program
 	.option("-o, --output <dir>", "Output directory", FILES.OUTPUT_DIR)
 	.option("-c, --cache", "Enable caching", true)
 	.option("-r, --resume", "Resume from previous run", false)
-	.option("-v, --verbose", MESSAGES.VERBOSE_OUTPUT, false)
+	.option(VERBOSE_OPTION, MESSAGES.VERBOSE_OUTPUT, false)
 	.option("-t, --translate", "Translate Japanese text to English", false)
 	.option("-d, --delay <ms>", "Delay between requests in ms", String(NETWORK.DEFAULT_DELAY))
 	.option("--start-id <id>", "Starting ID for catalog discovery", "00_0000")
 	.option("--count <number>", "Number of IDs to process", "10")
-	.action(async (options) => {
+	.action(async (options: unknown) => {
 		try {
 			const { scrapeData } = await import("../cli/scrape-command.js");
-			await scrapeData(options);
-		} catch (error) {
+			type ScrapeOptions = import("../cli/scrape-command.js").ScrapeOptions;
+			const scrapeOptions = options as ScrapeOptions;
+			await scrapeData(scrapeOptions);
+		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
-			console.error(`❌ ${MESSAGES.ERROR_OCCURRED} in scrape command:`, errorMessage);
-			if (options.verbose) {
+			console.error(ERROR_OCCURRED_PREFIX.replace("%s", "scrape"), errorMessage);
+			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
 				const errorStack = error instanceof Error ? error.stack : String(error);
 				console.error(errorStack);
 			}
@@ -60,19 +80,19 @@ program
 program
 	.command("translate")
 	.description("Translate existing scraped data from Japanese to English")
-	.option("-s, --source <source>", "Data source (all, bandai-catalog, bandai-manuals)", "all")
-	.option("-i, --input <dir>", "Override input directory for the specified source")
+	.option(SOURCE_OPTION, "Data source (all, bandai-catalog, bandai-manuals)", ALL_SOURCES)
+	.option(INPUT_DIR_OPTION, "Override input directory for the specified source")
 	.option("-c, --cache-dir <dir>", "Directory for translation cache", TRANSLATION_STORE_DIR)
-	.option("--dry-run", "Preview changes without writing", false)
-	.option("-v, --verbose", "Verbose output", false)
-	.action(async (options) => {
+	.option(DRY_RUN_OPTION, PREVIEW_CHANGES, false)
+	.option(VERBOSE_OPTION, "Verbose output", false)
+	.action(async (options: unknown) => {
 		try {
 			const { translateCatalogData } = await import("../cli/translate-command.js");
 			await translateCatalogData(options);
-		} catch (error) {
+		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
-			console.error("❌ Error in translate command:", errorMessage);
-			if (options.verbose) {
+			console.error(ERROR_PREFIX.replace("%s", "translate"), errorMessage);
+			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
 				const errorStack = error instanceof Error ? error.stack : String(error);
 				console.error(errorStack);
 			}
@@ -84,19 +104,19 @@ program
 program
 	.command("normalize")
 	.description("Normalize text spacing in existing data files (Gundam/ガンダム padding)")
-	.option("-s, --source <source>", "Data source (all, bandai-catalog, bandai-manuals)", "all")
-	.option("-i, --input <dir>", "Override input directory for the specified source")
-	.option("--dry-run", "Preview changes without writing", false)
-	.option("-v, --verbose", "Verbose output", false)
-	.action(async (options) => {
+	.option(SOURCE_OPTION, "Data source (all, bandai-catalog, bandai-manuals)", ALL_SOURCES)
+	.option(INPUT_DIR_OPTION, "Override input directory for the specified source")
+	.option(DRY_RUN_OPTION, PREVIEW_CHANGES, false)
+	.option(VERBOSE_OPTION, "Verbose output", false)
+	.action(async (options: unknown) => {
 		try {
 			const { normalizeData } = await import("../cli/normalize-command.js");
 			await normalizeData(options);
 			process.exit(0);
-		} catch (error) {
+		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
-			console.error("Error in normalize command:", errorMessage);
-			if (options.verbose) {
+			console.error(ERROR_PREFIX.replace("%s", "normalize").replace("❌ ", ""), errorMessage);
+			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
 				const errorStack = error instanceof Error ? error.stack : String(error);
 				console.error(errorStack);
 			}
@@ -108,7 +128,7 @@ program
 	.command("export")
 	.description("Export cached data in various formats (PLACEHOLDER - Not yet implemented)")
 	.action(() => {
-		console.log("🚧 Export command is not yet implemented");
+		console.log(COMMAND_NOT_IMPLEMENTED.replace("%s", "Export"));
 		console.log("This will eventually export data in formats:");
 		console.log("  - JSON (for web application)");
 		console.log("  - CSV (for spreadsheets)");
@@ -119,7 +139,7 @@ program
 	.command("cache")
 	.description("Manage cache (PLACEHOLDER - Not yet implemented)")
 	.action(() => {
-		console.log("🚧 Cache management is not yet implemented");
+		console.log(COMMAND_NOT_IMPLEMENTED.replace("%s", "Cache management"));
 		console.log("This will eventually provide:");
 		console.log("  - Clear cache functionality");
 		console.log("  - Cache statistics");
@@ -130,7 +150,7 @@ program
 	.command("status")
 	.description("Show scraping status and statistics (PLACEHOLDER - Not yet implemented)")
 	.action(() => {
-		console.log("🚧 Status command is not yet implemented");
+		console.log(COMMAND_NOT_IMPLEMENTED.replace("%s", "Status"));
 		console.log("This will eventually show:");
 		console.log("  - Scraping progress");
 		console.log("  - Data statistics");
@@ -141,34 +161,43 @@ program
 program
 	.command("download")
 	.description("Download images and PDFs from scraped data")
-	.option("--source <source>", "Data source (all, manuals, catalog)", "all")
+	.option(SOURCE_OPTION, "Data source (all, manuals, catalog)", ALL_SOURCES)
 	.option("--manuals-dir <dir>", "Manual data directory", "./data/bandai/manuals")
 	.option("--catalog-dir <dir>", "Catalog data directory", "./data/bandai/items")
 	.option("--concurrency <n>", "Number of concurrent downloads", "5")
 	.option("--delay <ms>", "Delay between batches in milliseconds", "0")
-	.option("--dry-run", "Show what would be downloaded without downloading", false)
-	.option("-v, --verbose", "Verbose output", false)
-	.action(async (options) => {
+	.option(DRY_RUN_OPTION, "Show what would be downloaded without downloading", false)
+	.option(VERBOSE_OPTION, "Verbose output", false)
+	.action(async (options: unknown) => {
 		try {
 			const { downloadAssets } = await import("../cli/download-command.js");
+			const typedOptions = options as {
+				source: string;
+				manualsDir: string;
+				catalogDir: string;
+				concurrency: string;
+				delay: string;
+				dryRun: boolean;
+				verbose: boolean;
+			};
 
 			console.log("Downloading assets from scraped data...");
-			console.log(`Source: ${options.source}`);
-			console.log(`Manuals directory: ${options.manualsDir}`);
-			console.log(`Catalog directory: ${options.catalogDir}`);
-			console.log(`Concurrency: ${options.concurrency}`);
-			console.log(`Delay: ${options.delay}ms`);
-			console.log(`Dry run: ${options.dryRun}`);
+			console.log(`Source: ${typedOptions.source}`);
+			console.log(`Manuals directory: ${typedOptions.manualsDir}`);
+			console.log(`Catalog directory: ${typedOptions.catalogDir}`);
+			console.log(`Concurrency: ${typedOptions.concurrency}`);
+			console.log(`Delay: ${typedOptions.delay}ms`);
+			console.log(`Dry run: ${String(typedOptions.dryRun)}`);
 			console.log("");
 
 			const result = await downloadAssets({
-				source: options.source,
-				manualsDir: options.manualsDir,
-				catalogDir: options.catalogDir,
-				concurrency: Number.parseInt(options.concurrency, 10),
-				delayMs: Number.parseInt(options.delay, 10),
-				dryRun: options.dryRun,
-				verbose: options.verbose,
+				source: typedOptions.source,
+				manualsDir: typedOptions.manualsDir,
+				catalogDir: typedOptions.catalogDir,
+				concurrency: Number.parseInt(typedOptions.concurrency, 10),
+				delayMs: Number.parseInt(typedOptions.delay, 10),
+				dryRun: typedOptions.dryRun,
+				verbose: typedOptions.verbose,
 			});
 
 			console.log("\nDownload Results:");
@@ -187,10 +216,10 @@ program
 			}
 
 			process.exit(result.failed === 0 ? 0 : 1);
-		} catch (error) {
+		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
-			console.error("Download failed:", errorMessage);
-			if (options.verbose) {
+			console.error(GENERIC_ERROR_PREFIX.replace("%s", "Download"), errorMessage);
+			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
 				const errorStack = error instanceof Error ? error.stack : String(error);
 				console.error(errorStack);
 			}
@@ -202,58 +231,74 @@ program
 program
 	.command("wayback")
 	.description("Submit URLs to Internet Archive Wayback Machine")
-	.option("--source <source>", "Data source (all, manuals, catalog)", "all")
+	.option(SOURCE_OPTION, "Data source (all, manuals, catalog)", ALL_SOURCES)
 	.option("--manuals-dir <dir>", "Manual data directory", "./data/bandai/manuals")
 	.option("--catalog-dir <dir>", "Catalog data directory", "./data/bandai/items")
-	.option("--dry-run", "Show URLs without submitting", false)
+	.option(DRY_RUN_OPTION, "Show URLs without submitting", false)
 	.option("--resume", "Resume from checkpoint", true)
-	.option("-v, --verbose", "Verbose logging", false)
+	.option(VERBOSE_OPTION, "Verbose logging", false)
 	.option("--retries <n>", "Retry attempts (-1 for unlimited)", "-1")
 	.option("--delay <seconds>", "Delay between requests", "0")
 	.option("--rate-limit-delay <seconds>", "Base delay after rate limit error", "30")
 	.option("--access-key <key>", "Internet Archive S3 access key")
 	.option("--secret-key <key>", "Internet Archive S3 secret key")
-	.option("--output <dir>", "Results directory", "./wayback-results")
+	.option(OUTPUT_DIR_OPTION, "Results directory", "./wayback-results")
 	.option("--min-archive-age <duration>", "Skip archives newer than this (e.g., 30d, 6m)", "30d")
 	.option("--max-archive-age <duration>", "Force re-archive if older than this (e.g., 1y, 18m)", "1y")
-	.action(async (options) => {
+	.action(async (options: unknown) => {
 		try {
 			const { WaybackCommand } = await import("../cli/wayback.js");
 			const waybackCommand = new WaybackCommand();
+			const typedOptions = options as {
+				source: string;
+				manualsDir: string;
+				catalogDir: string;
+				delay: string;
+				rateLimitDelay: string;
+				retries: string;
+				accessKey?: string;
+				secretKey?: string;
+				output: string;
+				minArchiveAge: string;
+				maxArchiveAge: string;
+				resume: boolean;
+				dryRun: boolean;
+				verbose: boolean;
+			};
 
 			// Parse API keys from options or environment
-			const accessKey = options.accessKey || process.env["IA_ACCESS_KEY"];
-			const secretKey = options.secretKey || process.env["IA_SECRET_KEY"];
+			const accessKey = typedOptions.accessKey ?? process.env["IA_ACCESS_KEY"];
+			const secretKey = typedOptions.secretKey ?? process.env["IA_SECRET_KEY"];
 
 			console.log("Submitting URLs to Internet Archive Wayback Machine...");
-			console.log(`Source: ${options.source}`);
-			console.log(`Manuals directory: ${options.manualsDir}`);
-			console.log(`Catalog directory: ${options.catalogDir}`);
-			console.log(`Delay between requests: ${options.delay}s`);
-			console.log(`Rate limit retry delay: ${options.rateLimitDelay}s (exponential backoff)`);
-			console.log(`Max retries: ${options.retries}`);
-			console.log(`Authentication: ${accessKey ? "API keys provided" : "No authentication"}`);
-			console.log(`Archive age thresholds: min=${options.minArchiveAge}, max=${options.maxArchiveAge}`);
-			console.log(`Resume: ${options.resume}`);
-			console.log(`Dry run: ${options.dryRun}`);
+			console.log(`Source: ${typedOptions.source}`);
+			console.log(`Manuals directory: ${typedOptions.manualsDir}`);
+			console.log(`Catalog directory: ${typedOptions.catalogDir}`);
+			console.log(`Delay between requests: ${typedOptions.delay}s`);
+			console.log(`Rate limit retry delay: ${typedOptions.rateLimitDelay}s (exponential backoff)`);
+			console.log(`Max retries: ${typedOptions.retries}`);
+			console.log(AUTHENTICATION_STRING + (accessKey ? API_KEYS_PROVIDED_STRING : NO_AUTHENTICATION_STRING));
+			console.log(`Archive age thresholds: min=${typedOptions.minArchiveAge}, max=${typedOptions.maxArchiveAge}`);
+			console.log(`Resume: ${String(typedOptions.resume)}`);
+			console.log(`Dry run: ${String(typedOptions.dryRun)}`);
 			console.log("");
 
 			const result = await waybackCommand.execute({
-				source: options.source,
-				manualsDir: options.manualsDir,
-				catalogDir: options.catalogDir,
+				source: typedOptions.source,
+				manualsDir: typedOptions.manualsDir,
+				catalogDir: typedOptions.catalogDir,
 				fields: [], // Fields are determined by source type internally
-				dryRun: options.dryRun,
-				resume: options.resume,
-				verbose: options.verbose,
-				retries: Number.parseInt(options.retries, 10),
-				delayMs: Number.parseFloat(options.delay) * 1000,
-				rateLimitDelayMs: Number.parseFloat(options.rateLimitDelay) * 1000,
+				dryRun: typedOptions.dryRun,
+				resume: typedOptions.resume,
+				verbose: typedOptions.verbose,
+				retries: Number.parseInt(typedOptions.retries, 10),
+				delayMs: Number.parseFloat(typedOptions.delay) * 1000,
+				rateLimitDelayMs: Number.parseFloat(typedOptions.rateLimitDelay) * 1000,
 				accessKey,
 				secretKey,
-				output: options.output,
-				minArchiveAge: options.minArchiveAge,
-				maxArchiveAge: options.maxArchiveAge,
+				output: typedOptions.output,
+				minArchiveAge: typedOptions.minArchiveAge,
+				maxArchiveAge: typedOptions.maxArchiveAge,
 			});
 
 			console.log("\nWayback Submission Results:");
@@ -279,10 +324,10 @@ program
 			}
 
 			process.exit(result.failed === 0 ? 0 : 1);
-		} catch (error) {
+		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
-			console.error("Wayback submission failed:", errorMessage);
-			if (options.verbose) {
+			console.error(GENERIC_ERROR_PREFIX.replace("%s", "Wayback submission"), errorMessage);
+			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
 				const errorStack = error instanceof Error ? error.stack : String(error);
 				console.error(errorStack);
 			}
@@ -299,58 +344,87 @@ program
 	.option("--show-successful", "Show successful URLs", false)
 	.option("--limit <n>", "Limit number of URLs to show", "20")
 	.option("--export-failed <file>", "Export failed URLs to a file")
-	.action(async (options) => {
+	.action(async (options: unknown) => {
 		try {
-			const checkpointPath = resolve(process.cwd(), options.checkpoint);
-			const content = readFileSync(checkpointPath, "utf8");
-			const checkpoint = JSON.parse(content);
+			const typedOptions = options as {
+				checkpoint: string;
+				showFailed: boolean;
+				showSuccessful: boolean;
+				limit: string;
+				exportFailed?: string;
+			};
+			const checkpointPath: string = resolve(process.cwd(), typedOptions.checkpoint);
+			const content: string = readFileSync(checkpointPath, "utf8");
+			const checkpoint = JSON.parse(content) as {
+				lastUpdated: string;
+				source?: string;
+				totalUrls?: number;
+				processedUrls?: string[];
+				successfulSubmissions?: Array<{
+					sourceType?: string;
+					itemId?: string;
+					manualId?: string;
+					field: string;
+					url: string;
+					archiveUrl?: string;
+				}>;
+				failedSubmissions?: Array<{
+					sourceType?: string;
+					itemId?: string;
+					manualId?: string;
+					field: string;
+					url: string;
+					error?: string;
+					ageCheckResult?: string;
+				}>;
+			};
 
 			console.log("Wayback Checkpoint Status");
 			console.log("=".repeat(50));
 			console.log(`Checkpoint file: ${checkpointPath}`);
 			console.log(`Last updated: ${new Date(checkpoint.lastUpdated).toLocaleString()}`);
-			console.log(`Source: ${checkpoint.source || "unknown"}`);
+			console.log(`Source: ${checkpoint.source ?? "unknown"}`);
 			console.log("");
 
 			console.log("Progress:");
-			console.log(`  Total URLs tracked: ${checkpoint.totalUrls || "unknown"}`);
-			console.log(`  Processed: ${checkpoint.processedUrls?.length || 0}`);
-			console.log(`  Successful: ${checkpoint.successfulSubmissions?.length || 0}`);
-			console.log(`  Failed: ${checkpoint.failedSubmissions?.length || 0}`);
+			console.log(`  Total URLs tracked: ${checkpoint.totalUrls ?? "unknown"}`);
+			console.log(`  Processed: ${checkpoint.processedUrls?.length ?? 0}`);
+			console.log(`  Successful: ${checkpoint.successfulSubmissions?.length ?? 0}`);
+			console.log(`  Failed: ${checkpoint.failedSubmissions?.length ?? 0}`);
 			console.log("");
 
 			// Group failures by error type
-			if (checkpoint.failedSubmissions?.length > 0) {
+			if (checkpoint.failedSubmissions && checkpoint.failedSubmissions.length > 0) {
 				const errorGroups: Record<string, number> = {};
 				const ageGroups: Record<string, number> = {};
 
 				for (const sub of checkpoint.failedSubmissions) {
-					const error = sub.error || "(empty error)";
-					errorGroups[error] = (errorGroups[error] || 0) + 1;
+					const error = sub.error ?? "(empty error)";
+					errorGroups[error] = (errorGroups[error] ?? 0) + 1;
 
-					const age = sub.ageCheckResult || "unknown";
-					ageGroups[age] = (ageGroups[age] || 0) + 1;
+					const age = sub.ageCheckResult ?? "unknown";
+					ageGroups[age] = (ageGroups[age] ?? 0) + 1;
 				}
 
 				console.log("Failed by error type:");
-				for (const [error, count] of Object.entries(errorGroups).sort((a, b) => b[1] - a[1])) {
+				for (const [error, count] of Object.entries(errorGroups).toSorted((a, b) => b[1] - a[1])) {
 					console.log(`  ${count}x: ${error.slice(0, 80)}`);
 				}
 				console.log("");
 
 				console.log("Failed by age check:");
-				for (const [age, count] of Object.entries(ageGroups).sort((a, b) => b[1] - a[1])) {
+				for (const [age, count] of Object.entries(ageGroups).toSorted((a, b) => b[1] - a[1])) {
 					console.log(`  ${count}x: ${age}`);
 				}
 				console.log("");
 			}
 
 			// Show failed URLs if requested
-			if (options.showFailed && checkpoint.failedSubmissions?.length > 0) {
-				const limit = Number.parseInt(options.limit, 10);
+			if (typedOptions.showFailed && checkpoint.failedSubmissions && checkpoint.failedSubmissions.length > 0) {
+				const limit = Number.parseInt(typedOptions.limit, 10);
 				console.log(`Failed URLs (showing ${Math.min(limit, checkpoint.failedSubmissions.length)} of ${checkpoint.failedSubmissions.length}):`);
 				for (const sub of checkpoint.failedSubmissions.slice(0, limit)) {
-					console.log(`  [${sub.sourceType || "manual"}:${sub.itemId || sub.manualId}] ${sub.field}: ${sub.url}`);
+					console.log(`  [${sub.sourceType ?? "manual"}:${sub.itemId ?? sub.manualId}] ${sub.field}: ${sub.url}`);
 					if (sub.error) {
 						console.log(`    Error: ${sub.error}`);
 					}
@@ -359,11 +433,11 @@ program
 			}
 
 			// Show successful URLs if requested
-			if (options.showSuccessful && checkpoint.successfulSubmissions?.length > 0) {
-				const limit = Number.parseInt(options.limit, 10);
+			if (typedOptions.showSuccessful && checkpoint.successfulSubmissions && checkpoint.successfulSubmissions.length > 0) {
+				const limit = Number.parseInt(typedOptions.limit, 10);
 				console.log(`Successful URLs (showing ${Math.min(limit, checkpoint.successfulSubmissions.length)} of ${checkpoint.successfulSubmissions.length}):`);
 				for (const sub of checkpoint.successfulSubmissions.slice(0, limit)) {
-					console.log(`  [${sub.sourceType || "manual"}:${sub.itemId || sub.manualId}] ${sub.field}: ${sub.url}`);
+					console.log(`  [${sub.sourceType ?? "manual"}:${sub.itemId ?? sub.manualId}] ${sub.field}: ${sub.url}`);
 					if (sub.archiveUrl) {
 						console.log(`    Archive: ${sub.archiveUrl}`);
 					}
@@ -372,15 +446,15 @@ program
 			}
 
 			// Export failed URLs to file if requested
-			if (options.exportFailed && checkpoint.failedSubmissions?.length > 0) {
-				const exportPath = resolve(process.cwd(), options.exportFailed);
-				const failedUrls = checkpoint.failedSubmissions.map((sub: { url: string }) => sub.url);
+			if (typedOptions.exportFailed && checkpoint.failedSubmissions && checkpoint.failedSubmissions.length > 0) {
+				const exportPath: string = resolve(process.cwd(), typedOptions.exportFailed);
+				const failedUrls = checkpoint.failedSubmissions.map((sub) => sub.url);
 				const { writeFileSync } = await import("node:fs");
 				writeFileSync(exportPath, failedUrls.join("\n"), "utf8");
 				console.log(`Exported ${failedUrls.length} failed URLs to ${exportPath}`);
 			}
-		} catch (error) {
-			if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+		} catch (error: unknown) {
+			if (error instanceof Error && (error as NodeJS.ErrnoException).code === "ENOENT") {
 				console.error("No checkpoint file found. Run `wayback` command first to create one.");
 			} else {
 				console.error("Error reading checkpoint:", error instanceof Error ? error.message : String(error));
@@ -394,42 +468,49 @@ program
 	.command("unify")
 	.description("Build unified product database by matching catalog items to manuals")
 	.option("--data-dir <dir>", "Base data directory", "./data/bandai")
-	.option("--output <dir>", "Output directory for unified data", "./data/bandai/unified")
+	.option(OUTPUT_DIR_OPTION, "Output directory for unified data", "./data/bandai/unified")
 	.option("--min-confidence <n>", "Minimum confidence for auto-match (0.0-1.0)", "0.70")
 	.option("--review-threshold <n>", "Below this goes to orphans, above to review queue (0.0-1.0)", "0.50")
-	.option("--dry-run", "Preview without writing files", false)
-	.option("-v, --verbose", "Verbose output", false)
-	.action(async (options) => {
+	.option(DRY_RUN_OPTION, "Preview without writing files", false)
+	.option(VERBOSE_OPTION, "Verbose output", false)
+	.action(async (options: unknown) => {
 		try {
 			const { runUnification, printStats } = await import("../unify/unifier.js");
-			const { resolve } = await import("node:path");
+			const typedOptions = options as {
+				dataDir: string;
+				output: string;
+				minConfidence: string;
+				reviewThreshold: string;
+				dryRun: boolean;
+				verbose: boolean;
+			};
 
-			const dataDir = resolve(process.cwd(), options.dataDir);
-			const outputDir = resolve(process.cwd(), options.output);
+			const dataDir: string = resolve(process.cwd(), typedOptions.dataDir);
+			const outputDir: string = resolve(process.cwd(), typedOptions.output);
 
 			console.log("Building unified product database...");
 			console.log(`Data directory: ${dataDir}`);
 			console.log(`Output directory: ${outputDir}`);
-			console.log(`Min confidence: ${options.minConfidence}`);
-			console.log(`Review threshold: ${options.reviewThreshold}`);
-			console.log(`Dry run: ${options.dryRun}`);
+			console.log(`Min confidence: ${typedOptions.minConfidence}`);
+			console.log(`Review threshold: ${typedOptions.reviewThreshold}`);
+			console.log(`Dry run: ${String(typedOptions.dryRun)}`);
 			console.log("");
 
 			const stats = await runUnification(dataDir, {
 				thresholds: {
-					autoAccept: Number.parseFloat(options.minConfidence),
-					reviewCutoff: Number.parseFloat(options.reviewThreshold),
+					autoAccept: Number.parseFloat(typedOptions.minConfidence),
+					reviewCutoff: Number.parseFloat(typedOptions.reviewThreshold),
 				},
-				dryRun: options.dryRun,
-				outputDir,
+				dryRun: typedOptions.dryRun,
+				outputDir: outputDir,
 			});
 
 			printStats(stats);
 			process.exit(0);
-		} catch (error) {
+		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
-			console.error("Unification failed:", errorMessage);
-			if (options.verbose) {
+			console.error(GENERIC_ERROR_PREFIX.replace("%s", "Unification"), errorMessage);
+			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
 				const errorStack = error instanceof Error ? error.stack : String(error);
 				console.error(errorStack);
 			}

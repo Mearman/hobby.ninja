@@ -4,6 +4,7 @@ import path from "node:path";
 import { ScraperRegistry } from "@hobby-ninja/scrapers";
 import type { LanguageDetection } from "@hobby-ninja/types/language";
 import type { GundamData } from "@hobby-ninja/types/product";
+
 import { LanguageDetector } from "../utils/language-detection.js";
 
 export interface SingleUrlOptions {
