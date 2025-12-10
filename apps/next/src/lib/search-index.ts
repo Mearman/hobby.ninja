@@ -1,4 +1,4 @@
-import Fuse, { type IFuseOptions } from "fuse.js";
+import Fuse, { type IFuseOptions, type FuseResult } from "fuse.js";
 
 import { PAGINATION, FILTER } from "./constants";
 
@@ -85,7 +85,7 @@ export interface SearchOptions {
 export interface SearchResult {
   item: SearchableItem;
   score: number;
-  matches?: readonly Fuse.FuseResultMatch[] | undefined;
+  matches?: FuseResult<SearchableItem>['matches'] | undefined;
 }
 
 export class SearchIndex {
