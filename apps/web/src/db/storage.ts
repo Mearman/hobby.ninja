@@ -4,30 +4,11 @@ import { z } from "zod";
 import { logger } from "../lib/logger";
 
 
-// Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
 
 // Generate UUID function
 export function generateId(): string {
 	// Use browser's built-in crypto.randomUUID if available
-	if (typeof crypto !== "undefined" && crypto.randomUUID) {
+	if (typeof crypto !== "undefined") {
 		return crypto.randomUUID();
 	}
 
@@ -63,7 +44,7 @@ export class Database extends Dexie {
 
 	constructor() {
 		super("DocumentDatabase");
-		this.version(ONE).stores({
+		this.version(1).stores({
 			schemas: "id, name, version, createdAt",
 			documents: "&id, schemaId, createdAt",
 		});
@@ -78,7 +59,7 @@ export const schemaRegistry = {
 	schemas: new Map<string, z.ZodObject<z.ZodRawShape>>(),
 
 	// Store a new schema
-	async register(schema: z.ZodObject<z.ZodRawShape>, name: string, version = "ONE.ZERO.ZERO"): Promise<void> {
+	async register(schema: z.ZodObject<z.ZodRawShape>, name: string, version = "1.0.0"): Promise<void> {
 		const id = `${name}@${version}`;
 
 		// Store schema in memory
@@ -98,14 +79,14 @@ export const schemaRegistry = {
 	},
 
 	// Get a stored schema
-	async get(id: string): Promise<z.ZodObject<z.ZodRawShape> | null> {
-		return this.schemas.get(id) || null;
+	get(id: string): z.ZodObject<z.ZodRawShape> | null {
+		return this.schemas.get(id) ?? null;
 	},
 
 	// Validate data against a schema
-	async validate(data: unknown, schemaId: string): Promise<{ success: true; data: unknown } | { success: false; error: string }> {
-		const schema = await this.get(schemaId);
-		if (!schema) {
+	validate(data: unknown, schemaId: string): { success: true; data: unknown } | { success: false; error: string } {
+		const schema = this.get(schemaId);
+		if (schema === null) {
 			return { success: false, error: `Schema not found: ${schemaId}` };
 		}
 
@@ -122,7 +103,7 @@ export const schemaRegistry = {
 	async reloadFromStorage(schemas: Record<string, z.ZodObject<z.ZodRawShape>>): Promise<void> {
 		const storedSchemas = await this.list();
 		for (const stored of storedSchemas) {
-			if (schemas[stored.id]) {
+			if (Object.prototype.hasOwnProperty.call(schemas, stored.id)) {
 				this.schemas.set(stored.id, schemas[stored.id]);
 			}
 		}
@@ -132,27 +113,27 @@ export const schemaRegistry = {
 // Document-based operations with schema validation
 export const storage = {
 	// Get all documents for a specific schema type
-	async getBySchema(schemaId: string): Promise<Document[]> {
-		return await db.documents.where("schemaId").equals(schemaId).toArray();
+	getBySchema(schemaId: string): Promise<Document[]> {
+		return db.documents.where("schemaId").equals(schemaId).toArray();
 	},
 
 	// Get a single document by ID
-	async getById(id: string): Promise<Document | undefined> {
-		return await db.documents.get(id);
+	getById(id: string): Promise<Document | undefined> {
+		return db.documents.get(id);
 	},
 
 
 	// Store a new document with schema validation
 	async create(schemaId: string, data: unknown, id?: string): Promise<{ success: true; id: string } | { success: false; error: string }> {
 		// Validate data against schema first
-		const validation = await schemaRegistry.validate(data, schemaId);
+		const validation = schemaRegistry.validate(data, schemaId);
 		if (!validation.success) {
 			return { success: false, error: validation.error };
 		}
 
 		const now = new Date();
 		const doc: Document = {
-			id: id || generateId(),
+			id: id ?? generateId(),
 			data: validation.data,
 			schemaId,
 			createdAt: now,
@@ -172,7 +153,7 @@ export const storage = {
 		}
 
 		// Validate new data against existing schema
-		const validation = await schemaRegistry.validate(data, existing.schemaId);
+		const validation = schemaRegistry.validate(data, existing.schemaId);
 		if (!validation.success) {
 			return { success: false, error: validation.error };
 		}
@@ -188,31 +169,32 @@ export const storage = {
 	},
 
 	// Get typed document data
-	async getTyped<T>(schemaId: string): Promise<Array<{ data: T; id: string }>> {
+	async getTyped(schemaId: string): Promise<Array<{ data: unknown; id: string }>> {
 		const documents = await this.getBySchema(schemaId);
 		return documents.map(doc => ({
-			data: doc.data as T,
+			data: doc.data,
 			id: doc.id ?? generateId(),
 		}));
 	},
 
 	// Search across document data
-	async search(query: string): Promise<Document[]> {
+	search(query: string): Promise<Document[]> {
 		const lowerQuery = query.toLowerCase();
-		return await db.documents.filter(doc => {
+		return db.documents.filter(doc => {
 			const dataString = JSON.stringify(doc.data);
 			return dataString.toLowerCase().includes(lowerQuery);
 		}).toArray();
 	},
 
 	// Delete document
-	async delete(id: string): Promise<void> {
-		await db.documents.delete(id);
+	delete(id: string): Promise<void> {
+		return db.documents.delete(id);
 	},
 
 	// Initialize database
-	async init(): Promise<void> {
-		await db.open();
-		logger.debug("Schema-based storage initialized");
+	init(): Promise<void> {
+		return db.open().then(() => {
+			logger.debug("Schema-based storage initialized");
+		});
 	},
 };
