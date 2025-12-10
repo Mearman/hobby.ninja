@@ -9,15 +9,15 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/next"
+        "outputPath": "apps/next/out"
       },
       "dependsOn": ["typecheck", "build-data"],
       "configurations": {
         "development": {
-          "outputPath": "dist/apps/next"
+          "outputPath": "apps/next/out"
         },
         "production": {
-          "outputPath": "dist/apps/next"
+          "outputPath": "apps/next/out"
         }
       }
     },
@@ -25,7 +25,7 @@
       "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/next",
+        "outputPath": "apps/next/out",
         "webpack": true,
         "env": {
           "NODE_ENV": "development"
@@ -47,7 +47,7 @@
     "serve": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "serve -s out -l 3001",
+        "command": "npx tsx server.ts",
         "cwd": "{projectRoot}"
       },
       "dependsOn": ["build"],
