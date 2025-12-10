@@ -34,6 +34,7 @@ interface DatabaseStats {
 	totalBrands: number;
 	totalCategories: number;
 	totalSeries: number;
+	featuredItems: number;
 	brands: Array<BrandNode & { itemCount: number }>;
 	categories: Array<CategoryNode & { itemCount: number }>;
 	series: Array<SeriesNode & { itemCount: number }>;
@@ -45,6 +46,7 @@ const initialStats: DatabaseStats = {
 	totalBrands: 0,
 	totalCategories: 0,
 	totalSeries: 0,
+	featuredItems: 0,
 	brands: [],
 	categories: [],
 	series: [],
@@ -110,20 +112,25 @@ const loadDatabaseStats = async (): Promise<DatabaseStats> => {
 			};
 		});
 
+		const featuredBrands = brandsWithCounts
+			.sort((a, b) => b.itemCount - a.itemCount)
+			.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT);
+		const featuredCategories = categoriesWithCounts
+			.sort((a, b) => b.itemCount - a.itemCount)
+			.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT);
+		const featuredSeries = seriesWithCounts
+			.sort((a, b) => b.itemCount - a.itemCount)
+			.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT);
+
 		return {
-			totalItems: items.length,
+			totalItems: items.length, // Full database size - accurate for database overview
 			totalBrands: brands.length,
 			totalCategories: categories.length,
 			totalSeries: series.length,
-			brands: brandsWithCounts
-				.sort((a, b) => b.itemCount - a.itemCount)
-				.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT),
-			categories: categoriesWithCounts
-				.sort((a, b) => b.itemCount - a.itemCount)
-				.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT),
-			series: seriesWithCounts
-				.sort((a, b) => b.itemCount - a.itemCount)
-				.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT),
+			featuredItems: featuredBrands.length + featuredCategories.length + featuredSeries.length,
+			brands: featuredBrands,
+			categories: featuredCategories,
+			series: featuredSeries,
 		};
 	} catch (error: unknown) {
 		// Failed to load database stats, returning initial stats
@@ -147,7 +154,7 @@ function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 					</div>
 					<div>
 						<Text size="xs" color="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
-              Total Items
+              Database Size
 						</Text>
 						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
 							{stats.totalItems.toLocaleString()}
