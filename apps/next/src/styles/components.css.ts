@@ -642,13 +642,15 @@ export const categoryCard = style({
 	textDecoration: CSS_VALUES.NONE,
 	color: "inherit",
 	transition: `all ${COMMON_VALUES.TRANSITION_SPEED_200} ease-in-out`,
-	backgroundColor: MANTINE_COLORS.WHITE,
+	backgroundColor: MANTINE_COLORS.BODY,
+	border: `${BORDER_WIDTHS.ONE} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.GRAY_3}`,
 
 	selectors: {
 		"&:hover": {
 			transform: COMMON_VALUES.TRANSFORM_TRANSLATE_Y_NEG_4,
 			boxShadow: COMMON_VALUES.BOX_SHADOW_LG,
 			borderColor: MANTINE_COLORS.BLUE_4,
+			backgroundColor: MANTINE_COLORS.GRAY_1,
 		},
 	},
 });
@@ -656,8 +658,8 @@ export const categoryCard = style({
 export const brandLogo = style({
 	borderRadius: COMMON_VALUES.BORDER_RADIUS_MD,
 	overflow: CSS_VALUES.HIDDEN,
-	backgroundColor: MANTINE_COLORS.GRAY_0,
-	border: `${BORDER_WIDTHS.ONE} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.GRAY_2}`,
+	backgroundColor: MANTINE_COLORS.GRAY_1,
+	border: `${BORDER_WIDTHS.ONE} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.GRAY_4}`,
 });
 
 export const categoryIcon = style({
@@ -675,13 +677,15 @@ export const seriesCard = style({
 	textDecoration: CSS_VALUES.NONE,
 	color: "inherit",
 	transition: `all ${COMMON_VALUES.TRANSITION_SPEED_200} ease-in-out`,
-	backgroundColor: MANTINE_COLORS.WHITE,
+	backgroundColor: MANTINE_COLORS.BODY,
+	border: `${BORDER_WIDTHS.ONE} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.GRAY_3}`,
 
 	selectors: {
 		"&:hover": {
 			transform: COMMON_VALUES.TRANSFORM_TRANSLATE_Y_NEG_4,
 			boxShadow: COMMON_VALUES.BOX_SHADOW_LG,
 			borderColor: MANTINE_COLORS.BLUE_4,
+			backgroundColor: MANTINE_COLORS.GRAY_1,
 		},
 	},
 });
@@ -712,7 +716,8 @@ export const actionCard = style({
 	textDecoration: CSS_VALUES.NONE,
 	color: "inherit",
 	transition: `all ${COMMON_VALUES.TRANSITION_SPEED_200} ease-in-out`,
-	backgroundColor: MANTINE_COLORS.WHITE,
+	backgroundColor: MANTINE_COLORS.BODY,
+	border: `${BORDER_WIDTHS.ONE} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.GRAY_3}`,
 
 	selectors: {
 		"&:hover": {
