@@ -22,6 +22,7 @@ export class ExcelExporter extends BaseExporter {
 			// Dynamically import xlsx library to avoid build issues
 			let XLSX: XLSXLibrary;
 			try {
+				// @ts-ignore - xlsx is an optional dependency
 				const xlsxModule = await import("xlsx");
 				XLSX = xlsxModule as XLSXLibrary;
 			} catch {
@@ -405,7 +406,8 @@ export class ExcelExporter extends BaseExporter {
 		try {
 			let XLSX: XLSXLibrary;
 			try {
-				const xlsxModule = await import("xlsx"); // Dynamic import of optional dependency
+				// @ts-ignore - xlsx is an optional dependency
+				const xlsxModule = await import("xlsx");
 				XLSX = xlsxModule as XLSXLibrary;
 			} catch {
 				throw new Error("Excel export requires the xlsx package. Please install it with: npm install xlsx");
