@@ -123,6 +123,58 @@ export function getAllManuals(): ManualNode[] {
 	return [...staticData.manuals].sort(sortByName);
 }
 
+// Get all unique grades from items
+export function getAllGrades(): ItemNode[] {
+	const grades = new Set<string>();
+	const gradeNodes: ItemNode[] = [];
+
+	staticData.items.forEach(item => {
+		if (item.grade && !grades.has(item.grade)) {
+			grades.add(item.grade);
+			// Create a grade node for consistency
+			gradeNodes.push({
+				id: `grade-${item.grade.toLowerCase().replace(/\s+/g, '-')}`,
+				type: 'grade',
+				name: item.grade,
+				grade: item.grade,
+			} as any);
+		}
+	});
+
+	return gradeNodes.sort((a, b) => (a.grade ?? '').localeCompare(b.grade ?? ''));
+}
+
+// Get all unique scales from items
+export function getAllScales(): ItemNode[] {
+	const scales = new Set<string>();
+	const scaleNodes: ItemNode[] = [];
+
+	staticData.items.forEach(item => {
+		if (item.scale && !scales.has(item.scale)) {
+			scales.add(item.scale);
+			// Create a scale node for consistency
+			scaleNodes.push({
+				id: `scale-${item.scale.toLowerCase().replace(/\s+/g, '-').replace(/[\/:]/g, '-')}`,
+				type: 'scale',
+				name: item.scale,
+				scale: item.scale,
+			} as any);
+		}
+	});
+
+	return scaleNodes.sort((a, b) => {
+		// Sort scales numerically when possible (e.g., 1/144, 1/100, etc.)
+		const aNum = (a.scale ?? '').match(/1\/(\d+)/);
+		const bNum = (b.scale ?? '').match(/1\/(\d+)/);
+
+		if (aNum && bNum) {
+			return Number.parseInt(aNum[1], 10) - Number.parseInt(bNum[1], 10);
+		}
+
+		return (a.scale ?? '').localeCompare(b.scale ?? '');
+	});
+}
+
 // Get specific node by ID with type safety (synchronous)
 export function getItemById(id: string): ItemNode | null {
 	return staticData.items.find(item => item.id === id) ?? null;
