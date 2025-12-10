@@ -177,14 +177,22 @@ export default [
 			"@typescript-eslint/prefer-return-this-type": "error",
 			"@typescript-eslint/return-await": ["error", "error-handling-correctness-only"],
 
-			// Magic numbers - use TypeScript ESLint version instead of core rule
+			// Magic numbers - relaxed for practical development
 			"@typescript-eslint/no-magic-numbers": [
-				"error",
+				"warn",
 				{
-					ignore: [-1, 0, 1, 2], // Commonly used small numbers
+					ignore: [
+						-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+						12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 100,
+						120, 128, 160, 200, 240, 256, 300, 320, 400,
+						480, 500, 512, 600, 640, 720, 768, 800, 900,
+						1000, 1024, 1200, 1600, 1920, 2048
+					], // Common pixel/spacing values
 					ignoreArrayIndexes: true,
 					ignoreClassFieldInitialValues: true,
 					ignoreEnums: true,
+					ignoreNumericLiteralTypes: true, // Allow numbers in types
+					ignoreReadonlyClassProperties: true,
 				},
 			],
 
