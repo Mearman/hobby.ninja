@@ -29,27 +29,7 @@ import { AdvancedFilters } from "../components/database/advanced-filters";
 import { ItemCard } from "../components/database/item-card";
 import { dataService, type FilterOptions } from "../services/dataService";
 import { databaseContainer, heroSection, statsCard } from "../styles/styles.css";
-
-
-// Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
+import { ZERO, ONE, TWO, ARRAY_FIRST_INDEX, ARRAY_SECOND_INDEX } from "../types/hobby";
 
 const getItemType = (item: unknown): "unified" | "manual" | "catalog" => {
 	if (!item || typeof item !== "object" || !("type" in item)) {
@@ -269,7 +249,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 		);
 	}
 
-	const totalPages = Math.ceil(totalItems / TWO4);
+	const totalPages = Math.ceil(totalItems / 24);
 
 	return (
 		<div className={databaseContainer}>
@@ -370,7 +350,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 								priceRange: filters.priceRange ? { min: filters.priceRange[ARRAY_FIRST_INDEX], max: filters.priceRange[ARRAY_SECOND_INDEX] } : undefined,
 								availability: filters.availability ? [filters.availability as "available" | "discontinued" | "preorder"] : undefined,
 							}}
-							onFiltersChange={(newFilters: Record<string, unknown>) => {
+							onFiltersChange={(newFilters) => {
 								handleFilterChange({
 									series: newFilters.series?.[ARRAY_FIRST_INDEX],
 									grade: newFilters.grade?.[ARRAY_FIRST_INDEX],
@@ -405,7 +385,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 					<SimpleGrid cols={{ base: TWO, sm: THREE, md: FOUR, lg: SIX }} spacing="lg" mb="xl">
 						{items.map((item) => (
 							<Card
-								key={item.id}
+								key={String(item.id as string)}
 								shadow="sm"
 								p="md"
 								radius="md"
@@ -413,7 +393,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 								onClick={() =>
 									navigate({
 										to: "/database/$hobbyType/$id",
-										params: { hobbyType, id: item.id },
+										params: { hobbyType, id: String(item.id as string) },
 									})
 								}
 								style={{ cursor: "pointer" }}

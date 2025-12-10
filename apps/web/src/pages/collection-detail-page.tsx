@@ -1,5 +1,5 @@
-import { Container, Title, Text, Card, Button, Group, Stack, SimpleGrid, Grid, Center, Badge, ActionIcon, Skeleton, Alert, Select, TextInput, Menu } from "@mantine/core";
-import { IconPlus, IconSearch, IconHeart, IconPackage, IconSettings, IconEdit, IconTrash, IconFilter, IconDots, IconPhoto, IconEye, IconShare } from "@tabler/icons-react";
+import { Container, Title, Text, Card, Button, Group, Stack, SimpleGrid, Badge, ActionIcon, Skeleton, Alert, Select, TextInput, Menu } from "@mantine/core";
+import { IconPlus, IconSearch, IconPackage, IconEdit, IconTrash, IconFilter, IconDots, IconPhoto } from "@tabler/icons-react";
 import { Link, useParams, useNavigate } from "@tanstack/react-router";
 import React, { useState, useEffect } from "react";
 
@@ -8,19 +8,19 @@ import { Collection, UniversalItem, ItemStatus } from "../types/hobby";
 
 
 // Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
+const ZERO = 0;
+const ONE = 1;
+const TWO = 2;
+const THREE = 3;
+const FOUR = 4;
+const FIVE = 5;
+const SIX = 6;
+const SEVEN = 7;
+const EIGHT = 8;
+const NINE = 9;
+const TEN = 10;
+const HUNDRED = 100;
+const THOUSAND = 1000;
 const JSON_INDENTATION = TWO;
 const PERCENTAGE_MULTIPLIER = HUNDRED;
 const ARRAY_FIRST_INDEX = ZERO;
@@ -115,7 +115,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 		if (searchQuery.trim()) {
 			const query = searchQuery.toLowerCase();
 			filtered = filtered.filter(item =>
-				item.data["name"]?.toString().toLowerCase().includes(query) ||
+				String(item.data["name"] as string).toLowerCase().includes(query) ||
 				item.tags.some(tag => tag.toLowerCase().includes(query)),
 			);
 		}
@@ -318,11 +318,11 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 											<Group justify="space-between" align="flex-start">
 												<Stack gap="xs" style={{ flex: ONE }}>
 													<Title order={FOUR} size={16} lineClamp={ONE}>
-														{item.data["name"] || "Untitled Item"}
+														{String(item.data["name"] as string) || "Untitled Item"}
 													</Title>
-													{item.data["brand"] && (
+													{(item.data["brand"] != null) && (
 														<Text size="sm" color="dimmed">
-															{item.data["brand"]}
+															{String(item.data["brand"] as string)}
 														</Text>
 													)}
 												</Stack>
@@ -379,15 +379,15 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 											)}
 
 											{/* Item Details */}
-											{item.data["grade"] && (
+											{(item.data["grade"] != null) && (
 												<Badge variant="outline" size="xs">
-													{item.data["grade"]}
+													{String(item.data["grade"] as string)}
 												</Badge>
 											)}
 
-											{item.data["scale"] && (
+											{(item.data["scale"] != null) && (
 												<Text size="xs" color="dimmed">
-													Scale: {item.data["scale"]}
+													Scale: {String(item.data["scale"] as string)}
 												</Text>
 											)}
 
@@ -410,7 +410,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 											{/* Status */}
 											<Group justify="space-between" mt="auto">
 												<Select
-													data={statusOptions.slice(ARRAY_SECOND_INDEX))} // Remove "All Status" option
+													data={statusOptions.slice(ARRAY_SECOND_INDEX)} // Remove "All Status" option
 													value={item.status}
 													onChange={(value) => value && handleStatusUpdate(item.id, value as ItemStatus)}
 													size="xs"
