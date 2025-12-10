@@ -286,7 +286,7 @@ export function FuseSearch({
 													</Badge>
 												)}
 												{result.item.brand && (
-													<Badge size="xs" variant="light" c="gray">
+													<Badge size="xs" variant="outline" color="gray">
 														{result.item.brand}
 													</Badge>
 												)}
