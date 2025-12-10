@@ -3,14 +3,20 @@
 import {
 	ActionIcon,
 	Anchor,
+	Avatar,
+	Badge,
 	Box,
 	Breadcrumbs,
 	Button,
 	Card,
 	Container,
+	Divider,
+	Drawer,
 	Group,
 	Menu,
 	Modal,
+	Radio,
+	Select,
 	SimpleGrid,
 	Skeleton,
 	Stack,
@@ -18,6 +24,7 @@ import {
 	Textarea,
 	TextInput,
 	Title,
+	Tooltip,
 } from "@mantine/core";
 import {
 	IconBox,
@@ -27,86 +34,106 @@ import {
 	IconEdit,
 	IconFilter,
 	IconFolder,
+	IconGrid3x3,
 	IconHome,
+	IconList,
 	IconPlus,
+	IconSearch,
+	IconSortAscending,
 	IconTrash,
 	IconTrendingUp,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import React from "react";
+import React, { useMemo } from "react";
 
 
 import { useCollection } from "@/contexts/collection-context";
 import { CSS, TYPOGRAPHY, UI } from "@/lib/constants";
 import {
-  collectionCard,
-  collectionContent,
-  collectionHeader,
-  statsGrid,
-  statCard,
-  statValue,
-  statLabel,
-  progressBar,
-  progressFill,
-  progressSegments,
-  progressSegment,
-  databaseStatIcon,
+	collectionCard,
+	collectionContent,
+	statsGrid,
+	statCard,
+	statValue,
+	statLabel,
+	progressBar,
+	progressFill,
+	progressSegments,
+	progressSegment,
+	databaseStatIcon,
 } from "@/styles/components.css";
+
+// Collection color helper function
+function getCollectionColor(index: number) {
+	const colors = ["blue", "green", "red", "orange", "purple", "teal", "pink", "indigo"];
+	return colors[index % colors.length];
+}
 
 // Collection card type
 interface CollectionCardType {
-  id: string;
-  name: string;
-  description?: string;
-  itemCount?: number;
-  completedCount?: number;
-  wantedCount?: number;
-  totalValue?: number;
-  completionPercentage?: number;
-  inProgressCount?: number;
-  lastModified: string;
+	id: string;
+	name: string;
+	description?: string;
+	itemCount?: number;
+	completedCount?: number;
+	wantedCount?: number;
+	totalValue?: number;
+	completionPercentage?: number;
+	inProgressCount?: number;
+	lastModified: string;
 }
 
-// Collection card component
-function CollectionCard({ collection, onEdit, onDelete }: {
-  collection: CollectionCardType;
-  onEdit: (collection: CollectionCardType) => void;
-  onDelete: (collection: CollectionCardType) => void;
+// Collection card component for grid view
+function CollectionCardGrid({ collection, onEdit, onDelete }: {
+	collection: CollectionCardType;
+	onEdit: (collection: CollectionCardType) => void;
+	onDelete: (collection: CollectionCardType) => void;
 }) {
+	const collectionColor = getCollectionColor(Number.parseInt(collection.id) || 0);
+
 	return (
 		<Card
 			p="lg"
 			radius="md"
 			className={collectionCard}
 			withBorder={true}
+			shadow="sm"
+			style={{
+				transition: "all 0.2s ease",
+				cursor: "pointer",
+			}}
+			onMouseEnter={(e) => {
+				e.currentTarget.style.transform = "translateY(-2px)";
+				e.currentTarget.style.boxShadow = "var(--mantine-shadow-md)";
+			}}
+			onMouseLeave={(e) => {
+				e.currentTarget.style.transform = "translateY(0)";
+				e.currentTarget.style.boxShadow = "var(--mantine-shadow-sm)";
+			}}
 		>
 			<Group justify="space-between" mb="md">
 				<Group>
-					<div className={collectionHeader} style={{
-						backgroundColor: "var(--mantine-color-blue-6)",
-						width: 48,
-						height: 48,
-						borderRadius: "var(--mantine-radius-md)",
-						display: "flex",
-						alignItems: "center",
-						justifyContent: "center",
-						color: "white",
-					}}>
+					<Avatar
+						size={48}
+						radius="md"
+						bg={`var(--mantine-color-${collectionColor}-6)`}
+						color="white"
+					>
 						<IconFolder size={UI.ICON_SIZE_XL} />
-					</div>
-					<Box>
-						<Text fw={TYPOGRAPHY.FONT_WEIGHT_MEDIUM} size="lg">
+					</Avatar>
+					<Box style={{ flex: 1 }}>
+						<Text fw={TYPOGRAPHY.FONT_WEIGHT_MEDIUM} size="lg" lineClamp={1}>
 							{collection.name}
 						</Text>
 						{collection.description && (
-							<Text size="sm" c="dimmed" lineClamp={1}>
+							<Text size="sm" c="dimmed" lineClamp={2}>
 								{collection.description}
 							</Text>
 						)}
 					</Box>
 				</Group>
 
-				<Menu shadow="md" width={200}>
+				<Menu shadow="md" width={200} position="bottom-end">
 					<Menu.Target>
 						<ActionIcon variant="subtle" color="gray">
 							<IconDots size={UI.ICON_SIZE_SM} />
@@ -115,10 +142,10 @@ function CollectionCard({ collection, onEdit, onDelete }: {
 
 					<Menu.Dropdown>
 						<Menu.Item leftSection={<IconEdit size={UI.ICON_SIZE_SM} />} onClick={() => { onEdit(collection); }}>
-              Edit Collection
+							Edit Collection
 						</Menu.Item>
 						<Menu.Item leftSection={<IconDownload size={UI.ICON_SIZE_SM} />}>
-              Export
+							Export
 						</Menu.Item>
 						<Menu.Divider />
 						<Menu.Item
@@ -126,7 +153,7 @@ function CollectionCard({ collection, onEdit, onDelete }: {
 							color="red"
 							onClick={() => { onDelete(collection); }}
 						>
-              Delete Collection
+							Delete Collection
 						</Menu.Item>
 					</Menu.Dropdown>
 				</Menu>
@@ -147,19 +174,24 @@ function CollectionCard({ collection, onEdit, onDelete }: {
 						<Text className={statLabel}>Wanted</Text>
 					</div>
 					<div className={statCard}>
-						<Text className={statValue}>{collection.totalValue || 0}</Text>
-						<Text className={statLabel}>Total Value</Text>
+						<Text className={statValue}>¥{(collection.totalValue || 0).toLocaleString()}</Text>
+						<Text className={statLabel}>Value</Text>
 					</div>
 				</div>
 
 				<Box mt="md">
-					<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} mb="xs">Completion Progress</Text>
+					<Group justify="space-between" mb="xs">
+						<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>Completion Progress</Text>
+						<Badge variant="light" size="sm" color={collectionColor}>
+							{collection.completionPercentage || 0}%
+						</Badge>
+					</Group>
 					<div className={progressBar}>
 						<div
 							className={progressFill}
 							style={{
 								width: `${collection.completionPercentage || 0}%`,
-								backgroundColor: "var(--mantine-color-blue-6)",
+								backgroundColor: `var(--mantine-color-${collectionColor}-6)`,
 							}}
 						/>
 						<div className={progressSegments}>
@@ -179,25 +211,139 @@ function CollectionCard({ collection, onEdit, onDelete }: {
 							/>
 						</div>
 					</div>
-					<Text size="xs" c="dimmed" mt="xs">
-						{collection.completionPercentage || 0}% Complete
-					</Text>
 				</Box>
 
-				<Group mt="md" justify="space-between">
-					<Text size="sm" c="dimmed">
-            Updated {new Date(collection.lastModified).toLocaleDateString()}
+				<Group mt="md" justify="space-between" align="center">
+					<Text size="xs" c="dimmed">
+						Updated {new Date(collection.lastModified).toLocaleDateString()}
 					</Text>
 					<Button
 						component={Link}
 						href={`/collection/${collection.id}`}
 						variant="light"
 						size="sm"
+						color={collectionColor}
 					>
-            View Collection
+						View Collection
 					</Button>
 				</Group>
 			</Box>
+		</Card>
+	);
+}
+
+// Collection row component for list view
+function CollectionCardList({ collection, onEdit, onDelete }: {
+	collection: CollectionCardType;
+	onEdit: (collection: CollectionCardType) => void;
+	onDelete: (collection: CollectionCardType) => void;
+}) {
+	const collectionColor = getCollectionColor(Number.parseInt(collection.id) || 0);
+
+	return (
+		<Card
+			p="md"
+			radius="md"
+			withBorder={true}
+			style={{
+				transition: "all 0.2s ease",
+			}}
+		>
+			<Group align="center" justify="space-between">
+				<Group align="center" style={{ flex: 1 }}>
+					<Avatar
+						size={40}
+						radius="md"
+						bg={`var(--mantine-color-${collectionColor}-6)`}
+						color="white"
+					>
+						<IconFolder size={UI.ICON_SIZE_LG} />
+					</Avatar>
+					<Box style={{ flex: 1, minWidth: 0 }}>
+						<Text fw={TYPOGRAPHY.FONT_WEIGHT_MEDIUM} size="lg" lineClamp={1}>
+							{collection.name}
+						</Text>
+						{collection.description && (
+							<Text size="sm" c="dimmed" lineClamp={1}>
+								{collection.description}
+							</Text>
+						)}
+					</Box>
+				</Group>
+
+				<Group align="center" gap="xl">
+					<div style={{ textAlign: "center", minWidth: "80px" }}>
+						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>{collection.itemCount || 0}</Text>
+						<Text size="xs" c="dimmed">Items</Text>
+					</div>
+
+					<div style={{ textAlign: "center", minWidth: "100px" }}>
+						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>{collection.completedCount || 0}</Text>
+						<Text size="xs" c="dimmed">Completed</Text>
+					</div>
+
+					<div style={{ textAlign: "center", minWidth: "100px" }}>
+						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>¥{(collection.totalValue || 0).toLocaleString()}</Text>
+						<Text size="xs" c="dimmed">Value</Text>
+					</div>
+
+					<Box style={{ minWidth: "120px" }}>
+						<Group align="center" gap="xs">
+							<div className={progressBar} style={{ flex: 1, height: "8px" }}>
+								<div
+									className={progressFill}
+									style={{
+										width: `${collection.completionPercentage || 0}%`,
+										backgroundColor: `var(--mantine-color-${collectionColor}-6)`,
+									}}
+								/>
+							</div>
+							<Badge variant="light" size="sm" color={collectionColor}>
+								{collection.completionPercentage || 0}%
+							</Badge>
+						</Group>
+						<Text size="xs" c="dimmed" mt="xs">
+							Updated {new Date(collection.lastModified).toLocaleDateString()}
+						</Text>
+					</Box>
+
+					<Group gap="sm">
+						<Button
+							component={Link}
+							href={`/collection/${collection.id}`}
+							variant="light"
+							size="sm"
+							color={collectionColor}
+						>
+							View
+						</Button>
+						<Menu shadow="md" width={200} position="bottom-end">
+							<Menu.Target>
+								<ActionIcon variant="subtle" color="gray">
+									<IconDots size={UI.ICON_SIZE_SM} />
+								</ActionIcon>
+							</Menu.Target>
+
+							<Menu.Dropdown>
+								<Menu.Item leftSection={<IconEdit size={UI.ICON_SIZE_SM} />} onClick={() => { onEdit(collection); }}>
+									Edit Collection
+								</Menu.Item>
+								<Menu.Item leftSection={<IconDownload size={UI.ICON_SIZE_SM} />}>
+									Export
+								</Menu.Item>
+								<Menu.Divider />
+								<Menu.Item
+									leftSection={<IconTrash size={UI.ICON_SIZE_SM} />}
+									color="red"
+									onClick={() => { onDelete(collection); }}
+								>
+									Delete Collection
+								</Menu.Item>
+							</Menu.Dropdown>
+						</Menu>
+					</Group>
+				</Group>
+			</Group>
 		</Card>
 	);
 }
@@ -323,13 +469,120 @@ function LoadingSkeleton() {
 	);
 }
 
+// Search and filter component
+function SearchAndFilters({
+	searchQuery,
+	onSearchChange,
+	viewMode,
+	onViewModeChange,
+	sortBy,
+	sortOrder,
+	onSortChange,
+}: {
+	searchQuery: string;
+	onSearchChange: (query: string) => void;
+	viewMode: "grid" | "list";
+	onViewModeChange: (mode: "grid" | "list") => void;
+	sortBy: string;
+	sortOrder: "asc" | "desc";
+	onSortChange: (sortBy: string, order: "asc" | "desc") => void;
+}) {
+	return (
+		<Card p="md" radius="md" withBorder={true}>
+			<Group justify="space-between" align="center">
+				<TextInput
+					placeholder="Search collections..."
+					leftSection={<IconSearch size={UI.ICON_SIZE_SM} />}
+					value={searchQuery}
+					onChange={(e) => { onSearchChange(e.target.value); }}
+					style={{ flex: 1, maxWidth: "400px" }}
+				/>
+
+				<Group gap="sm">
+					<Radio.Group
+						value={viewMode}
+						onChange={(value: "grid" | "list") => { onViewModeChange(value); }}
+					>
+						<Group>
+							<Tooltip label="Grid View">
+								<Radio value="grid" label="" icon={<IconGrid3x3 size={UI.ICON_SIZE_SM} />} />
+							</Tooltip>
+							<Tooltip label="List View">
+								<Radio value="list" label="" icon={<IconList size={UI.ICON_SIZE_SM} />} />
+							</Tooltip>
+						</Group>
+					</Radio.Group>
+
+					<Select
+						leftSection={sortBy === "name" ? <IconSortAscending size={UI.ICON_SIZE_SM} /> : <IconTrendingUp size={UI.ICON_SIZE_SM} />}
+						value={`${sortBy}-${sortOrder}`}
+						onChange={(value) => {
+							if (value) {
+								const [field, order] = value.split("-");
+								onSortChange(field, order as "asc" | "desc");
+							}
+						}}
+						data={[
+							{ value: "name-asc", label: "Name (A-Z)" },
+							{ value: "name-desc", label: "Name (Z-A)" },
+							{ value: "dateAdded-desc", label: "Newest First" },
+							{ value: "dateAdded-asc", label: "Oldest First" },
+							{ value: "itemCount-desc", label: "Most Items" },
+							{ value: "itemCount-asc", label: "Fewest Items" },
+							{ value: "totalValue-desc", label: "Highest Value" },
+							{ value: "totalValue-asc", label: "Lowest Value" },
+						]}
+						w={160}
+					/>
+				</Group>
+			</Group>
+		</Card>
+	);
+}
+
+// Enhanced empty state component
+function EmptyState({ onCreateCollection }: { onCreateCollection: () => void }) {
+	return (
+		<Card p="xl" radius="md" withBorder={true} style={{ textAlign: "center" }}>
+			<Stack gap="lg" align="center">
+				<Avatar size={80} radius="md" bg="var(--mantine-color-gray-1)">
+					<IconFolder size={48} color="var(--mantine-color-gray-4)" />
+				</Avatar>
+				<Box>
+					<Title order={3} mb="sm">
+						No Collections Yet
+					</Title>
+					<Text size="lg" c="dimmed" mb="md">
+						Start organizing your hobby items by creating your first collection
+					</Text>
+					<Text size="sm" c="dimmed" mb="xl">
+						Collections help you track progress, manage wishlists, and organize items by categories
+					</Text>
+				</Box>
+				<Button
+					size="lg"
+					leftSection={<IconPlus size={UI.ICON_SIZE_SM} />}
+					onClick={onCreateCollection}
+				>
+					Create Your First Collection
+				</Button>
+			</Stack>
+		</Card>
+	);
+}
+
 // Main collection page
 export default function CollectionPage() {
 	const { state, actions } = useCollection();
 	const [createModalOpen, setCreateModalOpen] = React.useState(false);
 	const [editModalOpen, setEditModalOpen] = React.useState(false);
+	const [filterDrawerOpen, setFilterDrawerOpen] = React.useState(false);
 	const [selectedCollection, setSelectedCollection] = React.useState<any>(null);
 	const [deleteModalOpen, setDeleteModalOpen] = React.useState(false);
+	const [searchQuery, setSearchQuery] = React.useState("");
+	const [viewMode, setViewMode] = React.useState<"grid" | "list">("grid");
+	const [sortBy, setSortBy] = React.useState("dateAdded");
+	const [sortOrder, setSortOrder] = React.useState<"asc" | "desc">("desc");
 	const [formData, setFormData] = React.useState({
 		name: "",
 		description: "",
@@ -391,6 +644,58 @@ export default function CollectionPage() {
 		setDeleteModalOpen(true);
 	};
 
+	// Filter and sort collections
+	const filteredAndSortedCollections = useMemo(() => {
+		let filtered = state.collections;
+
+		// Apply search filter
+		if (searchQuery.trim()) {
+			filtered = filtered.filter(collection =>
+				collection.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+				(collection.description?.toLowerCase().includes(searchQuery.toLowerCase())),
+			);
+		}
+
+		// Apply sorting
+		return filtered.sort((a, b) => {
+			let aValue: any;
+			let bValue: any;
+
+			switch (sortBy) {
+				case "name": {
+					aValue = a.name.toLowerCase();
+					bValue = b.name.toLowerCase();
+					break;
+				}
+				case "dateAdded": {
+					aValue = new Date(a.modifiedAt || a.createdAt);
+					bValue = new Date(b.modifiedAt || b.createdAt);
+					break;
+				}
+				case "itemCount": {
+					aValue = a.itemCount || 0;
+					bValue = b.itemCount || 0;
+					break;
+				}
+				case "totalValue": {
+					aValue = a.totalValue || 0;
+					bValue = b.totalValue || 0;
+					break;
+				}
+				default: {
+					aValue = a.name.toLowerCase();
+					bValue = b.name.toLowerCase();
+				}
+			}
+
+			if (aValue < bValue) return sortOrder === "asc" ? -1 : 1;
+			if (aValue > bValue) return sortOrder === "asc" ? 1 : -1;
+			return 0;
+		});
+	}, [state.collections, searchQuery, sortBy, sortOrder]);
+
+	const CollectionsList = viewMode === "grid" ? SimpleGrid : Stack;
+
 	return (
 		<Container size="xl" py="xl">
 			<Stack gap="xl">
@@ -399,17 +704,18 @@ export default function CollectionPage() {
 					<Group justify="space-between" align="flex-start">
 						<Box>
 							<Title order={1} mb="sm">
-                My Collections
+								My Collections
 							</Title>
-							<Text size="lg" color="dimmed">
-                Manage and track your personal hobby collections
+							<Text size="lg" c="dimmed">
+								Manage and track your personal hobby collections
 							</Text>
 						</Box>
 						<Button
+							size="lg"
 							leftSection={<IconPlus size={UI.ICON_SIZE_SM} />}
 							onClick={() => { setCreateModalOpen(true); }}
 						>
-              New Collection
+							New Collection
 						</Button>
 					</Group>
 				</Box>
@@ -419,11 +725,11 @@ export default function CollectionPage() {
 					<Anchor href="/" size="sm">
 						<Group gap={4}>
 							<IconHome size={UI.ICON_SIZE_SM} />
-              Home
+							Home
 						</Group>
 					</Anchor>
 					<Anchor href="/database" size="sm">
-            Database
+						Database
 					</Anchor>
 					<Text size="sm">Collections</Text>
 				</Breadcrumbs>
@@ -431,75 +737,117 @@ export default function CollectionPage() {
 				{/* Quick Stats */}
 				{!state.loading && <QuickStats state={state} />}
 
-				{/* Collections Grid */}
+				{/* Search and Filters */}
+				<SearchAndFilters
+					searchQuery={searchQuery}
+					onSearchChange={setSearchQuery}
+					viewMode={viewMode}
+					onViewModeChange={setViewMode}
+					sortBy={sortBy}
+					sortOrder={sortOrder}
+					onSortChange={setSortBy}
+				/>
+
+				{/* Collections Display */}
 				<Box>
-					<Group justify="space-between" mb="md">
+					<Group justify="space-between" mb="md" align="center">
 						<Title order={2}>
-              Your Collections
+							{searchQuery ? `Search Results (${filteredAndSortedCollections.length})` :
+							 filteredAndSortedCollections.length === state.collections.length ?
+							 `Your Collections (${filteredAndSortedCollections.length})` :
+							 `Filtered Collections (${filteredAndSortedCollections.length})`}
 						</Title>
-						<Group>
-							{state.collections.length > 0 && (
-								<>
-									<Button
-										variant="light"
-										leftSection={<IconFilter size={UI.ICON_SIZE_SM} />}
-										size="sm"
-									>
-                    Filter
-									</Button>
-									<Button
-										variant="light"
-										leftSection={<IconDownload size={UI.ICON_SIZE_SM} />}
-										size="sm"
-									>
-                    Export All
-									</Button>
-								</>
-							)}
-						</Group>
+						{filteredAndSortedCollections.length > 0 && (
+							<Group gap="sm">
+								<Button
+									variant="light"
+									leftSection={<IconFilter size={UI.ICON_SIZE_SM} />}
+									onClick={() => { setFilterDrawerOpen(true); }}
+									size="sm"
+								>
+									Filter
+								</Button>
+								<Button
+									variant="light"
+									leftSection={<IconDownload size={UI.ICON_SIZE_SM} />}
+									size="sm"
+								>
+									Export All
+								</Button>
+							</Group>
+						)}
 					</Group>
 
 					{state.loading ? (
-						<SimpleGrid
-							cols={{ base: 1, sm: 2, lg: 3 }}
-							spacing="lg"
+						<CollectionsList
+							{...(viewMode === "grid" ? {
+								cols: { base: 1, sm: 2, lg: 3 },
+								spacing: "lg",
+							} : {
+								gap: "md",
+							})}
 						>
 							<LoadingSkeleton />
-						</SimpleGrid>
-					) : state.collections.length > 0 ? (
-						<SimpleGrid
-							cols={{ base: 1, sm: 2, lg: 3 }}
-							spacing="lg"
+						</CollectionsList>
+					) : filteredAndSortedCollections.length > 0 ? (
+						<CollectionsList
+							{...(viewMode === "grid" ? {
+								cols: { base: 1, sm: 2, lg: 3 },
+								spacing: "lg",
+							} : {
+								gap: "md",
+							})}
 						>
-							{state.collections.map((collection) => (
-								<CollectionCard
-									key={collection.id}
-									collection={{
-										...collection,
-										lastModified: collection.modifiedAt?.toISOString() || new Date().toISOString(),
-									}}
-									onEdit={openEditModal}
-									onDelete={openDeleteModal}
-								/>
-							))}
-						</SimpleGrid>
+							{filteredAndSortedCollections.map((collection) => {
+								const collectionData = {
+									...collection,
+									lastModified: collection.modifiedAt?.toISOString() || new Date().toISOString(),
+								};
+
+								return viewMode === "grid" ? (
+									<CollectionCardGrid
+										key={collection.id}
+										collection={collectionData}
+										onEdit={openEditModal}
+										onDelete={openDeleteModal}
+									/>
+								) : (
+									<CollectionCardList
+										key={collection.id}
+										collection={collectionData}
+										onEdit={openEditModal}
+										onDelete={openDeleteModal}
+									/>
+								);
+							})}
+						</CollectionsList>
+					) : searchQuery ? (
+						<Card p="xl" radius="md" withBorder={true} style={{ textAlign: "center" }}>
+							<Stack gap="lg" align="center">
+								<Avatar size={80} radius="md" bg="var(--mantine-color-gray-1)">
+									<IconSearch size={48} color="var(--mantine-color-gray-4)" />
+								</Avatar>
+								<Box>
+									<Title order={3} mb="sm">
+										No Collections Found
+									</Title>
+									<Text size="lg" c="dimmed" mb="md">
+										No collections match your search for "{searchQuery}"
+									</Text>
+									<Text size="sm" c="dimmed" mb="xl">
+										Try adjusting your search terms or browse all collections
+									</Text>
+								</Box>
+								<Button
+									variant="light"
+									onClick={() => { setSearchQuery(""); }}
+								>
+									Clear Search
+								</Button>
+							</Stack>
+						</Card>
 					) : (
-						<Box ta="center" py="xl">
-							<IconFolder size={64} color="var(--mantine-color-gray-4)" />
-							<Title order={3} mt="md" mb="sm">
-                No Collections Yet
-							</Title>
-							<Text color="dimmed" mb="lg">
-                Create your first collection to start tracking your hobby items
-							</Text>
-							<Button
-								leftSection={<IconPlus size={UI.ICON_SIZE_SM} />}
-								onClick={() => { setCreateModalOpen(true); }}
-								size="lg"
-							>
-                Create Your First Collection
-							</Button>
-						</Box>
+						<EmptyState onCreateCollection={() => { setCreateModalOpen(true); }} />
 					)}
 				</Box>
 
@@ -584,18 +932,53 @@ export default function CollectionPage() {
 				>
 					<Stack gap="md">
 						<Text>
-              Are you sure you want to delete "{selectedCollection?.name}"? This action cannot be undone.
+							Are you sure you want to delete "{selectedCollection?.name}"? This action cannot be undone.
+						</Text>
+						<Text size="sm" c="dimmed">
+							{selectedCollection?.itemCount || 0} items will be permanently removed from this collection.
 						</Text>
 						<Group justify="flex-end" gap="sm">
 							<Button variant="light" onClick={() => { setDeleteModalOpen(false); }}>
-                Cancel
+								Cancel
 							</Button>
 							<Button color="red" onClick={handleDeleteCollection}>
-                Delete Collection
+								Delete Collection
 							</Button>
 						</Group>
 					</Stack>
 				</Modal>
+
+				{/* Filter Drawer */}
+				<Drawer
+					opened={filterDrawerOpen}
+					onClose={() => { setFilterDrawerOpen(false); }}
+					title="Advanced Filters"
+					position="right"
+					size="md"
+				>
+					<Stack gap="md">
+						<Text size="sm" c="dimmed">
+							Advanced filtering options will be available in a future update.
+						</Text>
+						<Divider />
+						<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_MEDIUM}>
+							Coming Soon:
+						</Text>
+						<Text size="sm" c="dimmed">
+							• Filter by item count range<br/>
+							• Filter by completion status<br/>
+							• Filter by value range<br/>
+							• Filter by creation date<br/>
+							• Filter by categories
+						</Text>
+						<Button
+							fullWidth={true}
+							onClick={() => { setFilterDrawerOpen(false); }}
+						>
+							Close
+						</Button>
+					</Stack>
+				</Drawer>
 			</Stack>
 		</Container>
 	);
