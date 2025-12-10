@@ -95,8 +95,8 @@ async function loadDataTypeFromFiles<T>(
 // Generate static params for dynamic routes
 export async function generateItemParams(): Promise<Array<{ id: string }>> {
 	const items = await loadItemsFromFiles();
-	// Limit to first 100 for testing - remove slice for all items
-	return items.slice(0, 100).map((item) => ({
+	// Generate params for all items
+	return items.map((item) => ({
 		id: item.id,
 	}));
 }
