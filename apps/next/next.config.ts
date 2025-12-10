@@ -29,7 +29,7 @@ const withPWAConfig = withPWA({
   register: true,
   skipWaiting: true,
   // Increase maximum file size for precaching to handle large chunks
-  maximumFileSizeToCacheInBytes: 20 * 1024 * 1024, // 20MB to handle graph data
+  // maximumFileSizeToCacheInBytes: 20 * 1024 * 1024, // 20MB to handle graph data
   runtimeCaching: [
     {
       urlPattern: /^https?.*/,
@@ -111,9 +111,14 @@ const nextConfig: NextConfig = {
   // Transpile Vanilla Extract packages (required for Next.js 15)
   transpilePackages: ['@vanilla-extract'],
 
-  // Configure experimental features for Mantine
+  // Configure experimental features for Mantine and Vanilla Extract
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
+    // Critical for Vanilla Extract static export compatibility
+    // esmExternals: 'loose', // Not supported with Turbopack
+    optimizeCss: true,
+    // Fix for Webpack 5 ESM modules
+    esmExternals: false,
   },
 
   // Enable strict mode for better error detection
@@ -127,15 +132,32 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
 
-  // Suppress ESLint warnings during development (these are Nx/Next.js internal issues)
-  eslint: {
-    ignoreDuringBuilds: true, // Skip ESLint during builds since we have separate linting pipeline
-  },
+  // Force webpack for better Vanilla Extract + static export compatibility
+  turbopack: false,
 
   // Additional webpack configuration for Vanilla Extract and bundle optimization
   webpack: (config, { isServer }) => {
     // Use environment variable or fall back to configured default
     const buildDataStrategy = process.env.BUILD_DATA_STRATEGY || DEFAULT_BUILD_DATA_STRATEGY;
+
+    // Fix for Webpack 5 and client-side modules in static export
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+        crypto: false,
+        stream: false,
+        url: false,
+        zlib: false,
+        http: false,
+        https: false,
+        assert: false,
+        os: false,
+        path: false,
+      };
+    }
 
     if (isServer) {
       config.plugins.push(new BuildDataPlugin({
@@ -186,6 +208,14 @@ const nextConfig: NextConfig = {
             name: 'mantine',
             priority: 15,
             chunks: 'all',
+          },
+          // Critical fix for Vanilla Extract static export
+          css: {
+            name: 'css',
+            test: /\.css$/,
+            chunks: 'all',
+            enforce: true,
+            priority: 30,
           },
         },
       };
