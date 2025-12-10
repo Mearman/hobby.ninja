@@ -134,21 +134,21 @@ function NodeCard({ node, currentNodeType }: { node: GraphNode; currentNodeType?
 				)}
 
 				{/* Additional metadata based on node type */}
-				{node.type === "item" && node.data["price"] && (
+				{node.type === "item" && (node.data["price"] != null) && (
 					<Text size="xs" c="blue">
-						¥{Number(node.data["price"]).toLocaleString()}
+						¥{Number(node.data["price"] as string).toLocaleString()}
 					</Text>
 				)}
 
-				{node.type === "manual" && node.data["pages"] && (
+				{node.type === "manual" && (node.data["pages"] != null) && (
 					<Text size="xs" c="dimmed">
-						{node.data["pages"]} pages
+						{String(node.data["pages"])} pages
 					</Text>
 				)}
 
-				{node.type === "series" && node.data["episodes"] && (
+				{node.type === "series" && (node.data["episodes"] != null) && (
 					<Text size="xs" c="dimmed">
-						{node.data["episodes"]} episodes
+						{String(node.data["episodes"])} episodes
 					</Text>
 				)}
 

@@ -596,24 +596,24 @@ export class UnifiedGraphDB {
 	}
 
 	// Constants for magic numbers
-	const ZERO = ZERO;
-	const ONE = ONE;
-	const TWO = TWO;
-	const THREE = THREE;
-	const FOUR = FOUR;
-	const FIVE = FIVE;
-	const SIX = SIX;
-	const SEVEN = SEVEN;
-	const EIGHT = EIGHT;
-	const NINE = NINE;
-	const TEN = TEN;
-	const HUNDRED = HUNDRED;
-	const THOUSAND = THOUSAND;
-	const JSON_INDENTATION = TWO;
-	const PERCENTAGE_MULTIPLIER = HUNDRED;
-	const ARRAY_FIRST_INDEX = ZERO;
-	const ARRAY_SECOND_INDEX = ONE;
-	const ARRAY_THIRD_INDEX = TWO;
+	private readonly ZERO = 0;
+	private readonly ONE = 1;
+	private readonly TWO = 2;
+	private readonly THREE = 3;
+	private readonly FOUR = 4;
+	private readonly FIVE = 5;
+	private readonly SIX = 6;
+	private readonly SEVEN = 7;
+	private readonly EIGHT = 8;
+	private readonly NINE = 9;
+	private readonly TEN = 10;
+	private readonly HUNDRED = 100;
+	private readonly THOUSAND = 1000;
+	private readonly JSON_INDENTATION = this.TWO;
+	private readonly PERCENTAGE_MULTIPLIER = this.HUNDRED;
+	private readonly ARRAY_FIRST_INDEX = this.ZERO;
+	private readonly ARRAY_SECOND_INDEX = this.ONE;
+	private readonly ARRAY_THIRD_INDEX = this.TWO;
 
 }
 
