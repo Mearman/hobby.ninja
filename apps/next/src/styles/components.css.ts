@@ -87,3 +87,10 @@ export const itemDetailMetadata = "item-detail-metadata";
 
 // Placeholder for any missing exports
 export const placeholderStyle = "placeholder-style";
+
+// Homepage Components
+export const itemCardHover = "item-card-hover";
+export const featuredSection = "featured-section";
+export const categoryShowcase = "category-showcase";
+export const testimonialCard = "testimonial-card";
+export const searchBarContainer = "search-bar-container";
