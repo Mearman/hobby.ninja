@@ -96,7 +96,7 @@ interface WorkerInstance {
 
 export class WorkerManager {
 	private workers: WorkerInstance[] = [];
-	private tasks = new Map<string, WorkerTask>();
+	private tasks = new Map<string, WorkerTask<any, any>>();
 	private config: WorkerPoolConfig;
 	private taskIdCounter = ZERO;
 	private isInitialized = false;

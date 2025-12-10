@@ -7,6 +7,7 @@
 
 import { Text, Stack, Group, Divider, Badge, List, Anchor } from "@mantine/core";
 import { IconPackage, IconTag, IconFileText, IconBooks, IconBuildingFactory } from "@tabler/icons-react";
+import type { ReactNode } from "react";
 
 import type { GraphNode } from "../../utils/graph-client";
 import { ZERO, ONE } from "../../types/hobby";
@@ -15,8 +16,8 @@ import { ZERO, ONE } from "../../types/hobby";
 function renderConditional<T>(
 	data: Record<string, unknown>,
 	key: string,
-	render: (value: T) => React.ReactNode
-): React.ReactNode {
+	render: (value: T) => ReactNode
+): ReactNode {
 	const value = data[key] as T | undefined;
 	return value != null ? render(value) : null;
 }
@@ -80,19 +81,19 @@ function ItemDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Scale/Grade */}
-			{(data["scale"] != null) as React.ReactNode && (
+			{((data["scale"] != null) && (
 				<Group>
 					<Text fw={600} size="sm">Scale:</Text>
 					<Badge color="blue" variant="light">{String(data["scale"] as string)}</Badge>
 				</Group>
-			)}
+			)) as ReactNode}
 
-			{renderConditional<string>(data, "series", (series) => (
+			{(data["series"] != null ? (
 				<Group>
 					<Text fw={600} size="sm">Series:</Text>
-					<Text size="sm">{String(series)}</Text>
+					<Text size="sm">{String(data["series"])}</Text>
 				</Group>
-			))}
+			) : null) as ReactNode}
 
 			{(() => {
 				const height = data["height"];
@@ -108,12 +109,12 @@ function ItemDetails({ node }: { node: GraphNode }) {
 				) : null;
 			})()}
 
-		{renderConditional<string>(data, "weight", (weight) => (
+		{(data["weight"] != null ? (
 			<Group>
 				<Text fw={600} size="sm">Weight:</Text>
-				<Text size="sm">{String(weight)}g</Text>
+				<Text size="sm">{String(data["weight"])}g</Text>
 			</Group>
-		))}
+		) : null) as ReactNode}
 
 			{/* Materials */}
 			{data["materials"] && Array.isArray(data["materials"]) && data["materials"].length > ZERO && (
@@ -130,12 +131,12 @@ function ItemDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Description */}
-			{renderConditional(data["description"], (description) => (
+			{(data["description"] != null ? (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Description:</Text>
-					<Text size="sm" lineClamp={3}>{String(description)}</Text>
+					<Text size="sm" lineClamp={3}>{String(data["description"])}</Text>
 				</Stack>
-			))}
+			) : null) as ReactNode}
 
 			{/* Official Links */}
 			{data["links"] && Array.isArray(data["links"]) && data["links"].length > ZERO && (
@@ -165,35 +166,35 @@ function BrandDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Brand Description */}
-			{renderConditional(data["description"], (description) => (
+			{(data["description"] != null ? (
 				<Stack gap="xs">
 					<Text size="sm" fw={600}>About:</Text>
-					<Text size="sm">{String(description)}</Text>
+					<Text size="sm">{String(data["description"])}</Text>
 				</Stack>
-			))}
+			) : null) as ReactNode}
 
-			{renderConditional(data["founded"], (founded) => (
+			{(data["founded"] != null ? (
 				<Group>
 					<Text fw={600} size="sm">Founded:</Text>
-					<Text size="sm">{String(founded)}</Text>
+					<Text size="sm">{String(data["founded"])}</Text>
 				</Group>
-			))}
+			) : null) as ReactNode}
 
-			{data["country"] != null ? (
+			{(data["country"] != null ? (
 				<Group>
 					<Text fw={600} size="sm">Country:</Text>
 					<Text size="sm">{String(data["country"])}</Text>
 				</Group>
-			) : null}
+			) : null) as ReactNode}
 
-			{data["website"] != null ? (
+			{(data["website"] != null ? (
 			<Group>
 				<Text fw={600} size="sm">Website:</Text>
 				<Anchor href={data["website"] as string} target="_blank" rel="noopener noreferrer">
 					{data["website"] as string}
 				</Anchor>
 			</Group>
-		) : null}
+		) : null) as ReactNode}
 
 			{/* Product Lines */}
 			{data["productLines"] && Array.isArray(data["productLines"]) && (data["productLines"] as string[]).length > ZERO && (
@@ -221,12 +222,12 @@ function CategoryDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Category Description */}
-			{renderConditional(data["description"], (description) => (
+			{(data["description"] != null ? (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Description:</Text>
-					<Text size="sm">{String(description)}</Text>
+					<Text size="sm">{String(data["description"])}</Text>
 				</Stack>
-			))}
+			) : null) as ReactNode}
 
 			{data["itemCount"] !== undefined ? (
 			<Group>
@@ -259,30 +260,30 @@ function ManualDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Manual Type */}
-			{(data["type"] != null) as React.ReactNode && (
+			{((data["type"] != null) && (
 				<Group>
 					<Text fw={600} size="sm">Type:</Text>
 					<Badge color="orange" variant="light">{String(data["type"] as string)}</Badge>
 				</Group>
-			)}
+			)) as ReactNode}
 
 			{/* Page Count */}
-			{(data["pages"] != null) as React.ReactNode && (
+			{(data["pages"] != null) as ReactNode && (
 				<Group>
 					<Text fw={600} size="sm">Pages:</Text>
 					<Text size="sm">{String(data["pages"] as string)}</Text>
 				</Group>
 			)}
 
-			{data["language"] != null ? (
+			{(data["language"] != null ? (
 				<Group>
 					<Text fw={600} size="sm">Language:</Text>
 					<Text size="sm">{String(data["language"])}</Text>
 				</Group>
-			) : null}
+			) : null) as ReactNode}
 
 			{/* Format */}
-			{(data["format"] != null) as React.ReactNode && (
+			{(data["format"] != null) as ReactNode && (
 				<Group>
 					<Text fw={600} size="sm">Format:</Text>
 					<Text size="sm">{String(data["format"])}</Text>
@@ -298,7 +299,7 @@ function ManualDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* ISBN */}
-			{(data["isbn"] != null) as React.ReactNode && (
+			{(data["isbn"] != null) as ReactNode && (
 				<Group>
 					<Text fw={600} size="sm">ISBN:</Text>
 					<Text size="sm">{String(data["isbn"])}</Text>
@@ -306,7 +307,7 @@ function ManualDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Size */}
-			{(data["size"] != null) as React.ReactNode && (
+			{(data["size"] != null) as ReactNode && (
 				<Group>
 					<Text fw={600} size="sm">Size:</Text>
 					<Text size="sm">{String(data["size"])}</Text>
@@ -325,7 +326,7 @@ function SeriesDetails({ node }: { node: GraphNode }) {
 	return (
 		<Stack gap="sm">
 			{/* Series Description */}
-			{(data["description"] != null) as React.ReactNode && (
+			{(data["description"] != null) as ReactNode && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">About:</Text>
 					<Text size="sm">{String(data["description"])}</Text>
@@ -343,7 +344,7 @@ function SeriesDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Episode Count */}
-			{(data["episodes"] != null) as React.ReactNode && (
+			{(data["episodes"] != null) as ReactNode && (
 				<Group>
 					<Text fw={600} size="sm">Episodes:</Text>
 					<Text size="sm">{String(data["episodes"])}</Text>
@@ -351,7 +352,7 @@ function SeriesDetails({ node }: { node: GraphNode }) {
 			)}
 
 			{/* Genre */}
-			{(data["genre"] != null) as React.ReactNode && (
+			{(data["genre"] != null) as ReactNode && (
 				<Stack gap="xs">
 					<Text fw={600} size="sm">Genre:</Text>
 					<Group>
@@ -469,7 +470,7 @@ export function GraphNodeDetails({ node }: GraphNodeDetailsProps) {
 			<CommonRelationships node={node} />
 
 			{/* Raw data for debugging (remove in production) */}
-			{process.env.NODE_ENV === "development" && (
+			{process.env["NODE_ENV"] === "development" && (
 				<>
 					<Divider label="Debug Info" labelPosition="center" />
 					<Text size="xs" c="dimmed" component="pre">

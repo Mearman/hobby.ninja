@@ -78,5 +78,6 @@ export interface XLSXLibrary {
 
 declare module "xlsx" {
   const xlsx: XLSXLibrary;
+  export default xlsx;
   export = xlsx;
 }
