@@ -85,7 +85,6 @@ export const TIMING = {
 // Filtering and Search
 export const FILTER = {
 	MIN_YEAR: 1980,
-	MAX_YEAR: 2025,
 	MIN_PRICE: 0,
 	MAX_PRICE: 50_000,
 	PRICE_STEP: 1000,
@@ -100,6 +99,37 @@ export const FILTER = {
 	PRICE_MARK_20_PERCENT: 10_000, // 20% of MAX_PRICE
 	PRICE_MARK_50_PERCENT: 25_000, // 50% of MAX_PRICE
 } as const;
+
+// Dynamic MAX_YEAR - calculated from dataset
+// This function should be used to get the current maximum year from the actual data
+export async function getMaxYear(): Promise<number> {
+	try {
+		// Import here to avoid circular dependencies
+		const { loadItemsFromFiles } = await import('./data-loader');
+		const items = await loadItemsFromFiles();
+
+		// Extract years from release dates
+		const years = items
+			.map(item => item.releaseDate?.year)
+			.filter((year): year is number => year !== undefined && year !== null && year > 0);
+
+		if (years.length === 0) {
+			// Fallback to current year if no data found
+			return new Date().getFullYear();
+		}
+
+		// Return the maximum year found in the dataset
+		return Math.max(...years);
+	} catch (error) {
+		console.warn('Failed to calculate MAX_YEAR from dataset, using current year:', error);
+		// Fallback to current year on error
+		return new Date().getFullYear();
+	}
+}
+
+// Legacy constant for backward compatibility - deprecated
+// Use getMaxYear() instead for dynamic calculation
+export const LEGACY_MAX_YEAR = 2025;
 
 // Z-Index layers
 export const Z_INDEX = {
