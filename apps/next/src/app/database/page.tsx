@@ -9,18 +9,6 @@ import React, { useEffect, useState } from "react";
 import { PAGINATION, TYPOGRAPHY, UI } from "@/lib/constants";
 import { getAllBrands, getAllCategories, getAllItems, getAllSeries } from "@/lib/graph-data";
 import { BaseEdge, BrandNode, CategoryNode, getNodeDisplayName, isBaseEdge, SeriesNode } from "@/lib/schemas";
-import {
-	actionCard,
-	brandLogo,
-	categoryCard,
-	categoryIcon,
-	databaseStatCard,
-	databaseStatIcon,
-	searchCard,
-	seriesCard,
-	seriesImage,
-	statCard,
-} from "@/styles/components.css";
 
 // Type-safe CSS class accessor for category-specific styling
 const getCategoryStyle = (_categoryId: string): string => {
@@ -147,13 +135,42 @@ function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 			cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
 			spacing={{ base: "sm", md: "lg" }}
 		>
-			<Card p="lg" radius="md" className={statCard}>
+			<Card
+				p="lg"
+				radius="md"
+				withBorder
+				style={{
+					transition: 'all 200ms ease-in-out',
+					border: `1px solid var(--mantine-color-gray-2)`,
+				}}
+				onMouseEnter={(e) => {
+					e.currentTarget.style.transform = 'translateY(-2px)';
+					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-md)';
+					e.currentTarget.style.borderColor = 'var(--mantine-color-blue-3)';
+				}}
+				onMouseLeave={(e) => {
+					e.currentTarget.style.transform = 'translateY(0)';
+					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-sm)';
+					e.currentTarget.style.borderColor = 'var(--mantine-color-gray-2)';
+				}}
+			>
 				<Group>
-					<div className={databaseStatIcon}>
+					<div
+						style={{
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							width: 48,
+							height: 48,
+							borderRadius: 'var(--mantine-radius-md)',
+							backgroundColor: 'var(--mantine-color-blue-0)',
+							color: 'var(--mantine-color-blue-6)',
+						}}
+					>
 						<IconBox size={UI.ICON_SIZE_XL} />
 					</div>
 					<div>
-						<Text size="xs" color="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
+						<Text size="xs" c="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
               Database Size
 						</Text>
 						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
@@ -163,13 +180,42 @@ function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 				</Group>
 			</Card>
 
-			<Card p="lg" radius="md" className={databaseStatCard}>
+			<Card
+				p="lg"
+				radius="md"
+				withBorder
+				style={{
+					transition: 'all 200ms ease-in-out',
+					border: `1px solid var(--mantine-color-gray-2)`,
+				}}
+				onMouseEnter={(e) => {
+					e.currentTarget.style.transform = 'translateY(-2px)';
+					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-md)';
+					e.currentTarget.style.borderColor = 'var(--mantine-color-blue-3)';
+				}}
+				onMouseLeave={(e) => {
+					e.currentTarget.style.transform = 'translateY(0)';
+					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-sm)';
+					e.currentTarget.style.borderColor = 'var(--mantine-color-gray-2)';
+				}}
+			>
 				<Group>
-					<div className={databaseStatIcon}>
+					<div
+						style={{
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							width: 48,
+							height: 48,
+							borderRadius: 'var(--mantine-radius-md)',
+							backgroundColor: 'var(--mantine-color-blue-0)',
+							color: 'var(--mantine-color-blue-6)',
+						}}
+					>
 						<IconFolder size={UI.ICON_SIZE_XL} />
 					</div>
 					<div>
-						<Text size="xs" color="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
+						<Text size="xs" c="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
               Brands
 						</Text>
 						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
@@ -179,13 +225,42 @@ function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 				</Group>
 			</Card>
 
-			<Card p="lg" radius="md" className={databaseStatCard}>
+			<Card
+				p="lg"
+				radius="md"
+				withBorder
+				style={{
+					transition: 'all 200ms ease-in-out',
+					border: `1px solid var(--mantine-color-gray-2)`,
+				}}
+				onMouseEnter={(e) => {
+					e.currentTarget.style.transform = 'translateY(-2px)';
+					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-md)';
+					e.currentTarget.style.borderColor = 'var(--mantine-color-blue-3)';
+				}}
+				onMouseLeave={(e) => {
+					e.currentTarget.style.transform = 'translateY(0)';
+					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-sm)';
+					e.currentTarget.style.borderColor = 'var(--mantine-color-gray-2)';
+				}}
+			>
 				<Group>
-					<div className={databaseStatIcon}>
+					<div
+						style={{
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							width: 48,
+							height: 48,
+							borderRadius: 'var(--mantine-radius-md)',
+							backgroundColor: 'var(--mantine-color-blue-0)',
+							color: 'var(--mantine-color-blue-6)',
+						}}
+					>
 						<IconTag size={UI.ICON_SIZE_XL} />
 					</div>
 					<div>
-						<Text size="xs" color="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
+						<Text size="xs" c="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
               Categories
 						</Text>
 						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
@@ -195,13 +270,42 @@ function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 				</Group>
 			</Card>
 
-			<Card p="lg" radius="md" className={databaseStatCard}>
+			<Card
+				p="lg"
+				radius="md"
+				withBorder
+				style={{
+					transition: 'all 200ms ease-in-out',
+					border: `1px solid var(--mantine-color-gray-2)`,
+				}}
+				onMouseEnter={(e) => {
+					e.currentTarget.style.transform = 'translateY(-2px)';
+					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-md)';
+					e.currentTarget.style.borderColor = 'var(--mantine-color-blue-3)';
+				}}
+				onMouseLeave={(e) => {
+					e.currentTarget.style.transform = 'translateY(0)';
+					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-sm)';
+					e.currentTarget.style.borderColor = 'var(--mantine-color-gray-2)';
+				}}
+			>
 				<Group>
-					<div className={databaseStatIcon}>
+					<div
+						style={{
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							width: 48,
+							height: 48,
+							borderRadius: 'var(--mantine-radius-md)',
+							backgroundColor: 'var(--mantine-color-blue-0)',
+							color: 'var(--mantine-color-blue-6)',
+						}}
+					>
 						<IconTrendingUp size={UI.ICON_SIZE_XL} />
 					</div>
 					<div>
-						<Text size="xs" color="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
+						<Text size="xs" c="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
               Series
 						</Text>
 						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
@@ -320,11 +424,11 @@ function BrandsGrid({ brands }: { brands: DatabaseStats["brands"] }) {
 							href={`/brand/${brand.id}`}
 							p="md"
 							radius="md"
-							className={categoryCard}
-							withBorder={true}
+							withBorder
+							h="100%"
 						>
 							<Stack align="center" gap={UI.SKELETON_HEIGHT_SMALL}>
-								<Box w={60} h={60} className={brandLogo}>
+								<Box w={60} h={60} style={{ borderRadius: 'var(--mantine-radius-md)', overflow: 'hidden', backgroundColor: 'var(--mantine-color-gray-1)', border: '1px solid var(--mantine-color-gray-4)' }}>
 									<Image
 										src={generateBrandPlaceholder(displayName)}
 										alt={displayName}
@@ -380,11 +484,11 @@ function CategoriesGrid({ categories }: { categories: DatabaseStats["categories"
 						href={`/category/${category.id}`}
 						p="lg"
 						radius="md"
-						className={categoryCard}
-						withBorder={true}
+						withBorder
+						h="100%"
 					>
 						<Stack align="center" gap={UI.SKELETON_HEIGHT_SMALL}>
-							<div className={`${categoryIcon} ${getCategoryStyle(category.id)}`}>
+							<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 64, height: 64, borderRadius: 'var(--mantine-radius-lg)', backgroundColor: 'var(--mantine-color-blue-1)', color: 'var(--mantine-color-blue-6)' }}>
 								<IconFolder size={UI.ICON_SIZE_XXL} />
 							</div>
 							<Text size="md" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} ta="center" lineClamp={1}>
@@ -435,11 +539,11 @@ function SeriesGrid({ series }: { series: DatabaseStats["series"] }) {
 							href={`/series/${seriesItem.id}`}
 							p="md"
 							radius="md"
-							className={seriesCard}
-							withBorder={true}
+							withBorder
+							h="100%"
 						>
 							<Stack gap={UI.SKELETON_HEIGHT_SMALL}>
-								<Box h={80} className={seriesImage}>
+								<Box h={80} style={{ borderRadius: 'var(--mantine-radius-sm)', overflow: 'hidden' }}>
 									<Image
 										src={generateSeriesPlaceholder(displayName)}
 										alt={displayName}
@@ -555,7 +659,24 @@ export default function DatabasePage() {
 						href="/search"
 						p="md"
 						radius="md"
-						className={searchCard}
+						style={{
+							textDecoration: 'none',
+							color: 'inherit',
+							backgroundColor: 'var(--mantine-color-body)',
+							border: '2px dashed var(--mantine-color-gray-4)',
+							cursor: 'pointer',
+							transition: 'all 200ms ease-in-out',
+						}}
+						onMouseEnter={(e) => {
+							e.currentTarget.style.backgroundColor = 'var(--mantine-color-blue-0)';
+							e.currentTarget.style.borderColor = 'var(--mantine-color-blue-4)';
+							e.currentTarget.style.transform = 'translateY(-2px)';
+						}}
+						onMouseLeave={(e) => {
+							e.currentTarget.style.backgroundColor = 'var(--mantine-color-body)';
+							e.currentTarget.style.borderColor = 'var(--mantine-color-gray-4)';
+							e.currentTarget.style.transform = 'translateY(0)';
+						}}
 					>
 						<Group>
 							<IconSearch size={UI.ICON_SIZE_LG} />
@@ -590,8 +711,23 @@ export default function DatabasePage() {
 							href="/items"
 							p="md"
 							radius="md"
-							className={actionCard}
-							withBorder={true}
+							withBorder
+							style={{
+								textDecoration: 'none',
+								color: 'inherit',
+								backgroundColor: 'var(--mantine-color-body)',
+								transition: 'all 200ms ease-in-out',
+							}}
+							onMouseEnter={(e) => {
+								e.currentTarget.style.backgroundColor = 'var(--mantine-color-blue-0)';
+								e.currentTarget.style.borderColor = 'var(--mantine-color-blue-4)';
+								e.currentTarget.style.transform = 'translateX(4px)';
+							}}
+							onMouseLeave={(e) => {
+								e.currentTarget.style.backgroundColor = 'var(--mantine-color-body)';
+								e.currentTarget.style.borderColor = 'var(--mantine-color-gray-3)';
+								e.currentTarget.style.transform = 'translateX(0)';
+							}}
 						>
 							<Group>
 								<IconBox size={UI.ICON_SIZE_LG} />
@@ -604,8 +740,23 @@ export default function DatabasePage() {
 							href="/collection"
 							p="md"
 							radius="md"
-							className={actionCard}
-							withBorder={true}
+							withBorder
+							style={{
+								textDecoration: 'none',
+								color: 'inherit',
+								backgroundColor: 'var(--mantine-color-body)',
+								transition: 'all 200ms ease-in-out',
+							}}
+							onMouseEnter={(e) => {
+								e.currentTarget.style.backgroundColor = 'var(--mantine-color-blue-0)';
+								e.currentTarget.style.borderColor = 'var(--mantine-color-blue-4)';
+								e.currentTarget.style.transform = 'translateX(4px)';
+							}}
+							onMouseLeave={(e) => {
+								e.currentTarget.style.backgroundColor = 'var(--mantine-color-body)';
+								e.currentTarget.style.borderColor = 'var(--mantine-color-gray-3)';
+								e.currentTarget.style.transform = 'translateX(0)';
+							}}
 						>
 							<Group>
 								<IconFolder size={UI.ICON_SIZE_LG} />
@@ -618,8 +769,23 @@ export default function DatabasePage() {
 							href="/import"
 							p="md"
 							radius="md"
-							className={actionCard}
-							withBorder={true}
+							withBorder
+							style={{
+								textDecoration: 'none',
+								color: 'inherit',
+								backgroundColor: 'var(--mantine-color-body)',
+								transition: 'all 200ms ease-in-out',
+							}}
+							onMouseEnter={(e) => {
+								e.currentTarget.style.backgroundColor = 'var(--mantine-color-blue-0)';
+								e.currentTarget.style.borderColor = 'var(--mantine-color-blue-4)';
+								e.currentTarget.style.transform = 'translateX(4px)';
+							}}
+							onMouseLeave={(e) => {
+								e.currentTarget.style.backgroundColor = 'var(--mantine-color-body)';
+								e.currentTarget.style.borderColor = 'var(--mantine-color-gray-3)';
+								e.currentTarget.style.transform = 'translateX(0)';
+							}}
 						>
 							<Group>
 								<IconTrendingUp size={UI.ICON_SIZE_LG} />
