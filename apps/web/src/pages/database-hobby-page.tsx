@@ -21,7 +21,7 @@ import {
 	Breadcrumbs,
 	Anchor,
 } from "@mantine/core";
-import { IconSearch, IconFilter, IconChevronRight, IconAdjustmentsHorizontal } from "@tabler/icons-react";
+import { IconSearch, IconFilter, IconAdjustmentsHorizontal } from "@tabler/icons-react";
 import { useNavigate, useParams, useSearch, Link } from "@tanstack/react-router";
 import React, { useState, useEffect, useCallback } from "react";
 
@@ -111,7 +111,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 			name: "Model Kits",
 			description: "Other anime and sci-fi model kits",
 			color: "gunplaGray" as const,
-			grades: ["ONE/144", "ONE/HUNDRED", "ONE/72", "ONE/48", "ONE/35"],
+			grades: ["1/144", "1/100", "1/72", "1/48", "1/35"],
 			series: ["Macross", "Patlabor", "Armored Core", "Votoms"],
 		},
 	};
@@ -237,7 +237,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 			<div className={databaseContainer}>
 				<Container size="lg">
 					<Center h="50vh">
-						<Alert color="red" variant="light" w="HUNDRED%" maw={500}>
+						<Alert color="red" variant="light" w="100%" maw={500}>
 							<Text ta="center">{error}</Text>
 							<Button variant="outline" onClick={() => { globalThis.location.reload(); }} mt="md">
 								Try Again
@@ -261,7 +261,7 @@ export function DatabaseHobbyPage(): React.ReactElement {
 							{breadcrumbItems}
 						</Breadcrumbs>
 
-						<Title order={ONE} size={36} mb="sm" c={config.color}>
+						<Title order={1} size={36} mb="sm" c={config.color}>
 							{config.name}
 						</Title>
 						<Text size="lg" color="dimmed" mb="xl">

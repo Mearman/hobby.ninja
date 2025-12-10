@@ -1,33 +1,22 @@
 import { Container, Title, Text, Card, Button, Group, Stack, SimpleGrid, Badge, ActionIcon, Skeleton, Alert, Select, TextInput, Menu } from "@mantine/core";
 import { IconPlus, IconSearch, IconPackage, IconEdit, IconTrash, IconFilter, IconDots, IconPhoto } from "@tabler/icons-react";
 import { Link, useParams, useNavigate } from "@tanstack/react-router";
+import { Collection, UniversalItem, ItemStatus } from "@workspace/types/hobby";
 import React, { useState, useEffect } from "react";
 
 import { collectionService } from "../services/collectionService";
-import { Collection, UniversalItem, ItemStatus } from "../types/hobby";
 
-
-// Constants for magic numbers
-const ZERO = 0;
-const ONE = 1;
-const TWO = 2;
-const THREE = 3;
-const FOUR = 4;
-const FIVE = 5;
-const SIX = 6;
-const SEVEN = 7;
-const EIGHT = 8;
-const NINE = 9;
-const TEN = 10;
-const HUNDRED = 100;
-const THOUSAND = 1000;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
-
-interface CollectionDetailPageProps {}
+const statusColors: Record<ItemStatus, string> = {
+	wanted: "blue",
+	ordered: "yellow",
+	owned: "green",
+	building: "orange",
+	completed: "cyan",
+	for_sale: "red",
+	traded: "purple",
+	lost: "gray",
+	archived: "dark",
+};
 
 const statusOptions = [
 	{ value: "", label: "All Status" },
@@ -42,22 +31,10 @@ const statusOptions = [
 	{ value: "archived", label: "Archived" },
 ];
 
-const statusColors: Record<ItemStatus, string> = {
-	wanted: "blue",
-	ordered: "yellow",
-	owned: "green",
-	building: "orange",
-	completed: "cyan",
-	for_sale: "red",
-	traded: "purple",
-	lost: "gray",
-	archived: "dark",
-};
-
 /**
  * Collection detail page showing all items in a specific collection
  */
-export function CollectionDetailPage({}: CollectionDetailPageProps): React.ReactElement {
+export function CollectionDetailPage(): React.ReactElement {
 	const { hobbyType, collectionId } = useParams({ from: "/collection/$hobbyType/$collectionId" });
 	const navigate = useNavigate();
 
@@ -70,13 +47,13 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 	const [statusFilter, setStatusFilter] = useState<string>("");
 
 	const hobbyTypeConfig = {
-		model_kits: { name: "Model Kits", icon: "🤖", color: "blue" },
-		trading_cards: { name: "Trading Cards", icon: "🃏", color: "purple" },
-		miniatures: { name: "Miniatures", icon: "🎭", color: "red" },
-		other: { name: "Other", icon: "📦", color: "gray" },
+		model_kits: { name: "Model Kits", icon: "MK", color: "blue" },
+		trading_cards: { name: "Trading Cards", icon: "TC", color: "purple" },
+		miniatures: { name: "Miniatures", icon: "MI", color: "red" },
+		other: { name: "Other", icon: "OT", color: "gray" },
 	};
 
-	const config = hobbyTypeConfig[hobbyType as keyof typeof hobbyTypeConfig] || { name: "Unknown", icon: "❓", color: "gray" };
+	const config = hobbyTypeConfig[hobbyType as keyof typeof hobbyTypeConfig] || { name: "Unknown", icon: "??", color: "gray" };
 
 	useEffect(() => {
 		const loadData = async () => {
@@ -115,7 +92,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 		if (searchQuery.trim()) {
 			const query = searchQuery.toLowerCase();
 			filtered = filtered.filter(item =>
-				String(item.data["name"] as string).toLowerCase().includes(query) ||
+				String(item.data.name as string).toLowerCase().includes(query) ||
 				item.tags.some(tag => tag.toLowerCase().includes(query)),
 			);
 		}
@@ -175,8 +152,8 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 					<Card p="lg" radius="lg" withBorder={true}>
 						<Stack gap="md">
 							<Skeleton height={32} width={200} />
-							<SimpleGrid cols={{ base: ONE, sm: TWO, lg: THREE }} spacing="lg">
-								{[ONE, TWO, THREE, FOUR, FIVE, SIX].map((i) => (
+							<SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="lg">
+								{[1, 2, 3, 4, 5, 6].map((i) => (
 									<Skeleton key={i} height={200} radius="md" />
 								))}
 							</SimpleGrid>
@@ -213,7 +190,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 								← Back to Collections
 							</Button>
 						</Group>
-						<Title order={ONE} size={36}>
+						<Title order={1} size={36}>
 							{collection.name}
 						</Title>
 						<Text size="lg" color="dimmed">
@@ -256,7 +233,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 								leftSection={<IconSearch size={16} />}
 								value={searchQuery}
 								onChange={(e) => { setSearchQuery(e.target.value); }}
-								style={{ flex: ONE }}
+								style={{ flex: 1 }}
 							/>
 							<Select
 								data={statusOptions}
@@ -277,20 +254,20 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 						</Group>
 
 						{/* Items Grid */}
-						{filteredItems.length === ZERO ? (
+						{filteredItems.length === 0 ? (
 							/* Empty State */
 							<Stack align="center" gap="lg" mih={300}>
 								<IconPackage size={48} color="gray" />
-								<Title order={THREE} ta="center">
-									{items.length === ZERO ? "No Items Yet" : "No Matching Items"}
+								<Title order={3} ta="center">
+									{items.length === 0 ? "No Items Yet" : "No Matching Items"}
 								</Title>
 								<Text color="dimmed" ta="center" maw={400}>
-									{items.length === ZERO
+									{items.length === 0
 										? "Start building your collection by adding your first item."
 										: "Try adjusting your search or filters to find what you're looking for."
 									}
 								</Text>
-								{items.length === ZERO && (
+								{items.length === 0 && (
 									<Button
 										onClick={handleAddItem}
 										leftSection={<IconPlus size={16} />}
@@ -301,7 +278,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 								)}
 							</Stack>
 						) : (
-							<SimpleGrid cols={{ base: ONE, sm: TWO, lg: THREE }} spacing="lg">
+							<SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="lg">
 								{filteredItems.map((item) => (
 									<Card
 										key={item.id}
@@ -310,19 +287,19 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 										shadow="sm"
 										withBorder={true}
 										style={{
-											transition: "all ZERO.2s ease",
+											transition: "all 0.2s ease",
 										}}
 									>
-										<Stack gap="md" h="HUNDRED%">
+										<Stack gap="md" h="100%">
 											{/* Item Header */}
 											<Group justify="space-between" align="flex-start">
-												<Stack gap="xs" style={{ flex: ONE }}>
-													<Title order={FOUR} size={16} lineClamp={ONE}>
-														{String(item.data["name"] as string) || "Untitled Item"}
+												<Stack gap="xs" style={{ flex: 1 }}>
+													<Title order={4} size={16} lineClamp={1}>
+														{String(item.data.name as string) || "Untitled Item"}
 													</Title>
-													{(item.data["brand"] != null) && (
+													{(item.data.brand != null) && (
 														<Text size="sm" color="dimmed">
-															{String(item.data["brand"] as string)}
+															{String(item.data.brand as string)}
 														</Text>
 													)}
 												</Stack>
@@ -353,19 +330,19 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 											</Group>
 
 											{/* Item Image */}
-											{item.images && item.images.length > ZERO ? (
+											{item.images && item.images.length > 0 ? (
 												<div
 													style={{
-														width: "HUNDRED%",
+														width: "100%",
 														height: 120,
-														background: `url(${item.images[ARRAY_FIRST_INDEX].url}) center/cover`,
+														background: `url(${item.images[0].url}) center/cover`,
 														borderRadius: "8px",
 													}}
 												/>
 											) : (
 												<div
 													style={{
-														width: "HUNDRED%",
+														width: "100%",
 														height: 120,
 														background: "#f5f5f5",
 														borderRadius: "8px",
@@ -379,29 +356,29 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 											)}
 
 											{/* Item Details */}
-											{(item.data["grade"] != null) && (
+											{(item.data.grade != null) && (
 												<Badge variant="outline" size="xs">
-													{String(item.data["grade"] as string)}
+													{String(item.data.grade as string)}
 												</Badge>
 											)}
 
-											{(item.data["scale"] != null) && (
+											{(item.data.scale != null) && (
 												<Text size="xs" color="dimmed">
-													Scale: {String(item.data["scale"] as string)}
+													Scale: {String(item.data.scale as string)}
 												</Text>
 											)}
 
 											{/* Item Tags */}
-											{item.tags.length > ZERO && (
+											{item.tags.length > 0 && (
 												<Group gap="xs" wrap="wrap">
-													{item.tags.slice(ARRAY_FIRST_INDEX, TWO).map((tag) => (
+													{item.tags.slice(0, 2).map((tag) => (
 														<Badge key={tag} variant="light" size="xs">
 															{tag}
 														</Badge>
 													))}
-													{item.tags.length > TWO && (
+													{item.tags.length > 2 && (
 														<Badge variant="light" size="xs">
-															+{item.tags.length - TWO}
+															+{item.tags.length - 2}
 														</Badge>
 													)}
 												</Group>
@@ -410,7 +387,7 @@ export function CollectionDetailPage({}: CollectionDetailPageProps): React.React
 											{/* Status */}
 											<Group justify="space-between" mt="auto">
 												<Select
-													data={statusOptions.slice(ARRAY_SECOND_INDEX)} // Remove "All Status" option
+													data={statusOptions.slice(1)} // Remove "All Status" option
 													value={item.status}
 													onChange={(value) => value && handleStatusUpdate(item.id, value as ItemStatus)}
 													size="xs"
