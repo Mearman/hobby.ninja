@@ -8,7 +8,9 @@ import { PWAInstall } from "@/components/pwa/pwa-install";
 import { SearchProvider } from "@/components/search/search-provider";
 import { CollectionProvider } from "@/contexts/collection-context";
 import { MantineThemeProvider } from "@/providers/mantine-provider";
+// Import the placeholder Vanilla Extract file for static export compatibility
 import { appShell, mainContent } from "@/styles/components.css";
+import "@/styles/components-placeholder.css";
 
 interface LayoutClientProps {
   children: React.ReactNode;
