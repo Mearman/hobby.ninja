@@ -1,7 +1,25 @@
 import fs from "node:fs";
 import path from "node:path";
-import { ItemNodeSchema, BrandNodeSchema, CategoryNodeSchema, SeriesNodeSchema, ManualNodeSchema, isItemNode, isBrandNode, isCategoryNode, isSeriesNode, isManualNode } from "./schemas";
-import type { ItemNode, BrandNode, CategoryNode, SeriesNode, ManualNode } from "./schemas";
+
+import type {
+	ItemNode,
+	BrandNode,
+	CategoryNode,
+	SeriesNode,
+	ManualNode,
+} from "./schemas";
+import {
+	ItemNodeSchema,
+	BrandNodeSchema,
+	CategoryNodeSchema,
+	SeriesNodeSchema,
+	ManualNodeSchema,
+	isItemNode,
+	isBrandNode,
+	isCategoryNode,
+	isSeriesNode,
+	isManualNode,
+} from "./schemas";
 
 // Data directory path
 const DATA_ROOT = path.resolve(process.cwd(), "../../data/api/graph");
@@ -30,8 +48,8 @@ export async function loadManualsFromFiles(): Promise<ManualNode[]> {
 // Generic function to load and validate data
 async function loadDataTypeFromFiles<T>(
 	dataType: string,
-	schema: any,
-	typeGuard: (data: unknown) => data is T
+	schema: { safeParse: (data: unknown) => { success: boolean; data?: T; error?: unknown } },
+	typeGuard: (data: unknown) => data is T,
 ): Promise<T[]> {
 	const dataDir = path.join(DATA_ROOT, dataType);
 
@@ -42,21 +60,21 @@ async function loadDataTypeFromFiles<T>(
 
 	try {
 		const files = await fs.promises.readdir(dataDir);
-		const jsonFiles = files.filter(file => file.endsWith(".json"));
+		const jsonFiles = files.filter((file) => file.endsWith(".json"));
 		const validatedData: T[] = [];
 
 		for (const file of jsonFiles) {
 			try {
 				const filePath = path.join(dataDir, file);
-				const fileContent = await fs.promises.readFile(filePath, "utf-8");
-				const data = JSON.parse(fileContent);
+				const fileContent = await fs.promises.readFile(filePath, "utf8");
+				const data: unknown = JSON.parse(fileContent);
 
 				// Handle single object or array of objects
 				const itemsToValidate = Array.isArray(data) ? data : [data];
 
 				for (const item of itemsToValidate) {
 					const result = schema.safeParse(item);
-					if (result.success && typeGuard(result.data)) {
+					if (result.success && result.data && typeGuard(result.data)) {
 						validatedData.push(result.data);
 					} else {
 						console.warn(`Invalid ${dataType} data in ${file}:`, result.error);
@@ -99,8 +117,8 @@ export async function generateCategoryParams(): Promise<Array<{ id: string }>> {
 
 export async function generateSeriesParams(): Promise<Array<{ id: string }>> {
 	const series = await loadSeriesFromFiles();
-	return series.map((seriesItem) => ({
-		id: seriesItem.id,
+	return series.map((seriesData) => ({
+		id: seriesData.id,
 	}));
 }
 

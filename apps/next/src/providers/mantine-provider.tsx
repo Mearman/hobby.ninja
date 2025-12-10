@@ -43,7 +43,7 @@ function useTheme() {
 		if (!mounted) return "light"; // Default for SSR
 
 		if (colorScheme === "system") {
-			return globalThis.window?.matchMedia?.("(prefers-color-scheme: dark)").matches
+			return globalThis.window.matchMedia("(prefers-color-scheme: dark)").matches
 				? "dark"
 				: "light";
 		}

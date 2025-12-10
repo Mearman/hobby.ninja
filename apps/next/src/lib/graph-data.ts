@@ -1,3 +1,12 @@
+
+// Static data imports for build-time embedding
+// This replaces runtime fetching with build-time imports
+import brandsData from "../data/brands.json";
+import categoriesData from "../data/categories.json";
+import itemsData from "../data/items.json";
+import manualsData from "../data/manuals.json";
+import seriesData from "../data/series.json";
+
 import {
 	BaseNode,
 	GraphNode,
@@ -20,27 +29,19 @@ import {
 	ManualNodeSchema,
 } from "./schemas";
 
-// Static data imports for build-time embedding
-// This replaces runtime fetching with build-time imports
-import itemsData from '../data/items.json';
-import brandsData from '../data/brands.json';
-import categoriesData from '../data/categories.json';
-import seriesData from '../data/series.json';
-import manualsData from '../data/manuals.json';
-
 // Type guard for the new JSON structure
 function isGraphDataFile(data: unknown): data is { nodes: unknown[]; edges: Record<string, Record<string, never>> } {
 	return (
-		typeof data === 'object' && data !== null &&
-		'nodes' in data && Array.isArray((data as any).nodes) &&
-		'edges' in data && typeof (data as any).edges === 'object'
+		typeof data === "object" && data !== null &&
+		"nodes" in data && Array.isArray((data as Record<string, unknown>).nodes) &&
+		"edges" in data && typeof (data as Record<string, unknown>).edges === "object"
 	);
 }
 
 // Parse and validate the imported data
-function parseJSONData<T>(schema: any, data: unknown): T[] {
+function parseJSONData<T>(schema: { safeParse: (data: unknown) => { success: boolean; data?: T; error?: unknown } }, data: unknown): T[] {
 	if (!isGraphDataFile(data)) {
-		console.error('Invalid data file format: expected {nodes: [], edges: {}}');
+		console.error("Invalid data file format: expected {nodes: [], edges: {}}");
 		return [];
 	}
 
@@ -56,7 +57,7 @@ function parseJSONData<T>(schema: any, data: unknown): T[] {
 // Extract edges from data files
 function parseEdges(data: unknown): Record<string, Record<string, never>> {
 	if (!isGraphDataFile(data)) {
-		console.error('Invalid data file format: expected {nodes: [], edges: {}}');
+		console.error("Invalid data file format: expected {nodes: [], edges: {}}");
 		return {};
 	}
 	return data.edges;
@@ -82,7 +83,7 @@ const staticData = {
 	edges: parsedEdges,
 };
 
-console.log('Loaded static graph data:', {
+console.log("Loaded static graph data:", {
 	items: staticData.items.length,
 	brands: staticData.brands.length,
 	categories: staticData.categories.length,
@@ -132,11 +133,11 @@ export function getCategoryById(id: string): CategoryNode | null {
 }
 
 export function getSeriesById(id: string): SeriesNode | null {
-	return staticData.series.find(s => s.id === id) ?? null;
+	return staticData.series.find(series => series.id === id) ?? null;
 }
 
 export function getManualById(id: string): ManualNode | null {
-	return staticData.manuals.find(manual => manual.id === id) ?? null;
+	return staticData.manuals.find(m => m.id === id) ?? null;
 }
 
 // Get items by category using edges
@@ -149,7 +150,7 @@ export function getItemsByCategory(categoryId: string): ItemNode[] {
 	// Find all edges that connect items to this category
 	for (const edgeKey of Object.keys(staticData.edges)) {
 		if (edgeKey.startsWith(categoryEdgePrefix) && edgeKey.endsWith(categoryEdgeSuffix)) {
-			const itemId = edgeKey.split(':')[1]; // Extract item ID from "item:ITEM_ID:BELONGS_TO_CATEGORY:category:CATEGORY_ID"
+			const itemId = edgeKey.split(":")[1]; // Extract item ID from "item:ITEM_ID:BELONGS_TO_CATEGORY:category:CATEGORY_ID"
 			itemIds.push(itemId);
 		}
 	}

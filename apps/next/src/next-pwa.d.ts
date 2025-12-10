@@ -1,10 +1,10 @@
-declare module 'next-pwa' {
+declare module "next-pwa" {
   interface PWAConfig {
     dest?: string;
     disable?: boolean;
     register?: boolean;
     skipWaiting?: boolean;
-    runtimeCaching?: Array<any>;
+    runtimeCaching?: any[];
     cacheOnFrontEndNav?: boolean;
     reloadOnOnline?: boolean;
     scope?: string;

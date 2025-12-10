@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { transformEdgesToUltraCompact, parseUltraCompactEdgeKey } from './edge-transformer';
+import { transformEdgesToUltraCompact, parseUltraCompactEdgeKey, type UltraCompactEdgeMap } from './edge-transformer';
 
 // Get current directory for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -41,9 +41,6 @@ export interface UnifiedEdge {
   targetType: string;
 }
 
-interface UltraCompactEdgeMap {
-  [edgeKey: string]: Record<string, never>;
-}
 
 interface UnifiedData {
   nodes: GraphNode[];
