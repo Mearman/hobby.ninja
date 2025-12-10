@@ -46,17 +46,17 @@ export function PWAInstall() {
 			setShowInstallModal(false);
 		};
 
-		window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-		window.addEventListener("appinstalled", handleAppInstalled);
+		globalThis.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+		globalThis.addEventListener("appinstalled", handleAppInstalled);
 
 		// Check if app is already installed
-		if (window.matchMedia("(display-mode: standalone)").matches) {
+		if (globalThis.matchMedia("(display-mode: standalone)").matches) {
 			setShowInstallPrompt(false);
 		}
 
 		return () => {
-			window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-			window.removeEventListener("appinstalled", handleAppInstalled);
+			globalThis.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+			globalThis.removeEventListener("appinstalled", handleAppInstalled);
 		};
 	}, []);
 
@@ -75,8 +75,9 @@ export function PWAInstall() {
 			}
 
 			setDeferredPrompt(null);
-		} catch (error) {
-			console.error("Error during PWA installation:", error);
+		} catch (error: unknown) {
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error("Error during PWA installation:", errorMessage);
 		}
 	};
 
@@ -88,7 +89,7 @@ export function PWAInstall() {
 			if (deferredPrompt) {
 				setShowInstallPrompt(true);
 			}
-		}, 60000); // 1 minute
+		}, 60_000); // 1 minute
 	};
 
 	if (!showInstallPrompt || !deferredPrompt) {
@@ -117,8 +118,8 @@ export function PWAInstall() {
 						radius="xl"
 						color="blue"
 						variant="filled"
-						onClick={() => setShowInstallModal(true)}
-						>
+						onClick={() => { setShowInstallModal(true); }}
+					>
 						<IconDownload size={20} />
 					</ActionIcon>
 				</Flex>
@@ -133,7 +134,7 @@ export function PWAInstall() {
 				title={
 					<Title order={3}>Install Hobby Ninja</Title>
 				}
-				withCloseButton
+				withCloseButton={true}
 			>
 				<Group gap="lg" mb="md">
 					<Box
