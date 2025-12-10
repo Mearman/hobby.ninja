@@ -35,24 +35,24 @@ import { dataService, type UnifiedItem, type ManualItem, type CatalogItem } from
 
 
 // Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
+const ZERO = 0;
+const ONE = 1;
+const TWO = 2;
+const THREE = 3;
+const FOUR = 4;
+const FIVE = 5;
+const SIX = 6;
+const SEVEN = 7;
+const EIGHT = 8;
+const NINE = 9;
+const TEN = 10;
+const HUNDRED = 100;
+const THOUSAND = 1000;
+const JSON_INDENTATION = 2;
+const PERCENTAGE_MULTIPLIER = 100;
+const ARRAY_FIRST_INDEX = 0;
+const ARRAY_SECOND_INDEX = 1;
+const ARRAY_THIRD_INDEX = 2;
 
 // Types for page state
 interface PageState {
@@ -153,9 +153,35 @@ export const ItemDetailPage: React.FC = () => {
 		setPageState(prev => ({ ...prev, source: preferredSource }));
 	}, [preferredSource]);
 
+	// Update recently viewed items
+	const updateRecentItems = (item: UnifiedItem | ManualItem | CatalogItem) => {
+		try {
+			const recentKey = "hobby_db_recent_items";
+			const recentItems = JSON.parse(localStorage.getItem(recentKey) || "[]");
+
+			// Remove if already exists
+			const filtered = recentItems.filter((i: any) => i.id !== item.id);
+
+			// Add to beginning
+			const updated = [
+				{
+					id: item.id,
+					name: item.properties?.name?.ja || item.properties?.name?.en || item.id,
+					timestamp: Date.now(),
+					type: "sources" in item ? "unified" : ("metadata" in item ? "manual" : "catalog"),
+				},
+				...filtered.slice(ARRAY_FIRST_INDEX, 19), // Keep only 20 recent items
+			];
+
+			localStorage.setItem(recentKey, JSON.stringify(updated));
+		} catch (error) {
+			console.warn("Failed to update recent items:", error);
+		}
+	};
+
 	// Load item data
 	useEffect(() => {
-		loadItem();
+		void loadItem();
 	}, [params.id, params.hobbyType, preferredSource]);
 
 	const loadItem = async () => {
@@ -226,32 +252,6 @@ export const ItemDetailPage: React.FC = () => {
 		}
 	};
 
-	// Update recently viewed items
-	const updateRecentItems = (item: UnifiedItem | ManualItem | CatalogItem) => {
-		try {
-			const recentKey = "hobby_db_recent_items";
-			const recentItems = JSON.parse(localStorage.getItem(recentKey) || "[]");
-
-			// Remove if already exists
-			const filtered = recentItems.filter((i: any) => i.id !== item.id);
-
-			// Add to beginning
-			const updated = [
-				{
-					id: item.id,
-					name: item.properties?.name?.ja || item.properties?.name?.en || item.id,
-					timestamp: Date.now(),
-					type: "sources" in item ? "unified" : ("metadata" in item ? "manual" : "catalog"),
-				},
-				...filtered.slice(ARRAY_FIRST_INDEX, 19), // Keep only 20 recent items
-			];
-
-			localStorage.setItem(recentKey, JSON.stringify(updated));
-		} catch (error) {
-			console.warn("Failed to update recent items:", error);
-		}
-	};
-
 	// Handle navigation
 	const handleBack = () => {
 		if (searchState.fromSearch) {
@@ -306,7 +306,7 @@ export const ItemDetailPage: React.FC = () => {
 
 		return (
 			<Badge color={colors[type]} variant="light">
-				{type.charAt(ARRAY_FIRST_INDEX).toUpperCase() + type.slice(ARRAY_SECOND_INDEX))}
+				{type.charAt(ARRAY_FIRST_INDEX).toUpperCase() + type.slice(ARRAY_SECOND_INDEX)}
 			</Badge>
 		);
 	};

@@ -14,24 +14,14 @@ import type { GraphNode } from "../utils/graph-client";
 
 
 // Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
+const ZERO = 0;
+const ONE = 1;
+const TWO = 2;
+const THREE = 3;
+const FOUR = 4;
+const EIGHT = 8;
+const ARRAY_FIRST_INDEX = 0;
+const ARRAY_SECOND_INDEX = 1;
 
 interface GraphNodePageLoader {
 	nodeData: GraphNode | null;
@@ -67,7 +57,7 @@ function GraphNodeBreadcrumbs({ nodeType, nodeId, nodeData }: { nodeType: string
 		{ title: "Home", href: "/" },
 		{ title: "Database", href: "/database" },
 		{
-			title: nodeType.charAt(ARRAY_FIRST_INDEX).toUpperCase() + nodeType.slice(ARRAY_SECOND_INDEX)),
+			title: nodeType.charAt(ARRAY_FIRST_INDEX).toUpperCase() + nodeType.slice(ARRAY_SECOND_INDEX),
 			href: `/database/${nodeType}s`,
 		},
 		{
@@ -87,22 +77,6 @@ function GraphNodeBreadcrumbs({ nodeType, nodeId, nodeData }: { nodeType: string
 	);
 }
 
-/**
- * Safe JSON-LD structured data component
- */
-function StructuredDataScript({ data }: { data: Record<string, unknown> }) {
-	// Sanitize structured data to ensure no script injection
-	const sanitizedData = JSON.stringify(data).replaceAll("<", String.raw`\u003c`).replaceAll(">", String.raw`\u003e`);
-
-	return (
-		<script
-			type="application/ld+json"
-			dangerouslySetInnerHTML={{
-				__html: sanitizedData,
-			}}
-		/>
-	);
-}
 
 /**
  * Meta tags for SEO optimization
@@ -111,7 +85,7 @@ function GraphNodeMeta({ nodeData, nodeType }: { nodeData: GraphNode | null; nod
 	if (!nodeData) return null;
 
 	const title = nodeData.name?.en ?? nodeData.name?.ja ?? "Graph Node";
-	const description = `${nodeType.charAt(ARRAY_FIRST_INDEX).toUpperCase() + nodeType.slice(ARRAY_SECOND_INDEX))}: ${title}`;
+	const description = `${nodeType.charAt(ARRAY_FIRST_INDEX).toUpperCase() + nodeType.slice(ARRAY_SECOND_INDEX)}: ${title}`;
 
 	// TODO: Add structured data generation when needed
 	// const structuredData = {
@@ -196,7 +170,7 @@ export function GraphNodePage() {
 
 				<Group>
 					<Text size="sm" c="dimmed">
-						Type: <strong>{nodeType.charAt(ARRAY_FIRST_INDEX).toUpperCase() + nodeType.slice(ARRAY_SECOND_INDEX))}</strong>
+						Type: <strong>{nodeType.charAt(ARRAY_FIRST_INDEX).toUpperCase() + nodeType.slice(ARRAY_SECOND_INDEX)}</strong>
 					</Text>
 					<Text size="sm" c="dimmed">
 						ID: <strong>{nodeId}</strong>
