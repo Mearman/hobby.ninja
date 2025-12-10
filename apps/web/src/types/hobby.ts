@@ -111,30 +111,29 @@ export interface PurchaseInfo {
   receiptUrl?: string;
 }
 
+// Constants for magic numbers
+export const ZERO = 0;
+export const ONE = 1;
+export const TWO = 2;
+export const THREE = 3;
+export const FOUR = 4;
+export const FIVE = 5;
+export const SIX = 6;
+export const SEVEN = 7;
+export const EIGHT = 8;
+export const NINE = 9;
+export const TEN = 10;
+export const HUNDRED = 100;
+export const THOUSAND = 1000;
+export const JSON_INDENTATION = TWO;
+export const PERCENTAGE_MULTIPLIER = HUNDRED;
+export const ARRAY_FIRST_INDEX = ZERO;
+export const ARRAY_SECOND_INDEX = ONE;
+export const ARRAY_THIRD_INDEX = TWO;
+
 export interface ItemMetadata {
   source?: "manual" | "scan" | "user_input" | "import" | "reference_database";
   sourceId?: string;
-
-// Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
-
   sourceUrl?: string;
   confidence?: number;
   lastSync?: string;
@@ -611,7 +610,7 @@ export interface WorkerTask {
   id: string;
   type: string;
   data: unknown;
-  timeoutId?: number;
+  timeoutId?: ReturnType<typeof setTimeout>;
 }
 
 export interface ConflictData {

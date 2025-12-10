@@ -14,19 +14,19 @@ import type { SearchFilter } from "../types/hobby";
 
 
 // Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
+const ZERO = 0;
+const ONE = 1;
+const TWO = 2;
+const THREE = 3;
+const FOUR = 4;
+const FIVE = 5;
+const SIX = 6;
+const SEVEN = 7;
+const EIGHT = 8;
+const NINE = 9;
+const TEN = 10;
+const HUNDRED = 100;
+const THOUSAND = 1000;
 const JSON_INDENTATION = TWO;
 const PERCENTAGE_MULTIPLIER = HUNDRED;
 const ARRAY_FIRST_INDEX = ZERO;
@@ -59,14 +59,15 @@ export type CatalogItem = CatalogItemNodeType;
 // ============================================================================
 
 /** Worker task configuration */
-interface WorkerTask<T = unknown> {
+interface WorkerTask<T = unknown, R = unknown> {
   id: string;
   type: "SEARCH" | "AGGREGATE" | "STATISTICS";
   payload: T;
-  resolve: (result: unknown) => void;
+  resolve: (result: R) => void;
   reject: (error: Error) => void;
   timeout?: number;
   onProgress?: (progress: { current: number; total: number; percentage: number; message?: string }) => void;
+  timeoutId?: ReturnType<typeof setTimeout>; // For browser setTimeout compatibility
 }
 
 /** Worker pool configuration */
@@ -153,7 +154,10 @@ export class WorkerManager {
 	): Promise<SearchResult["items"]> {
 		const taskId = this.generateTaskId();
 
-		const task: WorkerTask = {
+		let taskResolve: (result: SearchResult["items"]) => void;
+		let taskReject: (error: Error) => void;
+
+		const task: WorkerTask<unknown, SearchResult["items"]> = {
 			id: taskId,
 			type: "SEARCH",
 			payload: {
@@ -164,13 +168,13 @@ export class WorkerManager {
 			},
 			onProgress: options.onProgress,
 			timeout: options.timeout || this.config.taskTimeout,
-			resolve: () => {},
-			reject: () => {},
+			resolve: (result: SearchResult["items"]) => taskResolve(result),
+			reject: (error: Error) => taskReject(error),
 		};
 
-		return new Promise((resolve, reject) => {
-			task.resolve = resolve;
-			task.reject = reject;
+		return new Promise<SearchResult["items"]>((resolve, reject) => {
+			taskResolve = resolve;
+			taskReject = reject;
 
 			this.tasks.set(taskId, task);
 			this.scheduleTask(taskId);
@@ -195,7 +199,18 @@ export class WorkerManager {
   }> {
 		const taskId = this.generateTaskId();
 
-		const task: WorkerTask = {
+		let taskResolve: (result: {
+			aggregated: UnifiedItem[];
+			conflicts: Array<{ id: string; field: string; unified: unknown; manual: unknown; catalog: unknown }>;
+			statistics: Record<string, unknown>;
+		}) => void;
+		let taskReject: (error: Error) => void;
+
+		const task: WorkerTask<unknown, {
+			aggregated: UnifiedItem[];
+			conflicts: Array<{ id: string; field: string; unified: unknown; manual: unknown; catalog: unknown }>;
+			statistics: Record<string, unknown>;
+		}> = {
 			id: taskId,
 			type: "AGGREGATE",
 			payload: {
@@ -205,13 +220,17 @@ export class WorkerManager {
 			},
 			onProgress: options.onProgress,
 			timeout: options.timeout || this.config.taskTimeout,
-			resolve: () => {},
-			reject: () => {},
+			resolve: (result) => taskResolve(result),
+			reject: (error: Error) => taskReject(error),
 		};
 
-		return new Promise((resolve, reject) => {
-			task.resolve = resolve;
-			task.reject = reject;
+		return new Promise<{
+			aggregated: UnifiedItem[];
+			conflicts: Array<{ id: string; field: string; unified: unknown; manual: unknown; catalog: unknown }>;
+			statistics: Record<string, unknown>;
+		}>((resolve, reject) => {
+			taskResolve = resolve;
+			taskReject = reject;
 
 			this.tasks.set(taskId, task);
 			this.scheduleTask(taskId);
@@ -237,19 +256,43 @@ export class WorkerManager {
   }> {
 		const taskId = this.generateTaskId();
 
-		const task: WorkerTask = {
+		let taskResolve: (result: {
+			byGrade: Record<string, number>;
+			byScale: Record<string, number>;
+			bySeries: Record<string, number>;
+			byReleaseYear: Record<string, number>;
+			sourceCoverage: { manual: number; catalog: number; unified: number; total: number };
+			qualityMetrics: { completeness: number; accuracy: number; consistency: number; confidence: number };
+		}) => void;
+		let taskReject: (error: Error) => void;
+
+		const task: WorkerTask<unknown, {
+			byGrade: Record<string, number>;
+			byScale: Record<string, number>;
+			bySeries: Record<string, number>;
+			byReleaseYear: Record<string, number>;
+			sourceCoverage: { manual: number; catalog: number; unified: number; total: number };
+			qualityMetrics: { completeness: number; accuracy: number; consistency: number; confidence: number };
+		}> = {
 			id: taskId,
 			type: "STATISTICS",
 			payload: { items },
 			onProgress: options.onProgress,
 			timeout: options.timeout || this.config.taskTimeout,
-			resolve: () => {},
-			reject: () => {},
+			resolve: (result) => taskResolve(result),
+			reject: (error: Error) => taskReject(error),
 		};
 
-		return new Promise((resolve, reject) => {
-			task.resolve = resolve;
-			task.reject = reject;
+		return new Promise<{
+			byGrade: Record<string, number>;
+			byScale: Record<string, number>;
+			bySeries: Record<string, number>;
+			byReleaseYear: Record<string, number>;
+			sourceCoverage: { manual: number; catalog: number; unified: number; total: number };
+			qualityMetrics: { completeness: number; accuracy: number; consistency: number; confidence: number };
+		}>((resolve, reject) => {
+			taskResolve = resolve;
+			taskReject = reject;
 
 			this.tasks.set(taskId, task);
 			this.scheduleTask(taskId);
@@ -400,7 +443,7 @@ export class WorkerManager {
 		});
 
 		// Store timeout ID for cleanup
-		(task as WorkerTask & { timeoutId?: number }).timeoutId = timeoutId;
+		task.timeoutId = timeoutId;
 	}
 
 	/**
@@ -426,8 +469,8 @@ export class WorkerManager {
 
 		// Clear timeout
 		const task = this.tasks.get(id);
-		if (task && (task as WorkerTask & { timeoutId?: number }).timeoutId) {
-			clearTimeout((task as WorkerTask & { timeoutId?: number }).timeoutId);
+		if (task?.timeoutId) {
+			clearTimeout(task.timeoutId);
 		}
 
 		// Mark worker as available
