@@ -698,8 +698,8 @@ export const seriesImage = style({
 export const searchCard = style({
 	textDecoration: CSS_VALUES.NONE,
 	color: "inherit",
-	backgroundColor: MANTINE_COLORS.GRAY_0,
-	border: `${BORDER_WIDTHS.TWO} ${BORDER_STYLES.DASHED} ${MANTINE_COLORS.GRAY_3}`,
+	backgroundColor: MANTINE_COLORS.BODY,
+	border: `${BORDER_WIDTHS.TWO} ${BORDER_STYLES.DASHED} ${MANTINE_COLORS.GRAY_4}`,
 	cursor: CSS_VALUES.POINTER,
 	transition: `all ${COMMON_VALUES.TRANSITION_SPEED_200} ease-in-out`,
 
