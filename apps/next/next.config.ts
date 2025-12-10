@@ -135,6 +135,9 @@ const nextConfig: NextConfig = {
   // Next.js 16 automatically handles Turbopack/Webpack switching
   // Development uses Turbopack by default, static export uses webpack
 
+  // Empty turbopack config to avoid webpack/turbopack conflicts
+  turbopack: {},
+
   // Additional webpack configuration for Vanilla Extract and bundle optimization
   webpack: (config, { isServer }) => {
     // Use environment variable or fall back to configured default

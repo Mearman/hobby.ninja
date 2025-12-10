@@ -207,6 +207,52 @@ function DatabaseStats({ stats }: { stats: DatabaseStats }) {
 	);
 }
 
+// Generate SVG placeholder for brands
+const generateBrandPlaceholder = (brandName: string): string => {
+	const colors = [
+		"#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FECA57",
+		"#DDA0DD", "#98D8C8", "#F7DC6F", "#BB8FCE", "#85C1E9"
+	];
+	const colorIndex = brandName.length % colors.length;
+	const bgColor = colors[colorIndex];
+
+	const svg = `
+		<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+			<rect width="60" height="60" fill="${bgColor}"/>
+			<text x="30" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+				${brandName.slice(0, 8).toUpperCase()}
+			</text>
+		</svg>
+	`;
+	return `data:image/svg+xml;base64,${btoa(svg)}`;
+};
+
+// Generate SVG placeholder for series
+const generateSeriesPlaceholder = (seriesName: string): string => {
+	const gradients = [
+		["#667eea", "#764ba2"], ["#f093fb", "#f5576c"], ["#4facfe", "#00f2fe"],
+		["#43e97b", "#38f9d7"], ["#fa709a", "#fee140"], ["#30cfd0", "#330867"]
+	];
+	const gradientIndex = seriesName.length % gradients.length;
+	const [color1, color2] = gradients[gradientIndex];
+
+	const svg = `
+		<svg width="160" height="80" viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<linearGradient id="grad${seriesName.length}" x1="0%" y1="0%" x2="100%" y2="100%">
+					<stop offset="0%" style="stop-color:${color1};stop-opacity:1" />
+					<stop offset="100%" style="stop-color:${color2};stop-opacity:1" />
+				</linearGradient>
+			</defs>
+			<rect width="160" height="80" fill="url(#grad${seriesName.length})"/>
+			<text x="80" y="45" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+				${seriesName.slice(0, 12).toUpperCase()}
+			</text>
+		</svg>
+	`;
+	return `data:image/svg+xml;base64,${btoa(svg)}`;
+};
+
 // Component for brand grid
 function BrandsGrid({ brands }: { brands: DatabaseStats["brands"] }) {
 	if (brands.length === 0) return null;
@@ -220,35 +266,38 @@ function BrandsGrid({ brands }: { brands: DatabaseStats["brands"] }) {
 				cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
 				spacing="md"
 			>
-				{brands.map((brand) => (
-					<Card
-						key={brand.id}
-						component={Link}
-						href={`/brand/${brand.id}`}
-						p="md"
-						radius="md"
-						className={categoryCard}
-						withBorder={true}
-					>
-						<Stack align="center" gap={UI.SKELETON_HEIGHT_SMALL}>
-							<Box w={60} h={60} className={brandLogo}>
-								<Image
-									src={`https://via.placeholder.com/60x60/ffffff/666666?text=${encodeURIComponent(getNodeDisplayName(brand))}`}
-									alt={getNodeDisplayName(brand)}
-									fit="contain"
-									radius="sm"
-									fallbackSrc="https://via.placeholder.com/60x60/f5f5f5/999999?text=Logo"
-								/>
-							</Box>
-							<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} ta="center" lineClamp={2}>
-								{getNodeDisplayName(brand)}
-							</Text>
-							{/* Badge  variant="light" size="xs">
-								{brand.itemCount || 0} items
-							</Badge */}
-						</Stack>
-					</Card>
-				))}
+				{brands.map((brand) => {
+					const displayName = getNodeDisplayName(brand);
+					return (
+						<Card
+							key={brand.id}
+							component={Link}
+							href={`/brand/${brand.id}`}
+							p="md"
+							radius="md"
+							className={categoryCard}
+							withBorder={true}
+						>
+							<Stack align="center" gap={UI.SKELETON_HEIGHT_SMALL}>
+								<Box w={60} h={60} className={brandLogo}>
+									<Image
+										src={generateBrandPlaceholder(displayName)}
+										alt={displayName}
+										fit="contain"
+										radius="sm"
+										fallbackSrc="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCTxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0iI0Y1RjVGNSIvPgoJPHRleHQgeD0iMzAiIHk9IjM1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5OTk5IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOCI+Tm8gSW1hZ2U8L3RleHQ+Cjwvc3ZnPg=="
+									/>
+								</Box>
+								<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} ta="center" lineClamp={2}>
+									{displayName}
+								</Text>
+								{/* Badge  variant="light" size="xs">
+									{brand.itemCount || 0} items
+								</Badge */}
+							</Stack>
+						</Card>
+					);
+				})}
 			</SimpleGrid>
 
 			<Box mt="md" ta="center">
@@ -332,37 +381,40 @@ function SeriesGrid({ series }: { series: DatabaseStats["series"] }) {
 				cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
 				spacing="md"
 			>
-				{series.map((seriesItem) => (
-					<Card
-						key={seriesItem.id}
-						component={Link}
-						href={`/series/${seriesItem.id}`}
-						p="md"
-						radius="md"
-						className={seriesCard}
-						withBorder={true}
-					>
-						<Stack gap={UI.SKELETON_HEIGHT_SMALL}>
-							<Box h={80} className={seriesImage}>
-								<Image
-									src={`https://via.placeholder.com/160x80/f5f5f5/666666?text=${encodeURIComponent(getNodeDisplayName(seriesItem))}`}
-									alt={getNodeDisplayName(seriesItem)}
-									fit="cover"
-									radius="sm"
-									fallbackSrc="https://via.placeholder.com/160x80/e0e0e0/999999?text=Series"
-								/>
-							</Box>
-							<div>
-								<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} lineClamp={2}>
-									{getNodeDisplayName(seriesItem)}
-								</Text>
-								{/* Badge  variant="light" size="xs" mt={4}>
-									{seriesItem.itemCount || 0} items
-								</Badge */}
-							</div>
-						</Stack>
-					</Card>
-				))}
+				{series.map((seriesItem) => {
+					const displayName = getNodeDisplayName(seriesItem);
+					return (
+						<Card
+							key={seriesItem.id}
+							component={Link}
+							href={`/series/${seriesItem.id}`}
+							p="md"
+							radius="md"
+							className={seriesCard}
+							withBorder={true}
+						>
+							<Stack gap={UI.SKELETON_HEIGHT_SMALL}>
+								<Box h={80} className={seriesImage}>
+									<Image
+										src={generateSeriesPlaceholder(displayName)}
+										alt={displayName}
+										fit="cover"
+										radius="sm"
+										fallbackSrc="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTYwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSI4MCIgZmlsbD0iI0Y1RjVGNSIvPgoJPHRleHQgeD0iODAiIHk9IjQ1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5OTk5IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiPk5vIEltYWdlPC90ZXh0Pgo8L3N2Zz4="
+									/>
+								</Box>
+								<div>
+									<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} lineClamp={2}>
+										{displayName}
+									</Text>
+									{/* Badge  variant="light" size="xs" mt={4}>
+										{seriesItem.itemCount || 0} items
+									</Badge */}
+								</div>
+							</Stack>
+						</Card>
+					);
+				})}
 			</SimpleGrid>
 
 			<Box mt="md" ta="center">
