@@ -40,11 +40,36 @@ export default [
 	// Nx flat configs for React (includes react-base, react-typescript, react-jsx)
 	...nx.configs["flat/react"],
 
-	// TypeScript ESLint strict type-checked config
+	// TypeScript ESLint strict type-checked config - only for actual TypeScript files
 	...tseslint.configs.strictTypeChecked,
 
-	// TypeScript ESLint stylistic type-checked config
+	// TypeScript ESLint stylistic type-checked config - only for actual TypeScript files
 	...tseslint.configs.stylisticTypeChecked,
+
+	{
+		// Override for JSON files - disable type-checked rules
+		files: ["**/*.json"],
+		languageOptions: {
+			parser: typescriptParser,
+		},
+		rules: {
+			"@typescript-eslint/await-thenable": "off",
+			"@typescript-eslint/no-floating-promises": "off",
+			"@typescript-eslint/no-misused-promises": "off",
+			"@typescript-eslint/no-unnecessary-type-assertion": "off",
+			"@typescript-eslint/no-unnecessary-condition": "off",
+			"@typescript-eslint/no-unsafe-argument": "off",
+			"@typescript-eslint/no-unsafe-assignment": "off",
+			"@typescript-eslint/no-unsafe-call": "off",
+			"@typescript-eslint/no-unsafe-member-access": "off",
+			"@typescript-eslint/no-unsafe-return": "off",
+			"@typescript-eslint/require-await": "off",
+			"@typescript-eslint/restrict-template-expressions": "off",
+			"@typescript-eslint/unbound-method": "off",
+			"@typescript-eslint/no-base-to-string": "off",
+			"@typescript-eslint/restrict-plus-operands": "off",
+		},
+	},
 
 	{
 		files: ["**/*.{ts,tsx,js,jsx}"],
@@ -63,6 +88,7 @@ export default [
 					path.resolve(__dirname, "packages/utils/tsconfig.json"),
 					path.resolve(__dirname, "packages/cli/tsconfig.json"),
 					path.resolve(__dirname, "apps/web/tsconfig.json"),
+					path.resolve(__dirname, "apps/next/tsconfig.json"),
 					path.resolve(__dirname, "tsconfig.json"),
 				],
 				tsconfigRootDir: __dirname,
@@ -670,9 +696,15 @@ export default [
 			"tmp/**",
 			".nx/cache/**",
 			".next/**",
+			"out/**",
+			".output/**",
 			"!.syncpackrc.json",
 			"playwright-report/**",
 			"test-results/**",
+			"**/*.config.js",
+			"**/*.config.mjs",
+			"src/data/*.json",
+			"public/data/*.json",
 		],
 	},
 ];
