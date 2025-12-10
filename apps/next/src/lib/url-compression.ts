@@ -1,6 +1,6 @@
 import pako from "pako";
 
-export interface ShareableFilters {
+export interface ShareableFilters extends Record<string, unknown> {
   category?: string;
   search?: string;
   brands?: string[];

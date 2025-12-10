@@ -182,11 +182,11 @@ class SearchService {
 	getStats(): SearchStats {
 		return {
 			totalItems: this.data.length,
-			brands: [...new Set(this.data.map(item => item.brand).filter(Boolean))],
-			categories: [...new Set(this.data.map(item => item.category).filter(Boolean))],
-			series: [...new Set(this.data.map(item => item.series).filter(Boolean))],
-			grades: [...new Set(this.data.map(item => item.grade).filter(Boolean))],
-			scales: [...new Set(this.data.map(item => item.scale).filter(Boolean))],
+			brands: [...new Set(this.data.map(item => item.brand).filter((brand): brand is string => Boolean(brand)))],
+			categories: [...new Set(this.data.map(item => item.category).filter((category): category is string => Boolean(category)))],
+			series: [...new Set(this.data.map(item => item.series).filter((series): series is string => Boolean(series)))],
+			grades: [...new Set(this.data.map(item => item.grade).filter((grade): grade is string => Boolean(grade)))],
+			scales: [...new Set(this.data.map(item => item.scale).filter((scale): scale is string => Boolean(scale)))],
 		};
 	}
 }
