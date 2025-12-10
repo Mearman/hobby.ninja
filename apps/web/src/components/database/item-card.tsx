@@ -55,11 +55,13 @@ import {
 	PERCENTAGE_WIDTH_SMALL,
 	FONT_WEIGHT_NORMAL,
 } from "../../constants/index.js";
-import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/dataService";
+import type { UnifiedItem, ManualItem, CatalogItem } from "../../services/data-service.js";
+
+type ItemData = UnifiedItem | ManualItem | CatalogItem;
 
 interface ItemCardProps {
   /** Item data from any source */
-  item: UnifiedItem | ManualItem | CatalogItem;
+  item: ItemData;
   /** Item type for source identification */
   itemType: "unified" | "manual" | "catalog";
   /** Whether to show compact view */
@@ -71,9 +73,22 @@ interface ItemCardProps {
   /** View mode (grid or list) */
   viewMode?: "grid" | "list";
   /** Custom click handler */
-  onClick?: (item: UnifiedItem | ManualItem | CatalogItem) => void;
+  onClick?: (item: ItemData) => void;
   /** Loading state */
   loading?: boolean;
+}
+
+// Type guard functions
+function isUnifiedItem(item: ItemData): item is UnifiedItem {
+	return item.$type === "unified_item";
+}
+
+function isManualItem(item: ItemData): item is ManualItem {
+	return item.$type === "manual_item";
+}
+
+function isCatalogItem(item: ItemData): item is CatalogItem {
+	return item.$type === "catalog_item";
 }
 
 export function ItemCard({
@@ -95,12 +110,13 @@ export function ItemCard({
 
 	// Extract display name with fallbacks
 	const getDisplayName = useCallback(() => {
-		const name = item.properties.name;
-		if (typeof name === "string") {
-			return name;
+		if (!item.properties.name) return item.id;
+
+		if (typeof item.properties.name === "string") {
+			return item.properties.name;
 		}
-		// Type guard for localized name object
-		const localizedName = name as { ja?: string; en?: string };
+
+		const localizedName = item.properties.name as { ja?: string; en?: string };
 		return localizedName.en ?? localizedName.ja ?? item.id;
 	}, [item.properties.name, item.id]);
 
@@ -113,21 +129,18 @@ export function ItemCard({
 		if (typeof series === "string") {
 			return series;
 		}
-		// Type guard for localized series object
 		const localizedSeries = series as { ja?: string; en?: string };
 		return localizedSeries.en ?? localizedSeries.ja;
 	}, [item.properties.series]);
 
 	// Extract grade and scale
 	const getGrade = useCallback(() => {
-		if (itemType === "unified") {
-			const unifiedItem = item as UnifiedItem;
-			return unifiedItem.properties.grade;
+		if (isUnifiedItem(item)) {
+			return item.properties.grade;
 		}
-		if (itemType === "manual") {
-			const manualItem = item as ManualItem;
-			if ("grade" in manualItem.properties && "code" in manualItem.properties.grade) {
-				return manualItem.properties.grade.code;
+		if (isManualItem(item)) {
+			if ("grade" in item.properties && "code" in item.properties.grade) {
+				return item.properties.grade.code;
 			}
 		}
 		// Catalog items don't have grade

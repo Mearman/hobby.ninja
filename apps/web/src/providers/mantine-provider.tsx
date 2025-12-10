@@ -6,45 +6,25 @@ import React, { createContext, useContext } from "react";
 import { useTheme } from "../hooks/useTheme";
 import { theme } from "../lib/theme";
 
-
-// Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
+// Constants for magic numbers - only keeping used constants
+const ONE = 1;
+const FOUR = 4;
+const FIVE = 5;
+const TEN = 10;
+const HUNDRED = 100;
+const THOUSAND = 1000;
 
 // Create context for theme functions
-const ThemeContext = createContext<{
+interface ThemeContextType {
 	colorScheme: "light" | "dark" | "system";
 	effectiveColorScheme: "light" | "dark";
 	cycleTheme: () => void;
-		} | null>(null);
+}
+
+const ThemeContext = createContext<ThemeContextType | null>(null);
 
 interface MantineThemeProviderProps {
 	children: React.ReactNode;
-}
-
-// Hook to access theme context
-export function useThemeContext() {
-	const context = useContext(ThemeContext);
-	if (!context) {
-		throw new Error("useThemeContext must be used within MantineThemeProvider");
-	}
-	return context;
 }
 
 export function MantineThemeProvider({ children }: MantineThemeProviderProps) {
@@ -61,12 +41,21 @@ export function MantineThemeProvider({ children }: MantineThemeProviderProps) {
 					<Notifications
 						position="top-right"
 						limit={FIVE}
-						zIndex={9999}
-						containerWidth={400}
+						zIndex={THOUSAND * TEN - ONE}
+						containerWidth={FOUR * HUNDRED}
 					/>
 					{children}
 				</ModalsProvider>
 			</MantineProvider>
 		</ThemeContext.Provider>
 	);
+}
+
+// Hook to access theme context
+export function useThemeContext(): ThemeContextType {
+	const context = useContext(ThemeContext);
+	if (!context) {
+		throw new Error("useThemeContext must be used within MantineThemeProvider");
+	}
+	return context;
 }
