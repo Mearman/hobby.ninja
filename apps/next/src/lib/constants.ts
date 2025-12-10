@@ -85,7 +85,7 @@ export const TIMING = {
 // Filtering and Search
 export const FILTER = {
 	MIN_YEAR: 1980,
-	MAX_YEAR: 2024,
+	MAX_YEAR: 2025,
 	MIN_PRICE: 0,
 	MAX_PRICE: 50_000,
 	PRICE_STEP: 1000,

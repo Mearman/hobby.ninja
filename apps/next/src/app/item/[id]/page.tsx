@@ -50,13 +50,13 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 	const releaseYear = getNodeReleaseYear(item);
 
 	const itemDescription = getNodeDescription(item);
-	const truncatedDesc = itemDescription
-		? `${itemDescription.slice(0, 160).replaceAll("\n", " ")}...`
+	const fullDesc = itemDescription
+		? itemDescription.replaceAll("\n", " ")
 		: `Details about ${displayName}${releaseYear ? ` (${releaseYear})` : ""} from the hobby.ninja database`;
 
 	return {
 		title: `${displayName} - hobby.ninja`,
-		description: truncatedDesc,
+		description: fullDesc,
 		keywords: [
 			"gunpla", "gundam", "model kit",
 			item.brand ?? "",
