@@ -40,7 +40,7 @@ export class CollectionService {
 	private isInitialized = false;
 
 	constructor() {
-		this.initialize();
+		void this.initialize();
 	}
 
 	/**
@@ -72,7 +72,7 @@ export class CollectionService {
    */
 	async getHobbyType(id: string): Promise<HobbyType | null> {
 		const storage = await this.loadFromStorage();
-		return storage.hobbyTypes.find(ht => ht.id === id) || null;
+		return storage.hobbyTypes.find(ht => ht.id === id) ?? null;
 	}
 
 	/**
@@ -102,7 +102,7 @@ export class CollectionService {
 		const storage = await this.loadFromStorage();
 		const index = storage.hobbyTypes.findIndex(ht => ht.id === id);
 
-		if (index === -ONE) {
+		if (index === -1) {
 			throw new Error(`Hobby type not found: ${id}`);
 		}
 
@@ -130,8 +130,8 @@ export class CollectionService {
 
 		return collections.sort((a, b) => {
 			// Default collection first, then by updated date
-			if (a.isDefault) return -ONE;
-			if (b.isDefault) return ONE;
+			if (a.isDefault) return -1;
+			if (b.isDefault) return 1;
 			return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
 		});
 	}
@@ -141,7 +141,7 @@ export class CollectionService {
    */
 	async getCollection(id: string): Promise<Collection | null> {
 		const storage = await this.loadFromStorage();
-		return storage.collections.find(c => c.id === id) || null;
+		return storage.collections.find(c => c.id === id) ?? null;
 	}
 
 	/**
@@ -155,7 +155,7 @@ export class CollectionService {
 			id: generateId(),
 			items: [],
 			statistics: {
-				totalItems: ZERO,
+				totalItems: 0,
 				lastUpdated: new Date().toISOString(),
 				breakdown: {},
 			},
@@ -178,7 +178,7 @@ export class CollectionService {
 		const storage = await this.loadFromStorage();
 		const index = storage.collections.findIndex(c => c.id === id);
 
-		if (index === -ONE) {
+		if (index === -1) {
 			throw new Error(`Collection not found: ${id}`);
 		}
 
@@ -207,12 +207,12 @@ export class CollectionService {
 		const storage = await this.loadFromStorage();
 		const index = storage.collections.findIndex(c => c.id === id);
 
-		if (index === -ONE) {
+		if (index === -1) {
 			throw new Error(`Collection not found: ${id}`);
 		}
 
 		const collectionName = storage.collections[index].name;
-		storage.collections.splice(index, ONE);
+		storage.collections.splice(index, 1);
 		await this.saveToStorage(storage);
 
 		logger.info(`Deleted collection: ${collectionName}`);
@@ -244,7 +244,7 @@ export class CollectionService {
    */
 	async getItem(id: string): Promise<UniversalItem | null> {
 		const storage = await this.loadFromStorage();
-		return storage.items.find(item => item.id === id) || null;
+		return storage.items.find(item => item.id === id) ?? null;
 	}
 
 	/**
@@ -285,7 +285,7 @@ export class CollectionService {
 		const storage = await this.loadFromStorage();
 		const index = storage.items.findIndex(item => item.id === id);
 
-		if (index === -ONE) {
+		if (index === -1) {
 			throw new Error(`Item not found: ${id}`);
 		}
 
@@ -307,7 +307,7 @@ export class CollectionService {
 		const storage = await this.loadFromStorage();
 		const index = storage.items.findIndex(item => item.id === id);
 
-		if (index === -ONE) {
+		if (index === -1) {
 			throw new Error(`Item not found: ${id}`);
 		}
 
@@ -316,13 +316,13 @@ export class CollectionService {
 		// Remove from all collections
 		for (const collection of storage.collections) {
 			const itemIndex = collection.items.indexOf(id);
-			if (itemIndex !== -ONE) {
-				collection.items.splice(itemIndex, ONE);
+			if (itemIndex !== -1) {
+				collection.items.splice(itemIndex, 1);
 				collection.statistics = this.calculateStatistics(collection);
 			}
 		}
 
-		storage.items.splice(index, ONE);
+		storage.items.splice(index, 1);
 		await this.saveToStorage(storage);
 
 		logger.info(`Deleted item: ${id}`);
@@ -364,8 +364,8 @@ export class CollectionService {
 		}
 
 		const itemIndex = collection.items.indexOf(itemId);
-		if (itemIndex !== -ONE) {
-			collection.items.splice(itemIndex, ONE);
+		if (itemIndex !== -1) {
+			collection.items.splice(itemIndex, 1);
 			collection.statistics = this.calculateStatistics(collection);
 			await this.saveToStorage(storage);
 			logger.info(`Removed item ${itemId} from collection ${collectionId}`);
@@ -405,7 +405,7 @@ export class CollectionService {
 			items = items.filter(item => item.status === filters.status);
 		}
 
-		if (filters.tags && filters.tags.length > ZERO) {
+		if (filters.tags && filters.tags.length > 0) {
 			items = items.filter(item =>
 				filters.tags?.some(tag => item.tags.includes(tag)),
 			);
@@ -438,8 +438,8 @@ export class CollectionService {
     errors: string[];
   }> {
 		const results = {
-			success: ZERO,
-			failed: ZERO,
+			success: 0,
+			failed: 0,
 			errors: [] as string[],
 		};
 
@@ -474,7 +474,7 @@ export class CollectionService {
 										break;
 									}
 									case "number": {
-										value = Number(value) || ZERO;
+										value = Number(value) || 0;
 										break;
 									}
 									case "date": {
@@ -516,26 +516,7 @@ export class CollectionService {
 			results.failed = importData.data.length;
 			results.errors = [errorMessage];
 
-			// Constants for magic numbers
-			const ZERO = ZERO;
-			const ONE = ONE;
-			const TWO = TWO;
-			const THREE = THREE;
-			const FOUR = FOUR;
-			const FIVE = FIVE;
-			const SIX = SIX;
-			const SEVEN = SEVEN;
-			const EIGHT = EIGHT;
-			const NINE = NINE;
-			const TEN = TEN;
-			const HUNDRED = HUNDRED;
-			const THOUSAND = THOUSAND;
-			const JSON_INDENTATION = TWO;
-			const PERCENTAGE_MULTIPLIER = HUNDRED;
-			const ARRAY_FIRST_INDEX = ZERO;
-			const ARRAY_SECOND_INDEX = ONE;
-			const ARRAY_THIRD_INDEX = TWO;
-
+			
 		}
 
 		return results;
@@ -578,7 +559,13 @@ export class CollectionService {
 			}
 			case "excel": {
 				mimeType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-				content = JSON.stringify(TWO, $TWO, JSON_INDENTATION);
+				content = JSON.stringify(validItems, null, 2);
+				break;
+			}
+			default: {
+				mimeType = "application/json";
+				content = JSON.stringify(validItems, null, 2);
+				break;
 			}
 		}
 
@@ -615,7 +602,7 @@ export class CollectionService {
 			const storage = JSON.parse(stored);
 
 			// Ensure built-in hobby types are present
-			if (storage.hobbyTypes.length === ZERO) {
+			if (storage.hobbyTypes.length === 0) {
 				storage.hobbyTypes = [...BUILT_IN_HOBBY_TYPES];
 			}
 
@@ -660,7 +647,7 @@ export class CollectionService {
 		for (const itemId of collection.items) {
 			// In a real implementation, we'd fetch the item status
 			// For now, use placeholder data
-			statusBreakdown["owned"] = (statusBreakdown["owned"] || ZERO) + ONE;
+			statusBreakdown["owned"] = (statusBreakdown["owned"] || 0) + 1;
 		}
 
 		return {
@@ -671,7 +658,7 @@ export class CollectionService {
 	}
 
 	private convertToCSV(items: UniversalItem[], hobbyType: string): string {
-		if (items.length === ZERO) return "";
+		if (items.length === 0) return "";
 
 		const hobbyTypeConfig = BUILT_IN_HOBBY_TYPES.find(ht => ht.id === hobbyType);
 		const headers = hobbyTypeConfig?.fields.map(f => f.name) || ["Name"];

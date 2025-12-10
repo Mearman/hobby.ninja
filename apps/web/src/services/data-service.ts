@@ -20,26 +20,6 @@ import {
 	CatalogItemNodeType,
 	BaseEntitySchemaType,
 } from "../schemas/universal-graph-schema.js";
-import {
-	ZERO,
-	ONE,
-	TWO,
-	THREE,
-	FOUR,
-	FIVE,
-	SIX,
-	SEVEN,
-	EIGHT,
-	NINE,
-	TEN,
-	HUNDRED,
-	THOUSAND,
-	JSON_INDENTATION,
-	PERCENTAGE_MULTIPLIER,
-	ARRAY_FIRST_INDEX,
-	ARRAY_SECOND_INDEX,
-	ARRAY_THIRD_INDEX,
-} from "../constants/index.js";
 
 // Export types for the Zod-validated data structures
 export type UnifiedItem = UnifiedItemNodeType;
@@ -262,23 +242,23 @@ interface ItemProperties {
 }
 
 // Constants
-const CACHE_TTL_MINUTES = FIVE;
-const CACHE_TTL_MS = CACHE_TTL_MINUTES * 60 * THOUSAND;
-const SAMPLE_SIZE_DEFAULT = HUNDRED;
+const CACHE_TTL_MINUTES = 5;
+const CACHE_TTL_MS = CACHE_TTL_MINUTES * 60 * 1000;
+const SAMPLE_SIZE_DEFAULT = 100;
 const SAMPLE_SIZE_SEARCH = 50;
-const ITEM_ID_START_OFFSET = THOUSAND;
-const MANUAL_ID_START = ONE;
-const MIN_SEARCH_SCORE = ZERO.ONE;
-const MAX_RELEVANCE_SCORE = TWO;
-const MIN_QUERY_LENGTH = TWO;
-const MAX_SUGGESTIONS = FIVE;
+const ITEM_ID_START_OFFSET = 1000;
+const MANUAL_ID_START = 1;
+const MIN_SEARCH_SCORE = 0.1;
+const MAX_RELEVANCE_SCORE = 2;
+const MIN_QUERY_LENGTH = 2;
+const MAX_SUGGESTIONS = 5;
 const DEFAULT_EARLIEST_YEAR = 2000;
 const DEFAULT_LATEST_YEAR = 2025;
 
 // Configuration
 const DEFAULT_CONFIG = {
 	/** Cache size in number of items */
-	CACHE_SIZE: HUNDRED,
+	CACHE_SIZE: 100,
 	/** Search debounce delay in milliseconds */
 	SEARCH_DEBOUNCE_MS: 300,
 	/** Query timeout in milliseconds */
@@ -286,32 +266,32 @@ const DEFAULT_CONFIG = {
 	/** Pagination default limit */
 	DEFAULT_PAGE_LIMIT: 50,
 	/** Maximum pagination limit */
-	MAX_PAGE_LIMIT: HUNDRED,
+	MAX_PAGE_LIMIT: 100,
 	/** Data files base path */
 	DATA_PATH: "/api/graph/",
 	/** Cache TTL in milliseconds */
-	CACHE_TTL: CACHE_TTL_MS,
+	CACHE_TTL: 5 * 60 * 1000,
 	/** Sample sizes for different operations */
 	SAMPLE_SIZE: {
-		DEFAULT: SAMPLE_SIZE_DEFAULT,
-		SEARCH: SAMPLE_SIZE_SEARCH,
-		SUGGESTIONS: MAX_SUGGESTIONS,
+		DEFAULT: 100,
+		SEARCH: 50,
+		SUGGESTIONS: 5,
 	},
 	/** ID ranges */
 	ID_RANGES: {
-		ITEM_START: ITEM_ID_START_OFFSET,
-		MANUAL_START: MANUAL_ID_START,
+		ITEM_START: 1000,
+		MANUAL_START: 1,
 	},
 	/** Score thresholds */
 	THRESHOLDS: {
-		MIN_SEARCH_SCORE,
-		MAX_RELEVANCE_SCORE,
-		MIN_QUERY_LENGTH,
+		MIN_SEARCH_SCORE: 0.1,
+		MAX_RELEVANCE_SCORE: 2,
+		MIN_QUERY_LENGTH: 2,
 	},
 	/** Date defaults */
 	DEFAULT_YEARS: {
-		EARLIEST: DEFAULT_EARLIEST_YEAR,
-		LATEST: DEFAULT_LATEST_YEAR,
+		EARLIEST: 2000,
+		LATEST: 2025,
 	},
 };
 
@@ -377,8 +357,8 @@ const TextProcessor = {
 		const queryTerms = this.tokenize(query);
 		const textTerms = this.tokenize(text);
 
-		if (queryTerms.length === ZERO) return ZERO;
-		if (textTerms.length === ZERO) return ZERO;
+		if (queryTerms.length === 0) return 0;
+		if (textTerms.length === 0) return 0;
 
 		const querySet = new Set(queryTerms);
 		const textSet = new Set(textTerms);
@@ -511,9 +491,9 @@ export class DataService {
 		}
 
 		// Apply pagination
-		const page = ONE;
+		const page = 1;
 		const limit = DEFAULT_CONFIG.DEFAULT_PAGE_LIMIT;
-		const startIndex = (page - ONE) * limit;
+		const startIndex = (page - 1) * limit;
 		const endIndex = startIndex + limit;
 		const paginatedItems = allItems.slice(startIndex, endIndex);
 
@@ -542,7 +522,7 @@ export class DataService {
 
 		try {
 			const sampleSize = DEFAULT_CONFIG.SAMPLE_SIZE.SEARCH;
-			const sampleIds = this.dataFiles![sourceType].slice(ARRAY_FIRST_INDEX, sampleSize);
+			const sampleIds = this.dataFiles![sourceType].slice(0, sampleSize);
 
 			const items: SearchResult["items"] = [];
 
@@ -624,17 +604,17 @@ export class DataService {
 					scale: graphItem.scale ?? "",
 					releaseDate: graphItem.releaseDate ? {
 						year: graphItem.releaseDate.year,
-						month: graphItem.releaseDate.month || ONE,
-						day: graphItem.releaseDate.day || ONE,
+						month: graphItem.releaseDate.month || 1,
+						day: graphItem.releaseDate.day || 1,
 						ja: graphItem.releaseDate.ja
 					} : {
-						year: ZERO,
-						month: ONE,
-						day: ONE
+						year: 0,
+						month: 1,
+						day: 1
 					},
 					sources: {}, // Required but empty for graph items
 					matchMethod: "exact" as const,
-					confidence: ONE,
+					confidence: 1,
 					price: graphItem.price,
 					targetAge: graphItem.targetAge,
 					description: graphItem.description,
@@ -716,9 +696,9 @@ export class DataService {
    * Calculate relevance score for a graph item
    */
 	private calculateGraphItemScore(query: string, item: GraphItem | GraphManual): number {
-		if (!query) return ONE;
+		if (!query) return 1;
 
-		let score = ZERO;
+		let score = 0;
 		const normalizedQuery = TextProcessor.normalize(query);
 
 		// Check name fields
@@ -735,7 +715,7 @@ export class DataService {
 
 		// Boost exact matches
 		if (filteredFields.some(field => TextProcessor.normalize(field) === normalizedQuery)) {
-			score += ONE;
+			score += 1;
 		}
 
 		return Math.min(score, DEFAULT_CONFIG.THRESHOLDS.MAX_RELEVANCE_SCORE);
@@ -748,12 +728,12 @@ export class DataService {
 		if (!query || !text) return text;
 
 		const queryTerms = TextProcessor.tokenize(query);
-		if (queryTerms.length === ZERO) return text;
+		if (queryTerms.length === 0) return text;
 
 		let highlighted = text;
 		for (const term of queryTerms) {
 			const regex = new RegExp(`(${this.escapeRegex(term)})`, "gi");
-			highlighted = highlighted.replace(regex, "<mark>$ONE</mark>");
+			highlighted = highlighted.replace(regex, "<mark>$1</mark>");
 		}
 
 		return highlighted;
@@ -775,7 +755,7 @@ export class DataService {
 		}
 
 		return results.sort((a, b) => {
-			let comparison = ZERO;
+			let comparison = 0;
 
 			switch (sort.field) {
 				case "relevance": {
@@ -789,19 +769,19 @@ export class DataService {
 					break;
 				}
 				case "releaseDate": {
-					const aYear = a.data?.properties?.releaseDate?.year || ZERO;
-					const bYear = b.data?.properties?.releaseDate?.year || ZERO;
+					const aYear = a.data?.properties?.releaseDate?.year || 0;
+					const bYear = b.data?.properties?.releaseDate?.year || 0;
 					comparison = aYear - bYear;
 					break;
 				}
 				case "price": {
-					// Only catalog items have price, use ZERO for others
+					// Only catalog items have price, use 0 for others
 					const aPrice = a.data.$type === "unified_item"
-						? (a.data.properties as ItemProperties)?.price?.amount || ZERO
-						: ZERO;
+						? (a.data.properties as ItemProperties)?.price?.amount || 0
+						: 0;
 					const bPrice = b.data.$type === "unified_item"
-						? (b.data.properties as ItemProperties)?.price?.amount || ZERO
-						: ZERO;
+						? (b.data.properties as ItemProperties)?.price?.amount || 0
+						: 0;
 					comparison = aPrice - bPrice;
 					break;
 				}
@@ -815,7 +795,7 @@ export class DataService {
    * Get items by page
    */
 	async getItemsByPage(
-		page = ONE,
+		page = 1,
 		limit: number = DEFAULT_CONFIG.DEFAULT_PAGE_LIMIT,
 		source?: DataSourceType,
 	): Promise<PaginationResult<UnifiedItem | ManualItem | CatalogItem>> {
@@ -842,7 +822,7 @@ export class DataService {
 
 			const total = items.length;
 			const totalPages = Math.ceil(total / limit);
-			const startIndex = (page - ONE) * limit;
+			const startIndex = (page - 1) * limit;
 			const endIndex = startIndex + limit;
 			const pageItems = items.slice(startIndex, endIndex);
 
@@ -854,7 +834,7 @@ export class DataService {
 					total,
 					totalPages,
 					hasNext: page < totalPages,
-					hasPrev: page > ONE,
+					hasPrev: page > 1,
 				},
 			};
 
@@ -880,7 +860,7 @@ export class DataService {
 
 		try {
 			const sampleSize = DEFAULT_CONFIG.SAMPLE_SIZE.SEARCH;
-			const sampleIds = this.dataFiles!.items.slice(ARRAY_FIRST_INDEX, sampleSize);
+			const sampleIds = this.dataFiles!.items.slice(0, sampleSize);
 
 			items = [];
 			for (const filename of sampleIds) {
@@ -920,7 +900,7 @@ export class DataService {
 
 		try {
 			const sampleSize = DEFAULT_CONFIG.SAMPLE_SIZE.SEARCH;
-			const sampleIds = this.dataFiles!.manuals.slice(ARRAY_FIRST_INDEX, sampleSize);
+			const sampleIds = this.dataFiles!.manuals.slice(0, sampleSize);
 
 			const items: ManualItem[] = [];
 			for (const filename of sampleIds) {
@@ -993,8 +973,8 @@ export class DataService {
 
 		try {
 			// Simple stats based on file counts
-			const itemCount = this.dataFiles?.items.length || ZERO;
-			const manualCount = this.dataFiles?.manuals.length || ZERO;
+			const itemCount = this.dataFiles?.items.length || 0;
+			const manualCount = this.dataFiles?.manuals.length || 0;
 
 			stats = {
 				generatedAt: new Date().toISOString(),
@@ -1011,9 +991,9 @@ export class DataService {
 				},
 				quality: {
 					highConfidence: itemCount + manualCount,
-					mediumConfidence: ZERO,
-					lowConfidence: ZERO,
-					needsReview: ZERO,
+					mediumConfidence: 0,
+					lowConfidence: 0,
+					needsReview: 0,
 				},
 				dateRange: {
 					earliestYear: DEFAULT_CONFIG.DEFAULT_YEARS.EARLIEST,
@@ -1029,9 +1009,9 @@ export class DataService {
 			// Return default stats
 			return {
 				generatedAt: new Date().toISOString(),
-				totalItems: { unified: ZERO, manual: ZERO, catalog: ZERO },
-				sourceCoverage: { withManual: ZERO, withCatalog: ZERO, withBoth: ZERO, singleSource: ZERO },
-				quality: { highConfidence: ZERO, mediumConfidence: ZERO, lowConfidence: ZERO, needsReview: ZERO },
+				totalItems: { unified: 0, manual: 0, catalog: 0 },
+				sourceCoverage: { withManual: 0, withCatalog: 0, withBoth: 0, singleSource: 0 },
+				quality: { highConfidence: 0, mediumConfidence: 0, lowConfidence: 0, needsReview: 0 },
 				dateRange: {},
 			};
 		}
@@ -1064,7 +1044,7 @@ export class DataService {
 
 		return commonTerms.filter(term =>
 			term.toLowerCase().includes(query.toLowerCase()),
-		).slice(ARRAY_FIRST_INDEX, DEFAULT_CONFIG.SAMPLE_SIZE.SUGGESTIONS);
+		).slice(0, DEFAULT_CONFIG.SAMPLE_SIZE.SUGGESTIONS);
 	}
 
 	/**
