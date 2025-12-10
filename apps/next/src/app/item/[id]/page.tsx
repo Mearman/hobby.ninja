@@ -24,8 +24,8 @@ interface ItemPageProps {
 export async function generateStaticParams() {
 	try {
 		const params = await generateItemParams();
-		// For static export, limit to first 1 item to prevent build timeouts and memory issues
-		const result = Array.isArray(params) ? params.slice(0, 1) : [];
+		// For static export, limit to first 100 items to prevent build timeouts and memory issues
+		const result = Array.isArray(params) ? params.slice(0, 100) : [];
 		console.log(`Generating static params for ${result.length} items`);
 		return result;
 	} catch (error) {
