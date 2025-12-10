@@ -328,7 +328,7 @@ export function useQuickSearch(initialQuery = "") {
 		try {
 			const searchResults = searchIndex.search({
 				query: debouncedQuery,
-				limit: 5,
+				limit: 50,
 				includeTypes: ["item"],
 				threshold: 0.4,
 			});
