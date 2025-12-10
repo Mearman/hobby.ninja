@@ -26,28 +26,44 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/next",
+        "webpack": true,
         "env": {
           "NODE_ENV": "development"
         }
       }
+    },
+    "dev": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "dev:webpack"
+      },
+      "metadata": {
+        "scriptContent": "BUILD_DATA_STRATEGY=webpack next dev",
+        "runCommand": "pnpm run dev:webpack"
+      },
+      "configurations": {},
+      "parallelism": true
     },
     "serve": {
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
         "port": 3001,
-        "hostname": "localhost"
+        "hostname": "localhost",
+        "webpack": true
       },
       "dependsOn": ["build:dev"],
       "configurations": {
         "development": {
           "buildTarget": "next:build:dev",
           "dev": true,
-          "watch": true
+          "watch": true,
+          "webpack": true
         },
         "production": {
           "buildTarget": "next:build:production",
-          "dev": false
+          "dev": false,
+          "webpack": true
         }
       }
     },
