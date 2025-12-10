@@ -255,12 +255,12 @@ export function CollectionProvider({ children, defaultCollectionId }: Collection
 				isPublic: false,
 				itemCount: 0,
 				totalValue: 0,
-				currency: 'JPY' as const,
+				currency: "JPY" as const,
 				createdAt: new Date(),
 				modifiedAt: new Date(),
 				settings: {
-					defaultStatus: 'owned',
-					defaultCondition: 'new',
+					defaultStatus: "owned",
+					defaultCondition: "new",
 					autoBackup: false,
 				},
 			};
@@ -382,10 +382,16 @@ export function CollectionProvider({ children, defaultCollectionId }: Collection
 		try {
 			await bulkUpdateItems(updates);
 			// Update local state
-			const updatedItems = updates.map(update => ({
-				...state.items.find(item => item.id === update.id),
-				...update.updates,
-			})) as CollectionItem[];
+			const updatedItems = updates.map(update => {
+				const existingItem = state.items.find(item => item.id === update.id);
+				if (!existingItem) {
+					throw new Error(`Item with id ${update.id} not found`);
+				}
+				return {
+					...existingItem,
+					...update.updates,
+				};
+			});
 
 			dispatch({ type: "BULK_UPDATE_ITEMS", payload: updatedItems });
 			if (state.currentCollection?.id) {
@@ -447,11 +453,7 @@ export function CollectionProvider({ children, defaultCollectionId }: Collection
 	};
 
 	const refreshData = async () => {
-		if (state.currentCollection?.id) {
-			await loadCollection(state.currentCollection.id);
-		} else {
-			await loadCollections();
-		}
+		await (state.currentCollection?.id ? loadCollection(state.currentCollection.id) : loadCollections());
 	};
 
 	const resetState = () => {
