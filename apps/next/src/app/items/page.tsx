@@ -1,10 +1,7 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-
 import {
 	Anchor,
-	// Badge removed,
 	Box,
 	Breadcrumbs,
 	Button,
@@ -12,10 +9,8 @@ import {
 	Container,
 	Grid,
 	Group,
-	Image,
 	Pagination,
 	Select,
-	SimpleGrid,
 	Stack,
 	Text,
 	TextInput,
@@ -27,77 +22,17 @@ import {
 	IconHome,
 	IconSearch,
 } from "@tabler/icons-react";
-import Link from "next/link";
 import React, { useEffect, useState, useMemo } from "react";
 
 
 import { PAGINATION } from "@/lib/constants";
 import { getAllBrands, getAllCategories, getAllItems, getAllSeries } from "@/lib/graph-data";
 import { BaseNode, getNodeDisplayName, isItemNode, isBrandNode, isCategoryNode, isSeriesNode, ItemNode } from "@/lib/schemas";
-import {
-	itemCard,
-	itemCardBadge,
-	itemCardImage,
-	itemCardContent,
-	itemCardMetadata,
-	itemCardSubtitle,
-	itemCardTitle,
-} from "@/styles/components.css";
+import { ViewSwitcher, useViewMode } from "@/components/view/view-switcher";
+import { ViewRenderer } from "@/components/view/view-renderers";
 
 const ITEMS_PER_PAGE = 48;
 
-// Item card component
-function ItemCard({ item }: { item: ItemNode }) {
-	if (!isItemNode(item)) return null;
-
-	return (
-		<Card
-			component={Link}
-			href={`/item/${item.id}`}
-			p={0}
-			radius="md"
-			className={itemCard}
-			withBorder={true}
-		>
-			<Box className={itemCardImage}>
-				<Image
-					src={`https://via.placeholder.com/280x200/f5f5f5/666666?text=${encodeURIComponent(getNodeDisplayName(item))}`}
-					alt={getNodeDisplayName(item)}
-					fit="cover"
-					height={200}
-					fallbackSrc="https://via.placeholder.com/280x200/e0e0e0/999999?text=No+Image"
-				/>
-			</Box>
-			<Box className={itemCardContent}>
-				<Text className={itemCardTitle} lineClamp={2}>
-					{getNodeDisplayName(item)}
-				</Text>
-				{item.series && (
-					<Text className={itemCardSubtitle} lineClamp={1}>
-						{item.series}
-					</Text>
-				)}
-				<Box className={itemCardMetadata}>
-					{item.grade && (
-						<Badge className={itemCardBadge} variant="light">
-							{item.grade}
-						</Badge>
-					)}
-					{item.scale && (
-						<Badge className={itemCardBadge} variant="light">
-							{item.scale}
-						</Badge>
-					)}
-					{item.brand && (
-						<Badge className={itemCardBadge} variant="outline">
-							{item.brand}
-						</Badge>
-					)}
-				</Box>
-			</Box>
-		</Card>
-	);
-}
 
 export default function ItemsPage() {
 	const [items, setItems] = useState<ItemNode[]>([]);
@@ -111,6 +46,7 @@ export default function ItemsPage() {
 	const [brandFilter, setBrandFilter] = useState("");
 	const [categoryFilter, setCategoryFilter] = useState("");
 	const [seriesFilter, setSeriesFilter] = useState("");
+	const { viewMode, setViewMode } = useViewMode();
 
 	// Load data
 	useEffect(() => {
@@ -397,46 +333,29 @@ export default function ItemsPage() {
 						<Text size="sm" c="dimmed">
 							Showing {Math.min((page - 1) * ITEMS_PER_PAGE + 1, total)}-{Math.min(page * ITEMS_PER_PAGE, total)} of {total.toLocaleString()} items
 						</Text>
-						{(searchQuery || brandFilter || categoryFilter || seriesFilter) && (
-							<Button variant="light" size="sm" onClick={handleClearFilters}>
-								Clear Filters
-							</Button>
-						)}
+						<Group gap="md">
+							<ViewSwitcher
+								value={viewMode}
+								onChange={setViewMode}
+								size="sm"
+							/>
+							{(searchQuery || brandFilter || categoryFilter || seriesFilter) && (
+								<Button variant="light" size="sm" onClick={handleClearFilters}>
+									Clear Filters
+								</Button>
+							)}
+						</Group>
 					</Group>
 
 					{loading ? (
 						<Text ta="center" c="dimmed">
 							Loading items...
 						</Text>
-					) : paginatedItems.length > 0 ? (
-						<SimpleGrid
-							cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
-							spacing="md"
-						>
-							{paginatedItems.map((item) => (
-								<ItemCard key={item.id} item={item} />
-							))}
-						</SimpleGrid>
 					) : (
-						<Box ta="center" py="xl">
-							<IconBox size={64} color="var(--mantine-color-gray-4)" />
-							<Title order={3} mt="md" mb="sm">
-								{searchQuery || brandFilter || categoryFilter || seriesFilter
-									? "No items found"
-									: "No items available"}
-							</Title>
-							<Text c="dimmed" mb="lg">
-								{searchQuery || brandFilter || categoryFilter || seriesFilter
-									? "Try adjusting your search or filters"
-									: "There are no items in the database yet."
-								}
-							</Text>
-							{(searchQuery || brandFilter || categoryFilter || seriesFilter) && (
-								<Button variant="light" onClick={handleClearFilters}>
-									Clear Filters
-								</Button>
-							)}
-						</Box>
+						<ViewRenderer
+							viewMode={viewMode}
+							items={paginatedItems}
+						/>
 					)}
 				</Box>
 
