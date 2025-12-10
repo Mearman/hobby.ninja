@@ -1,35 +1,26 @@
 "use client";
 
-import {
-	Group,
-	ActionIcon,
-	Burger,
-	TextInput,
-	Badge,
-	Tooltip,
-	Box,
-	Container,
-} from "@mantine/core";
+import { Badge } from "@/components/ui/badge";
+import { ActionIcon, Box, Group, rem, TextInput, Tooltip } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";
 import {
-	IconSearch,
 	IconDatabase,
-	IconAdjustmentsHorizontal,
+	IconFolder,
 	IconHome,
 	IconMenu2,
-	IconX,
-	IconFolder,
-	IconSun,
 	IconMoon,
+	IconSearch,
+	IconSun,
+	IconX,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
-import { rem } from "@mantine/core";
+import { useEffect, useState } from "react";
 
-import { header, headerContent, logo, nav, navLink, mobileOnly, desktopOnly } from "@/styles/components.css";
+
+import { TIMING, UI } from "@/lib/constants";
 import { useThemeContext } from "@/providers/mantine-provider";
-import { UI, TIMING } from "@/lib/constants";
+import { desktopOnly, header, headerContent, logo, mobileOnly, nav, navLink } from "@/styles/components.css";
 
 interface HeaderProps {
   onMenuToggle?: () => void;
@@ -44,23 +35,29 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 
 	const getThemeIcon = () => {
 		switch (effectiveColorScheme) {
-			case "light":
+			case "light": {
 				return <IconSun style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
-			case "dark":
+			}
+			case "dark": {
 				return <IconMoon style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
-			default:
+			}
+			default: {
 				return <IconSun style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
+			}
 		}
 	};
 
 	const getThemeLabel = () => {
 		switch (effectiveColorScheme) {
-			case "light":
+			case "light": {
 				return "Switch to dark mode";
-			case "dark":
+			}
+			case "dark": {
 				return "Switch to system mode";
-			default:
+			}
+			default: {
 				return "Switch to light mode";
+			}
 		}
 	};
 
@@ -196,5 +193,3 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 		</header>
 	);
 }
-
-export default Header;

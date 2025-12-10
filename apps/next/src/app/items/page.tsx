@@ -1,44 +1,47 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
+
 import {
-	Title,
-	Text,
-	Badge,
-	Group,
-	Stack,
-	Card,
-	SimpleGrid,
-	Container,
-	Image,
+	Anchor,
+	// Badge removed,
 	Box,
 	Breadcrumbs,
-	Anchor,
-	Pagination,
-	TextInput,
-	Select,
 	Button,
+	Card,
+	Container,
 	Grid,
+	Group,
+	Image,
+	Pagination,
+	Select,
+	SimpleGrid,
+	Stack,
+	Text,
+	TextInput,
+	Title,
 } from "@mantine/core";
 import {
-	IconSearch,
+	IconBox,
 	IconFilter,
 	IconHome,
-	IconBox,
+	IconSearch,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import React, { useEffect, useState, useMemo } from "react";
 
-import { getAllItems, getAllBrands, getAllCategories, getAllSeries } from "@/lib/graph-data";
-import { getNodeDisplayName, ItemNode, isItemNode } from "@/lib/schemas";
+
 import { PAGINATION } from "@/lib/constants";
+import { getAllBrands, getAllCategories, getAllItems, getAllSeries } from "@/lib/graph-data";
+import { BaseNode, getNodeDisplayName, isItemNode, ItemNode } from "@/lib/schemas";
 import {
 	itemCard,
+	itemCardBadge,
 	itemCardImage,
 	itemCardContent,
-	itemCardTitle,
-	itemCardSubtitle,
 	itemCardMetadata,
-	itemCardBadge,
+	itemCardSubtitle,
+	itemCardTitle,
 } from "@/styles/components.css";
 
 const ITEMS_PER_PAGE = 48;
@@ -122,22 +125,29 @@ export default function ItemsPage() {
 
 				const filteredItems = itemsData.filter(isItemNode);
 				setItems(filteredItems);
-				setBrands(brandsData.map(b => getNodeDisplayName(b)));
-				setCategories(categoriesData.map(c => getNodeDisplayName(c)));
-				setSeries(seriesData.map(s => getNodeDisplayName(s)));
-			} catch (error) {
-				console.error("Failed to load items:", error);
+
+				// Type-check brand, category, and series data
+				const validBrands = brandsData.filter((b): b is BaseNode => b && typeof b === "object" && "name" in b);
+				const validCategories = categoriesData.filter((c): c is BaseNode => c && typeof c === "object" && "name" in c);
+				const validSeries = seriesData.filter((s): s is BaseNode => s && typeof s === "object" && "name" in s);
+
+				setBrands(validBrands.map(b => getNodeDisplayName(b)));
+				setCategories(validCategories.map(c => getNodeDisplayName(c)));
+				setSeries(validSeries.map(s => getNodeDisplayName(s)));
+			} catch (error: unknown) {
+				const errorMessage = error instanceof Error ? error.message : String(error);
+				console.error("Failed to load items:", errorMessage);
 			} finally {
 				setLoading(false);
 			}
 		};
 
-		loadData();
+		void loadData();
 	}, []);
 
 	// Handle URL params
 	useEffect(() => {
-		const url = new URL(window.location.href);
+		const url = new URL(globalThis.location.href);
 		const pageParam = url.searchParams.get("page");
 		const queryParam = url.searchParams.get("q");
 		const sortParam = url.searchParams.get("sort");
@@ -162,7 +172,7 @@ export default function ItemsPage() {
 		category?: string;
 		series?: string;
 	}) => {
-		const url = new URL(window.location.href);
+		const url = new URL(globalThis.location.href);
 
 		if (updates.page !== undefined) {
 			url.searchParams.set("page", updates.page.toString());
@@ -200,7 +210,7 @@ export default function ItemsPage() {
 			}
 		}
 
-		window.history.pushState({}, "", url.toString());
+		globalThis.history.pushState({}, "", url.toString());
 	};
 
 	// Filter and sort items
@@ -337,7 +347,7 @@ export default function ItemsPage() {
 								leftSection={<IconSearch size={16} />}
 								placeholder="Search items..."
 								value={searchQuery}
-								onChange={(e) => handleSearchChange(e.target.value)}
+								onChange={(e) => { handleSearchChange(e.target.value); }}
 							/>
 						</Grid.Col>
 						<Grid.Col span={{ base: 6, md: 2 }}>

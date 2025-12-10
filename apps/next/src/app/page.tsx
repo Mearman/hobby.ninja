@@ -1,3 +1,5 @@
+import { Badge } from "@/components/ui/badge";
+
 import {
 	Title,
 	Text,
@@ -6,7 +8,7 @@ import {
 	Stack,
 	Group,
 	Button,
-	Badge,
+	// Badge removed,
 	SimpleGrid,
 	Box,
 	rem,
@@ -21,8 +23,9 @@ import {
 	IconDeviceMobile,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import { getAllItems, getAllBrands, getAllCategories, getAllSeries } from "@/lib/server-graph-data";
+
 import { UI } from "@/lib/constants";
+import { getAllItems, getAllBrands, getAllCategories, getAllSeries } from "@/lib/server-graph-data";
 
 interface SearchResult {
 	item: {
@@ -48,7 +51,7 @@ async function getBuildTimeStats() {
 			totalSeries: series.length,
 		};
 	} catch (error) {
-		console.error("Failed to compute build-time stats:", error);
+		console.error("Failed to compute build-time stats:", error instanceof Error ? error.message : String(error));
 		// Fallback to reasonable defaults
 		return {
 			totalItems: 6000,
@@ -64,49 +67,49 @@ export default async function HomePage() {
 
 	
 	const features = [
-	{
+		{
 			icon: IconSearch,
 			title: "Advanced Search",
 			description: `Search through ${stats.totalItems.toLocaleString()}+ items with instant results and smart filtering`,
-			color: "blue"
+			color: "blue",
 		},
 		{
 			icon: IconHeart,
 			title: "Collection Management",
 			description: "Track your collection with wishlist, status updates, and progress tracking",
-			color: "red"
+			color: "red",
 		},
 		{
 			icon: IconDatabase,
 			title: "Comprehensive Database",
 			description: "Detailed information about Gundam models, grades, series, and pricing",
-			color: "green"
+			color: "green",
 		},
 		{
 			icon: IconDeviceMobile,
 			title: "PWA Ready",
 			description: "Install as native app with full offline support and mobile-optimized design",
-			color: "orange"
+			color: "orange",
 		},
 		{
 			icon: IconShield,
 			title: "Privacy First",
 			description: "Client-side storage means your data stays private and secure",
-			color: "violet"
+			color: "violet",
 		},
 		{
 			icon: IconDownload,
 			title: "Data Export",
 			description: "Export your collection data in multiple formats for backup or sharing",
-			color: "cyan"
-		}
+			color: "cyan",
+		},
 	];
 
 	const displayStats = [
 		{ label: "Items", value: stats.totalItems.toLocaleString() },
 		{ label: "Brands", value: stats.totalBrands.toLocaleString() },
 		{ label: "Categories", value: stats.totalCategories.toLocaleString() },
-		{ label: "Series", value: stats.totalSeries.toLocaleString() }
+		{ label: "Series", value: stats.totalSeries.toLocaleString() },
 	];
 
 	return (
@@ -115,7 +118,7 @@ export default async function HomePage() {
 			<Container size="xl" py="xl">
 				<Title order={1} size="h1" c="blue.6" fw={800}>
 				hobby.ninja
-			</Title>
+				</Title>
 
 				<Stack gap="xl" mt="xl">
 					<Title
@@ -142,42 +145,52 @@ export default async function HomePage() {
 
 					{/* Search Integration */}
 					<Box maw={600} mx="auto" w="100%">
-						<Button
-							variant="light"
-							size="lg"
-							radius="md"
-							component={Link}
-							href="/search"
-							leftSection={<IconSearch size={UI.BUTTON_ICON_SIZE} />}
-							w="100%"
-							justify="start"
-						>
-							Search for Gundam models, brands, series...
-						</Button>
+						<Link href="/search" style={{ textDecoration: 'none' }}>
+							<Card
+								withBorder
+								p="md"
+								radius="md"
+								style={{ cursor: 'pointer' }}
+							>
+								<Group justify="start">
+									<IconSearch size={UI.BUTTON_ICON_SIZE} />
+									<Text size="lg">Search for Gundam models, brands, series...</Text>
+								</Group>
+							</Card>
+						</Link>
 					</Box>
 
 					{/* Quick Actions */}
 					<Group justify="center" gap="md" mt="lg">
-						<Button
-							variant="filled"
-							size="lg"
-							radius="md"
-							component={Link}
-							href="/database"
-							leftSection={<IconDatabase size={UI.BUTTON_ICON_SIZE} />}
-						>
-							Browse Database
-						</Button>
-						<Button
-							variant="outline"
-							size="lg"
-							radius="md"
-							component={Link}
-							href="/search"
-							leftSection={<IconSearch size={UI.BUTTON_ICON_SIZE} />}
-						>
-							Advanced Search
-						</Button>
+						<Link href="/database" style={{ textDecoration: 'none' }}>
+							<Card
+								p="md"
+								radius="md"
+								style={{
+									cursor: 'pointer',
+									backgroundColor: '#339af0',
+									color: 'white',
+									border: '1px solid #339af0'
+								}}
+							>
+								<Group>
+									<IconDatabase size={UI.BUTTON_ICON_SIZE} />
+									<Text size="lg" style={{ color: 'white' }}>Browse Database</Text>
+								</Group>
+							</Card>
+						</Link>
+						<Link href="/search" style={{ textDecoration: 'none' }}>
+							<Card
+								p="md"
+								radius="md"
+								style={{ cursor: 'pointer', border: '1px solid #339af0' }}
+							>
+								<Group>
+									<IconSearch size={UI.BUTTON_ICON_SIZE} />
+									<Text size="lg" style={{ color: '#339af0' }}>Advanced Search</Text>
+								</Group>
+							</Card>
+						</Link>
 					</Group>
 				</Stack>
 			</Container>
@@ -190,7 +203,7 @@ export default async function HomePage() {
 						spacing="xl"
 					>
 						{displayStats.map((stat, index) => (
-							<Card key={index} p="lg" radius="md" withBorder>
+							<Card key={index} p="lg" radius="md" withBorder={true}>
 								<Stack align="center" gap="xs">
 									<Title order={1} size="h2" c="blue.6" fw={800}>
 										{stat.value}
@@ -230,7 +243,7 @@ export default async function HomePage() {
 						mt="xl"
 					>
 						{features.map((feature, index) => (
-							<Card key={index} p="xl" radius="md" withBorder h="100%">
+							<Card key={index} p="xl" radius="md" withBorder={true} h="100%">
 								<Stack gap="md" align="flex-start">
 									<ThemeIcon
 										color={feature.color}
@@ -259,7 +272,7 @@ export default async function HomePage() {
 			<Box
 				py="xl"
 				style={{
-					background: 'linear-gradient(to right, var(--mantine-color-blue-6), var(--mantine-color-cyan-6))'
+					background: "linear-gradient(to right, var(--mantine-color-blue-6), var(--mantine-color-cyan-6))",
 				}}
 			>
 				<Container size="lg">
@@ -273,27 +286,40 @@ export default async function HomePage() {
 						</Text>
 
 						<Group gap="md">
-							<Button
-								variant="white"
-								size="lg"
-								radius="md"
-								component={Link}
-							href="/collection"
-								leftSection={<IconHeart size={UI.BUTTON_ICON_SIZE} />}
-							>
-								My Collection
-							</Button>
-							<Button
-								variant="outline"
-								size="lg"
-								radius="md"
-								color="white"
-								component={Link}
-							href="/database"
-								leftSection={<IconDatabase size={UI.BUTTON_ICON_SIZE} />}
-							>
-								Explore Database
-							</Button>
+							<Link href="/collection" style={{ textDecoration: 'none' }}>
+								<Card
+									p="md"
+									radius="md"
+									style={{
+										cursor: 'pointer',
+										backgroundColor: 'rgba(255,255,255,0.1)',
+										color: 'white',
+										border: '1px solid rgba(255,255,255,0.3)'
+									}}
+								>
+									<Group>
+										<IconHeart size={UI.BUTTON_ICON_SIZE} style={{ color: 'white' }} />
+										<Text size="lg" style={{ color: 'white' }}>My Collection</Text>
+									</Group>
+								</Card>
+							</Link>
+							<Link href="/database" style={{ textDecoration: 'none' }}>
+								<Card
+									p="md"
+									radius="md"
+									style={{
+										cursor: 'pointer',
+										backgroundColor: 'transparent',
+										color: 'white',
+										border: '1px solid rgba(255,255,255,0.5)'
+									}}
+								>
+									<Group>
+										<IconDatabase size={UI.BUTTON_ICON_SIZE} style={{ color: 'white' }} />
+										<Text size="lg" style={{ color: 'white' }}>Explore Database</Text>
+									</Group>
+								</Card>
+							</Link>
 						</Group>
 
 						<Badge

@@ -1,5 +1,7 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
+
 import {
 	Drawer,
 	Stack,
@@ -8,7 +10,7 @@ import {
 	Text,
 	Divider,
 	ActionIcon,
-	Badge,
+	// Badge removed,
 	ScrollArea,
 	ThemeIcon,
 	UnstyledButton,
