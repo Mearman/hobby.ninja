@@ -96,35 +96,27 @@ export function ItemCard({
 	// Extract display name with fallbacks
 	const getDisplayName = useCallback(() => {
 		const name = item.properties.name;
-		if (!name) {
-			return item.id;
-		}
 		if (typeof name === "string") {
 			return name;
 		}
 		// Type guard for localized name object
-		if (typeof name === "object" && name !== null) {
-			const localizedName = name as { ja?: string; en?: string };
-			return localizedName.en ?? localizedName.ja ?? "Unknown";
-		}
-		return "Unknown";
+		const localizedName = name as { ja?: string; en?: string };
+		return localizedName.en ?? localizedName.ja ?? item.id;
 	}, [item.properties.name, item.id]);
 
 	// Extract series information
 	const getSeries = useCallback(() => {
-		if (item.properties.series) {
-			const series = item.properties.series;
-			if (typeof series === "string") {
-				return series;
-			}
-			// Type guard for localized series object
-			if (typeof series === "object" && series !== null) {
-				const localizedSeries = series as { ja?: string; en?: string };
-				return localizedSeries.en ?? localizedSeries.ja;
-			}
+		const series = item.properties.series;
+		if (!series) {
+			return null;
 		}
-		return null;
-	}, [item]);
+		if (typeof series === "string") {
+			return series;
+		}
+		// Type guard for localized series object
+		const localizedSeries = series as { ja?: string; en?: string };
+		return localizedSeries.en ?? localizedSeries.ja;
+	}, [item.properties.series]);
 
 	// Extract grade and scale
 	const getGrade = useCallback(() => {
@@ -139,7 +131,7 @@ export function ItemCard({
 			}
 		}
 		// Catalog items don't have grade
-		return undefined;
+		return null;
 	}, [item, itemType]);
 
 	const getScale = useCallback(() => {
@@ -149,12 +141,11 @@ export function ItemCard({
 	// Extract release date
 	const getReleaseDate = useCallback(() => {
 		const date = item.properties.releaseDate;
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 		if (date) {
 			const year = date.year;
 			const month = date.month;
 			const day = date.day;
-			return month && day ? `${year}-${month.toString().padStart(TWO, "ZERO")}-${day.toString().padStart(TWO, "ZERO")}` : year.toString();
+			return month && day ? `${year}-${month.toString().padStart(TWO, "0")}-${day.toString().padStart(TWO, "0")}` : year.toString();
 		}
 		return null;
 	}, [item]);
@@ -260,16 +251,11 @@ export function ItemCard({
 	const handleShare = useCallback((e: React.MouseEvent) => {
 		e.stopPropagation();
 		void (async () => {
-			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, unicorn/prefer-ternary
-			if (typeof navigator !== "undefined" && "share" in navigator && navigator.share) {
-				await navigator.share({
-					title: getDisplayName(),
-					text: `Check out this model: ${getDisplayName() ?? "unknown model"}`,
-					url: globalThis.location.href,
-				});
-			} else {
-				await navigator.clipboard.writeText(globalThis.location.href);
-			}
+			await (typeof navigator !== "undefined" && "share" in navigator && navigator.share ? navigator.share({
+				title: getDisplayName(),
+				text: `Check out this model: ${getDisplayName() ?? "unknown model"}`,
+				url: globalThis.location.href,
+			}) : navigator.clipboard.writeText(globalThis.location.href));
 		})();
 	}, [getDisplayName]);
 
@@ -331,7 +317,7 @@ export function ItemCard({
 				padding="sm"
 				radius="md"
 				withBorder={true}
-				h={compact ? COMPACT_HEIGHT : "HUNDRED%"}
+				h={compact ? COMPACT_HEIGHT : "100%"}
 			>
 				<Stack gap="xs">
 					<Skeleton height={compact ? THUMBNAIL_HEIGHT : SKELETON_HEIGHT} radius="md" />
@@ -354,7 +340,7 @@ export function ItemCard({
 	const imageSrc = getImageSrc();
 
 	const isListMode = viewMode === "list";
-	const cardHeight = isListMode ? "auto" : (compact ? COMPACT_HEIGHT : "HUNDRED%");
+	const cardHeight = isListMode ? "auto" : (compact ? COMPACT_HEIGHT : "100%");
 
 	return (
 		<Card
@@ -476,7 +462,7 @@ export function ItemCard({
 						lineClamp={isListMode ? ONE : TWO}
 						style={{
 							fontFamily: theme.fontFamily,
-							minHeight: compact ? "ONE.2em" : "TWO.4em",
+							minHeight: compact ? "1.2em" : "2.4em",
 						}}
 					>
 						{displayName}
