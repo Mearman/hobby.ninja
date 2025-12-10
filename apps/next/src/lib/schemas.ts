@@ -311,7 +311,10 @@ export const getNodeImages = (node: ItemNode): string[] => {
 		if (typeof img === "string") return img;
 
 		const imageResult = ImageSchema.safeParse(img);
-		if (!imageResult.success) return String(img);
+		if (!imageResult.success) {
+			// Type guard for unknown to string
+			return typeof img === "string" ? img : JSON.stringify(img);
+		}
 
 		// Handle the union type from ImageSchema
 		const imageData = imageResult.data;
@@ -342,7 +345,10 @@ export const getNodeAccessories = (node: ItemNode): string[] => {
 		if (typeof acc === "string") return acc;
 
 		const accessoryResult = AccessorySchema.safeParse(acc);
-		if (!accessoryResult.success) return String(acc);
+		if (!accessoryResult.success) {
+			// Type guard for unknown to string
+			return typeof acc === "string" ? acc : JSON.stringify(acc);
+		}
 
 		const accessory = accessoryResult.data;
 		if (typeof accessory === "string") return accessory;
@@ -352,7 +358,7 @@ export const getNodeAccessories = (node: ItemNode): string[] => {
 	});
 };
 
-export const getNodeManuals = (node: ItemNode): (string | ItemManual)[] => {
+export const getNodeManuals = (node: ItemNode): Array<string | ItemManual> => {
 	if (!node.manuals) return [];
 
 	return node.manuals.map(manual => {
@@ -360,7 +366,10 @@ export const getNodeManuals = (node: ItemNode): (string | ItemManual)[] => {
 		if (typeof manual === "string") return manual;
 
 		const manualResult = ManualSchema.safeParse(manual);
-		if (!manualResult.success) return String(manual);
+		if (!manualResult.success) {
+			// Type guard for unknown to string
+			return typeof manual === "string" ? manual : JSON.stringify(manual);
+		}
 
 		const manualData = manualResult.data;
 		if (typeof manualData === "string") return manualData;

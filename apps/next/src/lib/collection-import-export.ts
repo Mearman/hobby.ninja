@@ -50,7 +50,7 @@ export const exportCollection = async (collectionId: string, includeHidden = fal
 		// Compress the data
 		const jsonString = JSON.stringify(exportData, null, 2);
 		const compressed = pako.deflate(jsonString);
-		const base64 = btoa(String.fromCharCode(...compressed));
+		const base64 = btoa(Reflect.apply(String.fromCharCode, null, [...compressed]));
 
 		return base64;
 	} catch (error) {
@@ -75,10 +75,14 @@ export const importCollection = async (
 }> => {
 	try {
 		// Decompress and parse the data
-		const compressed = Uint8Array.from(atob(base64Data), c => c.charCodeAt(0));
+		const binaryString = atob(base64Data);
+		const compressed = new Uint8Array(binaryString.length);
+		for (let i = 0; i < binaryString.length; i++) {
+			compressed[i] = binaryString.charCodeAt(i);
+		}
 		const decompressed = pako.inflate(compressed);
 		const jsonString = new TextDecoder().decode(decompressed);
-		const exportData: ExportData = JSON.parse(jsonString);
+		const exportData = JSON.parse(jsonString) as ExportData;
 
 		// Validate the import data
 		if (!exportData.items || !Array.isArray(exportData.items)) {
@@ -153,10 +157,10 @@ export const generateCollectionShareUrl = async (collectionId: string, includeHi
 	try {
 		const base64Data = await exportCollection(collectionId, includeHidden);
 		const compressed = pako.deflate(base64Data);
-		const urlSafeBase64 = btoa(String.fromCharCode(...compressed))
-			.replace(/\+/g, "-")
-			.replace(/\//g, "_")
-			.replace(/=/g, "");
+		const urlSafeBase64 = btoa(Reflect.apply(String.fromCharCode, null, [...compressed]))
+			.replaceAll("+", "-")
+			.replaceAll("/", "_")
+			.replaceAll("=", "");
 
 		// Generate URL with share parameter
 		const url = `${globalThis.window === undefined ? "" : globalThis.location.origin}/collection/${collectionId}?share=${urlSafeBase64}`;
@@ -170,7 +174,7 @@ export const generateCollectionShareUrl = async (collectionId: string, includeHi
 // Parse shared collection from URL
 export const parseSharedCollection = async (
 	shareData: string,
-	collectionId: string
+	collectionId: string,
 ): Promise<{
   items: CollectionItem[];
   stats: {
@@ -183,11 +187,15 @@ export const parseSharedCollection = async (
 }> => {
 	try {
 		const urlSafeBase64 = shareData
-			.replace(/-/g, "+")
-			.replace(/_/g, "/")
-			.replace(/=/g, "+");
+			.replaceAll("-", "+")
+			.replaceAll("_", "/")
+			.replaceAll("=", "+");
 
-		const compressed = Uint8Array.from(atob(urlSafeBase64), c => c.charCodeAt(0));
+		const binaryString = atob(urlSafeBase64);
+		const compressed = new Uint8Array(binaryString.length);
+		for (let i = 0; i < binaryString.length; i++) {
+			compressed[i] = binaryString.charCodeAt(i);
+		}
 		const decompressed = pako.inflate(compressed);
 		const base64Data = new TextDecoder().decode(decompressed);
 
@@ -202,7 +210,11 @@ export const parseSharedCollection = async (
 export const exportCollectionCSV = async (collectionId: string, includeHidden = false): Promise<string> => {
 	try {
 		const base64Data = await exportCollection(collectionId, includeHidden);
-		const compressed = Uint8Array.from(atob(base64Data), c => c.charCodeAt(0));
+		const binaryString = atob(base64Data);
+		const compressed = new Uint8Array(binaryString.length);
+		for (let i = 0; i < binaryString.length; i++) {
+			compressed[i] = binaryString.charCodeAt(i);
+		}
 		const decompressed = pako.inflate(compressed);
 		const jsonString = new TextDecoder().decode(decompressed);
 		const exportData: ExportData = JSON.parse(jsonString);
@@ -237,7 +249,7 @@ export const exportCollectionCSV = async (collectionId: string, includeHidden = 
 				`"${item.condition ?? ""}"`,
 				`"${item.rating ?? 0}"`,
 				`"${(item.tags ?? []).join("; ")}"`,
-				`"${(item.notes ?? "").replace(/"/g, '""')}"`,
+				`"${(item.notes ?? "").replaceAll('"', '""')}"`,
 				`"${new Date(item.added).toLocaleString()}"`,
 				`"${new Date(item.modified).toLocaleString()}"`,
 			];

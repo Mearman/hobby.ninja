@@ -4,10 +4,10 @@ import { useDebouncedValue, useDebouncedState } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
 import { useState, useEffect, useCallback, useMemo } from "react";
 
+import { PAGINATION, TIMING, FILTER } from "@/lib/constants";
 import type { SearchOptions, SearchResult, SearchableItem } from "@/lib/search-index";
 import { getSearchIndex, initializeSearchIndex } from "@/lib/search-index";
 import { ShareableFilters } from "@/lib/url-compression";
-import { PAGINATION, TIMING, FILTER } from "@/lib/constants";
 
 // Additional constants for search functionality
 const MIN_SUGGESTION_INPUT_LENGTH = 2;
@@ -312,7 +312,9 @@ export function useQuickSearch(initialQuery = "") {
 	useEffect(() => {
 		initializeSearchIndex()
 			.then(() => { setIsInitialized(true); })
-			.catch(console.error);
+			.catch((error) => {
+				console.error("Failed to initialize search index:", error);
+			});
 	}, []);
 
 	// Search

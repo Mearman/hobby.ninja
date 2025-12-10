@@ -4,7 +4,7 @@ interface EdgeMetadata {
   [propertyName: string]: string | number | boolean;
 }
 
-interface UltraCompactEdgeMap {
+export interface UltraCompactEdgeMap {
   [edgeKey: string]: EdgeMetadata;
 }
 

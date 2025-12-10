@@ -1,7 +1,8 @@
 import Fuse, { type IFuseOptions } from "fuse.js";
 
-import { getAllItems, getAllBrands, getAllCategories, getAllSeries } from "@/lib/graph-data";
 import { PAGINATION, FILTER } from "./constants";
+
+import { getAllItems, getAllBrands, getAllCategories, getAllSeries } from "@/lib/graph-data";
 import {
 	ItemNodeSchema,
 	BrandNodeSchema,
@@ -29,7 +30,7 @@ function getLocalizedDescription(desc: unknown): string {
 	if (!descResult.success) return "";
 
 	const validatedDesc = descResult.data;
-	return validatedDesc.map(d => d.ja ?? d.en).join(" ");
+	return validatedDesc.map(d => d.ja ?? d.en ?? "").join(" ");
 }
 
 // Helper function to extract manual identifier using Zod validation
@@ -84,7 +85,7 @@ export interface SearchOptions {
 export interface SearchResult {
   item: SearchableItem;
   score: number;
-  matches?: readonly any[] | undefined;
+  matches?: readonly Fuse.FuseResultMatch[] | undefined;
 }
 
 export class SearchIndex {

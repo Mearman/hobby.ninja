@@ -163,7 +163,7 @@ export class UrlCompression {
 		try {
 			const compressedData = match[1];
 			const decompressed = pako.inflate(this.base64UrlToArrayBuffer(compressedData), { to: "string" });
-			return JSON.parse(decompressed);
+			return JSON.parse(decompressed) as ShareableData;
 		} catch (error) {
 			console.error("Failed to parse URL:", error);
 			return null;
@@ -174,11 +174,16 @@ export class UrlCompression {
    * Convert Uint8Array to base64url string
    */
 	private static arrayBufferToBase64Url(buffer: Uint8Array): string {
-		const base64 = btoa(String.fromCharCode(...buffer));
+		// Convert Uint8Array to string properly
+		let binary = "";
+		for (const element of buffer) {
+			binary += String.fromCharCode(element);
+		}
+		const base64 = btoa(binary);
 		return base64
-			.replace(/\+/g, "-")
-			.replace(/\//g, "_")
-			.replace(/=/g, "");
+			.replaceAll("+", "-")
+			.replaceAll("/", "_")
+			.replaceAll("=", "");
 	}
 
 	/**
@@ -188,8 +193,8 @@ export class UrlCompression {
 		// Pad with proper padding characters
 		const padding = (4 - (base64url.length % 4)) % 4;
 		const base64 = (base64url + "=".repeat(padding))
-			.replace(/-/g, "+")
-			.replace(/_/g, "/");
+			.replaceAll("-", "+")
+			.replaceAll("_", "/");
 
 		const binaryString = atob(base64);
 		const bytes = new Uint8Array(binaryString.length);
@@ -223,32 +228,35 @@ export class UrlCompression {
 
 			// Type-safe assignments based on the key
 			switch (key) {
-				case 'brands':
-				case 'categories':
-				case 'series':
-				case 'grades':
-				case 'scales':
-				case 'status':
-				case 'availability':
-					if (Array.isArray(value) && value.length > 0 && value.every(item => typeof item === 'string')) {
+				case "brands":
+				case "categories":
+				case "series":
+				case "grades":
+				case "scales":
+				case "status":
+				case "availability": {
+					if (Array.isArray(value) && value.length > 0 && value.every(item => typeof item === "string")) {
 						optimized[key] = value;
 					}
 					break;
-				case 'priceRange':
-				case 'dateRange':
-				case 'sort':
+				}
+				case "priceRange":
+				case "dateRange":
+				case "sort": {
 					if (typeof value === "object" && Object.keys(value).length > 0) {
 						optimized[key as keyof ShareableFilters] = value;
 					}
 					break;
-				case 'category':
-				case 'search':
-				case 'page':
-				case 'view':
+				}
+				case "category":
+				case "search":
+				case "page":
+				case "view": {
 					if (value !== "") {
 						optimized[key as keyof ShareableFilters] = value;
 					}
 					break;
+				}
 			}
 		}
 

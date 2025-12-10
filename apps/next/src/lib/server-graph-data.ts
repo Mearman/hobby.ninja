@@ -40,7 +40,7 @@ export {
 	getNodeByIdAny,
 	validateGraphData,
 	graphData as staticGraphData,
-} from './graph-data';
+} from "./graph-data";
 
 // Re-export types for compatibility
 export type {
@@ -51,4 +51,4 @@ export type {
 	ManualNode,
 	GraphNode,
 	BaseNode,
-} from './schemas';
+} from "./schemas";

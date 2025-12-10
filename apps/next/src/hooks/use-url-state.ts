@@ -4,8 +4,8 @@ import { debounce } from "lodash-es";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { useEffect, useState, useCallback } from "react";
 
-import UrlCompression, { type ShareableFilters } from "@/lib/url-compression";
 import { TIMING } from "@/lib/constants";
+import UrlCompression, { type ShareableFilters } from "@/lib/url-compression";
 
 interface UrlStateOptions {
   debounceMs?: number;
@@ -24,7 +24,7 @@ interface UseUrlStateReturn<T> {
 /**
  * Hook for managing URL state with compression and sharing capabilities
  */
-export function useUrlState<T extends Record<string, any>>(
+export function useUrlState<T extends Record<string, unknown>>(
 	defaultState: T,
 	options: UrlStateOptions = {},
 ): UseUrlStateReturn<T> {
