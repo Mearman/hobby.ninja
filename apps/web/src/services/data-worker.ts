@@ -7,44 +7,58 @@
 
 import type {
 	FilterOptions,
+} from "./data-service";
+
+// Local type definitions (since the actual types can't be imported in a worker)
+interface UnifiedItem {
+  id: string;
+  properties: {
+    name?: { en: string; ja: string };
+    series?: { en: string; ja: string } | string;
+    grade?: string | { code: string; family: string };
+    scale?: string;
+    releaseDate?: { year: number };
+    sources: {
+      manual?: { id: string };
+      catalog?: { id: string };
+    };
+    matchStage?: number;
+    matchMethod?: string;
+  };
+}
+
+interface ManualItem {
+  id: string;
+  properties: {
+    name?: { en: string; ja: string };
+    series?: { en: string; ja: string } | string;
+    grade?: string | { code: string; family: string };
+    scale?: string;
+  };
+}
+
+interface CatalogItem {
+  id: string;
+  properties: {
+    name?: { en: string; ja: string };
+    series?: { en: string; ja: string } | string;
+    grade?: string | { code: string; family: string };
+    scale?: string;
+  };
+}
 
 // Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
-
-	UnifiedItem,
-	ManualItem,
-	CatalogItem,
-} from "./dataService";
-
-// Constants for magic numbers
-const SEARCH_BATCH_SIZE = THOUSAND;
+const SEARCH_BATCH_SIZE = 1000;
 const AGGREGATION_BATCH_SIZE = 500;
-const STATISTICS_BATCH_SIZE = THOUSAND;
-const YIELD_INTERVAL_MULTIPLIER = FIVE;
-const MIN_TERM_LENGTH = TWO;
-const EXACT_MATCH_BONUS = ZERO.THREE;
-const DENSITY_BONUS_MAX = ZERO.TWO;
-const MIN_SCORE_THRESHOLD = ZERO.ONE;
-const POPULAR_TERM_BONUS = ZERO.THREE;
-const HIGH_CONFIDENCE_THRESHOLD = FOUR;
-const MEDIUM_CONFIDENCE_THRESHOLD = TWO;
+const STATISTICS_BATCH_SIZE = 1000;
+const YIELD_INTERVAL_MULTIPLIER = 5;
+const MIN_TERM_LENGTH = 2;
+const EXACT_MATCH_BONUS = 0.3;
+const DENSITY_BONUS_MAX = 0.2;
+const MIN_SCORE_THRESHOLD = 0.1;
+const POPULAR_TERM_BONUS = 0.3;
+const HIGH_CONFIDENCE_THRESHOLD = 4;
+const MEDIUM_CONFIDENCE_THRESHOLD = 2;
 
 // Local type for worker use
 interface SearchResult {
@@ -72,35 +86,6 @@ interface WorkerMessage {
   id: string;
   type: string;
   payload: unknown;
-}
-
-/** Search operation message */
-interface SearchMessage extends WorkerMessage {
-  type: "SEARCH";
-  payload: {
-    searchIndex: SearchIndexItem[];
-    query: string;
-    filters: FilterOptions;
-    fieldWeights?: Record<string, number>;
-  };
-}
-
-/** Aggregation operation message */
-interface AggregateMessage extends WorkerMessage {
-  type: "AGGREGATE";
-  payload: {
-    unifiedItems: UnifiedItem[];
-    manualItems: ManualItem[];
-    catalogItems: CatalogItem[];
-  };
-}
-
-/** Statistics operation message */
-interface StatsMessage extends WorkerMessage {
-  type: "STATISTICS";
-  payload: {
-    items: UnifiedItem[];
-  };
 }
 
 /** Response message from worker */
@@ -177,28 +162,28 @@ const WorkerTextProcessor = {
 		const queryTerms = this.tokenize(query);
 		const textTerms = this.tokenize(text);
 
-		if (queryTerms.length === ZERO) return ZERO;
-		if (textTerms.length === ZERO) return ZERO;
+		if (queryTerms.length === 0) return 0;
+		if (textTerms.length === 0) return 0;
 
 		// Calculate TF-IDF-like scoring
 		const queryFreq = new Map<string, number>();
 		const textFreq = new Map<string, number>();
 
 		for (const term of queryTerms) {
-			queryFreq.set(term, (queryFreq.get(term) ?? ZERO) + ONE);
+			queryFreq.set(term, (queryFreq.get(term) ?? 0) + 1);
 		}
 
 		for (const term of textTerms) {
-			textFreq.set(term, (textFreq.get(term) ?? ZERO) + ONE);
+			textFreq.set(term, (textFreq.get(term) ?? 0) + 1);
 		}
 
 		// Cosine similarity
-		let dotProduct = ZERO;
-		let queryMagnitude = ZERO;
-		let textMagnitude = ZERO;
+		let dotProduct = 0;
+		let queryMagnitude = 0;
+		let textMagnitude = 0;
 
 		for (const [term, qCount] of queryFreq.entries()) {
-			const tCount = textFreq.get(term) ?? ZERO;
+			const tCount = textFreq.get(term) ?? 0;
 			dotProduct += qCount * tCount;
 			queryMagnitude += qCount * qCount;
 		}
@@ -207,29 +192,29 @@ const WorkerTextProcessor = {
 			textMagnitude += tCount * tCount;
 		}
 
-		if (queryMagnitude === ZERO || textMagnitude === ZERO) return ZERO;
+		if (queryMagnitude === 0 || textMagnitude === 0) return 0;
 
 		const similarity = dotProduct / (Math.sqrt(queryMagnitude) * Math.sqrt(textMagnitude));
 
 		// Boost for exact phrase matches
-		const exactMatchBonus = text.toLowerCase().includes(query.toLowerCase()) ? EXACT_MATCH_BONUS : ZERO;
+		const exactMatchBonus = text.toLowerCase().includes(query.toLowerCase()) ? EXACT_MATCH_BONUS : 0;
 
 		// Boost for term density
-		const density = textTerms.length / Math.max(text.split(" ").length, ONE);
+		const density = textTerms.length / Math.max(text.split(" ").length, 1);
 		const densityBonus = Math.min(density * DENSITY_BONUS_MAX, DENSITY_BONUS_MAX);
 
-		return Math.min(similarity + exactMatchBonus + densityBonus, ONE);
+		return Math.min(similarity + exactMatchBonus + densityBonus, 1);
 	},
 
 	highlightMatches(text: string, query: string): string {
 		const queryTerms = this.tokenize(query);
-		if (queryTerms.length === ZERO) return text;
+		if (queryTerms.length === 0) return text;
 
 		let highlighted = text;
 
 		for (const term of queryTerms) {
 			const regex = new RegExp(`(${escapeRegex(term)})`, "gi");
-			highlighted = highlighted.replace(regex, "<mark>$ONE</mark>");
+			highlighted = highlighted.replace(regex, "<mark>$1</mark>");
 		}
 
 		return highlighted;
@@ -271,15 +256,15 @@ class SearchProcessor {
 		// Process in batches to avoid blocking
 		const results: SearchResult["items"] = [];
 
-		for (let i = ZERO; i < searchIndex.length; i += SEARCH_BATCH_SIZE) {
+		for (let i = 0; i < searchIndex.length; i += SEARCH_BATCH_SIZE) {
 			const batch = searchIndex.slice(i, i + SEARCH_BATCH_SIZE);
 
-			const batchResults = this.processBatch(batch, query, normalizedQuery, queryTerms, fieldWeights);
+			const batchResults = await this.processBatch(batch, query, normalizedQuery, queryTerms, fieldWeights);
 			results.push(...batchResults);
 
 			// Yield control periodically
-			if (i % (SEARCH_BATCH_SIZE * YIELD_INTERVAL_MULTIPLIER) === ZERO) {
-				await new Promise(resolve => setTimeout(resolve, ZERO));
+			if (i % (SEARCH_BATCH_SIZE * YIELD_INTERVAL_MULTIPLIER) === 0) {
+				await new Promise(resolve => setTimeout(resolve, 0));
 			}
 		}
 
@@ -294,28 +279,28 @@ class SearchProcessor {
 		normalizedQuery: string,
 		queryTerms: string[],
 		fieldWeights?: Record<string, number>,
-	): SearchResult["items"] {
-		return batch.map(item => {
-			let score = ZERO;
+	): Promise<SearchResult["items"]> {
+		return Promise.resolve(batch.map(item => {
+			let score = 0;
 
-			if (queryTerms.length > ZERO) {
+			if (queryTerms.length > 0) {
 				score = WorkerTextProcessor.calculateRelevance(normalizedQuery, item.normalizedText);
 
 				// Boost exact matches
 				if (item.normalizedText === normalizedQuery) {
-					score += ONE;
+					score += 1;
 				}
 
 				// Boost popular terms
-				if (item.popularTerms && item.popularTerms.length > ZERO) {
+				if (item.popularTerms && item.popularTerms.length > 0) {
 					const popularMatches = queryTerms.filter(term => item.popularTerms?.includes(term));
 					score += popularMatches.length * POPULAR_TERM_BONUS;
 				}
 
 				// Apply field weights
 				if (fieldWeights && item.metadata) {
-					const nameField = fieldWeights["name"];
-					const nameMetadata = item.metadata["name"];
+					const nameField = fieldWeights.name;
+					const nameMetadata = item.metadata.name;
 					if (nameField && nameMetadata && typeof nameMetadata === "string") {
 						const nameRelevance = WorkerTextProcessor.calculateRelevance(
 							normalizedQuery,
@@ -324,8 +309,8 @@ class SearchProcessor {
 						score += nameRelevance * nameField;
 					}
 
-					const seriesField = fieldWeights["series"];
-					const seriesMetadata = item.metadata["series"];
+					const seriesField = fieldWeights.series;
+					const seriesMetadata = item.metadata.series;
 					if (seriesField && seriesMetadata && typeof seriesMetadata === "string") {
 						const seriesRelevance = WorkerTextProcessor.calculateRelevance(
 							normalizedQuery,
@@ -334,8 +319,8 @@ class SearchProcessor {
 						score += seriesRelevance * seriesField;
 					}
 
-					const descriptionField = fieldWeights["description"];
-					const descriptionMetadata = item.metadata["description"];
+					const descriptionField = fieldWeights.description;
+					const descriptionMetadata = item.metadata.description;
 					if (descriptionField && descriptionMetadata && typeof descriptionMetadata === "string") {
 						const descRelevance = WorkerTextProcessor.calculateRelevance(
 							normalizedQuery,
@@ -358,7 +343,7 @@ class SearchProcessor {
 				},
 				data: null,
 			};
-		});
+		}));
 	}
 }
 
@@ -381,13 +366,13 @@ class DataAggregator {
 		// Process items in batches
 		const aggregated: UnifiedItem[] = [];
 
-		for (let i = ZERO; i < unifiedItems.length; i += AGGREGATION_BATCH_SIZE) {
+		for (let i = 0; i < unifiedItems.length; i += AGGREGATION_BATCH_SIZE) {
 			const batch = unifiedItems.slice(i, i + AGGREGATION_BATCH_SIZE);
 			const batchResults = this.processBatch(batch, manualItems, catalogItems, conflicts);
 			aggregated.push(...batchResults);
 
 			// Yield control periodically
-			await new Promise(resolve => setTimeout(resolve, ZERO));
+			await new Promise(resolve => setTimeout(resolve, 0));
 		}
 
 		// Calculate statistics
@@ -536,20 +521,20 @@ class StatisticsCalculator {
 			bySeries: {} as Record<string, number>,
 			byReleaseYear: {} as Record<string, number>,
 			sourceCoverage: {
-				withManual: ZERO,
-				withCatalog: ZERO,
-				withBoth: ZERO,
-				singleSource: ZERO,
+				withManual: 0,
+				withCatalog: 0,
+				withBoth: 0,
+				singleSource: 0,
 			},
 			qualityMetrics: {
-				highConfidence: ZERO,
-				mediumConfidence: ZERO,
-				lowConfidence: ZERO,
-				needsReview: ZERO,
+				highConfidence: 0,
+				mediumConfidence: 0,
+				lowConfidence: 0,
+				needsReview: 0,
 			},
 		};
 
-		for (let i = ZERO; i < items.length; i += STATISTICS_BATCH_SIZE) {
+		for (let i = 0; i < items.length; i += STATISTICS_BATCH_SIZE) {
 			const batch = items.slice(i, i + STATISTICS_BATCH_SIZE);
 
 			for (const item of batch) {
@@ -557,24 +542,24 @@ class StatisticsCalculator {
 
 				// Grade statistics
 				if (properties.grade) {
-					stats.byGrade[properties.grade] = (stats.byGrade[properties.grade] ?? ZERO) + ONE;
+					stats.byGrade[properties.grade] = (stats.byGrade[properties.grade] ?? 0) + 1;
 				}
 
 				// Scale statistics
 				if (properties.scale) {
-					stats.byScale[properties.scale] = (stats.byScale[properties.scale] ?? ZERO) + ONE;
+					stats.byScale[properties.scale] = (stats.byScale[properties.scale] ?? 0) + 1;
 				}
 
 				// Series statistics
 				const seriesName = properties.series?.en ?? properties.series?.ja;
 				if (seriesName) {
-					stats.bySeries[seriesName] = (stats.bySeries[seriesName] ?? ZERO) + ONE;
+					stats.bySeries[seriesName] = (stats.bySeries[seriesName] ?? 0) + 1;
 				}
 
 				// Release year statistics
 				if (properties.releaseDate?.year) {
 					const year = properties.releaseDate.year.toString();
-					stats.byReleaseYear[year] = (stats.byReleaseYear[year] ?? ZERO) + ONE;
+					stats.byReleaseYear[year] = (stats.byReleaseYear[year] ?? 0) + 1;
 				}
 
 				// Source coverage
@@ -584,7 +569,7 @@ class StatisticsCalculator {
 				if (hasManual) stats.sourceCoverage.withManual++;
 				if (hasCatalog) stats.sourceCoverage.withCatalog++;
 				if (hasManual && hasCatalog) stats.sourceCoverage.withBoth++;
-				if ((hasManual ? ONE : ZERO) + (hasCatalog ? ONE : ZERO) === ONE) {
+				if ((hasManual ? 1 : 0) + (hasCatalog ? 1 : 0) === 1) {
 					stats.sourceCoverage.singleSource++;
 				}
 
@@ -606,8 +591,8 @@ class StatisticsCalculator {
 			}
 
 			// Yield control periodically
-			if (i % (STATISTICS_BATCH_SIZE * YIELD_INTERVAL_MULTIPLIER) === ZERO) {
-				await new Promise(resolve => setTimeout(resolve, ZERO));
+			if (i % (STATISTICS_BATCH_SIZE * YIELD_INTERVAL_MULTIPLIER) === 0) {
+				await new Promise(resolve => setTimeout(resolve, 0));
 			}
 		}
 
@@ -634,20 +619,29 @@ workerSelf.addEventListener("message", async (event: MessageEvent<WorkerMessage>
 	try {
 		switch (type) {
 			case "SEARCH": {
-				const { searchIndex, query, filters, fieldWeights } = payload as SearchMessage["payload"];
+				const { searchIndex, query, filters, fieldWeights } = payload as {
+			searchIndex: unknown[];
+			query: string;
+			filters: FilterOptions;
+			fieldWeights?: Record<string, number>;
+		};
 
 				const results = await searchProcessor.performSearch(searchIndex, query, filters, fieldWeights);
 
-				self.postMessage({
+				workerSelf.postMessage({
 					id,
 					type: "SUCCESS",
 					payload: results,
-				} satisfies WorkerResponse<SearchResult["items"]>);
+				} satisfies WorkerResponse<unknown[]>);
 				break;
 			}
 
 			case "AGGREGATE": {
-				const { unifiedItems, manualItems, catalogItems } = payload as AggregateMessage["payload"];
+				const { unifiedItems, manualItems, catalogItems } = payload as {
+			unifiedItems: unknown[];
+			manualItems: unknown[];
+			catalogItems: unknown[];
+		};
 
 				const result = await dataAggregator.aggregateData(unifiedItems, manualItems, catalogItems);
 
@@ -660,7 +654,7 @@ workerSelf.addEventListener("message", async (event: MessageEvent<WorkerMessage>
 			}
 
 			case "STATISTICS": {
-				const { items } = payload as StatsMessage["payload"];
+				const { items } = payload as { items: unknown[] };
 
 				const stats = await statisticsCalculator.calculateStatistics(items);
 
