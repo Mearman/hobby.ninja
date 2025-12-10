@@ -132,8 +132,8 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
 
-  // Force webpack for better Vanilla Extract + static export compatibility
-  turbopack: false,
+  // Next.js 16 automatically handles Turbopack/Webpack switching
+  // Development uses Turbopack by default, static export uses webpack
 
   // Additional webpack configuration for Vanilla Extract and bundle optimization
   webpack: (config, { isServer }) => {
