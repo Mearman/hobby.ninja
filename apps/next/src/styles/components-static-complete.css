@@ -1,0 +1,81 @@
+/* Comprehensive static styles for static export compatibility */
+
+/* Layout Components */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mantine-color-body);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--mantine-color-body);
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+  backdrop-filter: blur(8px);
+}
+
+/* Series Card */
+.series-card {
+  text-decoration: none;
+  color: inherit;
+  transition: all 200ms ease-in-out;
+  background-color: var(--mantine-color-body);
+  border: 1px solid var(--mantine-color-gray-3);
+}
+
+.series-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--mantine-shadow-lg);
+  border-color: var(--mantine-color-blue-4);
+  background-color: var(--mantine-color-gray-1);
+}
+
+.series-image {
+  border-radius: var(--mantine-radius-sm);
+  overflow: hidden;
+}
+
+/* Category Card */
+.category-card {
+  text-decoration: none;
+  color: inherit;
+  transition: all 200ms ease-in-out;
+  background-color: var(--mantine-color-body);
+  border: 1px solid var(--mantine-color-gray-3);
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--mantine-shadow-lg);
+  border-color: var(--mantine-color-blue-4);
+  background-color: var(--mantine-color-gray-1);
+}
+
+.category-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--mantine-radius-lg);
+  background-color: var(--mantine-color-blue-1);
+  color: var(--mantine-color-blue-6);
+}
+
+/* Brand Logo */
+.brand-logo {
+  border-radius: var(--mantine-radius-md);
+  overflow: hidden;
+  background-color: var(--mantine-color-gray-1);
+  border: 1px solid var(--mantine-color-gray-3);
+}
