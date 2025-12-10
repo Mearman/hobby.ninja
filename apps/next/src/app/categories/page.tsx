@@ -1,59 +1,69 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
+
 import {
-	Title,
-	Text,
-	Badge,
-	Group,
-	Stack,
-	Card,
-	SimpleGrid,
-	Container,
-	Image,
+	Anchor,
+	// Badge removed,
 	Box,
 	Breadcrumbs,
-	Anchor,
+	Card,
+	Container,
+	Group,
 	Pagination,
+	SimpleGrid,
+	Stack,
+	Text,
 	TextInput,
+	Title,
 } from "@mantine/core";
 import {
-	IconSearch,
-	IconHome,
 	IconFolder,
+	IconHome,
+	IconSearch,
 	IconTag,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
+
 import { getAllCategories, getAllItems } from "@/lib/graph-data";
-import { getNodeDisplayName, CategoryNode, ItemNode, isItemNode } from "@/lib/schemas";
-import { PAGINATION } from "@/lib/constants";
-import * as styles from "@/styles/components.css";
+import { getNodeDisplayName } from "@/lib/schemas";
+import { categoryCard, categoryIcon } from "@/styles/components.css";
+
+// Define types locally to avoid circular imports
+interface Category {
+	id: string;
+	type: string;
+	name: string | { ja: string; en?: string };
+}
+
+interface Item {
+	id: string;
+	type: string;
+	name: string | { ja: string; en?: string };
+	category?: string;
+}
+
+interface CategoryWithCount extends Category {
+	itemCount: number;
+}
 
 const ITEMS_PER_PAGE = 24;
 
-// Type-safe CSS class accessor for category-specific styling
-type StylesWithCategories = typeof styles & Record<`category-${string}`, string | undefined>;
-
-const getCategoryStyle = (categoryId: string): string => {
-	const stylesWithCategories = styles as StylesWithCategories;
-	const styleKey = `category-${categoryId}` as const;
-	return stylesWithCategories[styleKey] ?? "";
-};
-
 // Category card component
-function CategoryCard({ category }: { category: CategoryNode & { itemCount: number } }) {
+function CategoryCard({ category }: { category: CategoryWithCount }): JSX.Element {
 	return (
 		<Card
 			component={Link}
 			href={`/category/${category.id}`}
 			p="lg"
 			radius="md"
-			className={styles.categoryCard}
+			className={categoryCard}
 			withBorder={true}
 		>
 			<Stack align="center" gap="md">
-				<div className={`${styles.categoryIcon} ${getCategoryStyle(category.id)}`}>
+				<div className={categoryIcon}>
 					<IconTag size={32} />
 				</div>
 				<Text size="lg" fw={600} ta="center" lineClamp={2}>
@@ -68,7 +78,7 @@ function CategoryCard({ category }: { category: CategoryNode & { itemCount: numb
 }
 
 export default function CategoriesPage() {
-	const [categories, setCategories] = useState<(CategoryNode & { itemCount: number })[]>([]);
+	const [categories, setCategories] = useState<CategoryWithCount[]>([]);
 	const [loading, setLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [page, setPage] = useState(1);
@@ -81,42 +91,44 @@ export default function CategoriesPage() {
 
 				// Count items per category
 				const categoryCounts = new Map<string, number>();
-				itemsData.forEach(item => {
-					if (isItemNode(item) && item.category) {
-						categoryCounts.set(item.category, (categoryCounts.get(item.category) || 0) + 1);
+				for (const item of itemsData as Item[]) {
+					if (item.type === "item" && item.category) {
+						categoryCounts.set(item.category, (categoryCounts.get(item.category) ?? 0) + 1);
 					}
-				});
+				}
 
 				// Attach item counts to categories
-				const categoriesWithCounts = categoriesData.map(category => ({
+				const categoriesWithCounts = (categoriesData as Category[]).map(category => ({
 					...category,
-					itemCount: categoryCounts.get(category.id) || 0,
+					itemCount: categoryCounts.get(category.id) ?? 0,
 				}));
 
 				setCategories(categoriesWithCounts);
-			} catch (error) {
-				console.error("Failed to load categories:", error);
+			} catch (error: unknown) {
+				const errorMessage = error instanceof Error ? error.message : String(error);
+				// eslint-disable-next-line no-console
+				console.error("Failed to load categories:", errorMessage);
 			} finally {
 				setLoading(false);
 			}
 		};
 
-		loadData();
+		void loadData();
 	}, []);
 
 	// Handle URL params
 	useEffect(() => {
-		const url = new URL(window.location.href);
+		const url = new URL(globalThis.location.href);
 		const pageParam = url.searchParams.get("page");
 		const queryParam = url.searchParams.get("q");
 
-		setSearchQuery(queryParam || "");
+		setSearchQuery(queryParam ?? "");
 		setPage(pageParam ? Number.parseInt(pageParam, 10) : 1);
 	}, []);
 
 	// Update URL when params change
-	const updateUrl = (newPage?: number, newQuery?: string) => {
-		const url = new URL(window.location.href);
+	const updateUrl = React.useCallback((newPage?: number, newQuery?: string) => {
+		const url = new URL(globalThis.location.href);
 
 		if (newPage !== undefined) {
 			url.searchParams.set("page", newPage.toString());
@@ -130,8 +142,8 @@ export default function CategoriesPage() {
 			url.searchParams.delete("page");
 		}
 
-		window.history.pushState({}, "", url.toString());
-	};
+		globalThis.history.pushState({}, "", url.toString());
+	}, []);
 
 	// Filter categories based on search
 	const filteredCategories = React.useMemo(() => {
@@ -139,7 +151,7 @@ export default function CategoriesPage() {
 
 		const query = searchQuery.toLowerCase();
 		return categories.filter(category =>
-			getNodeDisplayName(category).toLowerCase().includes(query)
+			getNodeDisplayName(category).toLowerCase().includes(query),
 		);
 	}, [categories, searchQuery]);
 
@@ -201,7 +213,7 @@ export default function CategoriesPage() {
 						leftSection={<IconSearch size={16} />}
 						placeholder="Search categories..."
 						value={searchQuery}
-						onChange={(e) => handleSearchChange(e.target.value)}
+						onChange={(e) => { handleSearchChange(e.target.value); }}
 					/>
 				</Card>
 
