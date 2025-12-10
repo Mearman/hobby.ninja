@@ -22,10 +22,17 @@ interface ItemPageProps {
 
 // Generate static params for items from JSON files
 export async function generateStaticParams() {
-	const params = await generateItemParams();
-	// For static export, limit to first 50 items to prevent build timeouts
-	const result = Array.isArray(params) ? params.slice(0, 50) : [];
-	return result;
+	try {
+		const params = await generateItemParams();
+		// For static export, limit to first 1 item to prevent build timeouts and memory issues
+		const result = Array.isArray(params) ? params.slice(0, 1) : [];
+		console.log(`Generating static params for ${result.length} items`);
+		return result;
+	} catch (error) {
+		console.error('Error generating static params:', error);
+		// Return empty array to prevent build failure
+		return [];
+	}
 }
 
 // Generate metadata for each item with type-safe data
