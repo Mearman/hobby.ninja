@@ -1,800 +1,1090 @@
 "use client";
 
-import { Box, Card, Container, Group, Image, SimpleGrid, Skeleton, Stack, Text, Title } from "@mantine/core";
-import { IconBox, IconFolder, IconSearch, IconTag, IconTrendingUp } from "@tabler/icons-react";
+import {
+  Badge,
+  Box,
+  Button,
+  Card,
+  Checkbox,
+  Container,
+  Divider,
+  Flex,
+  Group,
+  Input,
+  LoadingOverlay,
+  Modal,
+  NumberInput,
+  Pagination,
+  Paper,
+  Progress,
+  RangeSlider,
+  ScrollArea,
+  Select,
+  SimpleGrid,
+  Skeleton,
+  Space,
+  Stack,
+  Table,
+  Tabs,
+  Text,
+  TextInput,
+  Title,
+  Tooltip,
+  UnstyledButton,
+  Collapse,
+  ActionIcon,
+} from "@mantine/core";
+import {
+  IconBookmark,
+  IconBookmarkOff,
+  IconChartBar,
+  IconChartPie,
+  IconChevronDown,
+  IconChevronUp,
+  IconDownload,
+  IconFilter,
+  IconGridDots,
+  IconLayoutList,
+  IconRefresh,
+  IconSearch,
+  IconSortAscending,
+  IconSortDescending,
+  IconTable,
+  IconX,
+} from "@tabler/icons-react";
+import { showNotification } from "@mantine/notifications";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-
+import React, {
+  useState,
+  useEffect,
+  useMemo,
+  useCallback,
+  useRef,
+} from "react";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip as RechartsTooltip,
+  ResponsiveContainer,
+  Legend
+} from "recharts";
 
 import { PAGINATION, TYPOGRAPHY, UI } from "@/lib/constants";
 import { getAllBrands, getAllCategories, getAllItems, getAllSeries } from "@/lib/graph-data";
-import { BaseEdge, BrandNode, CategoryNode, getNodeDisplayName, isBaseEdge, SeriesNode } from "@/lib/schemas";
+import { BaseEdge, BrandNode, CategoryNode, ItemNode, getNodeDisplayName, isBaseEdge, SeriesNode } from "@/lib/schemas";
+import { useSearch, type SearchResult, type SearchFilters } from "@/lib/fuse-search";
+import { ViewSwitcher, useViewMode } from "@/components/view/view-switcher";
 
-// Type-safe CSS class accessor for category-specific styling
-const getCategoryStyle = (_categoryId: string): string => {
-	// Return empty string - category-specific classes should be handled differently
-	return "";
-};
-
-// Type for database stats
+// Types
 interface DatabaseStats {
-	totalItems: number;
-	totalBrands: number;
-	totalCategories: number;
-	totalSeries: number;
-	featuredItems: number;
-	brands: Array<BrandNode & { itemCount: number }>;
-	categories: Array<CategoryNode & { itemCount: number }>;
-	series: Array<SeriesNode & { itemCount: number }>;
+  totalItems: number;
+  totalBrands: number;
+  totalCategories: number;
+  totalSeries: number;
+  avgPrice: number;
+  brands: Array<BrandNode & { itemCount: number }>;
+  categories: Array<CategoryNode & { itemCount: number }>;
+  series: Array<SeriesNode & { itemCount: number }>;
 }
 
-// Initial loading state
-const initialStats: DatabaseStats = {
-	totalItems: 0,
-	totalBrands: 0,
-	totalCategories: 0,
-	totalSeries: 0,
-	featuredItems: 0,
-	brands: [],
-	categories: [],
-	series: [],
-};
-
-// Client-side data fetching function
-const loadDatabaseStats = async (): Promise<DatabaseStats> => {
-	try {
-		// Load data as a single result to avoid destructuring type inference issues
-		const allData = await Promise.all([
-			getAllItems(),
-			getAllBrands(),
-			getAllCategories(),
-			getAllSeries(),
-		]);
-
-		// Extract individual arrays with explicit typing
-		const items = allData[0];
-		const brands = allData[1];
-		const categories = allData[2];
-		const series = allData[3];
-
-		// Add itemCount to brands, categories, and series based on the loaded data
-		const brandsWithCounts: Array<BrandNode & { itemCount: number }> = brands.map(brand => {
-			const itemCount = items.filter(item => {
-				if (!item.edges?.outbound) return false;
-				return item.edges.outbound.some((edge): edge is BaseEdge =>
-					isBaseEdge(edge) && edge.target === brand.id,
-				);
-			}).length;
-
-			return {
-				...brand,
-				itemCount,
-			};
-		});
-
-		const categoriesWithCounts: Array<CategoryNode & { itemCount: number }> = categories.map(category => {
-			const itemCount = items.filter(item => {
-				if (!item.edges?.outbound) return false;
-				return item.edges.outbound.some((edge): edge is BaseEdge =>
-					isBaseEdge(edge) && edge.target === category.id,
-				);
-			}).length;
-
-			return {
-				...category,
-				itemCount,
-			};
-		});
-
-		const seriesWithCounts: Array<SeriesNode & { itemCount: number }> = series.map(seriesItem => {
-			const itemCount = items.filter(item => {
-				if (!item.edges?.outbound) return false;
-				return item.edges.outbound.some((edge): edge is BaseEdge =>
-					isBaseEdge(edge) && edge.target === seriesItem.id,
-				);
-			}).length;
-
-			return {
-				...seriesItem,
-				itemCount,
-			};
-		});
-
-		const featuredBrands = brandsWithCounts
-			.sort((a, b) => b.itemCount - a.itemCount)
-			.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT);
-		const featuredCategories = categoriesWithCounts
-			.sort((a, b) => b.itemCount - a.itemCount)
-			.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT);
-		const featuredSeries = seriesWithCounts
-			.sort((a, b) => b.itemCount - a.itemCount)
-			.slice(0, PAGINATION.CATEGORY_PREVIEW_COUNT);
-
-		return {
-			totalItems: items.length, // Full database size - accurate for database overview
-			totalBrands: brands.length,
-			totalCategories: categories.length,
-			totalSeries: series.length,
-			featuredItems: featuredBrands.length + featuredCategories.length + featuredSeries.length,
-			brands: featuredBrands,
-			categories: featuredCategories,
-			series: featuredSeries,
-		};
-	} catch (error: unknown) {
-		// Failed to load database stats, returning initial stats
-		const errorMessage = error instanceof Error ? error.message : String(error);
-		console.error("Failed to load database stats:", errorMessage);
-		return initialStats;
-	}
-};
-
-// Component for database statistics
-function DatabaseStats({ stats }: { stats: DatabaseStats }) {
-	return (
-		<SimpleGrid
-			cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
-			spacing={{ base: "sm", md: "lg" }}
-		>
-			<Card
-				p="lg"
-				radius="md"
-				withBorder
-				style={{
-					transition: 'all 200ms ease-in-out',
-					border: `1px solid var(--mantine-color-gray-2)`,
-				}}
-				onMouseEnter={(e) => {
-					e.currentTarget.style.transform = 'translateY(-2px)';
-					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-md)';
-					e.currentTarget.style.borderColor = 'var(--mantine-color-blue-3)';
-				}}
-				onMouseLeave={(e) => {
-					e.currentTarget.style.transform = 'translateY(0)';
-					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-sm)';
-					e.currentTarget.style.borderColor = 'var(--mantine-color-gray-2)';
-				}}
-			>
-				<Group>
-					<div
-						style={{
-							display: 'flex',
-							alignItems: 'center',
-							justifyContent: 'center',
-							width: 48,
-							height: 48,
-							borderRadius: 'var(--mantine-radius-md)',
-							backgroundColor: 'var(--mantine-color-blue-0)',
-							color: 'var(--mantine-color-blue-6)',
-						}}
-					>
-						<IconBox size={UI.ICON_SIZE_XL} />
-					</div>
-					<div>
-						<Text size="xs" c="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
-              Database Size
-						</Text>
-						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
-							{stats.totalItems.toLocaleString()}
-						</Text>
-					</div>
-				</Group>
-			</Card>
-
-			<Card
-				p="lg"
-				radius="md"
-				withBorder
-				style={{
-					transition: 'all 200ms ease-in-out',
-					border: `1px solid var(--mantine-color-gray-2)`,
-				}}
-				onMouseEnter={(e) => {
-					e.currentTarget.style.transform = 'translateY(-2px)';
-					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-md)';
-					e.currentTarget.style.borderColor = 'var(--mantine-color-blue-3)';
-				}}
-				onMouseLeave={(e) => {
-					e.currentTarget.style.transform = 'translateY(0)';
-					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-sm)';
-					e.currentTarget.style.borderColor = 'var(--mantine-color-gray-2)';
-				}}
-			>
-				<Group>
-					<div
-						style={{
-							display: 'flex',
-							alignItems: 'center',
-							justifyContent: 'center',
-							width: 48,
-							height: 48,
-							borderRadius: 'var(--mantine-radius-md)',
-							backgroundColor: 'var(--mantine-color-blue-0)',
-							color: 'var(--mantine-color-blue-6)',
-						}}
-					>
-						<IconFolder size={UI.ICON_SIZE_XL} />
-					</div>
-					<div>
-						<Text size="xs" c="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
-              Brands
-						</Text>
-						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
-							{stats.totalBrands}
-						</Text>
-					</div>
-				</Group>
-			</Card>
-
-			<Card
-				p="lg"
-				radius="md"
-				withBorder
-				style={{
-					transition: 'all 200ms ease-in-out',
-					border: `1px solid var(--mantine-color-gray-2)`,
-				}}
-				onMouseEnter={(e) => {
-					e.currentTarget.style.transform = 'translateY(-2px)';
-					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-md)';
-					e.currentTarget.style.borderColor = 'var(--mantine-color-blue-3)';
-				}}
-				onMouseLeave={(e) => {
-					e.currentTarget.style.transform = 'translateY(0)';
-					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-sm)';
-					e.currentTarget.style.borderColor = 'var(--mantine-color-gray-2)';
-				}}
-			>
-				<Group>
-					<div
-						style={{
-							display: 'flex',
-							alignItems: 'center',
-							justifyContent: 'center',
-							width: 48,
-							height: 48,
-							borderRadius: 'var(--mantine-radius-md)',
-							backgroundColor: 'var(--mantine-color-blue-0)',
-							color: 'var(--mantine-color-blue-6)',
-						}}
-					>
-						<IconTag size={UI.ICON_SIZE_XL} />
-					</div>
-					<div>
-						<Text size="xs" c="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
-              Categories
-						</Text>
-						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
-							{stats.totalCategories}
-						</Text>
-					</div>
-				</Group>
-			</Card>
-
-			<Card
-				p="lg"
-				radius="md"
-				withBorder
-				style={{
-					transition: 'all 200ms ease-in-out',
-					border: `1px solid var(--mantine-color-gray-2)`,
-				}}
-				onMouseEnter={(e) => {
-					e.currentTarget.style.transform = 'translateY(-2px)';
-					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-md)';
-					e.currentTarget.style.borderColor = 'var(--mantine-color-blue-3)';
-				}}
-				onMouseLeave={(e) => {
-					e.currentTarget.style.transform = 'translateY(0)';
-					e.currentTarget.style.boxShadow = 'var(--mantine-shadow-sm)';
-					e.currentTarget.style.borderColor = 'var(--mantine-color-gray-2)';
-				}}
-			>
-				<Group>
-					<div
-						style={{
-							display: 'flex',
-							alignItems: 'center',
-							justifyContent: 'center',
-							width: 48,
-							height: 48,
-							borderRadius: 'var(--mantine-radius-md)',
-							backgroundColor: 'var(--mantine-color-blue-0)',
-							color: 'var(--mantine-color-blue-6)',
-						}}
-					>
-						<IconTrendingUp size={UI.ICON_SIZE_XL} />
-					</div>
-					<div>
-						<Text size="xs" c="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
-              Series
-						</Text>
-						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
-							{stats.totalSeries}
-						</Text>
-					</div>
-				</Group>
-			</Card>
-		</SimpleGrid>
-	);
+interface SortOption {
+  key: string;
+  label: string;
+  field: keyof ItemNode | string;
 }
 
-// UTF-8 safe Base64 encoding function
-const utf8ToBase64 = (str: string): string => {
-	try {
-		// Use TextEncoder for proper UTF-8 encoding
-		const encoder = new TextEncoder();
-		const uint8Array = encoder.encode(str);
-		// Convert binary string to base64
-		let binary = '';
-		for (let i = 0; i < uint8Array.length; i++) {
-			binary += String.fromCharCode(uint8Array[i]);
-		}
-		return btoa(binary);
-	} catch (error) {
-		// Fallback to URL-encoding for problematic characters
-		return btoa(unescape(encodeURIComponent(str)));
-	}
-};
-
-// Generate SVG placeholder for brands
-const generateBrandPlaceholder = (brandName: string): string => {
-	const colors = [
-		"#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FECA57",
-		"#DDA0DD", "#98D8C8", "#F7DC6F", "#BB8FCE", "#85C1E9"
-	];
-	const colorIndex = brandName.length % colors.length;
-	const bgColor = colors[colorIndex];
-
-	// Escape SVG text content to handle special characters
-	const escapedName = brandName.slice(0, 8)
-		.replace(/&/g, '&amp;')
-		.replace(/</g, '&lt;')
-		.replace(/>/g, '&gt;')
-		.replace(/"/g, '&quot;')
-		.replace(/'/g, '&#39;')
-		.toUpperCase();
-
-	const svg = `
-		<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-			<rect width="60" height="60" fill="${bgColor}"/>
-			<text x="30" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
-				${escapedName}
-			</text>
-		</svg>
-	`;
-	return `data:image/svg+xml;base64,${utf8ToBase64(svg)}`;
-};
-
-// Generate SVG placeholder for series
-const generateSeriesPlaceholder = (seriesName: string): string => {
-	const gradients = [
-		["#667eea", "#764ba2"], ["#f093fb", "#f5576c"], ["#4facfe", "#00f2fe"],
-		["#43e97b", "#38f9d7"], ["#fa709a", "#fee140"], ["#30cfd0", "#330867"]
-	];
-	const gradientIndex = seriesName.length % gradients.length;
-	const [color1, color2] = gradients[gradientIndex];
-
-	// Escape SVG text content to handle special characters
-	const escapedName = seriesName.slice(0, 12)
-		.replace(/&/g, '&amp;')
-		.replace(/</g, '&lt;')
-		.replace(/>/g, '&gt;')
-		.replace(/"/g, '&quot;')
-		.replace(/'/g, '&#39;')
-		.toUpperCase();
-
-	const gradientId = `grad${Math.abs(seriesName.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0))}`;
-
-	const svg = `
-		<svg width="160" height="80" viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg">
-			<defs>
-				<linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="100%">
-					<stop offset="0%" style="stop-color:${color1};stop-opacity:1" />
-					<stop offset="100%" style="stop-color:${color2};stop-opacity:1" />
-				</linearGradient>
-			</defs>
-			<rect width="160" height="80" fill="url(#${gradientId})"/>
-			<text x="80" y="45" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
-				${escapedName}
-			</text>
-		</svg>
-	`;
-	return `data:image/svg+xml;base64,${utf8ToBase64(svg)}`;
-};
-
-// Component for brand grid
-function BrandsGrid({ brands }: { brands: DatabaseStats["brands"] }) {
-	if (brands.length === 0) return null;
-
-	return (
-		<Box>
-			<Title order={2} mb="lg">
-        Popular Brands
-			</Title>
-			<SimpleGrid
-				cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
-				spacing="md"
-			>
-				{brands.map((brand) => {
-					const displayName = getNodeDisplayName(brand);
-					return (
-						<Card
-							key={brand.id}
-							component={Link}
-							href={`/brand/${brand.id}`}
-							p="md"
-							radius="md"
-							withBorder
-							h="100%"
-						>
-							<Stack align="center" gap={UI.SKELETON_HEIGHT_SMALL}>
-								<Box w={60} h={60} style={{ borderRadius: 'var(--mantine-radius-md)', overflow: 'hidden', backgroundColor: 'var(--mantine-color-gray-1)', border: '1px solid var(--mantine-color-gray-4)' }}>
-									<Image
-										src={generateBrandPlaceholder(displayName)}
-										alt={displayName}
-										fit="contain"
-										radius="sm"
-										fallbackSrc="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCTxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0iI0Y1RjVGNSIvPgoJPHRleHQgeD0iMzAiIHk9IjM1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5OTk5IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOCI+Tm8gSW1hZ2U8L3RleHQ+Cjwvc3ZnPg=="
-									/>
-								</Box>
-								<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} ta="center" lineClamp={2}>
-									{displayName}
-								</Text>
-								{/* Badge  variant="light" size="xs">
-									{brand.itemCount || 0} items
-								</Badge */}
-							</Stack>
-						</Card>
-					);
-				})}
-			</SimpleGrid>
-
-			<Box mt="md" ta="center">
-				<Text
-					component={Link}
-					href="/brands"
-					size="sm"
-					c="blue"
-					td="underline"
-				>
-          View all brands →
-				</Text>
-			</Box>
-		</Box>
-	);
+interface QuickFilter {
+  id: string;
+  label: string;
+  icon: React.ComponentType<{ size?: number }>;
+  filters: Partial<SearchFilters>;
+  color?: string;
 }
 
-// Component for category grid
-function CategoriesGrid({ categories }: { categories: DatabaseStats["categories"] }) {
-	if (categories.length === 0) return null;
+// Colors for charts
+const CHART_COLORS = [
+  "#339af0", "#51cf66", "#ff6b6b", "#f59f00", "#7950f2",
+  "#15aabf", "#e64980", "#228be6", "#40c057", "#ff8787",
+  "#fab005", "#845ef7", "#12b886", "#f06595", "#1c7ed6"
+];
 
-	return (
-		<Box>
-			<Title order={2} mb="lg">
-        Browse Categories
-			</Title>
-			<SimpleGrid
-				cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
-				spacing={{ base: "sm", md: "md" }}
-			>
-				{categories.map((category) => (
-					<Card
-						key={category.id}
-						component={Link}
-						href={`/category/${category.id}`}
-						p="lg"
-						radius="md"
-						withBorder
-						h="100%"
-					>
-						<Stack align="center" gap={UI.SKELETON_HEIGHT_SMALL}>
-							<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 64, height: 64, borderRadius: 'var(--mantine-radius-lg)', backgroundColor: 'var(--mantine-color-blue-1)', color: 'var(--mantine-color-blue-6)' }}>
-								<IconFolder size={UI.ICON_SIZE_XXL} />
-							</div>
-							<Text size="md" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} ta="center" lineClamp={1}>
-								{getNodeDisplayName(category)}
-							</Text>
-							{/* Badge  variant="light" size="xs">
-								{category.itemCount || 0} items
-							</Badge */}
-						</Stack>
-					</Card>
-				))}
-			</SimpleGrid>
+// Sort options
+const SORT_OPTIONS: SortOption[] = [
+  { key: "name-asc", label: "Name (A-Z)", field: "name" },
+  { key: "name-desc", label: "Name (Z-A)", field: "name" },
+  { key: "price-asc", label: "Price (Low to High)", field: "price" },
+  { key: "price-desc", label: "Price (High to Low)", field: "price" },
+  { key: "year-desc", label: "Year (Newest)", field: "releaseDate" },
+  { key: "year-asc", label: "Year (Oldest)", field: "releaseDate" },
+  { key: "brand", label: "Brand", field: "brand" },
+  { key: "category", label: "Category", field: "category" },
+];
 
-			<Box mt="md" ta="center">
-				<Text
-					component={Link}
-					href="/categories"
-					size="sm"
-					c="blue"
-					td="underline"
-				>
-          View all categories →
-				</Text>
-			</Box>
-		</Box>
-	);
-}
+// Quick filter presets
+const QUICK_FILTERS: QuickFilter[] = [
+  {
+    id: "latest",
+    label: "Latest Releases",
+    icon: IconChevronUp,
+    filters: { minYear: 2023, maxYear: 2024 },
+    color: "blue",
+  },
+  {
+    id: "premium",
+    label: "Premium Models (¥10k+)",
+    icon: IconChartBar,
+    filters: { minPrice: 10000 },
+    color: "yellow",
+  },
+  {
+    id: "budget",
+    label: "Budget Friendly (¥3k-)",
+    icon: IconChartPie,
+    filters: { maxPrice: 3000 },
+    color: "green",
+  },
+  {
+    id: "mg",
+    label: "Master Grade",
+    icon: IconGridDots,
+    filters: { grades: ["MG"] },
+    color: "red",
+  },
+  {
+    id: "rg",
+    label: "Real Grade",
+    icon: IconLayoutList,
+    filters: { grades: ["RG"] },
+    color: "blue",
+  },
+  {
+    id: "pg",
+    label: "Perfect Grade",
+    icon: IconTable,
+    filters: { grades: ["PG"] },
+    color: "purple",
+  },
+];
 
-// Component for series grid
-function SeriesGrid({ series }: { series: DatabaseStats["series"] }) {
-	if (series.length === 0) return null;
-
-	return (
-		<Box>
-			<Title order={2} mb="lg">
-        Popular Series
-			</Title>
-			<SimpleGrid
-				cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
-				spacing="md"
-			>
-				{series.map((seriesItem) => {
-					const displayName = getNodeDisplayName(seriesItem);
-					return (
-						<Card
-							key={seriesItem.id}
-							component={Link}
-							href={`/series/${seriesItem.id}`}
-							p="md"
-							radius="md"
-							withBorder
-							h="100%"
-						>
-							<Stack gap={UI.SKELETON_HEIGHT_SMALL}>
-								<Box h={80} style={{ borderRadius: 'var(--mantine-radius-sm)', overflow: 'hidden' }}>
-									<Image
-										src={generateSeriesPlaceholder(displayName)}
-										alt={displayName}
-										fit="cover"
-										radius="sm"
-										fallbackSrc="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTYwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPHJlY3Qgd2lkdGg9IjE2MCIgaGVpZ2h0PSI4MCIgZmlsbD0iI0Y1RjVGNSIvPgoJPHRleHQgeD0iODAiIHk9IjQ1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5OTk5IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiPk5vIEltYWdlPC90ZXh0Pgo8L3N2Zz4="
-									/>
-								</Box>
-								<div>
-									<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL} lineClamp={2}>
-										{displayName}
-									</Text>
-									{/* Badge  variant="light" size="xs" mt={4}>
-										{seriesItem.itemCount || 0} items
-									</Badge */}
-								</div>
-							</Stack>
-						</Card>
-					);
-				})}
-			</SimpleGrid>
-
-			<Box mt="md" ta="center">
-				<Text
-					component={Link}
-					href="/series"
-					size="sm"
-					c="blue"
-					td="underline"
-				>
-          View all series →
-				</Text>
-			</Box>
-		</Box>
-	);
-}
-
-// Main page component
+// Main component
 export default function DatabasePage() {
-	const [stats, setStats] = useState<DatabaseStats>(initialStats);
-	const [loading, setLoading] = useState(true);
+  const [stats, setStats] = useState<DatabaseStats | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [searchLoading, setSearchLoading] = useState(false);
+  const [items, setItems] = useState<ItemNode[]>([]);
+  const [filteredItems, setFilteredItems] = useState<ItemNode[]>([]);
+  const [favorites, setFavorites] = useState<Set<string>>(new Set());
 
-	useEffect(() => {
-		const loadData = async () => {
-			try {
-				const databaseStats = await loadDatabaseStats();
-				setStats(databaseStats);
-			} catch (error: unknown) {
-				// Failed to load database stats, keeping initial values
-				const errorMessage = error instanceof Error ? error.message : String(error);
-				console.error("Failed to load database stats:", errorMessage);
-			} finally {
-				setLoading(false);
-			}
-		};
+  // View and pagination
+  const { viewMode, setViewMode } = useViewMode("grid");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 24;
 
-		void loadData();
-	}, []);
+  // Filters and sorting
+  const [showFilters, setShowFilters] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filters, setFilters] = useState<SearchFilters>({
+    brands: [],
+    categories: [],
+    series: [],
+    grades: [],
+    scales: [],
+    minPrice: 0,
+    maxPrice: 100000,
+    minYear: 1980,
+    maxYear: 2024,
+  });
+  const [sortBy, setSortBy] = useState<SortOption>(SORT_OPTIONS[0]);
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 
-	if (loading) {
-		return (
-			<Container size="xl" py="xl">
-				<Stack gap="xl">
-					{/* Header */}
-					<Box>
-						<Title order={1} mb="sm">
-							Hobby Database
-						</Title>
-						<Text size="lg" color="dimmed">
-							Browse our comprehensive collection of hobby items, including Gundam models, figures, and accessories
-						</Text>
-					</Box>
+  // Export modal
+  const [showExportModal, setShowExportModal] = useState(false);
 
-					{/* Loading skeleton */}
-					<SimpleGrid
-						cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
-						spacing={{ base: "sm", md: "lg" }}
-					>
-						{[1, 2, 3, 4].map((i) => (
-							<Card key={i} p="lg" radius="md">
-								<Group>
-									<Skeleton height={48} width={48} radius="md" />
-									<div>
-										<Skeleton height={16} width={80} mb={4} />
-										<Skeleton height={24} width={40} />
-									</div>
-								</Group>
-							</Card>
-						))}
-					</SimpleGrid>
-				</Stack>
-			</Container>
-		);
-	}
+  const { advancedSearch, getStats } = useSearch();
 
-	return (
-		<Container size="xl" py="xl">
-			<Stack gap="xl">
-				{/* Header */}
-				<Box>
-					<Title order={1} mb="sm">
+  // Load initial data
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        setLoading(true);
+        const [allItems, allBrands, allCategories, allSeries] = await Promise.all([
+          getAllItems(),
+          getAllBrands(),
+          getAllCategories(),
+          getAllSeries(),
+        ]);
+
+        // Process brands with counts
+        const brandsWithCounts = allBrands.map(brand => {
+          const itemCount = allItems.filter(item =>
+            item.edges?.outbound?.some((edge): edge is BaseEdge =>
+              isBaseEdge(edge) && edge.target === brand.id
+            )
+          ).length;
+          return { ...brand, itemCount };
+        });
+
+        // Process categories with counts
+        const categoriesWithCounts = allCategories.map(category => {
+          const itemCount = allItems.filter(item =>
+            item.edges?.outbound?.some((edge): edge is BaseEdge =>
+              isBaseEdge(edge) && edge.target === category.id
+            )
+          ).length;
+          return { ...category, itemCount };
+        });
+
+        // Process series with counts
+        const seriesWithCounts = allSeries.map(seriesItem => {
+          const itemCount = allItems.filter(item =>
+            item.edges?.outbound?.some((edge): edge is BaseEdge =>
+              isBaseEdge(edge) && edge.target === seriesItem.id
+            )
+          ).length;
+          return { ...seriesItem, itemCount };
+        });
+
+        // Calculate average price
+        const itemsWithPrice = allItems.filter(item =>
+          item.metadata && typeof item.metadata.price === 'number'
+        );
+        const avgPrice = itemsWithPrice.length > 0
+          ? itemsWithPrice.reduce((sum, item) => sum + ((item.metadata?.price as number) || 0), 0) / itemsWithPrice.length
+          : 0;
+
+        setStats({
+          totalItems: allItems.length,
+          totalBrands: allBrands.length,
+          totalCategories: allCategories.length,
+          totalSeries: allSeries.length,
+          avgPrice: Math.round(avgPrice),
+          brands: brandsWithCounts.sort((a, b) => b.itemCount - a.itemCount).slice(0, 10),
+          categories: categoriesWithCounts.sort((a, b) => b.itemCount - a.itemCount).slice(0, 10),
+          series: seriesWithCounts.sort((a, b) => b.itemCount - a.itemCount).slice(0, 10),
+        });
+
+        setItems(allItems);
+        setFilteredItems(allItems);
+      } catch (error) {
+        console.error("Failed to load database:", error);
+        showNotification({
+          title: "Error",
+          message: "Failed to load database data",
+          color: "red",
+        });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadData();
+  }, []);
+
+  // Load favorites from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem("database-favorites");
+    if (saved) {
+      try {
+        setFavorites(new Set(JSON.parse(saved)));
+      } catch (error) {
+        console.error("Failed to load favorites:", error);
+      }
+    }
+  }, []);
+
+  // Save favorites to localStorage
+  const saveFavorites = useCallback((newFavorites: Set<string>) => {
+    localStorage.setItem("database-favorites", JSON.stringify(Array.from(newFavorites)));
+    setFavorites(newFavorites);
+  }, []);
+
+  // Search and filter
+  const applyFilters = useCallback(() => {
+    if (!items.length) return;
+
+    setSearchLoading(true);
+    try {
+      let results = items;
+
+      // Apply search query if provided
+      if (searchQuery.trim()) {
+        const searchResults = advancedSearch(searchQuery, filters);
+        results = searchResults.map(r => r.item);
+      } else {
+        // Apply filters without search
+        if (filters.brands?.length ||
+            filters.categories?.length ||
+            filters.series?.length ||
+            filters.grades?.length ||
+            filters.scales?.length ||
+            filters.minPrice ||
+            (filters.maxPrice && filters.maxPrice < 100000) ||
+            (filters.minYear && filters.minYear > 1980) ||
+            (filters.maxYear && filters.maxYear < 2024)) {
+          const searchResults = advancedSearch("", filters);
+          results = searchResults.map(r => r.item);
+        }
+      }
+
+      // Apply sorting
+      results = [...results].sort((a, b) => {
+        let aValue: any;
+        let bValue: any;
+
+        // Extract values based on sort field
+        if (sortBy.field === "name") {
+          aValue = getNodeDisplayName(a);
+          bValue = getNodeDisplayName(b);
+        } else if (sortBy.field === "price") {
+          aValue = a.metadata?.price || 0;
+          bValue = b.metadata?.price || 0;
+        } else if (sortBy.field === "releaseDate") {
+          aValue = a.metadata?.releaseDate || "";
+          bValue = b.metadata?.releaseDate || "";
+        } else {
+          aValue = getNodeDisplayName(a);
+          bValue = getNodeDisplayName(b);
+        }
+
+        // Compare values
+        if (typeof aValue === "string" && typeof bValue === "string") {
+          return sortOrder === "asc"
+            ? aValue.localeCompare(bValue)
+            : bValue.localeCompare(aValue);
+        }
+
+        if (typeof aValue === "number" && typeof bValue === "number") {
+          return sortOrder === "asc" ? aValue - bValue : bValue - aValue;
+        }
+
+        return 0;
+      });
+
+      setFilteredItems(results);
+      setCurrentPage(1);
+    } catch (error) {
+      console.error("Failed to apply filters:", error);
+      showNotification({
+        title: "Error",
+        message: "Failed to apply filters",
+        color: "red",
+      });
+    } finally {
+      setSearchLoading(false);
+    }
+  }, [items, searchQuery, filters, sortBy, sortOrder, advancedSearch]);
+
+  // Auto-apply filters when dependencies change
+  useEffect(() => {
+    const timeoutId = setTimeout(applyFilters, 300);
+    return () => clearTimeout(timeoutId);
+  }, [applyFilters]);
+
+  // Toggle favorite
+  const toggleFavorite = useCallback((itemId: string) => {
+    const newFavorites = new Set(favorites);
+    if (newFavorites.has(itemId)) {
+      newFavorites.delete(itemId);
+      showNotification({
+        title: "Removed from favorites",
+        message: "Item removed from your favorites",
+        color: "gray",
+      });
+    } else {
+      newFavorites.add(itemId);
+      showNotification({
+        title: "Added to favorites",
+        message: "Item added to your favorites",
+        color: "green",
+      });
+    }
+    saveFavorites(newFavorites);
+  }, [favorites, saveFavorites]);
+
+  // Export functionality
+  const exportData = useCallback((format: "csv" | "json") => {
+    try {
+      const dataToExport = filteredItems.map(item => ({
+        id: item.id,
+        name: getNodeDisplayName(item),
+        brand: item.metadata?.brand || "",
+        category: item.metadata?.category || "",
+        series: item.metadata?.series || "",
+        grade: item.metadata?.grade || "",
+        scale: item.metadata?.scale || "",
+        price: item.metadata?.price || "",
+        releaseDate: item.metadata?.releaseDate || "",
+        url: item.sourceUrl || "",
+      }));
+
+      let content: string;
+      let filename: string;
+      let mimeType: string;
+
+      if (format === "csv") {
+        const headers = Object.keys(dataToExport[0] || {});
+        const csvContent = [
+          headers.join(","),
+          ...dataToExport.map(row =>
+            headers.map(header => {
+              const value = String(row[header as keyof typeof row] || "");
+              return value.includes(",") ? `"${value.replace(/"/g, '""')}"` : value;
+            }).join(",")
+          )
+        ].join("\n");
+
+        content = csvContent;
+        filename = `database-export-${new Date().toISOString().split("T")[0]}.csv`;
+        mimeType = "text/csv";
+      } else {
+        content = JSON.stringify(dataToExport, null, 2);
+        filename = `database-export-${new Date().toISOString().split("T")[0]}.json`;
+        mimeType = "application/json";
+      }
+
+      // Download file
+      const blob = new Blob([content], { type: mimeType });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      showNotification({
+        title: "Export successful",
+        message: `Exported ${dataToExport.length} items as ${format.toUpperCase()}`,
+        color: "green",
+      });
+    } catch (error) {
+      console.error("Export failed:", error);
+      showNotification({
+        title: "Export failed",
+        message: "Failed to export data",
+        color: "red",
+      });
+    }
+  }, [filteredItems]);
+
+  // Apply quick filter
+  const applyQuickFilter = useCallback((quickFilter: QuickFilter) => {
+    setFilters(prev => ({ ...prev, ...quickFilter.filters }));
+    setShowFilters(true);
+  }, []);
+
+  // Clear all filters
+  const clearAllFilters = useCallback(() => {
+    setSearchQuery("");
+    setFilters({
+      brands: [],
+      categories: [],
+      series: [],
+      grades: [],
+      scales: [],
+      minPrice: 0,
+      maxPrice: 100000,
+      minYear: 1980,
+      maxYear: 2024,
+    });
+    setSortBy(SORT_OPTIONS[0]);
+    setSortOrder("asc");
+  }, []);
+
+  // Get paginated items
+  const paginatedItems = useMemo(() => {
+    const start = (currentPage - 1) * itemsPerPage;
+    return filteredItems.slice(start, start + itemsPerPage);
+  }, [filteredItems, currentPage]);
+
+  // Prepare chart data
+  const brandChartData = useMemo(() =>
+    stats?.brands.slice(0, 5).map(brand => ({
+      name: getNodeDisplayName(brand),
+      value: brand.itemCount,
+    })) || [], [stats]);
+
+  const categoryChartData = useMemo(() =>
+    stats?.categories.slice(0, 5).map(category => ({
+      name: getNodeDisplayName(category),
+      value: category.itemCount,
+    })) || [], [stats]);
+
+  if (loading) {
+    return (
+      <Container size="xl" py="xl">
+        <LoadingOverlay visible={true} />
+        <Stack gap="xl">
+          <Skeleton height={60} />
+          <SimpleGrid cols={4} spacing="md">
+            {[...Array(8)].map((_, i) => <Card key={i} p="lg"><Skeleton height={120} /></Card>)}
+          </SimpleGrid>
+        </Stack>
+      </Container>
+    );
+  }
+
+  return (
+    <Container size="xl" py="xl">
+      <Stack gap="xl">
+        {/* Header */}
+        <Box>
+          <Title order={1} mb="sm">
             Hobby Database
-					</Title>
-					<Text size="lg" color="dimmed">
-            Browse our comprehensive collection of hobby items, including Gundam models, figures, and accessories
-					</Text>
-				</Box>
+          </Title>
+          <Text size="lg" c="dimmed">
+            Professional database exploration with advanced filtering and analytics
+          </Text>
+        </Box>
 
-				{/* Quick Search */}
-				<Card p="lg" radius="md" withBorder={true}>
-					<Card
-						component={Link}
-						href="/search"
-						p="md"
-						radius="md"
-						style={{
-							textDecoration: 'none',
-							color: 'inherit',
-							backgroundColor: 'var(--mantine-color-body)',
-							border: '2px dashed var(--mantine-color-gray-4)',
-							cursor: 'pointer',
-							transition: 'all 200ms ease-in-out',
-						}}
-						onMouseEnter={(e) => {
-							e.currentTarget.style.backgroundColor = 'var(--mantine-color-blue-0)';
-							e.currentTarget.style.borderColor = 'var(--mantine-color-blue-4)';
-							e.currentTarget.style.transform = 'translateY(-2px)';
-						}}
-						onMouseLeave={(e) => {
-							e.currentTarget.style.backgroundColor = 'var(--mantine-color-body)';
-							e.currentTarget.style.borderColor = 'var(--mantine-color-gray-4)';
-							e.currentTarget.style.transform = 'translateY(0)';
-						}}
-					>
-						<Group>
-							<IconSearch size={UI.ICON_SIZE_LG} />
-							<Text>Search the database...</Text>
-						</Group>
-					</Card>
-				</Card>
+        {/* Stats Dashboard */}
+        {stats && (
+          <Card p="lg" radius="md" withBorder>
+            <Title order={3} mb="md">Database Overview</Title>
+            <SimpleGrid cols={{ base: 2, sm: 3, md: 5 }} spacing="md">
+              <Box ta="center">
+                <Text size="2xl" fw="bold" c="blue">
+                  {stats.totalItems.toLocaleString()}
+                </Text>
+                <Text size="sm" c="dimmed">Total Items</Text>
+              </Box>
+              <Box ta="center">
+                <Text size="2xl" fw="bold" c="green">
+                  {stats.totalBrands}
+                </Text>
+                <Text size="sm" c="dimmed">Brands</Text>
+              </Box>
+              <Box ta="center">
+                <Text size="2xl" fw="bold" c="orange">
+                  {stats.totalCategories}
+                </Text>
+                <Text size="sm" c="dimmed">Categories</Text>
+              </Box>
+              <Box ta="center">
+                <Text size="2xl" fw="bold" c="purple">
+                  {stats.totalSeries}
+                </Text>
+                <Text size="sm" c="dimmed">Series</Text>
+              </Box>
+              <Box ta="center">
+                <Text size="2xl" fw="bold" c="red">
+                  ¥{stats.avgPrice.toLocaleString()}
+                </Text>
+                <Text size="sm" c="dimmed">Avg Price</Text>
+              </Box>
+            </SimpleGrid>
+          </Card>
+        )}
 
-				{/* Statistics */}
-				<DatabaseStats stats={stats} />
+        {/* Quick Filters */}
+        <Card p="md" radius="md" withBorder>
+          <Group justify="space-between" mb="sm">
+            <Text size="sm" fw="bold">Quick Filters</Text>
+            <Button
+              variant="subtle"
+              size="xs"
+              onClick={clearAllFilters}
+              leftSection={<IconX size={12} />}
+            >
+              Clear All
+            </Button>
+          </Group>
+          <Group gap="xs" wrap="wrap">
+            {QUICK_FILTERS.map((filter) => (
+              <Button
+                key={filter.id}
+                variant="light"
+                size="sm"
+                color={filter.color as any}
+                leftSection={<filter.icon size={14} />}
+                onClick={() => applyQuickFilter(filter)}
+              >
+                {filter.label}
+              </Button>
+            ))}
+          </Group>
+        </Card>
 
-				{/* Categories Grid */}
-				<CategoriesGrid categories={stats.categories} />
+        <Flex gap="lg" direction={{ base: "column", lg: "row" }}>
+          {/* Filters Sidebar */}
+          <Card
+            p="md"
+            radius="md"
+            withBorder
+            w={{ base: "100%", lg: 300 }}
+            style={{ flexShrink: 0 }}
+          >
+            <Stack gap="md">
+              <Group justify="space-between">
+                <Text size="sm" fw="bold">Filters</Text>
+                <ActionIcon
+                  variant="light"
+                  size="sm"
+                  onClick={() => setShowFilters(!showFilters)}
+                >
+                  {showFilters ? <IconChevronUp size={12} /> : <IconChevronDown size={12} />}
+                </ActionIcon>
+              </Group>
 
-				{/* Brands Grid */}
-				<BrandsGrid brands={stats.brands} />
+              <Collapse in={showFilters}>
+                <Stack gap="md">
+                  {/* Search */}
+                  <TextInput
+                    placeholder="Search items..."
+                    value={searchQuery}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
+                    leftSection={<IconSearch size={14} />}
+                    size="sm"
+                  />
 
-				{/* Series Grid */}
-				<SeriesGrid series={stats.series} />
+                  {/* Brands */}
+                  {stats && (
+                    <Select
+                      label="Brand"
+                      placeholder="Select brand"
+                      data={[
+                        { value: "", label: "All brands" },
+                        ...stats.brands.map(brand => ({
+                          value: brand.id,
+                          label: `${getNodeDisplayName(brand)} (${brand.itemCount})`,
+                        }))
+                      ]}
+                      value={filters.brands?.[0] || ""}
+                      onChange={(value) => setFilters(prev => ({
+                        ...prev,
+                        brands: value ? [value] : [],
+                      }))}
+                      searchable
+                      clearable
+                      size="sm"
+                    />
+                  )}
 
-				{/* Quick Actions */}
-				<Card p="lg" radius="md" withBorder={true}>
-					<Title order={3} mb="md">
-            Quick Actions
-					</Title>
-					<SimpleGrid
-						cols={{ base: 1, sm: 3 }}
-						spacing={{ base: "sm", md: "md" }}
-					>
-						<Card
-							component={Link}
-							href="/items"
-							p="md"
-							radius="md"
-							withBorder
-							style={{
-								textDecoration: 'none',
-								color: 'inherit',
-								backgroundColor: 'var(--mantine-color-body)',
-								transition: 'all 200ms ease-in-out',
-							}}
-							onMouseEnter={(e) => {
-								e.currentTarget.style.backgroundColor = 'var(--mantine-color-blue-0)';
-								e.currentTarget.style.borderColor = 'var(--mantine-color-blue-4)';
-								e.currentTarget.style.transform = 'translateX(4px)';
-							}}
-							onMouseLeave={(e) => {
-								e.currentTarget.style.backgroundColor = 'var(--mantine-color-body)';
-								e.currentTarget.style.borderColor = 'var(--mantine-color-gray-3)';
-								e.currentTarget.style.transform = 'translateX(0)';
-							}}
-						>
-							<Group>
-								<IconBox size={UI.ICON_SIZE_LG} />
-								<Text fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>Browse All Items</Text>
-							</Group>
-						</Card>
+                  {/* Categories */}
+                  {stats && (
+                    <Select
+                      label="Category"
+                      placeholder="Select category"
+                      data={[
+                        { value: "", label: "All categories" },
+                        ...stats.categories.map(category => ({
+                          value: category.id,
+                          label: `${getNodeDisplayName(category)} (${category.itemCount})`,
+                        }))
+                      ]}
+                      value={filters.categories?.[0] || ""}
+                      onChange={(value) => setFilters(prev => ({
+                        ...prev,
+                        categories: value ? [value] : [],
+                      }))}
+                      searchable
+                      clearable
+                      size="sm"
+                    />
+                  )}
 
-						<Card
-							component={Link}
-							href="/collection"
-							p="md"
-							radius="md"
-							withBorder
-							style={{
-								textDecoration: 'none',
-								color: 'inherit',
-								backgroundColor: 'var(--mantine-color-body)',
-								transition: 'all 200ms ease-in-out',
-							}}
-							onMouseEnter={(e) => {
-								e.currentTarget.style.backgroundColor = 'var(--mantine-color-blue-0)';
-								e.currentTarget.style.borderColor = 'var(--mantine-color-blue-4)';
-								e.currentTarget.style.transform = 'translateX(4px)';
-							}}
-							onMouseLeave={(e) => {
-								e.currentTarget.style.backgroundColor = 'var(--mantine-color-body)';
-								e.currentTarget.style.borderColor = 'var(--mantine-color-gray-3)';
-								e.currentTarget.style.transform = 'translateX(0)';
-							}}
-						>
-							<Group>
-								<IconFolder size={UI.ICON_SIZE_LG} />
-								<Text fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>My Collection</Text>
-							</Group>
-						</Card>
+                  {/* Price Range */}
+                  <Box>
+                    <Text size="xs" mb="xs">Price Range</Text>
+                    <RangeSlider
+                      min={0}
+                      max={100000}
+                      step={1000}
+                      value={[filters.minPrice || 0, filters.maxPrice || 100000]}
+                      onChange={(value) => setFilters(prev => ({
+                        ...prev,
+                        minPrice: value[0],
+                        maxPrice: value[1],
+                      }))}
+                      size="sm"
+                      marks={[
+                        { value: 0, label: "¥0" },
+                        { value: 50000, label: "¥50k" },
+                        { value: 100000, label: "¥100k" },
+                      ]}
+                    />
+                  </Box>
 
-						<Card
-							component={Link}
-							href="/import"
-							p="md"
-							radius="md"
-							withBorder
-							style={{
-								textDecoration: 'none',
-								color: 'inherit',
-								backgroundColor: 'var(--mantine-color-body)',
-								transition: 'all 200ms ease-in-out',
-							}}
-							onMouseEnter={(e) => {
-								e.currentTarget.style.backgroundColor = 'var(--mantine-color-blue-0)';
-								e.currentTarget.style.borderColor = 'var(--mantine-color-blue-4)';
-								e.currentTarget.style.transform = 'translateX(4px)';
-							}}
-							onMouseLeave={(e) => {
-								e.currentTarget.style.backgroundColor = 'var(--mantine-color-body)';
-								e.currentTarget.style.borderColor = 'var(--mantine-color-gray-3)';
-								e.currentTarget.style.transform = 'translateX(0)';
-							}}
-						>
-							<Group>
-								<IconTrendingUp size={UI.ICON_SIZE_LG} />
-								<Text fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>Import Data</Text>
-							</Group>
-						</Card>
-					</SimpleGrid>
-				</Card>
-			</Stack>
-		</Container>
-	);
+                  {/* Year Range */}
+                  <Box>
+                    <Text size="xs" mb="xs">Release Year</Text>
+                    <RangeSlider
+                      min={1980}
+                      max={2024}
+                      value={[filters.minYear || 1980, filters.maxYear || 2024]}
+                      onChange={(value) => setFilters(prev => ({
+                        ...prev,
+                        minYear: value[0],
+                        maxYear: value[1],
+                      }))}
+                      size="sm"
+                      marks={[
+                        { value: 1980, label: "1980" },
+                        { value: 2000, label: "2000" },
+                        { value: 2020, label: "2020" },
+                        { value: 2024, label: "2024" },
+                      ]}
+                    />
+                  </Box>
+                </Stack>
+              </Collapse>
+            </Stack>
+          </Card>
+
+          {/* Main Content */}
+          <Box style={{ flex: 1 }}>
+            <Stack gap="md">
+              {/* Toolbar */}
+              <Group justify="space-between">
+                <Group gap="sm">
+                  <Text size="sm" c="dimmed">
+                    {filteredItems.length.toLocaleString()} items found
+                  </Text>
+                  {favorites.size > 0 && (
+                    <Badge variant="light" color="yellow">
+                      {favorites.size} favorites
+                    </Badge>
+                  )}
+                </Group>
+
+                <Group gap="sm">
+                  {/* Sort */}
+                  <Select
+                    placeholder="Sort by"
+                    value={sortBy.key}
+                    onChange={(value) => {
+                      const sort = SORT_OPTIONS.find(s => s.key === value);
+                      if (sort) {
+                        setSortBy(sort);
+                      }
+                    }}
+                    data={SORT_OPTIONS.map(option => ({
+                      value: option.key,
+                      label: option.label,
+                    }))}
+                    size="sm"
+                    w={180}
+                  />
+
+                  {/* Sort Order */}
+                  <ActionIcon
+                    variant="light"
+                    size="sm"
+                    onClick={() => setSortOrder(prev => prev === "asc" ? "desc" : "asc")}
+                    title={`Sort ${sortOrder === "asc" ? "descending" : "ascending"}`}
+                  >
+                    {sortOrder === "asc" ? <IconSortAscending size={14} /> : <IconSortDescending size={14} />}
+                  </ActionIcon>
+
+                  {/* View Switcher */}
+                  <ViewSwitcher
+                    value={viewMode}
+                    onChange={setViewMode}
+                    size="sm"
+                  />
+
+                  {/* Export */}
+                  <Button
+                    variant="light"
+                    size="sm"
+                    leftSection={<IconDownload size={14} />}
+                    onClick={() => setShowExportModal(true)}
+                  >
+                    Export
+                  </Button>
+                </Group>
+              </Group>
+
+              {/* Loading Overlay */}
+              <Box pos="relative">
+                <LoadingOverlay visible={searchLoading} />
+
+                {/* Results */}
+                {viewMode === "grid" && (
+                  <SimpleGrid
+                    cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
+                    spacing="md"
+                  >
+                    {paginatedItems.map((item) => (
+                      <Card
+                        key={item.id}
+                        component={Link}
+                        href={`/item/${item.id}`}
+                        p="md"
+                        radius="md"
+                        withBorder
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        <Stack gap="xs">
+                          <Group justify="space-between" align="start">
+                            <Text size="sm" fw="bold" lineClamp={2}>
+                              {getNodeDisplayName(item)}
+                            </Text>
+                            <ActionIcon
+                              variant="light"
+                              size="sm"
+                              color={favorites.has(item.id) ? "yellow" : "gray"}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                toggleFavorite(item.id);
+                              }}
+                            >
+                              {favorites.has(item.id) ? (
+                                <IconBookmark size={12} />
+                              ) : (
+                                <IconBookmarkOff size={12} />
+                              )}
+                            </ActionIcon>
+                          </Group>
+
+                          <Text size="xs" c="dimmed">
+                            {(item.metadata?.brand as string) || ""}
+                          </Text>
+
+                          {typeof item.metadata?.price === 'number' && (
+                            <Text size="sm" fw="bold" c="green">
+                              ¥{item.metadata.price.toLocaleString()}
+                            </Text>
+                          )}
+                        </Stack>
+                      </Card>
+                    ))}
+                  </SimpleGrid>
+                )}
+
+                {viewMode === "list" && (
+                  <Stack gap="xs">
+                    {paginatedItems.map((item) => (
+                      <Card
+                        key={item.id}
+                        component={Link}
+                        href={`/item/${item.id}`}
+                        p="md"
+                        radius="md"
+                        withBorder
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        <Group justify="space-between">
+                          <Box style={{ flex: 1 }}>
+                            <Text size="sm" fw="bold">
+                              {getNodeDisplayName(item)}
+                            </Text>
+                            <Text size="xs" c="dimmed">
+                              {(item.metadata?.brand as string) || ""} • {(item.metadata?.category as string) || ""}
+                            </Text>
+                          </Box>
+
+                          <Group gap="sm">
+                            {typeof item.metadata?.price === 'number' && (
+                              <Text size="sm" fw="bold" c="green">
+                                ¥{item.metadata.price.toLocaleString()}
+                              </Text>
+                            )}
+                            <ActionIcon
+                              variant="light"
+                              size="sm"
+                              color={favorites.has(item.id) ? "yellow" : "gray"}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                toggleFavorite(item.id);
+                              }}
+                            >
+                              {favorites.has(item.id) ? (
+                                <IconBookmark size={12} />
+                              ) : (
+                                <IconBookmarkOff size={12} />
+                              )}
+                            </ActionIcon>
+                          </Group>
+                        </Group>
+                      </Card>
+                    ))}
+                  </Stack>
+                )}
+
+                {viewMode === "table" && (
+                  <Card p={0} radius="md" withBorder>
+                    <ScrollArea>
+                      <Table striped highlightOnHover>
+                        <Table.Thead>
+                          <Table.Tr>
+                            <Table.Th>Name</Table.Th>
+                            <Table.Th>Brand</Table.Th>
+                            <Table.Th>Category</Table.Th>
+                            <Table.Th>Grade</Table.Th>
+                            <Table.Th>Price</Table.Th>
+                            <Table.Th>Year</Table.Th>
+                            <Table.Th />
+                          </Table.Tr>
+                        </Table.Thead>
+                        <Table.Tbody>
+                          {paginatedItems.map((item) => (
+                            <Table.Tr key={item.id}>
+                              <Table.Td>
+                                <Text
+                                  size="sm"
+                                  fw="bold"
+                                  component={Link}
+                                  href={`/item/${item.id}`}
+                                  style={{ textDecoration: "none", color: "inherit" }}
+                                >
+                                  {getNodeDisplayName(item)}
+                                </Text>
+                              </Table.Td>
+                              <Table.Td>{(item.metadata?.brand as string) || ""}</Table.Td>
+                              <Table.Td>{(item.metadata?.category as string) || ""}</Table.Td>
+                              <Table.Td>{(item.metadata?.grade as string) || ""}</Table.Td>
+                              <Table.Td>
+                                {typeof item.metadata?.price === 'number' && (
+                                  <Text c="green">
+                                    ¥{item.metadata.price.toLocaleString()}
+                                  </Text>
+                                )}
+                              </Table.Td>
+                              <Table.Td>{(item.metadata?.releaseDate as string) || ""}</Table.Td>
+                              <Table.Td>
+                                <ActionIcon
+                                  variant="light"
+                                  size="sm"
+                                  color={favorites.has(item.id) ? "yellow" : "gray"}
+                                  onClick={() => toggleFavorite(item.id)}
+                                >
+                                  {favorites.has(item.id) ? (
+                                    <IconBookmark size={12} />
+                                  ) : (
+                                    <IconBookmarkOff size={12} />
+                                  )}
+                                </ActionIcon>
+                              </Table.Td>
+                            </Table.Tr>
+                          ))}
+                        </Table.Tbody>
+                      </Table>
+                    </ScrollArea>
+                  </Card>
+                )}
+              </Box>
+
+              {/* Pagination */}
+              {filteredItems.length > itemsPerPage && (
+                <Group justify="center" mt="lg">
+                  <Pagination
+                    total={Math.ceil(filteredItems.length / itemsPerPage)}
+                    value={currentPage}
+                    onChange={setCurrentPage}
+                    size="sm"
+                  />
+                </Group>
+              )}
+            </Stack>
+          </Box>
+        </Flex>
+
+        {/* Charts Section */}
+        {stats && brandChartData.length > 0 && (
+          <Card p="lg" radius="md" withBorder>
+            <Title order={3} mb="md">Data Analytics</Title>
+            <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
+              {/* Brand Distribution */}
+              <Box>
+                <Text size="sm" fw="bold" mb="md" ta="center">
+                  Top Brands by Item Count
+                </Text>
+                <ResponsiveContainer width="100%" height={300}>
+                  <PieChart>
+                    <Pie
+                      data={brandChartData}
+                      cx="50%"
+                      cy="50%"
+                      innerRadius={60}
+                      outerRadius={100}
+                      paddingAngle={2}
+                      dataKey="value"
+                    >
+                      {brandChartData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
+                      ))}
+                    </Pie>
+                    <RechartsTooltip />
+                  </PieChart>
+                </ResponsiveContainer>
+                <Box mt="md">
+                  {brandChartData.map((brand, index) => (
+                    <Group key={brand.name} gap="xs" mb="xs">
+                      <Box
+                        w={12}
+                        h={12}
+                        bg={CHART_COLORS[index % CHART_COLORS.length]}
+                        style={{ borderRadius: 2 }}
+                      />
+                      <Text size="xs">{brand.name}</Text>
+                      <Text size="xs" c="dimmed" ml="auto">
+                        {brand.value} items
+                      </Text>
+                    </Group>
+                  ))}
+                </Box>
+              </Box>
+
+              {/* Category Distribution */}
+              <Box>
+                <Text size="sm" fw="bold" mb="md" ta="center">
+                  Top Categories by Item Count
+                </Text>
+                <ResponsiveContainer width="100%" height={300}>
+                  <BarChart data={categoryChartData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" angle={-45} textAnchor="end" height={80} />
+                    <YAxis />
+                    <RechartsTooltip />
+                    <Bar dataKey="value" fill={CHART_COLORS[0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </Box>
+            </SimpleGrid>
+          </Card>
+        )}
+
+        {/* Export Modal */}
+        <Modal
+          opened={showExportModal}
+          onClose={() => setShowExportModal(false)}
+          title="Export Data"
+          size="sm"
+        >
+          <Stack gap="md">
+            <Text size="sm">
+              Export {filteredItems.length} items in your preferred format
+            </Text>
+
+            <Group gap="sm">
+              <Button
+                variant="light"
+                color="blue"
+                onClick={() => exportData("json")}
+                style={{ flex: 1 }}
+              >
+                Export as JSON
+              </Button>
+              <Button
+                variant="light"
+                color="green"
+                onClick={() => exportData("csv")}
+                style={{ flex: 1 }}
+              >
+                Export as CSV
+              </Button>
+            </Group>
+          </Stack>
+        </Modal>
+      </Stack>
+    </Container>
+  );
 }
