@@ -5,82 +5,62 @@ import { logger } from "../lib/logger";
 import { storage, schemaRegistry } from "./storage";
 
 
-// Constants for magic numbers
-const ZERO = 0;
-const ONE = 1;
-const TWO = 2;
-const THREE = 3;
-const FOUR = 4;
-const FIVE = 5;
-const SIX = 6;
-const SEVEN = 7;
-const EIGHT = 8;
-const NINE = 9;
-const TEN = 10;
-const HUNDRED = 100;
-const THOUSAND = 1000;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
 
 // Generic document operations without hardcoded schemas
 export const documents = {
 	// Register a new schema
-	async registerSchema(schema: z.ZodObject<z.ZodRawShape>, name: string, version = "ONE.ZERO.ZERO"): Promise<void> {
+	async registerSchema(schema: z.ZodObject<z.ZodRawShape>, name: string, version = "1.0.0"): Promise<void> {
 		await schemaRegistry.register(schema, name, version);
 	},
 
 	// Get all documents for a specific schema type
-	async getBySchema(schemaId: string): Promise<Array<{ data: unknown; id: string }>> {
-		return await storage.getTyped(schemaId);
+	getBySchema(schemaId: string): Promise<Array<{ data: unknown; id: string }>> {
+		return storage.getTyped(schemaId);
 	},
 
 	// Create a new document with schema validation
-	async create(data: unknown, schemaId: string, id?: string): Promise<{ success: true; id: string } | { success: false; error: string }> {
-		return await storage.create(schemaId, data, id);
+	create(data: unknown, schemaId: string, id?: string): Promise<{ success: true; id: string } | { success: false; error: string }> {
+		return storage.create(schemaId, data, id);
 	},
 
 	// Update an existing document
-	async update(id: string, data: unknown): Promise<{ success: true } | { success: false; error: string }> {
-		return await storage.update(id, data);
+	update(id: string, data: unknown): Promise<{ success: true } | { success: false; error: string }> {
+		return storage.update(id, data);
 	},
 
 	// Get a single document by ID
-	async getById(id: string): Promise<{ data: unknown; schemaId: string } | undefined> {
-		const doc = await storage.getById(id);
-		return doc ? { data: doc.data, schemaId: doc.schemaId } : undefined;
+	getById(id: string): Promise<{ data: unknown; schemaId: string } | undefined> {
+		return storage.getById(id).then(doc =>
+			doc ? { data: doc.data, schemaId: doc.schemaId } : undefined,
+		);
 	},
 
 	// Search documents
-	async search(query: string): Promise<Array<{ data: unknown; schemaId: string; id: string }>> {
-		const docs = await storage.search(query);
-		return docs.map(doc => ({
+	search(query: string): Promise<Array<{ data: unknown; schemaId: string; id: string }>> {
+		return storage.search(query).then(docs => docs.map(doc => ({
 			data: doc.data,
 			schemaId: doc.schemaId,
 			id: doc.id ?? crypto.randomUUID(),
-		}));
+		})));
 	},
 
 	// Delete document by ID
-	async delete(id: string): Promise<void> {
-		await storage.delete(id);
+	delete(id: string): Promise<void> {
+		return storage.delete(id);
 	},
 
 	// Get schema validation result
-	async validate(data: unknown, schemaId: string): Promise<{ success: true; data: unknown } | { success: false; error: string }> {
-		return await schemaRegistry.validate(data, schemaId);
+	validate(data: unknown, schemaId: string): { success: true; data: unknown } | { success: false; error: string } {
+		return schemaRegistry.validate(data, schemaId);
 	},
 
 	// List available schemas
-	async listSchemas(): Promise<Array<{ id: string; name: string; version: string }>> {
-		const schemas = await schemaRegistry.list();
-		return schemas.map(schema => ({
+	listSchemas(): Promise<Array<{ id: string; name: string; version: string }>> {
+		return schemaRegistry.list().then(schemas => schemas.map(schema => ({
 			id: schema.id,
 			name: schema.name,
 			version: schema.version,
-		}));
+		})));
 	},
 };
 
