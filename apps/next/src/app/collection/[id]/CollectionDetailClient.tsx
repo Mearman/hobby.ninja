@@ -1,9 +1,10 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
+
 import {
 	Title,
 	Text,
-	Badge,
 	Group,
 	Stack,
 	Card,
@@ -142,19 +143,15 @@ function CollectionItemCard({
 						)}
 						<Box className={itemCardMetadata}>
 							{dbItem?.grade && (
-								<Badge className={itemCardBadge} variant="light">
-									{dbItem.grade}
-								</Badge>
+								<Badge size="sm">{dbItem.grade}</Badge>
 							)}
 							{dbItem?.scale && (
-								<Badge className={itemCardBadge} variant="light">
-									{dbItem.scale}
-								</Badge>
+								<Badge size="sm" variant="outline">{dbItem.scale}</Badge>
 							)}
 							<Badge
-								className={itemCardBadge}
-								variant={item.status === "completed" ? "filled" : "outline"}
+								size="sm"
 								color={item.status === "completed" ? "green" : "blue"}
+								variant={item.status === "completed" ? "filled" : "light"}
 							>
 								{item.status}
 							</Badge>
@@ -210,15 +207,15 @@ function CollectionItemCard({
 						</Box>
 
 						<Group gap="xs">
-							{dbItem?.grade && <Badge size="sm">{dbItem.grade}</Badge>}
-							{dbItem?.scale && <Badge size="sm" variant="outline">{dbItem.scale}</Badge>}
-							<Badge
+							{dbItem?.grade && /*<Badge size="sm">{dbItem.grade}</Badge>*/ <Text size="sm">{dbItem.grade}</Text>}
+							{dbItem?.scale && /*<Badge size="sm" variant="outline">{dbItem.scale}</Badge>*/ <Text size="sm">{dbItem.scale}</Text>}
+							{/* Badge
 								size="sm"
 								color={item.status === "completed" ? "green" : "blue"}
 								variant={item.status === "completed" ? "filled" : "light"}
 							>
 								{item.status}
-							</Badge>
+							</Badge>*/}
 						</Group>
 
 						<Menu shadow="md" width={MENU_WIDTH}>
