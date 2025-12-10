@@ -91,6 +91,10 @@ console.log("Loaded static graph data:", {
 	edges: Object.keys(staticData.edges).length,
 });
 
+export function getStaticData() {
+	return staticData;
+}
+
 // Sort data by display name
 const sortByName = <T extends BaseNode>(a: T, b: T): number => {
 	const nameA = getNodeDisplayName(a);

@@ -27,7 +27,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 
-import { getAllCategories, getAllItems } from "@/lib/graph-data";
+import { getAllCategories, getAllItems, getStaticData } from "@/lib/graph-data";
 import { getNodeDisplayName } from "@/lib/schemas";
 import { categoryCard, categoryIcon } from "@/styles/components.css";
 
@@ -88,12 +88,18 @@ export default function CategoriesPage() {
 		const loadData = async () => {
 			try {
 				const [categoriesData, itemsData] = await Promise.all([getAllCategories(), getAllItems()]);
+				const staticData = getStaticData();
 
-				// Count items per category
+				// Count items per category using edges data
 				const categoryCounts = new Map<string, number>();
-				for (const item of itemsData as Item[]) {
-					if (item.type === "item" && item.category) {
-						categoryCounts.set(item.category, (categoryCounts.get(item.category) ?? 0) + 1);
+
+				// Process edges to count items per category
+				for (const [edgeKey] of Object.entries(staticData.edges)) {
+					if (edgeKey.includes(":BELONGS_TO_CATEGORY:category:")) {
+						const categoryId = edgeKey.split(":").pop() || "";
+						if (categoryId) {
+							categoryCounts.set(categoryId, (categoryCounts.get(categoryId) ?? 0) + 1);
+						}
 					}
 				}
 
