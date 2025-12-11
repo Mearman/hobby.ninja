@@ -103,7 +103,7 @@ const sortByName = <T extends BaseNode>(a: T, b: T): number => {
 };
 
 // Export synchronous functions that return pre-validated data with enriched properties
-export function getAllItems(): (ItemNode & { series?: string; grade?: string; scale?: string; brand?: string })[] {
+export function getAllItems(): EnrichedItem[] {
 	return [...staticData.items].map(item => enrichItemWithRelationships(item)).sort(sortByName);
 }
 
@@ -176,7 +176,7 @@ export function getAllScales(): ItemNode[] {
 }
 
 // Get specific node by ID with type safety (synchronous)
-export function getItemById(id: string): (ItemNode & { series?: string; grade?: string; scale?: string; brand?: string }) | null {
+export function getItemById(id: string): EnrichedItem | null {
 	const item = staticData.items.find(item => item.id === id);
 	return item ? enrichItemWithRelationships(item) : null;
 }
@@ -303,40 +303,65 @@ function extractGradeFromItem(item: ItemNode): string {
 	return '';
 }
 
+// Type for enriched item with relationship data
+export type EnrichedItem = ItemNode & {
+	series?: string;
+	seriesId?: string;
+	grade?: string;
+	scale?: string;
+	brand?: string;
+	brandId?: string;
+	categoryId?: string;
+	category?: string;
+};
+
 // Enrich item with resolved properties
-function enrichItemWithRelationships(item: ItemNode): ItemNode & { series?: string; grade?: string; scale?: string; brand?: string } {
-	const enrichedItem = { ...item };
+function enrichItemWithRelationships(item: ItemNode): EnrichedItem {
+	const enrichedItem: EnrichedItem = { ...item };
 
 	// Resolve series
 	const seriesIds = resolveRelatedNodes(item.id, 'BELONGS_TO_SERIES', 'series');
 	if (seriesIds.length > 0) {
-		(enrichedItem as any).series = getNodeNameById(seriesIds[0], 'series');
+		enrichedItem.seriesId = seriesIds[0];
+		enrichedItem.series = getNodeNameById(seriesIds[0], 'series');
 	}
 
 	// Resolve brand
 	const brandIds = resolveRelatedNodes(item.id, 'BELONGS_TO_BRAND', 'brand');
 	if (brandIds.length > 0) {
-		(enrichedItem as any).brand = getNodeNameById(brandIds[0], 'brand');
+		enrichedItem.brandId = brandIds[0];
+		enrichedItem.brand = getNodeNameById(brandIds[0], 'brand');
 	}
 
-	// Extract scale from name
-	const itemName = getNodeDisplayName(item);
-	const scale = extractScaleFromName(itemName);
-	if (scale) {
-		(enrichedItem as any).scale = scale;
+	// Resolve category
+	const categoryIds = resolveRelatedNodes(item.id, 'BELONGS_TO_CATEGORY', 'category');
+	if (categoryIds.length > 0) {
+		enrichedItem.categoryId = categoryIds[0];
+		enrichedItem.category = getNodeNameById(categoryIds[0], 'category');
+	}
+
+	// Extract scale from name or use existing scale
+	if (item.scale) {
+		enrichedItem.scale = item.scale;
+	} else {
+		const itemName = getNodeDisplayName(item);
+		const scale = extractScaleFromName(itemName);
+		if (scale) {
+			enrichedItem.scale = scale;
+		}
 	}
 
 	// Extract grade
 	const grade = extractGradeFromItem(item);
 	if (grade) {
-		(enrichedItem as any).grade = grade;
+		enrichedItem.grade = grade;
 	}
 
 	return enrichedItem;
 }
 
 // Get items by category using edges and enrich them with relationship data
-export function getItemsByCategory(categoryId: string): (ItemNode & { series?: string; grade?: string; scale?: string; brand?: string })[] {
+export function getItemsByCategory(categoryId: string): EnrichedItem[] {
 	const categoryEdgePrefix = `item:`;
 	const categoryEdgeSuffix = `:BELONGS_TO_CATEGORY:category:${categoryId}`;
 
@@ -358,7 +383,7 @@ export function getItemsByCategory(categoryId: string): (ItemNode & { series?: s
 }
 
 // Get items by series using edges and enrich them with relationship data
-export function getItemsBySeries(seriesId: string): (ItemNode & { series?: string; grade?: string; scale?: string; brand?: string })[] {
+export function getItemsBySeries(seriesId: string): EnrichedItem[] {
 	const seriesEdgePrefix = `item:`;
 	const seriesEdgeSuffix = `:BELONGS_TO_SERIES:series:${seriesId}`;
 
