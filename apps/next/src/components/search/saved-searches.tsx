@@ -31,7 +31,7 @@ interface SearchState {
   itemsPerPage: number;
 }
 
-interface SavedSearch extends SearchState {
+export interface SavedSearch extends SearchState {
   id: string;
   name: string;
   createdAt: string;
