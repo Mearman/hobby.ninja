@@ -39,7 +39,7 @@ import React from "react";
 
 import { useCollection } from "@/contexts/collection-context";
 import type { CollectionItem } from "@/lib/collection-storage";
-import { getNodeDisplayName, isItemNode, type ItemNode } from "@/lib/schemas";
+import { getNodeDisplayName, type ItemNode } from "@/lib/schemas";
 import {
 	itemCard,
 	itemCardImage,
@@ -84,7 +84,8 @@ interface CollectionStats {
 // Props for the client component
 interface CollectionDetailClientProps {
 	collectionId: string;
-	allDbItems: ItemNode[];
+	// Map of itemId -> ItemNode for O(1) lookups
+	dbItemsMap: Map<string, ItemNode>;
 }
 
 // Item card component for collection items
@@ -512,7 +513,7 @@ function LoadingGrid({ viewMode }: { viewMode: "grid" | "list" }) {
 }
 
 // Client Component for interactive parts
-export function CollectionDetailClient({ collectionId, allDbItems }: CollectionDetailClientProps) {
+export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionDetailClientProps) {
 	const { state, actions } = useCollection() as {
 		state: {
 			collections: any[];
@@ -547,7 +548,7 @@ export function CollectionDetailClient({ collectionId, allDbItems }: CollectionD
 		// Search filter - search in database item names
 		if (searchQuery) {
 			items = items.filter(item => {
-				const dbItem = allDbItems.find(dbItem => isItemNode(dbItem) && dbItem.id === item.itemId);
+				const dbItem = dbItemsMap.get(item.itemId);
 				return dbItem && getNodeDisplayName(dbItem).toLowerCase().includes(searchQuery.toLowerCase());
 			});
 		}
@@ -561,8 +562,8 @@ export function CollectionDetailClient({ collectionId, allDbItems }: CollectionD
 		items.sort((a, b) => {
 			switch (sortOrder) {
 				case "name": {
-					const aDbItem = allDbItems.find(dbItem => isItemNode(dbItem) && dbItem.id === a.itemId);
-					const bDbItem = allDbItems.find(dbItem => isItemNode(dbItem) && dbItem.id === b.itemId);
+					const aDbItem = dbItemsMap.get(a.itemId);
+					const bDbItem = dbItemsMap.get(b.itemId);
 					if (!aDbItem || !bDbItem) return 0;
 					return getNodeDisplayName(aDbItem).localeCompare(getNodeDisplayName(bDbItem));
 				}
@@ -583,7 +584,7 @@ export function CollectionDetailClient({ collectionId, allDbItems }: CollectionD
 		});
 
 		return items;
-	}, [state.items, allDbItems, searchQuery, statusFilter, sortOrder]);
+	}, [state.items, dbItemsMap, searchQuery, statusFilter, sortOrder]);
 
 	const handleEditItem = (item: CollectionItem) => {
 		setSelectedItem(item);
@@ -591,7 +592,7 @@ export function CollectionDetailClient({ collectionId, allDbItems }: CollectionD
 	};
 
 	const handleDeleteItem = (item: CollectionItem) => {
-		const dbItem = allDbItems.find(dbItem => isItemNode(dbItem) && dbItem.id === item.itemId);
+		const dbItem = dbItemsMap.get(item.itemId);
 		if (confirm(`Remove "${dbItem ? getNodeDisplayName(dbItem) : item.itemId}" from this collection?`)) {
 			actions.removeItem(item.id?.toString() ?? "");
 		}
@@ -720,7 +721,7 @@ export function CollectionDetailClient({ collectionId, allDbItems }: CollectionD
 							spacing="md"
 						>
 							{filteredItems.map((item, index) => {
-								const dbItem = allDbItems.find(dbItem => isItemNode(dbItem) && dbItem.id === item.itemId);
+								const dbItem = dbItemsMap.get(item.itemId);
 								return (
 									<CollectionItemCard
 										key={item.id ? `${item.id}` : `${item.itemId}-${index}`}
@@ -737,7 +738,7 @@ export function CollectionDetailClient({ collectionId, allDbItems }: CollectionD
 					) : (
 						<Stack gap="sm">
 							{filteredItems.map((item, index) => {
-								const dbItem = allDbItems.find(dbItem => isItemNode(dbItem) && dbItem.id === item.itemId);
+								const dbItem = dbItemsMap.get(item.itemId);
 								return (
 									<CollectionItemCard
 										key={item.id ? `${item.id}` : `${item.itemId}-${index}`}

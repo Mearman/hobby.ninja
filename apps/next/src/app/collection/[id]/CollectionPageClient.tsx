@@ -14,7 +14,8 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { CollectionDetailClient } from "./CollectionDetailClient";
-import { getClientItems } from "@/lib/client-data";
+import { getItemsByIds } from "@/lib/client-data";
+import { useCollection } from "@/contexts/collection-context";
 import type { ItemNode } from "@/lib/schemas";
 
 // Fully client-side page for collection details
@@ -23,16 +24,23 @@ export function CollectionPageClient() {
 	const params = useParams<{ id: string }>();
 	const collectionId = params.id;
 
-	const [allDbItems, setAllDbItems] = useState<ItemNode[]>([]);
+	const { state } = useCollection();
+	const [dbItemsMap, setDbItemsMap] = useState<Map<string, ItemNode>>(new Map());
 	const [loading, setLoading] = useState(true);
 
-	// Load database items client-side via fetch (not bundled in JS)
-	// Service worker caches this for offline support
+	// Load only the database items that are in the user's collection
+	// This fetches individual item files (~3KB each) instead of all items (19MB)
 	useEffect(() => {
 		const loadItems = async () => {
 			try {
-				const items = await getClientItems();
-				setAllDbItems(items);
+				// Get unique item IDs from the collection
+				const itemIds = [...new Set(state.items.map(item => item.itemId))];
+
+				if (itemIds.length > 0) {
+					// Fetch only the items we need (parallel requests)
+					const itemsMap = await getItemsByIds(itemIds);
+					setDbItemsMap(itemsMap);
+				}
 			} catch (error) {
 				console.error("Failed to load items:", error);
 			} finally {
@@ -40,7 +48,7 @@ export function CollectionPageClient() {
 			}
 		};
 		void loadItems();
-	}, []);
+	}, [state.items]);
 
 	if (loading) {
 		return (
@@ -82,7 +90,7 @@ export function CollectionPageClient() {
 
 			<CollectionDetailClient
 				collectionId={collectionId}
-				allDbItems={allDbItems}
+				dbItemsMap={dbItemsMap}
 			/>
 		</Container>
 	);
