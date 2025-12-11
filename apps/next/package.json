@@ -4,7 +4,7 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
-		"build": "next build --webpack",
+		"build": "NODE_OPTIONS='--max-old-space-size=8192' next build --webpack",
 		"build-data": "tsx ./scripts/data-processor.ts",
 		"build:disabled": "BUILD_DATA_STRATEGY=disabled next build",
 		"build:nx": "BUILD_DATA_STRATEGY=nx next build",

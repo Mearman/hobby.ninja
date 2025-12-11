@@ -122,6 +122,9 @@ const nextConfig: NextConfig = {
   // Configure experimental features for Mantine and Vanilla Extract
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
+    // Reduce worker threads to prevent OOM during static generation (6160 pages)
+    workerThreads: false,
+    cpus: 4,
     // Disable optimizeCss for Vanilla Extract compatibility
     // optimizeCss: true,
   },
