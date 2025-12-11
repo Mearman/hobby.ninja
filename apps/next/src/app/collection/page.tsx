@@ -501,14 +501,14 @@ function SearchAndFilters({
 				<Group gap="sm">
 					<Radio.Group
 						value={viewMode}
-						onChange={(value: "grid" | "list") => { onViewModeChange(value); }}
+						onChange={(value) => { onViewModeChange(value as "grid" | "list"); }}
 					>
 						<Group>
 							<Tooltip label="Grid View">
-								<Radio value="grid" label="" icon={<IconGrid3x3 size={UI.ICON_SIZE_SM} />} />
+								<Radio value="grid" label="Grid" />
 							</Tooltip>
 							<Tooltip label="List View">
-								<Radio value="list" label="" icon={<IconList size={UI.ICON_SIZE_SM} />} />
+								<Radio value="list" label="List" />
 							</Tooltip>
 						</Group>
 					</Radio.Group>
