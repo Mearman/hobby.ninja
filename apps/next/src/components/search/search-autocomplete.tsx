@@ -4,7 +4,7 @@ import { useSearch } from "@/lib/fuse-search";
 import { Badge, Box, Group, Text, TextInput, Combobox, useCombobox } from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
 import { useState, useEffect, useMemo } from "react";
-import { getNodeDisplayName } from "@/lib/schemas";
+import { getSearchItemDisplayName } from "@/lib/client-data";
 
 interface SearchAutocompleteProps {
   value: string;
@@ -43,7 +43,7 @@ export function SearchAutocomplete({
     try {
       const results = search(debouncedValue, { limit: 8 });
       return results.slice(0, 5).map(result => ({
-        value: getNodeDisplayName(result.item),
+        value: getSearchItemDisplayName(result.item),
         item: result.item,
         score: result.score
       }));
