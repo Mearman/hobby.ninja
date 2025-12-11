@@ -176,8 +176,9 @@ export function getAllScales(): ItemNode[] {
 }
 
 // Get specific node by ID with type safety (synchronous)
-export function getItemById(id: string): ItemNode | null {
-	return staticData.items.find(item => item.id === id) ?? null;
+export function getItemById(id: string): (ItemNode & { series?: string; grade?: string; scale?: string; brand?: string }) | null {
+	const item = staticData.items.find(item => item.id === id);
+	return item ? enrichItemWithRelationships(item) : null;
 }
 
 export function getBrandById(id: string): BrandNode | null {
