@@ -126,6 +126,9 @@ const nextConfig: NextConfig = {
     // optimizeCss: true,
   },
 
+  // Increase static page generation timeout for large dataset (6000+ pages)
+  staticPageGenerationTimeout: 180, // 3 minutes per page (default is 60s)
+
   // Enable strict mode for better error detection
   reactStrictMode: true,
 
