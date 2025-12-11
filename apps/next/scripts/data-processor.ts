@@ -309,6 +309,17 @@ export class DataProcessor {
     fs.writeFileSync(homepageOutputFile, JSON.stringify(homepageData, null, 2));
     console.log(`✅ Generated homepage.json with pre-computed stats and featured content`);
 
+    // Step 6: Generate lightweight static-params files (IDs only for generateStaticParams)
+    const staticParamsData = {
+      itemIds: itemNodes.map(node => node.id),
+      seriesIds: seriesNodes.map(node => node.id),
+      categoryIds: categoryNodes.map(node => node.id),
+      brandIds: brandNodes.map(node => node.id),
+    };
+    const staticParamsOutputFile = path.join(this.outputDir, 'static-params.json');
+    fs.writeFileSync(staticParamsOutputFile, JSON.stringify(staticParamsData, null, 2));
+    console.log(`✅ Generated static-params.json with ${staticParamsData.itemIds.length} item IDs`);
+
     console.log('\n📊 Unified Graph Build Summary:');
     console.log(`   Total nodes: ${allNodes.length}`);
     console.log(`   Total deduplicated edges: ${allEdges.length}`);

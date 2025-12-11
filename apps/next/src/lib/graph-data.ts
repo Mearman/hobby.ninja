@@ -38,6 +38,10 @@ function isGraphDataFile(data: unknown): data is { nodes: unknown[]; edges: Reco
 	);
 }
 
+// Skip Zod validation in development for faster loading
+// Data is pre-validated during build, so dev mode can trust the JSON
+const SKIP_VALIDATION = process.env.NODE_ENV === 'development';
+
 // Parse and validate the imported data
 function parseJSONData<T>(schema: { safeParse: (data: unknown) => { success: boolean; data?: T; error?: unknown } }, data: unknown): T[] {
 	if (!isGraphDataFile(data)) {
@@ -45,13 +49,21 @@ function parseJSONData<T>(schema: { safeParse: (data: unknown) => { success: boo
 		return [];
 	}
 
-	return data.nodes.filter(item => {
+	// In dev mode, skip Zod validation for faster loading
+	// The data is already validated during the build process
+	if (SKIP_VALIDATION) {
+		return data.nodes as T[];
+	}
+
+	// In production, validate each item (called once per item, not twice)
+	const validItems: T[] = [];
+	for (const item of data.nodes) {
 		const result = schema.safeParse(item);
-		return result.success;
-	}).map(item => {
-		const result = schema.safeParse(item);
-		return result.success ? result.data : null;
-	}).filter((item): item is T => item !== null);
+		if (result.success && result.data) {
+			validItems.push(result.data);
+		}
+	}
+	return validItems;
 }
 
 // Extract edges from data files
