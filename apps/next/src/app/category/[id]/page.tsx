@@ -1,6 +1,8 @@
 import { CategoryPageClient } from "./category-page-client";
 
 import { getAllCategories, getItemsByCategory, getCategoryById } from "@/lib/server-graph-data";
+// Import lightweight static params for generateStaticParams
+import staticParams from "@/data/static-params.json";
 import { Container, Title, Text, Group, Button } from "@mantine/core";
 import { IconArrowLeft, IconFolderOff } from "@tabler/icons-react";
 import Link from "next/link";
@@ -66,10 +68,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
 	);
 }
 
-// Generate static params for categories from static data
+// Generate static params for categories using lightweight IDs file
 export function generateStaticParams() {
-	const categories = getAllCategories();
-	return categories.map((category) => ({
-		id: category.id,
-	}));
+	return staticParams.categoryIds.map(id => ({ id }));
 }

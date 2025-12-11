@@ -14,7 +14,9 @@ import {
 } from "@mantine/core";
 import Link from "next/link";
 
-import { getAllItems, getItemById, type EnrichedItem } from "@/lib/graph-data";
+import { getItemById, type EnrichedItem } from "@/lib/graph-data";
+// Import lightweight static params (96KB) instead of full items (19MB) for generateStaticParams
+import staticParams from "@/data/static-params.json";
 import {
 	getNodeDisplayName,
 	getNodePrice,
@@ -28,11 +30,10 @@ interface ItemPageProps {
 	params: Promise<{ id: string }>;
 }
 
-// Generate static params for items from static data
+// Generate static params for items using lightweight IDs file (96KB vs 19MB)
 export function generateStaticParams() {
-	const items = getAllItems();
-	console.log(`Generating static params for ${items.length} items`);
-	return items.map(item => ({ id: item.id }));
+	console.log(`Generating static params for ${staticParams.itemIds.length} items`);
+	return staticParams.itemIds.map(id => ({ id }));
 }
 
 // Generate metadata for each item with type-safe data

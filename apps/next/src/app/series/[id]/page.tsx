@@ -21,7 +21,9 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 
-import { getAllSeries, getSeriesById, getItemsBySeries } from "@/lib/server-graph-data";
+import { getSeriesById, getItemsBySeries } from "@/lib/server-graph-data";
+// Import lightweight static params for generateStaticParams
+import staticParams from "@/data/static-params.json";
 import { getNodeDisplayName, type BaseNode, type ItemNode } from "@/lib/schemas";
 import { itemCard } from "@/styles/components.css";
 
@@ -29,19 +31,10 @@ interface SeriesPageProps {
 	params: Promise<{ id: string }>;
 }
 
-// Generate static params for all series
+// Generate static params for all series using lightweight IDs file
 export function generateStaticParams() {
-	try {
-		const series = getAllSeries();
-		const result = series.map((s) => ({
-			id: s.id,
-		}));
-		console.log(`Generating static params for ${result.length} series`);
-		return result;
-	} catch (error) {
-		console.error("Error generating static params for series:", error);
-		return [];
-	}
+	console.log(`Generating static params for ${staticParams.seriesIds.length} series`);
+	return staticParams.seriesIds.map(id => ({ id }));
 }
 
 // Generate metadata for series page
