@@ -341,6 +341,25 @@ export class DataProcessor {
     console.log(`\n✅ Generated category-specific JSON files with ultra-compact edges`);
     console.log(`💾 Overall space savings: ${spaceSavings}% reduction in edge storage`);
 
+    // Step 7: Copy data files to public/data for client-side fetch
+    // This enables the PWA to cache them via service worker for offline support
+    // outputDir is apps/next/src/data, so we need to go up two levels to apps/next
+    const appRoot = path.resolve(this.outputDir, '../..');
+    const publicDataDir = path.join(appRoot, 'public', 'data');
+    if (!fs.existsSync(publicDataDir)) {
+      fs.mkdirSync(publicDataDir, { recursive: true });
+    }
+
+    const filesToCopy = ['items.json', 'brands.json', 'categories.json', 'series.json', 'manuals.json'];
+    for (const file of filesToCopy) {
+      const srcPath = path.join(this.outputDir, file);
+      const destPath = path.join(publicDataDir, file);
+      if (fs.existsSync(srcPath)) {
+        fs.copyFileSync(srcPath, destPath);
+      }
+    }
+    console.log(`✅ Copied data files to public/data for client-side fetch (offline support)`);
+
     return results;
   }
 
