@@ -2,11 +2,11 @@
 
 import { useDebouncedValue, useDebouncedState } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 
 import { PAGINATION, TIMING, FILTER } from "@/lib/constants";
 import type { SearchOptions, SearchResult, SearchableItem } from "@/lib/search-index";
-import { getSearchIndex, initializeSearchIndex } from "@/lib/search-index";
+// Dynamic import for code-splitting - search-index module loaded on demand
 import { ShareableFilters } from "@/lib/url-compression";
 
 // Additional constants for search functionality
@@ -86,14 +86,17 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 		TIMING.DEBOUNCE_MEDIUM,
 	);
 
-	// Search index instance
-	const searchIndex = useMemo(() => getSearchIndex(), []);
+	// Search index instance - loaded dynamically
+	const searchIndexRef = useRef<Awaited<ReturnType<typeof import("@/lib/search-index").getSearchIndex>> | null>(null);
 
-	// Initialize search index
+	// Initialize search index with dynamic import
 	useEffect(() => {
 		const init = async () => {
 			try {
 				setIsLoading(true);
+				// Dynamic import for code-splitting
+				const { getSearchIndex, initializeSearchIndex } = await import("@/lib/search-index");
+				searchIndexRef.current = getSearchIndex();
 				await initializeSearchIndex();
 				setIsInitialized(true);
 				setError(null);
@@ -117,7 +120,7 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 
 	// Search function
 	const search = useCallback(async (searchOptionsOverride?: Partial<SearchOptions>) => {
-		if (!isInitialized) return;
+		if (!isInitialized || !searchIndexRef.current) return;
 
 		setIsLoading(true);
 		setError(null);
@@ -137,7 +140,7 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 				options.query = searchOptionsOverride.query;
 			}
 
-			const searchResults = searchIndex.search(options);
+			const searchResults = searchIndexRef.current.search(options);
 
 			const endTime = performance.now();
 			setSearchTime(endTime - startTime);
@@ -184,7 +187,7 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 		} finally {
 			setIsLoading(false);
 		}
-	}, [debouncedQuery, filters, isInitialized, searchIndex, showNotifications]);
+	}, [debouncedQuery, filters, isInitialized, showNotifications]);
 
 	// Auto-search when query or filters change
 	useEffect(() => {
@@ -195,20 +198,20 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 
 	// Get suggestions
 	const getSuggestions = useCallback(async (input: string): Promise<string[]> => {
-		if (!enableSuggestions || !isInitialized || input.length < 2) {
+		if (!enableSuggestions || !isInitialized || !searchIndexRef.current || input.length < 2) {
 			return [];
 		}
 
 		try {
 			const limit = suggestionLimit ?? PAGINATION.DEFAULT_SUGGESTION_LIMIT;
-			const searchSuggestions = searchIndex.getSuggestions(input, limit);
+			const searchSuggestions = searchIndexRef.current.getSuggestions(input, limit);
 			setSuggestions(searchSuggestions);
 			return searchSuggestions;
 		} catch (error_) {
 			console.error("Failed to get suggestions:", error_);
 			return [];
 		}
-	}, [enableSuggestions, isInitialized, searchIndex, suggestionLimit]);
+	}, [enableSuggestions, isInitialized, suggestionLimit]);
 
 	// Update suggestions when query changes
 	useEffect(() => {
@@ -240,16 +243,16 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 
 	// Get popular searches
 	const popularSearches = useMemo(() => {
-		if (!isInitialized) return [];
-		return searchIndex.getPopularSearches();
-	}, [isInitialized, searchIndex]);
+		if (!isInitialized || !searchIndexRef.current) return [];
+		return searchIndexRef.current.getPopularSearches();
+	}, [isInitialized]);
 
 	// Get random items
 	const getRandomItems = useCallback(async (category?: string, count?: number) => {
-		if (!isInitialized) return [];
+		if (!isInitialized || !searchIndexRef.current) return [];
 		const actualCount = count ?? PAGINATION.RANDOM_ITEMS_COUNT;
-		return searchIndex.getRandomItems(actualCount, category);
-	}, [isInitialized, searchIndex]);
+		return searchIndexRef.current.getRandomItems(actualCount, category);
+	}, [isInitialized]);
 
 	// Calculate total results
 	const totalResults = results.length;
@@ -306,27 +309,34 @@ export function useQuickSearch(initialQuery = "") {
 	const [isLoading, setIsLoading] = useState(false);
 	const [isInitialized, setIsInitialized] = useState(false);
 
-	const searchIndex = useMemo(() => getSearchIndex(), []);
+	// Search index instance - loaded dynamically
+	const searchIndexRef = useRef<Awaited<ReturnType<typeof import("@/lib/search-index").getSearchIndex>> | null>(null);
 
-	// Initialize
+	// Initialize with dynamic import
 	useEffect(() => {
-		initializeSearchIndex()
-			.then(() => { setIsInitialized(true); })
-			.catch((error) => {
+		const init = async () => {
+			try {
+				const { getSearchIndex, initializeSearchIndex } = await import("@/lib/search-index");
+				searchIndexRef.current = getSearchIndex();
+				await initializeSearchIndex();
+				setIsInitialized(true);
+			} catch (error) {
 				console.error("Failed to initialize search index:", error);
-			});
+			}
+		};
+		init();
 	}, []);
 
 	// Search
 	useEffect(() => {
-		if (!isInitialized || !debouncedQuery.trim()) {
+		if (!isInitialized || !searchIndexRef.current || !debouncedQuery.trim()) {
 			setResults([]);
 			return;
 		}
 
 		setIsLoading(true);
 		try {
-			const searchResults = searchIndex.search({
+			const searchResults = searchIndexRef.current.search({
 				query: debouncedQuery,
 				limit: 50,
 				includeTypes: ["item"],
@@ -339,7 +349,7 @@ export function useQuickSearch(initialQuery = "") {
 		} finally {
 			setIsLoading(false);
 		}
-	}, [debouncedQuery, isInitialized, searchIndex]);
+	}, [debouncedQuery, isInitialized]);
 
 	return {
 		query,
