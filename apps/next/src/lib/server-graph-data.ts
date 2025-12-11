@@ -35,6 +35,7 @@ export {
 	getSeriesById,
 	getManualById,
 	getItemsByCategory,
+	getItemsBySeries,
 	getAllNodes,
 	getNodesByType,
 	getNodeByIdAny,
