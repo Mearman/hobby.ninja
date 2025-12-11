@@ -1,129 +1,130 @@
 {
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "targetDefaults": {
-    "barrels": {
-      "cache": true,
-      "command": "barrelsby --config .barrelsby.json",
-      "parallel": false
-    },
-    "build": {
-      "cache": true,
-      "dependsOn": ["^build", "typecheck"],
-      "parallel": 4,
-      "maxParallel": 4
-    },
-    "test": {
-      "cache": true,
-      "parallel": 3,
-      "maxParallel": 3,
-      "inputs": [
-        "default",
-        "^default",
-        "{workspaceRoot}/tsconfig.base.json",
-        "{workspaceRoot}/vitest.config.ts"
-      ]
-    },
-    "lint": {
-      "cache": true,
-      "parallel": 5,
-      "maxParallel": 5
-    },
-    "typecheck": {
-      "cache": true,
-      "dependsOn": ["^typecheck"],
-      "inputs": [
-        "default",
-        "^default"
-      ]
-    },
-        "serve": {
-      "cache": false,
-      "dependsOn": ["^build", "barrels"]
-    },
-    "test:e2e": {
-      "cache": true,
-      "dependsOn": ["^build"],
-      "inputs": [
-        "default",
-        "^default",
-        "{workspaceRoot}/playwright.config.ts",
-        "{workspaceRoot}/.browserslistrc"
-      ],
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"]
-    },
-    "check": {
-      "dependsOn": [
-        "syncpack:fix",
-        "typecheck",
-        "lint",
-        "test",
-        "build"
-      ],
-      "cache": true
-    }
-  },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nx/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "build:prod", "test", "test:unit", "test:integration", "test:e2e", "lint", "lint:check", "lint:fix", "typecheck", "typecheck-root", "syncpack:fix", "barrels", "validate", "validate:affected", "check"],
-        "useDaemonProcess": true,
-        "runtimeCacheInputs": ["node -v", "npm -v"]
-      }
-    }
-  },
-  "generators": {
-    "@nx/react": {
-      "application": {
-        "style": "css",
-        "linter": "eslint",
-        "bundler": "vite",
-        "unitTestRunner": "vitest"
-      },
-      "component": {
-        "style": "css"
-      },
-      "library": {
-        "linter": "eslint",
-        "unitTestRunner": "vitest"
-      }
-    }
-  },
-  "plugins": [
-    {
-      "plugin": "@nx/next/plugin",
-      "options": {
-        "buildTargetName": "build",
-        "serveTargetName": "serve",
-        "startTargetName": "start",
-        "exportTargetName": "export"
-      }
-    },
-    {
-      "plugin": "@nx/vite/plugin",
-      "options": {
-        "buildTargetName": "build",
-        "testTargetName": "test",
-        "serveTargetName": "serve",
-        "previewTargetName": "preview"
-      }
-    },
-    {
-      "plugin": "@nx/playwright/plugin",
-      "options": {
-        "targetName": "test:e2e"
-      }
-    },
-    {
-      "plugin": "@nx/js/typescript",
-      "options": {
-        "typecheck": {
-          "targetName": "typecheck"
-        }
-      }
-    }
-  ],
-  "nx": {
-    "includedScripts": []
-  }
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"targetDefaults": {
+		"barrels": {
+			"cache": true,
+			"command": "barrelsby --config .barrelsby.json",
+			"parallel": false
+		},
+		"build": {
+			"cache": true,
+			"dependsOn": ["^build", "typecheck"],
+			"parallel": 4,
+			"maxParallel": 4
+		},
+		"test": {
+			"cache": true,
+			"parallel": 3,
+			"maxParallel": 3,
+			"inputs": ["default", "^default", "{workspaceRoot}/tsconfig.base.json", "{workspaceRoot}/vitest.config.ts"]
+		},
+		"lint": {
+			"cache": true,
+			"parallel": 5,
+			"maxParallel": 5
+		},
+		"typecheck": {
+			"cache": true,
+			"dependsOn": ["^typecheck"],
+			"inputs": ["default", "^default"]
+		},
+		"serve": {
+			"cache": false,
+			"dependsOn": ["^build", "barrels"]
+		},
+		"test:e2e": {
+			"cache": true,
+			"dependsOn": ["^build"],
+			"inputs": ["default", "^default", "{workspaceRoot}/playwright.config.ts", "{workspaceRoot}/.browserslistrc"],
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"]
+		},
+		"check": {
+			"dependsOn": ["syncpack:fix", "typecheck", "lint", "test", "build"],
+			"cache": true
+		}
+	},
+	"tasksRunnerOptions": {
+		"default": {
+			"runner": "@nx/workspace/tasks-runners/default",
+			"options": {
+				"cacheableOperations": [
+					"build",
+					"build:prod",
+					"test",
+					"test:unit",
+					"test:integration",
+					"test:e2e",
+					"lint",
+					"lint:check",
+					"lint:fix",
+					"typecheck",
+					"typecheck-root",
+					"syncpack:fix",
+					"barrels",
+					"validate",
+					"validate:affected",
+					"check"
+				],
+				"useDaemonProcess": true,
+				"runtimeCacheInputs": ["node -v", "npm -v"]
+			}
+		}
+	},
+	"parallel": 3,
+	"captureStderr": true,
+	"outputStyle": "stream",
+	"generators": {
+		"@nx/react": {
+			"application": {
+				"style": "css",
+				"linter": "eslint",
+				"bundler": "vite",
+				"unitTestRunner": "vitest"
+			},
+			"component": {
+				"style": "css"
+			},
+			"library": {
+				"linter": "eslint",
+				"unitTestRunner": "vitest"
+			}
+		}
+	},
+	"plugins": [
+		{
+			"plugin": "@nx/next/plugin",
+			"options": {
+				"buildTargetName": "build",
+				"serveTargetName": "serve",
+				"startTargetName": "start",
+				"exportTargetName": "export"
+			}
+		},
+		{
+			"plugin": "@nx/vite/plugin",
+			"options": {
+				"buildTargetName": "build",
+				"testTargetName": "test",
+				"serveTargetName": "serve",
+				"previewTargetName": "preview"
+			}
+		},
+		{
+			"plugin": "@nx/playwright/plugin",
+			"options": {
+				"targetName": "test:e2e"
+			}
+		},
+		{
+			"plugin": "@nx/js/typescript",
+			"options": {
+				"typecheck": {
+					"targetName": "typecheck"
+				}
+			}
+		}
+	],
+	"nx": {
+		"includedScripts": []
+	}
 }
