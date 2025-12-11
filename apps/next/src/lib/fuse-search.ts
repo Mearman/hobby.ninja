@@ -2,12 +2,11 @@ import Fuse from "fuse.js";
 import type { FuseResult, IFuseOptions } from "fuse.js";
 import { useCallback, useMemo } from "react";
 
-import { getClientItems } from "./client-data";
-import { ItemNode, getNodeDisplayName, getNodeReleaseYear } from "./schemas";
+import { getSearchIndex, type SearchIndexItem } from "./client-data";
 
-// Define search result type
+// Define search result type using lightweight search index
 export interface SearchResult {
-  item: ItemNode;
+  item: SearchIndexItem;
   score: number;
 }
 
@@ -18,15 +17,19 @@ function extractText(name: string | { ja: string; en?: string } | undefined): st
 	return name.en || name.ja;
 }
 
-// Fuse.js configuration
-const fuseOptions: IFuseOptions<ItemNode> = {
+// Helper to get release year from search index item
+function getItemReleaseYear(item: SearchIndexItem): number | undefined {
+	return item.releaseDate?.year;
+}
+
+// Fuse.js configuration for lightweight search index
+const fuseOptions: IFuseOptions<SearchIndexItem> = {
 	keys: [
 		{ name: "name", weight: 0.4 },
 		{ name: "brand", weight: 0.2 },
 		{ name: "series", weight: 0.2 },
 		{ name: "category", weight: 0.1 },
-		{ name: "description", weight: 0.05 },
-		{ name: "grade", weight: 0.03 },
+		{ name: "grade", weight: 0.08 },
 		{ name: "scale", weight: 0.02 },
 	],
 	threshold: 0.4,
@@ -35,14 +38,14 @@ const fuseOptions: IFuseOptions<ItemNode> = {
 };
 
 class SearchService {
-	private fuse: Fuse<ItemNode> | null = null;
-	private data: ItemNode[] = [];
+	private fuse: Fuse<SearchIndexItem> | null = null;
+	private data: SearchIndexItem[] = [];
 
 	async initialize() {
 		try {
-			// Load data via fetch (not bundled in JS)
+			// Load lightweight search index (~2MB instead of 19MB)
 			// Service worker caches this for offline support
-			this.data = await getClientItems();
+			this.data = await getSearchIndex();
 			this.fuse = new Fuse(this.data, fuseOptions);
 		} catch (error) {
 			console.error("Failed to initialize search:", error);
@@ -57,7 +60,7 @@ class SearchService {
 			return [];
 		}
 
-		const searchOptions: IFuseOptions<ItemNode> = {
+		const searchOptions: IFuseOptions<SearchIndexItem> = {
 			...fuseOptions,
 			...(options?.threshold && { threshold: options.threshold }),
 			...(options?.keys && { keys: options.keys }),
@@ -166,13 +169,13 @@ class SearchService {
 
 		if (filters.minYear !== undefined) {
 			results = results.filter(result =>
-				(getNodeReleaseYear(result.item) || 0) >= filters.minYear!,
+				(getItemReleaseYear(result.item) || 0) >= filters.minYear!,
 			);
 		}
 
 		if (filters.maxYear !== undefined) {
 			results = results.filter(result =>
-				(getNodeReleaseYear(result.item) || 0) <= filters.maxYear!,
+				(getItemReleaseYear(result.item) || 0) <= filters.maxYear!,
 			);
 		}
 
