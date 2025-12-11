@@ -2,7 +2,8 @@
 
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-import { searchService } from "@/lib/fuse-search";
+// Lazy import for code-splitting - Fuse.js and search logic are only loaded when needed
+// This reduces initial bundle size and speeds up first page load
 
 interface SearchContextType {
   isInitialized: boolean;
@@ -30,6 +31,8 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
 		const initializeSearch = async () => {
 			try {
 				setError(null);
+				// Dynamic import for code-splitting - fuse-search module loads on demand
+				const { searchService } = await import("@/lib/fuse-search");
 				await searchService.initialize();
 				setIsInitialized(true);
 			} catch (error_) {
