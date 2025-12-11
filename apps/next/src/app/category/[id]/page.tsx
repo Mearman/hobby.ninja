@@ -1,8 +1,7 @@
 import { CategoryPageClient } from "./category-page-client";
 
-import { generateCategoryParams } from "@/lib/data-loader";
 import { getAllCategories, getItemsByCategory, getCategoryById } from "@/lib/server-graph-data";
-import { Container, Title, Text, Group, Button, Anchor } from "@mantine/core";
+import { Container, Title, Text, Group, Button } from "@mantine/core";
 import { IconArrowLeft, IconFolderOff } from "@tabler/icons-react";
 import Link from "next/link";
 
@@ -10,23 +9,23 @@ import Link from "next/link";
 export default async function CategoryPage({ params }: { params: Promise<{ id: string }> }) {
 	const { id } = await params;
 
-	// Load data at build time
-	const [categories, items, category] = await Promise.all([
-		getAllCategories(),
-		getItemsByCategory(id),
-		getCategoryById(id),
-	]);
+	// Load data at build time (synchronous from static imports)
+	const categories = getAllCategories();
+	const items = getItemsByCategory(id);
+	const category = getCategoryById(id);
 
 	if (!category) {
 		return (
 			<Container size="xl" py="xl">
 				<Group mb="md">
-					<Anchor href="/categories" size="sm">
+					<Link href="/categories" style={{ textDecoration: "none" }}>
 						<Group gap={4}>
 							<IconArrowLeft size={14} />
-							Back to Categories
+							<Text size="sm" c="blue">
+								Back to Categories
+							</Text>
 						</Group>
-					</Anchor>
+					</Link>
 				</Group>
 
 				<Container size="sm" py="xl">
@@ -40,12 +39,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
 						The category you're looking for doesn't exist or has been moved.
 					</Text>
 					<Group justify="center">
-						<Button component={Link} href="/categories" variant="light">
-							Browse All Categories
-						</Button>
-						<Button component={Link} href="/database" variant="outline">
-							Explore Database
-						</Button>
+						<Link href="/categories" style={{ textDecoration: "none" }}>
+							<Button variant="light">
+								Browse All Categories
+							</Button>
+						</Link>
+						<Link href="/database" style={{ textDecoration: "none" }}>
+							<Button variant="outline">
+								Explore Database
+							</Button>
+						</Link>
 					</Group>
 				</Container>
 			</Container>
@@ -63,7 +66,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
 	);
 }
 
-// Generate static params for categories from JSON files
-export async function generateStaticParams() {
-	return await generateCategoryParams();
+// Generate static params for categories from static data
+export function generateStaticParams() {
+	const categories = getAllCategories();
+	return categories.map((category) => ({
+		id: category.id,
+	}));
 }
