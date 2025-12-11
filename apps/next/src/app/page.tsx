@@ -1,5 +1,3 @@
-"use client";
-
 import { Badge } from "@/components/ui/badge";
 
 import {
@@ -16,7 +14,6 @@ import {
 	rem,
 	ThemeIcon,
 	ScrollArea,
-	Carousel,
 	Avatar,
 	Divider,
 	Grid,
@@ -45,12 +42,10 @@ import {
 	IconBrandTwitter,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
 import { UI } from "@/lib/constants";
-import { getAllItems, getAllBrands, getAllCategories, getAllSeries, getItemById } from "@/lib/graph-data";
+import { getAllItems, getAllBrands, getAllCategories, getAllSeries } from "@/lib/graph-data";
 import { getNodeDisplayName } from "@/lib/schemas";
-import { useSearch } from "@/lib/fuse-search";
 
 // Item Card Component
 function ItemCard({ item, showGrade = true, showPrice = true }: {
@@ -67,140 +62,140 @@ function ItemCard({ item, showGrade = true, showPrice = true }: {
 	};
 
 	return (
-		<Card
-			component={Link}
-			href={`/item/${item.id}`}
-			shadow="sm"
-			padding="md"
-			radius="md"
-			withBorder
-			h="100%"
-			style={{ textDecoration: 'none', cursor: 'pointer' }}
-			className="item-card-hover"
-		>
-			<Stack gap="xs">
-				{/* Image placeholder */}
-				<Box
-					h={UI.THUMBNAIL_HEIGHT}
-					bg="gray.0"
-					style={{
-						borderRadius: 'var(--mantine-radius-sm)',
-						background: 'linear-gradient(135deg, var(--mantine-color-gray-0) 0%, var(--mantine-color-gray-1) 100%)'
-					}}
-				>
-					{item.images && item.images.length > 0 ? (
-						<img
-							src={typeof item.images[0] === 'string' ? item.images[0] : item.images[0].url}
-							alt={getNodeDisplayName(item)}
-							style={{
-								width: '100%',
-								height: '100%',
-								objectFit: 'cover',
-								borderRadius: 'var(--mantine-radius-sm)'
-							}}
-						/>
-					) : (
-						<Flex justify="center" align="center" h="100%">
-							<IconDatabase size={40} color="var(--mantine-color-gray-4)" />
-						</Flex>
-					)}
-				</Box>
+		<Link href={`/item/${item.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+			<Card
+				shadow="sm"
+				padding="md"
+				radius="md"
+				withBorder
+				h="100%"
+				style={{ cursor: 'pointer' }}
+				className="item-card-hover"
+			>
+				<Stack gap="xs">
+					{/* Image placeholder */}
+					<Box
+						h={UI.THUMBNAIL_HEIGHT}
+						bg="gray.0"
+						style={{
+							borderRadius: 'var(--mantine-radius-sm)',
+							background: 'linear-gradient(135deg, var(--mantine-color-gray-0) 0%, var(--mantine-color-gray-1) 100%)'
+						}}
+					>
+						{item.images && item.images.length > 0 ? (
+							<img
+								src={typeof item.images[0] === 'string' ? item.images[0] : item.images[0].url}
+								alt={getNodeDisplayName(item)}
+								style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'cover',
+									borderRadius: 'var(--mantine-radius-sm)'
+								}}
+							/>
+						) : (
+							<Flex justify="center" align="center" h="100%">
+								<IconDatabase size={40} color="var(--mantine-color-gray-4)" />
+							</Flex>
+						)}
+					</Box>
 
-				<Stack gap={4}>
-					<Text size="sm" fw={600} lineClamp={2} c="var(--mantine-color-gray-8)">
-						{getNodeDisplayName(item)}
-					</Text>
-
-					{item.series && (
-						<Text size="xs" c="dimmed" lineClamp={1}>
-							{item.series}
+					<Stack gap={4}>
+						<Text size="sm" fw={600} lineClamp={2} c="var(--mantine-color-gray-8)">
+							{getNodeDisplayName(item)}
 						</Text>
-					)}
 
-					<Group gap="xs" wrap="wrap">
-						{showGrade && item.grade && (
-							<Badge size="xs" variant="light" color="blue">
-								{item.grade}
-							</Badge>
+						{item.series && (
+							<Text size="xs" c="dimmed" lineClamp={1}>
+								{item.series}
+							</Text>
 						)}
-						{item.scale && (
-							<Badge size="xs" variant="outline">
-								{item.scale}
-							</Badge>
-						)}
-						{item.brand && (
-							<Badge size="xs" variant="outline" color="gray">
-								{item.brand}
-							</Badge>
-						)}
-					</Group>
 
-					{showPrice && item.price && (
-						<Text size="sm" fw={700} c="blue.6">
-							{formatPrice(item.price)}
-						</Text>
-					)}
+						<Group gap="xs" wrap="wrap">
+							{showGrade && item.grade && (
+								<Badge size="xs" variant="light" color="blue">
+									{item.grade}
+								</Badge>
+							)}
+							{item.scale && (
+								<Badge size="xs" variant="outline">
+									{item.scale}
+								</Badge>
+							)}
+							{item.brand && (
+								<Badge size="xs" variant="outline" color="gray">
+									{item.brand}
+								</Badge>
+							)}
+						</Group>
+
+						{showPrice && item.price && (
+							<Text size="sm" fw={700} c="blue.6">
+								{formatPrice(item.price)}
+							</Text>
+						)}
+					</Stack>
 				</Stack>
-			</Stack>
-		</Card>
+			</Card>
+		</Link>
 	);
 }
 
 // Category Card Component
 function CategoryCard({ category, itemCount = 0 }: { category: any; itemCount?: number }) {
 	return (
-		<Card
-			component={Link}
-			href={`/category/${category.id}`}
-			shadow="sm"
-			padding="lg"
-			radius="md"
-			withBorder
-			h="100%"
-			style={{ textDecoration: 'none', cursor: 'pointer' }}
-		>
-			<Stack align="center" gap="md">
-				<ThemeIcon size={60} radius="xl" variant="light" color="blue">
-					<IconDatabase size={30} />
-				</ThemeIcon>
-				<Title order={4} ta="center" size="h6" fw={600}>
-					{getNodeDisplayName(category)}
-				</Title>
-				<Text size="sm" c="dimmed" ta="center">
-					{itemCount.toLocaleString()} items
-				</Text>
-			</Stack>
-		</Card>
+		<Link href={`/category/${category.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+			<Card
+				shadow="sm"
+				padding="lg"
+				radius="md"
+				withBorder
+				h="100%"
+				style={{ cursor: 'pointer' }}
+			>
+				<Stack align="center" gap="md">
+					<ThemeIcon size={60} radius="xl" variant="light" color="blue">
+						<IconDatabase size={30} />
+					</ThemeIcon>
+					<Title order={4} ta="center" size="h6" fw={600}>
+						{getNodeDisplayName(category)}
+					</Title>
+					<Text size="sm" c="dimmed" ta="center">
+						{itemCount.toLocaleString()} items
+					</Text>
+				</Stack>
+			</Card>
+		</Link>
 	);
 }
 
 // Brand Card Component
 function BrandCard({ brand, itemCount = 0 }: { brand: any; itemCount?: number }) {
 	return (
-		<Card
-			component={Link}
-			href={`/brands/${brand.id}`}
-			shadow="sm"
-			padding="md"
-			radius="md"
-			withBorder
-			h="100%"
-			style={{ textDecoration: 'none', cursor: 'pointer' }}
-		>
-			<Group align="center" gap="md">
-				<Avatar size={UI.BRAND_LOGO_SIZE} radius="md">
-					{getNodeDisplayName(brand).charAt(0).toUpperCase()}
-				</Avatar>
-				<Box flex={1}>
-					<Text size="sm" fw={600} lineClamp={1}>
-						{getNodeDisplayName(brand)}
-					</Text>
-					<Text size="xs" c="dimmed">
-						{itemCount.toLocaleString()} items
-					</Text>
-				</Box>
-			</Group>
-		</Card>
+		<Link href={`/brands/${brand.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+			<Card
+				shadow="sm"
+				padding="md"
+				radius="md"
+				withBorder
+				h="100%"
+				style={{ cursor: 'pointer' }}
+			>
+				<Group align="center" gap="md">
+					<Avatar size={UI.BRAND_LOGO_SIZE} radius="md">
+						{getNodeDisplayName(brand).charAt(0).toUpperCase()}
+					</Avatar>
+					<Box flex={1}>
+						<Text size="sm" fw={600} lineClamp={1}>
+							{getNodeDisplayName(brand)}
+						</Text>
+						<Text size="xs" c="dimmed">
+							{itemCount.toLocaleString()} items
+						</Text>
+					</Box>
+				</Group>
+			</Card>
+		</Link>
 	);
 }
 
@@ -219,7 +214,7 @@ function TestimonialCard({ testimonial }: { testimonial: any }) {
 						/>
 					))}
 				</Group>
-				<Text size="sm" c="dimmed" italic lineClamp={3}>
+				<Text size="sm" c="dimmed" fs="italic" lineClamp={3}>
 					"{testimonial.content}"
 				</Text>
 				<Divider />
@@ -241,120 +236,25 @@ function TestimonialCard({ testimonial }: { testimonial: any }) {
 	);
 }
 
-// Search Bar Component
-function SearchBar() {
-	const [query, setQuery] = useState("");
-	const [results, setResults] = useState<any[]>([]);
-	const [showResults, setShowResults] = useState(false);
-	const { isInitialized, search } = useSearch();
-
-	const handleSearch = (searchQuery: string) => {
-		if (!isInitialized || searchQuery.length < 2) {
-			setResults([]);
-			return;
-		}
-
-		try {
-			const searchResults = search(searchQuery, { limit: 8 });
-			setResults(searchResults);
-		} catch (error) {
-			console.error("Search error:", error);
-			setResults([]);
-		}
-	};
-
-	useEffect(() => {
-		const debounceTimer = setTimeout(() => {
-			handleSearch(query);
-		}, 300);
-		return () => clearTimeout(debounceTimer);
-	}, [query, isInitialized]);
-
+// Static Search Link Component (replaces interactive SearchBar)
+function StaticSearchPrompt() {
 	return (
 		<Box maw={600} mx="auto" w="100%">
-			<Card
-				withBorder
-				p="md"
-				radius="md"
-				style={{ position: 'relative' }}
-			>
-				<Group>
-					<IconSearch size={UI.BUTTON_ICON_SIZE} color="var(--mantine-color-gray-5)" />
-					<input
-						type="text"
-						placeholder="Search for Gundam models, brands, series..."
-						value={query}
-						onChange={(e) => setQuery(e.target.value)}
-						onFocus={() => setShowResults(true)}
-						onBlur={() => setTimeout(() => setShowResults(false), 200)}
-						style={{
-							flex: 1,
-							border: 'none',
-							outline: 'none',
-							fontSize: '16px',
-							padding: '8px 0'
-						}}
-					/>
-					{query && (
-						<ActionIcon size="sm" variant="subtle" onClick={() => setQuery("")}>
-							<IconArrowRight size={14} />
-						</ActionIcon>
-					)}
-				</Group>
-
-				{showResults && results.length > 0 && (
-					<Box
-						style={{
-							position: 'absolute',
-							top: '100%',
-							left: 0,
-							right: 0,
-							zIndex: 1000,
-							background: 'white',
-							borderRadius: 'var(--mantine-radius-md)',
-							boxShadow: 'var(--mantine-shadow-md)',
-							border: '1px solid var(--mantine-color-gray-2)',
-							maxHeight: '400px',
-							overflow: 'auto'
-						}}
-						mt={4}
-					>
-						{results.slice(0, 8).map((result, index) => (
-							<Card
-								key={`${result.item.id}-${index}`}
-								p="sm"
-								component={Link}
-								href={`/item/${result.item.id}`}
-								style={{ textDecoration: 'none', cursor: 'pointer' }}
-								onMouseEnter={(e) => {
-									e.currentTarget.style.backgroundColor = 'var(--mantine-color-gray-0)';
-								}}
-								onMouseLeave={(e) => {
-									e.currentTarget.style.backgroundColor = 'transparent';
-								}}
-							>
-								<Group justify="space-between">
-									<Box flex={1}>
-										<Text size="sm" fw={500} lineClamp={1}>
-											{getNodeDisplayName(result.item)}
-										</Text>
-										{result.item.series && (
-											<Text size="xs" c="dimmed" lineClamp={1}>
-												{result.item.series}
-											</Text>
-										)}
-									</Box>
-									{result.item.grade && (
-										<Badge size="xs" variant="light">
-											{result.item.grade}
-										</Badge>
-									)}
-								</Group>
-							</Card>
-						))}
-					</Box>
-				)}
-			</Card>
+			<Link href="/search" style={{ textDecoration: 'none', color: 'inherit' }}>
+				<Card
+					withBorder
+					p="md"
+					radius="md"
+					style={{ cursor: 'pointer' }}
+				>
+					<Group>
+						<IconSearch size={UI.BUTTON_ICON_SIZE} color="var(--mantine-color-gray-5)" />
+						<Text c="dimmed" style={{ flex: 1 }}>
+							Search for Gundam models, brands, series...
+						</Text>
+					</Group>
+				</Card>
+			</Link>
 		</Box>
 	);
 }
@@ -382,58 +282,33 @@ const sampleTestimonials = [
 ];
 
 export default function HomePage() {
-	const [stats, setStats] = useState({
-		totalItems: 6000,
-		totalBrands: 78,
-		totalCategories: 5,
-		totalSeries: 135,
-	});
-	const [featuredItems, setFeaturedItems] = useState<any[]>([]);
-	const [popularBrands, setPopularBrands] = useState<any[]>([]);
-	const [categories, setCategories] = useState<any[]>([]);
-	const [recentItems, setRecentItems] = useState<any[]>([]);
+	// Load data directly (synchronous)
+	const items = getAllItems();
+	const brands = getAllBrands();
+	const allCategories = getAllCategories();
+	const series = getAllSeries();
 
-	// Load data on mount
-	useEffect(() => {
-		const loadData = async () => {
-			try {
-				const [items, brands, allCategories, series] = await Promise.all([
-					getAllItems(),
-					getAllBrands(),
-					getAllCategories(),
-					getAllSeries(),
-				]);
+	const stats = {
+		totalItems: items.length,
+		totalBrands: brands.length,
+		totalCategories: allCategories.length,
+		totalSeries: series.length,
+	};
 
-				setStats({
-					totalItems: items.length,
-					totalBrands: brands.length,
-					totalCategories: allCategories.length,
-					totalSeries: series.length,
-				});
+	// Get featured items (first 12 items for static display)
+	const featuredItems = items.slice(0, 12);
 
-				// Get featured items (random sample)
-				const randomItems = [...items].sort(() => 0.5 - Math.random()).slice(0, 12);
-				setFeaturedItems(randomItems);
+	// Get popular brands (first 8)
+	const popularBrands = brands.slice(0, 8);
 
-				// Get popular brands (first 8)
-				setPopularBrands(brands.slice(0, 8));
+	// Get all categories
+	const categories = allCategories;
 
-				// Get all categories
-				setCategories(allCategories);
-
-				// Get recent items (last modified)
-				const sortedItems = [...items]
-					.filter(item => item.modified)
-					.sort((a, b) => new Date(b.modified || 0).getTime() - new Date(a.modified || 0).getTime())
-					.slice(0, 8);
-				setRecentItems(sortedItems);
-			} catch (error) {
-				console.error("Failed to load data:", error);
-			}
-		};
-
-		loadData();
-	}, []);
+	// Get recent items (last modified)
+	const recentItems = [...items]
+		.filter(item => item.modified)
+		.sort((a, b) => new Date(b.modified || 0).getTime() - new Date(a.modified || 0).getTime())
+		.slice(0, 8);
 
 	
 	const features = [
@@ -511,8 +386,8 @@ export default function HomePage() {
 						Powerful search, detailed information, and full offline capability.
 					</Text>
 
-					{/* Integrated Search Bar */}
-					<SearchBar />
+					{/* Integrated Search Prompt */}
+					<StaticSearchPrompt />
 
 					{/* Quick Actions */}
 					<Group gap="md" mt="lg">
@@ -607,18 +482,11 @@ export default function HomePage() {
 					</Group>
 
 					{featuredItems.length > 0 ? (
-						<Carousel
-							slideSize={{ base: '100%', sm: '50%', md: '33.33%', lg: '25%' }}
-							slideGap="md"
-							loop
-							align="start"
-						>
-							{featuredItems.map((item) => (
-								<Carousel.Slide key={item.id}>
-									<ItemCard item={item} />
-								</Carousel.Slide>
+						<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="lg">
+							{featuredItems.slice(0, 8).map((item) => (
+								<ItemCard key={item.id} item={item} />
 							))}
-						</Carousel>
+						</SimpleGrid>
 					) : (
 						<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="lg">
 							{[...Array(8)].map((_, i) => (
@@ -649,29 +517,28 @@ export default function HomePage() {
 							{ title: "Series", description: `${stats.totalSeries}+ series`, icon: IconTrendingUp, href: "/series", color: "cyan" },
 							{ title: "Manuals", description: "Building instructions", icon: IconDownload, href: "/manuals", color: "grape" },
 						].map((item, index) => (
-							<Card
-								key={index}
-								component={Link}
-								href={item.href}
-								shadow="sm"
-								padding="lg"
-								radius="md"
-								withBorder
-								h="100%"
-								style={{ textDecoration: 'none', cursor: 'pointer' }}
-							>
-								<Stack align="center" gap="md">
-									<ThemeIcon color={item.color} size={50} radius="xl" variant="light">
-										<item.icon size={25} />
-									</ThemeIcon>
-									<Title order={4} ta="center" size="h6" fw={600}>
-										{item.title}
-									</Title>
-									<Text size="sm" c="dimmed" ta="center">
-										{item.description}
-									</Text>
-								</Stack>
-							</Card>
+							<Link key={index} href={item.href} style={{ textDecoration: 'none', color: 'inherit' }}>
+								<Card
+									shadow="sm"
+									padding="lg"
+									radius="md"
+									withBorder
+									h="100%"
+									style={{ cursor: 'pointer' }}
+								>
+									<Stack align="center" gap="md">
+										<ThemeIcon color={item.color} size={50} radius="xl" variant="light">
+											<item.icon size={25} />
+										</ThemeIcon>
+										<Title order={4} ta="center" size="h6" fw={600}>
+											{item.title}
+										</Title>
+										<Text size="sm" c="dimmed" ta="center">
+											{item.description}
+										</Text>
+									</Stack>
+								</Card>
+							</Link>
 						))}
 					</SimpleGrid>
 				</Stack>
