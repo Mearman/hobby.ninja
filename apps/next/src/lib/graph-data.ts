@@ -1,6 +1,9 @@
+import "server-only";
 
 // Static data imports for build-time embedding
 // This replaces runtime fetching with build-time imports
+// NOTE: This module is SERVER ONLY - it will error if imported in client components
+// For client-side data access, use client-data.ts instead
 import brandsData from "../data/brands.json";
 import categoriesData from "../data/categories.json";
 import itemsData from "../data/items.json";

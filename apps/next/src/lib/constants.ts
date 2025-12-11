@@ -104,9 +104,9 @@ export const FILTER = {
 // This function should be used to get the current maximum year from the actual data
 export async function getMaxYear(): Promise<number> {
 	try {
-		// Import here to avoid circular dependencies
-		const { getAllItems } = await import('./graph-data');
-		const items = await getAllItems();
+		// Use client-data for dynamic import to avoid bundling server-only graph-data
+		const { getClientItems } = await import('./client-data');
+		const items = await getClientItems();
 
 		// Extract years from release dates
 		const years = items

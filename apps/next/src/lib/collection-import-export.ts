@@ -1,7 +1,7 @@
 import pako from "pako";
 
 import type { CollectionItem } from "./collection-storage";
-import { getAllItems } from "./graph-data";
+import { getClientItems } from "./client-data";
 import { getNodeDisplayName, isItemNode } from "./schemas";
 
 // Export collection data
@@ -112,7 +112,7 @@ export const importCollection = async (
 
 			// Validate itemId exists in our database
 			try {
-				const allItems = await getAllItems();
+				const allItems = await getClientItems();
 				const existsInDatabase = allItems.some(dbItem =>
 					isItemNode(dbItem) && dbItem.id === item.itemId,
 				);
@@ -236,7 +236,7 @@ export const exportCollectionCSV = async (collectionId: string, includeHidden = 
 
 		for (const item of exportData.items) {
 			// Get database item for name
-			const allItems = await getAllItems();
+			const allItems = await getClientItems();
 			const dbItem = allItems.find(dbItem =>
 				isItemNode(dbItem) && dbItem.id === item.itemId,
 			);
@@ -270,7 +270,7 @@ export const importFromDatabase = async (
 	defaultStatus = "wanted",
 ): Promise<CollectionItem[]> => {
 	try {
-		const allItems = await getAllItems();
+		const allItems = await getClientItems();
 		const items: CollectionItem[] = [];
 
 		for (const itemId of itemIds) {

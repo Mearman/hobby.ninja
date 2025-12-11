@@ -2,7 +2,7 @@ import Fuse from "fuse.js";
 import type { FuseResult, IFuseOptions } from "fuse.js";
 import { useCallback, useMemo } from "react";
 
-import { getAllItems } from "./graph-data";
+import { getClientItems } from "./client-data";
 import { ItemNode, getNodeDisplayName, getNodeReleaseYear } from "./schemas";
 
 // Define search result type
@@ -40,8 +40,9 @@ class SearchService {
 
 	async initialize() {
 		try {
-			// Load data for static export
-			this.data = await getAllItems();
+			// Load data via fetch (not bundled in JS)
+			// Service worker caches this for offline support
+			this.data = await getClientItems();
 			this.fuse = new Fuse(this.data, fuseOptions);
 		} catch (error) {
 			console.error("Failed to initialize search:", error);

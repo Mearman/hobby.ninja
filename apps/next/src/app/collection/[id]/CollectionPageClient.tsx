@@ -14,7 +14,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { CollectionDetailClient } from "./CollectionDetailClient";
-import { getAllItems } from "@/lib/graph-data";
+import { getClientItems } from "@/lib/client-data";
 import type { ItemNode } from "@/lib/schemas";
 
 // Fully client-side page for collection details
@@ -26,11 +26,12 @@ export function CollectionPageClient() {
 	const [allDbItems, setAllDbItems] = useState<ItemNode[]>([]);
 	const [loading, setLoading] = useState(true);
 
-	// Load database items client-side
+	// Load database items client-side via fetch (not bundled in JS)
+	// Service worker caches this for offline support
 	useEffect(() => {
 		const loadItems = async () => {
 			try {
-				const items = await getAllItems();
+				const items = await getClientItems();
 				setAllDbItems(items);
 			} catch (error) {
 				console.error("Failed to load items:", error);

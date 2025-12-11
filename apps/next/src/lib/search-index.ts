@@ -2,7 +2,7 @@ import Fuse, { type IFuseOptions, type FuseResult } from "fuse.js";
 
 import { PAGINATION, FILTER } from "./constants";
 
-import { getAllItems, getAllBrands, getAllCategories, getAllSeries } from "@/lib/graph-data";
+import { getClientItems, getClientBrands, getClientCategories, getClientSeries } from "@/lib/client-data";
 import {
 	ItemNodeSchema,
 	BrandNodeSchema,
@@ -136,12 +136,13 @@ export class SearchIndex {
 		console.time("SearchIndex initialization");
 
 		try {
-			// Load all data in parallel
+			// Load all data in parallel via fetch (not bundled in JS)
+			// Service worker caches these for offline support
 			const [items, brands, categories, seriesData] = await Promise.all([
-				getAllItems(),
-				getAllBrands(),
-				getAllCategories(),
-				getAllSeries(),
+				getClientItems(),
+				getClientBrands(),
+				getClientCategories(),
+				getClientSeries(),
 			]);
 
 			// Process items
