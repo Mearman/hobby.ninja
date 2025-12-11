@@ -63,37 +63,79 @@ function parseEdges(data: unknown): Record<string, Record<string, never>> {
 	return data.edges;
 }
 
-// Pre-validated data loaded at build time
-const parsedItems = parseJSONData<ItemNode>(ItemNodeSchema, itemsData);
-const parsedBrands = parseJSONData<BrandNode>(BrandNodeSchema, brandsData);
-const parsedCategories = parseJSONData<CategoryNode>(CategoryNodeSchema, categoriesData);
-const parsedSeries = parseJSONData<SeriesNode>(SeriesNodeSchema, seriesData);
-const parsedManuals = parseJSONData<ManualNode>(ManualNodeSchema, manualsData);
+// Lazy-loaded data caches (initialized on first access, not on module import)
+let _parsedItems: ItemNode[] | null = null;
+let _parsedBrands: BrandNode[] | null = null;
+let _parsedCategories: CategoryNode[] | null = null;
+let _parsedSeries: SeriesNode[] | null = null;
+let _parsedManuals: ManualNode[] | null = null;
+let _parsedEdges: Record<string, Record<string, never>> | null = null;
 
-// Parse edges from items data (where category relationships are stored)
-const parsedEdges = parseEdges(itemsData);
+// Lazy getters for parsed data
+function getParsedItems(): ItemNode[] {
+	if (_parsedItems === null) {
+		_parsedItems = parseJSONData<ItemNode>(ItemNodeSchema, itemsData);
+	}
+	return _parsedItems;
+}
 
-// Cache for loaded data (synchronous since data is pre-built)
-const staticData = {
-	items: parsedItems,
-	brands: parsedBrands,
-	categories: parsedCategories,
-	series: parsedSeries,
-	manuals: parsedManuals,
-	edges: parsedEdges,
-};
+function getParsedBrands(): BrandNode[] {
+	if (_parsedBrands === null) {
+		_parsedBrands = parseJSONData<BrandNode>(BrandNodeSchema, brandsData);
+	}
+	return _parsedBrands;
+}
 
-console.log("Loaded static graph data:", {
-	items: staticData.items.length,
-	brands: staticData.brands.length,
-	categories: staticData.categories.length,
-	series: staticData.series.length,
-	edges: Object.keys(staticData.edges).length,
-});
+function getParsedCategories(): CategoryNode[] {
+	if (_parsedCategories === null) {
+		_parsedCategories = parseJSONData<CategoryNode>(CategoryNodeSchema, categoriesData);
+	}
+	return _parsedCategories;
+}
+
+function getParsedSeries(): SeriesNode[] {
+	if (_parsedSeries === null) {
+		_parsedSeries = parseJSONData<SeriesNode>(SeriesNodeSchema, seriesData);
+	}
+	return _parsedSeries;
+}
+
+function getParsedManuals(): ManualNode[] {
+	if (_parsedManuals === null) {
+		_parsedManuals = parseJSONData<ManualNode>(ManualNodeSchema, manualsData);
+	}
+	return _parsedManuals;
+}
+
+function getParsedEdges(): Record<string, Record<string, never>> {
+	if (_parsedEdges === null) {
+		_parsedEdges = parseEdges(itemsData);
+	}
+	return _parsedEdges;
+}
+
+// Lazy accessor for static data (creates object on first access)
+function getStaticDataInternal() {
+	return {
+		items: getParsedItems(),
+		brands: getParsedBrands(),
+		categories: getParsedCategories(),
+		series: getParsedSeries(),
+		manuals: getParsedManuals(),
+		edges: getParsedEdges(),
+	};
+}
 
 export function getStaticData() {
-	return staticData;
+	return getStaticDataInternal();
 }
+
+// Memoization caches for sorted/enriched results
+let _allItemsCache: EnrichedItem[] | null = null;
+let _allBrandsCache: BrandNode[] | null = null;
+let _allCategoriesCache: CategoryNode[] | null = null;
+let _allSeriesCache: SeriesNode[] | null = null;
+let _allManualsCache: ManualNode[] | null = null;
 
 // Sort data by display name
 const sortByName = <T extends BaseNode>(a: T, b: T): number => {
@@ -104,23 +146,38 @@ const sortByName = <T extends BaseNode>(a: T, b: T): number => {
 
 // Export synchronous functions that return pre-validated data with enriched properties
 export function getAllItems(): EnrichedItem[] {
-	return [...staticData.items].map(item => enrichItemWithRelationships(item)).sort(sortByName);
+	if (_allItemsCache === null) {
+		_allItemsCache = [...getParsedItems()].map(item => enrichItemWithRelationships(item)).sort(sortByName);
+	}
+	return _allItemsCache;
 }
 
 export function getAllBrands(): BrandNode[] {
-	return [...staticData.brands].sort(sortByName);
+	if (_allBrandsCache === null) {
+		_allBrandsCache = [...getParsedBrands()].sort(sortByName);
+	}
+	return _allBrandsCache;
 }
 
 export function getAllCategories(): CategoryNode[] {
-	return [...staticData.categories].sort(sortByName);
+	if (_allCategoriesCache === null) {
+		_allCategoriesCache = [...getParsedCategories()].sort(sortByName);
+	}
+	return _allCategoriesCache;
 }
 
 export function getAllSeries(): SeriesNode[] {
-	return [...staticData.series].sort(sortByName);
+	if (_allSeriesCache === null) {
+		_allSeriesCache = [...getParsedSeries()].sort(sortByName);
+	}
+	return _allSeriesCache;
 }
 
 export function getAllManuals(): ManualNode[] {
-	return [...staticData.manuals].sort(sortByName);
+	if (_allManualsCache === null) {
+		_allManualsCache = [...getParsedManuals()].sort(sortByName);
+	}
+	return _allManualsCache;
 }
 
 // Get all unique grades from items
@@ -128,7 +185,7 @@ export function getAllGrades(): ItemNode[] {
 	const grades = new Set<string>();
 	const gradeNodes: ItemNode[] = [];
 
-	staticData.items.forEach(item => {
+	getParsedItems().forEach(item => {
 		if (item.grade && !grades.has(item.grade)) {
 			grades.add(item.grade);
 			// Create a grade node for consistency
@@ -149,7 +206,7 @@ export function getAllScales(): ItemNode[] {
 	const scales = new Set<string>();
 	const scaleNodes: ItemNode[] = [];
 
-	staticData.items.forEach(item => {
+	getParsedItems().forEach(item => {
 		if (item.scale && !scales.has(item.scale)) {
 			scales.add(item.scale);
 			// Create a scale node for consistency
@@ -177,24 +234,24 @@ export function getAllScales(): ItemNode[] {
 
 // Get specific node by ID with type safety (synchronous)
 export function getItemById(id: string): EnrichedItem | null {
-	const item = staticData.items.find(item => item.id === id);
+	const item = getParsedItems().find(item => item.id === id);
 	return item ? enrichItemWithRelationships(item) : null;
 }
 
 export function getBrandById(id: string): BrandNode | null {
-	return staticData.brands.find(brand => brand.id === id) ?? null;
+	return getParsedBrands().find(brand => brand.id === id) ?? null;
 }
 
 export function getCategoryById(id: string): CategoryNode | null {
-	return staticData.categories.find(category => category.id === id) ?? null;
+	return getParsedCategories().find(category => category.id === id) ?? null;
 }
 
 export function getSeriesById(id: string): SeriesNode | null {
-	return staticData.series.find(series => series.id === id) ?? null;
+	return getParsedSeries().find(series => series.id === id) ?? null;
 }
 
 export function getManualById(id: string): ManualNode | null {
-	return staticData.manuals.find(m => m.id === id) ?? null;
+	return getParsedManuals().find(m => m.id === id) ?? null;
 }
 
 // Helper function to resolve related nodes from edges
@@ -202,7 +259,7 @@ function resolveRelatedNodes(itemId: string, relationshipType: string, targetTyp
 	const edgePrefix = `item:${itemId}:${relationshipType}:${targetType}:`;
 	const relatedIds: string[] = [];
 
-	for (const edgeKey of Object.keys(staticData.edges)) {
+	for (const edgeKey of Object.keys(getParsedEdges())) {
 		if (edgeKey.startsWith(edgePrefix)) {
 			const relatedId = edgeKey.replace(edgePrefix, '');
 			relatedIds.push(relatedId);
@@ -216,13 +273,13 @@ function resolveRelatedNodes(itemId: string, relationshipType: string, targetTyp
 function getNodeNameById(nodeId: string, nodeType: string): string {
 	switch (nodeType) {
 		case 'brand':
-			const brand = staticData.brands.find(b => b.id === nodeId);
+			const brand = getParsedBrands().find(b => b.id === nodeId);
 			return brand ? getNodeDisplayName(brand) : '';
 		case 'series':
-			const series = staticData.series.find(s => s.id === nodeId);
+			const series = getParsedSeries().find(s => s.id === nodeId);
 			return series ? getNodeDisplayName(series) : '';
 		case 'category':
-			const category = staticData.categories.find(c => c.id === nodeId);
+			const category = getParsedCategories().find(c => c.id === nodeId);
 			return category ? getNodeDisplayName(category) : '';
 		default:
 			return '';
@@ -368,7 +425,7 @@ export function getItemsByCategory(categoryId: string): EnrichedItem[] {
 	const itemIds: string[] = [];
 
 	// Find all edges that connect items to this category
-	for (const edgeKey of Object.keys(staticData.edges)) {
+	for (const edgeKey of Object.keys(getParsedEdges())) {
 		if (edgeKey.startsWith(categoryEdgePrefix) && edgeKey.endsWith(categoryEdgeSuffix)) {
 			const itemId = edgeKey.split(":")[1]; // Extract item ID from "item:ITEM_ID:BELONGS_TO_CATEGORY:category:CATEGORY_ID"
 			itemIds.push(itemId);
@@ -376,7 +433,7 @@ export function getItemsByCategory(categoryId: string): EnrichedItem[] {
 	}
 
 	// Return the items that match the found IDs, enriched with relationship data
-	return staticData.items
+	return getParsedItems()
 		.filter(item => itemIds.includes(item.id))
 		.map(item => enrichItemWithRelationships(item))
 		.sort(sortByName);
@@ -390,7 +447,7 @@ export function getItemsBySeries(seriesId: string): EnrichedItem[] {
 	const itemIds: string[] = [];
 
 	// Find all edges that connect items to this series
-	for (const edgeKey of Object.keys(staticData.edges)) {
+	for (const edgeKey of Object.keys(getParsedEdges())) {
 		if (edgeKey.startsWith(seriesEdgePrefix) && edgeKey.endsWith(seriesEdgeSuffix)) {
 			const itemId = edgeKey.split(":")[1]; // Extract item ID from "item:ITEM_ID:BELONGS_TO_SERIES:series:SERIES_ID"
 			itemIds.push(itemId);
@@ -398,7 +455,7 @@ export function getItemsBySeries(seriesId: string): EnrichedItem[] {
 	}
 
 	// Return the items that match the found IDs, enriched with relationship data
-	return staticData.items
+	return getParsedItems()
 		.filter(item => itemIds.includes(item.id))
 		.map(item => enrichItemWithRelationships(item))
 		.sort(sortByName);
@@ -406,7 +463,7 @@ export function getItemsBySeries(seriesId: string): EnrichedItem[] {
 
 // Get all nodes combined
 export function getAllNodes(): GraphNode[] {
-	return [...staticData.items, ...staticData.brands, ...staticData.categories, ...staticData.series, ...staticData.manuals];
+	return [...getParsedItems(), ...getParsedBrands(), ...getParsedCategories(), ...getParsedSeries(), ...getParsedManuals()];
 }
 
 // Get nodes by type
@@ -421,11 +478,11 @@ export function getNodesByType<T extends GraphNode>(
 // Get node by any type
 export function getNodeByIdAny(id: string): GraphNode | null {
 	return (
-		staticData.items.find(item => item.id === id) ??
-		staticData.brands.find(brand => brand.id === id) ??
-		staticData.categories.find(category => category.id === id) ??
-		staticData.series.find(s => s.id === id) ??
-		staticData.manuals.find(manual => manual.id === id) ??
+		getParsedItems().find(item => item.id === id) ??
+		getParsedBrands().find(brand => brand.id === id) ??
+		getParsedCategories().find(category => category.id === id) ??
+		getParsedSeries().find(s => s.id === id) ??
+		getParsedManuals().find(manual => manual.id === id) ??
 		null
 	);
 }
@@ -433,8 +490,15 @@ export function getNodeByIdAny(id: string): GraphNode | null {
 // Validate that required data is available (synchronous)
 export function validateGraphData(): boolean {
 	// Return true if data was successfully loaded and validated
-	return staticData.items.length > 0 && staticData.brands.length > 0 && staticData.categories.length > 0 && staticData.series.length > 0;
+	return getParsedItems().length > 0 && getParsedBrands().length > 0 && getParsedCategories().length > 0 && getParsedSeries().length > 0;
 }
 
-// Export the static data for direct access in other modules
-export { staticData as graphData };
+// Export graphData as a getter that returns lazy-loaded data
+export const graphData = {
+	get items() { return getParsedItems(); },
+	get brands() { return getParsedBrands(); },
+	get categories() { return getParsedCategories(); },
+	get series() { return getParsedSeries(); },
+	get manuals() { return getParsedManuals(); },
+	get edges() { return getParsedEdges(); },
+};
