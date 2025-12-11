@@ -25,7 +25,7 @@ import {
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 
 import { useSearch, type SearchResult, type SearchOptions } from "@/lib/fuse-search";
-import { getNodeDisplayName } from "@/lib/schemas";
+import { getSearchItemDisplayName, formatSearchItemPrice } from "@/lib/client-data";
 
 interface FuseSearchProps {
   onResultClick?: (result: SearchResult) => void;
@@ -155,12 +155,12 @@ export function FuseSearch({
 		setShowSuggestions(false);
 	}, []);
 
-	// Format price for display
-	const formatPrice = useCallback((price?: { amount: number; currency: string }) => {
+	// Format price for display (SearchIndexItem only has amount, not currency)
+	const formatPrice = useCallback((price?: { amount: number }) => {
 		if (!price) return "";
 		return new Intl.NumberFormat("ja-JP", {
 			style: "currency",
-			currency: price.currency || "JPY",
+			currency: "JPY",
 		}).format(price.amount);
 	}, []);
 
@@ -259,7 +259,7 @@ export function FuseSearch({
 											<Group justify="space-between" align="start">
 												<Box flex={1}>
 													<Text size="sm" fw={500} lineClamp={1}>
-														{getNodeDisplayName(result.item)}
+														{getSearchItemDisplayName(result.item)}
 													</Text>
 													{result.item.series && (
 														<Text size="xs" c="dimmed" lineClamp={1}>
