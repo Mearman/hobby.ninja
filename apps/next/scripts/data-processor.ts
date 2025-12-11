@@ -269,6 +269,46 @@ export class DataProcessor {
     results.nodes = allNodes.length;
     results.edges = allEdges.length;
 
+    // Step 5: Generate lightweight homepage data (stats + featured items)
+    const itemNodes = allNodes.filter(node => node.type === 'item');
+    const brandNodes = allNodes.filter(node => node.type === 'brand');
+    const categoryNodes = allNodes.filter(node => node.type === 'category');
+    const seriesNodes = allNodes.filter(node => node.type === 'series');
+
+    // Get featured items (first 12 by name)
+    const featuredItems = [...itemNodes]
+      .sort((a, b) => {
+        const nameA = typeof a.name === 'string' ? a.name : a.name?.en || a.name?.ja || '';
+        const nameB = typeof b.name === 'string' ? b.name : b.name?.en || b.name?.ja || '';
+        return nameA.localeCompare(nameB);
+      })
+      .slice(0, 12);
+
+    // Get popular brands (first 8 by name)
+    const popularBrands = [...brandNodes]
+      .sort((a, b) => {
+        const nameA = typeof a.name === 'string' ? a.name : a.name?.en || a.name?.ja || '';
+        const nameB = typeof b.name === 'string' ? b.name : b.name?.en || b.name?.ja || '';
+        return nameA.localeCompare(nameB);
+      })
+      .slice(0, 8);
+
+    const homepageData = {
+      stats: {
+        totalItems: itemNodes.length,
+        totalBrands: brandNodes.length,
+        totalCategories: categoryNodes.length,
+        totalSeries: seriesNodes.length,
+      },
+      featuredItems,
+      popularBrands,
+      categories: categoryNodes,
+    };
+
+    const homepageOutputFile = path.join(this.outputDir, 'homepage.json');
+    fs.writeFileSync(homepageOutputFile, JSON.stringify(homepageData, null, 2));
+    console.log(`✅ Generated homepage.json with pre-computed stats and featured content`);
+
     console.log('\n📊 Unified Graph Build Summary:');
     console.log(`   Total nodes: ${allNodes.length}`);
     console.log(`   Total deduplicated edges: ${allEdges.length}`);

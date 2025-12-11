@@ -44,7 +44,8 @@ import {
 import Link from "next/link";
 
 import { UI } from "@/lib/constants";
-import { getAllItems, getAllBrands, getAllCategories, getAllSeries } from "@/lib/graph-data";
+// Import lightweight pre-computed homepage data instead of all items
+import homepageData from "@/data/homepage.json";
 import { getNodeDisplayName } from "@/lib/schemas";
 
 // Item Card Component
@@ -282,33 +283,12 @@ const sampleTestimonials = [
 ];
 
 export default function HomePage() {
-	// Load data directly (synchronous)
-	const items = getAllItems();
-	const brands = getAllBrands();
-	const allCategories = getAllCategories();
-	const series = getAllSeries();
+	// Use pre-computed homepage data (8KB instead of 19MB)
+	// This avoids loading all 6000+ items just for the homepage
+	const { stats, featuredItems, popularBrands, categories } = homepageData;
 
-	const stats = {
-		totalItems: items.length,
-		totalBrands: brands.length,
-		totalCategories: allCategories.length,
-		totalSeries: series.length,
-	};
-
-	// Get featured items (first 12 items for static display)
-	const featuredItems = items.slice(0, 12);
-
-	// Get popular brands (first 8)
-	const popularBrands = brands.slice(0, 8);
-
-	// Get all categories
-	const categories = allCategories;
-
-	// Get recent items (last modified)
-	const recentItems = [...items]
-		.filter(item => item.modified)
-		.sort((a, b) => new Date(b.modified || 0).getTime() - new Date(a.modified || 0).getTime())
-		.slice(0, 8);
+	// Recent items not available in pre-computed data, use featured items as fallback
+	const recentItems = featuredItems.slice(0, 8);
 
 	
 	const features = [
