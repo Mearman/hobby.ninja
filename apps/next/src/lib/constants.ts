@@ -105,8 +105,8 @@ export const FILTER = {
 export async function getMaxYear(): Promise<number> {
 	try {
 		// Import here to avoid circular dependencies
-		const { loadItemsFromFiles } = await import('./data-loader');
-		const items = await loadItemsFromFiles();
+		const { getAllItems } = await import('./graph-data');
+		const items = await getAllItems();
 
 		// Extract years from release dates
 		const years = items
