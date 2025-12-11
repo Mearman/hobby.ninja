@@ -21,6 +21,21 @@ interface GraphNode {
   sourceUrl?: string;
   url?: string;
   extractedAt?: string;
+  // Item-specific fields
+  price?: {
+    amount: number;
+    currency: string;
+    taxIncluded?: boolean;
+    taxRate?: number;
+  };
+  releaseDate?: {
+    ja?: string;
+    year?: number;
+    month?: number;
+    day?: number;
+  };
+  scale?: string;
+  targetAge?: number;
 }
 
 export interface UnifiedEdge {
@@ -149,7 +164,12 @@ export class DataProcessor {
             ...(rawData.images && { images: rawData.images }),
             ...(rawData.sourceUrl && { sourceUrl: rawData.sourceUrl }),
             ...(rawData.url && { url: rawData.url }),
-            ...(rawData.extractedAt && { extractedAt: rawData.extractedAt })
+            ...(rawData.extractedAt && { extractedAt: rawData.extractedAt }),
+            // Item-specific fields
+            ...(rawData.price && { price: rawData.price }),
+            ...(rawData.releaseDate && { releaseDate: rawData.releaseDate }),
+            ...(rawData.scale && { scale: rawData.scale }),
+            ...(rawData.targetAge && { targetAge: rawData.targetAge })
           };
 
           allNodes.push(node);
