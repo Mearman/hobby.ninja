@@ -1,8 +1,8 @@
 import pako from "pako";
 
 import type { CollectionItem } from "./collection-storage";
-import { getClientItems } from "./client-data";
-import { getNodeDisplayName, isItemNode } from "./schemas";
+import { isValidItemId, getItemById } from "./client-data";
+import { getNodeDisplayName } from "./schemas";
 
 // Export collection data
 export interface ExportData {
@@ -110,12 +110,9 @@ export const importCollection = async (
 			}
 			seenIds.add(item.id);
 
-			// Validate itemId exists in our database
+			// Validate itemId exists in our database using lightweight ID lookup
 			try {
-				const allItems = await getClientItems();
-				const existsInDatabase = allItems.some(dbItem =>
-					isItemNode(dbItem) && dbItem.id === item.itemId,
-				);
+				const existsInDatabase = await isValidItemId(item.itemId);
 
 				if (!existsInDatabase) {
 					invalidCount++;
@@ -235,11 +232,8 @@ export const exportCollectionCSV = async (collectionId: string, includeHidden = 
 		const csvRows: string[] = [headers.join(",")];
 
 		for (const item of exportData.items) {
-			// Get database item for name
-			const allItems = await getClientItems();
-			const dbItem = allItems.find(dbItem =>
-				isItemNode(dbItem) && dbItem.id === item.itemId,
-			);
+			// Get database item for name using per-item lookup
+			const dbItem = await getItemById(item.itemId);
 
 			const row = [
 				`"${item.id ?? ""}"`,
@@ -270,12 +264,17 @@ export const importFromDatabase = async (
 	defaultStatus = "wanted",
 ): Promise<CollectionItem[]> => {
 	try {
-		const allItems = await getClientItems();
 		const items: CollectionItem[] = [];
 
-		for (const itemId of itemIds) {
-			const dbItem = allItems.find(item => isItemNode(item) && item.id === itemId);
+		// Fetch items in parallel using per-item lookups
+		const fetchResults = await Promise.all(
+			itemIds.map(async itemId => {
+				const dbItem = await getItemById(itemId);
+				return { itemId, dbItem };
+			})
+		);
 
+		for (const { itemId, dbItem } of fetchResults) {
 			if (dbItem) {
 				items.push({
 					id: `item-${Date.now()}-${Math.floor(Math.random() * 1_000_000)}`,
