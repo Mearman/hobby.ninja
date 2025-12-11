@@ -14,16 +14,14 @@ import {
 } from "@mantine/core";
 import Link from "next/link";
 
-import { getAllItems, getItemById } from "@/lib/graph-data";
+import { getAllItems, getItemById, type EnrichedItem } from "@/lib/graph-data";
 import {
 	getNodeDisplayName,
 	getNodePrice,
 	getNodeReleaseYear,
 	getNodeImages,
-	getNodeDescription,
 	getNodeAccessories,
 	isItemNode,
-	type ItemNode,
 } from "@/lib/schemas";
 
 interface ItemPageProps {
@@ -56,14 +54,8 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 	};
 }
 
-// Helper to get localized text (prefer English, fallback to Japanese)
-function getLocalizedText(item: { ja: string; en?: string } | string): string {
-	if (typeof item === "string") return item;
-	return item.en || item.ja;
-}
-
 // Helper to get description items as an array
-function getDescriptionItems(item: ItemNode): string[] {
+function getDescriptionItems(item: EnrichedItem): string[] {
 	if (!item.description || !Array.isArray(item.description)) return [];
 	return item.description.map((desc: unknown) => {
 		if (typeof desc === "string") return desc;
@@ -76,7 +68,7 @@ function getDescriptionItems(item: ItemNode): string[] {
 }
 
 // Helper to get contents items as an array
-function getContentsItems(item: ItemNode): string[] {
+function getContentsItems(item: EnrichedItem): string[] {
 	if (!item.contents || !Array.isArray(item.contents)) return [];
 	return item.contents.map((content) => {
 		if (typeof content === "string") return content;
@@ -151,8 +143,15 @@ export default async function ItemPage({ params }: ItemPageProps) {
 							<Stack gap="md">
 								<Title order={1} size="h2">{displayName}</Title>
 
-								{/* Metadata Badges */}
+								{/* Metadata Badges - Clickable links to related entities */}
 								<Group gap="xs">
+									{item.category && item.categoryId && (
+										<Link href={`/category/${item.categoryId}`} style={{ textDecoration: "none" }}>
+											<Badge color="gray" variant="light" style={{ cursor: "pointer" }}>
+												{item.category}
+											</Badge>
+										</Link>
+									)}
 									{item.brand && (
 										<Badge color="blue" variant="light">{item.brand}</Badge>
 									)}
@@ -162,8 +161,12 @@ export default async function ItemPage({ params }: ItemPageProps) {
 									{item.scale && (
 										<Badge color="orange" variant="light">{item.scale}</Badge>
 									)}
-									{item.series && (
-										<Badge color="violet" variant="light">{item.series}</Badge>
+									{item.series && item.seriesId && (
+										<Link href={`/series/${item.seriesId}`} style={{ textDecoration: "none" }}>
+											<Badge color="violet" variant="light" style={{ cursor: "pointer" }}>
+												{item.series}
+											</Badge>
+										</Link>
 									)}
 								</Group>
 
