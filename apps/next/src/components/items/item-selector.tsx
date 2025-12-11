@@ -73,7 +73,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
                         width={60}
                         height={60}
                         fit="cover"
-                        styles={{ root: { borderRadius: '4px' } }}
+                        style={{ borderRadius: '4px' }}
                       />
                       <Text size="xs" fw={500} lineClamp={2}>
                         {getNodeDisplayName(item)}
@@ -314,7 +314,7 @@ export function SelectableItemCard({
                 width={40}
                 height={40}
                 fit="cover"
-                radius="sm"
+                style={{ borderRadius: 'var(--mantine-radius-sm)' }}
               />
               <Text size="sm" fw={500}>
                 {getNodeDisplayName(item)}
@@ -370,9 +370,10 @@ export function SelectableItemCard({
         <CustomImage
           src={primaryImage ?? placeholderSrc}
           alt={getNodeDisplayName(item)}
-          width="100%"
+          width={300}
           height={200}
           fit="cover"
+          style={{ width: '100%' }}
         />
       </Box>
 
