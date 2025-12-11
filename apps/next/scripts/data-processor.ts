@@ -360,6 +360,100 @@ export class DataProcessor {
     }
     console.log(`✅ Copied data files to public/data for client-side fetch (offline support)`);
 
+    // Step 8: Generate optimized client-side data files
+    // - search-index.json: Lightweight search data (~2MB instead of 19MB)
+    // - item-ids.json: Array of valid IDs for validation (~50KB)
+    // - items/{id}.json: Full data per item for specific lookups (~3KB each)
+    console.log('\n🔧 Generating optimized client-side data files...');
+
+    // 8a: Generate lightweight search index (only fields needed for Fuse.js)
+    interface SearchIndexItem {
+      id: string;
+      name: { ja: string; en?: string } | string;
+      brand?: string;
+      category?: string;
+      series?: string;
+      grade?: string;
+      scale?: string;
+      price?: { amount: number };
+      releaseDate?: { year?: number };
+    }
+
+    const searchIndexData: SearchIndexItem[] = itemNodes.map(node => ({
+      id: node.id,
+      name: node.name,
+      ...(node.price && { price: { amount: node.price.amount } }),
+      ...(node.releaseDate?.year && { releaseDate: { year: node.releaseDate.year } }),
+    }));
+
+    // Enrich with relationship data from edges
+    const itemEdgeMap = new Map<string, { brand?: string; category?: string; series?: string; grade?: string; scale?: string }>();
+
+    for (const edge of allEdges) {
+      if (edge.sourceType === 'item') {
+        const existing = itemEdgeMap.get(edge.sourceId) || {};
+        if (edge.targetType === 'brand') {
+          const brandNode = brandNodes.find(b => b.id === edge.targetId);
+          if (brandNode) existing.brand = typeof brandNode.name === 'string' ? brandNode.name : brandNode.name?.en || brandNode.name?.ja;
+        }
+        if (edge.targetType === 'category') {
+          const categoryNode = categoryNodes.find(c => c.id === edge.targetId);
+          if (categoryNode) existing.category = typeof categoryNode.name === 'string' ? categoryNode.name : categoryNode.name?.en || categoryNode.name?.ja;
+        }
+        if (edge.targetType === 'series') {
+          const seriesNode = seriesNodes.find(s => s.id === edge.targetId);
+          if (seriesNode) existing.series = typeof seriesNode.name === 'string' ? seriesNode.name : seriesNode.name?.en || seriesNode.name?.ja;
+        }
+        itemEdgeMap.set(edge.sourceId, existing);
+      }
+    }
+
+    // Add enriched data to search index
+    for (const item of searchIndexData) {
+      const enriched = itemEdgeMap.get(item.id);
+      if (enriched) {
+        if (enriched.brand) item.brand = enriched.brand;
+        if (enriched.category) item.category = enriched.category;
+        if (enriched.series) item.series = enriched.series;
+      }
+      // Scale and grade come from item node directly if stored there
+      const originalNode = itemNodes.find(n => n.id === item.id);
+      if (originalNode?.scale) item.scale = originalNode.scale;
+    }
+
+    const searchIndexFile = path.join(publicDataDir, 'search-index.json');
+    fs.writeFileSync(searchIndexFile, JSON.stringify(searchIndexData));
+    const searchIndexSize = (fs.statSync(searchIndexFile).size / 1024 / 1024).toFixed(2);
+    console.log(`✅ Generated search-index.json (${searchIndexSize}MB) with ${searchIndexData.length} items`);
+
+    // 8b: Generate item IDs list for validation
+    const itemIdsData = itemNodes.map(node => node.id);
+    const itemIdsFile = path.join(publicDataDir, 'item-ids.json');
+    fs.writeFileSync(itemIdsFile, JSON.stringify(itemIdsData));
+    const itemIdsSize = (fs.statSync(itemIdsFile).size / 1024).toFixed(1);
+    console.log(`✅ Generated item-ids.json (${itemIdsSize}KB) with ${itemIdsData.length} IDs`);
+
+    // 8c: Generate per-item JSON files
+    const itemsDir = path.join(publicDataDir, 'items');
+    if (!fs.existsSync(itemsDir)) {
+      fs.mkdirSync(itemsDir, { recursive: true });
+    }
+
+    // Get full item data with enriched relationships
+    for (const node of itemNodes) {
+      const enriched = itemEdgeMap.get(node.id);
+      const fullItemData = {
+        ...node,
+        ...(enriched?.brand && { brand: enriched.brand }),
+        ...(enriched?.category && { category: enriched.category }),
+        ...(enriched?.series && { series: enriched.series }),
+      };
+
+      const itemFile = path.join(itemsDir, `${node.id}.json`);
+      fs.writeFileSync(itemFile, JSON.stringify(fullItemData));
+    }
+    console.log(`✅ Generated ${itemNodes.length} per-item JSON files in public/data/items/`);
+
     return results;
   }
 
