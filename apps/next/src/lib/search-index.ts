@@ -2,15 +2,17 @@ import Fuse, { type IFuseOptions, type FuseResult } from "fuse.js";
 
 import { PAGINATION, FILTER } from "./constants";
 
-import { getClientItems, getClientBrands, getClientCategories, getClientSeries } from "@/lib/client-data";
 import {
-	ItemNodeSchema,
+	getSearchIndex as getSearchIndexData,
+	getClientBrands,
+	getClientCategories,
+	getClientSeries,
+	type SearchIndexItem,
+} from "@/lib/client-data";
+import {
 	BrandNodeSchema,
 	CategoryNodeSchema,
 	SeriesNodeSchema,
-	LocalizedDescriptionSchema,
-	ManualSchema,
-	type ItemNode,
 	type BrandNode,
 	type CategoryNode,
 	type SeriesNode,
@@ -21,35 +23,6 @@ function getLocalizedString(text: string | { ja: string; en?: string } | undefin
 	if (!text) return "";
 	if (typeof text === "string") return text;
 	return text.ja ?? text.en ?? "";
-}
-
-// Helper function to extract string from localized description array using Zod validation
-function getLocalizedDescription(desc: unknown): string {
-	// Use Zod to validate the description structure
-	const descResult = LocalizedDescriptionSchema.safeParse(desc);
-	if (!descResult.success) return "";
-
-	const validatedDesc = descResult.data;
-	return validatedDesc.map(d => d.ja ?? d.en ?? "").join(" ");
-}
-
-// Helper function to extract manual identifier using Zod validation
-function getManualId(manuals: unknown): string | undefined {
-	// Use Zod to validate the manuals structure
-	const manualsResult = ItemNodeSchema.shape.manuals.safeParse(manuals);
-	if (!manualsResult.success || !manualsResult.data || manualsResult.data.length === 0) return undefined;
-
-	const validatedManuals = manualsResult.data;
-	const manual = validatedManuals[0];
-	if (typeof manual === "string") return manual;
-
-	// Use Zod to validate the individual manual structure
-	const manualResult = ManualSchema.safeParse(manual);
-	if (!manualResult.success) return undefined;
-
-	const validatedManual = manualResult.data;
-	if (typeof validatedManual === "string") return validatedManual;
-	return validatedManual.id;
 }
 
 export interface SearchableItem {
@@ -63,10 +36,10 @@ export interface SearchableItem {
   grade?: string;
   scale?: string;
   price?: number;
-  releaseDate?: string;
-  manual?: string;
+  releaseYear?: number;
   type: "item" | "brand" | "category" | "series";
-  originalData: ItemNode | BrandNode | CategoryNode | SeriesNode;
+  // originalData is only available for brand/category/series (not items to save memory)
+  originalData?: BrandNode | CategoryNode | SeriesNode;
 }
 
 export interface SearchOptions {
@@ -137,9 +110,10 @@ export class SearchIndex {
 
 		try {
 			// Load all data in parallel via fetch (not bundled in JS)
+			// Items use lightweight search index (~2MB instead of 19MB)
 			// Service worker caches these for offline support
 			const [items, brands, categories, seriesData] = await Promise.all([
-				getClientItems(),
+				getSearchIndexData(),
 				getClientBrands(),
 				getClientCategories(),
 				getClientSeries(),
@@ -148,43 +122,33 @@ export class SearchIndex {
 			// Process items
 			const searchableItems: SearchableItem[] = [];
 
-			// Add items with Zod validation
+			// Add items from lightweight search index (already validated during build)
 			for (const item of items) {
-				// Validate with Zod schema
-				const validationResult = ItemNodeSchema.safeParse(item);
-				if (!validationResult.success) {
-					console.warn(`Invalid item data for item ${item?.id}:`, validationResult.error);
-					continue;
-				}
-
-				const validatedItem = validationResult.data;
-				if (!validatedItem?.name) continue;
+				if (!item?.name) continue;
 
 				const searchableItem: SearchableItem = {
-					id: validatedItem.id,
-					name: getLocalizedString(validatedItem.name),
-					japaneseName: getLocalizedString(validatedItem.name),
-					description: getLocalizedDescription(validatedItem.description),
-					brand: validatedItem.brand,
-					category: validatedItem.category,
-					series: validatedItem.series,
-					grade: validatedItem.grade,
-					scale: validatedItem.scale,
-					price: validatedItem.price?.amount,
-					releaseDate: validatedItem.releaseDate?.ja,
-					manual: getManualId(validatedItem.manuals),
+					id: item.id,
+					name: getLocalizedString(item.name),
+					japaneseName: getLocalizedString(item.name),
+					brand: item.brand,
+					category: item.category,
+					series: item.series,
+					grade: item.grade,
+					scale: item.scale,
+					price: item.price?.amount,
+					releaseYear: item.releaseDate?.year,
 					type: "item",
-					originalData: validatedItem,
+					// No originalData for items - use getItemById() if full data needed
 				};
 
 				searchableItems.push(searchableItem);
 
 				// Build filter sets
-				if (validatedItem.category) this.categories.add(validatedItem.category);
-				if (validatedItem.brand) this.brands.add(validatedItem.brand);
-				if (validatedItem.grade) this.grades.add(validatedItem.grade);
-				if (validatedItem.scale) this.scales.add(validatedItem.scale);
-				if (validatedItem.series) this.series.add(validatedItem.series);
+				if (item.category) this.categories.add(item.category);
+				if (item.brand) this.brands.add(item.brand);
+				if (item.grade) this.grades.add(item.grade);
+				if (item.scale) this.scales.add(item.scale);
+				if (item.series) this.series.add(item.series);
 			}
 
 			// Add brands with Zod validation
