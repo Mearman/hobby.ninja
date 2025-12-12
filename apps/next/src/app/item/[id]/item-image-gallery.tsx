@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 import { Carousel } from "@mantine/carousel";
-import type { EmblaCarouselType } from "embla-carousel";
 import { Image, Box, SimpleGrid, ActionIcon, Group, Modal, Text } from "@mantine/core";
 import { IconPlayerPlay, IconPlayerPause, IconX, IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+import type { EmblaCarouselType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 
 import { useUserPreferences } from "@/hooks/use-user-preferences";
 
@@ -34,8 +34,11 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 		if (!embla || !isLoaded || images.length <= 1) return;
 
 		// Access autoplay plugin through embla's plugins API
-		const autoplay = embla.plugins()?.autoplay;
-		if (!autoplay || typeof autoplay.play !== "function") return;
+		// Cast to partial type - module augmentation claims autoplay always exists, but at runtime
+		// it's only present when the Autoplay plugin is loaded (depends on slideshowEnabled)
+		const emblaPlugins = embla.plugins() as Partial<{ autoplay: { play: () => void; stop: () => void } }>;
+		const autoplay = emblaPlugins.autoplay;
+		if (!autoplay) return;
 
 		if (preferences.slideshowEnabled) {
 			autoplay.play();
@@ -84,17 +87,28 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 		if (!fullscreenOpen) return;
 
 		const handleKeyDown = (e: KeyboardEvent) => {
-			if (e.key === "ArrowLeft") {
-				handleFullscreenPrev();
-			} else if (e.key === "ArrowRight") {
-				handleFullscreenNext();
-			} else if (e.key === "Escape") {
-				setFullscreenOpen(false);
+			switch (e.key) {
+				case "ArrowLeft": {
+					handleFullscreenPrev();
+			
+					break;
+				}
+				case "ArrowRight": {
+					handleFullscreenNext();
+			
+					break;
+				}
+				case "Escape": {
+					setFullscreenOpen(false);
+			
+					break;
+				}
+			// No default
 			}
 		};
 
-		window.addEventListener("keydown", handleKeyDown);
-		return () => window.removeEventListener("keydown", handleKeyDown);
+		globalThis.addEventListener("keydown", handleKeyDown);
+		return () => { globalThis.removeEventListener("keydown", handleKeyDown); };
 	}, [fullscreenOpen, handleFullscreenPrev, handleFullscreenNext]);
 
 	if (images.length === 0) {
@@ -135,12 +149,6 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 						backgroundColor: "var(--mantine-color-white)",
 						border: "1px solid var(--mantine-color-gray-3)",
 					},
-					indicator: {
-						backgroundColor: "var(--mantine-color-gray-4)",
-						"&[data-active]": {
-							backgroundColor: "var(--mantine-color-blue-6)",
-						},
-					},
 				}}
 			>
 				{images.map((img, index) => (
@@ -166,7 +174,7 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 					{images.map((img, index) => (
 						<Box
 							key={index}
-							onClick={() => handleThumbnailClick(index)}
+							onClick={() => { handleThumbnailClick(index); }}
 							style={{
 								cursor: "pointer",
 								border: selectedIndex === index
@@ -192,8 +200,8 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 			{/* Fullscreen Modal */}
 			<Modal
 				opened={fullscreenOpen}
-				onClose={() => setFullscreenOpen(false)}
-				fullScreen
+				onClose={() => { setFullscreenOpen(false); }}
+				fullScreen={true}
 				withCloseButton={false}
 				styles={{
 					body: {
@@ -220,7 +228,7 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 					<ActionIcon
 						variant="subtle"
 						color="white"
-						onClick={() => setFullscreenOpen(false)}
+						onClick={() => { setFullscreenOpen(false); }}
 						aria-label="Close fullscreen"
 					>
 						<IconX size={24} />
@@ -288,7 +296,7 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 						{images.map((img, index) => (
 							<Box
 								key={index}
-								onClick={() => setSelectedIndex(index)}
+								onClick={() => { setSelectedIndex(index); }}
 								style={{
 									cursor: "pointer",
 									border: selectedIndex === index

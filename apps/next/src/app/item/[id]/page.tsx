@@ -1,5 +1,3 @@
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
 import {
 	Container,
 	Card,
@@ -11,12 +9,15 @@ import {
 	SimpleGrid,
 	Anchor,
 } from "@mantine/core";
+import { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
-import { getItemById, type EnrichedItem } from "@/lib/graph-data";
-import { ItemImageGallery } from "./ItemImageGallery";
+import { ItemImageGallery } from "./item-image-gallery";
+
 // Import lightweight static params (96KB) instead of full items (19MB) for generateStaticParams
 import staticParams from "@/data/static-params.json";
+import { getItemById, type EnrichedItem } from "@/lib/graph-data";
 import {
 	getNodeDisplayName,
 	getNodePrice,
@@ -62,6 +63,8 @@ function getDescriptionItems(item: EnrichedItem): string[] {
 		if (typeof desc === "string") return desc;
 		if (typeof desc === "object" && desc !== null) {
 			const d = desc as { ja?: string; en?: string };
+			// Using || intentionally - fallback on empty string too, not just null/undefined
+			// eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
 			return d.en || d.ja || "";
 		}
 		return "";
@@ -75,12 +78,16 @@ function getContentsItems(item: EnrichedItem): string[] {
 		if (typeof content === "string") return content;
 		if (typeof content === "object" && content !== null) {
 			const c = content as { ja?: string; en?: string };
+			// Using || intentionally - fallback on empty string too, not just null/undefined
+			// eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
 			return c.en || c.ja || "";
 		}
 		return "";
 	}).filter(Boolean);
 }
 
+// Next.js requires default exports for page components
+// eslint-disable-next-line import/no-default-export
 export default async function ItemPage({ params }: ItemPageProps) {
 	const { id } = await params;
 	const item = getItemById(id);
@@ -112,13 +119,13 @@ export default async function ItemPage({ params }: ItemPageProps) {
 				{/* Main content */}
 				<SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
 					{/* Left column - Images */}
-					<Card withBorder p="lg">
+					<Card withBorder={true} p="lg">
 						<ItemImageGallery images={images} displayName={displayName} />
 					</Card>
 
 					{/* Right column - Details */}
 					<Stack gap="md">
-						<Card withBorder p="lg">
+						<Card withBorder={true} p="lg">
 							<Stack gap="md">
 								<Title order={1} size="h2">{displayName}</Title>
 
@@ -182,7 +189,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
 						{/* Description */}
 						{descriptionItems.length > 0 && (
-							<Card withBorder p="lg">
+							<Card withBorder={true} p="lg">
 								<Stack gap="sm">
 									<Title order={3} size="h4">Description</Title>
 									<Stack gap="xs">
@@ -200,7 +207,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 				<SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
 					{/* Accessories */}
 					{accessories.length > 0 && (
-						<Card withBorder p="lg">
+						<Card withBorder={true} p="lg">
 							<Stack gap="sm">
 								<Title order={3} size="h4">Accessories</Title>
 								<Stack gap="xs">
@@ -214,7 +221,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
 					{/* Contents */}
 					{contentsItems.length > 0 && (
-						<Card withBorder p="lg">
+						<Card withBorder={true} p="lg">
 							<Stack gap="sm">
 								<Title order={3} size="h4">Box Contents</Title>
 								<Stack gap="xs">

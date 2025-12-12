@@ -82,8 +82,8 @@ export default [
 					jsx: true,
 				},
 				// Use absolute paths for TypeScript project configurations
+				// Note: tsconfig.base.json excluded - it lacks path aliases (@/*) that apps define
 				project: [
-					path.resolve(__dirname, "tsconfig.base.json"),
 					path.resolve(__dirname, "packages/types/tsconfig.json"),
 					path.resolve(__dirname, "packages/utils/tsconfig.json"),
 					path.resolve(__dirname, "packages/cli/tsconfig.json"),
@@ -212,8 +212,9 @@ export default [
 						12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 100,
 						120, 128, 160, 200, 240, 256, 300, 320, 400,
 						480, 500, 512, 600, 640, 720, 768, 800, 900,
-						1000, 1024, 1200, 1600, 1920, 2048
-					], // Common pixel/spacing values
+						1000, 1024, 1200, 1600, 1920, 2048,
+						0.5, 0.6, 0.7, 0.8, 0.9,
+					], // Common pixel/spacing/opacity values
 					ignoreArrayIndexes: true,
 					ignoreClassFieldInitialValues: true,
 					ignoreEnums: true,
