@@ -22,21 +22,27 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 	const autoplayRef = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }));
 
 	// Memoize plugins array to prevent recreation on every render
+	// Only include autoplay if we have multiple images (slideshow makes no sense for single image)
 	const plugins = useMemo(() => {
-		if (!isLoaded) return [];
+		if (!isLoaded || images.length <= 1) return [];
 		return preferences.slideshowEnabled ? [autoplayRef.current] : [];
-	}, [preferences.slideshowEnabled, isLoaded]);
+	}, [preferences.slideshowEnabled, isLoaded, images.length]);
 
 	// Handle autoplay state changes
 	useEffect(() => {
-		if (!embla || !isLoaded) return;
+		// Only control autoplay if we have multiple images and carousel is ready
+		if (!embla || !isLoaded || images.length <= 1) return;
+
+		// Access autoplay plugin through embla's plugins API
+		const autoplay = embla.plugins()?.autoplay;
+		if (!autoplay || typeof autoplay.play !== "function") return;
 
 		if (preferences.slideshowEnabled) {
-			autoplayRef.current.play();
+			autoplay.play();
 		} else {
-			autoplayRef.current.stop();
+			autoplay.stop();
 		}
-	}, [embla, preferences.slideshowEnabled, isLoaded]);
+	}, [embla, preferences.slideshowEnabled, isLoaded, images.length]);
 
 	const handleThumbnailClick = useCallback((index: number) => {
 		if (embla) {
