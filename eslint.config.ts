@@ -1,23 +1,25 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
 import js from "@eslint/js";
+import nx from "@nx/eslint-plugin";
 import typescript from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
+import type { ESLint } from "eslint";
+import prettier from "eslint-config-prettier";
+import barrelFiles from "eslint-plugin-barrel-files";
+import importPlugin from "eslint-plugin-import";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import markdown from "eslint-plugin-markdown";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
-import importPlugin from "eslint-plugin-import";
-import jsxA11y from "eslint-plugin-jsx-a11y";
-import prettier from "eslint-config-prettier";
-import unicorn from "eslint-plugin-unicorn";
 import sonarjs from "eslint-plugin-sonarjs";
-import nx from "@nx/eslint-plugin";
-import markdown from "eslint-plugin-markdown";
+import unicorn from "eslint-plugin-unicorn";
 import tseslint from "typescript-eslint";
-import barrelFiles from "eslint-plugin-barrel-files";
 
 import { eslintPluginNoEmoji } from "./eslint-plugins/eslintPluginNoEmoji";
 
-import path from "path";
-import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -121,10 +123,10 @@ export default [
 			"react-hooks": reactHooks,
 			"react-refresh": reactRefresh,
 			import: importPlugin,
-			"jsx-a11y": jsxA11y,
-			"no-emoji": eslintPluginNoEmoji,
+			"jsx-a11y": jsxA11y as unknown as ESLint.Plugin,
+			"no-emoji": eslintPluginNoEmoji as unknown as ESLint.Plugin,
 			sonarjs: sonarjs,
-						"barrel-files": barrelFiles,
+			"barrel-files": barrelFiles as unknown as ESLint.Plugin,
 		},
 		settings: {
 			react: {
@@ -357,7 +359,8 @@ export default [
 			],
 
 			// JSX A11y rules (enhanced from Nx flat/react-jsx)
-			...jsxA11y.configs.recommended.rules,
+			// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- jsx-a11y lacks proper types
+			...(jsxA11y.configs.recommended.rules as Record<string, unknown>),
 			"jsx-a11y/anchor-is-valid": [
 				"warn",
 				{ aspects: ["noHref", "invalidHref"] },
@@ -402,7 +405,6 @@ export default [
 			"no-extra-label": "warn",
 			"no-fallthrough": "warn",
 			"no-func-assign": "warn",
-			"no-implied-eval": "warn",
 			"no-invalid-regexp": "warn",
 			"no-iterator": "warn",
 			"no-label-var": "warn",
@@ -443,7 +445,6 @@ export default [
 			"no-sparse-arrays": "warn",
 			"no-template-curly-in-string": "warn",
 			"no-this-before-super": "warn",
-			"no-throw-literal": "warn",
 			"no-unexpected-multiline": "warn",
 			"no-unreachable": "warn",
 			"no-unused-labels": "warn",
@@ -609,8 +610,8 @@ export default [
 		// Markdown files configuration with emoji ban
 		files: ["**/*.md"],
 		plugins: {
-			markdown: markdown,
-			"no-emoji": eslintPluginNoEmoji,
+			markdown: markdown as unknown as ESLint.Plugin,
+			"no-emoji": eslintPluginNoEmoji as unknown as ESLint.Plugin,
 		},
 		processor: "markdown/markdown",
 		languageOptions: {
@@ -625,7 +626,7 @@ export default [
 		// Configuration for code blocks extracted from markdown files
 		files: ["**/*.md/**"],
 		plugins: {
-			"no-emoji": eslintPluginNoEmoji,
+			"no-emoji": eslintPluginNoEmoji as unknown as ESLint.Plugin,
 		},
 		languageOptions: {
 			parser: typescriptParser,
@@ -669,6 +670,21 @@ export default [
 			"vite.config.ts",
 			"vitest.config.ts",
 			"playwright.config.ts",
+		],
+		rules: {
+			"import/no-default-export": "off",
+		},
+	},
+	{
+		// Next.js App Router requires default exports for pages, layouts, etc.
+		files: [
+			"**/app/**/page.tsx",
+			"**/app/**/layout.tsx",
+			"**/app/**/loading.tsx",
+			"**/app/**/error.tsx",
+			"**/app/**/not-found.tsx",
+			"**/app/**/template.tsx",
+			"**/app/**/default.tsx",
 		],
 		rules: {
 			"import/no-default-export": "off",
