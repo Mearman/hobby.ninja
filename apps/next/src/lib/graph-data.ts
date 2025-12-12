@@ -216,7 +216,133 @@ export function getAllGrades(): ItemNode[] {
 	return gradeNodes.sort((a, b) => (a.grade ?? '').localeCompare(b.grade ?? ''));
 }
 
-// Get all unique scales from items
+// Grade data type from per-grade JSON files
+export interface GradeData {
+	id: string;
+	type: 'grade';
+	name: string;
+	parent: string | null;
+	children: string[];
+	itemIds: string[];
+	itemCount: number;
+}
+
+// Scale data type from per-scale JSON files
+export interface ScaleData {
+	id: string;
+	type: 'scale';
+	name: string;
+	itemIds: string[];
+	itemCount: number;
+}
+
+// Grades index type
+export interface GradesIndex {
+	grades: Array<{
+		id: string;
+		name: string;
+		parent: string | null;
+		itemCount: number;
+	}>;
+	hierarchy: Record<string, { parent: string | null; children: string[] }>;
+}
+
+// Lazy-loaded grades index cache
+let _gradesIndexCache: GradesIndex | null = null;
+
+// Get grades index from pre-generated JSON
+export function getGradesIndex(): GradesIndex {
+	if (_gradesIndexCache === null) {
+		// Import the grades-index.json at build time
+		// Note: This is imported dynamically but will be inlined at build time
+		try {
+			// eslint-disable-next-line @typescript-eslint/no-require-imports
+			_gradesIndexCache = require('../../public/data/grades-index.json') as GradesIndex;
+		} catch {
+			console.error('Failed to load grades-index.json');
+			_gradesIndexCache = { grades: [], hierarchy: {} };
+		}
+	}
+	return _gradesIndexCache;
+}
+
+// Get all grades from the grades index
+export function getAllGradesFromIndex(): GradesIndex['grades'] {
+	return getGradesIndex().grades;
+}
+
+// Get grade by ID from per-grade JSON file
+export function getGradeById(id: string): GradeData | null {
+	try {
+		// eslint-disable-next-line @typescript-eslint/no-require-imports
+		return require(`../../public/data/grades/${id}.json`) as GradeData;
+	} catch {
+		return null;
+	}
+}
+
+// Get items by grade ID
+export function getItemsByGrade(gradeId: string): EnrichedItem[] {
+	const gradeData = getGradeById(gradeId);
+	if (!gradeData) return [];
+
+	const itemIds = new Set(gradeData.itemIds);
+	return getParsedItems()
+		.filter(item => itemIds.has(item.id))
+		.map(item => enrichItemWithRelationships(item))
+		.sort(sortByName);
+}
+
+// Get scale by ID from per-scale JSON file
+export function getScaleById(id: string): ScaleData | null {
+	try {
+		// eslint-disable-next-line @typescript-eslint/no-require-imports
+		return require(`../../public/data/scales/${id}.json`) as ScaleData;
+	} catch {
+		return null;
+	}
+}
+
+// Get all scales from the filesystem (derived from scale files)
+export function getAllScalesFromFiles(): ScaleData[] {
+	// This function reads all scale JSON files at build time
+	// For static generation, we'll use the static-params.json to get scale IDs
+	try {
+		// eslint-disable-next-line @typescript-eslint/no-require-imports
+		const staticParams = require('../data/static-params.json') as { scaleIds?: string[] };
+		if (!staticParams.scaleIds) return [];
+
+		return staticParams.scaleIds
+			.map(id => getScaleById(id))
+			.filter((scale): scale is ScaleData => scale !== null)
+			.sort((a, b) => {
+				// Sort scales numerically when possible
+				const aNum = a.name.match(/1\/(\d+)/);
+				const bNum = b.name.match(/1\/(\d+)/);
+				if (aNum && bNum) {
+					return Number.parseInt(aNum[1], 10) - Number.parseInt(bNum[1], 10);
+				}
+				return a.name.localeCompare(b.name);
+			});
+	} catch {
+		return [];
+	}
+}
+
+// Get items by scale ID
+export function getItemsByScale(scaleId: string): EnrichedItem[] {
+	const scaleData = getScaleById(scaleId);
+	if (!scaleData) return [];
+
+	const itemIds = new Set(scaleData.itemIds);
+	return getParsedItems()
+		.filter(item => itemIds.has(item.id))
+		.map(item => enrichItemWithRelationships(item))
+		.sort(sortByName);
+}
+
+
+// Legacy function: Get all unique scales from items (kept for backward compatibility)
 export function getAllScales(): ItemNode[] {
 	const scales = new Set<string>();
 	const scaleNodes: ItemNode[] = [];
@@ -443,6 +569,28 @@ export function getItemsByCategory(categoryId: string): EnrichedItem[] {
 	for (const edgeKey of Object.keys(getParsedEdges())) {
 		if (edgeKey.startsWith(categoryEdgePrefix) && edgeKey.endsWith(categoryEdgeSuffix)) {
 			const itemId = edgeKey.split(":")[1]; // Extract item ID from "item:ITEM_ID:BELONGS_TO_CATEGORY:category:CATEGORY_ID"
+			itemIds.push(itemId);
+		}
+	}
+
+	// Return the items that match the found IDs, enriched with relationship data
+	return getParsedItems()
+		.filter(item => itemIds.includes(item.id))
+		.map(item => enrichItemWithRelationships(item))
+		.sort(sortByName);
+}
+
+// Get items by brand using edges and enrich them with relationship data
+export function getItemsByBrand(brandId: string): EnrichedItem[] {
+	const brandEdgePrefix = `item:`;
+	const brandEdgeSuffix = `:BELONGS_TO_BRAND:brand:${brandId}`;
+
+	const itemIds: string[] = [];
+
+	// Find all edges that connect items to this brand
+	for (const edgeKey of Object.keys(getParsedEdges())) {
+		if (edgeKey.startsWith(brandEdgePrefix) && edgeKey.endsWith(brandEdgeSuffix)) {
+			const itemId = edgeKey.split(":")[1]; // Extract item ID from "item:ITEM_ID:BELONGS_TO_BRAND:brand:BRAND_ID"
 			itemIds.push(itemId);
 		}
 	}
