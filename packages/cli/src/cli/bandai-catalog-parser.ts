@@ -34,10 +34,12 @@ export class BandaiCatalogParser {
 				return { success: false, error: "Could not extract product name" };
 			}
 
+			const price = this.extractPrice($);
 			const item: CatalogItem = {
 				id,
+				itemType: price ? "product" : "blog",
 				name: { ja: name },
-				price: this.extractPrice($),
+				price,
 				releaseDate: this.extractReleaseDate($),
 				targetAge: this.extractTargetAge($),
 				series: this.extractSeries($),
