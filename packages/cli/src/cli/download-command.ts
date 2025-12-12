@@ -4,10 +4,16 @@
  * Downloads images and PDFs from JSON metadata into their corresponding folders.
  * Supports both bandai manuals (productImage, pdfUrl, supplementaryPdfUrl)
  * and catalog items (images array).
+ *
+ * CloudFront/Akamai signed URLs require Playwright browser context for authentication.
  */
 
 import { promises as fs } from "node:fs";
-import { join, basename } from "node:path";
+import path from "node:path";
+
+import type { Browser, BrowserContext, Page } from "playwright";
+
+const IMAGE_DELAY_MS = 50;
 
 export type DownloadSource = "all" | "manuals" | "catalog";
 
@@ -19,7 +25,13 @@ export interface DownloadOptions {
 	delayMs: number;
 	dryRun: boolean;
 	verbose: boolean;
+	usePlaywright?: boolean;
 }
+
+// Playwright browser instance (lazy initialized)
+let playwrightBrowser: Browser | null = null;
+let playwrightContext: BrowserContext | null = null;
+let playwrightPage: Page | null = null;
 
 export interface DownloadResult {
 	totalItems: number;
@@ -40,6 +52,7 @@ interface ManualJson {
 interface CatalogItemJson {
 	id: string;
 	images?: string[];
+	sourceUrl?: string;
 }
 
 const HEADERS = {
@@ -49,6 +62,97 @@ const HEADERS = {
 	"Accept-Language": "en-US,en;q=0.9,ja;q=0.8",
 	Referer: "https://bandai-hobby.net/",
 };
+
+/**
+ * Check if a URL requires Playwright (CloudFront or Akamai signed URLs)
+ */
+function requiresPlaywright(url: string): boolean {
+	return url.includes("cloudfront.net") || url.includes("akamaized.net");
+}
+
+/**
+ * Initialize Playwright browser (lazy initialization)
+ */
+async function initPlaywright(): Promise<void> {
+	if (playwrightBrowser) return;
+
+	const { chromium } = await import("playwright");
+	playwrightBrowser = await chromium.launch({
+		headless: false, // Bandai requires non-headless for signed URLs
+		slowMo: 100,
+	});
+	playwrightContext = await playwrightBrowser.newContext({
+		userAgent: HEADERS["User-Agent"],
+		locale: "ja-JP",
+	});
+	playwrightPage = await playwrightContext.newPage();
+}
+
+/**
+ * Close Playwright browser
+ */
+async function closePlaywright(): Promise<void> {
+	if (playwrightBrowser) {
+		await playwrightBrowser.close();
+		playwrightBrowser = null;
+		playwrightContext = null;
+		playwrightPage = null;
+	}
+}
+
+/**
+ * Visit a page to establish session cookies for signed URL downloads
+ */
+async function visitPageForSession(sourceUrl: string): Promise<void> {
+	if (!playwrightPage) {
+		await initPlaywright();
+	}
+	if (!playwrightPage) throw new Error("Playwright page not initialized");
+
+	await playwrightPage.goto(sourceUrl, { waitUntil: "networkidle", timeout: 30_000 });
+	await playwrightPage.waitForTimeout(1000);
+}
+
+/**
+ * Download a file using Playwright's browser context (for signed URLs)
+ */
+async function downloadFileWithPlaywright(
+	url: string,
+	destPath: string,
+	verbose: boolean,
+): Promise<{ downloaded: boolean; error?: string }> {
+	if (await fileExists(destPath)) {
+		if (verbose) {
+			console.log(`  Skipped (exists): ${path.basename(destPath)}`);
+		}
+		return { downloaded: false };
+	}
+
+	if (!playwrightPage) {
+		return { downloaded: false, error: "Playwright not initialized" };
+	}
+
+	try {
+		// Use page.evaluate to fetch with browser cookies
+		const buffer = await playwrightPage.evaluate(async (imageUrl: string) => {
+			const response = await fetch(imageUrl);
+			if (!response.ok) {
+				throw new Error(`HTTP ${response.status}`);
+			}
+			const arrayBuffer = await response.arrayBuffer();
+			return [...new Uint8Array(arrayBuffer)];
+		}, url);
+
+		await fs.writeFile(destPath, Buffer.from(buffer));
+		if (verbose) {
+			console.log(`  Downloaded (Playwright): ${path.basename(destPath)}`);
+		}
+		return { downloaded: true };
+	} catch (error) {
+		const message = error instanceof Error ? error.message : String(error);
+		return { downloaded: false, error: message };
+	}
+}
 
 async function fileExists(path: string): Promise<boolean> {
 	try {
@@ -63,12 +167,18 @@ async function downloadFile(
 	url: string,
 	destPath: string,
 	verbose: boolean,
+	usePlaywright = false,
 ): Promise<{ downloaded: boolean; error?: string }> {
 	if (await fileExists(destPath)) {
 		if (verbose) {
-			console.log(`  Skipped (exists): ${basename(destPath)}`);
+			console.log(`  Skipped (exists): ${path.basename(destPath)}`);
 		}
 		return { downloaded: false };
+	}
+
+	// Use Playwright for signed URLs
+	if (usePlaywright || requiresPlaywright(url)) {
+		return downloadFileWithPlaywright(url, destPath, verbose);
 	}
 
 	try {
@@ -80,7 +190,7 @@ async function downloadFile(
 		const buffer = await response.arrayBuffer();
 		await fs.writeFile(destPath, Buffer.from(buffer));
 		if (verbose) {
-			console.log(`  Downloaded: ${basename(destPath)}`);
+			console.log(`  Downloaded: ${path.basename(destPath)}`);
 		}
 		return { downloaded: true };
 	} catch (error) {
@@ -116,10 +226,10 @@ async function downloadManualAssets(
 	// Download product image
 	if (manual.productImage) {
 		const ext = getImageExtension(manual.productImage);
-		const imagePath = join(manualDir, `${manual.id}.${ext}`);
+		const imagePath = path.join(manualDir, `${manual.id}.${ext}`);
 
 		if (options.dryRun) {
-			console.log(`  Would download: ${manual.productImage} -> ${basename(imagePath)}`);
+			console.log(`  Would download: ${manual.productImage} -> ${path.basename(imagePath)}`);
 			stats.skipped++;
 		} else {
 			const result = await downloadFile(manual.productImage, imagePath, options.verbose);
@@ -136,10 +246,10 @@ async function downloadManualAssets(
 
 	// Download main PDF
 	if (manual.pdfUrl) {
-		const pdfPath = join(manualDir, `${manual.id}.pdf`);
+		const pdfPath = path.join(manualDir, `${manual.id}.pdf`);
 
 		if (options.dryRun) {
-			console.log(`  Would download: ${manual.pdfUrl} -> ${basename(pdfPath)}`);
+			console.log(`  Would download: ${manual.pdfUrl} -> ${path.basename(pdfPath)}`);
 			stats.skipped++;
 		} else {
 			const result = await downloadFile(manual.pdfUrl, pdfPath, options.verbose);
@@ -156,10 +266,10 @@ async function downloadManualAssets(
 
 	// Download supplementary PDF
 	if (manual.supplementaryPdfUrl) {
-		const pdfPath = join(manualDir, `${manual.id}_2.pdf`);
+		const pdfPath = path.join(manualDir, `${manual.id}_2.pdf`);
 
 		if (options.dryRun) {
-			console.log(`  Would download: ${manual.supplementaryPdfUrl} -> ${basename(pdfPath)}`);
+			console.log(`  Would download: ${manual.supplementaryPdfUrl} -> ${path.basename(pdfPath)}`);
 			stats.skipped++;
 		} else {
 			const result = await downloadFile(manual.supplementaryPdfUrl, pdfPath, options.verbose);
@@ -188,19 +298,34 @@ async function downloadCatalogAssets(
 		return stats;
 	}
 
+	// Check if any images require Playwright (CloudFront/Akamai signed URLs)
+	const needsPlaywright = item.images.some((url) => url && requiresPlaywright(url));
+
+	// If signed URLs and we have a source URL, visit the page first to get cookies
+	if (needsPlaywright && item.sourceUrl && !options.dryRun) {
+		try {
+			await visitPageForSession(item.sourceUrl);
+		} catch (error) {
+			const msg = error instanceof Error ? error.message : String(error);
+			stats.errors.push(`${item.id}: Failed to load source page: ${msg}`);
+			stats.failed += item.images.length;
+			return stats;
+		}
+	}
+
 	for (let i = 0; i < item.images.length; i++) {
 		const imageUrl = item.images[i];
 		if (!imageUrl) continue;
 
 		const ext = getImageExtension(imageUrl);
 		// Name images as {id}_0.jpg, {id}_1.jpg, etc.
-		const imagePath = join(itemDir, `${item.id}_${i}.${ext}`);
+		const imagePath = path.join(itemDir, `${item.id}_${i}.${ext}`);
 
 		if (options.dryRun) {
-			console.log(`  Would download: ${imageUrl} -> ${basename(imagePath)}`);
+			console.log(`  Would download: ${imageUrl} -> ${path.basename(imagePath)}`);
 			stats.skipped++;
 		} else {
-			const result = await downloadFile(imageUrl, imagePath, options.verbose);
+			const result = await downloadFile(imageUrl, imagePath, options.verbose, needsPlaywright);
 			if (result.downloaded) {
 				stats.downloaded++;
 			} else if (result.error) {
@@ -213,7 +338,7 @@ async function downloadCatalogAssets(
 
 		// Small delay between images in same item
 		if (i < item.images.length - 1 && !options.dryRun) {
-			await sleep(50);
+			await sleep(IMAGE_DELAY_MS);
 		}
 	}
 
@@ -234,7 +359,7 @@ async function processManuals(options: DownloadOptions): Promise<DownloadResult>
 
 	try {
 		const entries = await fs.readdir(options.manualsDir, { withFileTypes: true });
-		const ids = entries.filter((e) => e.isDirectory()).map((e) => e.name).sort();
+		const ids = entries.filter((e) => e.isDirectory()).map((e) => e.name).toSorted();
 		result.totalItems = ids.length;
 
 		console.log(`Processing ${ids.length} manuals from ${options.manualsDir}`);
@@ -245,12 +370,12 @@ async function processManuals(options: DownloadOptions): Promise<DownloadResult>
 
 			const batchResults = await Promise.all(
 				batch.map(async (id) => {
-					const manualDir = join(options.manualsDir, id);
-					const jsonPath = join(manualDir, `${id}.json`);
+					const manualDir = path.join(options.manualsDir, id);
+					const jsonPath = path.join(manualDir, `${id}.json`);
 
 					try {
 						const content = await fs.readFile(jsonPath, "utf8");
-						const manual: ManualJson = JSON.parse(content);
+						const manual = JSON.parse(content) as ManualJson;
 
 						if (options.verbose) {
 							console.log(`[${id}] Processing...`);
@@ -305,7 +430,7 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 
 	try {
 		const entries = await fs.readdir(options.catalogDir, { withFileTypes: true });
-		const ids = entries.filter((e) => e.isDirectory()).map((e) => e.name).sort();
+		const ids = entries.filter((e) => e.isDirectory()).map((e) => e.name).toSorted();
 		result.totalItems = ids.length;
 
 		console.log(`Processing ${ids.length} catalog items from ${options.catalogDir}`);
@@ -316,15 +441,15 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 
 			const batchResults = await Promise.all(
 				batch.map(async (id) => {
-					const itemDir = join(options.catalogDir, id);
-					const jsonPath = join(itemDir, `${id}.json`);
+					const itemDir = path.join(options.catalogDir, id);
+					const jsonPath = path.join(itemDir, `${id}.json`);
 
 					try {
 						const content = await fs.readFile(jsonPath, "utf8");
-						const item: CatalogItemJson = JSON.parse(content);
+						const item = JSON.parse(content) as CatalogItemJson;
 
 						if (options.verbose) {
-							console.log(`[${id}] Processing ${item.images?.length || 0} images...`);
+							console.log(`[${id}] Processing ${item.images?.length ?? 0} images...`);
 						}
 
 						return await downloadCatalogAssets(itemDir, item, options);
@@ -393,6 +518,9 @@ export async function downloadAssets(options: DownloadOptions): Promise<Download
 		combinedResult.failed += catalogResult.failed;
 		combinedResult.errors.push(...catalogResult.errors);
 	}
+
+	// Clean up Playwright browser if it was used
+	await closePlaywright();
 
 	combinedResult.duration = Date.now() - startTime;
 	return combinedResult;
