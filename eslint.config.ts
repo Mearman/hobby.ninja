@@ -735,14 +735,19 @@ export default [
 	{
 		files: JSON_DATA_FILE_PATTERNS,
 		rules: {
-			// Enforce minified JSON (no newlines, no indentation)
-			"jsonc/indent": ["error", 0],
-			"jsonc/array-bracket-newline": ["error", "never"],
-			"jsonc/array-element-newline": ["error", "never"],
-			"jsonc/object-curly-newline": ["error", "never"],
-			"jsonc/object-property-newline": ["error", { allowAllPropertiesOnSameLine: true }],
+			// Enforce tab indentation for JSON data files
+			"jsonc/indent": ["error", "tab"],
+			// Enforce pretty-printed JSON (newlines between elements)
+			"jsonc/array-bracket-newline": ["error", { multiline: true, minItems: 1 }],
+			"jsonc/array-element-newline": ["error", "always"],
+			"jsonc/object-curly-newline": ["error", { multiline: true, minProperties: 1 }],
+			"jsonc/object-property-newline": ["error", { allowAllPropertiesOnSameLine: false }],
+			// Space after colons
+			"jsonc/key-spacing": ["error", { beforeColon: false, afterColon: true }],
 			// Disable rules not applicable to data files
 			"unicorn/filename-case": "off",
+			// Allow irregular whitespace in data (Japanese text has special spaces)
+			"no-irregular-whitespace": "off",
 		},
 	},
 	{
