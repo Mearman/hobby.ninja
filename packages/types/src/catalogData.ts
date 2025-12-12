@@ -41,8 +41,11 @@ export interface CatalogRelatedProduct {
 	imageUrl?: string;
 }
 
+export type CatalogItemType = "product" | "blog";
+
 export interface CatalogItem {
 	id: string;
+	itemType: CatalogItemType;
 	name: LocalizedText;
 	price?: CatalogPrice;
 	releaseDate?: CatalogReleaseDate;
