@@ -119,21 +119,20 @@ export default async function ItemPage({ params }: ItemPageProps) {
 								<Image src={images[0]} alt={displayName} height={400} fit="contain" />
 							)}
 
-							{/* Additional Images */}
+							{/* Additional Images Grid */}
 							{images.length > 1 && (
-								<Group gap="xs">
-									{images.slice(1, 5).map((img, index) => (
+								<SimpleGrid cols={{ base: 3, sm: 4 }} spacing="xs">
+									{images.slice(1).map((img, index) => (
 										<Image
 											key={index}
 											src={img}
 											alt={`${displayName} ${index + 2}`}
-											height={80}
-											width={80}
+											height={100}
 											fit="contain"
 											style={{ border: "1px solid var(--mantine-color-gray-3)", borderRadius: 4 }}
 										/>
 									))}
-								</Group>
+								</SimpleGrid>
 							)}
 						</Stack>
 					</Card>
