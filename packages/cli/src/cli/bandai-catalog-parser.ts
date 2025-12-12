@@ -206,26 +206,31 @@ export class BandaiCatalogParser {
 
 	/**
 	 * Gets the full product description text from either legacy or new format.
-	 * Legacy: .pg-products__instructionTxt p
+	 * Legacy: .pg-products__instructionTxt p (excluding attentiontxt disclaimers)
 	 * New: .pg-products__article with PlaygroundEditorTheme paragraphs
+	 *
+	 * Priority: Article content first (richer format), then legacy fallback
 	 */
 	private getFullDescriptionText($: CheerioAPI): string {
-		// Try legacy format first
-		const legacyText = $(DESCRIPTION_SELECTOR_LEGACY).first().text().trim();
+		// Try new article format FIRST - this is the richer, newer format
+		const articleEl = $(DESCRIPTION_SELECTOR_ARTICLE);
+		if (articleEl.length > 0) {
+			// Get text from each paragraph, preserving line breaks
+			const lines: string[] = [];
+			articleEl.find("p").each((_, el) => {
+				const text = $(el).text().trim();
+				if (text) lines.push(text);
+			});
+			const articleText = lines.join("\n");
+			if (articleText) return articleText;
+		}
+
+		// Fall back to legacy format - exclude attentiontxt (disclaimers)
+		const legacyParagraphs = $(DESCRIPTION_SELECTOR_LEGACY).not(".pg-products__attentiontxt");
+		const legacyText = legacyParagraphs.first().text().trim();
 		if (legacyText) return legacyText;
 
-		// Try new article format - extract text from all paragraph spans
-		const articleEl = $(DESCRIPTION_SELECTOR_ARTICLE);
-		if (articleEl.length === 0) return "";
-
-		// Get text from each paragraph, preserving line breaks
-		const lines: string[] = [];
-		articleEl.find("p").each((_, el) => {
-			const text = $(el).text().trim();
-			if (text) lines.push(text);
-		});
-
-		return lines.join("\n");
+		return "";
 	}
 
 	private extractDescription($: CheerioAPI): Array<{ ja: string }> {
@@ -252,7 +257,7 @@ export class BandaiCatalogParser {
 		const accessories: Array<{ ja: string }> = [];
 		const descText = this.getFullDescriptionText($);
 
-		// Find text between 【付属品】 and 【商品内容】 or end
+		// Try formal section format: 【付属品】
 		const accessoriesMatch = /【付属品】([\s\S]*?)(?:【商品内容】|$)/.exec(descText);
 		const accessoriesText = accessoriesMatch?.[1];
 		if (accessoriesText) {
@@ -264,6 +269,22 @@ export class BandaiCatalogParser {
 
 			for (const item of items) {
 				accessories.push({ ja: item });
+			}
+		}
+
+		// Also try inline format: "付属武装：" (common in newer article format)
+		if (accessories.length === 0) {
+			const inlineMatch = /付属武装[：:]\s*(.+)/.exec(descText);
+			if (inlineMatch?.[1]) {
+				// Split on common separators: / or ／ or 、
+				const items = inlineMatch[1]
+					.split(/[/／、]/)
+					.map(s => s.trim())
+					.filter(s => s.length > 0);
+
+				for (const item of items) {
+					accessories.push({ ja: item });
+				}
 			}
 		}
 
