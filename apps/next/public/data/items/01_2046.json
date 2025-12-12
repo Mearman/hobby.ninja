@@ -3,74 +3,35 @@
 	"type": "item",
 	"name": { "ja": "ピカちんキットS06 ピカちんドローン", "en": "Pikachin KitS06 Pikachin Drone" },
 	"description": [
-		{
-			"ja": "• ２つの「スゴイ」を携え、ピカちんキットがついにドローンをピラめいた！",
-			"en": "• With two amazing features, Pikachin Kit finally hit the drone!"
-		},
-		{
-			"ja": "• ピカちんドローンのここがスゴイ！その１「初心者でも簡単！」な機能が満載！",
-			"en": "• What's amazing about the Pikachin drone! Part 1: Packed with features that are easy even for beginners!"
-		},
-		{
-			"ja": "• ピカちんドローンのここがスゴイ！その２「ピカちんアタッチメント」でカスタマイズ！",
-			"en": "• What's amazing about the Pikachin drone! Part 2: Customize with \"Pikachin Attachment\"!"
-		},
-		{
-			"ja": "• 初めてでも飛ばせるRC（ラジオコントロール）ドローン！",
-			"en": "• RC (radio control) drone that even first-timers can fly!"
-		},
-		{
-			"ja": "• 気圧センサー搭載で高度を自動調整。ボタン１プッシュでカンタン離陸、片手で操作可能！",
-			"en": "• Equipped with a barometric pressure sensor to automatically adjust altitude. Easy takeoff with one push of a button, can be operated with one hand!"
-		},
-		{
-			"ja": "• 低・中・高の３段階から腕前に合わせて速度を選べる！",
-			"en": "• You can choose the speed according to your skill from 3 levels: low, medium, and high!"
-		},
-		{
-			"ja": "• アタッチメントは５種類！キミだけのピカちんドローンを作ろう！",
-			"en": "• 5 types of attachments! Let's make your own Pikachin drone!"
-		},
-		{
-			"ja": "• キャプテン★プロポンの表情シールが２種類付属。",
-			"en": "• Captain★Two types of propon facial expressions are included."
-		},
-		{
-			"ja": "• 本体は組み立て済み！外装を取り付けてすぐに遊べる！",
-			"en": "• The main body has been assembled! Attach the exterior and start playing right away!"
-		},
-		{
-			"ja": "• スキルアップペーパークラフトが付属！フラッグ間を通したり、S字に旋回させたりしてスキルアップを目指せ！",
-			"en": "• Skill-up paper craft included! Aim to improve your skills by passing between flags or turning in an S shape!"
-		},
-		{ "ja": "【セット内容】", "en": "[Set contents]" },
-		{ "ja": "ピカちんドローン本体…1(コアユニット)", "en": "Pikachin drone body...1 (core unit)" },
-		{ "ja": "コントローラー…1", "en": "Controller...1" },
-		{ "ja": "USB充電ケーブル…1", "en": "USB charging cable...1" },
-		{ "ja": "フライトテクニックガイド…1", "en": "Flight technique guide...1" },
-		{ "ja": "スペアプロペラ…8", "en": "Spare propeller...8" },
-		{ "ja": "スキルアップペーパークラフト…4", "en": "Skill up paper craft...4" },
-		{ "ja": "ランナーパーツ(成形品)…2", "en": "Runner parts (molded products)...2" },
-		{ "ja": "ピカちんQRコードステッカー…1", "en": "Pikachin QR code Sticker...1" },
-		{ "ja": "ミラーラベル…1", "en": "Mirror label...1" },
-		{ "ja": "シール…1", "en": "Seal...1" },
-		{ "ja": "取扱説明書…1", "en": "Handling Manual...1" },
-		{
-			"ja": "ピカちんシート…1(表：設計図ページ)(裏：スキルアップページ)",
-			"en": "Pikachin sheet...1 (Front: Blueprint page) (Back: Skill up page)"
-		},
-		{
-			"ja": "※この商品に関するお問い合わせは下記までお願いいたします。",
-			"en": "*For inquiries regarding this product, please contact us below."
-		},
-		{ "ja": "(株)シー・シー・ピー サービスセンター", "en": "CCP Co., Ltd. Service Center" },
-		{ "ja": "〒143-0006", "en": "〒143-0006" },
-		{ "ja": "東京都大田区平和島5丁目3番1号", "en": "5-3-1 Heiwajima, Ota-ku, Tokyo" },
-		{ "ja": "電話番号 : 03-6404-6688", "en": "Phone number: 03-6404-6688" },
-		{
-			"ja": "受付時間 : 祝祭日・土日を除く　月～金曜日　9:30～12:00　13:00～17:00",
-			"en": "Reception hours: Excluding holidays and Saturdays - Fridays 9:30-12:00 13:00-17:00"
-		}
+		{ "ja": "■２つの「スゴイ」を携え、ピカちんキットがついにドローンをピラめいた！" },
+		{ "ja": "■ピカちんドローンのここがスゴイ！その１「初心者でも簡単！」な機能が満載！" },
+		{ "ja": "■ピカちんドローンのここがスゴイ！その２「ピカちんアタッチメント」でカスタマイズ！" },
+		{ "ja": "■初めてでも飛ばせるRC（ラジオコントロール）ドローン！" },
+		{ "ja": "■気圧センサー搭載で高度を自動調整。ボタン１プッシュでカンタン離陸、片手で操作可能！" },
+		{ "ja": "■低・中・高の３段階から腕前に合わせて速度を選べる！" },
+		{ "ja": "■アタッチメントは５種類！キミだけのピカちんドローンを作ろう！" },
+		{ "ja": "■キャプテン★プロポンの表情シールが２種類付属。" },
+		{ "ja": "■本体は組み立て済み！外装を取り付けてすぐに遊べる！" },
+		{ "ja": "■スキルアップペーパークラフトが付属！フラッグ間を通したり、S字に旋回させたりしてスキルアップを目指せ！" },
+		{ "ja": "【セット内容】" },
+		{ "ja": "ピカちんドローン本体…1(コアユニット)" },
+		{ "ja": "コントローラー…1" },
+		{ "ja": "USB充電ケーブル…1" },
+		{ "ja": "フライトテクニックガイド…1" },
+		{ "ja": "スペアプロペラ…8" },
+		{ "ja": "スキルアップペーパークラフト…4" },
+		{ "ja": "ランナーパーツ(成形品)…2" },
+		{ "ja": "ピカちんQRコードステッカー…1" },
+		{ "ja": "ミラーラベル…1" },
+		{ "ja": "シール…1" },
+		{ "ja": "取扱説明書…1" },
+		{ "ja": "ピカちんシート…1(表：設計図ページ)(裏：スキルアップページ)" },
+		{ "ja": "※この商品に関するお問い合わせは下記までお願いいたします。" },
+		{ "ja": "(株)シー・シー・ピー サービスセンター" },
+		{ "ja": "〒143-0006" },
+		{ "ja": "東京都大田区平和島5丁目3番1号" },
+		{ "ja": "電話番号 : 03-6404-6688" },
+		{ "ja": "受付時間 : 祝祭日・土日を除く　月～金曜日　9:30～12:00　13:00～17:00" }
 	],
 	"accessories": [],
 	"contents": [],
