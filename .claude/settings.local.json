@@ -52,7 +52,11 @@
       "mcp__chrome-devtools__get_console_message",
       "mcp__context7__resolve-library-id",
       "mcp__context7__get-library-docs",
-      "Bash(npm run build)"
+      "Bash(npm run build)",
+      "Bash(while read f)",
+      "Bash(do grep -L \"\"releaseDate\"\" $f)",
+      "Bash(do grep -l \"\"releaseDate\"\" $f)",
+      "Bash(sort grep -L \"\"releaseDate\"\" apps/next/public/data/items/*.json)"
     ],
     "deny": [
       "Bash(git add .)",
