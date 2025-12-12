@@ -8,13 +8,13 @@ import {
 	Stack,
 	Text,
 	Title,
-	Image,
 	SimpleGrid,
 	Anchor,
 } from "@mantine/core";
 import Link from "next/link";
 
 import { getItemById, type EnrichedItem } from "@/lib/graph-data";
+import { ItemImageGallery } from "./ItemImageGallery";
 // Import lightweight static params (96KB) instead of full items (19MB) for generateStaticParams
 import staticParams from "@/data/static-params.json";
 import {
@@ -113,28 +113,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 				<SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
 					{/* Left column - Images */}
 					<Card withBorder p="lg">
-						<Stack gap="md">
-							{/* Main Image */}
-							{images.length > 0 && (
-								<Image src={images[0]} alt={displayName} height={400} fit="contain" />
-							)}
-
-							{/* Additional Images Grid */}
-							{images.length > 1 && (
-								<SimpleGrid cols={{ base: 3, sm: 4 }} spacing="xs">
-									{images.slice(1).map((img, index) => (
-										<Image
-											key={index}
-											src={img}
-											alt={`${displayName} ${index + 2}`}
-											height={100}
-											fit="contain"
-											style={{ border: "1px solid var(--mantine-color-gray-3)", borderRadius: 4 }}
-										/>
-									))}
-								</SimpleGrid>
-							)}
-						</Stack>
+						<ItemImageGallery images={images} displayName={displayName} />
 					</Card>
 
 					{/* Right column - Details */}
