@@ -1,1 +1,224 @@
-{"grades":[{"id":"pg","name":"PG","parent":null,"itemCount":46},{"id":"mgex","name":"MGEX","parent":"mg","itemCount":6},{"id":"mg-ver-ka","name":"MG Ver.Ka","parent":"mg","itemCount":53},{"id":"mg","name":"MG","parent":null,"itemCount":584},{"id":"rg","name":"RG","parent":null,"itemCount":178},{"id":"hg-uc","name":"HGUC","parent":"hg","itemCount":323},{"id":"hg-ce","name":"HGCE","parent":"hg","itemCount":24},{"id":"hg-ac","name":"HGAC","parent":"hg","itemCount":1},{"id":"hg-amplified","name":"HG Amplified","parent":"hg","itemCount":3},{"id":"hg","name":"HG","parent":null,"itemCount":1326},{"id":"eg","name":"EG","parent":null,"itemCount":34},{"id":"sd-cs","name":"SD Cross Silhouette","parent":"sd","itemCount":5},{"id":"sd-bb","name":"SD BB Senshi","parent":"sd","itemCount":298},{"id":"sd-bb-warrior","name":"SD BB Warrior","parent":"sd","itemCount":147},{"id":"sdex","name":"SDEX","parent":"sd","itemCount":12},{"id":"sd","name":"SD","parent":null,"itemCount":605},{"id":"re-100","name":"RE/100","parent":null,"itemCount":28},{"id":"fm","name":"FM","parent":null,"itemCount":10},{"id":"figure-rise","name":"Figure-rise","parent":null,"itemCount":189},{"id":"mega-size","name":"Mega Size","parent":null,"itemCount":12}],"hierarchy":{"pg":{"parent":null,"children":[]},"mgex":{"parent":"mg","children":[]},"mg":{"parent":null,"children":["mgex","mg-ver-ka"]},"mg-ver-ka":{"parent":"mg","children":[]},"rg":{"parent":null,"children":[]},"hg-uc":{"parent":"hg","children":[]},"hg":{"parent":null,"children":["hg-uc","hg-ce","hg-ac","hg-ibo","hg-amplified"]},"hg-ce":{"parent":"hg","children":[]},"hg-ac":{"parent":"hg","children":[]},"hg-ibo":{"parent":"hg","children":[]},"hg-amplified":{"parent":"hg","children":[]},"eg":{"parent":null,"children":[]},"sd-cs":{"parent":"sd","children":[]},"sd":{"parent":null,"children":["sd-cs","sd-bb","sd-bb-warrior","sdex"]},"sd-bb":{"parent":"sd","children":[]},"sd-bb-warrior":{"parent":"sd","children":[]},"sdex":{"parent":"sd","children":[]},"re-100":{"parent":null,"children":[]},"fm":{"parent":null,"children":[]},"figure-rise":{"parent":null,"children":[]},"mega-size":{"parent":null,"children":[]}}}
+{
+	"grades": [
+		{
+			"id": "pg",
+			"name": "PG",
+			"parent": null,
+			"itemCount": 46
+		},
+		{
+			"id": "mgex",
+			"name": "MGEX",
+			"parent": "mg",
+			"itemCount": 6
+		},
+		{
+			"id": "mg-ver-ka",
+			"name": "MG Ver.Ka",
+			"parent": "mg",
+			"itemCount": 53
+		},
+		{
+			"id": "mg",
+			"name": "MG",
+			"parent": null,
+			"itemCount": 584
+		},
+		{
+			"id": "rg",
+			"name": "RG",
+			"parent": null,
+			"itemCount": 178
+		},
+		{
+			"id": "hg-uc",
+			"name": "HGUC",
+			"parent": "hg",
+			"itemCount": 323
+		},
+		{
+			"id": "hg-ce",
+			"name": "HGCE",
+			"parent": "hg",
+			"itemCount": 24
+		},
+		{
+			"id": "hg-ac",
+			"name": "HGAC",
+			"parent": "hg",
+			"itemCount": 1
+		},
+		{
+			"id": "hg-amplified",
+			"name": "HG Amplified",
+			"parent": "hg",
+			"itemCount": 3
+		},
+		{
+			"id": "hg",
+			"name": "HG",
+			"parent": null,
+			"itemCount": 1326
+		},
+		{
+			"id": "eg",
+			"name": "EG",
+			"parent": null,
+			"itemCount": 34
+		},
+		{
+			"id": "sd-cs",
+			"name": "SD Cross Silhouette",
+			"parent": "sd",
+			"itemCount": 5
+		},
+		{
+			"id": "sd-bb",
+			"name": "SD BB Senshi",
+			"parent": "sd",
+			"itemCount": 298
+		},
+		{
+			"id": "sd-bb-warrior",
+			"name": "SD BB Warrior",
+			"parent": "sd",
+			"itemCount": 147
+		},
+		{
+			"id": "sdex",
+			"name": "SDEX",
+			"parent": "sd",
+			"itemCount": 12
+		},
+		{
+			"id": "sd",
+			"name": "SD",
+			"parent": null,
+			"itemCount": 605
+		},
+		{
+			"id": "re-100",
+			"name": "RE/100",
+			"parent": null,
+			"itemCount": 28
+		},
+		{
+			"id": "fm",
+			"name": "FM",
+			"parent": null,
+			"itemCount": 10
+		},
+		{
+			"id": "figure-rise",
+			"name": "Figure-rise",
+			"parent": null,
+			"itemCount": 189
+		},
+		{
+			"id": "mega-size",
+			"name": "Mega Size",
+			"parent": null,
+			"itemCount": 12
+		}
+	],
+	"hierarchy": {
+		"pg": {
+			"parent": null,
+			"children": []
+		},
+		"mgex": {
+			"parent": "mg",
+			"children": []
+		},
+		"mg": {
+			"parent": null,
+			"children": [
+				"mgex",
+				"mg-ver-ka"
+			]
+		},
+		"mg-ver-ka": {
+			"parent": "mg",
+			"children": []
+		},
+		"rg": {
+			"parent": null,
+			"children": []
+		},
+		"hg-uc": {
+			"parent": "hg",
+			"children": []
+		},
+		"hg": {
+			"parent": null,
+			"children": [
+				"hg-uc",
+				"hg-ce",
+				"hg-ac",
+				"hg-ibo",
+				"hg-amplified"
+			]
+		},
+		"hg-ce": {
+			"parent": "hg",
+			"children": []
+		},
+		"hg-ac": {
+			"parent": "hg",
+			"children": []
+		},
+		"hg-ibo": {
+			"parent": "hg",
+			"children": []
+		},
+		"hg-amplified": {
+			"parent": "hg",
+			"children": []
+		},
+		"eg": {
+			"parent": null,
+			"children": []
+		},
+		"sd-cs": {
+			"parent": "sd",
+			"children": []
+		},
+		"sd": {
+			"parent": null,
+			"children": [
+				"sd-cs",
+				"sd-bb",
+				"sd-bb-warrior",
+				"sdex"
+			]
+		},
+		"sd-bb": {
+			"parent": "sd",
+			"children": []
+		},
+		"sd-bb-warrior": {
+			"parent": "sd",
+			"children": []
+		},
+		"sdex": {
+			"parent": "sd",
+			"children": []
+		},
+		"re-100": {
+			"parent": null,
+			"children": []
+		},
+		"fm": {
+			"parent": null,
+			"children": []
+		},
+		"figure-rise": {
+			"parent": null,
+			"children": []
+		},
+		"mega-size": {
+			"parent": null,
+			"children": []
+		}
+	}
+}
