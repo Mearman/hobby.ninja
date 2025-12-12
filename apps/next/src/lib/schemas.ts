@@ -301,7 +301,52 @@ export const getNodePrice = (node: ItemNode): string | null => {
 };
 
 export const getNodeReleaseYear = (node: ItemNode): number | null => {
-	return node.releaseDate?.year || null;
+	// First try the year field if it's a valid non-zero value
+	if (node.releaseDate?.year && node.releaseDate.year > 0) {
+		return node.releaseDate.year;
+	}
+
+	// Fall back to parsing the Japanese date string (e.g., "1985年06月")
+	if (node.releaseDate?.ja) {
+		const yearMatch = node.releaseDate.ja.match(/(\d{4})年/);
+		if (yearMatch?.[1]) {
+			return Number.parseInt(yearMatch[1], 10);
+		}
+	}
+
+	return null;
+};
+
+/**
+ * Get formatted release date string from item node.
+ * Tries structured year/month first, then falls back to parsing Japanese date string.
+ */
+export const getNodeReleaseDate = (node: ItemNode): string | null => {
+	const releaseDate = node.releaseDate;
+	if (!releaseDate) return null;
+
+	// If we have valid year and month, format them
+	if (releaseDate.year && releaseDate.year > 0) {
+		const month = releaseDate.month && releaseDate.month > 0
+			? String(releaseDate.month).padStart(2, "0")
+			: null;
+		return month ? `${releaseDate.year}/${month}` : String(releaseDate.year);
+	}
+
+	// Fall back to parsing the Japanese date string (e.g., "1985年06月")
+	if (releaseDate.ja) {
+		const match = releaseDate.ja.match(/(\d{4})年(\d{2})月/);
+		if (match?.[1] && match[2]) {
+			return `${match[1]}/${match[2]}`;
+		}
+		// Try just year
+		const yearMatch = releaseDate.ja.match(/(\d{4})年/);
+		if (yearMatch?.[1]) {
+			return yearMatch[1];
+		}
+	}
+
+	return null;
 };
 
 export const getNodeImages = (node: ItemNode): string[] => {

@@ -20,7 +20,7 @@ import staticParams from "@/data/static-params.json";
 import {
 	getNodeDisplayName,
 	getNodePrice,
-	getNodeReleaseYear,
+	getNodeReleaseDate,
 	getNodeImages,
 	getNodeAccessories,
 	isItemNode,
@@ -91,7 +91,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
 	const displayName = getNodeDisplayName(item);
 	const price = getNodePrice(item);
-	const releaseYear = getNodeReleaseYear(item);
+	const releaseDate = getNodeReleaseDate(item);
 	const images = getNodeImages(item);
 	const accessories = getNodeAccessories(item);
 	const descriptionItems = getDescriptionItems(item);
@@ -157,10 +157,10 @@ export default async function ItemPage({ params }: ItemPageProps) {
 											<Text fw={600} size="lg">{price}</Text>
 										</div>
 									)}
-									{releaseYear && (
+									{releaseDate && (
 										<div>
 											<Text size="sm" c="dimmed">Released</Text>
-											<Text fw={600} size="lg">{releaseYear}</Text>
+											<Text fw={600} size="lg">{releaseDate}</Text>
 										</div>
 									)}
 									{item.targetAge && (
