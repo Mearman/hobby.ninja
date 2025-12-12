@@ -1,10 +1,13 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 import { Carousel } from "@mantine/carousel";
 import type { EmblaCarouselType } from "embla-carousel";
-import { Image, Box, SimpleGrid } from "@mantine/core";
+import { Image, Box, SimpleGrid, ActionIcon, Group, Modal, Text } from "@mantine/core";
+import { IconPlayerPlay, IconPlayerPause, IconX, IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import Autoplay from "embla-carousel-autoplay";
+
+import { useUserPreferences } from "@/hooks/use-user-preferences";
 
 interface ItemImageGalleryProps {
 	images: string[];
@@ -14,6 +17,26 @@ interface ItemImageGalleryProps {
 export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps) {
 	const [selectedIndex, setSelectedIndex] = useState(0);
 	const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);
+	const [fullscreenOpen, setFullscreenOpen] = useState(false);
+	const { preferences, updatePreference, isLoaded } = useUserPreferences();
+	const autoplayRef = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }));
+
+	// Memoize plugins array to prevent recreation on every render
+	const plugins = useMemo(() => {
+		if (!isLoaded) return [];
+		return preferences.slideshowEnabled ? [autoplayRef.current] : [];
+	}, [preferences.slideshowEnabled, isLoaded]);
+
+	// Handle autoplay state changes
+	useEffect(() => {
+		if (!embla || !isLoaded) return;
+
+		if (preferences.slideshowEnabled) {
+			autoplayRef.current.play();
+		} else {
+			autoplayRef.current.stop();
+		}
+	}, [embla, preferences.slideshowEnabled, isLoaded]);
 
 	const handleThumbnailClick = useCallback((index: number) => {
 		if (embla) {
@@ -27,12 +50,71 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 		}
 	}, [embla]);
 
+	const handleImageClick = useCallback(() => {
+		setFullscreenOpen(true);
+	}, []);
+
+	const handleFullscreenPrev = useCallback(() => {
+		setSelectedIndex(prev => (prev === 0 ? images.length - 1 : prev - 1));
+	}, [images.length]);
+
+	const handleFullscreenNext = useCallback(() => {
+		setSelectedIndex(prev => (prev === images.length - 1 ? 0 : prev + 1));
+	}, [images.length]);
+
+	const toggleSlideshow = useCallback(() => {
+		updatePreference("slideshowEnabled", !preferences.slideshowEnabled);
+	}, [updatePreference, preferences.slideshowEnabled]);
+
+	// Sync carousel with fullscreen navigation
+	useEffect(() => {
+		if (embla && !fullscreenOpen) {
+			embla.scrollTo(selectedIndex);
+		}
+	}, [embla, selectedIndex, fullscreenOpen]);
+
+	// Handle keyboard navigation in fullscreen
+	useEffect(() => {
+		if (!fullscreenOpen) return;
+
+		const handleKeyDown = (e: KeyboardEvent) => {
+			if (e.key === "ArrowLeft") {
+				handleFullscreenPrev();
+			} else if (e.key === "ArrowRight") {
+				handleFullscreenNext();
+			} else if (e.key === "Escape") {
+				setFullscreenOpen(false);
+			}
+		};
+
+		window.addEventListener("keydown", handleKeyDown);
+		return () => window.removeEventListener("keydown", handleKeyDown);
+	}, [fullscreenOpen, handleFullscreenPrev, handleFullscreenNext]);
+
 	if (images.length === 0) {
 		return null;
 	}
 
 	return (
 		<Box>
+			{/* Controls Row */}
+			{images.length > 1 && (
+				<Group justify="flex-end" mb="xs">
+					<ActionIcon
+						variant="light"
+						onClick={toggleSlideshow}
+						title={preferences.slideshowEnabled ? "Pause slideshow" : "Play slideshow"}
+						aria-label={preferences.slideshowEnabled ? "Pause slideshow" : "Play slideshow"}
+					>
+						{preferences.slideshowEnabled ? (
+							<IconPlayerPause size={16} />
+						) : (
+							<IconPlayerPlay size={16} />
+						)}
+					</ActionIcon>
+				</Group>
+			)}
+
 			{/* Main Carousel */}
 			<Carousel
 				height={400}
@@ -40,9 +122,7 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 				onSlideChange={handleSelect}
 				withIndicators={images.length > 1}
 				withControls={images.length > 1}
-				plugins={[
-					Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }),
-				]}
+				plugins={plugins}
 				emblaOptions={{ loop: true }}
 				styles={{
 					control: {
@@ -59,12 +139,17 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 			>
 				{images.map((img, index) => (
 					<Carousel.Slide key={index}>
-						<Image
-							src={img}
-							alt={`${displayName} ${index + 1}`}
-							height={400}
-							fit="contain"
-						/>
+						<Box
+							onClick={handleImageClick}
+							style={{ cursor: "pointer", height: "100%" }}
+						>
+							<Image
+								src={img}
+								alt={`${displayName} ${index + 1}`}
+								height={400}
+								fit="contain"
+							/>
+						</Box>
 					</Carousel.Slide>
 				))}
 			</Carousel>
@@ -97,6 +182,130 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 					))}
 				</SimpleGrid>
 			)}
+
+			{/* Fullscreen Modal */}
+			<Modal
+				opened={fullscreenOpen}
+				onClose={() => setFullscreenOpen(false)}
+				fullScreen
+				withCloseButton={false}
+				styles={{
+					body: {
+						padding: 0,
+						height: "100%",
+						display: "flex",
+						flexDirection: "column",
+						backgroundColor: "var(--mantine-color-dark-9)",
+					},
+					content: {
+						backgroundColor: "var(--mantine-color-dark-9)",
+					},
+				}}
+			>
+				{/* Fullscreen Header */}
+				<Group
+					justify="space-between"
+					p="md"
+					style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+				>
+					<Text c="white" fw={500}>
+						{displayName} ({selectedIndex + 1} / {images.length})
+					</Text>
+					<ActionIcon
+						variant="subtle"
+						color="white"
+						onClick={() => setFullscreenOpen(false)}
+						aria-label="Close fullscreen"
+					>
+						<IconX size={24} />
+					</ActionIcon>
+				</Group>
+
+				{/* Fullscreen Image */}
+				<Box
+					style={{
+						flex: 1,
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						position: "relative",
+						overflow: "hidden",
+					}}
+				>
+					{/* Previous Button */}
+					{images.length > 1 && (
+						<ActionIcon
+							variant="filled"
+							color="dark"
+							size="xl"
+							onClick={handleFullscreenPrev}
+							style={{
+								position: "absolute",
+								left: 16,
+								zIndex: 10,
+							}}
+							aria-label="Previous image"
+						>
+							<IconChevronLeft size={32} />
+						</ActionIcon>
+					)}
+
+					<Image
+						src={images[selectedIndex]}
+						alt={`${displayName} ${selectedIndex + 1}`}
+						fit="contain"
+						style={{ maxHeight: "calc(100vh - 100px)", maxWidth: "100%" }}
+					/>
+
+					{/* Next Button */}
+					{images.length > 1 && (
+						<ActionIcon
+							variant="filled"
+							color="dark"
+							size="xl"
+							onClick={handleFullscreenNext}
+							style={{
+								position: "absolute",
+								right: 16,
+								zIndex: 10,
+							}}
+							aria-label="Next image"
+						>
+							<IconChevronRight size={32} />
+						</ActionIcon>
+					)}
+				</Box>
+
+				{/* Fullscreen Thumbnails */}
+				{images.length > 1 && (
+					<Group justify="center" p="md" gap="xs" style={{ backgroundColor: "rgba(0,0,0,0.5)" }}>
+						{images.map((img, index) => (
+							<Box
+								key={index}
+								onClick={() => setSelectedIndex(index)}
+								style={{
+									cursor: "pointer",
+									border: selectedIndex === index
+										? "2px solid var(--mantine-color-blue-6)"
+										: "1px solid var(--mantine-color-gray-6)",
+									borderRadius: 4,
+									overflow: "hidden",
+									opacity: selectedIndex === index ? 1 : 0.6,
+									transition: "all 0.2s ease",
+								}}
+							>
+								<Image
+									src={img}
+									alt={`${displayName} thumbnail ${index + 1}`}
+									height={50}
+									width={50}
+									fit="cover"
+								/>
+							</Box>
+						))}
+					</Group>
+				)}
+			</Modal>
 		</Box>
 	);
 }
