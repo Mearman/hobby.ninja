@@ -35,7 +35,7 @@ export function SeriesItemsClient({ items, seriesName, totalItems }: SeriesItems
 	} = useFilteredItems(items);
 
 	const { visibleItems, isLoading, hasMore, lastItemRef, reset } = useInfiniteScroll({
-		items: filteredItems,
+		items: filteredItems as ItemNode[],
 		itemsPerPage: preferences.infiniteScrollPageSize,
 		preservePageParam: true,
 		autoLoad: preferences.autoLoadInfiniteScroll,

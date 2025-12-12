@@ -20,6 +20,8 @@ import {
 	IconFilter,
 	IconX,
 	IconSearch,
+	IconSortAscending,
+	IconSortDescending,
 } from "@tabler/icons-react";
 import { FilterState } from "@/hooks/use-filtered-items";
 
@@ -116,21 +118,33 @@ export function ItemFilters({
 					<Select
 						placeholder="Sort by"
 						data={[
-							{ value: "date-desc", label: "Latest First" },
-							{ value: "date-asc", label: "Oldest First" },
-							{ value: "name-asc", label: "Name (A-Z)" },
-							{ value: "name-desc", label: "Name (Z-A)" },
-							{ value: "price-asc", label: "Price (Low to High)" },
-							{ value: "price-desc", label: "Price (High to Low)" },
-							{ value: "brand-asc", label: "Brand (A-Z)" },
-							{ value: "grade-asc", label: "Grade (A-Z)" },
-							{ value: "scale-asc", label: "Scale (A-Z)" },
-							{ value: "series-asc", label: "Series (A-Z)" },
+							{ value: "date", label: "Date" },
+							{ value: "name", label: "Name" },
+							{ value: "price", label: "Price" },
+							{ value: "brand", label: "Brand" },
+							{ value: "grade", label: "Grade" },
+							{ value: "scale", label: "Scale" },
+							{ value: "series", label: "Series" },
 						]}
-						value={filterState.sortBy}
-						onChange={(value) => onFilterChange({ sortBy: value ?? "date-desc" })}
+						value={filterState.sortField}
+						onChange={(value) => onFilterChange({ sortField: value ?? "date" })}
 						size="sm"
 					/>
+					<ActionIcon
+						variant={filterState.sortDirection === "asc" ? "filled" : "light"}
+						onClick={() => onFilterChange({
+							sortDirection: filterState.sortDirection === "asc" ? "desc" : "asc"
+						})}
+						size="sm"
+						style={{ marginLeft: "8px" }}
+						title={`Sort ${filterState.sortDirection === "asc" ? "Descending" : "Ascending"}`}
+					>
+						{filterState.sortDirection === "asc" ? (
+							<IconSortAscending size={14} />
+						) : (
+							<IconSortDescending size={14} />
+						)}
+					</ActionIcon>
 				</Group>
 
 				{/* Advanced Filters Toggle */}
@@ -248,6 +262,23 @@ export function ItemFilters({
 								}
 							>
 								Series: {filterState.series}
+							</Badge>
+						)}
+						{(filterState.sortField !== "date" || filterState.sortDirection !== "desc") && (
+							<Badge
+								size="sm"
+								variant="light"
+								color="orange"
+								rightSection={
+									<ActionIcon
+										size="xs"
+										onClick={() => onFilterChange({ sortField: "date", sortDirection: "desc" })}
+									>
+										<IconX size={10} />
+									</ActionIcon>
+								}
+							>
+								Sort: {filterState.sortField} {filterState.sortDirection === "asc" ? "↑" : "↓"}
 							</Badge>
 						)}
 					</Group>
