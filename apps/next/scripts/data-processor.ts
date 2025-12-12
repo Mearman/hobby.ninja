@@ -386,35 +386,82 @@ export class DataProcessor {
       ...(node.releaseDate?.year && { releaseDate: { year: node.releaseDate.year } }),
     }));
 
-    // Enrich with relationship data from edges
-    const itemEdgeMap = new Map<string, { brand?: string; category?: string; series?: string; grade?: string; scale?: string }>();
+    // Enrich with relationship data from edges (both IDs for linking and names for display)
+    interface ItemRelationships {
+      brandIds: string[];
+      brandNames: string[];
+      categoryIds: string[];
+      categoryNames: string[];
+      seriesIds: string[];
+      seriesNames: string[];
+      relatedItemIds: string[];
+    }
+    const itemEdgeMap = new Map<string, ItemRelationships>();
 
+    // Also build reverse maps for per-page JSON generation
+    const brandItemsMap = new Map<string, string[]>(); // brandId -> itemIds
+    const categoryItemsMap = new Map<string, string[]>(); // categoryId -> itemIds
+    const seriesItemsMap = new Map<string, string[]>(); // seriesId -> itemIds
+
+    // Process edges to build item relationships
+    // Outbound edges from items: sourceType="item", targetType="brand"|"category"|"series"|"item"
     for (const edge of allEdges) {
       if (edge.sourceType === 'item') {
-        const existing = itemEdgeMap.get(edge.sourceId) || {};
+        const itemId = edge.sourceId;
+        const existing = itemEdgeMap.get(itemId) || {
+          brandIds: [], brandNames: [],
+          categoryIds: [], categoryNames: [],
+          seriesIds: [], seriesNames: [],
+          relatedItemIds: []
+        };
+
         if (edge.targetType === 'brand') {
           const brandNode = brandNodes.find(b => b.id === edge.targetId);
-          if (brandNode) existing.brand = typeof brandNode.name === 'string' ? brandNode.name : brandNode.name?.en || brandNode.name?.ja;
+          if (brandNode) {
+            existing.brandIds.push(edge.targetId);
+            existing.brandNames.push(typeof brandNode.name === 'string' ? brandNode.name : brandNode.name?.en || brandNode.name?.ja);
+            // Add to reverse map
+            const brandItems = brandItemsMap.get(edge.targetId) || [];
+            brandItems.push(itemId);
+            brandItemsMap.set(edge.targetId, brandItems);
+          }
         }
         if (edge.targetType === 'category') {
           const categoryNode = categoryNodes.find(c => c.id === edge.targetId);
-          if (categoryNode) existing.category = typeof categoryNode.name === 'string' ? categoryNode.name : categoryNode.name?.en || categoryNode.name?.ja;
+          if (categoryNode) {
+            existing.categoryIds.push(edge.targetId);
+            existing.categoryNames.push(typeof categoryNode.name === 'string' ? categoryNode.name : categoryNode.name?.en || categoryNode.name?.ja);
+            // Add to reverse map
+            const categoryItems = categoryItemsMap.get(edge.targetId) || [];
+            categoryItems.push(itemId);
+            categoryItemsMap.set(edge.targetId, categoryItems);
+          }
         }
         if (edge.targetType === 'series') {
           const seriesNode = seriesNodes.find(s => s.id === edge.targetId);
-          if (seriesNode) existing.series = typeof seriesNode.name === 'string' ? seriesNode.name : seriesNode.name?.en || seriesNode.name?.ja;
+          if (seriesNode) {
+            existing.seriesIds.push(edge.targetId);
+            existing.seriesNames.push(typeof seriesNode.name === 'string' ? seriesNode.name : seriesNode.name?.en || seriesNode.name?.ja);
+            // Add to reverse map
+            const seriesItems = seriesItemsMap.get(edge.targetId) || [];
+            seriesItems.push(itemId);
+            seriesItemsMap.set(edge.targetId, seriesItems);
+          }
         }
-        itemEdgeMap.set(edge.sourceId, existing);
+        if (edge.targetType === 'item') {
+          existing.relatedItemIds.push(edge.targetId);
+        }
+        itemEdgeMap.set(itemId, existing);
       }
     }
 
-    // Add enriched data to search index
+    // Add enriched data to search index (use first name for display)
     for (const item of searchIndexData) {
       const enriched = itemEdgeMap.get(item.id);
       if (enriched) {
-        if (enriched.brand) item.brand = enriched.brand;
-        if (enriched.category) item.category = enriched.category;
-        if (enriched.series) item.series = enriched.series;
+        if (enriched.brandNames.length > 0) item.brand = enriched.brandNames[0];
+        if (enriched.categoryNames.length > 0) item.category = enriched.categoryNames[0];
+        if (enriched.seriesNames.length > 0) item.series = enriched.seriesNames[0];
       }
       // Scale and grade come from item node directly if stored there
       const originalNode = itemNodes.find(n => n.id === item.id);
@@ -433,26 +480,88 @@ export class DataProcessor {
     const itemIdsSize = (fs.statSync(itemIdsFile).size / 1024).toFixed(1);
     console.log(`✅ Generated item-ids.json (${itemIdsSize}KB) with ${itemIdsData.length} IDs`);
 
-    // 8c: Generate per-item JSON files
+    // 8c: Generate per-item JSON files with relationship IDs for linking
     const itemsDir = path.join(publicDataDir, 'items');
     if (!fs.existsSync(itemsDir)) {
       fs.mkdirSync(itemsDir, { recursive: true });
     }
 
-    // Get full item data with enriched relationships
+    // Get full item data with enriched relationships (both IDs and names)
     for (const node of itemNodes) {
       const enriched = itemEdgeMap.get(node.id);
       const fullItemData = {
         ...node,
-        ...(enriched?.brand && { brand: enriched.brand }),
-        ...(enriched?.category && { category: enriched.category }),
-        ...(enriched?.series && { series: enriched.series }),
+        // Include relationship IDs for linking to other pages
+        relationships: {
+          brands: enriched?.brandIds.map((id, i) => ({ id, name: enriched.brandNames[i] })) || [],
+          categories: enriched?.categoryIds.map((id, i) => ({ id, name: enriched.categoryNames[i] })) || [],
+          series: enriched?.seriesIds.map((id, i) => ({ id, name: enriched.seriesNames[i] })) || [],
+          relatedItems: enriched?.relatedItemIds || [],
+        },
+        // Keep legacy fields for backward compatibility
+        ...(enriched?.brandNames.length && { brand: enriched.brandNames[0] }),
+        ...(enriched?.categoryNames.length && { category: enriched.categoryNames[0] }),
+        ...(enriched?.seriesNames.length && { series: enriched.seriesNames[0] }),
       };
 
       const itemFile = path.join(itemsDir, `${node.id}.json`);
       fs.writeFileSync(itemFile, JSON.stringify(fullItemData));
     }
     console.log(`✅ Generated ${itemNodes.length} per-item JSON files in public/data/items/`);
+
+    // 8d: Generate per-brand JSON files
+    const brandsDir = path.join(publicDataDir, 'brands');
+    if (!fs.existsSync(brandsDir)) {
+      fs.mkdirSync(brandsDir, { recursive: true });
+    }
+
+    for (const brand of brandNodes) {
+      const itemIds = brandItemsMap.get(brand.id) || [];
+      const brandData = {
+        ...brand,
+        itemIds,
+        itemCount: itemIds.length,
+      };
+      const brandFile = path.join(brandsDir, `${brand.id}.json`);
+      fs.writeFileSync(brandFile, JSON.stringify(brandData));
+    }
+    console.log(`✅ Generated ${brandNodes.length} per-brand JSON files in public/data/brands/`);
+
+    // 8e: Generate per-series JSON files
+    const seriesDir = path.join(publicDataDir, 'series');
+    if (!fs.existsSync(seriesDir)) {
+      fs.mkdirSync(seriesDir, { recursive: true });
+    }
+
+    for (const series of seriesNodes) {
+      const itemIds = seriesItemsMap.get(series.id) || [];
+      const seriesData = {
+        ...series,
+        itemIds,
+        itemCount: itemIds.length,
+      };
+      const seriesFile = path.join(seriesDir, `${series.id}.json`);
+      fs.writeFileSync(seriesFile, JSON.stringify(seriesData));
+    }
+    console.log(`✅ Generated ${seriesNodes.length} per-series JSON files in public/data/series/`);
+
+    // 8f: Generate per-category JSON files
+    const categoriesDir = path.join(publicDataDir, 'categories');
+    if (!fs.existsSync(categoriesDir)) {
+      fs.mkdirSync(categoriesDir, { recursive: true });
+    }
+
+    for (const category of categoryNodes) {
+      const itemIds = categoryItemsMap.get(category.id) || [];
+      const categoryData = {
+        ...category,
+        itemIds,
+        itemCount: itemIds.length,
+      };
+      const categoryFile = path.join(categoriesDir, `${category.id}.json`);
+      fs.writeFileSync(categoryFile, JSON.stringify(categoryData));
+    }
+    console.log(`✅ Generated ${categoryNodes.length} per-category JSON files in public/data/categories/`);
 
     return results;
   }
@@ -480,7 +589,12 @@ export function buildDataFiles(options: DataProcessorOptions = {}): BuildResults
 // Run the build if this script is executed directly
 if (process.argv[1] === __filename) {
   try {
-    const results = buildDataFiles();
+    const options: DataProcessorOptions = {};
+    // Support SOURCE_DIR env var for specifying source directory
+    if (process.env.SOURCE_DIR) {
+      options.sourceDir = process.env.SOURCE_DIR;
+    }
+    const results = buildDataFiles(options);
     console.log('\n🎉 Build data files completed successfully!');
     process.exit(0);
   } catch (error) {
