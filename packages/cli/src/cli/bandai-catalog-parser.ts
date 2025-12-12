@@ -205,32 +205,65 @@ export class BandaiCatalogParser {
 	}
 
 	/**
+	 * Checks if text appears to be only Premium Bandai disclaimers.
+	 * Disclaimers typically start with "プレミアムバンダイ" and contain only boilerplate text.
+	 */
+	private isOnlyDisclaimers(text: string): boolean {
+		if (!text) return true;
+		const lines = text.split("\n").filter(l => l.trim().length > 0);
+		// If very few lines and starts with Premium Bandai text, it's just disclaimers
+		if (lines.length <= 5) {
+			const firstLine = lines[0]?.trim() ?? "";
+			if (firstLine.includes("プレミアムバンダイ") || firstLine.includes("Premium Bandai")) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
 	 * Gets the full product description text from either legacy or new format.
 	 * Legacy: .pg-products__instructionTxt p (excluding attentiontxt disclaimers)
 	 * New: .pg-products__article with PlaygroundEditorTheme paragraphs
 	 *
-	 * Priority: Article content first (richer format), then legacy fallback
+	 * Priority: Returns the format with substantial content (not just disclaimers).
+	 * If article has real content, use it. If article has only disclaimers, use legacy.
 	 */
 	private getFullDescriptionText($: CheerioAPI): string {
-		// Try new article format FIRST - this is the richer, newer format
+		// Get article text
+		let articleText = "";
 		const articleEl = $(DESCRIPTION_SELECTOR_ARTICLE);
 		if (articleEl.length > 0) {
-			// Get text from each paragraph, preserving line breaks
 			const lines: string[] = [];
 			articleEl.find("p").each((_, el) => {
 				const text = $(el).text().trim();
 				if (text) lines.push(text);
 			});
-			const articleText = lines.join("\n");
-			if (articleText) return articleText;
+			articleText = lines.join("\n");
 		}
 
-		// Fall back to legacy format - exclude attentiontxt (disclaimers)
+		// Get legacy text
 		const legacyParagraphs = $(DESCRIPTION_SELECTOR_LEGACY).not(".pg-products__attentiontxt");
 		const legacyText = legacyParagraphs.first().text().trim();
-		if (legacyText) return legacyText;
 
-		return "";
+		// Decision logic:
+		// 1. If article has substantial content (not just disclaimers), use it
+		// 2. If article has only disclaimers but legacy has content, use legacy
+		// 3. If both are empty or disclaimers, return whatever we have
+
+		const articleIsDisclaimers = this.isOnlyDisclaimers(articleText);
+		const legacyHasContent = legacyText.length > 0;
+
+		if (articleText && !articleIsDisclaimers) {
+			return articleText;
+		}
+
+		if (legacyHasContent) {
+			return legacyText;
+		}
+
+		// Fallback: return article text even if it's just disclaimers
+		return articleText;
 	}
 
 	private extractDescription($: CheerioAPI): Array<{ ja: string }> {
