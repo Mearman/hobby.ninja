@@ -12,7 +12,11 @@ import type {
 	CatalogCategory,
 	CatalogRelatedProduct,
 } from "@hobby-ninja/types/catalog";
-import * as cheerio from "cheerio";
+import { load, type CheerioAPI } from "cheerio";
+
+// Constants for repeated selectors
+const LABEL_VALUE_SELECTOR = "dd.pg-products__labelTxt";
+const DESCRIPTION_SELECTOR = ".pg-products__instructionTxt p";
 
 export interface ParseResult {
 	success: boolean;
@@ -23,7 +27,7 @@ export interface ParseResult {
 export class BandaiCatalogParser {
 	parse(html: string, id: string, sourceUrl: string): ParseResult {
 		try {
-			const $ = cheerio.load(html);
+			const $ = load(html);
 
 			const name = this.extractName($);
 			if (!name) {
@@ -58,13 +62,13 @@ export class BandaiCatalogParser {
 		}
 	}
 
-	private extractName($: cheerio.CheerioAPI): string | undefined {
+	private extractName($: CheerioAPI): string | undefined {
 		return $("h1.p-heading__h1-product").first().text().trim() || undefined;
 	}
 
-	private extractPrice($: cheerio.CheerioAPI): CatalogPrice | undefined {
+	private extractPrice($: CheerioAPI): CatalogPrice | undefined {
 		const priceLabel = $('dt.pg-products__label:contains("価格")');
-		const priceText = priceLabel.next("dd.pg-products__labelTxt").text().trim();
+		const priceText = priceLabel.next(LABEL_VALUE_SELECTOR).text().trim();
 
 		if (!priceText) return undefined;
 
@@ -87,32 +91,40 @@ export class BandaiCatalogParser {
 		};
 	}
 
-	private extractReleaseDate($: cheerio.CheerioAPI): CatalogReleaseDate | undefined {
+	private extractReleaseDate($: CheerioAPI): CatalogReleaseDate | undefined {
 		const dateLabel = $('dt.pg-products__label:contains("発売日")');
-		const dateText = dateLabel.next("dd.pg-products__labelTxt").text().trim();
+		const dateText = dateLabel.next(LABEL_VALUE_SELECTOR).text().trim();
 
 		if (!dateText) return undefined;
 
-		// Parse "2017年05月20日 (土)" format
-		const match = /(\d{4})年(\d{2})月(\d{2})日/.exec(dateText);
-		const yearStr = match?.[1];
-		const monthStr = match?.[2];
-		const dayStr = match?.[3];
-		if (!yearStr || !monthStr || !dayStr) {
-			return { ja: dateText, year: 0, month: 0 };
+		// Try full date format first: "2017年05月20日 (土)"
+		const fullMatch = /(\d{4})年(\d{2})月(\d{2})日/.exec(dateText);
+		if (fullMatch?.[1] && fullMatch[2] && fullMatch[3]) {
+			return {
+				ja: dateText,
+				year: Number.parseInt(fullMatch[1], 10),
+				month: Number.parseInt(fullMatch[2], 10),
+				day: Number.parseInt(fullMatch[3], 10),
+			};
 		}
 
-		return {
-			ja: dateText,
-			year: Number.parseInt(yearStr, 10),
-			month: Number.parseInt(monthStr, 10),
-			day: Number.parseInt(dayStr, 10),
-		};
+		// Try year+month format: "1985年06月" (for older items or future releases without specific day)
+		const monthMatch = /(\d{4})年(\d{2})月/.exec(dateText);
+		if (monthMatch?.[1] && monthMatch[2]) {
+			return {
+				ja: dateText,
+				year: Number.parseInt(monthMatch[1], 10),
+				month: Number.parseInt(monthMatch[2], 10),
+			};
+		}
+
+		// Fallback for unparseable dates - preserve raw text
+		return { ja: dateText, year: 0, month: 0 };
 	}
 
-	private extractTargetAge($: cheerio.CheerioAPI): number | undefined {
+	private extractTargetAge($: CheerioAPI): number | undefined {
 		const ageLabel = $('dt.pg-products__label:contains("対象年齢")');
-		const ageText = ageLabel.next("dd.pg-products__labelTxt").text().trim();
+		const ageText = ageLabel.next(LABEL_VALUE_SELECTOR).text().trim();
 
 		if (!ageText) return undefined;
 
@@ -122,7 +134,7 @@ export class BandaiCatalogParser {
 		return ageStr ? Number.parseInt(ageStr, 10) : undefined;
 	}
 
-	private extractSeries($: cheerio.CheerioAPI): CatalogSeries | undefined {
+	private extractSeries($: CheerioAPI): CatalogSeries | undefined {
 		// Series is in breadcrumbs - look for links to /series/
 		const seriesLink = $('ul.p-breadcrumb a[href*="/series/"]').first();
 		if (seriesLink.length === 0) return undefined;
@@ -133,7 +145,7 @@ export class BandaiCatalogParser {
 		};
 	}
 
-	private extractBrands($: cheerio.CheerioAPI): CatalogBrand[] {
+	private extractBrands($: CheerioAPI): CatalogBrand[] {
 		const brands: CatalogBrand[] = [];
 
 		// Brands are in breadcrumbs - look for links to /brand/
@@ -157,7 +169,7 @@ export class BandaiCatalogParser {
 		return brands;
 	}
 
-	private extractCategories($: cheerio.CheerioAPI): CatalogCategory[] {
+	private extractCategories($: CheerioAPI): CatalogCategory[] {
 		const categories: CatalogCategory[] = [];
 
 		// Categories are typically the second item in breadcrumbs (after TOP)
@@ -166,7 +178,7 @@ export class BandaiCatalogParser {
 			if (i === 0) return; // Skip TOP link
 
 			const $el = $(el);
-			const href = $el.attr("href") || "";
+			const href = $el.attr("href") ?? "";
 
 			// Only include category-level links (not brand or series)
 			if (!href.includes("/brand/") && !href.includes("/series/") && !href.includes("/item/")) {
@@ -187,15 +199,16 @@ export class BandaiCatalogParser {
 		return scaleNum ? `1/${scaleNum}` : undefined;
 	}
 
-	private extractDescription($: cheerio.CheerioAPI): Array<{ ja: string }> {
-		const descriptionEl = $(".pg-products__instructionTxt p").first();
+	private extractDescription($: CheerioAPI): Array<{ ja: string }> {
+		const descriptionEl = $(DESCRIPTION_SELECTOR).first();
 		const text = descriptionEl.text().trim();
 
 		if (!text) return [];
 
 		// Clean up the description - remove accessories/contents sections
-		const cleanTextPart = text.split(/【付属品】|【商品内容】/)[0];
-		const cleanText = cleanTextPart?.trim() ?? "";
+		// Note: split()[0] always returns a string when text is non-empty (verified by guard above)
+		const [firstPart] = text.split(/【付属品】|【商品内容】/);
+		const cleanText = firstPart.trim();
 
 		if (!cleanText) return [];
 
@@ -207,9 +220,9 @@ export class BandaiCatalogParser {
 			.map(line => ({ ja: line }));
 	}
 
-	private extractAccessories($: cheerio.CheerioAPI): Array<{ ja: string }> {
+	private extractAccessories($: CheerioAPI): Array<{ ja: string }> {
 		const accessories: Array<{ ja: string }> = [];
-		const descText = $(".pg-products__instructionTxt p").text();
+		const descText = $(DESCRIPTION_SELECTOR).text();
 
 		// Find text between 【付属品】 and 【商品内容】 or end
 		const accessoriesMatch = /【付属品】([\s\S]*?)(?:【商品内容】|$)/.exec(descText);
@@ -229,9 +242,9 @@ export class BandaiCatalogParser {
 		return accessories;
 	}
 
-	private extractContents($: cheerio.CheerioAPI): Array<{ ja: string }> {
+	private extractContents($: CheerioAPI): Array<{ ja: string }> {
 		const contents: Array<{ ja: string }> = [];
-		const descText = $(".pg-products__instructionTxt p").text();
+		const descText = $(DESCRIPTION_SELECTOR).text();
 
 		// Find text after 【商品内容】
 		const contentsMatch = /【商品内容】([\s\S]*?)$/.exec(descText);
@@ -251,7 +264,7 @@ export class BandaiCatalogParser {
 		return contents;
 	}
 
-	private extractImages($: cheerio.CheerioAPI): string[] {
+	private extractImages($: CheerioAPI): string[] {
 		const images: string[] = [];
 		const seen = new Set<string>();
 
@@ -276,14 +289,14 @@ export class BandaiCatalogParser {
 		return images;
 	}
 
-	private extractRelatedProducts($: cheerio.CheerioAPI): CatalogRelatedProduct[] {
+	private extractRelatedProducts($: CheerioAPI): CatalogRelatedProduct[] {
 		const related: CatalogRelatedProduct[] = [];
 
 		// Related products are in p-card__wrap following h2:contains("関連商品")
 		// Find the section containing "関連商品" and then its card links
 		$('h2.p-heading__h2:contains("関連商品")').next(".p-card__wrap").find('a[href*="/item/"]').each((_, el) => {
 			const $el = $(el);
-			const href = $el.attr("href") || "";
+			const href = $el.attr("href") ?? "";
 
 			// Extract ID from URL like "/item/01_5468/"
 			const idMatch = /\/item\/([^/]+)\/?/.exec(href);
