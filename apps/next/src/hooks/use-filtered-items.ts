@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useMemo, useCallback } from "react";
-import { getNodeDisplayName, isItemNode, type ItemNode } from "@/lib/schemas";
+
+import { getNodeDisplayName, getNodeReleaseDateSortable, isItemNode, type ItemNode } from "@/lib/schemas";
 
 export interface FilterState {
 	search: string;
@@ -49,8 +50,8 @@ const DEFAULT_FILTER_STATE: FilterState = {
 
 export function useFilteredItems(
 	items: ItemNode[],
-	options: FilterOptions = {}
-): UseFilteredItemsReturn<ItemNode> {
+	options: FilterOptions = {},
+): UseFilteredItemsReturn {
 	const [filterState, setFilterState] = useState<FilterState>(DEFAULT_FILTER_STATE);
 
 	// Calculate available filter options from items
@@ -60,32 +61,32 @@ export function useFilteredItems(
 		const scales = new Set<string>();
 		const series = new Set<string>();
 
-		const validItems = items.filter(item => isItemNode(item));
+		const validItems: ItemNode[] = items.filter((item): item is ItemNode => isItemNode(item));
 
-		validItems.forEach(item => {
+		for (const item of validItems) {
 			if (item.brand) brands.add(item.brand);
 			if (item.grade) grades.add(item.grade);
 			if (item.scale) scales.add(item.scale);
 			if (item.series) series.add(item.series);
-		});
+		}
 
 		return {
-			brands: options.availableBrands ?? [...Array.from(brands)].sort(),
-			grades: options.availableGrades ?? [...Array.from(grades)].sort(),
-			scales: options.availableScales ?? [...Array.from(scales)].sort(),
-			series: options.availableSeries ?? [...Array.from(series)].sort(),
+			brands: options.availableBrands ?? [...brands].sort(),
+			grades: options.availableGrades ?? [...grades].sort(),
+			scales: options.availableScales ?? [...scales].sort(),
+			series: options.availableSeries ?? [...series].sort(),
 		};
 	}, [items, options.availableBrands, options.availableGrades, options.availableScales, options.availableSeries]);
 
 	// Apply filters and sorting
-	const filteredItems = useMemo(() => {
+	const filteredItems = useMemo((): ItemNode[] => {
 		// Items are already pre-filtered by category/series/brand on the server
-		let filteredItems = items.filter(item => isItemNode(item));
+		let result: ItemNode[] = items.filter((item): item is ItemNode => isItemNode(item));
 
 		// Apply search filter
 		if (filterState.search) {
 			const query = filterState.search.toLowerCase();
-			filteredItems = filteredItems.filter(item => {
+			result = result.filter(item => {
 				const name = getNodeDisplayName(item).toLowerCase();
 				const brand = item.brand?.toLowerCase() ?? "";
 				const series = item.series?.toLowerCase() ?? "";
@@ -103,16 +104,16 @@ export function useFilteredItems(
 
 		// Apply filters
 		if (filterState.brand) {
-			filteredItems = filteredItems.filter(item => item.brand === filterState.brand);
+			result = result.filter(item => item.brand === filterState.brand);
 		}
 		if (filterState.grade) {
-			filteredItems = filteredItems.filter(item => item.grade === filterState.grade);
+			result = result.filter(item => item.grade === filterState.grade);
 		}
 		if (filterState.scale) {
-			filteredItems = filteredItems.filter(item => item.scale === filterState.scale);
+			result = result.filter(item => item.scale === filterState.scale);
 		}
 		if (filterState.series) {
-			filteredItems = filteredItems.filter(item => item.series === filterState.series);
+			result = result.filter(item => item.series === filterState.series);
 		}
 
 		// Apply sorting
@@ -121,59 +122,45 @@ export function useFilteredItems(
 
 		switch (sortField) {
 			case "name": {
-				if (sortDirection === "asc") {
-					filteredItems = [...filteredItems].sort((a, b) => getNodeDisplayName(a).localeCompare(getNodeDisplayName(b)));
-				} else {
-					filteredItems = [...filteredItems].sort((a, b) => getNodeDisplayName(b).localeCompare(getNodeDisplayName(a)));
-				}
+				result = sortDirection === "asc"
+					? result.toSorted((a, b) => getNodeDisplayName(a).localeCompare(getNodeDisplayName(b)))
+					: result.toSorted((a, b) => getNodeDisplayName(b).localeCompare(getNodeDisplayName(a)));
 				break;
 			}
 			case "date": {
-				if (sortDirection === "asc") {
-					filteredItems = [...filteredItems].sort((a, b) => (a.created ?? "").localeCompare(b.created ?? ""));
-				} else {
-					filteredItems = [...filteredItems].sort((a, b) => (b.created ?? "").localeCompare(a.created ?? ""));
-				}
+				result = sortDirection === "asc"
+					? result.toSorted((a, b) => getNodeReleaseDateSortable(a).localeCompare(getNodeReleaseDateSortable(b)))
+					: result.toSorted((a, b) => getNodeReleaseDateSortable(b).localeCompare(getNodeReleaseDateSortable(a)));
 				break;
 			}
 			case "price": {
-				if (sortDirection === "asc") {
-					filteredItems = [...filteredItems].sort((a, b) => (a.price?.amount ?? 0) - (b.price?.amount ?? 0));
-				} else {
-					filteredItems = [...filteredItems].sort((a, b) => (b.price?.amount ?? 0) - (a.price?.amount ?? 0));
-				}
+				result = sortDirection === "asc"
+					? result.toSorted((a, b) => (a.price?.amount ?? 0) - (b.price?.amount ?? 0))
+					: result.toSorted((a, b) => (b.price?.amount ?? 0) - (a.price?.amount ?? 0));
 				break;
 			}
 			case "brand": {
-				if (sortDirection === "asc") {
-					filteredItems = [...filteredItems].sort((a, b) => (a.brand ?? "").localeCompare(b.brand ?? ""));
-				} else {
-					filteredItems = [...filteredItems].sort((a, b) => (b.brand ?? "").localeCompare(a.brand ?? ""));
-				}
+				result = sortDirection === "asc"
+					? result.toSorted((a, b) => (a.brand ?? "").localeCompare(b.brand ?? ""))
+					: result.toSorted((a, b) => (b.brand ?? "").localeCompare(a.brand ?? ""));
 				break;
 			}
 			case "grade": {
-				if (sortDirection === "asc") {
-					filteredItems = [...filteredItems].sort((a, b) => (a.grade ?? "").localeCompare(b.grade ?? ""));
-				} else {
-					filteredItems = [...filteredItems].sort((a, b) => (b.grade ?? "").localeCompare(a.grade ?? ""));
-				}
+				result = sortDirection === "asc"
+					? result.toSorted((a, b) => (a.grade ?? "").localeCompare(b.grade ?? ""))
+					: result.toSorted((a, b) => (b.grade ?? "").localeCompare(a.grade ?? ""));
 				break;
 			}
 			case "scale": {
-				if (sortDirection === "asc") {
-					filteredItems = [...filteredItems].sort((a, b) => (a.scale ?? "").localeCompare(b.scale ?? ""));
-				} else {
-					filteredItems = [...filteredItems].sort((a, b) => (b.scale ?? "").localeCompare(a.scale ?? ""));
-				}
+				result = sortDirection === "asc"
+					? result.toSorted((a, b) => (a.scale ?? "").localeCompare(b.scale ?? ""))
+					: result.toSorted((a, b) => (b.scale ?? "").localeCompare(a.scale ?? ""));
 				break;
 			}
 			case "series": {
-				if (sortDirection === "asc") {
-					filteredItems = [...filteredItems].sort((a, b) => (a.series ?? "").localeCompare(b.series ?? ""));
-				} else {
-					filteredItems = [...filteredItems].sort((a, b) => (b.series ?? "").localeCompare(a.series ?? ""));
-				}
+				result = sortDirection === "asc"
+					? result.toSorted((a, b) => (a.series ?? "").localeCompare(b.series ?? ""))
+					: result.toSorted((a, b) => (b.series ?? "").localeCompare(a.series ?? ""));
 				break;
 			}
 			default: {
@@ -182,8 +169,8 @@ export function useFilteredItems(
 			}
 		}
 
-		return filteredItems;
-	}, [items, filterState, options.defaultSort]);
+		return result;
+	}, [items, filterState]);
 
 	// Update filter state
 	const updateFilter = useCallback((updates: Partial<FilterState>) => {
@@ -218,8 +205,8 @@ export function useFilteredItems(
 		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
 
 		const searchFilterCount = Object.values(searchFilters).filter(value => value !== "").length;
-		const sortFieldCount = sortField !== defaultSortField ? 1 : 0;
-		const sortDirectionCount = sortDirection !== defaultSortDirection ? 1 : 0;
+		const sortFieldCount = sortField === defaultSortField ? 0 : 1;
+		const sortDirectionCount = sortDirection === defaultSortDirection ? 0 : 1;
 
 		return searchFilterCount + sortFieldCount + sortDirectionCount;
 	}, [filterState]);
