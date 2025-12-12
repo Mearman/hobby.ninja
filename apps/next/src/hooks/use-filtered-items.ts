@@ -9,7 +9,8 @@ export interface FilterState {
 	grade: string;
 	scale: string;
 	series: string;
-	sortBy: string;
+	sortField: string;
+	sortDirection: "asc" | "desc";
 }
 
 export interface FilterOptions {
@@ -20,8 +21,8 @@ export interface FilterOptions {
 	defaultSort?: string;
 }
 
-export interface UseFilteredItemsReturn<T extends ItemNode> {
-	filteredItems: T[];
+export interface UseFilteredItemsReturn {
+	filteredItems: ItemNode[];
 	filterState: FilterState;
 	updateFilter: (updates: Partial<FilterState>) => void;
 	updateSearch: (value: string) => void;
@@ -42,13 +43,14 @@ const DEFAULT_FILTER_STATE: FilterState = {
 	grade: "",
 	scale: "",
 	series: "",
-	sortBy: "date-desc",
+	sortField: "date",
+	sortDirection: "desc",
 };
 
-export function useFilteredItems<T extends ItemNode>(
-	items: T[],
+export function useFilteredItems(
+	items: ItemNode[],
 	options: FilterOptions = {}
-): UseFilteredItemsReturn<T> {
+): UseFilteredItemsReturn<ItemNode> {
 	const [filterState, setFilterState] = useState<FilterState>(DEFAULT_FILTER_STATE);
 
 	// Calculate available filter options from items
@@ -58,7 +60,7 @@ export function useFilteredItems<T extends ItemNode>(
 		const scales = new Set<string>();
 		const series = new Set<string>();
 
-		const validItems = items.filter((item): item is ItemNode => isItemNode(item));
+		const validItems = items.filter(item => isItemNode(item));
 
 		validItems.forEach(item => {
 			if (item.brand) brands.add(item.brand);
@@ -68,17 +70,17 @@ export function useFilteredItems<T extends ItemNode>(
 		});
 
 		return {
-			brands: options.availableBrands ?? Array.from(brands).toSorted(),
-			grades: options.availableGrades ?? Array.from(grades).toSorted(),
-			scales: options.availableScales ?? Array.from(scales).toSorted(),
-			series: options.availableSeries ?? Array.from(series).toSorted(),
+			brands: options.availableBrands ?? [...Array.from(brands)].sort(),
+			grades: options.availableGrades ?? [...Array.from(grades)].sort(),
+			scales: options.availableScales ?? [...Array.from(scales)].sort(),
+			series: options.availableSeries ?? [...Array.from(series)].sort(),
 		};
 	}, [items, options.availableBrands, options.availableGrades, options.availableScales, options.availableSeries]);
 
 	// Apply filters and sorting
 	const filteredItems = useMemo(() => {
 		// Items are already pre-filtered by category/series/brand on the server
-		let filteredItems = items.filter((item): item is ItemNode => isItemNode(item));
+		let filteredItems = items.filter(item => isItemNode(item));
 
 		// Apply search filter
 		if (filterState.search) {
@@ -114,46 +116,64 @@ export function useFilteredItems<T extends ItemNode>(
 		}
 
 		// Apply sorting
-		const sortBy = filterState.sortBy || options.defaultSort || "date-desc";
-		switch (sortBy) {
-			case "name-asc": {
-				filteredItems = filteredItems.toSorted((a, b) => getNodeDisplayName(a).localeCompare(getNodeDisplayName(b)));
+		const sortField = filterState.sortField || "date";
+		const sortDirection = filterState.sortDirection || "desc";
+
+		switch (sortField) {
+			case "name": {
+				if (sortDirection === "asc") {
+					filteredItems = [...filteredItems].sort((a, b) => getNodeDisplayName(a).localeCompare(getNodeDisplayName(b)));
+				} else {
+					filteredItems = [...filteredItems].sort((a, b) => getNodeDisplayName(b).localeCompare(getNodeDisplayName(a)));
+				}
 				break;
 			}
-			case "name-desc": {
-				filteredItems = filteredItems.toSorted((a, b) => getNodeDisplayName(b).localeCompare(getNodeDisplayName(a)));
+			case "date": {
+				if (sortDirection === "asc") {
+					filteredItems = [...filteredItems].sort((a, b) => (a.created ?? "").localeCompare(b.created ?? ""));
+				} else {
+					filteredItems = [...filteredItems].sort((a, b) => (b.created ?? "").localeCompare(a.created ?? ""));
+				}
 				break;
 			}
-			case "date-asc": {
-				filteredItems = filteredItems.toSorted((a, b) => (a.created ?? "").localeCompare(b.created ?? ""));
+			case "price": {
+				if (sortDirection === "asc") {
+					filteredItems = [...filteredItems].sort((a, b) => (a.price?.amount ?? 0) - (b.price?.amount ?? 0));
+				} else {
+					filteredItems = [...filteredItems].sort((a, b) => (b.price?.amount ?? 0) - (a.price?.amount ?? 0));
+				}
 				break;
 			}
-			case "date-desc": {
-				filteredItems = filteredItems.toSorted((a, b) => (b.created ?? "").localeCompare(a.created ?? ""));
+			case "brand": {
+				if (sortDirection === "asc") {
+					filteredItems = [...filteredItems].sort((a, b) => (a.brand ?? "").localeCompare(b.brand ?? ""));
+				} else {
+					filteredItems = [...filteredItems].sort((a, b) => (b.brand ?? "").localeCompare(a.brand ?? ""));
+				}
 				break;
 			}
-			case "price-asc": {
-				filteredItems = filteredItems.toSorted((a, b) => (a.price?.amount ?? 0) - (b.price?.amount ?? 0));
+			case "grade": {
+				if (sortDirection === "asc") {
+					filteredItems = [...filteredItems].sort((a, b) => (a.grade ?? "").localeCompare(b.grade ?? ""));
+				} else {
+					filteredItems = [...filteredItems].sort((a, b) => (b.grade ?? "").localeCompare(a.grade ?? ""));
+				}
 				break;
 			}
-			case "price-desc": {
-				filteredItems = filteredItems.toSorted((a, b) => (b.price?.amount ?? 0) - (a.price?.amount ?? 0));
+			case "scale": {
+				if (sortDirection === "asc") {
+					filteredItems = [...filteredItems].sort((a, b) => (a.scale ?? "").localeCompare(b.scale ?? ""));
+				} else {
+					filteredItems = [...filteredItems].sort((a, b) => (b.scale ?? "").localeCompare(a.scale ?? ""));
+				}
 				break;
 			}
-			case "brand-asc": {
-				filteredItems = filteredItems.toSorted((a, b) => (a.brand ?? "").localeCompare(b.brand ?? ""));
-				break;
-			}
-			case "grade-asc": {
-				filteredItems = filteredItems.toSorted((a, b) => (a.grade ?? "").localeCompare(b.grade ?? ""));
-				break;
-			}
-			case "scale-asc": {
-				filteredItems = filteredItems.toSorted((a, b) => (a.scale ?? "").localeCompare(b.scale ?? ""));
-				break;
-			}
-			case "series-asc": {
-				filteredItems = filteredItems.toSorted((a, b) => (a.series ?? "").localeCompare(b.series ?? ""));
+			case "series": {
+				if (sortDirection === "asc") {
+					filteredItems = [...filteredItems].sort((a, b) => (a.series ?? "").localeCompare(b.series ?? ""));
+				} else {
+					filteredItems = [...filteredItems].sort((a, b) => (b.series ?? "").localeCompare(a.series ?? ""));
+				}
 				break;
 			}
 			default: {
@@ -181,16 +201,27 @@ export function useFilteredItems<T extends ItemNode>(
 
 	// Check if any filters are active
 	const hasActiveFilters = useMemo(() => {
-		return Object.values(filterState).some(value =>
-			value !== "" && value !== DEFAULT_FILTER_STATE.sortBy
-		);
+		const { sortField, sortDirection, ...searchFilters } = filterState;
+		const defaultSortField = DEFAULT_FILTER_STATE.sortField;
+		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
+
+		const hasSearchFilters = Object.values(searchFilters).some(value => value !== "");
+		const hasNonDefaultSort = sortField !== defaultSortField || sortDirection !== defaultSortDirection;
+
+		return hasSearchFilters || hasNonDefaultSort;
 	}, [filterState]);
 
 	// Count active filters
 	const activeFilterCount = useMemo(() => {
-		return Object.values(filterState).filter(value =>
-			value !== "" && value !== DEFAULT_FILTER_STATE.sortBy
-		).length;
+		const { sortField, sortDirection, ...searchFilters } = filterState;
+		const defaultSortField = DEFAULT_FILTER_STATE.sortField;
+		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
+
+		const searchFilterCount = Object.values(searchFilters).filter(value => value !== "").length;
+		const sortFieldCount = sortField !== defaultSortField ? 1 : 0;
+		const sortDirectionCount = sortDirection !== defaultSortDirection ? 1 : 0;
+
+		return searchFilterCount + sortFieldCount + sortDirectionCount;
 	}, [filterState]);
 
 	return {
