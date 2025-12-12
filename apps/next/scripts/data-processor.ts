@@ -284,6 +284,7 @@ export class DataProcessor {
     const brandNodes = allNodes.filter(node => node.type === 'brand');
     const categoryNodes = allNodes.filter(node => node.type === 'category');
     const seriesNodes = allNodes.filter(node => node.type === 'series');
+    const manualNodes = allNodes.filter(node => node.type === 'manual');
 
     // Get featured items (first 12 by name)
     const featuredItems = [...itemNodes]
@@ -320,15 +321,25 @@ export class DataProcessor {
     console.log(`✅ Generated homepage.json with pre-computed stats and featured content`);
 
     // Step 6: Generate lightweight static-params files (IDs only for generateStaticParams)
-    const staticParamsData = {
+    // Note: gradeIds and scaleIds will be added later after Step 8 processing
+    const staticParamsData: {
+      itemIds: string[];
+      seriesIds: string[];
+      categoryIds: string[];
+      brandIds: string[];
+      manualIds: string[];
+      gradeIds: string[];
+      scaleIds: string[];
+    } = {
       itemIds: itemNodes.map(node => node.id),
       seriesIds: seriesNodes.map(node => node.id),
       categoryIds: categoryNodes.map(node => node.id),
       brandIds: brandNodes.map(node => node.id),
+      manualIds: manualNodes.map(node => node.id),
+      gradeIds: [], // Will be populated after grade processing in Step 8
+      scaleIds: [], // Will be populated after scale processing in Step 8
     };
-    const staticParamsOutputFile = path.join(this.outputDir, 'static-params.json');
-    fs.writeFileSync(staticParamsOutputFile, JSON.stringify(staticParamsData, null, 2));
-    console.log(`✅ Generated static-params.json with ${staticParamsData.itemIds.length} item IDs`);
+    // Note: staticParamsData will be written after Step 8 with complete grade/scale IDs
 
     console.log('\n📊 Unified Graph Build Summary:');
     console.log(`   Total nodes: ${allNodes.length}`);
@@ -680,7 +691,6 @@ export class DataProcessor {
     console.log(`✅ Generated ${categoryNodes.length} per-category JSON files in public/data/categories/`);
 
     // 8g: Generate per-manual JSON files
-    const manualNodes = allNodes.filter(node => node.type === 'manual');
     const manualsDir = path.join(publicDataDir, 'manuals');
     if (!fs.existsSync(manualsDir)) {
       fs.mkdirSync(manualsDir, { recursive: true });
@@ -767,6 +777,9 @@ export class DataProcessor {
 
     console.log(`✅ Generated ${gradeItemsMap.size} per-grade JSON files in public/data/grades/ (with hierarchy)`);
 
+    // Populate gradeIds from grades that have items
+    staticParamsData.gradeIds = [...gradeItemsMap.keys()];
+
     // 8i: Generate per-scale JSON files
     const scalesDir = path.join(publicDataDir, 'scales');
     if (!fs.existsSync(scalesDir)) {
@@ -786,6 +799,16 @@ export class DataProcessor {
       fs.writeFileSync(scaleFile, JSON.stringify(scaleData));
     }
     console.log(`✅ Generated ${scaleItemsMap.size} per-scale JSON files in public/data/scales/`);
+
+    // Populate scaleIds from scales that have items
+    staticParamsData.scaleIds = [...scaleItemsMap.keys()].map(scale =>
+      scale.toLowerCase().replace(/[\/\s:]+/g, '-')
+    );
+
+    // Now write the complete static-params.json with all IDs
+    const staticParamsOutputFile = path.join(this.outputDir, 'static-params.json');
+    fs.writeFileSync(staticParamsOutputFile, JSON.stringify(staticParamsData, null, 2));
+    console.log(`✅ Generated static-params.json with ${staticParamsData.itemIds.length} items, ${staticParamsData.gradeIds.length} grades, ${staticParamsData.scaleIds.length} scales, ${staticParamsData.manualIds.length} manuals`);
 
     return results;
   }
