@@ -27,6 +27,7 @@ import React from "react";
 import { getAllItems, getAllSeries } from "@/lib/graph-data";
 import { BaseNode, getNodeDisplayName, isBaseNode } from "@/lib/schemas";
 import { seriesCard, seriesImage } from "@/styles/components.css";
+import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 
 // Define types locally to avoid circular imports
 interface SeriesWithStats extends BaseNode {
@@ -60,11 +61,11 @@ function SeriesCard({ series }: { series: SeriesWithStats }) {
 				<Stack gap="md">
 					<Box h={120} className={seriesImage}>
 						<Image
-							src={coverImage || `https://via.placeholder.com/200x120/f5f5f5/666666?text=${encodeURIComponent(getNodeDisplayName(series))}`}
+							src={coverImage || createPlaceholderSvg(getNodeDisplayName(series).slice(0, 20), 200, 120)}
 							alt={getNodeDisplayName(series)}
 							fit="cover"
 							radius="sm"
-							fallbackSrc="https://via.placeholder.com/200x120/e0e0e0/999999?text=Series"
+							fallbackSrc={createErrorPlaceholderSvg(200, 120)}
 						/>
 					</Box>
 					<div>

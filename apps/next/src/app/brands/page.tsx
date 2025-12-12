@@ -20,6 +20,7 @@ import Link from "next/link";
 
 import { getAllBrands, getAllItems } from "@/lib/graph-data";
 import { categoryCard } from "@/styles/components.css";
+import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 
 // Types
 interface Brand {
@@ -187,11 +188,11 @@ function BrandCard({ brand }: { brand: BrandWithStats }) {
 					<Group gap="sm">
 						<Box w={80} h={80}>
 							<Image
-								src={`https://via.placeholder.com/80x80/ffffff/666666?text=${encodeURIComponent(getDisplayName(brand).slice(0, 3))}`}
+								src={createPlaceholderSvg(getDisplayName(brand).slice(0, 3), 80, 80)}
 								alt={getDisplayName(brand)}
 								fit="contain"
 								radius="sm"
-								fallbackSrc={`https://via.placeholder.com/80x80/f5f5f5/999999?text=${getDisplayName(brand).slice(0, 2)}`}
+								fallbackSrc={createErrorPlaceholderSvg(80, 80)}
 							/>
 						</Box>
 						<Stack gap="xs" flex={1}>

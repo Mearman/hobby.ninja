@@ -55,6 +55,7 @@ import {
 	progressBar,
 	progressFill,
 } from "@/styles/components.css";
+import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 
 // Constants for magic numbers
 const PLACEHOLDER_IMAGE_HEIGHT = 200;
@@ -126,11 +127,11 @@ function CollectionItemCard({
 				<>
 					<Box className={itemCardImage}>
 						<Image
-							src={`https://via.placeholder.com/280x200/f5f5f5/666666?text=${encodeURIComponent(dbItem ? getNodeDisplayName(dbItem) : item.itemId)}`}
+							src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : item.itemId).slice(0, 20), 280, 200)}
 							alt={dbItem ? getNodeDisplayName(dbItem) : item.itemId}
 							fit="cover"
 							height={PLACEHOLDER_IMAGE_HEIGHT}
-							fallbackSrc="https://via.placeholder.com/280x200/e0e0e0/999999?text=No+Image"
+							fallbackSrc={createErrorPlaceholderSvg(280, 200)}
 						/>
 					</Box>
 					<Box className={itemCardContent}>
@@ -186,7 +187,7 @@ function CollectionItemCard({
 					<Group>
 						<Avatar
 							size="md"
-							src={`https://via.placeholder.com/40x40/f5f5f5/666666?text=${encodeURIComponent((dbItem ? getNodeDisplayName(dbItem) : item.itemId)[0])}`}
+							src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : item.itemId)[0], 40, 40)}
 							alt={dbItem ? getNodeDisplayName(dbItem) : item.itemId}
 						/>
 						<Box>
@@ -315,7 +316,7 @@ function ItemFormModal({
 						<Group>
 							<Avatar
 								size="lg"
-								src={`https://via.placeholder.com/60x60/f5f5f5/666666?text=${encodeURIComponent((dbItem ? getNodeDisplayName(dbItem) : item.itemId)[0])}`}
+								src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : item.itemId)[0], 60, 60)}
 								alt={dbItem ? getNodeDisplayName(dbItem) : item.itemId}
 							/>
 							<Box>

@@ -27,6 +27,7 @@ import { getScaleById, getItemsByScale } from "@/lib/server-graph-data";
 import staticParams from "@/data/static-params.json";
 import { getNodeDisplayName, type BaseNode, type ItemNode } from "@/lib/schemas";
 import { itemCard } from "@/styles/components.css";
+import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 
 interface ScalePageProps {
 	params: Promise<{ id: string }>;
@@ -108,11 +109,11 @@ function ItemCard({ item }: { item: ItemNode & { series?: string; grade?: string
 				<Stack gap="md">
 					<Box h={160} style={{ overflow: "hidden", borderRadius: "var(--mantine-radius-sm)" }}>
 						<Image
-							src={primaryImage || `https://via.placeholder.com/200x200/f5f5f5/666666?text=${encodeURIComponent(name)}`}
+							src={primaryImage || createPlaceholderSvg(name.slice(0, 20), 200, 200)}
 							alt={name}
 							fit="cover"
 							radius="sm"
-							fallbackSrc="https://via.placeholder.com/200x200/e0e0e0/999999?text=Item"
+							fallbackSrc={createErrorPlaceholderSvg(200, 200)}
 						/>
 					</Box>
 					<div>

@@ -25,6 +25,7 @@ import { getManualById } from "@/lib/server-graph-data";
 // Import lightweight static params for generateStaticParams
 import staticParams from "@/data/static-params.json";
 import { getNodeDisplayName, type BaseNode } from "@/lib/schemas";
+import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 
 interface ManualPageProps {
 	params: Promise<{ id: string }>;
@@ -139,7 +140,7 @@ export default async function ManualDetailPage({ params }: ManualPageProps) {
 										height={200}
 										radius="md"
 										fit="contain"
-										fallbackSrc="https://via.placeholder.com/200x200/e0e0e0/999999?text=Manual"
+										fallbackSrc={createErrorPlaceholderSvg(200, 200)}
 									/>
 								</Box>
 							)}
