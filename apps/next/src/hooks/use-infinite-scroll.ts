@@ -1,14 +1,12 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect } from "react";
+
 import { PAGINATION } from "@/lib/constants";
 
-/* eslint-disable @typescript-eslint/no-magic-numbers */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-floating-promises */
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
-/* eslint-disable @typescript-eslint/no-misused-promises */
+const MAX_CACHED_ITEMS = 1000;
+const INTERSECTION_THRESHOLD = 0.1;
+const LOADING_DELAY = 300;
 
 export interface InfiniteScrollOptions<T> {
 	items: T[];
@@ -32,9 +30,6 @@ export interface InfiniteScrollReturn<T> {
 	itemCount: number;
 	lastItemRef: (node: HTMLElement | null) => void;
 }
-
-const MAX_CACHED_ITEMS = 1000; // eslint-disable-line @typescript-eslint/no-magic-numbers
-const INTERSECTION_THRESHOLD = 0.1; // eslint-disable-line @typescript-eslint/no-magic-numbers
 
 export function useInfiniteScroll<T>({
 	items,
@@ -67,7 +62,7 @@ export function useInfiniteScroll<T>({
 
 		try {
 			// Brief loading delay for UX
-			await new Promise(resolve => setTimeout(resolve, 300));
+			await new Promise(resolve => setTimeout(resolve, LOADING_DELAY));
 
 			setLoadedCount(prev => {
 				const newCount = Math.min(prev + itemsPerPage, items.length, maxCachedItems);
@@ -107,7 +102,7 @@ export function useInfiniteScroll<T>({
 	}, [isLoading, autoLoad, hasMore, loadMore, threshold, rootMargin]);
 
 	// Reset scroll state
-	const reset = useCallback((): void => {
+	const reset = useCallback(() => {
 		setLoadedCount(itemsPerPage);
 		setIsLoading(false);
 		if (observerRef.current) {
@@ -122,8 +117,7 @@ export function useInfiniteScroll<T>({
 
 	// URL synchronization for page parameter
 	useEffect(() => {
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-		if (!preservePageParam || typeof window === "undefined") return;
+		if (!preservePageParam || typeof globalThis.window === "undefined") return;
 
 		const currentPage = Math.ceil(loadedCount / itemsPerPage);
 		const urlParams = new URLSearchParams(globalThis.location.search);
@@ -190,8 +184,8 @@ export function useInfiniteScrollWithFetch<T>({
 
 			setItems(prev => [...prev, ...newItems]);
 			setPage(prev => prev + 1);
-		} catch (err) {
-			setError(err instanceof Error ? err : new Error("Failed to load more items"));
+		} catch (error_) {
+			setError(error_ instanceof Error ? error_ : new Error("Failed to load more items"));
 		} finally {
 			setIsLoading(false);
 		}
