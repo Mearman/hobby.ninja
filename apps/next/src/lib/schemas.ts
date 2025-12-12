@@ -370,6 +370,48 @@ export const getNodeReleaseDate = (node: ItemNode): string | null => {
 	return null;
 };
 
+/**
+ * Get sortable release date string for comparison (YYYYMMDD format).
+ * Returns empty string if no release date, so items without dates sort to end.
+ */
+export const getNodeReleaseDateSortable = (node: ItemNode): string => {
+	const releaseDate = node.releaseDate;
+	if (!releaseDate) return "";
+
+	// If we have valid year, format as YYYYMMDD for proper sorting
+	if (releaseDate.year && releaseDate.year > 0) {
+		const month = releaseDate.month && releaseDate.month > 0
+			? String(releaseDate.month).padStart(2, "0")
+			: "00";
+		const day = releaseDate.day && releaseDate.day > 0
+			? String(releaseDate.day).padStart(2, "0")
+			: "00";
+
+		return `${releaseDate.year}${month}${day}`;
+	}
+
+	// Fall back to parsing the Japanese date string
+	if (releaseDate.ja) {
+		// Try full date format: "2017年05月20日"
+		const fullMatch = /(\d{4})年(\d{2})月(\d{2})日/.exec(releaseDate.ja);
+		if (fullMatch?.[1] && fullMatch[2] && fullMatch[3]) {
+			return `${fullMatch[1]}${fullMatch[2]}${fullMatch[3]}`;
+		}
+		// Try year+month format: "1985年06月"
+		const monthMatch = /(\d{4})年(\d{2})月/.exec(releaseDate.ja);
+		if (monthMatch?.[1] && monthMatch[2]) {
+			return `${monthMatch[1]}${monthMatch[2]}00`;
+		}
+		// Try just year
+		const yearMatch = /(\d{4})年/.exec(releaseDate.ja);
+		if (yearMatch?.[1]) {
+			return `${yearMatch[1]}0000`;
+		}
+	}
+
+	return "";
+};
+
 export const getNodeImages = (node: ItemNode): string[] => {
 	if (!node.images) return [];
 	return node.images.map(img => {
