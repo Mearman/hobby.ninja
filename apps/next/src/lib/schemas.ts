@@ -71,11 +71,12 @@ export const AccessorySchema = z.union([
 	LocalizedTextSchema,
 ]);
 
-// Image schema
+// Image schema - accepts full URLs or relative paths (e.g., /images/items/xxx.jpg)
 export const ImageSchema = z.union([
 	z.string().url(),
+	z.string().startsWith("/"), // Local relative paths
 	z.object({
-		url: z.string().url(),
+		url: z.string(),
 		alt: z.string().optional(),
 		width: z.number().optional(),
 		height: z.number().optional(),
