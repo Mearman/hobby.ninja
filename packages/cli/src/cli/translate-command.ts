@@ -8,7 +8,7 @@
  */
 
 import { promises as fs } from "node:fs";
-import { join } from "node:path";
+import path from "node:path";
 
 import {
 	TranslationService,
@@ -18,14 +18,15 @@ import {
 	TRANSLATION_STORE_DIR,
 } from "@hobby-ninja/translation";
 import type { CatalogItem } from "@hobby-ninja/types/catalog";
+import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 
 import { CatalogTranslator } from "./catalog-translator";
 import { TranslationProgressRenderer } from "./ui/TranslationProgress";
 
 const BATCH_SIZE = 50;
 
-const DEFAULT_CATALOG_DIR = "data/bandai/items";
-const DEFAULT_MANUALS_DIR = "data/bandai/manuals";
+const DEFAULT_CATALOG_DIR = resolveWorkspacePath("data/bandai/items");
+const DEFAULT_MANUALS_DIR = resolveWorkspacePath("data/bandai/manuals");
 
 export type TranslateSource = "all" | "bandai-catalog" | "bandai-manuals";
 
@@ -201,7 +202,7 @@ async function translateCatalogItems(options: CatalogTranslateOptions): Promise<
 
 		const results = await Promise.all(
 			batch.map(async (id) => {
-				const itemPath = join(inputDir, id, `${id}.json`);
+				const itemPath = path.join(inputDir, id, `${id}.json`);
 				return translateCatalogItem(itemPath, translator, dryRun, verbose);
 			}),
 		);
@@ -367,7 +368,7 @@ async function translateManualFiles(options: ManualTranslateOptions): Promise<Tr
 
 		const results = await Promise.all(
 			batch.map(async (id) => {
-				const manualPath = join(inputDir, id, `${id}.json`);
+				const manualPath = path.join(inputDir, id, `${id}.json`);
 				return translateManualItem(manualPath, translator, dryRun, verbose);
 			}),
 		);

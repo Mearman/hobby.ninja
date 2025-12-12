@@ -86,6 +86,7 @@ export default [
 				project: [
 					path.resolve(__dirname, "packages/types/tsconfig.json"),
 					path.resolve(__dirname, "packages/utils/tsconfig.json"),
+					path.resolve(__dirname, "packages/translation/tsconfig.json"),
 					path.resolve(__dirname, "packages/cli/tsconfig.json"),
 					path.resolve(__dirname, "apps/web/tsconfig.json"),
 					path.resolve(__dirname, "apps/next/tsconfig.json"),
@@ -595,6 +596,13 @@ export default [
 		rules: {
 			"no-console": "off",
 			"unicorn/no-negated-condition": "off",
+		},
+	},
+	{
+		// Constants files contain intentional magic numbers for configuration
+		files: ["**/constants.ts"],
+		rules: {
+			"@typescript-eslint/no-magic-numbers": "off",
 		},
 	},
 	{

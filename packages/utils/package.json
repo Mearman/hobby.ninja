@@ -41,6 +41,10 @@
 		"./rendering": {
 			"types": "./src/renderingDetection.ts",
 			"import": "./src/renderingDetection.ts"
+		},
+		"./workspace": {
+			"types": "./src/workspace.ts",
+			"import": "./src/workspace.ts"
 		}
 	},
 	"main": "./src/cache-manager.ts",

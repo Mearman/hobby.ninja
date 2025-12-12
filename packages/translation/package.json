@@ -11,6 +11,7 @@
 		"test:coverage": "vitest --coverage"
 	},
 	"dependencies": {
+		"@hobby-ninja/utils": "workspace:*",
 		"proper-lockfile": "4.1.2",
 		"zod": "4.1.13"
 	},

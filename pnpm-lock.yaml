@@ -551,6 +551,9 @@ importers:
 
   packages/translation:
     dependencies:
+      '@hobby-ninja/utils':
+        specifier: workspace:*
+        version: link:../utils
       proper-lockfile:
         specifier: 4.1.2
         version: 4.1.2
@@ -5490,6 +5493,7 @@ packages:
     resolution: {integrity: sha512-/baBXDqkfW8x0UlqfYAfRCkmVWiH8qFZ4uhT6yLVBLssiypDTbe78W6lNBse7huBFv1ipR5PG9evkxEnIXDxjA==}
     peerDependencies:
       eslint: '>= 5'
+    bundledDependencies: []
 
   eslint-plugin-import@2.32.0:
     resolution: {integrity: sha512-whOE1HFo/qJDyX4SnXzP4N6zOWn79WhnCUY/iDR0mPfQZO8wcYE4JClzI2oZrhBnnMUCBCHZhO6VQyoBU95mZA==}
