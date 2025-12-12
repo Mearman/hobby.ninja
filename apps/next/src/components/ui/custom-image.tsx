@@ -5,6 +5,11 @@ import Image from "next/image";
 
 // Custom image loader that adds proper headers for bandai-hobby.net images
 const customImageLoader = ({ src, width, quality }: { src: string; width: number; quality?: number }) => {
+	// Data URIs should be returned as-is - don't append query parameters
+	if (src.startsWith("data:")) {
+		return src;
+	}
+
 	// For bandai-hobby.net images, we need to handle them specially due to hotlink protection
 	if (src.includes("bandai-hobby.net")) {
 		// Return the original URL - Next.js will handle it with proper browser headers
@@ -47,6 +52,7 @@ export function CustomImage({
 }: CustomImageProps) {
 	const [imgSrc, setImgSrc] = React.useState(src);
 	const [hasError, setHasError] = React.useState(false);
+	const prevSrcRef = React.useRef(src);
 
 	const handleError = React.useCallback((e: React.SyntheticEvent<HTMLImageElement>) => {
 		if (!hasError && fallbackSrc) {
@@ -63,13 +69,14 @@ export function CustomImage({
 		onLoad?.(e);
 	}, [hasError, onLoad]);
 
-	// Reset state when src changes
+	// Reset state when src prop changes (skip initial mount)
 	React.useEffect(() => {
-		if (src !== imgSrc) {
+		if (prevSrcRef.current !== src) {
 			setImgSrc(src);
 			setHasError(false);
+			prevSrcRef.current = src;
 		}
-	}, [src, imgSrc]);
+	}, [src]);
 
 	const objectFit = fit === "contain" ? "contain" : fit === "cover" ? "cover" : "none";
 
@@ -91,7 +98,7 @@ export function CustomImage({
 				height: height ? "auto" : "100%",
 				...style,
 			}}
-			unoptimized={src.includes("bandai-hobby.net")} // Skip optimization for external images
+			unoptimized={src.startsWith("data:") || src.includes("bandai-hobby.net")} // Skip optimization for data URIs and external images
 		/>
 	);
 }
