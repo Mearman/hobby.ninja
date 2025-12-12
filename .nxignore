@@ -1,0 +1,15 @@
+# Ignore large data files to prevent Nx plugin timeouts
+# These JSON files are data assets, not source code
+
+# Source data directory (21MB+ JSON files)
+apps/next/src/data/**/*.json
+
+# Public data directory (19MB+ JSON files and thousands of individual files)
+apps/next/public/data/**/*.json
+apps/next/public/data/items/**
+apps/next/public/data/manuals/**
+apps/next/public/data/series/**
+apps/next/public/data/brands/**
+apps/next/public/data/categories/**
+apps/next/public/data/grades/**
+apps/next/public/data/scales/**

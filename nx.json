@@ -98,7 +98,8 @@
 				"serveTargetName": "serve",
 				"startTargetName": "start",
 				"exportTargetName": "export"
-			}
+			},
+			"exclude": ["apps/next/public/data/**", "apps/next/src/data/**"]
 		},
 		{
 			"plugin": "@nx/vite/plugin",

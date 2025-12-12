@@ -1,6 +1,6 @@
 export default {
-  // TypeScript and JavaScript files - use Nx for optimal performance
-  // Exclude lint-staged config file from being linted by itself
+  // TypeScript and JavaScript files - use ESLint directly for faster performance
+  // (Nx project graph building is slow with large data directories)
   '*.{ts,tsx,js,jsx}': (filenames) => {
     // Filter out the lint-staged config file to prevent circular linting
     const filteredFiles = filenames.filter(file => !file.includes('lint-staged.config.js'));
@@ -9,12 +9,8 @@ export default {
       return [];
     }
 
-    // Join all filenames into a single string
-    const files = filteredFiles.join(' ');
-
-    // Use Nx to lint with auto-fix - Nx will handle affected detection
-    // and run the appropriate linter for each project
-    return [`nx lint --fix --files="${files}"`];
+    // Use ESLint directly for faster linting (bypasses Nx project graph)
+    return [`eslint --fix ${filteredFiles.join(' ')}`];
   },
 
   // JSON files - basic linting

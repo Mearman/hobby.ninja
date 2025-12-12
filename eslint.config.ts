@@ -703,8 +703,12 @@ export default [
 			"test-results/**",
 			"**/*.config.js",
 			"**/*.config.mjs",
-			"src/data/*.json",
-			"public/data/*.json",
+			// Large data files - ignore all JSON in data directories
+			"**/src/data/**/*.json",
+			"**/public/data/**/*.json",
+			"**/public/data/**",
+			"apps/next/src/data/**",
+			"apps/next/public/data/**",
 		],
 	},
 ];
