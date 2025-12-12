@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 interface GraphNode {
   id: string;
   type: 'item' | 'brand' | 'category' | 'series' | 'manual';
+  itemType?: 'product' | 'blog'; // Only for type='item': product vs blog/promo content
   name: {
     ja: string;
     en: string;
@@ -41,6 +42,16 @@ interface GraphNode {
   productNumber?: string;
   productImage?: string;
   thumbnailImage?: string;
+}
+
+/**
+ * Check if an item node is a product (not blog/promo content)
+ * Items without itemType are treated as products for backwards compatibility
+ */
+function isProductNode(node: GraphNode): boolean {
+  if (node.type !== 'item') return true; // Non-item nodes pass through
+  if (node.itemType !== undefined) return node.itemType === 'product';
+  return node.price !== undefined; // Backwards compatibility: items with price are products
 }
 
 export interface UnifiedEdge {
@@ -162,6 +173,7 @@ export class DataProcessor {
           const node: GraphNode = {
             id: rawData.id,
             type: rawData.type,
+            ...(rawData.itemType && { itemType: rawData.itemType }), // product vs blog
             name: rawData.name,
             ...(rawData.description && { description: rawData.description }),
             ...(rawData.accessories && { accessories: rawData.accessories }),
@@ -280,11 +292,16 @@ export class DataProcessor {
     results.edges = allEdges.length;
 
     // Step 5: Generate lightweight homepage data (stats + featured items)
-    const itemNodes = allNodes.filter(node => node.type === 'item');
+    // Filter items to only include products (exclude blog/promo content)
+    const allItemNodes = allNodes.filter(node => node.type === 'item');
+    const itemNodes = allItemNodes.filter(isProductNode); // Products only
+    const blogNodes = allItemNodes.filter(node => !isProductNode(node)); // Blog/promo content
     const brandNodes = allNodes.filter(node => node.type === 'brand');
     const categoryNodes = allNodes.filter(node => node.type === 'category');
     const seriesNodes = allNodes.filter(node => node.type === 'series');
     const manualNodes = allNodes.filter(node => node.type === 'manual');
+
+    console.log(`📦 Filtering items: ${allItemNodes.length} total → ${itemNodes.length} products, ${blogNodes.length} blog/promo excluded`);
 
     // Get featured items (first 12 by name)
     const featuredItems = [...itemNodes]
