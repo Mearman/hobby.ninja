@@ -468,22 +468,54 @@ export class DataProcessor {
       }
     }
 
-    // Build grade and scale maps from item data
-    // Grade is derived from brand name (e.g., "HG [High Grade]" -> "HG")
-    const gradePatterns: [RegExp, string][] = [
-      [/\bpg\b|\bperfect grade\b/i, 'PG'],
-      [/\bmgex\b/i, 'MGEX'],
-      [/\bmg\b|\bmaster grade\b/i, 'MG'],
-      [/\brg\b|\breal grade\b/i, 'RG'],
-      [/\bhguc\b/i, 'HGUC'],
-      [/\bhg\b|\bhigh grade\b/i, 'HG'],
-      [/\beg\b|\bentry grade\b/i, 'EG'],
-      [/\bsd\b/i, 'SD'],
-      [/\bre\/100\b|\breborn/i, 'RE/100'],
-      [/\bfm\b|\bfull mechanics\b/i, 'FM'],
-      [/\bfigure-rise\b/i, 'Figure-rise'],
-      [/\bmega size\b/i, 'Mega Size'],
+    // Build grade and scale maps from item data with hierarchical support
+    // Grade hierarchy: parent grades contain all items from their sub-grades
+    interface GradeDefinition {
+      id: string;
+      name: string;
+      pattern: RegExp;
+      parent?: string; // Parent grade ID for hierarchy
+    }
+
+    const gradeDefinitions: GradeDefinition[] = [
+      // PG hierarchy
+      { id: 'pg', name: 'PG', pattern: /\bpg\b|\bperfect grade\b/i },
+
+      // MG hierarchy
+      { id: 'mgex', name: 'MGEX', pattern: /\bmgex\b|\bmaster grade extreme\b/i, parent: 'mg' },
+      { id: 'mg-ver-ka', name: 'MG Ver.Ka', pattern: /\bmg\s*ver\.?\s*ka\b|\bversion katoki\b/i, parent: 'mg' },
+      { id: 'mg', name: 'MG', pattern: /\bmg\b|\bmaster grade\b/i },
+
+      // RG hierarchy
+      { id: 'rg', name: 'RG', pattern: /\brg\b|\breal grade\b/i },
+
+      // HG hierarchy (sub-grades first for proper matching)
+      { id: 'hg-uc', name: 'HGUC', pattern: /\bhguc\b|\bhg\s*universal\s*century\b/i, parent: 'hg' },
+      { id: 'hg-ce', name: 'HGCE', pattern: /\bhgce\b|\bhg\s*cosmic\s*era\b/i, parent: 'hg' },
+      { id: 'hg-ac', name: 'HGAC', pattern: /\bhgac\b|\bhg\s*after\s*colony\b/i, parent: 'hg' },
+      { id: 'hg-ibo', name: 'HG IBO', pattern: /\bhg\s*ibo\b|\biron[- ]?blooded/i, parent: 'hg' },
+      { id: 'hg-amplified', name: 'HG Amplified', pattern: /\bhg\s*amplified\b/i, parent: 'hg' },
+      { id: 'hg', name: 'HG', pattern: /\bhg\b|\bhigh grade\b/i },
+
+      // EG hierarchy
+      { id: 'eg', name: 'EG', pattern: /\beg\b|\bentry grade\b/i },
+
+      // SD hierarchy (sub-grades first)
+      { id: 'sd-cs', name: 'SD Cross Silhouette', pattern: /\bsd\s*cross\s*silhouette\b|\bsdcs\b/i, parent: 'sd' },
+      { id: 'sd-bb', name: 'SD BB Senshi', pattern: /\bsd\s*bb\s*senshi\b|\bbb\s*senshi\b/i, parent: 'sd' },
+      { id: 'sd-bb-warrior', name: 'SD BB Warrior', pattern: /\bsd\s*bb\s*warrior\b|\bbb\s*warrior\b/i, parent: 'sd' },
+      { id: 'sdex', name: 'SDEX', pattern: /\bsdex\b/i, parent: 'sd' },
+      { id: 'sd', name: 'SD', pattern: /\bsd\b/i },
+
+      // Other grades
+      { id: 're-100', name: 'RE/100', pattern: /\bre\/100\b|\breborn/i },
+      { id: 'fm', name: 'FM', pattern: /\bfm\b|\bfull mechanics\b/i },
+      { id: 'figure-rise', name: 'Figure-rise', pattern: /\bfigure[- ]?rise\b/i },
+      { id: 'mega-size', name: 'Mega Size', pattern: /\bmega\s*size\b/i },
     ];
+
+    // Track which grades each item belongs to (can be multiple due to hierarchy)
+    const itemGradesMap = new Map<string, string[]>(); // itemId -> gradeIds[]
 
     for (const item of itemNodes) {
       // Build scale map
@@ -493,18 +525,49 @@ export class DataProcessor {
         scaleItemsMap.set(item.scale, scaleItems);
       }
 
-      // Build grade map from brand names
+      // Build grade map from ALL brand names (not just first)
       const enriched = itemEdgeMap.get(item.id);
       if (enriched?.brandNames.length) {
-        const brandName = enriched.brandNames[0];
-        for (const [pattern, grade] of gradePatterns) {
-          if (pattern.test(brandName)) {
-            const gradeItems = gradeItemsMap.get(grade) || [];
-            gradeItems.push(item.id);
-            gradeItemsMap.set(grade, gradeItems);
-            break; // Only assign one grade per item
+        const matchedGrades = new Set<string>();
+
+        // Check all brand names for grade matches
+        for (const brandName of enriched.brandNames) {
+          for (const gradeDef of gradeDefinitions) {
+            if (gradeDef.pattern.test(brandName)) {
+              matchedGrades.add(gradeDef.id);
+              // Also add to parent grade if exists
+              if (gradeDef.parent) {
+                matchedGrades.add(gradeDef.parent);
+              }
+              break; // Only one grade per brand name
+            }
           }
         }
+
+        // Add item to all matched grades
+        for (const gradeId of matchedGrades) {
+          const gradeItems = gradeItemsMap.get(gradeId) || [];
+          gradeItems.push(item.id);
+          gradeItemsMap.set(gradeId, gradeItems);
+        }
+
+        // Track grades for this item
+        if (matchedGrades.size > 0) {
+          itemGradesMap.set(item.id, [...matchedGrades]);
+        }
+      }
+    }
+
+    // Build grade hierarchy metadata for JSON output
+    const gradeHierarchy = new Map<string, { parent?: string; children: string[] }>();
+    for (const gradeDef of gradeDefinitions) {
+      if (!gradeHierarchy.has(gradeDef.id)) {
+        gradeHierarchy.set(gradeDef.id, { parent: gradeDef.parent, children: [] });
+      }
+      if (gradeDef.parent) {
+        const parentEntry = gradeHierarchy.get(gradeDef.parent) || { children: [] };
+        parentEntry.children.push(gradeDef.id);
+        gradeHierarchy.set(gradeDef.parent, parentEntry);
       }
     }
 
@@ -656,25 +719,53 @@ export class DataProcessor {
     }
     console.log(`✅ Generated ${manualNodes.length} per-manual JSON files in public/data/manuals/`);
 
-    // 8h: Generate per-grade JSON files (derived from brand patterns)
+    // 8h: Generate per-grade JSON files with hierarchy (derived from brand patterns)
     const gradesDir = path.join(publicDataDir, 'grades');
     if (!fs.existsSync(gradesDir)) {
       fs.mkdirSync(gradesDir, { recursive: true });
     }
 
-    for (const [grade, itemIds] of gradeItemsMap) {
-      const gradeId = grade.toLowerCase().replace(/[\/\s]+/g, '-');
+    // Create a lookup for grade definitions by id
+    const gradeDefLookup = new Map<string, GradeDefinition>();
+    for (const gradeDef of gradeDefinitions) {
+      gradeDefLookup.set(gradeDef.id, gradeDef);
+    }
+
+    for (const [gradeId, itemIds] of gradeItemsMap) {
+      const gradeDef = gradeDefLookup.get(gradeId);
+      const hierarchy = gradeHierarchy.get(gradeId);
+
       const gradeData = {
         id: gradeId,
         type: 'grade',
-        name: grade,
+        name: gradeDef?.name || gradeId.toUpperCase(),
+        // Hierarchy information
+        parent: hierarchy?.parent || null,
+        children: hierarchy?.children || [],
+        // Item data
         itemIds,
         itemCount: itemIds.length,
       };
       const gradeFile = path.join(gradesDir, `${gradeId}.json`);
       fs.writeFileSync(gradeFile, JSON.stringify(gradeData));
     }
-    console.log(`✅ Generated ${gradeItemsMap.size} per-grade JSON files in public/data/grades/`);
+
+    // Also generate a grades index file with hierarchy overview
+    const gradesIndex = {
+      grades: gradeDefinitions.map(def => ({
+        id: def.id,
+        name: def.name,
+        parent: def.parent || null,
+        itemCount: gradeItemsMap.get(def.id)?.length || 0,
+      })).filter(g => g.itemCount > 0),
+      hierarchy: Object.fromEntries(
+        [...gradeHierarchy.entries()].map(([id, h]) => [id, { parent: h.parent || null, children: h.children }])
+      ),
+    };
+    const gradesIndexFile = path.join(publicDataDir, 'grades-index.json');
+    fs.writeFileSync(gradesIndexFile, JSON.stringify(gradesIndex));
+
+    console.log(`✅ Generated ${gradeItemsMap.size} per-grade JSON files in public/data/grades/ (with hierarchy)`);
 
     // 8i: Generate per-scale JSON files
     const scalesDir = path.join(publicDataDir, 'scales');
