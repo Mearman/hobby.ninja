@@ -115,9 +115,13 @@ export const ManualSchema = z.union([
 
 export type ItemManual = z.infer<typeof ManualSchema> extends string | infer T ? T : never;
 
+// Item type discriminator (product vs blog/promo content)
+export const ItemTypeSchema = z.enum(["product", "blog"]);
+
 // Enhanced item schema with generic base
 export const ItemNodeSchema = BaseNodeSchema.extend({
 	type: z.literal("item"),
+	itemType: ItemTypeSchema.optional(), // "product" or "blog" - undefined treated as "product" for backwards compatibility
 	brand: z.string().optional(),
 	category: z.string().optional(),
 	series: z.string().optional(),
@@ -291,7 +295,7 @@ export const parseGraphData = (data: unknown): GraphData | null => {
 // Type-specific getters with validation
 export const getNodeDisplayName = (node: BaseNode): string => {
 	if (typeof node.name === "string") return node.name;
-	return node.name?.en || node.name?.ja || node.id;
+	return node.name.en ?? node.name.ja;
 };
 
 export const getNodePrice = (node: ItemNode): string | null => {
@@ -308,7 +312,7 @@ export const getNodeReleaseYear = (node: ItemNode): number | null => {
 
 	// Fall back to parsing the Japanese date string (e.g., "1985年06月")
 	if (node.releaseDate?.ja) {
-		const yearMatch = node.releaseDate.ja.match(/(\d{4})年/);
+		const yearMatch = /(\d{4})年/.exec(node.releaseDate.ja);
 		if (yearMatch?.[1]) {
 			return Number.parseInt(yearMatch[1], 10);
 		}
@@ -335,12 +339,12 @@ export const getNodeReleaseDate = (node: ItemNode): string | null => {
 
 	// Fall back to parsing the Japanese date string (e.g., "1985年06月")
 	if (releaseDate.ja) {
-		const match = releaseDate.ja.match(/(\d{4})年(\d{2})月/);
+		const match = /(\d{4})年(\d{2})月/.exec(releaseDate.ja);
 		if (match?.[1] && match[2]) {
 			return `${match[1]}/${match[2]}`;
 		}
 		// Try just year
-		const yearMatch = releaseDate.ja.match(/(\d{4})年/);
+		const yearMatch = /(\d{4})年/.exec(releaseDate.ja);
 		if (yearMatch?.[1]) {
 			return yearMatch[1];
 		}
@@ -379,7 +383,7 @@ export const getNodeDescription = (node: ItemNode): string => {
 	const englishDesc = descResult.data.find(d => d.en)?.en;
 	const japaneseDesc = descResult.data.find(d => d.ja)?.ja;
 
-	return englishDesc || japaneseDesc || "";
+	return englishDesc ?? japaneseDesc ?? "";
 };
 
 export const getNodeAccessories = (node: ItemNode): string[] => {
@@ -399,7 +403,7 @@ export const getNodeAccessories = (node: ItemNode): string[] => {
 		if (typeof accessory === "string") return accessory;
 
 		// Handle localized accessory name
-		return accessory.en || accessory.ja || JSON.stringify(accessory);
+		return accessory.en ?? accessory.ja;
 	});
 };
 
@@ -430,4 +434,24 @@ export const getNodeEdges = (node: GraphNode): EdgesSchemaType => {
 	// Use Zod parsing to validate edges structure
 	const edgesResult = EdgesSchema.safeParse(node.edges);
 	return edgesResult.success ? edgesResult.data : { inbound: [], outbound: [] };
+};
+
+/**
+ * Check if an item is a product (has price) vs blog/promo content
+ * Items without itemType field are treated as products for backwards compatibility
+ */
+export const isProduct = (item: ItemNode): boolean => {
+	// If itemType is explicitly set, use it
+	if (item.itemType !== undefined) {
+		return item.itemType === "product";
+	}
+	// Backwards compatibility: items with price are products
+	return item.price !== undefined;
+};
+
+/**
+ * Filter an array of items to only include products (exclude blog/promo content)
+ */
+export const filterProducts = (items: ItemNode[]): ItemNode[] => {
+	return items.filter((item) => isProduct(item));
 };
