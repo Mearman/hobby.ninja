@@ -36,6 +36,11 @@ interface GraphNode {
   };
   scale?: string;
   targetAge?: number;
+  // Manual-specific fields
+  pdfUrl?: string;
+  productNumber?: string;
+  productImage?: string;
+  thumbnailImage?: string;
 }
 
 export interface UnifiedEdge {
@@ -169,7 +174,12 @@ export class DataProcessor {
             ...(rawData.price && { price: rawData.price }),
             ...(rawData.releaseDate && { releaseDate: rawData.releaseDate }),
             ...(rawData.scale && { scale: rawData.scale }),
-            ...(rawData.targetAge && { targetAge: rawData.targetAge })
+            ...(rawData.targetAge && { targetAge: rawData.targetAge }),
+            // Manual-specific fields
+            ...(rawData.pdfUrl && { pdfUrl: rawData.pdfUrl }),
+            ...(rawData.productNumber && { productNumber: rawData.productNumber }),
+            ...(rawData.productImage && { productImage: rawData.productImage }),
+            ...(rawData.thumbnailImage && { thumbnailImage: rawData.thumbnailImage })
           };
 
           allNodes.push(node);
@@ -402,6 +412,9 @@ export class DataProcessor {
     const brandItemsMap = new Map<string, string[]>(); // brandId -> itemIds
     const categoryItemsMap = new Map<string, string[]>(); // categoryId -> itemIds
     const seriesItemsMap = new Map<string, string[]>(); // seriesId -> itemIds
+    const manualItemsMap = new Map<string, string[]>(); // manualId -> itemIds (via series/brand)
+    const gradeItemsMap = new Map<string, string[]>(); // grade -> itemIds
+    const scaleItemsMap = new Map<string, string[]>(); // scale -> itemIds
 
     // Process edges to build item relationships
     // Outbound edges from items: sourceType="item", targetType="brand"|"category"|"series"|"item"
@@ -452,6 +465,46 @@ export class DataProcessor {
           existing.relatedItemIds.push(edge.targetId);
         }
         itemEdgeMap.set(itemId, existing);
+      }
+    }
+
+    // Build grade and scale maps from item data
+    // Grade is derived from brand name (e.g., "HG [High Grade]" -> "HG")
+    const gradePatterns: [RegExp, string][] = [
+      [/\bpg\b|\bperfect grade\b/i, 'PG'],
+      [/\bmgex\b/i, 'MGEX'],
+      [/\bmg\b|\bmaster grade\b/i, 'MG'],
+      [/\brg\b|\breal grade\b/i, 'RG'],
+      [/\bhguc\b/i, 'HGUC'],
+      [/\bhg\b|\bhigh grade\b/i, 'HG'],
+      [/\beg\b|\bentry grade\b/i, 'EG'],
+      [/\bsd\b/i, 'SD'],
+      [/\bre\/100\b|\breborn/i, 'RE/100'],
+      [/\bfm\b|\bfull mechanics\b/i, 'FM'],
+      [/\bfigure-rise\b/i, 'Figure-rise'],
+      [/\bmega size\b/i, 'Mega Size'],
+    ];
+
+    for (const item of itemNodes) {
+      // Build scale map
+      if (item.scale) {
+        const scaleItems = scaleItemsMap.get(item.scale) || [];
+        scaleItems.push(item.id);
+        scaleItemsMap.set(item.scale, scaleItems);
+      }
+
+      // Build grade map from brand names
+      const enriched = itemEdgeMap.get(item.id);
+      if (enriched?.brandNames.length) {
+        const brandName = enriched.brandNames[0];
+        for (const [pattern, grade] of gradePatterns) {
+          if (pattern.test(brandName)) {
+            const gradeItems = gradeItemsMap.get(grade) || [];
+            gradeItems.push(item.id);
+            gradeItemsMap.set(grade, gradeItems);
+            break; // Only assign one grade per item
+          }
+        }
       }
     }
 
@@ -562,6 +615,86 @@ export class DataProcessor {
       fs.writeFileSync(categoryFile, JSON.stringify(categoryData));
     }
     console.log(`✅ Generated ${categoryNodes.length} per-category JSON files in public/data/categories/`);
+
+    // 8g: Generate per-manual JSON files
+    const manualNodes = allNodes.filter(node => node.type === 'manual');
+    const manualsDir = path.join(publicDataDir, 'manuals');
+    if (!fs.existsSync(manualsDir)) {
+      fs.mkdirSync(manualsDir, { recursive: true });
+    }
+
+    // Build manual relationships from edges
+    for (const manual of manualNodes) {
+      // Find related items via shared series/brand edges
+      const manualEdges = allEdges.filter(e => e.sourceId === manual.id || e.targetId === manual.id);
+      const relatedSeriesIds: string[] = [];
+      const relatedBrandIds: string[] = [];
+
+      for (const edge of manualEdges) {
+        if (edge.targetType === 'series') relatedSeriesIds.push(edge.targetId);
+        if (edge.targetType === 'brand') relatedBrandIds.push(edge.targetId);
+        if (edge.sourceType === 'series') relatedSeriesIds.push(edge.sourceId);
+        if (edge.sourceType === 'brand') relatedBrandIds.push(edge.sourceId);
+      }
+
+      // Find items that share the same series or brand as the manual
+      const relatedItemIds = new Set<string>();
+      for (const seriesId of relatedSeriesIds) {
+        const items = seriesItemsMap.get(seriesId) || [];
+        items.forEach(id => relatedItemIds.add(id));
+      }
+
+      const manualData = {
+        ...manual,
+        relatedSeriesIds: [...new Set(relatedSeriesIds)],
+        relatedBrandIds: [...new Set(relatedBrandIds)],
+        relatedItemIds: [...relatedItemIds],
+        relatedItemCount: relatedItemIds.size,
+      };
+      const manualFile = path.join(manualsDir, `${manual.id}.json`);
+      fs.writeFileSync(manualFile, JSON.stringify(manualData));
+    }
+    console.log(`✅ Generated ${manualNodes.length} per-manual JSON files in public/data/manuals/`);
+
+    // 8h: Generate per-grade JSON files (derived from brand patterns)
+    const gradesDir = path.join(publicDataDir, 'grades');
+    if (!fs.existsSync(gradesDir)) {
+      fs.mkdirSync(gradesDir, { recursive: true });
+    }
+
+    for (const [grade, itemIds] of gradeItemsMap) {
+      const gradeId = grade.toLowerCase().replace(/[\/\s]+/g, '-');
+      const gradeData = {
+        id: gradeId,
+        type: 'grade',
+        name: grade,
+        itemIds,
+        itemCount: itemIds.length,
+      };
+      const gradeFile = path.join(gradesDir, `${gradeId}.json`);
+      fs.writeFileSync(gradeFile, JSON.stringify(gradeData));
+    }
+    console.log(`✅ Generated ${gradeItemsMap.size} per-grade JSON files in public/data/grades/`);
+
+    // 8i: Generate per-scale JSON files
+    const scalesDir = path.join(publicDataDir, 'scales');
+    if (!fs.existsSync(scalesDir)) {
+      fs.mkdirSync(scalesDir, { recursive: true });
+    }
+
+    for (const [scale, itemIds] of scaleItemsMap) {
+      const scaleId = scale.toLowerCase().replace(/[\/\s:]+/g, '-');
+      const scaleData = {
+        id: scaleId,
+        type: 'scale',
+        name: scale,
+        itemIds,
+        itemCount: itemIds.length,
+      };
+      const scaleFile = path.join(scalesDir, `${scaleId}.json`);
+      fs.writeFileSync(scaleFile, JSON.stringify(scaleData));
+    }
+    console.log(`✅ Generated ${scaleItemsMap.size} per-scale JSON files in public/data/scales/`);
 
     return results;
   }
