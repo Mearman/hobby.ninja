@@ -9,6 +9,7 @@ import type { ESLint } from "eslint";
 import prettier from "eslint-config-prettier";
 import barrelFiles from "eslint-plugin-barrel-files";
 import importPlugin from "eslint-plugin-import";
+import jsonc from "eslint-plugin-jsonc";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import markdown from "eslint-plugin-markdown";
 import react from "eslint-plugin-react";
@@ -23,6 +24,14 @@ import { eslintPluginNoEmoji } from "./eslint-plugins/eslintPluginNoEmoji";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// JSON data file patterns - used for minification enforcement
+const JSON_DATA_FILE_PATTERNS = [
+	"**/public/data/**/*.json",
+	"**/src/data/**/*.json",
+	"apps/next/public/data/**/*.json",
+	"apps/next/src/data/**/*.json",
+];
 
 export default [
 	// Base configurations
@@ -712,6 +721,30 @@ export default [
 			"unicorn/prefer-module": "off", // Allow require.main === module pattern
 		},
 	},
+	// JSON data files must be minified (single line) - use eslint-plugin-jsonc
+	// First, disable all TypeScript type-checked rules for JSON files
+	{
+		...tseslint.configs.disableTypeChecked,
+		files: JSON_DATA_FILE_PATTERNS,
+	},
+	// Then apply jsonc recommended config
+	...jsonc.configs["flat/recommended-with-json"].map((config) => ({
+		...config,
+		files: JSON_DATA_FILE_PATTERNS,
+	})),
+	{
+		files: JSON_DATA_FILE_PATTERNS,
+		rules: {
+			// Enforce minified JSON (no newlines, no indentation)
+			"jsonc/indent": ["error", 0],
+			"jsonc/array-bracket-newline": ["error", "never"],
+			"jsonc/array-element-newline": ["error", "never"],
+			"jsonc/object-curly-newline": ["error", "never"],
+			"jsonc/object-property-newline": ["error", { allowAllPropertiesOnSameLine: true }],
+			// Disable rules not applicable to data files
+			"unicorn/filename-case": "off",
+		},
+	},
 	{
 		ignores: [
 			"dist/**",
@@ -728,12 +761,7 @@ export default [
 			"test-results/**",
 			"**/*.config.js",
 			"**/*.config.mjs",
-			// Large data files - ignore all JSON in data directories
-			"**/src/data/**/*.json",
-			"**/public/data/**/*.json",
-			"**/public/data/**",
-			"apps/next/src/data/**",
-			"apps/next/public/data/**",
+			// Note: JSON data files are no longer ignored - they are linted for minification
 		],
 	},
 ];
