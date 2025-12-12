@@ -28,6 +28,7 @@ import staticParams from "@/data/static-params.json";
 import { getNodeDisplayName, type BaseNode, type ItemNode } from "@/lib/schemas";
 import { itemCard } from "@/styles/components.css";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
+import { BrandItemsClient } from "./brand-items-client";
 
 interface BrandPageProps {
 	params: Promise<{ id: string }>;
@@ -293,32 +294,11 @@ export default async function BrandDetailPage({ params }: BrandPageProps) {
 								</Title>
 							</Group>
 
-							{brandItems.length > 0 ? (
-								<SimpleGrid
-									cols={{ base: 2, sm: 3, md: 4, lg: 5, xl: 6 }}
-									spacing="md"
-								>
-									{brandItems.slice(0, 24).map((item) => (
-										<ItemCard key={item.id} item={item} />
-									))}
-								</SimpleGrid>
-							) : (
-								<Box ta="center" py="xl">
-									<IconPhoto size={64} color="var(--mantine-color-gray-4)" />
-									<Title order={3} mt="md" mb="sm">
-										No items found
-									</Title>
-									<Text c="dimmed">
-										No items are currently available for this brand.
-									</Text>
-								</Box>
-							)}
-
-							{brandItems.length > 24 && (
-								<Text ta="center" c="dimmed" size="sm">
-									Showing 24 of {brandItems.length} items
-								</Text>
-							)}
+							<BrandItemsClient
+								items={brandItems}
+								brandName={displayName}
+								totalItems={stats.totalItems}
+							/>
 						</Stack>
 					</Card>
 
