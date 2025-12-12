@@ -1,7 +1,5 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-
 import {
 	TextInput,
 	MultiSelect,
@@ -14,11 +12,10 @@ import {
 	Text,
 	Divider,
 	Collapse,
-	// Badge removed,
+	Badge,
 } from "@mantine/core";
 import {
 	IconSearch,
-	IconFilter,
 	IconX,
 	IconChevronDown,
 	IconChevronUp,
@@ -26,6 +23,7 @@ import {
 import React, { useState, useCallback } from "react";
 
 import { useSearch, type SearchResult, type SearchFilters, type SearchStats } from "@/lib/fuse-search";
+import { getBrandImage, getSeriesImage } from "@/lib/image-lookup";
 
 interface AdvancedSearchProps {
   onSearch: (results: SearchResult[]) => void;
@@ -133,6 +131,18 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 									onChange={(value) => { setFilters(prev => ({ ...prev, brands: value })); }}
 									searchable={true}
 									clearable={true}
+									renderOption={({ option }) => (
+										<Group gap="xs">
+											{getBrandImage(option.value) && (
+												<img
+													src={getBrandImage(option.value)}
+													alt=""
+													style={{ width: 16, height: 16, objectFit: "contain" }}
+												/>
+											)}
+											<span>{option.label}</span>
+										</Group>
+									)}
 								/>
 
 								{/* Category Filter */}
@@ -162,6 +172,18 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 									searchable={true}
 									clearable={true}
 									maxValues={5}
+									renderOption={({ option }) => (
+										<Group gap="xs">
+											{getSeriesImage(option.value) && (
+												<img
+													src={getSeriesImage(option.value)}
+													alt=""
+													style={{ width: 16, height: 16, objectFit: "contain" }}
+												/>
+											)}
+											<span>{option.label}</span>
+										</Group>
+									)}
 								/>
 
 								{/* Grade Filter */}
@@ -197,14 +219,14 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 									<Group justify="space-between" mb="xs">
 										<Text size="sm">Price Range</Text>
 										<Text size="sm" fw={500}>
-											{formatPrice(filters.minPrice || 0)} - {formatPrice(filters.maxPrice || 100_000)}
+											{formatPrice(filters.minPrice ?? 0)} - {formatPrice(filters.maxPrice ?? 100_000)}
 										</Text>
 									</Group>
 									<RangeSlider
 										min={0}
 										max={100_000}
 										step={1000}
-										value={[filters.minPrice || 0, filters.maxPrice || 100_000]}
+										value={[filters.minPrice ?? 0, filters.maxPrice ?? 100_000]}
 										onChange={(value) => { setFilters(prev => ({
 											...prev,
 											minPrice: value[0],
@@ -225,13 +247,13 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 									<Group justify="space-between" mb="xs">
 										<Text size="sm">Release Year</Text>
 										<Text size="sm" fw={500}>
-											{filters.minYear || 1980} - {filters.maxYear || 2024}
+											{filters.minYear ?? 1980} - {filters.maxYear ?? 2024}
 										</Text>
 									</Group>
 									<RangeSlider
 										min={1980}
 										max={2024}
-										value={[filters.minYear || 1980, filters.maxYear || 2024]}
+										value={[filters.minYear ?? 1980, filters.maxYear ?? 2024]}
 										onChange={(value) => { setFilters(prev => ({
 											...prev,
 											minYear: value[0],
@@ -254,19 +276,23 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 
 				{/* Active Filters Display */}
 				{(query.trim() ||
-          filters.brands?.length ||
-          filters.categories?.length ||
-          filters.series?.length ||
-          filters.grades?.length ||
-          filters.scales?.length) && (
+					(filters.brands?.length ?? 0) > 0 ||
+					(filters.categories?.length ?? 0) > 0 ||
+					(filters.series?.length ?? 0) > 0 ||
+					(filters.grades?.length ?? 0) > 0 ||
+					(filters.scales?.length ?? 0) > 0) && (
 					<Group gap="xs" wrap="wrap">
 						{query.trim() && (
 							<Badge size="sm" variant="light" color="blue">
-                "{query}"
+								&ldquo;{query}&rdquo;
 							</Badge>
 						)}
 						{filters.brands?.map(brand => (
-							<Badge key={brand} size="sm" variant="light">
+							<Badge key={brand} size="sm" variant="light" leftSection={
+								getBrandImage(brand) ? (
+									<img src={getBrandImage(brand)} alt="" style={{ width: 12, height: 12, objectFit: "contain" }} />
+								) : null
+							}>
 								{brand}
 							</Badge>
 						))}
@@ -276,7 +302,11 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 							</Badge>
 						))}
 						{filters.series?.map(serie => (
-							<Badge key={serie} size="sm" variant="light" color="orange">
+							<Badge key={serie} size="sm" variant="light" color="orange" leftSection={
+								getSeriesImage(serie) ? (
+									<img src={getSeriesImage(serie)} alt="" style={{ width: 12, height: 12, objectFit: "contain" }} />
+								) : null
+							}>
 								{serie}
 							</Badge>
 						))}

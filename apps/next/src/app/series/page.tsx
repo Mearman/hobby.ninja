@@ -6,7 +6,6 @@ import {
 	Card,
 	Container,
 	Divider,
-	Flex,
 	Group,
 	Image,
 	SimpleGrid,
@@ -25,12 +24,13 @@ import Link from "next/link";
 import React from "react";
 
 import { getAllItems, getAllSeries } from "@/lib/graph-data";
+import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import { BaseNode, getNodeDisplayName, isBaseNode } from "@/lib/schemas";
 import { seriesCard, seriesImage } from "@/styles/components.css";
-import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 
 // Define types locally to avoid circular imports
 interface SeriesWithStats extends BaseNode {
+	image?: string;
 	itemCount: number;
 	firstYear?: number;
 	lastYear?: number;
@@ -42,8 +42,9 @@ interface SeriesWithStats extends BaseNode {
 
 // Enhanced series card component
 function SeriesCard({ series }: { series: SeriesWithStats }) {
-	const coverImage = series.metadata?.coverImage as string;
-	const franchise = series.franchise || "Standalone";
+	// Check for image at root level (new) or in metadata (legacy)
+	const coverImage = series.image ?? (series.metadata?.coverImage as string | undefined);
+	const franchise = series.franchise ?? "Standalone";
 	const yearSpan = series.firstYear && series.lastYear
 		? series.firstYear === series.lastYear
 			? series.firstYear.toString()
@@ -61,7 +62,7 @@ function SeriesCard({ series }: { series: SeriesWithStats }) {
 				<Stack gap="md">
 					<Box h={120} className={seriesImage}>
 						<Image
-							src={coverImage || createPlaceholderSvg(getNodeDisplayName(series).slice(0, 20), 200, 120)}
+							src={coverImage ?? createPlaceholderSvg(getNodeDisplayName(series).slice(0, 20), 200, 120)}
 							alt={getNodeDisplayName(series)}
 							fit="cover"
 							radius="sm"
@@ -124,7 +125,7 @@ function FeaturedSeries({ series }: { series: SeriesWithStats[] }) {
 function SeriesTimeline({ series }: { series: SeriesWithStats[] }) {
 	const groups = new Map<string, SeriesWithStats[]>();
 
-	series.forEach(s => {
+	for (const s of series) {
 		let era = "Unknown Era";
 		if (s.firstYear) {
 			if (s.firstYear < 1980) era = "Classic Era (< 1980)";
@@ -137,11 +138,11 @@ function SeriesTimeline({ series }: { series: SeriesWithStats[] }) {
 
 		if (!groups.has(era)) groups.set(era, []);
 		groups.get(era)!.push(s);
-	});
+	}
 
-	const eraGroups = Array.from(groups.entries()).sort((a, b) => {
-		const aYear = a[1][0]?.firstYear || 9999;
-		const bYear = b[1][0]?.firstYear || 9999;
+	const eraGroups = [...groups.entries()].toSorted((a, b) => {
+		const aYear = a[1][0]?.firstYear ?? 9999;
+		const bYear = b[1][0]?.firstYear ?? 9999;
 		return bYear - aYear;
 	});
 
@@ -193,8 +194,8 @@ function prepareSeriesData(): SeriesWithStats[] {
 	const seriesData = getAllSeries();
 	const itemsData = getAllItems();
 
-	const validSeries = seriesData.filter(isBaseNode);
-	const validItems = itemsData.filter(isBaseNode);
+	const validSeries = seriesData.filter((node) => isBaseNode(node));
+	const validItems = itemsData.filter((node) => isBaseNode(node));
 
 	// Count items per series and gather statistics
 	const seriesStats = new Map<string, {
@@ -204,11 +205,11 @@ function prepareSeriesData(): SeriesWithStats[] {
 		totalPrice: number;
 		priceCount: number;
 		grades: Set<string>;
-		items: any[];
+		items: BaseNode[];
 	}>();
 
 	for (const item of validItems) {
-		if (item.type === "item" && "series" in item && typeof item.series === "string") {
+		if ("series" in item && typeof item.series === "string") {
 			if (!seriesStats.has(item.series)) {
 				seriesStats.set(item.series, {
 					count: 0,
@@ -255,14 +256,14 @@ function prepareSeriesData(): SeriesWithStats[] {
 			firstYear: stats?.firstYear && stats.firstYear !== 9999 ? stats.firstYear : undefined,
 			lastYear: stats?.lastYear && stats.lastYear !== 0 ? stats.lastYear : undefined,
 			averagePrice: stats && stats.priceCount > 0 ? stats.totalPrice / stats.priceCount : undefined,
-			popularGrades: stats ? Array.from(stats.grades).slice(0, 3) : [],
+			popularGrades: stats ? [...stats.grades].slice(0, 3) : [],
 			franchise: seriesItem.franchise,
 			description: seriesItem.description,
 		};
 	});
 
 	// Sort by name
-	return seriesWithStats.sort((a, b) => getNodeDisplayName(a).localeCompare(getNodeDisplayName(b)));
+	return seriesWithStats.toSorted((a, b) => getNodeDisplayName(a).localeCompare(getNodeDisplayName(b)));
 }
 
 export default function SeriesPage() {
@@ -272,13 +273,13 @@ export default function SeriesPage() {
 	// Get featured series (top by item count)
 	const featuredSeries = allSeries
 		.filter(s => s.itemCount >= 5)
-		.sort((a, b) => b.itemCount - a.itemCount)
+		.toSorted((a, b) => b.itemCount - a.itemCount)
 		.slice(0, 8);
 
 	// Get available franchises
 	const franchises = new Set<string>();
-	allSeries.forEach(s => s.franchise && franchises.add(s.franchise));
-	const availableFranchises = Array.from(franchises).sort();
+	for (const s of allSeries) s.franchise && franchises.add(s.franchise);
+	const availableFranchises = [...franchises].toSorted();
 
 	const total = allSeries.length;
 

@@ -16,6 +16,7 @@ import { IconFolder } from "@tabler/icons-react";
 import { ViewMode } from "./view-switcher";
 
 import { CustomImage } from "@/components/ui/custom-image";
+import { getBrandImage } from "@/lib/image-lookup";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import { ItemNode , getNodeDisplayName, getNodeImages, getNodeReleaseDate, isItemNode } from "@/lib/schemas";
 import {
@@ -85,7 +86,15 @@ function ItemCard({ item }: { item: ItemNode }) {
 						</Badge>
 					)}
 					{item.brand && (
-						<Badge className={itemCardBadge} variant="outline">
+						<Badge className={itemCardBadge} variant="outline" leftSection={
+							getBrandImage(item.brand) ? (
+								<img
+									src={getBrandImage(item.brand)}
+									alt=""
+									style={{ width: 14, height: 14, objectFit: "contain" }}
+								/>
+							) : null
+						}>
 							{item.brand}
 						</Badge>
 					)}
@@ -169,7 +178,15 @@ export function ListView({ items }: { items: ItemNode[] }) {
 										</Badge>
 									)}
 									{item.brand && (
-										<Badge variant="outline" size="sm">
+										<Badge variant="outline" size="sm" leftSection={
+											getBrandImage(item.brand) ? (
+												<img
+													src={getBrandImage(item.brand)}
+													alt=""
+													style={{ width: 12, height: 12, objectFit: "contain" }}
+												/>
+											) : null
+										}>
 											{item.brand}
 										</Badge>
 									)}
@@ -223,7 +240,15 @@ export function TableView({ items }: { items: ItemNode[] }) {
 				<Table.Td>{item.scale ?? "-"}</Table.Td>
 				<Table.Td>
 					{item.brand ? (
-						<Badge variant="outline" size="sm">
+						<Badge variant="outline" size="sm" leftSection={
+							getBrandImage(item.brand) ? (
+								<img
+									src={getBrandImage(item.brand)}
+									alt=""
+									style={{ width: 12, height: 12, objectFit: "contain" }}
+								/>
+							) : null
+						}>
 							{item.brand}
 						</Badge>
 					) : (

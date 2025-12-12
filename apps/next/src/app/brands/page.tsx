@@ -19,14 +19,15 @@ import {
 import Link from "next/link";
 
 import { getAllBrands, getAllItems } from "@/lib/graph-data";
-import { categoryCard } from "@/styles/components.css";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
+import { categoryCard } from "@/styles/components.css";
 
 // Types
 interface Brand {
 	id: string;
 	type: string;
 	name: string | { ja: string; en?: string };
+	image?: string;
 	country?: string;
 	founded?: string | number;
 	website?: string;
@@ -72,11 +73,12 @@ interface BrandWithStats extends Brand {
 const getDisplayName = (brand: Brand | BrandWithStats): string => {
 	if (typeof brand.name === "string") return brand.name;
 	const nameObj = brand.name as { ja: string; en?: string };
-	return nameObj.en ?? nameObj.ja ?? brand.id;
+	return nameObj.en ?? nameObj.ja;
 };
 
 const getCountryFlag = (country?: string): string => {
 	if (!country) return "";
+	/* eslint-disable no-emoji/no-emoji -- Country flags are intentional UI elements */
 	const flags: Record<string, string> = {
 		japan: "🇯🇵",
 		china: "🇨🇳",
@@ -84,7 +86,8 @@ const getCountryFlag = (country?: string): string => {
 		usa: "🇺🇸",
 		taiwan: "🇹🇼",
 	};
-	return flags[country.toLowerCase()] || "";
+	/* eslint-enable no-emoji/no-emoji */
+	return flags[country.toLowerCase()] ?? "";
 };
 
 // Process brands with statistics from items
@@ -130,23 +133,27 @@ function processBrandsWithStats(brandsData: Brand[], itemsData: Item[]): BrandWi
 
 	// Create brands with statistics
 	const brandsWithStats = brandsData.map(brand => {
-		const stats = brandStats.get(brand.id) || {
+		const stats = brandStats.get(brand.id) ?? {
 			count: 0,
 			prices: [],
-			grades: new Set(),
-			scales: new Set(),
-			categories: new Set(),
-			series: new Set(),
+			grades: new Set<string>(),
+			scales: new Set<string>(),
+			categories: new Set<string>(),
+			series: new Set<string>(),
 		};
 
 		const prices = stats.prices.length > 0 ? stats.prices : [0];
-		const averagePrice = prices.reduce((sum, p) => sum + p, 0) / prices.length;
+		let priceSum = 0;
+		for (const p of prices) {
+			priceSum += p;
+		}
+		const averagePrice = priceSum / prices.length;
 		const minPrice = Math.min(...prices);
 		const maxPrice = Math.max(...prices);
 
 		// Determine if featured (top 20% by item count)
 		const allCounts = [...brandStats.values()].map(s => s.count);
-		const threshold = allCounts.sort((a, b) => b - a)[Math.floor(allCounts.length * 0.2)] || 0;
+		const threshold = allCounts.toSorted((a, b) => b - a)[Math.floor(allCounts.length * 0.2)] ?? 0;
 
 		return {
 			...brand,
@@ -177,72 +184,72 @@ function processBrandsWithStats(brandsData: Brand[], itemsData: Item[]): BrandWi
 function BrandCard({ brand }: { brand: BrandWithStats }) {
 	return (
 		<Link href={`/search?brand=${encodeURIComponent(brand.id)}`} style={{ textDecoration: "none", color: "inherit" }}>
-		<Card
-			p="md"
-			radius="md"
-			className={categoryCard}
-			withBorder={true}
-		>
-			<Stack gap="md">
-				<Group justify="space-between" align="flex-start">
-					<Group gap="sm">
-						<Box w={80} h={80}>
-							<Image
-								src={createPlaceholderSvg(getDisplayName(brand).slice(0, 3), 80, 80)}
-								alt={getDisplayName(brand)}
-								fit="contain"
-								radius="sm"
-								fallbackSrc={createErrorPlaceholderSvg(80, 80)}
-							/>
-						</Box>
-						<Stack gap="xs" flex={1}>
-							<Text size="md" fw={600} lineClamp={2}>
-								{getDisplayName(brand)}
-							</Text>
-							<Group gap="xs">
-								{brand.country && (
-									<Text size="xs" c="dimmed">
-										{getCountryFlag(brand.country)} {brand.country}
-									</Text>
-								)}
-								{brand.founded && (
-									<Text size="xs" c="dimmed">
+			<Card
+				p="md"
+				radius="md"
+				className={categoryCard}
+				withBorder={true}
+			>
+				<Stack gap="md">
+					<Group justify="space-between" align="flex-start">
+						<Group gap="sm">
+							<Box w={80} h={80}>
+								<Image
+									src={brand.image ?? createPlaceholderSvg(getDisplayName(brand).slice(0, 3), 80, 80)}
+									alt={getDisplayName(brand)}
+									fit="contain"
+									radius="sm"
+									fallbackSrc={createErrorPlaceholderSvg(80, 80)}
+								/>
+							</Box>
+							<Stack gap="xs" flex={1}>
+								<Text size="md" fw={600} lineClamp={2}>
+									{getDisplayName(brand)}
+								</Text>
+								<Group gap="xs">
+									{brand.country && (
+										<Text size="xs" c="dimmed">
+											{getCountryFlag(brand.country)} {brand.country}
+										</Text>
+									)}
+									{brand.founded && (
+										<Text size="xs" c="dimmed">
 										Est. {typeof brand.founded === "number" ? brand.founded : brand.founded}
-									</Text>
-								)}
-							</Group>
-						</Stack>
+										</Text>
+									)}
+								</Group>
+							</Stack>
+						</Group>
 					</Group>
-				</Group>
 
-				<Group gap="xs" wrap="wrap">
-					<Badge variant="light" size="sm">
-						{brand.itemCount} items
-					</Badge>
-					{brand.averagePrice && (
-						<Badge variant="light" color="green" size="sm">
-							{brand.priceCurrency === "JPY" ? "¥" : brand.priceCurrency || "$"}{brand.averagePrice.toFixed(0)} avg
+					<Group gap="xs" wrap="wrap">
+						<Badge variant="light" size="sm">
+							{brand.itemCount} items
 						</Badge>
-					)}
-					{brand.isFeatured && (
-						<Badge variant="light" color="yellow" size="sm">
-							<IconStarFilled size={10} />
-						</Badge>
-					)}
-				</Group>
+						{brand.averagePrice && (
+							<Badge variant="light" color="green" size="sm">
+								{brand.priceCurrency === "JPY" ? "¥" : brand.priceCurrency ?? "$"}{brand.averagePrice.toFixed(0)} avg
+							</Badge>
+						)}
+						{brand.isFeatured && (
+							<Badge variant="light" color="yellow" size="sm">
+								<IconStarFilled size={10} />
+							</Badge>
+						)}
+					</Group>
 
-				<Group justify="space-between" align="center">
-					<Text size="sm" fw={500} c="blue">
+					<Group justify="space-between" align="center">
+						<Text size="sm" fw={500} c="blue">
 						View all items
-					</Text>
-					{brand.website && (
-						<Text size="xs" c="dimmed">
-							Has website
 						</Text>
-					)}
-				</Group>
-			</Stack>
-		</Card>
+						{brand.website && (
+							<Text size="xs" c="dimmed">
+							Has website
+							</Text>
+						)}
+					</Group>
+				</Stack>
+			</Card>
 		</Link>
 	);
 }
@@ -268,17 +275,20 @@ function FeaturedBrands({ brands }: { brands: BrandWithStats[] }) {
 
 // Brand Statistics Component
 function BrandStatistics({ brands }: { brands: BrandWithStats[] }) {
-	const totalItems = brands.reduce((sum, brand) => sum + brand.itemCount, 0);
+	let totalItems = 0;
+	for (const brand of brands) {
+		totalItems += brand.itemCount;
+	}
 	const avgItemsPerBrand = totalItems / brands.length;
-	const topCountries = brands.reduce<Record<string, number>>((acc, brand) => {
+	const topCountries: Record<string, number> = {};
+	for (const brand of brands) {
 		if (brand.country) {
-			acc[brand.country] = (acc[brand.country] || 0) + 1;
+			topCountries[brand.country] = (topCountries[brand.country] ?? 0) + 1;
 		}
-		return acc;
-	}, {});
+	}
 
 	const sortedCountries = Object.entries(topCountries)
-		.sort(([,a], [,b]) => b - a)
+		.toSorted(([,a], [,b]) => b - a)
 		.slice(0, 5);
 
 	const stats = {

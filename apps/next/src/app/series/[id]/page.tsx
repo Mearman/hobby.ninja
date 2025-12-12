@@ -1,5 +1,3 @@
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
 import {
 	Badge,
 	Box,
@@ -16,18 +14,17 @@ import {
 	IconChevronRight,
 	IconClock,
 	IconCurrencyYen,
-	IconList,
-	IconPhoto,
 } from "@tabler/icons-react";
+import { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
-import { getSeriesById, getItemsBySeries } from "@/lib/server-graph-data";
-// Import lightweight static params for generateStaticParams
-import staticParams from "@/data/static-params.json";
-import { getNodeDisplayName, type BaseNode, type ItemNode } from "@/lib/schemas";
-import { itemCard } from "@/styles/components.css";
-import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import { SeriesItemsClient } from "./series-items-client";
+
+import staticParams from "@/data/static-params.json";
+import { getNodeDisplayName, type BaseNode } from "@/lib/schemas";
+import { getSeriesById, getItemsBySeries } from "@/lib/server-graph-data";
+
 
 interface SeriesPageProps {
 	params: Promise<{ id: string }>;
@@ -54,7 +51,7 @@ export async function generateMetadata({ params }: SeriesPageProps): Promise<Met
 
 	return {
 		title: `${displayName} - Series - hobby.ninja`,
-		description: series.description || `Browse all items from the ${displayName} series`,
+		description: series.description ?? `Browse all items from the ${displayName} series`,
 	};
 }
 
@@ -89,70 +86,6 @@ function SeriesBreadcrumbs({ series }: { series: BaseNode }) {
 	);
 }
 
-// Item card component (server component - no hooks)
-function ItemCard({ item }: { item: ItemNode & { series?: string; grade?: string; scale?: string; brand?: string } }) {
-	const rawImage = item.images?.[0];
-	// Handle union type: string | { url: string } | unknown
-	const primaryImage = typeof rawImage === "string"
-		? rawImage
-		: (rawImage && typeof rawImage === "object" && "url" in rawImage)
-			? (rawImage as { url: string }).url
-			: undefined;
-	const name = getNodeDisplayName(item);
-
-	return (
-		<Link href={`/item/${item.id}`} style={{ textDecoration: "none", color: "inherit" }}>
-			<Card
-				p="md"
-				radius="md"
-				withBorder={true}
-				className={itemCard}
-			>
-				<Stack gap="md">
-					<Box h={160} style={{ overflow: "hidden", borderRadius: "var(--mantine-radius-sm)" }}>
-						<Image
-							src={primaryImage || createPlaceholderSvg(name.slice(0, 20), 200, 200)}
-							alt={name}
-							fit="cover"
-							radius="sm"
-							fallbackSrc={createErrorPlaceholderSvg(200, 200)}
-						/>
-					</Box>
-					<div>
-						<Text size="sm" fw={600} lineClamp={2} mb="xs">
-							{name}
-						</Text>
-						<Group gap="xs" mb="xs">
-							{item.grade && (
-								<Badge variant="light" color="blue" size="xs">
-									{item.grade}
-								</Badge>
-							)}
-							{item.scale && (
-								<Badge variant="light" color="green" size="xs">
-									1/{item.scale}
-								</Badge>
-							)}
-						</Group>
-						<Group justify="space-between">
-							{item.price && (
-								<Text size="xs" c="dimmed">
-									¥{item.price.amount.toLocaleString()}
-								</Text>
-							)}
-							{item.releaseDate?.year && (
-								<Text size="xs" c="dimmed">
-									{item.releaseDate.year}
-								</Text>
-							)}
-						</Group>
-					</div>
-				</Stack>
-			</Card>
-		</Link>
-	);
-}
-
 export default async function SeriesDetailPage({ params }: SeriesPageProps) {
 	const { id } = await params;
 
@@ -181,10 +114,10 @@ export default async function SeriesDetailPage({ params }: SeriesPageProps) {
 
 	for (const item of seriesItems) {
 		if (item.grade) {
-			gradeDistribution.set(item.grade, (gradeDistribution.get(item.grade) || 0) + 1);
+			gradeDistribution.set(item.grade, (gradeDistribution.get(item.grade) ?? 0) + 1);
 		}
 		if (item.scale) {
-			scaleDistribution.set(item.scale, (scaleDistribution.get(item.scale) || 0) + 1);
+			scaleDistribution.set(item.scale, (scaleDistribution.get(item.scale) ?? 0) + 1);
 		}
 		if (item.releaseDate?.year) {
 			minYear = Math.min(minYear, item.releaseDate.year);
@@ -198,20 +131,23 @@ export default async function SeriesDetailPage({ params }: SeriesPageProps) {
 
 	const stats = {
 		totalItems: seriesItems.length,
-		gradeDistribution: Array.from(gradeDistribution.entries())
-			.sort((a, b) => b[1] - a[1])
+		gradeDistribution: [...gradeDistribution.entries()]
+			.toSorted((a, b) => b[1] - a[1])
 			.slice(0, 5),
-		scaleDistribution: Array.from(scaleDistribution.entries())
-			.sort((a, b) => b[1] - a[1])
+		scaleDistribution: [...scaleDistribution.entries()]
+			.toSorted((a, b) => b[1] - a[1])
 			.slice(0, 5),
 		yearRange: minYear < 9999 && maxYear > 0 ? { first: minYear, last: maxYear } : null,
 		averagePrice: priceCount > 0 ? totalPrice / priceCount : null,
 	};
 
 	const displayName = getNodeDisplayName(series);
-	const seriesDescription = series.description as string | undefined;
-	const seriesFranchise = (series as { franchise?: string }).franchise;
-	const coverImage = series.metadata?.coverImage;
+	// Cast to SeriesNode for type-safe access to series-specific fields
+	const seriesNode = series;
+	const seriesDescription = seriesNode.description;
+	const seriesFranchise = seriesNode.franchise;
+	// Check for image at root level (new) or in metadata (legacy)
+	const coverImage = seriesNode.image ?? (series.metadata?.coverImage as string | undefined);
 
 	return (
 		<Container size="xl" py="xl">
@@ -308,7 +244,7 @@ export default async function SeriesDetailPage({ params }: SeriesPageProps) {
 					</SimpleGrid>
 
 					{/* Price and Timeline Info */}
-					{(stats.averagePrice || stats.yearRange) && (
+					{(stats.averagePrice !== null || stats.yearRange !== null) && (
 						<Card p="lg" radius="md" withBorder={true}>
 							<SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
 								{stats.averagePrice && (
