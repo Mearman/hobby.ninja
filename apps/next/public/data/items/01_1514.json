@@ -1,7 +1,10 @@
 {
 	"id": "01_1514",
 	"type": "item",
-	"name": { "ja": "1/144 ガンブラスター", "en": "1/144 Gun Blaster" },
+	"name": {
+		"ja": "1/144 ガンブラスター",
+		"en": "1/144 Gun Blaster"
+	},
 	"description": [
 		{
 			"ja": "ＴＶ「機動戦士Ｖガンダム」登場のモビルスーツ・ガンイージを宇宙戦用に発展させた機体を立体化しました。ビーム・シールドはクリアパーツ成形で、本体への脱着が可能です。胸部パーツの選択式により、旧世代機のガンイージへの組換えも可能です。バックパックのスラスターは基部がボールジョイント製になっています。ビーム・ライフル、ビーム・ピストル、メガ・ビーム・バズーカ、ビーム・サーベル２種がついています。ディスプレイ用スタンドとカードがついています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1514_0.jpg", "/images/items/01_1514_1.jpg"],
+	"images": [
+		"/images/items/01_1514_0.jpg",
+		"/images/items/01_1514_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1514/",
 	"extractedAt": "2025-12-06T17:28:35.510Z",
-	"price": { "amount": 770, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1993年10月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 770,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1993年10月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-v-gundam", "name": "Mobile Suit V Gundam" }],
-		"relatedItems": ["01_4978", "01_3311", "01_2835", "item-1000142101"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-v-gundam",
+				"name": "Mobile Suit V Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4978",
+			"01_3311",
+			"01_2835",
+			"item-1000142101"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit V Gundam"

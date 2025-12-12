@@ -1,7 +1,10 @@
 {
 	"id": "01_5492",
 	"type": "item",
-	"name": { "ja": "30MP 後藤ひとり", "en": "30MP Goto Hitori" },
+	"name": {
+		"ja": "30MP 後藤ひとり",
+		"en": "30MP Goto Hitori"
+	},
 	"description": [
 		{
 			"ja": "30 MINUTES LABEL新ブランド 「30 MINUTES PREFERENCE」よりアニメ「ぼっち・ざ・ろっく！」後藤ひとりを豊富な付属パーツとともに商品化！",
@@ -45,15 +48,42 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "フェイスパーツ(タンポ印刷済み)×2種", "en": "Face parts (tampo printed) x 2 types" },
-		{ "ja": "フェイスパーツ(印刷無し)×1式", "en": "Face parts (no printing) x 1 set" },
-		{ "ja": "前髪パーツ×2種", "en": "Bangs parts x 2 types" },
-		{ "ja": "脚部パーツ×2種", "en": "Leg parts x 2 types" },
-		{ "ja": "ハンドパーツ×1式", "en": "Hand parts x 1 set" },
-		{ "ja": "ギター・エフェクター×1式", "en": "Guitar effector x 1 set" },
-		{ "ja": "交換用スカートパーツ×1", "en": "Replacement skirt parts x 1" },
-		{ "ja": "その他劇中再現用交換パーツ×1式", "en": "Other replacement parts for reproduction in the play x 1 set" },
-		{ "ja": "水転写式デカール×1", "en": "Water transfer decal x 1" }
+		{
+			"ja": "フェイスパーツ(タンポ印刷済み)×2種",
+			"en": "Face parts (tampo printed) x 2 types"
+		},
+		{
+			"ja": "フェイスパーツ(印刷無し)×1式",
+			"en": "Face parts (no printing) x 1 set"
+		},
+		{
+			"ja": "前髪パーツ×2種",
+			"en": "Bangs parts x 2 types"
+		},
+		{
+			"ja": "脚部パーツ×2種",
+			"en": "Leg parts x 2 types"
+		},
+		{
+			"ja": "ハンドパーツ×1式",
+			"en": "Hand parts x 1 set"
+		},
+		{
+			"ja": "ギター・エフェクター×1式",
+			"en": "Guitar effector x 1 set"
+		},
+		{
+			"ja": "交換用スカートパーツ×1",
+			"en": "Replacement skirt parts x 1"
+		},
+		{
+			"ja": "その他劇中再現用交換パーツ×1式",
+			"en": "Other replacement parts for reproduction in the play x 1 set"
+		},
+		{
+			"ja": "水転写式デカール×1",
+			"en": "Water transfer decal x 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -72,14 +102,41 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5492/",
 	"extractedAt": "2025-12-06T17:56:01.669Z",
-	"price": { "amount": 4840, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2025年03月22日 (土)", "year": 2025, "month": 3, "day": 22 },
+	"price": {
+		"amount": 4840,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2025年03月22日 (土)",
+		"year": 2025,
+		"month": 3,
+		"day": 22
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "30-minutes-preference", "name": "30 MINUTES PREFERENCE" }],
-		"categories": [{ "id": "30-minutes-label", "name": "30 MINUTES LABEL" }],
-		"series": [{ "id": "bocchi-the-rock", "name": "Bocchi the rock!" }],
-		"relatedItems": ["01_5982"]
+		"brands": [
+			{
+				"id": "30-minutes-preference",
+				"name": "30 MINUTES PREFERENCE"
+			}
+		],
+		"categories": [
+			{
+				"id": "30-minutes-label",
+				"name": "30 MINUTES LABEL"
+			}
+		],
+		"series": [
+			{
+				"id": "bocchi-the-rock",
+				"name": "Bocchi the rock!"
+			}
+		],
+		"relatedItems": [
+			"01_5982"
+		]
 	},
 	"brand": "30 MINUTES PREFERENCE",
 	"category": "30 MINUTES LABEL",

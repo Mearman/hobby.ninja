@@ -1,7 +1,10 @@
 {
 	"id": "01_1678",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ランチャー/ソードストライクガンダム", "en": "MG 1/100 Launcher/Sword Strike Gundam" },
+	"name": {
+		"ja": "MG 1/100 ランチャー/ソードストライクガンダム",
+		"en": "MG 1/100 Launcher/Sword Strike Gundam"
+	},
 	"description": [
 		{
 			"ja": "待望の“ランチャーストライカー”“ソードストライカー”を装備した人気MS“ストライクガンダム”が遂にMGシリーズラインナップ ストライクガンダム本体へ各ストライカーを装着することで、ランチャーストライクガンダム、ソードストライクガンダムがそれぞれ再現可能 ソードストライクガンダムの左肩はマイダスメッサーが着脱可能、パンツァーアイゼン先端のピアサーロックは射出状態をリード線を用いて再現可能 ランチャーストライクガンダムはフレキシブルに可動するアグニのサポートアームにより劇中同様のポージングが可能 アーマーシュナイダー×2、シールドが付属",
@@ -10,18 +13,50 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1678_0.jpg", "/images/items/01_1678_1.jpg"],
+	"images": [
+		"/images/items/01_1678_0.jpg",
+		"/images/items/01_1678_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1678/",
 	"extractedAt": "2025-12-06T17:41:03.173Z",
-	"price": { "amount": 5500, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2008年04月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 5500,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2008年04月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed", "name": "Mobile Suit Gundam SEED" }],
-		"relatedItems": ["01_5994", "01_5221", "01_4272", "01_4195"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed",
+				"name": "Mobile Suit Gundam SEED"
+			}
+		],
+		"relatedItems": [
+			"01_5994",
+			"01_5221",
+			"01_4272",
+			"01_4195"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

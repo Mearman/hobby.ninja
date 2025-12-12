@@ -1,19 +1,40 @@
 {
 	"id": "01_1310",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 ゼクアイン", "en": "HGUC 1/144 Zekuain" },
+	"name": {
+		"ja": "HGUC 1/144 ゼクアイン",
+		"en": "HGUC 1/144 Zekuain"
+	},
 	"description": [
-		{ "ja": "『ガンダムセンチネル』よりゼクアインが登場。" },
-		{ "ja": "●各関節部の可動は劇中のアクションを再現可能です。" },
-		{ "ja": "●シールドとタンクは設定通り、着脱が可能です。" },
-		{ "ja": "付属武装：専用マシンガン/弾装タンク×2/弾装ベルト/左右シールド/ビーム・サーベル" }
+		{
+			"ja": "『ガンダムセンチネル』よりゼクアインが登場。"
+		},
+		{
+			"ja": "●各関節部の可動は劇中のアクションを再現可能です。"
+		},
+		{
+			"ja": "●シールドとタンクは設定通り、着脱が可能です。"
+		},
+		{
+			"ja": "付属武装：専用マシンガン/弾装タンク×2/弾装ベルト/左右シールド/ビーム・サーベル"
+		}
 	],
 	"accessories": [
-		{ "ja": "専用マシンガン" },
-		{ "ja": "弾装タンク×2" },
-		{ "ja": "弾装ベルト" },
-		{ "ja": "左右シールド" },
-		{ "ja": "ビーム・サーベル" }
+		{
+			"ja": "専用マシンガン"
+		},
+		{
+			"ja": "弾装タンク×2"
+		},
+		{
+			"ja": "弾装ベルト"
+		},
+		{
+			"ja": "左右シールド"
+		},
+		{
+			"ja": "ビーム・サーベル"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -26,18 +47,48 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1310/",
 	"extractedAt": "2025-12-06T17:12:58.342Z",
-	"price": { "amount": 1760, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2001年10月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1760,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2001年10月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-sentinel", "name": "Gundam Sentinel" }],
-		"relatedItems": ["01_1247", "01_4064", "item-1000143361", "01_1700"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-sentinel",
+				"name": "Gundam Sentinel"
+			}
+		],
+		"relatedItems": [
+			"01_1247",
+			"01_4064",
+			"item-1000143361",
+			"01_1700"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

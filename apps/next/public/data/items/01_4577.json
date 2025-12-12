@@ -1,7 +1,10 @@
 {
 	"id": "01_4577",
 	"type": "item",
-	"name": { "ja": "AG 1/144 ゼダス", "en": "AG 1/144 Zedas" },
+	"name": {
+		"ja": "AG 1/144 ゼダス",
+		"en": "AG 1/144 Zedas"
+	},
 	"description": [
 		{
 			"ja": "• 塗装不要、道具不要。直感的に組み立てられる「ブロックビルド」の採用で、あっという間に完成。 • 付属のゲイジングチップを組み込み、ゲイジングバトルベースでスキャンすれば、自分だけのチームを作ってバトルできる。",
@@ -10,18 +13,47 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4577_0.jpg", "/images/items/01_4577_1.jpg", "/images/items/01_4577_2.jpg"],
+	"images": [
+		"/images/items/01_4577_0.jpg",
+		"/images/items/01_4577_1.jpg",
+		"/images/items/01_4577_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4577/",
 	"extractedAt": "2025-12-06T17:53:59.170Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2011年11月06日 (日)", "year": 2011, "month": 11, "day": 6 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2011年11月06日 (日)",
+		"year": 2011,
+		"month": 11,
+		"day": 6
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-age", "name": "Mobile Suit Gundam AGE" }],
-		"relatedItems": ["01_4196", "item-1000181355", "item-1000181354", "item-1000170540"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-age",
+				"name": "Mobile Suit Gundam AGE"
+			}
+		],
+		"relatedItems": [
+			"01_4196",
+			"item-1000181355",
+			"item-1000181354",
+			"item-1000170540"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam AGE"

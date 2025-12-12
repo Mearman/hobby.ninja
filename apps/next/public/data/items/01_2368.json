@@ -1,7 +1,10 @@
 {
 	"id": "01_2368",
 	"type": "item",
-	"name": { "ja": "1/100 モビルスモー／ゴールドタイプ", "en": "1/100 Mobile Sumo/Gold Type" },
+	"name": {
+		"ja": "1/100 モビルスモー／ゴールドタイプ",
+		"en": "1/100 Mobile Sumo/Gold Type"
+	},
 	"description": [
 		{
 			"ja": "TV「∀ガンダム」登場の金色に輝く機体を、メッキパーツでキット化しました。すべての装甲にメッキパーツを使用し、ゴールド色を完全再現しています。頭部フェイスパターンはノーマルとオープンの２種がついています。胸部およびふくらはぎのハッチは開閉機構を再現できます。肩部アーマーは二重構造により再現しています。キャノピーはクリアパーツ成形で、内部コクピットのディテールが確認できます。IFジェネレーターはクリアパーツを使用し、先端のビームには２種類の形態を選択可能です。クリアパーツを使用したハンドビーム・ガンがついています。",
@@ -20,15 +23,40 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2368/",
 	"extractedAt": "2025-12-06T17:49:12.654Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1999年09月01日 (水)", "year": 1999, "month": 9, "day": 1 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1999年09月01日 (水)",
+		"year": 1999,
+		"month": 9,
+		"day": 1
+	},
 	"scale": "1/100",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam", "name": "∀Gundam" }],
-		"relatedItems": ["item-1000135920", "item-1000099631", "item-1000165581", "01_120"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam",
+				"name": "∀Gundam"
+			}
+		],
+		"relatedItems": [
+			"item-1000135920",
+			"item-1000099631",
+			"item-1000165581",
+			"01_120"
+		]
 	},
 	"category": "Gunpla",
 	"series": "∀Gundam"

@@ -1,7 +1,10 @@
 {
 	"id": "01_1569",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ガンダム GP01Fb", "en": "MG 1/100 Gundam GP01Fb" },
+	"name": {
+		"ja": "MG 1/100 ガンダム GP01Fb",
+		"en": "MG 1/100 Gundam GP01Fb"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム 0083 STARDUST MEMORY』より、白いブーストポッドが特徴的な宇宙装備を施された「ガンダム GP01-Fb」が、様々なギミックを盛り込んでMGシリーズでキット化。胴体へ水平格納されるコアブロックは、コアファイターIIへ完全変形可能です。肩のサブスラスターはスライドギミックを内蔵しており、差し換え無しでノズルの展開が楽しめます。つま先と踵のカバーが着脱可能。胸のノズルもパーツの組み換えにより、開閉を再現できます。ビームライフルはE-CAPの着脱が可能、伸縮機構を再現したシールドの裏には、予備のE-CAPが2つ備えられています。コアファイターIIのビームガンにもなるビームサーベルは2本、両肩へ装備されます。",
@@ -10,18 +13,51 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1569_0.jpg", "/images/items/01_1569_1.jpg", "/images/items/01_1569_2.jpg"],
+	"images": [
+		"/images/items/01_1569_0.jpg",
+		"/images/items/01_1569_1.jpg",
+		"/images/items/01_1569_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1569/",
 	"extractedAt": "2025-12-06T17:33:16.074Z",
-	"price": { "amount": 3300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1997年12月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1997年12月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-0083-stardust-memory", "name": "Mobile Suit Gundam 0083 STARDUST MEMORY" }],
-		"relatedItems": ["item-1000127907", "item-1000127908", "item-1000124942", "item-1000105596"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-0083-stardust-memory",
+				"name": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+			}
+		],
+		"relatedItems": [
+			"item-1000127907",
+			"item-1000127908",
+			"item-1000124942",
+			"item-1000105596"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

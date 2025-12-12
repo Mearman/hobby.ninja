@@ -18,7 +18,10 @@
 			"ja": "ポリキャップレス構造で、従来より小柄なMSのプロポーションと可動の両立を実現。",
 			"en": "The polycapless structure allows for both smaller MS proportions and greater mobility than before."
 		},
-		{ "ja": "ヴェスバーは設定通り回転、展開可能。", "en": "Vesbar can be rotated and deployed as configured." },
+		{
+			"ja": "ヴェスバーは設定通り回転、展開可能。",
+			"en": "Vesbar can be rotated and deployed as configured."
+		},
 		{
 			"ja": "武器はビームライフル、ビームサーベル×２、ビームバズーカ、ビームシールドが付属。",
 			"en": "Weapons include beam rifle, beam saber x 2, beam bazooka, and beam seal."
@@ -26,17 +29,49 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5629_0.jpg", "/images/items/01_5629_1.jpg"],
+	"images": [
+		"/images/items/01_5629_0.jpg",
+		"/images/items/01_5629_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5629/",
 	"extractedAt": "2025-12-06T17:56:18.566Z",
-	"price": { "amount": 3300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2006年11月18日 (土)", "year": 2006, "month": 11, "day": 18 },
+	"price": {
+		"amount": 3300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2006年11月18日 (土)",
+		"year": 2006,
+		"month": 11,
+		"day": 18
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-crossbone-gundam", "name": "Mobile Suit Crossbone Gundam" }],
-		"relatedItems": ["01_1941", "item-1000136952", "01_5649"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-crossbone-gundam",
+				"name": "Mobile Suit Crossbone Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_1941",
+			"item-1000136952",
+			"01_5649"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

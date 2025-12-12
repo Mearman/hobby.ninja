@@ -44,15 +44,36 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "旗×1", "en": "Flag x 1" },
-		{ "ja": "剣×1", "en": "Sword x1" },
-		{ "ja": "台座×1", "en": "Pedestal x 1" }
+		{
+			"ja": "旗×1",
+			"en": "Flag x 1"
+		},
+		{
+			"ja": "剣×1",
+			"en": "Sword x1"
+		},
+		{
+			"ja": "台座×1",
+			"en": "Pedestal x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×2", "en": "Molded product x 2" },
-		{ "ja": "カイナスシール×1", "en": "Cainus Seal×1" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×2",
+			"en": "Molded product x 2"
+		},
+		{
+			"ja": "カイナスシール×1",
+			"en": "Cainus Seal×1"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_2409_0.jpg",
@@ -67,14 +88,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2409/",
 	"extractedAt": "2025-12-06T17:49:18.908Z",
-	"price": { "amount": 1540, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年10月19日 (土)", "year": 2019, "month": 10, "day": 19 },
+	"price": {
+		"amount": 1540,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年10月19日 (土)",
+		"year": 2019,
+		"month": 10,
+		"day": 19
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "petitrits", "name": "Petitrits" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "fategrand-order", "name": "Fate/Grand Order" }],
-		"relatedItems": ["01_2844", "01_2767", "01_2634", "01_2599"]
+		"brands": [
+			{
+				"id": "petitrits",
+				"name": "Petitrits"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "fategrand-order",
+				"name": "Fate/Grand Order"
+			}
+		],
+		"relatedItems": [
+			"01_2844",
+			"01_2767",
+			"01_2634",
+			"01_2599"
+		]
 	},
 	"brand": "Petitrits",
 	"category": "Character plastic model",

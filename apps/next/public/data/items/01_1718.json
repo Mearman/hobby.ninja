@@ -1,7 +1,10 @@
 {
 	"id": "01_1718",
 	"type": "item",
-	"name": { "ja": "MG 1/100 RX-75ガンタンク", "en": "MG 1/100 RX-75 Guntank" },
+	"name": {
+		"ja": "MG 1/100 RX-75ガンタンク",
+		"en": "MG 1/100 RX-75 Guntank"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム』より待望のMG化！　数々のギミックを搭載して“ガンタンク”遂に登場！ キャタピラユニットはサスペンションアームにより可動。それにより様々な表情をつけたアクションポーズが再現可能。 プラパーツ製のスプリングを用いたサスペンション機構をキャタピラユニット内に再現。 LEDユニットにより頭部コクピット内のコンソールとセンサーユニットが発光（ボタン電池LR41を2個仕様。別売り） 下部ユニットの前後にドーザーキャリアを再現。 キャタピラのベルトはプラパーツの連結式でリアルに再現。 コアファイターはガンダ",
@@ -18,15 +21,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1718/",
 	"extractedAt": "2025-12-06T17:44:10.505Z",
-	"price": { "amount": 5280, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2009年09月17日 (木)", "year": 2009, "month": 9, "day": 17 },
+	"price": {
+		"amount": 5280,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2009年09月17日 (木)",
+		"year": 2009,
+		"month": 9,
+		"day": 17
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

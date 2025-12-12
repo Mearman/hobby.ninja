@@ -1,7 +1,10 @@
 {
 	"id": "01_1423",
 	"type": "item",
-	"name": { "ja": "1/72 Bウイング・スターファイター", "en": "1/72 B-wing starfighter" },
+	"name": {
+		"ja": "1/72 Bウイング・スターファイター",
+		"en": "1/72 B-wing starfighter"
+	},
 	"description": [
 		{
 			"ja": "『スター・ウォーズ　エピソード6／ジェダイの帰還』に登場する「Bウイング・スターファイター」を立体化。",
@@ -41,15 +44,36 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ディスプレイベース×1", "en": "Display base x 1" },
-		{ "ja": "レーザーエフェクトパーツ×1", "en": "Laser effect parts x 1" },
-		{ "ja": "キャノピー2種(クリア窓付き・窓枠のみ)", "en": "2 types of canopy (with clear window/window frame only)" }
+		{
+			"ja": "ディスプレイベース×1",
+			"en": "Display base x 1"
+		},
+		{
+			"ja": "レーザーエフェクトパーツ×1",
+			"en": "Laser effect parts x 1"
+		},
+		{
+			"ja": "キャノピー2種(クリア窓付き・窓枠のみ)",
+			"en": "2 types of canopy (with clear window/window frame only)"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×6", "en": "Molded product x 6" },
-		{ "ja": "水転写式デカール×1", "en": "Water transfer decal x 1" },
-		{ "ja": "マーキングシール×1", "en": "MarkingSeal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×6",
+			"en": "Molded product x 6"
+		},
+		{
+			"ja": "水転写式デカール×1",
+			"en": "Water transfer decal x 1"
+		},
+		{
+			"ja": "マーキングシール×1",
+			"en": "MarkingSeal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1423_0.jpg",
@@ -67,15 +91,40 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1423/",
 	"extractedAt": "2025-12-06T17:20:46.970Z",
-	"price": { "amount": 4950, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年08月25日 (土)", "year": 2018, "month": 8, "day": 25 },
+	"price": {
+		"amount": 4950,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年08月25日 (土)",
+		"year": 2018,
+		"month": 8,
+		"day": 25
+	},
 	"scale": "1/72",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "star-wars", "name": "STAR WARS" }],
-		"relatedItems": ["01_4153", "01_4154", "01_3514", "01_3513"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "star-wars",
+				"name": "STAR WARS"
+			}
+		],
+		"relatedItems": [
+			"01_4153",
+			"01_4154",
+			"01_3514",
+			"01_3513"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "STAR WARS"

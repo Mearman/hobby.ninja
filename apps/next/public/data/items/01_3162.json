@@ -1,7 +1,10 @@
 {
 	"id": "01_3162",
 	"type": "item",
-	"name": { "ja": "1/144 ゲルググキャノン", "en": "1/144 Gelgoog Cannon" },
+	"name": {
+		"ja": "1/144 ゲルググキャノン",
+		"en": "1/144 Gelgoog Cannon"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム』より、1/144スケールで、MSVシリーズグフゲルググキャノンが登場。",
@@ -14,18 +17,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3162_0.jpg", "/images/items/01_3162_1.jpg"],
+	"images": [
+		"/images/items/01_3162_0.jpg",
+		"/images/items/01_3162_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3162/",
 	"extractedAt": "2025-12-06T17:50:53.401Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1983年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1983年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_6920", "01_6854", "01_6688", "01_5992"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_6920",
+			"01_6854",
+			"01_6688",
+			"01_5992"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam"

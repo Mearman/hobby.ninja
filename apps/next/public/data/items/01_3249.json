@@ -1,7 +1,10 @@
 {
 	"id": "01_3249",
 	"type": "item",
-	"name": { "ja": "1/144 ジムコマンド", "en": "1/144 Jim Command" },
+	"name": {
+		"ja": "1/144 ジムコマンド",
+		"en": "1/144 Jim Command"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム 0080 ポケットの中の戦争」の汎用型ジム系モビルスーツのキット化です。カメラカバーにクリアパーツを採用しています。股関節部はボールジョイント製です。腰の可動により、上体にひねりを加えたポージングが可能です。腰部サイドアーマーと左右フロントアーマーは独立可動します。足首アーマーは可動します。マシンガン、シールド、ビーム・サーベル２本が付いています。",
@@ -10,20 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3249_0.jpg", "/images/items/01_3249_1.jpg"],
+	"images": [
+		"/images/items/01_3249_0.jpg",
+		"/images/items/01_3249_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3249/",
 	"extractedAt": "2025-12-06T17:51:02.018Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1989年04月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1989年04月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [
-			{ "id": "mobile-suit-gundam-0080-war-in-the-pocket", "name": "Mobile Suit Gundam 0080 War in the Pocket" }
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
 		],
-		"relatedItems": ["01_2461", "01_5429", "01_5149", "01_5150"]
+		"series": [
+			{
+				"id": "mobile-suit-gundam-0080-war-in-the-pocket",
+				"name": "Mobile Suit Gundam 0080 War in the Pocket"
+			}
+		],
+		"relatedItems": [
+			"01_2461",
+			"01_5429",
+			"01_5149",
+			"01_5150"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam 0080 War in the Pocket"

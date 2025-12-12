@@ -1,7 +1,10 @@
 {
 	"id": "01_2186",
 	"type": "item",
-	"name": { "ja": "HG 1/60 M9Dファルケ Ver.IV", "en": "HG 1/60 M9D Falke Ver.IV" },
+	"name": {
+		"ja": "HG 1/60 M9Dファルケ Ver.IV",
+		"en": "HG 1/60 M9D Falke Ver.IV"
+	},
 	"description": [
 		{
 			"ja": "『フルメタル・パニック！ Invisible Victory』11話12話で大活躍した、ウルズチームの漆黒の隊長機「M9Dファルケ」を一部新規金型で立体化！",
@@ -21,16 +24,40 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "クリムゾンエッジ×2", "en": "Crimson Edge x2" },
-		{ "ja": "オリジナル武器×2", "en": "Original weapon x2" },
-		{ "ja": "グラーツ・マンリッヒャーAWS2000×1", "en": "Graz Mannlicher AWS2000×1" },
-		{ "ja": "GRAW-2 単分子カッター×1", "en": "GRAW-2 Single molecule cutter x 1" },
-		{ "ja": "GEC-B 40mm ライフル×1", "en": "GEC-B 40mm rifle x 1" }
+		{
+			"ja": "クリムゾンエッジ×2",
+			"en": "Crimson Edge x2"
+		},
+		{
+			"ja": "オリジナル武器×2",
+			"en": "Original weapon x2"
+		},
+		{
+			"ja": "グラーツ・マンリッヒャーAWS2000×1",
+			"en": "Graz Mannlicher AWS2000×1"
+		},
+		{
+			"ja": "GRAW-2 単分子カッター×1",
+			"en": "GRAW-2 Single molecule cutter x 1"
+		},
+		{
+			"ja": "GEC-B 40mm ライフル×1",
+			"en": "GEC-B 40mm rifle x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成型品×16", "en": "Molded products x 16" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成型品×16",
+			"en": "Molded products x 16"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_2186_0.jpg",
@@ -47,15 +74,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2186/",
 	"extractedAt": "2025-12-06T17:48:50.930Z",
-	"price": { "amount": 3740, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年05月18日 (土)", "year": 2019, "month": 5, "day": 18 },
+	"price": {
+		"amount": 3740,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年05月18日 (土)",
+		"year": 2019,
+		"month": 5,
+		"day": 18
+	},
 	"scale": "1/60",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "full-metal-panic", "name": "Full Metal Panic!" }],
-		"relatedItems": ["01_1304", "01_1889", "01_2119", "01_2128"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "full-metal-panic",
+				"name": "Full Metal Panic!"
+			}
+		],
+		"relatedItems": [
+			"01_1304",
+			"01_1889",
+			"01_2119",
+			"01_2128"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Character plastic model",

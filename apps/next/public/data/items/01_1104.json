@@ -1,7 +1,10 @@
 {
 	"id": "01_1104",
 	"type": "item",
-	"name": { "ja": "HG 1/144 ザクII C型/C-5型", "en": "HG 1/144 Zaku II C type/C-5 type" },
+	"name": {
+		"ja": "HG 1/144 ザクII C型/C-5型",
+		"en": "HG 1/144 Zaku II C type/C-5 type"
+	},
 	"description": [
 		{
 			"ja": "• 『機動戦士ガンダム THE ORIGIN 激突 ルウム会戦』に登場するザクIIが最新フォーマットでHG化！",
@@ -21,16 +24,40 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "MS用マシンガン×1", "en": "MS machine gun x 1" },
-		{ "ja": "ベルト給弾式MS用マシンガン×1", "en": "Belt-fed MS machine gun x 1" },
-		{ "ja": "ヒート・ホーク×2（展開・収納）", "en": "Heat Hawk x2 (deployed/stored)" },
-		{ "ja": "MS用バズーカA2型×1", "en": "Bazooka A2 type for MS x 1" },
-		{ "ja": "MS用対艦ライフル　ASR-78×1", "en": "MS anti-ship rifle ASR-78×1" }
+		{
+			"ja": "MS用マシンガン×1",
+			"en": "MS machine gun x 1"
+		},
+		{
+			"ja": "ベルト給弾式MS用マシンガン×1",
+			"en": "Belt-fed MS machine gun x 1"
+		},
+		{
+			"ja": "ヒート・ホーク×2（展開・収納）",
+			"en": "Heat Hawk x2 (deployed/stored)"
+		},
+		{
+			"ja": "MS用バズーカA2型×1",
+			"en": "Bazooka A2 type for MS x 1"
+		},
+		{
+			"ja": "MS用対艦ライフル　ASR-78×1",
+			"en": "MS anti-ship rifle ASR-78×1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×12", "en": "Molded product x 12" },
-		{ "ja": "マーキングシール×１", "en": "MarkingSeal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×12",
+			"en": "Molded product x 12"
+		},
+		{
+			"ja": "マーキングシール×１",
+			"en": "MarkingSeal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1104_0.jpg",
@@ -45,15 +72,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1104/",
 	"extractedAt": "2025-12-06T16:50:22.782Z",
-	"price": { "amount": 1980, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年09月02日 (土)", "year": 2017, "month": 9, "day": 2 },
+	"price": {
+		"amount": 1980,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年09月02日 (土)",
+		"year": 2017,
+		"month": 9,
+		"day": 2
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-the-origin", "name": "Mobile Suit Gundam THE ORIGIN" }],
-		"relatedItems": ["01_3711", "01_2828", "01_2707", "item-1000135687"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-the-origin",
+				"name": "Mobile Suit Gundam THE ORIGIN"
+			}
+		],
+		"relatedItems": [
+			"01_3711",
+			"01_2828",
+			"01_2707",
+			"item-1000135687"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

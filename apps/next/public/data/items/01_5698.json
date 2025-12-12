@@ -1,7 +1,10 @@
 {
 	"id": "01_5698",
 	"type": "item",
-	"name": { "ja": "サウザンド・サニー号", "en": "Thousand Sunny" },
+	"name": {
+		"ja": "サウザンド・サニー号",
+		"en": "Thousand Sunny"
+	},
 	"description": [
 		{
 			"ja": "• 「ONE PIECE」プラモデルシリーズからサウザンド・サニー号が登場。",
@@ -11,7 +14,10 @@
 			"ja": "• 周辺メカであるシロモクバ１号、ミニメリー２号、シャークサブマシーン３号が付属。",
 			"en": "• Peripheral Mecha Shiro Mokuba No. 1, Mini Merry No. 2, and Shark Submachine No. 3 are included."
 		},
-		{ "ja": "• ガオン砲、パドルは差し替えで再現。", "en": "• Gaon cannon and paddle are reproduced by replacement." },
+		{
+			"ja": "• ガオン砲、パドルは差し替えで再現。",
+			"en": "• Gaon cannon and paddle are reproduced by replacement."
+		},
 		{
 			"ja": "• 接着剤不要、塗装不要。編み込まれたロープは成形品で再現し、組み立て安さを追求。",
 			"en": "• No adhesive or painting required. The woven rope is reproduced with a molded product, pursuing a low-cost assembly."
@@ -27,17 +33,41 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5698_0.jpg", "/images/items/01_5698_1.jpg", "/images/items/01_5698_2.jpg"],
+	"images": [
+		"/images/items/01_5698_0.jpg",
+		"/images/items/01_5698_1.jpg",
+		"/images/items/01_5698_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5698/",
 	"extractedAt": "2025-12-06T17:56:26.198Z",
-	"price": { "amount": 4180, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2011年03月30日 (水)", "year": 2011, "month": 3, "day": 30 },
+	"price": {
+		"amount": 4180,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2011年03月30日 (水)",
+		"year": 2011,
+		"month": 3,
+		"day": 30
+	},
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "one-piece", "name": "one piece" }],
-		"relatedItems": ["01_4170", "01_4236", "01_5409", "01_5410"]
+		"series": [
+			{
+				"id": "one-piece",
+				"name": "one piece"
+			}
+		],
+		"relatedItems": [
+			"01_4170",
+			"01_4236",
+			"01_5409",
+			"01_5410"
+		]
 	},
 	"series": "one piece"
 }

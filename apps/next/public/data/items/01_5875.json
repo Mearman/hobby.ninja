@@ -1,7 +1,10 @@
 {
 	"id": "01_5875",
 	"type": "item",
-	"name": { "ja": "HGBC 1/144 アメイジングブースター", "en": "HGBC 1/144 Amazing Booster" },
+	"name": {
+		"ja": "HGBC 1/144 アメイジングブースター",
+		"en": "HGBC 1/144 Amazing Booster"
+	},
 	"description": [
 		{
 			"ja": "• ザクアメイジングの武装や追加装甲が１つに統合することで支援メカとなるアメイジングブースターをHGでキット化。",
@@ -22,18 +25,52 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5875_0.jpg", "/images/items/01_5875_1.jpg", "/images/items/01_5875_2.jpg"],
+	"images": [
+		"/images/items/01_5875_0.jpg",
+		"/images/items/01_5875_1.jpg",
+		"/images/items/01_5875_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5875/",
 	"extractedAt": "2025-12-06T17:56:47.400Z",
-	"price": { "amount": 770, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年10月05日 (土)", "year": 2013, "month": 10, "day": 5 },
+	"price": {
+		"amount": 770,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年10月05日 (土)",
+		"year": 2013,
+		"month": 10,
+		"day": 5
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-fighters", "name": "Gundam Build Fighters" }],
-		"relatedItems": ["01_1261", "01_1288", "01_1942", "01_5057"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-fighters",
+				"name": "Gundam Build Fighters"
+			}
+		],
+		"relatedItems": [
+			"01_1261",
+			"01_1288",
+			"01_1942",
+			"01_5057"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

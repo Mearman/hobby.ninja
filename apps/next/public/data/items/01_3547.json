@@ -1,7 +1,10 @@
 {
 	"id": "01_3547",
 	"type": "item",
-	"name": { "ja": "30MS SIS-A00 ティアーシャ[カラーB]", "en": "30MS SIS-A00 Tiasha [Color B]" },
+	"name": {
+		"ja": "30MS SIS-A00 ティアーシャ[カラーB]",
+		"en": "30MS SIS-A00 Tiasha [Color B]"
+	},
 	"description": [
 		{
 			"ja": "■キャラクター素体、3種類の表情パーツ、アーマーパーツがセットになったオールインワンアイテム。",
@@ -33,10 +36,22 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "剣×1", "en": "Sword x1" },
-		{ "ja": "盾×1", "en": "Shield x1" },
-		{ "ja": "フェイスパーツ×3種", "en": "Face parts x 3 types" },
-		{ "ja": "アーマーパーツ×１式", "en": "Armor parts x 1 set" },
+		{
+			"ja": "剣×1",
+			"en": "Sword x1"
+		},
+		{
+			"ja": "盾×1",
+			"en": "Shield x1"
+		},
+		{
+			"ja": "フェイスパーツ×3種",
+			"en": "Face parts x 3 types"
+		},
+		{
+			"ja": "アーマーパーツ×１式",
+			"en": "Armor parts x 1 set"
+		},
 		{
 			"ja": "ハンドパーツ　握り手（左右）、武器持ち手（左右）",
 			"en": "Hand parts Gripping hands (left and right), weapon handles (left and right)"
@@ -58,14 +73,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3547/",
 	"extractedAt": "2025-12-06T17:51:42.807Z",
-	"price": { "amount": 2530, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2021年09月25日 (土)", "year": 2021, "month": 9, "day": 25 },
+	"price": {
+		"amount": 2530,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2021年09月25日 (土)",
+		"year": 2021,
+		"month": 9,
+		"day": 25
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "30-minutes-sisters", "name": "30 MINUTES SISTERS" }],
-		"categories": [{ "id": "30-minutes-label", "name": "30 MINUTES LABEL" }],
+		"brands": [
+			{
+				"id": "30-minutes-sisters",
+				"name": "30 MINUTES SISTERS"
+			}
+		],
+		"categories": [
+			{
+				"id": "30-minutes-label",
+				"name": "30 MINUTES LABEL"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5975", "01_5976", "01_5977", "01_5954"]
+		"relatedItems": [
+			"01_5975",
+			"01_5976",
+			"01_5977",
+			"01_5954"
+		]
 	},
 	"brand": "30 MINUTES SISTERS",
 	"category": "30 MINUTES LABEL"

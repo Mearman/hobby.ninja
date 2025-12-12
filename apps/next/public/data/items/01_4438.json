@@ -1,7 +1,10 @@
 {
 	"id": "01_4438",
 	"type": "item",
-	"name": { "ja": "1/144 νガンダム", "en": "1/144 νGundam" },
+	"name": {
+		"ja": "1/144 νガンダム",
+		"en": "1/144 νGundam"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム逆襲のシャア」登場の主役機を立体化しました。前腕、脚部、胸部、腹部およびシールドアームの固定にビス止めを使用、専用ドライバーパーツが付いています。手は可動指を採用しています。フロントおよびサイドのアーマーが独立して可動します。ビーム・サーベルは柄がバックパックへマウント可能です。ビーム・ライフル、ビーム・サーベル、ニューハイパー・バズーカ、シールドが付いています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4438_0.jpg", "/images/items/01_4438_1.jpg"],
+	"images": [
+		"/images/items/01_4438_0.jpg",
+		"/images/items/01_4438_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4438/",
 	"extractedAt": "2025-12-06T17:53:43.482Z",
-	"price": { "amount": 880, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1987年12月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 880,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1987年12月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-chars-counterattack", "name": "Mobile Suit Gundam Char's Counterattack" }],
-		"relatedItems": ["01_5478", "01_5531", "01_5532", "01_5423"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-chars-counterattack",
+				"name": "Mobile Suit Gundam Char's Counterattack"
+			}
+		],
+		"relatedItems": [
+			"01_5478",
+			"01_5531",
+			"01_5532",
+			"01_5423"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam Char's Counterattack"

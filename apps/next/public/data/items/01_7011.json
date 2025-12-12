@@ -1,7 +1,10 @@
 {
 	"id": "01_7011",
 	"type": "item",
-	"name": { "ja": "PLABAKO デジモンアドベンチャー", "en": "PLABAKO Digimon Adventure" },
+	"name": {
+		"ja": "PLABAKO デジモンアドベンチャー",
+		"en": "PLABAKO Digimon Adventure"
+	},
 	"description": [
 		{
 			"ja": "クローズドボックス仕様のデジモンプラモデルPLABAKO登場！",
@@ -45,14 +48,38 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_7011/",
 	"extractedAt": "2025-12-06T17:58:21.388Z",
-	"price": { "amount": 1980, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2026年04月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1980,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2026年04月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "digimon-series", "name": "digimon series" }],
-		"relatedItems": ["01_5277", "01_5983", "01_6978", "item-1000216437"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "digimon-series",
+				"name": "digimon series"
+			}
+		],
+		"relatedItems": [
+			"01_5277",
+			"01_5983",
+			"01_6978",
+			"item-1000216437"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "digimon series"

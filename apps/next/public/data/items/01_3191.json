@@ -1,7 +1,10 @@
 {
 	"id": "01_3191",
 	"type": "item",
-	"name": { "ja": "SDGF 嵐の騎士トールギス", "en": "SDGF Storm Knight Tallgeese" },
+	"name": {
+		"ja": "SDGF 嵐の騎士トールギス",
+		"en": "SDGF Storm Knight Tallgeese"
+	},
 	"description": [
 		{
 			"ja": "現在放映中のTVアニメ「SD ガンダムフォース」に登場する敵キャラクター「嵐の騎士トールギス」のプラモデル。特徴ある頭部をリアルに再現しています。赤、黄、グレーの3色成形、各部設定色をホイールシールで再現できます。武器はダークネス・ドーバーソード、ダークネス・アレストシールドを装備可能です。",
@@ -10,20 +13,47 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3191_0.jpg"],
+	"images": [
+		"/images/items/01_3191_0.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3191/",
 	"extractedAt": "2025-12-06T17:50:55.729Z",
-	"price": { "amount": 330, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2004年03月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 330,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2004年03月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 5,
 	"relationships": {
 		"brands": [
-			{ "id": "sd-gundam-series", "name": "SD Gundam series" },
-			{ "id": "sd-gundam-bb-senshi", "name": "SD Gundam BB Senshi" }
+			{
+				"id": "sd-gundam-series",
+				"name": "SD Gundam series"
+			},
+			{
+				"id": "sd-gundam-bb-senshi",
+				"name": "SD Gundam BB Senshi"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5456", "01_5442", "01_5395", "01_5378"]
+		"relatedItems": [
+			"01_5456",
+			"01_5442",
+			"01_5395",
+			"01_5378"
+		]
 	},
 	"brand": "SD Gundam series",
 	"category": "Gunpla"

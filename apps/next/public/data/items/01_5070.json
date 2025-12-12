@@ -1,7 +1,10 @@
 {
 	"id": "01_5070",
 	"type": "item",
-	"name": { "ja": "プラノサウルス プテラノドン", "en": "planosaurus pteranodon" },
+	"name": {
+		"ja": "プラノサウルス プテラノドン",
+		"en": "planosaurus pteranodon"
+	},
 	"description": [
 		{
 			"ja": "自分の手で恐竜を“知りつくす”ブランド『プラノサウルス』第７弾に、空翔ける翼竜の代表格「プテラノドン」が登場！",
@@ -45,9 +48,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "着地状態用パーツ×１式", "en": "Parts for landing condition x 1 set" },
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "台座×1", "en": "Pedestal x 1" }
+		{
+			"ja": "着地状態用パーツ×１式",
+			"en": "Parts for landing condition x 1 set"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "台座×1",
+			"en": "Pedestal x 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -66,14 +78,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5070/",
 	"extractedAt": "2025-12-06T17:55:07.903Z",
-	"price": { "amount": 1595, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2024年01月20日 (土)", "year": 2024, "month": 1, "day": 20 },
+	"price": {
+		"amount": 1595,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2024年01月20日 (土)",
+		"year": 2024,
+		"month": 1,
+		"day": 20
+	},
 	"targetAge": 6,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "planosaurus", "name": "Planosaurus" }],
-		"relatedItems": ["01_5501", "01_5389", "01_5390", "01_5248"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "planosaurus",
+				"name": "Planosaurus"
+			}
+		],
+		"relatedItems": [
+			"01_5501",
+			"01_5389",
+			"01_5390",
+			"01_5248"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Planosaurus"

@@ -1,7 +1,10 @@
 {
 	"id": "01_5836",
 	"type": "item",
-	"name": { "ja": "Bトレインショーティー 新幹線N700A・Bセット", "en": "B Train Shorty Shinkansen N700A/B Set" },
+	"name": {
+		"ja": "Bトレインショーティー 新幹線N700A・Bセット",
+		"en": "B Train Shorty Shinkansen N700A/B Set"
+	},
 	"description": [
 		{
 			"ja": "• ベースはN700系。非常時のブレーキ性能の向上、運行ダイヤの乱れを自動修復する定速走行装置など最新の鉄道技術を結集し、2013年２月より営業運転開始。",
@@ -22,16 +25,39 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5836_0.jpg", "/images/items/01_5836_1.jpg"],
+	"images": [
+		"/images/items/01_5836_0.jpg",
+		"/images/items/01_5836_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5836/",
 	"extractedAt": "2025-12-06T17:56:43.622Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年07月20日 (土)", "year": 2013, "month": 7, "day": 20 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年07月20日 (土)",
+		"year": 2013,
+		"month": 7,
+		"day": 20
+	},
 	"relationships": {
-		"brands": [{ "id": "b-train-shorty", "name": "B train shorty" }],
+		"brands": [
+			{
+				"id": "b-train-shorty",
+				"name": "B train shorty"
+			}
+		],
 		"categories": [],
 		"series": [],
-		"relatedItems": ["01_1276", "01_1277", "01_1278", "01_1280"]
+		"relatedItems": [
+			"01_1276",
+			"01_1277",
+			"01_1278",
+			"01_1280"
+		]
 	},
 	"brand": "B train shorty"
 }

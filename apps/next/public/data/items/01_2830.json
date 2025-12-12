@@ -1,7 +1,10 @@
 {
 	"id": "01_2830",
 	"type": "item",
-	"name": { "ja": "ガンダムベース限定 MS汎用ハンガー", "en": "Gundam base limited MS general purpose hanger" },
+	"name": {
+		"ja": "ガンダムベース限定 MS汎用ハンガー",
+		"en": "Gundam base limited MS general purpose hanger"
+	},
 	"description": [
 		{
 			"ja": "全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -19,8 +22,14 @@
 			"ja": "様々なスケールに合わせて、自分だけのカスタマイズハンガーに組み換えが可能です！",
 			"en": "You can customize your own hanger to suit various scales!"
 		},
-		{ "ja": "組み換え例", "en": "Recombination example" },
-		{ "ja": "• <例1>1/60スケール(大型)用1個", "en": "• <Example 1> 1 piece for 1/60 Scale (large size)" },
+		{
+			"ja": "組み換え例",
+			"en": "Recombination example"
+		},
+		{
+			"ja": "• <例1>1/60スケール(大型)用1個",
+			"en": "• <Example 1> 1 piece for 1/60 Scale (large size)"
+		},
 		{
 			"ja": "• <例2>1/60スケール用1個、1/144スケール(小・中型)用2個",
 			"en": "• <Example 2> 1 piece for 1/60 Scale, 2 pieces for 1/144 Scale (small/medium size)"
@@ -51,14 +60,34 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2830/",
 	"extractedAt": "2025-12-06T17:50:12.335Z",
-	"price": { "amount": 2860, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2020年05月30日 (土)", "year": 2020, "month": 5, "day": 30 },
+	"price": {
+		"amount": 2860,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2020年05月30日 (土)",
+		"year": 2020,
+		"month": 5,
+		"day": 30
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5968", "01_5987", "01_5988", "01_5969"]
+		"relatedItems": [
+			"01_5968",
+			"01_5987",
+			"01_5988",
+			"01_5969"
+		]
 	},
 	"category": "Gunpla"
 }

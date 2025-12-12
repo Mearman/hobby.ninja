@@ -1,7 +1,10 @@
 {
 	"id": "01_1763",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 RGM-79C ジム改", "en": "HGUC 1/144 RGM-79C Jim Kai" },
+	"name": {
+		"ja": "HGUC 1/144 RGM-79C ジム改",
+		"en": "HGUC 1/144 RGM-79C Jim Kai"
+	},
 	"description": [
 		{
 			"ja": "• 「機動戦士ガンダム００８３スターダストメモリー」に登場するジム改をリリース。 • 手のパーツは、平手と握り手があり選択可能。 • マーキングシール付属。 成形品×6、テトロンシール×1、組立説明書",
@@ -19,15 +22,35 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1763/",
 	"extractedAt": "2025-12-06T17:48:02.961Z",
-	"price": { "amount": 1540, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2010年08月21日 (土)", "year": 2010, "month": 8, "day": 21 },
+	"price": {
+		"amount": 1540,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2010年08月21日 (土)",
+		"year": 2010,
+		"month": 8,
+		"day": 21
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "mobile-suit-gundam-0083-stardust-memory", "name": "Mobile Suit Gundam 0083 STARDUST MEMORY" }],
-		"relatedItems": ["item-1000102912", "item-1000102910", "item-1000115500", "01_5843"]
+		"series": [
+			{
+				"id": "mobile-suit-gundam-0083-stardust-memory",
+				"name": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+			}
+		],
+		"relatedItems": [
+			"item-1000102912",
+			"item-1000102910",
+			"item-1000115500",
+			"01_5843"
+		]
 	},
 	"series": "Mobile Suit Gundam 0083 STARDUST MEMORY"
 }

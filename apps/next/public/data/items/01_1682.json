@@ -1,7 +1,10 @@
 {
 	"id": "01_1682",
 	"type": "item",
-	"name": { "ja": "MG 1/100 真武者頑駄無", "en": "MG 1/100 Shinmusha Gundam" },
+	"name": {
+		"ja": "MG 1/100 真武者頑駄無",
+		"en": "MG 1/100 Shinmusha Gundam"
+	},
 	"description": [
 		{
 			"ja": "“真武者頑駄無”マスターグレードに推して参る！ 基本フレームにVer.O.Y.W.0079を用い、抜群の可動とアクション性を実現 フロントアーマーは節ごとに可動、脚の可動に合わせてしなり武者甲冑らしさを再現 左腰に装備可能な刀「日輪丸」は鞘から抜くことが可能 槍「散光丸」、薙刀「電光丸」、火砲「種子島」はバックパックに装着可能",
@@ -10,18 +13,51 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1682_0.jpg", "/images/items/01_1682_1.jpg", "/images/items/01_1682_2.jpg"],
+	"images": [
+		"/images/items/01_1682_0.jpg",
+		"/images/items/01_1682_1.jpg",
+		"/images/items/01_1682_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1682/",
 	"extractedAt": "2025-12-06T17:41:04.474Z",
-	"price": { "amount": 5500, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2008年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 5500,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2008年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

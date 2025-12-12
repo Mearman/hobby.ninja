@@ -1,7 +1,10 @@
 {
 	"id": "01_3521",
 	"type": "item",
-	"name": { "ja": "鬼滅模型 竈門炭治郎[ヒノカミ神楽]", "en": "Demon Slayer Model Tanjiro Kamado [Hinokami Kagura]" },
+	"name": {
+		"ja": "鬼滅模型 竈門炭治郎[ヒノカミ神楽]",
+		"en": "Demon Slayer Model Tanjiro Kamado [Hinokami Kagura]"
+	},
 	"description": [
 		{
 			"ja": "アニメ『鬼滅の刃』より主人公 竈門炭治郎が「ヒノカミ神楽」仕様で登場！",
@@ -33,9 +36,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "日輪刀（折れ）×1", "en": "Ring sword (broken) x 1" },
-		{ "ja": "ヒノカミ神楽エフェクト×1", "en": "Hinokami Kagura effect x1" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" }
+		{
+			"ja": "日輪刀（折れ）×1",
+			"en": "Ring sword (broken) x 1"
+		},
+		{
+			"ja": "ヒノカミ神楽エフェクト×1",
+			"en": "Hinokami Kagura effect x1"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -51,14 +63,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3521/",
 	"extractedAt": "2025-12-06T17:51:38.180Z",
-	"price": { "amount": 3300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2021年08月07日 (土)", "year": 2021, "month": 8, "day": 7 },
+	"price": {
+		"amount": 3300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2021年08月07日 (土)",
+		"year": 2021,
+		"month": 8,
+		"day": 7
+	},
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "demon-slayer", "name": "Demon slayer" }],
-		"relatedItems": ["01_5101", "01_5011", "01_4391", "01_3889"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "demon-slayer",
+				"name": "Demon slayer"
+			}
+		],
+		"relatedItems": [
+			"01_5101",
+			"01_5011",
+			"01_4391",
+			"01_3889"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Demon slayer"

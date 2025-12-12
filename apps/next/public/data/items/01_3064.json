@@ -1,7 +1,10 @@
 {
 	"id": "01_3064",
 	"type": "item",
-	"name": { "ja": "1/100 VF-1S 可変スーパーバルキリー", "en": "1/100 VF-1S Variable Super Valkyrie" },
+	"name": {
+		"ja": "1/100 VF-1S 可変スーパーバルキリー",
+		"en": "1/100 VF-1S Variable Super Valkyrie"
+	},
 	"description": [
 		{
 			"ja": "「1/100 ＶＦ－１Ｓ 可変スーパーバルキリー」が登場！",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3064_0.jpg"],
+	"images": [
+		"/images/items/01_3064_0.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3064/",
 	"extractedAt": "2025-12-06T17:50:42.155Z",
-	"price": { "amount": 1540, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2008年02月20日 (水)", "year": 2008, "month": 2, "day": 20 },
+	"price": {
+		"amount": 1540,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2008年02月20日 (水)",
+		"year": 2008,
+		"month": 2,
+		"day": 20
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "macross-series", "name": "Macross series" }],
-		"relatedItems": ["01_5944", "01_5945", "01_5946", "01_5465"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "macross-series",
+				"name": "Macross series"
+			}
+		],
+		"relatedItems": [
+			"01_5944",
+			"01_5945",
+			"01_5946",
+			"01_5465"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Macross series"

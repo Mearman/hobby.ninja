@@ -14,7 +14,10 @@
 			"ja": "• ジョイントパーツを使用することで様々な機体に装着が可能。別売りの「HGUC 1/144 ギャン」に組み合わせることで「ギャンバルカン」を再現できる。",
 			"en": "• Can be attached to various aircraft by using joint parts. By combining it with the separately sold \"HGUC 1/144 Gyan \", you can reproduce the \" Gan Vulcan\"."
 		},
-		{ "ja": "• 背部バルカンは上下に可動。", "en": "• The back vulcan can move up and down." },
+		{
+			"ja": "• 背部バルカンは上下に可動。",
+			"en": "• The back vulcan can move up and down."
+		},
 		{
 			"ja": "• シールドの突端にはビームサーベルを装備することも可能。",
 			"en": "• It is also possible to equip the tip of the Seal with a beam saber."
@@ -25,10 +28,22 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ヴァリュアブルポッド×1式", "en": "Valuable pod x 1 set" },
-		{ "ja": "ジョイントパーツ×1式", "en": "Joint parts x 1 set" },
-		{ "ja": "グリップ×1式", "en": "Grip x 1 set" },
-		{ "ja": "シール×1", "en": "Seal×1" }
+		{
+			"ja": "ヴァリュアブルポッド×1式",
+			"en": "Valuable pod x 1 set"
+		},
+		{
+			"ja": "ジョイントパーツ×1式",
+			"en": "Joint parts x 1 set"
+		},
+		{
+			"ja": "グリップ×1式",
+			"en": "Grip x 1 set"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -45,14 +60,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5238/",
 	"extractedAt": "2025-12-06T17:55:29.821Z",
-	"price": { "amount": 880, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2024年07月13日 (土)", "year": 2024, "month": 7, "day": 13 },
+	"price": {
+		"amount": 880,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2024年07月13日 (土)",
+		"year": 2024,
+		"month": 7,
+		"day": 13
+	},
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "optional-parts-set", "name": "Optional parts set" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-fighters", "name": "Gundam Build Fighters" }],
-		"relatedItems": ["01_5188", "01_5189", "01_5190", "01_5240"]
+		"brands": [
+			{
+				"id": "optional-parts-set",
+				"name": "Optional parts set"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-fighters",
+				"name": "Gundam Build Fighters"
+			}
+		],
+		"relatedItems": [
+			"01_5188",
+			"01_5189",
+			"01_5190",
+			"01_5240"
+		]
 	},
 	"brand": "Optional parts set",
 	"category": "Gunpla",

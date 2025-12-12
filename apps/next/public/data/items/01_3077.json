@@ -1,7 +1,10 @@
 {
 	"id": "01_3077",
 	"type": "item",
-	"name": { "ja": "1/100 RX-78F00 ガンダム", "en": "1/100 RX-78F00 Gundam" },
+	"name": {
+		"ja": "1/100 RX-78F00 ガンダム",
+		"en": "1/100 RX-78F00 Gundam"
+	},
 	"description": [
 		{
 			"ja": "『GUNDAM FACTORY YOKOHAMA』の動く実物大ガンダムの限定商品。動くガンダムのカラーリング、挙動を1/100スケールで再現可能",
@@ -29,8 +32,14 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ホイルシール", "en": "foil seal" },
-		{ "ja": "マーキングシール", "en": "MarkingSeal" }
+		{
+			"ja": "ホイルシール",
+			"en": "foil seal"
+		},
+		{
+			"ja": "マーキングシール",
+			"en": "MarkingSeal"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -46,15 +55,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3077/",
 	"extractedAt": "2025-12-06T17:50:44.157Z",
-	"price": { "amount": 3960, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2020年12月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3960,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2020年12月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "gundam-factory-yokohama", "name": "GUNDAM FACTORY YOKOHAMA" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5035", "01_4239", "01_3472", "01_3841"]
+		"brands": [
+			{
+				"id": "gundam-factory-yokohama",
+				"name": "GUNDAM FACTORY YOKOHAMA"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5035",
+			"01_4239",
+			"01_3472",
+			"01_3841"
+		]
 	},
 	"brand": "GUNDAM FACTORY YOKOHAMA",
 	"category": "Gunpla",

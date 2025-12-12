@@ -1,7 +1,10 @@
 {
 	"id": "01_2025",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 ディジェ", "en": "HGUC 1/144 Dije" },
+	"name": {
+		"ja": "HGUC 1/144 ディジェ",
+		"en": "HGUC 1/144 Dije"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士Z ガンダム』でアムロ・レイが正式搭乗したMSが完全新規造形で登場！",
@@ -37,14 +40,32 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ビーム・ライフル×1", "en": "Beam rifle x1" },
-		{ "ja": "グレイバズーカ×1", "en": "Gray bazooka×1" },
-		{ "ja": "ビーム・長刀×1", "en": "Beam long sword x 1" }
+		{
+			"ja": "ビーム・ライフル×1",
+			"en": "Beam rifle x1"
+		},
+		{
+			"ja": "グレイバズーカ×1",
+			"en": "Gray bazooka×1"
+		},
+		{
+			"ja": "ビーム・長刀×1",
+			"en": "Beam long sword x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×13", "en": "Molded products x 13" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×13",
+			"en": "Molded products x 13"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_2025_0.jpg",
@@ -58,18 +79,49 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2025/",
 	"extractedAt": "2025-12-06T16:45:40.020Z",
-	"price": { "amount": 2090, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年12月08日 (土)", "year": 2018, "month": 12, "day": 8 },
+	"price": {
+		"amount": 2090,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年12月08日 (土)",
+		"year": 2018,
+		"month": 12,
+		"day": 8
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-z-gundam", "name": "Mobile Suit Z Gundam" }],
-		"relatedItems": ["01_5468", "01_5375", "01_5162", "01_4985"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-z-gundam",
+				"name": "Mobile Suit Z Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5468",
+			"01_5375",
+			"01_5162",
+			"01_4985"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

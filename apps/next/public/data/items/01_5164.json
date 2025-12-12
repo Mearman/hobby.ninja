@@ -1,7 +1,10 @@
 {
 	"id": "01_5164",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ナラティブガンダム C装備 Ver.Ka", "en": "MG 1/100 Narrative Gundam C equipment Ver.Ka" },
+	"name": {
+		"ja": "MG 1/100 ナラティブガンダム C装備 Ver.Ka",
+		"en": "MG 1/100 Narrative Gundam C equipment Ver.Ka"
+	},
 	"description": [
 		{
 			"ja": "サイコフレーム試験機として開発されたモビルスーツ「ナラティブガンダム C装備」をMG Ver.Kaで立体化。カトキハジメ氏により物語とプラモデル、双方の視点から盛り込まれた数々のギミックを搭載。",
@@ -37,16 +40,46 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "シールド×１", "en": "Seal de x1" },
-		{ "ja": "ビーム・ライフル×１", "en": "Beam rifle x1" },
-		{ "ja": "ジェガン用ビーム・ライフル再現パーツ×１式", "en": "Beam rifle reproduction parts for Jegan x 1 set" },
-		{ "ja": "ビーム・サーベル×２", "en": "Beam saber x2" },
-		{ "ja": "素体再現用パーツ×1式", "en": "Body reproduction parts x 1 set" },
-		{ "ja": "コア・ファイター用ランディングギアパーツ×1式", "en": "Landing gear parts for Core Fighter x 1 set" },
-		{ "ja": "ハンドパーツ×１式", "en": "Hand parts x 1 set" },
-		{ "ja": "フィギュア×２種", "en": "Figure x 2 types" },
-		{ "ja": "３Dメタリックシール×１", "en": "3D metallic seal×1" },
-		{ "ja": "水転写式デカール×１", "en": "Water transfer decal x 1" },
+		{
+			"ja": "シールド×１",
+			"en": "Seal de x1"
+		},
+		{
+			"ja": "ビーム・ライフル×１",
+			"en": "Beam rifle x1"
+		},
+		{
+			"ja": "ジェガン用ビーム・ライフル再現パーツ×１式",
+			"en": "Beam rifle reproduction parts for Jegan x 1 set"
+		},
+		{
+			"ja": "ビーム・サーベル×２",
+			"en": "Beam saber x2"
+		},
+		{
+			"ja": "素体再現用パーツ×1式",
+			"en": "Body reproduction parts x 1 set"
+		},
+		{
+			"ja": "コア・ファイター用ランディングギアパーツ×1式",
+			"en": "Landing gear parts for Core Fighter x 1 set"
+		},
+		{
+			"ja": "ハンドパーツ×１式",
+			"en": "Hand parts x 1 set"
+		},
+		{
+			"ja": "フィギュア×２種",
+			"en": "Figure x 2 types"
+		},
+		{
+			"ja": "３Dメタリックシール×１",
+			"en": "3D metallic seal×1"
+		},
+		{
+			"ja": "水転写式デカール×１",
+			"en": "Water transfer decal x 1"
+		},
 		{
 			"ja": "NT-D未発動時用サイコフレームパーツ×1式",
 			"en": "Psycho frame parts for when NT-D is not activated x 1 set"
@@ -69,15 +102,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5164/",
 	"extractedAt": "2025-12-06T17:55:19.211Z",
-	"price": { "amount": 7700, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2024年04月27日 (土)", "year": 2024, "month": 4, "day": 27 },
+	"price": {
+		"amount": 7700,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2024年04月27日 (土)",
+		"year": 2024,
+		"month": 4,
+		"day": 27
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-verka-master-grade-version-katoki", "name": "MG Ver.Ka [Master Grade Version Katoki]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-nt-narrative", "name": "Mobile Suit Gundam NT [Narrative]" }],
-		"relatedItems": ["item-1000213253", "item-1000213251", "01_5187"]
+		"brands": [
+			{
+				"id": "mg-verka-master-grade-version-katoki",
+				"name": "MG Ver.Ka [Master Grade Version Katoki]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-nt-narrative",
+				"name": "Mobile Suit Gundam NT [Narrative]"
+			}
+		],
+		"relatedItems": [
+			"item-1000213253",
+			"item-1000213251",
+			"01_5187"
+		]
 	},
 	"brand": "MG Ver.Ka [Master Grade Version Katoki]",
 	"category": "Gunpla",

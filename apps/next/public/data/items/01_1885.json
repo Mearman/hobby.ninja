@@ -1,7 +1,10 @@
 {
 	"id": "01_1885",
 	"type": "item",
-	"name": { "ja": "Figure-rise Mechanics 元祖ドラえもん", "en": "Figure-rise Mechanics Original Doraemon" },
+	"name": {
+		"ja": "Figure-rise Mechanics 元祖ドラえもん",
+		"en": "Figure-rise Mechanics Original Doraemon"
+	},
 	"description": [
 		{
 			"ja": "「元祖ドラえもん」がFigure-rise Mechanicsにラインアップ！",
@@ -25,12 +28,24 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "クリア外装×1式", "en": "Clear exterior x 1 set" },
-		{ "ja": "ドラえもん用タケコプターパーツ×1式", "en": "Takecopter parts for Doraemon x 1 set" }
+		{
+			"ja": "クリア外装×1式",
+			"en": "Clear exterior x 1 set"
+		},
+		{
+			"ja": "ドラえもん用タケコプターパーツ×1式",
+			"en": "Takecopter parts for Doraemon x 1 set"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×9", "en": "Molded product x 9" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×9",
+			"en": "Molded product x 9"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1885_0.jpg",
@@ -48,14 +63,43 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1885/",
 	"extractedAt": "2025-12-06T17:48:18.476Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年09月01日 (土)", "year": 2018, "month": 9, "day": 1 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年09月01日 (土)",
+		"year": 2018,
+		"month": 9,
+		"day": 1
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "figure-rise-mechanics", "name": "Figure-rise Mechanics" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "doraemon", "name": "Doraemon" }],
-		"relatedItems": ["01_1206", "01_1207", "01_1208"]
+		"brands": [
+			{
+				"id": "figure-rise-mechanics",
+				"name": "Figure-rise Mechanics"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "doraemon",
+				"name": "Doraemon"
+			}
+		],
+		"relatedItems": [
+			"01_1206",
+			"01_1207",
+			"01_1208"
+		]
 	},
 	"brand": "Figure-rise Mechanics",
 	"category": "Character plastic model",

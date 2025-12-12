@@ -1,7 +1,10 @@
 {
 	"id": "01_2961",
 	"type": "item",
-	"name": { "ja": "1/144 S ガンダム/ブースター・ユニット装着型", "en": "1/144 S Gundam/Booster unit installed type" },
+	"name": {
+		"ja": "1/144 S ガンダム/ブースター・ユニット装着型",
+		"en": "1/144 S Gundam/Booster unit installed type"
+	},
 	"description": [
 		{
 			"ja": "『ガンダム・センチネル』より、1/144スケールで、S ガンダムブースター付が登場。",
@@ -14,18 +17,44 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2961_0.jpg", "/images/items/01_2961_1.jpg"],
+	"images": [
+		"/images/items/01_2961_0.jpg",
+		"/images/items/01_2961_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2961/",
 	"extractedAt": "2025-12-06T17:50:28.773Z",
-	"price": { "amount": 1540, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1988年11月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1540,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1988年11月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-sentinel", "name": "Gundam Sentinel" }],
-		"relatedItems": ["01_5593", "01_3408", "01_3062"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-sentinel",
+				"name": "Gundam Sentinel"
+			}
+		],
+		"relatedItems": [
+			"01_5593",
+			"01_3408",
+			"01_3062"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Gundam Sentinel"

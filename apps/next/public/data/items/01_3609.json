@@ -1,7 +1,10 @@
 {
 	"id": "01_3609",
 	"type": "item",
-	"name": { "ja": "HG 1/144 ガンダム AGE-3 フォートレス", "en": "HG 1/144 Gundam AGE-3 Fortress" },
+	"name": {
+		"ja": "HG 1/144 ガンダム AGE-3 フォートレス",
+		"en": "HG 1/144 Gundam AGE-3 Fortress"
+	},
 	"description": [
 		{
 			"ja": "• AGEシステムが導き出した新形態、フォートレスがHGとなって登場。 • コアファイターとGホッパーに分離可能。 • 脚部シグマシスキャノンは着脱可能。 • MS形態と飛行形態、どちらでも飾れる専用台座が付属。 成形品×7、ホイルシール×1、組立説明書×1",
@@ -18,15 +21,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3609/",
 	"extractedAt": "2025-12-06T17:51:49.551Z",
-	"price": { "amount": 1980, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2012年11月23日 (金)", "year": 2012, "month": 11, "day": 23 },
+	"price": {
+		"amount": 1980,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2012年11月23日 (金)",
+		"year": 2012,
+		"month": 11,
+		"day": 23
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-age", "name": "Mobile Suit Gundam AGE" }],
-		"relatedItems": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-age",
+				"name": "Mobile Suit Gundam AGE"
+			}
+		],
+		"relatedItems": [
+			"item-1000170540",
+			"item-1000169836",
+			"01_3738",
+			"item-1000082540"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

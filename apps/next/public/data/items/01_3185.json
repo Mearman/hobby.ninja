@@ -1,7 +1,10 @@
 {
 	"id": "01_3185",
 	"type": "item",
-	"name": { "ja": "1/100 シン・マツナガザクII", "en": "1/100 Shin Matsuna Gazaku II" },
+	"name": {
+		"ja": "1/100 シン・マツナガザクII",
+		"en": "1/100 Shin Matsuna Gazaku II"
+	},
 	"description": [
 		{
 			"ja": "ジオン軍開発のザク・バリエーションの一つ、シン・マツナガ中尉専用機を立体化しました。腕は前後にスイングします。肩シールドは可動式です。股関節部が左右に開閉し、脚がハの字に開きます。足首は前後左右に可動します。武器はザクマシンガンがついています。専用デカールがついています。差替え用の平手付です。",
@@ -10,18 +13,41 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3185_0.jpg", "/images/items/01_3185_1.jpg"],
+	"images": [
+		"/images/items/01_3185_0.jpg",
+		"/images/items/01_3185_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3185/",
 	"extractedAt": "2025-12-06T17:50:55.243Z",
-	"price": { "amount": 1100, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1985年03月01日 (金)", "year": 1985, "month": 3, "day": 1 },
+	"price": {
+		"amount": 1100,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1985年03月01日 (金)",
+		"year": 1985,
+		"month": 3,
+		"day": 1
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5968", "01_5987", "01_5988", "01_5969"]
+		"relatedItems": [
+			"01_5968",
+			"01_5987",
+			"01_5988",
+			"01_5969"
+		]
 	},
 	"category": "Gunpla"
 }

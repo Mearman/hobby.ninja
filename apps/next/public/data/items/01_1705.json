@@ -1,7 +1,10 @@
 {
 	"id": "01_1705",
 	"type": "item",
-	"name": { "ja": "MG 1/100 Gアーマー リアルタイプカラー", "en": "MG 1/100 G Armor Real Type Color" },
+	"name": {
+		"ja": "MG 1/100 Gアーマー リアルタイプカラー",
+		"en": "MG 1/100 G Armor Real Type Color"
+	},
 	"description": [
 		{
 			"ja": "月刊誌「ガンダムエース」にて好評連載中！「機動戦士ガンダム MSV-R」より“リアルタイプGアーマー”が登場 大河原氏によって描き起こされた設定画のカーラーリングとマーキングを再現 Gファイターとガンダムは合体・変形し「Gアーマー」「Gスカイ」「Gスカイ・イージー」「Gブル」「Gブル・イージー」「ガンダム高機動型」が再現可能 ガンダムの装備はビーム・ライフル、スーパー・ナパーム、ハイパー・バズーカ、ビーム・サーベル×2、ガンダム・ハンマー 、シールド×2が付属",
@@ -19,15 +22,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1705/",
 	"extractedAt": "2025-12-06T17:42:37.702Z",
-	"price": { "amount": 10780, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2009年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 10780,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2009年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

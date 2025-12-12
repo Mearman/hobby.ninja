@@ -1,7 +1,10 @@
 {
 	"id": "01_3081",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 ガンキャノン量産型", "en": "HGUC 1/144 Guncannon mass production type" },
+	"name": {
+		"ja": "HGUC 1/144 ガンキャノン量産型",
+		"en": "HGUC 1/144 Guncannon mass production type"
+	},
 	"description": [
 		{
 			"ja": "OVA「機動戦士ガンダム 0080」に登場する「ガンキャノン量産型」の1/144スケール・HG仕様のプラモデル。各部の可動は「HGUCガンキャノン」と同様に可動します。肩口の240?キャノン砲は、一度引き出してから前に倒す独特のアクションを設定通りに再現出来ます。その他にはマシンガン、3タイプの握り手が付属します。",
@@ -22,17 +25,34 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3081/",
 	"extractedAt": "2025-12-06T17:50:44.280Z",
-	"price": { "amount": 1320, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2004年02月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1320,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2004年02月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
 		"categories": [],
 		"series": [
-			{ "id": "mobile-suit-gundam-0080-war-in-the-pocket", "name": "Mobile Suit Gundam 0080 War in the Pocket" }
+			{
+				"id": "mobile-suit-gundam-0080-war-in-the-pocket",
+				"name": "Mobile Suit Gundam 0080 War in the Pocket"
+			}
 		],
-		"relatedItems": ["01_1686", "01_2436", "01_5429", "01_5768"]
+		"relatedItems": [
+			"01_1686",
+			"01_2436",
+			"01_5429",
+			"01_5768"
+		]
 	},
 	"series": "Mobile Suit Gundam 0080 War in the Pocket"
 }

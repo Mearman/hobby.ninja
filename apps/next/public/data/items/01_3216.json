@@ -1,7 +1,10 @@
 {
 	"id": "01_3216",
 	"type": "item",
-	"name": { "ja": "1/144 ZZ ガンダム", "en": "1/144 ZZ Gundam" },
+	"name": {
+		"ja": "1/144 ZZ ガンダム",
+		"en": "1/144 ZZ Gundam"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム ZZ」の主役機を1/144スケールでキット化したモデルです。頭部はポリキャップで接続します。サイドアーマーは可動します。ハイパー・ビーム・サーベルはバックパックに着脱可能な柄タイプ２本と、手持ちタイプの１本が付いています。ビーム・サーベル専用の持ち手が付いています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3216_0.jpg", "/images/items/01_3216_1.jpg"],
+	"images": [
+		"/images/items/01_3216_0.jpg",
+		"/images/items/01_3216_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3216/",
 	"extractedAt": "2025-12-06T17:50:58.954Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1986年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1986年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-zz", "name": "Mobile Suit Gundam ZZ" }],
-		"relatedItems": ["01_5963", "01_5454", "01_4985", "01_4971"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-zz",
+				"name": "Mobile Suit Gundam ZZ"
+			}
+		],
+		"relatedItems": [
+			"01_5963",
+			"01_5454",
+			"01_4985",
+			"01_4971"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam ZZ"

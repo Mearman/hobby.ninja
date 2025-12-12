@@ -1,7 +1,10 @@
 {
 	"id": "01_2941",
 	"type": "item",
-	"name": { "ja": "1/144 ハンブラビ", "en": "1/144 Hambrabi" },
+	"name": {
+		"ja": "1/144 ハンブラビ",
+		"en": "1/144 Hambrabi"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士Z ガンダム』より、1/144スケールでハンブラビが登場。",
@@ -14,18 +17,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2941_0.jpg", "/images/items/01_2941_1.jpg"],
+	"images": [
+		"/images/items/01_2941_0.jpg",
+		"/images/items/01_2941_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2941/",
 	"extractedAt": "2025-12-06T17:50:26.947Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1985年12月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1985年12月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-z-gundam", "name": "Mobile Suit Z Gundam" }],
-		"relatedItems": ["01_5468", "01_5375", "01_5162", "01_4985"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-z-gundam",
+				"name": "Mobile Suit Z Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5468",
+			"01_5375",
+			"01_5162",
+			"01_4985"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Z Gundam"

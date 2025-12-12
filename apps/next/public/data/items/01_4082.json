@@ -1,7 +1,10 @@
 {
 	"id": "01_4082",
 	"type": "item",
-	"name": { "ja": "ENTRY GRADE 1/144 νガンダム", "en": "ENTRY GRADE 1/144 νGundam" },
+	"name": {
+		"ja": "ENTRY GRADE 1/144 νガンダム",
+		"en": "ENTRY GRADE 1/144 νGundam"
+	},
 	"description": [
 		{
 			"ja": "“次世代のファーストガンプラ”第三弾に「νガンダム」が登場！",
@@ -29,9 +32,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ビーム・ライフル×1", "en": "Beam rifle x1" },
-		{ "ja": "シールド×1", "en": "Seal × 1" },
-		{ "ja": "マーキングシール×1", "en": "MarkingSeal×1" }
+		{
+			"ja": "ビーム・ライフル×1",
+			"en": "Beam rifle x1"
+		},
+		{
+			"ja": "シールド×1",
+			"en": "Seal × 1"
+		},
+		{
+			"ja": "マーキングシール×1",
+			"en": "MarkingSeal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -47,15 +59,43 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4082/",
 	"extractedAt": "2025-12-06T17:52:54.024Z",
-	"price": { "amount": 1100, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2022年04月09日 (土)", "year": 2022, "month": 4, "day": 9 },
+	"price": {
+		"amount": 1100,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2022年04月09日 (土)",
+		"year": 2022,
+		"month": 4,
+		"day": 9
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "entry-grade", "name": "ENTRY GRADE" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-chars-counterattack", "name": "Mobile Suit Gundam Char's Counterattack" }],
-		"relatedItems": ["01_4974", "01_4191"]
+		"brands": [
+			{
+				"id": "entry-grade",
+				"name": "ENTRY GRADE"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-chars-counterattack",
+				"name": "Mobile Suit Gundam Char's Counterattack"
+			}
+		],
+		"relatedItems": [
+			"01_4974",
+			"01_4191"
+		]
 	},
 	"brand": "ENTRY GRADE",
 	"category": "Gunpla",

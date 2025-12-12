@@ -1,9 +1,15 @@
 {
 	"id": "01_5502",
 	"type": "item",
-	"name": { "ja": "雷神丸", "en": "Raijinmaru" },
+	"name": {
+		"ja": "雷神丸",
+		"en": "Raijinmaru"
+	},
 	"description": [
-		{ "ja": "『魔神創造伝ワタル』より雷神丸が登場！", "en": "Raijinmaru appears from “Mashin Souzouden Wataru”!" },
+		{
+			"ja": "『魔神創造伝ワタル』より雷神丸が登場！",
+			"en": "Raijinmaru appears from “Mashin Souzouden Wataru”!"
+		},
 		{
 			"ja": "風神丸と対になるような姿をしている、御羅院が乗りこむ魔神！",
 			"en": "A demon god that Gorain rides, which looks like a counterpart to Fujinmaru!"
@@ -25,7 +31,12 @@
 			"en": "• Two thunder swords can be connected and transformed into a long sword!"
 		}
 	],
-	"accessories": [{ "ja": "雷鳴剣×2", "en": "Thunder sword x2" }],
+	"accessories": [
+		{
+			"ja": "雷鳴剣×2",
+			"en": "Thunder sword x2"
+		}
+	],
 	"contents": [],
 	"images": [
 		"/images/items/01_5502_0.jpg",
@@ -40,14 +51,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5502/",
 	"extractedAt": "2025-12-06T17:56:03.390Z",
-	"price": { "amount": 1925, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2025年05月10日 (土)", "year": 2025, "month": 5, "day": 10 },
+	"price": {
+		"amount": 1925,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2025年05月10日 (土)",
+		"year": 2025,
+		"month": 5,
+		"day": 10
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "wataru-series", "name": "Wataru series" }],
-		"relatedItems": ["01_5495", "01_5496", "01_5504", "01_5503"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "wataru-series",
+				"name": "Wataru series"
+			}
+		],
+		"relatedItems": [
+			"01_5495",
+			"01_5496",
+			"01_5504",
+			"01_5503"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Wataru series"

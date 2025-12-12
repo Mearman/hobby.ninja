@@ -1,7 +1,10 @@
 {
 	"id": "01_1512",
 	"type": "item",
-	"name": { "ja": "1/100 V2 ガンダム", "en": "1/100 V2 Gundam" },
+	"name": {
+		"ja": "1/100 V2 ガンダム",
+		"en": "1/100 V2 Gundam"
+	},
 	"description": [
 		{
 			"ja": "ＴＶ「機動戦士Ｖガンダム」登場のV ガンダムの後継機をキット化しました。胸部パーツは機首ユニットの取付により、コア・ファイターに変形可能です。トップ・ファイター、ボトム・ファイターへの変形は専用ユニットへ各パーツを差替えて再現します。背部ドライブユニットは開閉と左右スイングが可能です。ビーム・ライフル、ビーム・サーベル2種、ビーム・シールドがついています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1512_0.jpg", "/images/items/01_1512_1.jpg"],
+	"images": [
+		"/images/items/01_1512_0.jpg",
+		"/images/items/01_1512_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1512/",
 	"extractedAt": "2025-12-06T17:28:35.547Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1993年09月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1993年09月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-v-gundam", "name": "Mobile Suit V Gundam" }],
-		"relatedItems": ["01_4978", "01_3311", "01_2835", "item-1000142101"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-v-gundam",
+				"name": "Mobile Suit V Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4978",
+			"01_3311",
+			"01_2835",
+			"item-1000142101"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit V Gundam"

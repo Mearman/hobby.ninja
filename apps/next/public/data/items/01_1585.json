@@ -1,7 +1,10 @@
 {
 	"id": "01_1585",
 	"type": "item",
-	"name": { "ja": "MG 1/100 MSZ-006C1 ゼータプラス C1", "en": "MG 1/100 MSZ-006C1 Zeta Plus C1" },
+	"name": {
+		"ja": "MG 1/100 MSZ-006C1 ゼータプラス C1",
+		"en": "MG 1/100 MSZ-006C1 Zeta Plus C1"
+	},
 	"description": [
 		{
 			"ja": "「ガンダムセンチネル」に登場するMS「ゼータプラスC1」がMGモデルで登場。",
@@ -26,15 +29,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1585/",
 	"extractedAt": "2025-12-06T17:33:16.108Z",
-	"price": { "amount": 3300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2002年02月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2002年02月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-sentinel", "name": "Gundam Sentinel" }],
-		"relatedItems": ["01_1291", "01_5593", "01_3408", "01_2176"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-sentinel",
+				"name": "Gundam Sentinel"
+			}
+		],
+		"relatedItems": [
+			"01_1291",
+			"01_5593",
+			"01_3408",
+			"01_2176"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

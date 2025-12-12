@@ -1,7 +1,10 @@
 {
 	"id": "01_5437",
 	"type": "item",
-	"name": { "ja": "HG 龍神丸", "en": "HG Ryujinmaru" },
+	"name": {
+		"ja": "HG 龍神丸",
+		"en": "HG Ryujinmaru"
+	},
 	"description": [
 		{
 			"ja": "『魔神英雄伝ワタル』より、創界山の守り神、金龍の魂が宿った魔神「龍神丸」がHGで登場！",
@@ -27,7 +30,10 @@
 			"ja": "• 腰部は引き出すことで股関節の可動域が拡大し、大胆なポージングが可能。",
 			"en": "• By pulling out the waist, the range of motion of the hip joints is expanded, allowing for bold poses."
 		},
-		{ "ja": "• 膝アーマーは膝関節と連携して可動。", "en": "• Knee armor moves in conjunction with the knee joint." },
+		{
+			"ja": "• 膝アーマーは膝関節と連携して可動。",
+			"en": "• Knee armor moves in conjunction with the knee joint."
+		},
 		{
 			"ja": "• シールレスで劇中のカラーリングを再現。肩アーマーの龍の模様もパーツ分割で表現。",
 			"en": "• Reproduce the coloring in the movie without seals. The dragon pattern on the shoulder armor is also expressed by dividing it into parts."
@@ -38,8 +44,14 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "登龍剣×1", "en": "Toryu sword x1" },
-		{ "ja": "ハンドパーツ×1式", "en": "Hand parts x 1 set" }
+		{
+			"ja": "登龍剣×1",
+			"en": "Toryu sword x1"
+		},
+		{
+			"ja": "ハンドパーツ×1式",
+			"en": "Hand parts x 1 set"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -58,14 +70,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5437/",
 	"extractedAt": "2025-12-06T17:55:56.173Z",
-	"price": { "amount": 2860, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2023年07月15日 (土)", "year": 2023, "month": 7, "day": 15 },
+	"price": {
+		"amount": 2860,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2023年07月15日 (土)",
+		"year": 2023,
+		"month": 7,
+		"day": 15
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "wataru-series", "name": "Wataru series" }],
-		"relatedItems": ["01_5029", "01_6824", "item-1000209764", "item-1000184927"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "wataru-series",
+				"name": "Wataru series"
+			}
+		],
+		"relatedItems": [
+			"01_5029",
+			"01_6824",
+			"item-1000209764",
+			"item-1000184927"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Character plastic model",

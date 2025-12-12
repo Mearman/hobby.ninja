@@ -1,7 +1,10 @@
 {
 	"id": "01_3218",
 	"type": "item",
-	"name": { "ja": "1/144 ハンマハンマ", "en": "1/144 Hammer Hammer" },
+	"name": {
+		"ja": "1/144 ハンマハンマ",
+		"en": "1/144 Hammer Hammer"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム ZZ」に登場するネオ・ジオン軍騎士専用試作型モビルスーツのモデルです。機体を印象づける両手のクロー部分は一本ずつ独立可動します。上腕と前腕をリレーするパワー伝導ケーブルは伸縮２形態の選択式、また前腕とクロー部をつなぐワイヤーはパーツ差替えにより再現されます。腰部バーニアブロックはすべて別パーツによる成形です。ビーム・サーベル、シールドが付いています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3218_0.jpg", "/images/items/01_3218_1.jpg"],
+	"images": [
+		"/images/items/01_3218_0.jpg",
+		"/images/items/01_3218_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3218/",
 	"extractedAt": "2025-12-06T17:50:59.484Z",
-	"price": { "amount": 880, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1986年08月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 880,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1986年08月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-zz", "name": "Mobile Suit Gundam ZZ" }],
-		"relatedItems": ["01_5963", "01_5454", "01_4985", "01_4971"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-zz",
+				"name": "Mobile Suit Gundam ZZ"
+			}
+		],
+		"relatedItems": [
+			"01_5963",
+			"01_5454",
+			"01_4985",
+			"01_4971"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam ZZ"

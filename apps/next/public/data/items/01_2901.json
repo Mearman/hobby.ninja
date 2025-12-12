@@ -1,7 +1,10 @@
 {
 	"id": "01_2901",
 	"type": "item",
-	"name": { "ja": "MG 1/100 シャア専用ズゴック", "en": "MG 1/100 Char's Z'Gok" },
+	"name": {
+		"ja": "MG 1/100 シャア専用ズゴック",
+		"en": "MG 1/100 Char's Z'Gok"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム」に登場する人気キャラ「シャア」の搭乗する「シャア専用ズゴック」がマスターグレードにラインナップ しました。可動のモノアイはクリアパーツを使用。頭部ミサイルのディテールなどリアルに再現しています。腹、股関節、足首などに防水処理をイメージしたラバー状パーツを使用しています。腕、ももには新機構の伸縮ギミックを内臓し、より表現豊かなポージングが再現可能 となりました。幻の4本ヅメパーツが付属。",
@@ -18,15 +21,34 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2901/",
 	"extractedAt": "2025-12-06T17:50:20.770Z",
-	"price": { "amount": 3960, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2003年11月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3960,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2003年11月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"series": "Mobile Suit Gundam"
 }

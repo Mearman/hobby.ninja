@@ -1,10 +1,19 @@
 {
 	"id": "01_5503",
 	"type": "item",
-	"name": { "ja": "炎上丸", "en": "Flame Maru" },
+	"name": {
+		"ja": "炎上丸",
+		"en": "Flame Maru"
+	},
 	"description": [
-		{ "ja": "『魔神創造伝ワタル』より炎上丸が登場！", "en": "Enjoumaru appears from “Mashin Souzouden Wataru”!" },
-		{ "ja": "謎に包まれたエンジョーダの強力な魔神！", "en": "Enjoda's powerful demon shrouded in mystery!" },
+		{
+			"ja": "『魔神創造伝ワタル』より炎上丸が登場！",
+			"en": "Enjoumaru appears from “Mashin Souzouden Wataru”!"
+		},
+		{
+			"ja": "謎に包まれたエンジョーダの強力な魔神！",
+			"en": "Enjoda's powerful demon shrouded in mystery!"
+		},
 		{
 			"ja": "• 部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！",
 			"en": "• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!"
@@ -18,7 +27,12 @@
 			"en": "• The flaming wings on the back and the flaming dark sword are recreated using PET sheets!"
 		}
 	],
-	"accessories": [{ "ja": "炎上暗剣", "en": "flaming dark sword" }],
+	"accessories": [
+		{
+			"ja": "炎上暗剣",
+			"en": "flaming dark sword"
+		}
+	],
 	"contents": [],
 	"images": [
 		"/images/items/01_5503_0.jpg",
@@ -33,14 +47,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5503/",
 	"extractedAt": "2025-12-06T17:56:03.319Z",
-	"price": { "amount": 1980, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2025年05月31日 (土)", "year": 2025, "month": 5, "day": 31 },
+	"price": {
+		"amount": 1980,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2025年05月31日 (土)",
+		"year": 2025,
+		"month": 5,
+		"day": 31
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "wataru-series", "name": "Wataru series" }],
-		"relatedItems": ["01_5495", "01_5502", "01_5504", "01_5503"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "wataru-series",
+				"name": "Wataru series"
+			}
+		],
+		"relatedItems": [
+			"01_5495",
+			"01_5502",
+			"01_5504",
+			"01_5503"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Wataru series"

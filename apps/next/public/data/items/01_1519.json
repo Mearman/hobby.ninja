@@ -1,7 +1,10 @@
 {
 	"id": "01_1519",
 	"type": "item",
-	"name": { "ja": "武器セット(機動戦士V ガンダム)", "en": "Weapon set (Mobile Suit V Gundam)" },
+	"name": {
+		"ja": "武器セット(機動戦士V ガンダム)",
+		"en": "Weapon set (Mobile Suit V Gundam)"
+	},
 	"description": [
 		{
 			"ja": "ＴＶ『機動戦士Ｖガンダム』に登場したモビルスーツのオプション兵器をセットにしました。リガ・ミリティアのモビルスーツ用には、マルチプルランチャー、ビーム・ピストル、ビーム・ライフル、ビーム・バズーカ、サイドアーマー2個がついています。V2 ガンダム専用として、サイドアーマー装着型ビーム・ガン 2丁と、スナイピングユニット頭部がついています。ザンスカールのモビルスーツ用にはマルチ・バズーカ、ビーム・バズーカ、ガトリングガンがついています。ザンスカールのゾロアット専用ビーム・キャノンが左右各1門ついています。共通パーツとして平手、握り手、銃のホールド用握り手が左右2個ずつついています。部隊章、機体番号などのマーキングシールがついています。",
@@ -10,17 +13,44 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1519_0.jpg", "/images/items/01_1519_1.jpg"],
+	"images": [
+		"/images/items/01_1519_0.jpg",
+		"/images/items/01_1519_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1519/",
 	"extractedAt": "2025-12-06T17:28:34.330Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1993年11月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1993年11月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-v-gundam", "name": "Mobile Suit V Gundam" }],
-		"relatedItems": ["01_4978", "01_3311", "01_2835", "item-1000142101"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-v-gundam",
+				"name": "Mobile Suit V Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4978",
+			"01_3311",
+			"01_2835",
+			"item-1000142101"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit V Gundam"

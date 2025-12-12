@@ -1,7 +1,10 @@
 {
 	"id": "01_5710",
 	"type": "item",
-	"name": { "ja": "ゴーイング・メリー号 フライングモデル", "en": "Going Merry Flying Model" },
+	"name": {
+		"ja": "ゴーイング・メリー号 フライングモデル",
+		"en": "Going Merry Flying Model"
+	},
 	"description": [
 		{
 			"ja": "• ノンスケールプラモデル。全長約２８０ｍｍ。",
@@ -26,17 +29,41 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5710_0.jpg", "/images/items/01_5710_1.jpg", "/images/items/01_5710_2.jpg"],
+	"images": [
+		"/images/items/01_5710_0.jpg",
+		"/images/items/01_5710_1.jpg",
+		"/images/items/01_5710_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5710/",
 	"extractedAt": "2025-12-06T17:56:27.842Z",
-	"price": { "amount": 5500, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2011年07月01日 (金)", "year": 2011, "month": 7, "day": 1 },
+	"price": {
+		"amount": 5500,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2011年07月01日 (金)",
+		"year": 2011,
+		"month": 7,
+		"day": 1
+	},
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "one-piece", "name": "one piece" }],
-		"relatedItems": ["01_4170", "01_4236", "01_5409", "01_5410"]
+		"series": [
+			{
+				"id": "one-piece",
+				"name": "one piece"
+			}
+		],
+		"relatedItems": [
+			"01_4170",
+			"01_4236",
+			"01_5409",
+			"01_5410"
+		]
 	},
 	"series": "one piece"
 }

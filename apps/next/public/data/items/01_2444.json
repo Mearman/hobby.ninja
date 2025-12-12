@@ -1,7 +1,10 @@
 {
 	"id": "01_2444",
 	"type": "item",
-	"name": { "ja": "ハイレゾリューションモデル 1/100 ゴッドガンダム", "en": "High resolution Model 1/100 God Gundam" },
+	"name": {
+		"ja": "ハイレゾリューションモデル 1/100 ゴッドガンダム",
+		"en": "High resolution Model 1/100 God Gundam"
+	},
 	"description": [
 		{
 			"ja": "『機動武闘伝G ガンダム』より、高解像度化されたゴッドガンダムがハイレゾリューションモデルシリーズにラインナップ！格闘戦特化型フレーム採用でシリーズ最高峰の可動を実現！",
@@ -39,22 +42,46 @@
 			"ja": "• 胸部エネルギーマルチプライヤーにはジュエルシールを採用。",
 			"en": "• Jewel Seal is used as the chest energy multiplier."
 		},
-		{ "ja": "• ハンドパーツは平手等への交換が可能。", "en": "• Hand parts can be replaced with flat hands, etc." },
+		{
+			"ja": "• ハンドパーツは平手等への交換が可能。",
+			"en": "• Hand parts can be replaced with flat hands, etc."
+		},
 		{
 			"ja": "• ゴッドフィンガー用のクリアオレンジパーツも同梱。",
 			"en": "• Clear orange parts for Godfinger are also included."
 		}
 	],
 	"accessories": [
-		{ "ja": "完成品フレーム", "en": "finished product frame" },
-		{ "ja": "ジュエルシール×1", "en": "Jewel Seal×1" },
-		{ "ja": "ラバーシート×1", "en": "Rubber sheet x 1" },
-		{ "ja": "PETシート×1", "en": "PET sheet x 1" }
+		{
+			"ja": "完成品フレーム",
+			"en": "finished product frame"
+		},
+		{
+			"ja": "ジュエルシール×1",
+			"en": "Jewel Seal×1"
+		},
+		{
+			"ja": "ラバーシート×1",
+			"en": "Rubber sheet x 1"
+		},
+		{
+			"ja": "PETシート×1",
+			"en": "PET sheet x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×10", "en": "Molded product x 10" },
-		{ "ja": "テトロンシール×1", "en": "Tetron Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×10",
+			"en": "Molded product x 10"
+		},
+		{
+			"ja": "テトロンシール×1",
+			"en": "Tetron Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_2444_0.jpg",
@@ -72,14 +99,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2444/",
 	"extractedAt": "2025-12-06T17:49:22.727Z",
-	"price": { "amount": 14300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年10月26日 (土)", "year": 2019, "month": 10, "day": 26 },
+	"price": {
+		"amount": 14300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年10月26日 (土)",
+		"year": 2019,
+		"month": 10,
+		"day": 26
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hi-resolution-model", "name": "Hi-Resolution Model" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-fighter-g-gundam", "name": "Mobile Fighter G Gundam" }],
+		"brands": [
+			{
+				"id": "hi-resolution-model",
+				"name": "Hi-Resolution Model"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-fighter-g-gundam",
+				"name": "Mobile Fighter G Gundam"
+			}
+		],
 		"relatedItems": []
 	},
 	"brand": "Hi-Resolution Model",

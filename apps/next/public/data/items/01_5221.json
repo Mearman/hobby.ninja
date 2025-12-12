@@ -1,7 +1,10 @@
 {
 	"id": "01_5221",
 	"type": "item",
-	"name": { "ja": "MG 1/100 イージスガンダム [クリアカラー]", "en": "MG 1/100 Aegis Gundam [Clear Color]" },
+	"name": {
+		"ja": "MG 1/100 イージスガンダム [クリアカラー]",
+		"en": "MG 1/100 Aegis Gundam [Clear Color]"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム SEED』に登場するアスランの搭乗機「MG 1/100 イージスガンダム」がクリアカラーになって登場！",
@@ -19,22 +22,59 @@
 			"ja": "• 肘、つま先に取り付け可能なビームサーベルのエフェクトパーツが付属。",
 			"en": "• Comes with beam saber effect parts that can be attached to the elbows and toes."
 		},
-		{ "ja": "• プラモデルオリジナルのデカールが付属。", "en": "• Comes with original plastic model decals." }
+		{
+			"ja": "• プラモデルオリジナルのデカールが付属。",
+			"en": "• Comes with original plastic model decals."
+		}
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5221_0.jpg", "/images/items/01_5221_1.jpg", "/images/items/01_5221_2.jpg"],
+	"images": [
+		"/images/items/01_5221_0.jpg",
+		"/images/items/01_5221_1.jpg",
+		"/images/items/01_5221_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5221/",
 	"extractedAt": "2025-12-06T17:55:28.336Z",
-	"price": { "amount": 5610, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2024年03月09日 (土)", "year": 2024, "month": 3, "day": 9 },
+	"price": {
+		"amount": 5610,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2024年03月09日 (土)",
+		"year": 2024,
+		"month": 3,
+		"day": 9
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed", "name": "Mobile Suit Gundam SEED" }],
-		"relatedItems": ["01_4067", "01_4195", "01_4272", "01_5994"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed",
+				"name": "Mobile Suit Gundam SEED"
+			}
+		],
+		"relatedItems": [
+			"01_4067",
+			"01_4195",
+			"01_4272",
+			"01_5994"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

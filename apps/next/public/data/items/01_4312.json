@@ -19,7 +19,12 @@
 			"en": "• Can be attached to an action base (sold separately)."
 		}
 	],
-	"accessories": [{ "ja": "シール×１", "en": "Seal×1" }],
+	"accessories": [
+		{
+			"ja": "シール×１",
+			"en": "Seal×1"
+		}
+	],
 	"contents": [],
 	"images": [
 		"/images/items/01_4312_0.jpg",
@@ -29,14 +34,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4312/",
 	"extractedAt": "2025-12-06T17:53:25.319Z",
-	"price": { "amount": 1320, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2023年02月25日 (土)", "year": 2023, "month": 2, "day": 25 },
+	"price": {
+		"amount": 1320,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2023年02月25日 (土)",
+		"year": 2023,
+		"month": 2,
+		"day": 25
+	},
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "sd-gundam-series", "name": "SD Gundam series" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "sd-gundam-world-heroes", "name": "SD Gundam World Heroes" }],
-		"relatedItems": ["01_4294", "item-1000193966", "01_4336", "01_4634"]
+		"brands": [
+			{
+				"id": "sd-gundam-series",
+				"name": "SD Gundam series"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "sd-gundam-world-heroes",
+				"name": "SD Gundam World Heroes"
+			}
+		],
+		"relatedItems": [
+			"01_4294",
+			"item-1000193966",
+			"01_4336",
+			"01_4634"
+		]
 	},
 	"brand": "SD Gundam series",
 	"category": "Gunpla",

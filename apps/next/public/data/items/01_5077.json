@@ -1,7 +1,10 @@
 {
 	"id": "01_5077",
 	"type": "item",
-	"name": { "ja": "SDW HEROES 78代目武者頑駄無", "en": "SDW HEROES 78th Musha Gundam" },
+	"name": {
+		"ja": "SDW HEROES 78代目武者頑駄無",
+		"en": "SDW HEROES 78th Musha Gundam"
+	},
 	"description": [
 		{
 			"ja": "新世代の「武者頑駄無」が輝羅鋼を携え堂々参戦！",
@@ -25,9 +28,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "刀×1", "en": "Sword x1" },
-		{ "ja": "鞘×1", "en": "Scabbard x 1" },
-		{ "ja": "シール×1", "en": "Seal×1" }
+		{
+			"ja": "刀×1",
+			"en": "Sword x1"
+		},
+		{
+			"ja": "鞘×1",
+			"en": "Scabbard x 1"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -43,14 +55,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5077/",
 	"extractedAt": "2025-12-06T17:55:07.650Z",
-	"price": { "amount": 1980, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2024年02月23日 (金)", "year": 2024, "month": 2, "day": 23 },
+	"price": {
+		"amount": 1980,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2024年02月23日 (金)",
+		"year": 2024,
+		"month": 2,
+		"day": 23
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "sd-gundam-world-heroes", "name": "SD Gundam World Heroes" }],
-		"relatedItems": ["01_5470", "01_5471", "01_5472", "01_5347"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "sd-gundam-world-heroes",
+				"name": "SD Gundam World Heroes"
+			}
+		],
+		"relatedItems": [
+			"01_5470",
+			"01_5471",
+			"01_5472",
+			"01_5347"
+		]
 	},
 	"category": "Gunpla",
 	"series": "SD Gundam World Heroes"

@@ -1,7 +1,10 @@
 {
 	"id": "01_2960",
 	"type": "item",
-	"name": { "ja": "1/144 Ex-S ガンダム", "en": "1/144 Ex-S Gundam" },
+	"name": {
+		"ja": "1/144 Ex-S ガンダム",
+		"en": "1/144 Ex-S Gundam"
+	},
 	"description": [
 		{
 			"ja": "『ガンダム・センチネル』より、1/144スケールで、EX-S ガンダムが登場。",
@@ -14,18 +17,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2960_0.jpg", "/images/items/01_2960_1.jpg", "/images/items/01_2960_2.jpg"],
+	"images": [
+		"/images/items/01_2960_0.jpg",
+		"/images/items/01_2960_1.jpg",
+		"/images/items/01_2960_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2960/",
 	"extractedAt": "2025-12-06T17:50:28.524Z",
-	"price": { "amount": 1540, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1988年11月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1540,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1988年11月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-sentinel", "name": "Gundam Sentinel" }],
-		"relatedItems": ["01_5593", "01_3408", "01_3062"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-sentinel",
+				"name": "Gundam Sentinel"
+			}
+		],
+		"relatedItems": [
+			"01_5593",
+			"01_3408",
+			"01_3062"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Gundam Sentinel"

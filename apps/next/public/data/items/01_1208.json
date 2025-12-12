@@ -1,7 +1,10 @@
 {
 	"id": "01_1208",
 	"type": "item",
-	"name": { "ja": "Figure-rise Mechanics ドラえもん", "en": "Figure-rise Mechanics Doraemon" },
+	"name": {
+		"ja": "Figure-rise Mechanics ドラえもん",
+		"en": "Figure-rise Mechanics Doraemon"
+	},
 	"description": [
 		{
 			"ja": "Figure-riseMechanics ドラえもん登場！Figure-riseMechanicsはロボットの内部メカニックを組み立てる新境地へ！• ドラえもんの特徴的な「ペタリハンド」や「ウルトラ・スーパー・デラックス・コンピュータ」などの内部メカのディテールを精密に再現！• 組み立てていくことで、ドラえもんの内部メカが理解でき、よりドラえもんを知ることができます！• 外装パーツは、通常のブルーの他に、内部メカが透けて見えるクリア外装も付属！組み立てた後も内部メカが見えるディスプレイが楽しめます。• タイムマシン座り用パーツが付属し、同時発売「Figure-riseMechanics ドラえもんのひみつ道具 タイムマシン」に乗せることも可能です。• 口を別パーツにすることでシールレスを実現。さらに作りやすくなった！",
@@ -9,13 +12,28 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "クリア外装×1式", "en": "Clear exterior x 1 set" },
-		{ "ja": "タイムマシン座り用パーツ×１式", "en": "Time machine sitting parts x 1 set" }
+		{
+			"ja": "クリア外装×1式",
+			"en": "Clear exterior x 1 set"
+		},
+		{
+			"ja": "タイムマシン座り用パーツ×１式",
+			"en": "Time machine sitting parts x 1 set"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×4", "en": "Molded product x 4" },
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×4",
+			"en": "Molded product x 4"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1208_0.jpg",
@@ -32,13 +50,38 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1208/",
 	"extractedAt": "2025-12-06T17:01:18.410Z",
-	"price": { "amount": 3080, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年11月11日 (土)", "year": 2017, "month": 11, "day": 11 },
+	"price": {
+		"amount": 3080,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年11月11日 (土)",
+		"year": 2017,
+		"month": 11,
+		"day": 11
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "figure-rise-mechanics", "name": "Figure-rise Mechanics" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "doraemon", "name": "Doraemon" }],
+		"brands": [
+			{
+				"id": "figure-rise-mechanics",
+				"name": "Figure-rise Mechanics"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "doraemon",
+				"name": "Doraemon"
+			}
+		],
 		"relatedItems": []
 	},
 	"brand": "Figure-rise Mechanics",

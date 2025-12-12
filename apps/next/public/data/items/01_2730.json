@@ -1,7 +1,10 @@
 {
 	"id": "01_2730",
 	"type": "item",
-	"name": { "ja": "ハローキティ×ハロ（アニバーサリーモデル）", "en": "Hello Kitty x Hello (Anniversary Model)" },
+	"name": {
+		"ja": "ハローキティ×ハロ（アニバーサリーモデル）",
+		"en": "Hello Kitty x Hello (Anniversary Model)"
+	},
 	"description": [
 		{
 			"ja": "夢のハローキティとガンダムのコラボ企画！",
@@ -21,9 +24,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "手足パーツ×1", "en": "Limb parts x 1" },
-		{ "ja": "台座×1", "en": "Pedestal x 1" },
-		{ "ja": "ホイルシール×１", "en": "Foil Seal×1" }
+		{
+			"ja": "手足パーツ×1",
+			"en": "Limb parts x 1"
+		},
+		{
+			"ja": "台座×1",
+			"en": "Pedestal x 1"
+		},
+		{
+			"ja": "ホイルシール×１",
+			"en": "Foil Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -34,14 +46,38 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2730/",
 	"extractedAt": "2025-12-06T17:49:58.476Z",
-	"price": { "amount": 1100, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2020年02月29日 (土)", "year": 2020, "month": 2, "day": 29 },
+	"price": {
+		"amount": 1100,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2020年02月29日 (土)",
+		"year": 2020,
+		"month": 2,
+		"day": 29
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "hello-kitty", "name": "hello kitty" }],
-		"relatedItems": ["01_2587", "01_3495", "01_3295"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "hello-kitty",
+				"name": "hello kitty"
+			}
+		],
+		"relatedItems": [
+			"01_2587",
+			"01_3495",
+			"01_3295"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "hello kitty"

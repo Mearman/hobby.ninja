@@ -1,7 +1,10 @@
 {
 	"id": "01_1429",
 	"type": "item",
-	"name": { "ja": "1/20 スコープドッグ", "en": "1/20 scope dog" },
+	"name": {
+		"ja": "1/20 スコープドッグ",
+		"en": "1/20 scope dog"
+	},
 	"description": [
 		{
 			"ja": "• 「装甲騎兵ボトムズ」より“スコープドッグ”が1/20スケールで待望のキット化。",
@@ -45,14 +48,38 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1429/",
 	"extractedAt": "2025-12-06T17:22:21.752Z",
-	"price": { "amount": 4400, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2007年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 4400,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2007年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/20",
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "armored-trooper-votoms", "name": "Armored Trooper Votoms" }],
-		"relatedItems": ["item-1000223037", "01_5553", "item-1000209959", "item-1000209960"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "armored-trooper-votoms",
+				"name": "Armored Trooper Votoms"
+			}
+		],
+		"relatedItems": [
+			"item-1000223037",
+			"01_5553",
+			"item-1000209959",
+			"item-1000209960"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Armored Trooper Votoms"

@@ -1,7 +1,10 @@
 {
 	"id": "01_2950",
 	"type": "item",
-	"name": { "ja": "1/144 Rジャジャ", "en": "1/144 R Jaja" },
+	"name": {
+		"ja": "1/144 Rジャジャ",
+		"en": "1/144 R Jaja"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム ZZ」に登場する騎士専用試作型モビルスーツをキット化しました。肩アーマーと腕は別パーツ成形で、設定どおりにシールドとして前方へ展開することが可能です。頭部はポリキャップによる接続、モノアイはデカールでの再現となっています。銃剣部分の剣は着脱が可能です。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2950_0.jpg", "/images/items/01_2950_1.jpg"],
+	"images": [
+		"/images/items/01_2950_0.jpg",
+		"/images/items/01_2950_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2950/",
 	"extractedAt": "2025-12-06T17:50:28.165Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1986年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1986年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-zz", "name": "Mobile Suit Gundam ZZ" }],
-		"relatedItems": ["01_5963", "01_5454", "01_4985", "01_4971"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-zz",
+				"name": "Mobile Suit Gundam ZZ"
+			}
+		],
+		"relatedItems": [
+			"01_5963",
+			"01_5454",
+			"01_4985",
+			"01_4971"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam ZZ"

@@ -1,7 +1,10 @@
 {
 	"id": "01_3087",
 	"type": "item",
-	"name": { "ja": "1/144 シャア専用ザク", "en": "1/144 Char's Zaku" },
+	"name": {
+		"ja": "1/144 シャア専用ザク",
+		"en": "1/144 Char's Zaku"
+	},
 	"description": [
 		{
 			"ja": "足首以外の関節が可動式で、上体のひねりも再現可能です。・ザクマシンガンを装備しています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3087_0.jpg", "/images/items/01_3087_1.jpg"],
+	"images": [
+		"/images/items/01_3087_0.jpg",
+		"/images/items/01_3087_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3087/",
 	"extractedAt": "2025-12-06T17:50:44.997Z",
-	"price": { "amount": 330, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1980年09月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 330,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1980年09月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5992", "01_5473", "01_5474", "01_5475"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5992",
+			"01_5473",
+			"01_5474",
+			"01_5475"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam"

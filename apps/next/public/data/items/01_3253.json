@@ -1,7 +1,10 @@
 {
 	"id": "01_3253",
 	"type": "item",
-	"name": { "ja": "1/144 ハイゴッグ", "en": "1/144 Highgog" },
+	"name": {
+		"ja": "1/144 ハイゴッグ",
+		"en": "1/144 Highgog"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム 0080 ポケットの中の戦争」に登場した水陸両用型モビルスーツの立体化モデルです。ハンドミサイルユニットは前腕差替えにより再現しています。モノ・アイをクリアパーツで再現しています。上腕は蛇腹状の設定を再現し、関節ごとに可動します。股関節部と足首はボールジョイント製で、足首のヒレはすべて独立可動します。ジェットパックを装着し、水中航行形態への変形が再現可能です。",
@@ -10,20 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3253_0.jpg", "/images/items/01_3253_1.jpg"],
+	"images": [
+		"/images/items/01_3253_0.jpg",
+		"/images/items/01_3253_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3253/",
 	"extractedAt": "2025-12-06T17:51:02.196Z",
-	"price": { "amount": 770, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1989年05月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 770,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1989年05月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [
-			{ "id": "mobile-suit-gundam-0080-war-in-the-pocket", "name": "Mobile Suit Gundam 0080 War in the Pocket" }
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
 		],
-		"relatedItems": ["01_2461", "01_5429", "01_5149", "01_5150"]
+		"series": [
+			{
+				"id": "mobile-suit-gundam-0080-war-in-the-pocket",
+				"name": "Mobile Suit Gundam 0080 War in the Pocket"
+			}
+		],
+		"relatedItems": [
+			"01_2461",
+			"01_5429",
+			"01_5149",
+			"01_5150"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam 0080 War in the Pocket"

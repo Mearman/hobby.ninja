@@ -1,7 +1,10 @@
 {
 	"id": "01_3306",
 	"type": "item",
-	"name": { "ja": "RG 1/144 ジオング", "en": "RG 1/144 Zeon" },
+	"name": {
+		"ja": "RG 1/144 ジオング",
+		"en": "RG 1/144 Zeon"
+	},
 	"description": [
 		{
 			"ja": "ガンプラ40周年記念に合わせ、『機動戦士ガンダム』より「ジオング」を最新の技術とデザインでRG化！",
@@ -41,10 +44,22 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ディスプレイベース×1", "en": "Display base x 1" },
-		{ "ja": "リード線（赤）×1", "en": "Lead wire (red) x 1" },
-		{ "ja": "リード線（黒）×2", "en": "Lead wire (black) x 2" },
-		{ "ja": "リアリスティックデカール×1", "en": "Realistic decal x 1" }
+		{
+			"ja": "ディスプレイベース×1",
+			"en": "Display base x 1"
+		},
+		{
+			"ja": "リード線（赤）×1",
+			"en": "Lead wire (red) x 1"
+		},
+		{
+			"ja": "リード線（黒）×2",
+			"en": "Lead wire (black) x 2"
+		},
+		{
+			"ja": "リアリスティックデカール×1",
+			"en": "Realistic decal x 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -62,15 +77,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3306/",
 	"extractedAt": "2025-12-06T17:51:09.779Z",
-	"price": { "amount": 6050, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2021年01月23日 (土)", "year": 2021, "month": 1, "day": 23 },
+	"price": {
+		"amount": 6050,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2021年01月23日 (土)",
+		"year": 2021,
+		"month": 1,
+		"day": 23
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "rg-real-grade", "name": "RG [Real Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["item-1000162572", "01_4967", "01_151", "01_4775"]
+		"brands": [
+			{
+				"id": "rg-real-grade",
+				"name": "RG [Real Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"item-1000162572",
+			"01_4967",
+			"01_151",
+			"01_4775"
+		]
 	},
 	"brand": "RG [Real Grade]",
 	"category": "Gunpla",

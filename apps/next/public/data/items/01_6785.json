@@ -1,7 +1,10 @@
 {
 	"id": "01_6785",
 	"type": "item",
-	"name": { "ja": "HG 1/144 ガンダムジリウス", "en": "HG 1/144 Gundam Gilius" },
+	"name": {
+		"ja": "HG 1/144 ガンダムジリウス",
+		"en": "HG 1/144 Gundam Gilius"
+	},
 	"description": [
 		{
 			"ja": "－－－－－－－－－－－－－－－－－－－－－－－－－－残 さ れ た ガ ン ダ ム は 、 あ と １ 機－－－－－－－－－－－－－－－－－－－－－－－－－－月刊ガンダムエースでは初となる完全新作オルタナティブシリーズ『機動戦士ガンダムエイト』より「ガンダムジリウス」がHGで登場！特徴的な外装や武装を新規造形で再現。作りやすさにもこだわった1/144スケールアイテム。"
@@ -16,7 +19,17 @@
 			"ja": "※写真の完成品は塗装してあります。また、開発途中の試作品です。実際の商品とは異なる場合がございます。※クリアパーツの中には、製造工程上、気泡が入る場合がございます。※販売商品の生産時期により、製品素材が変更になる場合がございます。予めご了承ください。※メッキパーツは、塗装工程上バラツキが生じる場合があります。予めご了承ください。※販売状況により、今後、購入いただける数量が変更になる場合がございます。"
 		}
 	],
-	"accessories": [{ "ja": "ビームライフル" }, { "ja": "ビームサーベル×２" }, { "ja": "シールド" }],
+	"accessories": [
+		{
+			"ja": "ビームライフル"
+		},
+		{
+			"ja": "ビームサーベル×２"
+		},
+		{
+			"ja": "シールド"
+		}
+	],
 	"contents": [],
 	"images": [
 		"/images/items/01_6785_0.jpg",
@@ -32,19 +45,47 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_6785/",
 	"extractedAt": "2025-12-06T17:57:57.837Z",
-	"price": { "amount": 2970, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2025年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 2970,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2025年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-high-gradepreban-gunpla", "name": "HG [High Grade]/Preban Gunpla" },
-			{ "id": "prevan-gunpla", "name": "Prevan Gunpla" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-high-gradepreban-gunpla",
+				"name": "HG [High Grade]/Preban Gunpla"
+			},
+			{
+				"id": "prevan-gunpla",
+				"name": "Prevan Gunpla"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5961", "01_5963", "01_5986", "01_6741"]
+		"relatedItems": [
+			"01_5961",
+			"01_5963",
+			"01_5986",
+			"01_6741"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla"

@@ -1,7 +1,10 @@
 {
 	"id": "01_1751",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ウイングガンダム", "en": "MG 1/100 Wing Gundam" },
+	"name": {
+		"ja": "MG 1/100 ウイングガンダム",
+		"en": "MG 1/100 Wing Gundam"
+	},
 	"description": [
 		{
 			"ja": "• 新機動戦記ガンダム Wより、主役機「ウイングガンダム」がMG化！ • MG化にあたり、カトキハジメ氏によって再構築されたスタイリッシュなフォルムを再現。 • 翼面積が変化する可変機構搭載！ • バード形態に変形可能！変形時ロック機構も搭載。 • 武器にもアクションギミックを再現！銃身がテイクダウン、さらに、シールドからサーベルが迫り出します！ 成形品×13、ホイルシール×1、マーキングシール×1、ガンダムデカール×1、組立説明書×1",
@@ -10,18 +13,41 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1751_0.jpg", "/images/items/01_1751_1.jpg"],
+	"images": [
+		"/images/items/01_1751_0.jpg",
+		"/images/items/01_1751_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1751/",
 	"extractedAt": "2025-12-06T17:48:01.658Z",
-	"price": { "amount": 4400, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2010年04月28日 (水)", "year": 2010, "month": 4, "day": 28 },
+	"price": {
+		"amount": 4400,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2010年04月28日 (水)",
+		"year": 2010,
+		"month": 4,
+		"day": 28
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "new-mobile-report-gundam-w-series", "name": "New Mobile Report Gundam W series" }],
-		"relatedItems": ["item-1000194972", "01_3410", "item-1000171722", "item-1000142325"]
+		"series": [
+			{
+				"id": "new-mobile-report-gundam-w-series",
+				"name": "New Mobile Report Gundam W series"
+			}
+		],
+		"relatedItems": [
+			"item-1000194972",
+			"01_3410",
+			"item-1000171722",
+			"item-1000142325"
+		]
 	},
 	"series": "New Mobile Report Gundam W series"
 }

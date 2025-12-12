@@ -1,7 +1,10 @@
 {
 	"id": "01_4230",
 	"type": "item",
-	"name": { "ja": "MGEX 1/100 ストライクフリーダムガンダム", "en": "MGEX 1/100 Strike Freedom Gundam" },
+	"name": {
+		"ja": "MGEX 1/100 ストライクフリーダムガンダム",
+		"en": "MGEX 1/100 Strike Freedom Gundam"
+	},
 	"description": [
 		{
 			"ja": "BANDAI SPIRITSが積み重ねた技術と異素材の組み合わせにより、機体ごとに設定した『テーマ』をもとに、MSの“極限表現”に挑むMGハイエンドブランド。第二弾は「ストライクフリーダムガンダム」。",
@@ -33,16 +36,46 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ビームライフル×2", "en": "Beam rifle x2" },
-		{ "ja": "ビームサーベル刃×2", "en": "Beam saber blade x2" },
-		{ "ja": "ハンドパーツ×1式", "en": "Hand parts x 1 set" },
-		{ "ja": "フィギュア×2種（キラ・ヤマト、ラクス・クライン）", "en": "Figure x 2 types (Kira Yamato, Lacus Clyne)" },
-		{ "ja": "アクションベース×1", "en": "Action base x 1" },
-		{ "ja": "PETシート（ビームシールド用）×2", "en": "PET sheet (for beam seal) x 2" },
-		{ "ja": "水転写式デカール×1", "en": "Water transfer decal x 1" },
-		{ "ja": "エッチングシール×1", "en": "Etched Seal×1" },
-		{ "ja": "メタリック３Dシール×1", "en": "Metallic 3DSeal×1" },
-		{ "ja": "ペーパークラフト式ランナースタンド×1", "en": "Paper craft type Runner stand x 1" }
+		{
+			"ja": "ビームライフル×2",
+			"en": "Beam rifle x2"
+		},
+		{
+			"ja": "ビームサーベル刃×2",
+			"en": "Beam saber blade x2"
+		},
+		{
+			"ja": "ハンドパーツ×1式",
+			"en": "Hand parts x 1 set"
+		},
+		{
+			"ja": "フィギュア×2種（キラ・ヤマト、ラクス・クライン）",
+			"en": "Figure x 2 types (Kira Yamato, Lacus Clyne)"
+		},
+		{
+			"ja": "アクションベース×1",
+			"en": "Action base x 1"
+		},
+		{
+			"ja": "PETシート（ビームシールド用）×2",
+			"en": "PET sheet (for beam seal) x 2"
+		},
+		{
+			"ja": "水転写式デカール×1",
+			"en": "Water transfer decal x 1"
+		},
+		{
+			"ja": "エッチングシール×1",
+			"en": "Etched Seal×1"
+		},
+		{
+			"ja": "メタリック３Dシール×1",
+			"en": "Metallic 3DSeal×1"
+		},
+		{
+			"ja": "ペーパークラフト式ランナースタンド×1",
+			"en": "Paper craft type Runner stand x 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -61,14 +94,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4230/",
 	"extractedAt": "2025-12-06T17:53:14.199Z",
-	"price": { "amount": 17050, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2022年11月19日 (土)", "year": 2022, "month": 11, "day": 19 },
+	"price": {
+		"amount": 17050,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2022年11月19日 (土)",
+		"year": 2022,
+		"month": 11,
+		"day": 19
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mgex-master-grade-extreme", "name": "MGEX [Master Grade Extreme]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed-destiny", "name": "Mobile Suit Gundam SEED DESTINY" }],
+		"brands": [
+			{
+				"id": "mgex-master-grade-extreme",
+				"name": "MGEX [Master Grade Extreme]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed-destiny",
+				"name": "Mobile Suit Gundam SEED DESTINY"
+			}
+		],
 		"relatedItems": []
 	},
 	"brand": "MGEX [Master Grade Extreme]",

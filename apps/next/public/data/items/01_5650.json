@@ -1,7 +1,10 @@
 {
 	"id": "01_5650",
 	"type": "item",
-	"name": { "ja": "FG ガンダムデュナメス", "en": "FG Gundam Dynames" },
+	"name": {
+		"ja": "FG ガンダムデュナメス",
+		"en": "FG Gundam Dynames"
+	},
 	"description": [
 		{
 			"ja": "• 大型ライフルを装備した“ガンダムデュナメス”がFGシリーズにラインナップ",
@@ -26,17 +29,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5650_0.jpg", "/images/items/01_5650_1.jpg", "/images/items/01_5650_2.jpg"],
+	"images": [
+		"/images/items/01_5650_0.jpg",
+		"/images/items/01_5650_1.jpg",
+		"/images/items/01_5650_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5650/",
 	"extractedAt": "2025-12-06T17:56:20.917Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2007年09月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2007年09月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-00-double-o", "name": "Mobile Suit Gundam 00 [Double O]" }],
-		"relatedItems": ["01_5102", "01_5526", "item-1000216602", "item-1000161849"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-00-double-o",
+				"name": "Mobile Suit Gundam 00 [Double O]"
+			}
+		],
+		"relatedItems": [
+			"01_5102",
+			"01_5526",
+			"item-1000216602",
+			"item-1000161849"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam 00 [Double O]"

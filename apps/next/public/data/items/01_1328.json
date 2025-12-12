@@ -1,7 +1,10 @@
 {
 	"id": "01_1328",
 	"type": "item",
-	"name": { "ja": "ハロプラ モモハロ", "en": "Haropura Momoharo" },
+	"name": {
+		"ja": "ハロプラ モモハロ",
+		"en": "Haropura Momoharo"
+	},
 	"description": [
 		{
 			"ja": "『ガンダムビルドダイバーズ』に登場するピンクカラーのハロが登場！",
@@ -16,10 +19,21 @@
 			"en": "• In addition to being interchangeable, you can also recreate the state with the arms and legs out, and a pedestal for Haropura is also included!"
 		}
 	],
-	"accessories": [{ "ja": "専用台座×1", "en": "Dedicated pedestal x 1" }],
+	"accessories": [
+		{
+			"ja": "専用台座×1",
+			"en": "Dedicated pedestal x 1"
+		}
+	],
 	"contents": [
-		{ "ja": "成形品×3", "en": "Molded product x 3" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×3",
+			"en": "Molded product x 3"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1328_0.jpg",
@@ -31,14 +45,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1328/",
 	"extractedAt": "2025-12-06T17:14:31.263Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年05月26日 (土)", "year": 2018, "month": 5, "day": 26 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年05月26日 (土)",
+		"year": 2018,
+		"month": 5,
+		"day": 26
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-divers", "name": "Gundam Build Divers" }],
-		"relatedItems": ["01_5189", "01_5190", "01_3063", "01_2623"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-divers",
+				"name": "Gundam Build Divers"
+			}
+		],
+		"relatedItems": [
+			"01_5189",
+			"01_5190",
+			"01_3063",
+			"01_2623"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Gundam Build Divers"

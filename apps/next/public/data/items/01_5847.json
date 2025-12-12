@@ -1,7 +1,10 @@
 {
 	"id": "01_5847",
 	"type": "item",
-	"name": { "ja": "Bトレインショーティー E233系・中央線", "en": "B Train Shorty E233 Series Chuo Line" },
+	"name": {
+		"ja": "Bトレインショーティー E233系・中央線",
+		"en": "B Train Shorty E233 Series Chuo Line"
+	},
 	"description": [
 		{
 			"ja": "• ＪＲ中央本線・青梅線・五日市線で使用されている０番台。中央線伝統のラインカラーであるオレンジ色の帯をまとっている。",
@@ -22,16 +25,39 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5847_0.jpg", "/images/items/01_5847_1.jpg"],
+	"images": [
+		"/images/items/01_5847_0.jpg",
+		"/images/items/01_5847_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5847/",
 	"extractedAt": "2025-12-06T17:56:43.111Z",
-	"price": { "amount": 1320, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年08月10日 (土)", "year": 2013, "month": 8, "day": 10 },
+	"price": {
+		"amount": 1320,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年08月10日 (土)",
+		"year": 2013,
+		"month": 8,
+		"day": 10
+	},
 	"relationships": {
-		"brands": [{ "id": "b-train-shorty", "name": "B train shorty" }],
+		"brands": [
+			{
+				"id": "b-train-shorty",
+				"name": "B train shorty"
+			}
+		],
 		"categories": [],
 		"series": [],
-		"relatedItems": ["01_1276", "01_1277", "01_1278", "01_1280"]
+		"relatedItems": [
+			"01_1276",
+			"01_1277",
+			"01_1278",
+			"01_1280"
+		]
 	},
 	"brand": "B train shorty"
 }

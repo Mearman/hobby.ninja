@@ -1,13 +1,19 @@
 {
 	"id": "01_2251",
 	"type": "item",
-	"name": { "ja": "RG 1/144 クロスボーン・ガンダム X1", "en": "RG 1/144 Crossbone Gundam X1" },
+	"name": {
+		"ja": "RG 1/144 クロスボーン・ガンダム X1",
+		"en": "RG 1/144 Crossbone Gundam X1"
+	},
 	"description": [
 		{
 			"ja": "圧倒的な密度感と色分け再現！シリーズ最小ながら極限の精密再現を追及した",
 			"en": "Overwhelming sense of density and color-coded reproduction! Although it is the smallest in the series, we have pursued the ultimate precision reproduction."
 		},
-		{ "ja": "「GUNPLA EVOLUTION PROJECT」第5弾！", "en": "\"GUNPLA EVOLUTION PROJECT\" 5th edition!" },
+		{
+			"ja": "「GUNPLA EVOLUTION PROJECT」第5弾！",
+			"en": "\"GUNPLA EVOLUTION PROJECT\" 5th edition!"
+		},
 		{
 			"ja": "コミックス『機動戦士クロスボーン・ガンダム』に登場するクロスボーン・ガンダム X1をRGで立体化！",
 			"en": "The Crossbone Gundam X1 that appears in the comic \"Mobile Suit Crossbone Gundam\" is made into a three-dimensional model with RG!"
@@ -42,21 +48,60 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ザンバスター(ビーム・ザンバー/バスター・ガン)×各1", "en": "Zanbuster (Beam Zanbar/Buster Gun) x 1 each" },
-		{ "ja": "ブランド・マーカー×2", "en": "Brand marker x 2" },
-		{ "ja": "ヒート・ダガー×2", "en": "Heat dagger x2" },
-		{ "ja": "ビーム・サーベル×2", "en": "Beam saber x2" },
-		{ "ja": "ビーム・シールド×1", "en": "Beam Seal×1" },
-		{ "ja": "コア・ファイター×1", "en": "Core fighter x 1" },
-		{ "ja": "ABCマント×1", "en": "ABC cloak x 1" },
-		{ "ja": "シザー・アンカー×2", "en": "Scissor anchor x2" },
-		{ "ja": "ヒート・ダガー(足裏)×2", "en": "Heat dagger (sole) x 2" },
-		{ "ja": "パイロットフィギュア×1", "en": "Pilot figure x1" }
+		{
+			"ja": "ザンバスター(ビーム・ザンバー/バスター・ガン)×各1",
+			"en": "Zanbuster (Beam Zanbar/Buster Gun) x 1 each"
+		},
+		{
+			"ja": "ブランド・マーカー×2",
+			"en": "Brand marker x 2"
+		},
+		{
+			"ja": "ヒート・ダガー×2",
+			"en": "Heat dagger x2"
+		},
+		{
+			"ja": "ビーム・サーベル×2",
+			"en": "Beam saber x2"
+		},
+		{
+			"ja": "ビーム・シールド×1",
+			"en": "Beam Seal×1"
+		},
+		{
+			"ja": "コア・ファイター×1",
+			"en": "Core fighter x 1"
+		},
+		{
+			"ja": "ABCマント×1",
+			"en": "ABC cloak x 1"
+		},
+		{
+			"ja": "シザー・アンカー×2",
+			"en": "Scissor anchor x2"
+		},
+		{
+			"ja": "ヒート・ダガー(足裏)×2",
+			"en": "Heat dagger (sole) x 2"
+		},
+		{
+			"ja": "パイロットフィギュア×1",
+			"en": "Pilot figure x1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×10", "en": "Molded product x 10" },
-		{ "ja": "リアリスティックデカール×1", "en": "Realistic decal x 1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×10",
+			"en": "Molded product x 10"
+		},
+		{
+			"ja": "リアリスティックデカール×1",
+			"en": "Realistic decal x 1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_2251_0.jpg",
@@ -74,14 +119,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2251/",
 	"extractedAt": "2025-12-06T17:48:58.503Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年05月25日 (土)", "year": 2019, "month": 5, "day": 25 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年05月25日 (土)",
+		"year": 2019,
+		"month": 5,
+		"day": 25
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "rg-real-grade", "name": "RG [Real Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-crossbone-gundam", "name": "Mobile Suit Crossbone Gundam" }],
+		"brands": [
+			{
+				"id": "rg-real-grade",
+				"name": "RG [Real Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-crossbone-gundam",
+				"name": "Mobile Suit Crossbone Gundam"
+			}
+		],
 		"relatedItems": []
 	},
 	"brand": "RG [Real Grade]",

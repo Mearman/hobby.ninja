@@ -1,7 +1,10 @@
 {
 	"id": "01_5625",
 	"type": "item",
-	"name": { "ja": "1/100 セイバーガンダム", "en": "1/100 Saber Gundam" },
+	"name": {
+		"ja": "1/100 セイバーガンダム",
+		"en": "1/100 Saber Gundam"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム SEED DESTINY」でアスランとともに活躍した“セイバーガンダム”がベストプロポーションの1/100スケールモデルになって登場。特徴であるMA形態への変形は、頭部アンテナや下腕部装甲、ビームライフルなど細部ギミックまで徹底再現。ヒジの２重関節やツマ先とカカトの独立可動など抜群の可動域を実現。ビームライフル、ビームサーベル×2、シールドが付属。ビームサーベルはクリアパーツでリアルに再現。",
@@ -10,18 +13,47 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5625_0.jpg", "/images/items/01_5625_1.jpg", "/images/items/01_5625_2.jpg"],
+	"images": [
+		"/images/items/01_5625_0.jpg",
+		"/images/items/01_5625_1.jpg",
+		"/images/items/01_5625_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5625/",
 	"extractedAt": "2025-12-06T17:56:18.549Z",
-	"price": { "amount": 2860, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2006年10月25日 (水)", "year": 2006, "month": 10, "day": 25 },
+	"price": {
+		"amount": 2860,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2006年10月25日 (水)",
+		"year": 2006,
+		"month": 10,
+		"day": 25
+	},
 	"scale": "1/100",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed-destiny", "name": "Mobile Suit Gundam SEED DESTINY" }],
-		"relatedItems": ["01_5365", "01_5378", "01_5394", "item-1000214960"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed-destiny",
+				"name": "Mobile Suit Gundam SEED DESTINY"
+			}
+		],
+		"relatedItems": [
+			"01_5365",
+			"01_5378",
+			"01_5394",
+			"item-1000214960"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam SEED DESTINY"

@@ -1,12 +1,23 @@
 {
 	"id": "01_3408",
 	"type": "item",
-	"name": { "ja": "ＭＧ 1/100 ガンダムＭｋ-Ｖ", "en": "MG 1/100 Gundam Mk-V" },
+	"name": {
+		"ja": "ＭＧ 1/100 ガンダムＭｋ-Ｖ",
+		"en": "MG 1/100 Gundam Mk-V"
+	},
 	"description": [
-		{ "ja": "プレミアムバンダイはこちら" },
-		{ "ja": "※プレミアムバンダイのトップページに遷移します。" },
-		{ "ja": "※一部のエリアでは販売していません。" },
-		{ "ja": "※エリアにより申込開始の日時は異なります。" }
+		{
+			"ja": "プレミアムバンダイはこちら"
+		},
+		{
+			"ja": "※プレミアムバンダイのトップページに遷移します。"
+		},
+		{
+			"ja": "※一部のエリアでは販売していません。"
+		},
+		{
+			"ja": "※エリアにより申込開始の日時は異なります。"
+		}
 	],
 	"accessories": [],
 	"contents": [],
@@ -24,19 +35,52 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3408/",
 	"extractedAt": "2025-12-06T17:51:24.120Z",
-	"price": { "amount": 9240, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2021年04月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 9240,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2021年04月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [
-			{ "id": "mg-master-gradepreban-gunpla", "name": "MG [Master Grade]/Preban Gunpla" },
-			{ "id": "prevan-gunpla", "name": "Prevan Gunpla" },
-			{ "id": "mg-master-grade", "name": "MG [Master Grade]" }
+			{
+				"id": "mg-master-gradepreban-gunpla",
+				"name": "MG [Master Grade]/Preban Gunpla"
+			},
+			{
+				"id": "prevan-gunpla",
+				"name": "Prevan Gunpla"
+			},
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-sentinel", "name": "Gundam Sentinel" }],
-		"relatedItems": ["01_1291", "01_2176", "01_5593", "01_4064"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-sentinel",
+				"name": "Gundam Sentinel"
+			}
+		],
+		"relatedItems": [
+			"01_1291",
+			"01_2176",
+			"01_5593",
+			"01_4064"
+		]
 	},
 	"brand": "MG [Master Grade]/Preban Gunpla",
 	"category": "Gunpla",

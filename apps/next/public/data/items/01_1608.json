@@ -1,7 +1,10 @@
 {
 	"id": "01_1608",
 	"type": "item",
-	"name": { "ja": "MG 1/100 MS-05B ザクI", "en": "MG 1/100 MS-05B Zaku I" },
+	"name": {
+		"ja": "MG 1/100 MS-05B ザクI",
+		"en": "MG 1/100 MS-05B Zaku I"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム」より、ショルダータックルのダイナミックな印象のザクIを、MSVでキット化しました。頭部のモノアイは、左右に可動。メンテナンスハッチも開閉し、内部のメカディディールまで細密に再現されています。身を守る事はもちろん、格闘戦にも使用できるスパイクシールドを装備しています。ザクマシンガン、105mm マシンガン、ヒートホーク、ザクバズーカと豊富な武器が付いています。",
@@ -18,15 +21,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1608/",
 	"extractedAt": "2025-12-06T17:36:25.135Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1999年05月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1999年05月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

@@ -1,7 +1,10 @@
 {
 	"id": "01_1385",
 	"type": "item",
-	"name": { "ja": "MG 1/100 G ガンダム", "en": "MG 1/100 G Gundam" },
+	"name": {
+		"ja": "MG 1/100 G ガンダム",
+		"en": "MG 1/100 G Gundam"
+	},
 	"description": [
 		{
 			"ja": "TVアニメーション「機動武闘伝G ガンダム」に登場する主役モビルファイター「G ガンダム」が、遂にマスターグレードで登場。リアルなアクションの再現をコンセプトに、PGウイングガンダムゼロカスタムで培った内部フレームをダウンサイジングして導入。劇中同様のアクションポーズが可能です。",
@@ -26,15 +29,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1385/",
 	"extractedAt": "2025-12-06T17:17:39.102Z",
-	"price": { "amount": 3190, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2001年11月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3190,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2001年11月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-fighter-g-gundam", "name": "Mobile Fighter G Gundam" }],
-		"relatedItems": ["01_1746", "01_2482", "01_2493", "01_1629"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-fighter-g-gundam",
+				"name": "Mobile Fighter G Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_1746",
+			"01_2482",
+			"01_2493",
+			"01_1629"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

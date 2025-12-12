@@ -14,7 +14,10 @@
 			"ja": "• 装甲がスライド展開。フレームが拡張し、各部に配置されたサイコフレームが露出するギミックを搭載。",
 			"en": "• Armor slides out. Equipped with a gimmick that expands the frame and exposes the psycho frame placed in each part."
 		},
-		{ "ja": "成形品×25、シール×3、取扱説明書×1", "en": "Molded product x 25, Seal x 3, Instruction manual x 1" }
+		{
+			"ja": "成形品×25、シール×3、取扱説明書×1",
+			"en": "Molded product x 25, Seal x 3, Instruction manual x 1"
+		}
 	],
 	"accessories": [],
 	"contents": [],
@@ -26,15 +29,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5913/",
 	"extractedAt": "2025-12-06T17:56:50.828Z",
-	"price": { "amount": 17600, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年11月30日 (土)", "year": 2013, "month": 11, "day": 30 },
+	"price": {
+		"amount": 17600,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年11月30日 (土)",
+		"year": 2013,
+		"month": 11,
+		"day": 30
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-verka-master-grade-version-katoki", "name": "MG Ver.Ka [Master Grade Version Katoki]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-chars-counterattack", "name": "Mobile Suit Gundam Char's Counterattack" }],
-		"relatedItems": ["01_1997", "01_4275", "01_4818"]
+		"brands": [
+			{
+				"id": "mg-verka-master-grade-version-katoki",
+				"name": "MG Ver.Ka [Master Grade Version Katoki]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-chars-counterattack",
+				"name": "Mobile Suit Gundam Char's Counterattack"
+			}
+		],
+		"relatedItems": [
+			"01_1997",
+			"01_4275",
+			"01_4818"
+		]
 	},
 	"brand": "MG Ver.Ka [Master Grade Version Katoki]",
 	"category": "Gunpla",

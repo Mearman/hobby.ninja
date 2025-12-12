@@ -1,7 +1,10 @@
 {
 	"id": "01_3763",
 	"type": "item",
-	"name": { "ja": "30MS オプションパーツセット4(ステルスアーマー)", "en": "30MS Option Parts Set 4 (Stealth Armor)" },
+	"name": {
+		"ja": "30MS オプションパーツセット4(ステルスアーマー)",
+		"en": "30MS Option Parts Set 4 (Stealth Armor)"
+	},
 	"description": [
 		{
 			"ja": "“キャラメイキング”×“カスタマイズ”で自分好みのキャラクターがつくれる30MSシリーズよりオプションパーツセットが登場！キャラクター素体(別売り)への盛りカスタマイズが可能！",
@@ -17,8 +20,14 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "オプションアーマー×1式", "en": "Optional armor x 1 set" },
-		{ "ja": "30MINUTES汎用ジョイントランナー×1", "en": "30MINUTES General purpose joint Runner x 1" }
+		{
+			"ja": "オプションアーマー×1式",
+			"en": "Optional armor x 1 set"
+		},
+		{
+			"ja": "30MINUTES汎用ジョイントランナー×1",
+			"en": "30MINUTES General purpose joint Runner x 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -31,14 +40,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3763/",
 	"extractedAt": "2025-12-06T17:52:08.698Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2022年02月26日 (土)", "year": 2022, "month": 2, "day": 26 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2022年02月26日 (土)",
+		"year": 2022,
+		"month": 2,
+		"day": 26
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "30-minutes-sisters", "name": "30 MINUTES SISTERS" }],
-		"categories": [{ "id": "30-minutes-label", "name": "30 MINUTES LABEL" }],
+		"brands": [
+			{
+				"id": "30-minutes-sisters",
+				"name": "30 MINUTES SISTERS"
+			}
+		],
+		"categories": [
+			{
+				"id": "30-minutes-label",
+				"name": "30 MINUTES LABEL"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_6777", "01_6778", "01_6770", "01_6771"]
+		"relatedItems": [
+			"01_6777",
+			"01_6778",
+			"01_6770",
+			"01_6771"
+		]
 	},
 	"brand": "30 MINUTES SISTERS",
 	"category": "30 MINUTES LABEL"

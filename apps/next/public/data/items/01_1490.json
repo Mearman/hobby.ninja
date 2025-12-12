@@ -1,7 +1,10 @@
 {
 	"id": "01_1490",
 	"type": "item",
-	"name": { "ja": "1/100 ガンダム RXF91", "en": "1/100 Gundam RXF91" },
+	"name": {
+		"ja": "1/100 ガンダム RXF91",
+		"en": "1/100 Gundam RXF91"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム シルエットフォーミュラF91」に登場、トキオ・D・ランドールが搭乗した主役メカをキット化しました。バックパックのメインスラスターが可動し、ヴェスパーの展開ギミックを再現します。指が可動します。ビーム・シールドはクリアパーツ成形で、展開・収納状態をそれぞれ再現できます。ビーム・ライフル、ビーム・スプレーガン、ビーム・サーベル2本がついています。",
@@ -10,18 +13,39 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1490_0.jpg"],
+	"images": [
+		"/images/items/01_1490_0.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1490/",
 	"extractedAt": "2025-12-06T17:27:00.815Z",
-	"price": { "amount": 1540, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1992年05月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1540,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1992年05月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5968", "01_5986", "01_5987", "01_5988"]
+		"relatedItems": [
+			"01_5968",
+			"01_5986",
+			"01_5987",
+			"01_5988"
+		]
 	},
 	"category": "Gunpla"
 }

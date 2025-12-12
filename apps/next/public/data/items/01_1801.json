@@ -1,7 +1,10 @@
 {
 	"id": "01_1801",
 	"type": "item",
-	"name": { "ja": "EXモデル 09 1/144 ガンペリー", "en": "EXModel 09 1/144 Gunperry" },
+	"name": {
+		"ja": "EXモデル 09 1/144 ガンペリー",
+		"en": "EXModel 09 1/144 Gunperry"
+	},
 	"description": [
 		{
 			"ja": "全長315mmの機体は、下部カーゴ内にHGUC RX-78-2 ガンダム 1体を格納可能にしました。航空機としてのディテールを追求することで、モビルスーツとは異なる存在感を打ち出しています。大型ミサイル6基は、カタパルトを使用してコンテナ内に装備可能です。",
@@ -20,15 +23,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1801/",
 	"extractedAt": "2025-12-06T17:48:07.878Z",
-	"price": { "amount": 7150, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2002年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 7150,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2002年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5992", "01_5473", "01_5474", "01_5475"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5992",
+			"01_5473",
+			"01_5474",
+			"01_5475"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam"

@@ -1,7 +1,10 @@
 {
 	"id": "01_4475",
 	"type": "item",
-	"name": { "ja": "PG 1/60 MSZ-006 ゼータガンダム", "en": "PG 1/60 MSZ-006 Zeta Gundam" },
+	"name": {
+		"ja": "PG 1/60 MSZ-006 ゼータガンダム",
+		"en": "PG 1/60 MSZ-006 Zeta Gundam"
+	},
 	"description": [
 		{
 			"ja": "ウェブライダーの完全変形を実現するとともに、あらゆる形態でのベストプロポーションをも可能にしました。変形ギミックは足部連動やスプリング使用のギ ミックで、プレイバリューにも富んでいます。カメラアイ、テールスタビライザー識別灯、ウィング翼端灯、及びウェブライダー時にはコクピット正面コンソー ルがLEDにより点灯します。頭・胸・スネ外側面にゼータの特徴であるムーバブルフレームを再現しました。各ブロックのロック機構はモビルスーツ形態と飛 行形態の双方において徹底的に追求した作りになっており、デザイン面でも外観を損ねない引出し式ピンを採用しています。",
@@ -19,15 +22,43 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4475/",
 	"extractedAt": "2025-12-06T17:53:47.166Z",
-	"price": { "amount": 22000, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2000年03月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 22000,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2000年03月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/60",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "pg-perfect-grade", "name": "PG [Perfect Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-z-gundam", "name": "Mobile Suit Z Gundam" }],
-		"relatedItems": ["01_1417", "01_1832", "01_4870"]
+		"brands": [
+			{
+				"id": "pg-perfect-grade",
+				"name": "PG [Perfect Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-z-gundam",
+				"name": "Mobile Suit Z Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_1417",
+			"01_1832",
+			"01_4870"
+		]
 	},
 	"brand": "PG [Perfect Grade]",
 	"category": "Gunpla",

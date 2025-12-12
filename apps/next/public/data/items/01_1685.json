@@ -1,7 +1,10 @@
 {
 	"id": "01_1685",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ザクキャノン", "en": "MG 1/100 Zaku Cannon" },
+	"name": {
+		"ja": "MG 1/100 ザクキャノン",
+		"en": "MG 1/100 Zaku Cannon"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム」より、MSバリエーションからザクの系譜“ザクキャノン”がマスターグレード化！ 設定通りザクII Ver.2.0からフレームを継承し、高いアクション性を保持 キャノン砲はパックは着脱可能、本体とのコネクトボルトまでディテール再現 ロケットランチャーは腰部背面に装着可能、マガジンの着脱も再現 頭部は通常タイプとラビットタイプが選択可能 リアルな世界観を演出する各種マーキングが付属 ザク・マシンガン、ザク・バズーカ、ヒート・ホークも付属",
@@ -10,18 +13,46 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1685_0.jpg", "/images/items/01_1685_1.jpg", "/images/items/01_1685_2.jpg"],
+	"images": [
+		"/images/items/01_1685_0.jpg",
+		"/images/items/01_1685_1.jpg",
+		"/images/items/01_1685_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1685/",
 	"extractedAt": "2025-12-06T17:41:04.264Z",
-	"price": { "amount": 4950, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2008年08月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 4950,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2008年08月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5994", "01_5469", "01_5593", "item-1000216602"]
+		"relatedItems": [
+			"01_5994",
+			"01_5469",
+			"01_5593",
+			"item-1000216602"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla"

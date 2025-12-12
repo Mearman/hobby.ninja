@@ -1,7 +1,10 @@
 {
 	"id": "01_5491",
 	"type": "item",
-	"name": { "ja": "HG ヴァイスリッター", "en": "HG Weissritter" },
+	"name": {
+		"ja": "HG ヴァイスリッター",
+		"en": "HG Weissritter"
+	},
 	"description": [
 		{
 			"ja": "『スーパーロボット大戦OG』から、「ヴァイスリッター」がHGで登場！「オクスタン・ランチャー」や「プラズマカッター」が付属！",
@@ -37,13 +40,34 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "オクスタン・ランチャー×1", "en": "Octane launcher x1" },
-		{ "ja": "3連ビームキャノン×1式", "en": "Triple beam cannon x 1 set" },
-		{ "ja": "プラズマカッター×1", "en": "Plasma cutter x 1" },
-		{ "ja": "ハンドパーツ×1式", "en": "Hand parts x 1 set" },
-		{ "ja": "ジョイントパーツ×1式", "en": "Joint parts x 1 set" },
-		{ "ja": "アクションベース7×1", "en": "action base 7×1" },
-		{ "ja": "シール×1", "en": "Seal×1" }
+		{
+			"ja": "オクスタン・ランチャー×1",
+			"en": "Octane launcher x1"
+		},
+		{
+			"ja": "3連ビームキャノン×1式",
+			"en": "Triple beam cannon x 1 set"
+		},
+		{
+			"ja": "プラズマカッター×1",
+			"en": "Plasma cutter x 1"
+		},
+		{
+			"ja": "ハンドパーツ×1式",
+			"en": "Hand parts x 1 set"
+		},
+		{
+			"ja": "ジョイントパーツ×1式",
+			"en": "Joint parts x 1 set"
+		},
+		{
+			"ja": "アクションベース7×1",
+			"en": "action base 7×1"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -58,14 +82,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5491/",
 	"extractedAt": "2025-12-06T17:56:01.636Z",
-	"price": { "amount": 4950, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2025年03月08日 (土)", "year": 2025, "month": 3, "day": 8 },
+	"price": {
+		"amount": 4950,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2025年03月08日 (土)",
+		"year": 2025,
+		"month": 3,
+		"day": 8
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "super-robot-wars-og", "name": "Super Robot Wars OG" }],
-		"relatedItems": ["01_5369", "01_5578", "item-1000214961", "item-1000208235"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "super-robot-wars-og",
+				"name": "Super Robot Wars OG"
+			}
+		],
+		"relatedItems": [
+			"01_5369",
+			"01_5578",
+			"item-1000214961",
+			"item-1000208235"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Character plastic model",

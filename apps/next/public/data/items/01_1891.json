@@ -1,7 +1,10 @@
 {
 	"id": "01_1891",
 	"type": "item",
-	"name": { "ja": "HGBD 1/144 ジェガンブラストマスター", "en": "HGBD 1/144 Jegan Blast Master" },
+	"name": {
+		"ja": "HGBD 1/144 ジェガンブラストマスター",
+		"en": "HGBD 1/144 Jegan Blast Master"
+	},
 	"description": [
 		{
 			"ja": "『ガンダムビルドダイバーズ』に登場する新機体「ジェガンブラストマスター」がキット化！",
@@ -17,15 +20,36 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "サテライトキャノン×2", "en": "Satellite cannon x2" },
-		{ "ja": "ライフル（仮）×2", "en": "Rifle (temporary) x 2" },
-		{ "ja": "ビームサーベル×2", "en": "Beam saber x2" },
-		{ "ja": "バックパック用ジョイントパーツ×1", "en": "Backpack joint parts x 1" }
+		{
+			"ja": "サテライトキャノン×2",
+			"en": "Satellite cannon x2"
+		},
+		{
+			"ja": "ライフル（仮）×2",
+			"en": "Rifle (temporary) x 2"
+		},
+		{
+			"ja": "ビームサーベル×2",
+			"en": "Beam saber x2"
+		},
+		{
+			"ja": "バックパック用ジョイントパーツ×1",
+			"en": "Backpack joint parts x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×12", "en": "Molded product x 12" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×12",
+			"en": "Molded product x 12"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1891_0.jpg",
@@ -37,14 +61,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1891/",
 	"extractedAt": "2025-12-06T17:48:18.878Z",
-	"price": { "amount": 2200, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年09月08日 (土)", "year": 2018, "month": 9, "day": 8 },
+	"price": {
+		"amount": 2200,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年09月08日 (土)",
+		"year": 2018,
+		"month": 9,
+		"day": 8
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-divers", "name": "Gundam Build Divers" }],
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-divers",
+				"name": "Gundam Build Divers"
+			}
+		],
 		"relatedItems": []
 	},
 	"brand": "HG [High Grade]",

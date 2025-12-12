@@ -1,7 +1,10 @@
 {
 	"id": "01_5004",
 	"type": "item",
-	"name": { "ja": "HG スコープドッグ", "en": "HG Scopedog" },
+	"name": {
+		"ja": "HG スコープドッグ",
+		"en": "HG Scopedog"
+	},
 	"description": [
 		{
 			"ja": "TVアニメ放送開始から40周年を迎えた『装甲騎兵ボトムズ』より、スコープドッグが広範囲の可動ギミックを搭載し待望のHG化！",
@@ -37,10 +40,22 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ヘビィマシンガン×1", "en": "Heavy machine gun x1" },
-		{ "ja": "３Dメタリックシール×1", "en": "3D metallic seal×1" },
-		{ "ja": "ジョイントパーツ×1", "en": "Joint parts x 1" },
-		{ "ja": "ハンドパーツ×1式", "en": "Hand parts x 1 set" }
+		{
+			"ja": "ヘビィマシンガン×1",
+			"en": "Heavy machine gun x1"
+		},
+		{
+			"ja": "３Dメタリックシール×1",
+			"en": "3D metallic seal×1"
+		},
+		{
+			"ja": "ジョイントパーツ×1",
+			"en": "Joint parts x 1"
+		},
+		{
+			"ja": "ハンドパーツ×1式",
+			"en": "Hand parts x 1 set"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -59,14 +74,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5004/",
 	"extractedAt": "2025-12-06T17:54:54.495Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2023年10月21日 (土)", "year": 2023, "month": 10, "day": 21 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2023年10月21日 (土)",
+		"year": 2023,
+		"month": 10,
+		"day": 21
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "armored-trooper-votoms", "name": "Armored Trooper Votoms" }],
-		"relatedItems": ["item-1000223037", "01_5553", "item-1000209959", "item-1000209960"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "armored-trooper-votoms",
+				"name": "Armored Trooper Votoms"
+			}
+		],
+		"relatedItems": [
+			"item-1000223037",
+			"01_5553",
+			"item-1000209959",
+			"item-1000209960"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Character plastic model",

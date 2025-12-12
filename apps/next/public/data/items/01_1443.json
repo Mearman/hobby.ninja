@@ -1,7 +1,10 @@
 {
 	"id": "01_1443",
 	"type": "item",
-	"name": { "ja": "1/144 ガンダムヘビーアームズ", "en": "1/144 Gundam Heavy Arms" },
+	"name": {
+		"ja": "1/144 ガンダムヘビーアームズ",
+		"en": "1/144 Gundam Heavy Arms"
+	},
 	"description": [
 		{
 			"ja": "「新機動戦記ガンダム W」のガンダムヘビーアームズが1/144スケールモデルで登場。首、手首、股関節、足首にボールジョイントを使用し、スムーズな可動を実現しています。胸部と腹部が別パーツになっており、腰の回転が可能です。腰アーマーは左右が一体化したフロントと、サイド部が可動し、胸と両肩のハッチは差し替えなしで開閉可能です。右前腕部のアーミーナイフは劇中設定通りに展開可能です。ガトリングガンは手首との差し替え式で左腕に着脱できる他、バックパックへのマウントも可能になっています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1443_0.jpg"],
+	"images": [
+		"/images/items/01_1443_0.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1443/",
 	"extractedAt": "2025-12-06T17:22:20.554Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1995年06月01日 (木)", "year": 1995, "month": 6, "day": 1 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1995年06月01日 (木)",
+		"year": 1995,
+		"month": 6,
+		"day": 1
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "new-mobile-report-gundam-w-series", "name": "New Mobile Report Gundam W series" }],
-		"relatedItems": ["01_5968", "01_5993", "01_5590", "01_5377"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "new-mobile-report-gundam-w-series",
+				"name": "New Mobile Report Gundam W series"
+			}
+		],
+		"relatedItems": [
+			"01_5968",
+			"01_5993",
+			"01_5590",
+			"01_5377"
+		]
 	},
 	"category": "Gunpla",
 	"series": "New Mobile Report Gundam W series"

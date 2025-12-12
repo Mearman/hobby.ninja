@@ -1,7 +1,10 @@
 {
 	"id": "01_3704",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ダブルゼータガンダム Ver.Ka", "en": "MG 1/100 Double Zeta Gundam Ver.Ka" },
+	"name": {
+		"ja": "MG 1/100 ダブルゼータガンダム Ver.Ka",
+		"en": "MG 1/100 Double Zeta Gundam Ver.Ka"
+	},
 	"description": [
 		{
 			"ja": "• 待望の「MG ダブルゼータガンダム Ver.Ka」がついに登場！",
@@ -25,31 +28,94 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ダブル・ビーム・ライフル×1", "en": "Double beam rifle x 1" },
-		{ "ja": "ハイパー・ビーム・サーベル×2", "en": "Hyper beam saber x2" },
-		{ "ja": "握り手（左右）×各1", "en": "Gripping hands (left and right) x 1 each" },
-		{ "ja": "サーベル持ち手（左右）×各1", "en": "Saber handle (left and right) x 1 each" },
-		{ "ja": "変形用手（左右）×各1", "en": "Transformation hands (left and right) x 1 each" },
-		{ "ja": "武器持ち手（右）×1", "en": "Weapon holder (right) x 1" }
+		{
+			"ja": "ダブル・ビーム・ライフル×1",
+			"en": "Double beam rifle x 1"
+		},
+		{
+			"ja": "ハイパー・ビーム・サーベル×2",
+			"en": "Hyper beam saber x2"
+		},
+		{
+			"ja": "握り手（左右）×各1",
+			"en": "Gripping hands (left and right) x 1 each"
+		},
+		{
+			"ja": "サーベル持ち手（左右）×各1",
+			"en": "Saber handle (left and right) x 1 each"
+		},
+		{
+			"ja": "変形用手（左右）×各1",
+			"en": "Transformation hands (left and right) x 1 each"
+		},
+		{
+			"ja": "武器持ち手（右）×1",
+			"en": "Weapon holder (right) x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×17", "en": "Molded product x 17" },
-		{ "ja": "ホイルシール×１", "en": "Foil Seal×1" },
-		{ "ja": "水転写式デカール×1", "en": "Water transfer decal x 1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×17",
+			"en": "Molded product x 17"
+		},
+		{
+			"ja": "ホイルシール×１",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "水転写式デカール×1",
+			"en": "Water transfer decal x 1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
-	"images": ["/images/items/01_3704_0.jpg", "/images/items/01_3704_1.jpg", "/images/items/01_3704_2.jpg"],
+	"images": [
+		"/images/items/01_3704_0.jpg",
+		"/images/items/01_3704_1.jpg",
+		"/images/items/01_3704_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3704/",
 	"extractedAt": "2025-12-06T17:52:01.325Z",
-	"price": { "amount": 7150, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年12月01日 (金)", "year": 2017, "month": 12, "day": 1 },
+	"price": {
+		"amount": 7150,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年12月01日 (金)",
+		"year": 2017,
+		"month": 12,
+		"day": 1
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-verka-master-grade-version-katoki", "name": "MG Ver.Ka [Master Grade Version Katoki]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-zz", "name": "Mobile Suit Gundam ZZ" }],
-		"relatedItems": ["01_1211", "01_2133", "item-1000118343"]
+		"brands": [
+			{
+				"id": "mg-verka-master-grade-version-katoki",
+				"name": "MG Ver.Ka [Master Grade Version Katoki]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-zz",
+				"name": "Mobile Suit Gundam ZZ"
+			}
+		],
+		"relatedItems": [
+			"01_1211",
+			"01_2133",
+			"item-1000118343"
+		]
 	},
 	"brand": "MG Ver.Ka [Master Grade Version Katoki]",
 	"category": "Gunpla",

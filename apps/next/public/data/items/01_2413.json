@@ -1,7 +1,10 @@
 {
 	"id": "01_2413",
 	"type": "item",
-	"name": { "ja": "1/144 モビルカプル", "en": "1/144 Mobile Couple" },
+	"name": {
+		"ja": "1/144 モビルカプル",
+		"en": "1/144 Mobile Couple"
+	},
 	"description": [
 		{
 			"ja": "TV「∀ガンダム」に登場したモビルスーツをキット化しました。胸部のハッチが可動し、ミサイルの発射形態を再現できます。頭頂部は装甲の開閉が可能です。肩のアーマーは可動式です。腕部のジャバラ部分には複数の関節を採用し、独自の動きとポージングを再現できるようになっています。クロー（爪）は可動します。着脱可能なハンドガンがついています。",
@@ -19,15 +22,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2413/",
 	"extractedAt": "2025-12-06T17:49:18.664Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1999年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1999年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam", "name": "∀Gundam" }],
-		"relatedItems": ["item-1000135920", "item-1000099631", "item-1000165581", "01_120"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam",
+				"name": "∀Gundam"
+			}
+		],
+		"relatedItems": [
+			"item-1000135920",
+			"item-1000099631",
+			"item-1000165581",
+			"01_120"
+		]
 	},
 	"category": "Gunpla",
 	"series": "∀Gundam"

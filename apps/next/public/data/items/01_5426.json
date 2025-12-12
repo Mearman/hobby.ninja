@@ -20,8 +20,14 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "マーキングシール×1", "en": "MarkingSeal×1" },
-		{ "ja": "カラーシール×1", "en": "Color Seal×1" }
+		{
+			"ja": "マーキングシール×1",
+			"en": "MarkingSeal×1"
+		},
+		{
+			"ja": "カラーシール×1",
+			"en": "Color Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -37,14 +43,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5426/",
 	"extractedAt": "2025-12-06T17:55:53.763Z",
-	"price": { "amount": 2200, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2012年12月29日 (土)", "year": 2012, "month": 12, "day": 29 },
+	"price": {
+		"amount": 2200,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2012年12月29日 (土)",
+		"year": 2012,
+		"month": 12,
+		"day": 29
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "one-piece", "name": "one piece" }],
-		"relatedItems": ["01_4170", "01_4236", "01_5409", "01_5410"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "one-piece",
+				"name": "one piece"
+			}
+		],
+		"relatedItems": [
+			"01_4170",
+			"01_4236",
+			"01_5409",
+			"01_5410"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "one piece"

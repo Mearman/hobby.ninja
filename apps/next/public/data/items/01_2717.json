@@ -1,7 +1,10 @@
 {
 	"id": "01_2717",
 	"type": "item",
-	"name": { "ja": "MG 1/100 RX-78-5 ガンダム 5号機", "en": "MG 1/100 RX-78-5 Gundam Unit 5" },
+	"name": {
+		"ja": "MG 1/100 RX-78-5 ガンダム 5号機",
+		"en": "MG 1/100 RX-78-5 Gundam Unit 5"
+	},
 	"description": [
 		{
 			"ja": "ガンダムエース連載の機動戦士ガンダム外伝「Side Story」に登場する「ガンダム 5号機」のMG仕様のプラモデル。肩関節にこれまでのキットにはなかった引出し可動を設けており、ガトリングガンを両手で構えることが出来ます。また、足首が2重構造になっており、従来のキット以上の地面への接地性を実現しています。武器はガトリングガン、前腕ビームガン、ビームサーベル、ビームライフル、シールドが付属します。",
@@ -19,15 +22,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2717/",
 	"extractedAt": "2025-12-06T17:49:56.359Z",
-	"price": { "amount": 3080, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2003年08月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3080,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2003年08月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5994", "01_5469", "01_5593", "item-1000216602"]
+		"relatedItems": [
+			"01_5994",
+			"01_5469",
+			"01_5593",
+			"item-1000216602"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla"

@@ -1,7 +1,10 @@
 {
 	"id": "01_5439",
 	"type": "item",
-	"name": { "ja": "風神丸", "en": "Fujinmaru" },
+	"name": {
+		"ja": "風神丸",
+		"en": "Fujinmaru"
+	},
 	"description": [
 		{
 			"ja": "新作テレビアニメ『魔神創造伝ワタル』制作決定！主人公「星部ワタル」とともに冒険する「御富良院(おふらいん)」の魔神「風神丸」！",
@@ -24,7 +27,12 @@
 			"en": "• The head and other parts are reproduced in metallic gold molding color."
 		}
 	],
-	"accessories": [{ "ja": "刀×2", "en": "Sword x2" }],
+	"accessories": [
+		{
+			"ja": "刀×2",
+			"en": "Sword x2"
+		}
+	],
 	"contents": [],
 	"images": [
 		"/images/items/01_5439_0.jpg",
@@ -42,14 +50,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5439/",
 	"extractedAt": "2025-12-06T17:55:56.374Z",
-	"price": { "amount": 1925, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2024年12月28日 (土)", "year": 2024, "month": 12, "day": 28 },
+	"price": {
+		"amount": 1925,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2024年12月28日 (土)",
+		"year": 2024,
+		"month": 12,
+		"day": 28
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "wataru-series", "name": "Wataru series" }],
-		"relatedItems": ["01_5504", "01_5502", "01_5503", "01_5493"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "wataru-series",
+				"name": "Wataru series"
+			}
+		],
+		"relatedItems": [
+			"01_5504",
+			"01_5502",
+			"01_5503",
+			"01_5493"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Wataru series"

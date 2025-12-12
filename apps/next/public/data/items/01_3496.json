@@ -1,7 +1,10 @@
 {
 	"id": "01_3496",
 	"type": "item",
-	"name": { "ja": "RG 1/144 νガンダム[クリアカラー]", "en": "RG 1/144 νGundam [Clear color]" },
+	"name": {
+		"ja": "RG 1/144 νガンダム[クリアカラー]",
+		"en": "RG 1/144 νGundam [Clear color]"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム 逆襲のシャア』から、RG 1/144 νガンダムが、クリアカラーになって登場！",
@@ -26,18 +29,51 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3496_0.jpg", "/images/items/01_3496_1.jpg"],
+	"images": [
+		"/images/items/01_3496_0.jpg",
+		"/images/items/01_3496_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3496/",
 	"extractedAt": "2025-12-06T17:51:35.025Z",
-	"price": { "amount": 5170, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2021年04月10日 (土)", "year": 2021, "month": 4, "day": 10 },
+	"price": {
+		"amount": 5170,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2021年04月10日 (土)",
+		"year": 2021,
+		"month": 4,
+		"day": 10
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "rg-real-grade", "name": "RG [Real Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-chars-counterattack", "name": "Mobile Suit Gundam Char's Counterattack" }],
-		"relatedItems": ["01_2531", "01_2734", "01_4121", "item-1000136789"]
+		"brands": [
+			{
+				"id": "rg-real-grade",
+				"name": "RG [Real Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-chars-counterattack",
+				"name": "Mobile Suit Gundam Char's Counterattack"
+			}
+		],
+		"relatedItems": [
+			"01_2531",
+			"01_2734",
+			"01_4121",
+			"item-1000136789"
+		]
 	},
 	"brand": "RG [Real Grade]",
 	"category": "Gunpla",

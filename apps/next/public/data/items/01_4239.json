@@ -1,7 +1,10 @@
 {
 	"id": "01_4239",
 	"type": "item",
-	"name": { "ja": "1/144 RX-78F00 HMT ガンダム高機動型", "en": "1/144 RX-78F00 HMT Gundam High Mobility Type" },
+	"name": {
+		"ja": "1/144 RX-78F00 HMT ガンダム高機動型",
+		"en": "1/144 RX-78F00 HMT Gundam High Mobility Type"
+	},
 	"description": [
 		{
 			"ja": "『GUNDAM FACTORY YOKOHAMA』の動く実物大ガンダムの限定商品！",
@@ -23,7 +26,10 @@
 			"ja": "• 高機動ユニットは着脱が可能。プロトタイプガンダムの特徴的なアンクルガードも新規造形で再現。",
 			"en": "• High mobility unit is removable. The characteristic ankle guard of the prototype Gundam is also reproduced with new modeling."
 		},
-		{ "ja": "• 各種武装とハンドパーツが付属。", "en": "• Various weapons and hand parts are included." }
+		{
+			"ja": "• 各種武装とハンドパーツが付属。",
+			"en": "• Various weapons and hand parts are included."
+		}
 	],
 	"accessories": [],
 	"contents": [],
@@ -37,15 +43,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4239/",
 	"extractedAt": "2025-12-06T17:53:15.551Z",
-	"price": { "amount": 2530, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2022年07月16日 (土)", "year": 2022, "month": 7, "day": 16 },
+	"price": {
+		"amount": 2530,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2022年07月16日 (土)",
+		"year": 2022,
+		"month": 7,
+		"day": 16
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "gundam-factory-yokohama", "name": "GUNDAM FACTORY YOKOHAMA" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_3471", "01_3472", "01_3841", "01_5035"]
+		"brands": [
+			{
+				"id": "gundam-factory-yokohama",
+				"name": "GUNDAM FACTORY YOKOHAMA"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_3471",
+			"01_3472",
+			"01_3841",
+			"01_5035"
+		]
 	},
 	"brand": "GUNDAM FACTORY YOKOHAMA",
 	"category": "Gunpla",

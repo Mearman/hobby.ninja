@@ -1,7 +1,10 @@
 {
 	"id": "01_1304",
 	"type": "item",
-	"name": { "ja": "1/60 アーバレスト Ver.IV", "en": "1/60 Arbalest Ver.IV" },
+	"name": {
+		"ja": "1/60 アーバレスト Ver.IV",
+		"en": "1/60 Arbalest Ver.IV"
+	},
 	"description": [
 		{
 			"ja": "• 最新TVシリーズ第4期仕様の主役機アーバレストが1/60スケールでついにキット化！",
@@ -29,19 +32,40 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ボクサー 57mm散弾砲×1", "en": "Boxer 57mm shotgun x 1" },
-		{ "ja": "GRAW-2 単分子カッター×1", "en": "GRAW-2 Single molecule cutter x 1" },
-		{ "ja": "ナイフ咥え再現用顔パーツ×1", "en": "Face parts for reproducing knife holding x 1" },
+		{
+			"ja": "ボクサー 57mm散弾砲×1",
+			"en": "Boxer 57mm shotgun x 1"
+		},
+		{
+			"ja": "GRAW-2 単分子カッター×1",
+			"en": "GRAW-2 Single molecule cutter x 1"
+		},
+		{
+			"ja": "ナイフ咥え再現用顔パーツ×1",
+			"en": "Face parts for reproducing knife holding x 1"
+		},
 		{
 			"ja": "「ラムダ・ドライバ」発動状態再現用パーツ×1式",
 			"en": "\"Lambda Driver\" activation state reproduction parts x 1 set"
 		},
-		{ "ja": "グラーツ・マンリッヒャー AWS2000(LDWタイプ)×1", "en": "Graz Mannlicher AWS2000 (LDW type) x 1" }
+		{
+			"ja": "グラーツ・マンリッヒャー AWS2000(LDWタイプ)×1",
+			"en": "Graz Mannlicher AWS2000 (LDW type) x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×13", "en": "Molded products x 13" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×13",
+			"en": "Molded products x 13"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1304_0.jpg",
@@ -59,15 +83,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1304/",
 	"extractedAt": "2025-12-06T17:08:08.190Z",
-	"price": { "amount": 3080, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年04月14日 (土)", "year": 2018, "month": 4, "day": 14 },
+	"price": {
+		"amount": 3080,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年04月14日 (土)",
+		"year": 2018,
+		"month": 4,
+		"day": 14
+	},
 	"scale": "1/60",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "full-metal-panic", "name": "Full Metal Panic!" }],
-		"relatedItems": ["01_2186", "01_2128", "01_2119", "01_1889"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "full-metal-panic",
+				"name": "Full Metal Panic!"
+			}
+		],
+		"relatedItems": [
+			"01_2186",
+			"01_2128",
+			"01_2119",
+			"01_1889"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Character plastic model",

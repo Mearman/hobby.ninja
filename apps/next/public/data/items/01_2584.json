@@ -1,7 +1,10 @@
 {
 	"id": "01_2584",
 	"type": "item",
-	"name": { "ja": "MG 1/100 FAZZ Ver.Ka", "en": "MG 1/100 FAZZ Ver.Ka" },
+	"name": {
+		"ja": "MG 1/100 FAZZ Ver.Ka",
+		"en": "MG 1/100 FAZZ Ver.Ka"
+	},
 	"description": [
 		{
 			"ja": "『ガンダムセンチネル』より、FAZZがMG Ver.Kaで立体化！",
@@ -29,10 +32,22 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ダブル・ビーム・ライフル×1", "en": "Double beam rifle x 1" },
-		{ "ja": "ハイパー・メガ・カノン×1", "en": "Hyper Mega Canon x1" },
-		{ "ja": "水転写式デカール×1", "en": "Water transfer decal x 1" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" }
+		{
+			"ja": "ダブル・ビーム・ライフル×1",
+			"en": "Double beam rifle x 1"
+		},
+		{
+			"ja": "ハイパー・メガ・カノン×1",
+			"en": "Hyper Mega Canon x1"
+		},
+		{
+			"ja": "水転写式デカール×1",
+			"en": "Water transfer decal x 1"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -43,15 +58,42 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2584/",
 	"extractedAt": "2025-12-06T17:49:39.496Z",
-	"price": { "amount": 12540, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2020年02月15日 (土)", "year": 2020, "month": 2, "day": 15 },
+	"price": {
+		"amount": 12540,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2020年02月15日 (土)",
+		"year": 2020,
+		"month": 2,
+		"day": 15
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-verka-master-grade-version-katoki", "name": "MG Ver.Ka [Master Grade Version Katoki]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-sentinel", "name": "Gundam Sentinel" }],
-		"relatedItems": ["01_3062"]
+		"brands": [
+			{
+				"id": "mg-verka-master-grade-version-katoki",
+				"name": "MG Ver.Ka [Master Grade Version Katoki]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-sentinel",
+				"name": "Gundam Sentinel"
+			}
+		],
+		"relatedItems": [
+			"01_3062"
+		]
 	},
 	"brand": "MG Ver.Ka [Master Grade Version Katoki]",
 	"category": "Gunpla",

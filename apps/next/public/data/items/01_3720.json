@@ -1,7 +1,10 @@
 {
 	"id": "01_3720",
 	"type": "item",
-	"name": { "ja": "RG 1/144 エールストライクガンダム", "en": "RG 1/144 Ale Strike Gundam" },
+	"name": {
+		"ja": "RG 1/144 エールストライクガンダム",
+		"en": "RG 1/144 Ale Strike Gundam"
+	},
 	"description": [
 		{
 			"ja": "• ガンプラ30周年記念新ブランドの第３弾。RGシリーズにエールストライクガンダムが登場。",
@@ -15,7 +18,10 @@
 			"ja": "• リアルな質感を演出する「リアリスティックデカール」。",
 			"en": "• \"Realistic decals\" that create realistic textures."
 		},
-		{ "ja": "• 本物の魅力を引き出す「装甲多色化」。", "en": "• \"Multicolor armor\" brings out the real charm." },
+		{
+			"ja": "• 本物の魅力を引き出す「装甲多色化」。",
+			"en": "• \"Multicolor armor\" brings out the real charm."
+		},
 		{
 			"ja": "• キラ・ヤマトの立ち、座りフィギュア付属。",
 			"en": "• Kira Yamato standing and sitting figures included."
@@ -27,17 +33,46 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3720_0.jpg", "/images/items/01_3720_1.jpg", "/images/items/01_3720_2.jpg"],
+	"images": [
+		"/images/items/01_3720_0.jpg",
+		"/images/items/01_3720_1.jpg",
+		"/images/items/01_3720_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3720/",
 	"extractedAt": "2025-12-06T17:52:02.345Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2011年04月30日 (土)", "year": 2011, "month": 4, "day": 30 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2011年04月30日 (土)",
+		"year": 2011,
+		"month": 4,
+		"day": 30
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "rg-real-grade", "name": "RG [Real Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed", "name": "Mobile Suit Gundam SEED" }],
+		"brands": [
+			{
+				"id": "rg-real-grade",
+				"name": "RG [Real Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed",
+				"name": "Mobile Suit Gundam SEED"
+			}
+		],
 		"relatedItems": []
 	},
 	"brand": "RG [Real Grade]",

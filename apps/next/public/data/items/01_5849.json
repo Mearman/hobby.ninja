@@ -1,7 +1,10 @@
 {
 	"id": "01_5849",
 	"type": "item",
-	"name": { "ja": "MG 1/100 RX-78-2 ガンダム Ver.3.0", "en": "MG 1/100 RX-78-2 Gundam Ver.3.0" },
+	"name": {
+		"ja": "MG 1/100 RX-78-2 ガンダム Ver.3.0",
+		"en": "MG 1/100 RX-78-2 Gundam Ver.3.0"
+	},
 	"description": [
 		{
 			"ja": "• MGの新たなる未来に向けて、最新のガンダムのデザインを完全再現。",
@@ -27,22 +30,49 @@
 			"ja": "• コア・ファイターは変型させることで、ボディ内部に収納可能。",
 			"en": "• The Core Fighter can be transformed and stored inside the body."
 		},
-		{ "ja": "• 内部構造には塗装可能な素材を使用。", "en": "• Paintable materials are used for the internal structure." }
+		{
+			"ja": "• 内部構造には塗装可能な素材を使用。",
+			"en": "• Paintable materials are used for the internal structure."
+		}
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5849_0.jpg", "/images/items/01_5849_1.jpg", "/images/items/01_5849_2.jpg"],
+	"images": [
+		"/images/items/01_5849_0.jpg",
+		"/images/items/01_5849_1.jpg",
+		"/images/items/01_5849_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5849/",
 	"extractedAt": "2025-12-06T17:56:43.415Z",
-	"price": { "amount": 5390, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年08月10日 (土)", "year": 2013, "month": 8, "day": 10 },
+	"price": {
+		"amount": 5390,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年08月10日 (土)",
+		"year": 2013,
+		"month": 8,
+		"day": 10
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_3754", "01_3772", "01_4977", "01_5509"]
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_3754",
+			"01_3772",
+			"01_4977",
+			"01_5509"
+		]
 	},
 	"series": "Mobile Suit Gundam"
 }

@@ -1,7 +1,10 @@
 {
 	"id": "01_3770",
 	"type": "item",
-	"name": { "ja": "エクスプローリングラボネイチャー マンモス", "en": "Exploring Lab Nature Mammoth" },
+	"name": {
+		"ja": "エクスプローリングラボネイチャー マンモス",
+		"en": "Exploring Lab Nature Mammoth"
+	},
 	"description": [
 		{
 			"ja": "冷蔵庫で冷やすと…マンモスが復元される！精密骨格と温感変色樹脂が生み出した新感覚プラモデル！",
@@ -28,7 +31,12 @@
 			"en": "• Collaboration products with “Gakken Picture Book LIVE” are also being planned! Details scheduled to be released later!"
 		}
 	],
-	"accessories": [{ "ja": "取扱説明書×1", "en": "Handling manual×1" }],
+	"accessories": [
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
+	],
 	"contents": [],
 	"images": [
 		"/images/items/01_3770_0.jpg",
@@ -46,14 +54,36 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3770/",
 	"extractedAt": "2025-12-06T17:52:10.039Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2022年02月26日 (土)", "year": 2022, "month": 2, "day": 26 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2022年02月26日 (土)",
+		"year": 2022,
+		"month": 2,
+		"day": 26
+	},
 	"targetAge": 6,
 	"relationships": {
-		"brands": [{ "id": "exploring-lab-nature", "name": "Exploring Lab Nature" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
+		"brands": [
+			{
+				"id": "exploring-lab-nature",
+				"name": "Exploring Lab Nature"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_4115"]
+		"relatedItems": [
+			"01_4115"
+		]
 	},
 	"brand": "Exploring Lab Nature",
 	"category": "Character plastic model"

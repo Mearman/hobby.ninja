@@ -1,7 +1,10 @@
 {
 	"id": "01_1386",
 	"type": "item",
-	"name": { "ja": "Figure-riseLABO ホシノ・フミナ", "en": "Figure-riseLABO Fumina Hoshino" },
+	"name": {
+		"ja": "Figure-riseLABO ホシノ・フミナ",
+		"en": "Figure-riseLABO Fumina Hoshino"
+	},
 	"description": [
 		{
 			"ja": "バンダイが持つプラモデルの成形技術を発展させ、これまでのフィギュアやプラモデルでは実現できなかった表現を研究し、実現に向けて進化させていくプロジェクト「Figure-riseLABO」。その第1弾「ホシノ・フミナ」が登場！",
@@ -22,8 +25,14 @@
 	],
 	"accessories": [],
 	"contents": [
-		{ "ja": "成形品×７", "en": "Molded product x 7" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×７",
+			"en": "Molded product x 7"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1386_0.jpg",
@@ -37,14 +46,41 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1386/",
 	"extractedAt": "2025-12-06T17:17:39.605Z",
-	"price": { "amount": 6050, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年06月09日 (土)", "year": 2018, "month": 6, "day": 9 },
+	"price": {
+		"amount": 6050,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年06月09日 (土)",
+		"year": 2018,
+		"month": 6,
+		"day": 9
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "figure-riselabo-figure-rise-labo", "name": "Figure-riseLABO [Figure-rise LABO]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "gundam-build-fighters", "name": "Gundam Build Fighters" }],
-		"relatedItems": ["01_2259"]
+		"brands": [
+			{
+				"id": "figure-riselabo-figure-rise-labo",
+				"name": "Figure-riseLABO [Figure-rise LABO]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-fighters",
+				"name": "Gundam Build Fighters"
+			}
+		],
+		"relatedItems": [
+			"01_2259"
+		]
 	},
 	"brand": "Figure-riseLABO [Figure-rise LABO]",
 	"category": "Character plastic model",

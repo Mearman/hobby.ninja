@@ -1,7 +1,10 @@
 {
 	"id": "01_2623",
 	"type": "item",
-	"name": { "ja": "HGBD:R 1/144 ガンダム G-エルス", "en": "HGBD:R 1/144 Gundam G-Els" },
+	"name": {
+		"ja": "HGBD:R 1/144 ガンダム G-エルス",
+		"en": "HGBD:R 1/144 Gundam G-Els"
+	},
 	"description": [
 		{
 			"ja": "外伝「ガンダムビルドダイバーズブレイク」の主人公機が登場！",
@@ -17,9 +20,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ライフル×１", "en": "Rifle x 1" },
-		{ "ja": "ビームサーベルエフェクト×２", "en": "Beam saber effect x2" },
-		{ "ja": "ホイルシール×１", "en": "Foil Seal×1" }
+		{
+			"ja": "ライフル×１",
+			"en": "Rifle x 1"
+		},
+		{
+			"ja": "ビームサーベルエフェクト×２",
+			"en": "Beam saber effect x2"
+		},
+		{
+			"ja": "ホイルシール×１",
+			"en": "Foil Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -33,15 +45,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2623/",
 	"extractedAt": "2025-12-06T17:49:45.468Z",
-	"price": { "amount": 2090, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2020年03月21日 (土)", "year": 2020, "month": 3, "day": 21 },
+	"price": {
+		"amount": 2090,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2020年03月21日 (土)",
+		"year": 2020,
+		"month": 3,
+		"day": 21
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-divers-rerise", "name": "Gundam Build Divers Re:RISE" }],
-		"relatedItems": ["01_5054", "01_3562", "01_3565", "01_3291"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-divers-rerise",
+				"name": "Gundam Build Divers Re:RISE"
+			}
+		],
+		"relatedItems": [
+			"01_5054",
+			"01_3562",
+			"01_3565",
+			"01_3291"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

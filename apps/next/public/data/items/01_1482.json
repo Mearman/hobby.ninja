@@ -1,7 +1,10 @@
 {
 	"id": "01_1482",
 	"type": "item",
-	"name": { "ja": "HG 1/144 ダブルゼータガンダム", "en": "HG 1/144 Double Zeta Gundam" },
+	"name": {
+		"ja": "HG 1/144 ダブルゼータガンダム",
+		"en": "HG 1/144 Double Zeta Gundam"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム ZZ」の主役機をＨＧシリーズとして立体化したモデルです。頭部差替えにより、変形・分離・合体の３機構を再現可能です。コア・ブロック、コア・ファイターの変形は差替えなしで可能です。腰部アーマーはフロント、サイドともに可動式です。スネパーツのサイドブロックにビス止め機構を採用しています。専用のポリキャップが付属しています。ダブル・ビーム・ライフル、ハイパー・ビーム・サーベルが付いています。",
@@ -10,18 +13,50 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1482_0.jpg", "/images/items/01_1482_1.jpg"],
+	"images": [
+		"/images/items/01_1482_0.jpg",
+		"/images/items/01_1482_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1482/",
 	"extractedAt": "2025-12-06T17:25:27.830Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1991年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1991年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-zz", "name": "Mobile Suit Gundam ZZ" }],
-		"relatedItems": ["01_5963", "01_4985", "01_4971", "01_2079"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-zz",
+				"name": "Mobile Suit Gundam ZZ"
+			}
+		],
+		"relatedItems": [
+			"01_5963",
+			"01_4985",
+			"01_4971",
+			"01_2079"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

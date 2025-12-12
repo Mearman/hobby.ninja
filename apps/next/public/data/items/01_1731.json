@@ -1,7 +1,10 @@
 {
 	"id": "01_1731",
 	"type": "item",
-	"name": { "ja": "MG 1/100 LM312V04 V ガンダム Ver.Ka", "en": "MG 1/100 LM312V04 V Gundam Ver.Ka" },
+	"name": {
+		"ja": "MG 1/100 LM312V04 V ガンダム Ver.Ka",
+		"en": "MG 1/100 LM312V04 V Gundam Ver.Ka"
+	},
 	"description": [
 		{
 			"ja": "• V ガンダム遂にマスターグレードVer.kaで登場！！ • 全高152ｍｍの小柄なボディに変形ギミックを満載し、分離・変形・合体を遂に再現！！ • コアファイター、トップリム、ボトムリムだけでなく、トップファイター、ボトムファイターの飛行形態２種に変形が可能。 • ヘキサヘッドのコアファイターを組み込むことでV ガンダムヘキサを再現することが可能。 成型品×12、PET製ビームシールド×1、ホイルシール×1、ドライデカール×1、テトロンシール×1、組立説明書×1",
@@ -27,15 +30,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1731/",
 	"extractedAt": "2025-12-06T17:48:01.248Z",
-	"price": { "amount": 4620, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2009年12月19日 (土)", "year": 2009, "month": 12, "day": 19 },
+	"price": {
+		"amount": 4620,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2009年12月19日 (土)",
+		"year": 2009,
+		"month": 12,
+		"day": 19
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-verka-master-grade-version-katoki", "name": "MG Ver.Ka [Master Grade Version Katoki]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-v-gundam", "name": "Mobile Suit V Gundam" }],
-		"relatedItems": ["item-1000129971", "item-1000130021", "item-1000142041", "01_464"]
+		"brands": [
+			{
+				"id": "mg-verka-master-grade-version-katoki",
+				"name": "MG Ver.Ka [Master Grade Version Katoki]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-v-gundam",
+				"name": "Mobile Suit V Gundam"
+			}
+		],
+		"relatedItems": [
+			"item-1000129971",
+			"item-1000130021",
+			"item-1000142041",
+			"01_464"
+		]
 	},
 	"brand": "MG Ver.Ka [Master Grade Version Katoki]",
 	"category": "Gunpla",

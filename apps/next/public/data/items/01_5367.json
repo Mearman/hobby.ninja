@@ -1,7 +1,10 @@
 {
 	"id": "01_5367",
 	"type": "item",
-	"name": { "ja": "30MS 月岡恋鐘", "en": "30MS Oka Koi Bell" },
+	"name": {
+		"ja": "30MS 月岡恋鐘",
+		"en": "30MS Oka Koi Bell"
+	},
 	"description": [
 		{
 			"ja": "アイドルマスター シャイニーカラーズより、アンティーカの「月岡恋鐘」を30MSフォーマットで立体化！全身のパーツが同梱されているオールインワンアイテム。",
@@ -33,11 +36,26 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "フェイスパーツ(タンポ印刷)×3種", "en": "Face parts (tampo printing) x 3 types" },
-		{ "ja": "ハンドパーツ×1式", "en": "Hand parts x 1 set" },
-		{ "ja": "前髪パーツ(髪飾りなし)×1", "en": "Bangs parts (no hair ornament) x 1" },
-		{ "ja": "マイク×1", "en": "Microphone x 1" },
-		{ "ja": "シール×1", "en": "Seal×1" }
+		{
+			"ja": "フェイスパーツ(タンポ印刷)×3種",
+			"en": "Face parts (tampo printing) x 3 types"
+		},
+		{
+			"ja": "ハンドパーツ×1式",
+			"en": "Hand parts x 1 set"
+		},
+		{
+			"ja": "前髪パーツ(髪飾りなし)×1",
+			"en": "Bangs parts (no hair ornament) x 1"
+		},
+		{
+			"ja": "マイク×1",
+			"en": "Microphone x 1"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -56,14 +74,42 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5367/",
 	"extractedAt": "2025-12-06T17:55:46.064Z",
-	"price": { "amount": 4180, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2024年10月26日 (土)", "year": 2024, "month": 10, "day": 26 },
+	"price": {
+		"amount": 4180,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2024年10月26日 (土)",
+		"year": 2024,
+		"month": 10,
+		"day": 26
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "30-minutes-sisters", "name": "30 MINUTES SISTERS" }],
-		"categories": [{ "id": "30-minutes-label", "name": "30 MINUTES LABEL" }],
-		"series": [{ "id": "idolmaster-series", "name": "idolmaster series" }],
-		"relatedItems": ["01_6755", "01_6756"]
+		"brands": [
+			{
+				"id": "30-minutes-sisters",
+				"name": "30 MINUTES SISTERS"
+			}
+		],
+		"categories": [
+			{
+				"id": "30-minutes-label",
+				"name": "30 MINUTES LABEL"
+			}
+		],
+		"series": [
+			{
+				"id": "idolmaster-series",
+				"name": "idolmaster series"
+			}
+		],
+		"relatedItems": [
+			"01_6755",
+			"01_6756"
+		]
 	},
 	"brand": "30 MINUTES SISTERS",
 	"category": "30 MINUTES LABEL",

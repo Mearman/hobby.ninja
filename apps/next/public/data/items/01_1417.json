@@ -1,7 +1,10 @@
 {
 	"id": "01_1417",
 	"type": "item",
-	"name": { "ja": "PG 1/60 ガンダム Mk-II", "en": "PG 1/60 Gundam Mk-II" },
+	"name": {
+		"ja": "PG 1/60 ガンダム Mk-II",
+		"en": "PG 1/60 Gundam Mk-II"
+	},
 	"description": [
 		{
 			"ja": "待望のパーフェクトグレード・シリーズに、「機動戦士Z ガンダム」に登場するモビルスーツ「ガンダム Mk-II」が登場。機体設定の特徴であるムーバブルフレームの再現と、可動を両立。",
@@ -31,15 +34,43 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1417/",
 	"extractedAt": "2025-12-06T17:20:46.841Z",
-	"price": { "amount": 16500, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2001年11月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 16500,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2001年11月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/60",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "pg-perfect-grade", "name": "PG [Perfect Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-z-gundam", "name": "Mobile Suit Z Gundam" }],
-		"relatedItems": ["01_4870", "01_4475", "01_1832"]
+		"brands": [
+			{
+				"id": "pg-perfect-grade",
+				"name": "PG [Perfect Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-z-gundam",
+				"name": "Mobile Suit Z Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4870",
+			"01_4475",
+			"01_1832"
+		]
 	},
 	"brand": "PG [Perfect Grade]",
 	"category": "Gunpla",

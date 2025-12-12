@@ -1,7 +1,10 @@
 {
 	"id": "01_2099",
 	"type": "item",
-	"name": { "ja": "1/12 R5-J2", "en": "1/12 R5-J2" },
+	"name": {
+		"ja": "1/12 R5-J2",
+		"en": "1/12 R5-J2"
+	},
 	"description": [
 		{
 			"ja": "デス・スターIIに配備された帝国のアストロメク・ドロイドがドロイド・コレクションにラインアップ！",
@@ -17,12 +20,24 @@
 			"ja": "R2-D2用コンピューター・インターフェース・アーム収納ボックス×2",
 			"en": "Computer interface arm storage box for R2-D2 x 2"
 		},
-		{ "ja": "デイスプレイベース×1", "en": "Display base x 1" }
+		{
+			"ja": "デイスプレイベース×1",
+			"en": "Display base x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×5", "en": "Molded product x 5" },
-		{ "ja": "マーキングシール×1", "en": "MarkingSeal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×5",
+			"en": "Molded product x 5"
+		},
+		{
+			"ja": "マーキングシール×1",
+			"en": "MarkingSeal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_2099_0.jpg",
@@ -38,15 +53,40 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2099/",
 	"extractedAt": "2025-12-06T17:48:39.318Z",
-	"price": { "amount": 2200, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年03月22日 (金)", "year": 2019, "month": 3, "day": 22 },
+	"price": {
+		"amount": 2200,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年03月22日 (金)",
+		"year": 2019,
+		"month": 3,
+		"day": 22
+	},
 	"scale": "1/12",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "star-wars", "name": "STAR WARS" }],
-		"relatedItems": ["01_4153", "01_4154", "01_3514", "01_3513"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "star-wars",
+				"name": "STAR WARS"
+			}
+		],
+		"relatedItems": [
+			"01_4153",
+			"01_4154",
+			"01_3514",
+			"01_3513"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "STAR WARS"

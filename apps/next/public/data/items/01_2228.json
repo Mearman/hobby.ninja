@@ -1,7 +1,10 @@
 {
 	"id": "01_2228",
 	"type": "item",
-	"name": { "ja": "RG 1/144 RX-78-2 ガンダム", "en": "RG 1/144 RX-78-2 Gundam" },
+	"name": {
+		"ja": "RG 1/144 RX-78-2 ガンダム",
+		"en": "RG 1/144 RX-78-2 Gundam"
+	},
 	"description": [
 		{
 			"ja": "• REAL GRADE（RG）2010年7月より展開。 • “リアル”を追求し、精密さを伝えるハイディテール、マスターグレードにもひけをとらないダイナミックなアクション＆ギミック、組み立て済みインナーフレームを採用したストレスフリーの組み立てなど、全てのファンを満足させる様々な仕掛けが凝縮。最新技術を搭載し、ガンダムを知る全世代に向けたガンプラの新しい楽しみを伝える新ブランド。 • RX-78-2 ガンダムの全「設定」を全高約125mmの中に集約。 • 少ないパーツ数での組み立てでダイナミックな可動が可能なインナーフレーム『アドヴァンスドMSジョイント』搭載。 • リアルな質感で、見た目の完成度を追求した特殊素材製『リアリスティックデカール』付属。 成形品×10、リアリステイックデカール×1、取扱説明書",
@@ -10,17 +13,46 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2228_0.jpg", "/images/items/01_2228_1.jpg", "/images/items/01_2228_2.jpg"],
+	"images": [
+		"/images/items/01_2228_0.jpg",
+		"/images/items/01_2228_1.jpg",
+		"/images/items/01_2228_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2228/",
 	"extractedAt": "2025-12-06T17:48:54.784Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2010年07月24日 (土)", "year": 2010, "month": 7, "day": 24 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2010年07月24日 (土)",
+		"year": 2010,
+		"month": 7,
+		"day": 24
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "rg-real-grade", "name": "RG [Real Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
+		"brands": [
+			{
+				"id": "rg-real-grade",
+				"name": "RG [Real Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
 		"relatedItems": []
 	},
 	"brand": "RG [Real Grade]",

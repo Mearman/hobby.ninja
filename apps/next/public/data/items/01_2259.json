@@ -32,12 +32,24 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "専用台座×1", "en": "Dedicated pedestal x 1" },
-		{ "ja": "テクスチャー台紙×1", "en": "Texture mount x 1" }
+		{
+			"ja": "専用台座×1",
+			"en": "Dedicated pedestal x 1"
+		},
+		{
+			"ja": "テクスチャー台紙×1",
+			"en": "Texture mount x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×7", "en": "Molded product x 7" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×7",
+			"en": "Molded product x 7"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_2259_0.jpg",
@@ -51,14 +63,41 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2259/",
 	"extractedAt": "2025-12-06T17:48:59.355Z",
-	"price": { "amount": 6050, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年06月29日 (土)", "year": 2019, "month": 6, "day": 29 },
+	"price": {
+		"amount": 6050,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年06月29日 (土)",
+		"year": 2019,
+		"month": 6,
+		"day": 29
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "figure-riselabo-figure-rise-labo", "name": "Figure-riseLABO [Figure-rise LABO]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "gundam-build-fighters", "name": "Gundam Build Fighters" }],
-		"relatedItems": ["01_1386"]
+		"brands": [
+			{
+				"id": "figure-riselabo-figure-rise-labo",
+				"name": "Figure-riseLABO [Figure-rise LABO]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-fighters",
+				"name": "Gundam Build Fighters"
+			}
+		],
+		"relatedItems": [
+			"01_1386"
+		]
 	},
 	"brand": "Figure-riseLABO [Figure-rise LABO]",
 	"category": "Character plastic model",

@@ -1,7 +1,10 @@
 {
 	"id": "01_1332",
 	"type": "item",
-	"name": { "ja": "ピカちんキット09 びっくりカンカン", "en": "Pikachin Kit09 Surprise Kankan" },
+	"name": {
+		"ja": "ピカちんキット09 びっくりカンカン",
+		"en": "Pikachin Kit09 Surprise Kankan"
+	},
 	"description": [
 		{
 			"ja": "• ターゲットの気をそらしてピンチを回避したいキミへ！",
@@ -26,11 +29,26 @@
 	],
 	"accessories": [],
 	"contents": [
-		{ "ja": "びっくりカンカン…1（成形品…5）", "en": "Surprising click...1 (molded product...5)" },
-		{ "ja": "輪ゴム…3", "en": "rubber band...3" },
-		{ "ja": "ピカちんQRコードステッカー…1", "en": "Pikachin QR code Sticker...1" },
-		{ "ja": "取扱説明書…1", "en": "Handling Manual...1" },
-		{ "ja": "ピカちんシート…1", "en": "Pikachin sheet...1" }
+		{
+			"ja": "びっくりカンカン…1（成形品…5）",
+			"en": "Surprising click...1 (molded product...5)"
+		},
+		{
+			"ja": "輪ゴム…3",
+			"en": "rubber band...3"
+		},
+		{
+			"ja": "ピカちんQRコードステッカー…1",
+			"en": "Pikachin QR code Sticker...1"
+		},
+		{
+			"ja": "取扱説明書…1",
+			"en": "Handling Manual...1"
+		},
+		{
+			"ja": "ピカちんシート…1",
+			"en": "Pikachin sheet...1"
+		}
 	],
 	"images": [
 		"/images/items/01_1332_0.jpg",
@@ -42,14 +60,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1332/",
 	"extractedAt": "2025-12-06T17:14:31.359Z",
-	"price": { "amount": 1320, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年06月02日 (土)", "year": 2018, "month": 6, "day": 2 },
+	"price": {
+		"amount": 1320,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年06月02日 (土)",
+		"year": 2018,
+		"month": 6,
+		"day": 2
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "invention-pikachin-kit", "name": "Invention Pikachin Kit" }],
-		"relatedItems": ["01_2605", "01_2606", "01_2607", "01_2545"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "invention-pikachin-kit",
+				"name": "Invention Pikachin Kit"
+			}
+		],
+		"relatedItems": [
+			"01_2605",
+			"01_2606",
+			"01_2607",
+			"01_2545"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Invention Pikachin Kit"

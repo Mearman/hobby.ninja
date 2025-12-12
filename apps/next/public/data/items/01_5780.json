@@ -22,7 +22,10 @@
 			"ja": "• シールドにはアームド・アーマーDEを搭載。ブースター展開ギミックを再現できる。",
 			"en": "• Seal is equipped with Armed Armor DE. You can reproduce the booster deployment gimmick."
 		},
-		{ "ja": "• リボルビング・ランチャーはグレネード付き。", "en": "• Revolving launcher with grenades." },
+		{
+			"ja": "• リボルビング・ランチャーはグレネード付き。",
+			"en": "• Revolving launcher with grenades."
+		},
 		{
 			"ja": "• 別売りのHGUCバンシィデストロイモードにも装着可能な、グレードアップしたアームド・アーマーVNが付属。",
 			"en": "• Includes an upgraded Armed Armor VN that can also be attached to the HGUC Banshee Destroy Mode (sold separately)."
@@ -38,18 +41,49 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5780/",
 	"extractedAt": "2025-12-06T17:56:36.691Z",
-	"price": { "amount": 1870, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年03月09日 (土)", "year": 2013, "month": 3, "day": 9 },
+	"price": {
+		"amount": 1870,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年03月09日 (土)",
+		"year": 2013,
+		"month": 3,
+		"day": 9
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-uc-unicorn", "name": "Mobile Suit Gundam UC [Unicorn]" }],
-		"relatedItems": ["01_4971", "01_4986", "01_5527", "item-1000163998"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-uc-unicorn",
+				"name": "Mobile Suit Gundam UC [Unicorn]"
+			}
+		],
+		"relatedItems": [
+			"01_4971",
+			"01_4986",
+			"01_5527",
+			"item-1000163998"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

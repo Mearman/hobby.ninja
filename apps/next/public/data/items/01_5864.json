@@ -1,7 +1,10 @@
 {
 	"id": "01_5864",
 	"type": "item",
-	"name": { "ja": "1/72 VF-1 バルキリー用 スーパーパーツセット", "en": "Super parts set for 1/72 VF-1 Valkyrie" },
+	"name": {
+		"ja": "1/72 VF-1 バルキリー用 スーパーパーツセット",
+		"en": "Super parts set for 1/72 VF-1 Valkyrie"
+	},
 	"description": [
 		{
 			"ja": "• 別売りのVF-1本体と合わせ、スーパーバルキリーが再現できる。",
@@ -22,18 +25,46 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5864_0.jpg", "/images/items/01_5864_1.jpg"],
+	"images": [
+		"/images/items/01_5864_0.jpg",
+		"/images/items/01_5864_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5864/",
 	"extractedAt": "2025-12-06T17:56:45.291Z",
-	"price": { "amount": 2200, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年09月14日 (土)", "year": 2013, "month": 9, "day": 14 },
+	"price": {
+		"amount": 2200,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年09月14日 (土)",
+		"year": 2013,
+		"month": 9,
+		"day": 14
+	},
 	"scale": "1/72",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "macross-series", "name": "Macross series" }],
-		"relatedItems": ["01_5465", "01_5944", "01_5945", "01_5946"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "macross-series",
+				"name": "Macross series"
+			}
+		],
+		"relatedItems": [
+			"01_5465",
+			"01_5944",
+			"01_5945",
+			"01_5946"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Macross series"

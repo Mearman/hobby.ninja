@@ -1,7 +1,10 @@
 {
 	"id": "01_4848",
 	"type": "item",
-	"name": { "ja": "1/60 ガンダムエクシア クリアカラーバージョン", "en": "1/60 Gundam Exia Clear Color Version" },
+	"name": {
+		"ja": "1/60 ガンダムエクシア クリアカラーバージョン",
+		"en": "1/60 Gundam Exia Clear Color Version"
+	},
 	"description": [
 		{
 			"ja": "「1/60 ガンダムエクシア クリアカラーバージョン」登場！",
@@ -10,18 +13,47 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4848_0.jpg", "/images/items/01_4848_1.jpg", "/images/items/01_4848_2.jpg"],
+	"images": [
+		"/images/items/01_4848_0.jpg",
+		"/images/items/01_4848_1.jpg",
+		"/images/items/01_4848_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4848/",
 	"extractedAt": "2025-12-06T17:54:32.591Z",
-	"price": { "amount": 4714, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2008年04月25日 (金)", "year": 2008, "month": 4, "day": 25 },
+	"price": {
+		"amount": 4714,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2008年04月25日 (金)",
+		"year": 2008,
+		"month": 4,
+		"day": 25
+	},
 	"scale": "1/60",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-00-double-o", "name": "Mobile Suit Gundam 00 [Double O]" }],
-		"relatedItems": ["item-1000216602", "01_5526", "item-1000161849", "01_5102"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-00-double-o",
+				"name": "Mobile Suit Gundam 00 [Double O]"
+			}
+		],
+		"relatedItems": [
+			"item-1000216602",
+			"01_5526",
+			"item-1000161849",
+			"01_5102"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam 00 [Double O]"

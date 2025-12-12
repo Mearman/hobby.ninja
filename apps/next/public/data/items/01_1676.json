@@ -1,7 +1,10 @@
 {
 	"id": "01_1676",
 	"type": "item",
-	"name": { "ja": "MG 1/100 MS-06F ザク Ver.2.0", "en": "MG 1/100 MS-06F Zaku Ver.2.0" },
+	"name": {
+		"ja": "MG 1/100 MS-06F ザク Ver.2.0",
+		"en": "MG 1/100 MS-06F Zaku Ver.2.0"
+	},
 	"description": [
 		{
 			"ja": "MS史上屈指の傑作機“ザクII F型”がVer.2.0になって登場！ ランドセル、スネ、フクラハギ、足底に推進器を追加 股関節にアクションベースへ取り付けるためのパーツが付属 「機動戦士ガンダム」第１話を再現可能なコロニーハッチの開閉ダイヤル（アクションベースに取り付けて使用）が付属 武器はザク・マシンガン、ヒートホーク、ザク・バズーカが付属、ザク・バズーカは多弾倉仕様へのコンバージョンパーツ付き",
@@ -18,15 +21,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1676/",
 	"extractedAt": "2025-12-06T17:41:03.586Z",
-	"price": { "amount": 3850, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2008年03月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3850,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2008年03月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

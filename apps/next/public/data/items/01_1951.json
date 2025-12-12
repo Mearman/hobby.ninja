@@ -1,7 +1,10 @@
 {
 	"id": "01_1951",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ジャスティスガンダム[クリアカラー]", "en": "MG 1/100 Justice Gundam [Clear color]" },
+	"name": {
+		"ja": "MG 1/100 ジャスティスガンダム[クリアカラー]",
+		"en": "MG 1/100 Justice Gundam [Clear color]"
+	},
 	"description": [
 		{
 			"ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -14,18 +17,49 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1951_0.jpg"],
+	"images": [
+		"/images/items/01_1951_0.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1951/",
 	"extractedAt": "2025-12-06T17:48:25.891Z",
-	"price": { "amount": 5940, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年11月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 5940,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年11月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed", "name": "Mobile Suit Gundam SEED" }],
-		"relatedItems": ["01_5994", "01_5221", "01_4272", "01_4195"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed",
+				"name": "Mobile Suit Gundam SEED"
+			}
+		],
+		"relatedItems": [
+			"01_5994",
+			"01_5221",
+			"01_4272",
+			"01_4195"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

@@ -1,7 +1,10 @@
 {
 	"id": "01_3592",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ガンダム AGE-1 タイタス", "en": "MG 1/100 Gundam AGE-1 Titus" },
+	"name": {
+		"ja": "MG 1/100 ガンダム AGE-1 タイタス",
+		"en": "MG 1/100 Gundam AGE-1 Titus"
+	},
 	"description": [
 		{
 			"ja": "• 完成度の高さと作りやすさを両立させた「MG AGEシリーズ」第一弾として、タイタスが登場。 • 「魅せるための内部構造」として、各部の空間にメカディテールを取り入れ、内部構造の存在意義を追求。 • MGならではのディテールと可動域がプレイバリューを向上。 • 前腕部の回転機構など、ギミックも多い。 成形品×14、マーキングシール×1、ガンダムデカール×1、ネーマーシール×1、組立説明書×1",
@@ -18,15 +21,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3592/",
 	"extractedAt": "2025-12-06T17:51:47.414Z",
-	"price": { "amount": 4290, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2012年03月17日 (土)", "year": 2012, "month": 3, "day": 17 },
+	"price": {
+		"amount": 4290,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2012年03月17日 (土)",
+		"year": 2012,
+		"month": 3,
+		"day": 17
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-age", "name": "Mobile Suit Gundam AGE" }],
-		"relatedItems": ["item-1000181355", "item-1000181354", "01_4196", "item-1000128729"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-age",
+				"name": "Mobile Suit Gundam AGE"
+			}
+		],
+		"relatedItems": [
+			"item-1000181355",
+			"item-1000181354",
+			"01_4196",
+			"item-1000128729"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

@@ -1,7 +1,10 @@
 {
 	"id": "01_4905",
 	"type": "item",
-	"name": { "ja": "プラノサウルス スピノサウルス", "en": "planosaurus spinosaurus" },
+	"name": {
+		"ja": "プラノサウルス スピノサウルス",
+		"en": "planosaurus spinosaurus"
+	},
 	"description": [
 		{
 			"ja": "恐竜の骨格・外皮をひとつひとつ確かめながら自分で組み立て、自分の手で恐竜を“知りつくす”ブランド『プラノサウルス』から、史上最大級の肉食恐竜「スピノサウルス」が登場！",
@@ -41,9 +44,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "前肢パーツ（四足歩行用）×１式", "en": "Forelimb parts (for quadrupedal walking) x 1 set" },
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "台座×1", "en": "Pedestal x 1" }
+		{
+			"ja": "前肢パーツ（四足歩行用）×１式",
+			"en": "Forelimb parts (for quadrupedal walking) x 1 set"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "台座×1",
+			"en": "Pedestal x 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -62,14 +74,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4905/",
 	"extractedAt": "2025-12-06T17:54:38.296Z",
-	"price": { "amount": 1595, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2023年07月29日 (土)", "year": 2023, "month": 7, "day": 29 },
+	"price": {
+		"amount": 1595,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2023年07月29日 (土)",
+		"year": 2023,
+		"month": 7,
+		"day": 29
+	},
 	"targetAge": 6,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "planosaurus", "name": "Planosaurus" }],
-		"relatedItems": ["01_5501", "01_5389", "01_5390", "01_5248"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "planosaurus",
+				"name": "Planosaurus"
+			}
+		],
+		"relatedItems": [
+			"01_5501",
+			"01_5389",
+			"01_5390",
+			"01_5248"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Planosaurus"

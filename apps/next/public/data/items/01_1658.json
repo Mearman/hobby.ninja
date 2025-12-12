@@ -1,7 +1,10 @@
 {
 	"id": "01_1658",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 MSM-10 ゾック", "en": "HGUC 1/144 MSM-10 Zock" },
+	"name": {
+		"ja": "HGUC 1/144 MSM-10 ゾック",
+		"en": "HGUC 1/144 MSM-10 Zock"
+	},
 	"description": [
 		{
 			"ja": "●「機動戦士ガンダム」に登場する水陸両用MS“ゾック”がHGUCシリーズに登場 ●モノアイは内部に再現されたメカディテールのレールに沿って位置を変更可能 ●薄肉のモノアイカバーには目盛りを再現しリアル感を追求 ●肩部吸水口やクチバシ裏の排水口など水陸両用MS独自の機能を象徴する部位のディテールを精密に再現 ●特徴的な左右のアイアン・ネイルは各関節が可動、迫力のアクションシーンが再現可能",
@@ -10,18 +13,41 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1658_0.jpg", "/images/items/01_1658_1.jpg", "/images/items/01_1658_2.jpg"],
+	"images": [
+		"/images/items/01_1658_0.jpg",
+		"/images/items/01_1658_1.jpg",
+		"/images/items/01_1658_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1658/",
 	"extractedAt": "2025-12-06T17:39:29.654Z",
-	"price": { "amount": 2970, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2007年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 2970,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2007年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_4985", "01_4971", "01_4365", "01_3669"]
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4985",
+			"01_4971",
+			"01_4365",
+			"01_3669"
+		]
 	},
 	"series": "Mobile Suit Gundam"
 }

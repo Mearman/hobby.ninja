@@ -15,7 +15,9 @@
 		{
 			"ja": "●　ディアッカ・エルスマン専用機のカラーリングを成形色で再現　　ディアッカ・エルスマン専用機の特徴であるグレーとブラックのツートンのカラーリングを成形色で再現。●　MMI‐M633 ビーム突撃銃など、各種武装パーツも付属　　MMI‐M633 ビーム突撃銃・MA‐M8 ビームトマホークなどの各種武装パーツも付属。　　作中のポージングの再現が可能。"
 		},
-		{ "ja": "付属武装：ビームトマホーク ／ ビーム突撃銃／シールド" },
+		{
+			"ja": "付属武装：ビームトマホーク ／ ビーム突撃銃／シールド"
+		},
 		{
 			"ja": "ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー１／１００スケール組み立て式プラモデル対象年齢：１５才以上製品素材：ＰＳ・ＰＰ・ＡＢＳ・組み立てに接着剤は使用しませんーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー"
 		},
@@ -23,7 +25,17 @@
 			"ja": "※写真の完成品は塗装してあります。また、開発途中の試作品です。実際の商品とは異なる場合がございます。※クリアパーツの中には、製造工程上、気泡が入る場合がございますがご了承ください。※販売商品の生産時期により、製品素材が変更になる場合がございます。予めご了承ください。"
 		}
 	],
-	"accessories": [{ "ja": "ビームトマホーク" }, { "ja": "ビーム突撃銃" }, { "ja": "シールド" }],
+	"accessories": [
+		{
+			"ja": "ビームトマホーク"
+		},
+		{
+			"ja": "ビーム突撃銃"
+		},
+		{
+			"ja": "シールド"
+		}
+	],
 	"contents": [],
 	"images": [
 		"/images/items/01_6800_0.jpg",
@@ -37,19 +49,52 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_6800/",
 	"extractedAt": "2025-12-06T17:58:00.087Z",
-	"price": { "amount": 5390, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2025年08月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 5390,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2025年08月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [
-			{ "id": "mg-master-gradepreban-gunpla", "name": "MG [Master Grade]/Preban Gunpla" },
-			{ "id": "prevan-gunpla", "name": "Prevan Gunpla" },
-			{ "id": "mg-master-grade", "name": "MG [Master Grade]" }
+			{
+				"id": "mg-master-gradepreban-gunpla",
+				"name": "MG [Master Grade]/Preban Gunpla"
+			},
+			{
+				"id": "prevan-gunpla",
+				"name": "Prevan Gunpla"
+			},
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed-destiny", "name": "Mobile Suit Gundam SEED DESTINY" }],
-		"relatedItems": ["01_5421", "item-1000214960", "item-1000203308", "item-1000183862"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed-destiny",
+				"name": "Mobile Suit Gundam SEED DESTINY"
+			}
+		],
+		"relatedItems": [
+			"01_5421",
+			"item-1000214960",
+			"item-1000203308",
+			"item-1000183862"
+		]
 	},
 	"brand": "MG [Master Grade]/Preban Gunpla",
 	"category": "Gunpla",

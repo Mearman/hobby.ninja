@@ -1,7 +1,10 @@
 {
 	"id": "01_1746",
 	"type": "item",
-	"name": { "ja": "MG 1/100 シャイニングガンダム", "en": "MG 1/100 Shining Gundam" },
+	"name": {
+		"ja": "MG 1/100 シャイニングガンダム",
+		"en": "MG 1/100 Shining Gundam"
+	},
 	"description": [
 		{
 			"ja": "「機動武闘伝Ｇガンダム」に登場する主役モビルファイターのシャイニングガンダムのプラモデル。手刀などの格闘ポーズ用の手首が多数付属し、背部のコアランダーも分離、変形出来ます。体の各パーツを展開させることにより、スーパーモードも再現可能です。1/20スケールのドモン・カッシュのフィギュアが付属。",
@@ -19,15 +22,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1746/",
 	"extractedAt": "2025-12-06T17:47:59.398Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2002年05月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2002年05月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-fighter-g-gundam", "name": "Mobile Fighter G Gundam" }],
-		"relatedItems": ["01_1385", "01_1629", "01_2482", "01_2493"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-fighter-g-gundam",
+				"name": "Mobile Fighter G Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_1385",
+			"01_1629",
+			"01_2482",
+			"01_2493"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

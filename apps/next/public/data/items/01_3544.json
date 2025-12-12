@@ -1,7 +1,10 @@
 {
 	"id": "01_3544",
 	"type": "item",
-	"name": { "ja": "30MS オプションパーツセット1(スピードアーマー)", "en": "30MS Option Parts Set 1 (Speed ​​Armor)" },
+	"name": {
+		"ja": "30MS オプションパーツセット1(スピードアーマー)",
+		"en": "30MS Option Parts Set 1 (Speed ​​Armor)"
+	},
 	"description": [
 		{
 			"ja": "キャラクター素体への盛りカスタマイズが可能！",
@@ -21,22 +24,60 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "オプションアーマー×1式", "en": "Optional armor x 1 set" },
-		{ "ja": "太モモパーツ×1式", "en": "Thick thigh parts x 1 set" },
-		{ "ja": "脚部膝上パーツ×1式", "en": "Leg above knee parts x 1 set" }
+		{
+			"ja": "オプションアーマー×1式",
+			"en": "Optional armor x 1 set"
+		},
+		{
+			"ja": "太モモパーツ×1式",
+			"en": "Thick thigh parts x 1 set"
+		},
+		{
+			"ja": "脚部膝上パーツ×1式",
+			"en": "Leg above knee parts x 1 set"
+		}
 	],
 	"contents": [],
-	"images": ["/images/items/01_3544_0.jpg", "/images/items/01_3544_1.jpg", "/images/items/01_3544_2.jpg"],
+	"images": [
+		"/images/items/01_3544_0.jpg",
+		"/images/items/01_3544_1.jpg",
+		"/images/items/01_3544_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3544/",
 	"extractedAt": "2025-12-06T17:51:42.000Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2021年08月28日 (土)", "year": 2021, "month": 8, "day": 28 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2021年08月28日 (土)",
+		"year": 2021,
+		"month": 8,
+		"day": 28
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "30-minutes-sisters", "name": "30 MINUTES SISTERS" }],
-		"categories": [{ "id": "30-minutes-label", "name": "30 MINUTES LABEL" }],
+		"brands": [
+			{
+				"id": "30-minutes-sisters",
+				"name": "30 MINUTES SISTERS"
+			}
+		],
+		"categories": [
+			{
+				"id": "30-minutes-label",
+				"name": "30 MINUTES LABEL"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5975", "01_5976", "01_5977", "01_5954"]
+		"relatedItems": [
+			"01_5975",
+			"01_5976",
+			"01_5977",
+			"01_5954"
+		]
 	},
 	"brand": "30 MINUTES SISTERS",
 	"category": "30 MINUTES LABEL"

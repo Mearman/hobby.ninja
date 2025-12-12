@@ -1,7 +1,10 @@
 {
 	"id": "01_3183",
 	"type": "item",
-	"name": { "ja": "1/144 パーフェクトガンダム", "en": "1/144 Perfect Gundam" },
+	"name": {
+		"ja": "1/144 パーフェクトガンダム",
+		"en": "1/144 Perfect Gundam"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム』より、1/144スケールで、パーフェクトガンダムが登場。",
@@ -11,7 +14,10 @@
 			"ja": "連邦軍のRX-78 ガンダムの性能を最大限強化した、パーフェクト仕様の機体を立体化しました。各関節にポリキャップを使用し、可動性を高めています。",
 			"en": "A three-dimensional version of the perfect specification aircraft that maximizes the performance of the Federal Army's RX-78 Gundam. Polycaps are used on each joint to increase mobility."
 		},
-		{ "ja": "バックパックのロケット砲は可動式です。", "en": "The rocket gun in the backpack is movable." },
+		{
+			"ja": "バックパックのロケット砲は可動式です。",
+			"en": "The rocket gun in the backpack is movable."
+		},
 		{
 			"ja": "動力パイプは軟質素材を使用し、質感を表現しています。",
 			"en": "The power pipe uses a soft material to express the texture."
@@ -27,18 +33,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3183_0.jpg", "/images/items/01_3183_1.jpg"],
+	"images": [
+		"/images/items/01_3183_0.jpg",
+		"/images/items/01_3183_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3183/",
 	"extractedAt": "2025-12-06T17:50:55.369Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1984年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1984年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5992", "01_5473", "01_5474", "01_5475"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5992",
+			"01_5473",
+			"01_5474",
+			"01_5475"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam"

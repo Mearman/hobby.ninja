@@ -1,7 +1,10 @@
 {
 	"id": "01_2675",
 	"type": "item",
-	"name": { "ja": "1/144 HG ジャスティスガンダム", "en": "1/144 HG Justice Gundam" },
+	"name": {
+		"ja": "1/144 HG ジャスティスガンダム",
+		"en": "1/144 HG Justice Gundam"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム SEED」に登場する新ライバル機「ジャスティスガンダム」の1/144スケール・HG仕様のプラモデル。バックウェポンに多彩なギミックを搭載し、飛行形態を再現可能です。肩部の2連キャノンは可動式、ウイング部は展開・収納状態を可動で再現できます。武器はビームライフル、シールド、クリアパーツ取り付け可能のビームサーベルが付属します。",
@@ -10,18 +13,50 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2675_0.jpg", "/images/items/01_2675_1.jpg"],
+	"images": [
+		"/images/items/01_2675_0.jpg",
+		"/images/items/01_2675_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2675/",
 	"extractedAt": "2025-12-06T17:49:51.772Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2003年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2003年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed", "name": "Mobile Suit Gundam SEED" }],
-		"relatedItems": ["01_1930", "item-1000181726", "01_384", "01_83"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed",
+				"name": "Mobile Suit Gundam SEED"
+			}
+		],
+		"relatedItems": [
+			"01_1930",
+			"item-1000181726",
+			"01_384",
+			"01_83"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

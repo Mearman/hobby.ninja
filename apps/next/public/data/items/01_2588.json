@@ -1,7 +1,10 @@
 {
 	"id": "01_2588",
 	"type": "item",
-	"name": { "ja": "ハロプラ ハロ ベーシックグリーン", "en": "Haropura Haro Basic Green" },
+	"name": {
+		"ja": "ハロプラ ハロ ベーシックグリーン",
+		"en": "Haropura Haro Basic Green"
+	},
 	"description": [
 		{
 			"ja": "口が開くギミックにより、さらに表情が豊かになったハロが登場！",
@@ -19,11 +22,20 @@
 			"ja": "• 差し替え用の腕と足は台座の裏に収納可能。",
 			"en": "• Replaceable arms and legs can be stored behind the pedestal."
 		},
-		{ "ja": "• 連結可能な台座が付属。", "en": "• A connectable pedestal is included." }
+		{
+			"ja": "• 連結可能な台座が付属。",
+			"en": "• A connectable pedestal is included."
+		}
 	],
 	"accessories": [
-		{ "ja": "手足パーツ×1", "en": "Limb parts x 1" },
-		{ "ja": "台座×1", "en": "Pedestal x 1" }
+		{
+			"ja": "手足パーツ×1",
+			"en": "Limb parts x 1"
+		},
+		{
+			"ja": "台座×1",
+			"en": "Pedestal x 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -37,14 +49,34 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2588/",
 	"extractedAt": "2025-12-06T17:49:40.935Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2020年02月29日 (土)", "year": 2020, "month": 2, "day": 29 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2020年02月29日 (土)",
+		"year": 2020,
+		"month": 2,
+		"day": 29
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5992", "01_5473", "01_5474", "01_5475"]
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5992",
+			"01_5473",
+			"01_5474",
+			"01_5475"
+		]
 	},
 	"series": "Mobile Suit Gundam"
 }

@@ -1,7 +1,10 @@
 {
 	"id": "01_1516",
 	"type": "item",
-	"name": { "ja": "1/100 ゾリディア", "en": "1/100 Zolidia" },
+	"name": {
+		"ja": "1/100 ゾリディア",
+		"en": "1/100 Zolidia"
+	},
 	"description": [
 		{
 			"ja": "ＴＶ「機動戦士Ｖガンダム」ザンスカール帝国のモビルスーツ・ゾロアットを陸戦仕様にカスタムアップした機体をキット化しました。頭部カメラアイは開閉の 2形態の選択式で、前後スイングが可能です。ひじ関節部にカバーパーツがついています。クリアパーツ製ビーム・シールドは前腕部へ脱着できます。専用ビーム・サーベルはサイトが可動します。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1516_0.jpg", "/images/items/01_1516_1.jpg"],
+	"images": [
+		"/images/items/01_1516_0.jpg",
+		"/images/items/01_1516_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1516/",
 	"extractedAt": "2025-12-06T17:28:35.426Z",
-	"price": { "amount": 1100, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1993年11月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1100,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1993年11月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-v-gundam", "name": "Mobile Suit V Gundam" }],
-		"relatedItems": ["01_4978", "01_3311", "01_2835", "item-1000142101"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-v-gundam",
+				"name": "Mobile Suit V Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4978",
+			"01_3311",
+			"01_2835",
+			"item-1000142101"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit V Gundam"

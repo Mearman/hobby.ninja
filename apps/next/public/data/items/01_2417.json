@@ -1,7 +1,10 @@
 {
 	"id": "01_2417",
 	"type": "item",
-	"name": { "ja": "1/100 ターンエーガンダム", "en": "1/100 Turn A Gundam" },
+	"name": {
+		"ja": "1/100 ターンエーガンダム",
+		"en": "1/100 Turn A Gundam"
+	},
 	"description": [
 		{
 			"ja": "TV「∀ガンダム」の主役機体を1/100スケールでキット化しました。胸部マルチパーパスサイロは、パーツ差替えにより展開が可能です。脚部のスラスターベーンはスライドの可動を再現しています。コクピットブロックはキャノピーがクリアパーツ成形で、内部ディテールの確認が可能です。ビーム・ライフルはストックのスライド機構を再現できます。シールドはホールディングアームが可動し、背面オプションハンガーへの脱着も可能になっています。ビーム・サーベル、飛行形態のコアファイターがついています。",
@@ -18,15 +21,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2417/",
 	"extractedAt": "2025-12-06T17:49:18.876Z",
-	"price": { "amount": 2200, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1999年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 2200,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1999年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam", "name": "∀Gundam" }],
-		"relatedItems": ["item-1000135920", "item-1000099631", "item-1000165581", "01_120"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam",
+				"name": "∀Gundam"
+			}
+		],
+		"relatedItems": [
+			"item-1000135920",
+			"item-1000099631",
+			"item-1000165581",
+			"01_120"
+		]
 	},
 	"category": "Gunpla",
 	"series": "∀Gundam"

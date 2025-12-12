@@ -1,7 +1,10 @@
 {
 	"id": "01_3637",
 	"type": "item",
-	"name": { "ja": "Figure-rise Standard メタルガルルモン", "en": "Figure-rise Standard Metal Garurumon" },
+	"name": {
+		"ja": "Figure-rise Standard メタルガルルモン",
+		"en": "Figure-rise Standard Metal Garurumon"
+	},
 	"description": [
 		{
 			"ja": "『デジモンアドベンチャー』より、アニメ設定を元に立体化したFigure-rise Standardシリーズとして「メタルガルルモン」が第2弾で登場！",
@@ -17,8 +20,14 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "PETシート×1", "en": "PET sheet x 1" }
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "PETシート×1",
+			"en": "PET sheet x 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -34,14 +43,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3637/",
 	"extractedAt": "2025-12-06T17:51:53.227Z",
-	"price": { "amount": 2530, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2021年12月04日 (土)", "year": 2021, "month": 12, "day": 4 },
+	"price": {
+		"amount": 2530,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2021年12月04日 (土)",
+		"year": 2021,
+		"month": 12,
+		"day": 4
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "figure-rise-standard", "name": "Figure-rise Standard" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "digimon-series", "name": "digimon series" }],
-		"relatedItems": ["01_4917", "01_4302", "01_4113", "01_3766"]
+		"brands": [
+			{
+				"id": "figure-rise-standard",
+				"name": "Figure-rise Standard"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "digimon-series",
+				"name": "digimon series"
+			}
+		],
+		"relatedItems": [
+			"01_4917",
+			"01_4302",
+			"01_4113",
+			"01_3766"
+		]
 	},
 	"brand": "Figure-rise Standard",
 	"category": "Character plastic model",

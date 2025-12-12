@@ -1,7 +1,10 @@
 {
 	"id": "01_4234",
 	"type": "item",
-	"name": { "ja": "HG 1/144 マジンガーZERO(INFINITISM)", "en": "HG 1/144 Mazinger ZERO(INFINITISM)" },
+	"name": {
+		"ja": "HG 1/144 マジンガーZERO(INFINITISM)",
+		"en": "HG 1/144 Mazinger ZERO(INFINITISM)"
+	},
 	"description": [
 		{
 			"ja": "『真マジンガーZEROvs暗黒大将軍』より、「マジンガーZERO」が「INFINITISM」第５弾として登場！",
@@ -33,12 +36,30 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "エフェクトパーツ×1式", "en": "Effect parts x 1" },
-		{ "ja": "ハンドパーツ×1式", "en": "Hand parts x 1 set" },
-		{ "ja": "支柱パーツ×1式", "en": "Strut parts x 1 set" },
-		{ "ja": "ディスプレイベース×1", "en": "Display base x 1" },
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "水転写式デカール×1", "en": "Water transfer decal x 1" }
+		{
+			"ja": "エフェクトパーツ×1式",
+			"en": "Effect parts x 1"
+		},
+		{
+			"ja": "ハンドパーツ×1式",
+			"en": "Hand parts x 1 set"
+		},
+		{
+			"ja": "支柱パーツ×1式",
+			"en": "Strut parts x 1 set"
+		},
+		{
+			"ja": "ディスプレイベース×1",
+			"en": "Display base x 1"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "水転写式デカール×1",
+			"en": "Water transfer decal x 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -57,15 +78,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4234/",
 	"extractedAt": "2025-12-06T17:53:16.804Z",
-	"price": { "amount": 6050, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2022年12月10日 (土)", "year": 2022, "month": 12, "day": 10 },
+	"price": {
+		"amount": 6050,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2022年12月10日 (土)",
+		"year": 2022,
+		"month": 12,
+		"day": 10
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "dynamic-characters", "name": "dynamic characters" }],
-		"relatedItems": ["01_2853", "01_3332", "01_3528", "item-1000139230"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "dynamic-characters",
+				"name": "dynamic characters"
+			}
+		],
+		"relatedItems": [
+			"01_2853",
+			"01_3332",
+			"01_3528",
+			"item-1000139230"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Character plastic model",

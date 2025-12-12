@@ -1,7 +1,10 @@
 {
 	"id": "01_4270",
 	"type": "item",
-	"name": { "ja": "MG 1/100 百式 Ver.2.0 [メカニカルクリア]", "en": "MG 1/100 Hyakushiki Ver.2.0 [Mechanical Clear]" },
+	"name": {
+		"ja": "MG 1/100 百式 Ver.2.0 [メカニカルクリア]",
+		"en": "MG 1/100 Hyakushiki Ver.2.0 [Mechanical Clear]"
+	},
 	"description": [
 		{
 			"ja": "MG 1/100 百式 Ver.2.0 [メカニカルクリア]で登場！",
@@ -10,18 +13,50 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4270_0.jpg", "/images/items/01_4270_1.jpg"],
+	"images": [
+		"/images/items/01_4270_0.jpg",
+		"/images/items/01_4270_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4270/",
 	"extractedAt": "2025-12-06T17:53:19.042Z",
-	"price": { "amount": 6380, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年11月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 6380,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年11月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-z-gundam", "name": "Mobile Suit Z Gundam" }],
-		"relatedItems": ["item-1000145352", "item-1000131596", "item-1000112091", "item-1000112040"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-z-gundam",
+				"name": "Mobile Suit Z Gundam"
+			}
+		],
+		"relatedItems": [
+			"item-1000145352",
+			"item-1000131596",
+			"item-1000112091",
+			"item-1000112040"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

@@ -1,7 +1,10 @@
 {
 	"id": "01_2101",
 	"type": "item",
-	"name": { "ja": "ねこぶそう3 舟盛り", "en": "Nekobusou 3 Funasori" },
+	"name": {
+		"ja": "ねこぶそう3 舟盛り",
+		"en": "Nekobusou 3 Funasori"
+	},
 	"description": [
 		{
 			"ja": "話題のねこぶそう、第３弾が参ります！外装パーツ４種と、このセットでないと手に入らないねこの大まんぞくセット。",
@@ -30,10 +33,22 @@
 	],
 	"accessories": [],
 	"contents": [
-		{ "ja": "彩色済ねこフィギュア×1", "en": "Painted cat figure x 1" },
-		{ "ja": "ジャケット×1", "en": "Jacket x 1" },
-		{ "ja": "ぶそう×1式", "en": "Busou x 1 set" },
-		{ "ja": "パーツセパレーター×1", "en": "Parts separator x 1" }
+		{
+			"ja": "彩色済ねこフィギュア×1",
+			"en": "Painted cat figure x 1"
+		},
+		{
+			"ja": "ジャケット×1",
+			"en": "Jacket x 1"
+		},
+		{
+			"ja": "ぶそう×1式",
+			"en": "Busou x 1 set"
+		},
+		{
+			"ja": "パーツセパレーター×1",
+			"en": "Parts separator x 1"
+		}
 	],
 	"images": [
 		"/images/items/01_2101_0.jpg",
@@ -45,14 +60,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2101/",
 	"extractedAt": "2025-12-06T17:48:39.393Z",
-	"price": { "amount": 1527, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年03月22日 (金)", "year": 2019, "month": 3, "day": 22 },
+	"price": {
+		"amount": 1527,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年03月22日 (金)",
+		"year": 2019,
+		"month": 3,
+		"day": 22
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "looks-like-a-cat", "name": "Looks like a cat" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
+		"brands": [
+			{
+				"id": "looks-like-a-cat",
+				"name": "Looks like a cat"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_1421", "01_1979", "01_1981", "01_2100"]
+		"relatedItems": [
+			"01_1421",
+			"01_1979",
+			"01_1981",
+			"01_2100"
+		]
 	},
 	"brand": "Looks like a cat",
 	"category": "Character plastic model"

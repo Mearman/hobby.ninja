@@ -1,7 +1,10 @@
 {
 	"id": "01_1517",
 	"type": "item",
-	"name": { "ja": "1/144 リグシャッコー", "en": "1/144 Rig Shakko" },
+	"name": {
+		"ja": "1/144 リグシャッコー",
+		"en": "1/144 Rig Shakko"
+	},
 	"description": [
 		{
 			"ja": "ＴＶ「機動戦士Ｖガンダム」で、クロノクル・アシャー中尉がテストパイロットを務めたシャッコーの量産型機体をキット化しました。ビーム・シールドはクリアパーツ製で、本体への脱着が可能です。ビーム・ファンの基部2個はバックパックへマウント可能です。ビーム・ピストル2丁は左右ひざ横へマウントできます。ビーム・ライフル、ビーム・ファンがついています。ディスプレイ用のスタンドとカードがついています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1517_0.jpg", "/images/items/01_1517_1.jpg"],
+	"images": [
+		"/images/items/01_1517_0.jpg",
+		"/images/items/01_1517_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1517/",
 	"extractedAt": "2025-12-06T17:28:35.313Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1993年11月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1993年11月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-v-gundam", "name": "Mobile Suit V Gundam" }],
-		"relatedItems": ["01_4978", "01_3311", "01_2835", "item-1000142101"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-v-gundam",
+				"name": "Mobile Suit V Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4978",
+			"01_3311",
+			"01_2835",
+			"item-1000142101"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit V Gundam"

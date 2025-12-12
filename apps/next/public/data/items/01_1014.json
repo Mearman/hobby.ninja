@@ -1,7 +1,10 @@
 {
 	"id": "01_1014",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 RGM-79 ジム", "en": "HGUC 1/144 RGM-79 Jim" },
+	"name": {
+		"ja": "HGUC 1/144 RGM-79 ジム",
+		"en": "HGUC 1/144 RGM-79 Jim"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム」に登場する連邦軍の量産ＭＳ「ジム」がプラモデルで登場。",
@@ -27,18 +30,48 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1014/",
 	"extractedAt": "2025-12-06T16:22:23.705Z",
-	"price": { "amount": 1100, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2001年04月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1100,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2001年04月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_4985", "01_4971", "01_4365", "01_3669"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4985",
+			"01_4971",
+			"01_4365",
+			"01_3669"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

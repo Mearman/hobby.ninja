@@ -1,7 +1,10 @@
 {
 	"id": "01_1672",
 	"type": "item",
-	"name": { "ja": "EXモデル 07 1/144 ジェットコアブースター", "en": "EXModel 07 1/144 Jet Core Booster" },
+	"name": {
+		"ja": "EXモデル 07 1/144 ジェットコアブースター",
+		"en": "EXModel 07 1/144 Jet Core Booster"
+	},
 	"description": [
 		{
 			"ja": "OVA『機動戦士ガンダム第08MS小隊』に登場の機体を1/144スケールで立体化。同スケールの第08MS小隊シリーズに、よりリアルなミリタリー世界を再現しました。姿勢保持の専用スタンドが付属。",
@@ -10,18 +13,41 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1672_0.jpg", "/images/items/01_1672_1.jpg", "/images/items/01_1672_2.jpg"],
+	"images": [
+		"/images/items/01_1672_0.jpg",
+		"/images/items/01_1672_1.jpg",
+		"/images/items/01_1672_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1672/",
 	"extractedAt": "2025-12-06T17:41:03.386Z",
-	"price": { "amount": 3300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2002年03月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2002年03月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5968", "01_5986", "01_5987", "01_5988"]
+		"relatedItems": [
+			"01_5968",
+			"01_5986",
+			"01_5987",
+			"01_5988"
+		]
 	},
 	"category": "Gunpla"
 }

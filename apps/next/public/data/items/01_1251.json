@@ -1,7 +1,10 @@
 {
 	"id": "01_1251",
 	"type": "item",
-	"name": { "ja": "RE/100 1/100 ガンキャノン・ディテクター", "en": "RE/100 1/100 Guncannon Detector" },
+	"name": {
+		"ja": "RE/100 1/100 ガンキャノン・ディテクター",
+		"en": "RE/100 1/100 Guncannon Detector"
+	},
 	"description": [
 		{
 			"ja": "• 『機動戦士ガンダム UC Episode 4「重力の井戸の底」』より、トリントン基地でジオン軍残党と激戦を繰り広げたガンキャノン・ディテクターが初キット化！",
@@ -21,16 +24,40 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "専用ビーム・ライフル×1", "en": "Dedicated beam rifle x 1" },
-		{ "ja": "ビームガン×1", "en": "Beam gun x 1" },
-		{ "ja": "ビーム・キャノン×2", "en": "Beam cannon x2" },
-		{ "ja": "170mmキャノン砲×1", "en": "170mm cannon x 1" }
+		{
+			"ja": "専用ビーム・ライフル×1",
+			"en": "Dedicated beam rifle x 1"
+		},
+		{
+			"ja": "ビームガン×1",
+			"en": "Beam gun x 1"
+		},
+		{
+			"ja": "ビーム・キャノン×2",
+			"en": "Beam cannon x2"
+		},
+		{
+			"ja": "170mmキャノン砲×1",
+			"en": "170mm cannon x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×12", "en": "Molded product x 12" },
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "マーキングシール×1", "en": "MarkingSeal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×12",
+			"en": "Molded product x 12"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "マーキングシール×1",
+			"en": "MarkingSeal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1251_0.jpg",
@@ -44,15 +71,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1251/",
 	"extractedAt": "2025-12-06T17:04:26.392Z",
-	"price": { "amount": 4400, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年02月10日 (土)", "year": 2018, "month": 2, "day": 10 },
+	"price": {
+		"amount": 4400,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年02月10日 (土)",
+		"year": 2018,
+		"month": 2,
+		"day": 10
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "re100-reborn-one-hundred", "name": "RE/100 [Reborn One Hundred]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-uc-unicorn", "name": "Mobile Suit Gundam UC [Unicorn]" }],
-		"relatedItems": ["item-1000131829", "item-1000111478", "item-1000136102"]
+		"brands": [
+			{
+				"id": "re100-reborn-one-hundred",
+				"name": "RE/100 [Reborn One Hundred]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-uc-unicorn",
+				"name": "Mobile Suit Gundam UC [Unicorn]"
+			}
+		],
+		"relatedItems": [
+			"item-1000131829",
+			"item-1000111478",
+			"item-1000136102"
+		]
 	},
 	"brand": "RE/100 [Reborn One Hundred]",
 	"category": "Gunpla",

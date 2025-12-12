@@ -29,15 +29,35 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5851/",
 	"extractedAt": "2025-12-06T17:56:43.474Z",
-	"price": { "amount": 4950, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年08月24日 (土)", "year": 2013, "month": 8, "day": 24 },
+	"price": {
+		"amount": 4950,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年08月24日 (土)",
+		"year": 2013,
+		"month": 8,
+		"day": 24
+	},
 	"scale": "1/1000",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "space-battleship-yamato-series", "name": "Space Battleship Yamato series" }],
-		"relatedItems": ["01_5388", "01_5498", "01_5500", "01_5971"]
+		"series": [
+			{
+				"id": "space-battleship-yamato-series",
+				"name": "Space Battleship Yamato series"
+			}
+		],
+		"relatedItems": [
+			"01_5388",
+			"01_5498",
+			"01_5500",
+			"01_5971"
+		]
 	},
 	"series": "Space Battleship Yamato series"
 }

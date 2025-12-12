@@ -1,7 +1,10 @@
 {
 	"id": "01_1618",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 ガンダム GP03 デンドロビウム", "en": "HGUC 1/144 Gundam GP03 Dendrobium" },
+	"name": {
+		"ja": "HGUC 1/144 ガンダム GP03 デンドロビウム",
+		"en": "HGUC 1/144 Gundam GP03 Dendrobium"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム 0083』に登場した巨大機体・デンドロビウムを1/144サイズでキット化しました。ウェポンコンテナのハッチ展開ギミックを再現、コンテナからガンダム GP-03専用バズーカ、シールド、ビームライフルや、ミサイルを取り出すことができます。メガビーム砲のコントロールグリップは展開可能です。本体下部クローアームが展開し、大型ビームサーベルを保持できます。本体にドッキング可能なHGUC1/144 ガンダム GP-03Sが付属しています。ベストポジションをホールドする展示用ベースが付いています。",
@@ -19,18 +22,48 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1618/",
 	"extractedAt": "2025-12-06T17:36:23.979Z",
-	"price": { "amount": 30800, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2002年03月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 30800,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2002年03月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-0083-stardust-memory", "name": "Mobile Suit Gundam 0083 STARDUST MEMORY" }],
-		"relatedItems": ["item-1000102912", "item-1000102910", "item-1000115500", "01_5843"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-0083-stardust-memory",
+				"name": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+			}
+		],
+		"relatedItems": [
+			"item-1000102912",
+			"item-1000102910",
+			"item-1000115500",
+			"01_5843"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

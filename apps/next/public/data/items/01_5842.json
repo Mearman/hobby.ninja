@@ -22,7 +22,10 @@
 			"ja": "• ライディングギア付属。飛行状態再現用のスタンドが付属。",
 			"en": "• Riding gear included. A stand for reproducing flight conditions is included."
 		},
-		{ "ja": "• 翼のカラーはスライドマークで再現。", "en": "• The color of the wings is reproduced with slide marks." },
+		{
+			"ja": "• 翼のカラーはスライドマークで再現。",
+			"en": "• The color of the wings is reproduced with slide marks."
+		},
 		{
 			"ja": "• 機体下面のミサイル格納ベイを再現。開閉どちらかの状態を選択できる。",
 			"en": "• Reproduce the missile storage bay on the underside of the fuselage. You can choose between open and closed states."
@@ -39,15 +42,35 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5842/",
 	"extractedAt": "2025-12-06T17:56:44.086Z",
-	"price": { "amount": 3080, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年07月27日 (土)", "year": 2013, "month": 7, "day": 27 },
+	"price": {
+		"amount": 3080,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年07月27日 (土)",
+		"year": 2013,
+		"month": 7,
+		"day": 27
+	},
 	"scale": "1/72",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "space-battleship-yamato-series", "name": "Space Battleship Yamato series" }],
-		"relatedItems": ["01_5388", "01_5498", "01_5500", "01_5971"]
+		"series": [
+			{
+				"id": "space-battleship-yamato-series",
+				"name": "Space Battleship Yamato series"
+			}
+		],
+		"relatedItems": [
+			"01_5388",
+			"01_5498",
+			"01_5500",
+			"01_5971"
+		]
 	},
 	"series": "Space Battleship Yamato series"
 }

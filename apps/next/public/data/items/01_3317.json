@@ -1,7 +1,10 @@
 {
 	"id": "01_3317",
 	"type": "item",
-	"name": { "ja": "MG 1/100 RGM-79N ジムカスタム", "en": "MG 1/100 RGM-79N Jim Custom" },
+	"name": {
+		"ja": "MG 1/100 RGM-79N ジムカスタム",
+		"en": "MG 1/100 RGM-79N Jim Custom"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム 0083』に登場する地球連邦軍のエースクラスパイロット用、高性能量産型モビルスーツのキット化です。足部とバックパックの外装は取り外しができ、内部再現された細密なメカディティールを見る事ができます。ジムライフル、90mmマシンガン、ビームサーベル、シールドが付いています。1/20スケールのサウス・バニングのフィギュアが付いています。",
@@ -10,18 +13,51 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3317_0.jpg", "/images/items/01_3317_1.jpg", "/images/items/01_3317_2.jpg"],
+	"images": [
+		"/images/items/01_3317_0.jpg",
+		"/images/items/01_3317_1.jpg",
+		"/images/items/01_3317_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3317/",
 	"extractedAt": "2025-12-06T17:51:10.151Z",
-	"price": { "amount": 3300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1999年12月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1999年12月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-0083-stardust-memory", "name": "Mobile Suit Gundam 0083 STARDUST MEMORY" }],
-		"relatedItems": ["item-1000127907", "item-1000127908", "item-1000124942", "item-1000105596"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-0083-stardust-memory",
+				"name": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+			}
+		],
+		"relatedItems": [
+			"item-1000127907",
+			"item-1000127908",
+			"item-1000124942",
+			"item-1000105596"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

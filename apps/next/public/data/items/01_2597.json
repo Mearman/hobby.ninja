@@ -1,7 +1,10 @@
 {
 	"id": "01_2597",
 	"type": "item",
-	"name": { "ja": "MG 1/100 量産型ズゴック", "en": "MG 1/100 mass-produced Z'Gok" },
+	"name": {
+		"ja": "MG 1/100 量産型ズゴック",
+		"en": "MG 1/100 mass-produced Z'Gok"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム」に登場する水陸両用型MS「量産型ズゴック」の1/100スケールMG仕様のプラモデル。両腕のジャバラパーツには、防水処理をイメージさせる軟質素材を採用しています。メインカメラ周辺にはメカモールドを再現し、カメラアイは可動します。脚部には多くの関節を用意し、大きな開脚も実現出来ます。胸部ダクトは可動式です。",
@@ -18,15 +21,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2597/",
 	"extractedAt": "2025-12-06T17:49:42.091Z",
-	"price": { "amount": 3300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2003年05月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2003年05月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

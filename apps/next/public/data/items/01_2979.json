@@ -1,7 +1,10 @@
 {
 	"id": "01_2979",
 	"type": "item",
-	"name": { "ja": "リトルアピーチ", "en": "little apeach" },
+	"name": {
+		"ja": "リトルアピーチ",
+		"en": "little apeach"
+	},
 	"description": [
 		{
 			"ja": "メールアプリ「カカオトーク」から人気キャラクターをプラモデル化！",
@@ -27,11 +30,20 @@
 			"ja": "• 落書きシールとクレヨンのオプションパーツ付き。",
 			"en": "• Includes graffiti seal and crayon optional parts."
 		},
-		{ "ja": "• 表情替えパーツ、スタンドが付属。", "en": "• Comes with expression changing parts and stand." }
+		{
+			"ja": "• 表情替えパーツ、スタンドが付属。",
+			"en": "• Comes with expression changing parts and stand."
+		}
 	],
 	"accessories": [
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" }
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -50,14 +62,38 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2979/",
 	"extractedAt": "2025-12-06T17:50:31.075Z",
-	"price": { "amount": 880, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2020年11月21日 (土)", "year": 2020, "month": 11, "day": 21 },
+	"price": {
+		"amount": 880,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2020年11月21日 (土)",
+		"year": 2020,
+		"month": 11,
+		"day": 21
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "kakao-friends", "name": "KAKAO FRIENDS" }],
-		"relatedItems": ["01_2977", "01_2978", "01_2980"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "kakao-friends",
+				"name": "KAKAO FRIENDS"
+			}
+		],
+		"relatedItems": [
+			"01_2977",
+			"01_2978",
+			"01_2980"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "KAKAO FRIENDS"

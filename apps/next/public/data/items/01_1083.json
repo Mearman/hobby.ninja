@@ -1,7 +1,10 @@
 {
 	"id": "01_1083",
 	"type": "item",
-	"name": { "ja": "HGBF 1/144 はいぱーギャン子", "en": "HGBF 1/144 Hipa Gyanko" },
+	"name": {
+		"ja": "HGBF 1/144 はいぱーギャン子",
+		"en": "HGBF 1/144 Hipa Gyanko"
+	},
 	"description": [
 		{
 			"ja": "• ギャン子が“はいぱー”にガンプラ化！ギャン子の魅力とギャンを模した武装を余すことなく再現！",
@@ -19,17 +22,38 @@
 			"ja": "• 瞳はクリアパーツ式とシール式を選択可能で、ギャン子の特徴でもあるギャンのシールドを模した髪留めが特徴のツインテールも再現されている！",
 			"en": "• You can choose between a clear parts type and a seal type for the eyes, and Gyanko's twin tails, which feature a hair clip that imitates Gyan's Seal, are also reproduced!"
 		},
-		{ "ja": "• 武装はサーベルとシールドが付属！", "en": "• Armed with saber and seal!" }
+		{
+			"ja": "• 武装はサーベルとシールドが付属！",
+			"en": "• Armed with saber and seal!"
+		}
 	],
 	"accessories": [
-		{ "ja": "シールド×2", "en": "Seal × 2" },
-		{ "ja": "ビームサーベル×２", "en": "Beam saber x2" },
-		{ "ja": "ディスプレイベース×１", "en": "Display base x 1" }
+		{
+			"ja": "シールド×2",
+			"en": "Seal × 2"
+		},
+		{
+			"ja": "ビームサーベル×２",
+			"en": "Beam saber x2"
+		},
+		{
+			"ja": "ディスプレイベース×１",
+			"en": "Display base x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×11", "en": "Molded products x 11" },
-		{ "ja": "シール×１", "en": "Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×11",
+			"en": "Molded products x 11"
+		},
+		{
+			"ja": "シール×１",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1083_0.jpg",
@@ -40,15 +64,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1083/",
 	"extractedAt": "2025-12-06T16:48:48.754Z",
-	"price": { "amount": 2640, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年08月26日 (土)", "year": 2017, "month": 8, "day": 26 },
+	"price": {
+		"amount": 2640,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年08月26日 (土)",
+		"year": 2017,
+		"month": 8,
+		"day": 26
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-fighters", "name": "Gundam Build Fighters" }],
-		"relatedItems": ["01_5057", "01_1942", "01_1288", "01_1261"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-fighters",
+				"name": "Gundam Build Fighters"
+			}
+		],
+		"relatedItems": [
+			"01_5057",
+			"01_1942",
+			"01_1288",
+			"01_1261"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

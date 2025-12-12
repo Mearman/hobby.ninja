@@ -1,7 +1,10 @@
 {
 	"id": "01_1816",
 	"type": "item",
-	"name": { "ja": "HG 1/144 ギラーガ", "en": "HG 1/144 Giraga" },
+	"name": {
+		"ja": "HG 1/144 ギラーガ",
+		"en": "HG 1/144 Giraga"
+	},
 	"description": [
 		{
 			"ja": "• 第三期キオ編の新たなる敵エース機「ギラーガ」がHGで登場。 成形品×7、ホイルシール×1、組立説明書×1",
@@ -18,15 +21,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1816/",
 	"extractedAt": "2025-12-06T17:48:09.840Z",
-	"price": { "amount": 1430, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2012年06月16日 (土)", "year": 2012, "month": 6, "day": 16 },
+	"price": {
+		"amount": 1430,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2012年06月16日 (土)",
+		"year": 2012,
+		"month": 6,
+		"day": 16
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-age", "name": "Mobile Suit Gundam AGE" }],
-		"relatedItems": ["item-1000170540", "item-1000169836", "01_3738", "item-1000082540"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-age",
+				"name": "Mobile Suit Gundam AGE"
+			}
+		],
+		"relatedItems": [
+			"item-1000170540",
+			"item-1000169836",
+			"01_3738",
+			"item-1000082540"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

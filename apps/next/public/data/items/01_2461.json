@@ -1,7 +1,10 @@
 {
 	"id": "01_2461",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ガンダム NT-1 ver.2.0[クリアカラー]", "en": "MG 1/100 Gundam NT-1 ver.2.0 [Clear color]" },
+	"name": {
+		"ja": "MG 1/100 ガンダム NT-1 ver.2.0[クリアカラー]",
+		"en": "MG 1/100 Gundam NT-1 ver.2.0 [Clear color]"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム 0080 ポケットの中の戦争』よりガンダム NT-1がVer.2.0のクリアカラーになって登場！",
@@ -34,20 +37,52 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2461_0.jpg", "/images/items/01_2461_1.jpg", "/images/items/01_2461_2.jpg"],
+	"images": [
+		"/images/items/01_2461_0.jpg",
+		"/images/items/01_2461_1.jpg",
+		"/images/items/01_2461_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2461/",
 	"extractedAt": "2025-12-06T17:49:25.038Z",
-	"price": { "amount": 6380, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年08月09日 (金)", "year": 2019, "month": 8, "day": 9 },
+	"price": {
+		"amount": 6380,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年08月09日 (金)",
+		"year": 2019,
+		"month": 8,
+		"day": 9
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [
-			{ "id": "mobile-suit-gundam-0080-war-in-the-pocket", "name": "Mobile Suit Gundam 0080 War in the Pocket" }
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
 		],
-		"relatedItems": ["01_1266", "01_1955", "01_2254", "item-1000134463"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-0080-war-in-the-pocket",
+				"name": "Mobile Suit Gundam 0080 War in the Pocket"
+			}
+		],
+		"relatedItems": [
+			"01_1266",
+			"01_1955",
+			"01_2254",
+			"item-1000134463"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

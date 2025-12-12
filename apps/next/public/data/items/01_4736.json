@@ -1,7 +1,10 @@
 {
 	"id": "01_4736",
 	"type": "item",
-	"name": { "ja": "SD ガンダム 三国伝 004 真 胡軫ギャン", "en": "SD Gundam Sangokuden 004 Shin Hugyu Gyan" },
+	"name": {
+		"ja": "SD ガンダム 三国伝 004 真 胡軫ギャン",
+		"en": "SD Gundam Sangokuden 004 Shin Hugyu Gyan"
+	},
 	"description": [
 		{
 			"ja": "• 「SD ガンダム Brave Battle Warriors」登場の武将を商品化。",
@@ -10,17 +13,46 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4736_0.jpg", "/images/items/01_4736_1.jpg", "/images/items/01_4736_2.jpg"],
+	"images": [
+		"/images/items/01_4736_0.jpg",
+		"/images/items/01_4736_1.jpg",
+		"/images/items/01_4736_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4736/",
 	"extractedAt": "2025-12-06T17:54:18.591Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2010年02月25日 (木)", "year": 2010, "month": 2, "day": 25 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2010年02月25日 (木)",
+		"year": 2010,
+		"month": 2,
+		"day": 25
+	},
 	"targetAge": 10,
 	"relationships": {
-		"brands": [{ "id": "sd-gundam-bb-senshi", "name": "SD Gundam BB Senshi" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"brands": [
+			{
+				"id": "sd-gundam-bb-senshi",
+				"name": "SD Gundam BB Senshi"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5456", "01_5442", "01_5395", "01_5378"]
+		"relatedItems": [
+			"01_5456",
+			"01_5442",
+			"01_5395",
+			"01_5378"
+		]
 	},
 	"brand": "SD Gundam BB Senshi",
 	"category": "Gunpla"

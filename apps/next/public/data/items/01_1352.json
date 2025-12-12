@@ -1,7 +1,10 @@
 {
 	"id": "01_1352",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ゼータプラステストカラー", "en": "MG 1/100 Zeta Plus Test Color" },
+	"name": {
+		"ja": "MG 1/100 ゼータプラステストカラー",
+		"en": "MG 1/100 Zeta Plus Test Color"
+	},
 	"description": [
 		{
 			"ja": "「ガンダムセンチネル」に登場するMS「ゼータプラス」がMGシリーズで登場。",
@@ -22,15 +25,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1352/",
 	"extractedAt": "2025-12-06T17:16:04.289Z",
-	"price": { "amount": 3300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2001年10月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2001年10月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-sentinel", "name": "Gundam Sentinel" }],
-		"relatedItems": ["01_1291", "01_5593", "01_3408", "01_2176"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-sentinel",
+				"name": "Gundam Sentinel"
+			}
+		],
+		"relatedItems": [
+			"01_1291",
+			"01_5593",
+			"01_3408",
+			"01_2176"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

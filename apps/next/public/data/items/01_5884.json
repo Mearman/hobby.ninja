@@ -10,7 +10,10 @@
 			"ja": "• 『ポケットモンスターXY』の伝説のポケモンがポケプラに登場。",
 			"en": "• Legendary Pokemon from \"Pokemon XY\" are now available on PokePla."
 		},
-		{ "ja": "• 新タイプのフェアリー。", "en": "• A new type of fairy." },
+		{
+			"ja": "• 新タイプのフェアリー。",
+			"en": "• A new type of fairy."
+		},
 		{
 			"ja": "• 見上げる、角をつき出す、かけまわる。ポケプラアクションで躍動感あふれるポーズが決まる。",
 			"en": "• Look up, stick out your horns, and run around. Poses full of dynamism are determined by PokePla action."
@@ -26,17 +29,46 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5884_0.jpg", "/images/items/01_5884_1.jpg", "/images/items/01_5884_2.jpg"],
+	"images": [
+		"/images/items/01_5884_0.jpg",
+		"/images/items/01_5884_1.jpg",
+		"/images/items/01_5884_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5884/",
 	"extractedAt": "2025-12-06T17:56:47.893Z",
-	"price": { "amount": 1045, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年10月26日 (土)", "year": 2013, "month": 10, "day": 26 },
+	"price": {
+		"amount": 1045,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年10月26日 (土)",
+		"year": 2013,
+		"month": 10,
+		"day": 26
+	},
 	"targetAge": 6,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "pocket-monster", "name": "pocket monster" }],
-		"relatedItems": ["01_5568", "01_5984", "01_5958", "01_5947"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "pocket-monster",
+				"name": "pocket monster"
+			}
+		],
+		"relatedItems": [
+			"01_5568",
+			"01_5984",
+			"01_5958",
+			"01_5947"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "pocket monster"

@@ -1,7 +1,10 @@
 {
 	"id": "01_2443",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 ペーネロペー", "en": "HGUC 1/144 Penelope" },
+	"name": {
+		"ja": "HGUC 1/144 ペーネロペー",
+		"en": "HGUC 1/144 Penelope"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム 閃光のハサウェイ』より、レーン・エイム中尉が搭乗するMSペーネロペーが遂にHG化！",
@@ -33,15 +36,36 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ビーム・ライフル×1", "en": "Beam rifle x1" },
-		{ "ja": "ビーム・サーベル×2", "en": "Beam saber x2" },
-		{ "ja": "シールド×2", "en": "Seal × 2" },
-		{ "ja": "ディスプレイ台座×1", "en": "Display pedestal x 1" }
+		{
+			"ja": "ビーム・ライフル×1",
+			"en": "Beam rifle x1"
+		},
+		{
+			"ja": "ビーム・サーベル×2",
+			"en": "Beam saber x2"
+		},
+		{
+			"ja": "シールド×2",
+			"en": "Seal × 2"
+		},
+		{
+			"ja": "ディスプレイ台座×1",
+			"en": "Display pedestal x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×20", "en": "Molded product x 20" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" }
+		{
+			"ja": "成形品×20",
+			"en": "Molded product x 20"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		}
 	],
 	"images": [
 		"/images/items/01_2443_0.jpg",
@@ -51,18 +75,49 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2443/",
 	"extractedAt": "2025-12-06T17:49:23.478Z",
-	"price": { "amount": 7700, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年10月26日 (土)", "year": 2019, "month": 10, "day": 26 },
+	"price": {
+		"amount": 7700,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年10月26日 (土)",
+		"year": 2019,
+		"month": 10,
+		"day": 26
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-flash-hathaway", "name": "Mobile Suit Gundam Flash Hathaway" }],
-		"relatedItems": ["01_5594", "01_4971", "01_4269", "item-1000157737"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-flash-hathaway",
+				"name": "Mobile Suit Gundam Flash Hathaway"
+			}
+		],
+		"relatedItems": [
+			"01_5594",
+			"01_4971",
+			"01_4269",
+			"item-1000157737"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

@@ -1,7 +1,10 @@
 {
 	"id": "01_4710",
 	"type": "item",
-	"name": { "ja": "1/144 ガンダムレオパルド", "en": "1/144 Gundam Leopard" },
+	"name": {
+		"ja": "1/144 ガンダムレオパルド",
+		"en": "1/144 Gundam Leopard"
+	},
 	"description": [
 		{
 			"ja": "TV「機動新世紀ガンダム X」に登場した、ガンダムヘビーアームズの後継機体をキット化しました。前腕部搭載のグレネードランチャーはスライドします。ブレストガトリング、肩アーマーのショルダーミサイルハッチは開閉機構が再現できます。インナーアームガトリングは左手首パーツを外して内部へ収納することができます。ひざアーマーのホーネットミサイルはラック部分が開閉し、ミサイルの脱着が可能です。ビームナイフは右すね部分へ収納できます。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4710_0.jpg", "/images/items/01_4710_1.jpg"],
+	"images": [
+		"/images/items/01_4710_0.jpg",
+		"/images/items/01_4710_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4710/",
 	"extractedAt": "2025-12-06T17:54:16.204Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1996年04月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1996年04月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-new-century-gundam-x", "name": "Mobile New Century Gundam X" }],
-		"relatedItems": ["item-1000147185", "item-1000147187", "item-1000124674", "01_298"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-new-century-gundam-x",
+				"name": "Mobile New Century Gundam X"
+			}
+		],
+		"relatedItems": [
+			"item-1000147185",
+			"item-1000147187",
+			"item-1000124674",
+			"01_298"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile New Century Gundam X"

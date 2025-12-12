@@ -1,7 +1,10 @@
 {
 	"id": "01_1418",
 	"type": "item",
-	"name": { "ja": "Figure-rise Effect 衝撃波 イエロー", "en": "Figure-rise Effect Shock Wave Yellow" },
+	"name": {
+		"ja": "Figure-rise Effect 衝撃波 イエロー",
+		"en": "Figure-rise Effect Shock Wave Yellow"
+	},
 	"description": [
 		{
 			"ja": "斬る！走る！使い勝手抜群のエフェクトがFigure-rise Effectに登場！",
@@ -17,25 +20,63 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "衝撃波エフェクト ×1式", "en": "Shock wave effect x1" },
-		{ "ja": "岩×1式", "en": "Rock x 1 set" },
-		{ "ja": "アーム×1式", "en": "Arm x 1 set" }
+		{
+			"ja": "衝撃波エフェクト ×1式",
+			"en": "Shock wave effect x1"
+		},
+		{
+			"ja": "岩×1式",
+			"en": "Rock x 1 set"
+		},
+		{
+			"ja": "アーム×1式",
+			"en": "Arm x 1 set"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×3", "en": "Molded product x 3" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×3",
+			"en": "Molded product x 3"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
-	"images": ["/images/items/01_1418_0.jpg", "/images/items/01_1418_1.jpg"],
+	"images": [
+		"/images/items/01_1418_0.jpg",
+		"/images/items/01_1418_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1418/",
 	"extractedAt": "2025-12-06T17:20:46.909Z",
-	"price": { "amount": 825, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年08月11日 (土)", "year": 2018, "month": 8, "day": 11 },
+	"price": {
+		"amount": 825,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年08月11日 (土)",
+		"year": 2018,
+		"month": 8,
+		"day": 11
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "figure-rise-effect", "name": "Figure-rise Effect" }],
+		"brands": [
+			{
+				"id": "figure-rise-effect",
+				"name": "Figure-rise Effect"
+			}
+		],
 		"categories": [],
 		"series": [],
-		"relatedItems": ["01_2346", "01_2347", "01_2183", "01_1419"]
+		"relatedItems": [
+			"01_2346",
+			"01_2347",
+			"01_2183",
+			"01_1419"
+		]
 	},
 	"brand": "Figure-rise Effect"
 }

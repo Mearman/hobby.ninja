@@ -1,7 +1,10 @@
 {
 	"id": "01_5170",
 	"type": "item",
-	"name": { "ja": "HG 1/72 メイレス ゴウヨウカスタム", "en": "HG 1/72 Meires Goyo Custom" },
+	"name": {
+		"ja": "HG 1/72 メイレス ゴウヨウカスタム",
+		"en": "HG 1/72 Meires Goyo Custom"
+	},
 	"description": [
 		{
 			"ja": "『境界戦機 極鋼ノ装鬼』（きょうかいせんき きょっこうのそうき）のもう一人の主人公が駆る機体、「メイレス ゴウヨウカスタム」が商品化！",
@@ -25,14 +28,38 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ノーマルアサルトライフル×1", "en": "Normal assault rifle x1" },
-		{ "ja": "ノーマルハンドガン×1", "en": "Normal hand gun x 1" },
-		{ "ja": "アームパイル×1", "en": "Arm pile x1" },
-		{ "ja": "ウェポンラック×1", "en": "Weapon rack x 1" },
-		{ "ja": "リアスカ―トラック×1", "en": "Rear scar truck x 1" },
-		{ "ja": "ハンドパーツ×1式", "en": "Hand parts x 1 set" },
-		{ "ja": "ジョイントパーツ×１式", "en": "Joint parts x 1 set" },
-		{ "ja": "シール×2種", "en": "Seal×2 types" }
+		{
+			"ja": "ノーマルアサルトライフル×1",
+			"en": "Normal assault rifle x1"
+		},
+		{
+			"ja": "ノーマルハンドガン×1",
+			"en": "Normal hand gun x 1"
+		},
+		{
+			"ja": "アームパイル×1",
+			"en": "Arm pile x1"
+		},
+		{
+			"ja": "ウェポンラック×1",
+			"en": "Weapon rack x 1"
+		},
+		{
+			"ja": "リアスカ―トラック×1",
+			"en": "Rear scar truck x 1"
+		},
+		{
+			"ja": "ハンドパーツ×1式",
+			"en": "Hand parts x 1 set"
+		},
+		{
+			"ja": "ジョイントパーツ×１式",
+			"en": "Joint parts x 1 set"
+		},
+		{
+			"ja": "シール×2種",
+			"en": "Seal×2 types"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -49,15 +76,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5170/",
 	"extractedAt": "2025-12-06T17:55:20.090Z",
-	"price": { "amount": 2640, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2024年04月27日 (土)", "year": 2024, "month": 4, "day": 27 },
+	"price": {
+		"amount": 2640,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2024年04月27日 (土)",
+		"year": 2024,
+		"month": 4,
+		"day": 27
+	},
 	"scale": "1/72",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "kyoukai-senki", "name": "Kyoukai Senki" }],
-		"relatedItems": ["01_5080", "01_5196", "01_5183", "01_5171"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "kyoukai-senki",
+				"name": "Kyoukai Senki"
+			}
+		],
+		"relatedItems": [
+			"01_5080",
+			"01_5196",
+			"01_5183",
+			"01_5171"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Character plastic model",

@@ -1,7 +1,10 @@
 {
 	"id": "01_4376",
 	"type": "item",
-	"name": { "ja": "ENTRY GRADE うちはサスケ", "en": "ENTRY GRADE Uchiha Sasuke" },
+	"name": {
+		"ja": "ENTRY GRADE うちはサスケ",
+		"en": "ENTRY GRADE Uchiha Sasuke"
+	},
 	"description": [
 		{
 			"ja": "全てのプラモデル未経験者に贈る入門用シリーズ「ENTRY GRADE」にうちはサスケが登場！",
@@ -33,9 +36,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ランナー×５", "en": "Runner×5" },
-		{ "ja": "シール×2種", "en": "Seal×2 types" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "ランナー×５",
+			"en": "Runner×5"
+		},
+		{
+			"ja": "シール×2種",
+			"en": "Seal×2 types"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -49,14 +61,41 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4376/",
 	"extractedAt": "2025-12-06T17:53:34.381Z",
-	"price": { "amount": 1760, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2023年04月29日 (土)", "year": 2023, "month": 4, "day": 29 },
+	"price": {
+		"amount": 1760,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2023年04月29日 (土)",
+		"year": 2023,
+		"month": 4,
+		"day": 29
+	},
 	"targetAge": 6,
 	"relationships": {
-		"brands": [{ "id": "entry-grade", "name": "ENTRY GRADE" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "naruto", "name": "Naruto" }],
-		"relatedItems": ["01_4375"]
+		"brands": [
+			{
+				"id": "entry-grade",
+				"name": "ENTRY GRADE"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "naruto",
+				"name": "Naruto"
+			}
+		],
+		"relatedItems": [
+			"01_4375"
+		]
 	},
 	"brand": "ENTRY GRADE",
 	"category": "Character plastic model",

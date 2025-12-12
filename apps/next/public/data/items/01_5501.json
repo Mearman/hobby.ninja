@@ -1,7 +1,10 @@
 {
 	"id": "01_5501",
 	"type": "item",
-	"name": { "ja": "プラノサウルス テリジノサウルス", "en": "planosaurus therizinosaurus" },
+	"name": {
+		"ja": "プラノサウルス テリジノサウルス",
+		"en": "planosaurus therizinosaurus"
+	},
 	"description": [
 		{
 			"ja": "自分の手で恐竜を“知りつくす”ブランド『プラノサウルス』第11弾に、白亜紀後期の大型獣脚類「テリジノサウルス」が登場！",
@@ -37,8 +40,14 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "台座×1", "en": "Pedestal x 1" }
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "台座×1",
+			"en": "Pedestal x 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -56,14 +65,38 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5501/",
 	"extractedAt": "2025-12-06T17:56:03.404Z",
-	"price": { "amount": 1540, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2025年03月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1540,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2025年03月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 6,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "planosaurus", "name": "Planosaurus" }],
-		"relatedItems": ["01_5990", "01_5989", "01_5972", "01_5973"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "planosaurus",
+				"name": "Planosaurus"
+			}
+		],
+		"relatedItems": [
+			"01_5990",
+			"01_5989",
+			"01_5972",
+			"01_5973"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Planosaurus"

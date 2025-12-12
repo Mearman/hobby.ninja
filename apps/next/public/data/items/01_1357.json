@@ -1,7 +1,10 @@
 {
 	"id": "01_1357",
 	"type": "item",
-	"name": { "ja": "SD ガンダム クロスシルエット RX-78-2 ガンダム", "en": "SD Gundam Cross Silhouette RX-78-2 Gundam" },
+	"name": {
+		"ja": "SD ガンダム クロスシルエット RX-78-2 ガンダム",
+		"en": "SD Gundam Cross Silhouette RX-78-2 Gundam"
+	},
 	"description": [
 		{
 			"ja": "「SD ガンダム クロスシルエット」より、「RX-78-2 ガンダム」がラインナップ！",
@@ -17,14 +20,32 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ビーム・ライフル×1", "en": "Beam rifle x1" },
-		{ "ja": "シールド×1", "en": "Seal × 1" },
-		{ "ja": "ビーム・サーベル×1", "en": "Beam saber x 1" }
+		{
+			"ja": "ビーム・ライフル×1",
+			"en": "Beam rifle x1"
+		},
+		{
+			"ja": "シールド×1",
+			"en": "Seal × 1"
+		},
+		{
+			"ja": "ビーム・サーベル×1",
+			"en": "Beam saber x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×4", "en": "Molded product x 4" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×4",
+			"en": "Molded product x 4"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1357_0.jpg",
@@ -34,14 +55,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1357/",
 	"extractedAt": "2025-12-06T17:16:04.385Z",
-	"price": { "amount": 880, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年06月30日 (土)", "year": 2018, "month": 6, "day": 30 },
+	"price": {
+		"amount": 880,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年06月30日 (土)",
+		"year": 2018,
+		"month": 6,
+		"day": 30
+	},
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "sd-gundam-cross-silhouette", "name": "SD Gundam Cross Silhouette" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_4132", "01_3495", "01_3321", "01_2806"]
+		"brands": [
+			{
+				"id": "sd-gundam-cross-silhouette",
+				"name": "SD Gundam Cross Silhouette"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4132",
+			"01_3495",
+			"01_3321",
+			"01_2806"
+		]
 	},
 	"brand": "SD Gundam Cross Silhouette",
 	"category": "Gunpla",

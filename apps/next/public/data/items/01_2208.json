@@ -1,7 +1,10 @@
 {
 	"id": "01_2208",
 	"type": "item",
-	"name": { "ja": "1/5000 スター・デストロイヤー", "en": "1/5000 Star Destroyer" },
+	"name": {
+		"ja": "1/5000 スター・デストロイヤー",
+		"en": "1/5000 Star Destroyer"
+	},
 	"description": [
 		{
 			"ja": "『STAR WARS 』クラシック作品より、インペリアル級スター・デストロイヤーが1/5000スケールで登場！",
@@ -29,12 +32,24 @@
 			"ja": "1/5000 ブロッケード・ランナー／ミレニアム・ファルコン×各１",
 			"en": "1/5000 Blockade Runner/Millennium Falcon x 1 each"
 		},
-		{ "ja": "専用ディスプレイベース×１セット", "en": "Dedicated display base x 1 set" }
+		{
+			"ja": "専用ディスプレイベース×１セット",
+			"en": "Dedicated display base x 1 set"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×8", "en": "Molded product x 8" },
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×8",
+			"en": "Molded product x 8"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_2208_0.jpg",
@@ -52,15 +67,40 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2208/",
 	"extractedAt": "2025-12-06T17:48:53.887Z",
-	"price": { "amount": 7700, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年08月24日 (土)", "year": 2019, "month": 8, "day": 24 },
+	"price": {
+		"amount": 7700,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年08月24日 (土)",
+		"year": 2019,
+		"month": 8,
+		"day": 24
+	},
 	"scale": "1/5000",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "star-wars", "name": "STAR WARS" }],
-		"relatedItems": ["01_4153", "01_4154", "01_3514", "01_3513"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "star-wars",
+				"name": "STAR WARS"
+			}
+		],
+		"relatedItems": [
+			"01_4153",
+			"01_4154",
+			"01_3514",
+			"01_3513"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "STAR WARS"

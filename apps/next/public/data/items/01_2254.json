@@ -1,7 +1,10 @@
 {
 	"id": "01_2254",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ガンダム NT-1 Ver.2.0", "en": "MG 1/100 Gundam NT-1 Ver.2.0" },
+	"name": {
+		"ja": "MG 1/100 ガンダム NT-1 Ver.2.0",
+		"en": "MG 1/100 Gundam NT-1 Ver.2.0"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム 0080 ポケットの中の戦争』よりガンダム NT-1がVer.2.0で登場！",
@@ -29,19 +32,52 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "チョバム・アーマー×1セット", "en": "Chobham Armor x 1 set" },
-		{ "ja": "ブレードアンテナ (破損状態)×1", "en": "Blade antenna (damaged) x 1" },
-		{ "ja": "ビーム・サーベル×2", "en": "Beam saber x2" },
-		{ "ja": "ビーム・ライフル×1", "en": "Beam rifle x1" },
-		{ "ja": "シールド×1", "en": "Seal × 1" },
-		{ "ja": "ハイパー・バズーカ×1", "en": "Hyper bazooka x1" }
+		{
+			"ja": "チョバム・アーマー×1セット",
+			"en": "Chobham Armor x 1 set"
+		},
+		{
+			"ja": "ブレードアンテナ (破損状態)×1",
+			"en": "Blade antenna (damaged) x 1"
+		},
+		{
+			"ja": "ビーム・サーベル×2",
+			"en": "Beam saber x2"
+		},
+		{
+			"ja": "ビーム・ライフル×1",
+			"en": "Beam rifle x1"
+		},
+		{
+			"ja": "シールド×1",
+			"en": "Seal × 1"
+		},
+		{
+			"ja": "ハイパー・バズーカ×1",
+			"en": "Hyper bazooka x1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×22", "en": "Molded product x 22" },
-		{ "ja": "ビニール資材×1セット", "en": "Vinyl materials x 1 set" },
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "マーキングシール×1", "en": "MarkingSeal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×22",
+			"en": "Molded product x 22"
+		},
+		{
+			"ja": "ビニール資材×1セット",
+			"en": "Vinyl materials x 1 set"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "マーキングシール×1",
+			"en": "MarkingSeal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_2254_0.jpg",
@@ -51,17 +87,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2254/",
 	"extractedAt": "2025-12-06T17:48:59.019Z",
-	"price": { "amount": 6380, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年06月29日 (土)", "year": 2019, "month": 6, "day": 29 },
+	"price": {
+		"amount": 6380,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年06月29日 (土)",
+		"year": 2019,
+		"month": 6,
+		"day": 29
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [
-			{ "id": "mobile-suit-gundam-0080-war-in-the-pocket", "name": "Mobile Suit Gundam 0080 War in the Pocket" }
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
 		],
-		"relatedItems": ["01_1266", "01_1955", "01_2461", "item-1000134463"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-0080-war-in-the-pocket",
+				"name": "Mobile Suit Gundam 0080 War in the Pocket"
+			}
+		],
+		"relatedItems": [
+			"01_1266",
+			"01_1955",
+			"01_2461",
+			"item-1000134463"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

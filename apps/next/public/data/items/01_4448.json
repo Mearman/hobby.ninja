@@ -1,7 +1,10 @@
 {
 	"id": "01_4448",
 	"type": "item",
-	"name": { "ja": "1/144 ガンダムサンドロック", "en": "1/144 Gundam Sandrock" },
+	"name": {
+		"ja": "1/144 ガンダムサンドロック",
+		"en": "1/144 Gundam Sandrock"
+	},
 	"description": [
 		{
 			"ja": "「新機動戦記ガンダム W」のガンダムサンドロックが1/144スケールモデルで登場。首、手首、股関節、足首にボールジョイントを使用し、スムーズな可動を実現しています。胸部と腹部が別パーツとなっており、腰の回転が可能です。腰アーマーのフロント部、サイド部が可動します。 2本のヒートショーテルはバックパックに着脱できる他、バックパックとシールド、ヒートショーテルを組み合わせてクロスクラッシャーが再現できます。武器はそれ以外にサブマシンガンが付いています。",
@@ -10,18 +13,44 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4448_0.jpg"],
+	"images": [
+		"/images/items/01_4448_0.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4448/",
 	"extractedAt": "2025-12-06T17:53:43.995Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1995年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1995年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "new-mobile-report-gundam-w-series", "name": "New Mobile Report Gundam W series" }],
-		"relatedItems": ["01_5968", "01_5993", "01_5590", "01_5377"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "new-mobile-report-gundam-w-series",
+				"name": "New Mobile Report Gundam W series"
+			}
+		],
+		"relatedItems": [
+			"01_5968",
+			"01_5993",
+			"01_5590",
+			"01_5377"
+		]
 	},
 	"category": "Gunpla",
 	"series": "New Mobile Report Gundam W series"

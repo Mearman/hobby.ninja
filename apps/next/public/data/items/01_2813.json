@@ -1,7 +1,10 @@
 {
 	"id": "01_2813",
 	"type": "item",
-	"name": { "ja": "MG エールストライクガンダム", "en": "MG Ale Strike Gundam" },
+	"name": {
+		"ja": "MG エールストライクガンダム",
+		"en": "MG Ale Strike Gundam"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム SEED」に登場する主人公機「ストライクガンダム」がMG仕様のプラモデルで遂に登場です。エールパックが付属し、エールストライクを再現可能です。コクピットハッチは開閉式で、1/100スケールのキラ・ヤマトのフィギュアが付属します。両腰のアーマーにはアサルトナイフ「アーマーシュナイダー」を収納可能です。専用ディスプレイベースが付属し、番組オープニングの発進シーンが再現可能です。",
@@ -10,17 +13,49 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2813_0.jpg", "/images/items/01_2813_1.jpg"],
+	"images": [
+		"/images/items/01_2813_0.jpg",
+		"/images/items/01_2813_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2813/",
 	"extractedAt": "2025-12-06T17:50:09.280Z",
-	"price": { "amount": 4180, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2003年10月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 4180,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2003年10月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed", "name": "Mobile Suit Gundam SEED" }],
-		"relatedItems": ["01_5994", "01_5221", "01_4272", "01_4195"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed",
+				"name": "Mobile Suit Gundam SEED"
+			}
+		],
+		"relatedItems": [
+			"01_5994",
+			"01_5221",
+			"01_4272",
+			"01_4195"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

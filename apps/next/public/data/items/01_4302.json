@@ -1,7 +1,10 @@
 {
 	"id": "01_4302",
 	"type": "item",
-	"name": { "ja": "Figure-rise Standard エンジェモン", "en": "Figure-rise Standard Angemon" },
+	"name": {
+		"ja": "Figure-rise Standard エンジェモン",
+		"en": "Figure-rise Standard Angemon"
+	},
 	"description": [
 		{
 			"ja": "Figure-rise Standardデジモンシリーズ第５弾！天使型デジモン「エンジェモン」がアニメ設定に準拠したデザインとプロポーションで登場！",
@@ -29,9 +32,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ホーリーロッド×1", "en": "Holy rod x1" },
-		{ "ja": "ヘブンズナックルエフェクト× １", "en": "Heaven's Knuckle Effect x 1" },
-		{ "ja": "シール×1", "en": "Seal×1" }
+		{
+			"ja": "ホーリーロッド×1",
+			"en": "Holy rod x1"
+		},
+		{
+			"ja": "ヘブンズナックルエフェクト× １",
+			"en": "Heaven's Knuckle Effect x 1"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -48,14 +60,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4302/",
 	"extractedAt": "2025-12-06T17:53:24.740Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2023年01月14日 (土)", "year": 2023, "month": 1, "day": 14 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2023年01月14日 (土)",
+		"year": 2023,
+		"month": 1,
+		"day": 14
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "figure-rise-standard", "name": "Figure-rise Standard" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "digimon-series", "name": "digimon series" }],
-		"relatedItems": ["01_3637", "01_3766", "01_4113", "01_4917"]
+		"brands": [
+			{
+				"id": "figure-rise-standard",
+				"name": "Figure-rise Standard"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "digimon-series",
+				"name": "digimon series"
+			}
+		],
+		"relatedItems": [
+			"01_3637",
+			"01_3766",
+			"01_4113",
+			"01_4917"
+		]
 	},
 	"brand": "Figure-rise Standard",
 	"category": "Character plastic model",

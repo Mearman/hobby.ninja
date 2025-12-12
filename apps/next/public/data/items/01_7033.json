@@ -1,7 +1,10 @@
 {
 	"id": "01_7033",
 	"type": "item",
-	"name": { "ja": "HG ブルーティッシュドッグ(仮)", "en": "HG Blue Tissue Dog (tentative)" },
+	"name": {
+		"ja": "HG ブルーティッシュドッグ(仮)",
+		"en": "HG Blue Tissue Dog (tentative)"
+	},
 	"description": [
 		{
 			"ja": "『装甲騎兵ボトムズ』より、「フィアナ」が搭乗した「ブルーティッシュドッグ」がHGで登場！",
@@ -21,21 +24,60 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ハンドパーツ×1式", "en": "Hand parts x 1 set" },
-		{ "ja": "3Dメタリックシール×1", "en": "3D metallic seal×1" }
+		{
+			"ja": "ハンドパーツ×1式",
+			"en": "Hand parts x 1 set"
+		},
+		{
+			"ja": "3Dメタリックシール×1",
+			"en": "3D metallic seal×1"
+		}
 	],
 	"contents": [],
-	"images": ["/images/items/01_7033_0.jpg", "/images/items/01_7033_1.jpg", "/images/items/01_7033_2.jpg"],
+	"images": [
+		"/images/items/01_7033_0.jpg",
+		"/images/items/01_7033_1.jpg",
+		"/images/items/01_7033_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_7033/",
 	"extractedAt": "2025-12-06T17:58:24.455Z",
-	"price": { "amount": 4180, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2026年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 4180,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2026年06月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "armored-trooper-votoms", "name": "Armored Trooper Votoms" }],
-		"relatedItems": ["item-1000223037", "item-1000209959", "item-1000209960", "item-1000209961"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "armored-trooper-votoms",
+				"name": "Armored Trooper Votoms"
+			}
+		],
+		"relatedItems": [
+			"item-1000223037",
+			"item-1000209959",
+			"item-1000209960",
+			"item-1000209961"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Character plastic model",

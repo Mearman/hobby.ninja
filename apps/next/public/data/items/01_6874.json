@@ -1,7 +1,10 @@
 {
 	"id": "01_6874",
 	"type": "item",
-	"name": { "ja": "HG 1/144 レジェンドガンダム", "en": "HG 1/144 Legend Gundam" },
+	"name": {
+		"ja": "HG 1/144 レジェンドガンダム",
+		"en": "HG 1/144 Legend Gundam"
+	},
 	"description": [
 		{
 			"ja": "「SEEDアクションシステム」を搭載した最新フォーマットにて「レジェンドガンダム」を豊富な付属パーツと共に商品化！",
@@ -33,12 +36,30 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "高エネルギービームライフル×1", "en": "High energy beam rifle x1" },
-		{ "ja": "ビームジャベリン×2", "en": "Beam javelin x2" },
-		{ "ja": "ビームシールド×1", "en": "Beam Seal × 1" },
-		{ "ja": "ビームスパイクエフェクトパーツ×2", "en": "Beam spike effect parts x 2" },
-		{ "ja": "ハンドパーツ×1式", "en": "Hand parts x 1 set" },
-		{ "ja": "シール×1", "en": "Seal×1" }
+		{
+			"ja": "高エネルギービームライフル×1",
+			"en": "High energy beam rifle x1"
+		},
+		{
+			"ja": "ビームジャベリン×2",
+			"en": "Beam javelin x2"
+		},
+		{
+			"ja": "ビームシールド×1",
+			"en": "Beam Seal × 1"
+		},
+		{
+			"ja": "ビームスパイクエフェクトパーツ×2",
+			"en": "Beam spike effect parts x 2"
+		},
+		{
+			"ja": "ハンドパーツ×1式",
+			"en": "Hand parts x 1 set"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -49,15 +70,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_6874/",
 	"extractedAt": "2025-12-06T17:58:07.053Z",
-	"price": { "amount": 3080, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2026年01月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3080,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2026年01月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed-destiny", "name": "Mobile Suit Gundam SEED DESTINY" }],
-		"relatedItems": ["01_3739", "01_5097", "item-1000203308", "item-1000157417"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed-destiny",
+				"name": "Mobile Suit Gundam SEED DESTINY"
+			}
+		],
+		"relatedItems": [
+			"01_3739",
+			"01_5097",
+			"item-1000203308",
+			"item-1000157417"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

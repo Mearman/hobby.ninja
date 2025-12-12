@@ -1,7 +1,10 @@
 {
 	"id": "01_2418",
 	"type": "item",
-	"name": { "ja": "1/144 モビルバクゥ", "en": "1/144 Mobile Baku" },
+	"name": {
+		"ja": "1/144 モビルバクゥ",
+		"en": "1/144 Mobile Baku"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム SEED」登場する敵軍のザフト軍量産型MS「バクゥ」の1/144スケールのプラモデル。シリーズ中唯一の動物型のMSです。低年齢層でも組み立てられるようにパーツはシンプルに構成しています。背中の2連キャノンは可動式です。ホイルシール付き。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2418_0.jpg", "/images/items/01_2418_1.jpg"],
+	"images": [
+		"/images/items/01_2418_0.jpg",
+		"/images/items/01_2418_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2418/",
 	"extractedAt": "2025-12-06T17:49:18.555Z",
-	"price": { "amount": 440, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2003年03月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 440,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2003年03月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed", "name": "Mobile Suit Gundam SEED" }],
-		"relatedItems": ["01_5994", "01_5440", "01_5441", "01_5365"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed",
+				"name": "Mobile Suit Gundam SEED"
+			}
+		],
+		"relatedItems": [
+			"01_5994",
+			"01_5440",
+			"01_5441",
+			"01_5365"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam SEED"

@@ -1,7 +1,10 @@
 {
 	"id": "01_2414",
 	"type": "item",
-	"name": { "ja": "1/144 モビルスモー／ゴールドタイプ", "en": "1/144 Mobile Smo/Gold type" },
+	"name": {
+		"ja": "1/144 モビルスモー／ゴールドタイプ",
+		"en": "1/144 Mobile Smo/Gold type"
+	},
 	"description": [
 		{
 			"ja": "TV「∀ガンダム」に登場したモビルスモーのゴールドタイプをキット化しました。フェイスパーツは通常形態の他に、オープン形態のものがついています。ひざは二重関節を使用しています。軍配型ヒート・ファン、ハンドビーム・ガン、IFジェネレータがついています。",
@@ -19,15 +22,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2414/",
 	"extractedAt": "2025-12-06T17:49:19.641Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1999年08月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1999年08月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam", "name": "∀Gundam" }],
-		"relatedItems": ["item-1000135920", "item-1000099631", "item-1000165581", "01_120"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam",
+				"name": "∀Gundam"
+			}
+		],
+		"relatedItems": [
+			"item-1000135920",
+			"item-1000099631",
+			"item-1000165581",
+			"01_120"
+		]
 	},
 	"category": "Gunpla",
 	"series": "∀Gundam"

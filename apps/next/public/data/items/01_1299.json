@@ -1,7 +1,10 @@
 {
 	"id": "01_1299",
 	"type": "item",
-	"name": { "ja": "RG 1/144 トールギス EW", "en": "RG 1/144 Tallgeese EW" },
+	"name": {
+		"ja": "RG 1/144 トールギス EW",
+		"en": "RG 1/144 Tallgeese EW"
+	},
 	"description": [
 		{
 			"ja": "• 『新機動戦記ガンダム W Endless Waltz』版のトールギスがRGで立体化！",
@@ -25,14 +28,32 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ドーバーガン×1", "en": "Dober gun x 1" },
-		{ "ja": "サークルシールド×1", "en": "Circle Seal×1" },
-		{ "ja": "ビームサーベル×2", "en": "Beam saber x2" }
+		{
+			"ja": "ドーバーガン×1",
+			"en": "Dober gun x 1"
+		},
+		{
+			"ja": "サークルシールド×1",
+			"en": "Circle Seal×1"
+		},
+		{
+			"ja": "ビームサーベル×2",
+			"en": "Beam saber x2"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×11", "en": "Molded products x 11" },
-		{ "ja": "リアリスティックデカール×1", "en": "Realistic decal x 1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×11",
+			"en": "Molded products x 11"
+		},
+		{
+			"ja": "リアリスティックデカール×1",
+			"en": "Realistic decal x 1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1299_0.jpg",
@@ -45,15 +66,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1299/",
 	"extractedAt": "2025-12-06T17:08:07.724Z",
-	"price": { "amount": 3080, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年04月28日 (土)", "year": 2018, "month": 4, "day": 28 },
+	"price": {
+		"amount": 3080,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年04月28日 (土)",
+		"year": 2018,
+		"month": 4,
+		"day": 28
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "rg-real-grade", "name": "RG [Real Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "new-mobile-report-gundam-w-series", "name": "New Mobile Report Gundam W series" }],
-		"relatedItems": ["01_466", "01_4891", "item-1000225931", "01_251"]
+		"brands": [
+			{
+				"id": "rg-real-grade",
+				"name": "RG [Real Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "new-mobile-report-gundam-w-series",
+				"name": "New Mobile Report Gundam W series"
+			}
+		],
+		"relatedItems": [
+			"01_466",
+			"01_4891",
+			"item-1000225931",
+			"01_251"
+		]
 	},
 	"brand": "RG [Real Grade]",
 	"category": "Gunpla",

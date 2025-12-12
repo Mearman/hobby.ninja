@@ -1,7 +1,10 @@
 {
 	"id": "01_4090",
 	"type": "item",
-	"name": { "ja": "HG 1/72 境界戦機ウェポンセット", "en": "HG 1/72 Kyoukai Senki Weapon Set" },
+	"name": {
+		"ja": "HG 1/72 境界戦機ウェポンセット",
+		"en": "HG 1/72 Kyoukai Senki Weapon Set"
+	},
 	"description": [
 		{
 			"ja": "『境界戦機』シリーズの各専用武装を集約したウェポンセットが登場！自由な組み合わせで装備させ、プラモデルオリジナルの武装アレンジが充実！",
@@ -21,20 +24,62 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "60mm携行機関砲(多弾倉型)×１", "en": "60mm portable machine gun (multi-magazine type) x 1" },
-		{ "ja": "腕部超熱振式戦闘爪×１", "en": "Arm super heat wave fighting claw x 1" },
-		{ "ja": "戦闘短刀×１", "en": "Combat dagger x1" },
-		{ "ja": "120mm二連装狙撃砲×１", "en": "120mm dual sniper gun x 1" },
-		{ "ja": "装甲擲弾砲×2", "en": "Armored grenade gun x 2" },
-		{ "ja": "装甲擲弾砲用ジョイントパーツ×2", "en": "Joint parts for armored grenade gun x 2" },
-		{ "ja": "45mm速射拳銃×2", "en": "45mm rapid-fire pistol x 2" },
-		{ "ja": "左手銃持ち手×1", "en": "Left hand gun holder x 1" },
-		{ "ja": "超熱振式薙刀×1", "en": "Super heat wave type naginata x 1" },
-		{ "ja": "ブレイディハウンド専用ライフル(グレネードラン", "en": "Brady Hound Rifle (Grenade Run)" },
-		{ "ja": "チャー装備)×1", "en": "Char equipment)×1" },
-		{ "ja": "ブレイディハウンド専用ナイフ×1", "en": "Brady Hound knife x 1" },
-		{ "ja": "ブレイディハウンド専用ソード×1", "en": "Brady Hound special sword x1" },
-		{ "ja": "ウェポンラック×1式", "en": "Weapon rack x 1 set" }
+		{
+			"ja": "60mm携行機関砲(多弾倉型)×１",
+			"en": "60mm portable machine gun (multi-magazine type) x 1"
+		},
+		{
+			"ja": "腕部超熱振式戦闘爪×１",
+			"en": "Arm super heat wave fighting claw x 1"
+		},
+		{
+			"ja": "戦闘短刀×１",
+			"en": "Combat dagger x1"
+		},
+		{
+			"ja": "120mm二連装狙撃砲×１",
+			"en": "120mm dual sniper gun x 1"
+		},
+		{
+			"ja": "装甲擲弾砲×2",
+			"en": "Armored grenade gun x 2"
+		},
+		{
+			"ja": "装甲擲弾砲用ジョイントパーツ×2",
+			"en": "Joint parts for armored grenade gun x 2"
+		},
+		{
+			"ja": "45mm速射拳銃×2",
+			"en": "45mm rapid-fire pistol x 2"
+		},
+		{
+			"ja": "左手銃持ち手×1",
+			"en": "Left hand gun holder x 1"
+		},
+		{
+			"ja": "超熱振式薙刀×1",
+			"en": "Super heat wave type naginata x 1"
+		},
+		{
+			"ja": "ブレイディハウンド専用ライフル(グレネードラン",
+			"en": "Brady Hound Rifle (Grenade Run)"
+		},
+		{
+			"ja": "チャー装備)×1",
+			"en": "Char equipment)×1"
+		},
+		{
+			"ja": "ブレイディハウンド専用ナイフ×1",
+			"en": "Brady Hound knife x 1"
+		},
+		{
+			"ja": "ブレイディハウンド専用ソード×1",
+			"en": "Brady Hound special sword x1"
+		},
+		{
+			"ja": "ウェポンラック×1式",
+			"en": "Weapon rack x 1 set"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -51,15 +96,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4090/",
 	"extractedAt": "2025-12-06T17:52:55.212Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2022年04月09日 (土)", "year": 2022, "month": 4, "day": 9 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2022年04月09日 (土)",
+		"year": 2022,
+		"month": 4,
+		"day": 9
+	},
 	"scale": "1/72",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "kyoukai-senki", "name": "Kyoukai Senki" }],
-		"relatedItems": ["01_5196", "01_5183", "01_5170", "01_5171"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "kyoukai-senki",
+				"name": "Kyoukai Senki"
+			}
+		],
+		"relatedItems": [
+			"01_5196",
+			"01_5183",
+			"01_5170",
+			"01_5171"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Character plastic model",

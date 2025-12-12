@@ -1,12 +1,23 @@
 {
 	"id": "01_4031",
 	"type": "item",
-	"name": { "ja": "RE/100 1/100 イフリート・シュナイド", "en": "RE/100 1/100 Ifrit Schneid" },
+	"name": {
+		"ja": "RE/100 1/100 イフリート・シュナイド",
+		"en": "RE/100 1/100 Ifrit Schneid"
+	},
 	"description": [
-		{ "ja": "プレミアムバンダイはこちら" },
-		{ "ja": "※プレミアムバンダイのトップページに遷移します。" },
-		{ "ja": "※一部のエリアでは販売していません。" },
-		{ "ja": "※エリアにより申込開始の日時は異なります。" }
+		{
+			"ja": "プレミアムバンダイはこちら"
+		},
+		{
+			"ja": "※プレミアムバンダイのトップページに遷移します。"
+		},
+		{
+			"ja": "※一部のエリアでは販売していません。"
+		},
+		{
+			"ja": "※エリアにより申込開始の日時は異なります。"
+		}
 	],
 	"accessories": [],
 	"contents": [],
@@ -24,18 +35,48 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4031/",
 	"extractedAt": "2025-12-06T17:52:47.227Z",
-	"price": { "amount": 3850, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2016年09月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3850,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2016年09月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [
-			{ "id": "re100-reborn-one-hundred", "name": "RE/100 [Reborn One Hundred]" },
-			{ "id": "prevan-gunpla", "name": "Prevan Gunpla" }
+			{
+				"id": "re100-reborn-one-hundred",
+				"name": "RE/100 [Reborn One Hundred]"
+			},
+			{
+				"id": "prevan-gunpla",
+				"name": "Prevan Gunpla"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-uc-unicorn", "name": "Mobile Suit Gundam UC [Unicorn]" }],
-		"relatedItems": ["item-1000216106", "item-1000183366", "item-1000164780", "item-1000164779"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-uc-unicorn",
+				"name": "Mobile Suit Gundam UC [Unicorn]"
+			}
+		],
+		"relatedItems": [
+			"item-1000216106",
+			"item-1000183366",
+			"item-1000164780",
+			"item-1000164779"
+		]
 	},
 	"brand": "RE/100 [Reborn One Hundred]",
 	"category": "Gunpla",

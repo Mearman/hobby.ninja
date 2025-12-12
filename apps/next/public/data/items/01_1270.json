@@ -1,7 +1,10 @@
 {
 	"id": "01_1270",
 	"type": "item",
-	"name": { "ja": "HG ジプシー・アベンジャー", "en": "HG Gypsy Avenger" },
+	"name": {
+		"ja": "HG ジプシー・アベンジャー",
+		"en": "HG Gypsy Avenger"
+	},
 	"description": [
 		{
 			"ja": "パシフィックリム：アップライジング主役機ジプシー・アベンジャーがHGシリーズのプラモデルで商品化！",
@@ -17,15 +20,36 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "グラビティスリング発射形態再現用パーツ×1", "en": "Gravity sling firing form reproduction parts x 1" },
-		{ "ja": "プラズマキャスター発射形態再現用パーツ×1", "en": "Plasma caster firing form reproduction parts x 1" },
-		{ "ja": "チェーンソード2.0装備状態再現用パーツ×1", "en": "Chainsword 2.0 equipment state reproduction parts x 1" }
+		{
+			"ja": "グラビティスリング発射形態再現用パーツ×1",
+			"en": "Gravity sling firing form reproduction parts x 1"
+		},
+		{
+			"ja": "プラズマキャスター発射形態再現用パーツ×1",
+			"en": "Plasma caster firing form reproduction parts x 1"
+		},
+		{
+			"ja": "チェーンソード2.0装備状態再現用パーツ×1",
+			"en": "Chainsword 2.0 equipment state reproduction parts x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×4", "en": "Molded product x 4" },
-		{ "ja": "マーキングシール×1", "en": "MarkingSeal×1" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×4",
+			"en": "Molded product x 4"
+		},
+		{
+			"ja": "マーキングシール×1",
+			"en": "MarkingSeal×1"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1270_0.jpg",
@@ -41,14 +65,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1270/",
 	"extractedAt": "2025-12-06T17:06:36.294Z",
-	"price": { "amount": 2090, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年03月24日 (土)", "year": 2018, "month": 3, "day": 24 },
+	"price": {
+		"amount": 2090,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年03月24日 (土)",
+		"year": 2018,
+		"month": 3,
+		"day": 24
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "pacific-rim", "name": "pacific rim" }],
-		"relatedItems": ["01_2083", "01_1271", "01_1272", "01_1273"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "pacific-rim",
+				"name": "pacific rim"
+			}
+		],
+		"relatedItems": [
+			"01_2083",
+			"01_1271",
+			"01_1272",
+			"01_1273"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Character plastic model",

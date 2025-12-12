@@ -1,7 +1,10 @@
 {
 	"id": "01_2877",
 	"type": "item",
-	"name": { "ja": "PG 1/60 MS-06S シャア専用ザク2", "en": "PG 1/60 MS-06S Char's Zaku 2" },
+	"name": {
+		"ja": "PG 1/60 MS-06S シャア専用ザク2",
+		"en": "PG 1/60 MS-06S Char's Zaku 2"
+	},
 	"description": [
 		{
 			"ja": "「赤い彗星」シャアが搭乗するシャア専用ザク・の全身外装が内部骨格とともに完全再現されたコレクションズ・モデルです。同スケールによるシャア・アズナブルのフィギュアが付属、物語性を高めます。関節部の伸縮機構は可動と連動したダンパー等を精密に再現しています。外部装甲の脱着、及びコクピットハッチの展開、操縦席シートの可動によるフルハッチオープンの再現が可能です。ザクの印象を決定づける動力パイプには密巻きスプリングを内蔵し、自由な可動を実現しました。足裏部の可動により接地性が向上、腰部可動とともにポージングを安定・向上させます。武器はザクマシンガン、ヒートホークが付いています。",
@@ -19,15 +22,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2877/",
 	"extractedAt": "2025-12-06T17:50:18.543Z",
-	"price": { "amount": 13200, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1999年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 13200,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1999年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/60",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "pg-perfect-grade", "name": "PG [Perfect Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_1902", "01_2829", "01_3373", "01_3328"]
+		"brands": [
+			{
+				"id": "pg-perfect-grade",
+				"name": "PG [Perfect Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_1902",
+			"01_2829",
+			"01_3373",
+			"01_3328"
+		]
 	},
 	"brand": "PG [Perfect Grade]",
 	"category": "Gunpla",

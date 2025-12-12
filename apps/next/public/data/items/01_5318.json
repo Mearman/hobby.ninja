@@ -1,7 +1,10 @@
 {
 	"id": "01_5318",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ネモ", "en": "MG 1/100 Nemo" },
+	"name": {
+		"ja": "MG 1/100 ネモ",
+		"en": "MG 1/100 Nemo"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士Ｚガンダム」に登場するエゥーゴの主力モビルスーツ、ネモのＭＧシリーズプラモデルです。胴内部に球体コクピットディテールを再現。腹部に二重関節、股関節には前後スイング機構を設け可動範囲を拡大、様々なアクションポーズが再現可能。肩部と肩装甲部が独立し、腕部の可動域拡大を実現。武装はビーム・ライフル、ビーム・サーベル×2と伸縮が再現されたシールドが付属。",
@@ -10,18 +13,42 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5318_0.jpg", "/images/items/01_5318_1.jpg", "/images/items/01_5318_2.jpg"],
+	"images": [
+		"/images/items/01_5318_0.jpg",
+		"/images/items/01_5318_1.jpg",
+		"/images/items/01_5318_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5318/",
 	"extractedAt": "2025-12-06T17:55:39.164Z",
-	"price": { "amount": 3520, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2006年02月11日 (土)", "year": 2006, "month": 2, "day": 11 },
+	"price": {
+		"amount": 3520,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2006年02月11日 (土)",
+		"year": 2006,
+		"month": 2,
+		"day": 11
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "mobile-suit-z-gundam", "name": "Mobile Suit Z Gundam" }],
-		"relatedItems": ["01_4270", "item-1000145352", "item-1000131596", "item-1000112091"]
+		"series": [
+			{
+				"id": "mobile-suit-z-gundam",
+				"name": "Mobile Suit Z Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4270",
+			"item-1000145352",
+			"item-1000131596",
+			"item-1000112091"
+		]
 	},
 	"series": "Mobile Suit Z Gundam"
 }

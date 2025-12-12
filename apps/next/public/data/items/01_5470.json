@@ -1,7 +1,10 @@
 {
 	"id": "01_5470",
 	"type": "item",
-	"name": { "ja": "SDW HEROES キャプテンクアンタ GF", "en": "SDW HEROES Captain Quanta GF" },
+	"name": {
+		"ja": "SDW HEROES キャプテンクアンタ GF",
+		"en": "SDW HEROES Captain Quanta GF"
+	},
 	"description": [
 		{
 			"ja": "SDW HEROESガンプラシリーズに新たなヒーローのキットが登場‼",
@@ -25,9 +28,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ライフル×1", "en": "Rifle x 1" },
-		{ "ja": "シールド×1", "en": "Seal × 1" },
-		{ "ja": "シール×1", "en": "Seal×1" }
+		{
+			"ja": "ライフル×1",
+			"en": "Rifle x 1"
+		},
+		{
+			"ja": "シールド×1",
+			"en": "Seal × 1"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -40,14 +52,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5470/",
 	"extractedAt": "2025-12-06T17:55:59.191Z",
-	"price": { "amount": 1540, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2025年03月22日 (土)", "year": 2025, "month": 3, "day": 22 },
+	"price": {
+		"amount": 1540,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2025年03月22日 (土)",
+		"year": 2025,
+		"month": 3,
+		"day": 22
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "sd-gundam-world-heroes", "name": "SD Gundam World Heroes" }],
-		"relatedItems": ["01_5968", "01_5969", "01_5970", "01_5986"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "sd-gundam-world-heroes",
+				"name": "SD Gundam World Heroes"
+			}
+		],
+		"relatedItems": [
+			"01_5968",
+			"01_5969",
+			"01_5970",
+			"01_5986"
+		]
 	},
 	"category": "Gunpla",
 	"series": "SD Gundam World Heroes"

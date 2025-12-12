@@ -1,7 +1,10 @@
 {
 	"id": "01_1553",
 	"type": "item",
-	"name": { "ja": "MG 1/100 Z ガンダム", "en": "MG 1/100 Z Gundam" },
+	"name": {
+		"ja": "MG 1/100 Z ガンダム",
+		"en": "MG 1/100 Z Gundam"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士Ｚガンダム』より、エゥーゴの可変モビルスーツ「ゼータガンダム」をその精悍なプロポーションまでも再現、キット化しました。最大の特徴であるモビルスーツからウェイブライダーへの変形を、差し替え無しで完全に再現可能です。テールスタビライザーの認識灯はLEDを内蔵し、発光します。ビームライフルは伸縮機能まで再現されています。その他にも、腰に収納されたビームサーベルが２本、変形には欠かす事のできないシールド、腕部に装着されるグレネード・パック、そしてゼータガンダム最大の武器であるハイパー・メガ・ランチャーが付いています。",
@@ -18,15 +21,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1553/",
 	"extractedAt": "2025-12-06T17:31:43.315Z",
-	"price": { "amount": 3300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1996年04月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1996年04月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-z-gundam", "name": "Mobile Suit Z Gundam" }],
-		"relatedItems": ["item-1000145352", "item-1000131596", "01_4270", "item-1000112091"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-z-gundam",
+				"name": "Mobile Suit Z Gundam"
+			}
+		],
+		"relatedItems": [
+			"item-1000145352",
+			"item-1000131596",
+			"01_4270",
+			"item-1000112091"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

@@ -1,7 +1,10 @@
 {
 	"id": "01_1520",
 	"type": "item",
-	"name": { "ja": "1/100 V2アサルトガンダム", "en": "1/100 V2 Assault Gundam" },
+	"name": {
+		"ja": "1/100 V2アサルトガンダム",
+		"en": "1/100 V2 Assault Gundam"
+	},
 	"description": [
 		{
 			"ja": "ＴＶ「機動戦士Ｖガンダム」のV2 ガンダムに強襲作戦用オプションパーツを装備した武装強化バージョンを立体化しました。背部ヴェスパーを外すことでコア・ファイター、トップ・ファイター、ボトム・ファイターの各形態への変形が可能です。バレルユニットとコントロールユニットの分離変形を再現、各パーツはボトム・ファイターへ脱着できます。ビーム・ライフル、メガ・ビーム・ライフル、メガ・ビーム・シールド、ヴェスパー2門がついています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1520_0.jpg", "/images/items/01_1520_1.jpg"],
+	"images": [
+		"/images/items/01_1520_0.jpg",
+		"/images/items/01_1520_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1520/",
 	"extractedAt": "2025-12-06T17:28:34.990Z",
-	"price": { "amount": 1980, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1994年01月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1980,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1994年01月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-v-gundam", "name": "Mobile Suit V Gundam" }],
-		"relatedItems": ["01_4978", "01_3311", "01_2835", "item-1000142101"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-v-gundam",
+				"name": "Mobile Suit V Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4978",
+			"01_3311",
+			"01_2835",
+			"item-1000142101"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit V Gundam"

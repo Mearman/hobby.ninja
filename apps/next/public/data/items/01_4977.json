@@ -42,15 +42,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4977/",
 	"extractedAt": "2025-12-06T17:54:49.503Z",
-	"price": { "amount": 5500, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2023年05月03日 (水)", "year": 2023, "month": 5, "day": 3 },
+	"price": {
+		"amount": 5500,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2023年05月03日 (水)",
+		"year": 2023,
+		"month": 5,
+		"day": 3
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_3754", "01_3772", "01_4066", "01_5509"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_3754",
+			"01_3772",
+			"01_4066",
+			"01_5509"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

@@ -20,13 +20,28 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "コレクションステージ×1", "en": "Collection stage x1" },
-		{ "ja": "ディスプレイベース×5", "en": "Display base x 5" }
+		{
+			"ja": "コレクションステージ×1",
+			"en": "Collection stage x1"
+		},
+		{
+			"ja": "ディスプレイベース×5",
+			"en": "Display base x 5"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×12", "en": "Molded product x 12" },
-		{ "ja": "水転写式デカール×1", "en": "Water transfer decal x 1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×12",
+			"en": "Molded product x 12"
+		},
+		{
+			"ja": "水転写式デカール×1",
+			"en": "Water transfer decal x 1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_2020_0.jpg",
@@ -39,14 +54,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2020/",
 	"extractedAt": "2025-12-06T16:45:40.287Z",
-	"price": { "amount": 4070, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年11月03日 (土)", "year": 2018, "month": 11, "day": 3 },
+	"price": {
+		"amount": 4070,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年11月03日 (土)",
+		"year": 2018,
+		"month": 11,
+		"day": 3
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mecha-collection", "name": "Mecha collection" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "space-battleship-yamato-series", "name": "Space Battleship Yamato series" }],
-		"relatedItems": ["01_5498", "01_5500", "01_3667", "01_3650"]
+		"brands": [
+			{
+				"id": "mecha-collection",
+				"name": "Mecha collection"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "space-battleship-yamato-series",
+				"name": "Space Battleship Yamato series"
+			}
+		],
+		"relatedItems": [
+			"01_5498",
+			"01_5500",
+			"01_3667",
+			"01_3650"
+		]
 	},
 	"brand": "Mecha collection",
 	"category": "Character plastic model",

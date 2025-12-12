@@ -1,7 +1,10 @@
 {
 	"id": "01_1000",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 バーザム", "en": "HGUC 1/144 Barzam" },
+	"name": {
+		"ja": "HGUC 1/144 バーザム",
+		"en": "HGUC 1/144 Barzam"
+	},
 	"description": [
 		{
 			"ja": "• 『機動戦士Ζガンダム』より、ティターンズ最後の量産機“バーザム”が、最新フォーマットのプロポーションでキット化！",
@@ -25,14 +28,32 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ビーム・ライフルｘ1", "en": "Beam rifle x1" },
-		{ "ja": "ビーム・サーベルｘ2", "en": "Beam saber x2" },
-		{ "ja": "バルカン・ポッド・システムｘ1", "en": "Vulcan Pod System x1" }
+		{
+			"ja": "ビーム・ライフルｘ1",
+			"en": "Beam rifle x1"
+		},
+		{
+			"ja": "ビーム・サーベルｘ2",
+			"en": "Beam saber x2"
+		},
+		{
+			"ja": "バルカン・ポッド・システムｘ1",
+			"en": "Vulcan Pod System x1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品ｘ8", "en": "Molded product x8" },
-		{ "ja": "シールｘ1", "en": "Sealx1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品ｘ8",
+			"en": "Molded product x8"
+		},
+		{
+			"ja": "シールｘ1",
+			"en": "Sealx1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1000_0.jpg",
@@ -45,18 +66,49 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1000/",
 	"extractedAt": "2025-12-06T16:20:43.606Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年05月20日 (土)", "year": 2017, "month": 5, "day": 20 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年05月20日 (土)",
+		"year": 2017,
+		"month": 5,
+		"day": 20
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-z-gundam", "name": "Mobile Suit Z Gundam" }],
-		"relatedItems": ["01_5468", "01_5375", "01_5162", "01_4985"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-z-gundam",
+				"name": "Mobile Suit Z Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5468",
+			"01_5375",
+			"01_5162",
+			"01_4985"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

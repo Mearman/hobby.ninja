@@ -1,7 +1,10 @@
 {
 	"id": "01_3176",
 	"type": "item",
-	"name": { "ja": "1/144 ジョニー・ライデンザクII", "en": "1/144 Johnny Leidenzak II" },
+	"name": {
+		"ja": "1/144 ジョニー・ライデンザクII",
+		"en": "1/144 Johnny Leidenzak II"
+	},
 	"description": [
 		{
 			"ja": "ジオン軍エース・パイロットのジョニー・ライデン少佐機をキット化しました。ザクバズーカをシールドにマウントさせるラッチがついています。股関節部が左右に開閉できます。武器はザクマシンガン、ザクバズーカ、ヒートホークがついています。専用デカールが付です。",
@@ -10,18 +13,40 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3176_0.jpg", "/images/items/01_3176_1.jpg"],
+	"images": [
+		"/images/items/01_3176_0.jpg",
+		"/images/items/01_3176_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3176/",
 	"extractedAt": "2025-12-06T17:50:55.120Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1984年02月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1984年02月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5968", "01_5986", "01_5987", "01_5988"]
+		"relatedItems": [
+			"01_5968",
+			"01_5986",
+			"01_5987",
+			"01_5988"
+		]
 	},
 	"category": "Gunpla"
 }

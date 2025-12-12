@@ -1,7 +1,10 @@
 {
 	"id": "01_1916",
 	"type": "item",
-	"name": { "ja": "BB戦士238 ゴッグ&アッガイ&ゾック", "en": "BB Senshi 238 Gog & Acguy & Zock" },
+	"name": {
+		"ja": "BB戦士238 ゴッグ&アッガイ&ゾック",
+		"en": "BB Senshi 238 Gog & Acguy & Zock"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム」に登場するゴッグ、アッガイ、ゾックのプラモデル。BB戦士としては初登場です。ツメが自由に動くゴッグ、差し換えパーツでツメの伸縮を実現するアッガイ、表裏対象のデザインを再現するゾックなど各機体の特徴をうまく再現しています。",
@@ -19,14 +22,43 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1916/",
 	"extractedAt": "2025-12-06T17:48:22.127Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2002年08月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2002年08月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "sd-gundam-bb-warrior", "name": "SD Gundam BB Warrior" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5456", "01_4789", "01_4783", "01_2038"]
+		"brands": [
+			{
+				"id": "sd-gundam-bb-warrior",
+				"name": "SD Gundam BB Warrior"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5456",
+			"01_4789",
+			"01_4783",
+			"01_2038"
+		]
 	},
 	"brand": "SD Gundam BB Warrior",
 	"category": "Gunpla",

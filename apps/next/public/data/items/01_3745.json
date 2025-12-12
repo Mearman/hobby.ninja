@@ -1,7 +1,10 @@
 {
 	"id": "01_3745",
 	"type": "item",
-	"name": { "ja": "SDW HEROES アーサーガンダム Mk-III", "en": "SDW HEROES Arthur Gundam Mk-III" },
+	"name": {
+		"ja": "SDW HEROES アーサーガンダム Mk-III",
+		"en": "SDW HEROES Arthur Gundam Mk-III"
+	},
 	"description": [
 		{
 			"ja": "（11/8記載）諸般の都合により、商品の発売月を変更させていただきました。",
@@ -19,13 +22,28 @@
 			"ja": "• クリアパーツは剣・鎧のどちらにも取り付けが可能。",
 			"en": "• Clear parts can be attached to both swords and armor."
 		},
-		{ "ja": "• 表情手(右)が付属。", "en": "• Expression hand (right) is included." }
+		{
+			"ja": "• 表情手(右)が付属。",
+			"en": "• Expression hand (right) is included."
+		}
 	],
 	"accessories": [
-		{ "ja": "剣×1", "en": "Sword x1" },
-		{ "ja": "表情手（右）×1", "en": "Expression hand (right) x 1" },
-		{ "ja": "クリアパーツ×1式", "en": "Clear parts x 1 set" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" }
+		{
+			"ja": "剣×1",
+			"en": "Sword x1"
+		},
+		{
+			"ja": "表情手（右）×1",
+			"en": "Expression hand (right) x 1"
+		},
+		{
+			"ja": "クリアパーツ×1式",
+			"en": "Clear parts x 1 set"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -38,14 +56,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3745/",
 	"extractedAt": "2025-12-06T17:52:06.999Z",
-	"price": { "amount": 1100, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2022年04月29日 (金)", "year": 2022, "month": 4, "day": 29 },
+	"price": {
+		"amount": 1100,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2022年04月29日 (金)",
+		"year": 2022,
+		"month": 4,
+		"day": 29
+	},
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "sd-gundam-series", "name": "SD Gundam series" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "sd-gundam-world-heroes", "name": "SD Gundam World Heroes" }],
-		"relatedItems": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
+		"brands": [
+			{
+				"id": "sd-gundam-series",
+				"name": "SD Gundam series"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "sd-gundam-world-heroes",
+				"name": "SD Gundam World Heroes"
+			}
+		],
+		"relatedItems": [
+			"item-1000193966",
+			"01_4336",
+			"01_4312",
+			"01_4634"
+		]
 	},
 	"brand": "SD Gundam series",
 	"category": "Gunpla",

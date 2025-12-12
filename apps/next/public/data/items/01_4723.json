@@ -1,7 +1,10 @@
 {
 	"id": "01_4723",
 	"type": "item",
-	"name": { "ja": "1/144 MS-06J ザク(08小隊版)", "en": "1/144 MS-06J Zaku (08 platoon version)" },
+	"name": {
+		"ja": "1/144 MS-06J ザク(08小隊版)",
+		"en": "1/144 MS-06J Zaku (08 platoon version)"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム第08MS小隊」に登場するMS-06JザクIIを1/144スケールモデルでキット化。パーツの選択でF型も再現できるコンパーチブルキットです。頭部は、一般兵用と指揮官用が選択可能です。胸部のコクピットハッチは着脱可能、内部のメカディテールも再現されています。機体各所の動力パイプは軟質素材で再現されていて、可動の邪魔になりません。武器はザクマシンガンとザクバズーカ、ヒートホークが付いています。",
@@ -10,18 +13,40 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4723_0.jpg", "/images/items/01_4723_1.jpg"],
+	"images": [
+		"/images/items/01_4723_0.jpg",
+		"/images/items/01_4723_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4723/",
 	"extractedAt": "2025-12-06T17:54:16.586Z",
-	"price": { "amount": 880, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1998年03月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 880,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1998年03月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5968", "01_5986", "01_5987", "01_5988"]
+		"relatedItems": [
+			"01_5968",
+			"01_5986",
+			"01_5987",
+			"01_5988"
+		]
 	},
 	"category": "Gunpla"
 }

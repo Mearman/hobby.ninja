@@ -1,7 +1,10 @@
 {
 	"id": "01_2696",
 	"type": "item",
-	"name": { "ja": "1/144 ガンダムジェミナス01", "en": "1/144 Gundam Geminass 01" },
+	"name": {
+		"ja": "1/144 ガンダムジェミナス01",
+		"en": "1/144 Gundam Geminass 01"
+	},
 	"description": [
 		{
 			"ja": "コミック「新機動戦記ガンダム W DUEL STORY G-UNIT」に登場した機体を立体化しました。肩とふくらはぎパーツの差替えにより、地上戦または宇宙戦仕様の再現が可能です。宇宙戦用ショルダースラスターは展開機構を再現できます。レッグスラスターはユニットの差替えで脱着の各形態を再現します。バックスラスターはバックパックへの脱着が可能です。アクセラレートライフルはシールドにマウントできます。ビーム・ソード2本がついています。",
@@ -10,20 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2696_0.jpg", "/images/items/01_2696_1.jpg"],
+	"images": [
+		"/images/items/01_2696_0.jpg",
+		"/images/items/01_2696_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2696/",
 	"extractedAt": "2025-12-06T17:49:53.602Z",
-	"price": { "amount": 880, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1997年05月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 880,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1997年05月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [
-			{ "id": "mobile-report-gundam-w-dual-story-g-unit", "name": "Mobile Report Gundam W Dual Story G-UNIT" }
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
 		],
-		"relatedItems": ["item-1000217501", "item-1000209099", "01_4393", "item-1000176706"]
+		"series": [
+			{
+				"id": "mobile-report-gundam-w-dual-story-g-unit",
+				"name": "Mobile Report Gundam W Dual Story G-UNIT"
+			}
+		],
+		"relatedItems": [
+			"item-1000217501",
+			"item-1000209099",
+			"01_4393",
+			"item-1000176706"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Report Gundam W Dual Story G-UNIT"

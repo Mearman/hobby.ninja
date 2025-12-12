@@ -1,7 +1,10 @@
 {
 	"id": "01_2872",
 	"type": "item",
-	"name": { "ja": "鬼滅模型 竈門炭治郎", "en": "Demon Slayer Model Tanjiro Kamado" },
+	"name": {
+		"ja": "鬼滅模型 竈門炭治郎",
+		"en": "Demon Slayer Model Tanjiro Kamado"
+	},
 	"description": [
 		{
 			"ja": "ＴＶアニメ『鬼滅の刃』の主人公「竈門炭治郎」をBANDAI SPIRITS ホビー事業部の技術でプラモデル化！",
@@ -21,9 +24,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "日輪刀×1", "en": "Ring sword x 1" },
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "日輪刀×1",
+			"en": "Ring sword x 1"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -39,14 +51,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2872/",
 	"extractedAt": "2025-12-06T17:50:18.048Z",
-	"price": { "amount": 2860, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2020年12月19日 (土)", "year": 2020, "month": 12, "day": 19 },
+	"price": {
+		"amount": 2860,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2020年12月19日 (土)",
+		"year": 2020,
+		"month": 12,
+		"day": 19
+	},
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "demon-slayer", "name": "Demon slayer" }],
-		"relatedItems": ["01_5101", "01_5011", "01_4391", "01_3889"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "demon-slayer",
+				"name": "Demon slayer"
+			}
+		],
+		"relatedItems": [
+			"01_5101",
+			"01_5011",
+			"01_4391",
+			"01_3889"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Demon slayer"

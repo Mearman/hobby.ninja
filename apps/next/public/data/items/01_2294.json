@@ -1,7 +1,10 @@
 {
 	"id": "01_2294",
 	"type": "item",
-	"name": { "ja": "SD ガンダムベース限定 RX-零丸(獅子吼)", "en": "SD Gundam Base Limited RX-Zeromaru (Lion's Roar)" },
+	"name": {
+		"ja": "SD ガンダムベース限定 RX-零丸(獅子吼)",
+		"en": "SD Gundam Base Limited RX-Zeromaru (Lion's Roar)"
+	},
 	"description": [
 		{
 			"ja": "全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
@@ -31,14 +34,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2294/",
 	"extractedAt": "2025-12-06T17:49:02.918Z",
-	"price": { "amount": 1980, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年04月20日 (土)", "year": 2019, "month": 4, "day": 20 },
+	"price": {
+		"amount": 1980,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年04月20日 (土)",
+		"year": 2019,
+		"month": 4,
+		"day": 20
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-divers", "name": "Gundam Build Divers" }],
-		"relatedItems": ["01_5189", "01_5190", "01_3063", "01_2623"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-divers",
+				"name": "Gundam Build Divers"
+			}
+		],
+		"relatedItems": [
+			"01_5189",
+			"01_5190",
+			"01_3063",
+			"01_2623"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Gundam Build Divers"

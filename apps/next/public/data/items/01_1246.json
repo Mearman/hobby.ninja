@@ -1,7 +1,10 @@
 {
 	"id": "01_1246",
 	"type": "item",
-	"name": { "ja": "HG 1/144 アクト・ザク(キシリア部隊機)", "en": "HG 1/144 Act Zaku (Kycilia unit machine)" },
+	"name": {
+		"ja": "HG 1/144 アクト・ザク(キシリア部隊機)",
+		"en": "HG 1/144 Act Zaku (Kycilia unit machine)"
+	},
 	"description": [
 		{
 			"ja": "• 『機動戦士ガンダム THE ORIGIN』の世界観が舞台のメカニカル考証企画「MSD（Mobile Suit Discovery）」より、一年戦争末期にザクIIをベースに開発された高性能MS「アクト・ザク」が、「ペズン計画」を主導したキシリア部隊仕様でHG化！",
@@ -13,14 +16,32 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "4連装マシンガン×1", "en": "4-barreled machine gun x 1" },
-		{ "ja": "専用ヒート・ホーク×2", "en": "Dedicated heat hawk x2" },
-		{ "ja": "ヒート・ホーク（展開・収納）×各1", "en": "Heat Hawk (deployment/storage) x 1 each" }
+		{
+			"ja": "4連装マシンガン×1",
+			"en": "4-barreled machine gun x 1"
+		},
+		{
+			"ja": "専用ヒート・ホーク×2",
+			"en": "Dedicated heat hawk x2"
+		},
+		{
+			"ja": "ヒート・ホーク（展開・収納）×各1",
+			"en": "Heat Hawk (deployment/storage) x 1 each"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×10", "en": "Molded product x 10" },
-		{ "ja": "マーキングシール×1", "en": "MarkingSeal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×10",
+			"en": "Molded product x 10"
+		},
+		{
+			"ja": "マーキングシール×1",
+			"en": "MarkingSeal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1246_0.jpg",
@@ -33,15 +54,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1246/",
 	"extractedAt": "2025-12-06T17:02:52.902Z",
-	"price": { "amount": 2200, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年01月20日 (土)", "year": 2018, "month": 1, "day": 20 },
+	"price": {
+		"amount": 2200,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年01月20日 (土)",
+		"year": 2018,
+		"month": 1,
+		"day": 20
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-the-origin", "name": "Mobile Suit Gundam THE ORIGIN" }],
-		"relatedItems": ["01_3711", "01_2828", "01_2707", "item-1000135687"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-the-origin",
+				"name": "Mobile Suit Gundam THE ORIGIN"
+			}
+		],
+		"relatedItems": [
+			"01_3711",
+			"01_2828",
+			"01_2707",
+			"item-1000135687"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

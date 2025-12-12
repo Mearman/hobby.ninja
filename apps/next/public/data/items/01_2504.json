@@ -1,7 +1,10 @@
 {
 	"id": "01_2504",
 	"type": "item",
-	"name": { "ja": "BB戦士248 ガンダムアストレイ", "en": "BB Senshi 248 Gundam Astray" },
+	"name": {
+		"ja": "BB戦士248 ガンダムアストレイ",
+		"en": "BB Senshi 248 Gundam Astray"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム SEED」のオープニングに登場する「ガンダムアストレイ」のBB戦士のプラモデル。BB戦士としては初の商品化です。肘、肩、足、足首などが可動し、劇中のポーズを再現出来ます。武器はシールド、ビームライフル、ビームサーベルが付属します。",
@@ -10,16 +13,42 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2504_0.jpg"],
+	"images": [
+		"/images/items/01_2504_0.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2504/",
 	"extractedAt": "2025-12-06T17:49:29.686Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2003年04月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2003年04月",
+		"year": 0,
+		"month": 0
+	},
 	"relationships": {
-		"brands": [{ "id": "sd-gundam-bb-senshi", "name": "SD Gundam BB Senshi" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"brands": [
+			{
+				"id": "sd-gundam-bb-senshi",
+				"name": "SD Gundam BB Senshi"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5456", "01_5442", "01_5395", "01_5378"]
+		"relatedItems": [
+			"01_5456",
+			"01_5442",
+			"01_5395",
+			"01_5378"
+		]
 	},
 	"brand": "SD Gundam BB Senshi",
 	"category": "Gunpla"

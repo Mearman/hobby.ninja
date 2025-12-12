@@ -1,7 +1,10 @@
 {
 	"id": "01_1498",
 	"type": "item",
-	"name": { "ja": "1/100 V ガンダム", "en": "1/100 V Gundam" },
+	"name": {
+		"ja": "1/100 V ガンダム",
+		"en": "1/100 V Gundam"
+	},
 	"description": [
 		{
 			"ja": "ＴＶ「機動戦士Ｖガンダム」で、帝政への反抗の象徴となったビクトリー・ガンダムを1/100スケールでキット化しました。手首パーツと機首パーツの差替えにより、上半身ユニットからトップファイターへの変形が可能です。コア・ファイターは別ユニットとしてついており、脚部と差し替えパーツの使用でボトムファイターへの変形が可能です。背面のメインブースターと腰部リアアーマーブースターは開閉します。ビーム・シールドはクリアパーツ成形で基部が可動します。ビーム・ライフル、ビーム・サーベル2種がついています。指は可動します。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1498_0.jpg", "/images/items/01_1498_1.jpg"],
+	"images": [
+		"/images/items/01_1498_0.jpg",
+		"/images/items/01_1498_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1498/",
 	"extractedAt": "2025-12-06T17:27:00.747Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1993年04月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1993年04月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-v-gundam", "name": "Mobile Suit V Gundam" }],
-		"relatedItems": ["01_4978", "01_3311", "01_2835", "item-1000142101"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-v-gundam",
+				"name": "Mobile Suit V Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4978",
+			"01_3311",
+			"01_2835",
+			"item-1000142101"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit V Gundam"

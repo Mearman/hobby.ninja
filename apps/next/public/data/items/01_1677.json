@@ -1,7 +1,10 @@
 {
 	"id": "01_1677",
 	"type": "item",
-	"name": { "ja": "MG 1/100 量産型ゲルググ Ver.2.0", "en": "MG 1/100 mass-produced Gelgoog Ver.2.0" },
+	"name": {
+		"ja": "MG 1/100 量産型ゲルググ Ver.2.0",
+		"en": "MG 1/100 mass-produced Gelgoog Ver.2.0"
+	},
 	"description": [
 		{
 			"ja": "ジオン軍最後の量産型MS“量産型ゲルググ Ver.2.0”がMGに登場 脚部フレアスカートの裾を別パーツ化、インナーフレームへ装着を介して着脱可能 腰部スカートは前面、側面、背面で独立可動 頭部モノアイは、首振りに連動した視線移動を再現 専用ビーム・ライフルにはグレネードランチャーとバイポッドが付属",
@@ -10,18 +13,51 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1677_0.jpg", "/images/items/01_1677_1.jpg", "/images/items/01_1677_2.jpg"],
+	"images": [
+		"/images/items/01_1677_0.jpg",
+		"/images/items/01_1677_1.jpg",
+		"/images/items/01_1677_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1677/",
 	"extractedAt": "2025-12-06T17:41:04.825Z",
-	"price": { "amount": 4950, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2008年04月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 4950,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2008年04月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

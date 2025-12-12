@@ -1,7 +1,10 @@
 {
 	"id": "01_2145",
 	"type": "item",
-	"name": { "ja": "HG 1/144 バーザム[クリアカラー]", "en": "HG 1/144 Barzam [Clear color]" },
+	"name": {
+		"ja": "HG 1/144 バーザム[クリアカラー]",
+		"en": "HG 1/144 Barzam [Clear color]"
+	},
 	"description": [
 		{
 			"ja": "HG バーサムがクリアカラーとなってイベント限定品として登場。",
@@ -26,21 +29,54 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2145_0.jpg", "/images/items/01_2145_1.jpg"],
+	"images": [
+		"/images/items/01_2145_0.jpg",
+		"/images/items/01_2145_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2145/",
 	"extractedAt": "2025-12-06T17:48:44.909Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年12月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年12月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-z-gundam", "name": "Mobile Suit Z Gundam" }],
-		"relatedItems": ["01_5468", "01_5375", "01_5162", "01_4985"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-z-gundam",
+				"name": "Mobile Suit Z Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5468",
+			"01_5375",
+			"01_5162",
+			"01_4985"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

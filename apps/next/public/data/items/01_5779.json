@@ -1,7 +1,10 @@
 {
 	"id": "01_5779",
 	"type": "item",
-	"name": { "ja": "MG 1/100 MSN-06S シナンジュ・スタイン Ver.Ka", "en": "MG 1/100 MSN-06S Sinanju Stein Ver.Ka" },
+	"name": {
+		"ja": "MG 1/100 MSN-06S シナンジュ・スタイン Ver.Ka",
+		"en": "MG 1/100 MSN-06S Sinanju Stein Ver.Ka"
+	},
 	"description": [
 		{
 			"ja": "• 『機動戦士ガンダム UC』MSVプロジェクトより生み出された、シナンジュ・スタインがVer.Kaで登場。",
@@ -11,7 +14,10 @@
 			"ja": "シナンジュ・スタインはシナンジュがフル・フロンタル専用に改修される前の姿。",
 			"en": "Sinanju Stein is the state of Sinanju before it was renovated exclusively for Full Frontal."
 		},
-		{ "ja": "• 純白の装甲は成形色で再現。", "en": "• Pure white armor is reproduced with molded color." },
+		{
+			"ja": "• 純白の装甲は成形色で再現。",
+			"en": "• Pure white armor is reproduced with molded color."
+		},
 		{
 			"ja": "• MGならではのベストプロポーションと、全身に及ぶ高い可動性能。",
 			"en": "• Best proportions unique to MG and high mobility throughout the body."
@@ -31,18 +37,52 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5779_0.jpg", "/images/items/01_5779_1.jpg", "/images/items/01_5779_2.jpg"],
+	"images": [
+		"/images/items/01_5779_0.jpg",
+		"/images/items/01_5779_1.jpg",
+		"/images/items/01_5779_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5779/",
 	"extractedAt": "2025-12-06T17:56:36.265Z",
-	"price": { "amount": 7700, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年02月23日 (土)", "year": 2013, "month": 2, "day": 23 },
+	"price": {
+		"amount": 7700,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年02月23日 (土)",
+		"year": 2013,
+		"month": 2,
+		"day": 23
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-verka-master-grade-version-katoki", "name": "MG Ver.Ka [Master Grade Version Katoki]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-uc-unicorn", "name": "Mobile Suit Gundam UC [Unicorn]" }],
-		"relatedItems": ["01_1292", "01_5668", "01_5726", "item-1000095303"]
+		"brands": [
+			{
+				"id": "mg-verka-master-grade-version-katoki",
+				"name": "MG Ver.Ka [Master Grade Version Katoki]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-uc-unicorn",
+				"name": "Mobile Suit Gundam UC [Unicorn]"
+			}
+		],
+		"relatedItems": [
+			"01_1292",
+			"01_5668",
+			"01_5726",
+			"item-1000095303"
+		]
 	},
 	"brand": "MG Ver.Ka [Master Grade Version Katoki]",
 	"category": "Gunpla",

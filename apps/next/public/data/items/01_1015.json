@@ -25,9 +25,18 @@
 	],
 	"accessories": [],
 	"contents": [
-		{ "ja": "成形品×３", "en": "Molded product x 3" },
-		{ "ja": "水転写式デカール×１", "en": "Water transfer decal x 1" },
-		{ "ja": "取扱説明書(箱裏に印刷)", "en": "Instruction manual (printed on the back of the box)" }
+		{
+			"ja": "成形品×３",
+			"en": "Molded product x 3"
+		},
+		{
+			"ja": "水転写式デカール×１",
+			"en": "Water transfer decal x 1"
+		},
+		{
+			"ja": "取扱説明書(箱裏に印刷)",
+			"en": "Instruction manual (printed on the back of the box)"
+		}
 	],
 	"images": [
 		"/images/items/01_1015_0.jpg",
@@ -41,14 +50,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1015/",
 	"extractedAt": "2025-12-06T16:24:27.713Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年06月17日 (土)", "year": 2017, "month": 6, "day": 17 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年06月17日 (土)",
+		"year": 2017,
+		"month": 6,
+		"day": 17
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mecha-collection", "name": "Mecha collection" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "ultraman", "name": "ultraman" }],
-		"relatedItems": ["item-1000118308", "item-1000115996", "01_1090", "01_1091"]
+		"brands": [
+			{
+				"id": "mecha-collection",
+				"name": "Mecha collection"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "ultraman",
+				"name": "ultraman"
+			}
+		],
+		"relatedItems": [
+			"item-1000118308",
+			"item-1000115996",
+			"01_1090",
+			"01_1091"
+		]
 	},
 	"brand": "Mecha collection",
 	"category": "Character plastic model",

@@ -1,9 +1,15 @@
 {
 	"id": "01_5496",
 	"type": "item",
-	"name": { "ja": "皇龍丸", "en": "Koryumaru" },
+	"name": {
+		"ja": "皇龍丸",
+		"en": "Koryumaru"
+	},
 	"description": [
-		{ "ja": "『魔神創造伝ワタル』より皇龍丸が登場！", "en": "Koryumaru appears from “Mashin Souzouden Wataru”!" },
+		{
+			"ja": "『魔神創造伝ワタル』より皇龍丸が登場！",
+			"en": "Koryumaru appears from “Mashin Souzouden Wataru”!"
+		},
 		{
 			"ja": "• 部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！",
 			"en": "• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!"
@@ -21,7 +27,12 @@
 			"en": "• The imperial ring of the Imperial Dragon Staff is reproduced with blue clear parts!"
 		}
 	],
-	"accessories": [{ "ja": "皇龍杖", "en": "Emperor Dragon Staff" }],
+	"accessories": [
+		{
+			"ja": "皇龍杖",
+			"en": "Emperor Dragon Staff"
+		}
+	],
 	"contents": [],
 	"images": [
 		"/images/items/01_5496_0.jpg",
@@ -35,14 +46,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5496/",
 	"extractedAt": "2025-12-06T17:56:02.551Z",
-	"price": { "amount": 2090, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2025年03月29日 (土)", "year": 2025, "month": 3, "day": 29 },
+	"price": {
+		"amount": 2090,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2025年03月29日 (土)",
+		"year": 2025,
+		"month": 3,
+		"day": 29
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "wataru-series", "name": "Wataru series" }],
-		"relatedItems": ["01_5990", "01_5989", "01_5972", "01_5973"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "wataru-series",
+				"name": "Wataru series"
+			}
+		],
+		"relatedItems": [
+			"01_5990",
+			"01_5989",
+			"01_5972",
+			"01_5973"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Wataru series"

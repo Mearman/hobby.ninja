@@ -1,7 +1,10 @@
 {
 	"id": "01_5598",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 ザクI", "en": "HGUC 1/144 Zaku I" },
+	"name": {
+		"ja": "HGUC 1/144 ザクI",
+		"en": "HGUC 1/144 Zaku I"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム」に登場するMS「ザク１」がHGUCシリーズにラインナップ。腰が回転し、上半身を前屈させることでショルダータックルを再現可能。ヒジ部は新採用の２重関節により可動範囲が拡大。頭部裏のレバーを動かすことでモノアイが左右に可動。ザクバズーカ、肩部バズーカラック、105mmザクマシンガン、ヒートホーク、シュツルムファウスト、ナックルシールドが付属。様々な表情を再現したハイディテールな手首パーツが付属。",
@@ -18,18 +21,49 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5598/",
 	"extractedAt": "2025-12-06T17:56:15.059Z",
-	"price": { "amount": 1100, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2006年05月31日 (水)", "year": 2006, "month": 5, "day": 31 },
+	"price": {
+		"amount": 1100,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2006年05月31日 (水)",
+		"year": 2006,
+		"month": 5,
+		"day": 31
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_3669", "01_4365", "01_4971", "01_4985"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_3669",
+			"01_4365",
+			"01_4971",
+			"01_4985"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

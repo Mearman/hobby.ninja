@@ -1,7 +1,10 @@
 {
 	"id": "01_1546",
 	"type": "item",
-	"name": { "ja": "MG 1/100 RX-78 ガンダム", "en": "MG 1/100 RX-78 Gundam" },
+	"name": {
+		"ja": "MG 1/100 RX-78 ガンダム",
+		"en": "MG 1/100 RX-78 Gundam"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム』にて登場した主役機のキット化です。コアファイターはコアブロックへ変形、胴体内部に収納できます。また、非変形のコアブロックが付いており、ガンダムとコアファイターを同時にディスプレイする事が可能です。両肩のマーキングは特殊印刷で再現されています。武器は腰にマウントする事のできるビームライフルの他に、バックパックに収納されているビームサーベルが２本、ハイパーバズーカ、裏のモールドまで再現されたシールドが付いています。",
@@ -18,15 +21,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1546/",
 	"extractedAt": "2025-12-06T17:30:08.405Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1995年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1995年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

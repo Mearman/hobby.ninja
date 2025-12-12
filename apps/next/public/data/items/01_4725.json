@@ -1,7 +1,10 @@
 {
 	"id": "01_4725",
 	"type": "item",
-	"name": { "ja": "1/144 MS-07B3グフカスタム(08小隊版)", "en": "1/144 MS-07B3 Gouf Custom (08 platoon version)" },
+	"name": {
+		"ja": "1/144 MS-07B3グフカスタム(08小隊版)",
+		"en": "1/144 MS-07B3 Gouf Custom (08 platoon version)"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム第08MS小隊」において人気のMS、グフカスタムが1/144スケールでモデル化。頭部モノアイはシールで再現されています。肩アーマーはポリキャップにより接続されており可動、着脱が可能です。右前腕部のヒート・ロッドはリード線で再現、着脱が可能です。3連想35mmガトリング砲、ガトリングシールド、ノーマルシールド、ヒート・サーベルといった豊富な武器が付いています。ヒート・サーベルはガトリングシールドへマウントが可能。左手首は5連マシンガン・タイプの物と差し替えが可能です。",
@@ -10,18 +13,40 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4725_0.jpg", "/images/items/01_4725_1.jpg"],
+	"images": [
+		"/images/items/01_4725_0.jpg",
+		"/images/items/01_4725_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4725/",
 	"extractedAt": "2025-12-06T17:54:16.694Z",
-	"price": { "amount": 880, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1998年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 880,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1998年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5968", "01_5986", "01_5987", "01_5988"]
+		"relatedItems": [
+			"01_5968",
+			"01_5986",
+			"01_5987",
+			"01_5988"
+		]
 	},
 	"category": "Gunpla"
 }

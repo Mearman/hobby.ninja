@@ -1,7 +1,10 @@
 {
 	"id": "01_5248",
 	"type": "item",
-	"name": { "ja": "プラノサウルス パラサウロロフス", "en": "planosaurus parasaurolophus" },
+	"name": {
+		"ja": "プラノサウルス パラサウロロフス",
+		"en": "planosaurus parasaurolophus"
+	},
 	"description": [
 		{
 			"ja": "自分の手で恐竜を“知りつくす”ブランド『プラノサウルス』第9弾に、とさかが特徴的な恐竜「パラサウロロフス」が登場！",
@@ -41,9 +44,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "頭部パーツ×1式", "en": "Head parts x 1 set" },
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "台座×1", "en": "Pedestal x 1" }
+		{
+			"ja": "頭部パーツ×1式",
+			"en": "Head parts x 1 set"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "台座×1",
+			"en": "Pedestal x 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -62,14 +74,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5248/",
 	"extractedAt": "2025-12-06T17:55:30.991Z",
-	"price": { "amount": 1540, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2024年07月13日 (土)", "year": 2024, "month": 7, "day": 13 },
+	"price": {
+		"amount": 1540,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2024年07月13日 (土)",
+		"year": 2024,
+		"month": 7,
+		"day": 13
+	},
 	"targetAge": 6,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "planosaurus", "name": "Planosaurus" }],
-		"relatedItems": ["01_5501", "01_5390", "01_5389", "01_5249"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "planosaurus",
+				"name": "Planosaurus"
+			}
+		],
+		"relatedItems": [
+			"01_5501",
+			"01_5390",
+			"01_5389",
+			"01_5249"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Planosaurus"

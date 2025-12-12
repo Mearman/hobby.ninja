@@ -1,7 +1,10 @@
 {
 	"id": "01_5181",
 	"type": "item",
-	"name": { "ja": "HG バーグラリードッグ", "en": "HG Burglar Dog" },
+	"name": {
+		"ja": "HG バーグラリードッグ",
+		"en": "HG Burglar Dog"
+	},
 	"description": [
 		{
 			"ja": "OVA作品『装甲騎兵ボトムズ 赫奕たる異端』よりバーグラリードッグが商品化！",
@@ -33,11 +36,26 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ヘビィマシンガン×1", "en": "Heavy machine gun x1" },
-		{ "ja": "ハンドパーツ×1式", "en": "Hand parts x 1 set" },
-		{ "ja": "カスタマイズ用外装パーツ×1式", "en": "Exterior parts for customization x 1 set" },
-		{ "ja": "ジョイントパーツ×1式", "en": "Joint parts x 1 set" },
-		{ "ja": "３Dメタリックシール×1", "en": "3D metallic seal×1" }
+		{
+			"ja": "ヘビィマシンガン×1",
+			"en": "Heavy machine gun x1"
+		},
+		{
+			"ja": "ハンドパーツ×1式",
+			"en": "Hand parts x 1 set"
+		},
+		{
+			"ja": "カスタマイズ用外装パーツ×1式",
+			"en": "Exterior parts for customization x 1 set"
+		},
+		{
+			"ja": "ジョイントパーツ×1式",
+			"en": "Joint parts x 1 set"
+		},
+		{
+			"ja": "３Dメタリックシール×1",
+			"en": "3D metallic seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -54,14 +72,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5181/",
 	"extractedAt": "2025-12-06T17:55:21.304Z",
-	"price": { "amount": 3850, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2024年05月18日 (土)", "year": 2024, "month": 5, "day": 18 },
+	"price": {
+		"amount": 3850,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2024年05月18日 (土)",
+		"year": 2024,
+		"month": 5,
+		"day": 18
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "armored-trooper-votoms", "name": "Armored Trooper Votoms" }],
-		"relatedItems": ["item-1000223037", "01_5553", "item-1000209959", "item-1000209960"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "armored-trooper-votoms",
+				"name": "Armored Trooper Votoms"
+			}
+		],
+		"relatedItems": [
+			"item-1000223037",
+			"01_5553",
+			"item-1000209959",
+			"item-1000209960"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Character plastic model",

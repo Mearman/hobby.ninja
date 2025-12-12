@@ -1,7 +1,10 @@
 {
 	"id": "01_4643",
 	"type": "item",
-	"name": { "ja": "1/100 ニクスプロヴィデンスガンダム", "en": "1/100 Nyx Providence Gundam" },
+	"name": {
+		"ja": "1/100 ニクスプロヴィデンスガンダム",
+		"en": "1/100 Nyx Providence Gundam"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム SEED VS ASTRAY（ヴァーサスアストレイ）」より“ニクスプロヴィデンスガンダム”が登場。 新規パーツの追加により新機体のプロポーションを再現。 全身のドラグーンは脱着可能。 バックパックは同シリーズの別機体と交換可能。",
@@ -10,18 +13,47 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4643_0.jpg", "/images/items/01_4643_1.jpg", "/images/items/01_4643_2.jpg"],
+	"images": [
+		"/images/items/01_4643_0.jpg",
+		"/images/items/01_4643_1.jpg",
+		"/images/items/01_4643_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4643/",
 	"extractedAt": "2025-12-06T17:54:07.123Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2009年09月28日 (月)", "year": 2009, "month": 9, "day": 28 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2009年09月28日 (月)",
+		"year": 2009,
+		"month": 9,
+		"day": 28
+	},
 	"scale": "1/100",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed", "name": "Mobile Suit Gundam SEED" }],
-		"relatedItems": ["01_5994", "01_5440", "01_5441", "01_5365"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed",
+				"name": "Mobile Suit Gundam SEED"
+			}
+		],
+		"relatedItems": [
+			"01_5994",
+			"01_5440",
+			"01_5441",
+			"01_5365"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam SEED"

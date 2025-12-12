@@ -1,7 +1,10 @@
 {
 	"id": "01_5593",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ガンダム Mk-V [クリアカラー]", "en": "MG 1/100 Gundam Mk-V [Clear Color]" },
+	"name": {
+		"ja": "MG 1/100 ガンダム Mk-V [クリアカラー]",
+		"en": "MG 1/100 Gundam Mk-V [Clear Color]"
+	},
 	"description": [
 		{
 			"ja": "MG 1/100 ガンダム Mk-Vがクリアカラーになって登場！",
@@ -22,18 +25,52 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5593_0.jpg", "/images/items/01_5593_1.jpg", "/images/items/01_5593_2.jpg"],
+	"images": [
+		"/images/items/01_5593_0.jpg",
+		"/images/items/01_5593_1.jpg",
+		"/images/items/01_5593_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5593/",
 	"extractedAt": "2025-12-06T17:56:14.570Z",
-	"price": { "amount": 9460, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2025年02月08日 (土)", "year": 2025, "month": 2, "day": 8 },
+	"price": {
+		"amount": 9460,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2025年02月08日 (土)",
+		"year": 2025,
+		"month": 2,
+		"day": 8
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-sentinel", "name": "Gundam Sentinel" }],
-		"relatedItems": ["01_1291", "01_2176", "01_3408", "item-1000089611"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-sentinel",
+				"name": "Gundam Sentinel"
+			}
+		],
+		"relatedItems": [
+			"01_1291",
+			"01_2176",
+			"01_3408",
+			"item-1000089611"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

@@ -1,7 +1,10 @@
 {
 	"id": "01_5692",
 	"type": "item",
-	"name": { "ja": "BB戦士 365シナンジュ", "en": "BB Senshi 365 Sinanju" },
+	"name": {
+		"ja": "BB戦士 365シナンジュ",
+		"en": "BB Senshi 365 Sinanju"
+	},
 	"description": [
 		{
 			"ja": "• SDながら重MSにふさわしいボリューム。 • 頭を左右に動かすとモノアイが動く。 • 上半身と下半身がそれぞれビーストモードに変形。 • 大型ランスや大型ボウガンなどの豊富な武器パーツが付属。 成形品×6、ホイルシール×1、テトロンシール×1、組立説明書",
@@ -10,17 +13,51 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5692_0.jpg", "/images/items/01_5692_1.jpg", "/images/items/01_5692_2.jpg"],
+	"images": [
+		"/images/items/01_5692_0.jpg",
+		"/images/items/01_5692_1.jpg",
+		"/images/items/01_5692_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5692/",
 	"extractedAt": "2025-12-06T17:56:25.805Z",
-	"price": { "amount": 1100, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2011年03月05日 (土)", "year": 2011, "month": 3, "day": 5 },
+	"price": {
+		"amount": 1100,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2011年03月05日 (土)",
+		"year": 2011,
+		"month": 3,
+		"day": 5
+	},
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "sd-gundam-bb-senshi", "name": "SD Gundam BB Senshi" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-uc-unicorn", "name": "Mobile Suit Gundam UC [Unicorn]" }],
-		"relatedItems": ["01_1932", "01_2646", "01_3490", "item-1000095978"]
+		"brands": [
+			{
+				"id": "sd-gundam-bb-senshi",
+				"name": "SD Gundam BB Senshi"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-uc-unicorn",
+				"name": "Mobile Suit Gundam UC [Unicorn]"
+			}
+		],
+		"relatedItems": [
+			"01_1932",
+			"01_2646",
+			"01_3490",
+			"item-1000095978"
+		]
 	},
 	"brand": "SD Gundam BB Senshi",
 	"category": "Gunpla",

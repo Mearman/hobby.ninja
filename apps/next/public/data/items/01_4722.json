@@ -1,7 +1,10 @@
 {
 	"id": "01_4722",
 	"type": "item",
-	"name": { "ja": "1/144 RGM-79ジム(08小隊版)", "en": "1/144 RGM-79 Jim (08 platoon version)" },
+	"name": {
+		"ja": "1/144 RGM-79ジム(08小隊版)",
+		"en": "1/144 RGM-79 Jim (08 platoon version)"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム第08MS小隊」に登場する陸戦型ジムを1/144スケールで再現。胸のコクピットハッチは取り外す事が可能です。100mmマシンガン、ロケットランチャー、ミサイルランチャー、シールドビーム・サーベル2本も精巧なディテールで再現されています。ロケットランチャーはショルダーマウントと呼ばれる部位がスライド可動します。シールドも腕部とのジョイントパーツを差し替える事で白兵戦闘時のポジションを再現が可能です。",
@@ -10,18 +13,40 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4722_0.jpg", "/images/items/01_4722_1.jpg"],
+	"images": [
+		"/images/items/01_4722_0.jpg",
+		"/images/items/01_4722_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4722/",
 	"extractedAt": "2025-12-06T17:54:16.512Z",
-	"price": { "amount": 880, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1996年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 880,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1996年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5968", "01_5986", "01_5987", "01_5988"]
+		"relatedItems": [
+			"01_5968",
+			"01_5986",
+			"01_5987",
+			"01_5988"
+		]
 	},
 	"category": "Gunpla"
 }

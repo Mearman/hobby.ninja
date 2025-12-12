@@ -1,7 +1,10 @@
 {
 	"id": "01_5389",
 	"type": "item",
-	"name": { "ja": "プラノサウルス ブラキオサウルス", "en": "planosaurus brachiosaurus" },
+	"name": {
+		"ja": "プラノサウルス ブラキオサウルス",
+		"en": "planosaurus brachiosaurus"
+	},
 	"description": [
 		{
 			"ja": "自分の手で恐竜を“知りつくす”ブランド『プラノサウルス』第10弾に、ジュラ紀後期の超大型竜脚形類「ブラキオサウルス」が登場！",
@@ -45,8 +48,14 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "台座×1", "en": "Pedestal x 1" }
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "台座×1",
+			"en": "Pedestal x 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -65,14 +74,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5389/",
 	"extractedAt": "2025-12-06T17:55:48.918Z",
-	"price": { "amount": 1870, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2024年11月16日 (土)", "year": 2024, "month": 11, "day": 16 },
+	"price": {
+		"amount": 1870,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2024年11月16日 (土)",
+		"year": 2024,
+		"month": 11,
+		"day": 16
+	},
 	"targetAge": 6,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "planosaurus", "name": "Planosaurus" }],
-		"relatedItems": ["01_5990", "01_5989", "01_5972", "01_5973"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "planosaurus",
+				"name": "Planosaurus"
+			}
+		],
+		"relatedItems": [
+			"01_5990",
+			"01_5989",
+			"01_5972",
+			"01_5973"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Planosaurus"

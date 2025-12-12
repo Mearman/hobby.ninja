@@ -1,7 +1,10 @@
 {
 	"id": "01_4714",
 	"type": "item",
-	"name": { "ja": "1/144 ガンダムエックスD.V.", "en": "1/144 Gundam X D.V." },
+	"name": {
+		"ja": "1/144 ガンダムエックスD.V.",
+		"en": "1/144 Gundam X D.V."
+	},
 	"description": [
 		{
 			"ja": "TV「機動新世紀ガンダム X」に登場したディバイダーバージョンをキット化しました。ディバイダーの変形機構が再現できます。ホバリングモードの再現が可能です。バックパックはエネルギーパックが可動し、大型ビーム・ソードの柄部分をマウントできます。ビーム・マシンガンがついています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4714_0.jpg", "/images/items/01_4714_1.jpg"],
+	"images": [
+		"/images/items/01_4714_0.jpg",
+		"/images/items/01_4714_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4714/",
 	"extractedAt": "2025-12-06T17:54:16.277Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1996年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1996年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-new-century-gundam-x", "name": "Mobile New Century Gundam X" }],
-		"relatedItems": ["item-1000147185", "item-1000147187", "item-1000124674", "01_298"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-new-century-gundam-x",
+				"name": "Mobile New Century Gundam X"
+			}
+		],
+		"relatedItems": [
+			"item-1000147185",
+			"item-1000147187",
+			"item-1000124674",
+			"01_298"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile New Century Gundam X"

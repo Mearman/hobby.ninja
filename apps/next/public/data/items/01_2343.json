@@ -1,7 +1,10 @@
 {
 	"id": "01_2343",
 	"type": "item",
-	"name": { "ja": "RG 1/144 νガンダム", "en": "RG 1/144 νGundam" },
+	"name": {
+		"ja": "RG 1/144 νガンダム",
+		"en": "RG 1/144 νGundam"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム 逆襲のシャア』に登場する、アムロ・レイ搭乗機をRGにラインナップ！",
@@ -37,16 +40,46 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ビーム・ライフル×1", "en": "Beam rifle x1" },
-		{ "ja": "フィン・ファンネル×6", "en": "Fin Funnel x 6" },
-		{ "ja": "ニュー・ハイパー・バズーカ×1", "en": "New hyper bazooka x1" },
-		{ "ja": "シールド（ビーム・キャノン）×1", "en": "Seal (beam cannon) x 1" },
-		{ "ja": "ビーム・サーベル（バックパック部・腕部）×各1", "en": "Beam saber (backpack part/arm part) x 1 each" },
-		{ "ja": "ミサイル×1式", "en": "Missile x 1 type" },
-		{ "ja": "【付属品】", "en": "[accessories]" },
-		{ "ja": "成形品×13", "en": "Molded products x 13" },
-		{ "ja": "リアリスティックデカール×1", "en": "Realistic decal x 1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "ビーム・ライフル×1",
+			"en": "Beam rifle x1"
+		},
+		{
+			"ja": "フィン・ファンネル×6",
+			"en": "Fin Funnel x 6"
+		},
+		{
+			"ja": "ニュー・ハイパー・バズーカ×1",
+			"en": "New hyper bazooka x1"
+		},
+		{
+			"ja": "シールド（ビーム・キャノン）×1",
+			"en": "Seal (beam cannon) x 1"
+		},
+		{
+			"ja": "ビーム・サーベル（バックパック部・腕部）×各1",
+			"en": "Beam saber (backpack part/arm part) x 1 each"
+		},
+		{
+			"ja": "ミサイル×1式",
+			"en": "Missile x 1 type"
+		},
+		{
+			"ja": "【付属品】",
+			"en": "[accessories]"
+		},
+		{
+			"ja": "成形品×13",
+			"en": "Molded products x 13"
+		},
+		{
+			"ja": "リアリスティックデカール×1",
+			"en": "Realistic decal x 1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -63,15 +96,43 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2343/",
 	"extractedAt": "2025-12-06T17:49:09.882Z",
-	"price": { "amount": 4950, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年08月10日 (土)", "year": 2019, "month": 8, "day": 10 },
+	"price": {
+		"amount": 4950,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年08月10日 (土)",
+		"year": 2019,
+		"month": 8,
+		"day": 10
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "rg-real-grade", "name": "RG [Real Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-chars-counterattack", "name": "Mobile Suit Gundam Char's Counterattack" }],
-		"relatedItems": ["01_1408", "01_4121"]
+		"brands": [
+			{
+				"id": "rg-real-grade",
+				"name": "RG [Real Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-chars-counterattack",
+				"name": "Mobile Suit Gundam Char's Counterattack"
+			}
+		],
+		"relatedItems": [
+			"01_1408",
+			"01_4121"
+		]
 	},
 	"brand": "RG [Real Grade]",
 	"category": "Gunpla",

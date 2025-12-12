@@ -1,7 +1,10 @@
 {
 	"id": "01_1915",
 	"type": "item",
-	"name": { "ja": "ガンダムベース限定 アクションベース2 [ブルー]", "en": "Gundam Base Limited Action Base 2 [Blue]" },
+	"name": {
+		"ja": "ガンダムベース限定 アクションベース2 [ブルー]",
+		"en": "Gundam Base Limited Action Base 2 [Blue]"
+	},
 	"description": [
 		{
 			"ja": "全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定商品です。",
@@ -14,17 +17,44 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1915_0.jpg", "/images/items/01_1915_1.jpg"],
+	"images": [
+		"/images/items/01_1915_0.jpg",
+		"/images/items/01_1915_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1915/",
 	"extractedAt": "2025-12-06T17:48:21.711Z",
-	"price": { "amount": 495, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年08月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 495,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年08月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "action-base", "name": "action base" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
+		"brands": [
+			{
+				"id": "action-base",
+				"name": "action base"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5934", "01_5256", "01_5258", "01_5165"]
+		"relatedItems": [
+			"01_5934",
+			"01_5256",
+			"01_5258",
+			"01_5165"
+		]
 	},
 	"brand": "action base",
 	"category": "Character plastic model"

@@ -1,7 +1,10 @@
 {
 	"id": "01_1776",
 	"type": "item",
-	"name": { "ja": "MG 1/100 XXXG-01S シェンロンガンダム EW", "en": "MG 1/100 XXXG-01S Shenron Gundam EW" },
+	"name": {
+		"ja": "MG 1/100 XXXG-01S シェンロンガンダム EW",
+		"en": "MG 1/100 XXXG-01S Shenron Gundam EW"
+	},
 	"description": [
 		{
 			"ja": "• 「新機動戦記ガンダム W EndlessWaltz」に登場するEW版シェンロンガンダムの初立体化。 • 可動性の高いXXX-Gフレームを採用。足首の二重可動により、大胆なポージングが可能。 • 新デザインのドラゴンハングを再現。５ヶ所の可動により「牙」部分の展開ギミックを再現できる。 • マーキングはカトキハジメ氏によるデザイン。 成形品×14、ホイルシール×1、マーキングシール×1、ガンダムデカール×1、組立説明書",
@@ -18,15 +21,35 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1776/",
 	"extractedAt": "2025-12-06T17:48:04.469Z",
-	"price": { "amount": 4620, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2011年03月26日 (土)", "year": 2011, "month": 3, "day": 26 },
+	"price": {
+		"amount": 4620,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2011年03月26日 (土)",
+		"year": 2011,
+		"month": 3,
+		"day": 26
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "new-mobile-report-gundam-w-series", "name": "New Mobile Report Gundam W series" }],
-		"relatedItems": ["item-1000194972", "01_3410", "item-1000171722", "item-1000142325"]
+		"series": [
+			{
+				"id": "new-mobile-report-gundam-w-series",
+				"name": "New Mobile Report Gundam W series"
+			}
+		],
+		"relatedItems": [
+			"item-1000194972",
+			"01_3410",
+			"item-1000171722",
+			"item-1000142325"
+		]
 	},
 	"series": "New Mobile Report Gundam W series"
 }

@@ -20,14 +20,32 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "プラカード×1", "en": "Placard x 1" },
-		{ "ja": "プラカードジョイント×1", "en": "Placard joint x 1" },
-		{ "ja": "ディスプレイ台座×1", "en": "Display pedestal x 1" }
+		{
+			"ja": "プラカード×1",
+			"en": "Placard x 1"
+		},
+		{
+			"ja": "プラカードジョイント×1",
+			"en": "Placard joint x 1"
+		},
+		{
+			"ja": "ディスプレイ台座×1",
+			"en": "Display pedestal x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×4", "en": "Molded product x 4" },
-		{ "ja": "シール×1", "en": "Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×4",
+			"en": "Molded product x 4"
+		},
+		{
+			"ja": "シール×1",
+			"en": "Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1008_0.jpg",
@@ -39,18 +57,49 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1008/",
 	"extractedAt": "2025-12-06T16:20:43.676Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年05月27日 (土)", "year": 2017, "month": 5, "day": 27 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年05月27日 (土)",
+		"year": 2017,
+		"month": 5,
+		"day": 27
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "petitgguybeargguy", "name": "Petitgguy/Beargguy" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "petitgguybeargguy",
+				"name": "Petitgguy/Beargguy"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-fighters", "name": "Gundam Build Fighters" }],
-		"relatedItems": ["01_5057", "01_1942", "01_1288", "01_1261"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-fighters",
+				"name": "Gundam Build Fighters"
+			}
+		],
+		"relatedItems": [
+			"01_5057",
+			"01_1942",
+			"01_1288",
+			"01_1261"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

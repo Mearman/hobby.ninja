@@ -1,7 +1,10 @@
 {
 	"id": "01_1510",
 	"type": "item",
-	"name": { "ja": "1/144 シャイターン", "en": "1/144 Shaitaan" },
+	"name": {
+		"ja": "1/144 シャイターン",
+		"en": "1/144 Shaitaan"
+	},
 	"description": [
 		{
 			"ja": "ＴＶ「機動戦士Ｖガンダム」ザンスカール帝国の首都防衛用重装甲モビルスーツをキット化しました。頭部カメラブロックは別パーツ成形になっています。ビーム・シールドは左手首へのマウントが可能です。ビーム・ライフルは腰後部へマウントできます。ディスプレイ用スタンドとカードがついています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1510_0.jpg", "/images/items/01_1510_1.jpg"],
+	"images": [
+		"/images/items/01_1510_0.jpg",
+		"/images/items/01_1510_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1510/",
 	"extractedAt": "2025-12-06T17:28:35.446Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1993年09月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1993年09月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-v-gundam", "name": "Mobile Suit V Gundam" }],
-		"relatedItems": ["01_4978", "01_3311", "01_2835", "item-1000142101"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-v-gundam",
+				"name": "Mobile Suit V Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4978",
+			"01_3311",
+			"01_2835",
+			"item-1000142101"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit V Gundam"

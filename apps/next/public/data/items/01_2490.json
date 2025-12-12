@@ -1,7 +1,10 @@
 {
 	"id": "01_2490",
 	"type": "item",
-	"name": { "ja": "ハロプラ ザクレロハロ", "en": "Haropura Zakuro Haro" },
+	"name": {
+		"ja": "ハロプラ ザクレロハロ",
+		"en": "Haropura Zakuro Haro"
+	},
 	"description": [
 		{
 			"ja": "「ボールハロ」に続くハロカスタムバリエーションとして、「ザクレロハロ」が登場！",
@@ -13,8 +16,14 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "鎌×2", "en": "Sickle x2" },
-		{ "ja": "ブースター×2", "en": "Booster x 2" }
+		{
+			"ja": "鎌×2",
+			"en": "Sickle x2"
+		},
+		{
+			"ja": "ブースター×2",
+			"en": "Booster x 2"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -26,14 +35,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2490/",
 	"extractedAt": "2025-12-06T17:49:28.639Z",
-	"price": { "amount": 825, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年12月07日 (土)", "year": 2019, "month": 12, "day": 7 },
+	"price": {
+		"amount": 825,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年12月07日 (土)",
+		"year": 2019,
+		"month": 12,
+		"day": 7
+	},
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-divers-rerise", "name": "Gundam Build Divers Re:RISE" }],
-		"relatedItems": ["01_5054", "01_3562", "01_3565", "01_3291"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-divers-rerise",
+				"name": "Gundam Build Divers Re:RISE"
+			}
+		],
+		"relatedItems": [
+			"01_5054",
+			"01_3562",
+			"01_3565",
+			"01_3291"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

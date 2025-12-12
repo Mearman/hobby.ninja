@@ -1,7 +1,10 @@
 {
 	"id": "01_1663",
 	"type": "item",
-	"name": { "ja": "MG 1/100 WD-M01 ターンエーガンダム", "en": "MG 1/100 WD-M01 Turn A Gundam" },
+	"name": {
+		"ja": "MG 1/100 WD-M01 ターンエーガンダム",
+		"en": "MG 1/100 WD-M01 Turn A Gundam"
+	},
 	"description": [
 		{
 			"ja": "「∀ガンダム」より、MGシリーズNo.100として“∀ガンダム”登場！ オリジナルデザインを徹底解析し、ターンエーガンダムの立体版解体新書を目指しモデル化 脚部スラスターベーンの構造を再現 胸部ハッチ開閉、胸の十字部パーツは白と青の2種が付属 武器は専用ビーム・ライフル、シールド、ハンマーが付属 1/100スケール「ロラン・セアック」と「牛」のフィギュアも付属 初回出荷分には冊子「ガンプラ∀（ターンエース）」が同梱",
@@ -20,15 +23,34 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1663/",
 	"extractedAt": "2025-12-06T17:39:30.769Z",
-	"price": { "amount": 4840, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2007年08月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 4840,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2007年08月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "gundam", "name": "∀Gundam" }],
-		"relatedItems": ["item-1000135920", "item-1000099631", "item-1000165581", "01_120"]
+		"series": [
+			{
+				"id": "gundam",
+				"name": "∀Gundam"
+			}
+		],
+		"relatedItems": [
+			"item-1000135920",
+			"item-1000099631",
+			"item-1000165581",
+			"01_120"
+		]
 	},
 	"series": "∀Gundam"
 }

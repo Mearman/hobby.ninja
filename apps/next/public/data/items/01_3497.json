@@ -1,7 +1,10 @@
 {
 	"id": "01_3497",
 	"type": "item",
-	"name": { "ja": "SDGF 闇の騎士デスサイズ", "en": "SDGF Dark Knight Deathscythe" },
+	"name": {
+		"ja": "SDGF 闇の騎士デスサイズ",
+		"en": "SDGF Dark Knight Deathscythe"
+	},
 	"description": [
 		{
 			"ja": "現在放送中のTVアニメ「SD ガンダムフォース」の敵キャラクター「闇の騎士デスサイズ」のプラモデル。特徴的な背部の「スティールクローク」をリアルに再現しています。武器は大型鎌「スティール・デスシザーズ」が付属します。バイザー部いは金メッキパーツを採用しています。",
@@ -10,20 +13,47 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3497_0.jpg"],
+	"images": [
+		"/images/items/01_3497_0.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3497/",
 	"extractedAt": "2025-12-06T17:51:34.825Z",
-	"price": { "amount": 440, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2004年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 440,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2004年06月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 6,
 	"relationships": {
 		"brands": [
-			{ "id": "sd-gundam-series", "name": "SD Gundam series" },
-			{ "id": "sd-gundam-bb-senshi", "name": "SD Gundam BB Senshi" }
+			{
+				"id": "sd-gundam-series",
+				"name": "SD Gundam series"
+			},
+			{
+				"id": "sd-gundam-bb-senshi",
+				"name": "SD Gundam BB Senshi"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5456", "01_5442", "01_5395", "01_5378"]
+		"relatedItems": [
+			"01_5456",
+			"01_5442",
+			"01_5395",
+			"01_5378"
+		]
 	},
 	"brand": "SD Gundam series",
 	"category": "Gunpla"

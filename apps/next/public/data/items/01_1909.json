@@ -1,7 +1,10 @@
 {
 	"id": "01_1909",
 	"type": "item",
-	"name": { "ja": "HG 1/144 ガンダムトライオン3 [クリアカラー]", "en": "HG 1/144 Gundam Tryon 3 [Clear Color]" },
+	"name": {
+		"ja": "HG 1/144 ガンダムトライオン3 [クリアカラー]",
+		"en": "HG 1/144 Gundam Tryon 3 [Clear Color]"
+	},
 	"description": [
 		{
 			"ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -14,18 +17,44 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1909_0.jpg"],
+	"images": [
+		"/images/items/01_1909_0.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1909/",
 	"extractedAt": "2025-12-06T17:48:20.634Z",
-	"price": { "amount": 3080, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3080,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5986", "01_5961", "01_5963", "01_5951"]
+		"relatedItems": [
+			"01_5986",
+			"01_5961",
+			"01_5963",
+			"01_5951"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla"

@@ -38,17 +38,48 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2519/",
 	"extractedAt": "2025-12-06T17:49:32.640Z",
-	"price": { "amount": 3300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年09月01日 (日)", "year": 2019, "month": 9, "day": 1 },
+	"price": {
+		"amount": 3300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年09月01日 (日)",
+		"year": 2019,
+		"month": 9,
+		"day": 1
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "figure-rise-standard", "name": "Figure-rise Standard" },
-			{ "id": "petitgguybeargguy", "name": "Petitgguy/Beargguy" }
+			{
+				"id": "figure-rise-standard",
+				"name": "Figure-rise Standard"
+			},
+			{
+				"id": "petitgguybeargguy",
+				"name": "Petitgguy/Beargguy"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-divers", "name": "Gundam Build Divers" }],
-		"relatedItems": ["01_1894", "01_2060", "01_2098", "01_2403"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-divers",
+				"name": "Gundam Build Divers"
+			}
+		],
+		"relatedItems": [
+			"01_1894",
+			"01_2060",
+			"01_2098",
+			"01_2403"
+		]
 	},
 	"brand": "Figure-rise Standard",
 	"category": "Gunpla",

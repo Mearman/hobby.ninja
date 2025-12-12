@@ -1,7 +1,10 @@
 {
 	"id": "01_1219",
 	"type": "item",
-	"name": { "ja": "ピカちんキット０５ ゼロゼロマーカー", "en": "Pikachin Kit05 Zero Zero Marker" },
+	"name": {
+		"ja": "ピカちんキット０５ ゼロゼロマーカー",
+		"en": "Pikachin Kit05 Zero Zero Marker"
+	},
 	"description": [
 		{
 			"ja": "• テレビ番組「ポチっと発明 ピカちんキット」に登場するゼロゼロマーカーが商品化！",
@@ -22,12 +25,30 @@
 	],
 	"accessories": [],
 	"contents": [
-		{ "ja": "ゼロゼロマーカー×1", "en": "Zero zero marker x 1" },
-		{ "ja": "（成形品×2）", "en": "(molded product x 2)" },
-		{ "ja": "ピカちんQRコード×1", "en": "Pikachin QR code x 1" },
-		{ "ja": "LEDユニット×1", "en": "LED unit x 1" },
-		{ "ja": "ペン×1", "en": "Pen x 1" },
-		{ "ja": "ピカちんシート×1", "en": "Pikachin sheet x 1" }
+		{
+			"ja": "ゼロゼロマーカー×1",
+			"en": "Zero zero marker x 1"
+		},
+		{
+			"ja": "（成形品×2）",
+			"en": "(molded product x 2)"
+		},
+		{
+			"ja": "ピカちんQRコード×1",
+			"en": "Pikachin QR code x 1"
+		},
+		{
+			"ja": "LEDユニット×1",
+			"en": "LED unit x 1"
+		},
+		{
+			"ja": "ペン×1",
+			"en": "Pen x 1"
+		},
+		{
+			"ja": "ピカちんシート×1",
+			"en": "Pikachin sheet x 1"
+		}
 	],
 	"images": [
 		"/images/items/01_1219_0.jpg",
@@ -42,14 +63,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1219/",
 	"extractedAt": "2025-12-06T17:01:19.257Z",
-	"price": { "amount": 1320, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年03月10日 (土)", "year": 2018, "month": 3, "day": 10 },
+	"price": {
+		"amount": 1320,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年03月10日 (土)",
+		"year": 2018,
+		"month": 3,
+		"day": 10
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "invention-pikachin-kit", "name": "Invention Pikachin Kit" }],
-		"relatedItems": ["01_2605", "01_2606", "01_2607", "01_2545"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "invention-pikachin-kit",
+				"name": "Invention Pikachin Kit"
+			}
+		],
+		"relatedItems": [
+			"01_2605",
+			"01_2606",
+			"01_2607",
+			"01_2545"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Invention Pikachin Kit"

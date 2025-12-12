@@ -1,12 +1,23 @@
 {
 	"id": "01_1043",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 ジム・スナイパー", "en": "HGUC 1/144 Jim Sniper" },
+	"name": {
+		"ja": "HGUC 1/144 ジム・スナイパー",
+		"en": "HGUC 1/144 Jim Sniper"
+	},
 	"description": [
-		{ "ja": "プレミアムバンダイはこちら" },
-		{ "ja": "※プレミアムバンダイのトップページに遷移します。" },
-		{ "ja": "※一部のエリアでは販売していません。" },
-		{ "ja": "※エリアにより申込開始の日時は異なります。" }
+		{
+			"ja": "プレミアムバンダイはこちら"
+		},
+		{
+			"ja": "※プレミアムバンダイのトップページに遷移します。"
+		},
+		{
+			"ja": "※一部のエリアでは販売していません。"
+		},
+		{
+			"ja": "※エリアにより申込開始の日時は異なります。"
+		}
 	],
 	"accessories": [],
 	"contents": [],
@@ -24,20 +35,51 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1043/",
 	"extractedAt": "2025-12-06T16:41:23.206Z",
-	"price": { "amount": 1870, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1870,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-high-gradepreban-gunpla", "name": "HG [High Grade]/Preban Gunpla" },
-			{ "id": "prevan-gunpla", "name": "Prevan Gunpla" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-high-gradepreban-gunpla",
+				"name": "HG [High Grade]/Preban Gunpla"
+			},
+			{
+				"id": "prevan-gunpla",
+				"name": "Prevan Gunpla"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5986", "01_5963", "01_5961", "01_5951"]
+		"relatedItems": [
+			"01_5986",
+			"01_5963",
+			"01_5961",
+			"01_5951"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla"

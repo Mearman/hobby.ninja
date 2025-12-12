@@ -1,7 +1,10 @@
 {
 	"id": "01_4166",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ボール Ver.Ka", "en": "MG 1/100 Ball Ver.Ka" },
+	"name": {
+		"ja": "MG 1/100 ボール Ver.Ka",
+		"en": "MG 1/100 Ball Ver.Ka"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム」、「機動戦士ガンダム 0083」などに登場する「ボール」をメカデザイナー、カトキハジメ氏の監修によるMG仕様のプラモデル。作業用ポッドとしてのリアル感の追及のため、各部のディテールをより精密に再現しています。作業アーム部には金属シャフトを、可動アーム基部の関節カバーなどには軟質パーツを使用しリアルな質感を表現しています。1/100スケールの整備員フィギュアが2体付属します。展示用の台座も同梱します。",
@@ -19,15 +22,42 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4166/",
 	"extractedAt": "2025-12-06T17:53:04.312Z",
-	"price": { "amount": 2860, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2004年12月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 2860,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2004年12月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-verka-master-grade-version-katoki", "name": "MG Ver.Ka [Master Grade Version Katoki]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_2226", "01_3737"]
+		"brands": [
+			{
+				"id": "mg-verka-master-grade-version-katoki",
+				"name": "MG Ver.Ka [Master Grade Version Katoki]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_2226",
+			"01_3737"
+		]
 	},
 	"brand": "MG Ver.Ka [Master Grade Version Katoki]",
 	"category": "Gunpla",

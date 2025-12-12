@@ -1,14 +1,23 @@
 {
 	"id": "01_1100",
 	"type": "item",
-	"name": { "ja": "Figure-riseEffect バーストエフェクト", "en": "Figure-riseEffect Burst effect" },
+	"name": {
+		"ja": "Figure-riseEffect バーストエフェクト",
+		"en": "Figure-riseEffect Burst effect"
+	},
 	"description": [
-		{ "ja": "Figure-riseEffectにバーストエフェクトが登場！", "en": "Burst effect now available in Figure-riseEffect!" },
+		{
+			"ja": "Figure-riseEffectにバーストエフェクトが登場！",
+			"en": "Burst effect now available in Figure-riseEffect!"
+		},
 		{
 			"ja": "• 爆発シーンや被弾シーンの再現がより忠実に！ディスプレイの幅がさらに広がる！",
 			"en": "• More faithful reproduction of explosion scenes and bullet scenes! The width of the display is even wider!"
 		},
-		{ "ja": "• グレーエフェクトで砂埃も再現可能！", "en": "• Sand dust can be reproduced with gray effect!" },
+		{
+			"ja": "• グレーエフェクトで砂埃も再現可能！",
+			"en": "• Sand dust can be reproduced with gray effect!"
+		},
 		{
 			"ja": "• 専用アクションベースが付属し、エフェクトとの組み合わせは自由自在！",
 			"en": "• A special action base is included, so you can freely combine it with effects!"
@@ -27,15 +36,36 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "アクションベース×1", "en": "Action base x 1" },
-		{ "ja": "ジョイントパーツ×4", "en": "Joint parts x 4" },
-		{ "ja": "支柱パーツ大×2", "en": "Large pillar parts x 2" },
-		{ "ja": "支柱パーツ小×2", "en": "Support parts small x 2" },
-		{ "ja": "台座用ジョイントパーツ×1", "en": "Joint parts for pedestal x 1" }
+		{
+			"ja": "アクションベース×1",
+			"en": "Action base x 1"
+		},
+		{
+			"ja": "ジョイントパーツ×4",
+			"en": "Joint parts x 4"
+		},
+		{
+			"ja": "支柱パーツ大×2",
+			"en": "Large pillar parts x 2"
+		},
+		{
+			"ja": "支柱パーツ小×2",
+			"en": "Support parts small x 2"
+		},
+		{
+			"ja": "台座用ジョイントパーツ×1",
+			"en": "Joint parts for pedestal x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×3", "en": "Molded product x 3" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×3",
+			"en": "Molded product x 3"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1100_0.jpg",
@@ -45,14 +75,34 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1100/",
 	"extractedAt": "2025-12-06T16:50:23.760Z",
-	"price": { "amount": 990, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2017年08月05日 (土)", "year": 2017, "month": 8, "day": 5 },
+	"price": {
+		"amount": 990,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2017年08月05日 (土)",
+		"year": 2017,
+		"month": 8,
+		"day": 5
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "figure-rise-effect", "name": "Figure-rise Effect" }],
+		"brands": [
+			{
+				"id": "figure-rise-effect",
+				"name": "Figure-rise Effect"
+			}
+		],
 		"categories": [],
 		"series": [],
-		"relatedItems": ["01_2346", "01_2347", "01_2183", "01_1418"]
+		"relatedItems": [
+			"01_2346",
+			"01_2347",
+			"01_2183",
+			"01_1418"
+		]
 	},
 	"brand": "Figure-rise Effect"
 }

@@ -23,11 +23,25 @@
 			"en": "• In the 2199 version, you can get the Deathbatator, which was only available by purchasing the 1/1000 Nazca-class Kiska!"
 		}
 	],
-	"accessories": [{ "ja": "ディスプレイベース×2", "en": "Display base x 2" }],
+	"accessories": [
+		{
+			"ja": "ディスプレイベース×2",
+			"en": "Display base x 2"
+		}
+	],
 	"contents": [
-		{ "ja": "成形品×5", "en": "Molded product x 5" },
-		{ "ja": "水転写デカール×1", "en": "Water transfer decal x 1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×5",
+			"en": "Molded product x 5"
+		},
+		{
+			"ja": "水転写デカール×1",
+			"en": "Water transfer decal x 1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1420_0.jpg",
@@ -39,14 +53,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1420/",
 	"extractedAt": "2025-12-06T17:20:46.627Z",
-	"price": { "amount": 1100, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年08月31日 (金)", "year": 2018, "month": 8, "day": 31 },
+	"price": {
+		"amount": 1100,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年08月31日 (金)",
+		"year": 2018,
+		"month": 8,
+		"day": 31
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mecha-collection", "name": "Mecha collection" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "space-battleship-yamato-series", "name": "Space Battleship Yamato series" }],
-		"relatedItems": ["01_5498", "01_5500", "01_3667", "01_3650"]
+		"brands": [
+			{
+				"id": "mecha-collection",
+				"name": "Mecha collection"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "space-battleship-yamato-series",
+				"name": "Space Battleship Yamato series"
+			}
+		],
+		"relatedItems": [
+			"01_5498",
+			"01_5500",
+			"01_3667",
+			"01_3650"
+		]
 	},
 	"brand": "Mecha collection",
 	"category": "Character plastic model",

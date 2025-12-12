@@ -1,7 +1,10 @@
 {
 	"id": "01_2953",
 	"type": "item",
-	"name": { "ja": "1/144 ズサ", "en": "1/144 Zusa" },
+	"name": {
+		"ja": "1/144 ズサ",
+		"en": "1/144 Zusa"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム ZZ」に登場する異色の形状のモビルアーマーを立体再現しました。ブースターポッドの着脱・変形により、飛行形態への変形が再現できます。ブースター左右のミサイルポッドは大きい方のポッドが独立可動します。脚の左右開閉、足首の前後スイングが可能です。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2953_0.jpg", "/images/items/01_2953_1.jpg"],
+	"images": [
+		"/images/items/01_2953_0.jpg",
+		"/images/items/01_2953_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2953/",
 	"extractedAt": "2025-12-06T17:50:27.191Z",
-	"price": { "amount": 770, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1986年06月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 770,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1986年06月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-zz", "name": "Mobile Suit Gundam ZZ" }],
-		"relatedItems": ["01_5963", "01_5454", "01_4985", "01_4971"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-zz",
+				"name": "Mobile Suit Gundam ZZ"
+			}
+		],
+		"relatedItems": [
+			"01_5963",
+			"01_5454",
+			"01_4985",
+			"01_4971"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam ZZ"

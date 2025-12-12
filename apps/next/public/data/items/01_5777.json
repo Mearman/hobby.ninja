@@ -1,7 +1,10 @@
 {
 	"id": "01_5777",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 ジェスタ・キャノン", "en": "HGUC 1/144 Jesta Cannon" },
+	"name": {
+		"ja": "HGUC 1/144 ジェスタ・キャノン",
+		"en": "HGUC 1/144 Jesta Cannon"
+	},
 	"description": [
 		{
 			"ja": "• 『機動戦士ガンダム UC　ep　6』で活躍する、ジェスタの重装備仕様となるジェスタ・キャノンをHGUC化。",
@@ -26,18 +29,49 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5777/",
 	"extractedAt": "2025-12-06T17:56:36.112Z",
-	"price": { "amount": 2200, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年02月23日 (土)", "year": 2013, "month": 2, "day": 23 },
+	"price": {
+		"amount": 2200,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年02月23日 (土)",
+		"year": 2013,
+		"month": 2,
+		"day": 23
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-uc-unicorn", "name": "Mobile Suit Gundam UC [Unicorn]" }],
-		"relatedItems": ["01_4971", "01_4986", "01_5527", "item-1000163998"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-uc-unicorn",
+				"name": "Mobile Suit Gundam UC [Unicorn]"
+			}
+		],
+		"relatedItems": [
+			"01_4971",
+			"01_4986",
+			"01_5527",
+			"item-1000163998"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

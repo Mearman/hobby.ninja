@@ -1,7 +1,10 @@
 {
 	"id": "01_5257",
 	"type": "item",
-	"name": { "ja": "MG 1/100 Z ガンダム Ver.2.0", "en": "MG 1/100 Z Gundam Ver.2.0" },
+	"name": {
+		"ja": "MG 1/100 Z ガンダム Ver.2.0",
+		"en": "MG 1/100 Z Gundam Ver.2.0"
+	},
 	"description": [
 		{
 			"ja": "劇場版「機動戦士Ｚガンダム II－恋人たち－」で話題のＺガンダムのマスターグレードプラモデルが最新のver.2.0になって登場です。従来キットの変形ギミックを進化させ、モビルスーツ、ウェーブライダー両形態でのプロポーションを両立。両形態でディスプレイ可能なカタパルト型ディスプレイスタンドが付属します。",
@@ -19,15 +22,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5257/",
 	"extractedAt": "2025-12-06T17:55:31.631Z",
-	"price": { "amount": 5500, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2005年12月23日 (金)", "year": 2005, "month": 12, "day": 23 },
+	"price": {
+		"amount": 5500,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2005年12月23日 (金)",
+		"year": 2005,
+		"month": 12,
+		"day": 23
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-z-gundam", "name": "Mobile Suit Z Gundam" }],
-		"relatedItems": ["01_4270", "item-1000145352", "item-1000131596", "item-1000112091"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-z-gundam",
+				"name": "Mobile Suit Z Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4270",
+			"item-1000145352",
+			"item-1000131596",
+			"item-1000112091"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

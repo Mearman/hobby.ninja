@@ -1,7 +1,10 @@
 {
 	"id": "01_5017",
 	"type": "item",
-	"name": { "ja": "SDW HEROES 信長専用軍馬", "en": "SDW HEROES Nobunaga's War Horse" },
+	"name": {
+		"ja": "SDW HEROES 信長専用軍馬",
+		"en": "SDW HEROES Nobunaga's War Horse"
+	},
 	"description": [
 		{
 			"ja": "『SDガンダムワールド ヒーローズ』シリーズより、豪華な鎧を纏った「信長専用軍馬」が新登場！二人乗りが可能な鞍パーツが付属！",
@@ -25,8 +28,14 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "二人乗り用鞍パーツ×１式", "en": "Two-seater saddle parts x 1 set" },
-		{ "ja": "シール×１", "en": "Seal×1" }
+		{
+			"ja": "二人乗り用鞍パーツ×１式",
+			"en": "Two-seater saddle parts x 1 set"
+		},
+		{
+			"ja": "シール×１",
+			"en": "Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -38,14 +47,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5017/",
 	"extractedAt": "2025-12-06T17:54:54.800Z",
-	"price": { "amount": 1045, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2023年12月09日 (土)", "year": 2023, "month": 12, "day": 9 },
+	"price": {
+		"amount": 1045,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2023年12月09日 (土)",
+		"year": 2023,
+		"month": 12,
+		"day": 9
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "sd-gundam-world-heroes", "name": "SD Gundam World Heroes" }],
-		"relatedItems": ["01_5470", "01_5471", "01_5472", "01_5347"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "sd-gundam-world-heroes",
+				"name": "SD Gundam World Heroes"
+			}
+		],
+		"relatedItems": [
+			"01_5470",
+			"01_5471",
+			"01_5472",
+			"01_5347"
+		]
 	},
 	"category": "Gunpla",
 	"series": "SD Gundam World Heroes"

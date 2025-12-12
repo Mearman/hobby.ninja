@@ -1,7 +1,10 @@
 {
 	"id": "01_1563",
 	"type": "item",
-	"name": { "ja": "MG 1/100 シャア専用ゲルググ", "en": "MG 1/100 Char's Gelgoog" },
+	"name": {
+		"ja": "MG 1/100 シャア専用ゲルググ",
+		"en": "MG 1/100 Char's Gelgoog"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム」より、１年戦争末期に使用されたジオン公国軍の名機「ゲルググ」の「シャア・アズナブル」大佐専用機を重モビルスーツならではのボリュームで再現しています。胴部、腕部、足部には内部機構が再現されており、完成後に外装を外し見ることが可能です。スネ内部の動力パイプはメッシュパイプを用いて、質感までも再現しました。ジオン軍初装備のビームライフル、ビームナギナタ、シールドの他に、B型用のバックパックが付いています。",
@@ -18,15 +21,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1563/",
 	"extractedAt": "2025-12-06T17:31:42.577Z",
-	"price": { "amount": 3300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1996年12月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1996年12月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

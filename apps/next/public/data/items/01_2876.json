@@ -1,7 +1,10 @@
 {
 	"id": "01_2876",
 	"type": "item",
-	"name": { "ja": "PG 1/60 MS-06F 量産型ザク2", "en": "PG 1/60 MS-06F Mass Production Zaku 2" },
+	"name": {
+		"ja": "PG 1/60 MS-06F 量産型ザク2",
+		"en": "PG 1/60 MS-06F Mass Production Zaku 2"
+	},
 	"description": [
 		{
 			"ja": "根強い人気を誇るザクの全身外装、内部構造を徹底的に再現し、腰部可動による印象的なポージングを展開します。関節部には、可動にシンクロするダンパー等の伸縮機構が再現されています。外部装甲の脱着と、コクピットハッチの展開、内部シートの可動によるフルハッチオープンディスプレイが可能です。各部動力パイプに密巻きスプリングを内臓し、可動性を高めました。武器はザクマシンガン、ヒートホークが付いています。",
@@ -19,15 +22,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2876/",
 	"extractedAt": "2025-12-06T17:50:18.332Z",
-	"price": { "amount": 13200, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1999年03月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 13200,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1999年03月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/60",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "pg-perfect-grade", "name": "PG [Perfect Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_1902", "01_2829", "01_3373", "01_3328"]
+		"brands": [
+			{
+				"id": "pg-perfect-grade",
+				"name": "PG [Perfect Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_1902",
+			"01_2829",
+			"01_3373",
+			"01_3328"
+		]
 	},
 	"brand": "PG [Perfect Grade]",
 	"category": "Gunpla",

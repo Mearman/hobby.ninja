@@ -1,7 +1,10 @@
 {
 	"id": "01_3652",
 	"type": "item",
-	"name": { "ja": "SDマクロス　バルキリースペシャルセット2", "en": "SD Macross Valkyrie Special Set 2" },
+	"name": {
+		"ja": "SDマクロス　バルキリースペシャルセット2",
+		"en": "SD Macross Valkyrie Special Set 2"
+	},
 	"description": [
 		{
 			"ja": "1990年の発売以来、長年にわたり発売されていなかったSDバルキリープラモデルが仕様も新たに登場！",
@@ -20,7 +23,12 @@
 			"en": "• Each aircraft is SD, but can be replaced to transform into three forms: Fighter, Gerwalk, and Battroid."
 		}
 	],
-	"accessories": [{ "ja": "ホイルシール×1", "en": "Foil Seal×1" }],
+	"accessories": [
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		}
+	],
 	"contents": [],
 	"images": [
 		"/images/items/01_3652_0.jpg",
@@ -38,14 +46,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3652/",
 	"extractedAt": "2025-12-06T17:51:55.427Z",
-	"price": { "amount": 3300, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2021年10月30日 (土)", "year": 2021, "month": 10, "day": 30 },
+	"price": {
+		"amount": 3300,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2021年10月30日 (土)",
+		"year": 2021,
+		"month": 10,
+		"day": 30
+	},
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "macross-series", "name": "Macross series" }],
-		"relatedItems": ["01_5944", "01_5945", "01_5946", "01_5465"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "macross-series",
+				"name": "Macross series"
+			}
+		],
+		"relatedItems": [
+			"01_5944",
+			"01_5945",
+			"01_5946",
+			"01_5465"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Macross series"

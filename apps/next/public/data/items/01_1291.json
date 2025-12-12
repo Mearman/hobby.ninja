@@ -1,7 +1,10 @@
 {
 	"id": "01_1291",
 	"type": "item",
-	"name": { "ja": "MG 1/100 PLAN303E ディープストライカー", "en": "MG 1/100 PLAN303E Deep Striker" },
+	"name": {
+		"ja": "MG 1/100 PLAN303E ディープストライカー",
+		"en": "MG 1/100 PLAN303E Deep Striker"
+	},
 	"description": [
 		{
 			"ja": "• MGシリーズ200体達成を記念して、「ガンダムセンチネル」から大型アイテム「PLAN303E ディープ・ストライカー」が登場！",
@@ -21,17 +24,44 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ビーム・スマートガン×1", "en": "Beam smart gun x1" },
-		{ "ja": "ディスプレイベース×1", "en": "Display base x 1" }
+		{
+			"ja": "ビーム・スマートガン×1",
+			"en": "Beam smart gun x1"
+		},
+		{
+			"ja": "ディスプレイベース×1",
+			"en": "Display base x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×39", "en": "Molded product x 39" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" },
-		{ "ja": "マーキングシール×1", "en": "MarkingSeal×1" },
-		{ "ja": "メッシュパイプ×1", "en": "Mesh pipe x 1" },
-		{ "ja": "リード線×1", "en": "Lead wire x 1" },
-		{ "ja": "ビス×14（長×5、短×9）", "en": "Screws x 14 (long x 5, short x 9)" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×39",
+			"en": "Molded product x 39"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "マーキングシール×1",
+			"en": "MarkingSeal×1"
+		},
+		{
+			"ja": "メッシュパイプ×1",
+			"en": "Mesh pipe x 1"
+		},
+		{
+			"ja": "リード線×1",
+			"en": "Lead wire x 1"
+		},
+		{
+			"ja": "ビス×14（長×5、短×9）",
+			"en": "Screws x 14 (long x 5, short x 9)"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1291_0.jpg",
@@ -42,15 +72,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1291/",
 	"extractedAt": "2025-12-06T17:08:06.397Z",
-	"price": { "amount": 22000, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年03月17日 (土)", "year": 2018, "month": 3, "day": 17 },
+	"price": {
+		"amount": 22000,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年03月17日 (土)",
+		"year": 2018,
+		"month": 3,
+		"day": 17
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-sentinel", "name": "Gundam Sentinel" }],
-		"relatedItems": ["01_5593", "01_3408", "01_2176", "item-1000089611"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-sentinel",
+				"name": "Gundam Sentinel"
+			}
+		],
+		"relatedItems": [
+			"01_5593",
+			"01_3408",
+			"01_2176",
+			"item-1000089611"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

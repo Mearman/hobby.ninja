@@ -1,7 +1,10 @@
 {
 	"id": "01_4826",
 	"type": "item",
-	"name": { "ja": "RG 1/144 ガンダムエクシア トランザムクリアVer.", "en": "RG 1/144 Gundam Exia Trans-Am Clear Ver." },
+	"name": {
+		"ja": "RG 1/144 ガンダムエクシア トランザムクリアVer.",
+		"en": "RG 1/144 Gundam Exia Trans-Am Clear Ver."
+	},
 	"description": [
 		{
 			"ja": "RG 1/144 ガンダムエクシア トランザムクリアVer.登場！",
@@ -10,18 +13,51 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4826_0.jpg", "/images/items/01_4826_1.jpg"],
+	"images": [
+		"/images/items/01_4826_0.jpg",
+		"/images/items/01_4826_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4826/",
 	"extractedAt": "2025-12-06T17:54:30.156Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2016年11月19日 (土)", "year": 2016, "month": 11, "day": 19 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2016年11月19日 (土)",
+		"year": 2016,
+		"month": 11,
+		"day": 19
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "rg-real-grade", "name": "RG [Real Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-00-double-o", "name": "Mobile Suit Gundam 00 [Double O]" }],
-		"relatedItems": ["01_2648", "item-1000111587", "01_558", "item-1000124969"]
+		"brands": [
+			{
+				"id": "rg-real-grade",
+				"name": "RG [Real Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-00-double-o",
+				"name": "Mobile Suit Gundam 00 [Double O]"
+			}
+		],
+		"relatedItems": [
+			"01_2648",
+			"item-1000111587",
+			"01_558",
+			"item-1000124969"
+		]
 	},
 	"brand": "RG [Real Grade]",
 	"category": "Gunpla",

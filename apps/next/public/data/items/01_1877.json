@@ -1,7 +1,10 @@
 {
 	"id": "01_1877",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ジオング", "en": "MG 1/100 Zeon" },
+	"name": {
+		"ja": "MG 1/100 ジオング",
+		"en": "MG 1/100 Zeon"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム」に登場の最終ライバル「ジオング」のプラモデル。多数の関節が可動し、腰と肩を引き出すことでダイナミックなポーズ取りが実現します。頭部が着脱するのはもちろん、頭部モノアイや耳ノズルも可動します。本体、左右の前腕用スタンドが付属。両手の有線式サイコミュ兵器を展開したまま飾ることができます。",
@@ -18,15 +21,34 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1877/",
 	"extractedAt": "2025-12-06T17:48:17.204Z",
-	"price": { "amount": 7040, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2002年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 7040,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2002年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
 		"categories": [],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"series": "Mobile Suit Gundam"
 }

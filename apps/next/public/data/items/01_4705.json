@@ -1,7 +1,10 @@
 {
 	"id": "01_4705",
 	"type": "item",
-	"name": { "ja": "1/100 ガンダムデスサイズ", "en": "1/100 Gundam Death Size" },
+	"name": {
+		"ja": "1/100 ガンダムデスサイズ",
+		"en": "1/100 Gundam Death Size"
+	},
 	"description": [
 		{
 			"ja": "「新機動戦記ガンダム W」に登場する5体のガンダムの1体、ガンダムデスサイズを1/100スケールモデルでモデル化しました。ビーム・サイズの柄など各部にシルバーメッキパーツを使用しています。首、手首、股関節、足首にボールジョイントを使用し、スムーズな可動を実現している他、指もそれぞれ可動し、またひじ、ひざは二重関節になっています。胸部と腹部を別パーツ化し、腰の回転を再現できます。n収納状態のビーム・サイズは、腰リアアーマーにマウント可能で、展開状態ではビーム発生部が可動します。バスターシールドは刃の開閉が可能で、先端部にビームパーツを取り付けることも出来ます。各種ビームパーツ、カメラアイはクリアーパーツで再現し、また同じくクリアーパーツ製のイメージアップパーツも付属します。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4705_0.jpg", "/images/items/01_4705_1.jpg"],
+	"images": [
+		"/images/items/01_4705_0.jpg",
+		"/images/items/01_4705_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4705/",
 	"extractedAt": "2025-12-06T17:54:15.315Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1995年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1995年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "new-mobile-report-gundam-w-series", "name": "New Mobile Report Gundam W series" }],
-		"relatedItems": ["01_5968", "01_5993", "01_5590", "01_5377"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "new-mobile-report-gundam-w-series",
+				"name": "New Mobile Report Gundam W series"
+			}
+		],
+		"relatedItems": [
+			"01_5968",
+			"01_5993",
+			"01_5590",
+			"01_5377"
+		]
 	},
 	"category": "Gunpla",
 	"series": "New Mobile Report Gundam W series"

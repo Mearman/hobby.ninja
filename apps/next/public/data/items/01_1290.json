@@ -1,7 +1,10 @@
 {
 	"id": "01_1290",
 	"type": "item",
-	"name": { "ja": "RG 1/144 ユニコーンガンダム (バンデシネVer.)", "en": "RG 1/144 Unicorn Gundam (Bandecine Ver.)" },
+	"name": {
+		"ja": "RG 1/144 ユニコーンガンダム (バンデシネVer.)",
+		"en": "RG 1/144 Unicorn Gundam (Bandecine Ver.)"
+	},
 	"description": [
 		{
 			"ja": "• 月刊ガンダムエースにて「機動戦士ガンダム UC バンデシネ Episode：0」の連載がスタートしたことにあわせて、「UC バンデシネ」版ユニコーンガンダムがRGシリーズに数量限定生産で登場！",
@@ -17,17 +20,44 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ビーム・マグナム×1", "en": "Beam Magnum x 1" },
-		{ "ja": "ビーム・サーベル×2", "en": "Beam saber x2" },
-		{ "ja": "シールド×1", "en": "Seal × 1" },
-		{ "ja": "ハイパー・バズーカ×１", "en": "Hyper bazooka x1" },
-		{ "ja": "アームド・アーマーDE×1", "en": "Armed Armor DE×1" }
+		{
+			"ja": "ビーム・マグナム×1",
+			"en": "Beam Magnum x 1"
+		},
+		{
+			"ja": "ビーム・サーベル×2",
+			"en": "Beam saber x2"
+		},
+		{
+			"ja": "シールド×1",
+			"en": "Seal × 1"
+		},
+		{
+			"ja": "ハイパー・バズーカ×１",
+			"en": "Hyper bazooka x1"
+		},
+		{
+			"ja": "アームド・アーマーDE×1",
+			"en": "Armed Armor DE×1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×14", "en": "Molded product x 14" },
-		{ "ja": "リアリスティックデカール×１", "en": "Realistic decal x 1" },
-		{ "ja": "デカール×１", "en": "Decal x 1" },
-		{ "ja": "取扱説明書×2", "en": "Handling manual×2" }
+		{
+			"ja": "成形品×14",
+			"en": "Molded product x 14"
+		},
+		{
+			"ja": "リアリスティックデカール×１",
+			"en": "Realistic decal x 1"
+		},
+		{
+			"ja": "デカール×１",
+			"en": "Decal x 1"
+		},
+		{
+			"ja": "取扱説明書×2",
+			"en": "Handling manual×2"
+		}
 	],
 	"images": [
 		"/images/items/01_1290_0.jpg",
@@ -38,15 +68,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1290/",
 	"extractedAt": "2025-12-06T17:08:06.199Z",
-	"price": { "amount": 4400, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年02月17日 (土)", "year": 2018, "month": 2, "day": 17 },
+	"price": {
+		"amount": 4400,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年02月17日 (土)",
+		"year": 2018,
+		"month": 2,
+		"day": 17
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "rg-real-grade", "name": "RG [Real Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-uc-unicorn", "name": "Mobile Suit Gundam UC [Unicorn]" }],
-		"relatedItems": ["item-1000216106", "01_5037", "01_3060", "01_2821"]
+		"brands": [
+			{
+				"id": "rg-real-grade",
+				"name": "RG [Real Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-uc-unicorn",
+				"name": "Mobile Suit Gundam UC [Unicorn]"
+			}
+		],
+		"relatedItems": [
+			"item-1000216106",
+			"01_5037",
+			"01_3060",
+			"01_2821"
+		]
 	},
 	"brand": "RG [Real Grade]",
 	"category": "Gunpla",

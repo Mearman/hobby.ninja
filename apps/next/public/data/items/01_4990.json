@@ -1,7 +1,10 @@
 {
 	"id": "01_4990",
 	"type": "item",
-	"name": { "ja": "MG 1/100 百式＋バリュートシステム", "en": "MG 1/100 Hyakushiki + Valute System" },
+	"name": {
+		"ja": "MG 1/100 百式＋バリュートシステム",
+		"en": "MG 1/100 Hyakushiki + Valute System"
+	},
 	"description": [
 		{
 			"ja": "劇場版「機動戦士Ｚガンダム－星を継ぐ者－」でも登場したバリュートシステム装備の百式の1/100MGシリーズプラモデルです。バリュートシステムは胸部、脚部、背部をそれぞれ装着可能で、内部のパラシュートは収納状態で再現しました。バリュートシステムサイドのパイプには軟質材料を採用し、質感をリアルに再現。",
@@ -18,15 +21,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4990/",
 	"extractedAt": "2025-12-06T17:54:52.443Z",
-	"price": { "amount": 4400, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2005年09月17日 (土)", "year": 2005, "month": 9, "day": 17 },
+	"price": {
+		"amount": 4400,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2005年09月17日 (土)",
+		"year": 2005,
+		"month": 9,
+		"day": 17
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-z-gundam", "name": "Mobile Suit Z Gundam" }],
-		"relatedItems": ["01_4270", "item-1000145352", "item-1000131596", "item-1000112091"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-z-gundam",
+				"name": "Mobile Suit Z Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4270",
+			"item-1000145352",
+			"item-1000131596",
+			"item-1000112091"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

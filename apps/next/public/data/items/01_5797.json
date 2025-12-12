@@ -1,7 +1,10 @@
 {
 	"id": "01_5797",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ジェスタ", "en": "MG 1/100 Jesta" },
+	"name": {
+		"ja": "MG 1/100 ジェスタ",
+		"en": "MG 1/100 Jesta"
+	},
 	"description": [
 		{
 			"ja": "• ロンド・ベル隊配備の高性能機ジェスタをMGで立体化。",
@@ -31,22 +34,59 @@
 			"ja": "• 専用ライフルのほか、ビーム・サーベルも付属。",
 			"en": "• In addition to the special rifle, a beam saber is also included."
 		},
-		{ "ja": "さらに詳しく", "en": "Learn more" }
+		{
+			"ja": "さらに詳しく",
+			"en": "Learn more"
+		}
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5797_0.jpg", "/images/items/01_5797_1.jpg", "/images/items/01_5797_2.jpg"],
+	"images": [
+		"/images/items/01_5797_0.jpg",
+		"/images/items/01_5797_1.jpg",
+		"/images/items/01_5797_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5797/",
 	"extractedAt": "2025-12-06T17:56:38.457Z",
-	"price": { "amount": 4400, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年04月20日 (土)", "year": 2013, "month": 4, "day": 20 },
+	"price": {
+		"amount": 4400,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年04月20日 (土)",
+		"year": 2013,
+		"month": 4,
+		"day": 20
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-uc-unicorn", "name": "Mobile Suit Gundam UC [Unicorn]" }],
-		"relatedItems": ["01_2670", "01_4271", "item-1000183366", "item-1000138934"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-uc-unicorn",
+				"name": "Mobile Suit Gundam UC [Unicorn]"
+			}
+		],
+		"relatedItems": [
+			"01_2670",
+			"01_4271",
+			"item-1000183366",
+			"item-1000138934"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

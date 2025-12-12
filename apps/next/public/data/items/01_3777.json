@@ -1,7 +1,10 @@
 {
 	"id": "01_3777",
 	"type": "item",
-	"name": { "ja": "HG 1/72 メイレスジョウガン改", "en": "HG 1/72 Meires Jougan Kai" },
+	"name": {
+		"ja": "HG 1/72 メイレスジョウガン改",
+		"en": "HG 1/72 Meires Jougan Kai"
+	},
 	"description": [
 		{
 			"ja": "KEN OKUYAMA DESIGNによる構造検証を経て、ジョウガンの改良機、「ジョウガン改」をHGで立体化！",
@@ -33,14 +36,26 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "45mm回転式装甲機関砲×１", "en": "45mm rotary armored machine gun x 1" },
-		{ "ja": "肩用シールド(左右)×１", "en": "Shoulder Seal (left and right) x 1" },
-		{ "ja": "40mm携行短機関砲×２", "en": "40mm portable submachine gun x 2" },
+		{
+			"ja": "45mm回転式装甲機関砲×１",
+			"en": "45mm rotary armored machine gun x 1"
+		},
+		{
+			"ja": "肩用シールド(左右)×１",
+			"en": "Shoulder Seal (left and right) x 1"
+		},
+		{
+			"ja": "40mm携行短機関砲×２",
+			"en": "40mm portable submachine gun x 2"
+		},
 		{
 			"ja": "ハンドパーツ平手（左右）、握り手(左右)、銃持ち手(左右)",
 			"en": "Hand parts Open hand (left and right), grip hand (left and right), gun handle (left and right)"
 		},
-		{ "ja": "ホイルシール×１", "en": "Foil Seal×1" }
+		{
+			"ja": "ホイルシール×１",
+			"en": "Foil Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -57,15 +72,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3777/",
 	"extractedAt": "2025-12-06T17:52:11.645Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2022年05月21日 (土)", "year": 2022, "month": 5, "day": 21 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2022年05月21日 (土)",
+		"year": 2022,
+		"month": 5,
+		"day": 21
+	},
 	"scale": "1/72",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "kyoukai-senki", "name": "Kyoukai Senki" }],
-		"relatedItems": ["01_5196", "01_5183", "01_5170", "01_5171"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "kyoukai-senki",
+				"name": "Kyoukai Senki"
+			}
+		],
+		"relatedItems": [
+			"01_5196",
+			"01_5183",
+			"01_5170",
+			"01_5171"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Character plastic model",

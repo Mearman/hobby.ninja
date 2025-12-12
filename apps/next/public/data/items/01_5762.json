@@ -1,7 +1,10 @@
 {
 	"id": "01_5762",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 ベースジャバー（ユニコーンVer.）", "en": "HGUC 1/144 Base Jabber (Unicorn Ver.)" },
+	"name": {
+		"ja": "HGUC 1/144 ベースジャバー（ユニコーンVer.）",
+		"en": "HGUC 1/144 Base Jabber (Unicorn Ver.)"
+	},
 	"description": [
 		{
 			"ja": "• 『機動戦士ガンダム UC』episode 5「黒いユニコーン」の空中戦で活躍したベースジャバーがHGUC化。 • フットパネルの伸縮で各種MSに対応。 • アクションベース１（別売り）に対応。迫力の戦闘シーンを再現できる。 • ランディングギア付属。地に置くことも可能。 成形品×3、シール、組立説明書×1",
@@ -18,18 +21,49 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5762/",
 	"extractedAt": "2025-12-06T17:56:34.393Z",
-	"price": { "amount": 1320, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2012年07月14日 (土)", "year": 2012, "month": 7, "day": 14 },
+	"price": {
+		"amount": 1320,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2012年07月14日 (土)",
+		"year": 2012,
+		"month": 7,
+		"day": 14
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-uc-unicorn", "name": "Mobile Suit Gundam UC [Unicorn]" }],
-		"relatedItems": ["01_4971", "01_4986", "01_5527", "item-1000163998"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-uc-unicorn",
+				"name": "Mobile Suit Gundam UC [Unicorn]"
+			}
+		],
+		"relatedItems": [
+			"01_4971",
+			"01_4986",
+			"01_5527",
+			"item-1000163998"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

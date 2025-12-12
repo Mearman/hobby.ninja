@@ -37,15 +37,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_6999/",
 	"extractedAt": "2025-12-06T17:58:20.477Z",
-	"price": { "amount": 6600, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2025年11月22日 (土)", "year": 2025, "month": 11, "day": 22 },
+	"price": {
+		"amount": 6600,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2025年11月22日 (土)",
+		"year": 2025,
+		"month": 11,
+		"day": 22
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-fighters", "name": "Gundam Build Fighters" }],
-		"relatedItems": ["01_4760", "item-1000106283", "item-1000106282", "01_395"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-fighters",
+				"name": "Gundam Build Fighters"
+			}
+		],
+		"relatedItems": [
+			"01_4760",
+			"item-1000106283",
+			"item-1000106282",
+			"01_395"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

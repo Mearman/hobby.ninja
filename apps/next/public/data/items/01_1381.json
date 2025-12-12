@@ -1,7 +1,10 @@
 {
 	"id": "01_1381",
 	"type": "item",
-	"name": { "ja": "ハロプラ ハロ ハッピーイエロー", "en": "Haropura Haro Happy Yellow" },
+	"name": {
+		"ja": "ハロプラ ハロ ハッピーイエロー",
+		"en": "Haropura Haro Happy Yellow"
+	},
 	"description": [
 		{
 			"ja": "ハロプラ新バリエーションカラー「ハッピーイエロー」登場！",
@@ -16,10 +19,21 @@
 			"en": "• In addition to connecting the halos, the display base can also be connected to Petit'gguy!"
 		}
 	],
-	"accessories": [{ "ja": "ディスプレイベース×1", "en": "Display base x 1" }],
+	"accessories": [
+		{
+			"ja": "ディスプレイベース×1",
+			"en": "Display base x 1"
+		}
+	],
 	"contents": [
-		{ "ja": "成形品×3", "en": "Molded product x 3" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×3",
+			"en": "Molded product x 3"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1381_0.jpg",
@@ -29,14 +43,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1381/",
 	"extractedAt": "2025-12-06T17:17:39.695Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年07月07日 (土)", "year": 2018, "month": 7, "day": 7 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年07月07日 (土)",
+		"year": 2018,
+		"month": 7,
+		"day": 7
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-divers", "name": "Gundam Build Divers" }],
-		"relatedItems": ["01_5189", "01_5190", "01_3063", "01_2623"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-divers",
+				"name": "Gundam Build Divers"
+			}
+		],
+		"relatedItems": [
+			"01_5189",
+			"01_5190",
+			"01_3063",
+			"01_2623"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Gundam Build Divers"

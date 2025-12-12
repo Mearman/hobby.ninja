@@ -1,7 +1,10 @@
 {
 	"id": "01_4513",
 	"type": "item",
-	"name": { "ja": "アクションベース2 スパークルクリアグリーン", "en": "Action Base 2 Sparkle Clear Green" },
+	"name": {
+		"ja": "アクションベース2 スパークルクリアグリーン",
+		"en": "Action Base 2 Sparkle Clear Green"
+	},
 	"description": [
 		{
 			"ja": "アクションベース2に「機動戦士ガンダム 00」のガンダムをイメージした“スパークルクリアグリーン”が登場！ メカモールドの入った台座は連結可能。 キットを取り付ける支柱は高さや向きの調節可能。 アクションベース1とも連動、支柱を取り外しアクションベース1にジョイント。",
@@ -10,17 +13,43 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4513_0.jpg", "/images/items/01_4513_1.jpg"],
+	"images": [
+		"/images/items/01_4513_0.jpg",
+		"/images/items/01_4513_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4513/",
 	"extractedAt": "2025-12-06T17:53:51.697Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2008年02月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2008年02月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "action-base", "name": "action base" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
+		"brands": [
+			{
+				"id": "action-base",
+				"name": "action base"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5934", "01_5256", "01_5258"]
+		"relatedItems": [
+			"01_5934",
+			"01_5256",
+			"01_5258"
+		]
 	},
 	"brand": "action base",
 	"category": "Character plastic model"

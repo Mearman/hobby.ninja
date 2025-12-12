@@ -1,7 +1,10 @@
 {
 	"id": "01_2178",
 	"type": "item",
-	"name": { "ja": "SD ガンダム クロスシルエット シスクード", "en": "SD Gundam Cross Silhouette Siskudo" },
+	"name": {
+		"ja": "SD ガンダム クロスシルエット シスクード",
+		"en": "SD Gundam Cross Silhouette Siskudo"
+	},
 	"description": [
 		{
 			"ja": "SD ガンダムクロスシルエットに「モノアイガンダム」シスクードが登場！",
@@ -24,12 +27,29 @@
 			"en": "• Two beam sabers using clear parts are included."
 		}
 	],
-	"accessories": [{ "ja": "ビーム・サーベル×2", "en": "Beam saber x2" }],
+	"accessories": [
+		{
+			"ja": "ビーム・サーベル×2",
+			"en": "Beam saber x2"
+		}
+	],
 	"contents": [
-		{ "ja": "成型品×6", "en": "Molded product x 6" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" },
-		{ "ja": "ジュエルシール×1", "en": "Jewel Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成型品×6",
+			"en": "Molded product x 6"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "ジュエルシール×1",
+			"en": "Jewel Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_2178_0.jpg",
@@ -41,14 +61,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2178/",
 	"extractedAt": "2025-12-06T17:48:49.509Z",
-	"price": { "amount": 1540, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年04月27日 (土)", "year": 2019, "month": 4, "day": 27 },
+	"price": {
+		"amount": 1540,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年04月27日 (土)",
+		"year": 2019,
+		"month": 4,
+		"day": 27
+	},
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "sd-gundam-cross-silhouette", "name": "SD Gundam Cross Silhouette" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"brands": [
+			{
+				"id": "sd-gundam-cross-silhouette",
+				"name": "SD Gundam Cross Silhouette"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5275", "01_5191", "01_5014", "01_4893"]
+		"relatedItems": [
+			"01_5275",
+			"01_5191",
+			"01_5014",
+			"01_4893"
+		]
 	},
 	"brand": "SD Gundam Cross Silhouette",
 	"category": "Gunpla"

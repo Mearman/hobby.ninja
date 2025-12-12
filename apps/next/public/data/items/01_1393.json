@@ -1,7 +1,10 @@
 {
 	"id": "01_1393",
 	"type": "item",
-	"name": { "ja": "HGBD 1/144 ガンダムダブルオーダイバーエース", "en": "HGBD 1/144 Gundam 00 Diver Ace" },
+	"name": {
+		"ja": "HGBD 1/144 ガンダムダブルオーダイバーエース",
+		"en": "HGBD 1/144 Gundam 00 Diver Ace"
+	},
 	"description": [
 		{
 			"ja": "『ガンダムビルドダイバーズ』より、主人公・リクのガンプラで、カスタムユニットをフル装備した「ガンダムダブルオーダイバーエース」が登場！",
@@ -13,15 +16,36 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "GNダイバーソード×2", "en": "GN Diver Sword x2" },
-		{ "ja": "スーパーGNソードII×2", "en": "Super GN Sword II x 2" },
-		{ "ja": "バックパック×1", "en": "Backpack x 1" },
-		{ "ja": "ジョイントパーツ×1", "en": "Joint parts x 1" }
+		{
+			"ja": "GNダイバーソード×2",
+			"en": "GN Diver Sword x2"
+		},
+		{
+			"ja": "スーパーGNソードII×2",
+			"en": "Super GN Sword II x 2"
+		},
+		{
+			"ja": "バックパック×1",
+			"en": "Backpack x 1"
+		},
+		{
+			"ja": "ジョイントパーツ×1",
+			"en": "Joint parts x 1"
+		}
 	],
 	"contents": [
-		{ "ja": "成形品×12", "en": "Molded product x 12" },
-		{ "ja": "ホイルシール×1", "en": "Foil Seal×1" },
-		{ "ja": "取扱説明書×1", "en": "Handling manual×1" }
+		{
+			"ja": "成形品×12",
+			"en": "Molded product x 12"
+		},
+		{
+			"ja": "ホイルシール×1",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "取扱説明書×1",
+			"en": "Handling manual×1"
+		}
 	],
 	"images": [
 		"/images/items/01_1393_0.jpg",
@@ -33,15 +57,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1393/",
 	"extractedAt": "2025-12-06T17:19:13.593Z",
-	"price": { "amount": 2200, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年07月21日 (土)", "year": 2018, "month": 7, "day": 21 },
+	"price": {
+		"amount": 2200,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年07月21日 (土)",
+		"year": 2018,
+		"month": 7,
+		"day": 21
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-divers", "name": "Gundam Build Divers" }],
-		"relatedItems": ["01_2623", "item-1000138336", "01_2518", "01_2403"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-divers",
+				"name": "Gundam Build Divers"
+			}
+		],
+		"relatedItems": [
+			"01_2623",
+			"item-1000138336",
+			"01_2518",
+			"01_2403"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

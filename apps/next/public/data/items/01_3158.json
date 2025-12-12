@@ -1,7 +1,10 @@
 {
 	"id": "01_3158",
 	"type": "item",
-	"name": { "ja": "MG ウイングガンダム（Ver.Ka）", "en": "MG Wing Gundam (Ver.Ka)" },
+	"name": {
+		"ja": "MG ウイングガンダム（Ver.Ka）",
+		"en": "MG Wing Gundam (Ver.Ka)"
+	},
 	"description": [
 		{
 			"ja": "メカニックデザイナー、カトキハジメ氏が造形からパッケージまですべて監修した待望の第2弾が登場です。機体のカラーリングをパーツの分割により再現しています。肩関節は前後にスイングし、より広範囲な可動を実現しています。飛行形態にも変形可能で脚部変形は最新設定を仕様しています。コクピットは開閉式で、1/100スケールのヒイロ・ユイフィギュアが付属します。",
@@ -19,14 +22,43 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3158/",
 	"extractedAt": "2025-12-06T17:50:53.050Z",
-	"price": { "amount": 4290, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2004年03月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 4290,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2004年03月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-verka-master-grade-version-katoki", "name": "MG Ver.Ka [Master Grade Version Katoki]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "new-mobile-report-gundam-w-series", "name": "New Mobile Report Gundam W series" }],
-		"relatedItems": ["01_2981", "01_5993", "01_4369", "01_4005"]
+		"brands": [
+			{
+				"id": "mg-verka-master-grade-version-katoki",
+				"name": "MG Ver.Ka [Master Grade Version Katoki]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "new-mobile-report-gundam-w-series",
+				"name": "New Mobile Report Gundam W series"
+			}
+		],
+		"relatedItems": [
+			"01_2981",
+			"01_5993",
+			"01_4369",
+			"01_4005"
+		]
 	},
 	"brand": "MG Ver.Ka [Master Grade Version Katoki]",
 	"category": "Gunpla",

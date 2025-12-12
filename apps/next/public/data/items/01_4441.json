@@ -1,7 +1,10 @@
 {
 	"id": "01_4441",
 	"type": "item",
-	"name": { "ja": "1/144 νガンダム(ファンネル付)", "en": "1/144 νGundam (with funnel)" },
+	"name": {
+		"ja": "1/144 νガンダム(ファンネル付)",
+		"en": "1/144 νGundam (with funnel)"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム逆襲のシャア」でフィン・ファンネルを装備したνガンダムをキット化しました。フィン・ファンネルは折りたたんだ状態の４基と、可動する２基の計６基が装備でき、また１基ずつ分離することが可能です。結合状態のフィン・ファンネルはバックパックに装着できます。",
@@ -10,18 +13,44 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4441_0.jpg"],
+	"images": [
+		"/images/items/01_4441_0.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4441/",
 	"extractedAt": "2025-12-06T17:53:42.933Z",
-	"price": { "amount": 1100, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1988年07月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1100,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1988年07月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-chars-counterattack", "name": "Mobile Suit Gundam Char's Counterattack" }],
-		"relatedItems": ["01_5478", "01_5531", "01_5532", "01_5423"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-chars-counterattack",
+				"name": "Mobile Suit Gundam Char's Counterattack"
+			}
+		],
+		"relatedItems": [
+			"01_5478",
+			"01_5531",
+			"01_5532",
+			"01_5423"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam Char's Counterattack"

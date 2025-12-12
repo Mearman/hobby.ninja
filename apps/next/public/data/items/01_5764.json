@@ -1,7 +1,10 @@
 {
 	"id": "01_5764",
 	"type": "item",
-	"name": { "ja": "Bトレインショーティー E233系・湘南色", "en": "B Train Shorty E233 series/Shonan color" },
+	"name": {
+		"ja": "Bトレインショーティー E233系・湘南色",
+		"en": "B Train Shorty E233 series/Shonan color"
+	},
 	"description": [
 		{
 			"ja": "• ＪＲ東海道本線・高崎線・宇都宮線等で使用されている3000番台。ラインカラーの湘南色の帯をまとっている。",
@@ -22,16 +25,39 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5764_0.jpg", "/images/items/01_5764_1.jpg"],
+	"images": [
+		"/images/items/01_5764_0.jpg",
+		"/images/items/01_5764_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5764/",
 	"extractedAt": "2025-12-06T17:56:34.370Z",
-	"price": { "amount": 1320, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2012年08月22日 (水)", "year": 2012, "month": 8, "day": 22 },
+	"price": {
+		"amount": 1320,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2012年08月22日 (水)",
+		"year": 2012,
+		"month": 8,
+		"day": 22
+	},
 	"relationships": {
-		"brands": [{ "id": "b-train-shorty", "name": "B train shorty" }],
+		"brands": [
+			{
+				"id": "b-train-shorty",
+				"name": "B train shorty"
+			}
+		],
 		"categories": [],
 		"series": [],
-		"relatedItems": ["01_1276", "01_1277", "01_1278", "01_1280"]
+		"relatedItems": [
+			"01_1276",
+			"01_1277",
+			"01_1278",
+			"01_1280"
+		]
 	},
 	"brand": "B train shorty"
 }

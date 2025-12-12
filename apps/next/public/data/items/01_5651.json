@@ -1,7 +1,10 @@
 {
 	"id": "01_5651",
 	"type": "item",
-	"name": { "ja": "FG ガンダムキュリオス", "en": "FG Gundam Curios" },
+	"name": {
+		"ja": "FG ガンダムキュリオス",
+		"en": "FG Gundam Curios"
+	},
 	"description": [
 		{
 			"ja": "• 「機動戦士ガンダム 00」より“ガンダムキュリオス”がFGシリーズに登場",
@@ -19,21 +22,52 @@
 			"ja": "• 股関節のスイングアクションや肩、ヒジ、ヒザの可動で様々なアクションポーズを再現可能",
 			"en": "• Various action poses can be recreated by swinging the hip joint and moving the shoulders, elbows, and knees."
 		},
-		{ "ja": "• 武器はライフル、シールドが付属", "en": "• Weapons include rifle and seal" }
+		{
+			"ja": "• 武器はライフル、シールドが付属",
+			"en": "• Weapons include rifle and seal"
+		}
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_5651_0.jpg", "/images/items/01_5651_1.jpg", "/images/items/01_5651_2.jpg"],
+	"images": [
+		"/images/items/01_5651_0.jpg",
+		"/images/items/01_5651_1.jpg",
+		"/images/items/01_5651_2.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5651/",
 	"extractedAt": "2025-12-06T17:56:21.050Z",
-	"price": { "amount": 660, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2007年09月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 660,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2007年09月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-00-double-o", "name": "Mobile Suit Gundam 00 [Double O]" }],
-		"relatedItems": ["01_5102", "01_5526", "item-1000216602", "item-1000161849"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-00-double-o",
+				"name": "Mobile Suit Gundam 00 [Double O]"
+			}
+		],
+		"relatedItems": [
+			"01_5102",
+			"01_5526",
+			"item-1000216602",
+			"item-1000161849"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam 00 [Double O]"

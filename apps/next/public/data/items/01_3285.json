@@ -1,7 +1,10 @@
 {
 	"id": "01_3285",
 	"type": "item",
-	"name": { "ja": "SDGF グラップラーグフ", "en": "SDGF Grappler Gouf" },
+	"name": {
+		"ja": "SDGF グラップラーグフ",
+		"en": "SDGF Grappler Gouf"
+	},
 	"description": [
 		{
 			"ja": "「SD ガンダムフォース」に登場する新キャラクター「グラップラーグフ」のプラモデル。球形ポリキャップを使用することにより、SDフォースシリーズの他のキットと腕、足の交換が可能です。300円のSD ガンダムフォースシリーズでは初めて、頭部の可動を実現しています。",
@@ -10,17 +13,43 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_3285_0.jpg"],
+	"images": [
+		"/images/items/01_3285_0.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3285/",
 	"extractedAt": "2025-12-06T17:51:05.970Z",
-	"price": { "amount": 330, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2004年05月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 330,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2004年05月",
+		"year": 0,
+		"month": 0
+	},
 	"targetAge": 5,
 	"relationships": {
-		"brands": [{ "id": "sd-gundam-series", "name": "SD Gundam series" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"brands": [
+			{
+				"id": "sd-gundam-series",
+				"name": "SD Gundam series"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["item-1000193966", "01_4975", "01_4336", "01_4312"]
+		"relatedItems": [
+			"item-1000193966",
+			"01_4975",
+			"01_4336",
+			"01_4312"
+		]
 	},
 	"brand": "SD Gundam series",
 	"category": "Gunpla"

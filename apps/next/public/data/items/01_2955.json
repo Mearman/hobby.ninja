@@ -1,7 +1,10 @@
 {
 	"id": "01_2955",
 	"type": "item",
-	"name": { "ja": "1/144 アイザック", "en": "1/144 Isaac" },
+	"name": {
+		"ja": "1/144 アイザック",
+		"en": "1/144 Isaac"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム ZZ」に登場した、偵察用量産型モビルスーツを立体化しました。ザクマシンガン改、シールドを装備しています。指は可動式です。大型モノ・アイは別パーツ成形になっています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2955_0.jpg", "/images/items/01_2955_1.jpg"],
+	"images": [
+		"/images/items/01_2955_0.jpg",
+		"/images/items/01_2955_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2955/",
 	"extractedAt": "2025-12-06T17:50:27.234Z",
-	"price": { "amount": 770, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1986年09月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 770,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1986年09月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-zz", "name": "Mobile Suit Gundam ZZ" }],
-		"relatedItems": ["01_5963", "01_5454", "01_4985", "01_4971"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-zz",
+				"name": "Mobile Suit Gundam ZZ"
+			}
+		],
+		"relatedItems": [
+			"01_5963",
+			"01_5454",
+			"01_4985",
+			"01_4971"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit Gundam ZZ"

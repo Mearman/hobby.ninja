@@ -1,7 +1,10 @@
 {
 	"id": "01_4373",
 	"type": "item",
-	"name": { "ja": "HG 1/144 セイバーガンダム", "en": "HG 1/144 Saber Gundam" },
+	"name": {
+		"ja": "HG 1/144 セイバーガンダム",
+		"en": "HG 1/144 Saber Gundam"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム SEED DESTINY」に登場する「セイバーガンダム」の1/144スケールHG仕様のプラモデル。一部のパーツ差替えにより、MA形態への完全変形が可能です。背部の大型ビーム砲もスムーズに変形可動させることができ、肩口に取り付くビームサーベルは着脱が可能です。",
@@ -18,15 +21,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4373/",
 	"extractedAt": "2025-12-06T17:53:33.266Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2005年03月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2005年03月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "hg-high-grade", "name": "HG [High Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-seed-destiny", "name": "Mobile Suit Gundam SEED DESTINY" }],
-		"relatedItems": ["01_3739", "item-1000203308", "01_5097", "item-1000157417"]
+		"brands": [
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-seed-destiny",
+				"name": "Mobile Suit Gundam SEED DESTINY"
+			}
+		],
+		"relatedItems": [
+			"01_3739",
+			"item-1000203308",
+			"01_5097",
+			"item-1000157417"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

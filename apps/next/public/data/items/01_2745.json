@@ -1,7 +1,10 @@
 {
 	"id": "01_2745",
 	"type": "item",
-	"name": { "ja": "EXモデル 35 1/144 駆逐モビルポッド オッゴ", "en": "EXModel 35 1/144 Destroyer Mobile Pod Ogo" },
+	"name": {
+		"ja": "EXモデル 35 1/144 駆逐モビルポッド オッゴ",
+		"en": "EXModel 35 1/144 Destroyer Mobile Pod Ogo"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム MS IGLOO黙示録0079」第２話に登場する“オッゴ”がEXモデルシリーズに1/144スケールでキット化。パーツの差し替えにより、アームの展開ギミックを再現。バズーカ、マシンガンが取り付くターレットは、腕部展開時180°回転し、背後への攻撃形態を再現可能。武器はザク・マシンガン、ザク・バズーカ、シュツルムファウスト×2、ミサイルポッドが付属。搭載装置をモチーフにしたディスプレイスタンドが付属、台座は複数連結が可能。",
@@ -24,15 +27,34 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2745/",
 	"extractedAt": "2025-12-06T17:50:00.396Z",
-	"price": { "amount": 3850, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2007年04月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3850,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2007年04月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5968", "01_5986", "01_5987", "01_5988"]
+		"relatedItems": [
+			"01_5968",
+			"01_5986",
+			"01_5987",
+			"01_5988"
+		]
 	},
 	"category": "Gunpla"
 }

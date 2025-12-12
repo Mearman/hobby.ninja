@@ -1,7 +1,10 @@
 {
 	"id": "01_4547",
 	"type": "item",
-	"name": { "ja": "BB戦士 ガンダム RX-78NT-1＆ガンダム GP01Fb", "en": "BB Senshi Gundam RX-78NT-1 & Gundam GP01Fb" },
+	"name": {
+		"ja": "BB戦士 ガンダム RX-78NT-1＆ガンダム GP01Fb",
+		"en": "BB Senshi Gundam RX-78NT-1 & Gundam GP01Fb"
+	},
 	"description": [
 		{
 			"ja": "• ガンダム RX-78-2を正当に受け継ぐ2大ガンダムの共演。 • NT-1は強化装甲「チョバム・アーマー」を装備可能で、チョバム・アーマーはSDオリジナルの「チョバム・タンク」に。 • GP01は換装パーツの組み換えで「GP01Fb」を再現可能。 • 新規に追加したマーキングシールでSDながらMG（マスターグレード）を彷彿とさせる。 成形品×8、ホイールシール×2、テトロンシール×１、組立説明書×2、マーキング指示書×1",
@@ -10,17 +13,50 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4547_0.jpg", "/images/items/01_4547_1.jpg"],
+	"images": [
+		"/images/items/01_4547_0.jpg",
+		"/images/items/01_4547_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4547/",
 	"extractedAt": "2025-12-06T17:53:55.758Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2010年04月30日 (金)", "year": 2010, "month": 4, "day": 30 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2010年04月30日 (金)",
+		"year": 2010,
+		"month": 4,
+		"day": 30
+	},
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "sd-gundam-bb-senshi", "name": "SD Gundam BB Senshi" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-0083-stardust-memory", "name": "Mobile Suit Gundam 0083 STARDUST MEMORY" }],
-		"relatedItems": ["01_1396", "01_1604", "01_1631", "01_5442"]
+		"brands": [
+			{
+				"id": "sd-gundam-bb-senshi",
+				"name": "SD Gundam BB Senshi"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-0083-stardust-memory",
+				"name": "Mobile Suit Gundam 0083 STARDUST MEMORY"
+			}
+		],
+		"relatedItems": [
+			"01_1396",
+			"01_1604",
+			"01_1631",
+			"01_5442"
+		]
 	},
 	"brand": "SD Gundam BB Senshi",
 	"category": "Gunpla",

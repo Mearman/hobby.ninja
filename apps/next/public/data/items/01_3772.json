@@ -1,7 +1,10 @@
 {
 	"id": "01_3772",
 	"type": "item",
-	"name": { "ja": "MG 1/100 リック・ドム", "en": "MG 1/100 Rick Dom" },
+	"name": {
+		"ja": "MG 1/100 リック・ドム",
+		"en": "MG 1/100 Rick Dom"
+	},
 	"description": [
 		{
 			"ja": "『機動戦士ガンダム』より、「MG 1/100 リック・ドム」が外装・内部構造をアップグレードして登場！",
@@ -25,11 +28,26 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ヒート・サーベル×1", "en": "Heat saber x1" },
-		{ "ja": "ジャイアント・バズ×1", "en": "Giant Buzz x1" },
-		{ "ja": "ビーム・バズーカ×1", "en": "Beam bazooka x 1" },
-		{ "ja": "水転写式デカール×1", "en": "Water transfer decal x 1" },
-		{ "ja": "ジュエルシール×1", "en": "Jewel Seal×1" }
+		{
+			"ja": "ヒート・サーベル×1",
+			"en": "Heat saber x1"
+		},
+		{
+			"ja": "ジャイアント・バズ×1",
+			"en": "Giant Buzz x1"
+		},
+		{
+			"ja": "ビーム・バズーカ×1",
+			"en": "Beam bazooka x 1"
+		},
+		{
+			"ja": "水転写式デカール×1",
+			"en": "Water transfer decal x 1"
+		},
+		{
+			"ja": "ジュエルシール×1",
+			"en": "Jewel Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -45,15 +63,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3772/",
 	"extractedAt": "2025-12-06T17:52:10.522Z",
-	"price": { "amount": 5500, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2022年03月12日 (土)", "year": 2022, "month": 3, "day": 12 },
+	"price": {
+		"amount": 5500,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2022年03月12日 (土)",
+		"year": 2022,
+		"month": 3,
+		"day": 12
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_3754", "01_5509", "01_4977", "01_4066"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_3754",
+			"01_5509",
+			"01_4977",
+			"01_4066"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

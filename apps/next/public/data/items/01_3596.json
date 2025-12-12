@@ -1,7 +1,10 @@
 {
 	"id": "01_3596",
 	"type": "item",
-	"name": { "ja": "MG 1/100 ガンダム AGE-1 スパロー", "en": "MG 1/100 Gundam AGE-1 Sparrow" },
+	"name": {
+		"ja": "MG 1/100 ガンダム AGE-1 スパロー",
+		"en": "MG 1/100 Gundam AGE-1 Sparrow"
+	},
 	"description": [
 		{
 			"ja": "• MGの遺伝子を受け継ぎつつ、新たなるコンセプトを採用。 • 「魅せるための内部構造」として、完成後に関節を動かしたときに生じる空間や装甲の裏側などのディテールを追求。 • 完成度の高さと作りやすさを両立。 • スパローのアクションに適したフィンガーパーツ付属。 成形品×14、マーキングシール×1、ガンダムデカール×1、シルバーシール×1、ホイルシール×1、組立説明書×1",
@@ -18,15 +21,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3596/",
 	"extractedAt": "2025-12-06T17:51:48.108Z",
-	"price": { "amount": 3850, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2012年04月28日 (土)", "year": 2012, "month": 4, "day": 28 },
+	"price": {
+		"amount": 3850,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2012年04月28日 (土)",
+		"year": 2012,
+		"month": 4,
+		"day": 28
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-age", "name": "Mobile Suit Gundam AGE" }],
-		"relatedItems": ["item-1000181355", "item-1000181354", "01_4196", "item-1000128729"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-age",
+				"name": "Mobile Suit Gundam AGE"
+			}
+		],
+		"relatedItems": [
+			"item-1000181355",
+			"item-1000181354",
+			"01_4196",
+			"item-1000128729"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

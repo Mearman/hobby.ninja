@@ -1,7 +1,10 @@
 {
 	"id": "01_2070",
 	"type": "item",
-	"name": { "ja": "1/144 ガンダムアストレイ (ブルーフレーム)", "en": "1/144 Gundam Astray (Blue Frame)" },
+	"name": {
+		"ja": "1/144 ガンダムアストレイ (ブルーフレーム)",
+		"en": "1/144 Gundam Astray (Blue Frame)"
+	},
 	"description": [
 		{
 			"ja": "「電撃ホビーマガジン」で連載されている「機動戦士ガンダム SEED」外伝に登場するガンダムアストレイ(ブルーフレーム)の1/144のプラモデル。簡単に組み立てられるようにパーツはシンプルに構成しています。各関節が球型ジョイントで接合される為、手足の可動が可能です。武器はライフル、シールドが付属します。",
@@ -10,18 +13,41 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2070_0.jpg", "/images/items/01_2070_1.jpg"],
+	"images": [
+		"/images/items/01_2070_0.jpg",
+		"/images/items/01_2070_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2070/",
 	"extractedAt": "2025-12-06T17:48:34.055Z",
-	"price": { "amount": 330, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2002年11月16日 (土)", "year": 2002, "month": 11, "day": 16 },
+	"price": {
+		"amount": 330,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2002年11月16日 (土)",
+		"year": 2002,
+		"month": 11,
+		"day": 16
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5968", "01_5986", "01_5987", "01_5988"]
+		"relatedItems": [
+			"01_5968",
+			"01_5986",
+			"01_5987",
+			"01_5988"
+		]
 	},
 	"category": "Gunpla"
 }

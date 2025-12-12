@@ -1,7 +1,10 @@
 {
 	"id": "01_1506",
 	"type": "item",
-	"name": { "ja": "1/144 Vダッシュガンダム", "en": "1/144 V Dash Gundam" },
+	"name": {
+		"ja": "1/144 Vダッシュガンダム",
+		"en": "1/144 V Dash Gundam"
+	},
 	"description": [
 		{
 			"ja": "ＴＶ「機動戦士Ｖガンダム」のV ガンダムにブースター・パックを換装した高機動タイプをキット化しました。V ガンダムヘキサ用の頭部パーツがついており、 V ガンダム、Vダッシュガンダム、V ガンダムヘキサの３種の組換えが可能になっています。武器はビーム・ライフル、メガ・ビーム・ライフル、ビーム・シールドがついています。コアファイターが別ユニットとしてついています。ディスプレイスタンド、カードがついています。",
@@ -10,18 +13,45 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1506_0.jpg", "/images/items/01_1506_1.jpg"],
+	"images": [
+		"/images/items/01_1506_0.jpg",
+		"/images/items/01_1506_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1506/",
 	"extractedAt": "2025-12-06T17:27:00.827Z",
-	"price": { "amount": 770, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1993年08月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 770,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1993年08月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-v-gundam", "name": "Mobile Suit V Gundam" }],
-		"relatedItems": ["01_4978", "01_3311", "01_2835", "item-1000142101"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-v-gundam",
+				"name": "Mobile Suit V Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_4978",
+			"01_3311",
+			"01_2835",
+			"item-1000142101"
+		]
 	},
 	"category": "Gunpla",
 	"series": "Mobile Suit V Gundam"

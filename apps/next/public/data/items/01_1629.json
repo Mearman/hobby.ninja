@@ -1,7 +1,10 @@
 {
 	"id": "01_1629",
 	"type": "item",
-	"name": { "ja": "MG 1/100 マスターガンダム", "en": "MG 1/100 Master Gundam" },
+	"name": {
+		"ja": "MG 1/100 マスターガンダム",
+		"en": "MG 1/100 Master Gundam"
+	},
 	"description": [
 		{
 			"ja": "「機動武闘伝G ガンダム」に登場するライバルMF「マスターガンダム」のプラモデル。可動式アクションフレームを使用して、様々な格闘アクションの再現が可能。マスタークロス、ダークネスフィンガーなど武器も付属します。",
@@ -22,15 +25,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1629/",
 	"extractedAt": "2025-12-06T17:37:56.952Z",
-	"price": { "amount": 3520, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2002年03月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3520,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2002年03月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-fighter-g-gundam", "name": "Mobile Fighter G Gundam" }],
-		"relatedItems": ["01_1385", "01_1746", "01_2482", "01_2493"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-fighter-g-gundam",
+				"name": "Mobile Fighter G Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_1385",
+			"01_1746",
+			"01_2482",
+			"01_2493"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

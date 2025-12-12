@@ -1,7 +1,10 @@
 {
 	"id": "01_4994",
 	"type": "item",
-	"name": { "ja": "MGSD ガンダムバルバトス", "en": "MGSD Gundam Barbatos" },
+	"name": {
+		"ja": "MGSD ガンダムバルバトス",
+		"en": "MGSD Gundam Barbatos"
+	},
 	"description": [
 		{
 			"ja": "SD ガンダムの躯体にMGの技術を集約した新次元のSDハイエンドブランド「MGSD」より、ガンダム・バルバトスが登場！",
@@ -53,11 +56,26 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "メイス×1", "en": "Mace x 1" },
-		{ "ja": "太刀×1", "en": "Long sword x1" },
-		{ "ja": "300mm滑腔砲×1", "en": "300mm smoothbore gun x 1" },
-		{ "ja": "ジョイントパーツ×1式", "en": "Joint parts x 1 set" },
-		{ "ja": "マーキングシール×1", "en": "MarkingSeal×1" }
+		{
+			"ja": "メイス×1",
+			"en": "Mace x 1"
+		},
+		{
+			"ja": "太刀×1",
+			"en": "Long sword x1"
+		},
+		{
+			"ja": "300mm滑腔砲×1",
+			"en": "300mm smoothbore gun x 1"
+		},
+		{
+			"ja": "ジョイントパーツ×1式",
+			"en": "Joint parts x 1 set"
+		},
+		{
+			"ja": "マーキングシール×1",
+			"en": "MarkingSeal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -76,13 +94,38 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4994/",
 	"extractedAt": "2025-12-06T17:54:52.113Z",
-	"price": { "amount": 4290, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2023年10月21日 (土)", "year": 2023, "month": 10, "day": 21 },
+	"price": {
+		"amount": 4290,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2023年10月21日 (土)",
+		"year": 2023,
+		"month": 10,
+		"day": 21
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "master-grade-sd", "name": "MASTER GRADE SD" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-iron-blooded-orphans", "name": "Mobile Suit Gundam Iron-Blooded Orphans" }],
+		"brands": [
+			{
+				"id": "master-grade-sd",
+				"name": "MASTER GRADE SD"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-iron-blooded-orphans",
+				"name": "Mobile Suit Gundam Iron-Blooded Orphans"
+			}
+		],
 		"relatedItems": []
 	},
 	"brand": "MASTER GRADE SD",

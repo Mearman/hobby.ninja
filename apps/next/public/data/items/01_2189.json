@@ -1,7 +1,10 @@
 {
 	"id": "01_2189",
 	"type": "item",
-	"name": { "ja": "RG 1/144 ダブルオーライザー[クリアカラー]", "en": "RG 1/144 00 Raiser [Clear Color]" },
+	"name": {
+		"ja": "RG 1/144 ダブルオーライザー[クリアカラー]",
+		"en": "RG 1/144 00 Raiser [Clear Color]"
+	},
 	"description": [
 		{
 			"ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
@@ -14,18 +17,50 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_2189_0.jpg", "/images/items/01_2189_1.jpg"],
+	"images": [
+		"/images/items/01_2189_0.jpg",
+		"/images/items/01_2189_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2189/",
 	"extractedAt": "2025-12-06T17:48:50.319Z",
-	"price": { "amount": 3850, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年01月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 3850,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年01月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "rg-real-grade", "name": "RG [Real Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-00-double-o", "name": "Mobile Suit Gundam 00 [Double O]" }],
-		"relatedItems": ["01_2648", "item-1000118869", "item-1000111587", "01_4826"]
+		"brands": [
+			{
+				"id": "rg-real-grade",
+				"name": "RG [Real Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-00-double-o",
+				"name": "Mobile Suit Gundam 00 [Double O]"
+			}
+		],
+		"relatedItems": [
+			"01_2648",
+			"item-1000118869",
+			"item-1000111587",
+			"01_4826"
+		]
 	},
 	"brand": "RG [Real Grade]",
 	"category": "Gunpla",

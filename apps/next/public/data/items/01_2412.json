@@ -1,7 +1,10 @@
 {
 	"id": "01_2412",
 	"type": "item",
-	"name": { "ja": "1/144 モビルフラット", "en": "1/144 Mobile Flat" },
+	"name": {
+		"ja": "1/144 モビルフラット",
+		"en": "1/144 Mobile Flat"
+	},
 	"description": [
 		{
 			"ja": "TV「∀ガンダム」登場のモビルスーツをキット化しました。降下形態はかかとパーツの差替えと変形により再現可能です。頭部ユニットは前後にスイングします。腰部は回転が可能です。ひざは二重関節仕様で、180度の折り曲げが可能になっています。ボックスビーム・ライフルがついています。",
@@ -20,15 +23,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2412/",
 	"extractedAt": "2025-12-06T17:49:18.768Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1999年05月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1999年05月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam", "name": "∀Gundam" }],
-		"relatedItems": ["item-1000135920", "item-1000099631", "item-1000165581", "01_120"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam",
+				"name": "∀Gundam"
+			}
+		],
+		"relatedItems": [
+			"item-1000135920",
+			"item-1000099631",
+			"item-1000165581",
+			"01_120"
+		]
 	},
 	"category": "Gunpla",
 	"series": "∀Gundam"

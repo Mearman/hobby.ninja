@@ -30,7 +30,10 @@
 			"ja": "■コア・ファイターは変型させることで、ボディ内部に収納可能。",
 			"en": "■The Core Fighter can be stored inside the body by transforming it."
 		},
-		{ "ja": "■内部構造には塗装可能な素材を使用。", "en": "■The internal structure uses paintable materials." },
+		{
+			"ja": "■内部構造には塗装可能な素材を使用。",
+			"en": "■The internal structure uses paintable materials."
+		},
 		{
 			"ja": "■肩アーマーやシールド等、ガンダムベースオリジナルのスペシャルマーキングシールが付属。",
 			"en": "■Comes with Gundam base original special marking seals such as shoulder armor and seals."
@@ -51,15 +54,45 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2649/",
 	"extractedAt": "2025-12-06T17:49:48.325Z",
-	"price": { "amount": 5500, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2019年11月23日 (土)", "year": 2019, "month": 11, "day": 23 },
+	"price": {
+		"amount": 5500,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2019年11月23日 (土)",
+		"year": 2019,
+		"month": 11,
+		"day": 23
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

@@ -1,7 +1,10 @@
 {
 	"id": "01_4992",
 	"type": "item",
-	"name": { "ja": "ENTRY GRADE 1/144 ラーガンダム", "en": "ENTRY GRADE 1/144 Ra Gundam" },
+	"name": {
+		"ja": "ENTRY GRADE 1/144 ラーガンダム",
+		"en": "ENTRY GRADE 1/144 Ra Gundam"
+	},
 	"description": [
 		{
 			"ja": "2023年10月配信予定、『ガンダムビルドシリーズ』10周年記念映像『ガンダムビルドメタバース』より、主人公機「ラーガンダム」が“簡単組み立て×ハイクオリティ”のENTRY GRADEで登場！",
@@ -21,9 +24,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "シールド×1", "en": "Seal × 1" },
-		{ "ja": "ビームライフル×1", "en": "Beam rifle x 1" },
-		{ "ja": "ビームナギナタ×1", "en": "Beam Naginata×1" }
+		{
+			"ja": "シールド×1",
+			"en": "Seal × 1"
+		},
+		{
+			"ja": "ビームライフル×1",
+			"en": "Beam rifle x 1"
+		},
+		{
+			"ja": "ビームナギナタ×1",
+			"en": "Beam Naginata×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -39,15 +51,43 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4992/",
 	"extractedAt": "2025-12-06T17:54:52.433Z",
-	"price": { "amount": 1100, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2023年10月07日 (土)", "year": 2023, "month": 10, "day": 7 },
+	"price": {
+		"amount": 1100,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2023年10月07日 (土)",
+		"year": 2023,
+		"month": 10,
+		"day": 7
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
-		"brands": [{ "id": "entry-grade", "name": "ENTRY GRADE" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "gundam-build-metaverse", "name": "Gundam Build Metaverse" }],
-		"relatedItems": ["01_5105", "01_4993"]
+		"brands": [
+			{
+				"id": "entry-grade",
+				"name": "ENTRY GRADE"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "gundam-build-metaverse",
+				"name": "Gundam Build Metaverse"
+			}
+		],
+		"relatedItems": [
+			"01_5105",
+			"01_4993"
+		]
 	},
 	"brand": "ENTRY GRADE",
 	"category": "Gunpla",

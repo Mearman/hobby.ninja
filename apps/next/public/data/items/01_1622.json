@@ -1,7 +1,10 @@
 {
 	"id": "01_1622",
 	"type": "item",
-	"name": { "ja": "MG 1/100 MS-09R リックドム", "en": "MG 1/100 MS-09R Rick Dom" },
+	"name": {
+		"ja": "MG 1/100 MS-09R リックドム",
+		"en": "MG 1/100 MS-09R Rick Dom"
+	},
 	"description": [
 		{
 			"ja": "「機動戦士ガンダム」より、宇宙での空間戦闘用に換装された「リックドム」のキット化です。背部バーニアやスカートアーマー、ソール裏など換装されたパーツには、精巧なディティールが施されています。頭部は、内部のメカディティールまで作り込まれており、モノアイも十時方向へ可動します。ジャイアントバズーカ、ヒートサーベル、ビームバズーカが付いています。",
@@ -10,18 +13,50 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_1622_0.jpg", "/images/items/01_1622_1.jpg"],
+	"images": [
+		"/images/items/01_1622_0.jpg",
+		"/images/items/01_1622_1.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1622/",
 	"extractedAt": "2025-12-06T17:36:23.917Z",
-	"price": { "amount": 4400, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "1999年10月", "year": 0, "month": 0 },
+	"price": {
+		"amount": 4400,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "1999年10月",
+		"year": 0,
+		"month": 0
+	},
 	"scale": "1/100",
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "mg-master-grade", "name": "MG [Master Grade]" }],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam", "name": "Mobile Suit Gundam" }],
-		"relatedItems": ["01_5509", "01_4977", "01_3772", "01_3754"]
+		"brands": [
+			{
+				"id": "mg-master-grade",
+				"name": "MG [Master Grade]"
+			}
+		],
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam",
+				"name": "Mobile Suit Gundam"
+			}
+		],
+		"relatedItems": [
+			"01_5509",
+			"01_4977",
+			"01_3772",
+			"01_3754"
+		]
 	},
 	"brand": "MG [Master Grade]",
 	"category": "Gunpla",

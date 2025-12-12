@@ -1,7 +1,10 @@
 {
 	"id": "01_1981",
 	"type": "item",
-	"name": { "ja": "ねこぶそう2 てんこ盛り", "en": "Nekobusou 2 Tenkomori" },
+	"name": {
+		"ja": "ねこぶそう2 てんこ盛り",
+		"en": "Nekobusou 2 Tenkomori"
+	},
 	"description": [
 		{
 			"ja": "「ねこ」フィギュアに「ジャケット」を着せ「ぶそう」パーツを装備させて楽しむ新感覚Hobby！",
@@ -34,9 +37,18 @@
 	],
 	"accessories": [],
 	"contents": [
-		{ "ja": "彩色済ねこフィギュア×1", "en": "Painted cat figure x 1" },
-		{ "ja": "ジャケット×1", "en": "Jacket x 1" },
-		{ "ja": "ぶそう×1式", "en": "Busou x 1 set" }
+		{
+			"ja": "彩色済ねこフィギュア×1",
+			"en": "Painted cat figure x 1"
+		},
+		{
+			"ja": "ジャケット×1",
+			"en": "Jacket x 1"
+		},
+		{
+			"ja": "ぶそう×1式",
+			"en": "Busou x 1 set"
+		}
 	],
 	"images": [
 		"/images/items/01_1981_0.jpg",
@@ -54,14 +66,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1981/",
 	"extractedAt": "2025-12-06T17:48:30.138Z",
-	"price": { "amount": 1527, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2018年11月30日 (金)", "year": 2018, "month": 11, "day": 30 },
+	"price": {
+		"amount": 1527,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2018年11月30日 (金)",
+		"year": 2018,
+		"month": 11,
+		"day": 30
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "looks-like-a-cat", "name": "Looks like a cat" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
+		"brands": [
+			{
+				"id": "looks-like-a-cat",
+				"name": "Looks like a cat"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_1421", "01_1979", "01_2100", "01_2101"]
+		"relatedItems": [
+			"01_1421",
+			"01_1979",
+			"01_2100",
+			"01_2101"
+		]
 	},
 	"brand": "Looks like a cat",
 	"category": "Character plastic model"

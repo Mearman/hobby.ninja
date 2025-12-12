@@ -1,7 +1,10 @@
 {
 	"id": "01_5854",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 ゾゴック（ユニコーンVer.）", "en": "HGUC 1/144 Zogok (Unicorn Ver.)" },
+	"name": {
+		"ja": "HGUC 1/144 ゾゴック（ユニコーンVer.）",
+		"en": "HGUC 1/144 Zogok (Unicorn Ver.)"
+	},
 	"description": [
 		{
 			"ja": "• 水陸両用のゾゴックを『機動戦士ガンダム UC』登場時の現代的なフォルムでHGUC化。",
@@ -42,18 +45,49 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5854/",
 	"extractedAt": "2025-12-06T17:56:45.123Z",
-	"price": { "amount": 2090, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2013年09月07日 (土)", "year": 2013, "month": 9, "day": 7 },
+	"price": {
+		"amount": 2090,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2013年09月07日 (土)",
+		"year": 2013,
+		"month": 9,
+		"day": 7
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-uc-unicorn", "name": "Mobile Suit Gundam UC [Unicorn]" }],
-		"relatedItems": ["01_4971", "01_4986", "01_5527", "item-1000163998"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-uc-unicorn",
+				"name": "Mobile Suit Gundam UC [Unicorn]"
+			}
+		],
+		"relatedItems": [
+			"01_4971",
+			"01_4986",
+			"01_5527",
+			"item-1000163998"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

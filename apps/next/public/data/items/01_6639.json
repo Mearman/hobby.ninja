@@ -1,7 +1,10 @@
 {
 	"id": "01_6639",
 	"type": "item",
-	"name": { "ja": "龍神丸", "en": "Ryujinmaru" },
+	"name": {
+		"ja": "龍神丸",
+		"en": "Ryujinmaru"
+	},
 	"description": [
 		{
 			"ja": "新作テレビアニメ『魔神創造伝ワタル』制作決定！",
@@ -29,9 +32,18 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "登龍剣×1", "en": "Toryu sword x1" },
-		{ "ja": "シールド×1", "en": "Seal × 1" },
-		{ "ja": "ジョイントパーツ×1式", "en": "Joint parts x 1 set" }
+		{
+			"ja": "登龍剣×1",
+			"en": "Toryu sword x1"
+		},
+		{
+			"ja": "シールド×1",
+			"en": "Seal × 1"
+		},
+		{
+			"ja": "ジョイントパーツ×1式",
+			"en": "Joint parts x 1 set"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -50,14 +62,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_6639/",
 	"extractedAt": "2025-12-06T17:57:44.588Z",
-	"price": { "amount": 1650, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2024年12月28日 (土)", "year": 2024, "month": 12, "day": 28 },
+	"price": {
+		"amount": 1650,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2024年12月28日 (土)",
+		"year": 2024,
+		"month": 12,
+		"day": 28
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "wataru-series", "name": "Wataru series" }],
-		"relatedItems": ["01_5493", "01_5502", "01_5503", "01_5504"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "wataru-series",
+				"name": "Wataru series"
+			}
+		],
+		"relatedItems": [
+			"01_5493",
+			"01_5502",
+			"01_5503",
+			"01_5504"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Wataru series"

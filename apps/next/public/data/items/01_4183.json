@@ -1,7 +1,10 @@
 {
 	"id": "01_4183",
 	"type": "item",
-	"name": { "ja": "カスタマイズウェポンズ(ミリタリー武装)", "en": "Customized Weapons (Military Weapons)" },
+	"name": {
+		"ja": "カスタマイズウェポンズ(ミリタリー武装)",
+		"en": "Customized Weapons (Military Weapons)"
+	},
 	"description": [
 		{
 			"ja": "ミリタリーイメージの武装がセットになったカスタマイズウェポンズが登場！",
@@ -21,14 +24,38 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ライフル×1", "en": "Rifle x 1" },
-		{ "ja": "リボルバー×1", "en": "Revolver x 1" },
-		{ "ja": "ホルスター×1", "en": "Holster x 1" },
-		{ "ja": "ショットガン×1", "en": "Shotgun x 1" },
-		{ "ja": "ハンドガン×1", "en": "Hand gun x 1" },
-		{ "ja": "ランチャー×1", "en": "Launcher x 1" },
-		{ "ja": "コンバットナイフ×1", "en": "Combat knife x 1" },
-		{ "ja": "シールド×1", "en": "Seal × 1" }
+		{
+			"ja": "ライフル×1",
+			"en": "Rifle x 1"
+		},
+		{
+			"ja": "リボルバー×1",
+			"en": "Revolver x 1"
+		},
+		{
+			"ja": "ホルスター×1",
+			"en": "Holster x 1"
+		},
+		{
+			"ja": "ショットガン×1",
+			"en": "Shotgun x 1"
+		},
+		{
+			"ja": "ハンドガン×1",
+			"en": "Hand gun x 1"
+		},
+		{
+			"ja": "ランチャー×1",
+			"en": "Launcher x 1"
+		},
+		{
+			"ja": "コンバットナイフ×1",
+			"en": "Combat knife x 1"
+		},
+		{
+			"ja": "シールド×1",
+			"en": "Seal × 1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -40,8 +67,18 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4183/",
 	"extractedAt": "2025-12-06T17:53:06.940Z",
-	"price": { "amount": 550, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2022年09月10日 (土)", "year": 2022, "month": 9, "day": 10 },
+	"price": {
+		"amount": 550,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2022年09月10日 (土)",
+		"year": 2022,
+		"month": 9,
+		"day": 10
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
@@ -49,11 +86,24 @@
 				"id": "customized-scene-baseeffectsmaterialsweapons",
 				"name": "Customized Scene Base/Effects/Materials/Weapons"
 			},
-			{ "id": "30-minutes-missions", "name": "30 MINUTES MISSIONS" }
+			{
+				"id": "30-minutes-missions",
+				"name": "30 MINUTES MISSIONS"
+			}
 		],
-		"categories": [{ "id": "30-minutes-label", "name": "30 MINUTES LABEL" }],
+		"categories": [
+			{
+				"id": "30-minutes-label",
+				"name": "30 MINUTES LABEL"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5972", "01_5973", "01_5974", "01_5964"]
+		"relatedItems": [
+			"01_5972",
+			"01_5973",
+			"01_5974",
+			"01_5964"
+		]
 	},
 	"brand": "Customized Scene Base/Effects/Materials/Weapons",
 	"category": "30 MINUTES LABEL"

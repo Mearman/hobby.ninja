@@ -1,7 +1,10 @@
 {
 	"id": "01_1809",
 	"type": "item",
-	"name": { "ja": "HGUC 1/144 ギラ・ドーガ", "en": "HGUC 1/144 Gira Doga" },
+	"name": {
+		"ja": "HGUC 1/144 ギラ・ドーガ",
+		"en": "HGUC 1/144 Gira Doga"
+	},
 	"description": [
 		{
 			"ja": "映画「機動戦士ガンダム 逆襲のシャア」よりザクの系譜を受け継ぐ量産型MS“ギラ・ドーガ”がHGUCに待望のラインナップ 大型MSの巨躯を支えつつ、あらゆるポージングを可能にする新型ポリキャップを採用 ビーム・マシンガン、2種類のビーム形状クリアパーツが付属するビーム・アックス、ピック、シュツルムファウスト×4、中折れ機構を再現したシールドなど、特徴である豊富な武器が付属 頭部は一般機、指揮官機の選択式",
@@ -20,18 +23,49 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1809/",
 	"extractedAt": "2025-12-06T17:48:09.089Z",
-	"price": { "amount": 2420, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2008年11月15日 (土)", "year": 2008, "month": 11, "day": 15 },
+	"price": {
+		"amount": 2420,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2008年11月15日 (土)",
+		"year": 2008,
+		"month": 11,
+		"day": 15
+	},
 	"scale": "1/144",
 	"targetAge": 8,
 	"relationships": {
 		"brands": [
-			{ "id": "hg-high-grade", "name": "HG [High Grade]" },
-			{ "id": "hg-universal-century", "name": "HG UNIVERSAL CENTURY" }
+			{
+				"id": "hg-high-grade",
+				"name": "HG [High Grade]"
+			},
+			{
+				"id": "hg-universal-century",
+				"name": "HG UNIVERSAL CENTURY"
+			}
 		],
-		"categories": [{ "id": "gunpla", "name": "Gunpla" }],
-		"series": [{ "id": "mobile-suit-gundam-chars-counterattack", "name": "Mobile Suit Gundam Char's Counterattack" }],
-		"relatedItems": ["01_5346", "01_5210", "01_4971", "01_4408"]
+		"categories": [
+			{
+				"id": "gunpla",
+				"name": "Gunpla"
+			}
+		],
+		"series": [
+			{
+				"id": "mobile-suit-gundam-chars-counterattack",
+				"name": "Mobile Suit Gundam Char's Counterattack"
+			}
+		],
+		"relatedItems": [
+			"01_5346",
+			"01_5210",
+			"01_4971",
+			"01_4408"
+		]
 	},
 	"brand": "HG [High Grade]",
 	"category": "Gunpla",

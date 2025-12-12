@@ -1,7 +1,10 @@
 {
 	"id": "01_4192",
 	"type": "item",
-	"name": { "ja": "ガンプラくん　マスコットキーチェーン", "en": "Gunpla-kun mascot key chain" },
+	"name": {
+		"ja": "ガンプラくん　マスコットキーチェーン",
+		"en": "Gunpla-kun mascot key chain"
+	},
 	"description": [
 		{
 			"ja": "（3/30記載）諸般の都合により、商品の発売月を変更させていただきました。",
@@ -14,17 +17,39 @@
 	],
 	"accessories": [],
 	"contents": [],
-	"images": ["/images/items/01_4192_0.jpg"],
+	"images": [
+		"/images/items/01_4192_0.jpg"
+	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4192/",
 	"extractedAt": "2025-12-06T17:53:09.480Z",
-	"price": { "amount": 880, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2022年06月04日 (土)", "year": 2022, "month": 6, "day": 4 },
+	"price": {
+		"amount": 880,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2022年06月04日 (土)",
+		"year": 2022,
+		"month": 6,
+		"day": 4
+	},
 	"targetAge": 15,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "product-list", "name": "Product list" }],
+		"categories": [
+			{
+				"id": "product-list",
+				"name": "Product list"
+			}
+		],
 		"series": [],
-		"relatedItems": ["01_5571", "01_5556", "01_5992", "01_5478"]
+		"relatedItems": [
+			"01_5571",
+			"01_5556",
+			"01_5992",
+			"01_5478"
+		]
 	},
 	"category": "Product list"
 }

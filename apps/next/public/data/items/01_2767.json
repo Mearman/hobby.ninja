@@ -1,7 +1,10 @@
 {
 	"id": "01_2767",
 	"type": "item",
-	"name": { "ja": "ぷちりっつ アーチャー/ギルガメッシュ", "en": "Petitrits Archer/Gilgamesh" },
+	"name": {
+		"ja": "ぷちりっつ アーチャー/ギルガメッシュ",
+		"en": "Petitrits Archer/Gilgamesh"
+	},
 	"description": [
 		{
 			"ja": "ぷちなパーツ数で高い再現性！ぷちりっつシリーズに『Fate/Grand Order』に登場する英雄王を召喚！",
@@ -25,10 +28,22 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "乖離剣エア×１", "en": "Separate sword air x1" },
-		{ "ja": "台座×１", "en": "Pedestal x 1" },
-		{ "ja": "ホイルシール×１", "en": "Foil Seal×1" },
-		{ "ja": "カイナスシール×１", "en": "Cainus Seal×1" }
+		{
+			"ja": "乖離剣エア×１",
+			"en": "Separate sword air x1"
+		},
+		{
+			"ja": "台座×１",
+			"en": "Pedestal x 1"
+		},
+		{
+			"ja": "ホイルシール×１",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "カイナスシール×１",
+			"en": "Cainus Seal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -44,14 +59,44 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2767/",
 	"extractedAt": "2025-12-06T17:50:03.943Z",
-	"price": { "amount": 1540, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2020年06月20日 (土)", "year": 2020, "month": 6, "day": 20 },
+	"price": {
+		"amount": 1540,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2020年06月20日 (土)",
+		"year": 2020,
+		"month": 6,
+		"day": 20
+	},
 	"targetAge": 15,
 	"relationships": {
-		"brands": [{ "id": "petitrits", "name": "Petitrits" }],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "fategrand-order", "name": "Fate/Grand Order" }],
-		"relatedItems": ["01_2599", "01_2600", "01_2634", "01_2844"]
+		"brands": [
+			{
+				"id": "petitrits",
+				"name": "Petitrits"
+			}
+		],
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "fategrand-order",
+				"name": "Fate/Grand Order"
+			}
+		],
+		"relatedItems": [
+			"01_2599",
+			"01_2600",
+			"01_2634",
+			"01_2844"
+		]
 	},
 	"brand": "Petitrits",
 	"category": "Character plastic model",

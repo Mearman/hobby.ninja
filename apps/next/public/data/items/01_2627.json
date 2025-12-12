@@ -1,7 +1,10 @@
 {
 	"id": "01_2627",
 	"type": "item",
-	"name": { "ja": "ハイパーファンクション LBXルシファー", "en": "Hyperfunction LBX Lucifer" },
+	"name": {
+		"ja": "ハイパーファンクション LBXルシファー",
+		"en": "Hyperfunction LBX Lucifer"
+	},
 	"description": [
 		{
 			"ja": "『ダンボール戦機』より、天使と悪魔、二つの顔を併せ持つ「LBXルシファー」がハイパーファンクションシリーズから登場！",
@@ -25,10 +28,22 @@
 		}
 	],
 	"accessories": [
-		{ "ja": "ヘブンズエッジ×１", "en": "Heaven's Edge x1" },
-		{ "ja": "天帝ネメシスシールド×１", "en": "Tentei Nemesis Seal×1" },
-		{ "ja": "ホイルシール×１", "en": "Foil Seal×1" },
-		{ "ja": "マーキングシール×１", "en": "MarkingSeal×1" }
+		{
+			"ja": "ヘブンズエッジ×１",
+			"en": "Heaven's Edge x1"
+		},
+		{
+			"ja": "天帝ネメシスシールド×１",
+			"en": "Tentei Nemesis Seal×1"
+		},
+		{
+			"ja": "ホイルシール×１",
+			"en": "Foil Seal×1"
+		},
+		{
+			"ja": "マーキングシール×１",
+			"en": "MarkingSeal×1"
+		}
 	],
 	"contents": [],
 	"images": [
@@ -41,14 +56,39 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2627/",
 	"extractedAt": "2025-12-06T17:49:45.432Z",
-	"price": { "amount": 2750, "currency": "JPY", "taxIncluded": true, "taxRate": 10 },
-	"releaseDate": { "ja": "2020年03月07日 (土)", "year": 2020, "month": 3, "day": 7 },
+	"price": {
+		"amount": 2750,
+		"currency": "JPY",
+		"taxIncluded": true,
+		"taxRate": 10
+	},
+	"releaseDate": {
+		"ja": "2020年03月07日 (土)",
+		"year": 2020,
+		"month": 3,
+		"day": 7
+	},
 	"targetAge": 8,
 	"relationships": {
 		"brands": [],
-		"categories": [{ "id": "character-plastic-model", "name": "Character plastic model" }],
-		"series": [{ "id": "danball-senki", "name": "Danball Senki" }],
-		"relatedItems": ["item-1000215196", "item-1000215197", "item-1000210042", "item-1000210041"]
+		"categories": [
+			{
+				"id": "character-plastic-model",
+				"name": "Character plastic model"
+			}
+		],
+		"series": [
+			{
+				"id": "danball-senki",
+				"name": "Danball Senki"
+			}
+		],
+		"relatedItems": [
+			"item-1000215196",
+			"item-1000215197",
+			"item-1000210042",
+			"item-1000210041"
+		]
 	},
 	"category": "Character plastic model",
 	"series": "Danball Senki"
