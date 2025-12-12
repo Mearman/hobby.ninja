@@ -323,25 +323,42 @@ export const getNodeReleaseYear = (node: ItemNode): number | null => {
 
 /**
  * Get formatted release date string from item node.
- * Tries structured year/month first, then falls back to parsing Japanese date string.
+ * Tries structured year/month/day first, then falls back to parsing Japanese date string.
+ * Output format: YYYY/MM/DD, YYYY/MM, or YYYY depending on available data.
  */
 export const getNodeReleaseDate = (node: ItemNode): string | null => {
 	const releaseDate = node.releaseDate;
 	if (!releaseDate) return null;
 
-	// If we have valid year and month, format them
+	// If we have valid year, format with month and day if available
 	if (releaseDate.year && releaseDate.year > 0) {
 		const month = releaseDate.month && releaseDate.month > 0
 			? String(releaseDate.month).padStart(2, "0")
 			: null;
-		return month ? `${releaseDate.year}/${month}` : String(releaseDate.year);
+		const day = releaseDate.day && releaseDate.day > 0
+			? String(releaseDate.day).padStart(2, "0")
+			: null;
+
+		if (month && day) {
+			return `${releaseDate.year}/${month}/${day}`;
+		}
+		if (month) {
+			return `${releaseDate.year}/${month}`;
+		}
+		return String(releaseDate.year);
 	}
 
-	// Fall back to parsing the Japanese date string (e.g., "1985年06月")
+	// Fall back to parsing the Japanese date string
 	if (releaseDate.ja) {
-		const match = /(\d{4})年(\d{2})月/.exec(releaseDate.ja);
-		if (match?.[1] && match[2]) {
-			return `${match[1]}/${match[2]}`;
+		// Try full date format: "2017年05月20日"
+		const fullMatch = /(\d{4})年(\d{2})月(\d{2})日/.exec(releaseDate.ja);
+		if (fullMatch?.[1] && fullMatch[2] && fullMatch[3]) {
+			return `${fullMatch[1]}/${fullMatch[2]}/${fullMatch[3]}`;
+		}
+		// Try year+month format: "1985年06月"
+		const monthMatch = /(\d{4})年(\d{2})月/.exec(releaseDate.ja);
+		if (monthMatch?.[1] && monthMatch[2]) {
+			return `${monthMatch[1]}/${monthMatch[2]}`;
 		}
 		// Try just year
 		const yearMatch = /(\d{4})年/.exec(releaseDate.ja);
