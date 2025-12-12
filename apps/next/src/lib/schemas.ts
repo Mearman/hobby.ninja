@@ -143,6 +143,7 @@ export const ItemNodeSchema = BaseNodeSchema.extend({
 // Brand node schema
 export const BrandNodeSchema = BaseNodeSchema.extend({
 	type: z.literal("brand"),
+	image: z.string().optional(),
 	country: z.string().optional(),
 	founded: z.union([z.string(), z.number()]).optional(),
 	website: z.string().url().optional(),
@@ -163,6 +164,7 @@ export const CategoryNodeSchema = BaseNodeSchema.extend({
 // Series node schema
 export const SeriesNodeSchema = BaseNodeSchema.extend({
 	type: z.literal("series"),
+	image: z.string().optional(),
 	description: z.string().optional(),
 	franchise: z.string().optional(),
 	itemCount: z.number().optional(),
