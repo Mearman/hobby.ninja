@@ -13,7 +13,7 @@ import {
 } from "@mantine/core";
 import { IconFolder } from "@tabler/icons-react";
 import { ItemNode } from "@/lib/schemas";
-import { getNodeDisplayName, getNodeImages, isItemNode } from "@/lib/schemas";
+import { getNodeDisplayName, getNodeImages, getNodeReleaseDate, isItemNode } from "@/lib/schemas";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import { CustomImage } from "@/components/ui/custom-image";
 import { ViewMode } from "./view-switcher";
@@ -35,6 +35,7 @@ function ItemCard({ item }: { item: ItemNode }) {
   const primaryImage = itemImages.length > 0 ? itemImages[0] : null;
   const placeholderSrc = createPlaceholderSvg(getNodeDisplayName(item));
   const errorPlaceholderSrc = createErrorPlaceholderSvg();
+  const releaseDate = getNodeReleaseDate(item);
 
   return (
     <Card
@@ -67,6 +68,11 @@ function ItemCard({ item }: { item: ItemNode }) {
           </Text>
         )}
         <Box className={itemCardMetadata}>
+          {releaseDate && (
+            <Badge className={itemCardBadge} variant="light" color="gray">
+              {releaseDate}
+            </Badge>
+          )}
           {item.grade && (
             <Badge className={itemCardBadge} variant="light">
               {item.grade}
@@ -114,56 +120,64 @@ export function ListView({ items }: { items: ItemNode[] }) {
 
   return (
     <Stack gap="md">
-      {items.filter(isItemNode).map((item) => (
-        <Card
-          key={item.id}
-          component="a"
-          href={`/item/${item.id}`}
-          p="md"
-          radius="md"
-          withBorder
-          style={{ textDecoration: "none", color: "inherit" }}
-        >
-          <Group gap="md" align="flex-start">
-            <Box w={80} style={{ flexShrink: 0 }}>
-              <CustomImage
-                src={getNodeImages(item)[0] ?? createPlaceholderSvg(getNodeDisplayName(item))}
-                alt={getNodeDisplayName(item)}
-                fit="cover"
-                height={80}
-                fallbackSrc={createErrorPlaceholderSvg()}
-                />
-            </Box>
-            <Box flex={1}>
-              <Title order={4} mb="xs">
-                {getNodeDisplayName(item)}
-              </Title>
-              {item.series && (
-                <Text size="sm" c="dimmed" mb="sm">
-                  {item.series}
-                </Text>
-              )}
-              <Group gap="xs">
-                {item.grade && (
-                  <Badge variant="light" size="sm">
-                    {item.grade}
-                  </Badge>
+      {items.filter(isItemNode).map((item) => {
+        const releaseDate = getNodeReleaseDate(item);
+        return (
+          <Card
+            key={item.id}
+            component="a"
+            href={`/item/${item.id}`}
+            p="md"
+            radius="md"
+            withBorder
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Group gap="md" align="flex-start">
+              <Box w={80} style={{ flexShrink: 0 }}>
+                <CustomImage
+                  src={getNodeImages(item)[0] ?? createPlaceholderSvg(getNodeDisplayName(item))}
+                  alt={getNodeDisplayName(item)}
+                  fit="cover"
+                  height={80}
+                  fallbackSrc={createErrorPlaceholderSvg()}
+                  />
+              </Box>
+              <Box flex={1}>
+                <Title order={4} mb="xs">
+                  {getNodeDisplayName(item)}
+                </Title>
+                {item.series && (
+                  <Text size="sm" c="dimmed" mb="sm">
+                    {item.series}
+                  </Text>
                 )}
-                {item.scale && (
-                  <Badge variant="light" size="sm">
-                    {item.scale}
-                  </Badge>
-                )}
-                {item.brand && (
-                  <Badge variant="outline" size="sm">
-                    {item.brand}
-                  </Badge>
-                )}
-              </Group>
-            </Box>
-          </Group>
-        </Card>
-      ))}
+                <Group gap="xs">
+                  {releaseDate && (
+                    <Badge variant="light" size="sm" color="gray">
+                      {releaseDate}
+                    </Badge>
+                  )}
+                  {item.grade && (
+                    <Badge variant="light" size="sm">
+                      {item.grade}
+                    </Badge>
+                  )}
+                  {item.scale && (
+                    <Badge variant="light" size="sm">
+                      {item.scale}
+                    </Badge>
+                  )}
+                  {item.brand && (
+                    <Badge variant="outline" size="sm">
+                      {item.brand}
+                    </Badge>
+                  )}
+                </Group>
+              </Box>
+            </Group>
+          </Card>
+        );
+      })}
     </Stack>
   );
 }
@@ -176,44 +190,48 @@ export function TableView({ items }: { items: ItemNode[] }) {
 
   const validItems = items.filter(isItemNode);
 
-  const rows = validItems.map((item) => (
-    <Table.Tr key={item.id}>
-      <Table.Td>
-        <Box
-          component="a"
-          href={`/item/${item.id}`}
-          style={{ textDecoration: "none", color: "inherit", display: "block" }}
-        >
-          <Group gap="sm" align="center">
-            <Box w={40} h={40}>
-              <CustomImage
-                src={getNodeImages(item)[0] ?? createPlaceholderSvg(getNodeDisplayName(item))}
-                alt={getNodeDisplayName(item)}
-                fit="cover"
-                height={40}
-                fallbackSrc={createErrorPlaceholderSvg()}
-              />
-            </Box>
-            <Text size="sm" fw={500}>
-              {getNodeDisplayName(item)}
-            </Text>
-          </Group>
-        </Box>
-      </Table.Td>
-      <Table.Td c="dimmed">{item.series ?? "-"}</Table.Td>
-      <Table.Td>{item.grade ?? "-"}</Table.Td>
-      <Table.Td>{item.scale ?? "-"}</Table.Td>
-      <Table.Td>
-        {item.brand ? (
-          <Badge variant="outline" size="sm">
-            {item.brand}
-          </Badge>
-        ) : (
-          "-"
-        )}
-      </Table.Td>
-    </Table.Tr>
-  ));
+  const rows = validItems.map((item) => {
+    const releaseDate = getNodeReleaseDate(item);
+    return (
+      <Table.Tr key={item.id}>
+        <Table.Td>
+          <Box
+            component="a"
+            href={`/item/${item.id}`}
+            style={{ textDecoration: "none", color: "inherit", display: "block" }}
+          >
+            <Group gap="sm" align="center">
+              <Box w={40} h={40}>
+                <CustomImage
+                  src={getNodeImages(item)[0] ?? createPlaceholderSvg(getNodeDisplayName(item))}
+                  alt={getNodeDisplayName(item)}
+                  fit="cover"
+                  height={40}
+                  fallbackSrc={createErrorPlaceholderSvg()}
+                />
+              </Box>
+              <Text size="sm" fw={500}>
+                {getNodeDisplayName(item)}
+              </Text>
+            </Group>
+          </Box>
+        </Table.Td>
+        <Table.Td c="dimmed">{releaseDate ?? "-"}</Table.Td>
+        <Table.Td c="dimmed">{item.series ?? "-"}</Table.Td>
+        <Table.Td>{item.grade ?? "-"}</Table.Td>
+        <Table.Td>{item.scale ?? "-"}</Table.Td>
+        <Table.Td>
+          {item.brand ? (
+            <Badge variant="outline" size="sm">
+              {item.brand}
+            </Badge>
+          ) : (
+            "-"
+          )}
+        </Table.Td>
+      </Table.Tr>
+    );
+  });
 
   return (
     <Box>
@@ -221,6 +239,7 @@ export function TableView({ items }: { items: ItemNode[] }) {
         <Table.Thead>
           <Table.Tr>
             <Table.Th>Name</Table.Th>
+            <Table.Th>Released</Table.Th>
             <Table.Th>Series</Table.Th>
             <Table.Th>Grade</Table.Th>
             <Table.Th>Scale</Table.Th>
