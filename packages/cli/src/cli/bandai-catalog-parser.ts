@@ -16,7 +16,10 @@ import { load, type CheerioAPI } from "cheerio";
 
 // Constants for repeated selectors
 const LABEL_VALUE_SELECTOR = "dd.pg-products__labelTxt";
-const DESCRIPTION_SELECTOR = ".pg-products__instructionTxt p";
+// Legacy format: description in instructionTxt paragraph
+const DESCRIPTION_SELECTOR_LEGACY = ".pg-products__instructionTxt p";
+// New format: description in article with PlaygroundEditorTheme paragraphs
+const DESCRIPTION_SELECTOR_ARTICLE = ".pg-products__article";
 
 export interface ParseResult {
 	success: boolean;
@@ -201,15 +204,38 @@ export class BandaiCatalogParser {
 		return scaleNum ? `1/${scaleNum}` : undefined;
 	}
 
+	/**
+	 * Gets the full product description text from either legacy or new format.
+	 * Legacy: .pg-products__instructionTxt p
+	 * New: .pg-products__article with PlaygroundEditorTheme paragraphs
+	 */
+	private getFullDescriptionText($: CheerioAPI): string {
+		// Try legacy format first
+		const legacyText = $(DESCRIPTION_SELECTOR_LEGACY).first().text().trim();
+		if (legacyText) return legacyText;
+
+		// Try new article format - extract text from all paragraph spans
+		const articleEl = $(DESCRIPTION_SELECTOR_ARTICLE);
+		if (articleEl.length === 0) return "";
+
+		// Get text from each paragraph, preserving line breaks
+		const lines: string[] = [];
+		articleEl.find("p").each((_, el) => {
+			const text = $(el).text().trim();
+			if (text) lines.push(text);
+		});
+
+		return lines.join("\n");
+	}
+
 	private extractDescription($: CheerioAPI): Array<{ ja: string }> {
-		const descriptionEl = $(DESCRIPTION_SELECTOR).first();
-		const text = descriptionEl.text().trim();
+		const text = this.getFullDescriptionText($);
 
 		if (!text) return [];
 
 		// Clean up the description - remove accessories/contents sections
-		// Note: split()[0] always returns a string when text is non-empty (verified by guard above)
-		const [firstPart] = text.split(/【付属品】|【商品内容】/);
+		const parts = text.split(/【付属品】|【商品内容】/);
+		const firstPart = parts[0] ?? "";
 		const cleanText = firstPart.trim();
 
 		if (!cleanText) return [];
@@ -224,15 +250,15 @@ export class BandaiCatalogParser {
 
 	private extractAccessories($: CheerioAPI): Array<{ ja: string }> {
 		const accessories: Array<{ ja: string }> = [];
-		const descText = $(DESCRIPTION_SELECTOR).text();
+		const descText = this.getFullDescriptionText($);
 
 		// Find text between 【付属品】 and 【商品内容】 or end
 		const accessoriesMatch = /【付属品】([\s\S]*?)(?:【商品内容】|$)/.exec(descText);
 		const accessoriesText = accessoriesMatch?.[1];
 		if (accessoriesText) {
-			// Split on newlines or ■ at start of line, keep items intact
+			// Split on newlines or ■, keep items intact
 			const items = accessoriesText
-				.split(/\n■|^■/m)
+				.split(/\n|■/)
 				.map(s => s.replace(/^■/, "").trim())
 				.filter(s => s.length > 0);
 
@@ -246,15 +272,15 @@ export class BandaiCatalogParser {
 
 	private extractContents($: CheerioAPI): Array<{ ja: string }> {
 		const contents: Array<{ ja: string }> = [];
-		const descText = $(DESCRIPTION_SELECTOR).text();
+		const descText = this.getFullDescriptionText($);
 
 		// Find text after 【商品内容】
 		const contentsMatch = /【商品内容】([\s\S]*?)$/.exec(descText);
 		const contentsText = contentsMatch?.[1];
 		if (contentsText) {
-			// Split on newlines or ■ at start of line, keep items intact
+			// Split on newlines or ■, keep items intact
 			const items = contentsText
-				.split(/\n■|^■/m)
+				.split(/\n|■/)
 				.map(s => s.replace(/^■/, "").trim())
 				.filter(s => s.length > 0);
 
