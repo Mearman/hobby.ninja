@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Accordion, Box, Skeleton, ActionIcon, Group, Tooltip, Switch, Card, Stack } from "@mantine/core";
 import { IconDownload, IconExternalLink, IconFileTypePdf, IconArrowsHorizontal } from "@tabler/icons-react";
 
@@ -45,9 +45,24 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 	const [expandedItems, setExpandedItems] = useState<string[]>([]);
 	const [loadedItems, setLoadedItems] = useState<Set<string>>(new Set());
 	const { fullWidth, toggleFullWidth, isHydrated } = useFullWidthPreference();
+	const itemRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
 	const handleChange = (values: string[]) => {
+		// Find newly expanded items
+		const newlyExpanded = values.filter((v) => !expandedItems.includes(v));
+
 		setExpandedItems(values);
+
+		// Scroll to the first newly expanded item after a short delay for render
+		if (newlyExpanded.length > 0) {
+			const itemId = newlyExpanded[0];
+			setTimeout(() => {
+				const element = itemRefs.current.get(itemId);
+				if (element) {
+					element.scrollIntoView({ behavior: "smooth", block: "start" });
+				}
+			}, 100);
+		}
 	};
 
 	const handleLoad = (id: string) => {
@@ -108,7 +123,17 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 							const isLoaded = loadedItems.has(itemId);
 
 							return (
-								<Accordion.Item key={index} value={itemId}>
+								<Accordion.Item
+									key={index}
+									value={itemId}
+									ref={(el: HTMLDivElement | null) => {
+										if (el) {
+											itemRefs.current.set(itemId, el);
+										} else {
+											itemRefs.current.delete(itemId);
+										}
+									}}
+								>
 									<Accordion.Control icon={<IconFileTypePdf size={20} />}>
 										<Group justify="space-between" wrap="nowrap" pr="md">
 											<span>{pdf.name}</span>
