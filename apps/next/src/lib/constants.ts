@@ -3,6 +3,8 @@
  * Centralized to avoid magic numbers throughout the codebase
  */
 
+import { itemsList } from "@hobby-ninja/data/items";
+
 // Pagination and Limits
 export const PAGINATION = {
 	ITEMS_PER_PAGE: 24,
@@ -100,31 +102,18 @@ export const FILTER = {
 	PRICE_MARK_50_PERCENT: 25_000, // 50% of MAX_PRICE
 } as const;
 
-// Dynamic MAX_YEAR - calculated from dataset
-// This function should be used to get the current maximum year from the actual data
-export async function getMaxYear(): Promise<number> {
-	try {
-		// Use client-data for dynamic import to avoid bundling server-only graph-data
-		const { getClientItems } = await import('./client-data');
-		const items = await getClientItems();
+// Dynamic MAX_YEAR - calculated from dataset at build time
+// Data is embedded via top-level import from @hobby-ninja/data
+export function getMaxYear(): number {
+	const years = itemsList
+		.map(item => item.releaseDate?.year)
+		.filter((year): year is number => year !== undefined && year !== null && year > 0);
 
-		// Extract years from release dates
-		const years = items
-			.map(item => item.releaseDate?.year)
-			.filter((year): year is number => year !== undefined && year !== null && year > 0);
-
-		if (years.length === 0) {
-			// Fallback to current year if no data found
-			return new Date().getFullYear();
-		}
-
-		// Return the maximum year found in the dataset
-		return Math.max(...years);
-	} catch (error) {
-		console.warn('Failed to calculate MAX_YEAR from dataset, using current year:', error);
-		// Fallback to current year on error
+	if (years.length === 0) {
 		return new Date().getFullYear();
 	}
+
+	return Math.max(...years);
 }
 
 // Legacy constant for backward compatibility - deprecated
