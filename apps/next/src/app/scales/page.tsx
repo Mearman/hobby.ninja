@@ -1,3 +1,4 @@
+import { scalesList, type ScaleData } from "@hobby-ninja/data/scales";
 import {
 	Anchor,
 	Badge,
@@ -14,12 +15,14 @@ import {
 import { IconHome, IconRuler } from "@tabler/icons-react";
 import Link from "next/link";
 
-import { scalesList, type ScaleData } from "@hobby-ninja/data/scales";
+import { ScalesClient } from "./scales-client";
+
 import { categoryCard } from "@/styles/components.css";
 
 // Helper function to parse scale ratio for sorting (e.g., "1/144" -> 144)
 function parseScaleRatio(scaleName: string): number {
-	const match = scaleName.match(/1\/(\d+)/);
+	const regex = /1\/(\d+)/;
+	const match = regex.exec(scaleName);
 	if (match) {
 		return Number.parseInt(match[1], 10);
 	}
@@ -35,7 +38,7 @@ function isCommonScale(scaleName: string): boolean {
 
 // Sort scales: common scales first, then by numeric ratio (ascending)
 function sortScales(scales: ScaleData[]): ScaleData[] {
-	return [...scales].sort((a, b) => {
+	return [...scales].toSorted((a, b) => {
 		const aIsCommon = isCommonScale(a.name);
 		const bIsCommon = isCommonScale(b.name);
 
@@ -100,14 +103,18 @@ function ScaleCard({ scale }: { scale: ScaleData }) {
 
 // Scale Statistics Component
 function ScaleStatistics({ scales }: { scales: ScaleData[] }) {
-	const totalItems = scales.reduce((sum, scale) => sum + scale.itemCount, 0);
+	let totalItems = 0;
+	for (const scale of scales) {
+		totalItems += scale.itemCount;
+	}
 	const avgItemsPerScale = totalItems / scales.length;
-	const topScale = scales.reduce((max, scale) =>
-		scale.itemCount > max.itemCount ? scale : max
-	);
-	const commonScalesCount = scales.filter((scale) =>
-		isCommonScale(scale.name)
-	).length;
+
+	let topScale = scales[0];
+	for (const scale of scales) {
+		if (scale.itemCount > topScale.itemCount) {
+			topScale = scale;
+		}
+	}
 
 	return (
 		<SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="md">
@@ -214,17 +221,13 @@ export default function ScalesPage() {
 				{/* Common Scales */}
 				{commonScales.length > 0 && <CommonScales scales={commonScales} />}
 
-				{/* All Other Scales */}
+				{/* All Other Scales with Infinite Scroll */}
 				{otherScales.length > 0 && (
 					<Box>
 						<Title order={2} mb="md">
 							All Scales
 						</Title>
-						<SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 5 }} spacing="md">
-							{otherScales.map((scale) => (
-								<ScaleCard key={scale.id} scale={scale} />
-							))}
-						</SimpleGrid>
+						<ScalesClient scales={otherScales} totalScales={otherScales.length} />
 					</Box>
 				)}
 			</Stack>
