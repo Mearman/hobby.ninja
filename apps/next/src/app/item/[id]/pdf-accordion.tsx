@@ -56,16 +56,12 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 		// Scroll the expanded accordion item header to top
 		if (newlyExpanded.length > 0) {
 			const itemId = newlyExpanded[0];
-			// Get position immediately before expansion animation moves things
-			const element = itemRefs.current.get(itemId);
-			if (element) {
-				const rect = element.getBoundingClientRect();
-				const scrollTop = window.scrollY + rect.top - 16; // 16px padding from top
-				// Scroll after width transition completes
-				setTimeout(() => {
-					window.scrollTo({ top: scrollTop, behavior: "smooth" });
-				}, 250);
-			}
+			setTimeout(() => {
+				const element = itemRefs.current.get(itemId);
+				if (element) {
+					element.scrollIntoView({ behavior: "smooth", block: "start" });
+				}
+			}, 50);
 		}
 	};
 
@@ -133,6 +129,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 											if (el) itemRefs.current.set(itemId, el);
 											else itemRefs.current.delete(itemId);
 										}}
+										style={{ scrollMarginTop: 16 }}
 									>
 										<Accordion.Control icon={<IconFileTypePdf size={20} />}>
 										<Group justify="space-between" wrap="nowrap" pr="md">
