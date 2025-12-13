@@ -12,10 +12,10 @@ import { ViewSwitcher, useViewMode } from "@/components/view/view-switcher";
 import { useFilteredItems } from "@/hooks/use-filtered-items";
 import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
-import { isFutureRelease, type ItemNode } from "@/lib/schemas";
+import { isFutureRelease, type Item } from "@hobby-ninja/data";
 
 interface GradeItemsClientProps {
-	items: ItemNode[];
+	items: Item[];
 	gradeName: string;
 	totalItems: number;
 }
@@ -43,6 +43,7 @@ export function GradeItemsClient({ items, gradeName, totalItems }: GradeItemsCli
 		filterState,
 		updateFilter,
 		updateSearch,
+		toggleFilterValue,
 		clearFilters,
 		hasActiveFilters,
 		activeFilterCount,
@@ -69,6 +70,7 @@ export function GradeItemsClient({ items, gradeName, totalItems }: GradeItemsCli
 				availableOptions={availableOptions}
 				onFilterChange={updateFilter}
 				onSearchChange={updateSearch}
+				onToggleFilterValue={toggleFilterValue}
 				onClearFilters={clearFilters}
 				hasActiveFilters={hasActiveFilters}
 				activeFilterCount={activeFilterCount}

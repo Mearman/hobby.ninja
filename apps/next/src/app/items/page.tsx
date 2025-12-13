@@ -15,7 +15,7 @@ import {
 } from "@tabler/icons-react";
 
 import { getAllItems } from "@/lib/graph-data";
-import { getNodeDisplayName } from "@/lib/schemas";
+import { getNodeDisplayName } from "@hobby-ninja/data";
 
 // Server Component - no client-side JavaScript needed
 export default function ItemsPage() {

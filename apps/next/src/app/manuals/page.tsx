@@ -18,19 +18,18 @@ import {
 import Link from "next/link";
 
 import { getAllManuals } from "@/lib/server-graph-data";
-import { getNodeDisplayName } from "@/lib/schemas";
+import { getNodeDisplayName, type Manual } from "@hobby-ninja/data";
 import { categoryCard } from "@/styles/components.css";
-import type { ManualNode } from "@/lib/schemas";
 
 // Helper function to get item display name
-const getItemDisplayName = (manual: ManualNode): string | null => {
+const getItemDisplayName = (manual: Manual): string | null => {
 	if (!manual.itemName) return null;
 	if (typeof manual.itemName === "string") return manual.itemName;
 	return manual.itemName.en ?? manual.itemName.ja ?? null;
 };
 
 // Manual Card Component
-function ManualCard({ manual }: { manual: ManualNode }) {
+function ManualCard({ manual }: { manual: Manual }) {
 	const displayName = getNodeDisplayName(manual);
 	const itemName = getItemDisplayName(manual);
 
@@ -94,7 +93,7 @@ function ManualCard({ manual }: { manual: ManualNode }) {
 }
 
 // Manual Statistics Component
-function ManualStatistics({ manuals }: { manuals: ManualNode[] }) {
+function ManualStatistics({ manuals }: { manuals: Manual[] }) {
 	const manualsWithPdf = manuals.filter(m => m.url).length;
 	const manualsWithPages = manuals.filter(m => m.pages).length;
 	const totalPages = manuals.reduce((sum, m) => sum + (m.pages || 0), 0);

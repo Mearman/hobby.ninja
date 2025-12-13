@@ -39,7 +39,7 @@ import React from "react";
 
 import { useCollection } from "@/contexts/collection-context";
 import type { CollectionItem } from "@/lib/collection-storage";
-import { getNodeDisplayName, type ItemNode } from "@/lib/schemas";
+import { getNodeDisplayName, type Item } from "@hobby-ninja/data";
 import {
 	itemCard,
 	itemCardImage,
@@ -85,8 +85,8 @@ interface CollectionStats {
 // Props for the client component
 interface CollectionDetailClientProps {
 	collectionId: string;
-	// Map of itemId -> ItemNode for O(1) lookups
-	dbItemsMap: Map<string, ItemNode>;
+	// Map of itemId -> Item for O(1) lookups
+	dbItemsMap: Map<string, Item>;
 }
 
 // Item card component for collection items
@@ -99,7 +99,7 @@ function CollectionItemCard({
 	dbItem,
 }: {
   item: CollectionItem;
-  dbItem?: ItemNode;
+  dbItem?: Item;
   onEdit: (item: CollectionItem) => void;
   onDelete: (item: CollectionItem) => void;
   onToggleVisibility: (item: CollectionItem) => void;
@@ -138,9 +138,9 @@ function CollectionItemCard({
 						<Text className={itemCardTitle} lineClamp={2}>
 							{dbItem ? getNodeDisplayName(dbItem) : item.itemId}
 						</Text>
-						{dbItem?.series && (
+						{dbItem?.seriesIds && dbItem.seriesIds.length > 0 && (
 							<Text className={itemCardSubtitle} lineClamp={1}>
-								{dbItem.series}
+								{dbItem.seriesIds.join(", ")}
 							</Text>
 						)}
 						<Box className={itemCardMetadata}>
@@ -192,9 +192,9 @@ function CollectionItemCard({
 						/>
 						<Box>
 							<Text fw={500}>{dbItem ? getNodeDisplayName(dbItem) : item.itemId}</Text>
-							{dbItem?.series && (
+							{dbItem?.seriesIds && dbItem.seriesIds.length > 0 && (
 								<Text size="sm" c="dimmed">
-									{dbItem.series}
+									{dbItem.seriesIds.join(", ")}
 								</Text>
 							)}
 						</Box>
@@ -262,7 +262,7 @@ function ItemFormModal({
   opened: boolean;
   onClose: () => void;
   item?: CollectionItem;
-  dbItem?: ItemNode;
+  dbItem?: Item;
   onSave: (itemData: Partial<CollectionItem>) => void;
 }) {
 	const [formData, setFormData] = React.useState({
@@ -321,7 +321,7 @@ function ItemFormModal({
 							/>
 							<Box>
 								<Text fw={500}>{dbItem ? getNodeDisplayName(dbItem) : item.itemId}</Text>
-								<Text size="sm" c="dimmed">{dbItem?.series ?? item.itemId}</Text>
+								<Text size="sm" c="dimmed">{dbItem?.seriesIds && dbItem.seriesIds.length > 0 ? dbItem.seriesIds.join(", ") : item.itemId}</Text>
 							</Box>
 						</Group>
 					</Box>

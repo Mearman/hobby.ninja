@@ -21,7 +21,7 @@ import { notFound } from "next/navigation";
 
 import { SeriesItemsClient } from "./series-items-client";
 
-import { getNodeDisplayName, type BaseNode } from "@/lib/schemas";
+import { getNodeDisplayName, type Node } from "@hobby-ninja/data";
 import {
 	getSeriesById,
 	getSeriesIds,
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: SeriesPageProps): Promise<Met
 }
 
 // Breadcrumbs component
-function SeriesBreadcrumbs({ series }: { series: BaseNode }) {
+function SeriesBreadcrumbs({ series }: { series: Node }) {
 	const breadcrumbItems = [
 		{ title: "Home", href: "/" },
 		{ title: "Database", href: "/database" },

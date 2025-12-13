@@ -29,12 +29,12 @@ import { ViewSwitcher, useViewMode } from "@/components/view/view-switcher";
 import { useFilteredItems } from "@/hooks/use-filtered-items";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
 import { PAGINATION } from "@/lib/constants";
-import { getNodeDisplayName, isFutureRelease, isItemNode, type CategoryNode, type ItemNode } from "@/lib/schemas";
+import { getNodeDisplayName, isFutureRelease, isItem, type Category, type Item } from "@hobby-ninja/data";
 
 interface CategoryPageClientProps {
-	initialCategory: CategoryNode;
-	initialItems: ItemNode[];
-	_initialCategories: CategoryNode[];
+	initialCategory: Category;
+	initialItems: Item[];
+	_initialCategories: Category[];
 	categoryId: string;
 }
 
@@ -55,7 +55,6 @@ export function CategoryPageClient({
 	categoryId,
 }: CategoryPageClientProps) {
 	const [page, setPage] = useState(1);
-	const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
 	const { viewMode, setViewMode } = useViewMode();
 	const { preferences, isLoaded } = useUserPreferences();
 
@@ -78,6 +77,7 @@ export function CategoryPageClient({
 		filterState,
 		updateFilter,
 		updateSearch,
+		toggleFilterValue,
 		clearFilters,
 		hasActiveFilters,
 		activeFilterCount,
@@ -93,7 +93,7 @@ export function CategoryPageClient({
 
 	// Calculate category statistics (price-related only, filter options come from hook)
 	const categoryStats = useMemo((): CategoryStats => {
-		const validItems: ItemNode[] = initialItems.filter((item): item is ItemNode => isItemNode(item));
+		const validItems: Item[] = initialItems.filter((item): item is Item => isItem(item));
 		const prices: number[] = [];
 		let newestItem = "";
 		let oldestItem = "";
@@ -230,9 +230,8 @@ export function CategoryPageClient({
 					availableOptions={availableOptions}
 					onFilterChange={updateFilter}
 					onSearchChange={updateSearch}
+					onToggleFilterValue={toggleFilterValue}
 					onClearFilters={clearFilters}
-					showAdvancedFilters={showAdvancedFilters}
-					onToggleAdvancedFilters={() => { setShowAdvancedFilters(!showAdvancedFilters); }}
 					hasActiveFilters={hasActiveFilters}
 					activeFilterCount={activeFilterCount}
 					title="Filter Items"

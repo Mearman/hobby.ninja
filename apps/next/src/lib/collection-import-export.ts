@@ -1,9 +1,9 @@
 import pako from "pako";
 
 import { getItemById, getItemIds } from "@hobby-ninja/data/items";
+import { getNodeDisplayName } from "@hobby-ninja/data";
 
 import type { CollectionItem } from "./collection-storage";
-import { getNodeDisplayName } from "./schemas";
 
 // Check if item ID exists in the database
 function isValidItemId(id: string): boolean {

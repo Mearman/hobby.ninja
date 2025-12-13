@@ -1,6 +1,6 @@
 "use client";
 
-import { type Item } from "@hobby-ninja/data";
+import { type Item, isFutureRelease } from "@hobby-ninja/data";
 import { Group, Stack } from "@mantine/core";
 import { IconList } from "@tabler/icons-react";
 import { useEffect, useMemo } from "react";
@@ -13,7 +13,6 @@ import { ViewSwitcher, useViewMode } from "@/components/view/view-switcher";
 import { useFilteredItems } from "@/hooks/use-filtered-items";
 import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
-import { isFutureRelease, type ItemNode } from "@/lib/schemas";
 
 interface SeriesItemsClientProps {
 	items: Item[];
@@ -27,7 +26,7 @@ export function SeriesItemsClient({ items, seriesName, totalItems }: SeriesItems
 
 	// Calculate future release count for display
 	const futureCount = useMemo(
-		() => items.filter((item) => isFutureRelease(item as ItemNode)).length,
+		() => items.filter((item) => isFutureRelease(item)).length,
 		[items],
 	);
 
@@ -35,7 +34,7 @@ export function SeriesItemsClient({ items, seriesName, totalItems }: SeriesItems
 	const visibleItems = useMemo(() => {
 		if (!isLoaded) return items;
 		if (!preferences.hideFutureReleases) return items;
-		return items.filter((item) => !isFutureRelease(item as ItemNode));
+		return items.filter((item) => !isFutureRelease(item));
 	}, [items, preferences.hideFutureReleases, isLoaded]);
 
 	// Apply filtering and sorting to items
@@ -44,6 +43,7 @@ export function SeriesItemsClient({ items, seriesName, totalItems }: SeriesItems
 		filterState,
 		updateFilter,
 		updateSearch,
+		toggleFilterValue,
 		clearFilters,
 		hasActiveFilters,
 		activeFilterCount,
@@ -70,6 +70,7 @@ export function SeriesItemsClient({ items, seriesName, totalItems }: SeriesItems
 				availableOptions={availableOptions}
 				onFilterChange={updateFilter}
 				onSearchChange={updateSearch}
+				onToggleFilterValue={toggleFilterValue}
 				onClearFilters={clearFilters}
 				hasActiveFilters={hasActiveFilters}
 				activeFilterCount={activeFilterCount}

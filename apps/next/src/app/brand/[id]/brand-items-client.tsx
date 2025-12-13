@@ -12,10 +12,10 @@ import { ViewSwitcher, useViewMode } from "@/components/view/view-switcher";
 import { useFilteredItems } from "@/hooks/use-filtered-items";
 import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
-import { type ItemNode, isFutureRelease } from "@/lib/schemas";
+import { type Item, isFutureRelease } from "@hobby-ninja/data";
 
 interface BrandItemsClientProps {
-	items: ItemNode[];
+	items: Item[];
 	brandName: string;
 	totalItems: number;
 }
@@ -43,6 +43,7 @@ export function BrandItemsClient({ items, brandName, totalItems }: BrandItemsCli
 		filterState,
 		updateFilter,
 		updateSearch,
+		toggleFilterValue,
 		clearFilters,
 		hasActiveFilters,
 		activeFilterCount,
@@ -69,6 +70,7 @@ export function BrandItemsClient({ items, brandName, totalItems }: BrandItemsCli
 				availableOptions={availableOptions}
 				onFilterChange={updateFilter}
 				onSearchChange={updateSearch}
+				onToggleFilterValue={toggleFilterValue}
 				onClearFilters={clearFilters}
 				hasActiveFilters={hasActiveFilters}
 				activeFilterCount={activeFilterCount}

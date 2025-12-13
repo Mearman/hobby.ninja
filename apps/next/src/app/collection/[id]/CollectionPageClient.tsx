@@ -16,7 +16,6 @@ import { useEffect, useState } from "react";
 import { CollectionDetailClient } from "./CollectionDetailClient";
 import { getItemById, type Item } from "@hobby-ninja/data/items";
 import { useCollection } from "@/contexts/collection-context";
-import type { ItemNode } from "@/lib/schemas";
 
 // Fully client-side page for collection details
 // Collections are stored in IndexedDB and not known at build time
@@ -25,7 +24,7 @@ export function CollectionPageClient() {
 	const collectionId = params.id;
 
 	const { state } = useCollection();
-	const [dbItemsMap, setDbItemsMap] = useState<Map<string, ItemNode>>(new Map());
+	const [dbItemsMap, setDbItemsMap] = useState<Map<string, Item>>(new Map());
 	const [loading, setLoading] = useState(true);
 
 	// Load only the database items that are in the user's collection
@@ -37,11 +36,11 @@ export function CollectionPageClient() {
 
 			if (itemIds.length > 0) {
 				// Build items map synchronously
-				const itemsMap = new Map<string, ItemNode>();
+				const itemsMap = new Map<string, Item>();
 				for (const id of itemIds) {
 					const item = getItemById(id);
 					if (item) {
-						itemsMap.set(id, item as ItemNode);
+						itemsMap.set(id, item as Item);
 					}
 				}
 				setDbItemsMap(itemsMap);

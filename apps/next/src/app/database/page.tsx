@@ -11,7 +11,7 @@ import {
 import Link from "next/link";
 
 import { getAllBrands, getAllCategories, getAllItems, getAllSeries } from "@/lib/graph-data";
-import { BrandNode, CategoryNode, ItemNode, getNodeDisplayName, SeriesNode } from "@/lib/schemas";
+import { type Brand, type Category, type Item, getNodeDisplayName, type Series } from "@hobby-ninja/data";
 
 // Types
 interface DatabaseStats {
@@ -20,32 +20,31 @@ interface DatabaseStats {
   totalCategories: number;
   totalSeries: number;
   avgPrice: number;
-  brands: Array<BrandNode & { itemCount: number }>;
-  categories: Array<CategoryNode & { itemCount: number }>;
-  series: Array<SeriesNode & { itemCount: number }>;
-  recentItems: ItemNode[];
+  brands: Array<Brand & { itemCount: number }>;
+  categories: Array<Category & { itemCount: number }>;
+  series: Array<Series & { itemCount: number }>;
+  recentItems: Item[];
 }
 
 // Calculate database statistics
 function calculateStats(
-  allItems: ItemNode[],
-  allBrands: BrandNode[],
-  allCategories: CategoryNode[],
-  allSeries: SeriesNode[]
+  allItems: Item[],
+  allBrands: Brand[],
+  allCategories: Category[],
+  allSeries: Series[]
 ): DatabaseStats {
   // Calculate average price
   const itemsWithPrice = allItems.filter(item =>
-    item.metadata && typeof item.metadata.price === 'number'
+    item.price && typeof item.price.amount === 'number'
   );
   const avgPrice = itemsWithPrice.length > 0
-    ? itemsWithPrice.reduce((sum, item) => sum + ((item.metadata?.price as number) || 0), 0) / itemsWithPrice.length
+    ? itemsWithPrice.reduce((sum, item) => sum + (item.price?.amount ?? 0), 0) / itemsWithPrice.length
     : 0;
 
   // Get top brands by item count
   const brandCounts = new Map<string, number>();
   allItems.forEach(item => {
-    const brandId = (item as any).brand;
-    if (brandId) {
+    for (const brandId of item.brandIds) {
       brandCounts.set(brandId, (brandCounts.get(brandId) || 0) + 1);
     }
   });
@@ -61,8 +60,7 @@ function calculateStats(
   // Get top categories by item count
   const categoryCounts = new Map<string, number>();
   allItems.forEach(item => {
-    const categoryId = (item as any).category;
-    if (categoryId) {
+    for (const categoryId of item.categoryIds) {
       categoryCounts.set(categoryId, (categoryCounts.get(categoryId) || 0) + 1);
     }
   });
@@ -78,9 +76,8 @@ function calculateStats(
   // Get top series by item count
   const seriesCounts = new Map<string, number>();
   allItems.forEach(item => {
-    const seriesName = (item as any).series;
-    if (seriesName) {
-      seriesCounts.set(seriesName, (seriesCounts.get(seriesName) || 0) + 1);
+    for (const seriesId of item.seriesIds) {
+      seriesCounts.set(seriesId, (seriesCounts.get(seriesId) || 0) + 1);
     }
   });
 
@@ -231,8 +228,7 @@ export default function DatabasePage() {
           <Title order={3} mb="md">Recent Items</Title>
           <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="md">
             {stats.recentItems.map((item) => {
-              const price = item.metadata?.price;
-              const priceNum = typeof price === 'number' ? price : null;
+              const priceAmount = item.price?.amount;
               return (
                 <Link
                   key={item.id}
@@ -245,11 +241,11 @@ export default function DatabasePage() {
                         {getNodeDisplayName(item)}
                       </Text>
                       <Text size="xs" c="dimmed">
-                        {(item as any).brand || ""}
+                        {item.brandIds.length > 0 ? item.brandIds.join(", ") : ""}
                       </Text>
-                      {priceNum !== null && (
+                      {priceAmount !== undefined && (
                         <Text size="sm" fw="bold" c="green">
-                          ¥{priceNum.toLocaleString()}
+                          ¥{priceAmount.toLocaleString()}
                         </Text>
                       )}
                     </Stack>

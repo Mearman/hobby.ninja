@@ -29,7 +29,7 @@ import {
 	categoriesList,
 	type Category,
 } from "@hobby-ninja/data/categories";
-import { getNodeDisplayName } from "@/lib/schemas";
+import { getNodeDisplayName } from "@hobby-ninja/data";
 import { categoryCard, categoryIcon } from "@/styles/components.css";
 
 interface CategoryWithCount extends Category {

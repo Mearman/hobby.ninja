@@ -2,22 +2,17 @@ import Fuse, { type IFuseOptions, type FuseResult } from "fuse.js";
 
 import { PAGINATION, FILTER } from "./constants";
 
-import { searchRecords, type SearchRecord } from "@hobby-ninja/data/search";
+import { searchRecords } from "@hobby-ninja/data/search";
 import { brandsList, type Brand } from "@hobby-ninja/data/brands";
 import { categoriesList, type Category } from "@hobby-ninja/data/categories";
 import { seriesList, type Series } from "@hobby-ninja/data/series";
 import { getItemById } from "@hobby-ninja/data/items";
-import {
-	type BrandNode,
-	type CategoryNode,
-	type SeriesNode,
-} from "@/lib/schemas";
 
 // Helper function to extract string from localized text
 function getLocalizedString(text: string | { ja: string; en?: string } | undefined): string {
 	if (!text) return "";
 	if (typeof text === "string") return text;
-	return text.ja ?? text.en ?? "";
+	return text.ja || text.en || "";
 }
 
 export interface SearchableItem {
@@ -34,7 +29,7 @@ export interface SearchableItem {
   releaseYear?: number;
   type: "item" | "brand" | "category" | "series";
   // originalData is only available for brand/category/series (not items to save memory)
-  originalData?: BrandNode | CategoryNode | SeriesNode;
+  originalData?: Brand | Category | Series;
 }
 
 export interface SearchOptions {
@@ -108,7 +103,7 @@ export class SearchIndex {
 		try {
 			// Process items from search records
 			for (const record of searchRecords) {
-				if (!record?.name) continue;
+				if (!record.name) continue;
 
 				// Get full item data for grade, scale, price, releaseYear
 				const fullItem = getItemById(record.id);
@@ -138,46 +133,46 @@ export class SearchIndex {
 				if (record.series) this.series.add(record.series);
 			}
 
-			// Add brands (Brand type is compatible with BrandNode)
+			// Add brands
 			for (const brand of brandsList) {
-				if (!brand?.name) continue;
+				if (!brand.name) continue;
 
 				searchableItems.push({
 					id: brand.id,
 					name: getLocalizedString(brand.name),
 					description: brand.description,
 					type: "brand",
-					originalData: brand as unknown as BrandNode,
+					originalData: brand,
 				});
 
 				this.brands.add(getLocalizedString(brand.name));
 			}
 
-			// Add categories (Category type is compatible with CategoryNode)
+			// Add categories
 			for (const category of categoriesList) {
-				if (!category?.name) continue;
+				if (!category.name) continue;
 
 				searchableItems.push({
 					id: category.id,
 					name: getLocalizedString(category.name),
 					description: category.description,
 					type: "category",
-					originalData: category as unknown as CategoryNode,
+					originalData: category,
 				});
 
 				this.categories.add(getLocalizedString(category.name));
 			}
 
-			// Add series (Series type is compatible with SeriesNode)
+			// Add series
 			for (const series of seriesList) {
-				if (!series?.name) continue;
+				if (!series.name) continue;
 
 				searchableItems.push({
 					id: series.id,
 					name: getLocalizedString(series.name),
 					description: series.description,
 					type: "series",
-					originalData: series as unknown as SeriesNode,
+					originalData: series,
 				});
 
 				this.series.add(getLocalizedString(series.name));
@@ -246,8 +241,8 @@ export class SearchIndex {
 		// If no query, return filtered items sorted by relevance (name)
 		if (!query?.trim()) {
 			const results = filteredItems
-				.map(item => ({ item, score: 0 } as SearchResult))
-				.sort((a, b) => a.item.name.localeCompare(b.item.name))
+				.map(item => ({ item, score: 0 }) satisfies SearchResult)
+				.toSorted((a, b) => a.item.name.localeCompare(b.item.name))
 				.slice(0, limit);
 
 			return results;
@@ -275,7 +270,7 @@ export class SearchIndex {
    * Get suggestions for autocomplete
    */
 	getSuggestions(query: string, limit: number = PAGINATION.DEFAULT_SUGGESTION_LIMIT): string[] {
-		if (!query?.trim() || query.length < 2) return [];
+		if (!query.trim() || query.length < 2) return [];
 
 		const results = this.search({
 			query,
@@ -311,11 +306,11 @@ export class SearchIndex {
    */
 	getFilterOptions() {
 		return {
-			categories: [...this.categories].sort(),
-			brands: [...this.brands].sort(),
-			grades: [...this.grades].sort(),
-			scales: [...this.scales].sort(),
-			series: [...this.series].sort(),
+			categories: [...this.categories].toSorted(),
+			brands: [...this.brands].toSorted(),
+			grades: [...this.grades].toSorted(),
+			scales: [...this.scales].toSorted(),
+			series: [...this.series].toSorted(),
 		};
 	}
 
@@ -368,7 +363,7 @@ export class SearchIndex {
 			this.allItems.filter(item => item.type === "item");
 
 		// Randomly sample items
-		const shuffled = [...pool].sort(() => Math.random() - 0.5);
+		const shuffled = [...pool].toSorted(() => Math.random() - 0.5);
 		const selected = shuffled.slice(0, count);
 
 		return selected.map(item => ({
@@ -409,9 +404,7 @@ export class SearchIndex {
 let searchIndexInstance: SearchIndex | null = null;
 
 export function getSearchIndex(): SearchIndex {
-	if (!searchIndexInstance) {
-		searchIndexInstance = new SearchIndex();
-	}
+	searchIndexInstance ??= new SearchIndex();
 	return searchIndexInstance;
 }
 
@@ -420,4 +413,4 @@ export function initializeSearchIndex(): SearchIndex {
 	return getSearchIndex();
 }
 
-export default SearchIndex;
+export { SearchIndex };
