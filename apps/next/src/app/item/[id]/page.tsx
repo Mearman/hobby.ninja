@@ -1,4 +1,19 @@
 import {
+	getItemIds,
+	getItemById,
+	getBrandById,
+	getSeriesById,
+	getCategoryById,
+	getManualById,
+	type Item,
+	getNodeDisplayName,
+	getNodePrice,
+	getNodeReleaseDate,
+	getNodeImages,
+	getNodeAccessories,
+	isItem,
+} from "@hobby-ninja/data";
+import {
 	Container,
 	Card,
 	Badge,
@@ -17,21 +32,6 @@ import { ItemImageGallery } from "./item-image-gallery";
 import { PdfAccordion } from "./pdf-accordion";
 
 // Import from canonical data package
-import {
-	getItemIds,
-	getItemById,
-	getBrandById,
-	getSeriesById,
-	getCategoryById,
-	getManualById,
-	type Item,
-	getNodeDisplayName,
-	getNodePrice,
-	getNodeReleaseDate,
-	getNodeImages,
-	getNodeAccessories,
-	isItem,
-} from "@hobby-ninja/data";
 
 interface ItemPageProps {
 	params: Promise<{ id: string }>;
@@ -74,7 +74,7 @@ function getDescriptionItems(item: Item): string[] {
 }
 
 // Next.js requires default exports for page components
-// eslint-disable-next-line import/no-default-export
+ 
 export default async function ItemPage({ params }: ItemPageProps) {
 	const { id } = await params;
 	const item = getItemById(id);
@@ -91,9 +91,9 @@ export default async function ItemPage({ params }: ItemPageProps) {
 	const descriptionItems = getDescriptionItems(item);
 
 	// Resolve relationship names from IDs
-	const category = item.categoryIds[0] ? getCategoryById(item.categoryIds[0]) : undefined;
-	const brand = item.brandIds[0] ? getBrandById(item.brandIds[0]) : undefined;
-	const series = item.seriesIds[0] ? getSeriesById(item.seriesIds[0]) : undefined;
+	const categories = item.categoryIds.map(id => getCategoryById(id)).filter((c): c is NonNullable<typeof c> => c != null);
+	const brands = item.brandIds.map(id => getBrandById(id)).filter((b): b is NonNullable<typeof b> => b != null);
+	const seriesList = item.seriesIds.map(id => getSeriesById(id)).filter((s): s is NonNullable<typeof s> => s != null);
 	const manual = item.manualId ? getManualById(item.manualId) : undefined;
 
 	return (
@@ -123,29 +123,31 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
 								{/* Metadata Badges - Clickable links to related entities */}
 								<Group gap="xs">
-									{category && (
-										<Link href={`/category/${category.id}`} style={{ textDecoration: "none" }}>
+									{categories.map(category => (
+										<Link key={category.id} href={`/category/${category.id}`} style={{ textDecoration: "none" }}>
 											<Badge color="gray" variant="light" style={{ cursor: "pointer" }}>
 												{getNodeDisplayName(category)}
 											</Badge>
 										</Link>
-									)}
-									{brand && (
-										<Badge color="blue" variant="light">{getNodeDisplayName(brand)}</Badge>
-									)}
+									))}
+									{brands.map(brand => (
+										<Badge key={brand.id} color="blue" variant="light">
+											{getNodeDisplayName(brand)}
+										</Badge>
+									))}
 									{item.grade && (
 										<Badge color="green" variant="light">{item.grade}</Badge>
 									)}
 									{item.scale && (
 										<Badge color="orange" variant="light">{item.scale}</Badge>
 									)}
-									{series && (
-										<Link href={`/series/${series.id}`} style={{ textDecoration: "none" }}>
+									{seriesList.map(series => (
+										<Link key={series.id} href={`/series/${series.id}`} style={{ textDecoration: "none" }}>
 											<Badge color="violet" variant="light" style={{ cursor: "pointer" }}>
 												{getNodeDisplayName(series)}
 											</Badge>
 										</Link>
-									)}
+									))}
 								</Group>
 
 								{/* Price and Release */}
@@ -210,14 +212,14 @@ export default async function ItemPage({ params }: ItemPageProps) {
 				)}
 
 				{/* Assembly Manual - Full Width with Embedded PDF */}
-				{manual && manual.pdfs && manual.pdfs.length > 0 && (
+				{manual?.pdfs && manual.pdfs.length > 0 && (
 					<PdfAccordion
 						pdfs={manual.pdfs.map((pdf, index) => {
 							const suffix = index === 0 ? "" : `_${index + 1}`;
 							return {
-								name: pdf.name.en || pdf.name.ja,
+								name: pdf.name.en ?? pdf.name.ja,
 								src: `/manuals/${manual.id}/${manual.id}${suffix}.pdf`,
-								title: `${getNodeDisplayName(manual)} - ${pdf.name.en || pdf.name.ja}`,
+								title: `${getNodeDisplayName(manual)} - ${pdf.name.en ?? pdf.name.ja}`,
 							};
 						})}
 						header={
@@ -256,14 +258,14 @@ export default async function ItemPage({ params }: ItemPageProps) {
 												</Badge>
 											)}
 										</Group>
-										{manual.brandIds && manual.brandIds.length > 0 && (
+										{manual.brandIds.length > 0 && (
 											<Text size="xs" c="dimmed">
-												Brand: {manual.brandIds.map(id => getBrandById(id)).filter(Boolean).map(b => b && getNodeDisplayName(b)).join(", ")}
+												Brand: {manual.brandIds.map(id => getBrandById(id)).filter((b): b is NonNullable<typeof b> => b != null).map(b => getNodeDisplayName(b)).join(", ")}
 											</Text>
 										)}
-										{manual.seriesIds && manual.seriesIds.length > 0 && (
+										{manual.seriesIds.length > 0 && (
 											<Text size="xs" c="dimmed">
-												Series: {manual.seriesIds.map(id => getSeriesById(id)).filter(Boolean).map(s => s && getNodeDisplayName(s)).join(", ")}
+												Series: {manual.seriesIds.map(id => getSeriesById(id)).filter((s): s is NonNullable<typeof s> => s != null).map(s => getNodeDisplayName(s)).join(", ")}
 											</Text>
 										)}
 									</Stack>
@@ -276,10 +278,10 @@ export default async function ItemPage({ params }: ItemPageProps) {
 									>
 										View on Bandai
 									</Anchor>
-									{manual.pdfs && manual.pdfs.length > 0 && manual.pdfs.map((pdf, index) => {
+									{manual.pdfs.map((pdf, index) => {
 										const suffix = index === 0 ? "" : `_${index + 1}`;
 										const pdfPath = `/manuals/${manual.id}/${manual.id}${suffix}.pdf`;
-										const pdfName = pdf.name.en || pdf.name.ja;
+										const pdfName = pdf.name.en ?? pdf.name.ja;
 										return (
 											<Anchor
 												key={index}
