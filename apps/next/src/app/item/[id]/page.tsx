@@ -86,7 +86,6 @@ export default async function ItemPage({ params }: ItemPageProps) {
 	const displayName = getNodeDisplayName(item);
 	const price = getNodePrice(item);
 	const releaseDate = getNodeReleaseDate(item);
-	const images = getNodeImages(item);
 	const accessories = getNodeAccessories(item);
 	const descriptionItems = getDescriptionItems(item);
 
@@ -95,6 +94,12 @@ export default async function ItemPage({ params }: ItemPageProps) {
 	const brands = item.brandIds.map(id => getBrandById(id)).filter((b): b is NonNullable<typeof b> => b != null);
 	const seriesList = item.seriesIds.map(id => getSeriesById(id)).filter((s): s is NonNullable<typeof s> => s != null);
 	const manual = item.manualId ? getManualById(item.manualId) : undefined;
+
+	// Get item images, falling back to manual image if none exist
+	let images = getNodeImages(item);
+	if (images.length === 0 && manual?.productImage) {
+		images = [manual.productImage];
+	}
 
 	return (
 		<Container size="xl" py="md">
