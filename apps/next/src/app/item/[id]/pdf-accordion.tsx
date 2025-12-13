@@ -127,15 +127,14 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 							const isLoaded = loadedItems.has(itemId);
 
 							return (
-								<Accordion.Item
-									key={index}
-									value={itemId}
-									ref={(el: HTMLDivElement | null) => {
-										if (el) itemRefs.current.set(itemId, el);
-										else itemRefs.current.delete(itemId);
-									}}
-								>
-									<Accordion.Control icon={<IconFileTypePdf size={20} />}>
+								<Accordion.Item key={index} value={itemId}>
+									<Box
+										ref={(el: HTMLDivElement | null) => {
+											if (el) itemRefs.current.set(itemId, el);
+											else itemRefs.current.delete(itemId);
+										}}
+									>
+										<Accordion.Control icon={<IconFileTypePdf size={20} />}>
 										<Group justify="space-between" wrap="nowrap" pr="md">
 											<span>{pdf.name}</span>
 											<Group gap="xs" onClick={(e) => e.stopPropagation()}>
@@ -164,7 +163,8 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 												</ActionIcon>
 											</Group>
 										</Group>
-									</Accordion.Control>
+										</Accordion.Control>
+									</Box>
 									<Accordion.Panel>
 										{isExpanded && (
 											<Box pos="relative">
