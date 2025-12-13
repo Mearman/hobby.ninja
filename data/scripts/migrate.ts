@@ -4,7 +4,7 @@
  *
  * Transforms:
  * - Items: edges.outbound → brandIds, seriesIds, categoryIds, relatedItemIds
- * - Items: edges.inbound (MANUAL_FOR) → manualIds
+ * - Items: edges.inbound (MANUAL_FOR) → manualId (1:1 relationship)
  * - Brands/Series/Categories: Remove edges (will be derived during build)
  * - Manuals: edges.outbound → brandIds, seriesIds
  *
@@ -49,7 +49,7 @@ interface CanonicalItem {
 	seriesIds: string[];
 	categoryIds: string[];
 	relatedItemIds: string[];
-	manualIds: string[];
+	manualId?: string;
 	[key: string]: unknown;
 }
 
@@ -85,7 +85,7 @@ function transformItem(data: GraphEntity): CanonicalItem {
 	const seriesIds: string[] = [];
 	const categoryIds: string[] = [];
 	const relatedItemIds: string[] = [];
-	const manualIds: string[] = [];
+	let manualId: string | undefined;
 
 	// Extract from outbound edges
 	if (data.edges?.outbound) {
@@ -109,11 +109,12 @@ function transformItem(data: GraphEntity): CanonicalItem {
 		}
 	}
 
-	// Extract manuals from inbound edges
+	// Extract manual from inbound edges (1:1 relationship - take first)
 	if (data.edges?.inbound) {
 		for (const edge of data.edges.inbound) {
 			if (edge.type === "MANUAL_FOR" && edge.targetType === "manual") {
-				manualIds.push(edge.targetId);
+				manualId = edge.targetId;
+				break; // 1:1 - only one manual per item
 			}
 		}
 	}
@@ -126,7 +127,7 @@ function transformItem(data: GraphEntity): CanonicalItem {
 		seriesIds,
 		categoryIds,
 		relatedItemIds,
-		manualIds,
+		manualId,
 	} as CanonicalItem;
 }
 

@@ -40,7 +40,7 @@ interface Item {
 	seriesIds: string[];
 	categoryIds: string[];
 	relatedItemIds: string[];
-	manualIds: string[];
+	manualId?: string;
 	scale?: string;
 	price?: { amount: number; currency: string };
 	releaseDate?: { year?: number; month?: number; day?: number };
