@@ -1,9 +1,9 @@
 #!/usr/bin/env tsx
 /**
- * Sync pdfs array from raw manuals to canonical manuals
+ * Sync pdfs array and translations from raw manuals to canonical manuals
  *
- * This script reads the pdfs array from raw scraped manual data
- * and copies it to the canonical manual files in data/src/manuals/,
+ * This script reads the pdfs array and translations from raw scraped manual data
+ * and copies them to the canonical manual files in data/src/manuals/,
  * removing the old pdfUrl/supplementaryPdfUrl fields.
  *
  * Usage:
@@ -26,14 +26,23 @@ interface ManualPdf {
 	name: { ja: string; en?: string };
 }
 
+interface LocalizedString {
+	ja: string;
+	en?: string;
+}
+
 interface RawManual {
 	id: string;
+	name?: LocalizedString;
+	series?: LocalizedString;
 	pdfs?: ManualPdf[];
 	[key: string]: unknown;
 }
 
 interface CanonicalManual {
 	id: string;
+	name?: LocalizedString;
+	series?: LocalizedString;
 	pdfUrl?: string;
 	supplementaryPdfUrl?: string;
 	pdfs?: ManualPdf[];
@@ -83,23 +92,36 @@ async function main() {
 				continue;
 			}
 
-			// Check if canonical already has pdfs array
-			if (canonicalData.pdfs && canonicalData.pdfs.length > 0) {
-				skipped++;
-				continue;
-			}
+			// Track what we're updating
+			const changes: string[] = [];
 
 			// Update canonical with pdfs array and remove old fields
 			const updatedCanonical = { ...canonicalData };
+
+			// Always sync pdfs array (to pick up translations)
 			updatedCanonical.pdfs = rawData.pdfs;
+			changes.push(`${rawData.pdfs.length} PDF(s)`);
+
 			delete updatedCanonical.pdfUrl;
 			delete updatedCanonical.supplementaryPdfUrl;
+
+			// Sync name translation if available
+			if (rawData.name?.en && updatedCanonical.name) {
+				updatedCanonical.name = { ...updatedCanonical.name, en: rawData.name.en };
+				changes.push("name.en");
+			}
+
+			// Sync series translation if available
+			if (rawData.series?.en && updatedCanonical.series) {
+				updatedCanonical.series = { ...updatedCanonical.series, en: rawData.series.en };
+				changes.push("series.en");
+			}
 
 			if (!DRY_RUN) {
 				writeFileSync(canonicalPath, JSON.stringify(updatedCanonical, null, "\t"));
 			}
 
-			log(`  ${id}: Updated with ${rawData.pdfs.length} PDF(s)`);
+			log(`  ${id}: Updated (${changes.join(", ")})`);
 			updated++;
 		} catch (err) {
 			console.error(`  ${id}: Error - ${err}`);
