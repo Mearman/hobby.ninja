@@ -2,7 +2,7 @@
  * Asset download command for manuals and catalog items
  *
  * Downloads images and PDFs from JSON metadata into their corresponding folders.
- * Supports both bandai manuals (productImage, pdfUrl, supplementaryPdfUrl)
+ * Supports both bandai manuals (productImage, pdfs array)
  * and catalog items (images array).
  *
  * CloudFront/Akamai signed URLs require Playwright browser context for authentication.
@@ -19,7 +19,8 @@ export type DownloadSource = "all" | "manuals" | "catalog";
 
 export interface DownloadOptions {
 	source: DownloadSource;
-	manualsDir: string;
+	manualsSourceDir: string; // Directory containing manual JSON files
+	manualsDir: string; // Output directory for manual assets (images, PDFs)
 	catalogDir: string;
 	concurrency: number;
 	delayMs: number;
@@ -42,11 +43,15 @@ export interface DownloadResult {
 	duration: number;
 }
 
+interface ManualPdf {
+	url: string;
+	name: { ja: string; en?: string };
+}
+
 interface ManualJson {
 	id: string;
 	productImage?: string;
-	pdfUrl?: string;
-	supplementaryPdfUrl?: string;
+	pdfs?: ManualPdf[];
 }
 
 interface CatalogItemJson {
@@ -229,8 +234,15 @@ async function downloadManualAssets(
 		const imagePath = path.join(manualDir, `${manual.id}.${ext}`);
 
 		if (options.dryRun) {
-			console.log(`  Would download: ${manual.productImage} -> ${path.basename(imagePath)}`);
-			stats.skipped++;
+			if (await fileExists(imagePath)) {
+				if (options.verbose) {
+					console.log(`  Would skip (exists): ${path.basename(imagePath)}`);
+				}
+				stats.skipped++;
+			} else {
+				console.log(`  Would download: ${manual.productImage} -> ${path.basename(imagePath)}`);
+				stats.downloaded++;
+			}
 		} else {
 			const result = await downloadFile(manual.productImage, imagePath, options.verbose);
 			if (result.downloaded) {
@@ -244,42 +256,35 @@ async function downloadManualAssets(
 		}
 	}
 
-	// Download main PDF
-	if (manual.pdfUrl) {
-		const pdfPath = path.join(manualDir, `${manual.id}.pdf`);
+	// Download PDFs from the pdfs array
+	if (manual.pdfs && manual.pdfs.length > 0) {
+		for (let i = 0; i < manual.pdfs.length; i++) {
+			const pdf = manual.pdfs[i];
+			// Use padded ID for filename: 0001.pdf, 0001_2.pdf, etc.
+			const suffix = i === 0 ? "" : `_${i + 1}`;
+			const filename = `${manual.id}${suffix}.pdf`;
+			const pdfPath = path.join(manualDir, filename);
 
-		if (options.dryRun) {
-			console.log(`  Would download: ${manual.pdfUrl} -> ${path.basename(pdfPath)}`);
-			stats.skipped++;
-		} else {
-			const result = await downloadFile(manual.pdfUrl, pdfPath, options.verbose);
-			if (result.downloaded) {
-				stats.downloaded++;
-			} else if (result.error) {
-				stats.failed++;
-				stats.errors.push(`${manual.id} pdfUrl: ${result.error}`);
+			if (options.dryRun) {
+				if (await fileExists(pdfPath)) {
+					if (options.verbose) {
+						console.log(`  Would skip (exists): ${filename}`);
+					}
+					stats.skipped++;
+				} else {
+					console.log(`  Would download: ${pdf.url} -> ${filename}`);
+					stats.downloaded++;
+				}
 			} else {
-				stats.skipped++;
-			}
-		}
-	}
-
-	// Download supplementary PDF
-	if (manual.supplementaryPdfUrl) {
-		const pdfPath = path.join(manualDir, `${manual.id}_2.pdf`);
-
-		if (options.dryRun) {
-			console.log(`  Would download: ${manual.supplementaryPdfUrl} -> ${path.basename(pdfPath)}`);
-			stats.skipped++;
-		} else {
-			const result = await downloadFile(manual.supplementaryPdfUrl, pdfPath, options.verbose);
-			if (result.downloaded) {
-				stats.downloaded++;
-			} else if (result.error) {
-				stats.failed++;
-				stats.errors.push(`${manual.id} supplementaryPdfUrl: ${result.error}`);
-			} else {
-				stats.skipped++;
+				const result = await downloadFile(pdf.url, pdfPath, options.verbose);
+				if (result.downloaded) {
+					stats.downloaded++;
+				} else if (result.error) {
+					stats.failed++;
+					stats.errors.push(`${manual.id} pdf (${pdf.name.ja}): ${result.error}`);
+				} else {
+					stats.skipped++;
+				}
 			}
 		}
 	}
@@ -358,11 +363,13 @@ async function processManuals(options: DownloadOptions): Promise<DownloadResult>
 	const startTime = Date.now();
 
 	try {
-		const entries = await fs.readdir(options.manualsDir, { withFileTypes: true });
+		const entries = await fs.readdir(options.manualsSourceDir, { withFileTypes: true });
 		const ids = entries.filter((e) => e.isDirectory()).map((e) => e.name).toSorted();
 		result.totalItems = ids.length;
 
-		console.log(`Processing ${ids.length} manuals from ${options.manualsDir}`);
+		console.log(`Processing ${ids.length} manuals`);
+		console.log(`  Source: ${options.manualsSourceDir}`);
+		console.log(`  Output: ${options.manualsDir}`);
 
 		// Process in batches for concurrency
 		for (let i = 0; i < ids.length; i += options.concurrency) {
@@ -370,18 +377,24 @@ async function processManuals(options: DownloadOptions): Promise<DownloadResult>
 
 			const batchResults = await Promise.all(
 				batch.map(async (id) => {
-					const manualDir = path.join(options.manualsDir, id);
-					const jsonPath = path.join(manualDir, `${id}.json`);
+					const sourceDir = path.join(options.manualsSourceDir, id);
+					const outputDir = path.join(options.manualsDir, id);
+					const jsonPath = path.join(sourceDir, `${id}.json`);
 
 					try {
 						const content = await fs.readFile(jsonPath, "utf8");
 						const manual = JSON.parse(content) as ManualJson;
 
+						// Ensure output directory exists
+						if (!options.dryRun) {
+							await fs.mkdir(outputDir, { recursive: true });
+						}
+
 						if (options.verbose) {
 							console.log(`[${id}] Processing...`);
 						}
 
-						return await downloadManualAssets(manualDir, manual, options);
+						return await downloadManualAssets(outputDir, manual, options);
 					} catch (error) {
 						const msg = error instanceof Error ? error.message : String(error);
 						return { downloaded: 0, skipped: 0, failed: 1, errors: [`${id}: ${msg}`] };

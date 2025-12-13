@@ -162,7 +162,8 @@ program
 	.command("download")
 	.description("Download images and PDFs from scraped data")
 	.option(SOURCE_OPTION, "Data source (all, manuals, catalog)", ALL_SOURCES)
-	.option("--manuals-dir <dir>", "Manual data directory", "./data/bandai/manuals")
+	.option("--manuals-source-dir <dir>", "Source directory for manual JSON files", "./data/raw/bandai/manuals")
+	.option("--manuals-dir <dir>", "Output directory for manual assets", "./apps/next/public/manuals")
 	.option("--catalog-dir <dir>", "Catalog data directory", "./data/bandai/items")
 	.option("--concurrency <n>", "Number of concurrent downloads", "5")
 	.option("--delay <ms>", "Delay between batches in milliseconds", "0")
@@ -173,6 +174,7 @@ program
 			const { downloadAssets } = await import("../cli/download-command.js");
 			const typedOptions = options as {
 				source: string;
+				manualsSourceDir: string;
 				manualsDir: string;
 				catalogDir: string;
 				concurrency: string;
@@ -183,7 +185,8 @@ program
 
 			console.log("Downloading assets from scraped data...");
 			console.log(`Source: ${typedOptions.source}`);
-			console.log(`Manuals directory: ${typedOptions.manualsDir}`);
+			console.log(`Manuals source: ${typedOptions.manualsSourceDir}`);
+			console.log(`Manuals output: ${typedOptions.manualsDir}`);
 			console.log(`Catalog directory: ${typedOptions.catalogDir}`);
 			console.log(`Concurrency: ${typedOptions.concurrency}`);
 			console.log(`Delay: ${typedOptions.delay}ms`);
@@ -192,6 +195,7 @@ program
 
 			const result = await downloadAssets({
 				source: typedOptions.source,
+				manualsSourceDir: typedOptions.manualsSourceDir,
 				manualsDir: typedOptions.manualsDir,
 				catalogDir: typedOptions.catalogDir,
 				concurrency: Number.parseInt(typedOptions.concurrency, 10),
