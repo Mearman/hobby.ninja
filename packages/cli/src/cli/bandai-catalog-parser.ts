@@ -54,6 +54,7 @@ export class BandaiCatalogParser {
 				contents: this.extractContents($),
 				images: this.extractImages($),
 				relatedProducts: this.extractRelatedProducts($),
+				manualId: this.extractManualId($),
 				sourceUrl,
 				extractedAt: new Date().toISOString(),
 			};
@@ -400,5 +401,30 @@ export class BandaiCatalogParser {
 		});
 
 		return related;
+	}
+
+	/**
+	 * Extract manual ID from links to manual.bandai-hobby.net/menus/detail/{id}
+	 * These are direct 1:1 links between items and their assembly manuals.
+	 */
+	private extractManualId($: CheerioAPI): string | undefined {
+		// Pattern: manual.bandai-hobby.net/menus/detail/{id}
+		const manualPattern = /manual\.bandai-hobby\.net\/menus\/detail\/(\d+)/;
+
+		let manualId: string | undefined;
+
+		$("a[href]").each((_, el) => {
+			if (manualId) return; // 1:1 relationship - stop after first match
+
+			const href = $(el).attr("href");
+			if (href) {
+				const match = manualPattern.exec(href);
+				if (match?.[1]) {
+					manualId = match[1];
+				}
+			}
+		});
+
+		return manualId;
 	}
 }
