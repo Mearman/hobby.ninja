@@ -1,15 +1,16 @@
 "use client";
 
+import { getNodeDisplayName, getNodeReleaseDateSortable, isItem, type Item } from "@hobby-ninja/data";
 import { useState, useMemo, useCallback } from "react";
 
-import { getNodeDisplayName, getNodeReleaseDateSortable, isItemNode, type ItemNode } from "@/lib/schemas";
 
 export interface FilterState {
 	search: string;
-	brand: string;
-	grade: string;
-	scale: string;
-	series: string;
+	brands: string[];
+	grades: string[];
+	scales: string[];
+	series: string[];
+	categories: string[];
 	sortField: string;
 	sortDirection: "asc" | "desc";
 }
@@ -19,37 +20,41 @@ export interface FilterOptions {
 	availableGrades?: string[];
 	availableScales?: string[];
 	availableSeries?: string[];
+	availableCategories?: string[];
 	defaultSort?: string;
 }
 
 export interface UseFilteredItemsReturn {
-	filteredItems: ItemNode[];
+	filteredItems: Item[];
 	filterState: FilterState;
 	updateFilter: (updates: Partial<FilterState>) => void;
 	updateSearch: (value: string) => void;
+	toggleFilterValue: (field: keyof Pick<FilterState, "brands" | "grades" | "scales" | "series" | "categories">, value: string) => void;
 	clearFilters: () => void;
 	hasActiveFilters: boolean;
 	activeFilterCount: number;
 	availableOptions: {
 		brands: string[];
-	grades: string[];
+		grades: string[];
 		scales: string[];
-	series: string[];
+		series: string[];
+		categories: string[];
 	};
 }
 
 const DEFAULT_FILTER_STATE: FilterState = {
 	search: "",
-	brand: "",
-	grade: "",
-	scale: "",
-	series: "",
+	brands: [],
+	grades: [],
+	scales: [],
+	series: [],
+	categories: [],
 	sortField: "date",
 	sortDirection: "desc",
 };
 
 export function useFilteredItems(
-	items: ItemNode[],
+	items: Item[],
 	options: FilterOptions = {},
 ): UseFilteredItemsReturn {
 	const [filterState, setFilterState] = useState<FilterState>(DEFAULT_FILTER_STATE);
@@ -60,65 +65,84 @@ export function useFilteredItems(
 		const grades = new Set<string>();
 		const scales = new Set<string>();
 		const series = new Set<string>();
+		const categories = new Set<string>();
 
-		const validItems: ItemNode[] = items.filter((item): item is ItemNode => isItemNode(item));
+		const validItems: Item[] = items.filter((item): item is Item => isItem(item));
 
 		for (const item of validItems) {
-			if (item.brand) brands.add(item.brand);
+			// Use array-based IDs from the data package
+			for (const brandId of item.brandIds) {
+				brands.add(brandId);
+			}
 			if (item.grade) grades.add(item.grade);
 			if (item.scale) scales.add(item.scale);
-			if (item.series) series.add(item.series);
+			for (const seriesId of item.seriesIds) {
+				series.add(seriesId);
+			}
+			for (const categoryId of item.categoryIds) {
+				categories.add(categoryId);
+			}
 		}
 
 		return {
-			brands: options.availableBrands ?? [...brands].sort(),
-			grades: options.availableGrades ?? [...grades].sort(),
-			scales: options.availableScales ?? [...scales].sort(),
-			series: options.availableSeries ?? [...series].sort(),
+			brands: options.availableBrands ?? [...brands].toSorted(),
+			grades: options.availableGrades ?? [...grades].toSorted(),
+			scales: options.availableScales ?? [...scales].toSorted(),
+			series: options.availableSeries ?? [...series].toSorted(),
+			categories: options.availableCategories ?? [...categories].toSorted(),
 		};
-	}, [items, options.availableBrands, options.availableGrades, options.availableScales, options.availableSeries]);
+	}, [items, options.availableBrands, options.availableGrades, options.availableScales, options.availableSeries, options.availableCategories]);
 
 	// Apply filters and sorting
-	const filteredItems = useMemo((): ItemNode[] => {
+	const filteredItems = useMemo((): Item[] => {
 		// Items are already pre-filtered by category/series/brand on the server
-		let result: ItemNode[] = items.filter((item): item is ItemNode => isItemNode(item));
+		let result: Item[] = items.filter((item): item is Item => isItem(item));
 
 		// Apply search filter
 		if (filterState.search) {
 			const query = filterState.search.toLowerCase();
 			result = result.filter(item => {
 				const name = getNodeDisplayName(item).toLowerCase();
-				const brand = item.brand?.toLowerCase() ?? "";
-				const series = item.series?.toLowerCase() ?? "";
+				const brandIds = item.brandIds.join(" ").toLowerCase();
+				const seriesIds = item.seriesIds.join(" ").toLowerCase();
 				const grade = item.grade?.toLowerCase() ?? "";
 				const scale = item.scale?.toLowerCase() ?? "";
 				return (
 					name.includes(query) ||
-					brand.includes(query) ||
-					series.includes(query) ||
+					brandIds.includes(query) ||
+					seriesIds.includes(query) ||
 					grade.includes(query) ||
 					scale.includes(query)
 				);
 			});
 		}
 
-		// Apply filters
-		if (filterState.brand) {
-			result = result.filter(item => item.brand === filterState.brand);
+		// Apply array-based filters (show all if array is empty)
+		if (filterState.brands.length > 0) {
+			result = result.filter(item =>
+				item.brandIds.some(brandId => filterState.brands.includes(brandId)),
+			);
 		}
-		if (filterState.grade) {
-			result = result.filter(item => item.grade === filterState.grade);
+		if (filterState.grades.length > 0) {
+			result = result.filter(item => item.grade != null && filterState.grades.includes(item.grade));
 		}
-		if (filterState.scale) {
-			result = result.filter(item => item.scale === filterState.scale);
+		if (filterState.scales.length > 0) {
+			result = result.filter(item => item.scale != null && filterState.scales.includes(item.scale));
 		}
-		if (filterState.series) {
-			result = result.filter(item => item.series === filterState.series);
+		if (filterState.series.length > 0) {
+			result = result.filter(item =>
+				item.seriesIds.some(seriesId => filterState.series.includes(seriesId)),
+			);
+		}
+		if (filterState.categories.length > 0) {
+			result = result.filter(item =>
+				item.categoryIds.some(categoryId => filterState.categories.includes(categoryId)),
+			);
 		}
 
 		// Apply sorting
-		const sortField = filterState.sortField || "date";
-		const sortDirection = filterState.sortDirection || "desc";
+		const sortField = filterState.sortField;
+		const sortDirection = filterState.sortDirection;
 
 		switch (sortField) {
 			case "name": {
@@ -141,8 +165,8 @@ export function useFilteredItems(
 			}
 			case "brand": {
 				result = sortDirection === "asc"
-					? result.toSorted((a, b) => (a.brand ?? "").localeCompare(b.brand ?? ""))
-					: result.toSorted((a, b) => (b.brand ?? "").localeCompare(a.brand ?? ""));
+					? result.toSorted((a, b) => (a.brandIds[0] ?? "").localeCompare(b.brandIds[0] ?? ""))
+					: result.toSorted((a, b) => (b.brandIds[0] ?? "").localeCompare(a.brandIds[0] ?? ""));
 				break;
 			}
 			case "grade": {
@@ -159,8 +183,8 @@ export function useFilteredItems(
 			}
 			case "series": {
 				result = sortDirection === "asc"
-					? result.toSorted((a, b) => (a.series ?? "").localeCompare(b.series ?? ""))
-					: result.toSorted((a, b) => (b.series ?? "").localeCompare(a.series ?? ""));
+					? result.toSorted((a, b) => (a.seriesIds[0] ?? "").localeCompare(b.seriesIds[0] ?? ""))
+					: result.toSorted((a, b) => (b.seriesIds[0] ?? "").localeCompare(a.seriesIds[0] ?? ""));
 				break;
 			}
 			default: {
@@ -181,6 +205,20 @@ export function useFilteredItems(
 		updateFilter({ search: value });
 	}, [updateFilter]);
 
+	// Toggle a single value in an array filter field
+	const toggleFilterValue = useCallback((
+		field: keyof Pick<FilterState, "brands" | "grades" | "scales" | "series" | "categories">,
+		value: string,
+	) => {
+		setFilterState(prev => {
+			const currentValues = prev[field];
+			const newValues = currentValues.includes(value)
+				? currentValues.filter(v => v !== value)
+				: [...currentValues, value];
+			return { ...prev, [field]: newValues };
+		});
+	}, []);
+
 	// Clear all filters
 	const clearFilters = useCallback(() => {
 		setFilterState(DEFAULT_FILTER_STATE);
@@ -188,27 +226,29 @@ export function useFilteredItems(
 
 	// Check if any filters are active
 	const hasActiveFilters = useMemo(() => {
-		const { sortField, sortDirection, ...searchFilters } = filterState;
+		const { sortField, sortDirection, search, ...arrayFilters } = filterState;
 		const defaultSortField = DEFAULT_FILTER_STATE.sortField;
 		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
 
-		const hasSearchFilters = Object.values(searchFilters).some(value => value !== "");
+		const hasSearch = search !== "";
+		const hasArrayFilters = Object.values(arrayFilters).some(arr => arr.length > 0);
 		const hasNonDefaultSort = sortField !== defaultSortField || sortDirection !== defaultSortDirection;
 
-		return hasSearchFilters || hasNonDefaultSort;
+		return hasSearch || hasArrayFilters || hasNonDefaultSort;
 	}, [filterState]);
 
 	// Count active filters
 	const activeFilterCount = useMemo(() => {
-		const { sortField, sortDirection, ...searchFilters } = filterState;
+		const { sortField, sortDirection, search, ...arrayFilters } = filterState;
 		const defaultSortField = DEFAULT_FILTER_STATE.sortField;
 		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
 
-		const searchFilterCount = Object.values(searchFilters).filter(value => value !== "").length;
-		const sortFieldCount = sortField === defaultSortField ? 0 : 1;
-		const sortDirectionCount = sortDirection === defaultSortDirection ? 0 : 1;
+		const searchCount = search === "" ? 0 : 1;
+		// Count total number of selected filter values across all arrays
+		const arrayFilterCount = Object.values(arrayFilters).reduce((sum, arr) => sum + arr.length, 0);
+		const sortCount = (sortField === defaultSortField ? 0 : 1) + (sortDirection === defaultSortDirection ? 0 : 1);
 
-		return searchFilterCount + sortFieldCount + sortDirectionCount;
+		return searchCount + arrayFilterCount + sortCount;
 	}, [filterState]);
 
 	return {
@@ -216,6 +256,7 @@ export function useFilteredItems(
 		filterState,
 		updateFilter,
 		updateSearch,
+		toggleFilterValue,
 		clearFilters,
 		hasActiveFilters,
 		activeFilterCount,
