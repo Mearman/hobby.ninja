@@ -18,9 +18,12 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 
+import { BrandsClient } from "./brands-client";
+
 import { getAllBrands, getAllItems } from "@/lib/graph-data";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import { categoryCard } from "@/styles/components.css";
+
 
 // Types
 interface Brand {
@@ -183,7 +186,7 @@ function processBrandsWithStats(brandsData: Brand[], itemsData: Item[]): BrandWi
 // Brand Card Component
 function BrandCard({ brand }: { brand: BrandWithStats }) {
 	return (
-		<Link href={`/search?brand=${encodeURIComponent(brand.id)}`} style={{ textDecoration: "none", color: "inherit" }}>
+		<Link href={`/brand/${encodeURIComponent(brand.id)}`} style={{ textDecoration: "none", color: "inherit" }}>
 			<Card
 				p="md"
 				radius="md"
@@ -368,16 +371,12 @@ export default function BrandsPage() {
 				{/* Featured Brands */}
 				{featuredBrands.length > 0 && <FeaturedBrands brands={featuredBrands} />}
 
-				{/* All Brands */}
+				{/* All Brands with Infinite Scroll */}
 				<Box>
 					<Title order={2} mb="md">
 						All Brands
 					</Title>
-					<SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 5 }} spacing="md">
-						{brands.map((brand) => (
-							<BrandCard key={brand.id} brand={brand} />
-						))}
-					</SimpleGrid>
+					<BrandsClient brands={brands} totalBrands={brands.length} />
 				</Box>
 			</Stack>
 		</Container>
