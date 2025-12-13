@@ -66,7 +66,7 @@ export function EntityList({
 	clickable = true,
 }: EntityListProps) {
 	if (ids.length === 0) {
-		return <Text size={size} c="dimmed">{emptyText}</Text>;
+		return <Text component="span" size={size} c="dimmed">{emptyText}</Text>;
 	}
 
 	const getRoute = routeMap[entityType];
@@ -75,13 +75,13 @@ export function EntityList({
 	// Text mode - plain comma-separated text
 	if (mode === "text") {
 		const names = ids.map((id) => getDisplayName(id, entityType));
-		return <Text size={size} c="dimmed">{names.join(", ")}</Text>;
+		return <Text component="span" size={size} c="dimmed">{names.join(", ")}</Text>;
 	}
 
 	// Links mode - comma-separated clickable links
 	if (mode === "links") {
 		return (
-			<Text size={size}>
+			<Text component="span" size={size}>
 				{ids.map((id, index) => (
 					<Fragment key={id}>
 						{clickable ? (
