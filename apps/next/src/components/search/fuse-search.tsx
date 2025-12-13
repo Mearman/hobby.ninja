@@ -246,7 +246,7 @@ export function FuseSearch({
 										style={{ cursor: "pointer" }}
 										onClick={() => { handleResultClick(result); }}
 										onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
-											e.currentTarget.style.backgroundColor = "var(--mantine-color-gray-0)";
+											e.currentTarget.style.backgroundColor = "var(--mantine-color-default-hover)";
 										}}
 										onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => {
 											e.currentTarget.style.backgroundColor = "transparent";
@@ -313,7 +313,7 @@ export function FuseSearch({
 								style={{ cursor: "pointer" }}
 								onClick={() => { handleSuggestionClick(suggestion); }}
 								onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
-									e.currentTarget.style.backgroundColor = "var(--mantine-color-gray-0)";
+									e.currentTarget.style.backgroundColor = "var(--mantine-color-default-hover)";
 								}}
 								onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => {
 									e.currentTarget.style.backgroundColor = "transparent";
@@ -355,14 +355,14 @@ export function FuseSearch({
 								style={{ cursor: "pointer" }}
 								onClick={() => { handleRecentSearchClick(recentQuery); }}
 								onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
-									e.currentTarget.style.backgroundColor = "var(--mantine-color-gray-0)";
+									e.currentTarget.style.backgroundColor = "var(--mantine-color-default-hover)";
 								}}
 								onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => {
 									e.currentTarget.style.backgroundColor = "transparent";
 								}}
 							>
 								<Group gap="xs">
-									<IconClock size={12} color="var(--mantine-color-gray-5)" />
+									<IconClock size={12} color="var(--mantine-color-dimmed)" />
 									<Text size="sm">{recentQuery}</Text>
 								</Group>
 							</Card>

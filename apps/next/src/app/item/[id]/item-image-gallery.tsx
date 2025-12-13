@@ -153,8 +153,8 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 				emblaOptions={{ loop: true }}
 				styles={{
 					control: {
-						backgroundColor: "var(--mantine-color-white)",
-						border: "1px solid var(--mantine-color-gray-3)",
+						backgroundColor: "var(--mantine-color-body)",
+						border: "1px solid var(--mantine-color-default-border)",
 					},
 				}}
 			>

@@ -375,7 +375,7 @@ export default function HomePage() {
 								size="lg"
 								radius="md"
 								leftSection={<IconDatabase size={20} />}
-								style={{ backgroundColor: '#339af0' }}
+								style={{ backgroundColor: 'var(--mantine-color-blue-5)' }}
 							>
 								Browse Database
 							</Button>

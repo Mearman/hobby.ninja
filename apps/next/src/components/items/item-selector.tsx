@@ -375,7 +375,7 @@ export function SelectableItemCard({
 					onChange={onToggleSelection}
 					size="sm"
 					styles={{
-						input: { backgroundColor: "rgba(255, 255, 255, 0.9)" },
+						input: { backgroundColor: "var(--mantine-color-body)" },
 					}}
 				/>
 			</Box>
