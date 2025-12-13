@@ -1,10 +1,10 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { ActionIcon, Box, Group, rem, TextInput, Tooltip } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";
 import {
 	IconDatabase,
+	IconDeviceDesktop,
 	IconFolder,
 	IconHome,
 	IconMenu2,
@@ -17,7 +17,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-
+import { Badge } from "@/components/ui/badge";
 import { TIMING, UI } from "@/lib/constants";
 import { useThemeContext } from "@/providers/mantine-provider";
 import { desktopOnly, header, headerContent, logo, mobileOnly, nav, navLink } from "@/styles/components.css";
@@ -31,31 +31,31 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 	const pathname = usePathname();
 	const [searchQuery, setSearchQuery] = useState("");
 	const [debouncedSearchQuery] = useDebouncedValue(searchQuery, TIMING.DEBOUNCE_DEFAULT);
-	const { effectiveColorScheme, cycleTheme } = useThemeContext();
+	const { colorScheme, cycleTheme } = useThemeContext();
 
 	const getThemeIcon = () => {
-		switch (effectiveColorScheme) {
+		switch (colorScheme) {
 			case "light": {
 				return <IconSun style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
 			}
 			case "dark": {
 				return <IconMoon style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
 			}
-			default: {
-				return <IconSun style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
+			case "system": {
+				return <IconDeviceDesktop style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
 			}
 		}
 	};
 
 	const getThemeLabel = () => {
-		switch (effectiveColorScheme) {
+		switch (colorScheme) {
 			case "light": {
 				return "Switch to dark mode";
 			}
 			case "dark": {
 				return "Switch to system mode";
 			}
-			default: {
+			case "system": {
 				return "Switch to light mode";
 			}
 		}
