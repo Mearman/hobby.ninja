@@ -65,7 +65,7 @@ export type Accessory = z.infer<typeof AccessorySchema>;
 
 /**
  * Item node schema with array-based relationships (canonical format)
- * Uses brandIds[], seriesIds[], categoryIds[], relatedItemIds[], manualIds[] instead of edges
+ * Uses brandIds[], seriesIds[], categoryIds[], relatedItemIds[] and manualId (1:1) instead of edges
  */
 export const ItemSchema = z.object({
 	id: z.string(),
@@ -77,7 +77,8 @@ export const ItemSchema = z.object({
 	seriesIds: z.array(z.string()).default([]),
 	categoryIds: z.array(z.string()).default([]),
 	relatedItemIds: z.array(z.string()).default([]),
-	manualIds: z.array(z.string()).default([]),
+	// 1:1 relationship - each item has at most one manual
+	manualId: z.string().optional(),
 
 	// Product information
 	scale: z.string().optional(),
@@ -196,9 +197,15 @@ export const ManualSchema = z.object({
 
 	// Manual metadata
 	url: z.string().url().optional(),
+	pdfUrl: z.string().url().optional(),
 	pages: z.number().optional(),
 	language: z.string().optional(),
 	size: z.string().optional(),
+	scale: z.string().optional(),
+	productNumber: z.string().optional(),
+	productImage: z.string().url().optional(),
+	thumbnailImage: z.string().url().optional(),
+	releaseDate: ReleaseDateSchema.optional(),
 	itemId: z.string().optional(),
 	itemName: z.union([z.string(), LocalizedStringSchema]).optional(),
 
@@ -492,10 +499,10 @@ export const getNodeAccessories = (item: Item): string[] => {
 };
 
 /**
- * Get array of manual IDs from an item
+ * Get manual ID from an item (1:1 relationship)
  */
-export const getNodeManualIds = (item: Item): string[] => {
-	return item.manualIds;
+export const getNodeManualId = (item: Item): string | undefined => {
+	return item.manualId;
 };
 
 /**
