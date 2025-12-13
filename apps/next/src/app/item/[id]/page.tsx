@@ -14,7 +14,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ItemImageGallery } from "./item-image-gallery";
-import { LazyPdfViewer } from "./lazy-pdf-viewer";
+import { PdfAccordion } from "./pdf-accordion";
 
 // Import from canonical data package
 import {
@@ -287,26 +287,18 @@ export default async function ItemPage({ params }: ItemPageProps) {
 								</Group>
 							</Group>
 
-							{/* Embedded PDF Viewers - Lazy loaded */}
+							{/* PDF Accordion - loads only when expanded */}
 							{manual.pdfs && manual.pdfs.length > 0 && (
-								<Stack gap="md">
-									{manual.pdfs.map((pdf, index) => {
+								<PdfAccordion
+									pdfs={manual.pdfs.map((pdf, index) => {
 										const suffix = index === 0 ? "" : `_${index + 1}`;
-										const pdfPath = `/manuals/${manual.id}/${manual.id}${suffix}.pdf`;
-										const pdfName = pdf.name.en || pdf.name.ja;
-										return (
-											<Stack key={index} gap="xs">
-												{manual.pdfs && manual.pdfs.length > 1 && (
-													<Text fw={500} size="sm">{pdfName}</Text>
-												)}
-												<LazyPdfViewer
-													src={pdfPath}
-													title={`${getNodeDisplayName(manual)} - ${pdfName}`}
-												/>
-											</Stack>
-										);
+										return {
+											name: pdf.name.en || pdf.name.ja,
+											src: `/manuals/${manual.id}/${manual.id}${suffix}.pdf`,
+											title: `${getNodeDisplayName(manual)} - ${pdf.name.en || pdf.name.ja}`,
+										};
 									})}
-								</Stack>
+								/>
 							)}
 						</Stack>
 					</Card>
