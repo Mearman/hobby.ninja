@@ -3,26 +3,59 @@
 	"version": "0.0.1",
 	"description": "Canonical data source for hobby.ninja",
 	"type": "module",
-	"main": "./lib/index.ts",
+	"main": "./dist/lib/index.js",
+	"types": "./dist/lib/index.d.ts",
 	"exports": {
-		".": "./lib/index.ts",
-		"./items": "./lib/items.ts",
-		"./brands": "./lib/brands.ts",
-		"./series": "./lib/series.ts",
-		"./categories": "./lib/categories.ts",
-		"./manuals": "./lib/manuals.ts",
-		"./grades": "./lib/grades.ts",
-		"./scales": "./lib/scales.ts",
-		"./homepage": "./lib/homepage.ts",
-		"./search": "./lib/search.ts",
-		"./schemas": "./lib/schemas.ts"
+		".": {
+			"types": "./dist/lib/index.d.ts",
+			"import": "./dist/lib/index.js"
+		},
+		"./items": {
+			"types": "./dist/lib/items.d.ts",
+			"import": "./dist/lib/items.js"
+		},
+		"./brands": {
+			"types": "./dist/lib/brands.d.ts",
+			"import": "./dist/lib/brands.js"
+		},
+		"./series": {
+			"types": "./dist/lib/series.d.ts",
+			"import": "./dist/lib/series.js"
+		},
+		"./categories": {
+			"types": "./dist/lib/categories.d.ts",
+			"import": "./dist/lib/categories.js"
+		},
+		"./manuals": {
+			"types": "./dist/lib/manuals.d.ts",
+			"import": "./dist/lib/manuals.js"
+		},
+		"./grades": {
+			"types": "./dist/lib/grades.d.ts",
+			"import": "./dist/lib/grades.js"
+		},
+		"./scales": {
+			"types": "./dist/lib/scales.d.ts",
+			"import": "./dist/lib/scales.js"
+		},
+		"./homepage": {
+			"types": "./dist/lib/homepage.d.ts",
+			"import": "./dist/lib/homepage.js"
+		},
+		"./search": {
+			"types": "./dist/lib/search.d.ts",
+			"import": "./dist/lib/search.js"
+		},
+		"./schemas": {
+			"types": "./dist/lib/schemas.d.ts",
+			"import": "./dist/lib/schemas.js"
+		}
 	},
 	"files": [
-		"lib",
 		"dist"
 	],
 	"scripts": {
-		"build": "tsx scripts/build.ts",
+		"build": "tsx scripts/build.ts && tsup",
 		"validate": "tsx scripts/validate.ts",
 		"migrate": "tsx scripts/migrate.ts"
 	},
@@ -31,6 +64,7 @@
 		"zod": "4.1.13"
 	},
 	"devDependencies": {
+		"tsup": "^8.5.1",
 		"tsx": "^4.19.4"
 	}
 }

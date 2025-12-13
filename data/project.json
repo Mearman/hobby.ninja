@@ -9,12 +9,18 @@
 			"executor": "nx:run-commands",
 			"options": {
 				"cwd": "data",
-				"command": "pnpm tsx scripts/build.ts"
+				"commands": [
+					"pnpm tsx scripts/build.ts",
+					"tsup"
+				],
+				"parallel": false
 			},
 			"outputs": ["{projectRoot}/dist"],
 			"inputs": [
 				"{projectRoot}/src/**/*",
-				"{projectRoot}/scripts/build.ts"
+				"{projectRoot}/lib/**/*",
+				"{projectRoot}/scripts/build.ts",
+				"{projectRoot}/tsup.config.ts"
 			],
 			"cache": true
 		},

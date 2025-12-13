@@ -11,6 +11,16 @@
 import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { basename, join } from "node:path";
+import { z } from "zod";
+
+// Schema for core fields we extract from JSON files during validation
+const ValidationRecordSchema = z.object({
+	id: z.string().optional(),
+	name: z.unknown().optional(),
+	type: z.string().optional(),
+}).passthrough(); // Allow additional fields for field discovery
+
+type ValidationRecord = z.infer<typeof ValidationRecordSchema>;
 
 const ROOT = join(import.meta.dirname, "../..");
 const DATA_ROOT = join(ROOT, "data");
@@ -76,15 +86,16 @@ function getEntityStats(dirPath: string, entityType: string): EntityStats {
 	for (const file of files) {
 		try {
 			const content = readFileSync(join(dirPath, file), "utf-8");
-			const data = JSON.parse(content) as Record<string, unknown>;
+			const rawData = JSON.parse(content) as Record<string, unknown>;
+			const data = ValidationRecordSchema.parse(rawData);
 
 			// Collect field names from first 10 files
 			if (sampleIds.length < 10) {
-				const fields = collectFieldNames(data);
+				const fields = collectFieldNames(rawData);
 				for (const field of fields) {
 					allFieldNames.add(field);
 				}
-				sampleIds.push(data.id as string || basename(file, ".json"));
+				sampleIds.push(data.id ?? basename(file, ".json"));
 			}
 
 			// Hash core identifying fields for integrity check

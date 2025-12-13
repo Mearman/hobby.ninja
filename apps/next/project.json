@@ -11,7 +11,7 @@
       "options": {
         "outputPath": "apps/next/out"
       },
-      "dependsOn": ["typecheck", "build-data"],
+      "dependsOn": ["^build", "typecheck"],
       "configurations": {
         "development": {
           "outputPath": "apps/next/out"
@@ -87,19 +87,6 @@
         "command": "tsc --noEmit",
         "cwd": "apps/next"
       }
-    },
-    "build-data": {
-      "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/data/dist"],
-      "options": {
-        "command": "pnpm tsx scripts/build.ts",
-        "cwd": "data"
-      },
-      "inputs": [
-        "{workspaceRoot}/data/src/**/*",
-        "{workspaceRoot}/data/scripts/build.ts"
-      ],
-      "cache": true
     }
   },
   "tags": []
