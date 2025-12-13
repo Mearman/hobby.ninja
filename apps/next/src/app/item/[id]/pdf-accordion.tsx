@@ -45,7 +45,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 	const [expandedItems, setExpandedItems] = useState<string[]>([]);
 	const [loadedItems, setLoadedItems] = useState<Set<string>>(new Set());
 	const { fullWidth, toggleFullWidth, isHydrated } = useFullWidthPreference();
-	const accordionRef = useRef<HTMLDivElement>(null);
+	const itemRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
 	const handleChange = (values: string[]) => {
 		// Find newly expanded items
@@ -53,10 +53,11 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 
 		setExpandedItems(values);
 
-		// Scroll the accordion to top when any item is expanded
+		// Scroll the expanded accordion item to top
 		if (newlyExpanded.length > 0) {
+			const itemId = newlyExpanded[0];
 			setTimeout(() => {
-				const element = accordionRef.current;
+				const element = itemRefs.current.get(itemId);
 				if (element) {
 					const rect = element.getBoundingClientRect();
 					const scrollTop = window.scrollY + rect.top - 16; // 16px padding from top
@@ -111,21 +112,27 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 					</Group>
 
 					{/* PDF Accordion */}
-					<Box ref={accordionRef}>
-						<Accordion
-							multiple
-							value={expandedItems}
-							onChange={handleChange}
-							variant="separated"
-							radius="md"
-						>
+					<Accordion
+						multiple
+						value={expandedItems}
+						onChange={handleChange}
+						variant="separated"
+						radius="md"
+					>
 						{pdfs.map((pdf, index) => {
 							const itemId = `pdf-${index}`;
 							const isExpanded = expandedItems.includes(itemId);
 							const isLoaded = loadedItems.has(itemId);
 
 							return (
-								<Accordion.Item key={index} value={itemId}>
+								<Accordion.Item
+									key={index}
+									value={itemId}
+									ref={(el: HTMLDivElement | null) => {
+										if (el) itemRefs.current.set(itemId, el);
+										else itemRefs.current.delete(itemId);
+									}}
+								>
 									<Accordion.Control icon={<IconFileTypePdf size={20} />}>
 										<Group justify="space-between" wrap="nowrap" pr="md">
 											<span>{pdf.name}</span>
@@ -188,8 +195,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 								</Accordion.Item>
 							);
 						})}
-						</Accordion>
-					</Box>
+					</Accordion>
 				</Stack>
 			</Card>
 		</Box>
