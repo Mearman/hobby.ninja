@@ -1,6 +1,6 @@
+import { getGradesIndex, getNodeDisplayName, type GradeData } from "@hobby-ninja/data";
 import {
 	Anchor,
-	Badge,
 	Box,
 	Breadcrumbs,
 	Card,
@@ -12,62 +12,8 @@ import {
 	Title,
 } from "@mantine/core";
 import { IconHome } from "@tabler/icons-react";
-import Link from "next/link";
 
-import { getGradesIndex, getNodeDisplayName, type GradeData } from "@hobby-ninja/data";
-import { categoryCard } from "@/styles/components.css";
-
-// Grade Card Component
-function GradeCard({ grade, subGrades }: { grade: GradeData; subGrades: GradeData[] }) {
-	return (
-		<Link
-			href={`/grade/${encodeURIComponent(grade.id)}`}
-			style={{ textDecoration: "none", color: "inherit" }}
-		>
-			<Card p="md" radius="md" className={categoryCard} withBorder={true}>
-				<Stack gap="md">
-					<Group justify="space-between" align="flex-start">
-						<Stack gap="xs" flex={1}>
-							<Text size="lg" fw={700} lineClamp={1}>
-								{getNodeDisplayName(grade)}
-							</Text>
-							<Badge variant="light" size="sm">
-								{grade.itemCount.toLocaleString()} items
-							</Badge>
-						</Stack>
-					</Group>
-
-					{subGrades.length > 0 && (
-						<Box>
-							<Text size="xs" c="dimmed" mb="xs" tt="uppercase" fw={600}>
-								Sub-Grades:
-							</Text>
-							<Group gap="xs" wrap="wrap">
-								{subGrades.map((subGrade) => (
-									<Badge
-										key={subGrade.id}
-										variant="light"
-										color="blue"
-										size="xs"
-										style={{ cursor: "pointer" }}
-									>
-										{getNodeDisplayName(subGrade)} ({subGrade.itemCount})
-									</Badge>
-								))}
-							</Group>
-						</Box>
-					)}
-
-					<Group justify="space-between" align="center">
-						<Text size="sm" fw={500} c="blue">
-							View all items
-						</Text>
-					</Group>
-				</Stack>
-			</Card>
-		</Link>
-	);
-}
+import { GradesClient } from "./grades-client";
 
 // Statistics Component
 function GradeStatistics({ grades }: { grades: GradeData[] }) {
@@ -76,7 +22,7 @@ function GradeStatistics({ grades }: { grades: GradeData[] }) {
 	const avgItemsPerGrade = totalItems / grades.length;
 
 	// Find most popular grade
-	const mostPopular = [...grades].sort((a, b) => b.itemCount - a.itemCount)[0];
+	const mostPopular = [...grades].toSorted((a, b) => b.itemCount - a.itemCount)[0];
 
 	const stats = {
 		totalGrades: grades.length,
@@ -117,7 +63,7 @@ function GradeStatistics({ grades }: { grades: GradeData[] }) {
 					Most Popular
 				</Text>
 				<Text size="xl" fw={700} mt="sm">
-					{stats.mostPopular ? getNodeDisplayName(stats.mostPopular) : "N/A"}
+					{getNodeDisplayName(stats.mostPopular)}
 				</Text>
 			</Card>
 		</SimpleGrid>
@@ -127,7 +73,7 @@ function GradeStatistics({ grades }: { grades: GradeData[] }) {
 export default function GradesPage() {
 	// Load grades index data
 	const gradesIndex = getGradesIndex();
-	const { grades, hierarchy } = gradesIndex;
+	const { grades } = gradesIndex;
 
 	// Separate parent grades and sub-grades
 	const parentGrades = grades.filter((g) => g.parent === null);
@@ -136,14 +82,20 @@ export default function GradesPage() {
 	// Build map of parent grades to their sub-grades
 	for (const grade of grades) {
 		if (grade.parent !== null) {
-			const existing = subGradesMap.get(grade.parent) || [];
+			const existing = subGradesMap.get(grade.parent) ?? [];
 			existing.push(grade);
 			subGradesMap.set(grade.parent, existing);
 		}
 	}
 
 	// Sort parent grades by item count (descending)
-	const sortedParentGrades = [...parentGrades].sort((a, b) => b.itemCount - a.itemCount);
+	const sortedParentGrades = [...parentGrades].toSorted((a, b) => b.itemCount - a.itemCount);
+
+	// Prepare grades with sub-grades for client component
+	const gradesWithSubGrades = sortedParentGrades.map((grade) => ({
+		grade,
+		subGrades: subGradesMap.get(grade.id) ?? [],
+	}));
 
 	return (
 		<Container size="xl" py="xl">
@@ -177,7 +129,7 @@ export default function GradesPage() {
 				{/* Statistics */}
 				<GradeStatistics grades={grades} />
 
-				{/* Parent Grades with Sub-Grades */}
+				{/* Parent Grades with Sub-Grades and Infinite Scroll */}
 				<Box>
 					<Title order={2} mb="md">
 						Grade Hierarchy
@@ -185,12 +137,10 @@ export default function GradesPage() {
 					<Text size="sm" c="dimmed" mb="lg">
 						Main grade lines with their sub-categories
 					</Text>
-					<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="md">
-						{sortedParentGrades.map((grade) => {
-							const subGrades = subGradesMap.get(grade.id) || [];
-							return <GradeCard key={grade.id} grade={grade} subGrades={subGrades} />;
-						})}
-					</SimpleGrid>
+					<GradesClient
+						gradesWithSubGrades={gradesWithSubGrades}
+						totalGrades={sortedParentGrades.length}
+					/>
 				</Box>
 			</Stack>
 		</Container>
