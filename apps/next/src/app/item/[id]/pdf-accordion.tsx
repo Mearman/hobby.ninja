@@ -52,16 +52,22 @@ export function PdfAccordion({ pdfs, height = 800, header }: PdfAccordionProps) 
 		setLoadedItems((prev) => new Set(prev).add(id));
 	};
 
-	// Full width container styles
-	const fullWidthStyles = fullWidth
+	// Full width container styles - only apply when toggle is on AND accordion is expanded
+	const hasExpandedItems = expandedItems.length > 0;
+	const shouldExpand = fullWidth && hasExpandedItems;
+
+	const fullWidthStyles = shouldExpand
 		? {
 				marginLeft: "calc(-50vw + 50%)",
 				marginRight: "calc(-50vw + 50%)",
 				width: "100vw",
 				paddingLeft: "1rem",
 				paddingRight: "1rem",
+				transition: "margin 0.2s ease-out, width 0.2s ease-out, padding 0.2s ease-out",
 			}
-		: {};
+		: {
+				transition: "margin 0.2s ease-out, width 0.2s ease-out, padding 0.2s ease-out",
+			};
 
 	return (
 		<Box style={fullWidthStyles}>
