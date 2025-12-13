@@ -3,6 +3,30 @@
 import { getNodeDisplayName, getNodeReleaseDateSortable, isItem, type Item } from "@hobby-ninja/data";
 import { useState, useMemo, useCallback } from "react";
 
+/**
+ * Parse scale string (e.g., "1/144") to get the denominator as a number.
+ * Returns Infinity for invalid scales so they sort to the end.
+ */
+function parseScaleDenominator(scale: string): number {
+	const match = scale.match(/1\/(\d+)/);
+	if (match?.[1]) {
+		return Number.parseInt(match[1], 10);
+	}
+	return Number.POSITIVE_INFINITY;
+}
+
+/**
+ * Sort scales from largest to smallest (1/60 before 1/144).
+ * Larger scale = smaller denominator.
+ */
+function sortScales(scales: string[]): string[] {
+	return [...scales].sort((a, b) => {
+		const denomA = parseScaleDenominator(a);
+		const denomB = parseScaleDenominator(b);
+		return denomA - denomB; // Smaller denominator = larger scale, comes first
+	});
+}
+
 
 export interface FilterState {
 	search: string;
@@ -87,7 +111,7 @@ export function useFilteredItems(
 		return {
 			brands: options.availableBrands ?? [...brands].toSorted(),
 			grades: options.availableGrades ?? [...grades].toSorted(),
-			scales: options.availableScales ?? [...scales].toSorted(),
+			scales: options.availableScales ?? sortScales([...scales]),
 			series: options.availableSeries ?? [...series].toSorted(),
 			categories: options.availableCategories ?? [...categories].toSorted(),
 		};
