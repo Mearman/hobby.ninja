@@ -34,7 +34,10 @@ const getItemDisplayName = (manual: Manual): string | null => {
 	if (typeof manual.itemName === "string") return manual.itemName;
 	// Prefer en, fall back to ja if en is empty
 	const en = manual.itemName.en;
-	return en.length > 0 ? en : manual.itemName.ja;
+	const ja = manual.itemName.ja;
+	if (en && en.length > 0) return en;
+	if (ja && ja.length > 0) return ja;
+	return null;
 };
 
 // Manual Card Component

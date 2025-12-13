@@ -1,5 +1,6 @@
 "use client";
 
+import { getNodeDisplayName, isFutureRelease, isItem, type Category, type Item } from "@hobby-ninja/data";
 import {
 	Anchor,
 	Badge,
@@ -10,7 +11,6 @@ import {
 	Container,
 	Grid,
 	Group,
-	Pagination,
 	Stack,
 	Text,
 	Title,
@@ -20,16 +20,16 @@ import {
 	IconHome,
 	IconX,
 } from "@tabler/icons-react";
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useMemo } from "react";
 
 import { ItemFilters } from "@/components/filtering/item-filters";
 import { FutureReleasesToggle } from "@/components/ui/future-releases-toggle";
+import { InfiniteScrollLoader } from "@/components/ui/infinite-scroll-loader";
 import { ViewRenderer } from "@/components/view/view-renderers";
 import { ViewSwitcher, useViewMode } from "@/components/view/view-switcher";
 import { useFilteredItems } from "@/hooks/use-filtered-items";
+import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
-import { PAGINATION } from "@/lib/constants";
-import { getNodeDisplayName, isFutureRelease, isItem, type Category, type Item } from "@hobby-ninja/data";
 
 interface CategoryPageClientProps {
 	initialCategory: Category;
@@ -54,7 +54,6 @@ export function CategoryPageClient({
 	_initialCategories,
 	categoryId,
 }: CategoryPageClientProps) {
-	const [page, setPage] = useState(1);
 	const { viewMode, setViewMode } = useViewMode();
 	const { preferences, isLoaded } = useUserPreferences();
 
@@ -84,12 +83,13 @@ export function CategoryPageClient({
 		availableOptions,
 	} = useFilteredItems(visibleItems);
 
-	// Reset page when filters change - synchronous setState is intentional here
-	/* eslint-disable react-hooks/set-state-in-effect */
-	useEffect(() => {
-		setPage(1);
-	}, [filterState]);
-	/* eslint-enable react-hooks/set-state-in-effect */
+	// Use infinite scroll for items
+	const { visibleItems: paginatedItems, isLoading, hasMore, lastItemRef } = useInfiniteScroll({
+		items: filteredItems,
+		itemsPerPage: preferences.infiniteScrollPageSize,
+		preservePageParam: true,
+		autoLoad: preferences.autoLoadInfiniteScroll,
+	});
 
 	// Calculate category statistics (price-related only, filter options come from hook)
 	const categoryStats = useMemo((): CategoryStats => {
@@ -133,16 +133,7 @@ export function CategoryPageClient({
 		};
 	}, [initialItems]);
 
-	// Pagination calculations
 	const total = filteredItems.length;
-	const totalPages = Math.ceil(total / PAGINATION.ITEMS_PER_PAGE);
-	const startIndex = (page - 1) * PAGINATION.ITEMS_PER_PAGE;
-	const paginatedItems = filteredItems.slice(startIndex, startIndex + PAGINATION.ITEMS_PER_PAGE);
-
-	// Handle page change
-	const handlePageChange = useCallback((newPage: number) => {
-		setPage(newPage);
-	}, []);
 
 	return (
 		<Container size="xl" py="xl">
@@ -243,7 +234,7 @@ export function CategoryPageClient({
 					<Group justify="space-between" align="center" mb="md" wrap="wrap">
 						<Box>
 							<Text size="sm" c="dimmed">
-								Showing {Math.min((page - 1) * PAGINATION.ITEMS_PER_PAGE + 1, total)}-{Math.min(page * PAGINATION.ITEMS_PER_PAGE, total)} of {total.toLocaleString()} items
+								Showing {paginatedItems.length} of {total.toLocaleString()} items
 							</Text>
 							{total !== categoryStats.totalItems && (
 								<Text size="xs" c="blue">
@@ -264,10 +255,20 @@ export function CategoryPageClient({
 
 					{/* Results Display */}
 					{paginatedItems.length > 0 ? (
-						<ViewRenderer
-							viewMode={viewMode}
-							items={paginatedItems}
-						/>
+						<>
+							<ViewRenderer
+								viewMode={viewMode}
+								items={paginatedItems}
+							/>
+							{/* Infinite Scroll Loader */}
+							<div ref={lastItemRef}>
+								<InfiniteScrollLoader
+									isLoading={isLoading}
+									hasMore={hasMore}
+									autoLoad={preferences.autoLoadInfiniteScroll}
+								/>
+							</div>
+						</>
 					) : (
 						// Empty State
 						<Card p="xl" radius="md" withBorder={true} ta="center">
@@ -299,37 +300,17 @@ export function CategoryPageClient({
 					)}
 				</Box>
 
-				{/* Pagination */}
-				{totalPages > 1 && (
-					<Box>
-						<Pagination
-							total={totalPages}
-							value={page}
-							onChange={handlePageChange}
-							siblings={1}
-							boundaries={2}
-							size="md"
-							withEdges={true}
-						/>
-						<Text ta="center" size="sm" c="dimmed" mt="sm">
-							Page {page} of {totalPages}
-						</Text>
-					</Box>
-				)}
-
 				{/* Quick Access Stats */}
-				{/* Using || intentionally - empty strings should be falsy */}
-				{/* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing */}
-				{(categoryStats.newestItem || categoryStats.oldestItem) && (
+				{(categoryStats.newestItem && categoryStats.newestItem.length > 0) ?? (categoryStats.oldestItem && categoryStats.oldestItem.length > 0) && (
 					<Card p="md" radius="md" withBorder={true} bg="gray.0">
 						<Group justify="space-between">
-							{categoryStats.newestItem && (
+							{categoryStats.newestItem && categoryStats.newestItem.length > 0 && (
 								<Box>
 									<Text size="xs" c="dimmed" tt="uppercase" fw={500}>Newest Item</Text>
 									<Text size="sm" truncate={true} maw={200}>{categoryStats.newestItem}</Text>
 								</Box>
 							)}
-							{categoryStats.oldestItem && (
+							{categoryStats.oldestItem && categoryStats.oldestItem.length > 0 && (
 								<Box>
 									<Text size="xs" c="dimmed" tt="uppercase" fw={500}>Oldest Item</Text>
 									<Text size="sm" truncate={true} maw={200}>{categoryStats.oldestItem}</Text>
