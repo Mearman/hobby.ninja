@@ -49,6 +49,14 @@ export interface GradeInfo {
 }
 
 /**
+ * PDF document with URL and localized name
+ */
+export interface ManualPdf {
+  url: string;
+  name: LocalizedText;
+}
+
+/**
  * Clean filtered output structure
  * Uses LocalizedText for fields that can be translated
  */
@@ -64,8 +72,7 @@ export interface FilteredManualData {
   thumbnailImage: string;
   sourceUrl: string;
   extractedAt: string;
-  pdfUrl?: string;
-  supplementaryPdfUrl?: string;
+  pdfs: ManualPdf[];
 }
 
 /**
@@ -472,46 +479,33 @@ function buildSourceUrl(manualId: string): string {
 }
 
 /**
- * Check if raw content contains 補足説明書 (supplementary manual)
+ * Extract PDFs from raw HTML content
+ * Parses the HTML to find PDF links and their labels
+ *
+ * Pattern in HTML:
+ * <a data-src="/viewer.php?file=/pdf/1585.pdf&v=..."><span class="ico_manual">取扱説明書</span></a>
  */
-function hasSupplementaryManual(blocks: RawParsedJson["content"]["blocks"]): boolean {
-	for (const block of blocks) {
-		const text = block.content?.text || block.content?.ja || "";
-		if (text.includes("補足説明書")) {
-			return true;
-		}
+function extractPdfsFromHtml(htmlContent: string): ManualPdf[] {
+	const pdfs: ManualPdf[] = [];
+
+	// Regex to match PDF links with their labels
+	// Captures: 1) PDF filename (e.g., "1585.pdf" or "1585_2.pdf"), 2) Label text
+	const pdfLinkRegex =
+		/data-src="\/viewer\.php\?file=\/pdf\/(\d+(?:_\d+)?\.pdf)[^"]*"[^>]*>[\s\S]*?<span class="ico_manual">([^<]+)<\/span>/g;
+
+	let match: RegExpExecArray | null;
+	while ((match = pdfLinkRegex.exec(htmlContent)) !== null) {
+		const [, pdfFilename, labelText] = match;
+		const url = `https://manual.bandai-hobby.net/pdf/${pdfFilename}`;
+		const label = labelText.trim();
+
+		pdfs.push({
+			url,
+			name: { ja: label },
+		});
 	}
-	return false;
-}
 
-/**
- * Build PDF URL from manual ID
- * Pattern: https://manual.bandai-hobby.net/pdf/{id}.pdf
- */
-function buildPdfUrl(manualId: string): string {
-	const numericId = Number.parseInt(manualId, 10);
-	return `https://manual.bandai-hobby.net/pdf/${numericId}.pdf`;
-}
-
-/**
- * Build supplementary PDF URL from manual ID
- * Pattern: https://manual.bandai-hobby.net/pdf/{id}_2.pdf
- */
-function buildSupplementaryPdfUrl(manualId: string): string {
-	const numericId = Number.parseInt(manualId, 10);
-	return `https://manual.bandai-hobby.net/pdf/${numericId}_2.pdf`;
-}
-
-/**
- * Check if a PDF URL exists (returns 200 OK)
- */
-async function checkPdfExists(url: string): Promise<boolean> {
-	try {
-		const response = await fetch(url, { method: "HEAD" });
-		return response.ok;
-	} catch {
-		return false;
-	}
+	return pdfs;
 }
 
 /**
@@ -532,10 +526,11 @@ function isValidParsedHtml(rawJson: unknown): rawJson is RawParsedJson {
 /**
  * Filter raw parsed JSON to clean product data
  */
-export async function filterManualJson(
+export function filterManualJson(
 	rawJson: unknown,
 	manualId: string,
-): Promise<FilteredManualData> {
+	pdfs: ManualPdf[],
+): FilteredManualData {
 	if (!isValidParsedHtml(rawJson)) {
 		throw new Error("Invalid structure: not a parsed HTML JSON file");
 	}
@@ -567,6 +562,7 @@ export async function filterManualJson(
 		thumbnailImage,
 		sourceUrl: buildSourceUrl(manualId),
 		extractedAt: rawJson.metadata?.extractedAt || new Date().toISOString(),
+		pdfs,
 	};
 
 	if (grade) {
@@ -574,21 +570,6 @@ export async function filterManualJson(
 	}
 	if (scale) {
 		result.scale = scale;
-	}
-
-	// All manuals have a PDF available
-	result.pdfUrl = buildPdfUrl(manualId);
-
-	// Only add supplementary PDF if text indicates it AND the PDF actually exists
-	if (hasSupplementaryManual(blocks)) {
-		const supplementaryUrl = buildSupplementaryPdfUrl(manualId);
-		if (await checkPdfExists(supplementaryUrl)) {
-			result.supplementaryPdfUrl = supplementaryUrl;
-		} else {
-			throw new Error(
-				`Supplementary manual indicated in HTML but PDF not found: ${supplementaryUrl}`,
-			);
-		}
 	}
 
 	return result;
@@ -602,10 +583,16 @@ export async function filterJsonFile(
 	outputPath: string,
 	manualId: string,
 ): Promise<FilteredManualData> {
+	// Read parsed JSON for structured product data
 	const rawContent = await fs.readFile(inputPath, "utf8");
 	const rawJson: unknown = JSON.parse(rawContent);
 
-	const filtered = await filterManualJson(rawJson, manualId);
+	// Read raw HTML to extract PDFs with their labels
+	const htmlPath = inputPath.replace(".html.json", ".html");
+	const htmlContent = await fs.readFile(htmlPath, "utf8");
+	const pdfs = extractPdfsFromHtml(htmlContent);
+
+	const filtered = filterManualJson(rawJson, manualId, pdfs);
 
 	await fs.writeFile(outputPath, JSON.stringify(filtered, null, 2), "utf-8");
 
