@@ -45,7 +45,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 	const [expandedItems, setExpandedItems] = useState<string[]>([]);
 	const [loadedItems, setLoadedItems] = useState<Set<string>>(new Set());
 	const { fullWidth, toggleFullWidth, isHydrated } = useFullWidthPreference();
-	const itemRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+	const containerRef = useRef<HTMLDivElement>(null);
 
 	const handleChange = (values: string[]) => {
 		// Find newly expanded items
@@ -53,11 +53,10 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 
 		setExpandedItems(values);
 
-		// Scroll to the first newly expanded item after transitions complete
+		// Scroll the entire section to top when any accordion is expanded
 		if (newlyExpanded.length > 0) {
-			const itemId = newlyExpanded[0];
 			setTimeout(() => {
-				const element = itemRefs.current.get(itemId);
+				const element = containerRef.current;
 				if (element) {
 					const rect = element.getBoundingClientRect();
 					const scrollTop = window.scrollY + rect.top - 16; // 16px padding from top
@@ -89,7 +88,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 			};
 
 	return (
-		<Box style={fullWidthStyles}>
+		<Box ref={containerRef} style={fullWidthStyles}>
 			<Card withBorder p="lg">
 				<Stack gap="md">
 					{/* Header content passed from parent */}
@@ -125,18 +124,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 							const isLoaded = loadedItems.has(itemId);
 
 							return (
-								<Accordion.Item
-									key={index}
-									value={itemId}
-									ref={(el: HTMLDivElement | null) => {
-										if (el) {
-											itemRefs.current.set(itemId, el);
-										} else {
-											itemRefs.current.delete(itemId);
-										}
-									}}
-									style={{ scrollMarginTop: "1rem" }}
-								>
+								<Accordion.Item key={index} value={itemId}>
 									<Accordion.Control icon={<IconFileTypePdf size={20} />}>
 										<Group justify="space-between" wrap="nowrap" pr="md">
 											<span>{pdf.name}</span>
