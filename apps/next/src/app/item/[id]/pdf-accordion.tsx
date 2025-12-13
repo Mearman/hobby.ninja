@@ -53,17 +53,19 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 
 		setExpandedItems(values);
 
-		// Scroll the expanded accordion item to top
+		// Scroll the expanded accordion item header to top
 		if (newlyExpanded.length > 0) {
 			const itemId = newlyExpanded[0];
-			setTimeout(() => {
-				const element = itemRefs.current.get(itemId);
-				if (element) {
-					const rect = element.getBoundingClientRect();
-					const scrollTop = window.scrollY + rect.top - 16; // 16px padding from top
+			// Get position immediately before expansion animation moves things
+			const element = itemRefs.current.get(itemId);
+			if (element) {
+				const rect = element.getBoundingClientRect();
+				const scrollTop = window.scrollY + rect.top - 16; // 16px padding from top
+				// Scroll after width transition completes
+				setTimeout(() => {
 					window.scrollTo({ top: scrollTop, behavior: "smooth" });
-				}
-			}, 250); // Wait for width transition (200ms) + buffer
+				}, 250);
+			}
 		}
 	};
 
