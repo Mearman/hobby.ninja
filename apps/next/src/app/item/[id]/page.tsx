@@ -267,28 +267,52 @@ export default async function ItemPage({ params }: ItemPageProps) {
 									>
 										View on Bandai
 									</Anchor>
-									<Anchor
-										href={`/manuals/${manual.id}/${manual.id}.pdf`}
-										target="_blank"
-										size="sm"
-										fw={500}
-									>
-										Open PDF
-									</Anchor>
+									{manual.pdfs && manual.pdfs.length > 0 && manual.pdfs.map((pdf, index) => {
+										const suffix = index === 0 ? "" : `_${index + 1}`;
+										const pdfPath = `/manuals/${manual.id}/${manual.id}${suffix}.pdf`;
+										const pdfName = pdf.name.en || pdf.name.ja;
+										return (
+											<Anchor
+												key={index}
+												href={pdfPath}
+												target="_blank"
+												size="sm"
+												fw={500}
+											>
+												{pdfName}
+											</Anchor>
+										);
+									})}
 								</Group>
 							</Group>
 
-							{/* Embedded PDF Viewer - Full Width */}
-							<iframe
-								src={`/manuals/${manual.id}/${manual.id}.pdf`}
-								title={`${getNodeDisplayName(manual)} - Assembly Manual PDF`}
-								style={{
-									width: "100%",
-									height: 800,
-									border: "1px solid var(--mantine-color-gray-3)",
-									borderRadius: 4,
-								}}
-							/>
+							{/* Embedded PDF Viewers - Show all PDFs */}
+							{manual.pdfs && manual.pdfs.length > 0 && (
+								<Stack gap="md">
+									{manual.pdfs.map((pdf, index) => {
+										const suffix = index === 0 ? "" : `_${index + 1}`;
+										const pdfPath = `/manuals/${manual.id}/${manual.id}${suffix}.pdf`;
+										const pdfName = pdf.name.en || pdf.name.ja;
+										return (
+											<Stack key={index} gap="xs">
+												{manual.pdfs && manual.pdfs.length > 1 && (
+													<Text fw={500} size="sm">{pdfName}</Text>
+												)}
+												<iframe
+													src={pdfPath}
+													title={`${getNodeDisplayName(manual)} - ${pdfName}`}
+													style={{
+														width: "100%",
+														height: 800,
+														border: "1px solid var(--mantine-color-gray-3)",
+														borderRadius: 4,
+													}}
+												/>
+											</Stack>
+										);
+									})}
+								</Stack>
+							)}
 						</Stack>
 					</Card>
 				)}
