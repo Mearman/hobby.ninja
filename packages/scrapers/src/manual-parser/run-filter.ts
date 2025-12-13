@@ -12,9 +12,9 @@ import { filterJsonFile } from "./core/json-filter";
 async function main() {
 	console.log("Running JSON filter on all manual files...\n");
 
-	let manualsDir = "data/bandai/manuals";
+	let manualsDir = "data/raw/bandai/manuals";
 	if (process.cwd().endsWith("packages/scrapers")) {
-		manualsDir = "../../data/bandai/manuals";
+		manualsDir = "../../data/raw/bandai/manuals";
 	}
 
 	const entries = await fs.readdir(manualsDir, { withFileTypes: true });
