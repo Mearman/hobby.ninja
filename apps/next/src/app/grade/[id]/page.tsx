@@ -1,12 +1,15 @@
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import {
+	getGradeById,
+	getItemsByGrade,
+	getGradeIds,
+	type GradeData,
+	getNodeDisplayName,
+} from "@hobby-ninja/data";
 import {
 	Badge,
-	Box,
 	Card,
 	Container,
 	Group,
-	Image,
 	SimpleGrid,
 	Stack,
 	Text,
@@ -16,22 +19,12 @@ import {
 	IconChevronRight,
 	IconClock,
 	IconCurrencyYen,
-	IconList,
-	IconPhoto,
 } from "@tabler/icons-react";
+import { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
-import {
-	getGradeById,
-	getItemsByGrade,
-	getGradesIndex,
-	getGradeIds,
-	type GradeData,
-	getNodeDisplayName,
-	type Item,
-} from "@hobby-ninja/data";
-import { itemCard } from "@/styles/components.css";
-import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
+import { GradeItemsClient } from "./grade-items-client";
 
 interface GradePageProps {
 	params: Promise<{ id: string }>;
@@ -94,70 +87,6 @@ function GradeBreadcrumbs({ grade }: { grade: GradeData }) {
 	);
 }
 
-// Item card component (server component - no hooks)
-function ItemCard({ item }: { item: Item & { series?: string; grade?: string; scale?: string; brand?: string } }) {
-	const rawImage = item.images?.[0];
-	// Handle union type: string | { url: string } | unknown
-	const primaryImage = typeof rawImage === "string"
-		? rawImage
-		: (rawImage && typeof rawImage === "object" && "url" in rawImage)
-			? (rawImage as { url: string }).url
-			: undefined;
-	const name = getNodeDisplayName(item);
-
-	return (
-		<Link href={`/item/${item.id}`} style={{ textDecoration: "none", color: "inherit" }}>
-			<Card
-				p="md"
-				radius="md"
-				withBorder={true}
-				className={itemCard}
-			>
-				<Stack gap="md">
-					<Box h={160} style={{ overflow: "hidden", borderRadius: "var(--mantine-radius-sm)" }}>
-						<Image
-							src={primaryImage || createPlaceholderSvg(name.slice(0, 20), 200, 200)}
-							alt={name}
-							fit="cover"
-							radius="sm"
-							fallbackSrc={createErrorPlaceholderSvg(200, 200)}
-						/>
-					</Box>
-					<div>
-						<Text size="sm" fw={600} lineClamp={2} mb="xs">
-							{name}
-						</Text>
-						<Group gap="xs" mb="xs">
-							{item.grade && (
-								<Badge variant="light" color="blue" size="xs">
-									{item.grade}
-								</Badge>
-							)}
-							{item.scale && (
-								<Badge variant="light" color="green" size="xs">
-									1/{item.scale}
-								</Badge>
-							)}
-						</Group>
-						<Group justify="space-between">
-							{item.price && (
-								<Text size="xs" c="dimmed">
-									¥{item.price.amount.toLocaleString()}
-								</Text>
-							)}
-							{item.releaseDate?.year && (
-								<Text size="xs" c="dimmed">
-									{item.releaseDate.year}
-								</Text>
-							)}
-						</Group>
-					</div>
-				</Stack>
-			</Card>
-		</Link>
-	);
-}
-
 export default async function GradeDetailPage({ params }: GradePageProps) {
 	const { id } = await params;
 
@@ -176,9 +105,6 @@ export default async function GradeDetailPage({ params }: GradePageProps) {
 		notFound();
 	}
 
-	// Get grades index for parent/child lookups
-	const gradesIndex = getGradesIndex();
-
 	// Get parent grade if exists
 	const parentGrade = grade.parent ? getGradeById(grade.parent) : null;
 
@@ -196,7 +122,7 @@ export default async function GradeDetailPage({ params }: GradePageProps) {
 
 	for (const item of gradeItems) {
 		if (item.scale) {
-			scaleDistribution.set(item.scale, (scaleDistribution.get(item.scale) || 0) + 1);
+			scaleDistribution.set(item.scale, (scaleDistribution.get(item.scale) ?? 0) + 1);
 		}
 		if (item.releaseDate?.year) {
 			minYear = Math.min(minYear, item.releaseDate.year);
@@ -210,8 +136,8 @@ export default async function GradeDetailPage({ params }: GradePageProps) {
 
 	const stats = {
 		totalItems: gradeItems.length,
-		scaleDistribution: Array.from(scaleDistribution.entries())
-			.sort((a, b) => b[1] - a[1])
+		scaleDistribution: [...scaleDistribution.entries()]
+			.toSorted((a, b) => b[1] - a[1])
 			.slice(0, 5),
 		yearRange: minYear < 9999 && maxYear > 0 ? { first: minYear, last: maxYear } : null,
 		averagePrice: priceCount > 0 ? totalPrice / priceCount : null,
@@ -269,48 +195,15 @@ export default async function GradeDetailPage({ params }: GradePageProps) {
 					</Stack>
 				</Card>
 
-				{/* Content Sections */}
+				{/* Items Section with Client-Side Filtering */}
+				<GradeItemsClient
+					items={gradeItems}
+					gradeName={getNodeDisplayName(grade)}
+					totalItems={stats.totalItems}
+				/>
+
+				{/* Statistics Sections */}
 				<Stack gap="md">
-					{/* Items Section */}
-					<Card p="lg" radius="md" withBorder={true}>
-						<Stack gap="md">
-							<Group justify="space-between">
-								<Title order={2}>
-									<Group gap="xs">
-										<IconList size={24} />
-										Items ({stats.totalItems})
-									</Group>
-								</Title>
-							</Group>
-
-							{gradeItems.length > 0 ? (
-								<SimpleGrid
-									cols={{ base: 2, sm: 3, md: 4, lg: 5, xl: 6 }}
-									spacing="md"
-								>
-									{gradeItems.slice(0, 24).map((item) => (
-										<ItemCard key={item.id} item={item} />
-									))}
-								</SimpleGrid>
-							) : (
-								<Box ta="center" py="xl">
-									<IconPhoto size={64} color="var(--mantine-color-gray-4)" />
-									<Title order={3} mt="md" mb="sm">
-										No items found
-									</Title>
-									<Text c="dimmed">
-										No items are currently available for this grade.
-									</Text>
-								</Box>
-							)}
-
-							{gradeItems.length > 24 && (
-								<Text ta="center" c="dimmed" size="sm">
-									Showing 24 of {gradeItems.length} items
-								</Text>
-							)}
-						</Stack>
-					</Card>
 
 					{/* Statistics Section */}
 					<Card p="lg" radius="md" withBorder={true} h="100%">
@@ -330,7 +223,7 @@ export default async function GradeDetailPage({ params }: GradePageProps) {
 					</Card>
 
 					{/* Price and Timeline Info */}
-					{(stats.averagePrice || stats.yearRange) && (
+					{(stats.averagePrice != null || stats.yearRange != null) && (
 						<Card p="lg" radius="md" withBorder={true}>
 							<SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
 								{stats.averagePrice && (

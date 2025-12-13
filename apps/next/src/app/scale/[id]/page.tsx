@@ -1,12 +1,13 @@
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import {
+	getScaleById,
+	getItemsByScale,
+	getScaleIds,
+} from "@hobby-ninja/data";
 import {
 	Badge,
-	Box,
 	Card,
 	Container,
 	Group,
-	Image,
 	SimpleGrid,
 	Stack,
 	Text,
@@ -16,22 +17,13 @@ import {
 	IconChevronRight,
 	IconClock,
 	IconCurrencyYen,
-	IconList,
-	IconPhoto,
 	IconRuler,
 } from "@tabler/icons-react";
+import { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
-import {
-	getScaleById,
-	getItemsByScale,
-	getScaleIds,
-	type ScaleData,
-	getNodeDisplayName,
-	type Item,
-} from "@hobby-ninja/data";
-import { itemCard } from "@/styles/components.css";
-import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
+import { ScaleItemsClient } from "./scale-items-client";
 
 interface ScalePageProps {
 	params: Promise<{ id: string }>;
@@ -92,70 +84,6 @@ function ScaleBreadcrumbs({ scaleName }: { scaleName: string }) {
 	);
 }
 
-// Item card component (server component - no hooks)
-function ItemCard({ item }: { item: Item & { series?: string; grade?: string; scale?: string; brand?: string } }) {
-	const rawImage = item.images?.[0];
-	// Handle union type: string | { url: string } | unknown
-	const primaryImage = typeof rawImage === "string"
-		? rawImage
-		: (rawImage && typeof rawImage === "object" && "url" in rawImage)
-			? (rawImage as { url: string }).url
-			: undefined;
-	const name = getNodeDisplayName(item);
-
-	return (
-		<Link href={`/item/${item.id}`} style={{ textDecoration: "none", color: "inherit" }}>
-			<Card
-				p="md"
-				radius="md"
-				withBorder={true}
-				className={itemCard}
-			>
-				<Stack gap="md">
-					<Box h={160} style={{ overflow: "hidden", borderRadius: "var(--mantine-radius-sm)" }}>
-						<Image
-							src={primaryImage || createPlaceholderSvg(name.slice(0, 20), 200, 200)}
-							alt={name}
-							fit="cover"
-							radius="sm"
-							fallbackSrc={createErrorPlaceholderSvg(200, 200)}
-						/>
-					</Box>
-					<div>
-						<Text size="sm" fw={600} lineClamp={2} mb="xs">
-							{name}
-						</Text>
-						<Group gap="xs" mb="xs">
-							{item.grade && (
-								<Badge variant="light" color="blue" size="xs">
-									{item.grade}
-								</Badge>
-							)}
-							{item.series && (
-								<Badge variant="light" color="violet" size="xs">
-									{item.series}
-								</Badge>
-							)}
-						</Group>
-						<Group justify="space-between">
-							{item.price && (
-								<Text size="xs" c="dimmed">
-									¥{item.price.amount.toLocaleString()}
-								</Text>
-							)}
-							{item.releaseDate?.year && (
-								<Text size="xs" c="dimmed">
-									{item.releaseDate.year}
-								</Text>
-							)}
-						</Group>
-					</div>
-				</Stack>
-			</Card>
-		</Link>
-	);
-}
-
 export default async function ScaleDetailPage({ params }: ScalePageProps) {
 	const { id } = await params;
 
@@ -184,12 +112,12 @@ export default async function ScaleDetailPage({ params }: ScalePageProps) {
 
 	for (const item of scaleItems) {
 		if (item.grade) {
-			gradeDistribution.set(item.grade, (gradeDistribution.get(item.grade) || 0) + 1);
+			gradeDistribution.set(item.grade, (gradeDistribution.get(item.grade) ?? 0) + 1);
 		}
 		// Use first series ID from array
 		const seriesId = item.seriesIds[0];
 		if (seriesId) {
-			seriesDistribution.set(seriesId, (seriesDistribution.get(seriesId) || 0) + 1);
+			seriesDistribution.set(seriesId, (seriesDistribution.get(seriesId) ?? 0) + 1);
 		}
 		if (item.releaseDate?.year) {
 			minYear = Math.min(minYear, item.releaseDate.year);
@@ -203,11 +131,11 @@ export default async function ScaleDetailPage({ params }: ScalePageProps) {
 
 	const stats = {
 		totalItems: scaleItems.length,
-		gradeDistribution: Array.from(gradeDistribution.entries())
-			.sort((a, b) => b[1] - a[1])
+		gradeDistribution: [...gradeDistribution.entries()]
+			.toSorted((a, b) => b[1] - a[1])
 			.slice(0, 5),
-		seriesDistribution: Array.from(seriesDistribution.entries())
-			.sort((a, b) => b[1] - a[1])
+		seriesDistribution: [...seriesDistribution.entries()]
+			.toSorted((a, b) => b[1] - a[1])
 			.slice(0, 5),
 		yearRange: minYear < 9999 && maxYear > 0 ? { first: minYear, last: maxYear } : null,
 		averagePrice: priceCount > 0 ? totalPrice / priceCount : null,
@@ -253,50 +181,16 @@ export default async function ScaleDetailPage({ params }: ScalePageProps) {
 					</Stack>
 				</Card>
 
-				{/* Content Sections */}
+				{/* Items Section with Client-Side Filtering */}
+				<ScaleItemsClient
+					items={scaleItems}
+					scaleName={scale.name}
+					totalItems={stats.totalItems}
+				/>
+
+				{/* Statistics Sections */}
 				<Stack gap="md">
-					{/* Items Section */}
-					<Card p="lg" radius="md" withBorder={true}>
-						<Stack gap="md">
-							<Group justify="space-between">
-								<Title order={2}>
-									<Group gap="xs">
-										<IconList size={24} />
-										Items ({stats.totalItems})
-									</Group>
-								</Title>
-							</Group>
-
-							{scaleItems.length > 0 ? (
-								<SimpleGrid
-									cols={{ base: 2, sm: 3, md: 4, lg: 5, xl: 6 }}
-									spacing="md"
-								>
-									{scaleItems.slice(0, 24).map((item) => (
-										<ItemCard key={item.id} item={item} />
-									))}
-								</SimpleGrid>
-							) : (
-								<Box ta="center" py="xl">
-									<IconPhoto size={64} color="var(--mantine-color-gray-4)" />
-									<Title order={3} mt="md" mb="sm">
-										No items found
-									</Title>
-									<Text c="dimmed">
-										No items are currently available at this scale.
-									</Text>
-								</Box>
-							)}
-
-							{scaleItems.length > 24 && (
-								<Text ta="center" c="dimmed" size="sm">
-									Showing 24 of {scaleItems.length} items
-								</Text>
-							)}
-						</Stack>
-					</Card>
-
-					{/* Statistics Section */}
+					{/* Grade/Series Distribution */}
 					<SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
 						<Card p="lg" radius="md" withBorder={true} h="100%">
 							<Title order={3} mb="md">Top Grades</Title>
@@ -332,7 +226,7 @@ export default async function ScaleDetailPage({ params }: ScalePageProps) {
 					</SimpleGrid>
 
 					{/* Price and Timeline Info */}
-					{(stats.averagePrice || stats.yearRange) && (
+					{(stats.averagePrice != null || stats.yearRange != null) && (
 						<Card p="lg" radius="md" withBorder={true}>
 							<SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
 								{stats.averagePrice && (
