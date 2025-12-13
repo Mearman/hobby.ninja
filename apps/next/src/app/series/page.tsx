@@ -1,4 +1,11 @@
 import {
+	seriesList,
+	getItemById,
+	getNodeDisplayName,
+	type Series,
+	type Item,
+} from "@hobby-ninja/data";
+import {
 	Anchor,
 	Badge,
 	Box,
@@ -16,22 +23,16 @@ import {
 import {
 	IconCalendar,
 	IconClock,
-	IconFolder,
 	IconHome,
 	IconStar,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import React from "react";
 
-import {
-	seriesList,
-	getItemById,
-	getNodeDisplayName,
-	type Series,
-	type Item,
-} from "@hobby-ninja/data";
+import { SeriesClient } from "./series-client";
+
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import { seriesCard, seriesImage } from "@/styles/components.css";
+
 
 // Define types locally to avoid circular imports
 interface SeriesWithStats extends Series {
@@ -42,10 +43,9 @@ interface SeriesWithStats extends Series {
 	popularGrades?: string[];
 }
 
-// Enhanced series card component
-function SeriesCard({ series }: { series: SeriesWithStats }) {
+// Featured series card component (for featured section)
+function FeaturedSeriesCard({ series }: { series: SeriesWithStats }) {
 	const coverImage = series.image;
-	const franchise = series.franchise ?? "Standalone";
 	const yearSpan = series.firstYear && series.lastYear
 		? series.firstYear === series.lastYear
 			? series.firstYear.toString()
@@ -74,11 +74,6 @@ function SeriesCard({ series }: { series: SeriesWithStats }) {
 						<Text size="sm" fw={600} lineClamp={2} mb="xs">
 							{getNodeDisplayName(series)}
 						</Text>
-						{series.description && (
-							<Text size="xs" c="dimmed" lineClamp={2} mb="xs">
-								{series.description}
-							</Text>
-						)}
 						<Group justify="space-between" mt="xs">
 							<Badge variant="light" color="blue" size="sm">
 								{series.itemCount} items
@@ -88,11 +83,6 @@ function SeriesCard({ series }: { series: SeriesWithStats }) {
 								<Text size="xs" c="dimmed">{yearSpan}</Text>
 							</Group>
 						</Group>
-						{franchise !== "Standalone" && (
-							<Badge variant="outline" size="xs" mt="xs">
-								{franchise}
-							</Badge>
-						)}
 					</div>
 				</Stack>
 			</Card>
@@ -115,7 +105,7 @@ function FeaturedSeries({ series }: { series: SeriesWithStats[] }) {
 				spacing="md"
 			>
 				{series.map((seriesItem) => (
-					<SeriesCard key={seriesItem.id} series={seriesItem} />
+					<FeaturedSeriesCard key={seriesItem.id} series={seriesItem} />
 				))}
 			</SimpleGrid>
 		</Card>
@@ -195,7 +185,7 @@ function prepareSeriesData(): SeriesWithStats[] {
 	// Calculate statistics for each series based on its items
 	const seriesWithStats: SeriesWithStats[] = seriesList.map(series => {
 		// Get all items for this series using itemIds array
-		const items = (series.itemIds || [])
+		const items = series.itemIds
 			.map(itemId => getItemById(itemId))
 			.filter((item): item is Item => item !== undefined);
 
@@ -276,9 +266,9 @@ export default function SeriesPage() {
 					<Anchor href="/database" size="sm">
 						Database
 					</Anchor>
-					<Anchor href="/series" size="sm">
+					<Text size="sm" c="dimmed">
 						Series
-					</Anchor>
+					</Text>
 				</Breadcrumbs>
 
 				{/* Header */}
@@ -287,7 +277,7 @@ export default function SeriesPage() {
 						Series Explorer
 					</Title>
 					<Text size="lg" c="dimmed">
-						Explore {total.toLocaleString()} series across {availableFranchises.length} franchises
+						Explore {total.toLocaleString()} series across {availableFranchises.length} franchises with search and infinite scroll.
 					</Text>
 				</Box>
 
@@ -299,38 +289,12 @@ export default function SeriesPage() {
 				{/* Series Timeline */}
 				<SeriesTimeline series={allSeries.slice(0, 50)} />
 
-				{/* All Series */}
+				{/* All Series with Infinite Scroll */}
 				<Box>
-					<Group justify="space-between" mb="md">
-						<Title order={2}>All Series</Title>
-						<Text size="sm" c="dimmed">
-							{total.toLocaleString()} series
-						</Text>
-					</Group>
-
-					{allSeries.length > 0 ? (
-						<SimpleGrid
-							cols={{ base: 1, sm: 2, md: 3, lg: 4, xl: 5 }}
-							spacing="md"
-						>
-							{allSeries.map((seriesItem) => (
-								<SeriesCard
-									key={seriesItem.id}
-									series={seriesItem}
-								/>
-							))}
-						</SimpleGrid>
-					) : (
-						<Box ta="center" py="xl">
-							<IconFolder size={64} color="var(--mantine-color-gray-4)" />
-							<Title order={3} mt="md" mb="sm">
-								No series available
-							</Title>
-							<Text c="dimmed" mb="lg">
-								There are no series in the database yet.
-							</Text>
-						</Box>
-					)}
+					<Title order={2} mb="md">
+						All Series
+					</Title>
+					<SeriesClient series={allSeries} totalSeries={total} />
 				</Box>
 			</Stack>
 		</Container>
