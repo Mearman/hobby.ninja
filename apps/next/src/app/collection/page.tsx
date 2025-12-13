@@ -46,8 +46,10 @@ import {
 import Link from "next/link";
 import React, { useMemo } from "react";
 
-
+import { InfiniteScrollLoader } from "@/components/ui/infinite-scroll-loader";
 import { useCollection } from "@/contexts/collection-context";
+import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
+import { useUserPreferences } from "@/hooks/use-user-preferences";
 import { CSS, TYPOGRAPHY, UI } from "@/lib/constants";
 import {
 	collectionCard,
@@ -574,6 +576,7 @@ function EmptyState({ onCreateCollection }: { onCreateCollection: () => void }) 
 // Main collection page
 export default function CollectionPage() {
 	const { state, actions } = useCollection();
+	const { preferences } = useUserPreferences();
 	const [createModalOpen, setCreateModalOpen] = React.useState(false);
 	const [editModalOpen, setEditModalOpen] = React.useState(false);
 	const [filterDrawerOpen, setFilterDrawerOpen] = React.useState(false);
@@ -694,6 +697,19 @@ export default function CollectionPage() {
 		});
 	}, [state.collections, searchQuery, sortBy, sortOrder]);
 
+	// Infinite scroll hook
+	const {
+		visibleItems: visibleCollections,
+		hasMore,
+		isLoading: isLoadingMore,
+		loadMore,
+		lastItemRef,
+	} = useInfiniteScroll({
+		items: filteredAndSortedCollections,
+		itemsPerPage: preferences.infiniteScrollPageSize,
+		autoLoad: preferences.autoLoadInfiniteScroll,
+	});
+
 	const CollectionsList = viewMode === "grid" ? SimpleGrid : Stack;
 
 	return (
@@ -790,37 +806,50 @@ export default function CollectionPage() {
 							<LoadingSkeleton />
 						</CollectionsList>
 					) : filteredAndSortedCollections.length > 0 ? (
-						<CollectionsList
-							{...(viewMode === "grid" ? {
-								cols: { base: 1, sm: 2, lg: 3 },
-								spacing: "lg",
-							} : {
-								gap: "md",
-							})}
-						>
-							{filteredAndSortedCollections.map((collection) => {
-								const collectionData = {
-									...collection,
-									lastModified: collection.modifiedAt?.toISOString() || new Date().toISOString(),
-								};
+						<>
+							<CollectionsList
+								{...(viewMode === "grid" ? {
+									cols: { base: 1, sm: 2, lg: 3 },
+									spacing: "lg",
+								} : {
+									gap: "md",
+								})}
+							>
+								{visibleCollections.map((collection, index) => {
+									const collectionData = {
+										...collection,
+										lastModified: collection.modifiedAt?.toISOString() || new Date().toISOString(),
+									};
 
-								return viewMode === "grid" ? (
-									<CollectionCardGrid
-										key={collection.id}
-										collection={collectionData}
-										onEdit={openEditModal}
-										onDelete={openDeleteModal}
-									/>
-								) : (
-									<CollectionCardList
-										key={collection.id}
-										collection={collectionData}
-										onEdit={openEditModal}
-										onDelete={openDeleteModal}
-									/>
-								);
-							})}
-						</CollectionsList>
+									const isLastItem = index === visibleCollections.length - 1;
+
+									return viewMode === "grid" ? (
+										<div key={collection.id} ref={isLastItem ? lastItemRef : undefined}>
+											<CollectionCardGrid
+												collection={collectionData}
+												onEdit={openEditModal}
+												onDelete={openDeleteModal}
+											/>
+										</div>
+									) : (
+										<div key={collection.id} ref={isLastItem ? lastItemRef : undefined}>
+											<CollectionCardList
+												collection={collectionData}
+												onEdit={openEditModal}
+												onDelete={openDeleteModal}
+											/>
+										</div>
+									);
+								})}
+							</CollectionsList>
+
+							<InfiniteScrollLoader
+								isLoading={isLoadingMore}
+								hasMore={hasMore}
+								onLoadMore={loadMore}
+								autoLoad={preferences.autoLoadInfiniteScroll}
+							/>
+						</>
 					) : searchQuery ? (
 						<Card p="xl" radius="md" withBorder={true} style={{ textAlign: "center" }}>
 							<Stack gap="lg" align="center">
