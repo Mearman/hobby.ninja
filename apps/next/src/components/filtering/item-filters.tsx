@@ -10,11 +10,11 @@ import {
 	Collapse,
 	Divider,
 	Group,
-	ScrollArea,
 	Select,
 	Stack,
 	Text,
 	TextInput,
+	UnstyledButton,
 } from "@mantine/core";
 import {
 	IconChevronDown,
@@ -91,22 +91,56 @@ function FilterSection({
 	formatValue = (v) => v,
 	color = "blue",
 }: FilterSectionProps) {
+	const [expanded, setExpanded] = useState(false);
+
 	if (options.length === 0) return null;
 
 	return (
 		<Box>
-			<Group justify="space-between" mb="xs">
-				<Text size="sm" fw={500} c="dimmed">
-					{label} ({options.length})
-				</Text>
-				{selectedValues.length > 0 && (
-					<Badge size="xs" variant="filled" color={color}>
-						{selectedValues.length} selected
-					</Badge>
-				)}
-			</Group>
-			<ScrollArea.Autosize mah={200} type="auto">
-				<Group gap="xs" wrap="wrap">
+			{/* Accordion Header */}
+			<UnstyledButton
+				onClick={() => { setExpanded(!expanded); }}
+				style={{ width: "100%" }}
+			>
+				<Group justify="space-between" mb={expanded ? "xs" : 0}>
+					<Group gap="xs">
+						{expanded ? <IconChevronUp size={14} /> : <IconChevronDown size={14} />}
+						<Text size="sm" fw={500}>
+							{label}
+						</Text>
+						<Text size="xs" c="dimmed">
+							({options.length})
+						</Text>
+					</Group>
+					{selectedValues.length > 0 && (
+						<Badge size="xs" variant="filled" color={color}>
+							{selectedValues.length} selected
+						</Badge>
+					)}
+				</Group>
+			</UnstyledButton>
+
+			{/* Collapsed: Show selected values only */}
+			{!expanded && selectedValues.length > 0 && (
+				<Group gap="xs" wrap="wrap" mt="xs">
+					{selectedValues.map((value) => (
+						<Chip
+							key={value}
+							checked={true}
+							onChange={() => { onToggle(field, value); }}
+							size="xs"
+							variant="filled"
+							color={color}
+						>
+							{formatValue(value)}
+						</Chip>
+					))}
+				</Group>
+			)}
+
+			{/* Expanded: Show all options */}
+			<Collapse in={expanded}>
+				<Group gap="xs" wrap="wrap" mt="xs">
 					{options.map((value) => (
 						<Chip
 							key={value}
@@ -120,7 +154,7 @@ function FilterSection({
 						</Chip>
 					))}
 				</Group>
-			</ScrollArea.Autosize>
+			</Collapse>
 		</Box>
 	);
 }
