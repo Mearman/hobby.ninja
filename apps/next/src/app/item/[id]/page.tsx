@@ -95,10 +95,10 @@ export default async function ItemPage({ params }: ItemPageProps) {
 	const seriesList = item.seriesIds.map(id => getSeriesById(id)).filter((s): s is NonNullable<typeof s> => s != null);
 	const manual = item.manualId ? getManualById(item.manualId) : undefined;
 
-	// Get item images, falling back to manual image if none exist
+	// Get item images, falling back to displayImage (which may come from manual)
 	let images = getNodeImages(item);
-	if (images.length === 0 && manual?.productImage) {
-		images = [manual.productImage];
+	if (images.length === 0 && item.displayImage) {
+		images = [item.displayImage];
 	}
 
 	return (

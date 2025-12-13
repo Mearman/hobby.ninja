@@ -23,17 +23,17 @@ import { useState } from "react";
 import { CustomImage } from "@/components/ui/custom-image";
 import { getBrandImage } from "@/lib/image-lookup";
 import { createPlaceholderSvg } from "@/lib/image-placeholders";
-import { ItemNode , getNodeDisplayName, getNodeImages } from "@/lib/schemas";
+import { type Item, getNodeDisplayName } from "@hobby-ninja/data";
 
 interface ItemSelectorProps {
-  items: ItemNode[];
+  items: Item[];
   selectedItems: string[];
   onSelectionChange: (selectedIds: string[]) => void;
   maxSelection?: number;
 }
 
 interface ComparisonModalProps {
-  items: ItemNode[];
+  items: Item[];
   opened: boolean;
   onClose: () => void;
 }
@@ -66,7 +66,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 									<Table.Th key={item.id} ta="center">
 										<Stack gap="xs" align="center" miw={120}>
 											<CustomImage
-												src={getNodeImages(item)[0] ?? createPlaceholderSvg(getNodeDisplayName(item))}
+												src={item.displayImage ?? createPlaceholderSvg(getNodeDisplayName(item))}
 												alt={getNodeDisplayName(item)}
 												width={60}
 												height={60}
@@ -280,7 +280,7 @@ export function ItemSelector({ items, selectedItems, onSelectionChange, maxSelec
 
 // Enhanced item card with selection checkbox
 interface SelectableItemCardProps {
-  item: ItemNode;
+  item: Item;
   isSelected: boolean;
   onToggleSelection: () => void;
   viewMode: "grid" | "list" | "table";
@@ -292,8 +292,7 @@ export function SelectableItemCard({
 	onToggleSelection,
 	viewMode,
 }: SelectableItemCardProps) {
-	const itemImages = getNodeImages(item);
-	const primaryImage = itemImages.length > 0 ? itemImages[0] : null;
+	const primaryImage = item.displayImage ?? null;
 	const placeholderSrc = createPlaceholderSvg(getNodeDisplayName(item));
 
 	if (viewMode === "table") {

@@ -98,6 +98,7 @@ export const ItemSchema = z.object({
 
 	// Content and metadata
 	images: z.array(ImageSchema).optional(),
+	displayImage: z.string().optional(), // Computed: first image or manual.productImage fallback
 	description: z.array(LocalizedStringSchema).optional(),
 	accessories: z.array(AccessorySchema).optional(),
 	targetAge: z.number().optional(),
@@ -541,4 +542,32 @@ export const parseCategory = (data: unknown): Category | null => {
 export const parseManual = (data: unknown): Manual | null => {
 	const result = ManualSchema.safeParse(data);
 	return result.success ? result.data : null;
+};
+
+/**
+ * Check if an item has a release date in the future.
+ * Uses the sortable date format (YYYYMMDD) for comparison.
+ * Items without release dates are NOT considered future releases.
+ */
+export const isFutureRelease = (item: Item): boolean => {
+	const releaseDate = item.releaseDate;
+	if (!releaseDate) return false;
+
+	// Get today's date as YYYYMMDD
+	const now = new Date();
+	const todayStr = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, "0")}${String(now.getDate()).padStart(2, "0")}`;
+
+	// Get item's release date as YYYYMMDD
+	const itemDateStr = getNodeReleaseDateSortable(item);
+	if (!itemDateStr) return false;
+
+	// Compare as strings (works because format is YYYYMMDD)
+	return itemDateStr > todayStr;
+};
+
+/**
+ * Filter an array of items to exclude future releases
+ */
+export const filterFutureReleases = (items: Item[]): Item[] => {
+	return items.filter((item) => !isFutureRelease(item));
 };

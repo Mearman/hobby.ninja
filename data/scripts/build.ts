@@ -19,13 +19,14 @@
  *   pnpm tsx data/scripts/build.ts
  */
 
-import Fuse from "fuse.js";
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import path from "node:path";
 
-const ROOT = join(import.meta.dirname, "..");
-const SRC_PATH = join(ROOT, "src");
-const DIST_PATH = join(ROOT, "dist");
+import Fuse from "fuse.js";
+
+const ROOT = path.join(import.meta.dirname, "..");
+const SRC_PATH = path.join(ROOT, "src");
+const DIST_PATH = path.join(ROOT, "dist");
 
 interface LocalizedString {
 	ja: string;
@@ -45,6 +46,7 @@ interface Item {
 	price?: { amount: number; currency: string };
 	releaseDate?: { year?: number; month?: number; day?: number };
 	images?: unknown[];
+	displayImage?: string;
 	[key: string]: unknown;
 }
 
@@ -81,6 +83,8 @@ interface Manual {
 	name: LocalizedString;
 	brandIds: string[];
 	seriesIds: string[];
+	productImage?: string;
+	thumbnailImage?: string;
 	[key: string]: unknown;
 }
 
@@ -160,7 +164,7 @@ function readJsonDir<T>(dirPath: string): Map<string, T> {
 
 	const files = readdirSync(dirPath).filter((f) => f.endsWith(".json"));
 	for (const file of files) {
-		const content = readFileSync(join(dirPath, file), "utf-8");
+		const content = readFileSync(path.join(dirPath, file), "utf8");
 		const data = JSON.parse(content) as T & { id: string };
 		map.set(data.id, data);
 	}
@@ -168,7 +172,24 @@ function readJsonDir<T>(dirPath: string): Map<string, T> {
 }
 
 function writeJson(filePath: string, data: unknown): void {
-	writeFileSync(filePath, JSON.stringify(data, null, "\t"), "utf-8");
+	writeFileSync(filePath, JSON.stringify(data, null, "\t"), "utf8");
+}
+
+// Compute displayImage for each item (first image or manual.productImage fallback)
+function computeDisplayImages(items: Map<string, Item>, manuals: Map<string, Manual>): void {
+	for (const [, item] of items) {
+		// Get first item image if available
+		if (item.images && item.images.length > 0) {
+			const firstImage = item.images[0];
+			item.displayImage = typeof firstImage === "string" ? firstImage : (firstImage as { url: string }).url;
+		} else if (item.manualId) {
+			// Fall back to manual's productImage
+			const manual = manuals.get(item.manualId);
+			if (manual?.productImage) {
+				item.displayImage = manual.productImage;
+			}
+		}
+	}
 }
 
 // Extract grade from item name and brand names
@@ -207,7 +228,7 @@ function extractGradeFromItem(item: Item, brands: Map<string, Brand>): string | 
 	}
 
 	// Check brand names
-	for (const brandId of item.brandIds || []) {
+	for (const brandId of item.brandIds) {
 		const brand = brands.get(brandId);
 		if (brand) {
 			const brandName = (brand.name.en || brand.name.ja || "").toLowerCase();
@@ -240,7 +261,7 @@ function buildGrades(items: Map<string, Item>, brands: Map<string, Brand>): Map<
 	// Build GradeData objects
 	const grades = new Map<string, GradeData>();
 	for (const [gradeId, definition] of Object.entries(GRADE_DEFINITIONS)) {
-		const itemIds = gradeItemIds.get(gradeId) || [];
+		const itemIds = gradeItemIds.get(gradeId) ?? [];
 		grades.set(gradeId, {
 			id: gradeId,
 			type: "grade",
@@ -295,10 +316,10 @@ function buildSearchData(items: Map<string, Item>, brands: Map<string, Brand>, s
 
 	for (const [id, item] of items) {
 		const brandNames = item.brandIds
-			.map((bid) => brands.get(bid)?.name.en || bid)
+			.map((bid) => brands.get(bid)?.name.en ?? bid)
 			.join(", ");
 		const seriesNames = item.seriesIds
-			.map((sid) => series.get(sid)?.name.en || sid)
+			.map((sid) => series.get(sid)?.name.en ?? sid)
 			.join(", ");
 
 		searchRecords.push({
@@ -330,7 +351,7 @@ function buildHomepageData(
 	items: Map<string, Item>,
 	brands: Map<string, Brand>,
 	categories: Map<string, Category>,
-	series: Map<string, Series>
+	series: Map<string, Series>,
 ): HomepageData {
 	// Compute stats
 	const stats: HomepageStats = {
@@ -341,7 +362,7 @@ function buildHomepageData(
 	};
 
 	// Get featured items (items with most images and price info)
-	const itemsArray = Array.from(items.values());
+	const itemsArray = [...items.values()];
 	const scoredItems = itemsArray.map(item => {
 		let score = 0;
 		if (item.images && item.images.length > 0) score += item.images.length;
@@ -354,12 +375,12 @@ function buildHomepageData(
 	const featuredItems = scoredItems.slice(0, 12).map(({ item }) => item);
 
 	// Get popular brands (by item count)
-	const brandsArray = Array.from(brands.values());
-	brandsArray.sort((a, b) => (b.itemIds?.length || 0) - (a.itemIds?.length || 0));
+	const brandsArray = [...brands.values()];
+	brandsArray.sort((a, b) => (b.itemIds?.length ?? 0) - (a.itemIds?.length ?? 0));
 	const popularBrands = brandsArray.slice(0, 8);
 
 	// Get all categories
-	const categoriesArray = Array.from(categories.values());
+	const categoriesArray = [...categories.values()];
 
 	return {
 		stats,
@@ -369,24 +390,30 @@ function buildHomepageData(
 	};
 }
 
-async function main() {
+function main() {
 	console.log("=== Building @hobby-ninja/data (JSON output) ===\n");
 
 	ensureDir(DIST_PATH);
 
 	// Read all source data
 	console.log("Reading source data...");
-	const items = readJsonDir<Item>(join(SRC_PATH, "items"));
-	const brands = readJsonDir<Brand>(join(SRC_PATH, "brands"));
-	const series = readJsonDir<Series>(join(SRC_PATH, "series"));
-	const categories = readJsonDir<Category>(join(SRC_PATH, "categories"));
-	const manuals = readJsonDir<Manual>(join(SRC_PATH, "manuals"));
+	const items = readJsonDir<Item>(path.join(SRC_PATH, "items"));
+	const brands = readJsonDir<Brand>(path.join(SRC_PATH, "brands"));
+	const series = readJsonDir<Series>(path.join(SRC_PATH, "series"));
+	const categories = readJsonDir<Category>(path.join(SRC_PATH, "categories"));
+	const manuals = readJsonDir<Manual>(path.join(SRC_PATH, "manuals"));
 
 	console.log(`  Items: ${items.size}`);
 	console.log(`  Brands: ${brands.size}`);
 	console.log(`  Series: ${series.size}`);
 	console.log(`  Categories: ${categories.size}`);
 	console.log(`  Manuals: ${manuals.size}`);
+
+	// Compute displayImage for items (first image or manual fallback)
+	console.log("\nComputing display images...");
+	computeDisplayImages(items, manuals);
+	const itemsWithDisplayImage = [...items.values()].filter(i => i.displayImage).length;
+	console.log(`  Items with displayImage: ${itemsWithDisplayImage}`);
 
 	// Compute reverse relationships (itemIds for brands/series/categories)
 	console.log("\nComputing reverse relationships...");
@@ -411,13 +438,13 @@ async function main() {
 
 	// Add itemIds to brands/series/categories
 	for (const [id, brand] of brands) {
-		brand.itemIds = brandItemIds.get(id) || [];
+		brand.itemIds = brandItemIds.get(id) ?? [];
 	}
 	for (const [id, s] of series) {
-		s.itemIds = seriesItemIds.get(id) || [];
+		s.itemIds = seriesItemIds.get(id) ?? [];
 	}
 	for (const [id, category] of categories) {
-		category.itemIds = categoryItemIds.get(id) || [];
+		category.itemIds = categoryItemIds.get(id) ?? [];
 	}
 
 	// Build derived data
@@ -437,31 +464,31 @@ async function main() {
 	// Write JSON files
 	console.log("\nWriting JSON files...");
 
-	writeJson(join(DIST_PATH, "items.json"), Object.fromEntries(items));
+	writeJson(path.join(DIST_PATH, "items.json"), Object.fromEntries(items));
 	console.log("  items.json");
 
-	writeJson(join(DIST_PATH, "brands.json"), Object.fromEntries(brands));
+	writeJson(path.join(DIST_PATH, "brands.json"), Object.fromEntries(brands));
 	console.log("  brands.json");
 
-	writeJson(join(DIST_PATH, "series.json"), Object.fromEntries(series));
+	writeJson(path.join(DIST_PATH, "series.json"), Object.fromEntries(series));
 	console.log("  series.json");
 
-	writeJson(join(DIST_PATH, "categories.json"), Object.fromEntries(categories));
+	writeJson(path.join(DIST_PATH, "categories.json"), Object.fromEntries(categories));
 	console.log("  categories.json");
 
-	writeJson(join(DIST_PATH, "manuals.json"), Object.fromEntries(manuals));
+	writeJson(path.join(DIST_PATH, "manuals.json"), Object.fromEntries(manuals));
 	console.log("  manuals.json");
 
-	writeJson(join(DIST_PATH, "grades.json"), Object.fromEntries(grades));
+	writeJson(path.join(DIST_PATH, "grades.json"), Object.fromEntries(grades));
 	console.log("  grades.json");
 
-	writeJson(join(DIST_PATH, "scales.json"), Object.fromEntries(scales));
+	writeJson(path.join(DIST_PATH, "scales.json"), Object.fromEntries(scales));
 	console.log("  scales.json");
 
-	writeJson(join(DIST_PATH, "search.json"), searchData);
+	writeJson(path.join(DIST_PATH, "search.json"), searchData);
 	console.log("  search.json");
 
-	writeJson(join(DIST_PATH, "homepage.json"), homepageData);
+	writeJson(path.join(DIST_PATH, "homepage.json"), homepageData);
 	console.log("  homepage.json");
 
 	console.log("\n=== Build Complete ===");
@@ -469,4 +496,4 @@ async function main() {
 	console.log("Note: TypeScript modules should be hand-written in lib/");
 }
 
-main().catch(console.error);
+main();

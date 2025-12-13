@@ -18,7 +18,7 @@ import { ViewMode } from "./view-switcher";
 import { CustomImage } from "@/components/ui/custom-image";
 import { getBrandImage } from "@/lib/image-lookup";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
-import { ItemNode , getNodeDisplayName, getNodeImages, getNodeReleaseDate, isItemNode } from "@/lib/schemas";
+import { ItemNode, getNodeDisplayName, getNodeReleaseDate, isItemNode } from "@/lib/schemas";
 import {
 	itemCard,
 	itemCardBadge,
@@ -33,8 +33,7 @@ import {
 function ItemCard({ item }: { item: ItemNode }) {
 	if (!isItemNode(item)) return null;
 
-	const itemImages = getNodeImages(item);
-	const primaryImage = itemImages.length > 0 ? itemImages[0] : null;
+	const primaryImage = item.displayImage ?? null;
 	const placeholderSrc = createPlaceholderSvg(getNodeDisplayName(item));
 	const errorPlaceholderSrc = createErrorPlaceholderSvg();
 	const releaseDate = getNodeReleaseDate(item);
@@ -145,7 +144,7 @@ export function ListView({ items }: { items: ItemNode[] }) {
 						<Group gap="md" align="flex-start">
 							<Box w={80} style={{ flexShrink: 0 }}>
 								<CustomImage
-									src={getNodeImages(item)[0] ?? createPlaceholderSvg(getNodeDisplayName(item))}
+									src={item.displayImage ?? createPlaceholderSvg(getNodeDisplayName(item))}
 									alt={getNodeDisplayName(item)}
 									fit="cover"
 									height={80}
@@ -221,7 +220,7 @@ export function TableView({ items }: { items: ItemNode[] }) {
 						<Group gap="sm" align="center">
 							<Box w={40} h={40}>
 								<CustomImage
-									src={getNodeImages(item)[0] ?? createPlaceholderSvg(getNodeDisplayName(item))}
+									src={item.displayImage ?? createPlaceholderSvg(getNodeDisplayName(item))}
 									alt={getNodeDisplayName(item)}
 									fit="cover"
 									height={40}

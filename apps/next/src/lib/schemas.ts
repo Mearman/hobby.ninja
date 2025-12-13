@@ -133,6 +133,7 @@ export const ItemNodeSchema = BaseNodeSchema.extend({
 	description: z.union([LocalizedDescriptionSchema, EmptyArraySchema]).optional(),
 	accessories: z.union([z.array(AccessorySchema), EmptyArraySchema]).optional(),
 	images: z.union([z.array(ImageSchema), EmptyArraySchema]).optional(),
+	displayImage: z.string().optional(), // Computed: first image or manual.productImage fallback
 	manuals: z.union([z.array(z.union([ManualSchema, z.string()])), EmptyArraySchema]).optional(),
 	targetAge: z.number().optional(),
 	tags: z.union([z.array(z.string()), EmptyArraySchema]).optional(),
