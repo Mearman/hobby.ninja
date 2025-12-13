@@ -23,11 +23,13 @@ import {
 import { useState, useEffect, useMemo, useCallback } from "react";
 
 import { ItemFilters } from "@/components/filtering/item-filters";
+import { FutureReleasesToggle } from "@/components/ui/future-releases-toggle";
 import { ViewRenderer } from "@/components/view/view-renderers";
 import { ViewSwitcher, useViewMode } from "@/components/view/view-switcher";
 import { useFilteredItems } from "@/hooks/use-filtered-items";
+import { useUserPreferences } from "@/hooks/use-user-preferences";
 import { PAGINATION } from "@/lib/constants";
-import { getNodeDisplayName, isItemNode, type CategoryNode, type ItemNode } from "@/lib/schemas";
+import { getNodeDisplayName, isFutureRelease, isItemNode, type CategoryNode, type ItemNode } from "@/lib/schemas";
 
 interface CategoryPageClientProps {
 	initialCategory: CategoryNode;
@@ -55,6 +57,20 @@ export function CategoryPageClient({
 	const [page, setPage] = useState(1);
 	const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
 	const { viewMode, setViewMode } = useViewMode();
+	const { preferences, isLoaded } = useUserPreferences();
+
+	// Calculate future release count for display
+	const futureCount = useMemo(
+		() => initialItems.filter((item) => isFutureRelease(item)).length,
+		[initialItems],
+	);
+
+	// Filter out future releases if preference is enabled
+	const visibleItems = useMemo(() => {
+		if (!isLoaded) return initialItems;
+		if (!preferences.hideFutureReleases) return initialItems;
+		return initialItems.filter((item) => !isFutureRelease(item));
+	}, [initialItems, preferences.hideFutureReleases, isLoaded]);
 
 	// Use the shared filtering hook
 	const {
@@ -66,12 +82,14 @@ export function CategoryPageClient({
 		hasActiveFilters,
 		activeFilterCount,
 		availableOptions,
-	} = useFilteredItems(initialItems);
+	} = useFilteredItems(visibleItems);
 
-	// Reset page when filters change
+	// Reset page when filters change - synchronous setState is intentional here
+	/* eslint-disable react-hooks/set-state-in-effect */
 	useEffect(() => {
 		setPage(1);
 	}, [filterState]);
+	/* eslint-enable react-hooks/set-state-in-effect */
 
 	// Calculate category statistics (price-related only, filter options come from hook)
 	const categoryStats = useMemo((): CategoryStats => {
@@ -223,7 +241,7 @@ export function CategoryPageClient({
 
 				{/* Results Header */}
 				<Box>
-					<Group justify="space-between" align="center" mb="md">
+					<Group justify="space-between" align="center" mb="md" wrap="wrap">
 						<Box>
 							<Text size="sm" c="dimmed">
 								Showing {Math.min((page - 1) * PAGINATION.ITEMS_PER_PAGE + 1, total)}-{Math.min(page * PAGINATION.ITEMS_PER_PAGE, total)} of {total.toLocaleString()} items
@@ -235,11 +253,14 @@ export function CategoryPageClient({
 							)}
 						</Box>
 
-						<ViewSwitcher
-							value={viewMode}
-							onChange={setViewMode}
-							size="sm"
-						/>
+						<Group gap="md">
+							{futureCount > 0 && <FutureReleasesToggle futureCount={futureCount} />}
+							<ViewSwitcher
+								value={viewMode}
+								onChange={setViewMode}
+								size="sm"
+							/>
+						</Group>
 					</Group>
 
 					{/* Results Display */}
@@ -298,6 +319,8 @@ export function CategoryPageClient({
 				)}
 
 				{/* Quick Access Stats */}
+				{/* Using || intentionally - empty strings should be falsy */}
+				{/* eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing */}
 				{(categoryStats.newestItem || categoryStats.oldestItem) && (
 					<Card p="md" radius="md" withBorder={true} bg="gray.0">
 						<Group justify="space-between">
