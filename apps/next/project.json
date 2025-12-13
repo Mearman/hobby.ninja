@@ -34,6 +34,7 @@
     },
     "dev": {
       "executor": "nx:run-script",
+      "dependsOn": ["data:build"],
       "options": {
         "script": "dev:webpack"
       },
