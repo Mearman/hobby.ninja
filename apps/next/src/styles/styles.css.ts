@@ -73,6 +73,9 @@ const COMMON_VALUES = {
 // Mantine color values
 const MANTINE_COLORS = {
 	WHITE: "var(--mantine-color-white)",
+	BODY: "var(--mantine-color-body)",
+	DEFAULT: "var(--mantine-color-default)",
+	DEFAULT_BORDER: "var(--mantine-color-default-border)",
 	BLUE_6: "var(--mantine-color-blue-6)",
 	GRAY_0: "var(--mantine-color-gray-0)",
 	GRAY_1: "var(--mantine-color-gray-1)",
@@ -117,13 +120,13 @@ export const container = style({
 export const pageContainer = style({
 	minHeight: COMMON_VALUES.MIN_HEIGHT_100VH,
 	padding: SPACING.LG,
-	background: `linear-gradient(180deg, ${MANTINE_COLORS.GRAY_0} 0%, ${MANTINE_COLORS.GRAY_1} 100%)`,
+	background: MANTINE_COLORS.BODY,
 });
 
 // Navigation styles
 export const navigation = style({
-	background: MANTINE_COLORS.WHITE,
-	borderBottom: `${COMMON_VALUES.BORDER_WIDTH_1PX} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.GRAY_3}`,
+	background: MANTINE_COLORS.BODY,
+	borderBottom: `${COMMON_VALUES.BORDER_WIDTH_1PX} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.DEFAULT_BORDER}`,
 	padding: `${SPACING.MD} 0`,
 	marginBottom: SPACING.LG,
 	boxShadow: COMMON_VALUES.BOX_SHADOW_SM,
@@ -153,19 +156,19 @@ export const navLinks = style({
 
 // Card styles
 export const card = style({
-	background: MANTINE_COLORS.WHITE,
+	background: MANTINE_COLORS.DEFAULT,
 	borderRadius: BORDER_RADIUS.LG,
 	padding: SPACING.LG,
-	border: `${COMMON_VALUES.BORDER_WIDTH_1PX} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.GRAY_3}`,
+	border: `${COMMON_VALUES.BORDER_WIDTH_1PX} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.DEFAULT_BORDER}`,
 	boxShadow: COMMON_VALUES.BOX_SHADOW_SM,
 	transition: `all ${ANIMATION_DURATIONS.FAST_200} ease`,
 });
 
 export const cardHover = style({
-	background: MANTINE_COLORS.WHITE,
+	background: MANTINE_COLORS.DEFAULT,
 	borderRadius: BORDER_RADIUS.LG,
 	padding: SPACING.LG,
-	border: `${COMMON_VALUES.BORDER_WIDTH_1PX} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.GRAY_3}`,
+	border: `${COMMON_VALUES.BORDER_WIDTH_1PX} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.DEFAULT_BORDER}`,
 	boxShadow: COMMON_VALUES.BOX_SHADOW_SM,
 	transition: `all ${ANIMATION_DURATIONS.FAST_200} ease`,
 	cursor: CSS_VALUES.POINTER,
@@ -187,9 +190,9 @@ export const itemGrid = style({
 
 // Item card styles
 export const itemCard = style({
-	background: MANTINE_COLORS.WHITE,
+	background: MANTINE_COLORS.DEFAULT,
 	borderRadius: BORDER_RADIUS.LG,
-	border: `${COMMON_VALUES.BORDER_WIDTH_1PX} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.GRAY_3}`,
+	border: `${COMMON_VALUES.BORDER_WIDTH_1PX} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.DEFAULT_BORDER}`,
 	overflow: CSS_VALUES.HIDDEN,
 	transition: `all ${ANIMATION_DURATIONS.FAST_200} ease`,
 	cursor: CSS_VALUES.POINTER,
@@ -209,7 +212,7 @@ export const itemCardImageContainer = style({
 	width: COMMON_VALUES.WIDTH_FULL,
 	height: COMMON_VALUES.HEIGHT_200PX,
 	overflow: CSS_VALUES.HIDDEN,
-	background: MANTINE_COLORS.GRAY_1,
+	background: MANTINE_COLORS.DEFAULT,
 });
 
 export const itemCardContent = style({
@@ -260,7 +263,7 @@ export const detailActions = style({
 	gap: SPACING.SM,
 	marginTop: SPACING.MD,
 	paddingTop: SPACING.MD,
-	borderTop: `${COMMON_VALUES.BORDER_WIDTH_1PX} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.GRAY_3}`,
+	borderTop: `${COMMON_VALUES.BORDER_WIDTH_1PX} ${BORDER_STYLES.SOLID} ${MANTINE_COLORS.DEFAULT_BORDER}`,
 });
 
 // Utility styles

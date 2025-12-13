@@ -26,9 +26,15 @@ interface BeforeInstallPromptEvent extends Event {
 	}>;
 }
 
+// Check if app is already installed (outside component for initial state)
+function isAppInstalled(): boolean {
+	if (typeof globalThis.matchMedia !== "function") return false;
+	return globalThis.matchMedia("(display-mode: standalone)").matches;
+}
+
 export function PWAInstall() {
 	const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-	const [showInstallPrompt, setShowInstallPrompt] = useState(false);
+	const [showInstallPrompt, setShowInstallPrompt] = useState(() => !isAppInstalled());
 	const [showInstallModal, setShowInstallModal] = useState(false);
 
 	useEffect(() => {
@@ -48,11 +54,6 @@ export function PWAInstall() {
 
 		globalThis.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
 		globalThis.addEventListener("appinstalled", handleAppInstalled);
-
-		// Check if app is already installed
-		if (globalThis.matchMedia("(display-mode: standalone)").matches) {
-			setShowInstallPrompt(false);
-		}
 
 		return () => {
 			globalThis.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
@@ -141,7 +142,7 @@ export function PWAInstall() {
 						w={rem(60)}
 						h={rem(60)}
 						style={{
-							background: "linear-gradient(135deg, #339af0, #228be6)",
+							background: "linear-gradient(135deg, var(--mantine-color-blue-5), var(--mantine-color-blue-6))",
 							borderRadius: "12px",
 							display: "flex",
 							alignItems: "center",
@@ -170,7 +171,7 @@ export function PWAInstall() {
 					</Button>
 					<Button
 						color="blue"
-						onClick={handleInstallClick}
+						onClick={() => { void handleInstallClick(); }}
 						leftSection={<IconDownload size={14} />}
 					>
 						Install

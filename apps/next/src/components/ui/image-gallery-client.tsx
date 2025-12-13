@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
 import {
 	Box,
-	Image,
 	Group,
 	ThemeIcon,
-	Stack,
 	Skeleton,
 	ActionIcon,
 	Tooltip,
@@ -19,8 +16,9 @@ import {
 	IconChevronLeft,
 	IconChevronRight,
 } from "@tabler/icons-react";
+import React, { useState, useCallback } from "react";
+
 import { CustomImage } from "./custom-image";
-import { Badge as CustomBadge } from "./badge";
 
 interface ImageGalleryClientProps {
 	images: string[];
@@ -83,7 +81,7 @@ export function ImageGalleryClient({ images, itemName, className }: ImageGallery
 						No images available
 					</Text>
 					<Text size="sm" c="dimmed">
-						This item doesn't have any product images
+						This item does not have any product images
 					</Text>
 				</Box>
 			</Box>
@@ -116,7 +114,7 @@ export function ImageGalleryClient({ images, itemName, className }: ImageGallery
 							display: "flex",
 							alignItems: "center",
 							justifyContent: "center",
-							background: "var(--mantine-color-gray-0)",
+							background: "var(--mantine-color-default)",
 						}}
 					>
 						<Skeleton height={400} width="100%" />
@@ -133,10 +131,10 @@ export function ImageGalleryClient({ images, itemName, className }: ImageGallery
 					style={{
 						width: "100%",
 						height: "400px",
-						background: "var(--mantine-color-gray-0)",
+						background: "var(--mantine-color-default)",
 					}}
-					onLoad={() => handleImageLoad(selectedImage)}
-					onError={() => handleImageError(selectedImage)}
+					onLoad={() => { handleImageLoad(selectedImage); }}
+					onError={() => { handleImageError(selectedImage); }}
 					priority={selectedImage === 0}
 				/>
 
@@ -223,7 +221,7 @@ export function ImageGalleryClient({ images, itemName, className }: ImageGallery
 								transition: "all 0.2s ease",
 								opacity: selectedImage === index ? 1 : 0.5,
 							}}
-							onClick={() => selectImage(index)}
+							onClick={() => { selectImage(index); }}
 						/>
 					))}
 				</Group>
@@ -245,7 +243,7 @@ export function ImageGalleryClient({ images, itemName, className }: ImageGallery
 									flex: "0 0 80px",
 									height: "60px",
 								}}
-								onClick={() => selectImage(index)}
+								onClick={() => { selectImage(index); }}
 							>
 								<CustomImage
 									src={image}
