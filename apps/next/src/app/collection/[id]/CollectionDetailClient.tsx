@@ -39,6 +39,7 @@ import React from "react";
 
 import { useCollection } from "@/contexts/collection-context";
 import type { CollectionItem } from "@/lib/collection-storage";
+import { EntityList } from "@/components/ui/entity-list";
 import { getNodeDisplayName, type Item } from "@hobby-ninja/data";
 import {
 	itemCard,
@@ -47,7 +48,6 @@ import {
 	itemCardTitle,
 	itemCardSubtitle,
 	itemCardMetadata,
-	itemCardBadge,
 	itemCardPrice,
 	itemCardActions,
 	collectionCard,
@@ -140,7 +140,7 @@ function CollectionItemCard({
 						</Text>
 						{dbItem?.seriesIds && dbItem.seriesIds.length > 0 && (
 							<Text className={itemCardSubtitle} lineClamp={1}>
-								{dbItem.seriesIds.join(", ")}
+								<EntityList ids={dbItem.seriesIds} entityType="series" mode="text" size="xs" emptyText="" />
 							</Text>
 						)}
 						<Box className={itemCardMetadata}>
@@ -194,7 +194,7 @@ function CollectionItemCard({
 							<Text fw={500}>{dbItem ? getNodeDisplayName(dbItem) : item.itemId}</Text>
 							{dbItem?.seriesIds && dbItem.seriesIds.length > 0 && (
 								<Text size="sm" c="dimmed">
-									{dbItem.seriesIds.join(", ")}
+									<EntityList ids={dbItem.seriesIds} entityType="series" mode="text" size="sm" emptyText="" />
 								</Text>
 							)}
 						</Box>
@@ -321,7 +321,10 @@ function ItemFormModal({
 							/>
 							<Box>
 								<Text fw={500}>{dbItem ? getNodeDisplayName(dbItem) : item.itemId}</Text>
-								<Text size="sm" c="dimmed">{dbItem?.seriesIds && dbItem.seriesIds.length > 0 ? dbItem.seriesIds.join(", ") : item.itemId}</Text>
+								{dbItem?.seriesIds && dbItem.seriesIds.length > 0
+									? <EntityList ids={dbItem.seriesIds} entityType="series" mode="text" size="sm" emptyText="" />
+									: <Text size="sm" c="dimmed">{item.itemId}</Text>
+								}
 							</Box>
 						</Group>
 					</Box>

@@ -22,7 +22,7 @@ import {
 import { useState } from "react";
 
 import { CustomImage } from "@/components/ui/custom-image";
-import { getBrandImage } from "@/lib/image-lookup";
+import { EntityList } from "@/components/ui/entity-list";
 import { createPlaceholderSvg } from "@/lib/image-placeholders";
 
 interface ItemSelectorProps {
@@ -97,7 +97,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 								<Table.Td fw={500}>Series</Table.Td>
 								{comparisonItems.map((item) => (
 									<Table.Td key={`series-${item.id}`} ta="center">
-										<Text size="sm">{item.seriesIds.length > 0 ? item.seriesIds.join(", ") : "-"}</Text>
+										<EntityList ids={item.seriesIds} entityType="series" size="sm" />
 									</Table.Td>
 								))}
 							</Table.Tr>
@@ -107,30 +107,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 								<Table.Td fw={500}>Brand</Table.Td>
 								{comparisonItems.map((item) => (
 									<Table.Td key={`brand-${item.id}`} ta="center">
-										{item.brandIds.length > 0 ? (
-											<Group gap="xs" justify="center">
-												{item.brandIds.map((brandId) => (
-													<Badge
-														key={brandId}
-														size="sm"
-														variant="outline"
-														leftSection={
-															getBrandImage(brandId) ? (
-																<img
-																	src={getBrandImage(brandId)}
-																	alt=""
-																	style={{ width: 12, height: 12, objectFit: "contain" }}
-																/>
-															) : null
-														}
-													>
-														{brandId}
-													</Badge>
-												))}
-											</Group>
-										) : (
-											"-"
-										)}
+										<EntityList ids={item.brandIds} entityType="brand" size="sm" />
 									</Table.Td>
 								))}
 							</Table.Tr>
@@ -164,7 +141,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 								<Table.Td fw={500}>Category</Table.Td>
 								{comparisonItems.map((item) => (
 									<Table.Td key={`category-${item.id}`} ta="center">
-										<Text size="sm">{item.categoryIds.length > 0 ? item.categoryIds.join(", ") : "-"}</Text>
+										<EntityList ids={item.categoryIds} entityType="category" size="sm" />
 									</Table.Td>
 								))}
 							</Table.Tr>
@@ -338,34 +315,11 @@ export function SelectableItemCard({
 						</Group>
 					</Box>
 				</Table.Td>
-				<Table.Td>{item.seriesIds.length > 0 ? item.seriesIds.join(", ") : "-"}</Table.Td>
+				<Table.Td><EntityList ids={item.seriesIds} entityType="series" size="sm" /></Table.Td>
 				<Table.Td>{item.grade ?? "-"}</Table.Td>
 				<Table.Td>{item.scale ?? "-"}</Table.Td>
 				<Table.Td>
-					{item.brandIds.length > 0 ? (
-						<Group gap="xs">
-							{item.brandIds.map((brandId) => (
-								<Badge
-									key={brandId}
-									variant="outline"
-									size="sm"
-									leftSection={
-										getBrandImage(brandId) ? (
-											<img
-												src={getBrandImage(brandId)}
-												alt=""
-												style={{ width: 12, height: 12, objectFit: "contain" }}
-											/>
-										) : null
-									}
-								>
-									{brandId}
-								</Badge>
-							))}
-						</Group>
-					) : (
-						"-"
-					)}
+					<EntityList ids={item.brandIds} entityType="brand" size="sm" />
 				</Table.Td>
 			</Table.Tr>
 		);
@@ -415,9 +369,9 @@ export function SelectableItemCard({
 					{getNodeDisplayName(item)}
 				</Text>
 				{item.seriesIds.length > 0 && (
-					<Text size="xs" c="dimmed" mt={2}>
-						{item.seriesIds.join(", ")}
-					</Text>
+					<Box mt={2}>
+						<EntityList ids={item.seriesIds} entityType="series" mode="text" size="xs" emptyText="" />
+					</Box>
 				)}
 				<Group gap={4} mt={8} wrap="wrap">
 					{item.grade && (
@@ -426,24 +380,7 @@ export function SelectableItemCard({
 					{item.scale && (
 						<Badge size="xs" variant="light">{item.scale}</Badge>
 					)}
-					{item.brandIds.map((brandId) => (
-						<Badge
-							key={brandId}
-							size="xs"
-							variant="outline"
-							leftSection={
-								getBrandImage(brandId) ? (
-									<img
-										src={getBrandImage(brandId)}
-										alt=""
-										style={{ width: 10, height: 10, objectFit: "contain" }}
-									/>
-								) : null
-							}
-						>
-							{brandId}
-						</Badge>
-					))}
+					<EntityList ids={item.brandIds} entityType="brand" size="xs" clickable={false} />
 				</Group>
 			</Box>
 		</Card>

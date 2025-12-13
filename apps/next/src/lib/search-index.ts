@@ -412,5 +412,3 @@ export function getSearchIndex(): SearchIndex {
 export function initializeSearchIndex(): SearchIndex {
 	return getSearchIndex();
 }
-
-export { SearchIndex };

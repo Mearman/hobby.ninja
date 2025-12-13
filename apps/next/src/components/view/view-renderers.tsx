@@ -17,7 +17,7 @@ import { IconFolder } from "@tabler/icons-react";
 import { ViewMode } from "./view-switcher";
 
 import { CustomImage } from "@/components/ui/custom-image";
-import { getBrandImage } from "@/lib/image-lookup";
+import { EntityList } from "@/components/ui/entity-list";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import {
 	itemCard,
@@ -65,7 +65,7 @@ function ItemCard({ item }: { item: Item }) {
 				</Text>
 				{item.seriesIds.length > 0 && (
 					<Text className={itemCardSubtitle} lineClamp={1}>
-						{item.seriesIds.join(", ")}
+						<EntityList ids={item.seriesIds} entityType="series" mode="text" size="xs" emptyText="" />
 					</Text>
 				)}
 				<Box className={itemCardMetadata}>
@@ -84,24 +84,7 @@ function ItemCard({ item }: { item: Item }) {
 							{item.scale}
 						</Badge>
 					)}
-					{item.brandIds.map((brandId) => (
-						<Badge
-							key={brandId}
-							className={itemCardBadge}
-							variant="outline"
-							leftSection={
-								getBrandImage(brandId) ? (
-									<img
-										src={getBrandImage(brandId)}
-										alt=""
-										style={{ width: 14, height: 14, objectFit: "contain" }}
-									/>
-								) : null
-							}
-						>
-							{brandId}
-						</Badge>
-					))}
+					<EntityList ids={item.brandIds} entityType="brand" size="xs" clickable={false} />
 				</Box>
 			</Box>
 		</Card>
@@ -161,9 +144,9 @@ export function ListView({ items }: { items: Item[] }) {
 									{getNodeDisplayName(item)}
 								</Title>
 								{item.seriesIds.length > 0 && (
-									<Text size="sm" c="dimmed" mb="sm">
-										{item.seriesIds.join(", ")}
-									</Text>
+									<Box mb="sm">
+										<EntityList ids={item.seriesIds} entityType="series" mode="text" size="sm" emptyText="" />
+									</Box>
 								)}
 								<Group gap="xs">
 									{releaseDate && (
@@ -181,24 +164,7 @@ export function ListView({ items }: { items: Item[] }) {
 											{item.scale}
 										</Badge>
 									)}
-									{item.brandIds.map((brandId) => (
-										<Badge
-											key={brandId}
-											variant="outline"
-											size="sm"
-											leftSection={
-												getBrandImage(brandId) ? (
-													<img
-														src={getBrandImage(brandId)}
-														alt=""
-														style={{ width: 12, height: 12, objectFit: "contain" }}
-													/>
-												) : null
-											}
-										>
-											{brandId}
-										</Badge>
-									))}
+									<EntityList ids={item.brandIds} entityType="brand" size="sm" clickable={false} />
 								</Group>
 							</Box>
 						</Group>
@@ -244,34 +210,11 @@ export function TableView({ items }: { items: Item[] }) {
 					</Box>
 				</Table.Td>
 				<Table.Td c="dimmed">{releaseDate ?? "-"}</Table.Td>
-				<Table.Td c="dimmed">{item.seriesIds.length > 0 ? item.seriesIds.join(", ") : "-"}</Table.Td>
+				<Table.Td><EntityList ids={item.seriesIds} entityType="series" size="sm" /></Table.Td>
 				<Table.Td>{item.grade ?? "-"}</Table.Td>
 				<Table.Td>{item.scale ?? "-"}</Table.Td>
 				<Table.Td>
-					{item.brandIds.length > 0 ? (
-						<Group gap="xs">
-							{item.brandIds.map((brandId) => (
-								<Badge
-									key={brandId}
-									variant="outline"
-									size="sm"
-									leftSection={
-										getBrandImage(brandId) ? (
-											<img
-												src={getBrandImage(brandId)}
-												alt=""
-												style={{ width: 12, height: 12, objectFit: "contain" }}
-											/>
-										) : null
-									}
-								>
-									{brandId}
-								</Badge>
-							))}
-						</Group>
-					) : (
-						"-"
-					)}
+					<EntityList ids={item.brandIds} entityType="brand" size="sm" />
 				</Table.Td>
 			</Table.Tr>
 		);
