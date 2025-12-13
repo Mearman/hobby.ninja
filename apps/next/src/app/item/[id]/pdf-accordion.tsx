@@ -14,7 +14,6 @@ interface PdfItem {
 
 interface PdfAccordionProps {
 	pdfs: PdfItem[];
-	height?: number;
 	header?: React.ReactNode;
 }
 
@@ -39,7 +38,10 @@ function useFullWidthPreference() {
 	return { fullWidth, toggleFullWidth, isHydrated };
 }
 
-export function PdfAccordion({ pdfs, height = 800, header }: PdfAccordionProps) {
+// Height for PDF viewer: full viewport minus space for accordion header and some padding
+const PDF_HEIGHT = "calc(100vh - 120px)";
+
+export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 	const [expandedItems, setExpandedItems] = useState<string[]>([]);
 	const [loadedItems, setLoadedItems] = useState<Set<string>>(new Set());
 	const { fullWidth, toggleFullWidth, isHydrated } = useFullWidthPreference();
@@ -142,7 +144,7 @@ export function PdfAccordion({ pdfs, height = 800, header }: PdfAccordionProps) 
 											<Box pos="relative">
 												{!isLoaded && (
 													<Skeleton
-														height={height}
+														h={PDF_HEIGHT}
 														radius={4}
 														pos="absolute"
 														top={0}
@@ -156,7 +158,7 @@ export function PdfAccordion({ pdfs, height = 800, header }: PdfAccordionProps) 
 													onLoad={() => handleLoad(itemId)}
 													style={{
 														width: "100%",
-														height,
+														height: PDF_HEIGHT,
 														border: "1px solid var(--mantine-color-default-border)",
 														borderRadius: 4,
 														opacity: isLoaded ? 1 : 0,
