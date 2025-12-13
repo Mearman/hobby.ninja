@@ -131,9 +131,11 @@ export default async function ItemPage({ params }: ItemPageProps) {
 										</Link>
 									))}
 									{brands.map(brand => (
-										<Badge key={brand.id} color="blue" variant="light">
-											{getNodeDisplayName(brand)}
-										</Badge>
+										<Link key={brand.id} href={`/brand/${brand.id}`} style={{ textDecoration: "none" }}>
+											<Badge color="blue" variant="light" style={{ cursor: "pointer" }}>
+												{getNodeDisplayName(brand)}
+											</Badge>
+										</Link>
 									))}
 									{item.grade && (
 										<Badge color="green" variant="light">{item.grade}</Badge>
