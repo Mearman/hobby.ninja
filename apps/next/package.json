@@ -19,6 +19,7 @@
 		"start": "next start"
 	},
 	"dependencies": {
+		"@hobby-ninja/data": "workspace:*",
 		"@hobby-ninja/types": "workspace:*",
 		"@hobby-ninja/utils": "workspace:*",
 		"@mantine/carousel": "8.3.10",

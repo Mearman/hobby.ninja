@@ -1,8 +1,12 @@
 import { CategoryPageClient } from "./category-page-client";
 
-import { getAllCategories, getItemsByCategory, getCategoryById } from "@/lib/server-graph-data";
-// Import lightweight static params for generateStaticParams
-import staticParams from "@/data/static-params.json";
+import {
+	getCategoryIds,
+	getCategoryById,
+	getItemById,
+	getNodeDisplayName,
+	type Category,
+} from "@hobby-ninja/data";
 import { Container, Title, Text, Group, Button } from "@mantine/core";
 import { IconArrowLeft, IconFolderOff } from "@tabler/icons-react";
 import Link from "next/link";
@@ -12,9 +16,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
 	const { id } = await params;
 
 	// Load data at build time (synchronous from static imports)
-	const categories = getAllCategories();
-	const items = getItemsByCategory(id);
 	const category = getCategoryById(id);
+
+	// Get items using category's itemIds array
+	const items = category?.itemIds.map(itemId => getItemById(itemId)).filter((item): item is NonNullable<typeof item> => item !== undefined) ?? [];
 
 	if (!category) {
 		return (
@@ -62,7 +67,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
 		<CategoryPageClient
 			initialCategory={category}
 			initialItems={items}
-			_initialCategories={categories}
+			_initialCategories={[]}
 			categoryId={id}
 		/>
 	);
@@ -70,5 +75,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
 
 // Generate static params for categories using lightweight IDs file
 export function generateStaticParams() {
-	return staticParams.categoryIds.map(id => ({ id }));
+	const categoryIds = getCategoryIds();
+	console.log(`Generating static params for ${categoryIds.length} categories`);
+	return categoryIds.map(id => ({ id }));
 }

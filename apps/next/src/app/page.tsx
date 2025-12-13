@@ -44,9 +44,8 @@ import {
 import Link from "next/link";
 
 import { UI } from "@/lib/constants";
-// Import lightweight pre-computed homepage data instead of all items
-import homepageData from "@/data/homepage.json";
-import { getNodeDisplayName } from "@/lib/schemas";
+// Import pre-computed homepage data from @hobby-ninja/data
+import { homepage, getNodeDisplayName } from "@hobby-ninja/data";
 
 // Item Card Component
 function ItemCard({ item, showGrade = true, showPrice = true }: {
@@ -285,7 +284,7 @@ const sampleTestimonials = [
 export default function HomePage() {
 	// Use pre-computed homepage data (8KB instead of 19MB)
 	// This avoids loading all 6000+ items just for the homepage
-	const { stats, featuredItems, popularBrands, categories } = homepageData;
+	const { stats, featuredItems, popularBrands, categories } = homepage;
 
 	// Recent items not available in pre-computed data, use featured items as fallback
 	const recentItems = featuredItems.slice(0, 8);

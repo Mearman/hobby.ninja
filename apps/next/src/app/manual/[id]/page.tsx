@@ -21,10 +21,7 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 
-import { getManualById } from "@/lib/server-graph-data";
-// Import lightweight static params for generateStaticParams
-import staticParams from "@/data/static-params.json";
-import { getNodeDisplayName, type BaseNode } from "@/lib/schemas";
+import { getManualById, getManualIds, getNodeDisplayName, type Manual } from "@hobby-ninja/data";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 
 interface ManualPageProps {
@@ -33,8 +30,9 @@ interface ManualPageProps {
 
 // Generate static params for all manuals using lightweight IDs file
 export function generateStaticParams() {
-	console.log(`Generating static params for ${staticParams.manualIds.length} manuals`);
-	return staticParams.manualIds.map(id => ({ id }));
+	const manualIds = getManualIds();
+	console.log(`Generating static params for ${manualIds.length} manuals`);
+	return manualIds.map(id => ({ id }));
 }
 
 // Generate metadata for manual page
@@ -57,7 +55,7 @@ export async function generateMetadata({ params }: ManualPageProps): Promise<Met
 }
 
 // Breadcrumbs component
-function ManualBreadcrumbs({ manual }: { manual: BaseNode }) {
+function ManualBreadcrumbs({ manual }: { manual: Manual }) {
 	const breadcrumbItems = [
 		{ title: "Home", href: "/" },
 		{ title: "Database", href: "/database" },
@@ -111,15 +109,11 @@ export default async function ManualDetailPage({ params }: ManualPageProps) {
 	const itemId = manual.itemId;
 	const itemName = manual.itemName;
 
-	// Get product image or thumbnail from metadata
-	const productImage = manual.metadata?.productImage as string | undefined;
-	const thumbnailImage = manual.metadata?.thumbnailImage as string | undefined;
-	const displayImage = productImage || thumbnailImage;
-
-	// Get product number from name or metadata
+	// The Manual type doesn't have productImage or thumbnailImage fields
+	// Display name from the manual name
 	const productNumber = typeof manual.name === "object" && manual.name.ja
 		? manual.name.ja
-		: manual.metadata?.productNumber as string | undefined;
+		: undefined;
 
 	return (
 		<Container size="xl" py="xl">
@@ -131,20 +125,6 @@ export default async function ManualDetailPage({ params }: ManualPageProps) {
 				<Card p="lg" radius="md" withBorder={true}>
 					<Stack gap="md">
 						<Group align="flex-start" wrap="nowrap">
-							{/* Image Section */}
-							{displayImage && (
-								<Box style={{ flex: "0 0 200px" }}>
-									<Image
-										src={displayImage}
-										alt={displayName}
-										height={200}
-										radius="md"
-										fit="contain"
-										fallbackSrc={createErrorPlaceholderSvg(200, 200)}
-									/>
-								</Box>
-							)}
-
 							{/* Info Section */}
 							<Stack gap="md" style={{ flex: 1 }}>
 								<div>

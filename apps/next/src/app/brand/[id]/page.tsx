@@ -24,9 +24,14 @@ import { notFound } from "next/navigation";
 // Import lightweight static params for generateStaticParams
 import { BrandItemsClient } from "./brand-items-client";
 
-import staticParams from "@/data/static-params.json";
-import { getNodeDisplayName, type BaseNode } from "@/lib/schemas";
-import { getBrandById, getItemsByBrand } from "@/lib/server-graph-data";
+import {
+	getBrandById,
+	getBrandIds,
+	getItemById,
+	getNodeDisplayName,
+	type Brand,
+	type Item,
+} from "@hobby-ninja/data";
 
 interface BrandPageProps {
 	params: Promise<{ id: string }>;
@@ -34,8 +39,9 @@ interface BrandPageProps {
 
 // Generate static params for all brands using lightweight IDs file
 export function generateStaticParams() {
-	console.log(`Generating static params for ${staticParams.brandIds.length} brands`);
-	return staticParams.brandIds.map(id => ({ id }));
+	const brandIds = getBrandIds();
+	console.log(`Generating static params for ${brandIds.length} brands`);
+	return brandIds.map(id => ({ id }));
 }
 
 // Generate metadata for brand page
@@ -58,7 +64,7 @@ export async function generateMetadata({ params }: BrandPageProps): Promise<Meta
 }
 
 // Breadcrumbs component
-function BrandBreadcrumbs({ brand }: { brand: BaseNode }) {
+function BrandBreadcrumbs({ brand }: { brand: Brand }) {
 	const breadcrumbItems = [
 		{ title: "Home", href: "/" },
 		{ title: "Database", href: "/database" },
@@ -92,11 +98,16 @@ export default async function BrandDetailPage({ params }: BrandPageProps) {
 	const { id } = await params;
 
 	// Fetch data at build time
-	let brand;
-	let brandItems;
+	let brand: Brand | undefined;
+	let brandItems: Item[] = [];
 	try {
 		brand = getBrandById(id);
-		brandItems = getItemsByBrand(id);
+		if (brand) {
+			// Use brand's itemIds array to fetch related items
+			brandItems = brand.itemIds
+				.map(itemId => getItemById(itemId))
+				.filter((item): item is Item => item !== undefined);
+		}
 	} catch (error) {
 		console.error("Error fetching brand:", error);
 		throw new Error(`Failed to load brand: ${id}`);
@@ -144,14 +155,11 @@ export default async function BrandDetailPage({ params }: BrandPageProps) {
 	};
 
 	const displayName = getNodeDisplayName(brand);
-	// Cast to BrandNode for type-safe access to brand-specific fields
-	const brandNode = brand;
-	const brandDescription = brandNode.description;
-	const brandCountry = brandNode.country;
-	const brandFounded = brandNode.founded;
-	const brandWebsite = brandNode.website;
-	// Check for image at root level (new) or in metadata (legacy)
-	const coverImage = brandNode.image ?? (brand.metadata?.coverImage as string | undefined);
+	const brandDescription = brand.description;
+	const brandCountry = brand.country;
+	const brandFounded = brand.founded;
+	const brandWebsite = brand.website;
+	const coverImage = brand.image;
 
 	return (
 		<Container size="xl" py="xl">

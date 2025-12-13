@@ -14,7 +14,7 @@ import {
 import { IconHome, IconRuler } from "@tabler/icons-react";
 import Link from "next/link";
 
-import { getAllScalesFromFiles, type ScaleData } from "@/lib/server-graph-data";
+import { scalesList, type ScaleData } from "@hobby-ninja/data/scales";
 import { categoryCard } from "@/styles/components.css";
 
 // Helper function to parse scale ratio for sorting (e.g., "1/144" -> 144)
@@ -168,8 +168,8 @@ function CommonScales({ scales }: { scales: ScaleData[] }) {
 }
 
 export default function ScalesPage() {
-	// Load data synchronously
-	const scalesData = getAllScalesFromFiles();
+	// Load data from @hobby-ninja/data
+	const scalesData = scalesList;
 
 	// Sort scales
 	const scales = sortScales(scalesData);

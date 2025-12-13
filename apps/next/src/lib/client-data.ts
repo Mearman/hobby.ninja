@@ -8,12 +8,12 @@
  * Service worker caches these files for offline support.
  *
  * Available data files:
- * - search-index.json: Lightweight search data (~2MB) with id, name, brand, series, category, scale, price, releaseDate
+ * - search-index.json: Lightweight search data (~1.4MB) with id, name, brand, series, category, scale, price, releaseDate
  * - item-ids.json: Array of valid item IDs (~50KB) for validation
- * - items/{id}.json: Full item data per item (~3KB each) for specific lookups
- * - brands.json, categories.json, series.json: Full data for other node types
+ * - items.json: Full item data (~16MB) for item lookups
+ * - brands.json, categories.json, series.json, manuals.json: Full data for other node types
  *
- * For server components, use server-graph-data.ts instead.
+ * For server components (pages), import from @hobby-ninja/data instead.
  */
 
 import type { ItemNode, BrandNode, CategoryNode, SeriesNode } from "./schemas";
@@ -130,8 +130,8 @@ export async function isValidItemId(id: string): Promise<boolean> {
 }
 
 /**
- * Get a specific item by ID (~3KB per item)
- * Fetches individual item file, not the full items.json
+ * Get a specific item by ID
+ * Loads from items.json cache (individual item files no longer exist)
  */
 export async function getItemById(id: string): Promise<ItemNode | null> {
 	// Check cache first
@@ -139,12 +139,13 @@ export async function getItemById(id: string): Promise<ItemNode | null> {
 		return itemCache.get(id)!;
 	}
 
-	// Fetch individual item file
-	const item = await fetchRawJson<ItemNode>(`items/${id}.json`);
+	// Load all items and find the one we need
+	const items = await getClientItems();
+	const item = items.find(i => i.id === id);
 	if (item) {
 		itemCache.set(id, item);
 	}
-	return item;
+	return item ?? null;
 }
 
 /**

@@ -1,0 +1,36 @@
+{
+	"name": "@hobby-ninja/data",
+	"version": "0.0.1",
+	"description": "Canonical data source for hobby.ninja",
+	"type": "module",
+	"main": "./lib/index.ts",
+	"exports": {
+		".": "./lib/index.ts",
+		"./items": "./lib/items.ts",
+		"./brands": "./lib/brands.ts",
+		"./series": "./lib/series.ts",
+		"./categories": "./lib/categories.ts",
+		"./manuals": "./lib/manuals.ts",
+		"./grades": "./lib/grades.ts",
+		"./scales": "./lib/scales.ts",
+		"./homepage": "./lib/homepage.ts",
+		"./search": "./lib/search.ts",
+		"./schemas": "./lib/schemas.ts"
+	},
+	"files": [
+		"lib",
+		"dist"
+	],
+	"scripts": {
+		"build": "tsx scripts/build.ts",
+		"validate": "tsx scripts/validate.ts",
+		"migrate": "tsx scripts/migrate.ts"
+	},
+	"dependencies": {
+		"fuse.js": "^7.0.0",
+		"zod": "4.1.13"
+	},
+	"devDependencies": {
+		"tsx": "^4.19.4"
+	}
+}

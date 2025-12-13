@@ -1,1 +1,19 @@
-*
+# Generated output (from scripts/build.ts)
+dist/
+
+# Scraping cache (14GB+)
+raw/
+
+# Legacy directories (to be deleted)
+api/
+bandai/
+
+# Build artifacts
+node_modules/
+*.tsbuildinfo
+
+# Migration artifacts
+.migration-manifest.json
+
+# OS files
+.DS_Store

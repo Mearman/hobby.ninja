@@ -1,225 +1,336 @@
 import "server-only";
 
-// Static data imports for build-time embedding
+// Static data imports from @hobby-ninja/data package
 // This replaces runtime fetching with build-time imports
 // NOTE: This module is SERVER ONLY - it will error if imported in client components
 // For client-side data access, use client-data.ts instead
-import brandsData from "../data/brands.json";
-import categoriesData from "../data/categories.json";
-import itemsData from "../data/items.json";
-import manualsData from "../data/manuals.json";
-import seriesData from "../data/series.json";
 
 import {
-	BaseNode,
-	GraphNode,
-	ItemNode,
-	BrandNode,
-	CategoryNode,
-	SeriesNode,
-	ManualNode,
-	isItemNode,
-	isBrandNode,
-	isCategoryNode,
-	isSeriesNode,
-	isManualNode,
-	parseNode,
-	getNodeDisplayName,
-	ItemNodeSchema,
-	BrandNodeSchema,
-	CategoryNodeSchema,
-	SeriesNodeSchema,
-	ManualNodeSchema,
-} from "./schemas";
+	items as itemsData,
+	itemsList,
+	getItemIds,
+	type Item,
+} from "@hobby-ninja/data/items";
+import {
+	brands as brandsData,
+	brandsList,
+	getBrandIds,
+	type Brand,
+} from "@hobby-ninja/data/brands";
+import {
+	series as seriesData,
+	seriesList,
+	getSeriesIds,
+	type Series,
+} from "@hobby-ninja/data/series";
+import {
+	categories as categoriesData,
+	categoriesList,
+	getCategoryIds,
+	type Category,
+} from "@hobby-ninja/data/categories";
+import {
+	manuals as manualsData,
+	manualsList,
+	getManualIds,
+	type Manual,
+} from "@hobby-ninja/data/manuals";
+import { getNodeDisplayName } from "@hobby-ninja/data/schemas";
 
-// Type guard for the new JSON structure
-function isGraphDataFile(data: unknown): data is { nodes: unknown[]; edges: Record<string, Record<string, never>> } {
-	return (
-		typeof data === "object" && data !== null &&
-		"nodes" in data && Array.isArray((data as Record<string, unknown>).nodes) &&
-		"edges" in data && typeof (data as Record<string, unknown>).edges === "object"
-	);
+// Re-export types for convenience
+export type { Item, Brand, Series, Category, Manual };
+
+// Type aliases for backward compatibility
+export type ItemNode = Item;
+export type BrandNode = Brand;
+export type CategoryNode = Category;
+export type SeriesNode = Series;
+export type ManualNode = Manual;
+
+// Base node type for common operations
+export interface BaseNode {
+	id: string;
+	type: string;
+	name: string | { ja: string; en?: string };
 }
 
-// Skip Zod validation in development for faster loading
-// Data is pre-validated during build, so dev mode can trust the JSON
-const SKIP_VALIDATION = process.env.NODE_ENV === 'development';
-
-// Parse and validate the imported data
-function parseJSONData<T>(schema: { safeParse: (data: unknown) => { success: boolean; data?: T; error?: unknown } }, data: unknown): T[] {
-	if (!isGraphDataFile(data)) {
-		console.error("Invalid data file format: expected {nodes: [], edges: {}}");
-		return [];
-	}
-
-	// In dev mode, skip Zod validation for faster loading
-	// The data is already validated during the build process
-	if (SKIP_VALIDATION) {
-		return data.nodes as T[];
-	}
-
-	// In production, validate each item (called once per item, not twice)
-	const validItems: T[] = [];
-	for (const item of data.nodes) {
-		const result = schema.safeParse(item);
-		if (result.success && result.data) {
-			validItems.push(result.data);
-		}
-	}
-	return validItems;
-}
-
-// Extract edges from data files
-function parseEdges(data: unknown): Record<string, Record<string, never>> {
-	if (!isGraphDataFile(data)) {
-		console.error("Invalid data file format: expected {nodes: [], edges: {}}");
-		return {};
-	}
-	return data.edges;
-}
-
-// Lazy-loaded data caches (initialized on first access, not on module import)
-let _parsedItems: ItemNode[] | null = null;
-let _parsedBrands: BrandNode[] | null = null;
-let _parsedCategories: CategoryNode[] | null = null;
-let _parsedSeries: SeriesNode[] | null = null;
-let _parsedManuals: ManualNode[] | null = null;
-let _parsedEdges: Record<string, Record<string, never>> | null = null;
-
-// Lazy getters for parsed data
-function getParsedItems(): ItemNode[] {
-	if (_parsedItems === null) {
-		_parsedItems = parseJSONData<ItemNode>(ItemNodeSchema, itemsData);
-	}
-	return _parsedItems;
-}
-
-function getParsedBrands(): BrandNode[] {
-	if (_parsedBrands === null) {
-		_parsedBrands = parseJSONData<BrandNode>(BrandNodeSchema, brandsData);
-	}
-	return _parsedBrands;
-}
-
-function getParsedCategories(): CategoryNode[] {
-	if (_parsedCategories === null) {
-		_parsedCategories = parseJSONData<CategoryNode>(CategoryNodeSchema, categoriesData);
-	}
-	return _parsedCategories;
-}
-
-function getParsedSeries(): SeriesNode[] {
-	if (_parsedSeries === null) {
-		_parsedSeries = parseJSONData<SeriesNode>(SeriesNodeSchema, seriesData);
-	}
-	return _parsedSeries;
-}
-
-function getParsedManuals(): ManualNode[] {
-	if (_parsedManuals === null) {
-		_parsedManuals = parseJSONData<ManualNode>(ManualNodeSchema, manualsData);
-	}
-	return _parsedManuals;
-}
-
-function getParsedEdges(): Record<string, Record<string, never>> {
-	if (_parsedEdges === null) {
-		_parsedEdges = parseEdges(itemsData);
-	}
-	return _parsedEdges;
-}
-
-// Lazy accessor for static data (creates object on first access)
-function getStaticDataInternal() {
-	return {
-		items: getParsedItems(),
-		brands: getParsedBrands(),
-		categories: getParsedCategories(),
-		series: getParsedSeries(),
-		manuals: getParsedManuals(),
-		edges: getParsedEdges(),
-	};
-}
-
-export function getStaticData() {
-	return getStaticDataInternal();
-}
-
-// Memoization caches for sorted/enriched results
-let _allItemsCache: EnrichedItem[] | null = null;
-let _allBrandsCache: BrandNode[] | null = null;
-let _allCategoriesCache: CategoryNode[] | null = null;
-let _allSeriesCache: SeriesNode[] | null = null;
-let _allManualsCache: ManualNode[] | null = null;
+// Union type for all graph nodes
+export type GraphNode = Item | Brand | Series | Category | Manual;
 
 // Sort data by display name
-const sortByName = <T extends BaseNode>(a: T, b: T): number => {
+const sortByName = <T extends GraphNode>(a: T, b: T): number => {
 	const nameA = getNodeDisplayName(a);
 	const nameB = getNodeDisplayName(b);
 	return nameA.localeCompare(nameB);
 };
 
+// Memoization caches for sorted/enriched results
+let _allItemsCache: EnrichedItem[] | null = null;
+let _allBrandsCache: Brand[] | null = null;
+let _allCategoriesCache: Category[] | null = null;
+let _allSeriesCache: Series[] | null = null;
+let _allManualsCache: Manual[] | null = null;
+
+// Type for enriched item with resolved relationship names
+export type EnrichedItem = Item & {
+	series?: string;
+	seriesId?: string;
+	grade?: string;
+	scale?: string;
+	brand?: string;
+	brandId?: string;
+	categoryId?: string;
+	category?: string;
+};
+
+// Helper function to get node name by ID
+function getBrandNameById(brandId: string): string {
+	const brand = brandsData[brandId];
+	return brand ? getNodeDisplayName(brand) : "";
+}
+
+function getSeriesNameById(seriesId: string): string {
+	const series = seriesData[seriesId];
+	return series ? getNodeDisplayName(series) : "";
+}
+
+function getCategoryNameById(categoryId: string): string {
+	const category = categoriesData[categoryId];
+	return category ? getNodeDisplayName(category) : "";
+}
+
+// Extract grade from item name or brand
+function extractGradeFromItem(item: Item): string {
+	const itemName = getNodeDisplayName(item).toLowerCase();
+
+	// Check for grade indicators in name
+	const gradePatterns = [
+		/\b(?:pg|perfect grade)\b/,
+		/\b(?:mg|master grade)\b/,
+		/\b(?:rg|real grade)\b/,
+		/\b(?:hg|high grade)\b/,
+		/\b(?:hguc|high grade universal century)\b/,
+		/\b(?:sd|super deformed)\b/,
+		/\b(?:eg|entry grade)\b/,
+		/\b(?:re|revive)\b/,
+		/\b(?:mb|metal build)\b/,
+		/\b(?:fix|full action)\b/,
+	];
+
+	for (const pattern of gradePatterns) {
+		const match = itemName.match(pattern);
+		if (match) {
+			return match[0].toUpperCase();
+		}
+	}
+
+	// Check brand for grade information
+	for (const brandId of item.brandIds || []) {
+		const brandName = getBrandNameById(brandId).toLowerCase();
+		if (brandName.includes("pg") || brandName.includes("perfect grade")) return "PG";
+		if (brandName.includes("mg") || brandName.includes("master grade")) return "MG";
+		if (brandName.includes("rg") || brandName.includes("real grade")) return "RG";
+		if (brandName.includes("hg") || brandName.includes("high grade")) return "HG";
+		if (brandName.includes("sd") || brandName.includes("super deformed")) return "SD";
+		if (brandName.includes("eg") || brandName.includes("entry grade")) return "EG";
+	}
+
+	return "";
+}
+
+// Enrich item with resolved relationship names
+function enrichItemWithRelationships(item: Item): EnrichedItem {
+	const enrichedItem: EnrichedItem = { ...item };
+
+	// Resolve series (use first one)
+	if (item.seriesIds && item.seriesIds.length > 0) {
+		enrichedItem.seriesId = item.seriesIds[0];
+		enrichedItem.series = getSeriesNameById(item.seriesIds[0]);
+	}
+
+	// Resolve brand (use first one)
+	if (item.brandIds && item.brandIds.length > 0) {
+		enrichedItem.brandId = item.brandIds[0];
+		enrichedItem.brand = getBrandNameById(item.brandIds[0]);
+	}
+
+	// Resolve category (use first one)
+	if (item.categoryIds && item.categoryIds.length > 0) {
+		enrichedItem.categoryId = item.categoryIds[0];
+		enrichedItem.category = getCategoryNameById(item.categoryIds[0]);
+	}
+
+	// Use scale from item data
+	if (item.scale) {
+		enrichedItem.scale = item.scale;
+	}
+
+	// Extract grade
+	const grade = extractGradeFromItem(item);
+	if (grade) {
+		enrichedItem.grade = grade;
+	}
+
+	return enrichedItem;
+}
+
 // Export synchronous functions that return pre-validated data with enriched properties
 export function getAllItems(): EnrichedItem[] {
 	if (_allItemsCache === null) {
-		_allItemsCache = [...getParsedItems()].map(item => enrichItemWithRelationships(item)).sort(sortByName);
+		_allItemsCache = itemsList.map((item) => enrichItemWithRelationships(item)).sort(sortByName);
 	}
 	return _allItemsCache;
 }
 
-export function getAllBrands(): BrandNode[] {
+export function getAllBrands(): Brand[] {
 	if (_allBrandsCache === null) {
-		_allBrandsCache = [...getParsedBrands()].sort(sortByName);
+		_allBrandsCache = [...brandsList].sort(sortByName);
 	}
 	return _allBrandsCache;
 }
 
-export function getAllCategories(): CategoryNode[] {
+export function getAllCategories(): Category[] {
 	if (_allCategoriesCache === null) {
-		_allCategoriesCache = [...getParsedCategories()].sort(sortByName);
+		_allCategoriesCache = [...categoriesList].sort(sortByName);
 	}
 	return _allCategoriesCache;
 }
 
-export function getAllSeries(): SeriesNode[] {
+export function getAllSeries(): Series[] {
 	if (_allSeriesCache === null) {
-		_allSeriesCache = [...getParsedSeries()].sort(sortByName);
+		_allSeriesCache = [...seriesList].sort(sortByName);
 	}
 	return _allSeriesCache;
 }
 
-export function getAllManuals(): ManualNode[] {
+export function getAllManuals(): Manual[] {
 	if (_allManualsCache === null) {
-		_allManualsCache = [...getParsedManuals()].sort(sortByName);
+		_allManualsCache = [...manualsList].sort(sortByName);
 	}
 	return _allManualsCache;
 }
 
-// Get all unique grades from items
-export function getAllGrades(): ItemNode[] {
-	const grades = new Set<string>();
-	const gradeNodes: ItemNode[] = [];
-
-	getParsedItems().forEach(item => {
-		if (item.grade && !grades.has(item.grade)) {
-			grades.add(item.grade);
-			// Create a grade node for consistency
-			gradeNodes.push({
-				id: `grade-${item.grade.toLowerCase().replace(/\s+/g, '-')}`,
-				type: 'grade',
-				name: item.grade,
-				grade: item.grade,
-			} as any);
-		}
-	});
-
-	return gradeNodes.sort((a, b) => (a.grade ?? '').localeCompare(b.grade ?? ''));
+// Get specific node by ID
+export function getItemById(id: string): EnrichedItem | null {
+	const item = itemsData[id];
+	return item ? enrichItemWithRelationships(item) : null;
 }
+
+export function getBrandById(id: string): Brand | null {
+	return brandsData[id] ?? null;
+}
+
+export function getCategoryById(id: string): Category | null {
+	return categoriesData[id] ?? null;
+}
+
+export function getSeriesById(id: string): Series | null {
+	return seriesData[id] ?? null;
+}
+
+export function getManualById(id: string): Manual | null {
+	return manualsData[id] ?? null;
+}
+
+// Get items by category (using itemIds array on category)
+export function getItemsByCategory(categoryId: string): EnrichedItem[] {
+	const category = categoriesData[categoryId];
+	if (!category || !category.itemIds) return [];
+
+	return category.itemIds
+		.map((itemId) => itemsData[itemId])
+		.filter((item): item is Item => item !== undefined)
+		.map((item) => enrichItemWithRelationships(item))
+		.sort(sortByName);
+}
+
+// Get items by brand (using itemIds array on brand)
+export function getItemsByBrand(brandId: string): EnrichedItem[] {
+	const brand = brandsData[brandId];
+	if (!brand || !brand.itemIds) return [];
+
+	return brand.itemIds
+		.map((itemId) => itemsData[itemId])
+		.filter((item): item is Item => item !== undefined)
+		.map((item) => enrichItemWithRelationships(item))
+		.sort(sortByName);
+}
+
+// Get items by series (using itemIds array on series)
+export function getItemsBySeries(seriesId: string): EnrichedItem[] {
+	const series = seriesData[seriesId];
+	if (!series || !series.itemIds) return [];
+
+	return series.itemIds
+		.map((itemId) => itemsData[itemId])
+		.filter((item): item is Item => item !== undefined)
+		.map((item) => enrichItemWithRelationships(item))
+		.sort(sortByName);
+}
+
+// Get all unique grades from items
+export function getAllGrades(): string[] {
+	const grades = new Set<string>();
+
+	for (const item of itemsList) {
+		const grade = extractGradeFromItem(item);
+		if (grade) {
+			grades.add(grade);
+		}
+	}
+
+	return Array.from(grades).sort((a, b) => a.localeCompare(b));
+}
+
+// Get all nodes combined
+export function getAllNodes(): GraphNode[] {
+	return [...itemsList, ...brandsList, ...categoriesList, ...seriesList, ...manualsList];
+}
+
+// Get node by any type
+export function getNodeByIdAny(id: string): GraphNode | null {
+	return itemsData[id] ?? brandsData[id] ?? categoriesData[id] ?? seriesData[id] ?? manualsData[id] ?? null;
+}
+
+// Validate that required data is available
+export function validateGraphData(): boolean {
+	return itemsList.length > 0 && brandsList.length > 0 && categoriesList.length > 0 && seriesList.length > 0;
+}
+
+// Export static data for backward compatibility
+export function getStaticData() {
+	return {
+		items: itemsList,
+		brands: brandsList,
+		categories: categoriesList,
+		series: seriesList,
+		manuals: manualsList,
+	};
+}
+
+// Export graphData as a getter for backward compatibility
+export const graphData = {
+	get items() {
+		return itemsList;
+	},
+	get brands() {
+		return brandsList;
+	},
+	get categories() {
+		return categoriesList;
+	},
+	get series() {
+		return seriesList;
+	},
+	get manuals() {
+		return manualsList;
+	},
+};
 
 // Grade data type from per-grade JSON files
 export interface GradeData {
 	id: string;
-	type: 'grade';
+	type: "grade";
 	name: string;
 	parent: string | null;
 	children: string[];
@@ -230,7 +341,7 @@ export interface GradeData {
 // Scale data type from per-scale JSON files
 export interface ScaleData {
 	id: string;
-	type: 'scale';
+	type: "scale";
 	name: string;
 	itemIds: string[];
 	itemCount: number;
@@ -246,422 +357,3 @@ export interface GradesIndex {
 	}>;
 	hierarchy: Record<string, { parent: string | null; children: string[] }>;
 }
-
-// Lazy-loaded grades index cache
-let _gradesIndexCache: GradesIndex | null = null;
-
-// Get grades index from pre-generated JSON
-export function getGradesIndex(): GradesIndex {
-	if (_gradesIndexCache === null) {
-		// Import the grades-index.json at build time
-		// Note: This is imported dynamically but will be inlined at build time
-		try {
-			// eslint-disable-next-line @typescript-eslint/no-require-imports
-			_gradesIndexCache = require('../../public/data/grades-index.json') as GradesIndex;
-		} catch {
-			console.error('Failed to load grades-index.json');
-			_gradesIndexCache = { grades: [], hierarchy: {} };
-		}
-	}
-	return _gradesIndexCache;
-}
-
-// Get all grades from the grades index
-export function getAllGradesFromIndex(): GradesIndex['grades'] {
-	return getGradesIndex().grades;
-}
-
-// Get grade by ID from per-grade JSON file
-export function getGradeById(id: string): GradeData | null {
-	try {
-		// eslint-disable-next-line @typescript-eslint/no-require-imports
-		return require(`../../public/data/grades/${id}.json`) as GradeData;
-	} catch {
-		return null;
-	}
-}
-
-// Get items by grade ID
-export function getItemsByGrade(gradeId: string): EnrichedItem[] {
-	const gradeData = getGradeById(gradeId);
-	if (!gradeData) return [];
-
-	const itemIds = new Set(gradeData.itemIds);
-	return getParsedItems()
-		.filter(item => itemIds.has(item.id))
-		.map(item => enrichItemWithRelationships(item))
-		.sort(sortByName);
-}
-
-// Get scale by ID from per-scale JSON file
-export function getScaleById(id: string): ScaleData | null {
-	try {
-		// eslint-disable-next-line @typescript-eslint/no-require-imports
-		return require(`../../public/data/scales/${id}.json`) as ScaleData;
-	} catch {
-		return null;
-	}
-}
-
-// Get all scales from the filesystem (derived from scale files)
-export function getAllScalesFromFiles(): ScaleData[] {
-	// This function reads all scale JSON files at build time
-	// For static generation, we'll use the static-params.json to get scale IDs
-	try {
-		// eslint-disable-next-line @typescript-eslint/no-require-imports
-		const staticParams = require('../data/static-params.json') as { scaleIds?: string[] };
-		if (!staticParams.scaleIds) return [];
-
-		return staticParams.scaleIds
-			.map(id => getScaleById(id))
-			.filter((scale): scale is ScaleData => scale !== null)
-			.sort((a, b) => {
-				// Sort scales numerically when possible
-				const aNum = a.name.match(/1\/(\d+)/);
-				const bNum = b.name.match(/1\/(\d+)/);
-				if (aNum && bNum) {
-					return Number.parseInt(aNum[1], 10) - Number.parseInt(bNum[1], 10);
-				}
-				return a.name.localeCompare(b.name);
-			});
-	} catch {
-		return [];
-	}
-}
-
-// Get items by scale ID
-export function getItemsByScale(scaleId: string): EnrichedItem[] {
-	const scaleData = getScaleById(scaleId);
-	if (!scaleData) return [];
-
-	const itemIds = new Set(scaleData.itemIds);
-	return getParsedItems()
-		.filter(item => itemIds.has(item.id))
-		.map(item => enrichItemWithRelationships(item))
-		.sort(sortByName);
-}
-
-
-// Legacy function: Get all unique scales from items (kept for backward compatibility)
-export function getAllScales(): ItemNode[] {
-	const scales = new Set<string>();
-	const scaleNodes: ItemNode[] = [];
-
-	getParsedItems().forEach(item => {
-		if (item.scale && !scales.has(item.scale)) {
-			scales.add(item.scale);
-			// Create a scale node for consistency
-			scaleNodes.push({
-				id: `scale-${item.scale.toLowerCase().replace(/\s+/g, '-').replace(/[\/:]/g, '-')}`,
-				type: 'scale',
-				name: item.scale,
-				scale: item.scale,
-			} as any);
-		}
-	});
-
-	return scaleNodes.sort((a, b) => {
-		// Sort scales numerically when possible (e.g., 1/144, 1/100, etc.)
-		const aNum = (a.scale ?? '').match(/1\/(\d+)/);
-		const bNum = (b.scale ?? '').match(/1\/(\d+)/);
-
-		if (aNum && bNum) {
-			return Number.parseInt(aNum[1], 10) - Number.parseInt(bNum[1], 10);
-		}
-
-		return (a.scale ?? '').localeCompare(b.scale ?? '');
-	});
-}
-
-// Get specific node by ID with type safety (synchronous)
-export function getItemById(id: string): EnrichedItem | null {
-	const item = getParsedItems().find(item => item.id === id);
-	return item ? enrichItemWithRelationships(item) : null;
-}
-
-export function getBrandById(id: string): BrandNode | null {
-	return getParsedBrands().find(brand => brand.id === id) ?? null;
-}
-
-export function getCategoryById(id: string): CategoryNode | null {
-	return getParsedCategories().find(category => category.id === id) ?? null;
-}
-
-export function getSeriesById(id: string): SeriesNode | null {
-	return getParsedSeries().find(series => series.id === id) ?? null;
-}
-
-export function getManualById(id: string): ManualNode | null {
-	return getParsedManuals().find(m => m.id === id) ?? null;
-}
-
-// Helper function to resolve related nodes from edges
-function resolveRelatedNodes(itemId: string, relationshipType: string, targetType: string): string[] {
-	const edgePrefix = `item:${itemId}:${relationshipType}:${targetType}:`;
-	const relatedIds: string[] = [];
-
-	for (const edgeKey of Object.keys(getParsedEdges())) {
-		if (edgeKey.startsWith(edgePrefix)) {
-			const relatedId = edgeKey.replace(edgePrefix, '');
-			relatedIds.push(relatedId);
-		}
-	}
-
-	return relatedIds;
-}
-
-// Helper function to get node name by ID and type
-function getNodeNameById(nodeId: string, nodeType: string): string {
-	switch (nodeType) {
-		case 'brand':
-			const brand = getParsedBrands().find(b => b.id === nodeId);
-			return brand ? getNodeDisplayName(brand) : '';
-		case 'series':
-			const series = getParsedSeries().find(s => s.id === nodeId);
-			return series ? getNodeDisplayName(series) : '';
-		case 'category':
-			const category = getParsedCategories().find(c => c.id === nodeId);
-			return category ? getNodeDisplayName(category) : '';
-		default:
-			return '';
-	}
-}
-
-// Extract scale from item name
-function extractScaleFromName(itemName: string): string {
-	// Look for patterns like "1/144", "1/100", "1/60", etc.
-	const scaleMatch = itemName.match(/1\/\d+/);
-	if (scaleMatch) {
-		return scaleMatch[0];
-	}
-
-	// Look for other common scale indicators
-	const otherScaleMatch = itemName.match(/(\d+(?:\/\d+)?)(?:mm|MM)/);
-	if (otherScaleMatch) {
-		return otherScaleMatch[1];
-	}
-
-	// Look for Non Scale
-	if (itemName.toLowerCase().includes('non scale') || itemName.toLowerCase().includes('ノンスケール')) {
-		return 'Non Scale';
-	}
-
-	return '';
-}
-
-// Extract grade from item name or brand
-function extractGradeFromItem(item: ItemNode): string {
-	const itemName = getNodeDisplayName(item).toLowerCase();
-
-	// Check for grade indicators in name
-	const gradePatterns = [
-		/\b(?:pg|perfect grade)\b/,
-		/\b(?:mg|master grade)\b/,
-		/\b(?:rg|real grade)\b/,
-		/\b(?:hg|high grade)\b/,
-		/\b(?:hguc|high grade universal century)\b/,
-		/\b(?:sd|super deformed)\b/,
-		/\b(?:eg|entry grade)\b/,
-		/\b(?:re|revive)\b/,
-		/\b(?:mb|metal build)\b/,
-		/\b(?:fix|full action)\b/
-	];
-
-	for (const pattern of gradePatterns) {
-		const match = itemName.match(pattern);
-		if (match) {
-			return match[0].toUpperCase();
-		}
-	}
-
-	// Check brand for grade information
-	const brandIds = resolveRelatedNodes(item.id, 'BELONGS_TO_BRAND', 'brand');
-	for (const brandId of brandIds) {
-		const brandName = getNodeNameById(brandId, 'brand').toLowerCase();
-		if (brandName.includes('pg') || brandName.includes('perfect grade')) {
-			return 'PG';
-		}
-		if (brandName.includes('mg') || brandName.includes('master grade')) {
-			return 'MG';
-		}
-		if (brandName.includes('rg') || brandName.includes('real grade')) {
-			return 'RG';
-		}
-		if (brandName.includes('hg') || brandName.includes('high grade')) {
-			return 'HG';
-		}
-		if (brandName.includes('sd') || brandName.includes('super deformed')) {
-			return 'SD';
-		}
-		if (brandName.includes('eg') || brandName.includes('entry grade')) {
-			return 'EG';
-		}
-	}
-
-	return '';
-}
-
-// Type for enriched item with relationship data
-export type EnrichedItem = ItemNode & {
-	series?: string;
-	seriesId?: string;
-	grade?: string;
-	scale?: string;
-	brand?: string;
-	brandId?: string;
-	categoryId?: string;
-	category?: string;
-};
-
-// Enrich item with resolved properties
-function enrichItemWithRelationships(item: ItemNode): EnrichedItem {
-	const enrichedItem: EnrichedItem = { ...item };
-
-	// Resolve series
-	const seriesIds = resolveRelatedNodes(item.id, 'BELONGS_TO_SERIES', 'series');
-	if (seriesIds.length > 0) {
-		enrichedItem.seriesId = seriesIds[0];
-		enrichedItem.series = getNodeNameById(seriesIds[0], 'series');
-	}
-
-	// Resolve brand
-	const brandIds = resolveRelatedNodes(item.id, 'BELONGS_TO_BRAND', 'brand');
-	if (brandIds.length > 0) {
-		enrichedItem.brandId = brandIds[0];
-		enrichedItem.brand = getNodeNameById(brandIds[0], 'brand');
-	}
-
-	// Resolve category
-	const categoryIds = resolveRelatedNodes(item.id, 'BELONGS_TO_CATEGORY', 'category');
-	if (categoryIds.length > 0) {
-		enrichedItem.categoryId = categoryIds[0];
-		enrichedItem.category = getNodeNameById(categoryIds[0], 'category');
-	}
-
-	// Extract scale from name or use existing scale
-	if (item.scale) {
-		enrichedItem.scale = item.scale;
-	} else {
-		const itemName = getNodeDisplayName(item);
-		const scale = extractScaleFromName(itemName);
-		if (scale) {
-			enrichedItem.scale = scale;
-		}
-	}
-
-	// Extract grade
-	const grade = extractGradeFromItem(item);
-	if (grade) {
-		enrichedItem.grade = grade;
-	}
-
-	return enrichedItem;
-}
-
-// Get items by category using edges and enrich them with relationship data
-export function getItemsByCategory(categoryId: string): EnrichedItem[] {
-	const categoryEdgePrefix = `item:`;
-	const categoryEdgeSuffix = `:BELONGS_TO_CATEGORY:category:${categoryId}`;
-
-	const itemIds: string[] = [];
-
-	// Find all edges that connect items to this category
-	for (const edgeKey of Object.keys(getParsedEdges())) {
-		if (edgeKey.startsWith(categoryEdgePrefix) && edgeKey.endsWith(categoryEdgeSuffix)) {
-			const itemId = edgeKey.split(":")[1]; // Extract item ID from "item:ITEM_ID:BELONGS_TO_CATEGORY:category:CATEGORY_ID"
-			itemIds.push(itemId);
-		}
-	}
-
-	// Return the items that match the found IDs, enriched with relationship data
-	return getParsedItems()
-		.filter(item => itemIds.includes(item.id))
-		.map(item => enrichItemWithRelationships(item))
-		.sort(sortByName);
-}
-
-// Get items by brand using edges and enrich them with relationship data
-export function getItemsByBrand(brandId: string): EnrichedItem[] {
-	const brandEdgePrefix = `item:`;
-	const brandEdgeSuffix = `:BELONGS_TO_BRAND:brand:${brandId}`;
-
-	const itemIds: string[] = [];
-
-	// Find all edges that connect items to this brand
-	for (const edgeKey of Object.keys(getParsedEdges())) {
-		if (edgeKey.startsWith(brandEdgePrefix) && edgeKey.endsWith(brandEdgeSuffix)) {
-			const itemId = edgeKey.split(":")[1]; // Extract item ID from "item:ITEM_ID:BELONGS_TO_BRAND:brand:BRAND_ID"
-			itemIds.push(itemId);
-		}
-	}
-
-	// Return the items that match the found IDs, enriched with relationship data
-	return getParsedItems()
-		.filter(item => itemIds.includes(item.id))
-		.map(item => enrichItemWithRelationships(item))
-		.sort(sortByName);
-}
-
-// Get items by series using edges and enrich them with relationship data
-export function getItemsBySeries(seriesId: string): EnrichedItem[] {
-	const seriesEdgePrefix = `item:`;
-	const seriesEdgeSuffix = `:BELONGS_TO_SERIES:series:${seriesId}`;
-
-	const itemIds: string[] = [];
-
-	// Find all edges that connect items to this series
-	for (const edgeKey of Object.keys(getParsedEdges())) {
-		if (edgeKey.startsWith(seriesEdgePrefix) && edgeKey.endsWith(seriesEdgeSuffix)) {
-			const itemId = edgeKey.split(":")[1]; // Extract item ID from "item:ITEM_ID:BELONGS_TO_SERIES:series:SERIES_ID"
-			itemIds.push(itemId);
-		}
-	}
-
-	// Return the items that match the found IDs, enriched with relationship data
-	return getParsedItems()
-		.filter(item => itemIds.includes(item.id))
-		.map(item => enrichItemWithRelationships(item))
-		.sort(sortByName);
-}
-
-// Get all nodes combined
-export function getAllNodes(): GraphNode[] {
-	return [...getParsedItems(), ...getParsedBrands(), ...getParsedCategories(), ...getParsedSeries(), ...getParsedManuals()];
-}
-
-// Get nodes by type
-export function getNodesByType<T extends GraphNode>(
-	type: string,
-	typeGuard: (data: unknown) => data is T,
-): T[] {
-	const allNodes = getAllNodes();
-	return allNodes.filter((node): node is T => node.type === type && typeGuard(node));
-}
-
-// Get node by any type
-export function getNodeByIdAny(id: string): GraphNode | null {
-	return (
-		getParsedItems().find(item => item.id === id) ??
-		getParsedBrands().find(brand => brand.id === id) ??
-		getParsedCategories().find(category => category.id === id) ??
-		getParsedSeries().find(s => s.id === id) ??
-		getParsedManuals().find(manual => manual.id === id) ??
-		null
-	);
-}
-
-// Validate that required data is available (synchronous)
-export function validateGraphData(): boolean {
-	// Return true if data was successfully loaded and validated
-	return getParsedItems().length > 0 && getParsedBrands().length > 0 && getParsedCategories().length > 0 && getParsedSeries().length > 0;
-}
-
-// Export graphData as a getter that returns lazy-loaded data
-export const graphData = {
-	get items() { return getParsedItems(); },
-	get brands() { return getParsedBrands(); },
-	get categories() { return getParsedCategories(); },
-	get series() { return getParsedSeries(); },
-	get manuals() { return getParsedManuals(); },
-	get edges() { return getParsedEdges(); },
-};

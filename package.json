@@ -7,7 +7,8 @@
 	"packageManager": "pnpm@10.0.0",
 	"workspaces": [
 		"apps/*",
-		"packages/*"
+		"packages/*",
+		"data"
 	],
 	"scripts": {
 		"build": "nx run hobby-ninja:build",

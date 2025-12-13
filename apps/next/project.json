@@ -90,28 +90,16 @@
     },
     "build-data": {
       "executor": "nx:run-commands",
-      "outputs": ["{projectRoot}/src/data"],
+      "outputs": ["{workspaceRoot}/data/dist"],
       "options": {
-        "command": "node ../../node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs scripts/build-data-cli.ts",
-        "cwd": "{projectRoot}",
-        "cache": true
+        "command": "pnpm tsx scripts/build.ts",
+        "cwd": "data"
       },
       "inputs": [
-        "default",
-        "^default",
-        "{workspaceRoot}/data/api/graph/**/*"
+        "{workspaceRoot}/data/src/**/*",
+        "{workspaceRoot}/data/scripts/build.ts"
       ],
-      "configurations": {
-        "development": {
-          "command": "node ../../node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs scripts/build-data-cli.ts --output-dir src/data"
-        },
-        "production": {
-          "command": "node ../../node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs scripts/build-data-cli.ts --output-dir src/data"
-        },
-        "custom": {
-          "command": "node ../../node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs scripts/build-data-cli.ts {args}"
-        }
-      }
+      "cache": true
     }
   },
   "tags": []

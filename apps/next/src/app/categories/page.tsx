@@ -25,17 +25,12 @@ import {
 import Link from "next/link";
 import React from "react";
 
-import { getAllCategories, getStaticData } from "@/lib/graph-data";
+import {
+	categoriesList,
+	type Category,
+} from "@hobby-ninja/data/categories";
 import { getNodeDisplayName } from "@/lib/schemas";
 import { categoryCard, categoryIcon } from "@/styles/components.css";
-
-// Define types locally to avoid circular imports
-interface Category {
-	id: string;
-	type: string;
-	name: string | { ja: string; en?: string };
-	url?: string;
-}
 
 interface CategoryWithCount extends Category {
 	itemCount: number;
@@ -278,25 +273,12 @@ function getCategoryDescription(categoryId: string): string {
 // Server Component - Data loaded at build time
 export default function CategoriesPage() {
 	// Load data synchronously at build time
-	const categoriesData = getAllCategories();
-	const staticData = getStaticData();
-
-	// Count items per category using edges data
-	const categoryCounts = new Map<string, number>();
-
-	// Process edges to count items per category
-	for (const edgeKey of Object.keys(staticData.edges)) {
-		if (edgeKey.includes(":BELONGS_TO_CATEGORY:category:")) {
-			const categoryId = edgeKey.split(":").pop() || "";
-			if (categoryId) {
-				categoryCounts.set(categoryId, (categoryCounts.get(categoryId) ?? 0) + 1);
-			}
-		}
-	}
+	const categoriesData = categoriesList;
 
 	// Attach item counts and additional metadata to categories
-	const categoriesWithCounts = (categoriesData as Category[]).map(category => {
-		const itemCount = categoryCounts.get(category.id) ?? 0;
+	const categoriesWithCounts = categoriesData.map(category => {
+		// Count items using the itemIds array on each category
+		const itemCount = category.itemIds?.length ?? 0;
 		const totalCount = categoriesData.length;
 
 		// Generate additional metadata

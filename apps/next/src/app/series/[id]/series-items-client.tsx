@@ -10,10 +10,10 @@ import { ViewSwitcher, useViewMode } from "@/components/view/view-switcher";
 import { ViewRenderer } from "@/components/view/view-renderers";
 import { InfiniteScrollLoader } from "@/components/ui/infinite-scroll-loader";
 import { ItemFilters } from "@/components/filtering/item-filters";
-import { type ItemNode } from "@/lib/schemas";
+import { type Item } from "@hobby-ninja/data";
 
 interface SeriesItemsClientProps {
-	items: ItemNode[];
+	items: Item[];
 	seriesName: string;
 	totalItems: number;
 }
@@ -35,7 +35,7 @@ export function SeriesItemsClient({ items, seriesName, totalItems }: SeriesItems
 	} = useFilteredItems(items);
 
 	const { visibleItems, isLoading, hasMore, lastItemRef, reset } = useInfiniteScroll({
-		items: filteredItems as ItemNode[],
+		items: filteredItems as Item[],
 		itemsPerPage: preferences.infiniteScrollPageSize,
 		preservePageParam: true,
 		autoLoad: preferences.autoLoadInfiniteScroll,

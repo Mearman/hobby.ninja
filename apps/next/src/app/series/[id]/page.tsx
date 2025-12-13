@@ -21,9 +21,14 @@ import { notFound } from "next/navigation";
 
 import { SeriesItemsClient } from "./series-items-client";
 
-import staticParams from "@/data/static-params.json";
 import { getNodeDisplayName, type BaseNode } from "@/lib/schemas";
-import { getSeriesById, getItemsBySeries } from "@/lib/server-graph-data";
+import {
+	getSeriesById,
+	getSeriesIds,
+	getItemById,
+	type Series,
+	type Item,
+} from "@hobby-ninja/data";
 
 
 interface SeriesPageProps {
@@ -32,8 +37,9 @@ interface SeriesPageProps {
 
 // Generate static params for all series using lightweight IDs file
 export function generateStaticParams() {
-	console.log(`Generating static params for ${staticParams.seriesIds.length} series`);
-	return staticParams.seriesIds.map(id => ({ id }));
+	const seriesIds = getSeriesIds();
+	console.log(`Generating static params for ${seriesIds.length} series`);
+	return seriesIds.map(id => ({ id }));
 }
 
 // Generate metadata for series page
@@ -90,11 +96,16 @@ export default async function SeriesDetailPage({ params }: SeriesPageProps) {
 	const { id } = await params;
 
 	// Fetch data at build time
-	let series;
-	let seriesItems;
+	let series: Series | undefined;
+	let seriesItems: Item[] = [];
 	try {
 		series = getSeriesById(id);
-		seriesItems = getItemsBySeries(id);
+		// Fetch items using the series itemIds array
+		if (series) {
+			seriesItems = series.itemIds
+				.map(itemId => getItemById(itemId))
+				.filter((item): item is Item => item !== undefined);
+		}
 	} catch (error) {
 		console.error("Error fetching series:", error);
 		throw new Error(`Failed to load series: ${id}`);
@@ -142,12 +153,9 @@ export default async function SeriesDetailPage({ params }: SeriesPageProps) {
 	};
 
 	const displayName = getNodeDisplayName(series);
-	// Cast to SeriesNode for type-safe access to series-specific fields
-	const seriesNode = series;
-	const seriesDescription = seriesNode.description;
-	const seriesFranchise = seriesNode.franchise;
-	// Check for image at root level (new) or in metadata (legacy)
-	const coverImage = seriesNode.image ?? (series.metadata?.coverImage as string | undefined);
+	const seriesDescription = series.description;
+	const seriesFranchise = series.franchise;
+	const coverImage = series.image;
 
 	return (
 		<Container size="xl" py="xl">

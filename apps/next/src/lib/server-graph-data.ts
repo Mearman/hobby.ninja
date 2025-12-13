@@ -38,18 +38,9 @@ export {
 	getItemsBySeries,
 	getItemsByBrand,
 	getAllNodes,
-	getNodesByType,
 	getNodeByIdAny,
 	validateGraphData,
 	graphData as staticGraphData,
-	// New grade/scale functions
-	getGradesIndex,
-	getAllGradesFromIndex,
-	getGradeById,
-	getItemsByGrade,
-	getScaleById,
-	getAllScalesFromFiles,
-	getItemsByScale,
 	// Types
 	type GradeData,
 	type ScaleData,

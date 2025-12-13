@@ -22,10 +22,14 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 
-import { getScaleById, getItemsByScale } from "@/lib/server-graph-data";
-// Import lightweight static params for generateStaticParams
-import staticParams from "@/data/static-params.json";
-import { getNodeDisplayName, type BaseNode, type ItemNode } from "@/lib/schemas";
+import {
+	getScaleById,
+	getItemsByScale,
+	getScaleIds,
+	type ScaleData,
+	getNodeDisplayName,
+	type Item,
+} from "@hobby-ninja/data";
 import { itemCard } from "@/styles/components.css";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 
@@ -33,10 +37,11 @@ interface ScalePageProps {
 	params: Promise<{ id: string }>;
 }
 
-// Generate static params for all scales using lightweight IDs file
+// Generate static params for all scales
 export function generateStaticParams() {
-	console.log(`Generating static params for ${staticParams.scaleIds.length} scales`);
-	return staticParams.scaleIds.map(id => ({ id }));
+	const scaleIds = getScaleIds();
+	console.log(`Generating static params for ${scaleIds.length} scales`);
+	return scaleIds.map(id => ({ id }));
 }
 
 // Generate metadata for scale page
@@ -88,7 +93,7 @@ function ScaleBreadcrumbs({ scaleName }: { scaleName: string }) {
 }
 
 // Item card component (server component - no hooks)
-function ItemCard({ item }: { item: ItemNode & { series?: string; grade?: string; scale?: string; brand?: string } }) {
+function ItemCard({ item }: { item: Item & { series?: string; grade?: string; scale?: string; brand?: string } }) {
 	const rawImage = item.images?.[0];
 	// Handle union type: string | { url: string } | unknown
 	const primaryImage = typeof rawImage === "string"
@@ -181,8 +186,10 @@ export default async function ScaleDetailPage({ params }: ScalePageProps) {
 		if (item.grade) {
 			gradeDistribution.set(item.grade, (gradeDistribution.get(item.grade) || 0) + 1);
 		}
-		if (item.series) {
-			seriesDistribution.set(item.series, (seriesDistribution.get(item.series) || 0) + 1);
+		// Use first series ID from array
+		const seriesId = item.seriesIds[0];
+		if (seriesId) {
+			seriesDistribution.set(seriesId, (seriesDistribution.get(seriesId) || 0) + 1);
 		}
 		if (item.releaseDate?.year) {
 			minYear = Math.min(minYear, item.releaseDate.year);

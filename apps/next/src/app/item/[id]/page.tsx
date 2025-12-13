@@ -15,26 +15,31 @@ import { notFound } from "next/navigation";
 
 import { ItemImageGallery } from "./item-image-gallery";
 
-// Import lightweight static params (96KB) instead of full items (19MB) for generateStaticParams
-import staticParams from "@/data/static-params.json";
-import { getItemById, type EnrichedItem } from "@/lib/graph-data";
+// Import from canonical data package
 import {
+	getItemIds,
+	getItemById,
+	getBrandById,
+	getSeriesById,
+	getCategoryById,
+	type Item,
 	getNodeDisplayName,
 	getNodePrice,
 	getNodeReleaseDate,
 	getNodeImages,
 	getNodeAccessories,
-	isItemNode,
-} from "@/lib/schemas";
+	isItem,
+} from "@hobby-ninja/data";
 
 interface ItemPageProps {
 	params: Promise<{ id: string }>;
 }
 
-// Generate static params for items using lightweight IDs file (96KB vs 19MB)
+// Generate static params for items from canonical data package
 export function generateStaticParams() {
-	console.log(`Generating static params for ${staticParams.itemIds.length} items`);
-	return staticParams.itemIds.map(id => ({ id }));
+	const itemIds = getItemIds();
+	console.log(`Generating static params for ${itemIds.length} items`);
+	return itemIds.map(id => ({ id }));
 }
 
 // Generate metadata for each item with type-safe data
@@ -42,7 +47,7 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 	const { id } = await params;
 	const item = getItemById(id);
 
-	if (!item || !isItemNode(item)) {
+	if (!item || !isItem(item)) {
 		return {
 			title: "Item Not Found",
 		};
@@ -57,32 +62,12 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 }
 
 // Helper to get description items as an array
-function getDescriptionItems(item: EnrichedItem): string[] {
+function getDescriptionItems(item: Item): string[] {
 	if (!item.description || !Array.isArray(item.description)) return [];
-	return item.description.map((desc: unknown) => {
-		if (typeof desc === "string") return desc;
-		if (typeof desc === "object" && desc !== null) {
-			const d = desc as { ja?: string; en?: string };
-			// Using || intentionally - fallback on empty string too, not just null/undefined
-			// eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
-			return d.en || d.ja || "";
-		}
-		return "";
-	}).filter(Boolean);
-}
-
-// Helper to get contents items as an array
-function getContentsItems(item: EnrichedItem): string[] {
-	if (!item.contents || !Array.isArray(item.contents)) return [];
-	return item.contents.map((content) => {
-		if (typeof content === "string") return content;
-		if (typeof content === "object" && content !== null) {
-			const c = content as { ja?: string; en?: string };
-			// Using || intentionally - fallback on empty string too, not just null/undefined
-			// eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
-			return c.en || c.ja || "";
-		}
-		return "";
+	return item.description.map((desc) => {
+		// Using || intentionally - fallback on empty string too, not just null/undefined
+		// eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
+		return desc.en || desc.ja || "";
 	}).filter(Boolean);
 }
 
@@ -92,7 +77,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 	const { id } = await params;
 	const item = getItemById(id);
 
-	if (!item || !isItemNode(item)) {
+	if (!item || !isItem(item)) {
 		notFound();
 	}
 
@@ -102,7 +87,11 @@ export default async function ItemPage({ params }: ItemPageProps) {
 	const images = getNodeImages(item);
 	const accessories = getNodeAccessories(item);
 	const descriptionItems = getDescriptionItems(item);
-	const contentsItems = getContentsItems(item);
+
+	// Resolve relationship names from IDs
+	const category = item.categoryIds[0] ? getCategoryById(item.categoryIds[0]) : undefined;
+	const brand = item.brandIds[0] ? getBrandById(item.brandIds[0]) : undefined;
+	const series = item.seriesIds[0] ? getSeriesById(item.seriesIds[0]) : undefined;
 
 	return (
 		<Container size="xl" py="md">
@@ -131,15 +120,15 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
 								{/* Metadata Badges - Clickable links to related entities */}
 								<Group gap="xs">
-									{item.category && item.categoryId && (
-										<Link href={`/category/${item.categoryId}`} style={{ textDecoration: "none" }}>
+									{category && (
+										<Link href={`/category/${category.id}`} style={{ textDecoration: "none" }}>
 											<Badge color="gray" variant="light" style={{ cursor: "pointer" }}>
-												{item.category}
+												{getNodeDisplayName(category)}
 											</Badge>
 										</Link>
 									)}
-									{item.brand && (
-										<Badge color="blue" variant="light">{item.brand}</Badge>
+									{brand && (
+										<Badge color="blue" variant="light">{getNodeDisplayName(brand)}</Badge>
 									)}
 									{item.grade && (
 										<Badge color="green" variant="light">{item.grade}</Badge>
@@ -147,10 +136,10 @@ export default async function ItemPage({ params }: ItemPageProps) {
 									{item.scale && (
 										<Badge color="orange" variant="light">{item.scale}</Badge>
 									)}
-									{item.series && item.seriesId && (
-										<Link href={`/series/${item.seriesId}`} style={{ textDecoration: "none" }}>
+									{series && (
+										<Link href={`/series/${series.id}`} style={{ textDecoration: "none" }}>
 											<Badge color="violet" variant="light" style={{ cursor: "pointer" }}>
-												{item.series}
+												{getNodeDisplayName(series)}
 											</Badge>
 										</Link>
 									)}
@@ -203,36 +192,19 @@ export default async function ItemPage({ params }: ItemPageProps) {
 					</Stack>
 				</SimpleGrid>
 
-				{/* Bottom section - Accessories and Contents */}
-				<SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
-					{/* Accessories */}
-					{accessories.length > 0 && (
-						<Card withBorder={true} p="lg">
-							<Stack gap="sm">
-								<Title order={3} size="h4">Accessories</Title>
-								<Stack gap="xs">
-									{accessories.map((acc, index) => (
-										<Text key={index} size="sm">• {acc}</Text>
-									))}
-								</Stack>
+				{/* Bottom section - Accessories */}
+				{accessories.length > 0 && (
+					<Card withBorder={true} p="lg">
+						<Stack gap="sm">
+							<Title order={3} size="h4">Accessories</Title>
+							<Stack gap="xs">
+								{accessories.map((acc, index) => (
+									<Text key={index} size="sm">• {acc}</Text>
+								))}
 							</Stack>
-						</Card>
-					)}
-
-					{/* Contents */}
-					{contentsItems.length > 0 && (
-						<Card withBorder={true} p="lg">
-							<Stack gap="sm">
-								<Title order={3} size="h4">Box Contents</Title>
-								<Stack gap="xs">
-									{contentsItems.map((content, index) => (
-										<Text key={index} size="sm">• {content}</Text>
-									))}
-								</Stack>
-							</Stack>
-						</Card>
-					)}
-				</SimpleGrid>
+						</Stack>
+					</Card>
+				)}
 			</Stack>
 		</Container>
 	);

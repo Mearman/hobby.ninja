@@ -21,22 +21,27 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 
-import { getGradeById, getItemsByGrade, getGradesIndex } from "@/lib/server-graph-data";
-// Import lightweight static params for generateStaticParams
-import staticParams from "@/data/static-params.json";
-import { getNodeDisplayName, type ItemNode } from "@/lib/schemas";
+import {
+	getGradeById,
+	getItemsByGrade,
+	getGradesIndex,
+	getGradeIds,
+	type GradeData,
+	getNodeDisplayName,
+	type Item,
+} from "@hobby-ninja/data";
 import { itemCard } from "@/styles/components.css";
-import type { GradeData } from "@/lib/server-graph-data";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 
 interface GradePageProps {
 	params: Promise<{ id: string }>;
 }
 
-// Generate static params for all grades using lightweight IDs file
+// Generate static params for all grades
 export function generateStaticParams() {
-	console.log(`Generating static params for ${staticParams.gradeIds.length} grades`);
-	return staticParams.gradeIds.map(id => ({ id }));
+	const gradeIds = getGradeIds();
+	console.log(`Generating static params for ${gradeIds.length} grades`);
+	return gradeIds.map(id => ({ id }));
 }
 
 // Generate metadata for grade page
@@ -50,19 +55,21 @@ export async function generateMetadata({ params }: GradePageProps): Promise<Meta
 		};
 	}
 
+	const gradeName = getNodeDisplayName(grade);
 	return {
-		title: `${grade.name} - Grade - hobby.ninja`,
-		description: `Browse all ${grade.name} grade items. ${grade.itemCount} items available.`,
+		title: `${gradeName} - Grade - hobby.ninja`,
+		description: `Browse all ${gradeName} grade items. ${grade.itemCount} items available.`,
 	};
 }
 
 // Breadcrumbs component
 function GradeBreadcrumbs({ grade }: { grade: GradeData }) {
+	const gradeName = getNodeDisplayName(grade);
 	const breadcrumbItems = [
 		{ title: "Home", href: "/" },
 		{ title: "Database", href: "/database" },
 		{ title: "Grades", href: "/grades" },
-		{ title: grade.name, href: "" },
+		{ title: gradeName, href: "" },
 	];
 
 	return (
@@ -88,7 +95,7 @@ function GradeBreadcrumbs({ grade }: { grade: GradeData }) {
 }
 
 // Item card component (server component - no hooks)
-function ItemCard({ item }: { item: ItemNode & { series?: string; grade?: string; scale?: string; brand?: string } }) {
+function ItemCard({ item }: { item: Item & { series?: string; grade?: string; scale?: string; brand?: string } }) {
 	const rawImage = item.images?.[0];
 	// Handle union type: string | { url: string } | unknown
 	const primaryImage = typeof rawImage === "string"
@@ -219,7 +226,7 @@ export default async function GradeDetailPage({ params }: GradePageProps) {
 				{/* Grade Header */}
 				<Card p="lg" radius="md" withBorder={true}>
 					<Stack gap="md">
-						<Title order={1}>{grade.name}</Title>
+						<Title order={1}>{getNodeDisplayName(grade)}</Title>
 
 						<Group gap="xs">
 							<Badge variant="outline" size="lg">
@@ -238,7 +245,7 @@ export default async function GradeDetailPage({ params }: GradePageProps) {
 								<Text size="sm" c="dimmed">Parent Grade:</Text>
 								<Link href={`/grade/${parentGrade.id}`} style={{ textDecoration: "none" }}>
 									<Badge variant="light" size="md">
-										{parentGrade.name}
+										{getNodeDisplayName(parentGrade)}
 									</Badge>
 								</Link>
 							</Group>
@@ -252,7 +259,7 @@ export default async function GradeDetailPage({ params }: GradePageProps) {
 									{childGrades.map((child) => (
 										<Link key={child.id} href={`/grade/${child.id}`} style={{ textDecoration: "none" }}>
 											<Badge variant="light" color="violet" size="md">
-												{child.name} ({child.itemCount})
+												{getNodeDisplayName(child)} ({child.itemCount})
 											</Badge>
 										</Link>
 									))}

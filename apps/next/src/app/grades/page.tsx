@@ -14,26 +14,11 @@ import {
 import { IconHome } from "@tabler/icons-react";
 import Link from "next/link";
 
-import { getGradesIndex } from "@/lib/server-graph-data";
+import { getGradesIndex, getNodeDisplayName, type GradeData } from "@hobby-ninja/data";
 import { categoryCard } from "@/styles/components.css";
 
-// Types
-interface GradeInfo {
-	id: string;
-	name: string;
-	parent: string | null;
-	itemCount: number;
-}
-
-interface GradesHierarchy {
-	[gradeId: string]: {
-		parent: string | null;
-		children: string[];
-	};
-}
-
 // Grade Card Component
-function GradeCard({ grade, subGrades }: { grade: GradeInfo; subGrades: GradeInfo[] }) {
+function GradeCard({ grade, subGrades }: { grade: GradeData; subGrades: GradeData[] }) {
 	return (
 		<Link
 			href={`/grade/${encodeURIComponent(grade.id)}`}
@@ -44,7 +29,7 @@ function GradeCard({ grade, subGrades }: { grade: GradeInfo; subGrades: GradeInf
 					<Group justify="space-between" align="flex-start">
 						<Stack gap="xs" flex={1}>
 							<Text size="lg" fw={700} lineClamp={1}>
-								{grade.name}
+								{getNodeDisplayName(grade)}
 							</Text>
 							<Badge variant="light" size="sm">
 								{grade.itemCount.toLocaleString()} items
@@ -66,7 +51,7 @@ function GradeCard({ grade, subGrades }: { grade: GradeInfo; subGrades: GradeInf
 										size="xs"
 										style={{ cursor: "pointer" }}
 									>
-										{subGrade.name} ({subGrade.itemCount})
+										{getNodeDisplayName(subGrade)} ({subGrade.itemCount})
 									</Badge>
 								))}
 							</Group>
@@ -85,7 +70,7 @@ function GradeCard({ grade, subGrades }: { grade: GradeInfo; subGrades: GradeInf
 }
 
 // Statistics Component
-function GradeStatistics({ grades }: { grades: GradeInfo[] }) {
+function GradeStatistics({ grades }: { grades: GradeData[] }) {
 	const totalItems = grades.reduce((sum, grade) => sum + grade.itemCount, 0);
 	const parentGrades = grades.filter((g) => g.parent === null);
 	const avgItemsPerGrade = totalItems / grades.length;
@@ -132,7 +117,7 @@ function GradeStatistics({ grades }: { grades: GradeInfo[] }) {
 					Most Popular
 				</Text>
 				<Text size="xl" fw={700} mt="sm">
-					{stats.mostPopular ? stats.mostPopular.name : "N/A"}
+					{stats.mostPopular ? getNodeDisplayName(stats.mostPopular) : "N/A"}
 				</Text>
 			</Card>
 		</SimpleGrid>
@@ -146,7 +131,7 @@ export default function GradesPage() {
 
 	// Separate parent grades and sub-grades
 	const parentGrades = grades.filter((g) => g.parent === null);
-	const subGradesMap = new Map<string, GradeInfo[]>();
+	const subGradesMap = new Map<string, GradeData[]>();
 
 	// Build map of parent grades to their sub-grades
 	for (const grade of grades) {

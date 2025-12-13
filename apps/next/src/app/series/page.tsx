@@ -23,27 +23,28 @@ import {
 import Link from "next/link";
 import React from "react";
 
-import { getAllItems, getAllSeries } from "@/lib/graph-data";
+import {
+	seriesList,
+	getItemById,
+	getNodeDisplayName,
+	type Series,
+	type Item,
+} from "@hobby-ninja/data";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
-import { BaseNode, getNodeDisplayName, isBaseNode } from "@/lib/schemas";
 import { seriesCard, seriesImage } from "@/styles/components.css";
 
 // Define types locally to avoid circular imports
-interface SeriesWithStats extends BaseNode {
-	image?: string;
+interface SeriesWithStats extends Series {
 	itemCount: number;
 	firstYear?: number;
 	lastYear?: number;
 	averagePrice?: number;
 	popularGrades?: string[];
-	description?: string;
-	franchise?: string;
 }
 
 // Enhanced series card component
 function SeriesCard({ series }: { series: SeriesWithStats }) {
-	// Check for image at root level (new) or in metadata (legacy)
-	const coverImage = series.image ?? (series.metadata?.coverImage as string | undefined);
+	const coverImage = series.image;
 	const franchise = series.franchise ?? "Standalone";
 	const yearSpan = series.firstYear && series.lastYear
 		? series.firstYear === series.lastYear
@@ -191,74 +192,52 @@ function SeriesTimeline({ series }: { series: SeriesWithStats[] }) {
 
 // Prepare series data with statistics
 function prepareSeriesData(): SeriesWithStats[] {
-	const seriesData = getAllSeries();
-	const itemsData = getAllItems();
+	// Calculate statistics for each series based on its items
+	const seriesWithStats: SeriesWithStats[] = seriesList.map(series => {
+		// Get all items for this series using itemIds array
+		const items = (series.itemIds || [])
+			.map(itemId => getItemById(itemId))
+			.filter((item): item is Item => item !== undefined);
 
-	const validSeries = seriesData.filter((node) => isBaseNode(node));
-	const validItems = itemsData.filter((node) => isBaseNode(node));
+		let firstYear: number | undefined;
+		let lastYear: number | undefined;
+		let totalPrice = 0;
+		let priceCount = 0;
+		const grades = new Set<string>();
 
-	// Count items per series and gather statistics
-	const seriesStats = new Map<string, {
-		count: number;
-		firstYear: number;
-		lastYear: number;
-		totalPrice: number;
-		priceCount: number;
-		grades: Set<string>;
-		items: BaseNode[];
-	}>();
-
-	for (const item of validItems) {
-		if ("series" in item && typeof item.series === "string") {
-			if (!seriesStats.has(item.series)) {
-				seriesStats.set(item.series, {
-					count: 0,
-					firstYear: 9999,
-					lastYear: 0,
-					totalPrice: 0,
-					priceCount: 0,
-					grades: new Set(),
-					items: [],
-				});
-			}
-
-			const stats = seriesStats.get(item.series)!;
-			stats.count++;
-			stats.items.push(item);
-
+		// Calculate statistics from items
+		for (const item of items) {
 			// Track years
 			const year = item.releaseDate?.year;
-			if (year) {
-				stats.firstYear = Math.min(stats.firstYear, year);
-				stats.lastYear = Math.max(stats.lastYear, year);
+			if (year && year > 0) {
+				if (firstYear === undefined || year < firstYear) {
+					firstYear = year;
+				}
+				if (lastYear === undefined || year > lastYear) {
+					lastYear = year;
+				}
 			}
 
 			// Track prices
 			const price = item.price?.amount;
-			if (price) {
-				stats.totalPrice += price;
-				stats.priceCount++;
+			if (price !== undefined) {
+				totalPrice += price;
+				priceCount++;
 			}
 
 			// Track grades
 			if (item.grade) {
-				stats.grades.add(item.grade);
+				grades.add(item.grade);
 			}
 		}
-	}
 
-	// Attach statistics to series
-	const seriesWithStats: SeriesWithStats[] = validSeries.map(seriesItem => {
-		const stats = seriesStats.get(seriesItem.id);
 		return {
-			...seriesItem,
-			itemCount: stats?.count ?? 0,
-			firstYear: stats?.firstYear && stats.firstYear !== 9999 ? stats.firstYear : undefined,
-			lastYear: stats?.lastYear && stats.lastYear !== 0 ? stats.lastYear : undefined,
-			averagePrice: stats && stats.priceCount > 0 ? stats.totalPrice / stats.priceCount : undefined,
-			popularGrades: stats ? [...stats.grades].slice(0, 3) : [],
-			franchise: seriesItem.franchise,
-			description: seriesItem.description,
+			...series,
+			itemCount: items.length,
+			firstYear,
+			lastYear,
+			averagePrice: priceCount > 0 ? totalPrice / priceCount : undefined,
+			popularGrades: [...grades].slice(0, 3),
 		};
 	});
 
