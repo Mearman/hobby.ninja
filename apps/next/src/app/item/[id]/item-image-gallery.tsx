@@ -7,7 +7,12 @@ import type { EmblaCarouselType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 
-import { useUserPreferences } from "@/hooks/use-user-preferences";
+import { useUserPreferences, type UserPreferences } from "../../../hooks/use-user-preferences";
+
+// UI Constants
+const THUMBNAIL_OPACITY_SELECTED = 1;
+const THUMBNAIL_OPACITY_UNSELECTED = 0.7;
+const FULLSCREEN_THUMBNAIL_OPACITY_UNSELECTED = 0.6;
 
 interface ItemImageGalleryProps {
 	images: string[];
@@ -18,7 +23,9 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 	const [selectedIndex, setSelectedIndex] = useState(0);
 	const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);
 	const [fullscreenOpen, setFullscreenOpen] = useState(false);
-	const { preferences, updatePreference, isLoaded } = useUserPreferences();
+	const userPrefs = useUserPreferences();
+	const preferences: UserPreferences = userPrefs.preferences;
+	const { updatePreference, isLoaded } = userPrefs;
 	const autoplayRef = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }));
 
 	// Memoize plugins array to prevent recreation on every render
@@ -182,7 +189,7 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 									: "1px solid var(--mantine-color-gray-3)",
 								borderRadius: 4,
 								overflow: "hidden",
-								opacity: selectedIndex === index ? 1 : 0.7,
+								opacity: selectedIndex === index ? THUMBNAIL_OPACITY_SELECTED : THUMBNAIL_OPACITY_UNSELECTED,
 								transition: "all 0.2s ease",
 							}}
 						>
@@ -304,7 +311,7 @@ export function ItemImageGallery({ images, displayName }: ItemImageGalleryProps)
 										: "1px solid var(--mantine-color-gray-6)",
 									borderRadius: 4,
 									overflow: "hidden",
-									opacity: selectedIndex === index ? 1 : 0.6,
+									opacity: selectedIndex === index ? THUMBNAIL_OPACITY_SELECTED : FULLSCREEN_THUMBNAIL_OPACITY_UNSELECTED,
 									transition: "all 0.2s ease",
 								}}
 							>

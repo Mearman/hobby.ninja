@@ -7,12 +7,13 @@
  * Usage: pnpm tsx scripts/update-brand-images.ts
  */
 
-import * as fs from "node:fs";
-import * as path from "node:path";
+import { readFileSync, readdirSync, writeFileSync } from "node:fs";
+import path from "node:path";
 
 const BRANDS_JSON_PATH = "apps/next/public/data/brands.json";
 const IMAGES_DIR = "apps/next/public/images/brands";
 const IMAGE_PATH_PREFIX = "/images/brands/";
+const SUMMARY_SEPARATOR_LENGTH = 50;
 
 interface BrandNode {
 	id: string;
@@ -28,10 +29,10 @@ interface BrandData {
 
 function main() {
 	// Load brand data
-	const brandData: BrandData = JSON.parse(fs.readFileSync(BRANDS_JSON_PATH, "utf-8"));
+	const brandData = JSON.parse(readFileSync(BRANDS_JSON_PATH, "utf8")) as BrandData;
 
 	// Get list of image files
-	const imageFiles = fs.readdirSync(IMAGES_DIR);
+	const imageFiles = readdirSync(IMAGES_DIR);
 	const imageMap = new Map<string, string>();
 
 	// Create a map of base filename to full filename (with extension)
@@ -40,8 +41,8 @@ function main() {
 		imageMap.set(baseName, file);
 	}
 
-	console.log(`Found ${imageFiles.length} image files`);
-	console.log(`Found ${brandData.nodes.length} brands\n`);
+	console.log(`Found ${String(imageFiles.length)} image files`);
+	console.log(`Found ${String(brandData.nodes.length)} brands\n`);
 
 	let updated = 0;
 	let alreadyHasImage = 0;
@@ -66,14 +67,14 @@ function main() {
 	}
 
 	// Write updated data
-	fs.writeFileSync(BRANDS_JSON_PATH, JSON.stringify(brandData, null, "\t") + "\n");
+	writeFileSync(BRANDS_JSON_PATH, JSON.stringify(brandData, null, "\t") + "\n");
 
-	console.log("\n" + "=".repeat(50));
+	console.log("\n" + "=".repeat(SUMMARY_SEPARATOR_LENGTH));
 	console.log("SUMMARY");
-	console.log("=".repeat(50));
-	console.log(`Already had image: ${alreadyHasImage}`);
-	console.log(`Updated with image: ${updated}`);
-	console.log(`No image found: ${noImageFound}`);
+	console.log("=".repeat(SUMMARY_SEPARATOR_LENGTH));
+	console.log(`Already had image: ${String(alreadyHasImage)}`);
+	console.log(`Updated with image: ${String(updated)}`);
+	console.log(`No image found: ${String(noImageFound)}`);
 }
 
 main();

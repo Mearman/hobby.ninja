@@ -7,13 +7,20 @@
  * Usage: pnpm tsx scripts/download-series-images.ts
  */
 
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import path from "node:path";
+
 import { chromium, type Page } from "@playwright/test";
-import * as fs from "node:fs";
-import * as path from "node:path";
 
 const SERIES_JSON_PATH = "apps/next/public/data/series.json";
 const OUTPUT_DIR = "apps/next/public/images/series";
 const IMAGE_SELECTOR = "#series > div.l-wrap > main > div > div.pg-brand__brand > div > img";
+const SUMMARY_SEPARATOR_LENGTH = 50;
+const SLOW_MO_MS = 100;
+const NAVIGATION_TIMEOUT_MS = 30_000;
+const SELECTOR_TIMEOUT_MS = 10_000;
+const DELAY_BETWEEN_REQUESTS_MS = 500;
+const BYTES_PER_KB = 1024;
 
 interface SeriesNode {
 	id: string;
@@ -29,19 +36,19 @@ interface SeriesData {
 async function downloadImage(page: Page, imageUrl: string, outputPath: string): Promise<boolean> {
 	try {
 		// Navigate to image URL directly - this keeps the CloudFront session cookies
-		const response = await page.goto(imageUrl, { waitUntil: "load", timeout: 30000 });
+		const response = await page.goto(imageUrl, { waitUntil: "load", timeout: NAVIGATION_TIMEOUT_MS });
 
-		if (!response || !response.ok()) {
-			console.error(`  Failed to fetch image: ${response?.status()}`);
+		if (!response?.ok()) {
+			console.error(`  Failed to fetch image: ${String(response?.status())}`);
 			return false;
 		}
 
 		const buffer = await response.body();
-		fs.writeFileSync(outputPath, buffer);
-		console.log(`  Saved: ${outputPath} (${(buffer.length / 1024).toFixed(1)} KB)`);
+		writeFileSync(outputPath, buffer);
+		console.log(`  Saved: ${outputPath} (${(buffer.length / BYTES_PER_KB).toFixed(1)} KB)`);
 		return true;
 	} catch (error) {
-		console.error(`  Error downloading image: ${error}`);
+		console.error(`  Error downloading image: ${String(error)}`);
 		return false;
 	}
 }
@@ -63,24 +70,24 @@ function sanitizeFilename(id: string): string {
 
 async function main() {
 	// Load series data
-	const seriesData: SeriesData = JSON.parse(fs.readFileSync(SERIES_JSON_PATH, "utf-8"));
+	const seriesData = JSON.parse(readFileSync(SERIES_JSON_PATH, "utf8")) as SeriesData;
 
 	// Filter to series that need images (have URL but no image)
 	const seriesToProcess = seriesData.nodes.filter(
-		(s) => s.url && (!s.image || s.image === "")
+		(s) => s.url && (!s.image || s.image === ""),
 	);
 
-	console.log(`Found ${seriesToProcess.length} series needing images\n`);
+	console.log(`Found ${String(seriesToProcess.length)} series needing images\n`);
 
 	// Ensure output directory exists
-	if (!fs.existsSync(OUTPUT_DIR)) {
-		fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+	if (!existsSync(OUTPUT_DIR)) {
+		mkdirSync(OUTPUT_DIR, { recursive: true });
 	}
 
 	// Launch browser
 	const browser = await chromium.launch({
 		headless: false, // Set to true for automated runs
-		slowMo: 100
+		slowMo: SLOW_MO_MS,
 	});
 	const context = await browser.newContext({
 		userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -90,7 +97,8 @@ async function main() {
 	const results: { success: string[]; failed: string[] } = { success: [], failed: [] };
 
 	for (const series of seriesToProcess) {
-		const seriesUrl = series.url!;
+		if (!series.url) continue;
+		const seriesUrl = series.url;
 		const filename = sanitizeFilename(series.id);
 
 		console.log(`\nProcessing: ${series.id}`);
@@ -98,10 +106,10 @@ async function main() {
 
 		try {
 			// Navigate to series page
-			await page.goto(seriesUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
+			await page.goto(seriesUrl, { waitUntil: "domcontentloaded", timeout: NAVIGATION_TIMEOUT_MS });
 
 			// Wait for the image element
-			const imgElement = await page.waitForSelector(IMAGE_SELECTOR, { timeout: 10000 }).catch(() => null);
+			const imgElement = await page.waitForSelector(IMAGE_SELECTOR, { timeout: SELECTOR_TIMEOUT_MS }).catch(() => null);
 
 			if (!imgElement) {
 				console.log(`  No image found at selector`);
@@ -118,14 +126,14 @@ async function main() {
 				continue;
 			}
 
-			console.log(`  Found image: ${imgSrc.substring(0, 80)}...`);
+			console.log(`  Found image: ${imgSrc.slice(0, 80)}...`);
 
 			// Determine file extension and output path
 			const ext = getFileExtension(imgSrc);
 			const outputPath = path.join(OUTPUT_DIR, `${filename}${ext}`);
 
 			// Check if file already exists
-			if (fs.existsSync(outputPath)) {
+			if (existsSync(outputPath)) {
 				console.log(`  Already exists: ${outputPath}`);
 				results.success.push(series.id);
 				continue;
@@ -141,10 +149,10 @@ async function main() {
 			}
 
 			// Small delay between requests
-			await page.waitForTimeout(500);
+			await page.waitForTimeout(DELAY_BETWEEN_REQUESTS_MS);
 
 		} catch (error) {
-			console.error(`  Error processing ${series.id}: ${error}`);
+			console.error(`  Error processing ${series.id}: ${String(error)}`);
 			results.failed.push(series.id);
 		}
 	}
@@ -152,16 +160,18 @@ async function main() {
 	await browser.close();
 
 	// Print summary
-	console.log("\n" + "=".repeat(50));
+	console.log("\n" + "=".repeat(SUMMARY_SEPARATOR_LENGTH));
 	console.log("SUMMARY");
-	console.log("=".repeat(50));
-	console.log(`Success: ${results.success.length}`);
-	console.log(`Failed: ${results.failed.length}`);
+	console.log("=".repeat(SUMMARY_SEPARATOR_LENGTH));
+	console.log(`Success: ${String(results.success.length)}`);
+	console.log(`Failed: ${String(results.failed.length)}`);
 
 	if (results.failed.length > 0) {
 		console.log("\nFailed series:");
-		results.failed.forEach((id) => console.log(`  - ${id}`));
+		for (const id of results.failed) {
+			console.log(`  - ${id}`);
+		}
 	}
 }
 
-main().catch(console.error);
+await main();

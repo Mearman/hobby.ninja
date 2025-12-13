@@ -7,11 +7,18 @@
  * Usage: pnpm tsx scripts/download-brand-images.ts
  */
 
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import path from "node:path";
+
 import { chromium, type Page } from "@playwright/test";
-import * as fs from "node:fs";
-import * as path from "node:path";
 
 const BRANDS_JSON_PATH = "apps/next/public/data/brands.json";
+const SUMMARY_SEPARATOR_LENGTH = 50;
+const SLOW_MO_MS = 100;
+const NAVIGATION_TIMEOUT_MS = 30_000;
+const SELECTOR_TIMEOUT_MS = 10_000;
+const DELAY_BETWEEN_REQUESTS_MS = 500;
+const BYTES_PER_KB = 1024;
 const OUTPUT_DIR = "apps/next/public/images/brands";
 // Brand pages use a similar structure to series pages
 const IMAGE_SELECTOR = ".pg-brand__brand img";
@@ -30,19 +37,19 @@ interface BrandData {
 async function downloadImage(page: Page, imageUrl: string, outputPath: string): Promise<boolean> {
 	try {
 		// Navigate to image URL directly - this keeps the CloudFront session cookies
-		const response = await page.goto(imageUrl, { waitUntil: "load", timeout: 30000 });
+		const response = await page.goto(imageUrl, { waitUntil: "load", timeout: NAVIGATION_TIMEOUT_MS });
 
-		if (!response || !response.ok()) {
-			console.error(`  Failed to fetch image: ${response?.status()}`);
+		if (!response?.ok()) {
+			console.error(`  Failed to fetch image: ${String(response?.status())}`);
 			return false;
 		}
 
 		const buffer = await response.body();
-		fs.writeFileSync(outputPath, buffer);
-		console.log(`  Saved: ${outputPath} (${(buffer.length / 1024).toFixed(1)} KB)`);
+		writeFileSync(outputPath, buffer);
+		console.log(`  Saved: ${outputPath} (${(buffer.length / BYTES_PER_KB).toFixed(1)} KB)`);
 		return true;
 	} catch (error) {
-		console.error(`  Error downloading image: ${error}`);
+		console.error(`  Error downloading image: ${String(error)}`);
 		return false;
 	}
 }
@@ -60,24 +67,24 @@ function sanitizeFilename(id: string): string {
 
 async function main() {
 	// Load brand data
-	const brandData: BrandData = JSON.parse(fs.readFileSync(BRANDS_JSON_PATH, "utf-8"));
+	const brandData = JSON.parse(readFileSync(BRANDS_JSON_PATH, "utf8")) as BrandData;
 
 	// Filter to brands that need images (have URL but no image)
 	const brandsToProcess = brandData.nodes.filter(
-		(b) => b.url && (!b.image || b.image === "")
+		(b) => b.url && (!b.image || b.image === ""),
 	);
 
-	console.log(`Found ${brandsToProcess.length} brands needing images\n`);
+	console.log(`Found ${String(brandsToProcess.length)} brands needing images\n`);
 
 	// Ensure output directory exists
-	if (!fs.existsSync(OUTPUT_DIR)) {
-		fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+	if (!existsSync(OUTPUT_DIR)) {
+		mkdirSync(OUTPUT_DIR, { recursive: true });
 	}
 
 	// Launch browser
 	const browser = await chromium.launch({
 		headless: false, // Set to true for automated runs
-		slowMo: 100
+		slowMo: SLOW_MO_MS,
 	});
 	const context = await browser.newContext({
 		userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -87,7 +94,8 @@ async function main() {
 	const results: { success: string[]; failed: string[] } = { success: [], failed: [] };
 
 	for (const brand of brandsToProcess) {
-		const brandUrl = brand.url!;
+		if (!brand.url) continue;
+		const brandUrl = brand.url;
 		const filename = sanitizeFilename(brand.id);
 
 		console.log(`\nProcessing: ${brand.id}`);
@@ -95,7 +103,7 @@ async function main() {
 
 		try {
 			// Navigate to brand page
-			await page.goto(brandUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
+			await page.goto(brandUrl, { waitUntil: "domcontentloaded", timeout: NAVIGATION_TIMEOUT_MS });
 
 			// Check if it's a 404 page
 			const title = await page.title();
@@ -106,7 +114,7 @@ async function main() {
 			}
 
 			// Wait for the image element
-			const imgElement = await page.waitForSelector(IMAGE_SELECTOR, { timeout: 10000 }).catch(() => null);
+			const imgElement = await page.waitForSelector(IMAGE_SELECTOR, { timeout: SELECTOR_TIMEOUT_MS }).catch(() => null);
 
 			if (!imgElement) {
 				console.log(`  No image found at selector`);
@@ -123,14 +131,14 @@ async function main() {
 				continue;
 			}
 
-			console.log(`  Found image: ${imgSrc.substring(0, 80)}...`);
+			console.log(`  Found image: ${imgSrc.slice(0, 80)}...`);
 
 			// Determine file extension and output path
 			const ext = getFileExtension(imgSrc);
 			const outputPath = path.join(OUTPUT_DIR, `${filename}${ext}`);
 
 			// Check if file already exists
-			if (fs.existsSync(outputPath)) {
+			if (existsSync(outputPath)) {
 				console.log(`  Already exists: ${outputPath}`);
 				results.success.push(brand.id);
 				continue;
@@ -146,10 +154,10 @@ async function main() {
 			}
 
 			// Small delay between requests
-			await page.waitForTimeout(500);
+			await page.waitForTimeout(DELAY_BETWEEN_REQUESTS_MS);
 
 		} catch (error) {
-			console.error(`  Error processing ${brand.id}: ${error}`);
+			console.error(`  Error processing ${brand.id}: ${String(error)}`);
 			results.failed.push(brand.id);
 		}
 	}
@@ -157,16 +165,18 @@ async function main() {
 	await browser.close();
 
 	// Print summary
-	console.log("\n" + "=".repeat(50));
+	console.log("\n" + "=".repeat(SUMMARY_SEPARATOR_LENGTH));
 	console.log("SUMMARY");
-	console.log("=".repeat(50));
-	console.log(`Success: ${results.success.length}`);
-	console.log(`Failed: ${results.failed.length}`);
+	console.log("=".repeat(SUMMARY_SEPARATOR_LENGTH));
+	console.log(`Success: ${String(results.success.length)}`);
+	console.log(`Failed: ${String(results.failed.length)}`);
 
 	if (results.failed.length > 0) {
 		console.log("\nFailed brands:");
-		results.failed.forEach((id) => console.log(`  - ${id}`));
+		for (const id of results.failed) {
+			console.log(`  - ${id}`);
+		}
 	}
 }
 
-main().catch(console.error);
+await main();
