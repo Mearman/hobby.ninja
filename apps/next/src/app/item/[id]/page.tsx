@@ -14,6 +14,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ItemImageGallery } from "./item-image-gallery";
+import { LazyPdfViewer } from "./lazy-pdf-viewer";
 
 // Import from canonical data package
 import {
@@ -286,7 +287,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 								</Group>
 							</Group>
 
-							{/* Embedded PDF Viewers - Show all PDFs */}
+							{/* Embedded PDF Viewers - Lazy loaded */}
 							{manual.pdfs && manual.pdfs.length > 0 && (
 								<Stack gap="md">
 									{manual.pdfs.map((pdf, index) => {
@@ -298,15 +299,9 @@ export default async function ItemPage({ params }: ItemPageProps) {
 												{manual.pdfs && manual.pdfs.length > 1 && (
 													<Text fw={500} size="sm">{pdfName}</Text>
 												)}
-												<iframe
+												<LazyPdfViewer
 													src={pdfPath}
 													title={`${getNodeDisplayName(manual)} - ${pdfName}`}
-													style={{
-														width: "100%",
-														height: 800,
-														border: "1px solid var(--mantine-color-gray-3)",
-														borderRadius: 4,
-													}}
 												/>
 											</Stack>
 										);
