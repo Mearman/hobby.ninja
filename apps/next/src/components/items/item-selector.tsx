@@ -1,5 +1,6 @@
 "use client";
 
+import { type Item, getNodeDisplayName } from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -23,7 +24,6 @@ import { useState } from "react";
 import { CustomImage } from "@/components/ui/custom-image";
 import { getBrandImage } from "@/lib/image-lookup";
 import { createPlaceholderSvg } from "@/lib/image-placeholders";
-import { type Item, getNodeDisplayName } from "@hobby-ninja/data";
 
 interface ItemSelectorProps {
   items: Item[];
@@ -97,7 +97,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 								<Table.Td fw={500}>Series</Table.Td>
 								{comparisonItems.map((item) => (
 									<Table.Td key={`series-${item.id}`} ta="center">
-										<Text size="sm">{item.series ?? "-"}</Text>
+										<Text size="sm">{item.seriesIds.length > 0 ? item.seriesIds.join(", ") : "-"}</Text>
 									</Table.Td>
 								))}
 							</Table.Tr>
@@ -107,16 +107,27 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 								<Table.Td fw={500}>Brand</Table.Td>
 								{comparisonItems.map((item) => (
 									<Table.Td key={`brand-${item.id}`} ta="center">
-										{item.brand ? (
-											<Badge size="sm" variant="outline" leftSection={
-												getBrandImage(item.brand) ? (
-													<img
-														src={getBrandImage(item.brand)}
-														alt=""
-														style={{ width: 12, height: 12, objectFit: "contain" }}
-													/>
-												) : null
-											}>{item.brand}</Badge>
+										{item.brandIds.length > 0 ? (
+											<Group gap="xs" justify="center">
+												{item.brandIds.map((brandId) => (
+													<Badge
+														key={brandId}
+														size="sm"
+														variant="outline"
+														leftSection={
+															getBrandImage(brandId) ? (
+																<img
+																	src={getBrandImage(brandId)}
+																	alt=""
+																	style={{ width: 12, height: 12, objectFit: "contain" }}
+																/>
+															) : null
+														}
+													>
+														{brandId}
+													</Badge>
+												))}
+											</Group>
 										) : (
 											"-"
 										)}
@@ -153,7 +164,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 								<Table.Td fw={500}>Category</Table.Td>
 								{comparisonItems.map((item) => (
 									<Table.Td key={`category-${item.id}`} ta="center">
-										<Text size="sm">{item.category ?? "-"}</Text>
+										<Text size="sm">{item.categoryIds.length > 0 ? item.categoryIds.join(", ") : "-"}</Text>
 									</Table.Td>
 								))}
 							</Table.Tr>
@@ -175,7 +186,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 								<Table.Td fw={500}>Release Date</Table.Td>
 								{comparisonItems.map((item) => (
 									<Table.Td key={`date-${item.id}`} ta="center">
-										<Text size="sm">{typeof item.releaseDate === "string" ? item.releaseDate : "-"}</Text>
+										<Text size="sm">{item.releaseDate?.ja ?? "-"}</Text>
 									</Table.Td>
 								))}
 							</Table.Tr>
@@ -327,22 +338,31 @@ export function SelectableItemCard({
 						</Group>
 					</Box>
 				</Table.Td>
-				<Table.Td>{item.series ?? "-"}</Table.Td>
+				<Table.Td>{item.seriesIds.length > 0 ? item.seriesIds.join(", ") : "-"}</Table.Td>
 				<Table.Td>{item.grade ?? "-"}</Table.Td>
 				<Table.Td>{item.scale ?? "-"}</Table.Td>
 				<Table.Td>
-					{item.brand ? (
-						<Badge variant="outline" size="sm" leftSection={
-							getBrandImage(item.brand) ? (
-								<img
-									src={getBrandImage(item.brand)}
-									alt=""
-									style={{ width: 12, height: 12, objectFit: "contain" }}
-								/>
-							) : null
-						}>
-							{item.brand}
-						</Badge>
+					{item.brandIds.length > 0 ? (
+						<Group gap="xs">
+							{item.brandIds.map((brandId) => (
+								<Badge
+									key={brandId}
+									variant="outline"
+									size="sm"
+									leftSection={
+										getBrandImage(brandId) ? (
+											<img
+												src={getBrandImage(brandId)}
+												alt=""
+												style={{ width: 12, height: 12, objectFit: "contain" }}
+											/>
+										) : null
+									}
+								>
+									{brandId}
+								</Badge>
+							))}
+						</Group>
 					) : (
 						"-"
 					)}
@@ -394,9 +414,9 @@ export function SelectableItemCard({
 				<Text size="sm" fw={500} lineClamp={2}>
 					{getNodeDisplayName(item)}
 				</Text>
-				{item.series && (
+				{item.seriesIds.length > 0 && (
 					<Text size="xs" c="dimmed" mt={2}>
-						{item.series}
+						{item.seriesIds.join(", ")}
 					</Text>
 				)}
 				<Group gap={4} mt={8} wrap="wrap">
@@ -406,17 +426,24 @@ export function SelectableItemCard({
 					{item.scale && (
 						<Badge size="xs" variant="light">{item.scale}</Badge>
 					)}
-					{item.brand && (
-						<Badge size="xs" variant="outline" leftSection={
-							getBrandImage(item.brand) ? (
-								<img
-									src={getBrandImage(item.brand)}
-									alt=""
-									style={{ width: 10, height: 10, objectFit: "contain" }}
-								/>
-							) : null
-						}>{item.brand}</Badge>
-					)}
+					{item.brandIds.map((brandId) => (
+						<Badge
+							key={brandId}
+							size="xs"
+							variant="outline"
+							leftSection={
+								getBrandImage(brandId) ? (
+									<img
+										src={getBrandImage(brandId)}
+										alt=""
+										style={{ width: 10, height: 10, objectFit: "contain" }}
+									/>
+								) : null
+							}
+						>
+							{brandId}
+						</Badge>
+					))}
 				</Group>
 			</Box>
 		</Card>
