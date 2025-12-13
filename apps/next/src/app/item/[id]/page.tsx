@@ -210,9 +210,17 @@ export default async function ItemPage({ params }: ItemPageProps) {
 				)}
 
 				{/* Assembly Manual - Full Width with Embedded PDF */}
-				{manual && (
-					<Card withBorder p="lg" style={{ overflow: "visible" }}>
-						<Stack gap="md">
+				{manual && manual.pdfs && manual.pdfs.length > 0 && (
+					<PdfAccordion
+						pdfs={manual.pdfs.map((pdf, index) => {
+							const suffix = index === 0 ? "" : `_${index + 1}`;
+							return {
+								name: pdf.name.en || pdf.name.ja,
+								src: `/manuals/${manual.id}/${manual.id}${suffix}.pdf`,
+								title: `${getNodeDisplayName(manual)} - ${pdf.name.en || pdf.name.ja}`,
+							};
+						})}
+						header={
 							<Group justify="space-between" align="flex-start" wrap="wrap">
 								<Group gap="md" align="flex-start">
 									{manual.thumbnailImage && (
@@ -286,22 +294,8 @@ export default async function ItemPage({ params }: ItemPageProps) {
 									})}
 								</Group>
 							</Group>
-
-							{/* PDF Accordion - loads only when expanded */}
-							{manual.pdfs && manual.pdfs.length > 0 && (
-								<PdfAccordion
-									pdfs={manual.pdfs.map((pdf, index) => {
-										const suffix = index === 0 ? "" : `_${index + 1}`;
-										return {
-											name: pdf.name.en || pdf.name.ja,
-											src: `/manuals/${manual.id}/${manual.id}${suffix}.pdf`,
-											title: `${getNodeDisplayName(manual)} - ${pdf.name.en || pdf.name.ja}`,
-										};
-									})}
-								/>
-							)}
-						</Stack>
-					</Card>
+						}
+					/>
 				)}
 			</Stack>
 		</Container>

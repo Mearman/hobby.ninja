@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { Accordion, Box, Skeleton, ActionIcon, Group, Tooltip, Switch } from "@mantine/core";
+import { useState, useEffect } from "react";
+import { Accordion, Box, Skeleton, ActionIcon, Group, Tooltip, Switch, Card, Stack } from "@mantine/core";
 import { IconDownload, IconExternalLink, IconFileTypePdf, IconArrowsHorizontal } from "@tabler/icons-react";
 
 const STORAGE_KEY = "pdf-full-width-preference";
@@ -15,6 +15,7 @@ interface PdfItem {
 interface PdfAccordionProps {
 	pdfs: PdfItem[];
 	height?: number;
+	header?: React.ReactNode;
 }
 
 function useFullWidthPreference() {
@@ -38,87 +39,7 @@ function useFullWidthPreference() {
 	return { fullWidth, toggleFullWidth, isHydrated };
 }
 
-interface FullWidthPdfProps {
-	src: string;
-	title: string;
-	height: number;
-	isLoaded: boolean;
-	onLoad: () => void;
-	fullWidth: boolean;
-}
-
-function FullWidthPdf({ src, title, height, isLoaded, onLoad, fullWidth }: FullWidthPdfProps) {
-	const containerRef = useRef<HTMLDivElement>(null);
-	const [offset, setOffset] = useState({ left: 0, width: "100%" });
-
-	useEffect(() => {
-		if (!fullWidth || !containerRef.current) {
-			setOffset({ left: 0, width: "100%" });
-			return;
-		}
-
-		const updateOffset = () => {
-			const el = containerRef.current;
-			if (!el) return;
-
-			const rect = el.getBoundingClientRect();
-			const viewportWidth = window.innerWidth;
-
-			setOffset({
-				left: -rect.left,
-				width: `${viewportWidth}px`,
-			});
-		};
-
-		updateOffset();
-		window.addEventListener("resize", updateOffset);
-		return () => window.removeEventListener("resize", updateOffset);
-	}, [fullWidth]);
-
-	return (
-		<Box ref={containerRef} pos="relative" style={{ overflow: "visible" }}>
-			<Box
-				pos="relative"
-				style={
-					fullWidth
-						? {
-								marginLeft: offset.left,
-								width: offset.width,
-								padding: "0 1rem",
-								transition: "margin-left 0.2s ease-out, width 0.2s ease-out",
-							}
-						: {}
-				}
-			>
-				{!isLoaded && (
-					<Skeleton
-						height={height}
-						radius={4}
-						pos="absolute"
-						top={0}
-						left={fullWidth ? "1rem" : 0}
-						right={fullWidth ? "1rem" : 0}
-					/>
-				)}
-				<iframe
-					src={src}
-					title={title}
-					onLoad={onLoad}
-					style={{
-						width: "100%",
-						height,
-						border: "1px solid var(--mantine-color-default-border)",
-						borderRadius: 4,
-						opacity: isLoaded ? 1 : 0,
-						transition: "opacity 0.2s ease-in-out",
-					}}
-				/>
-			</Box>
-		</Box>
-	);
-}
-
-export function PdfAccordion({ pdfs, height = 800 }: PdfAccordionProps) {
+export function PdfAccordion({ pdfs, height = 800, header }: PdfAccordionProps) {
 	const [expandedItems, setExpandedItems] = useState<string[]>([]);
 	const [loadedItems, setLoadedItems] = useState<Set<string>>(new Set());
 	const { fullWidth, toggleFullWidth, isHydrated } = useFullWidthPreference();
@@ -131,89 +52,120 @@ export function PdfAccordion({ pdfs, height = 800 }: PdfAccordionProps) {
 		setLoadedItems((prev) => new Set(prev).add(id));
 	};
 
+	// Full width container styles
+	const fullWidthStyles = fullWidth
+		? {
+				marginLeft: "calc(-50vw + 50%)",
+				marginRight: "calc(-50vw + 50%)",
+				width: "100vw",
+				paddingLeft: "1rem",
+				paddingRight: "1rem",
+			}
+		: {};
+
 	return (
-		<Box style={{ overflow: "visible" }}>
-			{/* Preference toggle */}
-			<Group justify="flex-end" mb="xs">
-				<Tooltip label="Expand PDFs to full page width" position="left">
-					<Group gap="xs">
-						<IconArrowsHorizontal size={16} style={{ opacity: 0.6 }} />
-						<Switch
-							size="sm"
-							checked={isHydrated ? fullWidth : false}
-							onChange={toggleFullWidth}
-							label="Full width"
-							styles={{ label: { paddingLeft: 8, fontSize: "var(--mantine-font-size-sm)" } }}
-						/>
+		<Box style={fullWidthStyles}>
+			<Card withBorder p="lg">
+				<Stack gap="md">
+					{/* Header content passed from parent */}
+					{header}
+
+					{/* Preference toggle */}
+					<Group justify="flex-end">
+						<Tooltip label="Expand manual section to full page width" position="left">
+							<Group gap="xs">
+								<IconArrowsHorizontal size={16} style={{ opacity: 0.6 }} />
+								<Switch
+									size="sm"
+									checked={isHydrated ? fullWidth : false}
+									onChange={toggleFullWidth}
+									label="Full width"
+									styles={{ label: { paddingLeft: 8, fontSize: "var(--mantine-font-size-sm)" } }}
+								/>
+							</Group>
+						</Tooltip>
 					</Group>
-				</Tooltip>
-			</Group>
 
-			<Accordion
-				multiple
-				value={expandedItems}
-				onChange={handleChange}
-				variant="separated"
-				radius="md"
-				styles={{
-					item: { overflow: "visible" },
-					panel: { overflow: "visible" },
-					content: { overflow: "visible" },
-				}}
-			>
-				{pdfs.map((pdf, index) => {
-					const itemId = `pdf-${index}`;
-					const isExpanded = expandedItems.includes(itemId);
-					const isLoaded = loadedItems.has(itemId);
+					{/* PDF Accordion */}
+					<Accordion
+						multiple
+						value={expandedItems}
+						onChange={handleChange}
+						variant="separated"
+						radius="md"
+					>
+						{pdfs.map((pdf, index) => {
+							const itemId = `pdf-${index}`;
+							const isExpanded = expandedItems.includes(itemId);
+							const isLoaded = loadedItems.has(itemId);
 
-					return (
-						<Accordion.Item key={index} value={itemId}>
-							<Accordion.Control icon={<IconFileTypePdf size={20} />}>
-								<Group justify="space-between" wrap="nowrap" pr="md">
-									<span>{pdf.name}</span>
-									<Group gap="xs" onClick={(e) => e.stopPropagation()}>
-										<ActionIcon
-											component="a"
-											href={pdf.src}
-											download
-											variant="subtle"
-											color="gray"
-											size="sm"
-											title="Download PDF"
-										>
-											<IconDownload size={16} />
-										</ActionIcon>
-										<ActionIcon
-											component="a"
-											href={pdf.src}
-											target="_blank"
-											rel="noopener noreferrer"
-											variant="subtle"
-											color="gray"
-											size="sm"
-											title="Open in new tab"
-										>
-											<IconExternalLink size={16} />
-										</ActionIcon>
-									</Group>
-								</Group>
-							</Accordion.Control>
-							<Accordion.Panel>
-								{isExpanded && (
-									<FullWidthPdf
-										src={pdf.src}
-										title={pdf.title}
-										height={height}
-										isLoaded={isLoaded}
-										onLoad={() => handleLoad(itemId)}
-										fullWidth={fullWidth}
-									/>
-								)}
-							</Accordion.Panel>
-						</Accordion.Item>
-					);
-				})}
-			</Accordion>
+							return (
+								<Accordion.Item key={index} value={itemId}>
+									<Accordion.Control icon={<IconFileTypePdf size={20} />}>
+										<Group justify="space-between" wrap="nowrap" pr="md">
+											<span>{pdf.name}</span>
+											<Group gap="xs" onClick={(e) => e.stopPropagation()}>
+												<ActionIcon
+													component="a"
+													href={pdf.src}
+													download
+													variant="subtle"
+													color="gray"
+													size="sm"
+													title="Download PDF"
+												>
+													<IconDownload size={16} />
+												</ActionIcon>
+												<ActionIcon
+													component="a"
+													href={pdf.src}
+													target="_blank"
+													rel="noopener noreferrer"
+													variant="subtle"
+													color="gray"
+													size="sm"
+													title="Open in new tab"
+												>
+													<IconExternalLink size={16} />
+												</ActionIcon>
+											</Group>
+										</Group>
+									</Accordion.Control>
+									<Accordion.Panel>
+										{isExpanded && (
+											<Box pos="relative">
+												{!isLoaded && (
+													<Skeleton
+														height={height}
+														radius={4}
+														pos="absolute"
+														top={0}
+														left={0}
+														right={0}
+													/>
+												)}
+												<iframe
+													src={pdf.src}
+													title={pdf.title}
+													onLoad={() => handleLoad(itemId)}
+													style={{
+														width: "100%",
+														height,
+														border: "1px solid var(--mantine-color-default-border)",
+														borderRadius: 4,
+														opacity: isLoaded ? 1 : 0,
+														transition: "opacity 0.2s ease-in-out",
+													}}
+												/>
+											</Box>
+										)}
+									</Accordion.Panel>
+								</Accordion.Item>
+							);
+						})}
+					</Accordion>
+				</Stack>
+			</Card>
 		</Box>
 	);
 }
