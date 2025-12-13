@@ -55,6 +55,10 @@ interface FilteredManualData {
 	id: string;
 	name: { ja: string; en?: string };
 	series: { ja: string; en?: string };
+	pdfs?: Array<{
+		url: string;
+		name: { ja: string; en?: string };
+	}>;
 	[key: string]: unknown;
 }
 
@@ -440,6 +444,23 @@ async function translateManualItem(
 			} catch (error) {
 				if (verbose) {
 					console.error(`  Failed to translate series for ${manual.id}:`, error);
+				}
+			}
+		}
+
+		// Translate PDF names if not already translated
+		if (manual.pdfs && manual.pdfs.length > 0) {
+			for (const pdf of manual.pdfs) {
+				if (pdf.name.ja && !pdf.name.en) {
+					try {
+						const result = await translator.translateText(pdf.name.ja, "en", "ja");
+						pdf.name.en = result.translated;
+						fieldsTranslated++;
+					} catch (error) {
+						if (verbose) {
+							console.error(`  Failed to translate PDF name for ${manual.id}:`, error);
+						}
+					}
 				}
 			}
 		}
