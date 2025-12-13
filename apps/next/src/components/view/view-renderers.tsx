@@ -1,5 +1,6 @@
 "use client";
 
+import { type Item, getNodeDisplayName, getNodeReleaseDate, isItem } from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -18,7 +19,6 @@ import { ViewMode } from "./view-switcher";
 import { CustomImage } from "@/components/ui/custom-image";
 import { getBrandImage } from "@/lib/image-lookup";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
-import { ItemNode, getNodeDisplayName, getNodeReleaseDate, isItemNode } from "@/lib/schemas";
 import {
 	itemCard,
 	itemCardBadge,
@@ -30,8 +30,8 @@ import {
 } from "@/styles/components.css";
 
 // Common item card component used in grid and list views
-function ItemCard({ item }: { item: ItemNode }) {
-	if (!isItemNode(item)) return null;
+function ItemCard({ item }: { item: Item }) {
+	if (!isItem(item)) return null;
 
 	const primaryImage = item.displayImage ?? null;
 	const placeholderSrc = createPlaceholderSvg(getNodeDisplayName(item));
@@ -63,9 +63,9 @@ function ItemCard({ item }: { item: ItemNode }) {
 				<Text className={itemCardTitle} lineClamp={2}>
 					{getNodeDisplayName(item)}
 				</Text>
-				{item.series && (
+				{item.seriesIds.length > 0 && (
 					<Text className={itemCardSubtitle} lineClamp={1}>
-						{item.series}
+						{item.seriesIds.join(", ")}
 					</Text>
 				)}
 				<Box className={itemCardMetadata}>
@@ -84,19 +84,24 @@ function ItemCard({ item }: { item: ItemNode }) {
 							{item.scale}
 						</Badge>
 					)}
-					{item.brand && (
-						<Badge className={itemCardBadge} variant="outline" leftSection={
-							getBrandImage(item.brand) ? (
-								<img
-									src={getBrandImage(item.brand)}
-									alt=""
-									style={{ width: 14, height: 14, objectFit: "contain" }}
-								/>
-							) : null
-						}>
-							{item.brand}
+					{item.brandIds.map((brandId) => (
+						<Badge
+							key={brandId}
+							className={itemCardBadge}
+							variant="outline"
+							leftSection={
+								getBrandImage(brandId) ? (
+									<img
+										src={getBrandImage(brandId)}
+										alt=""
+										style={{ width: 14, height: 14, objectFit: "contain" }}
+									/>
+								) : null
+							}
+						>
+							{brandId}
 						</Badge>
-					)}
+					))}
 				</Box>
 			</Box>
 		</Card>
@@ -104,7 +109,7 @@ function ItemCard({ item }: { item: ItemNode }) {
 }
 
 // Grid View - current implementation with SimpleGrid
-export function GridView({ items }: { items: ItemNode[] }) {
+export function GridView({ items }: { items: Item[] }) {
 	if (items.length === 0) {
 		return <EmptyState view="grid" />;
 	}
@@ -114,7 +119,7 @@ export function GridView({ items }: { items: ItemNode[] }) {
 			cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
 			spacing="md"
 		>
-			{items.filter((item): item is ItemNode => isItemNode(item)).map((item) => (
+			{items.filter((item): item is Item => isItem(item)).map((item) => (
 				<ItemCard key={item.id} item={item} />
 			))}
 		</SimpleGrid>
@@ -122,14 +127,14 @@ export function GridView({ items }: { items: ItemNode[] }) {
 }
 
 // List View - single column layout with more details
-export function ListView({ items }: { items: ItemNode[] }) {
+export function ListView({ items }: { items: Item[] }) {
 	if (items.length === 0) {
 		return <EmptyState view="list" />;
 	}
 
 	return (
 		<Stack gap="md">
-			{items.filter((item): item is ItemNode => isItemNode(item)).map((item) => {
+			{items.filter((item): item is Item => isItem(item)).map((item) => {
 				const releaseDate = getNodeReleaseDate(item);
 				return (
 					<Card
@@ -155,9 +160,9 @@ export function ListView({ items }: { items: ItemNode[] }) {
 								<Title order={4} mb="xs">
 									{getNodeDisplayName(item)}
 								</Title>
-								{item.series && (
+								{item.seriesIds.length > 0 && (
 									<Text size="sm" c="dimmed" mb="sm">
-										{item.series}
+										{item.seriesIds.join(", ")}
 									</Text>
 								)}
 								<Group gap="xs">
@@ -176,19 +181,24 @@ export function ListView({ items }: { items: ItemNode[] }) {
 											{item.scale}
 										</Badge>
 									)}
-									{item.brand && (
-										<Badge variant="outline" size="sm" leftSection={
-											getBrandImage(item.brand) ? (
-												<img
-													src={getBrandImage(item.brand)}
-													alt=""
-													style={{ width: 12, height: 12, objectFit: "contain" }}
-												/>
-											) : null
-										}>
-											{item.brand}
+									{item.brandIds.map((brandId) => (
+										<Badge
+											key={brandId}
+											variant="outline"
+											size="sm"
+											leftSection={
+												getBrandImage(brandId) ? (
+													<img
+														src={getBrandImage(brandId)}
+														alt=""
+														style={{ width: 12, height: 12, objectFit: "contain" }}
+													/>
+												) : null
+											}
+										>
+											{brandId}
 										</Badge>
-									)}
+									))}
 								</Group>
 							</Box>
 						</Group>
@@ -200,12 +210,12 @@ export function ListView({ items }: { items: ItemNode[] }) {
 }
 
 // Table View - structured data display
-export function TableView({ items }: { items: ItemNode[] }) {
+export function TableView({ items }: { items: Item[] }) {
 	if (items.length === 0) {
 		return <EmptyState view="table" />;
 	}
 
-	const validItems: ItemNode[] = items.filter((item): item is ItemNode => isItemNode(item));
+	const validItems: Item[] = items.filter((item): item is Item => isItem(item));
 
 	const rows = validItems.map((item) => {
 		const releaseDate = getNodeReleaseDate(item);
@@ -234,22 +244,31 @@ export function TableView({ items }: { items: ItemNode[] }) {
 					</Box>
 				</Table.Td>
 				<Table.Td c="dimmed">{releaseDate ?? "-"}</Table.Td>
-				<Table.Td c="dimmed">{item.series ?? "-"}</Table.Td>
+				<Table.Td c="dimmed">{item.seriesIds.length > 0 ? item.seriesIds.join(", ") : "-"}</Table.Td>
 				<Table.Td>{item.grade ?? "-"}</Table.Td>
 				<Table.Td>{item.scale ?? "-"}</Table.Td>
 				<Table.Td>
-					{item.brand ? (
-						<Badge variant="outline" size="sm" leftSection={
-							getBrandImage(item.brand) ? (
-								<img
-									src={getBrandImage(item.brand)}
-									alt=""
-									style={{ width: 12, height: 12, objectFit: "contain" }}
-								/>
-							) : null
-						}>
-							{item.brand}
-						</Badge>
+					{item.brandIds.length > 0 ? (
+						<Group gap="xs">
+							{item.brandIds.map((brandId) => (
+								<Badge
+									key={brandId}
+									variant="outline"
+									size="sm"
+									leftSection={
+										getBrandImage(brandId) ? (
+											<img
+												src={getBrandImage(brandId)}
+												alt=""
+												style={{ width: 12, height: 12, objectFit: "contain" }}
+											/>
+										) : null
+									}
+								>
+									{brandId}
+								</Badge>
+							))}
+						</Group>
 					) : (
 						"-"
 					)}
@@ -301,7 +320,7 @@ function EmptyState({ view }: { view: ViewMode }) {
 // Main view renderer component
 interface ViewRendererProps {
   viewMode: ViewMode;
-  items: ItemNode[];
+  items: Item[];
 }
 
 export function ViewRenderer({ viewMode, items }: ViewRendererProps) {
