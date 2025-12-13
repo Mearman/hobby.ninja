@@ -1,24 +1,23 @@
-import {
-	BaseNode,
-	GraphNode,
-	ItemNode,
-	BrandNode,
-	CategoryNode,
-	SeriesNode,
-	ManualNode,
-	isItemNode,
-	isBrandNode,
-	isCategoryNode,
-	isSeriesNode,
-	isManualNode,
-	parseNode,
+// Re-export from @hobby-ninja/data for type guards and utilities
+export {
+	isItem,
+	isBrand,
+	isCategory,
+	isSeries,
+	isManual,
 	getNodeDisplayName,
-	ItemNodeSchema,
-	BrandNodeSchema,
-	CategoryNodeSchema,
-	SeriesNodeSchema,
-	ManualNodeSchema,
-} from "./schemas";
+	parseItem,
+	parseBrand,
+	parseCategory,
+	parseSeries,
+	parseManual,
+	type Item,
+	type Brand,
+	type Category,
+	type Series,
+	type Manual,
+	type Node,
+} from "@hobby-ninja/data";
 
 // Re-export from the main graph-data module
 // Since we're now using static imports for both server and client,
@@ -47,14 +46,3 @@ export {
 	type GradesIndex,
 	type EnrichedItem,
 } from "./graph-data";
-
-// Re-export types for compatibility
-export type {
-	ItemNode,
-	BrandNode,
-	CategoryNode,
-	SeriesNode,
-	ManualNode,
-	GraphNode,
-	BaseNode,
-} from "./schemas";
