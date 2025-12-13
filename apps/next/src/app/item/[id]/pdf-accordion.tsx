@@ -56,12 +56,19 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 		// Scroll the expanded accordion item header to top
 		if (newlyExpanded.length > 0) {
 			const itemId = newlyExpanded[0];
-			setTimeout(() => {
-				const element = itemRefs.current.get(itemId);
-				if (element) {
-					element.scrollIntoView({ behavior: "smooth", block: "start" });
+			const element = itemRefs.current.get(itemId);
+			if (element) {
+				// Calculate absolute position by walking up offsetParent chain
+				let top = 0;
+				let el: HTMLElement | null = element;
+				while (el) {
+					top += el.offsetTop;
+					el = el.offsetParent as HTMLElement | null;
 				}
-			}, 50);
+				setTimeout(() => {
+					window.scrollTo({ top: top - 16, behavior: "smooth" });
+				}, 250);
+			}
 		}
 	};
 
@@ -123,14 +130,14 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 							const isLoaded = loadedItems.has(itemId);
 
 							return (
-								<Accordion.Item key={index} value={itemId}>
-									<div
-										ref={(el) => {
-											if (el) itemRefs.current.set(itemId, el);
-											else itemRefs.current.delete(itemId);
-										}}
-										style={{ height: 0, marginTop: -16, paddingTop: 16 }}
-									/>
+								<Accordion.Item
+									key={index}
+									value={itemId}
+									ref={(el: HTMLDivElement | null) => {
+										if (el) itemRefs.current.set(itemId, el);
+										else itemRefs.current.delete(itemId);
+									}}
+								>
 									<Accordion.Control icon={<IconFileTypePdf size={20} />}>
 										<Group justify="space-between" wrap="nowrap" pr="md">
 											<span>{pdf.name}</span>
