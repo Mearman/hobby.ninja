@@ -6,7 +6,7 @@ export interface CollectionItem {
   id: string;
   collectionId: string;
   itemId: string;
-  category: string;
+  categories: string[];
   status: "owned" | "wanted" | "ordered" | "pre-ordered" | "building" | "completed";
   condition: "new" | "used" | "damaged" | "box-damaged";
   purchaseInfo?: {

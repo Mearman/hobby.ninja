@@ -1,8 +1,14 @@
 import pako from "pako";
 
+import { getItemById, getItemIds } from "@hobby-ninja/data/items";
+
 import type { CollectionItem } from "./collection-storage";
-import { isValidItemId, getItemById } from "./client-data";
 import { getNodeDisplayName } from "./schemas";
+
+// Check if item ID exists in the database
+function isValidItemId(id: string): boolean {
+	return getItemIds().includes(id);
+}
 
 // Export collection data
 export interface ExportData {
@@ -110,28 +116,21 @@ export const importCollection = async (
 			}
 			seenIds.add(item.id);
 
-			// Validate itemId exists in our database using lightweight ID lookup
-			try {
-				const existsInDatabase = await isValidItemId(item.itemId);
-
-				if (!existsInDatabase) {
-					invalidCount++;
-					continue;
-				}
-
-				processedItems.push({
-					...item,
-					id: item.id || `item-${Date.now()}-${Math.floor(Math.random() * 1_000_000)}`,
-					collectionId: collectionId,
-					category: item.category ?? "default",
-					added: item.added ?? new Date(),
-					modified: new Date(),
-				});
-				validCount++;
-			} catch (error) {
-				console.warn("Failed to validate item:", item, error);
+			// Validate itemId exists in our database
+			if (!isValidItemId(item.itemId)) {
 				invalidCount++;
+				continue;
 			}
+
+			processedItems.push({
+				...item,
+				id: item.id || `item-${Date.now()}-${Math.floor(Math.random() * 1_000_000)}`,
+				collectionId: collectionId,
+				categories: item.categories ?? [],
+				added: item.added ?? new Date(),
+				modified: new Date(),
+			});
+			validCount++;
 		}
 
 		return {
@@ -232,8 +231,8 @@ export const exportCollectionCSV = async (collectionId: string, includeHidden = 
 		const csvRows: string[] = [headers.join(",")];
 
 		for (const item of exportData.items) {
-			// Get database item for name using per-item lookup
-			const dbItem = await getItemById(item.itemId);
+			// Get database item for name
+			const dbItem = getItemById(item.itemId);
 
 			const row = [
 				`"${item.id ?? ""}"`,
@@ -259,45 +258,33 @@ export const exportCollectionCSV = async (collectionId: string, includeHidden = 
 };
 
 // Import items from database
-export const importFromDatabase = async (
+export const importFromDatabase = (
 	itemIds: string[],
 	defaultStatus = "wanted",
-): Promise<CollectionItem[]> => {
-	try {
-		const items: CollectionItem[] = [];
+): CollectionItem[] => {
+	const items: CollectionItem[] = [];
 
-		// Fetch items in parallel using per-item lookups
-		const fetchResults = await Promise.all(
-			itemIds.map(async itemId => {
-				const dbItem = await getItemById(itemId);
-				return { itemId, dbItem };
-			})
-		);
-
-		for (const { itemId, dbItem } of fetchResults) {
-			if (dbItem) {
-				items.push({
-					id: `item-${Date.now()}-${Math.floor(Math.random() * 1_000_000)}`,
-					collectionId: "default",
-					itemId: dbItem.id,
-					category: dbItem.category ?? "default",
-					status: defaultStatus as CollectionItem["status"],
-					condition: "new",
-					photos: [],
-					notes: "",
-					rating: 0,
-					tags: [],
-					added: new Date(),
-					modified: new Date(),
-				});
-			}
+	for (const itemId of itemIds) {
+		const dbItem = getItemById(itemId);
+		if (dbItem) {
+			items.push({
+				id: `item-${Date.now()}-${Math.floor(Math.random() * 1_000_000)}`,
+				collectionId: "default",
+				itemId: dbItem.id,
+				categories: dbItem.categoryIds,
+				status: defaultStatus as CollectionItem["status"],
+				condition: "new",
+				photos: [],
+				notes: "",
+				rating: 0,
+				tags: [],
+				added: new Date(),
+				modified: new Date(),
+			});
 		}
-
-		return items;
-	} catch (error) {
-		console.error("Failed to import from database:", error);
-		throw new Error("Failed to import items from database");
 	}
+
+	return items;
 };
 
 // Generate collection statistics

@@ -14,7 +14,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { CollectionDetailClient } from "./CollectionDetailClient";
-import { getItemsByIds } from "@/lib/client-data";
+import { getItemById, type Item } from "@hobby-ninja/data/items";
 import { useCollection } from "@/contexts/collection-context";
 import type { ItemNode } from "@/lib/schemas";
 
@@ -29,25 +29,28 @@ export function CollectionPageClient() {
 	const [loading, setLoading] = useState(true);
 
 	// Load only the database items that are in the user's collection
-	// This fetches individual item files (~3KB each) instead of all items (19MB)
+	// This uses sync data access from @hobby-ninja/data
 	useEffect(() => {
-		const loadItems = async () => {
-			try {
-				// Get unique item IDs from the collection
-				const itemIds = [...new Set(state.items.map(item => item.itemId))];
+		try {
+			// Get unique item IDs from the collection
+			const itemIds = [...new Set(state.items.map(item => item.itemId))];
 
-				if (itemIds.length > 0) {
-					// Fetch only the items we need (parallel requests)
-					const itemsMap = await getItemsByIds(itemIds);
-					setDbItemsMap(itemsMap);
+			if (itemIds.length > 0) {
+				// Build items map synchronously
+				const itemsMap = new Map<string, ItemNode>();
+				for (const id of itemIds) {
+					const item = getItemById(id);
+					if (item) {
+						itemsMap.set(id, item as ItemNode);
+					}
 				}
-			} catch (error) {
-				console.error("Failed to load items:", error);
-			} finally {
-				setLoading(false);
+				setDbItemsMap(itemsMap);
 			}
-		};
-		void loadItems();
+		} catch (error) {
+			console.error("Failed to load items:", error);
+		} finally {
+			setLoading(false);
+		}
 	}, [state.items]);
 
 	if (loading) {
