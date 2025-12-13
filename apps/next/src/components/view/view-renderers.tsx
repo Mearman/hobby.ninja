@@ -29,8 +29,11 @@ import {
 	itemCardTitle,
 } from "@/styles/components.css";
 
+// Number of items to prioritize loading (above the fold in typical viewport)
+const PRIORITY_ITEM_COUNT = 8;
+
 // Common item card component used in grid and list views
-function ItemCard({ item }: { item: Item }) {
+function ItemCard({ item, priority = false }: { item: Item; priority?: boolean }) {
 	if (!isItem(item)) return null;
 
 	const primaryImage = item.displayImage ?? null;
@@ -54,6 +57,7 @@ function ItemCard({ item }: { item: Item }) {
 					fit="cover"
 					height={200}
 					fallbackSrc={errorPlaceholderSrc}
+					priority={priority}
 					onError={(e) => {
 						e.currentTarget.src = errorPlaceholderSrc;
 					}}
@@ -102,8 +106,8 @@ export function GridView({ items }: { items: Item[] }) {
 			cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
 			spacing="md"
 		>
-			{items.filter((item): item is Item => isItem(item)).map((item) => (
-				<ItemCard key={item.id} item={item} />
+			{items.filter((item): item is Item => isItem(item)).map((item, index) => (
+				<ItemCard key={item.id} item={item} priority={index < PRIORITY_ITEM_COUNT} />
 			))}
 		</SimpleGrid>
 	);
@@ -117,7 +121,7 @@ export function ListView({ items }: { items: Item[] }) {
 
 	return (
 		<Stack gap="md">
-			{items.filter((item): item is Item => isItem(item)).map((item) => {
+			{items.filter((item): item is Item => isItem(item)).map((item, index) => {
 				const releaseDate = getNodeReleaseDate(item);
 				return (
 					<Card
@@ -136,6 +140,7 @@ export function ListView({ items }: { items: Item[] }) {
 									alt={getNodeDisplayName(item)}
 									fit="cover"
 									height={80}
+									priority={index < PRIORITY_ITEM_COUNT}
 									fallbackSrc={createErrorPlaceholderSvg()}
 								/>
 							</Box>
@@ -183,7 +188,7 @@ export function TableView({ items }: { items: Item[] }) {
 
 	const validItems: Item[] = items.filter((item): item is Item => isItem(item));
 
-	const rows = validItems.map((item) => {
+	const rows = validItems.map((item, index) => {
 		const releaseDate = getNodeReleaseDate(item);
 		return (
 			<Table.Tr key={item.id}>
@@ -200,6 +205,7 @@ export function TableView({ items }: { items: Item[] }) {
 									alt={getNodeDisplayName(item)}
 									fit="cover"
 									height={40}
+									priority={index < PRIORITY_ITEM_COUNT}
 									fallbackSrc={createErrorPlaceholderSvg()}
 								/>
 							</Box>
