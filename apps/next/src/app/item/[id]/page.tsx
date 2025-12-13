@@ -22,6 +22,7 @@ import {
 	getBrandById,
 	getSeriesById,
 	getCategoryById,
+	getManualById,
 	type Item,
 	getNodeDisplayName,
 	getNodePrice,
@@ -92,6 +93,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 	const category = item.categoryIds[0] ? getCategoryById(item.categoryIds[0]) : undefined;
 	const brand = item.brandIds[0] ? getBrandById(item.brandIds[0]) : undefined;
 	const series = item.seriesIds[0] ? getSeriesById(item.seriesIds[0]) : undefined;
+	const manual = item.manualId ? getManualById(item.manualId) : undefined;
 
 	return (
 		<Container size="xl" py="md">
@@ -202,6 +204,91 @@ export default async function ItemPage({ params }: ItemPageProps) {
 									<Text key={index} size="sm">• {acc}</Text>
 								))}
 							</Stack>
+						</Stack>
+					</Card>
+				)}
+
+				{/* Assembly Manual - Full Width with Embedded PDF */}
+				{manual && (
+					<Card withBorder p="lg">
+						<Stack gap="md">
+							<Group justify="space-between" align="flex-start" wrap="wrap">
+								<Group gap="md" align="flex-start">
+									{manual.thumbnailImage && (
+										<img
+											src={manual.thumbnailImage}
+											alt={getNodeDisplayName(manual)}
+											style={{
+												width: 80,
+												height: 80,
+												objectFit: "cover",
+												borderRadius: 4,
+												border: "1px solid var(--mantine-color-gray-3)",
+											}}
+										/>
+									)}
+									<Stack gap={4}>
+										<Title order={3} size="h4">Assembly Manual</Title>
+										<Text fw={500}>{getNodeDisplayName(manual)}</Text>
+										<Group gap="xs">
+											{manual.productNumber && (
+												<Badge variant="light" color="gray" size="sm">
+													Product #{manual.productNumber}
+												</Badge>
+											)}
+											{manual.scale && (
+												<Badge variant="light" color="orange" size="sm">
+													{manual.scale}
+												</Badge>
+											)}
+											{manual.releaseDate && (
+												<Badge variant="light" color="blue" size="sm">
+													{manual.releaseDate.year}/{String(manual.releaseDate.month).padStart(2, "0")}/{String(manual.releaseDate.day).padStart(2, "0")}
+												</Badge>
+											)}
+										</Group>
+										{manual.brandIds && manual.brandIds.length > 0 && (
+											<Text size="xs" c="dimmed">
+												Brand: {manual.brandIds.map(id => getBrandById(id)).filter(Boolean).map(b => b && getNodeDisplayName(b)).join(", ")}
+											</Text>
+										)}
+										{manual.seriesIds && manual.seriesIds.length > 0 && (
+											<Text size="xs" c="dimmed">
+												Series: {manual.seriesIds.map(id => getSeriesById(id)).filter(Boolean).map(s => s && getNodeDisplayName(s)).join(", ")}
+											</Text>
+										)}
+									</Stack>
+								</Group>
+								<Group gap="md">
+									<Anchor
+										href={`https://manual.bandai-hobby.net/menus/detail/${manual.id}/`}
+										target="_blank"
+										size="sm"
+									>
+										View on Bandai
+									</Anchor>
+									<Anchor
+										href={`/manuals/${manual.id}/${manual.id}.pdf`}
+										target="_blank"
+										size="sm"
+										fw={500}
+									>
+										Open PDF
+									</Anchor>
+								</Group>
+							</Group>
+
+							{/* Embedded PDF Viewer - Full Width */}
+							<iframe
+								src={`/manuals/${manual.id}/${manual.id}.pdf`}
+								title={`${getNodeDisplayName(manual)} - Assembly Manual PDF`}
+								style={{
+									width: "100%",
+									height: 800,
+									border: "1px solid var(--mantine-color-gray-3)",
+									borderRadius: 4,
+								}}
+							/>
 						</Stack>
 					</Card>
 				)}
