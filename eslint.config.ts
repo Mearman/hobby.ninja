@@ -101,6 +101,7 @@ export default [
 					path.resolve(__dirname, "packages/cli/tsconfig.json"),
 					path.resolve(__dirname, "apps/web/tsconfig.json"),
 					path.resolve(__dirname, "apps/next/tsconfig.json"),
+					path.resolve(__dirname, "data/tsconfig.json"),
 					path.resolve(__dirname, "tsconfig.json"),
 				],
 				tsconfigRootDir: __dirname,
@@ -713,6 +714,8 @@ export default [
 			"packages/scrapers/**/*.ts",
 			"tools/scripts/**/*.ts",
 			"scripts/**/*.ts",
+			"data/scripts/**/*.ts",
+			"data/lib/**/*.ts",
 		],
 		rules: {
 			"no-console": "off",
