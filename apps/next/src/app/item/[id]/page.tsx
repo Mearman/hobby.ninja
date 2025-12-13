@@ -211,7 +211,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
 				{/* Assembly Manual - Full Width with Embedded PDF */}
 				{manual && (
-					<Card withBorder p="lg">
+					<Card withBorder p="lg" style={{ overflow: "visible" }}>
 						<Stack gap="md">
 							<Group justify="space-between" align="flex-start" wrap="wrap">
 								<Group gap="md" align="flex-start">
