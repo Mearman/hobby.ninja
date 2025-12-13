@@ -53,15 +53,17 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 
 		setExpandedItems(values);
 
-		// Scroll to the first newly expanded item after a short delay for render
+		// Scroll to the first newly expanded item after transitions complete
 		if (newlyExpanded.length > 0) {
 			const itemId = newlyExpanded[0];
 			setTimeout(() => {
 				const element = itemRefs.current.get(itemId);
 				if (element) {
-					element.scrollIntoView({ behavior: "smooth", block: "start" });
+					const rect = element.getBoundingClientRect();
+					const scrollTop = window.scrollY + rect.top - 16; // 16px padding from top
+					window.scrollTo({ top: scrollTop, behavior: "smooth" });
 				}
-			}, 100);
+			}, 250); // Wait for width transition (200ms) + buffer
 		}
 	};
 
@@ -133,6 +135,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 											itemRefs.current.delete(itemId);
 										}
 									}}
+									style={{ scrollMarginTop: "1rem" }}
 								>
 									<Accordion.Control icon={<IconFileTypePdf size={20} />}>
 										<Group justify="space-between" wrap="nowrap" pr="md">
