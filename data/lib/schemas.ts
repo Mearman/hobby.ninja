@@ -38,6 +38,16 @@ export const ReleaseDateSchema = z.object({
 export type ReleaseDate = z.infer<typeof ReleaseDateSchema>;
 
 /**
+ * Manual PDF with URL and localized name
+ */
+export const ManualPdfSchema = z.object({
+	url: z.string().url(),
+	name: LocalizedStringSchema,
+});
+
+export type ManualPdf = z.infer<typeof ManualPdfSchema>;
+
+/**
  * Image can be a simple URL string or an object with URL and metadata
  */
 export const ImageSchema = z.union([
@@ -197,7 +207,7 @@ export const ManualSchema = z.object({
 
 	// Manual metadata
 	url: z.string().url().optional(),
-	pdfUrl: z.string().url().optional(),
+	pdfs: z.array(ManualPdfSchema).default([]),
 	pages: z.number().optional(),
 	language: z.string().optional(),
 	size: z.string().optional(),
