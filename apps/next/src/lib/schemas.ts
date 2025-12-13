@@ -517,3 +517,31 @@ export const isProduct = (item: ItemNode): boolean => {
 export const filterProducts = (items: ItemNode[]): ItemNode[] => {
 	return items.filter((item) => isProduct(item));
 };
+
+/**
+ * Check if an item has a release date in the future.
+ * Uses the sortable date format (YYYYMMDD) for comparison.
+ * Items without release dates are NOT considered future releases.
+ */
+export const isFutureRelease = (item: ItemNode): boolean => {
+	const releaseDate = item.releaseDate;
+	if (!releaseDate) return false;
+
+	// Get today's date as YYYYMMDD
+	const now = new Date();
+	const todayStr = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, "0")}${String(now.getDate()).padStart(2, "0")}`;
+
+	// Get item's release date as YYYYMMDD
+	const itemDateStr = getNodeReleaseDateSortable(item);
+	if (!itemDateStr) return false;
+
+	// Compare as strings (works because format is YYYYMMDD)
+	return itemDateStr > todayStr;
+};
+
+/**
+ * Filter an array of items to exclude future releases
+ */
+export const filterFutureReleases = (items: ItemNode[]): ItemNode[] => {
+	return items.filter((item) => !isFutureRelease(item));
+};

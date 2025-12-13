@@ -7,6 +7,7 @@ export interface UserPreferences {
 	autoLoadInfiniteScroll: boolean;
 	infiniteScrollPageSize: number;
 	reducedAnimations: boolean;
+	hideFutureReleases: boolean;
 }
 
 const STORAGE_KEY = "hobby-ninja-preferences";
@@ -16,6 +17,7 @@ const defaultPreferences: UserPreferences = {
 	autoLoadInfiniteScroll: true,
 	infiniteScrollPageSize: 24,
 	reducedAnimations: false,
+	hideFutureReleases: true,
 };
 
 export function useUserPreferences() {
