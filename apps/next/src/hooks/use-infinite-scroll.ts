@@ -31,6 +31,18 @@ export interface InfiniteScrollReturn<T> {
 	lastItemRef: (node: HTMLElement | null) => void;
 }
 
+// Get initial page from URL for position restoration (safe for SSR)
+function getInitialPageFromUrl(): number {
+	// Safe SSR check - globalThis.location is undefined during SSR
+	const location = globalThis.location as Location | undefined;
+	if (!location) return 1;
+	const urlParams = new URLSearchParams(location.search);
+	const pageParam = urlParams.get("page");
+	if (!pageParam) return 1;
+	const page = Number.parseInt(pageParam, 10);
+	return Number.isNaN(page) || page < 1 ? 1 : page;
+}
+
 export function useInfiniteScroll<T>({
 	items,
 	itemsPerPage = PAGINATION.ITEMS_PER_PAGE,
@@ -42,11 +54,19 @@ export function useInfiniteScroll<T>({
 	preservePageParam = false,
 	autoLoad = true,
 }: InfiniteScrollOptions<T>): InfiniteScrollReturn<T> {
-	const [loadedCount, setLoadedCount] = useState(itemsPerPage);
+	// Lazy initializer for loadedCount - reads from URL on first render if preservePageParam is true
+	const [loadedCount, setLoadedCount] = useState(() => {
+		if (!preservePageParam) return itemsPerPage;
+		const page = getInitialPageFromUrl();
+		// Note: items.length may be 0 on first render, so we use page * itemsPerPage
+		// The actual visible items will be capped by items.slice() anyway
+		return Math.max(itemsPerPage, page * itemsPerPage);
+	});
 	const [isLoading, setIsLoading] = useState(false);
 	const observerRef = useRef<IntersectionObserver | null>(null);
 	const loadMoreTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 	const prevItemsRef = useRef<T[]>(items);
+	const isInitialLoadRef = useRef(true);
 
 	// Calculate items to show
 	const loadedItems = items.slice(0, loadedCount);
@@ -168,11 +188,17 @@ export function useInfiniteScroll<T>({
 	}, [itemsPerPage]);
 
 	// Reset loaded count when items array reference changes (filter/search)
+	// Skip reset on initial load to preserve URL-restored state
 	/* eslint-disable react-hooks/set-state-in-effect -- Reset on filter change is intentional */
 	useEffect(() => {
 		if (prevItemsRef.current !== items) {
 			prevItemsRef.current = items;
-			setLoadedCount(itemsPerPage);
+			// Don't reset on initial items load if we have URL-restored state
+			if (isInitialLoadRef.current) {
+				isInitialLoadRef.current = false;
+			} else {
+				setLoadedCount(itemsPerPage);
+			}
 		}
 	}, [items, itemsPerPage]);
 	/* eslint-enable react-hooks/set-state-in-effect */
@@ -193,6 +219,22 @@ export function useInfiniteScroll<T>({
 		const newUrl = `${globalThis.location.pathname}${urlParams.toString() ? `?${urlParams.toString()}` : ""}`;
 		globalThis.history.replaceState({}, "", newUrl);
 	}, [loadedCount, itemsPerPage, preservePageParam]);
+
+	// Handle browser back/forward navigation
+	useEffect(() => {
+		if (!preservePageParam) return;
+
+		const handlePopState = () => {
+			const page = getInitialPageFromUrl();
+			const newLoadedCount = Math.max(itemsPerPage, page * itemsPerPage);
+			setLoadedCount(newLoadedCount);
+		};
+
+		globalThis.addEventListener("popstate", handlePopState);
+		return () => {
+			globalThis.removeEventListener("popstate", handlePopState);
+		};
+	}, [preservePageParam, itemsPerPage]);
 
 	return {
 		visibleItems,
