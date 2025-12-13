@@ -4,16 +4,17 @@ import {
 	ActionIcon,
 	Badge,
 	Box,
+	Button,
 	Card,
 	Chip,
 	Collapse,
 	Divider,
 	Group,
+	ScrollArea,
 	Select,
 	Stack,
 	Text,
 	TextInput,
-	Button,
 } from "@mantine/core";
 import {
 	IconChevronDown,
@@ -27,6 +28,28 @@ import {
 import { useState } from "react";
 
 import { FilterState } from "@/hooks/use-filtered-items";
+import {
+	getBrandById,
+	getCategoryById,
+	getNodeDisplayName,
+	getSeriesById,
+} from "@hobby-ninja/data";
+
+// Helper functions to format entity IDs to display names
+function formatBrandName(id: string): string {
+	const brand = getBrandById(id);
+	return brand ? getNodeDisplayName(brand) : id;
+}
+
+function formatSeriesName(id: string): string {
+	const series = getSeriesById(id);
+	return series ? getNodeDisplayName(series) : id;
+}
+
+function formatCategoryName(id: string): string {
+	const category = getCategoryById(id);
+	return category ? getNodeDisplayName(category) : id;
+}
 
 type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
 
@@ -68,11 +91,6 @@ function FilterSection({
 	formatValue = (v) => v,
 	color = "blue",
 }: FilterSectionProps) {
-	const [expanded, setExpanded] = useState(false);
-	const displayLimit = 8;
-	const hasMore = options.length > displayLimit;
-	const visibleOptions = expanded ? options : options.slice(0, displayLimit);
-
 	if (options.length === 0) return null;
 
 	return (
@@ -87,30 +105,22 @@ function FilterSection({
 					</Badge>
 				)}
 			</Group>
-			<Group gap="xs" wrap="wrap">
-				{visibleOptions.map((value) => (
-					<Chip
-						key={value}
-						checked={selectedValues.includes(value)}
-						onChange={() => { onToggle(field, value); }}
-						size="xs"
-						variant="outline"
-						color={color}
-					>
-						{formatValue(value)}
-					</Chip>
-				))}
-				{hasMore && (
-					<Button
-						variant="subtle"
-						size="compact-xs"
-						onClick={() => { setExpanded(!expanded); }}
-						rightSection={expanded ? <IconChevronUp size={12} /> : <IconChevronDown size={12} />}
-					>
-						{expanded ? "Show less" : `+${options.length - displayLimit} more`}
-					</Button>
-				)}
-			</Group>
+			<ScrollArea.Autosize mah={200} type="auto">
+				<Group gap="xs" wrap="wrap">
+					{options.map((value) => (
+						<Chip
+							key={value}
+							checked={selectedValues.includes(value)}
+							onChange={() => { onToggle(field, value); }}
+							size="xs"
+							variant="outline"
+							color={color}
+						>
+							{formatValue(value)}
+						</Chip>
+					))}
+				</Group>
+			</ScrollArea.Autosize>
 		</Box>
 	);
 }
@@ -219,6 +229,7 @@ export function ItemFilters({
 								options={availableOptions.categories}
 								selectedValues={filterState.categories}
 								onToggle={onToggleFilterValue}
+								formatValue={formatCategoryName}
 								color="grape"
 							/>
 
@@ -228,6 +239,7 @@ export function ItemFilters({
 								options={availableOptions.brands}
 								selectedValues={filterState.brands}
 								onToggle={onToggleFilterValue}
+								formatValue={formatBrandName}
 								color="blue"
 							/>
 
@@ -237,6 +249,7 @@ export function ItemFilters({
 								options={availableOptions.series}
 								selectedValues={filterState.series}
 								onToggle={onToggleFilterValue}
+								formatValue={formatSeriesName}
 								color="violet"
 							/>
 
@@ -255,7 +268,6 @@ export function ItemFilters({
 								options={availableOptions.scales}
 								selectedValues={filterState.scales}
 								onToggle={onToggleFilterValue}
-								formatValue={(v) => `1/${v}`}
 								color="orange"
 							/>
 						</Stack>
@@ -291,7 +303,7 @@ export function ItemFilters({
 									</ActionIcon>
 								}
 							>
-								{brand}
+								{formatBrandName(brand)}
 							</Badge>
 						))}
 						{filterState.grades.map(grade => (
@@ -321,7 +333,7 @@ export function ItemFilters({
 									</ActionIcon>
 								}
 							>
-								1/{scale}
+								{scale}
 							</Badge>
 						))}
 						{filterState.series.map(s => (
@@ -336,7 +348,7 @@ export function ItemFilters({
 									</ActionIcon>
 								}
 							>
-								{s}
+								{formatSeriesName(s)}
 							</Badge>
 						))}
 						{filterState.categories.map(cat => (
@@ -351,7 +363,7 @@ export function ItemFilters({
 									</ActionIcon>
 								}
 							>
-								{cat}
+								{formatCategoryName(cat)}
 							</Badge>
 						))}
 					</Group>
