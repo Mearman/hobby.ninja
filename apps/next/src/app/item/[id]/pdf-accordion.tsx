@@ -45,7 +45,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 	const [expandedItems, setExpandedItems] = useState<string[]>([]);
 	const [loadedItems, setLoadedItems] = useState<Set<string>>(new Set());
 	const { fullWidth, toggleFullWidth, isHydrated } = useFullWidthPreference();
-	const containerRef = useRef<HTMLDivElement>(null);
+	const accordionRef = useRef<HTMLDivElement>(null);
 
 	const handleChange = (values: string[]) => {
 		// Find newly expanded items
@@ -53,10 +53,10 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 
 		setExpandedItems(values);
 
-		// Scroll the entire section to top when any accordion is expanded
+		// Scroll the accordion to top when any item is expanded
 		if (newlyExpanded.length > 0) {
 			setTimeout(() => {
-				const element = containerRef.current;
+				const element = accordionRef.current;
 				if (element) {
 					const rect = element.getBoundingClientRect();
 					const scrollTop = window.scrollY + rect.top - 16; // 16px padding from top
@@ -88,7 +88,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 			};
 
 	return (
-		<Box ref={containerRef} style={fullWidthStyles}>
+		<Box style={fullWidthStyles}>
 			<Card withBorder p="lg">
 				<Stack gap="md">
 					{/* Header content passed from parent */}
@@ -111,13 +111,14 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 					</Group>
 
 					{/* PDF Accordion */}
-					<Accordion
-						multiple
-						value={expandedItems}
-						onChange={handleChange}
-						variant="separated"
-						radius="md"
-					>
+					<Box ref={accordionRef}>
+						<Accordion
+							multiple
+							value={expandedItems}
+							onChange={handleChange}
+							variant="separated"
+							radius="md"
+						>
 						{pdfs.map((pdf, index) => {
 							const itemId = `pdf-${index}`;
 							const isExpanded = expandedItems.includes(itemId);
@@ -187,7 +188,8 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 								</Accordion.Item>
 							);
 						})}
-					</Accordion>
+						</Accordion>
+					</Box>
 				</Stack>
 			</Card>
 		</Box>
