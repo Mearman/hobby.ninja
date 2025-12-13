@@ -35,6 +35,7 @@ export class BandaiHobbyScraper extends BaseScraper {
 		const specifications = this.extractSpecifications($);
 		const rawImages = this.extractImages($);
 		const categories = this.extractCategories($);
+		const manualId = this.extractManualId($);
 
 		// Transform images to match GundamData interface (alt is required)
 		const images = rawImages.map(img => ({
@@ -65,6 +66,11 @@ export class BandaiHobbyScraper extends BaseScraper {
 		// Add category from categories array
 		if (categories.length > 0) {
 			productData.category = categories.join(" > ");
+		}
+
+		// Add manual ID if found (links to manual.bandai-hobby.net)
+		if (manualId) {
+			productData.manualId = manualId;
 		}
 
 		return productData;
@@ -313,5 +319,31 @@ export class BandaiHobbyScraper extends BaseScraper {
 
 		// Remove duplicates while preserving order
 		return [...new Set(categories)];
+	}
+
+	/**
+	 * Extract manual ID from links to manual.bandai-hobby.net/menus/detail/{id}
+	 * These links appear on item pages and connect products to their assembly manuals.
+	 */
+	private extractManualId($: cheerio.CheerioAPI): string | undefined {
+		// Pattern to match manual.bandai-hobby.net/menus/detail/{id}
+		const manualUrlPattern = /manual\.bandai-hobby\.net\/menus\/detail\/(\d+)/;
+
+		// Search for links containing the manual URL pattern
+		let manualId: string | undefined;
+
+		$("a[href]").each((_: number, element: Element) => {
+			if (manualId) return; // Already found
+
+			const href = $(element).attr("href");
+			if (href) {
+				const match = manualUrlPattern.exec(href);
+				if (match?.[1]) {
+					manualId = match[1];
+				}
+			}
+		});
+
+		return manualId;
 	}
 }

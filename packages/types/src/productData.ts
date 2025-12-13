@@ -48,4 +48,6 @@ export interface GundamData {
   url?: string;
   source: string;
   scrapedAt: string;
+  /** Manual ID from manual.bandai-hobby.net/menus/detail/{manualId} link */
+  manualId?: string;
 }

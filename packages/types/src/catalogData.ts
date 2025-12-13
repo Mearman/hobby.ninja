@@ -61,4 +61,6 @@ export interface CatalogItem {
 	relatedProducts: CatalogRelatedProduct[];
 	sourceUrl: string;
 	extractedAt: string;
+	/** Direct link to manual from manual.bandai-hobby.net/menus/detail/{id} */
+	manualId?: string;
 }

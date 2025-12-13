@@ -89,7 +89,7 @@ export interface UnifiedItem {
     };
   };
   /** Method used for matching data sources */
-  matchMethod: "exact" | "fuzzy" | "manual_override";
+  matchMethod: "direct" | "exact" | "fuzzy" | "manual_override";
   /** Matching stage (1-5 indicating strategy) */
   matchStage?: number;
   /** Creation timestamp */

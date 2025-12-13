@@ -49,7 +49,7 @@ export interface UnifiedProduct {
 	sources: UnifiedSources;
 
 	// Matching metadata
-	matchMethod: "exact" | "fuzzy" | "manual_override";
+	matchMethod: "direct" | "exact" | "fuzzy" | "manual_override";
 	matchStage?: number; // 1-5 indicating which strategy matched
 	createdAt: string;
 	updatedAt: string;
