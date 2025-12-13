@@ -5,25 +5,30 @@ import {
 	Badge,
 	Box,
 	Card,
-	Container,
+	Chip,
+	Collapse,
 	Divider,
 	Group,
 	Select,
-	TextInput,
-	Tooltip,
-	Text,
-	Button,
 	Stack,
+	Text,
+	TextInput,
+	Button,
 } from "@mantine/core";
 import {
-	IconAdjustmentsHorizontal,
+	IconChevronDown,
+	IconChevronUp,
 	IconFilter,
-	IconX,
 	IconSearch,
 	IconSortAscending,
 	IconSortDescending,
+	IconX,
 } from "@tabler/icons-react";
+import { useState } from "react";
+
 import { FilterState } from "@/hooks/use-filtered-items";
+
+type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
 
 interface ItemFiltersProps {
 	filterState: FilterState;
@@ -32,16 +37,82 @@ interface ItemFiltersProps {
 		grades: string[];
 		scales: string[];
 		series: string[];
+		categories: string[];
 	};
 	onFilterChange: (updates: Partial<FilterState>) => void;
 	onSearchChange: (value: string) => void;
+	onToggleFilterValue: (field: ArrayFilterField, value: string) => void;
 	onClearFilters: () => void;
-	showAdvancedFilters?: boolean;
-	onToggleAdvancedFilters?: () => void;
 	hasActiveFilters?: boolean;
 	activeFilterCount?: number;
 	title?: string;
 	subtitle?: string;
+}
+
+interface FilterSectionProps {
+	label: string;
+	field: ArrayFilterField;
+	options: string[];
+	selectedValues: string[];
+	onToggle: (field: ArrayFilterField, value: string) => void;
+	formatValue?: (value: string) => string;
+	color?: string;
+}
+
+function FilterSection({
+	label,
+	field,
+	options,
+	selectedValues,
+	onToggle,
+	formatValue = (v) => v,
+	color = "blue",
+}: FilterSectionProps) {
+	const [expanded, setExpanded] = useState(false);
+	const displayLimit = 8;
+	const hasMore = options.length > displayLimit;
+	const visibleOptions = expanded ? options : options.slice(0, displayLimit);
+
+	if (options.length === 0) return null;
+
+	return (
+		<Box>
+			<Group justify="space-between" mb="xs">
+				<Text size="sm" fw={500} c="dimmed">
+					{label} ({options.length})
+				</Text>
+				{selectedValues.length > 0 && (
+					<Badge size="xs" variant="filled" color={color}>
+						{selectedValues.length} selected
+					</Badge>
+				)}
+			</Group>
+			<Group gap="xs" wrap="wrap">
+				{visibleOptions.map((value) => (
+					<Chip
+						key={value}
+						checked={selectedValues.includes(value)}
+						onChange={() => { onToggle(field, value); }}
+						size="xs"
+						variant="outline"
+						color={color}
+					>
+						{formatValue(value)}
+					</Chip>
+				))}
+				{hasMore && (
+					<Button
+						variant="subtle"
+						size="compact-xs"
+						onClick={() => { setExpanded(!expanded); }}
+						rightSection={expanded ? <IconChevronUp size={12} /> : <IconChevronDown size={12} />}
+					>
+						{expanded ? "Show less" : `+${options.length - displayLimit} more`}
+					</Button>
+				)}
+			</Group>
+		</Box>
+	);
 }
 
 export function ItemFilters({
@@ -49,116 +120,30 @@ export function ItemFilters({
 	availableOptions,
 	onFilterChange,
 	onSearchChange,
+	onToggleFilterValue,
 	onClearFilters,
-	showAdvancedFilters = false,
-	onToggleAdvancedFilters,
 	hasActiveFilters = false,
 	activeFilterCount = 0,
 	title = "Filters",
 	subtitle,
 }: ItemFiltersProps) {
+	const [filtersExpanded, setFiltersExpanded] = useState(true);
+
 	return (
-		<Card p="lg" radius="md" withBorder>
+		<Card p="lg" radius="md" withBorder={true}>
 			<Stack gap="md">
-				{/* Title */}
-				{title && <Text size="lg" fw={600}>{title}</Text>}
-				{subtitle && <Text size="sm" c="dimmed">{subtitle}</Text>}
-
-				{/* Search Bar */}
-				<TextInput
-					leftSection={<IconSearch size={16} />}
-					placeholder="Search by name, brand, series, grade, or scale..."
-					value={filterState.search}
-					onChange={(e) => onSearchChange(e.target.value)}
-					size="md"
-				/>
-
-				{/* Quick Filters Row */}
-				<Group>
-					<Select
-						leftSection={<IconFilter size={16} />}
-						placeholder="All Brands"
-						data={[
-							{ value: "", label: "All Brands" },
-							...availableOptions.brands.map(brand => ({ value: brand, label: brand })),
-						]}
-						value={filterState.brand}
-						onChange={(value) => onFilterChange({ brand: value ?? "" })}
-						clearable
-						searchable
-						size="sm"
-						style={{ flex: 1 }}
-					/>
-					<Select
-						placeholder="All Grades"
-						data={[
-							{ value: "", label: "All Grades" },
-							...availableOptions.grades.map(grade => ({ value: grade, label: grade })),
-						]}
-						value={filterState.grade}
-						onChange={(value) => onFilterChange({ grade: value ?? "" })}
-						clearable
-						searchable
-						size="sm"
-						style={{ flex: 1 }}
-					/>
-					<Select
-						placeholder="All Scales"
-						data={[
-							{ value: "", label: "All Scales" },
-							...availableOptions.scales.map(scale => ({ value: `1/${scale}`, label: `1/${scale}` })),
-						]}
-						value={filterState.scale}
-						onChange={(value) => onFilterChange({ scale: value ?? "" })}
-						clearable
-						searchable
-						size="sm"
-						style={{ flex: 1 }}
-					/>
-					<Select
-						placeholder="Sort by"
-						data={[
-							{ value: "date", label: "Date" },
-							{ value: "name", label: "Name" },
-							{ value: "price", label: "Price" },
-							{ value: "brand", label: "Brand" },
-							{ value: "grade", label: "Grade" },
-							{ value: "scale", label: "Scale" },
-							{ value: "series", label: "Series" },
-						]}
-						value={filterState.sortField}
-						onChange={(value) => onFilterChange({ sortField: value ?? "date" })}
-						size="sm"
-					/>
-					<ActionIcon
-						variant={filterState.sortDirection === "asc" ? "filled" : "light"}
-						onClick={() => onFilterChange({
-							sortDirection: filterState.sortDirection === "asc" ? "desc" : "asc"
-						})}
-						size="sm"
-						style={{ marginLeft: "8px" }}
-						title={`Sort ${filterState.sortDirection === "asc" ? "Descending" : "Ascending"}`}
-					>
-						{filterState.sortDirection === "asc" ? (
-							<IconSortAscending size={14} />
-						) : (
-							<IconSortDescending size={14} />
+				{/* Header */}
+				<Group justify="space-between" align="center">
+					<Group gap="xs">
+						<IconFilter size={20} />
+						{title && <Text size="lg" fw={600}>{title}</Text>}
+						{activeFilterCount > 0 && (
+							<Badge size="sm" variant="filled" color="blue">
+								{activeFilterCount}
+							</Badge>
 						)}
-					</ActionIcon>
-				</Group>
-
-				{/* Advanced Filters Toggle */}
-				{availableOptions.series.length > 0 && (
-					<Group justify="space-between" align="center">
-						<Button
-							variant="subtle"
-							size="xs"
-							onClick={onToggleAdvancedFilters}
-							leftSection={<IconAdjustmentsHorizontal size={14} />}
-						>
-							{showAdvancedFilters ? "Hide" : "Show"} Advanced Filters
-						</Button>
-
+					</Group>
+					<Group gap="xs">
 						{hasActiveFilters && (
 							<Button
 								variant="light"
@@ -167,120 +152,208 @@ export function ItemFilters({
 								onClick={onClearFilters}
 								leftSection={<IconX size={14} />}
 							>
-								Clear All Filters ({activeFilterCount})
+								Clear All
 							</Button>
 						)}
+						<ActionIcon
+							variant="subtle"
+							onClick={() => { setFiltersExpanded(!filtersExpanded); }}
+						>
+							{filtersExpanded ? <IconChevronUp size={18} /> : <IconChevronDown size={18} />}
+						</ActionIcon>
 					</Group>
-				)}
+				</Group>
+				{subtitle && <Text size="sm" c="dimmed">{subtitle}</Text>}
 
-				{/* Advanced Filters */}
-				{showAdvancedFilters && availableOptions.series.length > 0 && (
-					<>
-						<Divider />
-						<Box>
-							<Select
-								placeholder="Filter by Series"
-								data={[
-									{ value: "", label: "All Series" },
-									...availableOptions.series.map(series => ({ value: series, label: series })),
-								]}
-								value={filterState.series}
-								onChange={(value) => onFilterChange({ series: value ?? "" })}
-								clearable
-								searchable
+				<Collapse in={filtersExpanded}>
+					<Stack gap="md">
+						{/* Search and Sort Row */}
+						<Group align="flex-end">
+							<TextInput
+								leftSection={<IconSearch size={16} />}
+								placeholder="Search by name..."
+								value={filterState.search}
+								onChange={(e) => { onSearchChange(e.target.value); }}
 								size="sm"
-								leftSection={<IconFilter size={14} />}
+								style={{ flex: 1 }}
 							/>
-						</Box>
-					</>
-				)}
+							<Select
+								placeholder="Sort by"
+								data={[
+									{ value: "date", label: "Date" },
+									{ value: "name", label: "Name" },
+									{ value: "price", label: "Price" },
+									{ value: "brand", label: "Brand" },
+									{ value: "grade", label: "Grade" },
+									{ value: "scale", label: "Scale" },
+									{ value: "series", label: "Series" },
+								]}
+								value={filterState.sortField}
+								onChange={(value) => { onFilterChange({ sortField: value ?? "date" }); }}
+								size="sm"
+								w={120}
+							/>
+							<ActionIcon
+								variant={filterState.sortDirection === "asc" ? "filled" : "light"}
+								onClick={() => { onFilterChange({
+									sortDirection: filterState.sortDirection === "asc" ? "desc" : "asc",
+								}); }}
+								size="lg"
+								title={`Sort ${filterState.sortDirection === "asc" ? "Descending" : "Ascending"}`}
+							>
+								{filterState.sortDirection === "asc" ? (
+									<IconSortAscending size={18} />
+								) : (
+									<IconSortDescending size={18} />
+								)}
+							</ActionIcon>
+						</Group>
 
-				{/* Active Filters Display */}
-				{hasActiveFilters && (
-					<Group gap="xs" wrap="wrap" mt="sm">
+						<Divider />
+
+						{/* Filter Sections */}
+						<Stack gap="lg">
+							<FilterSection
+								label="Categories"
+								field="categories"
+								options={availableOptions.categories}
+								selectedValues={filterState.categories}
+								onToggle={onToggleFilterValue}
+								color="grape"
+							/>
+
+							<FilterSection
+								label="Brands"
+								field="brands"
+								options={availableOptions.brands}
+								selectedValues={filterState.brands}
+								onToggle={onToggleFilterValue}
+								color="blue"
+							/>
+
+							<FilterSection
+								label="Series"
+								field="series"
+								options={availableOptions.series}
+								selectedValues={filterState.series}
+								onToggle={onToggleFilterValue}
+								color="violet"
+							/>
+
+							<FilterSection
+								label="Grades"
+								field="grades"
+								options={availableOptions.grades}
+								selectedValues={filterState.grades}
+								onToggle={onToggleFilterValue}
+								color="teal"
+							/>
+
+							<FilterSection
+								label="Scales"
+								field="scales"
+								options={availableOptions.scales}
+								selectedValues={filterState.scales}
+								onToggle={onToggleFilterValue}
+								formatValue={(v) => `1/${v}`}
+								color="orange"
+							/>
+						</Stack>
+					</Stack>
+				</Collapse>
+
+				{/* Active Filters Summary (shown when collapsed) */}
+				{!filtersExpanded && hasActiveFilters && (
+					<Group gap="xs" wrap="wrap">
 						{filterState.search && (
 							<Badge
 								size="sm"
 								variant="light"
 								color="blue"
 								rightSection={
-									<ActionIcon size="xs" onClick={() => onFilterChange({ search: "" })}>
+									<ActionIcon size="xs" variant="transparent" onClick={() => { onSearchChange(""); }}>
 										<IconX size={10} />
 									</ActionIcon>
 								}
 							>
-								Search: "{filterState.search}"
+								Search: &quot;{filterState.search}&quot;
 							</Badge>
 						)}
-						{filterState.brand && (
+						{filterState.brands.map(brand => (
 							<Badge
+								key={`brand-${brand}`}
 								size="sm"
 								variant="light"
+								color="blue"
 								rightSection={
-									<ActionIcon size="xs" onClick={() => onFilterChange({ brand: "" })}>
+									<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("brands", brand); }}>
 										<IconX size={10} />
 									</ActionIcon>
 								}
 							>
-								Brand: {filterState.brand}
+								{brand}
 							</Badge>
-						)}
-						{filterState.grade && (
+						))}
+						{filterState.grades.map(grade => (
 							<Badge
+								key={`grade-${grade}`}
 								size="sm"
 								variant="light"
+								color="teal"
 								rightSection={
-									<ActionIcon size="xs" onClick={() => onFilterChange({ grade: "" })}>
+									<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("grades", grade); }}>
 										<IconX size={10} />
 									</ActionIcon>
 								}
 							>
-								Grade: {filterState.grade}
+								{grade}
 							</Badge>
-						)}
-						{filterState.scale && (
+						))}
+						{filterState.scales.map(scale => (
 							<Badge
-								size="sm"
-								variant="light"
-								rightSection={
-									<ActionIcon size="xs" onClick={() => onFilterChange({ scale: "" })}>
-										<IconX size={10} />
-									</ActionIcon>
-								}
-							>
-								Scale: 1/{filterState.scale}
-							</Badge>
-						)}
-						{filterState.series && (
-							<Badge
-								size="sm"
-								variant="light"
-								rightSection={
-									<ActionIcon size="xs" onClick={() => onFilterChange({ series: "" })}>
-										<IconX size={10} />
-									</ActionIcon>
-								}
-							>
-								Series: {filterState.series}
-							</Badge>
-						)}
-						{(filterState.sortField !== "date" || filterState.sortDirection !== "desc") && (
-							<Badge
+								key={`scale-${scale}`}
 								size="sm"
 								variant="light"
 								color="orange"
 								rightSection={
-									<ActionIcon
-										size="xs"
-										onClick={() => onFilterChange({ sortField: "date", sortDirection: "desc" })}
-									>
+									<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("scales", scale); }}>
 										<IconX size={10} />
 									</ActionIcon>
 								}
 							>
-								Sort: {filterState.sortField} {filterState.sortDirection === "asc" ? "↑" : "↓"}
+								1/{scale}
 							</Badge>
-						)}
+						))}
+						{filterState.series.map(s => (
+							<Badge
+								key={`series-${s}`}
+								size="sm"
+								variant="light"
+								color="violet"
+								rightSection={
+									<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("series", s); }}>
+										<IconX size={10} />
+									</ActionIcon>
+								}
+							>
+								{s}
+							</Badge>
+						))}
+						{filterState.categories.map(cat => (
+							<Badge
+								key={`category-${cat}`}
+								size="sm"
+								variant="light"
+								color="grape"
+								rightSection={
+									<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("categories", cat); }}>
+										<IconX size={10} />
+									</ActionIcon>
+								}
+							>
+								{cat}
+							</Badge>
+						))}
 					</Group>
 				)}
 			</Stack>
