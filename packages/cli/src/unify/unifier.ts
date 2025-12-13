@@ -226,7 +226,7 @@ function createUnifiedProduct(
 				linkedAt: now,
 			},
 		},
-		matchMethod: match.stage === 1 ? "exact" : "fuzzy",
+		matchMethod: match.stage === 0 ? "direct" : match.stage === 1 ? "exact" : "fuzzy",
 		matchStage: match.stage,
 		createdAt: now,
 		updatedAt: now,
@@ -309,6 +309,13 @@ function createManualOnlyProduct(
 
 /**
  * Run the full unification process.
+ *
+ * Matching strategy (in order):
+ * 1. Direct links: Use manualId from catalog item if present (1:1 relationship)
+ * 2. Fuzzy matching: Match remaining items using name/series/scale similarity
+ *
+ * 1:1 constraint: Each item can have at most one manual, each manual can be
+ * linked to at most one item.
  */
 export async function runUnification(
 	dataDir: string,
@@ -328,19 +335,53 @@ export async function runUnification(
 	console.log(`Loaded ${catalogItems.size} catalog items`);
 	console.log(`Loaded ${manuals.size} manuals`);
 
-	// Convert to match items
-	const catalogMatchItems = [...catalogItems.values()].map(
-		catalogToMatchItem,
-	);
-	const manualMatchItems = [...manuals.values()].map(manualToMatchItem);
+	// Track 1:1 relationships - each manual can only be linked to one item
+	const usedManualIds = new Set<string>();
+	const usedCatalogIds = new Set<string>();
 
-	console.log("Running matching algorithm...");
+	// Phase 1: Process direct links (manualId field in catalog items)
+	const directMatches: MatchCandidate[] = [];
+	for (const [catalogId, item] of catalogItems) {
+		if (item.manualId && manuals.has(item.manualId)) {
+			// Enforce 1:1: skip if manual already used
+			if (usedManualIds.has(item.manualId)) {
+				console.warn(`Manual ${item.manualId} already linked, skipping direct link for ${catalogId}`);
+				continue;
+			}
 
-	// Run matching
-	const { matches, unmatchedCatalogIds, unmatchedManualIds } = matchAll(
-		catalogMatchItems,
-		manualMatchItems,
+			directMatches.push({
+				catalogId,
+				manualId: item.manualId,
+				confidence: 1.0, // Direct link = perfect confidence
+				stage: 0, // Stage 0 = direct link
+				matchedFields: {}, // Direct link - no fuzzy field matching needed
+			});
+			usedManualIds.add(item.manualId);
+			usedCatalogIds.add(catalogId);
+		}
+	}
+
+	console.log(`Found ${directMatches.length} direct links (manualId field)`);
+
+	// Phase 2: Fuzzy matching for remaining items only
+	// Filter out items and manuals that already have direct links
+	const remainingCatalogItems = [...catalogItems.values()]
+		.filter(item => !usedCatalogIds.has(item.id))
+		.map(catalogToMatchItem);
+	const remainingManuals = [...manuals.values()]
+		.filter(manual => !usedManualIds.has(manual.id))
+		.map(manualToMatchItem);
+
+	console.log(`Running fuzzy matching on ${remainingCatalogItems.length} remaining items...`);
+
+	// Run fuzzy matching only on remaining items
+	const { matches: fuzzyMatches, unmatchedCatalogIds, unmatchedManualIds } = matchAll(
+		remainingCatalogItems,
+		remainingManuals,
 	);
+
+	// Combine direct matches with fuzzy matches
+	const matches = [...directMatches, ...fuzzyMatches];
 
 	console.log(`Found ${matches.length} matches`);
 	console.log(`Unmatched catalog items: ${unmatchedCatalogIds.size}`);
@@ -541,6 +582,7 @@ export function printStats(stats: UnifyStats): void {
 
 	for (const [stage, count] of Object.entries(stats.byStage)) {
 		const stageNames: Record<string, string> = {
+			"0": "Direct link (manualId)",
 			"1": "Exact name",
 			"2": "Fuzzy name + series",
 			"3": "Fuzzy name + scale + date",
