@@ -17,7 +17,7 @@ const defaultPreferences: UserPreferences = {
 	autoLoadInfiniteScroll: true,
 	infiniteScrollPageSize: 24,
 	reducedAnimations: false,
-	hideFutureReleases: true,
+	hideFutureReleases: false,
 };
 
 export function useUserPreferences() {
