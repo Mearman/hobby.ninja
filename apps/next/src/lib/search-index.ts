@@ -2,17 +2,12 @@ import Fuse, { type IFuseOptions, type FuseResult } from "fuse.js";
 
 import { PAGINATION, FILTER } from "./constants";
 
+import { searchRecords, type SearchRecord } from "@hobby-ninja/data/search";
+import { brandsList, type Brand } from "@hobby-ninja/data/brands";
+import { categoriesList, type Category } from "@hobby-ninja/data/categories";
+import { seriesList, type Series } from "@hobby-ninja/data/series";
+import { getItemById } from "@hobby-ninja/data/items";
 import {
-	getSearchIndex as getSearchIndexData,
-	getClientBrands,
-	getClientCategories,
-	getClientSeries,
-	type SearchIndexItem,
-} from "@/lib/client-data";
-import {
-	BrandNodeSchema,
-	CategoryNodeSchema,
-	SeriesNodeSchema,
 	type BrandNode,
 	type CategoryNode,
 	type SeriesNode,
@@ -72,7 +67,6 @@ export class SearchIndex {
 	private baseFuseOptions: IFuseOptions<SearchableItem>;
 
 	constructor() {
-		this.allItems = [];
 		this.categories = new Set();
 		this.brands = new Set();
 		this.grades = new Set();
@@ -99,44 +93,37 @@ export class SearchIndex {
 			distance: FILTER.FUZZY_SEARCH_DISTANCE,
 		};
 
-		this.itemFuse = new Fuse([], this.baseFuseOptions);
+		// Initialize data synchronously from imports
+		this.allItems = this.buildSearchableItems();
+		this.itemFuse = new Fuse(this.allItems, this.baseFuseOptions);
 	}
 
 	/**
-   * Initialize the search index with all data
-   */
-	async initialize(): Promise<void> {
+	 * Build searchable items from imported data
+	 */
+	private buildSearchableItems(): SearchableItem[] {
 		console.time("SearchIndex initialization");
+		const searchableItems: SearchableItem[] = [];
 
 		try {
-			// Load all data in parallel via fetch (not bundled in JS)
-			// Items use lightweight search index (~2MB instead of 19MB)
-			// Service worker caches these for offline support
-			const [items, brands, categories, seriesData] = await Promise.all([
-				getSearchIndexData(),
-				getClientBrands(),
-				getClientCategories(),
-				getClientSeries(),
-			]);
+			// Process items from search records
+			for (const record of searchRecords) {
+				if (!record?.name) continue;
 
-			// Process items
-			const searchableItems: SearchableItem[] = [];
-
-			// Add items from lightweight search index (already validated during build)
-			for (const item of items) {
-				if (!item?.name) continue;
+				// Get full item data for grade, scale, price, releaseYear
+				const fullItem = getItemById(record.id);
 
 				const searchableItem: SearchableItem = {
-					id: item.id,
-					name: getLocalizedString(item.name),
-					japaneseName: getLocalizedString(item.name),
-					brand: item.brand,
-					category: item.category,
-					series: item.series,
-					grade: item.grade,
-					scale: item.scale,
-					price: item.price?.amount,
-					releaseYear: item.releaseDate?.year,
+					id: record.id,
+					name: getLocalizedString(record.name),
+					japaneseName: getLocalizedString(record.nameJa),
+					brand: record.brand,
+					category: record.category,
+					series: record.series,
+					grade: fullItem?.grade,
+					scale: fullItem?.scale,
+					price: fullItem?.price?.amount ?? undefined,
+					releaseYear: fullItem?.releaseDate?.year ?? undefined,
 					type: "item",
 					// No originalData for items - use getItemById() if full data needed
 				};
@@ -144,83 +131,62 @@ export class SearchIndex {
 				searchableItems.push(searchableItem);
 
 				// Build filter sets
-				if (item.category) this.categories.add(item.category);
-				if (item.brand) this.brands.add(item.brand);
-				if (item.grade) this.grades.add(item.grade);
-				if (item.scale) this.scales.add(item.scale);
-				if (item.series) this.series.add(item.series);
+				if (record.category) this.categories.add(record.category);
+				if (record.brand) this.brands.add(record.brand);
+				if (fullItem?.grade) this.grades.add(fullItem.grade);
+				if (fullItem?.scale) this.scales.add(fullItem.scale);
+				if (record.series) this.series.add(record.series);
 			}
 
-			// Add brands with Zod validation
-			for (const brand of brands) {
-				const validationResult = BrandNodeSchema.safeParse(brand);
-				if (!validationResult.success) {
-					console.warn(`Invalid brand data for brand ${brand?.id}:`, validationResult.error);
-					continue;
-				}
-
-				const validatedBrand = validationResult.data;
-				if (!validatedBrand?.name) continue;
+			// Add brands (Brand type is compatible with BrandNode)
+			for (const brand of brandsList) {
+				if (!brand?.name) continue;
 
 				searchableItems.push({
-					id: validatedBrand.id,
-					name: getLocalizedString(validatedBrand.name),
-					description: validatedBrand.description,
+					id: brand.id,
+					name: getLocalizedString(brand.name),
+					description: brand.description,
 					type: "brand",
-					originalData: validatedBrand,
+					originalData: brand as unknown as BrandNode,
 				});
 
-				this.brands.add(getLocalizedString(validatedBrand.name));
+				this.brands.add(getLocalizedString(brand.name));
 			}
 
-			// Add categories with Zod validation
-			for (const category of categories) {
-				const validationResult = CategoryNodeSchema.safeParse(category);
-				if (!validationResult.success) {
-					console.warn(`Invalid category data for category ${category?.id}:`, validationResult.error);
-					continue;
-				}
-
-				const validatedCategory = validationResult.data;
-				if (!validatedCategory?.name) continue;
+			// Add categories (Category type is compatible with CategoryNode)
+			for (const category of categoriesList) {
+				if (!category?.name) continue;
 
 				searchableItems.push({
-					id: validatedCategory.id,
-					name: getLocalizedString(validatedCategory.name),
-					description: validatedCategory.description,
+					id: category.id,
+					name: getLocalizedString(category.name),
+					description: category.description,
 					type: "category",
-					originalData: validatedCategory,
+					originalData: category as unknown as CategoryNode,
 				});
 
-				this.categories.add(getLocalizedString(validatedCategory.name));
+				this.categories.add(getLocalizedString(category.name));
 			}
 
-			// Add series with Zod validation
-			for (const series of seriesData) {
-				const validationResult = SeriesNodeSchema.safeParse(series);
-				if (!validationResult.success) {
-					console.warn(`Invalid series data for series ${series?.id}:`, validationResult.error);
-					continue;
-				}
-
-				const validatedSeries = validationResult.data;
-				if (!validatedSeries?.name) continue;
+			// Add series (Series type is compatible with SeriesNode)
+			for (const series of seriesList) {
+				if (!series?.name) continue;
 
 				searchableItems.push({
-					id: validatedSeries.id,
-					name: getLocalizedString(validatedSeries.name),
-					description: validatedSeries.description,
+					id: series.id,
+					name: getLocalizedString(series.name),
+					description: series.description,
 					type: "series",
-					originalData: validatedSeries,
+					originalData: series as unknown as SeriesNode,
 				});
-				this.series.add(getLocalizedString(validatedSeries.name));
-			}
 
-			this.allItems = searchableItems;
-			this.itemFuse.setCollection(searchableItems);
+				this.series.add(getLocalizedString(series.name));
+			}
 
 			console.log(`Search index initialized with ${searchableItems.length} items`);
 			console.log(`Categories: ${this.categories.size}, Brands: ${this.brands.size}, Grades: ${this.grades.size}, Scales: ${this.scales.size}, Series: ${this.series.size}`);
+
+			return searchableItems;
 		} catch (error) {
 			console.error("Failed to initialize search index:", error);
 			throw error;
@@ -228,6 +194,7 @@ export class SearchIndex {
 			console.timeEnd("SearchIndex initialization");
 		}
 	}
+
 
 	/**
    * Perform search with filters
@@ -448,10 +415,9 @@ export function getSearchIndex(): SearchIndex {
 	return searchIndexInstance;
 }
 
-export async function initializeSearchIndex(): Promise<SearchIndex> {
-	const index = getSearchIndex();
-	await index.initialize();
-	return index;
+// Deprecated: No longer needed as data is loaded synchronously
+export function initializeSearchIndex(): SearchIndex {
+	return getSearchIndex();
 }
 
 export default SearchIndex;

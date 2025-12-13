@@ -1,89 +1,82 @@
-import Fuse from "fuse.js";
-import type { FuseResult, IFuseOptions } from "fuse.js";
 import { useCallback, useMemo } from "react";
 
-import { getSearchIndex, type SearchIndexItem } from "./client-data";
+import {
+	search as dataSearch,
+	searchRecords,
+	getSearchInstance,
+	type SearchRecord,
+} from "@hobby-ninja/data/search";
+import { getItemById } from "@hobby-ninja/data/items";
 
-// Define search result type using lightweight search index
+// Re-export SearchRecord as SearchIndexItem for compatibility
+export type SearchIndexItem = SearchRecord;
+
+// Define search result type
 export interface SearchResult {
-  item: SearchIndexItem;
-  score: number;
+	item: SearchRecord;
+	score: number;
 }
 
-// Helper function to extract text from localized name
-function extractText(name: string | { ja: string; en?: string } | undefined): string {
-	if (!name) return "";
-	if (typeof name === "string") return name;
-	return name.en || name.ja;
+// Helper function to extract text from name
+function extractText(name: string | undefined): string {
+	return name ?? "";
 }
 
-// Helper to get release year from search index item
-function getItemReleaseYear(item: SearchIndexItem): number | undefined {
-	return item.releaseDate?.year;
+// Search options interface
+export interface SearchOptions {
+	limit?: number;
+	threshold?: number;
+	keys?: string[];
 }
 
-// Fuse.js configuration for lightweight search index
-const fuseOptions: IFuseOptions<SearchIndexItem> = {
-	keys: [
-		{ name: "name", weight: 0.4 },
-		{ name: "brand", weight: 0.2 },
-		{ name: "series", weight: 0.2 },
-		{ name: "category", weight: 0.1 },
-		{ name: "grade", weight: 0.08 },
-		{ name: "scale", weight: 0.02 },
-	],
-	threshold: 0.4,
-	includeScore: true,
-	minMatchCharLength: 2,
-};
+// Advanced search filters interface
+export interface SearchFilters {
+	brands?: string[];
+	categories?: string[];
+	series?: string[];
+	grades?: string[];
+	scales?: string[];
+	minPrice?: number;
+	maxPrice?: number;
+	minYear?: number;
+	maxYear?: number;
+}
+
+// Search stats interface
+export interface SearchStats {
+	totalItems: number;
+	brands: string[];
+	categories: string[];
+	series: string[];
+	grades: string[];
+	scales: string[];
+}
 
 class SearchService {
-	private fuse: Fuse<SearchIndexItem> | null = null;
-	private data: SearchIndexItem[] = [];
+	private initialized = false;
 
-	async initialize() {
-		try {
-			// Load lightweight search index (~2MB instead of 19MB)
-			// Service worker caches this for offline support
-			this.data = await getSearchIndex();
-			this.fuse = new Fuse(this.data, fuseOptions);
-		} catch (error) {
-			console.error("Failed to initialize search:", error);
-			// Fallback to empty data
-			this.data = [];
-			this.fuse = new Fuse([], fuseOptions);
-		}
+	initialize() {
+		// Pre-built index is already loaded via import
+		// Just mark as initialized
+		this.initialized = true;
 	}
 
 	search(query: string, options?: SearchOptions): SearchResult[] {
-		if (!this.fuse || !query.trim()) {
+		if (!query.trim()) {
 			return [];
 		}
 
-		const searchOptions: IFuseOptions<SearchIndexItem> = {
-			...fuseOptions,
-			...(options?.threshold && { threshold: options.threshold }),
-			...(options?.keys && { keys: options.keys }),
-		};
+		const results = dataSearch(query, options?.limit ?? 50);
 
-		// Create temporary Fuse instance for custom options
-		const fuse = options?.keys || options?.threshold
-			? new Fuse(this.data, searchOptions)
-			: this.fuse;
-
-		const results = fuse.search(query);
-
-		return results
-			.slice(0, options?.limit || 50)
-			.map(result => ({
-				item: result.item,
-				score: result.score || 0,
-			}));
+		return results.map(result => ({
+			item: result.item,
+			score: result.score ?? 0,
+		}));
 	}
 
 	// Get suggestions based on current query
 	getSuggestions(query: string, limit = 5): string[] {
-		if (query.length < 2 || !this.fuse) return [];
+		if (query.length < 2) return [];
 
 		const results = this.search(query, { limit: limit * 2 });
 		const suggestions = new Set<string>();
@@ -107,12 +100,6 @@ class SearchService {
 			if (series?.toLowerCase().includes(queryLower)) {
 				suggestions.add(series);
 			}
-
-			// Add grade suggestions
-			const grade = result.item.grade;
-			if (grade?.toLowerCase().includes(queryLower)) {
-				suggestions.add(grade);
-			}
 		}
 
 		return [...suggestions]
@@ -122,61 +109,62 @@ class SearchService {
 
 	// Advanced search with filters
 	advancedSearch(query: string, filters: SearchFilters): SearchResult[] {
-		let results = this.search(query);
+		let results = this.search(query, { limit: 200 });
 
-		// Apply filters
+		// Apply filters using search record fields
 		if (filters.brands?.length) {
 			results = results.filter(result =>
-        filters.brands!.includes(result.item.brand || ""),
+				filters.brands!.includes(result.item.brand ?? ""),
 			);
 		}
 
 		if (filters.categories?.length) {
 			results = results.filter(result =>
-        filters.categories!.includes(result.item.category || ""),
+				filters.categories!.includes(result.item.category ?? ""),
 			);
 		}
 
 		if (filters.series?.length) {
 			results = results.filter(result =>
-        filters.series!.includes(result.item.series || ""),
+				filters.series!.includes(result.item.series ?? ""),
 			);
 		}
 
-		if (filters.grades?.length) {
-			results = results.filter(result =>
-        filters.grades!.includes(result.item.grade || ""),
-			);
-		}
+		// For grade/scale/price/year filters, look up full item data
+		if (filters.grades?.length || filters.scales?.length ||
+			filters.minPrice !== undefined || filters.maxPrice !== undefined ||
+			filters.minYear !== undefined || filters.maxYear !== undefined) {
+			results = results.filter(result => {
+				const item = getItemById(result.item.id);
+				if (!item) return false;
 
-		if (filters.scales?.length) {
-			results = results.filter(result =>
-        filters.scales!.includes(result.item.scale || ""),
-			);
-		}
+				if (filters.grades?.length) {
+					// Item has grade as a direct string field
+					if (!item.grade || !filters.grades.includes(item.grade)) return false;
+				}
 
-		if (filters.minPrice !== undefined) {
-			results = results.filter(result =>
-				(result.item.price?.amount || 0) >= filters.minPrice!,
-			);
-		}
+				if (filters.scales?.length) {
+					if (!filters.scales.includes(item.scale ?? "")) return false;
+				}
 
-		if (filters.maxPrice !== undefined) {
-			results = results.filter(result =>
-				(result.item.price?.amount || 0) <= filters.maxPrice!,
-			);
-		}
+				if (filters.minPrice !== undefined) {
+					if ((item.price?.amount ?? 0) < filters.minPrice) return false;
+				}
 
-		if (filters.minYear !== undefined) {
-			results = results.filter(result =>
-				(getItemReleaseYear(result.item) || 0) >= filters.minYear!,
-			);
-		}
+				if (filters.maxPrice !== undefined) {
+					if ((item.price?.amount ?? 0) > filters.maxPrice) return false;
+				}
 
-		if (filters.maxYear !== undefined) {
-			results = results.filter(result =>
-				(getItemReleaseYear(result.item) || 0) <= filters.maxYear!,
-			);
+				if (filters.minYear !== undefined) {
+					if ((item.releaseDate?.year ?? 0) < filters.minYear) return false;
+				}
+
+				if (filters.maxYear !== undefined) {
+					if ((item.releaseDate?.year ?? 0) > filters.maxYear) return false;
+				}
+
+				return true;
+			});
 		}
 
 		return results;
@@ -184,49 +172,41 @@ class SearchService {
 
 	// Get statistics
 	getStats(): SearchStats {
+		const brands = new Set<string>();
+		const categories = new Set<string>();
+		const series = new Set<string>();
+		const grades = new Set<string>();
+		const scales = new Set<string>();
+
+		for (const record of searchRecords) {
+			if (record.brand) brands.add(record.brand);
+			if (record.category) categories.add(record.category);
+			if (record.series) series.add(record.series);
+		}
+
+		// For grades and scales, we need to look at full item data
+		// This is expensive but only done once for stats
+		for (const record of searchRecords) {
+			const item = getItemById(record.id);
+			if (item) {
+				if (item.scale) scales.add(item.scale);
+				if (item.grade) grades.add(item.grade);
+			}
+		}
+
 		return {
-			totalItems: this.data.length,
-			brands: [...new Set(this.data.map(item => item.brand).filter((brand): brand is string => Boolean(brand)))],
-			categories: [...new Set(this.data.map(item => item.category).filter((category): category is string => Boolean(category)))],
-			series: [...new Set(this.data.map(item => item.series).filter((series): series is string => Boolean(series)))],
-			grades: [...new Set(this.data.map(item => item.grade).filter((grade): grade is string => Boolean(grade)))],
-			scales: [...new Set(this.data.map(item => item.scale).filter((scale): scale is string => Boolean(scale)))],
+			totalItems: searchRecords.length,
+			brands: [...brands],
+			categories: [...categories],
+			series: [...series],
+			grades: [...grades],
+			scales: [...scales],
 		};
 	}
 }
 
 // Export singleton instance
 export const searchService = new SearchService();
-
-// Search options interface
-export interface SearchOptions {
-  limit?: number;
-  threshold?: number;
-  keys?: string[];
-}
-
-// Advanced search filters interface
-export interface SearchFilters {
-  brands?: string[];
-  categories?: string[];
-  series?: string[];
-  grades?: string[];
-  scales?: string[];
-  minPrice?: number;
-  maxPrice?: number;
-  minYear?: number;
-  maxYear?: number;
-}
-
-// Search stats interface
-export interface SearchStats {
-  totalItems: number;
-  brands: string[];
-  categories: string[];
-  series: string[];
-  grades: string[];
-  scales: string[];
-}
 
 // Export hook for React components
 export function useSearch() {
@@ -236,10 +216,13 @@ export function useSearch() {
 	const getStats = useCallback((): SearchStats => searchService.getStats(), []);
 
 	return useMemo(() => ({
-		isInitialized: true, // This is handled by SearchProvider
+		isInitialized: true,
 		search,
 		getSuggestions,
 		advancedSearch,
 		getStats,
 	}), [search, getSuggestions, advancedSearch, getStats]);
 }
+
+// Re-export for compatibility
+export { searchRecords, getSearchInstance };

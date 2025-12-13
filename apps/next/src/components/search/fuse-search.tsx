@@ -25,7 +25,6 @@ import {
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 
 import { useSearch, type SearchResult, type SearchOptions } from "@/lib/fuse-search";
-import { getSearchItemDisplayName, formatSearchItemPrice } from "@/lib/client-data";
 
 interface FuseSearchProps {
   onResultClick?: (result: SearchResult) => void;
@@ -155,13 +154,11 @@ export function FuseSearch({
 		setShowSuggestions(false);
 	}, []);
 
-	// Format price for display (SearchIndexItem only has amount, not currency)
-	const formatPrice = useCallback((price?: { amount: number }) => {
+	// Format price for display
+	const formatPrice = useCallback((price: { amount: number; currency?: string } | undefined): string => {
 		if (!price) return "";
-		return new Intl.NumberFormat("ja-JP", {
-			style: "currency",
-			currency: "JPY",
-		}).format(price.amount);
+		const symbol = price.currency === "JPY" || !price.currency ? "¥" : price.currency;
+		return `${symbol}${price.amount.toLocaleString()}`;
 	}, []);
 
 	// Get search stats for display
@@ -259,7 +256,7 @@ export function FuseSearch({
 											<Group justify="space-between" align="start">
 												<Box flex={1}>
 													<Text size="sm" fw={500} lineClamp={1}>
-														{getSearchItemDisplayName(result.item)}
+														{result.item.name}
 													</Text>
 													{result.item.series && (
 														<Text size="xs" c="dimmed" lineClamp={1}>
@@ -267,22 +264,12 @@ export function FuseSearch({
 														</Text>
 													)}
 												</Box>
-												{result.item.price && (
-													<Text size="sm" fw={500} c="blue">
-														{formatPrice(result.item.price)}
-													</Text>
-												)}
 											</Group>
 
 											<Group gap="xs" wrap="wrap">
-												{result.item.grade && (
+												{result.item.category && (
 													<Badge size="xs" variant="light">
-														{result.item.grade}
-													</Badge>
-												)}
-												{result.item.scale && (
-													<Badge size="xs" variant="outline">
-														{result.item.scale}
+														{result.item.category}
 													</Badge>
 												)}
 												{result.item.brand && (
