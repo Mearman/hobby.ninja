@@ -18,8 +18,8 @@ const ITEMS_PATH = resolveWorkspacePath("data/src/items");
 const ITEMS_INDEX_PATH = path.join(ITEMS_PATH, "index.json");
 const GLOBAL_BASE_URL = "https://global.bandai-hobby.net/en-us";
 
-// Delay between requests (ms) to be polite to the server
-const REQUEST_DELAY = 2000;
+// Delay between requests (ms) - set to 0 for maximum speed
+const REQUEST_DELAY = 0;
 
 export interface GlobalLookupOptions {
 	/** Maximum number of items to check */
@@ -120,9 +120,6 @@ async function lookupEnglishTranslation(page: Page, itemId: string): Promise<{
 			return { hasPage: false, error: `HTTP ${status}` };
 		}
 
-		// Wait for dynamic content
-		await sleep(500);
-
 		// Get page HTML and parse with cheerio
 		const html = await page.content();
 		const $ = cheerioLoad(html);
@@ -139,15 +136,20 @@ async function lookupEnglishTranslation(page: Page, itemId: string): Promise<{
 			return { hasPage: false };
 		}
 
-		// Extract description bullets
+		// Extract description bullets from the product info section
 		const description: string[] = [];
-		const mainText = $("main").text();
-		const bulletMatches = mainText.match(/■[^■\n]+/g);
-		if (bulletMatches) {
-			for (const match of bulletMatches) {
-				const cleaned = match.replace(/^■\s*/, "").trim();
+		const instructionEl = $(".pg-products__instructionTxt p").first();
+		if (instructionEl.length > 0) {
+			// Replace <br> tags with newlines to preserve line breaks
+			instructionEl.find("br").replaceWith("\n");
+			const text = instructionEl.text();
+
+			// Split on ■ bullets and clean each line
+			const bullets = text.split("■").filter(Boolean);
+			for (const bullet of bullets) {
+				const cleaned = bullet.trim();
 				if (cleaned.length > 10) {
-					description.push(cleaned);
+					description.push(`■ ${cleaned}`);
 				}
 			}
 		}
