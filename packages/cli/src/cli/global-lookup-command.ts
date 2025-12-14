@@ -8,14 +8,14 @@
  */
 
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import path from "node:path";
 
-import { chromium, type Browser, type Page } from "playwright";
-import * as cheerio from "cheerio";
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
+import { load as cheerioLoad } from "cheerio";
+import { chromium, type Page } from "playwright";
 
 const ITEMS_PATH = resolveWorkspacePath("data/src/items");
-const ITEMS_INDEX_PATH = join(ITEMS_PATH, "index.json");
+const ITEMS_INDEX_PATH = path.join(ITEMS_PATH, "index.json");
 const GLOBAL_BASE_URL = "https://global.bandai-hobby.net/en-us";
 
 // Delay between requests (ms) to be polite to the server
@@ -71,19 +71,20 @@ interface LocalizedText {
 	en?: string;
 }
 
+interface LocalizedTextArray {
+	ja: string[];
+	en?: string[];
+}
+
 interface ItemFile {
 	id: string;
 	name: LocalizedText;
-	description?: LocalizedText[];
+	description?: LocalizedTextArray;
+	accessories?: LocalizedTextArray;
+	contents?: LocalizedTextArray;
 	[key: string]: unknown;
 }
 
-interface GlobalSiteData {
-	name?: string;
-	description?: string[];
-	hasPage: boolean;
-	error?: string;
-}
 
 function sleep(ms: number): Promise<void> {
 	return new Promise((resolve) => setTimeout(resolve, ms));
@@ -97,13 +98,18 @@ function log(message: string, dryRun: boolean): void {
 /**
  * Look up English translation from global site using Playwright
  */
-async function lookupEnglishTranslation(page: Page, itemId: string): Promise<GlobalSiteData> {
+async function lookupEnglishTranslation(page: Page, itemId: string): Promise<{
+	name?: string;
+	description?: string[];
+	hasPage: boolean;
+	error?: string;
+}> {
 	const url = `${GLOBAL_BASE_URL}/item/${itemId}/`;
 
 	try {
 		const response = await page.goto(url, {
 			waitUntil: "domcontentloaded",
-			timeout: 15000,
+			timeout: 15_000,
 		});
 
 		const status = response?.status() ?? 0;
@@ -119,7 +125,7 @@ async function lookupEnglishTranslation(page: Page, itemId: string): Promise<Glo
 
 		// Get page HTML and parse with cheerio
 		const html = await page.content();
-		const $ = cheerio.load(html);
+		const $ = cheerioLoad(html);
 
 		// Check if page has actual content
 		const h1 = $("main h1").first().text().trim();
@@ -163,35 +169,42 @@ async function lookupEnglishTranslation(page: Page, itemId: string): Promise<Glo
 }
 
 /**
- * Update item file with English translations
+ * Update item file with English translations from global site
+ * Uses LocalizedTextArray structure: { ja: string[], en?: string[] }
  */
-function updateItemFile(itemId: string, globalData: GlobalSiteData, dryRun: boolean): boolean {
+function updateItemFile(itemId: string, globalData: {
+	name?: string;
+	description?: string[];
+	hasPage: boolean;
+	error?: string;
+}, dryRun: boolean): boolean {
 	if (!globalData.hasPage || !globalData.name) {
 		return false;
 	}
 
-	const filePath = join(ITEMS_PATH, `${itemId}.json`);
+	const filePath = path.join(ITEMS_PATH, `${itemId}.json`);
 	if (!existsSync(filePath)) {
 		return false;
 	}
 
 	try {
-		const item = JSON.parse(readFileSync(filePath, "utf-8")) as ItemFile;
+		const item = JSON.parse(readFileSync(filePath, "utf8")) as ItemFile;
 		let updated = false;
 
-		// Update name.en if missing
-		if (item.name && !item.name.en && globalData.name) {
+		// Update name.en if missing or different
+		if (!item.name.en || item.name.en !== globalData.name) {
 			item.name.en = globalData.name;
 			updated = true;
 		}
 
-		// Update description[].en if missing
-		if (item.description && globalData.description) {
-			for (let i = 0; i < Math.min(item.description.length, globalData.description.length); i++) {
-				if (item.description[i] && !item.description[i].en && globalData.description[i]) {
-					item.description[i].en = globalData.description[i];
-					updated = true;
-				}
+		// Update description.en array (canonical source from global site)
+		if (globalData.description && globalData.description.length > 0) {
+			if (!item.description) {
+				item.description = { ja: [], en: globalData.description };
+				updated = true;
+			} else if (!item.description.en || JSON.stringify(item.description.en) !== JSON.stringify(globalData.description)) {
+				item.description.en = globalData.description;
+				updated = true;
 			}
 		}
 
@@ -267,7 +280,7 @@ export async function runGlobalLookup(options: GlobalLookupOptions): Promise<voi
 		process.exit(1);
 	}
 
-	const index = JSON.parse(readFileSync(ITEMS_INDEX_PATH, "utf-8")) as ItemsIndex;
+	const index = JSON.parse(readFileSync(ITEMS_INDEX_PATH, "utf8")) as ItemsIndex;
 	console.log(`Loaded index with ${Object.keys(index.items).length} items\n`);
 
 	// Find items to check
@@ -324,9 +337,7 @@ export async function runGlobalLookup(options: GlobalLookupOptions): Promise<voi
 			const result = await lookupEnglishTranslation(page, itemId);
 
 			// Update index
-			if (!index.items[itemId]) {
-				index.items[itemId] = {};
-			}
+			index.items[itemId] ??= {};
 
 			index.items[itemId].globalSite = {
 				hasPage: result.hasPage,
@@ -336,7 +347,7 @@ export async function runGlobalLookup(options: GlobalLookupOptions): Promise<voi
 			};
 
 			if (result.hasPage) {
-				log(`  ✓ Found: ${result.name}`, dryRun);
+				log(`  ✓ Found: ${result.name ?? "unknown"}`, dryRun);
 				found++;
 
 				if (updateFiles) {
