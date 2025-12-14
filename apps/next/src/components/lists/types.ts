@@ -39,6 +39,7 @@ export interface FilterResult<T, TFilterState = Record<string, unknown>> {
 	updateFilter: (updates: Partial<TFilterState>) => void;
 	clearFilters: () => void;
 	hasActiveFilters: boolean;
+	availableOptions: Record<string, unknown>;
 }
 
 export interface GenericListPageProps<T, TFilterState = Record<string, unknown>> {

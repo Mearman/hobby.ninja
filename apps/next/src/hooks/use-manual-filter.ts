@@ -59,5 +59,6 @@ export function useManualFilter(items: Manual[]) {
 		updateFilter,
 		clearFilters,
 		hasActiveFilters,
+		availableOptions: {}, // Manual filters don't have complex available options
 	};
 }

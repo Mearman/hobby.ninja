@@ -146,5 +146,6 @@ export function useManualFilterEnhanced(items: Manual[]) {
 		updateFilter,
 		clearFilters,
 		hasActiveFilters,
+		availableOptions: {}, // Manual filters don't have complex available options
 	};
 }

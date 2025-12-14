@@ -8,6 +8,8 @@ import {
 	Stack,
 	SimpleGrid,
 	Card,
+	Table,
+	Box,
 } from "@mantine/core";
 import { IconBox } from "@tabler/icons-react";
 
@@ -34,7 +36,7 @@ export function GenericListPage<T>({
 	const { viewMode, setViewMode } = useViewMode();
 
 	// Apply filtering using the config's filter hook
-	const { filteredItems, filterState, updateFilter, hasActiveFilters } =
+	const { filteredItems, filterState, updateFilter, hasActiveFilters, availableOptions } =
 		config.filters.hook(items);
 
 	// Apply infinite scroll if enabled
@@ -77,7 +79,7 @@ export function GenericListPage<T>({
 				<Card p="lg" radius="md" withBorder={true}>
 					<FilterComponent
 						filterState={filterState}
-						availableOptions={{}}
+						availableOptions={availableOptions}
 						onFilterChange={handleFilterChange}
 						items={items}
 					/>
@@ -128,7 +130,7 @@ export function GenericListPage<T>({
 							</SimpleGrid>
 						)}
 
-						{(viewMode === "list" || viewMode === "table") && (
+						{viewMode === "list" && (
 							<Stack gap="xs">
 								{visibleItems.map((item, index) => {
 									const isLast = index === visibleItems.length - 1;
@@ -143,6 +145,38 @@ export function GenericListPage<T>({
 								})}
 							</Stack>
 						)}
+
+						{viewMode === "table" && (
+							<Box>
+								<Table striped={true} highlightOnHover={true}>
+									<Table.Thead>
+										<Table.Tr>
+											<Table.Th>Name</Table.Th>
+											<Table.Th>Released</Table.Th>
+											<Table.Th>Series</Table.Th>
+											<Table.Th>Grade</Table.Th>
+											<Table.Th>Scale</Table.Th>
+											<Table.Th>Brand</Table.Th>
+										</Table.Tr>
+									</Table.Thead>
+									<Table.Tbody>
+										{visibleItems.map((item, index) => {
+											const isLast = index === visibleItems.length - 1;
+											return (
+												<div
+													key={String(item[config.itemIdField])}
+													ref={isLast ? lastItemRef : undefined}
+													style={{ display: "contents" }}
+												>
+													<config.card item={item} viewMode={viewMode} />
+												</div>
+											);
+										})}
+									</Table.Tbody>
+								</Table>
+							</Box>
+						)}
+
 
 						{/* Infinite Scroll Loader */}
 						{config.infiniteScroll && viewMode !== "table" && (
