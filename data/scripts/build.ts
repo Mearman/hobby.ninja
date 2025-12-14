@@ -30,7 +30,7 @@ const DIST_PATH = path.join(ROOT, "dist");
 
 interface LocalizedString {
 	ja: string;
-	en: string;
+	en?: string;
 }
 
 interface Item {
@@ -43,6 +43,9 @@ interface Item {
 	relatedItemIds: string[];
 	manualId?: string;
 	scale?: string;
+	// Grades - keyed by root grade, value is array of specific grades
+	// e.g., { "hg": ["hg-uc"], "mg": [] }
+	grades?: Record<string, string[]>;
 	price?: { amount: number; currency: string };
 	releaseDate?: { year?: number; month?: number; day?: number };
 	images?: unknown[];
@@ -192,69 +195,106 @@ function computeDisplayImages(items: Map<string, Item>, manuals: Map<string, Man
 	}
 }
 
-// Extract grade from item name and brand names
-function extractGradeFromItem(item: Item, brands: Map<string, Brand>): string | null {
-	const itemName = (item.name?.en || item.name?.ja || "").toLowerCase();
+// Grade patterns for extraction
+const GRADE_PATTERNS: Array<{ pattern: RegExp; grade: string }> = [
+	{ pattern: /\bhg\s*uc\b|\bhguc\b|\bhigh grade universal century\b/, grade: "hg-uc" },
+	{ pattern: /\bhg\s*ce\b|\bhgce\b|\bhigh grade cosmic era\b/, grade: "hg-ce" },
+	{ pattern: /\bhg\s*ac\b|\bhgac\b|\bhigh grade after colony\b/, grade: "hg-ac" },
+	{ pattern: /\bhg\s*amplified\b/, grade: "hg-amplified" },
+	{ pattern: /\bmg\s*ver\.?\s*ka\b|\bver\.?\s*ka\b/, grade: "mg-ver-ka" },
+	{ pattern: /\bmgex\b/, grade: "mgex" },
+	{ pattern: /\bsd\s*cs\b|\bsdcs\b|\bcross silhouette\b/, grade: "sd-cs" },
+	{ pattern: /\bsd\s*bb\s*warrior\b/, grade: "sd-bb-warrior" },
+	{ pattern: /\bsd\s*bb\b|\bbb\s*senshi\b/, grade: "sd-bb" },
+	{ pattern: /\bsdex\b/, grade: "sdex" },
+	{ pattern: /\bre[/-]?100\b/, grade: "re-100" },
+	{ pattern: /\bmega\s*size\b/, grade: "mega-size" },
+	{ pattern: /\bfigure[- ]?rise\b/, grade: "figure-rise" },
+	{ pattern: /\bpg\b|\bperfect grade\b/, grade: "pg" },
+	{ pattern: /\bmg\b|\bmaster grade\b/, grade: "mg" },
+	{ pattern: /\brg\b|\breal grade\b/, grade: "rg" },
+	{ pattern: /\bhg\b|\bhigh grade\b/, grade: "hg" },
+	{ pattern: /\bsd\b|\bsuper deformed\b/, grade: "sd" },
+	{ pattern: /\beg\b|\bentry grade\b/, grade: "eg" },
+	{ pattern: /\bfm\b|\bfull mechanics\b/, grade: "fm" },
+];
 
-	// Grade patterns in order of specificity (most specific first)
-	const gradePatterns: Array<{ pattern: RegExp; grade: string }> = [
-		{ pattern: /\bhg\s*uc\b|\bhguc\b|\bhigh grade universal century\b/, grade: "hg-uc" },
-		{ pattern: /\bhg\s*ce\b|\bhgce\b|\bhigh grade cosmic era\b/, grade: "hg-ce" },
-		{ pattern: /\bhg\s*ac\b|\bhgac\b|\bhigh grade after colony\b/, grade: "hg-ac" },
-		{ pattern: /\bhg\s*amplified\b/, grade: "hg-amplified" },
-		{ pattern: /\bmg\s*ver\.?\s*ka\b|\bver\.?\s*ka\b/, grade: "mg-ver-ka" },
-		{ pattern: /\bmgex\b/, grade: "mgex" },
-		{ pattern: /\bsd\s*cs\b|\bsdcs\b|\bcross silhouette\b/, grade: "sd-cs" },
-		{ pattern: /\bsd\s*bb\s*warrior\b/, grade: "sd-bb-warrior" },
-		{ pattern: /\bsd\s*bb\b|\bbb\s*senshi\b/, grade: "sd-bb" },
-		{ pattern: /\bsdex\b/, grade: "sdex" },
-		{ pattern: /\bre[/-]?100\b/, grade: "re-100" },
-		{ pattern: /\bmega\s*size\b/, grade: "mega-size" },
-		{ pattern: /\bfigure[- ]?rise\b/, grade: "figure-rise" },
-		{ pattern: /\bpg\b|\bperfect grade\b/, grade: "pg" },
-		{ pattern: /\bmg\b|\bmaster grade\b/, grade: "mg" },
-		{ pattern: /\brg\b|\breal grade\b/, grade: "rg" },
-		{ pattern: /\bhg\b|\bhigh grade\b/, grade: "hg" },
-		{ pattern: /\bsd\b|\bsuper deformed\b/, grade: "sd" },
-		{ pattern: /\beg\b|\bentry grade\b/, grade: "eg" },
-		{ pattern: /\bfm\b|\bfull mechanics\b/, grade: "fm" },
-	];
+// Extract grades from item name and brand names
+// Returns hierarchical object: { rootGrade: [specificGrades...] }
+// e.g., { "hg": ["hg-uc", "hg-ce"], "mg": [] }
+function extractGrades(item: Item, brands: Map<string, Brand>): Record<string, string[]> {
+	const matched = new Set<string>();
+	const itemName = (item.name.en ?? item.name.ja).toLowerCase();
 
-	// Check item name first
-	for (const { pattern, grade } of gradePatterns) {
+	// Check item name for all matching patterns
+	for (const { pattern, grade } of GRADE_PATTERNS) {
 		if (pattern.test(itemName)) {
-			return grade;
+			matched.add(grade);
 		}
 	}
 
 	// Check brand names
-	for (const brandId of item.brandIds ?? []) {
+	for (const brandId of item.brandIds) {
 		const brand = brands.get(brandId);
 		if (brand) {
-			const brandName = (brand.name?.en || brand.name?.ja || "").toLowerCase();
-			for (const { pattern, grade } of gradePatterns) {
+			const brandName = (brand.name.en ?? brand.name.ja).toLowerCase();
+			for (const { pattern, grade } of GRADE_PATTERNS) {
 				if (pattern.test(brandName)) {
-					return grade;
+					matched.add(grade);
 				}
 			}
 		}
 	}
 
-	return null;
+	// Build hierarchical structure: { rootGrade: [specificGrades...] }
+	const result: Record<string, string[]> = {};
+
+	for (const gradeId of matched) {
+		const definition = GRADE_DEFINITIONS[gradeId] as { parent?: string } | undefined;
+		if (!definition) continue;
+
+		const rootGrade = definition.parent ?? gradeId;
+
+		result[rootGrade] ??= [];
+
+		// If this is a child grade, add it to the array
+		// If this is a root grade, the array stays empty (or we skip adding it)
+		if (definition.parent) {
+			result[rootGrade].push(gradeId);
+		}
+	}
+
+	return result;
 }
 
-// Build grades data from items
+// Build grades data from items and populate item.grades field
 function buildGrades(items: Map<string, Item>, brands: Map<string, Brand>): Map<string, GradeData> {
 	const gradeItemIds = new Map<string, string[]>();
 
-	// Extract grade from each item
+	// Extract grades from each item and populate the grades field
 	for (const [itemId, item] of items) {
-		const gradeId = extractGradeFromItem(item, brands);
-		if (gradeId) {
-			if (!gradeItemIds.has(gradeId)) {
-				gradeItemIds.set(gradeId, []);
+		const grades = extractGrades(item, brands);
+
+		// Populate the grades field on the item
+		if (Object.keys(grades).length > 0) {
+			item.grades = grades;
+		}
+
+		// Track items per grade (both root and specific)
+		for (const [rootGrade, specificGrades] of Object.entries(grades)) {
+			// Add to root grade
+			if (!gradeItemIds.has(rootGrade)) {
+				gradeItemIds.set(rootGrade, []);
 			}
-			gradeItemIds.get(gradeId)!.push(itemId);
+			gradeItemIds.get(rootGrade)!.push(itemId);
+
+			// Add to specific grades
+			for (const specificGrade of specificGrades) {
+				if (!gradeItemIds.has(specificGrade)) {
+					gradeItemIds.set(specificGrade, []);
+				}
+				gradeItemIds.get(specificGrade)!.push(itemId);
+			}
 		}
 	}
 
@@ -315,17 +355,17 @@ function buildSearchData(items: Map<string, Item>, brands: Map<string, Brand>, s
 	const searchRecords: SearchRecord[] = [];
 
 	for (const [id, item] of items) {
-		const brandNames = (item.brandIds ?? [])
-			.map((bid) => brands.get(bid)?.name?.en ?? bid)
+		const brandNames = item.brandIds
+			.map((bid) => brands.get(bid)?.name.en ?? bid)
 			.join(", ");
-		const seriesNames = (item.seriesIds ?? [])
-			.map((sid) => series.get(sid)?.name?.en ?? sid)
+		const seriesNames = item.seriesIds
+			.map((sid) => series.get(sid)?.name.en ?? sid)
 			.join(", ");
 
 		searchRecords.push({
 			id,
-			name: item.name?.en ?? "",
-			nameJa: item.name?.ja ?? "",
+			name: item.name.en ?? "",
+			nameJa: item.name.ja,
 			brand: brandNames,
 			series: seriesNames,
 		});
@@ -368,7 +408,7 @@ function buildHomepageData(
 		if (item.images && item.images.length > 0) score += item.images.length;
 		if (item.price) score += 2;
 		if (item.releaseDate?.year && item.releaseDate.year > 2020) score += 3;
-		if (item.name?.en) score += 1;
+		if (item.name.en) score += 1;
 		return { item, score };
 	});
 	scoredItems.sort((a, b) => b.score - a.score);
@@ -422,17 +462,20 @@ function main() {
 	const categoryItemIds = new Map<string, string[]>();
 
 	for (const [itemId, item] of items) {
-		for (const brandId of item.brandIds ?? []) {
-			if (!brandItemIds.has(brandId)) brandItemIds.set(brandId, []);
-			brandItemIds.get(brandId)!.push(itemId);
+		for (const brandId of item.brandIds) {
+			const list = brandItemIds.get(brandId) ?? [];
+			list.push(itemId);
+			brandItemIds.set(brandId, list);
 		}
-		for (const seriesId of item.seriesIds ?? []) {
-			if (!seriesItemIds.has(seriesId)) seriesItemIds.set(seriesId, []);
-			seriesItemIds.get(seriesId)!.push(itemId);
+		for (const seriesId of item.seriesIds) {
+			const list = seriesItemIds.get(seriesId) ?? [];
+			list.push(itemId);
+			seriesItemIds.set(seriesId, list);
 		}
-		for (const categoryId of item.categoryIds ?? []) {
-			if (!categoryItemIds.has(categoryId)) categoryItemIds.set(categoryId, []);
-			categoryItemIds.get(categoryId)!.push(itemId);
+		for (const categoryId of item.categoryIds) {
+			const list = categoryItemIds.get(categoryId) ?? [];
+			list.push(itemId);
+			categoryItemIds.set(categoryId, list);
 		}
 	}
 
