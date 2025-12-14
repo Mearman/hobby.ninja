@@ -1,18 +1,38 @@
 "use client";
 
-import { getNodeDisplayName, type Item, type Manual } from "@hobby-ninja/data";
+import { getNodeDisplayName, getNodeReleaseDateSortable, type Item, type Manual } from "@hobby-ninja/data";
 import {
+	getBrandById,
+	getCategoryById,
+	getSeriesById,
+} from "@hobby-ninja/data";
+import {
+	ActionIcon,
+	Badge,
+	Box,
+	Button,
+	Card,
+	Chip,
+	Collapse,
+	Divider,
 	Group,
+	Select,
+	SimpleGrid,
 	Stack,
 	Text,
-	Badge,
-	Card,
-	SimpleGrid,
+	TextInput,
+	UnstyledButton,
 } from "@mantine/core";
 import {
 	IconBox,
+	IconChevronDown,
+	IconChevronUp,
 	IconFileText,
 	IconFilter,
+	IconSearch,
+	IconSortAscending,
+	IconSortDescending,
+	IconX,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
@@ -29,10 +49,30 @@ interface DatabaseClientProps {
 	totalManuals: number;
 }
 
+// Constants for duplicate CSS variable strings
+const MANTINE_COLOR_BLUE_0 = "var(--mantine-color-blue-0)";
+const MANTINE_COLOR_BLUE_6 = "var(--mantine-color-blue-6)";
+const MANTINE_COLOR_DIMMED = "var(--mantine-color-dimmed)";
+const TABLE_CELL_PADDING = "0.75rem 1rem";
+
 // Type for combined database entries
 type DatabaseEntry =
 	| ({ type: "item" } & Item)
 	| ({ type: "manual" } & Manual);
+
+// Filter state
+interface DatabaseFilterState {
+	search: string;
+	type: "all" | "items" | "manuals";
+	brands: string[];
+	grades: string[];
+	scales: string[];
+	series: string[];
+	categories: string[];
+	languages: string[];
+	sortField: string;
+	sortDirection: "asc" | "desc";
+}
 
 // Helper function to get item display name for manuals
 const getItemDisplayName = (manual: Manual): string | null => {
@@ -45,6 +85,22 @@ const getItemDisplayName = (manual: Manual): string | null => {
 	return null;
 };
 
+// Helper functions for formatting
+const formatBrandName = (id: string): string => {
+	const brand = getBrandById(id);
+	return brand ? getNodeDisplayName(brand) : id;
+};
+
+const formatSeriesName = (id: string): string => {
+	const series = getSeriesById(id);
+	return series ? getNodeDisplayName(series) : id;
+};
+
+const formatCategoryName = (id: string): string => {
+	const category = getCategoryById(id);
+	return category ? getNodeDisplayName(category) : id;
+};
+
 // Helper to get first brand from brandIds
 const getFirstBrand = (item: Item): string => {
 	return item.brandIds.length > 0 ? item.brandIds[0] : "";
@@ -54,6 +110,330 @@ const getFirstBrand = (item: Item): string => {
 const getFirstCategory = (item: Item): string => {
 	return item.categoryIds.length > 0 ? item.categoryIds[0] : "";
 };
+
+// Helper to get first series from seriesIds
+const getFirstSeries = (item: Item): string => {
+	return item.seriesIds.length > 0 ? item.seriesIds[0] : "";
+};
+
+// Helper to get release year string from DatabaseEntry (handles both Item and Manual)
+const getEntryReleaseYear = (entry: DatabaseEntry): string => {
+	if (entry.type === "item") {
+		// Use the existing function for items
+		const sortableDate = getNodeReleaseDateSortable(entry);
+		// Extract 4-digit year from YYYYMMDD format or return empty string
+		return sortableDate.length >= 4 ? sortableDate.slice(0, 4) : "";
+	}
+
+	// For manuals, check if releaseDate has a year property and it's a valid number
+	if (entry.releaseDate && typeof entry.releaseDate === "object" && "year" in entry.releaseDate && entry.releaseDate.year !== null && entry.releaseDate.year !== undefined) {
+		return entry.releaseDate.year.toString();
+	}
+
+	return "";
+};
+
+
+// Custom Filters Component for Database
+function DatabaseFilters({
+	filterState,
+	availableOptions,
+	onFilterChange,
+	onSearchChange,
+	onToggleFilterValue,
+	onClearFilters,
+	hasActiveFilters,
+	activeFilterCount,
+}: {
+	filterState: DatabaseFilterState;
+	availableOptions: {
+		brands: string[];
+		grades: string[];
+		scales: string[];
+		series: string[];
+		categories: string[];
+		languages: string[];
+	};
+	onFilterChange: (updates: Partial<DatabaseFilterState>) => void;
+	onSearchChange: (value: string) => void;
+	onToggleFilterValue: (field: string, value: string) => void;
+	onClearFilters: () => void;
+	hasActiveFilters: boolean;
+	activeFilterCount: number;
+}) {
+	const [expanded, setExpanded] = useState(false);
+
+	return (
+		<Card p="lg" radius="md" withBorder={true}>
+			<Group justify="space-between" mb="md">
+				<Group gap="md">
+					<IconFilter size={16} />
+					<Text size="sm" fw={500}>Filter</Text>
+					{activeFilterCount > 0 && (
+						<Badge size="xs" variant="filled" color="blue">
+							{activeFilterCount}
+						</Badge>
+					)}
+				</Group>
+				<Group gap="xs">
+					{hasActiveFilters && (
+						<Button
+							variant="outline"
+							size="xs"
+							onClick={onClearFilters}
+							leftSection={<IconX size={12} />}
+						>
+							Clear All
+						</Button>
+					)}
+					<UnstyledButton
+						onClick={() => { setExpanded(!expanded); }}
+						style={{ display: "flex", alignItems: "center", gap: 4 }}
+					>
+						<Text size="xs" c="blue">
+							{expanded ? "Hide Filters" : "Show Filters"}
+						</Text>
+						{expanded ? <IconChevronUp size={12} /> : <IconChevronDown size={12} />}
+					</UnstyledButton>
+				</Group>
+			</Group>
+
+			{/* Always visible filters */}
+			<Group gap="lg" align="flex-end" mb="md">
+				<div style={{ flex: 1 }}>
+					<Text size="xs" c="dimmed" mb="xs">Search</Text>
+					<TextInput
+						placeholder="Search by name, brand, category..."
+						value={filterState.search}
+						onChange={(e) => { onSearchChange(e.target.value); }}
+						leftSection={<IconSearch size={14} />}
+					/>
+				</div>
+				<div>
+					<Text size="xs" c="dimmed" mb="xs">Type</Text>
+					<Group gap="xs">
+						{[
+							{ value: "all", label: "All" },
+							{ value: "items", label: "Products" },
+							{ value: "manuals", label: "Manuals" },
+						].map(({ value, label }) => (
+							<Badge
+								key={value}
+								variant={filterState.type === value ? "filled" : "outline"}
+								style={{ cursor: "pointer" }}
+								onClick={() => { onFilterChange({ type: value as "all" | "items" | "manuals" }); }}
+							>
+								{label}
+							</Badge>
+						))}
+					</Group>
+				</div>
+			</Group>
+
+			{/* Expandable detailed filters */}
+			<Collapse in={expanded}>
+				<Divider my="md" />
+
+				{/* Sort Options */}
+				<Group gap="md" mb="lg">
+					<Select
+						label="Sort By"
+						data={[
+							{ value: "name", label: "Name" },
+							{ value: "date", label: "Date" },
+							{ value: "price", label: "Price" },
+						]}
+						value={filterState.sortField}
+						onChange={(value) => { onFilterChange({ sortField: value ?? "name" }); }}
+						leftSection={<IconSortAscending size={14} />}
+					/>
+					<ActionIcon
+						variant={filterState.sortDirection === "asc" ? "filled" : "outline"}
+						onClick={() => { onFilterChange({
+							sortDirection: filterState.sortDirection === "asc" ? "desc" : "asc",
+						}); }}
+					>
+						{filterState.sortDirection === "asc" ? <IconSortAscending size={14} /> : <IconSortDescending size={14} />}
+					</ActionIcon>
+				</Group>
+
+				{/* Filter Sections */}
+				<div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "md" }}>
+					{/* Type filter info */}
+					<Box mb="md">
+						<Text size="xs" c="blue">
+							{filterState.type === "all"
+								? "Showing items without manuals plus all manuals"
+								: filterState.type === "items"
+									? "Showing all products"
+									: "Showing all manuals"}
+						</Text>
+					</Box>
+
+					{/* Item filters - only show when type is items or all */}
+					{(filterState.type === "items" || filterState.type === "all") && (
+						<>
+							{availableOptions.brands.length > 0 && (
+								<FilterSection
+									label="Brands"
+									field="brands"
+									options={availableOptions.brands.slice(0, 10)}
+									selectedValues={filterState.brands}
+									onToggle={onToggleFilterValue}
+									formatValue={formatBrandName}
+								/>
+							)}
+
+							{availableOptions.categories.length > 0 && (
+								<FilterSection
+									label="Categories"
+									field="categories"
+									options={availableOptions.categories.slice(0, 10)}
+									selectedValues={filterState.categories}
+									onToggle={onToggleFilterValue}
+									formatValue={formatCategoryName}
+								/>
+							)}
+
+							{availableOptions.grades.length > 0 && (
+								<FilterSection
+									label="Grades"
+									field="grades"
+									options={availableOptions.grades}
+									selectedValues={filterState.grades}
+									onToggle={onToggleFilterValue}
+								/>
+							)}
+
+							{availableOptions.scales.length > 0 && (
+								<FilterSection
+									label="Scales"
+									field="scales"
+									options={availableOptions.scales.slice(0, 10)}
+									selectedValues={filterState.scales}
+									onToggle={onToggleFilterValue}
+								/>
+							)}
+
+							{availableOptions.series.length > 0 && (
+								<FilterSection
+									label="Series"
+									field="series"
+									options={availableOptions.series.slice(0, 10)}
+									selectedValues={filterState.series}
+									onToggle={onToggleFilterValue}
+									formatValue={formatSeriesName}
+								/>
+							)}
+						</>
+					)}
+
+					{/* Manual filters - only show when type is manuals or all */}
+					{(filterState.type === "manuals" || filterState.type === "all") && (
+						availableOptions.languages.length > 0 && (
+							<FilterSection
+								label="Languages"
+								field="languages"
+								options={availableOptions.languages}
+								selectedValues={filterState.languages}
+								onToggle={onToggleFilterValue}
+								color="green"
+							/>
+						)
+					)}
+				</div>
+			</Collapse>
+		</Card>
+	);
+}
+
+// Filter Section Component
+function FilterSection({
+	label,
+	field,
+	options,
+	selectedValues,
+	onToggle,
+	formatValue = (v) => v,
+	color = "blue",
+}: {
+	label: string;
+	field: string;
+	options: string[];
+	selectedValues: string[];
+	onToggle: (field: string, value: string) => void;
+	formatValue?: (value: string) => string;
+	color?: string;
+}) {
+	const [expanded, setExpanded] = useState(false);
+
+	if (options.length === 0) return null;
+
+	return (
+		<Box>
+			<Group justify="space-between" mb="xs">
+				<Text size="xs" fw={500}>{label}</Text>
+				{selectedValues.length > 0 && (
+					<Text size="xs" c="dimmed">
+						{selectedValues.length} selected
+					</Text>
+				)}
+			</Group>
+			<Box>
+				{!expanded && selectedValues.length > 0 ? (
+					<Box>
+						{selectedValues.slice(0, 3).map((value) => (
+							<Group gap={4} key={value} style={{ marginBottom: 4 }}>
+								<Badge size="xs" color={color}>
+									{formatValue(value)}
+								</Badge>
+								<ActionIcon
+									size="xs"
+									variant="transparent"
+									color={color}
+									onClick={() => { onToggle(field, value); }}
+								>
+									<IconX size={10} />
+								</ActionIcon>
+							</Group>
+						))}
+						{selectedValues.length > 3 && (
+							<Chip size="xs" variant="outline" style={{ marginBottom: 4 }}>
+								+{selectedValues.length - 3} more
+							</Chip>
+						)}
+					</Box>
+				) : (
+					<Box style={{ maxHeight: expanded ? "200px" : "100px", overflow: "hidden" }}>
+						{options.map((value) => (
+							<Chip
+								key={value}
+								size="xs"
+								variant={selectedValues.includes(value) ? "filled" : "outline"}
+								color={color}
+								onClick={() => { onToggle(field, value); }}
+								style={{ marginBottom: 4, cursor: "pointer" }}
+							>
+								{formatValue(value)}
+							</Chip>
+						))}
+					</Box>
+				)}
+				{options.length > (expanded ? 10 : 5) && (
+					<UnstyledButton
+						onClick={() => { setExpanded(!expanded); }}
+						style={{ display: "flex", alignItems: "center", gap: 4 }}
+					>
+						<Text size="xs" c="blue">
+							{expanded ? "Show Less" : `Show All (${options.length})`}
+						</Text>
+						{expanded ? <IconChevronUp size={12} /> : <IconChevronDown size={12} />}
+					</UnstyledButton>
+				)}
+			</Box>
+		</Box>
+	);
+}
 
 // Grid View Card Component
 function GridViewCard({ entry }: { entry: DatabaseEntry }) {
@@ -122,7 +502,7 @@ function GridViewCard({ entry }: { entry: DatabaseEntry }) {
 				style={{
 					textDecoration: "none",
 					color: "inherit",
-					backgroundColor: "var(--mantine-color-blue-0)",
+					backgroundColor: MANTINE_COLOR_BLUE_0,
 				}}
 			>
 				<div style={{ padding: "1rem" }}>
@@ -140,9 +520,9 @@ function GridViewCard({ entry }: { entry: DatabaseEntry }) {
 					)}
 
 					<div style={{ display: "flex", gap: "4px", flexWrap: "wrap" }}>
-						{entry.year && (
+						{entry.releaseDate && (
 							<Badge size="xs" variant="light" color="blue">
-								{entry.year}
+								{getEntryReleaseYear(entry)}
 							</Badge>
 						)}
 						{entry.language && (
@@ -211,7 +591,7 @@ function ListViewRow({ entry }: { entry: DatabaseEntry }) {
 				style={{
 					textDecoration: "none",
 					color: "inherit",
-					backgroundColor: "var(--mantine-color-blue-0)",
+					backgroundColor: MANTINE_COLOR_BLUE_0,
 					marginBottom: "0.5rem",
 				}}
 			>
@@ -230,9 +610,9 @@ function ListViewRow({ entry }: { entry: DatabaseEntry }) {
 						)}
 					</div>
 					<Group gap="md">
-						{entry.year && (
+						{entry.releaseDate && (
 							<Badge size="xs" variant="light" color="blue">
-								{entry.year}
+								{getEntryReleaseYear(entry)}
 							</Badge>
 						)}
 						{entry.language && (
@@ -258,22 +638,22 @@ function TableView({ entries }: { entries: DatabaseEntry[] }) {
 			<table style={{ width: "100%", borderCollapse: "collapse" }}>
 				<thead style={{ backgroundColor: "var(--mantine-color-gray-0)" }}>
 					<tr>
-						<th style={{ padding: "0.75rem 1rem", textAlign: "left", fontSize: "0.875rem", fontWeight: "600" }}>
+						<th style={{ padding: TABLE_CELL_PADDING, textAlign: "left", fontSize: "0.875rem", fontWeight: "600" }}>
 							Name
 						</th>
-						<th style={{ padding: "0.75rem 1rem", textAlign: "left", fontSize: "0.875rem", fontWeight: "600" }}>
+						<th style={{ padding: TABLE_CELL_PADDING, textAlign: "left", fontSize: "0.875rem", fontWeight: "600" }}>
 							Type
 						</th>
-						<th style={{ padding: "0.75rem 1rem", textAlign: "left", fontSize: "0.875rem", fontWeight: "600" }}>
+						<th style={{ padding: TABLE_CELL_PADDING, textAlign: "left", fontSize: "0.875rem", fontWeight: "600" }}>
 							Brand/Year
 						</th>
-						<th style={{ padding: "0.75rem 1rem", textAlign: "left", fontSize: "0.875rem", fontWeight: "600" }}>
+						<th style={{ padding: TABLE_CELL_PADDING, textAlign: "left", fontSize: "0.875rem", fontWeight: "600" }}>
 							Category/Language
 						</th>
-						<th style={{ padding: "0.75rem 1rem", textAlign: "left", fontSize: "0.875rem", fontWeight: "600" }}>
+						<th style={{ padding: TABLE_CELL_PADDING, textAlign: "left", fontSize: "0.875rem", fontWeight: "600" }}>
 							Grade/Scale
 						</th>
-						<th style={{ padding: "0.75rem 1rem", textAlign: "right", fontSize: "0.875rem", fontWeight: "600" }}>
+						<th style={{ padding: TABLE_CELL_PADDING, textAlign: "right", fontSize: "0.875rem", fontWeight: "600" }}>
 							Price
 						</th>
 					</tr>
@@ -287,11 +667,11 @@ function TableView({ entries }: { entries: DatabaseEntry[] }) {
 
 							return (
 								<tr key={entry.id} style={{ borderBottom: "1px solid var(--mantine-color-gray-2)" }}>
-									<td style={{ padding: "0.75rem 1rem" }}>
+									<td style={{ padding: TABLE_CELL_PADDING }}>
 										<Link
 											href={`/item/${entry.id}`}
 											style={{
-												color: "var(--mantine-color-blue-6)",
+												color: MANTINE_COLOR_BLUE_6,
 												textDecoration: "none",
 												fontWeight: "500",
 											}}
@@ -299,38 +679,37 @@ function TableView({ entries }: { entries: DatabaseEntry[] }) {
 											{getNodeDisplayName(entry)}
 										</Link>
 									</td>
-									<td style={{ padding: "0.75rem 1rem" }}>
+									<td style={{ padding: TABLE_CELL_PADDING }}>
 										<Badge size="xs" variant="light" color="blue">Product</Badge>
 									</td>
-									<td style={{ padding: "0.75rem 1rem", color: "var(--mantine-color-blue-6)" }}>
+									<td style={{ padding: TABLE_CELL_PADDING, color: MANTINE_COLOR_BLUE_6 }}>
 										{brand || "-"}
 									</td>
-									<td style={{ padding: "0.75rem 1rem", color: "var(--mantine-color-orange-6)" }}>
+									<td style={{ padding: TABLE_CELL_PADDING, color: "var(--mantine-color-orange-6)" }}>
 										{category || "-"}
 									</td>
-									<td style={{ padding: "0.75rem 1rem" }}>
+									<td style={{ padding: TABLE_CELL_PADDING }}>
 										<div style={{ display: "flex", gap: "4px" }}>
 											{entry.grade && <Badge size="xs">{entry.grade}</Badge>}
 											{entry.scale && <Badge size="xs">{entry.scale}</Badge>}
 										</div>
 									</td>
-									<td style={{ padding: "0.75rem 1rem", textAlign: "right" }}>
+									<td style={{ padding: TABLE_CELL_PADDING, textAlign: "right" }}>
 										{priceAmount === undefined ? "-" : `¥${priceAmount.toLocaleString()}`}
 									</td>
 								</tr>
 							);
 						} else {
-							const itemName = getItemDisplayName(entry);
 							return (
 								<tr key={entry.id} style={{
 									borderBottom: "1px solid var(--mantine-color-gray-2)",
-									backgroundColor: "var(--mantine-color-blue-0)",
+									backgroundColor: MANTINE_COLOR_BLUE_0,
 								}}>
-									<td style={{ padding: "0.75rem 1rem" }}>
+									<td style={{ padding: TABLE_CELL_PADDING }}>
 										<Link
 											href={`/manual/${entry.id}`}
 											style={{
-												color: "var(--mantine-color-blue-6)",
+												color: MANTINE_COLOR_BLUE_6,
 												textDecoration: "none",
 												fontWeight: "500",
 												display: "flex",
@@ -342,17 +721,17 @@ function TableView({ entries }: { entries: DatabaseEntry[] }) {
 											{getNodeDisplayName(entry)}
 										</Link>
 									</td>
-									<td style={{ padding: "0.75rem 1rem" }}>
+									<td style={{ padding: TABLE_CELL_PADDING }}>
 										<Badge size="xs" variant="light" color="green">Manual</Badge>
 									</td>
-									<td style={{ padding: "0.75rem 1rem" }}>
-										{entry.year || "-"}
+									<td style={{ padding: TABLE_CELL_PADDING }}>
+										{getEntryReleaseYear(entry) || "-"}
 									</td>
-									<td style={{ padding: "0.75rem 1rem" }}>
+									<td style={{ padding: TABLE_CELL_PADDING }}>
 										{entry.language ? entry.language.toUpperCase() : "-"}
 									</td>
-									<td style={{ padding: "0.75rem 1rem" }}>-</td>
-									<td style={{ padding: "0.75rem 1rem", textAlign: "right" }}>-</td>
+									<td style={{ padding: TABLE_CELL_PADDING }}>-</td>
+									<td style={{ padding: TABLE_CELL_PADDING, textAlign: "right" }}>-</td>
 								</tr>
 							);
 						}
@@ -367,19 +746,37 @@ export function DatabaseClient({ items, manuals, totalItems, totalManuals }: Dat
 	const { preferences } = useUserPreferences();
 	const { viewMode, setViewMode } = useViewMode();
 
-	// Type filter state
-	const [typeFilter, setTypeFilter] = useState<"all" | "items" | "manuals">("all");
-	const [searchQuery, setSearchQuery] = useState("");
+	// Client-side state for filtering
+	const [filters, setFilters] = useState<DatabaseFilterState>({
+		search: "",
+		type: "all",
+		brands: [],
+		grades: [],
+		scales: [],
+		series: [],
+		categories: [],
+		languages: [],
+		sortField: "name",
+		sortDirection: "asc",
+	});
+
+	const updateFilter = (updates: Partial<DatabaseFilterState>) => {
+		setFilters((prev) => ({ ...prev, ...updates }));
+	};
 
 	// Combine items and manuals
 	const allEntries = useMemo(() => {
 		const entries: DatabaseEntry[] = [];
 
 		// Add items
-		entries.push(...items.map(item => ({ type: "item", ...item })));
+		for (const item of items) {
+			entries.push({ type: "item", ...item });
+		}
 
 		// Add manuals
-		entries.push(...manuals.map(manual => ({ type: "manual", ...manual })));
+		for (const manual of manuals) {
+			entries.push({ type: "manual", ...manual });
+		}
 
 		return entries;
 	}, [items, manuals]);
@@ -389,15 +786,15 @@ export function DatabaseClient({ items, manuals, totalItems, totalManuals }: Dat
 		let filtered = allEntries;
 
 		// Type filter
-		if (typeFilter === "items") {
+		if (filters.type === "items") {
 			filtered = filtered.filter(entry => entry.type === "item");
-		} else if (typeFilter === "manuals") {
+		} else if (filters.type === "manuals") {
 			filtered = filtered.filter(entry => entry.type === "manual");
 		}
 
 		// Search filter
-		if (searchQuery.trim()) {
-			const query = searchQuery.toLowerCase();
+		if (filters.search.trim()) {
+			const query = filters.search.toLowerCase();
 			filtered = filtered.filter(entry => {
 				const name = getNodeDisplayName(entry).toLowerCase();
 				if (name.includes(query)) return true;
@@ -406,38 +803,108 @@ export function DatabaseClient({ items, manuals, totalItems, totalManuals }: Dat
 					const brand = getFirstBrand(entry);
 					const category = getFirstCategory(entry);
 					return (
-						(brand && brand.toLowerCase().includes(query)) ||
-						(category && category.toLowerCase().includes(query)) ||
-						(entry.grade?.toLowerCase().includes(query)) ||
-						(entry.scale?.toLowerCase().includes(query))
+						brand.toLowerCase().includes(query) ||
+						category.toLowerCase().includes(query) ||
+						(entry.grade?.toLowerCase().includes(query) ?? false) ||
+						(entry.scale?.toLowerCase().includes(query) ?? false)
 					);
 				} else {
 					const itemName = getItemDisplayName(entry);
-					return itemName && itemName.toLowerCase().includes(query);
+					return (itemName?.toLowerCase().includes(query) ?? false);
 				}
 			});
 		}
 
+		// Brand filter (only for items)
+		if (filters.brands.length > 0) {
+			filtered = filtered.filter(entry =>
+				entry.type === "item" && getFirstBrand(entry) && filters.brands.includes(getFirstBrand(entry)),
+			);
+		}
+
+		// Category filter (only for items)
+		if (filters.categories.length > 0) {
+			filtered = filtered.filter(entry =>
+				entry.type === "item" && getFirstCategory(entry) && filters.categories.includes(getFirstCategory(entry)),
+			);
+		}
+
+		// Grade filter (only for items)
+		if (filters.grades.length > 0) {
+			filtered = filtered.filter(entry =>
+				entry.type === "item" && entry.grade && filters.grades.includes(entry.grade),
+			);
+		}
+
+		// Scale filter (only for items)
+		if (filters.scales.length > 0) {
+			filtered = filtered.filter(entry =>
+				entry.type === "item" && entry.scale && filters.scales.includes(entry.scale),
+			);
+		}
+
+		// Series filter (only for items)
+		if (filters.series.length > 0) {
+			filtered = filtered.filter(entry =>
+				entry.type === "item" && getFirstSeries(entry) && filters.series.includes(getFirstSeries(entry)),
+			);
+		}
+
+		// Language filter (only for manuals)
+		if (filters.languages.length > 0) {
+			filtered = filtered.filter(entry =>
+				entry.type === "manual" && entry.language && filters.languages.includes(entry.language),
+			);
+		}
+
 		// If both items and manuals are showing, remove items that have manuals
-		if (typeFilter === "all") {
+		if (filters.type === "all") {
 			const manualItemIds = new Set(
 				manuals
-					.filter(manual => manual.itemId)
-					.map(manual => manual.itemId!),
+					.map(manual => manual.itemId)
+					.filter((itemId): itemId is string => itemId != null),
 			);
 			filtered = filtered.filter(entry =>
 				!(entry.type === "item" && manualItemIds.has(entry.id)),
 			);
 		}
 
-		// Sort: items first, then manuals, then by name
-		return filtered.sort((a, b) => {
-			if (a.type !== b.type) {
+		// Sort entries
+		return filtered.toSorted((a, b) => {
+			// Type sorting: items first when "all", otherwise by name
+			if (filters.type === "all" && a.type !== b.type) {
 				return a.type === "item" ? -1 : 1;
 			}
-			return getNodeDisplayName(a).localeCompare(getNodeDisplayName(b));
+
+			let aValue: string;
+			let bValue: string;
+
+			switch (filters.sortField) {
+				case "name": {
+					aValue = getNodeDisplayName(a);
+					bValue = getNodeDisplayName(b);
+					break;
+				}
+				case "brand": {
+					aValue = a.type === "item" ? getFirstBrand(a) : getItemDisplayName(a) ?? "";
+					bValue = b.type === "item" ? getFirstBrand(b) : getItemDisplayName(b) ?? "";
+					break;
+				}
+				case "date": {
+					aValue = getEntryReleaseYear(a);
+					bValue = getEntryReleaseYear(b);
+					break;
+				}
+				default: {
+					aValue = getNodeDisplayName(a);
+					bValue = getNodeDisplayName(b);
+				}
+			}
+
+			const comparison = aValue.localeCompare(bValue);
+			return filters.sortDirection === "desc" ? -comparison : comparison;
 		});
-	}, [allEntries, typeFilter, searchQuery, manuals]);
+	}, [allEntries, filters, manuals]);
 
 	const { visibleItems: paginatedEntries, isLoading, hasMore, lastItemRef } = useInfiniteScroll({
 		items: filteredEntries,
@@ -457,10 +924,10 @@ export function DatabaseClient({ items, manuals, totalItems, totalManuals }: Dat
 			}}>
 				<div style={{ display: "flex", justifyContent: "center", gap: "3rem" }}>
 					<div style={{ textAlign: "center" }}>
-						<div style={{ fontSize: "2rem", fontWeight: "bold", color: "var(--mantine-color-blue-6)" }}>
+						<div style={{ fontSize: "2rem", fontWeight: "bold", color: MANTINE_COLOR_BLUE_6 }}>
 							{totalItems.toLocaleString()}
 						</div>
-						<div style={{ fontSize: "0.875rem", color: "var(--mantine-color-dimmed)" }}>
+						<div style={{ fontSize: "0.875rem", color: MANTINE_COLOR_DIMMED }}>
 							<Link href="/items" style={{ color: "inherit", textDecoration: "none" }}>Items</Link>
 						</div>
 					</div>
@@ -468,7 +935,7 @@ export function DatabaseClient({ items, manuals, totalItems, totalManuals }: Dat
 						<div style={{ fontSize: "2rem", fontWeight: "bold", color: "var(--mantine-color-green-6)" }}>
 							{totalManuals.toLocaleString()}
 						</div>
-						<div style={{ fontSize: "0.875rem", color: "var(--mantine-color-dimmed)" }}>
+						<div style={{ fontSize: "0.875rem", color: MANTINE_COLOR_DIMMED }}>
 							<Link href="/manuals" style={{ color: "inherit", textDecoration: "none" }}>Manuals</Link>
 						</div>
 					</div>
@@ -481,77 +948,77 @@ export function DatabaseClient({ items, manuals, totalItems, totalManuals }: Dat
 			</div>
 
 			{/* Custom Filters */}
-			<Card p="lg" radius="md" withBorder={true}>
-				<Group gap="md" mb="md">
-					<IconFilter size={16} />
-					<Text size="sm" fw={500}>Filter</Text>
-				</Group>
-
-				<Group gap="lg" align="center">
-					<div>
-						<Text size="xs" c="dimmed" mb="xs">Type</Text>
-						<Group gap="xs">
-							{[
-								{ value: "all", label: "All" },
-								{ value: "items", label: "Products" },
-								{ value: "manuals", label: "Manuals" },
-							].map(({ value, label }) => (
-								<Badge
-									key={value}
-									variant={typeFilter === value ? "filled" : "outline"}
-									style={{ cursor: "pointer" }}
-									onClick={() => { setTypeFilter(value as any); }}
-								>
-									{label}
-								</Badge>
-							))}
-						</Group>
-					</div>
-
-					<div style={{ flex: 1 }}>
-						<Text size="xs" c="dimmed" mb="xs">Search</Text>
-						<input
-							type="text"
-							placeholder="Search..."
-							value={searchQuery}
-							onChange={(e) => { setSearchQuery(e.target.value); }}
-							style={{
-								width: "100%",
-								padding: "0.5rem",
-								border: "1px solid var(--mantine-color-gray-3)",
-								borderRadius: "0.25rem",
-								fontSize: "0.875rem",
-							}}
-						/>
-					</div>
-				</Group>
-
-				{typeFilter !== "all" && (
-					<div style={{ marginTop: "0.5rem" }}>
-						<Text size="xs" c="blue">
-							{typeFilter === "items"
-								? "Showing all products"
-								: "Showing all manuals"
-							}
-						</Text>
-					</div>
-				)}
-
-				{typeFilter === "all" && (
-					<div style={{ marginTop: "0.5rem" }}>
-						<Text size="xs" c="green">
-							Showing all items without manuals plus all manuals
-						</Text>
-					</div>
-				)}
-			</Card>
+			<DatabaseFilters
+				filterState={filters}
+				availableOptions={{
+					brands: [...new Set(items
+						.filter(item => getFirstBrand(item))
+						.map(item => getFirstBrand(item)),
+					)].toSorted(),
+					categories: [...new Set(items
+						.filter(item => getFirstCategory(item))
+						.map(item => getFirstCategory(item)),
+					)].toSorted(),
+					grades: [...new Set(items
+						.map(item => item.grade)
+						.filter((grade): grade is string => grade != null),
+					)].toSorted(),
+					scales: [...new Set(items
+						.map(item => item.scale)
+						.filter((scale): scale is string => scale != null),
+					)].toSorted(),
+					series: [...new Set(items
+						.filter(item => getFirstSeries(item))
+						.map(item => getFirstSeries(item)),
+					)].toSorted(),
+					languages: [...new Set(manuals
+						.map(manual => manual.language)
+						.filter((language): language is string => language != null),
+					)].toSorted(),
+				}}
+				onFilterChange={updateFilter}
+				onSearchChange={(search) => { updateFilter({ search }); }}
+				onToggleFilterValue={(field, value) => {
+					const currentValues = filters[field as keyof DatabaseFilterState] as string[];
+					const newValues = currentValues.includes(value)
+						? currentValues.filter(v => v !== value)
+						: [...currentValues, value];
+					updateFilter({ [field]: newValues } as Partial<DatabaseFilterState>);
+				}}
+				onClearFilters={() => {
+					updateFilter({
+						brands: [],
+						categories: [],
+						grades: [],
+						scales: [],
+						series: [],
+						languages: [],
+					});
+				}}
+				hasActiveFilters={
+					filters.brands.length > 0 ||
+					filters.categories.length > 0 ||
+					filters.grades.length > 0 ||
+					filters.scales.length > 0 ||
+					filters.series.length > 0 ||
+					filters.languages.length > 0
+				}
+				activeFilterCount={
+					filters.brands.length +
+					filters.categories.length +
+					filters.grades.length +
+					filters.scales.length +
+					filters.series.length +
+					filters.languages.length
+				}
+			/>
 
 			{/* Header with View Switcher */}
 			<Group justify="space-between" wrap="wrap">
 				<Group gap="xs">
 					<IconBox size={24} />
 					<Text size="lg" fw={600}>
-						{typeFilter === "all" ? "All Items & Manuals" : typeFilter === "items" ? "Products" : "Manuals"}
+						{filters.type === "all" ? "All Items & Manuals" : filters.type === "items" ? "Products" : "Manuals"}
 					</Text>
 					<Text size="sm" c="dimmed">
 						({filteredEntries.length.toLocaleString()} of {(totalItems + totalManuals).toLocaleString()})
@@ -612,12 +1079,12 @@ export function DatabaseClient({ items, manuals, totalItems, totalManuals }: Dat
 				<Stack align="center" py="xl" gap="md">
 					<IconBox size={64} style={{ color: "var(--mantine-color-gray-4)" }} />
 					<Text size="lg" fw={500}>
-						{searchQuery.trim() || typeFilter !== "all"
+						{filters.search.trim() || filters.type !== "all" || filters.brands.length > 0 || filters.categories.length > 0 || filters.grades.length > 0 || filters.scales.length > 0 || filters.series.length > 0 || filters.languages.length > 0
 							? "No items or manuals match your filters"
 							: "No items or manuals found"}
 					</Text>
 					<Text c="dimmed" ta="center">
-						{searchQuery.trim() || typeFilter !== "all"
+						{filters.search.trim() || filters.type !== "all" || filters.brands.length > 0 || filters.categories.length > 0 || filters.grades.length > 0 || filters.scales.length > 0 || filters.series.length > 0 || filters.languages.length > 0
 							? "Try adjusting your filters to see more items."
 							: "The database appears to be empty."}
 					</Text>

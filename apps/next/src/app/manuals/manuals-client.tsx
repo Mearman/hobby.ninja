@@ -1,186 +1,162 @@
 "use client";
 
-import { getNodeDisplayName, type Manual } from "@hobby-ninja/data";
+import type { Manual } from "@hobby-ninja/data";
 import {
-	Badge,
+	Anchor,
 	Box,
+	Breadcrumbs,
 	Card,
+	Container,
 	Group,
 	SimpleGrid,
 	Stack,
 	Text,
-	TextInput,
+	Title,
 } from "@mantine/core";
 import {
-	IconFileText,
-	IconSearch,
+	IconHome,
 } from "@tabler/icons-react";
-import Link from "next/link";
-import { useMemo, useState } from "react";
 
-import { InfiniteScrollLoader } from "@/components/ui/infinite-scroll-loader";
-import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
-import { useUserPreferences } from "@/hooks/use-user-preferences";
-import { categoryCard } from "@/styles/components.css";
+import { manualConfigEnhanced } from "@/components/lists/configs";
+import { GenericListPage } from "@/components/lists/generic-list-page";
 
 interface ManualsClientProps {
 	manuals: Manual[];
 	totalManuals: number;
 }
 
-// Helper function to get item display name
-const getItemDisplayName = (manual: Manual): string | null => {
-	if (!manual.itemName) return null;
-	if (typeof manual.itemName === "string") return manual.itemName;
-	// Prefer en, fall back to ja if en is empty
-	const en = manual.itemName.en;
-	const ja = manual.itemName.ja;
-	if (en && en.length > 0) return en;
-	if (ja && ja.length > 0) return ja;
-	return null;
-};
+// Manual Statistics Component
+function ManualStatistics({ manuals }: { manuals: Manual[] }) {
+	const manualsWithPdf = manuals.filter(m => m.url).length;
+	const manualsWithPages = manuals.filter(m => m.pages).length;
+	const totalPages = manuals.reduce((sum, m) => sum + (m.pages ?? 0), 0);
+	const avgPages = manualsWithPages > 0 ? totalPages / manualsWithPages : 0;
 
-// Manual Card Component
-function ManualCard({ manual }: { manual: Manual }) {
-	const displayName = getNodeDisplayName(manual);
-	const itemName = getItemDisplayName(manual);
+	const languages = new Map<string, number>();
+	for (const m of manuals) {
+		if (m.language) {
+			languages.set(m.language, (languages.get(m.language) ?? 0) + 1);
+		}
+	}
+	const sortedLanguages = [...languages.entries()].toSorted((a, b) => b[1] - a[1]);
+	const topLanguageName = sortedLanguages.length > 0 ? sortedLanguages[0][0] : "N/A";
+
+	// Calculate date range statistics
+	const manualsWithDates = manuals.filter(m => m.releaseDate);
+	const earliestDate = manualsWithDates.length > 0 ?
+		new Date(Math.min(...manualsWithDates.map(m => {
+			if (typeof m.releaseDate === "string") return new Date(m.releaseDate).getTime();
+			if (typeof m.releaseDate === "object" && "year" in m.releaseDate) {
+				return new Date(m.releaseDate.year ?? 0).getTime();
+			}
+			return 0;
+		}))) : null;
+	const latestDate = manualsWithDates.length > 0 ?
+		new Date(Math.max(...manualsWithDates.map(m => {
+			if (typeof m.releaseDate === "string") return new Date(m.releaseDate).getTime();
+			if (typeof m.releaseDate === "object" && "year" in m.releaseDate) {
+				return new Date(m.releaseDate.year ?? 0).getTime();
+			}
+			return 0;
+		}))) : null;
 
 	return (
-		<Link href={`/manual/${encodeURIComponent(manual.id)}`} style={{ textDecoration: "none", color: "inherit" }}>
-			<Card
-				p="md"
-				radius="md"
-				className={categoryCard}
-				withBorder={true}
-			>
-				<Stack gap="md">
-					<Group gap="sm" align="flex-start">
-						<Box>
-							<IconFileText size={48} color="var(--mantine-color-blue-6)" />
-						</Box>
-						<Stack gap="xs" flex={1}>
-							<Text size="md" fw={600} lineClamp={2}>
-								{displayName}
-							</Text>
-							{itemName && (
-								<Text size="xs" c="dimmed" lineClamp={1}>
-									{itemName}
-								</Text>
-							)}
-						</Stack>
-					</Group>
-
-					<Group gap="xs" wrap="wrap">
-						{manual.pages && (
-							<Badge variant="light" size="sm">
-								{manual.pages} pages
-							</Badge>
-						)}
-						{manual.language && (
-							<Badge variant="light" color="blue" size="sm">
-								{manual.language}
-							</Badge>
-						)}
-						{manual.size !== undefined && (
-							<Badge variant="light" color="gray" size="sm">
-								{manual.size}
-							</Badge>
-						)}
-						{manual.url && (
-							<Badge variant="light" color="green" size="sm">
-								PDF Available
-							</Badge>
-						)}
-					</Group>
-
-					<Group justify="space-between" align="center">
-						<Text size="sm" fw={500} c="blue">
-							View manual
-						</Text>
-					</Group>
-				</Stack>
+		<SimpleGrid cols={{ base: 1, sm: 2, md: 4, lg: 6 }} spacing="md">
+			<Card p="lg" radius="md" withBorder={true}>
+				<Text size="sm" c="dimmed" tt="uppercase" fw={700}>Total Manuals</Text>
+				<Text size="xl" fw={700} mt="sm">{manuals.length.toLocaleString()}</Text>
 			</Card>
-		</Link>
+			<Card p="lg" radius="md" withBorder={true}>
+				<Text size="sm" c="dimmed" tt="uppercase" fw={700}>With PDF</Text>
+				<Text size="xl" fw={700} mt="sm">{manualsWithPdf.toLocaleString()}</Text>
+			</Card>
+			<Card p="lg" radius="md" withBorder={true}>
+				<Text size="sm" c="dimmed" tt="uppercase" fw={700}>Avg Pages</Text>
+				<Text size="xl" fw={700} mt="sm">{avgPages > 0 ? avgPages.toFixed(0) : "N/A"}</Text>
+			</Card>
+			<Card p="lg" radius="md" withBorder={true}>
+				<Text size="sm" c="dimmed" tt="uppercase" fw={700}>Top Language</Text>
+				<Text size="xl" fw={700} mt="sm">{topLanguageName}</Text>
+			</Card>
+			<Card p="lg" radius="md" withBorder={true}>
+				<Text size="sm" c="dimmed" tt="uppercase" fw={700}>Date Range</Text>
+				<Text size="sm" fw={700} mt="sm">
+					{earliestDate ? earliestDate.getFullYear() : "N/A"} - {latestDate ? latestDate.getFullYear() : "N/A"}
+				</Text>
+			</Card>
+			<Card p="lg" radius="md" withBorder={true}>
+				<Text size="sm" c="dimmed" tt="uppercase" fw={700}>With Dates</Text>
+				<Text size="xl" fw={700} mt="sm">{manualsWithDates.length.toLocaleString()}</Text>
+			</Card>
+		</SimpleGrid>
 	);
 }
 
-export function ManualsClient({ manuals, totalManuals }: ManualsClientProps) {
-	const { preferences } = useUserPreferences();
-	const [search, setSearch] = useState("");
-
-	// Filter manuals by search
-	const filteredManuals = useMemo(() => {
-		if (!search.trim()) return manuals;
-		const query = search.toLowerCase();
-		return manuals.filter((manual) => {
-			const name = getNodeDisplayName(manual).toLowerCase();
-			const itemName = getItemDisplayName(manual)?.toLowerCase() ?? "";
-			return name.includes(query) || itemName.includes(query);
-		});
-	}, [manuals, search]);
-
-	const { visibleItems: paginatedManuals, isLoading, hasMore, lastItemRef } = useInfiniteScroll({
-		items: filteredManuals,
-		itemsPerPage: preferences.infiniteScrollPageSize,
-		preservePageParam: true,
-		autoLoad: preferences.autoLoadInfiniteScroll,
-	});
-
-	// Note: useInfiniteScroll automatically resets when items array reference changes
-
+export function ManualsClientEnhanced({ manuals, totalManuals }: ManualsClientProps) {
 	return (
-		<Stack gap="md">
-			{/* Search */}
-			<TextInput
-				leftSection={<IconSearch size={16} />}
-				placeholder="Search manuals..."
-				value={search}
-				onChange={(e) => { setSearch(e.target.value); }}
-				size="md"
-			/>
-
-			{/* Results count */}
-			<Group justify="space-between">
-				<Text size="sm" c="dimmed">
-					{filteredManuals.length === totalManuals
-						? `${totalManuals.toLocaleString()} manuals`
-						: `${filteredManuals.length.toLocaleString()} of ${totalManuals.toLocaleString()} manuals`
-					}
-				</Text>
-			</Group>
-
-			{/* Manuals Grid */}
-			{paginatedManuals.length > 0 ? (
-				<>
-					<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="md">
-						{paginatedManuals.map((manual) => (
-							<ManualCard key={manual.id} manual={manual} />
-						))}
-					</SimpleGrid>
-
-					{/* Infinite Scroll Loader */}
-					<div ref={lastItemRef}>
-						<InfiniteScrollLoader
-							isLoading={isLoading}
-							hasMore={hasMore}
-							autoLoad={preferences.autoLoadInfiniteScroll}
-						/>
-					</div>
-				</>
-			) : (
-				<Stack align="center" py="xl" gap="md">
-					<IconFileText size={64} style={{ color: "var(--mantine-color-gray-4)" }} />
-					<Text size="lg" fw={500}>
-						{search ? "No manuals match your search" : "No manuals found"}
+		<Container size="xl" py="xl">
+			<Stack gap="xl">
+				{/* Breadcrumbs */}
+				<Breadcrumbs>
+					<Anchor href="/" size="sm">
+						<Group gap={4}>
+							<IconHome size={14} />
+							Home
+						</Group>
+					</Anchor>
+					<Anchor href="/database" size="sm">
+						Database
+					</Anchor>
+					<Text size="sm" c="dimmed">
+						Manuals
 					</Text>
-					<Text c="dimmed" ta="center">
-						{search
-							? "Try a different search term."
-							: "No manuals are currently available."
-						}
+				</Breadcrumbs>
+
+				{/* Header */}
+				<Box>
+					<Title order={1} mb="sm">
+						Enhanced Manual Directory
+					</Title>
+					<Text size="lg" c="dimmed">
+						Browse {totalManuals.toLocaleString()} instruction manuals with advanced search, date filtering, and sorting.
 					</Text>
-				</Stack>
-			)}
-		</Stack>
+				</Box>
+
+				{/* Statistics */}
+				<ManualStatistics manuals={manuals} />
+
+				{/* Feature Highlights */}
+				<Card p="lg" radius="md" withBorder={true} bg="blue.0">
+					<Title order={3} mb="sm" c="blue">
+						New Features
+					</Title>
+					<Group>
+						<Text>
+							<strong>Date Range Filtering:</strong> Filter manuals by release date using interactive date pickers
+						</Text>
+					</Group>
+					<Group>
+						<Text>
+							<strong>Advanced Sorting:</strong> Sort by name, date, page count, or language
+						</Text>
+					</Group>
+					<Group>
+						<Text>
+							<strong>Smart Search:</strong> Search manual names and associated item names
+						</Text>
+					</Group>
+				</Card>
+
+				{/* Generic List Page with Enhanced Filters */}
+				<GenericListPage
+					items={manuals}
+					totalItems={totalManuals}
+					config={manualConfigEnhanced}
+					pageTitle="All Manuals"
+					subtitle="Use the advanced filters to narrow down your search"
+					breadcrumbs={undefined} // Already handled above
+				/>
+			</Stack>
+		</Container>
 	);
 }
