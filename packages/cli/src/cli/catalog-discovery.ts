@@ -2,10 +2,13 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 
+import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
+
 import { BandaiCatalogParser } from "./bandai-catalog-parser";
 import { CatalogTranslator } from "./catalog-translator";
 import { SimpleCatalogScraper, type SimpleCatalogResult } from "./simple-catalog-scraper";
 import type { CatalogDiscoveryOptions, CatalogDiscoveryResult, CatalogRangeStats, CatalogIndex, CatalogIndexEntry } from "./types/catalog-discovery";
+import { ItemsIndexUpdater } from "./items-index-updater";
 
 // Fast HTTP client for discovery phase
 const USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
@@ -148,17 +151,20 @@ export async function discoverValidIds(
 			for (const { range, result } of results) {
 				if (result.isValid) {
 					validIds.push(range);
-					recordDiscoveredValidId(range, result.title); // Record in index immediately
+					recordDiscoveredValidId(range, result.title); // Record in catalog index
+					ItemsIndexUpdater.recordJpValid(range, result.title); // Record in items index
 					newExistCount++;
 				} else {
 					invalidIds.push(range);
 					recordInvalidId(range);
+					ItemsIndexUpdater.recordJpInvalid(range); // Record in items index
 					newNotFoundCount++;
 				}
 			}
 
-			// Save index after each batch
+			// Save indexes after each batch
 			saveCatalogIndex();
+			ItemsIndexUpdater.save();
 		}
 
 		// Final summary on new line
@@ -489,8 +495,9 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 	// Ensure output directory exists
 	mkdirSync(options.outputDir, { recursive: true });
 
-	// Load existing index
+	// Load existing indexes
 	loadCatalogIndex(options.outputDir);
+	ItemsIndexUpdater.load();
 	const indexStats = getIndexStats();
 
 	console.log(`📊 Index: ${indexStats.valid} products found, ${indexStats.invalid} IDs with no page, ${indexStats.totalChecked} total checked`);
@@ -662,8 +669,9 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 		result.processedUrls += alreadyDownloaded;
 	}
 
-	// Final save of index
+	// Final save of indexes
 	saveCatalogIndex();
+	ItemsIndexUpdater.save();
 
 	const endTime = Date.now();
 	result.processingTime = endTime - startTime;
