@@ -65,12 +65,9 @@ export async function generateMetadata({ params }: ItemPageProps): Promise<Metad
 
 // Helper to get description items as an array
 function getDescriptionItems(item: Item): string[] {
-	if (!item.description || !Array.isArray(item.description)) return [];
-	return item.description.map((desc) => {
-		// Using || intentionally - fallback on empty string too, not just null/undefined
-		// eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
-		return desc.en || desc.ja || "";
-	}).filter(Boolean);
+	if (!item.description) return [];
+	// Description is now LocalizedTextArray: { ja: string[], en?: string[] }
+	return item.description.en ?? item.description.ja;
 }
 
 // Next.js requires default exports for page components
