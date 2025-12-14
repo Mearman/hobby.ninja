@@ -1,94 +1,91 @@
 {
-  "name": "next",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/next/src",
-  "projectType": "application",
-  "targets": {
-    "build": {
-      "executor": "@nx/next:build",
-      "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
-      "options": {
-        "outputPath": "apps/next/out"
-      },
-      "dependsOn": ["^build", "typecheck"],
-      "configurations": {
-        "development": {
-          "outputPath": "apps/next/out"
-        },
-        "production": {
-          "outputPath": "apps/next/out"
-        }
-      }
-    },
-    "build:dev": {
-      "executor": "@nx/next:build",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "apps/next/out",
-        "webpack": true,
-        "env": {
-          "NODE_ENV": "development"
-        }
-      }
-    },
-    "dev": {
-      "executor": "nx:run-script",
-      "dependsOn": ["data:build"],
-      "options": {
-        "script": "dev:webpack"
-      },
-      "metadata": {
-        "scriptContent": "BUILD_DATA_STRATEGY=webpack next dev",
-        "runCommand": "pnpm run dev:webpack"
-      },
-      "configurations": {},
-      "parallelism": true
-    },
-    "serve": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "npx tsx server.ts",
-        "cwd": "{projectRoot}"
-      },
-      "dependsOn": ["build"],
-      "configurations": {
-        "development": {
-          "buildTarget": "next:build:dev"
-        },
-        "production": {
-          "buildTarget": "next:build:production"
-        }
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-      "options": {
-        "jestConfig": "apps/next/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "coverageReporters": ["text"]
-        }
-      }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/next/**/*.{ts,tsx,js,jsx}"]
-      }
-    },
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "tsc --noEmit",
-        "cwd": "apps/next"
-      }
-    }
-  },
-  "tags": []
+	"name": "next",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "apps/next/src",
+	"projectType": "application",
+	"targets": {
+		"build": {
+			"executor": "@nx/next:build",
+			"outputs": ["{options.outputPath}"],
+			"defaultConfiguration": "production",
+			"options": {
+				"outputPath": "apps/next/out"
+			},
+			"dependsOn": ["^build", "typecheck"],
+			"configurations": {
+				"development": {
+					"outputPath": "apps/next/out"
+				},
+				"production": {
+					"outputPath": "apps/next/out"
+				}
+			}
+		},
+		"build:dev": {
+			"executor": "@nx/next:build",
+			"outputs": ["{options.outputPath}"],
+			"options": {
+				"outputPath": "apps/next/out",
+				"webpack": true,
+				"env": {
+					"NODE_ENV": "development"
+				}
+			}
+		},
+		"dev": {
+			"executor": "nx:run-commands",
+			"dependsOn": ["data:build"],
+			"options": {
+				"command": "concurrently --names \"DATA,NEXT\" --prefix-colors \"cyan,green\" \"nx watch --projects=data --includeDependentProjects --verbose -- 'nx run data:watch:build'\" \"BUILD_DATA_STRATEGY=webpack next dev\"",
+				"cwd": "{projectRoot}"
+			},
+			"configurations": {},
+			"parallelism": true
+		},
+		"serve": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "npx tsx server.ts",
+				"cwd": "{projectRoot}"
+			},
+			"dependsOn": ["build"],
+			"configurations": {
+				"development": {
+					"buildTarget": "next:build:dev"
+				},
+				"production": {
+					"buildTarget": "next:build:production"
+				}
+			}
+		},
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "apps/next/jest.config.ts",
+				"passWithNoTests": true
+			},
+			"configurations": {
+				"ci": {
+					"ci": true,
+					"coverageReporters": ["text"]
+				}
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": ["apps/next/**/*.{ts,tsx,js,jsx}"]
+			}
+		},
+		"typecheck": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "tsc --noEmit",
+				"cwd": "apps/next"
+			}
+		}
+	},
+	"tags": []
 }

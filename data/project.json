@@ -9,10 +9,7 @@
 			"executor": "nx:run-commands",
 			"options": {
 				"cwd": "data",
-				"commands": [
-					"pnpm tsx scripts/build.ts",
-					"tsup"
-				],
+				"commands": ["pnpm tsx scripts/build.ts", "tsup"],
 				"parallel": false
 			},
 			"outputs": ["{projectRoot}/dist"],
@@ -37,6 +34,22 @@
 				"cwd": "data",
 				"command": "pnpm tsx scripts/validate.ts"
 			}
+		},
+		"watch:build": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "data",
+				"commands": ["pnpm tsx scripts/build.ts", "tsup"],
+				"parallel": false
+			},
+			"outputs": ["{projectRoot}/dist"],
+			"inputs": [
+				"{projectRoot}/src/**/*",
+				"{projectRoot}/lib/**/*",
+				"{projectRoot}/scripts/build.ts",
+				"{projectRoot}/tsup.config.ts"
+			],
+			"cache": false
 		}
 	}
 }
