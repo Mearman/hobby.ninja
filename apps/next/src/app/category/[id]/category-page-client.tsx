@@ -1,35 +1,24 @@
 "use client";
 
-import { getNodeDisplayName, isFutureRelease, isItem, type Category, type Item } from "@hobby-ninja/data";
+import { getNodeDisplayName, isItem, type Category, type Item } from "@hobby-ninja/data";
 import {
 	Anchor,
 	Badge,
 	Box,
 	Breadcrumbs,
-	Button,
 	Card,
-	Container,
 	Grid,
 	Group,
-	Stack,
 	Text,
-	Title,
 } from "@mantine/core";
 import {
 	IconFolder,
 	IconHome,
-	IconX,
 } from "@tabler/icons-react";
 import { useMemo } from "react";
 
-import { ItemFilters } from "@/components/filtering/item-filters";
-import { FutureReleasesToggle } from "@/components/ui/future-releases-toggle";
-import { InfiniteScrollLoader } from "@/components/ui/infinite-scroll-loader";
-import { ViewRenderer } from "@/components/view/view-renderers";
-import { ViewSwitcher, useViewMode } from "@/components/view/view-switcher";
-import { useFilteredItems } from "@/hooks/use-filtered-items";
-import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
-import { useUserPreferences } from "@/hooks/use-user-preferences";
+import { itemConfig } from "@/components/lists/configs";
+import { GenericListPage } from "@/components/lists/generic-list-page";
 
 interface CategoryPageClientProps {
 	initialCategory: Category;
@@ -45,6 +34,10 @@ interface CategoryStats {
 	priceRange?: { min: number; max: number };
 	newestItem?: string;
 	oldestItem?: string;
+	brandsCount: number;
+	gradesCount: number;
+	scalesCount: number;
+	seriesCount: number;
 }
 
 // Main client component
@@ -54,44 +47,7 @@ export function CategoryPageClient({
 	_initialCategories,
 	categoryId,
 }: CategoryPageClientProps) {
-	const { viewMode, setViewMode } = useViewMode();
-	const { preferences, isLoaded } = useUserPreferences();
-
-	// Calculate future release count for display
-	const futureCount = useMemo(
-		() => initialItems.filter((item) => isFutureRelease(item)).length,
-		[initialItems],
-	);
-
-	// Filter out future releases if preference is enabled
-	const visibleItems = useMemo(() => {
-		if (!isLoaded) return initialItems;
-		if (!preferences.hideFutureReleases) return initialItems;
-		return initialItems.filter((item) => !isFutureRelease(item));
-	}, [initialItems, preferences.hideFutureReleases, isLoaded]);
-
-	// Use the shared filtering hook
-	const {
-		filteredItems,
-		filterState,
-		updateFilter,
-		updateSearch,
-		toggleFilterValue,
-		clearFilters,
-		hasActiveFilters,
-		activeFilterCount,
-		availableOptions,
-	} = useFilteredItems(visibleItems);
-
-	// Use infinite scroll for items
-	const { visibleItems: paginatedItems, isLoading, hasMore, lastItemRef } = useInfiniteScroll({
-		items: filteredItems,
-		itemsPerPage: preferences.infiniteScrollPageSize,
-		preservePageParam: true,
-		autoLoad: preferences.autoLoadInfiniteScroll,
-	});
-
-	// Calculate category statistics (price-related only, filter options come from hook)
+	// Calculate category statistics
 	const categoryStats = useMemo((): CategoryStats => {
 		const validItems: Item[] = initialItems.filter((item): item is Item => isItem(item));
 		const prices: number[] = [];
@@ -99,6 +55,11 @@ export function CategoryPageClient({
 		let oldestItem = "";
 		let newestDate = "";
 		let oldestDate = "";
+
+		const brands = new Set<string>();
+		const grades = new Set<string>();
+		const scales = new Set<string>();
+		const series = new Set<string>();
 
 		for (const item of validItems) {
 			// Collect price data
@@ -116,6 +77,16 @@ export function CategoryPageClient({
 				newestDate = itemDate;
 				newestItem = getNodeDisplayName(item);
 			}
+
+			// Collect filter options
+			for (const brandId of item.brandIds) {
+				brands.add(brandId);
+			}
+			if (item.grade) grades.add(item.grade);
+			if (item.scale) scales.add(item.scale);
+			for (const seriesId of item.seriesIds) {
+				series.add(seriesId);
+			}
 		}
 
 		const avgPrice = prices.length > 0 ? prices.reduce((a, b) => a + b, 0) / prices.length : undefined;
@@ -130,15 +101,21 @@ export function CategoryPageClient({
 			priceRange,
 			newestItem,
 			oldestItem,
+			brandsCount: brands.size,
+			gradesCount: grades.size,
+			scalesCount: scales.size,
+			seriesCount: series.size,
 		};
 	}, [initialItems]);
 
-	const total = filteredItems.length;
-
 	return (
-		<Container size="xl" py="xl">
-			<Stack gap="xl">
-				{/* Breadcrumbs */}
+		<GenericListPage
+			items={initialItems}
+			totalItems={categoryStats.totalItems}
+			config={itemConfig}
+			pageTitle={getNodeDisplayName(initialCategory)}
+			subtitle={`${categoryStats.totalItems.toLocaleString()} items in this category`}
+			breadcrumbs={
 				<Breadcrumbs>
 					<Anchor href="/" size="sm">
 						<Group gap={4}>
@@ -156,49 +133,42 @@ export function CategoryPageClient({
 						{getNodeDisplayName(initialCategory)}
 					</Anchor>
 				</Breadcrumbs>
-
-				{/* Category Header with Statistics */}
+			}
+			headerContent={
 				<Card p="lg" radius="md" withBorder={true}>
 					<Group justify="space-between" align="flex-start">
 						<Box flex={1}>
 							<Group align="center" gap="sm" mb="md">
 								<IconFolder size={28} color="var(--mantine-color-blue-6)" />
-								<Title order={1}>
-									{getNodeDisplayName(initialCategory)}
-								</Title>
 								<Badge size="lg" variant="light" color="blue">
 									Category
 								</Badge>
 							</Group>
-
-							<Text size="lg" c="dimmed" mb="md">
-								{categoryStats.totalItems.toLocaleString()} items in this category
-							</Text>
 
 							{/* Category Statistics Grid */}
 							<Grid>
 								<Grid.Col span={{ base: 6, md: 3 }}>
 									<Box>
 										<Text size="xs" c="dimmed" tt="uppercase" fw={500}>Brands</Text>
-										<Text size="lg" fw={600}>{availableOptions.brands.length}</Text>
+										<Text size="lg" fw={600}>{categoryStats.brandsCount}</Text>
 									</Box>
 								</Grid.Col>
 								<Grid.Col span={{ base: 6, md: 3 }}>
 									<Box>
 										<Text size="xs" c="dimmed" tt="uppercase" fw={500}>Grades</Text>
-										<Text size="lg" fw={600}>{availableOptions.grades.length}</Text>
+										<Text size="lg" fw={600}>{categoryStats.gradesCount}</Text>
 									</Box>
 								</Grid.Col>
 								<Grid.Col span={{ base: 6, md: 3 }}>
 									<Box>
 										<Text size="xs" c="dimmed" tt="uppercase" fw={500}>Scales</Text>
-										<Text size="lg" fw={600}>{availableOptions.scales.length}</Text>
+										<Text size="lg" fw={600}>{categoryStats.scalesCount}</Text>
 									</Box>
 								</Grid.Col>
 								<Grid.Col span={{ base: 6, md: 3 }}>
 									<Box>
 										<Text size="xs" c="dimmed" tt="uppercase" fw={500}>Series</Text>
-										<Text size="lg" fw={600}>{availableOptions.series.length}</Text>
+										<Text size="lg" fw={600}>{categoryStats.seriesCount}</Text>
 									</Box>
 								</Grid.Col>
 							</Grid>
@@ -214,94 +184,9 @@ export function CategoryPageClient({
 						</Box>
 					</Group>
 				</Card>
-
-				{/* Shared Filters Component */}
-				<ItemFilters
-					filterState={filterState}
-					availableOptions={availableOptions}
-					onFilterChange={updateFilter}
-					onSearchChange={updateSearch}
-					onToggleFilterValue={toggleFilterValue}
-					onClearFilters={clearFilters}
-					hasActiveFilters={hasActiveFilters}
-					activeFilterCount={activeFilterCount}
-					title="Filter Items"
-					subtitle={`Filtering ${categoryStats.totalItems} items in ${getNodeDisplayName(initialCategory)}`}
-				/>
-
-				{/* Results Header */}
-				<Box>
-					<Group justify="space-between" align="center" mb="md" wrap="wrap">
-						<Box>
-							<Text size="sm" c="dimmed">
-								Showing {paginatedItems.length} of {total.toLocaleString()} items
-							</Text>
-							{total !== categoryStats.totalItems && (
-								<Text size="xs" c="blue">
-									Filtered from {categoryStats.totalItems.toLocaleString()} total items
-								</Text>
-							)}
-						</Box>
-
-						<Group gap="md">
-							{futureCount > 0 && <FutureReleasesToggle futureCount={futureCount} />}
-							<ViewSwitcher
-								value={viewMode}
-								onChange={setViewMode}
-								size="sm"
-							/>
-						</Group>
-					</Group>
-
-					{/* Results Display */}
-					{paginatedItems.length > 0 ? (
-						<>
-							<ViewRenderer
-								viewMode={viewMode}
-								items={paginatedItems}
-							/>
-							{/* Infinite Scroll Loader */}
-							<div ref={lastItemRef}>
-								<InfiniteScrollLoader
-									isLoading={isLoading}
-									hasMore={hasMore}
-									autoLoad={preferences.autoLoadInfiniteScroll}
-								/>
-							</div>
-						</>
-					) : (
-						// Empty State
-						<Card p="xl" radius="md" withBorder={true} ta="center">
-							<Stack gap="md" align="center">
-								<IconFolder
-									size={64}
-									color="var(--mantine-color-gray-4)"
-								/>
-								<Title order={3}>
-									{hasActiveFilters ? "No items match your filters" : "No items in this category"}
-								</Title>
-								<Text c="dimmed" size="lg">
-									{hasActiveFilters
-										? "Try adjusting your search terms or clearing some filters to find what you're looking for."
-										: "This category appears to be empty or items are still being added."
-									}
-								</Text>
-								{hasActiveFilters && (
-									<Button
-										variant="light"
-										onClick={clearFilters}
-										leftSection={<IconX size={16} />}
-									>
-										Clear All Filters
-									</Button>
-								)}
-							</Stack>
-						</Card>
-					)}
-				</Box>
-
-				{/* Quick Access Stats */}
-				{(categoryStats.newestItem && categoryStats.newestItem.length > 0) || (categoryStats.oldestItem && categoryStats.oldestItem.length > 0) ? (
+			}
+			stats={
+				(categoryStats.newestItem && categoryStats.newestItem.length > 0) || (categoryStats.oldestItem && categoryStats.oldestItem.length > 0) ? (
 					<Card p="md" radius="md" withBorder={true} bg="gray.0">
 						<Group justify="space-between">
 							{categoryStats.newestItem && categoryStats.newestItem.length > 0 && (
@@ -318,8 +203,8 @@ export function CategoryPageClient({
 							)}
 						</Group>
 					</Card>
-				) : null}
-			</Stack>
-		</Container>
+				) : undefined
+			}
+		/>
 	);
 }
