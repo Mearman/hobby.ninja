@@ -65,13 +65,13 @@ function formatGradeName(id: string): string {
 
 type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
 
-// Shared style for filter images - larger size for better visibility
-const FILTER_IMAGE_SIZE = 48;
-const FILTER_IMAGE_STYLE = {
-	objectFit: "cover" as const,
-	borderRadius: 8,
-	boxShadow: "0 2px 4px rgba(0, 0, 0, 0.15)",
-	display: "block",
+// Shared style for filter images
+const FILTER_IMAGE_SIZE = 36;
+const FILTER_IMAGE_STYLE: React.CSSProperties = {
+	width: FILTER_IMAGE_SIZE,
+	height: FILTER_IMAGE_SIZE,
+	objectFit: "cover",
+	borderRadius: 6,
 };
 
 interface ItemFiltersProps {
@@ -144,20 +144,20 @@ function FilterSection({
 	};
 
 	// Determine chip size based on display mode and whether it has an image
-	const getChipSize = (value: string) => hasImage(value) ? "xl" : "xs";
+	const getChipSize = (value: string) => hasImage(value) ? "lg" : "xs";
 
-	// Custom styles for image chips - minimal padding so image fills the chip
+	// Custom styles for image chips - override height to fit image
 	const getChipStyles = (value: string) => {
 		if (hasImage(value)) {
 			return {
+				root: {
+					height: FILTER_IMAGE_SIZE + 8,
+				},
 				label: {
-					padding: 2,
+					padding: 4,
+					height: FILTER_IMAGE_SIZE + 8,
 					display: "flex",
 					alignItems: "center",
-					justifyContent: "center",
-				},
-				iconWrapper: {
-					display: "none",
 				},
 			};
 		}
@@ -441,10 +441,10 @@ export function ItemFilters({
 							const badge = (
 								<Badge
 									key={`brand-${brand}`}
-									size={brandImage ? "xl" : "sm"}
+									size={brandImage ? "lg" : "sm"}
 									variant="light"
 									color="blue"
-									styles={brandImage ? { root: { paddingLeft: 4, paddingRight: 8 } } : undefined}
+									styles={brandImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										brandImage ? (
 											<Image src={brandImage} alt={formatBrandName(brand)} width={FILTER_IMAGE_SIZE} height={FILTER_IMAGE_SIZE} style={FILTER_IMAGE_STYLE} />
@@ -470,10 +470,10 @@ export function ItemFilters({
 							const badge = (
 								<Badge
 									key={`grade-${grade}`}
-									size={gradeImage ? "xl" : "sm"}
+									size={gradeImage ? "lg" : "sm"}
 									variant="light"
 									color="teal"
-									styles={gradeImage ? { root: { paddingLeft: 4, paddingRight: 8 } } : undefined}
+									styles={gradeImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										gradeImage ? (
 											<Image src={gradeImage} alt={formatGradeName(grade)} width={FILTER_IMAGE_SIZE} height={FILTER_IMAGE_SIZE} style={FILTER_IMAGE_STYLE} />
@@ -514,10 +514,10 @@ export function ItemFilters({
 							const badge = (
 								<Badge
 									key={`series-${s}`}
-									size={seriesImage ? "xl" : "sm"}
+									size={seriesImage ? "lg" : "sm"}
 									variant="light"
 									color="violet"
-									styles={seriesImage ? { root: { paddingLeft: 4, paddingRight: 8 } } : undefined}
+									styles={seriesImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										seriesImage ? (
 											<Image src={seriesImage} alt={formatSeriesName(s)} width={FILTER_IMAGE_SIZE} height={FILTER_IMAGE_SIZE} style={FILTER_IMAGE_STYLE} />
