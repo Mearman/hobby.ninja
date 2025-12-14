@@ -59,6 +59,8 @@ interface Brand {
 	name: LocalizedString;
 	url?: string;
 	itemIds?: string[];
+	gradeId?: string;
+	isGrade?: boolean;
 	[key: string]: unknown;
 }
 
@@ -108,6 +110,7 @@ interface GradeData {
 	itemIds: string[];
 	itemCount: number;
 	sortOrder: number;
+	image?: string;
 }
 
 interface ScaleData {
@@ -131,6 +134,7 @@ interface HomepageData {
 	popularBrands: unknown[];
 	categories: unknown[];
 }
+
 
 // Grade definitions with hierarchy and sort order
 // Sort order by builder complexity: EG (100) → SD (200) → HG (300) → Mega Size (350) → FM (400) → Figure-rise (450) → RE/100 (500) → RG (600) → MG (700) → PG (900)
@@ -307,6 +311,20 @@ function buildGrades(items: Map<string, Item>, brands: Map<string, Brand>): Map<
 	const grades = new Map<string, GradeData>();
 	for (const [gradeId, definition] of Object.entries(GRADE_DEFINITIONS)) {
 		const itemIds = gradeItemIds.get(gradeId) ?? [];
+
+		// Find image reference from corresponding brand
+		let image: string | undefined;
+		// Look for a brand with this gradeId to get its image
+		for (const [brandId, brand] of brands) {
+			if (brand.gradeId === gradeId) {
+				const brandImage = brand['image'] as string | undefined;
+				if (brandImage && typeof brandImage === 'string') {
+					image = brandImage;
+					break;
+				}
+			}
+		}
+
 		grades.set(gradeId, {
 			id: gradeId,
 			type: "grade",
@@ -316,6 +334,7 @@ function buildGrades(items: Map<string, Item>, brands: Map<string, Brand>): Map<
 			itemIds,
 			itemCount: itemIds.length,
 			sortOrder: definition.sortOrder,
+			image,
 		});
 	}
 
