@@ -1,16 +1,15 @@
 "use client";
 
-import { Anchor, Badge, Group, Text } from "@mantine/core";
-import Link from "next/link";
-import { Fragment } from "react";
-
-import { getBrandImage } from "@/lib/image-lookup";
 import {
 	getBrandById,
 	getCategoryById,
 	getNodeDisplayName,
 	getSeriesById,
 } from "@hobby-ninja/data";
+import { Anchor, Badge, Group, Text } from "@mantine/core";
+import Link from "next/link";
+import { Fragment } from "react";
+
 
 export type DisplayMode = "text" | "links" | "badges";
 export type EntityType = "series" | "brand" | "category";
@@ -105,10 +104,12 @@ export function EntityList({
 		<Group gap={4} wrap="wrap">
 			{ids.map((id) => {
 				const displayName = getDisplayName(id, entityType);
-				const brandImage = entityType === "brand" ? getBrandImage(id) : null;
-				const leftSection = brandImage ? (
+				const entity = entityType === "brand" ? getBrandById(id) :
+							   entityType === "series" ? getSeriesById(id) : null;
+				const entityImage = entity?.image;
+				const leftSection = entityImage ? (
 					<img
-						src={brandImage}
+						src={entityImage}
 						alt=""
 						style={{ width: 14, height: 14, objectFit: "contain" }}
 					/>
