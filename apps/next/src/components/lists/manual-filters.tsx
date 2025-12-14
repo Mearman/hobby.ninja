@@ -7,7 +7,9 @@ import { useState } from "react";
 
 import type { FilterProps } from "./types";
 
-export function ManualFilters({ onFilterChange }: FilterProps<Manual>) {
+import type { ManualFilterState } from "@/hooks/use-manual-filter";
+
+export function ManualFilters({ onFilterChange }: FilterProps<Manual, ManualFilterState>) {
 	const [search, setSearch] = useState("");
 
 	const handleSearchChange = (value: string) => {

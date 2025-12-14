@@ -92,7 +92,7 @@ function ManualStatistics({ manuals }: { manuals: Manual[] }) {
 	);
 }
 
-export function ManualsClientEnhanced({ manuals, totalManuals }: ManualsClientProps) {
+export function ManualsClient({ manuals, totalManuals }: ManualsClientProps) {
 	return (
 		<Container size="xl" py="xl">
 			<Stack gap="xl">

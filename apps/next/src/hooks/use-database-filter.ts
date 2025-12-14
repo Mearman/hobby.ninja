@@ -4,6 +4,8 @@ import type { Item, Manual } from "@hobby-ninja/data";
 import { getNodeDisplayName } from "@hobby-ninja/data";
 import { useMemo, useState } from "react";
 
+import type { DatabaseAvailableOptions } from "@/components/lists/database-filters";
+
 export type DatabaseEntry =
 	| (Item & { type: "item" })
 	| (Manual & { type: "manual" });
@@ -21,7 +23,7 @@ export interface DatabaseFilterState {
 	sortDirection: "asc" | "desc";
 }
 
-export function useDatabaseFilter(allEntries: DatabaseEntry[]) {
+export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 	const [filterState, setFilterState] = useState<DatabaseFilterState>({
 		search: "",
 		type: "all",
@@ -34,6 +36,18 @@ export function useDatabaseFilter(allEntries: DatabaseEntry[]) {
 		sortField: "name",
 		sortDirection: "asc",
 	});
+
+	// Combine items and manuals into unified array
+	const allEntries = useMemo((): DatabaseEntry[] => {
+		const entries: DatabaseEntry[] = [];
+		for (const item of items) {
+			entries.push({ ...item, type: "item" });
+		}
+		for (const manual of manuals) {
+			entries.push({ ...manual, type: "manual" });
+		}
+		return entries;
+	}, [items, manuals]);
 
 	// Filter entries
 	const filteredEntries = useMemo(() => {
@@ -234,11 +248,43 @@ export function useDatabaseFilter(allEntries: DatabaseEntry[]) {
 		filterState.series.length > 0 ||
 		filterState.languages.length > 0;
 
+	// Calculate available filter options
+	const availableOptions = useMemo((): DatabaseAvailableOptions => {
+		const brands = new Set<string>();
+		const categories = new Set<string>();
+		const grades = new Set<string>();
+		const scales = new Set<string>();
+		const series = new Set<string>();
+		const languages = new Set<string>();
+
+		for (const item of items) {
+			if (item.brandIds.length > 0) brands.add(item.brandIds[0]);
+			if (item.categoryIds.length > 0) categories.add(item.categoryIds[0]);
+			if (item.grade) grades.add(item.grade);
+			if (item.scale) scales.add(item.scale);
+			if (item.seriesIds.length > 0) series.add(item.seriesIds[0]);
+		}
+
+		for (const manual of manuals) {
+			if (manual.language) languages.add(manual.language);
+		}
+
+		return {
+			brands: [...brands].toSorted(),
+			categories: [...categories].toSorted(),
+			grades: [...grades].toSorted(),
+			scales: [...scales].toSorted(),
+			series: [...series].toSorted(),
+			languages: [...languages].toSorted(),
+		};
+	}, [items, manuals]);
+
 	return {
 		filteredItems: filteredEntries,
 		filterState,
 		updateFilter,
 		clearFilters,
 		hasActiveFilters,
+		availableOptions,
 	};
 }

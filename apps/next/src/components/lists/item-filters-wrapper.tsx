@@ -8,6 +8,13 @@ import { ItemFilters } from "@/components/filtering/item-filters";
 import type { FilterState } from "@/hooks/use-filtered-items";
 
 /**
+ * Type guard to check if a value is a string array.
+ */
+const isStringArray = (value: unknown): value is string[] => {
+	return Array.isArray(value) && value.every((item): item is string => typeof item === "string");
+};
+
+/**
  * Wrapper component that adapts ItemFilters to work with the generic list abstraction.
  *
  * The generic list abstraction provides basic filter state management,
@@ -77,13 +84,29 @@ export function ItemFiltersWrapper({
 		(currentFilterState.sortField === "date" ? 0 : 1) +
 		(currentFilterState.sortDirection === "desc" ? 0 : 1);
 
-	// Build available options in the expected format
+	// Build available options in the expected format using type guards
+	const getBrandsArray = (): string[] => {
+		return isStringArray(availableOptions.brands) ? availableOptions.brands : [];
+	};
+	const getGradesArray = (): string[] => {
+		return isStringArray(availableOptions.grades) ? availableOptions.grades : [];
+	};
+	const getScalesArray = (): string[] => {
+		return isStringArray(availableOptions.scales) ? availableOptions.scales : [];
+	};
+	const getSeriesArray = (): string[] => {
+		return isStringArray(availableOptions.series) ? availableOptions.series : [];
+	};
+	const getCategoriesArray = (): string[] => {
+		return isStringArray(availableOptions.categories) ? availableOptions.categories : [];
+	};
+
 	const formattedAvailableOptions = {
-		brands: availableOptions.brands ?? [],
-		grades: availableOptions.grades ?? [],
-		scales: availableOptions.scales ?? [],
-		series: availableOptions.series ?? [],
-		categories: availableOptions.categories ?? [],
+		brands: getBrandsArray(),
+		grades: getGradesArray(),
+		scales: getScalesArray(),
+		series: getSeriesArray(),
+		categories: getCategoriesArray(),
 	};
 
 	return (

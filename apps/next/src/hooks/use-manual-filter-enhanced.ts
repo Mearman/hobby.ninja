@@ -31,7 +31,7 @@ export interface ManualFilterState {
 	sortDirection: "asc" | "desc";
 }
 
-export function useManualFilterEnhanced(items: Manual[]) {
+export function useManualFilterEnhanced(items: Manual[], _initialFilters?: Partial<ManualFilterState>) {
 	const [filterState, setFilterState] = useState<ManualFilterState>({
 		search: "",
 		dateRange: {

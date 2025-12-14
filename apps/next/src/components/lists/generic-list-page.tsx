@@ -22,7 +22,7 @@ import { useViewMode , ViewSwitcher } from "@/components/view/view-switcher";
 import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
 
-export function GenericListPage<T>({
+export function GenericListPage<T, TFilterState = Record<string, unknown>, TAvailableOptions = Record<string, unknown>>({
 	items,
 	totalItems,
 	config,
@@ -31,7 +31,7 @@ export function GenericListPage<T>({
 	breadcrumbs,
 	stats,
 	pageTitle,
-}: GenericListPageProps<T>) {
+}: GenericListPageProps<T, TFilterState, TAvailableOptions>) {
 	const { preferences } = useUserPreferences();
 	const { viewMode, setViewMode } = useViewMode();
 
@@ -48,7 +48,7 @@ export function GenericListPage<T>({
 	});
 
 	// Handle filter changes
-	const handleFilterChange = (updates: Record<string, unknown>) => {
+	const handleFilterChange = (updates: Partial<TFilterState>) => {
 		updateFilter(updates);
 	};
 

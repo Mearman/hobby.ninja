@@ -18,12 +18,11 @@ export interface ManualFilterState {
 
 export function ManualFiltersEnhanced({
 	filterState,
-	_availableOptions,
 	onFilterChange,
 	items,
-}: FilterProps<Manual>) {
+}: FilterProps<Manual, ManualFilterState>) {
 	const [showAdvanced, setShowAdvanced] = useState(false);
-	const currentFilterState = filterState as ManualFilterState;
+	const currentFilterState = filterState;
 
 	const handleSearchChange = (search: string) => {
 		onFilterChange({ ...currentFilterState, search });

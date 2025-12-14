@@ -8,7 +8,7 @@ import { useState, useMemo, useCallback } from "react";
  * Returns Infinity for invalid scales so they sort to the end.
  */
 function parseScaleDenominator(scale: string): number {
-	const match = scale.match(/1\/(\d+)/);
+	const match = /1\/(\d+)/.exec(scale);
 	if (match?.[1]) {
 		return Number.parseInt(match[1], 10);
 	}
@@ -20,7 +20,7 @@ function parseScaleDenominator(scale: string): number {
  * Larger scale = smaller denominator.
  */
 function sortScales(scales: string[]): string[] {
-	return [...scales].sort((a, b) => {
+	return [...scales].toSorted((a, b) => {
 		const denomA = parseScaleDenominator(a);
 		const denomB = parseScaleDenominator(b);
 		return denomA - denomB; // Smaller denominator = larger scale, comes first
@@ -79,7 +79,7 @@ const DEFAULT_FILTER_STATE: FilterState = {
 
 export function useFilteredItems(
 	items: Item[],
-	options: FilterOptions = {},
+	_initialFilters?: Partial<FilterState>,
 ): UseFilteredItemsReturn {
 	const [filterState, setFilterState] = useState<FilterState>(DEFAULT_FILTER_STATE);
 
@@ -109,13 +109,13 @@ export function useFilteredItems(
 		}
 
 		return {
-			brands: options.availableBrands ?? [...brands].toSorted(),
-			grades: options.availableGrades ?? [...grades].toSorted(),
-			scales: options.availableScales ?? sortScales([...scales]),
-			series: options.availableSeries ?? [...series].toSorted(),
-			categories: options.availableCategories ?? [...categories].toSorted(),
+			brands: [...brands].toSorted(),
+			grades: [...grades].toSorted(),
+			scales: sortScales([...scales]),
+			series: [...series].toSorted(),
+			categories: [...categories].toSorted(),
 		};
-	}, [items, options.availableBrands, options.availableGrades, options.availableScales, options.availableSeries, options.availableCategories]);
+	}, [items]);
 
 	// Apply filters and sorting
 	const filteredItems = useMemo((): Item[] => {

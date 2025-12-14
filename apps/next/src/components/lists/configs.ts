@@ -1,5 +1,7 @@
 import type { Item , Manual } from "@hobby-ninja/data";
 
+import { DatabaseCard } from "./database-card";
+import { DatabaseFilters, type DatabaseAvailableOptions } from "./database-filters";
 import { ItemCard } from "./item-card";
 import { ItemFiltersWrapper } from "./item-filters-wrapper";
 import { ManualCard } from "./manual-card";
@@ -7,9 +9,11 @@ import { ManualFilters } from "./manual-filters";
 import { ManualFiltersEnhanced } from "./manual-filters-enhanced";
 import type { ListPageConfig } from "./types";
 
+import type { DatabaseFilterState } from "@/hooks/use-database-filter";
+import { useDatabaseFilterWrapper } from "@/hooks/use-database-filter-wrapper";
 import { useFilteredItems, type FilterState } from "@/hooks/use-filtered-items";
-import { useManualFilter } from "@/hooks/use-manual-filter";
-import { useManualFilterEnhanced } from "@/hooks/use-manual-filter-enhanced";
+import { useManualFilter, type ManualFilterState } from "@/hooks/use-manual-filter";
+import { useManualFilterEnhanced, type ManualFilterState as ManualFilterStateEnhanced } from "@/hooks/use-manual-filter-enhanced";
 
 
 // Item configuration - used for main items page and brand/category/grade/scale/series pages
@@ -33,7 +37,7 @@ export const itemConfig: ListPageConfig<Item, FilterState> = {
 };
 
 // Manual configuration - used for manuals page
-export const manualConfig: ListPageConfig<Manual> = {
+export const manualConfig: ListPageConfig<Manual, ManualFilterState> = {
 	entityType: "manuals",
 	filters: {
 		component: ManualFilters,
@@ -53,7 +57,7 @@ export const manualConfig: ListPageConfig<Manual> = {
 };
 
 // Enhanced manual configuration with date range filtering
-export const manualConfigEnhanced: ListPageConfig<Manual> = {
+export const manualConfigEnhanced: ListPageConfig<Manual, ManualFilterStateEnhanced> = {
 	entityType: "manuals",
 	filters: {
 		component: ManualFiltersEnhanced,
@@ -73,18 +77,11 @@ export const manualConfigEnhanced: ListPageConfig<Manual> = {
 };
 
 // Database configuration - hybrid items and manuals
-export const databaseConfig: ListPageConfig<Item | Manual> = {
+export const databaseConfig: ListPageConfig<Item | Manual, DatabaseFilterState, DatabaseAvailableOptions> = {
 	entityType: "database",
 	filters: {
-		component: () => null, // Will be implemented as DatabaseFilters component
-		hook: (items: Array<Item | Manual>) => ({
-			filteredItems: items,
-			filterState: {},
-			// Placeholder no-op implementations until DatabaseFilters is implemented
-			updateFilter: () => { /* no-op placeholder */ },
-			clearFilters: () => { /* no-op placeholder */ },
-			hasActiveFilters: false,
-		}),
+		component: DatabaseFilters,
+		hook: useDatabaseFilterWrapper,
 		fields: ["search", "type", "brands", "categories", "grades", "scales", "series", "languages"],
 		sortOptions: ["name", "date", "brand"],
 	},
@@ -92,7 +89,7 @@ export const databaseConfig: ListPageConfig<Item | Manual> = {
 		enabled: ["grid", "list", "table"],
 		default: "grid",
 	},
-	card: () => null, // Will be implemented as DatabaseEntryCard component
+	card: DatabaseCard,
 	infiniteScroll: true,
 	futureReleases: false,
 	itemIdField: "id",

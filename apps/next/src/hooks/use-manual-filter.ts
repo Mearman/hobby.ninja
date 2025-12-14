@@ -19,7 +19,7 @@ export interface ManualFilterState {
 	search: string;
 }
 
-export function useManualFilter(items: Manual[]) {
+export function useManualFilter(items: Manual[], _initialFilters?: Partial<ManualFilterState>) {
 	const [filterState, setFilterState] = useState<ManualFilterState>({
 		search: "",
 	});
