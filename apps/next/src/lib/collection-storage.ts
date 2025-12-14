@@ -64,6 +64,7 @@ export interface CollectionStats {
   totalValue: number;
   statusBreakdown: Record<CollectionItem["status"], number>;
   conditionBreakdown: Record<CollectionItem["condition"], number>;
+  completionPercentage: number;
 }
 
 export interface CollectionListResponse {
@@ -144,12 +145,7 @@ export class CollectionDatabase extends Dexie {
 		// Placeholder
 	}
 
-	async getCollectionStats(collectionId: string): Promise<{
-    totalItems: number;
-    totalValue: number;
-    statusBreakdown: Record<CollectionItem["status"], number>;
-    conditionBreakdown: Record<CollectionItem["condition"], number>;
-  }> {
+	async getCollectionStats(collectionId: string): Promise<CollectionStats> {
 		return {
 			totalItems: 0,
 			totalValue: 0,
@@ -167,6 +163,7 @@ export class CollectionDatabase extends Dexie {
 				damaged: 0,
 				"box-damaged": 0,
 			},
+			completionPercentage: 0,
 		};
 	}
 
