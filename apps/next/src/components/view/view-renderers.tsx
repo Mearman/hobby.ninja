@@ -1,6 +1,6 @@
 "use client";
 
-import { type Item, getNodeDisplayName, getNodeReleaseDate, isItem } from "@hobby-ninja/data";
+import { type Item, getNodeDisplayName, getNodePrimaryGrade, getNodeReleaseDate, isItem } from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -78,9 +78,9 @@ function ItemCard({ item, priority = false }: { item: Item; priority?: boolean }
 							{releaseDate}
 						</Badge>
 					)}
-					{item.grade && (
+					{getNodePrimaryGrade(item) && (
 						<Badge className={itemCardBadge} variant="light">
-							{item.grade}
+							{getNodePrimaryGrade(item)}
 						</Badge>
 					)}
 					{item.scale && (
@@ -159,9 +159,9 @@ export function ListView({ items }: { items: Item[] }) {
 											{releaseDate}
 										</Badge>
 									)}
-									{item.grade && (
+									{getNodePrimaryGrade(item) && (
 										<Badge variant="light" size="sm">
-											{item.grade}
+											{getNodePrimaryGrade(item)}
 										</Badge>
 									)}
 									{item.scale && (
@@ -217,7 +217,7 @@ export function TableView({ items }: { items: Item[] }) {
 				</Table.Td>
 				<Table.Td c="dimmed">{releaseDate ?? "-"}</Table.Td>
 				<Table.Td><EntityList ids={item.seriesIds} entityType="series" size="sm" /></Table.Td>
-				<Table.Td>{item.grade ?? "-"}</Table.Td>
+				<Table.Td>{getNodePrimaryGrade(item) ?? "-"}</Table.Td>
 				<Table.Td>{item.scale ?? "-"}</Table.Td>
 				<Table.Td>
 					<EntityList ids={item.brandIds} entityType="brand" size="sm" />

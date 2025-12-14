@@ -1,6 +1,6 @@
 "use client";
 
-import { type Item, getNodeDisplayName } from "@hobby-ninja/data";
+import { type Item, getNodeDisplayName, getNodePrimaryGrade } from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -117,8 +117,8 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 								<Table.Td fw={500}>Grade</Table.Td>
 								{comparisonItems.map((item) => (
 									<Table.Td key={`grade-${item.id}`} ta="center">
-										{item.grade ? (
-											<Badge size="sm" variant="light">{item.grade}</Badge>
+										{getNodePrimaryGrade(item) ? (
+											<Badge size="sm" variant="light">{getNodePrimaryGrade(item)}</Badge>
 										) : (
 											"-"
 										)}
@@ -316,7 +316,7 @@ export function SelectableItemCard({
 					</Box>
 				</Table.Td>
 				<Table.Td><EntityList ids={item.seriesIds} entityType="series" size="sm" /></Table.Td>
-				<Table.Td>{item.grade ?? "-"}</Table.Td>
+				<Table.Td>{getNodePrimaryGrade(item) ?? "-"}</Table.Td>
 				<Table.Td>{item.scale ?? "-"}</Table.Td>
 				<Table.Td>
 					<EntityList ids={item.brandIds} entityType="brand" size="sm" />
@@ -374,8 +374,8 @@ export function SelectableItemCard({
 					</Box>
 				)}
 				<Group gap={4} mt={8} wrap="wrap">
-					{item.grade && (
-						<Badge size="xs" variant="light">{item.grade}</Badge>
+					{getNodePrimaryGrade(item) && (
+						<Badge size="xs" variant="light">{getNodePrimaryGrade(item)}</Badge>
 					)}
 					{item.scale && (
 						<Badge size="xs" variant="light">{item.scale}</Badge>
