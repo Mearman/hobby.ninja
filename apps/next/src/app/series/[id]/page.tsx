@@ -1,3 +1,10 @@
+import { getNodeDisplayName, getNodePrimaryGrade, type Node ,
+	getSeriesById,
+	getSeriesIds,
+	getItemById,
+	type Series,
+	type Item,
+} from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -21,14 +28,6 @@ import { notFound } from "next/navigation";
 
 import { SeriesItemsClient } from "./series-items-client";
 
-import { getNodeDisplayName, type Node } from "@hobby-ninja/data";
-import {
-	getSeriesById,
-	getSeriesIds,
-	getItemById,
-	type Series,
-	type Item,
-} from "@hobby-ninja/data";
 
 
 interface SeriesPageProps {
@@ -124,8 +123,9 @@ export default async function SeriesDetailPage({ params }: SeriesPageProps) {
 	let maxYear = 0;
 
 	for (const item of seriesItems) {
-		if (item.grade) {
-			gradeDistribution.set(item.grade, (gradeDistribution.get(item.grade) ?? 0) + 1);
+		const grade = getNodePrimaryGrade(item);
+		if (grade) {
+			gradeDistribution.set(grade, (gradeDistribution.get(grade) ?? 0) + 1);
 		}
 		if (item.scale) {
 			scaleDistribution.set(item.scale, (scaleDistribution.get(item.scale) ?? 0) + 1);

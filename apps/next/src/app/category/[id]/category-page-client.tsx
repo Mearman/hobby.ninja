@@ -1,6 +1,6 @@
 "use client";
 
-import { getNodeDisplayName, isItem, type Category, type Item } from "@hobby-ninja/data";
+import { getNodeDisplayName, getNodePrimaryGrade, isItem, type Category, type Item } from "@hobby-ninja/data";
 import {
 	Anchor,
 	Badge,
@@ -82,7 +82,8 @@ export function CategoryPageClient({
 			for (const brandId of item.brandIds) {
 				brands.add(brandId);
 			}
-			if (item.grade) grades.add(item.grade);
+			const grade = getNodePrimaryGrade(item);
+			if (grade) grades.add(grade);
 			if (item.scale) scales.add(item.scale);
 			for (const seriesId of item.seriesIds) {
 				series.add(seriesId);

@@ -2,6 +2,7 @@ import {
 	seriesList,
 	getItemById,
 	getNodeDisplayName,
+	getNodePrimaryGrade,
 	type Series,
 	type Item,
 } from "@hobby-ninja/data";
@@ -216,8 +217,9 @@ function prepareSeriesData(): SeriesWithStats[] {
 			}
 
 			// Track grades
-			if (item.grade) {
-				grades.add(item.grade);
+			const grade = getNodePrimaryGrade(item);
+			if (grade) {
+				grades.add(grade);
 			}
 		}
 

@@ -7,6 +7,7 @@ import {
 	getManualById,
 	type Item,
 	getNodeDisplayName,
+	getNodePrimaryGrade,
 	getNodePrice,
 	getNodeReleaseDate,
 	getNodeImages,
@@ -139,8 +140,8 @@ export default async function ItemPage({ params }: ItemPageProps) {
 											</Badge>
 										</Link>
 									))}
-									{item.grade && (
-										<Badge color="green" variant="light">{item.grade}</Badge>
+									{getNodePrimaryGrade(item) && (
+										<Badge color="green" variant="light">{getNodePrimaryGrade(item)}</Badge>
 									)}
 									{item.scale && (
 										<Badge color="orange" variant="light">{item.scale}</Badge>

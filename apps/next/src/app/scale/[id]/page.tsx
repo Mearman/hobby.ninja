@@ -2,6 +2,7 @@ import {
 	getScaleById,
 	getItemsByScale,
 	getScaleIds,
+	getNodePrimaryGrade,
 } from "@hobby-ninja/data";
 import {
 	Badge,
@@ -111,8 +112,9 @@ export default async function ScaleDetailPage({ params }: ScalePageProps) {
 	let maxYear = 0;
 
 	for (const item of scaleItems) {
-		if (item.grade) {
-			gradeDistribution.set(item.grade, (gradeDistribution.get(item.grade) ?? 0) + 1);
+		const grade = getNodePrimaryGrade(item);
+		if (grade) {
+			gradeDistribution.set(grade, (gradeDistribution.get(grade) ?? 0) + 1);
 		}
 		// Use first series ID from array
 		const seriesId = item.seriesIds[0];
