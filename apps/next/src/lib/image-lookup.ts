@@ -13,6 +13,7 @@ import imageLookup from "@/data/image-lookup.json";
 
 interface ImageLookupData {
 	brands: Record<string, string>;
+	grades: Record<string, string>;
 	series: Record<string, string>;
 }
 
@@ -35,6 +36,14 @@ export function getSeriesImage(seriesId: string): string | undefined {
 }
 
 /**
+ * Get the image path for a grade by ID
+ * @returns Image path or undefined if no image exists
+ */
+export function getGradeImage(gradeId: string): string | undefined {
+	return lookup.grades[gradeId];
+}
+
+/**
  * Check if a brand has an image
  */
 export function hasBrandImage(brandId: string): boolean {
@@ -49,6 +58,13 @@ export function hasSeriesImage(seriesId: string): boolean {
 }
 
 /**
+ * Check if a grade has an image
+ */
+export function hasGradeImage(gradeId: string): boolean {
+	return gradeId in lookup.grades;
+}
+
+/**
  * Get all brand IDs that have images
  */
 export function getBrandIdsWithImages(): string[] {
@@ -60,4 +76,11 @@ export function getBrandIdsWithImages(): string[] {
  */
 export function getSeriesIdsWithImages(): string[] {
 	return Object.keys(lookup.series);
+}
+
+/**
+ * Get all grade IDs that have images
+ */
+export function getGradeIdsWithImages(): string[] {
+	return Object.keys(lookup.grades);
 }

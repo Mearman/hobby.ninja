@@ -1,6 +1,13 @@
 "use client";
 
 import {
+	getBrandById,
+	getCategoryById,
+	getGradeById,
+	getNodeDisplayName,
+	getSeriesById,
+} from "@hobby-ninja/data";
+import {
 	ActionIcon,
 	Badge,
 	Box,
@@ -28,13 +35,7 @@ import {
 import { useState } from "react";
 
 import { FilterState } from "@/hooks/use-filtered-items";
-import {
-	getBrandById,
-	getCategoryById,
-	getGradeById,
-	getNodeDisplayName,
-	getSeriesById,
-} from "@hobby-ninja/data";
+import { getGradeImage } from "@/lib/image-lookup";
 
 // Helper functions to format entity IDs to display names
 function formatBrandName(id: string): string {
@@ -353,6 +354,11 @@ export function ItemFilters({
 								size="sm"
 								variant="light"
 								color="teal"
+								leftSection={
+									getGradeImage(grade) ? (
+										<img src={getGradeImage(grade)} alt="" style={{ width: 12, height: 12, objectFit: "contain" }} />
+									) : null
+								}
 								rightSection={
 									<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("grades", grade); }}>
 										<IconX size={10} />

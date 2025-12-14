@@ -1,5 +1,6 @@
 "use client";
 
+import { getGradeById, getNodeDisplayName } from "@hobby-ninja/data";
 import {
 	TextInput,
 	MultiSelect,
@@ -23,8 +24,7 @@ import {
 import React, { useState, useCallback } from "react";
 
 import { useSearch, type SearchResult, type SearchFilters, type SearchStats } from "@/lib/fuse-search";
-import { getBrandImage, getSeriesImage } from "@/lib/image-lookup";
-import { getGradeById, getNodeDisplayName } from "@hobby-ninja/data";
+import { getBrandImage, getGradeImage, getSeriesImage } from "@/lib/image-lookup";
 
 function formatGradeName(id: string): string {
 	const grade = getGradeById(id);
@@ -317,7 +317,11 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 							</Badge>
 						))}
 						{filters.grades?.map(grade => (
-							<Badge key={grade} size="sm" variant="light" color="purple">
+							<Badge key={grade} size="sm" variant="light" color="purple" leftSection={
+								getGradeImage(grade) ? (
+									<img src={getGradeImage(grade)} alt="" style={{ width: 12, height: 12, objectFit: "contain" }} />
+								) : null
+							}>
 								{formatGradeName(grade)}
 							</Badge>
 						))}
