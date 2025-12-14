@@ -66,7 +66,7 @@ function formatGradeName(id: string): string {
 type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
 
 // Shared style for filter images - preserve aspect ratio
-const FILTER_IMAGE_HEIGHT = 32;
+const FILTER_IMAGE_HEIGHT = 44;
 const FILTER_IMAGE_STYLE: React.CSSProperties = {
 	height: FILTER_IMAGE_HEIGHT,
 	width: "auto",
