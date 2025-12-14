@@ -13,7 +13,6 @@ import {
 	Box,
 	Button,
 	Card,
-	Chip,
 	Collapse,
 	Divider,
 	Group,
@@ -64,30 +63,35 @@ function formatGradeName(id: string): string {
 
 type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
 
-// Shared style for filter images - preserve aspect ratio
+// Shared style for filter images - match aspect ratio of reference images (300x170 ≈ 1.76:1)
 const FILTER_IMAGE_HEIGHT = 56;
-const FILTER_IMAGE_STYLE: React.CSSProperties = {
-	height: FILTER_IMAGE_HEIGHT,
-	width: "auto",
-	objectFit: "contain",
-	display: "block",
-};
+const FILTER_IMAGE_WIDTH = 99; // 56 * (300/170) to match reference image aspect ratio
 
-// Style for text-only chips to match image chip dimensions
-const TEXT_CHIP_STYLE: React.CSSProperties = {
+// Drop shadow for images that may have transparency (PNG/SVG) - makes white logos visible on white background
+const TRANSPARENT_IMAGE_FILTER = "drop-shadow(0 0 1px rgba(0,0,0,0.7)) drop-shadow(0 0 2px rgba(0,0,0,0.5))";
+
+// Check if image might have transparency based on file extension
+const mightHaveTransparency = (src: string) => /\.(png|svg)$/i.test(src);
+
+const getFilterImageStyle = (src: string): React.CSSProperties => ({
+	maxHeight: "100%",
+	maxWidth: "100%",
+	objectFit: "contain",
+	filter: mightHaveTransparency(src) ? TRANSPARENT_IMAGE_FILTER : undefined,
+});
+
+// Background color for filter buttons
+const FILTER_BUTTON_BG_UNSELECTED = "white";
+
+// Base style for all filter button containers - consistent sizing with aspect ratio matching reference images
+const FILTER_BUTTON_BASE_STYLE: React.CSSProperties = {
 	height: FILTER_IMAGE_HEIGHT,
-	minWidth: 80,
-	maxWidth: 200,
+	width: FILTER_IMAGE_WIDTH,
 	borderRadius: 8,
-	padding: "0 12px",
+	overflow: "hidden",
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
-	textAlign: "center",
-	fontSize: 12,
-	fontWeight: 500,
-	lineHeight: 1.2,
-	overflow: "hidden",
 };
 
 interface ItemFiltersProps {
@@ -153,7 +157,7 @@ function FilterSection({
 					alt={formatValue(value)}
 					width={120}
 					height={FILTER_IMAGE_HEIGHT}
-					style={FILTER_IMAGE_STYLE}
+					style={getFilterImageStyle(imageSrc)}
 				/>
 			);
 		}
@@ -196,9 +200,7 @@ function FilterSection({
 									<UnstyledButton
 										onClick={() => { onToggle(field, value); }}
 										style={{
-											height: FILTER_IMAGE_HEIGHT,
-											borderRadius: 8,
-											overflow: "hidden",
+											...FILTER_BUTTON_BASE_STYLE,
 											border: `2px solid var(--mantine-color-${color}-filled)`,
 											background: `var(--mantine-color-${color}-filled)`,
 										}}
@@ -213,7 +215,7 @@ function FilterSection({
 								<UnstyledButton
 									onClick={() => { onToggle(field, value); }}
 									style={{
-										...TEXT_CHIP_STYLE,
+										...FILTER_BUTTON_BASE_STYLE,
 										border: `2px solid var(--mantine-color-${color}-filled)`,
 										background: `var(--mantine-color-${color}-filled)`,
 										color: "white",
@@ -241,11 +243,9 @@ function FilterSection({
 									<UnstyledButton
 										onClick={() => { onToggle(field, value); }}
 										style={{
-											height: FILTER_IMAGE_HEIGHT,
-											borderRadius: 8,
-											overflow: "hidden",
+											...FILTER_BUTTON_BASE_STYLE,
 											border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
-											background: isSelected ? `var(--mantine-color-${color}-filled)` : "transparent",
+											background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 											opacity: hasAnySelection && !isSelected ? 0.7 : 1,
 										}}
 									>
@@ -259,9 +259,9 @@ function FilterSection({
 								<UnstyledButton
 									onClick={() => { onToggle(field, value); }}
 									style={{
-										...TEXT_CHIP_STYLE,
+										...FILTER_BUTTON_BASE_STYLE,
 										border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
-										background: isSelected ? `var(--mantine-color-${color}-filled)` : "white",
+										background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 										color: isSelected ? "white" : `var(--mantine-color-${color}-filled)`,
 										opacity: hasAnySelection && !isSelected ? 0.7 : 1,
 									}}
@@ -470,7 +470,7 @@ export function ItemFilters({
 									styles={brandImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										brandImage ? (
-											<Image src={brandImage} alt={formatBrandName(brand)} width={FILTER_IMAGE_HEIGHT} height={FILTER_IMAGE_HEIGHT} style={FILTER_IMAGE_STYLE} />
+											<Image src={brandImage} alt={formatBrandName(brand)} width={FILTER_IMAGE_HEIGHT} height={FILTER_IMAGE_HEIGHT} style={getFilterImageStyle(brandImage)} />
 										) : null
 									}
 									rightSection={
@@ -499,7 +499,7 @@ export function ItemFilters({
 									styles={gradeImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										gradeImage ? (
-											<Image src={gradeImage} alt={formatGradeName(grade)} width={FILTER_IMAGE_HEIGHT} height={FILTER_IMAGE_HEIGHT} style={FILTER_IMAGE_STYLE} />
+											<Image src={gradeImage} alt={formatGradeName(grade)} width={FILTER_IMAGE_HEIGHT} height={FILTER_IMAGE_HEIGHT} style={getFilterImageStyle(gradeImage)} />
 										) : null
 									}
 									rightSection={
@@ -543,7 +543,7 @@ export function ItemFilters({
 									styles={seriesImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										seriesImage ? (
-											<Image src={seriesImage} alt={formatSeriesName(s)} width={FILTER_IMAGE_HEIGHT} height={FILTER_IMAGE_HEIGHT} style={FILTER_IMAGE_STYLE} />
+											<Image src={seriesImage} alt={formatSeriesName(s)} width={FILTER_IMAGE_HEIGHT} height={FILTER_IMAGE_HEIGHT} style={getFilterImageStyle(seriesImage)} />
 										) : null
 									}
 									rightSection={

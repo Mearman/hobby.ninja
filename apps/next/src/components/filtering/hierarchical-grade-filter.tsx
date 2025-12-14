@@ -11,7 +11,6 @@ import {
 	ActionIcon,
 	Badge,
 	Box,
-	Chip,
 	Group,
 	Text,
 	Tooltip,
@@ -28,12 +27,35 @@ import { Fragment, useState } from "react";
 
 import { getGradeImage } from "@/lib/image-lookup";
 
+// Shared style for filter images - match aspect ratio of reference images (300x170 ≈ 1.76:1)
 const FILTER_IMAGE_HEIGHT = 56;
-const FILTER_IMAGE_STYLE: React.CSSProperties = {
-	height: FILTER_IMAGE_HEIGHT,
-	width: "auto",
+const FILTER_IMAGE_WIDTH = 99; // 56 * (300/170) to match reference image aspect ratio
+
+// Drop shadow for images that may have transparency (PNG/SVG) - makes white logos visible on white background
+const TRANSPARENT_IMAGE_FILTER = "drop-shadow(0 0 1px rgba(0,0,0,0.7)) drop-shadow(0 0 2px rgba(0,0,0,0.5))";
+
+// Check if image might have transparency based on file extension
+const mightHaveTransparency = (src: string) => /\.(png|svg)$/i.test(src);
+
+const getFilterImageStyle = (src: string): React.CSSProperties => ({
+	maxHeight: "100%",
+	maxWidth: "100%",
 	objectFit: "contain",
-	display: "block",
+	filter: mightHaveTransparency(src) ? TRANSPARENT_IMAGE_FILTER : undefined,
+});
+
+// Background color for filter buttons
+const FILTER_BUTTON_BG_UNSELECTED = "white";
+
+// Base style for all filter button containers - consistent sizing with aspect ratio matching reference images
+const FILTER_BUTTON_BASE_STYLE: React.CSSProperties = {
+	height: FILTER_IMAGE_HEIGHT,
+	width: FILTER_IMAGE_WIDTH,
+	borderRadius: 8,
+	overflow: "hidden",
+	display: "flex",
+	alignItems: "center",
+	justifyContent: "center",
 };
 
 function formatGradeName(id: string): string {
@@ -98,11 +120,9 @@ export function HierarchicalGradeFilter({
 					<UnstyledButton
 						onClick={() => { onToggle(gradeId); }}
 						style={{
-							height: FILTER_IMAGE_HEIGHT,
-							borderRadius: 8,
-							overflow: "hidden",
+							...FILTER_BUTTON_BASE_STYLE,
 							border: `2px ${borderStyle} var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
-							background: isSelected ? `var(--mantine-color-${color}-filled)` : "transparent",
+							background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 							opacity: hasAnySelection && !isSelected ? 0.7 : 1,
 						}}
 					>
@@ -111,7 +131,7 @@ export function HierarchicalGradeFilter({
 							alt={label}
 							width={120}
 							height={FILTER_IMAGE_HEIGHT}
-							style={FILTER_IMAGE_STYLE}
+							style={getFilterImageStyle(imageSrc)}
 						/>
 					</UnstyledButton>
 				</Tooltip>
@@ -119,17 +139,23 @@ export function HierarchicalGradeFilter({
 		}
 
 		return (
-			<Chip
-				key={gradeId}
-				checked={isSelected}
-				onChange={() => { onToggle(gradeId); }}
-				size="sm"
-				variant="outline"
-				color={color}
-				styles={options?.dashed ? { label: { fontStyle: "italic" } } : undefined}
-			>
-				{label}
-			</Chip>
+			<Tooltip key={gradeId} label={label} position="top" withArrow={true}>
+				<UnstyledButton
+					onClick={() => { onToggle(gradeId); }}
+					style={{
+						...FILTER_BUTTON_BASE_STYLE,
+						border: `2px ${borderStyle} var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
+						background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
+						color: isSelected ? "white" : `var(--mantine-color-${color}-filled)`,
+						opacity: hasAnySelection && !isSelected ? 0.7 : 1,
+						fontStyle: options?.dashed ? "italic" : "normal",
+					}}
+				>
+					<Text size="xs" fw={500} lineClamp={2} ta="center">
+						{label}
+					</Text>
+				</UnstyledButton>
+			</Tooltip>
 		);
 	};
 
@@ -175,12 +201,10 @@ export function HierarchicalGradeFilter({
 									<UnstyledButton
 										onClick={() => { onToggleFamily(root.id); }}
 										style={{
+											...FILTER_BUTTON_BASE_STYLE,
 											position: "relative",
-											height: FILTER_IMAGE_HEIGHT,
-											borderRadius: 8,
-											overflow: "hidden",
 											border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
-											background: selectedInFamily.length === familyIds.length ? `var(--mantine-color-${color}-filled)` : "transparent",
+											background: selectedInFamily.length === familyIds.length ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 											opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
 										}}
 									>
@@ -189,7 +213,7 @@ export function HierarchicalGradeFilter({
 											alt={formatGradeName(root.id)}
 											width={120}
 											height={FILTER_IMAGE_HEIGHT}
-											style={FILTER_IMAGE_STYLE}
+											style={getFilterImageStyle(imageSrc)}
 										/>
 										{selectedInFamily.length > 0 && (
 											<Badge
@@ -219,15 +243,37 @@ export function HierarchicalGradeFilter({
 							</Group>
 						) : (
 							<Group gap={4} wrap="nowrap">
-								<Chip
-									checked={selectedInFamily.length > 0}
-									onChange={() => { onToggleFamily(root.id); }}
-									size="sm"
-									variant="outline"
-									color={color}
-								>
-									{formatGradeName(root.id)}
-								</Chip>
+								<Tooltip label={`${formatGradeName(root.id)} (select all)`} position="top" withArrow={true}>
+									<UnstyledButton
+										onClick={() => { onToggleFamily(root.id); }}
+										style={{
+											...FILTER_BUTTON_BASE_STYLE,
+											position: "relative",
+											border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
+											background: selectedInFamily.length === familyIds.length ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
+											color: selectedInFamily.length > 0 ? "white" : `var(--mantine-color-${color}-filled)`,
+											opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+										}}
+									>
+										<Text size="xs" fw={500} lineClamp={2} ta="center">
+											{formatGradeName(root.id)}
+										</Text>
+										{selectedInFamily.length > 0 && (
+											<Badge
+												size="xs"
+												variant="filled"
+												color={color}
+												style={{
+													position: "absolute",
+													top: 2,
+													right: 2,
+												}}
+											>
+												{selectedInFamily.length}/{familyIds.length}
+											</Badge>
+										)}
+									</UnstyledButton>
+								</Tooltip>
 								<ActionIcon
 									variant="filled"
 									size="sm"
@@ -237,11 +283,6 @@ export function HierarchicalGradeFilter({
 								>
 									<IconChevronDown size={14} />
 								</ActionIcon>
-								{selectedInFamily.length > 0 && (
-									<Badge size="xs" variant="filled" color={color}>
-										{selectedInFamily.length}/{familyIds.length}
-									</Badge>
-								)}
 							</Group>
 						)}
 
@@ -266,12 +307,10 @@ export function HierarchicalGradeFilter({
 						<UnstyledButton
 							onClick={() => { onToggleFamily(root.id); }}
 							style={{
+								...FILTER_BUTTON_BASE_STYLE,
 								position: "relative",
-								height: FILTER_IMAGE_HEIGHT,
-								borderRadius: 8,
-								overflow: "hidden",
 								border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
-								background: selectedInFamily.length > 0 ? `var(--mantine-color-${color}-filled)` : "transparent",
+								background: selectedInFamily.length > 0 ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 								opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
 							}}
 						>
@@ -280,7 +319,7 @@ export function HierarchicalGradeFilter({
 								alt={formatGradeName(root.id)}
 								width={120}
 								height={FILTER_IMAGE_HEIGHT}
-								style={FILTER_IMAGE_STYLE}
+								style={getFilterImageStyle(imageSrc)}
 							/>
 							{selectedInFamily.length > 0 && (
 								<Badge
@@ -312,15 +351,37 @@ export function HierarchicalGradeFilter({
 
 		return (
 			<Group key={root.id} gap={4} wrap="nowrap">
-				<Chip
-					checked={selectedInFamily.length > 0}
-					onChange={() => { onToggleFamily(root.id); }}
-					size="sm"
-					variant="outline"
-					color={color}
-				>
-					{formatGradeName(root.id)}
-				</Chip>
+				<Tooltip label={formatGradeName(root.id)} position="top" withArrow={true}>
+					<UnstyledButton
+						onClick={() => { onToggleFamily(root.id); }}
+						style={{
+							...FILTER_BUTTON_BASE_STYLE,
+							position: "relative",
+							border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
+							background: selectedInFamily.length > 0 ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
+							color: selectedInFamily.length > 0 ? "white" : `var(--mantine-color-${color}-filled)`,
+							opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+						}}
+					>
+						<Text size="xs" fw={500} lineClamp={2} ta="center">
+							{formatGradeName(root.id)}
+						</Text>
+						{selectedInFamily.length > 0 && (
+							<Badge
+								size="xs"
+								variant="filled"
+								color={color}
+								style={{
+									position: "absolute",
+									top: 2,
+									right: 2,
+								}}
+							>
+								{selectedInFamily.length}/{familyIds.length}
+							</Badge>
+						)}
+					</UnstyledButton>
+				</Tooltip>
 				<ActionIcon
 					variant="subtle"
 					size="sm"
@@ -329,11 +390,6 @@ export function HierarchicalGradeFilter({
 				>
 					<IconChevronRight size={14} />
 				</ActionIcon>
-				{selectedInFamily.length > 0 && (
-					<Badge size="xs" variant="light" color={color}>
-						{selectedInFamily.length}/{familyIds.length}
-					</Badge>
-				)}
 			</Group>
 		);
 	};
@@ -382,9 +438,7 @@ export function HierarchicalGradeFilter({
 									<UnstyledButton
 										onClick={() => { onToggle(gradeId); }}
 										style={{
-											height: FILTER_IMAGE_HEIGHT,
-											borderRadius: 8,
-											overflow: "hidden",
+											...FILTER_BUTTON_BASE_STYLE,
 											border: `2px solid var(--mantine-color-${color}-filled)`,
 											background: `var(--mantine-color-${color}-filled)`,
 										}}
@@ -394,23 +448,28 @@ export function HierarchicalGradeFilter({
 											alt={formatGradeName(gradeId)}
 											width={120}
 											height={FILTER_IMAGE_HEIGHT}
-											style={FILTER_IMAGE_STYLE}
+											style={getFilterImageStyle(imageSrc)}
 										/>
 									</UnstyledButton>
 								</Tooltip>
 							);
 						}
 						return (
-							<Chip
-								key={gradeId}
-								checked={true}
-								onChange={() => { onToggle(gradeId); }}
-								size="xs"
-								variant="filled"
-								color={color}
-							>
-								{formatGradeName(gradeId)}
-							</Chip>
+							<Tooltip key={gradeId} label={formatGradeName(gradeId)} position="top" withArrow={true}>
+								<UnstyledButton
+									onClick={() => { onToggle(gradeId); }}
+									style={{
+										...FILTER_BUTTON_BASE_STYLE,
+										border: `2px solid var(--mantine-color-${color}-filled)`,
+										background: `var(--mantine-color-${color}-filled)`,
+										color: "white",
+									}}
+								>
+									<Text size="xs" fw={500} lineClamp={2} ta="center">
+										{formatGradeName(gradeId)}
+									</Text>
+								</UnstyledButton>
+							</Tooltip>
 						);
 					})}
 				</Group>
