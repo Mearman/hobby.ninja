@@ -71,10 +71,14 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 					const brand = entry.brandIds.length > 0 ? entry.brandIds[0] : "";
 					const category =
 						entry.categoryIds.length > 0 ? entry.categoryIds[0] : "";
+					// Search in grades object (root keys + specific values)
+					const gradesMatch =
+						Object.keys(entry.grades).some(g => g.toLowerCase().includes(query)) ||
+						Object.values(entry.grades).flat().some(g => g.toLowerCase().includes(query));
 					return (
 						brand.toLowerCase().includes(query) ||
 						category.toLowerCase().includes(query) ||
-						(entry.grade?.toLowerCase().includes(query) ?? false) ||
+						gradesMatch ||
 						(entry.scale?.toLowerCase().includes(query) ?? false)
 					);
 				}
@@ -103,13 +107,17 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 		}
 
 		// Grade filter (only for items)
+		// Matches if any selected grade is a root key OR in any specific grades array
 		if (filterState.grades.length > 0) {
-			filtered = filtered.filter(
-				(entry) =>
-					entry.type === "item" &&
-					entry.grade &&
-					filterState.grades.includes(entry.grade),
-			);
+			filtered = filtered.filter((entry) => {
+				if (entry.type !== "item") return false;
+				// Check if any selected grade matches root or specific
+				return filterState.grades.some(
+					(selectedGrade) =>
+						selectedGrade in entry.grades ||
+						Object.values(entry.grades).flat().includes(selectedGrade),
+				);
+			});
 		}
 
 		// Scale filter (for both items and manuals)
@@ -259,7 +267,15 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 		for (const item of items) {
 			if (item.brandIds.length > 0) brands.add(item.brandIds[0]);
 			if (item.categoryIds.length > 0) categories.add(item.categoryIds[0]);
-			if (item.grade) grades.add(item.grade);
+			// Collect grades from object: both root keys and specific values
+			for (const rootGrade of Object.keys(item.grades)) {
+				grades.add(rootGrade);
+			}
+			for (const specificGrades of Object.values(item.grades)) {
+				for (const specific of specificGrades) {
+					grades.add(specific);
+				}
+			}
 			if (item.scale) scales.add(item.scale);
 			if (item.seriesIds.length > 0) series.add(item.seriesIds[0]);
 		}

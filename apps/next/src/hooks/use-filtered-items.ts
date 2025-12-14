@@ -98,7 +98,15 @@ export function useFilteredItems(
 			for (const brandId of item.brandIds) {
 				brands.add(brandId);
 			}
-			if (item.grade) grades.add(item.grade);
+			// Collect grades from object: both root keys and specific values
+			for (const rootGrade of Object.keys(item.grades)) {
+				grades.add(rootGrade);
+			}
+			for (const specificGrades of Object.values(item.grades)) {
+				for (const specific of specificGrades) {
+					grades.add(specific);
+				}
+			}
 			if (item.scale) scales.add(item.scale);
 			for (const seriesId of item.seriesIds) {
 				series.add(seriesId);
@@ -129,13 +137,16 @@ export function useFilteredItems(
 				const name = getNodeDisplayName(item).toLowerCase();
 				const brandIds = item.brandIds.join(" ").toLowerCase();
 				const seriesIds = item.seriesIds.join(" ").toLowerCase();
-				const grade = item.grade?.toLowerCase() ?? "";
+				// Search in grades object (root keys + specific values)
+				const gradesMatch =
+					Object.keys(item.grades).some(g => g.toLowerCase().includes(query)) ||
+					Object.values(item.grades).flat().some(g => g.toLowerCase().includes(query));
 				const scale = item.scale?.toLowerCase() ?? "";
 				return (
 					name.includes(query) ||
 					brandIds.includes(query) ||
 					seriesIds.includes(query) ||
-					grade.includes(query) ||
+					gradesMatch ||
 					scale.includes(query)
 				);
 			});
@@ -147,8 +158,15 @@ export function useFilteredItems(
 				item.brandIds.some(brandId => filterState.brands.includes(brandId)),
 			);
 		}
+		// Grade filter: matches if any selected grade is a root key OR in any specific grades array
 		if (filterState.grades.length > 0) {
-			result = result.filter(item => item.grade != null && filterState.grades.includes(item.grade));
+			result = result.filter(item =>
+				filterState.grades.some(
+					(selectedGrade) =>
+						selectedGrade in item.grades ||
+						Object.values(item.grades).flat().includes(selectedGrade),
+				),
+			);
 		}
 		if (filterState.scales.length > 0) {
 			result = result.filter(item => item.scale != null && filterState.scales.includes(item.scale));
@@ -194,9 +212,14 @@ export function useFilteredItems(
 				break;
 			}
 			case "grade": {
+				// Get primary grade (first root key) for sorting
+				const getPrimaryGrade = (item: Item): string => {
+					const rootGrades = Object.keys(item.grades);
+					return rootGrades[0] ?? "";
+				};
 				result = sortDirection === "asc"
-					? result.toSorted((a, b) => (a.grade ?? "").localeCompare(b.grade ?? ""))
-					: result.toSorted((a, b) => (b.grade ?? "").localeCompare(a.grade ?? ""));
+					? result.toSorted((a, b) => getPrimaryGrade(a).localeCompare(getPrimaryGrade(b)))
+					: result.toSorted((a, b) => getPrimaryGrade(b).localeCompare(getPrimaryGrade(a)));
 				break;
 			}
 			case "scale": {
