@@ -1,27 +1,23 @@
 import type { Item , Manual } from "@hobby-ninja/data";
 
+import { ItemCard } from "./item-card";
+import { ItemFiltersWrapper } from "./item-filters-wrapper";
 import { ManualCard } from "./manual-card";
 import { ManualFilters } from "./manual-filters";
 import { ManualFiltersEnhanced } from "./manual-filters-enhanced";
 import type { ListPageConfig } from "./types";
 
+import { useFilteredItems, type FilterState } from "@/hooks/use-filtered-items";
 import { useManualFilter } from "@/hooks/use-manual-filter";
 import { useManualFilterEnhanced } from "@/hooks/use-manual-filter-enhanced";
 
 
 // Item configuration - used for main items page and brand/category/grade/scale/series pages
-export const itemConfig: ListPageConfig<Item> = {
+export const itemConfig: ListPageConfig<Item, FilterState> = {
 	entityType: "items",
 	filters: {
-		component: () => null, // Will be replaced with ItemFilters component
-		hook: (items: Item[]) => ({
-			filteredItems: items,
-			filterState: {},
-			// Placeholder no-op implementations until ItemFilters is implemented
-			updateFilter: () => { /* no-op placeholder */ },
-			clearFilters: () => { /* no-op placeholder */ },
-			hasActiveFilters: false,
-		}),
+		component: ItemFiltersWrapper,
+		hook: useFilteredItems,
 		fields: ["brands", "grades", "scales", "series", "categories"],
 		sortOptions: ["name", "date", "price", "brand", "grade", "scale", "series"],
 	},
@@ -29,7 +25,7 @@ export const itemConfig: ListPageConfig<Item> = {
 		enabled: ["grid", "list", "table"],
 		default: "grid",
 	},
-	card: () => null, // Will be replaced with ItemCard component
+	card: ItemCard,
 	infiniteScroll: true,
 	futureReleases: true,
 	itemIdField: "id",
