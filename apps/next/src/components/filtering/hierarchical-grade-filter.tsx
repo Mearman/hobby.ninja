@@ -25,7 +25,6 @@ import {
 import Image from "next/image";
 import { Fragment, useState } from "react";
 
-import { getGradeImage } from "@/lib/image-lookup";
 
 // Shared style for filter images - match aspect ratio of reference images (300x170 ≈ 1.76:1)
 const FILTER_IMAGE_HEIGHT = 56;
@@ -109,7 +108,8 @@ export function HierarchicalGradeFilter({
 	// Render a single grade chip (same size for all)
 	const renderGradeChip = (gradeId: string, options?: { dashed?: boolean; label?: string }) => {
 		const isSelected = selectedGrades.includes(gradeId);
-		const imageSrc = getGradeImage(gradeId);
+		const grade = getGradeById(gradeId);
+		const imageSrc = grade?.image;
 		const hasAnySelection = selectedGrades.length > 0;
 		const label = options?.label ?? formatGradeName(gradeId);
 		const borderStyle = options?.dashed ? "dashed" : "solid";
@@ -174,7 +174,8 @@ export function HierarchicalGradeFilter({
 		// Get selection state for family
 		const familyIds = getGradeFamilyIds(root.id).filter((id) => availableGrades.includes(id));
 		const selectedInFamily = familyIds.filter((id) => selectedGrades.includes(id));
-		const imageSrc = getGradeImage(root.id);
+		const grade = getGradeById(root.id);
+		const imageSrc = grade?.image;
 		const hasAnySelection = selectedGrades.length > 0;
 
 		// Simple grade without children - render as regular chip
@@ -431,7 +432,8 @@ export function HierarchicalGradeFilter({
 			{!expanded && selectedGrades.length > 0 && (
 				<Group gap="xs" wrap="wrap" mt="xs">
 					{selectedGrades.map((gradeId) => {
-						const imageSrc = getGradeImage(gradeId);
+						const grade = getGradeById(gradeId);
+						const imageSrc = grade?.image;
 						if (displayMode === "icon" && imageSrc) {
 							return (
 								<Tooltip key={gradeId} label={formatGradeName(gradeId)} position="top" withArrow={true}>
