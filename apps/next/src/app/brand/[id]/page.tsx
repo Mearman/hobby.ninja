@@ -1,4 +1,13 @@
 import {
+	getBrandById,
+	getBrandIds,
+	getItemById,
+	getNodeDisplayName,
+	getNodePrimaryGrade,
+	type Brand,
+	type Item,
+} from "@hobby-ninja/data";
+import {
 	Badge,
 	Box,
 	Card,
@@ -24,14 +33,6 @@ import { notFound } from "next/navigation";
 // Import lightweight static params for generateStaticParams
 import { BrandItemsClient } from "./brand-items-client";
 
-import {
-	getBrandById,
-	getBrandIds,
-	getItemById,
-	getNodeDisplayName,
-	type Brand,
-	type Item,
-} from "@hobby-ninja/data";
 
 interface BrandPageProps {
 	params: Promise<{ id: string }>;
@@ -126,8 +127,9 @@ export default async function BrandDetailPage({ params }: BrandPageProps) {
 	let maxYear = 0;
 
 	for (const item of brandItems) {
-		if (item.grade) {
-			gradeDistribution.set(item.grade, (gradeDistribution.get(item.grade) ?? 0) + 1);
+		const grade = getNodePrimaryGrade(item);
+		if (grade) {
+			gradeDistribution.set(grade, (gradeDistribution.get(grade) ?? 0) + 1);
 		}
 		if (item.scale) {
 			scaleDistribution.set(item.scale, (scaleDistribution.get(item.scale) ?? 0) + 1);
