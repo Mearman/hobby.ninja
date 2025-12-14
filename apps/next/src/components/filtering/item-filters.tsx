@@ -27,15 +27,18 @@ import {
 	IconChevronDown,
 	IconChevronUp,
 	IconFilter,
+	IconPhoto,
 	IconSearch,
 	IconSortAscending,
 	IconSortDescending,
+	IconTextSize,
 	IconX,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import { useState } from "react";
 
 import { FilterState } from "@/hooks/use-filtered-items";
+import { useUserPreferences } from "@/hooks/use-user-preferences";
 import { getBrandImage, getGradeImage, getSeriesImage } from "@/lib/image-lookup";
 
 // Helper functions to format entity IDs to display names
@@ -89,6 +92,8 @@ interface FilterSectionProps {
 	formatValue?: (value: string) => string;
 	getImage?: (value: string) => string | undefined;
 	color?: string;
+	displayMode: "icon" | "text";
+	headerAction?: React.ReactNode;
 }
 
 function FilterSection({
@@ -100,15 +105,18 @@ function FilterSection({
 	formatValue = (v) => v,
 	getImage,
 	color = "blue",
+	displayMode,
+	headerAction,
 }: FilterSectionProps) {
 	const [expanded, setExpanded] = useState(false);
 
 	if (options.length === 0) return null;
 
-	// Helper to render chip content with optional image (icon-only when image available)
+	// Helper to render chip content based on display mode
 	const renderChipContent = (value: string) => {
 		const imageSrc = getImage?.(value);
-		if (imageSrc) {
+		// Only show icon if in icon mode AND image exists
+		if (displayMode === "icon" && imageSrc) {
 			return (
 				<Image
 					src={imageSrc}
@@ -123,17 +131,17 @@ function FilterSection({
 		return formatValue(value);
 	};
 
-	// Determine chip size based on whether it has an image
-	const getChipSize = (value: string) => getImage?.(value) ? "md" : "xs";
+	// Determine chip size based on display mode and whether it has an image
+	const getChipSize = (value: string) => (displayMode === "icon" && getImage?.(value)) ? "md" : "xs";
 
 	return (
 		<Box>
 			{/* Accordion Header */}
-			<UnstyledButton
-				onClick={() => { setExpanded(!expanded); }}
-				style={{ width: "100%" }}
-			>
-				<Group justify="space-between" mb={expanded ? "xs" : 0}>
+			<Group justify="space-between" mb={expanded ? "xs" : 0}>
+				<UnstyledButton
+					onClick={() => { setExpanded(!expanded); }}
+					style={{ flex: 1 }}
+				>
 					<Group gap="xs">
 						{expanded ? <IconChevronUp size={14} /> : <IconChevronDown size={14} />}
 						<Text size="sm" fw={500}>
@@ -142,14 +150,15 @@ function FilterSection({
 						<Text size="xs" c="dimmed">
 							({options.length})
 						</Text>
+						{selectedValues.length > 0 && (
+							<Badge size="xs" variant="filled" color={color}>
+								{selectedValues.length} selected
+							</Badge>
+						)}
 					</Group>
-					{selectedValues.length > 0 && (
-						<Badge size="xs" variant="filled" color={color}>
-							{selectedValues.length} selected
-						</Badge>
-					)}
-				</Group>
-			</UnstyledButton>
+				</UnstyledButton>
+				{headerAction}
+			</Group>
 
 			{/* Collapsed: Show selected values only */}
 			{!expanded && selectedValues.length > 0 && (
@@ -203,6 +212,12 @@ export function ItemFilters({
 	subtitle,
 }: ItemFiltersProps) {
 	const [filtersExpanded, setFiltersExpanded] = useState(true);
+	const { preferences, updatePreference } = useUserPreferences();
+	const displayMode = preferences.filterDisplayMode;
+
+	const toggleDisplayMode = () => {
+		updatePreference("filterDisplayMode", displayMode === "icon" ? "text" : "icon");
+	};
 
 	return (
 		<Card p="lg" radius="md" withBorder={true}>
@@ -296,6 +311,7 @@ export function ItemFilters({
 								onToggle={onToggleFilterValue}
 								formatValue={formatCategoryName}
 								color="grape"
+								displayMode={displayMode}
 							/>
 
 							<FilterSection
@@ -307,6 +323,7 @@ export function ItemFilters({
 								formatValue={formatBrandName}
 								getImage={getBrandImage}
 								color="blue"
+								displayMode={displayMode}
 							/>
 
 							<FilterSection
@@ -318,6 +335,7 @@ export function ItemFilters({
 								formatValue={formatSeriesName}
 								getImage={getSeriesImage}
 								color="violet"
+								displayMode={displayMode}
 							/>
 
 							<FilterSection
@@ -329,6 +347,17 @@ export function ItemFilters({
 								formatValue={formatGradeName}
 								getImage={getGradeImage}
 								color="teal"
+								displayMode={displayMode}
+								headerAction={
+									<ActionIcon
+										variant={displayMode === "icon" ? "filled" : "light"}
+										size="sm"
+										onClick={(e) => { e.stopPropagation(); toggleDisplayMode(); }}
+										title={displayMode === "icon" ? "Switch to text labels" : "Switch to icons"}
+									>
+										{displayMode === "icon" ? <IconPhoto size={16} /> : <IconTextSize size={16} />}
+									</ActionIcon>
+								}
 							/>
 
 							<FilterSection
@@ -338,6 +367,7 @@ export function ItemFilters({
 								selectedValues={filterState.scales}
 								onToggle={onToggleFilterValue}
 								color="orange"
+								displayMode={displayMode}
 							/>
 						</Stack>
 					</Stack>
