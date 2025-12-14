@@ -418,13 +418,10 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 					result.discoveredUrls++;
 					result.processedUrls++;
 
-					// Save files asynchronously
-					const itemDir = join(options.outputDir, range);
-					await mkdir(itemDir, { recursive: true });
-
+					// Save files asynchronously (flat structure: outputDir/{id}.json)
 					// Write HTML and JSON in parallel
 					const writePromises: Array<Promise<void>> = [
-						writeFile(join(itemDir, `${range}.html`), processResult.data.html, "utf8"),
+						writeFile(join(options.outputDir, `${range}.html`), processResult.data.html, "utf8"),
 					];
 
 					if (catalogResult.success && catalogResult.data) {
@@ -444,7 +441,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 						}
 
 						writePromises.push(
-							writeFile(join(itemDir, `${range}.json`), JSON.stringify(catalogResult.data, null, 2), "utf8"),
+							writeFile(join(options.outputDir, `${range}.json`), JSON.stringify(catalogResult.data, null, 2), "utf8"),
 						);
 					}
 
@@ -498,14 +495,13 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 		result.processedUrls += alreadyDownloaded;
 	}
 
-	// Final save of indexes
-	saveCatalogIndex();
+	// Final save of index
 	ItemsIndexUpdater.save();
 
 	const endTime = Date.now();
 	result.processingTime = endTime - startTime;
 
-	const finalStats = getIndexStats();
+	const finalStats = ItemsIndexUpdater.getDisplayStats();
 	result.stats = {
 		totalRanges: options.ranges.length,
 		completedRanges: result.completedRanges,
