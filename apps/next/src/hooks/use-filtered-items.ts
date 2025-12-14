@@ -1,6 +1,6 @@
 "use client";
 
-import { getNodeDisplayName, getNodeReleaseDateSortable, isItem, type Item } from "@hobby-ninja/data";
+import { getGradeSortOrder, getNodeDisplayName, getNodeReleaseDateSortable, isItem, sortGradeIds, type Item } from "@hobby-ninja/data";
 import { useState, useMemo, useCallback } from "react";
 
 /**
@@ -118,7 +118,7 @@ export function useFilteredItems(
 
 		return {
 			brands: [...brands].toSorted(),
-			grades: [...grades].toSorted(),
+			grades: sortGradeIds([...grades]),
 			scales: sortScales([...scales]),
 			series: [...series].toSorted(),
 			categories: [...categories].toSorted(),
@@ -212,14 +212,16 @@ export function useFilteredItems(
 				break;
 			}
 			case "grade": {
-				// Get primary grade (first root key) for sorting
-				const getPrimaryGrade = (item: Item): string => {
+				// Get primary grade's sort order (lower = simpler grade)
+				// Items without grades sort to end (sortOrder 999 is returned by getGradeSortOrder for unknown grades)
+				const getPrimaryGradeSortOrder = (item: Item): number => {
 					const rootGrades = Object.keys(item.grades);
-					return rootGrades[0] ?? "";
+					const primaryGrade = rootGrades[0] ?? "";
+					return getGradeSortOrder(primaryGrade);
 				};
 				result = sortDirection === "asc"
-					? result.toSorted((a, b) => getPrimaryGrade(a).localeCompare(getPrimaryGrade(b)))
-					: result.toSorted((a, b) => getPrimaryGrade(b).localeCompare(getPrimaryGrade(a)));
+					? result.toSorted((a, b) => getPrimaryGradeSortOrder(a) - getPrimaryGradeSortOrder(b))
+					: result.toSorted((a, b) => getPrimaryGradeSortOrder(b) - getPrimaryGradeSortOrder(a));
 				break;
 			}
 			case "scale": {

@@ -242,6 +242,9 @@ export const ManualSchema = z.object({
 
 export type Manual = z.infer<typeof ManualSchema>;
 
+/** Default sort order for grades - high value to sort unknown grades to end */
+const DEFAULT_GRADE_SORT_ORDER = 999;
+
 /**
  * Grade aggregation data with hierarchy and item counts
  */
@@ -253,6 +256,7 @@ export const GradeDataSchema = z.object({
 	children: z.array(z.string()).default([]),
 	itemIds: z.array(z.string()).default([]),
 	itemCount: z.number(),
+	sortOrder: z.number().default(DEFAULT_GRADE_SORT_ORDER),
 });
 
 export type GradeData = z.infer<typeof GradeDataSchema>;

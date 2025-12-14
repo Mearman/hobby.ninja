@@ -1,7 +1,7 @@
 "use client";
 
 import type { Item, Manual } from "@hobby-ninja/data";
-import { getNodeDisplayName } from "@hobby-ninja/data";
+import { getNodeDisplayName, sortGradeIds } from "@hobby-ninja/data";
 import { useMemo, useState } from "react";
 
 import type { DatabaseAvailableOptions } from "@/components/lists/database-filters";
@@ -288,7 +288,7 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 		return {
 			brands: [...brands].toSorted(),
 			categories: [...categories].toSorted(),
-			grades: [...grades].toSorted(),
+			grades: sortGradeIds([...grades]),
 			scales: [...scales].toSorted(),
 			series: [...series].toSorted(),
 			languages: [...languages].toSorted(),
