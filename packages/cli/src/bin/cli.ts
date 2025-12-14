@@ -100,6 +100,49 @@ program
 		}
 	});
 
+// Global lookup command implementation
+program
+	.command("global-lookup")
+	.description("Look up English translations from global.bandai-hobby.net")
+	.option("-l, --limit <n>", "Maximum number of items to check", "0")
+	.option(DRY_RUN_OPTION, PREVIEW_CHANGES, false)
+	.option("--no-update-files", "Skip updating individual item files")
+	.option("--retry-errors", "Retry items that had errors", false)
+	.option("--headed", "Show browser window", false)
+	.option(VERBOSE_OPTION, MESSAGES.VERBOSE_OUTPUT, false)
+	.action(async (options: unknown) => {
+		try {
+			const { runGlobalLookup } = await import("../cli/global-lookup-command.js");
+			const typedOptions = options as {
+				limit: string;
+				dryRun: boolean;
+				updateFiles: boolean;
+				retryErrors: boolean;
+				headed: boolean;
+				verbose: boolean;
+			};
+
+			await runGlobalLookup({
+				limit: Number.parseInt(typedOptions.limit, 10),
+				dryRun: typedOptions.dryRun,
+				noUpdateFiles: !typedOptions.updateFiles,
+				retryErrors: typedOptions.retryErrors,
+				headed: typedOptions.headed,
+				verbose: typedOptions.verbose,
+			});
+
+			process.exit(0);
+		} catch (error: unknown) {
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.error(GENERIC_ERROR_PREFIX.replace("%s", "Global lookup"), errorMessage);
+			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
+				const errorStack = error instanceof Error ? error.stack : String(error);
+				console.error(errorStack);
+			}
+			process.exit(1);
+		}
+	});
+
 // Normalize command implementation
 program
 	.command("normalize")
