@@ -1,6 +1,6 @@
 "use client";
 
-import { getGradeById, getNodeDisplayName } from "@hobby-ninja/data";
+import { getBrandById, getGradeById, getNodeDisplayName, getSeriesById } from "@hobby-ninja/data";
 import {
 	TextInput,
 	MultiSelect,
@@ -25,7 +25,6 @@ import Image from "next/image";
 import React, { useState, useCallback } from "react";
 
 import { useSearch, type SearchResult, type SearchFilters, type SearchStats } from "@/lib/fuse-search";
-import { getBrandImage, getGradeImage, getSeriesImage } from "@/lib/image-lookup";
 
 function formatGradeName(id: string): string {
 	const grade = getGradeById(id);
@@ -138,16 +137,20 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 									onChange={(value) => { setFilters(prev => ({ ...prev, brands: value })); }}
 									searchable={true}
 									clearable={true}
-									renderOption={({ option }) => (
-										<Group gap="xs">
-											{getBrandImage(option.value) && (
-												<img
-													src={getBrandImage(option.value)}
-													alt=""
-													style={{ width: 16, height: 16, objectFit: "contain" }}
-												/>
-											)}
-											<span>{option.label}</span>
+									renderOption={({ option }) => {
+										const brand = getBrandById(option.value);
+										return (
+											<Group gap="xs">
+												{brand?.image && (
+													<img
+														src={brand.image}
+														alt=""
+														style={{ width: 16, height: 16, objectFit: "contain" }}
+													/>
+												)}
+												<span>{option.label}</span>
+											);
+										}}
 										</Group>
 									)}
 								/>
@@ -179,16 +182,20 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 									searchable={true}
 									clearable={true}
 									maxValues={5}
-									renderOption={({ option }) => (
-										<Group gap="xs">
-											{getSeriesImage(option.value) && (
-												<img
-													src={getSeriesImage(option.value)}
-													alt=""
-													style={{ width: 16, height: 16, objectFit: "contain" }}
-												/>
-											)}
-											<span>{option.label}</span>
+									renderOption={({ option }) => {
+										const series = getSeriesById(option.value);
+										return (
+											<Group gap="xs">
+												{series?.image && (
+													<img
+														src={series.image}
+														alt=""
+														style={{ width: 16, height: 16, objectFit: "contain" }}
+													/>
+												)}
+												<span>{option.label}</span>
+											);
+										}}
 										</Group>
 									)}
 								/>
@@ -295,7 +302,8 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 							</Badge>
 						)}
 						{filters.brands?.map(brand => {
-							const brandImage = getBrandImage(brand);
+							const brandData = getBrandById(brand);
+							const brandImage = brandData?.image;
 							return (
 								<Badge key={brand} size={brandImage ? "lg" : "sm"} variant="light" title={brand}
 									styles={brandImage ? { root: { paddingLeft: 4, paddingRight: 4 } } : undefined}
@@ -314,7 +322,8 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 							</Badge>
 						))}
 						{filters.series?.map(serie => {
-							const seriesImage = getSeriesImage(serie);
+							const seriesData = getSeriesById(serie);
+							const seriesImage = seriesData?.image;
 							return (
 								<Badge key={serie} size={seriesImage ? "lg" : "sm"} variant="light" color="orange" title={serie}
 									styles={seriesImage ? { root: { paddingLeft: 4, paddingRight: 4 } } : undefined}
@@ -328,7 +337,8 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 							);
 						})}
 						{filters.grades?.map(grade => {
-							const gradeImage = getGradeImage(grade);
+							const gradeData = getGradeById(grade);
+							const gradeImage = gradeData?.image;
 							return (
 								<Badge key={grade} size={gradeImage ? "lg" : "sm"} variant="light" color="purple" title={formatGradeName(grade)}
 									styles={gradeImage ? { root: { paddingLeft: 4, paddingRight: 4 } } : undefined}

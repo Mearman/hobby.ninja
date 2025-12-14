@@ -38,7 +38,6 @@ import { useState } from "react";
 import { HierarchicalGradeFilter } from "@/components/filtering/hierarchical-grade-filter";
 import { FilterState } from "@/hooks/use-filtered-items";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
-import { getBrandImage, getGradeImage, getSeriesImage } from "@/lib/image-lookup";
 
 // Helper functions to format entity IDs to display names
 function formatBrandName(id: string): string {
@@ -402,7 +401,7 @@ export function ItemFilters({
 								selectedValues={filterState.brands}
 								onToggle={onToggleFilterValue}
 								formatValue={formatBrandName}
-								getImage={getBrandImage}
+								getImage={(id) => getBrandById(id)?.image}
 								color="blue"
 								displayMode={displayMode}
 							/>
@@ -414,7 +413,7 @@ export function ItemFilters({
 								selectedValues={filterState.series}
 								onToggle={onToggleFilterValue}
 								formatValue={formatSeriesName}
-								getImage={getSeriesImage}
+								getImage={(id) => getSeriesById(id)?.image}
 								color="violet"
 								displayMode={displayMode}
 							/>
@@ -460,7 +459,8 @@ export function ItemFilters({
 							</Badge>
 						)}
 						{filterState.brands.map(brand => {
-							const brandImage = getBrandImage(brand);
+							const brandData = getBrandById(brand);
+							const brandImage = brandData?.image;
 							const badge = (
 								<Badge
 									key={`brand-${brand}`}
@@ -489,7 +489,8 @@ export function ItemFilters({
 							) : badge;
 						})}
 						{filterState.grades.map(grade => {
-							const gradeImage = getGradeImage(grade);
+							const gradeData = getGradeById(grade);
+							const gradeImage = gradeData?.image;
 							const badge = (
 								<Badge
 									key={`grade-${grade}`}
@@ -533,7 +534,8 @@ export function ItemFilters({
 							</Badge>
 						))}
 						{filterState.series.map(s => {
-							const seriesImage = getSeriesImage(s);
+							const seriesData = getSeriesById(s);
+							const seriesImage = seriesData?.image;
 							const badge = (
 								<Badge
 									key={`series-${s}`}
