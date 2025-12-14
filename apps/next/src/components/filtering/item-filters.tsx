@@ -21,6 +21,7 @@ import {
 	Stack,
 	Text,
 	TextInput,
+	Tooltip,
 	UnstyledButton,
 } from "@mantine/core";
 import {
@@ -63,6 +64,13 @@ function formatGradeName(id: string): string {
 }
 
 type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
+
+// Shared style for filter images
+const FILTER_IMAGE_STYLE = {
+	objectFit: "cover" as const,
+	borderRadius: 6,
+	boxShadow: "0 1px 3px rgba(0, 0, 0, 0.12)",
+};
 
 interface ItemFiltersProps {
 	filterState: FilterState;
@@ -112,6 +120,9 @@ function FilterSection({
 
 	if (options.length === 0) return null;
 
+	// Check if a value has an image available
+	const hasImage = (value: string) => displayMode === "icon" && Boolean(getImage?.(value));
+
 	// Helper to render chip content based on display mode
 	const renderChipContent = (value: string) => {
 		const imageSrc = getImage?.(value);
@@ -121,10 +132,9 @@ function FilterSection({
 				<Image
 					src={imageSrc}
 					alt={formatValue(value)}
-					title={formatValue(value)}
-					width={28}
-					height={28}
-					style={{ objectFit: "cover", borderRadius: 4 }}
+					width={36}
+					height={36}
+					style={FILTER_IMAGE_STYLE}
 				/>
 			);
 		}
@@ -132,7 +142,21 @@ function FilterSection({
 	};
 
 	// Determine chip size based on display mode and whether it has an image
-	const getChipSize = (value: string) => (displayMode === "icon" && getImage?.(value)) ? "md" : "xs";
+	const getChipSize = (value: string) => hasImage(value) ? "lg" : "xs";
+
+	// Custom styles for image chips - remove inner padding for cleaner look
+	const getChipStyles = (value: string) => {
+		if (hasImage(value)) {
+			return {
+				label: {
+					padding: "4px 6px",
+					display: "flex",
+					alignItems: "center",
+				},
+			};
+		}
+		return;
+	};
 
 	return (
 		<Box>
@@ -163,36 +187,52 @@ function FilterSection({
 			{/* Collapsed: Show selected values only */}
 			{!expanded && selectedValues.length > 0 && (
 				<Group gap="xs" wrap="wrap" mt="xs">
-					{selectedValues.map((value) => (
-						<Chip
-							key={value}
-							checked={true}
-							onChange={() => { onToggle(field, value); }}
-							size={getChipSize(value)}
-							variant="filled"
-							color={color}
-						>
-							{renderChipContent(value)}
-						</Chip>
-					))}
+					{selectedValues.map((value) => {
+						const chip = (
+							<Chip
+								key={value}
+								checked={true}
+								onChange={() => { onToggle(field, value); }}
+								size={getChipSize(value)}
+								variant="filled"
+								color={color}
+								styles={getChipStyles(value)}
+							>
+								{renderChipContent(value)}
+							</Chip>
+						);
+						return hasImage(value) ? (
+							<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
+								{chip}
+							</Tooltip>
+						) : chip;
+					})}
 				</Group>
 			)}
 
 			{/* Expanded: Show all options */}
 			<Collapse in={expanded}>
 				<Group gap="xs" wrap="wrap" mt="xs">
-					{options.map((value) => (
-						<Chip
-							key={value}
-							checked={selectedValues.includes(value)}
-							onChange={() => { onToggle(field, value); }}
-							size={getChipSize(value)}
-							variant="outline"
-							color={color}
-						>
-							{renderChipContent(value)}
-						</Chip>
-					))}
+					{options.map((value) => {
+						const chip = (
+							<Chip
+								key={value}
+								checked={selectedValues.includes(value)}
+								onChange={() => { onToggle(field, value); }}
+								size={getChipSize(value)}
+								variant="outline"
+								color={color}
+								styles={getChipStyles(value)}
+							>
+								{renderChipContent(value)}
+							</Chip>
+						);
+						return hasImage(value) ? (
+							<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
+								{chip}
+							</Tooltip>
+						) : chip;
+					})}
 				</Group>
 			</Collapse>
 		</Box>
@@ -392,17 +432,16 @@ export function ItemFilters({
 						)}
 						{filterState.brands.map(brand => {
 							const brandImage = getBrandImage(brand);
-							return (
+							const badge = (
 								<Badge
 									key={`brand-${brand}`}
-									size={brandImage ? "lg" : "sm"}
+									size={brandImage ? "xl" : "sm"}
 									variant="light"
 									color="blue"
-									title={formatBrandName(brand)}
-									styles={brandImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
+									styles={brandImage ? { root: { paddingLeft: 4, paddingRight: 8 } } : undefined}
 									leftSection={
 										brandImage ? (
-											<Image src={brandImage} alt={formatBrandName(brand)} width={28} height={28} style={{ objectFit: "cover", borderRadius: 4 }} />
+											<Image src={brandImage} alt={formatBrandName(brand)} width={36} height={36} style={FILTER_IMAGE_STYLE} />
 										) : null
 									}
 									rightSection={
@@ -414,20 +453,24 @@ export function ItemFilters({
 									{brandImage ? null : formatBrandName(brand)}
 								</Badge>
 							);
+							return brandImage ? (
+								<Tooltip key={`brand-${brand}`} label={formatBrandName(brand)} position="top" withArrow={true}>
+									{badge}
+								</Tooltip>
+							) : badge;
 						})}
 						{filterState.grades.map(grade => {
 							const gradeImage = getGradeImage(grade);
-							return (
+							const badge = (
 								<Badge
 									key={`grade-${grade}`}
-									size={gradeImage ? "lg" : "sm"}
+									size={gradeImage ? "xl" : "sm"}
 									variant="light"
 									color="teal"
-									title={formatGradeName(grade)}
-									styles={gradeImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
+									styles={gradeImage ? { root: { paddingLeft: 4, paddingRight: 8 } } : undefined}
 									leftSection={
 										gradeImage ? (
-											<Image src={gradeImage} alt={formatGradeName(grade)} width={28} height={28} style={{ objectFit: "cover", borderRadius: 4 }} />
+											<Image src={gradeImage} alt={formatGradeName(grade)} width={36} height={36} style={FILTER_IMAGE_STYLE} />
 										) : null
 									}
 									rightSection={
@@ -439,6 +482,11 @@ export function ItemFilters({
 									{gradeImage ? null : formatGradeName(grade)}
 								</Badge>
 							);
+							return gradeImage ? (
+								<Tooltip key={`grade-${grade}`} label={formatGradeName(grade)} position="top" withArrow={true}>
+									{badge}
+								</Tooltip>
+							) : badge;
 						})}
 						{filterState.scales.map(scale => (
 							<Badge
@@ -457,17 +505,16 @@ export function ItemFilters({
 						))}
 						{filterState.series.map(s => {
 							const seriesImage = getSeriesImage(s);
-							return (
+							const badge = (
 								<Badge
 									key={`series-${s}`}
-									size={seriesImage ? "lg" : "sm"}
+									size={seriesImage ? "xl" : "sm"}
 									variant="light"
 									color="violet"
-									title={formatSeriesName(s)}
-									styles={seriesImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
+									styles={seriesImage ? { root: { paddingLeft: 4, paddingRight: 8 } } : undefined}
 									leftSection={
 										seriesImage ? (
-											<Image src={seriesImage} alt={formatSeriesName(s)} width={28} height={28} style={{ objectFit: "cover", borderRadius: 4 }} />
+											<Image src={seriesImage} alt={formatSeriesName(s)} width={36} height={36} style={FILTER_IMAGE_STYLE} />
 										) : null
 									}
 									rightSection={
@@ -479,6 +526,11 @@ export function ItemFilters({
 									{seriesImage ? null : formatSeriesName(s)}
 								</Badge>
 							);
+							return seriesImage ? (
+								<Tooltip key={`series-${s}`} label={formatSeriesName(s)} position="top" withArrow={true}>
+									{badge}
+								</Tooltip>
+							) : badge;
 						})}
 						{filterState.categories.map(cat => (
 							<Badge
