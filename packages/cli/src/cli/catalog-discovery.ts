@@ -7,7 +7,7 @@ import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 import { BandaiCatalogParser } from "./bandai-catalog-parser";
 import { CatalogTranslator } from "./catalog-translator";
 import { SimpleCatalogScraper, type SimpleCatalogResult } from "./simple-catalog-scraper";
-import type { CatalogDiscoveryOptions, CatalogDiscoveryResult, CatalogRangeStats, CatalogIndex, CatalogIndexEntry } from "./types/catalog-discovery";
+import type { CatalogDiscoveryOptions, CatalogDiscoveryResult, CatalogRangeStats } from "./types/catalog-discovery";
 import { ItemsIndexUpdater } from "./items-index-updater";
 
 // Fast HTTP client for discovery phase
@@ -102,10 +102,10 @@ export async function discoverValidIds(
 
 	// First pass: quickly categorize indexed vs needs-check (no async, instant)
 	for (const range of ranges) {
-		const indexCheck = isIdIndexed(range);
+		const indexCheck = ItemsIndexUpdater.isIndexed(range);
 		if (indexCheck.indexed) {
 			skippedIds.push(range);
-			if (indexCheck.isValid) {
+			if (indexCheck.hasPage) {
 				validIds.push(range);
 			} else {
 				invalidIds.push(range);
@@ -151,19 +151,16 @@ export async function discoverValidIds(
 			for (const { range, result } of results) {
 				if (result.isValid) {
 					validIds.push(range);
-					recordDiscoveredValidId(range, result.title); // Record in catalog index
-					ItemsIndexUpdater.recordJpValid(range, result.title); // Record in items index
+					ItemsIndexUpdater.recordJpValid(range, result.title);
 					newExistCount++;
 				} else {
 					invalidIds.push(range);
-					recordInvalidId(range);
-					ItemsIndexUpdater.recordJpInvalid(range); // Record in items index
+					ItemsIndexUpdater.recordJpInvalid(range);
 					newNotFoundCount++;
 				}
 			}
 
-			// Save indexes after each batch
-			saveCatalogIndex();
+			// Save index after each batch
 			ItemsIndexUpdater.save();
 		}
 
@@ -176,169 +173,6 @@ export async function discoverValidIds(
 	return { validIds, invalidIds, skippedIds };
 }
 
-// Module-level index state
-let catalogIndex: CatalogIndex = createEmptyIndex();
-let indexPath = "";
-
-/**
- * Creates an empty catalog index
- */
-function createEmptyIndex(): CatalogIndex {
-	return {
-		valid: {},
-		invalidRanges: [],
-		invalidSingles: [],
-		totalChecked: 0,
-		lastUpdated: new Date().toISOString(),
-	};
-}
-
-/**
- * Loads the catalog index from disk
- */
-export function loadCatalogIndex(outputDir: string): CatalogIndex {
-	indexPath = join(outputDir, "index.json");
-
-	try {
-		if (existsSync(indexPath)) {
-			const data = readFileSync(indexPath, "utf8");
-			catalogIndex = JSON.parse(data);
-			return catalogIndex;
-		}
-	} catch (error) {
-		console.warn(`⚠️  Failed to load index: ${error}`);
-	}
-
-	catalogIndex = createEmptyIndex();
-	return catalogIndex;
-}
-
-/**
- * Saves the catalog index to disk
- */
-export function saveCatalogIndex(): void {
-	if (!indexPath) return;
-
-	try {
-		catalogIndex.lastUpdated = new Date().toISOString();
-		writeFileSync(indexPath, JSON.stringify(catalogIndex, null, 2), "utf8");
-	} catch (error) {
-		console.warn(`⚠️  Failed to save index: ${error}`);
-	}
-}
-
-/**
- * Checks if an ID is already in the index (valid or invalid)
- */
-export function isIdIndexed(id: string): { indexed: boolean; isValid?: boolean; entry?: CatalogIndexEntry } {
-	// Check valid entries
-	if (catalogIndex.valid[id]) {
-		return { indexed: true, isValid: true, entry: catalogIndex.valid[id] };
-	}
-
-	// Check invalid singles
-	if (catalogIndex.invalidSingles.includes(id)) {
-		return { indexed: true, isValid: false };
-	}
-
-	// Check invalid ranges (convert string IDs to comparable format)
-	for (const range of catalogIndex.invalidRanges) {
-		if (compareIds(id, range.start) >= 0 && compareIds(id, range.end) <= 0) {
-			return { indexed: true, isValid: false };
-		}
-	}
-
-	return { indexed: false };
-}
-
-/**
- * Compare two catalog IDs (e.g., "01_1000" vs "01_1001")
- */
-function compareIds(a: string, b: string): number {
-	const partsA = a.split("_");
-	const partsB = b.split("_");
-	const prefixA = partsA[0] ?? "";
-	const prefixB = partsB[0] ?? "";
-	const suffixA = partsA[1] ?? "0";
-	const suffixB = partsB[1] ?? "0";
-
-	if (prefixA !== prefixB) {
-		return prefixA.localeCompare(prefixB);
-	}
-
-	return Number.parseInt(suffixA, 10) - Number.parseInt(suffixB, 10);
-}
-
-/**
- * Records a valid catalog entry in the index
- */
-export function recordValidId(id: string, hasContent: boolean, productName?: string): void {
-	// Only increment totalChecked if this is a new entry
-	if (!catalogIndex.valid[id]) {
-		catalogIndex.totalChecked++;
-	}
-	catalogIndex.valid[id] = {
-		id,
-		hasContent,
-		lastChecked: new Date().toISOString(),
-		hasFile: hasContent, // hasFile = true only if we have content
-		productName,
-	};
-
-	// Remove from invalid lists if present
-	catalogIndex.invalidSingles = catalogIndex.invalidSingles.filter(s => s !== id);
-}
-
-/**
- * Records a discovered valid ID (before content is downloaded)
- */
-export function recordDiscoveredValidId(id: string, productName?: string): void {
-	// Don't overwrite if we already have full content
-	if (catalogIndex.valid[id]?.hasContent) return;
-
-	recordValidId(id, false, productName);
-}
-
-/**
- * Records an invalid catalog ID in the index
- */
-export function recordInvalidId(id: string): void {
-	catalogIndex.totalChecked++;
-
-	// Don't add if already in valid (shouldn't happen but be safe)
-	if (catalogIndex.valid[id]) return;
-
-	// Don't add if already in invalid singles
-	if (catalogIndex.invalidSingles.includes(id)) return;
-
-	// Check if already covered by a range
-	for (const range of catalogIndex.invalidRanges) {
-		if (compareIds(id, range.start) >= 0 && compareIds(id, range.end) <= 0) {
-			return;
-		}
-	}
-
-	// Add to invalid singles (range compression done on save if needed)
-	catalogIndex.invalidSingles.push(id);
-}
-
-/**
- * Gets index statistics for display
- */
-export function getIndexStats(): { valid: number; invalid: number; totalChecked: number } {
-	const invalidCount = catalogIndex.invalidSingles.length +
-		catalogIndex.invalidRanges.reduce((sum, r) => {
-			const [, startSuffix = "0"] = r.start.split("_");
-			const [, endSuffix = "0"] = r.end.split("_");
-			return sum + (Number.parseInt(endSuffix) - Number.parseInt(startSuffix) + 1);
-		}, 0);
-
-	return {
-		valid: Object.keys(catalogIndex.valid).length,
-		invalid: invalidCount,
-		totalChecked: catalogIndex.totalChecked,
-	};
-}
 
 /**
  * Generates sequential catalog range identifiers starting from 00_0000
@@ -495,10 +329,9 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 	// Ensure output directory exists
 	mkdirSync(options.outputDir, { recursive: true });
 
-	// Load existing indexes
-	loadCatalogIndex(options.outputDir);
+	// Load existing index
 	ItemsIndexUpdater.load();
-	const indexStats = getIndexStats();
+	const indexStats = ItemsIndexUpdater.getDisplayStats();
 
 	console.log(`📊 Index: ${indexStats.valid} products found, ${indexStats.invalid} IDs with no page, ${indexStats.totalChecked} total checked`);
 
@@ -538,11 +371,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 	result.failedRanges = discovery.invalidIds.length;
 
 	// Filter to only IDs that need content download (valid but not yet downloaded)
-	const idsNeedingDownload = discovery.validIds.filter(id => {
-		const check = isIdIndexed(id);
-		// Need download if not indexed OR indexed but doesn't have file yet
-		return !check.indexed || (check.indexed && check.isValid && !check.entry?.hasFile);
-	});
+	const idsNeedingDownload = ItemsIndexUpdater.getIdsNeedingDownload(discovery.validIds);
 
 	if (idsNeedingDownload.length === 0) {
 		console.log(`\n✅ All product pages already scraped.`);
@@ -584,7 +413,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 						? catalogResult.data.name.ja
 						: processResult.data.title;
 
-					recordValidId(range, true, productName);
+					ItemsIndexUpdater.recordFileCreated(range, productName);
 					result.completedRanges++;
 					result.discoveredUrls++;
 					result.processedUrls++;
@@ -637,7 +466,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 
 			// Save index periodically (every 10 completions)
 			if (completedCount % 10 === 0) {
-				saveCatalogIndex();
+				ItemsIndexUpdater.save();
 			}
 		};
 
