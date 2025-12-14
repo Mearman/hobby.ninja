@@ -4,6 +4,7 @@ import type { Item, Manual } from "@hobby-ninja/data";
 import {
 	getBrandById,
 	getCategoryById,
+	getGradeById,
 	getNodeDisplayName,
 	getSeriesById,
 } from "@hobby-ninja/data";
@@ -52,6 +53,11 @@ function formatSeriesName(id: string): string {
 function formatCategoryName(id: string): string {
 	const category = getCategoryById(id);
 	return category ? getNodeDisplayName(category) : id;
+}
+
+function formatGradeName(id: string): string {
+	const grade = getGradeById(id);
+	return grade ? getNodeDisplayName(grade) : id;
 }
 
 type DatabaseArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories" | "languages";
@@ -378,6 +384,7 @@ export function DatabaseFilters({
 										options={formattedOptions.grades}
 										selectedValues={currentFilterState.grades}
 										onToggle={handleToggleFilterValue}
+										formatValue={formatGradeName}
 										color="teal"
 									/>
 

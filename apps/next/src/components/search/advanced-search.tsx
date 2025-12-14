@@ -24,6 +24,12 @@ import React, { useState, useCallback } from "react";
 
 import { useSearch, type SearchResult, type SearchFilters, type SearchStats } from "@/lib/fuse-search";
 import { getBrandImage, getSeriesImage } from "@/lib/image-lookup";
+import { getGradeById, getNodeDisplayName } from "@hobby-ninja/data";
+
+function formatGradeName(id: string): string {
+	const grade = getGradeById(id);
+	return grade ? getNodeDisplayName(grade) : id;
+}
 
 interface AdvancedSearchProps {
   onSearch: (results: SearchResult[]) => void;
@@ -312,7 +318,7 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 						))}
 						{filters.grades?.map(grade => (
 							<Badge key={grade} size="sm" variant="light" color="purple">
-								{grade}
+								{formatGradeName(grade)}
 							</Badge>
 						))}
 						{filters.scales?.map(scale => (

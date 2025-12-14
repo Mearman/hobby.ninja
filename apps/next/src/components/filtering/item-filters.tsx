@@ -31,6 +31,7 @@ import { FilterState } from "@/hooks/use-filtered-items";
 import {
 	getBrandById,
 	getCategoryById,
+	getGradeById,
 	getNodeDisplayName,
 	getSeriesById,
 } from "@hobby-ninja/data";
@@ -49,6 +50,11 @@ function formatSeriesName(id: string): string {
 function formatCategoryName(id: string): string {
 	const category = getCategoryById(id);
 	return category ? getNodeDisplayName(category) : id;
+}
+
+function formatGradeName(id: string): string {
+	const grade = getGradeById(id);
+	return grade ? getNodeDisplayName(grade) : id;
 }
 
 type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
@@ -293,6 +299,7 @@ export function ItemFilters({
 								options={availableOptions.grades}
 								selectedValues={filterState.grades}
 								onToggle={onToggleFilterValue}
+								formatValue={formatGradeName}
 								color="teal"
 							/>
 
@@ -352,7 +359,7 @@ export function ItemFilters({
 									</ActionIcon>
 								}
 							>
-								{grade}
+								{formatGradeName(grade)}
 							</Badge>
 						))}
 						{filterState.scales.map(scale => (
