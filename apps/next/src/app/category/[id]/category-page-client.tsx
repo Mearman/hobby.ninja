@@ -301,7 +301,7 @@ export function CategoryPageClient({
 				</Box>
 
 				{/* Quick Access Stats */}
-				{(categoryStats.newestItem && categoryStats.newestItem.length > 0) ?? (categoryStats.oldestItem && categoryStats.oldestItem.length > 0) && (
+				{(categoryStats.newestItem && categoryStats.newestItem.length > 0) || (categoryStats.oldestItem && categoryStats.oldestItem.length > 0) ? (
 					<Card p="md" radius="md" withBorder={true} bg="gray.0">
 						<Group justify="space-between">
 							{categoryStats.newestItem && categoryStats.newestItem.length > 0 && (
@@ -318,7 +318,7 @@ export function CategoryPageClient({
 							)}
 						</Group>
 					</Card>
-				)}
+				) : null}
 			</Stack>
 		</Container>
 	);
