@@ -38,9 +38,9 @@ import {
 import React from "react";
 
 import { useCollection } from "@/contexts/collection-context";
-import type { CollectionItem } from "@/lib/collection-storage";
+import type { CollectionItem, CollectionStats } from "@/lib/collection-storage";
 import { EntityList } from "@/components/ui/entity-list";
-import { getNodeDisplayName, type Item } from "@hobby-ninja/data";
+import { getNodeDisplayName, getNodePrimaryGrade, type Item } from "@hobby-ninja/data";
 import {
 	itemCard,
 	itemCardImage,
@@ -66,21 +66,6 @@ const NUMBER_INPUT_STEP = 100;
 const LOADING_GRID_ITEMS_COUNT = 8;
 const LOADING_LIST_ITEMS_COUNT = 6;
 const TEXTAREA_MIN_ROWS = 3;
-
-// Interface for collection stats
-interface CollectionStats {
-  totalItems: number;
-  totalValue: number;
-  statusBreakdown: {
-    owned: number;
-    wanted: number;
-    ordered: number;
-    "pre-ordered": number;
-    building: number;
-    completed: number;
-  };
-  completionPercentage: number;
-}
 
 // Props for the client component
 interface CollectionDetailClientProps {
@@ -144,8 +129,8 @@ function CollectionItemCard({
 							</Text>
 						)}
 						<Box className={itemCardMetadata}>
-							{dbItem?.grade && (
-								<Badge size="sm">{dbItem.grade}</Badge>
+							{dbItem && getNodePrimaryGrade(dbItem) && (
+								<Badge size="sm">{getNodePrimaryGrade(dbItem)}</Badge>
 							)}
 							{dbItem?.scale && (
 								<Badge size="sm" variant="outline">{dbItem.scale}</Badge>
@@ -209,15 +194,8 @@ function CollectionItemCard({
 						</Box>
 
 						<Group gap="xs">
-							{dbItem?.grade && /*<Badge size="sm">{dbItem.grade}</Badge>*/ <Text size="sm">{dbItem.grade}</Text>}
-							{dbItem?.scale && /*<Badge size="sm" variant="outline">{dbItem.scale}</Badge>*/ <Text size="sm">{dbItem.scale}</Text>}
-							{/* Badge
-								size="sm"
-								color={item.status === "completed" ? "green" : "blue"}
-								variant={item.status === "completed" ? "filled" : "light"}
-							>
-								{item.status}
-							</Badge>*/}
+							{dbItem && getNodePrimaryGrade(dbItem) && <Text size="sm">{getNodePrimaryGrade(dbItem)}</Text>}
+							{dbItem?.scale && <Text size="sm">{dbItem.scale}</Text>}
 						</Group>
 
 						<Menu shadow="md" width={MENU_WIDTH}>
@@ -413,7 +391,7 @@ function CollectionStats({ stats }: { stats: CollectionStats }) {
             Total Items
 					</Text>
 					<Text size="lg" fw={500}>
-						{stats?.totalItems ?? 0}
+						{stats.totalItems}
 					</Text>
 				</div>
 
@@ -422,7 +400,7 @@ function CollectionStats({ stats }: { stats: CollectionStats }) {
             Total Value
 					</Text>
 					<Text size="lg" fw={500}>
-            ¥{(stats?.totalValue ?? 0).toLocaleString()}
+            ¥{stats.totalValue.toLocaleString()}
 					</Text>
 				</div>
 
@@ -431,7 +409,7 @@ function CollectionStats({ stats }: { stats: CollectionStats }) {
             Completed
 					</Text>
 					<Text size="lg" fw={500}>
-						{stats?.statusBreakdown?.completed ?? 0}
+						{stats.statusBreakdown.completed}
 					</Text>
 				</div>
 
@@ -440,7 +418,7 @@ function CollectionStats({ stats }: { stats: CollectionStats }) {
             In Progress
 					</Text>
 					<Text size="lg" fw={500}>
-						{stats?.statusBreakdown?.building ?? 0}
+						{stats.statusBreakdown.building}
 					</Text>
 				</div>
 			</SimpleGrid>
@@ -449,14 +427,14 @@ function CollectionStats({ stats }: { stats: CollectionStats }) {
 				<Group justify="space-between" mb="xs">
 					<Text size="sm" fw={500}>Progress</Text>
 					<Text size="sm" c="dimmed">
-						{stats?.completionPercentage ?? 0}% Complete
+						{stats.completionPercentage}% Complete
 					</Text>
 				</Group>
 				<div className={progressBar}>
 					<div
 						className={progressFill}
 						style={{
-							width: `${stats?.completionPercentage ?? 0}%`,
+							width: `${stats.completionPercentage}%`,
 						}}
 					/>
 				</div>
@@ -518,22 +496,7 @@ function LoadingGrid({ viewMode }: { viewMode: "grid" | "list" }) {
 
 // Client Component for interactive parts
 export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionDetailClientProps) {
-	const { state, actions } = useCollection() as {
-		state: {
-			collections: any[];
-			currentCollection: { id?: number; name: string; description?: string; isPublic: boolean; itemCount: number; totalValue: number; currency: string; createdAt: Date; modifiedAt: Date; settings: any } | null;
-			items: CollectionItem[];
-			stats: CollectionStats | null;
-			loading: boolean;
-			error: string | null;
-			searchQuery: string;
-			filters: any;
-			sortBy: string;
-			sortOrder: string;
-			viewMode: string;
-		};
-		actions: any;
-	};
+	const { state, actions } = useCollection();
 	const [viewMode, setViewMode] = React.useState<"grid" | "list">("grid");
 	const [searchQuery, setSearchQuery] = React.useState("");
 	const [statusFilter, setStatusFilter] = React.useState<string[]>([]);
@@ -598,17 +561,17 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 	const handleDeleteItem = (item: CollectionItem) => {
 		const dbItem = dbItemsMap.get(item.itemId);
 		if (confirm(`Remove "${dbItem ? getNodeDisplayName(dbItem) : item.itemId}" from this collection?`)) {
-			actions.removeItem(item.id?.toString() ?? "");
+			void actions.removeItem(String(item.id));
 		}
 	};
 
 	const handleToggleVisibility = (item: CollectionItem) => {
-		actions.updateItem(item.id?.toString() ?? "", { hidden: !item.hidden });
+		void actions.updateItem(String(item.id), { hidden: !item.hidden });
 	};
 
 	const handleSaveItem = (itemData: Partial<CollectionItem>) => {
-		if (selectedItem?.id) {
-			actions.updateItem(selectedItem.id.toString(), itemData);
+		if (selectedItem?.id != null) {
+			void actions.updateItem(String(selectedItem.id), itemData);
 		}
 		setSelectedItem(null);
 	};
@@ -681,7 +644,7 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 								{ value: "price", label: "Price" },
 							]}
 							value={sortOrder}
-							onChange={(value) => { setSortOrder(value!); }}
+							onChange={(value) => { if (value) setSortOrder(value); }}
 						/>
 					</Grid.Col>
 					<Grid.Col span={{ base: 12, md: 2 }}>
