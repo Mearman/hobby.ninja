@@ -315,10 +315,10 @@ function buildGrades(items: Map<string, Item>, brands: Map<string, Brand>): Map<
 		// Find image reference from corresponding brand
 		let image: string | undefined;
 		// Look for a brand with this gradeId to get its image
-		for (const [brandId, brand] of brands) {
+		for (const brand of brands.values()) {
 			if (brand.gradeId === gradeId) {
-				const brandImage = brand['image'] as string | undefined;
-				if (brandImage && typeof brandImage === 'string') {
+				const brandImage = brand["image"] as string | undefined;
+				if (brandImage && typeof brandImage === "string") {
 					image = brandImage;
 					break;
 				}
