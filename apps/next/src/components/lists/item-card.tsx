@@ -1,6 +1,6 @@
 "use client";
 
-import { type Item, getNodeDisplayName, getNodePrimaryGrade, getNodeReleaseDate, isItem } from "@hobby-ninja/data";
+import { type Item, getNodeDisplayName, getNodeImages, getNodePrimaryGrade, getNodeReleaseDate, isItem } from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -14,6 +14,7 @@ import {
 import type { ViewMode } from "./types";
 
 import { CustomImage } from "@/components/ui/custom-image";
+import { ImageSlideshow } from "@/components/ui/image-slideshow";
 import { EntityList } from "@/components/ui/entity-list";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import {
@@ -39,6 +40,9 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 	if (!isItem(item)) return null;
 
 	const primaryImage = item.displayImage ?? null;
+	const allImages = getNodeImages(item);
+	// Use all images if available, otherwise fall back to displayImage
+	const images = allImages.length > 0 ? allImages : (primaryImage ? [primaryImage] : []);
 	const placeholderSrc = createPlaceholderSvg(getNodeDisplayName(item));
 	const errorPlaceholderSrc = createErrorPlaceholderSvg();
 	const releaseDate = getNodeReleaseDate(item);
@@ -55,15 +59,12 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 				withBorder={true}
 			>
 				<Box className={itemCardImage}>
-					<CustomImage
-						src={primaryImage ?? placeholderSrc}
+					<ImageSlideshow
+						images={images}
 						alt={getNodeDisplayName(item)}
-						fit="cover"
 						height={200}
+						placeholderSrc={placeholderSrc}
 						fallbackSrc={errorPlaceholderSrc}
-						onError={(e) => {
-							e.currentTarget.src = errorPlaceholderSrc;
-						}}
 					/>
 				</Box>
 				<Box className={itemCardContent}>
