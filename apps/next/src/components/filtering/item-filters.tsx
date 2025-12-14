@@ -212,6 +212,7 @@ function FilterSection({
 				<Group gap="xs" wrap="wrap" mt="xs">
 					{options.map((value) => {
 						const isSelected = selectedValues.includes(value);
+						const hasAnySelection = selectedValues.length > 0;
 						if (hasImage(value)) {
 							return (
 								<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
@@ -223,7 +224,7 @@ function FilterSection({
 											overflow: "hidden",
 											border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
 											background: isSelected ? `var(--mantine-color-${color}-filled)` : "transparent",
-											opacity: isSelected ? 1 : 0.7,
+											opacity: hasAnySelection && !isSelected ? 0.7 : 1,
 										}}
 									>
 										{renderChipContent(value)}
