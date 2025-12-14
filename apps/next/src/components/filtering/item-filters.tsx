@@ -143,32 +143,6 @@ function FilterSection({
 		return formatValue(value);
 	};
 
-	// Determine chip size based on display mode and whether it has an image
-	const getChipSize = (value: string) => hasImage(value) ? "lg" : "xs";
-
-	// Custom styles for image chips - no padding, image fills chip
-	const getChipStyles = (value: string) => {
-		if (hasImage(value)) {
-			return {
-				root: {
-					height: FILTER_IMAGE_HEIGHT,
-					borderRadius: 6,
-					overflow: "hidden",
-				},
-				label: {
-					padding: 0,
-					height: FILTER_IMAGE_HEIGHT,
-					display: "flex",
-					alignItems: "center",
-				},
-				iconWrapper: {
-					display: "none",
-				},
-			};
-		}
-		return;
-	};
-
 	return (
 		<Box>
 			{/* Accordion Header */}
@@ -199,24 +173,36 @@ function FilterSection({
 			{!expanded && selectedValues.length > 0 && (
 				<Group gap="xs" wrap="wrap" mt="xs">
 					{selectedValues.map((value) => {
-						const chip = (
+						if (hasImage(value)) {
+							return (
+								<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
+									<UnstyledButton
+										onClick={() => { onToggle(field, value); }}
+										style={{
+											height: FILTER_IMAGE_HEIGHT,
+											borderRadius: 8,
+											overflow: "hidden",
+											border: `2px solid var(--mantine-color-${color}-filled)`,
+											background: `var(--mantine-color-${color}-filled)`,
+										}}
+									>
+										{renderChipContent(value)}
+									</UnstyledButton>
+								</Tooltip>
+							);
+						}
+						return (
 							<Chip
 								key={value}
 								checked={true}
 								onChange={() => { onToggle(field, value); }}
-								size={getChipSize(value)}
+								size="xs"
 								variant="filled"
 								color={color}
-								styles={getChipStyles(value)}
 							>
-								{renderChipContent(value)}
+								{formatValue(value)}
 							</Chip>
 						);
-						return hasImage(value) ? (
-							<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
-								{chip}
-							</Tooltip>
-						) : chip;
 					})}
 				</Group>
 			)}
@@ -225,24 +211,38 @@ function FilterSection({
 			<Collapse in={expanded}>
 				<Group gap="xs" wrap="wrap" mt="xs">
 					{options.map((value) => {
-						const chip = (
+						const isSelected = selectedValues.includes(value);
+						if (hasImage(value)) {
+							return (
+								<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
+									<UnstyledButton
+										onClick={() => { onToggle(field, value); }}
+										style={{
+											height: FILTER_IMAGE_HEIGHT,
+											borderRadius: 8,
+											overflow: "hidden",
+											border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
+											background: isSelected ? `var(--mantine-color-${color}-filled)` : "transparent",
+											opacity: isSelected ? 1 : 0.7,
+										}}
+									>
+										{renderChipContent(value)}
+									</UnstyledButton>
+								</Tooltip>
+							);
+						}
+						return (
 							<Chip
 								key={value}
-								checked={selectedValues.includes(value)}
+								checked={isSelected}
 								onChange={() => { onToggle(field, value); }}
-								size={getChipSize(value)}
+								size="xs"
 								variant="outline"
 								color={color}
-								styles={getChipStyles(value)}
 							>
-								{renderChipContent(value)}
+								{formatValue(value)}
 							</Chip>
 						);
-						return hasImage(value) ? (
-							<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
-								{chip}
-							</Tooltip>
-						) : chip;
 					})}
 				</Group>
 			</Collapse>
