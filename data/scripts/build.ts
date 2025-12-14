@@ -162,7 +162,7 @@ function readJsonDir<T>(dirPath: string): Map<string, T> {
 	const map = new Map<string, T>();
 	if (!existsSync(dirPath)) return map;
 
-	const files = readdirSync(dirPath).filter((f) => f.endsWith(".json"));
+	const files = readdirSync(dirPath).filter((f) => f.endsWith(".json") && f !== "index.json");
 	for (const file of files) {
 		const content = readFileSync(path.join(dirPath, file), "utf8");
 		const data = JSON.parse(content) as T & { id: string };
@@ -194,7 +194,7 @@ function computeDisplayImages(items: Map<string, Item>, manuals: Map<string, Man
 
 // Extract grade from item name and brand names
 function extractGradeFromItem(item: Item, brands: Map<string, Brand>): string | null {
-	const itemName = (item.name.en || item.name.ja || "").toLowerCase();
+	const itemName = (item.name?.en || item.name?.ja || "").toLowerCase();
 
 	// Grade patterns in order of specificity (most specific first)
 	const gradePatterns: Array<{ pattern: RegExp; grade: string }> = [
@@ -228,10 +228,10 @@ function extractGradeFromItem(item: Item, brands: Map<string, Brand>): string | 
 	}
 
 	// Check brand names
-	for (const brandId of item.brandIds) {
+	for (const brandId of item.brandIds ?? []) {
 		const brand = brands.get(brandId);
 		if (brand) {
-			const brandName = (brand.name.en || brand.name.ja || "").toLowerCase();
+			const brandName = (brand.name?.en || brand.name?.ja || "").toLowerCase();
 			for (const { pattern, grade } of gradePatterns) {
 				if (pattern.test(brandName)) {
 					return grade;
@@ -315,17 +315,17 @@ function buildSearchData(items: Map<string, Item>, brands: Map<string, Brand>, s
 	const searchRecords: SearchRecord[] = [];
 
 	for (const [id, item] of items) {
-		const brandNames = item.brandIds
-			.map((bid) => brands.get(bid)?.name.en ?? bid)
+		const brandNames = (item.brandIds ?? [])
+			.map((bid) => brands.get(bid)?.name?.en ?? bid)
 			.join(", ");
-		const seriesNames = item.seriesIds
-			.map((sid) => series.get(sid)?.name.en ?? sid)
+		const seriesNames = (item.seriesIds ?? [])
+			.map((sid) => series.get(sid)?.name?.en ?? sid)
 			.join(", ");
 
 		searchRecords.push({
 			id,
-			name: item.name.en,
-			nameJa: item.name.ja,
+			name: item.name?.en ?? "",
+			nameJa: item.name?.ja ?? "",
 			brand: brandNames,
 			series: seriesNames,
 		});
@@ -368,7 +368,7 @@ function buildHomepageData(
 		if (item.images && item.images.length > 0) score += item.images.length;
 		if (item.price) score += 2;
 		if (item.releaseDate?.year && item.releaseDate.year > 2020) score += 3;
-		if (item.name.en) score += 1;
+		if (item.name?.en) score += 1;
 		return { item, score };
 	});
 	scoredItems.sort((a, b) => b.score - a.score);
@@ -422,15 +422,15 @@ function main() {
 	const categoryItemIds = new Map<string, string[]>();
 
 	for (const [itemId, item] of items) {
-		for (const brandId of item.brandIds) {
+		for (const brandId of item.brandIds ?? []) {
 			if (!brandItemIds.has(brandId)) brandItemIds.set(brandId, []);
 			brandItemIds.get(brandId)!.push(itemId);
 		}
-		for (const seriesId of item.seriesIds) {
+		for (const seriesId of item.seriesIds ?? []) {
 			if (!seriesItemIds.has(seriesId)) seriesItemIds.set(seriesId, []);
 			seriesItemIds.get(seriesId)!.push(itemId);
 		}
-		for (const categoryId of item.categoryIds) {
+		for (const categoryId of item.categoryIds ?? []) {
 			if (!categoryItemIds.has(categoryId)) categoryItemIds.set(categoryId, []);
 			categoryItemIds.get(categoryId)!.push(itemId);
 		}
