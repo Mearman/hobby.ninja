@@ -65,11 +65,13 @@ function formatGradeName(id: string): string {
 
 type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
 
-// Shared style for filter images
+// Shared style for filter images - larger size for better visibility
+const FILTER_IMAGE_SIZE = 48;
 const FILTER_IMAGE_STYLE = {
 	objectFit: "cover" as const,
-	borderRadius: 6,
-	boxShadow: "0 1px 3px rgba(0, 0, 0, 0.12)",
+	borderRadius: 8,
+	boxShadow: "0 2px 4px rgba(0, 0, 0, 0.15)",
+	display: "block",
 };
 
 interface ItemFiltersProps {
@@ -132,8 +134,8 @@ function FilterSection({
 				<Image
 					src={imageSrc}
 					alt={formatValue(value)}
-					width={36}
-					height={36}
+					width={FILTER_IMAGE_SIZE}
+					height={FILTER_IMAGE_SIZE}
 					style={FILTER_IMAGE_STYLE}
 				/>
 			);
@@ -142,16 +144,20 @@ function FilterSection({
 	};
 
 	// Determine chip size based on display mode and whether it has an image
-	const getChipSize = (value: string) => hasImage(value) ? "lg" : "xs";
+	const getChipSize = (value: string) => hasImage(value) ? "xl" : "xs";
 
-	// Custom styles for image chips - remove inner padding for cleaner look
+	// Custom styles for image chips - minimal padding so image fills the chip
 	const getChipStyles = (value: string) => {
 		if (hasImage(value)) {
 			return {
 				label: {
-					padding: "4px 6px",
+					padding: 2,
 					display: "flex",
 					alignItems: "center",
+					justifyContent: "center",
+				},
+				iconWrapper: {
+					display: "none",
 				},
 			};
 		}
@@ -441,7 +447,7 @@ export function ItemFilters({
 									styles={brandImage ? { root: { paddingLeft: 4, paddingRight: 8 } } : undefined}
 									leftSection={
 										brandImage ? (
-											<Image src={brandImage} alt={formatBrandName(brand)} width={36} height={36} style={FILTER_IMAGE_STYLE} />
+											<Image src={brandImage} alt={formatBrandName(brand)} width={FILTER_IMAGE_SIZE} height={FILTER_IMAGE_SIZE} style={FILTER_IMAGE_STYLE} />
 										) : null
 									}
 									rightSection={
@@ -470,7 +476,7 @@ export function ItemFilters({
 									styles={gradeImage ? { root: { paddingLeft: 4, paddingRight: 8 } } : undefined}
 									leftSection={
 										gradeImage ? (
-											<Image src={gradeImage} alt={formatGradeName(grade)} width={36} height={36} style={FILTER_IMAGE_STYLE} />
+											<Image src={gradeImage} alt={formatGradeName(grade)} width={FILTER_IMAGE_SIZE} height={FILTER_IMAGE_SIZE} style={FILTER_IMAGE_STYLE} />
 										) : null
 									}
 									rightSection={
@@ -514,7 +520,7 @@ export function ItemFilters({
 									styles={seriesImage ? { root: { paddingLeft: 4, paddingRight: 8 } } : undefined}
 									leftSection={
 										seriesImage ? (
-											<Image src={seriesImage} alt={formatSeriesName(s)} width={36} height={36} style={FILTER_IMAGE_STYLE} />
+											<Image src={seriesImage} alt={formatSeriesName(s)} width={FILTER_IMAGE_SIZE} height={FILTER_IMAGE_SIZE} style={FILTER_IMAGE_STYLE} />
 										) : null
 									}
 									rightSection={
