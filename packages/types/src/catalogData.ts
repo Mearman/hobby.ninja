@@ -1,6 +1,6 @@
 // Bandai Catalog Item Types
 
-import type { LocalizedText } from "./manualData";
+import type { LocalizedText, LocalizedTextArray } from "./manualData";
 
 export interface CatalogPrice {
 	amount: number;
@@ -54,9 +54,9 @@ export interface CatalogItem {
 	brands: CatalogBrand[];
 	categories: CatalogCategory[];
 	scale?: string;
-	description: LocalizedText[];
-	accessories: LocalizedText[];
-	contents: LocalizedText[];
+	description: LocalizedTextArray;
+	accessories: LocalizedTextArray;
+	contents: LocalizedTextArray;
 	images: string[];
 	relatedProducts: CatalogRelatedProduct[];
 	sourceUrl: string;

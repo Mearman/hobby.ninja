@@ -5,6 +5,12 @@ export interface LocalizedText {
   en?: string;
 }
 
+/** Localized text arrays - for content that may differ between languages (not 1:1 translations) */
+export interface LocalizedTextArray {
+  ja: string[];
+  en?: string[];
+}
+
 export interface ProductInfo {
   name: string;
   series?: string;
