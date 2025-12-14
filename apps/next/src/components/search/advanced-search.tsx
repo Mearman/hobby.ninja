@@ -21,6 +21,7 @@ import {
 	IconChevronDown,
 	IconChevronUp,
 } from "@tabler/icons-react";
+import Image from "next/image";
 import React, { useState, useCallback } from "react";
 
 import { useSearch, type SearchResult, type SearchFilters, type SearchStats } from "@/lib/fuse-search";
@@ -293,38 +294,47 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 								&ldquo;{query}&rdquo;
 							</Badge>
 						)}
-						{filters.brands?.map(brand => (
-							<Badge key={brand} size="sm" variant="light" leftSection={
-								getBrandImage(brand) ? (
-									<img src={getBrandImage(brand)} alt="" style={{ width: 12, height: 12, objectFit: "contain" }} />
-								) : null
-							}>
-								{brand}
-							</Badge>
-						))}
+						{filters.brands?.map(brand => {
+							const brandImage = getBrandImage(brand);
+							return (
+								<Badge key={brand} size="sm" variant="light" title={brand} leftSection={
+									brandImage ? (
+										<Image src={brandImage} alt={brand} width={16} height={16} style={{ objectFit: "contain" }} />
+									) : null
+								}>
+									{brandImage ? null : brand}
+								</Badge>
+							);
+						})}
 						{filters.categories?.map(category => (
 							<Badge key={category} size="sm" variant="light" color="green">
 								{category}
 							</Badge>
 						))}
-						{filters.series?.map(serie => (
-							<Badge key={serie} size="sm" variant="light" color="orange" leftSection={
-								getSeriesImage(serie) ? (
-									<img src={getSeriesImage(serie)} alt="" style={{ width: 12, height: 12, objectFit: "contain" }} />
-								) : null
-							}>
-								{serie}
-							</Badge>
-						))}
-						{filters.grades?.map(grade => (
-							<Badge key={grade} size="sm" variant="light" color="purple" leftSection={
-								getGradeImage(grade) ? (
-									<img src={getGradeImage(grade)} alt="" style={{ width: 12, height: 12, objectFit: "contain" }} />
-								) : null
-							}>
-								{formatGradeName(grade)}
-							</Badge>
-						))}
+						{filters.series?.map(serie => {
+							const seriesImage = getSeriesImage(serie);
+							return (
+								<Badge key={serie} size="sm" variant="light" color="orange" title={serie} leftSection={
+									seriesImage ? (
+										<Image src={seriesImage} alt={serie} width={16} height={16} style={{ objectFit: "contain" }} />
+									) : null
+								}>
+									{seriesImage ? null : serie}
+								</Badge>
+							);
+						})}
+						{filters.grades?.map(grade => {
+							const gradeImage = getGradeImage(grade);
+							return (
+								<Badge key={grade} size="sm" variant="light" color="purple" title={formatGradeName(grade)} leftSection={
+									gradeImage ? (
+										<Image src={gradeImage} alt={formatGradeName(grade)} width={16} height={16} style={{ objectFit: "contain" }} />
+									) : null
+								}>
+									{gradeImage ? null : formatGradeName(grade)}
+								</Badge>
+							);
+						})}
 						{filters.scales?.map(scale => (
 							<Badge key={scale} size="sm" variant="light" color="cyan">
 								{scale}

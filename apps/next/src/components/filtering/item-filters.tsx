@@ -32,10 +32,11 @@ import {
 	IconSortDescending,
 	IconX,
 } from "@tabler/icons-react";
+import Image from "next/image";
 import { useState } from "react";
 
 import { FilterState } from "@/hooks/use-filtered-items";
-import { getGradeImage } from "@/lib/image-lookup";
+import { getBrandImage, getGradeImage, getSeriesImage } from "@/lib/image-lookup";
 
 // Helper functions to format entity IDs to display names
 function formatBrandName(id: string): string {
@@ -86,6 +87,7 @@ interface FilterSectionProps {
 	selectedValues: string[];
 	onToggle: (field: ArrayFilterField, value: string) => void;
 	formatValue?: (value: string) => string;
+	getImage?: (value: string) => string | undefined;
 	color?: string;
 }
 
@@ -96,11 +98,30 @@ function FilterSection({
 	selectedValues,
 	onToggle,
 	formatValue = (v) => v,
+	getImage,
 	color = "blue",
 }: FilterSectionProps) {
 	const [expanded, setExpanded] = useState(false);
 
 	if (options.length === 0) return null;
+
+	// Helper to render chip content with optional image (icon-only when image available)
+	const renderChipContent = (value: string) => {
+		const imageSrc = getImage?.(value);
+		if (imageSrc) {
+			return (
+				<Image
+					src={imageSrc}
+					alt={formatValue(value)}
+					title={formatValue(value)}
+					width={20}
+					height={20}
+					style={{ objectFit: "contain" }}
+				/>
+			);
+		}
+		return formatValue(value);
+	};
 
 	return (
 		<Box>
@@ -139,7 +160,7 @@ function FilterSection({
 							variant="filled"
 							color={color}
 						>
-							{formatValue(value)}
+							{renderChipContent(value)}
 						</Chip>
 					))}
 				</Group>
@@ -157,7 +178,7 @@ function FilterSection({
 							variant="outline"
 							color={color}
 						>
-							{formatValue(value)}
+							{renderChipContent(value)}
 						</Chip>
 					))}
 				</Group>
@@ -281,6 +302,7 @@ export function ItemFilters({
 								selectedValues={filterState.brands}
 								onToggle={onToggleFilterValue}
 								formatValue={formatBrandName}
+								getImage={getBrandImage}
 								color="blue"
 							/>
 
@@ -291,6 +313,7 @@ export function ItemFilters({
 								selectedValues={filterState.series}
 								onToggle={onToggleFilterValue}
 								formatValue={formatSeriesName}
+								getImage={getSeriesImage}
 								color="violet"
 							/>
 
@@ -301,6 +324,7 @@ export function ItemFilters({
 								selectedValues={filterState.grades}
 								onToggle={onToggleFilterValue}
 								formatValue={formatGradeName}
+								getImage={getGradeImage}
 								color="teal"
 							/>
 
@@ -333,41 +357,54 @@ export function ItemFilters({
 								Search: &quot;{filterState.search}&quot;
 							</Badge>
 						)}
-						{filterState.brands.map(brand => (
-							<Badge
-								key={`brand-${brand}`}
-								size="sm"
-								variant="light"
-								color="blue"
-								rightSection={
-									<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("brands", brand); }}>
-										<IconX size={10} />
-									</ActionIcon>
-								}
-							>
-								{formatBrandName(brand)}
-							</Badge>
-						))}
-						{filterState.grades.map(grade => (
-							<Badge
-								key={`grade-${grade}`}
-								size="sm"
-								variant="light"
-								color="teal"
-								leftSection={
-									getGradeImage(grade) ? (
-										<img src={getGradeImage(grade)} alt="" style={{ width: 12, height: 12, objectFit: "contain" }} />
-									) : null
-								}
-								rightSection={
-									<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("grades", grade); }}>
-										<IconX size={10} />
-									</ActionIcon>
-								}
-							>
-								{formatGradeName(grade)}
-							</Badge>
-						))}
+						{filterState.brands.map(brand => {
+							const brandImage = getBrandImage(brand);
+							return (
+								<Badge
+									key={`brand-${brand}`}
+									size="sm"
+									variant="light"
+									color="blue"
+									title={formatBrandName(brand)}
+									leftSection={
+										brandImage ? (
+											<Image src={brandImage} alt={formatBrandName(brand)} width={16} height={16} style={{ objectFit: "contain" }} />
+										) : null
+									}
+									rightSection={
+										<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("brands", brand); }}>
+											<IconX size={10} />
+										</ActionIcon>
+									}
+								>
+									{brandImage ? null : formatBrandName(brand)}
+								</Badge>
+							);
+						})}
+						{filterState.grades.map(grade => {
+							const gradeImage = getGradeImage(grade);
+							return (
+								<Badge
+									key={`grade-${grade}`}
+									size="sm"
+									variant="light"
+									color="teal"
+									title={formatGradeName(grade)}
+									leftSection={
+										gradeImage ? (
+											<Image src={gradeImage} alt={formatGradeName(grade)} width={16} height={16} style={{ objectFit: "contain" }} />
+										) : null
+									}
+									rightSection={
+										<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("grades", grade); }}>
+											<IconX size={10} />
+										</ActionIcon>
+									}
+								>
+									{gradeImage ? null : formatGradeName(grade)}
+								</Badge>
+							);
+						})}
 						{filterState.scales.map(scale => (
 							<Badge
 								key={`scale-${scale}`}
@@ -383,21 +420,30 @@ export function ItemFilters({
 								{scale}
 							</Badge>
 						))}
-						{filterState.series.map(s => (
-							<Badge
-								key={`series-${s}`}
-								size="sm"
-								variant="light"
-								color="violet"
-								rightSection={
-									<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("series", s); }}>
-										<IconX size={10} />
-									</ActionIcon>
-								}
-							>
-								{formatSeriesName(s)}
-							</Badge>
-						))}
+						{filterState.series.map(s => {
+							const seriesImage = getSeriesImage(s);
+							return (
+								<Badge
+									key={`series-${s}`}
+									size="sm"
+									variant="light"
+									color="violet"
+									title={formatSeriesName(s)}
+									leftSection={
+										seriesImage ? (
+											<Image src={seriesImage} alt={formatSeriesName(s)} width={16} height={16} style={{ objectFit: "contain" }} />
+										) : null
+									}
+									rightSection={
+										<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("series", s); }}>
+											<IconX size={10} />
+										</ActionIcon>
+									}
+								>
+									{seriesImage ? null : formatSeriesName(s)}
+								</Badge>
+							);
+						})}
 						{filterState.categories.map(cat => (
 							<Badge
 								key={`category-${cat}`}
