@@ -17,26 +17,20 @@
 		"month": 0
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "人気のロボシリーズに“タママロボMk-II”が登場。",
-			"en": "“Tama Robo Mk-II” is now available in the popular robot series."
-		},
-		{
-			"ja": "タママサブマリンへ変形可能。",
-			"en": "Can be transformed into Tamama Submarine."
-		},
-		{
-			"ja": "ロボに乗り込むタママ二等兵も手足が可動。",
-			"en": "Private Tamama who rides the robot also has movable limbs."
-		},
-		{
-			"ja": "タママはロボのコクピットにもなるソーサーに乗せることが可能。",
-			"en": "Tamama can be placed on a saucer that also serves as the robot's cockpit."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"人気のロボシリーズに“タママロボMk-II”が登場。",
+			"タママサブマリンへ変形可能。",
+			"ロボに乗り込むタママ二等兵も手足が可動。",
+			"タママはロボのコクピットにもなるソーサーに乗せることが可能。"
+		],
+		"en": [
+			"“Tama Robo Mk-II” is now available in the popular robot series.",
+			"Can be transformed into Tamama Submarine.",
+			"Private Tamama who rides the robot also has movable limbs.",
+			"Tamama can be placed on a saucer that also serves as the robot's cockpit."
+		]
+	},
 	"images": [
 		"/images/items/01_2106_0.jpg",
 		"/images/items/01_2106_1.jpg",
@@ -47,16 +41,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2106/",
 	"extractedAt": "2025-12-06T17:48:39.558Z",
 	"brandIds": [],
-	"seriesIds": [
-		"sergeant-keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["sergeant-keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

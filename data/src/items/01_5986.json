@@ -19,47 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「リック・ドム ガイア機/オルテガ機」をHGで立体化！",
-			"en": "From \"Mobile Suit Gundam GQuuuuuuX \" (Zeke Ax), \" Rick Dom Gaia machine/Ortega machine\" is made into a three-dimensional HG!"
-		},
-		{
-			"ja": "• 劇中の動きが再現できる可動性。",
-			"en": "• Mobility that allows you to reproduce the movements in the play."
-		},
-		{
-			"ja": "• 高機動形態へは差し替えなしで変形可能。",
-			"en": "• Can be transformed into high mobility mode without replacement."
-		},
-		{
-			"ja": "• ジャイアント・バズが付属し、グリップが可動。",
-			"en": "• Giant Buzz is included and the grip is movable."
-		},
-		{
-			"ja": "• 電磁ハーケンにはリード線を使用。",
-			"en": "• Use lead wire for electromagnetic Harken."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "武装×1式",
-			"en": "Armed x 1 type"
-		},
-		{
-			"ja": "リード線×1式",
-			"en": "Lead wire x 1 set"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「リック・ドム ガイア機/オルテガ機」をHGで立体化！",
+			"• 劇中の動きが再現できる可動性。",
+			"• 高機動形態へは差し替えなしで変形可能。",
+			"• ジャイアント・バズが付属し、グリップが可動。",
+			"• 電磁ハーケンにはリード線を使用。"
+		],
+		"en": [
+			"From \"Mobile Suit Gundam GQuuuuuuX \" (Zeke Ax), \" Rick Dom Gaia machine/Ortega machine\" is made into a three-dimensional HG!",
+			"• Mobility that allows you to reproduce the movements in the play.",
+			"• Can be transformed into high mobility mode without replacement.",
+			"• Giant Buzz is included and the grip is movable.",
+			"• Use lead wire for electromagnetic Harken."
+		]
+	},
+	"accessories": {
+		"ja": ["武装×1式", "リード線×1式", "ハンドパーツ×1式", "マーキングシール×1"],
+		"en": ["Armed x 1 type", "Lead wire x 1 set", "Hand parts x 1 set", "MarkingSeal×1"]
+	},
 	"images": [
 		"/images/items/01_5986_0.jpg",
 		"/images/items/01_5986_1.jpg",
@@ -72,19 +51,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5986/",
 	"extractedAt": "2025-12-06T17:57:00.116Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-gquuuuuux"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5961",
-		"01_5951",
-		"01_5952",
-		"01_5935"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-gquuuuuux"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5961", "01_5951", "01_5952", "01_5935"]
 }

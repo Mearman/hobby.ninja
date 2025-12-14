@@ -18,44 +18,26 @@
 		"day": 13
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "バンとカズヤの親友、川村アミが操る軽量型LBXが登場！",
-			"en": "Introducing a lightweight LBX operated by Ami Kawamura, Ban and Kazuya's best friend!"
-		},
-		{
-			"ja": "• 細身のストライダーフレームのLBX！",
-			"en": "• LBX with slender strider frame!"
-		},
-		{
-			"ja": "• 専用台座が付属。",
-			"en": "• A special pedestal is included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "コダチ×2",
-			"en": "Kodachi×2"
-		},
-		{
-			"ja": "専用ディスプレイ台座×1",
-			"en": "Dedicated display pedestal x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成型品×4",
-			"en": "Molded product x 4"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"バンとカズヤの親友、川村アミが操る軽量型LBXが登場！",
+			"• 細身のストライダーフレームのLBX！",
+			"• 専用台座が付属。"
+		],
+		"en": [
+			"Introducing a lightweight LBX operated by Ami Kawamura, Ban and Kazuya's best friend!",
+			"• LBX with slender strider frame!",
+			"• A special pedestal is included."
+		]
+	},
+	"accessories": {
+		"ja": ["コダチ×2", "専用ディスプレイ台座×1"],
+		"en": ["Kodachi×2", "Dedicated display pedestal x 1"]
+	},
+	"contents": {
+		"ja": ["成型品×4", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 4", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2219_0.jpg",
 		"/images/items/01_2219_1.jpg",
@@ -68,16 +50,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2219/",
 	"extractedAt": "2025-12-06T17:48:54.667Z",
 	"brandIds": [],
-	"seriesIds": [
-		"danball-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"seriesIds": ["danball-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000215196", "item-1000215197", "item-1000210042", "item-1000210041"]
 }

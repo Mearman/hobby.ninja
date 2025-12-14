@@ -17,59 +17,30 @@
 		"month": 0
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「カスタマイズストラクチャー2」が登場！",
-			"en": "\"Customize Structure 2 \" is now available from \" 30 MINUTES FANTASY\" where you can create your own fantasy job!"
-		},
-		{
-			"ja": "■冒険のシチュエーションづくりの幅を広げるモンスターや情景パーツが詰まったセット。",
-			"en": "• A set packed with monsters and scene parts that expand the range of adventure situation creation."
-		},
-		{
-			"ja": "■シチュエーションをつくる情景パーツとして「石柱」「岩」が付属。",
-			"en": "• \"Stone pillars \" and \" rocks\" are included as scenic parts to create situations."
-		},
-		{
-			"ja": "■「石柱」には別売りの「30MF アイテムショップ4(クエストオプション)」に付属する「トーチ」等を取り付け可能。",
-			"en": "• The \"Torch \" etc. that comes with the \" 30MF Item Shop 4 (Quest Option)\" (sold separately) can be attached to the \" Stone Pillar\"."
-		},
-		{
-			"ja": "■「コウモリ」「一つ目」「罠」のモンスターが同梱。",
-			"en": "• \"Bat \", \" One-eyed \" and \" Trap\" monsters are included."
-		},
-		{
-			"ja": "■「罠」モンスターは別売りの「30MF アイテムショップ1 (ナイトオプション)」に付属する「宝箱」との組み合わせが可能。",
-			"en": "• \"Trap \" monsters can be combined with \" treasure chests \" included in \" 30MF Item Shop 1 (Night Option)\" sold separately."
-		},
-		{
-			"ja": "■モンスターの一部はカスタマイズパーツとしても使用可能。",
-			"en": "• Some of the monsters can also be used as customized parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "モンスター（コウモリ）×1",
-			"en": "Monster (bat) x1"
-		},
-		{
-			"ja": "モンスター（一つ目）×1",
-			"en": "Monster (one eye) x1"
-		},
-		{
-			"ja": "モンスター（罠）×1",
-			"en": "Monster (trap) x1"
-		},
-		{
-			"ja": "石柱×1",
-			"en": "Stone pillar x1"
-		},
-		{
-			"ja": "岩×2種",
-			"en": "Rock x 2 types"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「カスタマイズストラクチャー2」が登場！",
+			"■冒険のシチュエーションづくりの幅を広げるモンスターや情景パーツが詰まったセット。",
+			"■シチュエーションをつくる情景パーツとして「石柱」「岩」が付属。",
+			"■「石柱」には別売りの「30MF アイテムショップ4(クエストオプション)」に付属する「トーチ」等を取り付け可能。",
+			"■「コウモリ」「一つ目」「罠」のモンスターが同梱。",
+			"■「罠」モンスターは別売りの「30MF アイテムショップ1 (ナイトオプション)」に付属する「宝箱」との組み合わせが可能。",
+			"■モンスターの一部はカスタマイズパーツとしても使用可能。"
+		],
+		"en": [
+			"\"Customize Structure 2 \" is now available from \" 30 MINUTES FANTASY\" where you can create your own fantasy job!",
+			"• A set packed with monsters and scene parts that expand the range of adventure situation creation.",
+			"• \"Stone pillars \" and \" rocks\" are included as scenic parts to create situations.",
+			"• The \"Torch \" etc. that comes with the \" 30MF Item Shop 4 (Quest Option)\" (sold separately) can be attached to the \" Stone Pillar\".",
+			"• \"Bat \", \" One-eyed \" and \" Trap\" monsters are included.",
+			"• \"Trap \" monsters can be combined with \" treasure chests \" included in \" 30MF Item Shop 1 (Night Option)\" sold separately.",
+			"• Some of the monsters can also be used as customized parts."
+		]
+	},
+	"accessories": {
+		"ja": ["モンスター（コウモリ）×1", "モンスター（一つ目）×1", "モンスター（罠）×1", "石柱×1", "岩×2種"],
+		"en": ["Monster (bat) x1", "Monster (one eye) x1", "Monster (trap) x1", "Stone pillar x1", "Rock x 2 types"]
+	},
 	"images": [
 		"/images/items/01_6938_0.jpg",
 		"/images/items/01_6938_1.jpg",
@@ -78,17 +49,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_6938/",
 	"extractedAt": "2025-12-06T17:58:13.257Z",
-	"brandIds": [
-		"30-minutes-fantasy"
-	],
+	"brandIds": ["30-minutes-fantasy"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6931",
-		"01_6932",
-		"01_6776",
-		"01_6912"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6931", "01_6932", "01_6776", "01_6912"]
 }

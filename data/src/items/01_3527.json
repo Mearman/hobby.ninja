@@ -18,47 +18,24 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『SDガンダムワールド ヒーローズ』より、「サージェントヴェルデバスターガンダム」と共に市民を守るエリート警察官が登場！",
-			"en": "From \"SD Gundam World Heroes \", an elite police officer who protects citizens appears with \" Sergeant Verde Buster Gundam\"!"
-		},
-		{
-			"ja": "■別売りの「サージェントヴェルデバスターガンダムDXセット」に付属する強化パーツを装着可能。",
-			"en": "• Can be equipped with enhanced parts included in the \"Sergeant Verde Buster Gundam DX Set\" sold separately."
-		},
-		{
-			"ja": "■フロントスカートの巨大な手錠、新規造形のシールド、警棒が付属。",
-			"en": "• Includes giant handcuffs on the front skirt, a newly sculpted seal, and a baton."
-		},
-		{
-			"ja": "■別売りの「サージェントヴェルデバスターガンダムDXセット」と組み合わせることで、双方の色再現がUPするクリアブルーのパーツを同梱。",
-			"en": "• Includes clear blue parts that improve the color reproduction of both when combined with the separately sold \"Sergeant Verde Buster Gundam DX Set\"."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "拳銃×1",
-			"en": "Handgun x 1"
-		},
-		{
-			"ja": "手錠×1",
-			"en": "Handcuffs x 1"
-		},
-		{
-			"ja": "シールド×1",
-			"en": "Seal × 1"
-		},
-		{
-			"ja": "警棒×1",
-			"en": "Baton x 1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『SDガンダムワールド ヒーローズ』より、「サージェントヴェルデバスターガンダム」と共に市民を守るエリート警察官が登場！",
+			"■別売りの「サージェントヴェルデバスターガンダムDXセット」に付属する強化パーツを装着可能。",
+			"■フロントスカートの巨大な手錠、新規造形のシールド、警棒が付属。",
+			"■別売りの「サージェントヴェルデバスターガンダムDXセット」と組み合わせることで、双方の色再現がUPするクリアブルーのパーツを同梱。"
+		],
+		"en": [
+			"From \"SD Gundam World Heroes \", an elite police officer who protects citizens appears with \" Sergeant Verde Buster Gundam\"!",
+			"• Can be equipped with enhanced parts included in the \"Sergeant Verde Buster Gundam DX Set\" sold separately.",
+			"• Includes giant handcuffs on the front skirt, a newly sculpted seal, and a baton.",
+			"• Includes clear blue parts that improve the color reproduction of both when combined with the separately sold \"Sergeant Verde Buster Gundam DX Set\"."
+		]
+	},
+	"accessories": {
+		"ja": ["拳銃×1", "手錠×1", "シールド×1", "警棒×1", "ホイルシール×1"],
+		"en": ["Handgun x 1", "Handcuffs x 1", "Seal × 1", "Baton x 1", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_3527_0.jpg",
 		"/images/items/01_3527_1.jpg",
@@ -71,19 +48,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3527/",
 	"extractedAt": "2025-12-06T17:51:39.778Z",
-	"brandIds": [
-		"sd-gundam-series"
-	],
-	"seriesIds": [
-		"sd-gundam-world-heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4312",
-		"01_4634"
-	]
+	"brandIds": ["sd-gundam-series"],
+	"seriesIds": ["sd-gundam-world-heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
 }

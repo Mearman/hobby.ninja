@@ -19,72 +19,44 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズ』に登場する、ガンダムアストレイノーネイムの装備「ノーネイムライフル」が、HGBCにラインアップ！",
-			"en": "Gundam Astray No Name's equipment \"No Name Rifle \" that appears in \" Gundam Build Divers\" is now available at HGBC!"
-		},
-		{
-			"ja": "• 防御モード、遠距離攻撃用射撃モード、バックパックモードの各形態を再現でき、各形態用のジョイントパーツと拡張用のジョイントパーツが付属！（一軸・二軸・ボールジョイント［大・中・小］）",
-			"en": "• Each form can be reproduced: defense mode, long-range attack shooting mode, and backpack mode, and joint parts for each form and joint parts for expansion are included! (Single axis/double axis/ball joint [large/medium/small])"
-		},
-		{
-			"ja": "• HGシリーズとカスタマイズが可能となっているので、様々な形態で装備させて君のガンプラをパワーアップさせよう！",
-			"en": "• Customization is possible with the HG series, so power up your Gunpla by equipping it in various forms!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ノーネイムライフル×１",
-			"en": "No name rifle x1"
-		},
-		{
-			"ja": "射撃モード用ジョイントパーツ×1",
-			"en": "Joint parts for shooting mode x 1"
-		},
-		{
-			"ja": "バックパックモード用ジョイントパーツ×1",
-			"en": "Joint parts for backpack mode x 1"
-		},
-		{
-			"ja": "防御形態用ジョイントパーツ×1",
-			"en": "Joint parts for defense form x 1"
-		},
-		{
-			"ja": "拡張用ジョイントパーツ×1式",
-			"en": "Expansion joint parts x 1 set"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×3",
-			"en": "Molded product x 3"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
-	"images": [
-		"/images/items/01_1946_0.jpg",
-		"/images/items/01_1946_1.jpg"
-	],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズ』に登場する、ガンダムアストレイノーネイムの装備「ノーネイムライフル」が、HGBCにラインアップ！",
+			"• 防御モード、遠距離攻撃用射撃モード、バックパックモードの各形態を再現でき、各形態用のジョイントパーツと拡張用のジョイントパーツが付属！（一軸・二軸・ボールジョイント［大・中・小］）",
+			"• HGシリーズとカスタマイズが可能となっているので、様々な形態で装備させて君のガンプラをパワーアップさせよう！"
+		],
+		"en": [
+			"Gundam Astray No Name's equipment \"No Name Rifle \" that appears in \" Gundam Build Divers\" is now available at HGBC!",
+			"• Each form can be reproduced: defense mode, long-range attack shooting mode, and backpack mode, and joint parts for each form and joint parts for expansion are included! (Single axis/double axis/ball joint [large/medium/small])",
+			"• Customization is possible with the HG series, so power up your Gunpla by equipping it in various forms!"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ノーネイムライフル×１",
+			"射撃モード用ジョイントパーツ×1",
+			"バックパックモード用ジョイントパーツ×1",
+			"防御形態用ジョイントパーツ×1",
+			"拡張用ジョイントパーツ×1式"
+		],
+		"en": [
+			"No name rifle x1",
+			"Joint parts for shooting mode x 1",
+			"Joint parts for backpack mode x 1",
+			"Joint parts for defense form x 1",
+			"Expansion joint parts x 1 set"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×3", "取扱説明書×1"],
+		"en": ["Molded product x 3", "Handling manual×1"]
+	},
+	"images": ["/images/items/01_1946_0.jpg", "/images/items/01_1946_1.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1946/",
 	"extractedAt": "2025-12-06T17:48:25.578Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "0698"
 }

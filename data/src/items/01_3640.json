@@ -19,55 +19,40 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MMシリーズ新たに加わった、第３勢力の量産機「スピナティオ」が登場！",
-			"en": "The third mass-produced machine \"Spinatio\", newly added to the 30MM series, is now available!"
-		},
-		{
-			"ja": "■素体となる本体のほか、アーマーパーツ、武器パーツがひとつになったオールインワンアイテム。",
-			"en": "• An all-in-one item that includes the main body, armor parts, and weapon parts."
-		},
-		{
-			"ja": "■更に組み立てやすくなった新構造！可動範囲を活かしつつも組み立ての際の挟み込みは一切なし。",
-			"en": "• New structure that is even easier to assemble! While taking advantage of the range of motion, there is no pinching during assembly."
-		},
-		{
-			"ja": "■既存アイテムともミキシングできる共通関節構造、３mmジョイントを採用。",
-			"en": "• Adopts a 3mm joint, a common joint structure that can be mixed with existing items."
-		},
-		{
-			"ja": "■初回限定生産にて「カスタムジョイント」が同梱。",
-			"en": "• \"Custom joint\" is included in the first limited production."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビームライフル×1",
-			"en": "Beam rifle x 1"
-		},
-		{
-			"ja": "太刀×1",
-			"en": "Long sword x1"
-		},
-		{
-			"ja": "ハンドパーツ　武器持ち手（左右）、平手（左右）、ライフル持ち手（右）",
-			"en": "Hand parts Weapon handle (left and right), open hand (left and right), rifle handle (right)"
-		},
-		{
-			"ja": "武者アーマー×１式",
-			"en": "Musha armor x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×1",
-			"en": "Joint parts x 1"
-		},
-		{
-			"ja": "初回限定カスタムジョイント×1",
-			"en": "First time limited custom joint x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MMシリーズ新たに加わった、第３勢力の量産機「スピナティオ」が登場！",
+			"■素体となる本体のほか、アーマーパーツ、武器パーツがひとつになったオールインワンアイテム。",
+			"■更に組み立てやすくなった新構造！可動範囲を活かしつつも組み立ての際の挟み込みは一切なし。",
+			"■既存アイテムともミキシングできる共通関節構造、３mmジョイントを採用。",
+			"■初回限定生産にて「カスタムジョイント」が同梱。"
+		],
+		"en": [
+			"The third mass-produced machine \"Spinatio\", newly added to the 30MM series, is now available!",
+			"• An all-in-one item that includes the main body, armor parts, and weapon parts.",
+			"• New structure that is even easier to assemble! While taking advantage of the range of motion, there is no pinching during assembly.",
+			"• Adopts a 3mm joint, a common joint structure that can be mixed with existing items.",
+			"• \"Custom joint\" is included in the first limited production."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ビームライフル×1",
+			"太刀×1",
+			"ハンドパーツ　武器持ち手（左右）、平手（左右）、ライフル持ち手（右）",
+			"武者アーマー×１式",
+			"ジョイントパーツ×1",
+			"初回限定カスタムジョイント×1"
+		],
+		"en": [
+			"Beam rifle x 1",
+			"Long sword x1",
+			"Hand parts Weapon handle (left and right), open hand (left and right), rifle handle (right)",
+			"Musha armor x 1 set",
+			"Joint parts x 1",
+			"First time limited custom joint x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_3640_0.jpg",
 		"/images/items/01_3640_1.jpg",
@@ -83,18 +68,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3640/",
 	"extractedAt": "2025-12-06T17:51:53.372Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3721"
 }

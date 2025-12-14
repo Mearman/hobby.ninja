@@ -19,80 +19,58 @@
 	},
 	"targetAge": 15,
 	"scale": "1/1000",
-	"description": [
-		{
-			"ja": "ヤマト、再び発進の時。",
-			"en": "Yamato, time to take off again."
-		},
-		{
-			"ja": "『宇宙戦艦ヤマト2202』に登場のヤマト2202版が1/1000スケールで、いよいよ登場！",
-			"en": "The Yamato 2202 version that appeared in \"Space Battleship Yamato 2202\" is finally available in 1/1000 Scale!"
-		},
-		{
-			"ja": "• 精密なディテールでヤマト2202を再現！",
-			"en": "• Reproduce Yamato 2202 with precise details!"
-		},
-		{
-			"ja": "• 新規パーツで第4艦橋の展開と、安定翼の展開・収納を再現。",
-			"en": "• New parts reproduce the deployment of the 4th bridge and the deployment and storage of the stabilizing wings."
-		},
-		{
-			"ja": "• 2202版に合わせた「LEDユニット(青)」が付属し、波動砲と艦橋部の発光が再現可能。",
-			"en": "• An \"LED unit (blue)\" that matches the 2202 version is included, allowing you to reproduce the light emission of the wave motion gun and the bridge."
-		},
-		{
-			"ja": "• 別売りの「発光ユニット(白)2灯式」と付属のオレンジのクリアパーツを使用すれば、エンジンの発光も再現可能。",
-			"en": "• If you use the separately sold \"Light-emitting unit (white) 2-lamp type\" and the included orange clear parts, you can also reproduce the engine's light emission."
-		},
-		{
-			"ja": "• メカコレクション ゆうなぎが付属。",
-			"en": "• Mecha Collection Yuunagi is included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ディスプレイベース×1",
-			"en": "Display base x 1"
-		},
-		{
-			"ja": "コスモタイガーII（単座）×2",
-			"en": "Cosmo Tiger II (single seat) x 2"
-		},
-		{
-			"ja": "コスモタイガーII（三座）×2",
-			"en": "Cosmo Tiger II (three seats) x 2"
-		},
-		{
-			"ja": "メカコレコレクションゆうなぎ×1",
-			"en": "Mechacolle Collection Yuunagi x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×16",
-			"en": "Molded product x 16"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "水転写式デカール×1",
-			"en": "Water transfer decal x 1"
-		},
-		{
-			"ja": "マーキングシール（ゆうなぎ）×1",
-			"en": "MarkingSeal (Yuunagi)×1"
-		},
-		{
-			"ja": "LEDユニット(青)×２",
-			"en": "LED unit (blue) x 2"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"ヤマト、再び発進の時。",
+			"『宇宙戦艦ヤマト2202』に登場のヤマト2202版が1/1000スケールで、いよいよ登場！",
+			"• 精密なディテールでヤマト2202を再現！",
+			"• 新規パーツで第4艦橋の展開と、安定翼の展開・収納を再現。",
+			"• 2202版に合わせた「LEDユニット(青)」が付属し、波動砲と艦橋部の発光が再現可能。",
+			"• 別売りの「発光ユニット(白)2灯式」と付属のオレンジのクリアパーツを使用すれば、エンジンの発光も再現可能。",
+			"• メカコレクション ゆうなぎが付属。"
+		],
+		"en": [
+			"Yamato, time to take off again.",
+			"The Yamato 2202 version that appeared in \"Space Battleship Yamato 2202\" is finally available in 1/1000 Scale!",
+			"• Reproduce Yamato 2202 with precise details!",
+			"• New parts reproduce the deployment of the 4th bridge and the deployment and storage of the stabilizing wings.",
+			"• An \"LED unit (blue)\" that matches the 2202 version is included, allowing you to reproduce the light emission of the wave motion gun and the bridge.",
+			"• If you use the separately sold \"Light-emitting unit (white) 2-lamp type\" and the included orange clear parts, you can also reproduce the engine's light emission.",
+			"• Mecha Collection Yuunagi is included."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ディスプレイベース×1",
+			"コスモタイガーII（単座）×2",
+			"コスモタイガーII（三座）×2",
+			"メカコレコレクションゆうなぎ×1"
+		],
+		"en": [
+			"Display base x 1",
+			"Cosmo Tiger II (single seat) x 2",
+			"Cosmo Tiger II (three seats) x 2",
+			"Mechacolle Collection Yuunagi x 1"
+		]
+	},
+	"contents": {
+		"ja": [
+			"成形品×16",
+			"ホイルシール×1",
+			"水転写式デカール×1",
+			"マーキングシール（ゆうなぎ）×1",
+			"LEDユニット(青)×２",
+			"取扱説明書×1"
+		],
+		"en": [
+			"Molded product x 16",
+			"Foil Seal×1",
+			"Water transfer decal x 1",
+			"MarkingSeal (Yuunagi)×1",
+			"LED unit (blue) x 2",
+			"Handling manual×1"
+		]
+	},
 	"images": [
 		"/images/items/01_1131_0.jpg",
 		"/images/items/01_1131_1.jpg",
@@ -110,16 +88,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_1131/",
 	"extractedAt": "2025-12-06T16:55:06.114Z",
 	"brandIds": [],
-	"seriesIds": [
-		"space-battleship-yamato-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5971",
-		"01_5498",
-		"01_5500",
-		"01_5388"
-	]
+	"seriesIds": ["space-battleship-yamato-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5971", "01_5498", "01_5500", "01_5388"]
 }

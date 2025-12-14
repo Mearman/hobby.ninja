@@ -18,47 +18,26 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『ダンボール戦機』より、海道ジン専用の騎士型LBXがハイパーファンクションで登場！",
-			"en": "From \"Danball Senki\", Kaido Jin's exclusive knight type LBX is now available in hyper function!"
-		},
-		{
-			"ja": "• パーツ分割による色再現と、驚異の可動域を確保したコアスケルトン内蔵のハイパーファンクション。",
-			"en": "• Hyper function with built-in core skeleton that ensures color reproduction through parts division and an amazing range of motion."
-		},
-		{
-			"ja": "• コアスケルトンは精密なメカディテールを再現。多色成形で再現された各装甲はスムーズに着脱することができる。",
-			"en": "• The core skeleton reproduces precise mechanical details. Each piece of armor is reproduced using multicolored molding and can be smoothly attached and detached."
-		},
-		{
-			"ja": "• 布製マントは取付部を可動させることで翻る動きを表現可能。迫力のアクションが決まる！",
-			"en": "• The cloth cloak can express fluttering motion by moving the attachment part. Powerful action is decided!"
-		},
-		{
-			"ja": "• 基本装備の「ティターニア」付属。",
-			"en": "• Basic equipment \"Titania\" included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ティターニア×1",
-			"en": "Titania×1"
-		},
-		{
-			"ja": "マント×1",
-			"en": "Cloak x 1"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "ホイルシール×2",
-			"en": "Foil Seal×2"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『ダンボール戦機』より、海道ジン専用の騎士型LBXがハイパーファンクションで登場！",
+			"• パーツ分割による色再現と、驚異の可動域を確保したコアスケルトン内蔵のハイパーファンクション。",
+			"• コアスケルトンは精密なメカディテールを再現。多色成形で再現された各装甲はスムーズに着脱することができる。",
+			"• 布製マントは取付部を可動させることで翻る動きを表現可能。迫力のアクションが決まる！",
+			"• 基本装備の「ティターニア」付属。"
+		],
+		"en": [
+			"From \"Danball Senki\", Kaido Jin's exclusive knight type LBX is now available in hyper function!",
+			"• Hyper function with built-in core skeleton that ensures color reproduction through parts division and an amazing range of motion.",
+			"• The core skeleton reproduces precise mechanical details. Each piece of armor is reproduced using multicolored molding and can be smoothly attached and detached.",
+			"• The cloth cloak can express fluttering motion by moving the attachment part. Powerful action is decided!",
+			"• Basic equipment \"Titania\" included."
+		]
+	},
+	"accessories": {
+		"ja": ["ティターニア×1", "マント×1", "マーキングシール×1", "ホイルシール×2"],
+		"en": ["Titania×1", "Cloak x 1", "MarkingSeal×1", "Foil Seal×2"]
+	},
 	"images": [
 		"/images/items/01_2501_0.jpg",
 		"/images/items/01_2501_1.jpg",
@@ -71,16 +50,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2501/",
 	"extractedAt": "2025-12-06T17:49:29.956Z",
 	"brandIds": [],
-	"seriesIds": [
-		"danball-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"seriesIds": ["danball-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000215196", "item-1000215197", "item-1000210042", "item-1000210041"]
 }

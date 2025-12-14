@@ -18,51 +18,31 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• テレビ番組「ポチっと発明 ピカちんキット」に登場するゼロゼロマーカーが商品化！",
-			"en": "• The zero-zero marker that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!"
-		},
-		{
-			"ja": "• 仲間同士で秘密のメッセージのやり取りができちゃう発明品！",
-			"en": "• An invention that allows friends to exchange secret messages!"
-		},
-		{
-			"ja": "• 他の人に見られたくない大切な言葉も白昼堂々書きまくれる！",
-			"en": "• You can write important words in broad daylight that you don't want others to see!"
-		},
-		{
-			"ja": "• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！",
-			"en": "• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
-		}
-	],
-	"accessories": [],
-	"contents": [
-		{
-			"ja": "ゼロゼロマーカー×1",
-			"en": "Zero zero marker x 1"
-		},
-		{
-			"ja": "（成形品×2）",
-			"en": "(molded product x 2)"
-		},
-		{
-			"ja": "ピカちんQRコード×1",
-			"en": "Pikachin QR code x 1"
-		},
-		{
-			"ja": "LEDユニット×1",
-			"en": "LED unit x 1"
-		},
-		{
-			"ja": "ペン×1",
-			"en": "Pen x 1"
-		},
-		{
-			"ja": "ピカちんシート×1",
-			"en": "Pikachin sheet x 1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• テレビ番組「ポチっと発明 ピカちんキット」に登場するゼロゼロマーカーが商品化！",
+			"• 仲間同士で秘密のメッセージのやり取りができちゃう発明品！",
+			"• 他の人に見られたくない大切な言葉も白昼堂々書きまくれる！",
+			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
+		],
+		"en": [
+			"• The zero-zero marker that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
+			"• An invention that allows friends to exchange secret messages!",
+			"• You can write important words in broad daylight that you don't want others to see!",
+			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
+		]
+	},
+	"contents": {
+		"ja": ["ゼロゼロマーカー×1", "（成形品×2）", "ピカちんQRコード×1", "LEDユニット×1", "ペン×1", "ピカちんシート×1"],
+		"en": [
+			"Zero zero marker x 1",
+			"(molded product x 2)",
+			"Pikachin QR code x 1",
+			"LED unit x 1",
+			"Pen x 1",
+			"Pikachin sheet x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_1219_0.jpg",
 		"/images/items/01_1219_1.jpg",
@@ -77,16 +57,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_1219/",
 	"extractedAt": "2025-12-06T17:01:19.257Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2605", "01_2606", "01_2607", "01_2545"]
 }

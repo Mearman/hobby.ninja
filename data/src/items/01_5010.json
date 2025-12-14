@@ -18,35 +18,24 @@
 		"day": 21
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "ポケモンプラモコレクション セレクトシリーズに「黒いレックウザ」がラインアップ！",
-			"en": "\"Black Rayquaza\" is now available in the Pokemon Plastic Model Collection Select Series!"
-		},
-		{
-			"ja": "• 黒いレックウザの模様はパーツ分割で再現。",
-			"en": "• The black Rayquaza pattern is reproduced by dividing it into parts."
-		},
-		{
-			"ja": "• 胴体の回転可動により、ダイナミックなポージングが可能。",
-			"en": "• Dynamic poses are possible by rotating the torso."
-		},
-		{
-			"ja": "• 専用の台座が付属。",
-			"en": "• Comes with a special pedestal."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "台座×1",
-			"en": "Pedestal x 1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ポケモンプラモコレクション セレクトシリーズに「黒いレックウザ」がラインアップ！",
+			"• 黒いレックウザの模様はパーツ分割で再現。",
+			"• 胴体の回転可動により、ダイナミックなポージングが可能。",
+			"• 専用の台座が付属。"
+		],
+		"en": [
+			"\"Black Rayquaza\" is now available in the Pokemon Plastic Model Collection Select Series!",
+			"• The black Rayquaza pattern is reproduced by dividing it into parts.",
+			"• Dynamic poses are possible by rotating the torso.",
+			"• Comes with a special pedestal."
+		]
+	},
+	"accessories": {
+		"ja": ["台座×1", "シール×1"],
+		"en": ["Pedestal x 1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5010_0.jpg",
 		"/images/items/01_5010_1.jpg",
@@ -64,16 +53,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5010/",
 	"extractedAt": "2025-12-06T17:54:55.181Z",
 	"brandIds": [],
-	"seriesIds": [
-		"pocket-monster"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pocket-monster"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

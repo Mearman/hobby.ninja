@@ -17,30 +17,22 @@
 		"month": 0
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "ケロロロボに新バージョン！“ケロロロボMk-II”登場！",
-			"en": "New version of Keroro Robo! “Keroro Robo Mk-II” is here!"
-		},
-		{
-			"ja": "飛行形態“ケロロジェット”に変形可能。",
-			"en": "Can be transformed into flight form \"Keroro Jet\"."
-		},
-		{
-			"ja": "各関節が可動し、様々なポージングが可能。",
-			"en": "Each joint is movable and various poses are possible."
-		},
-		{
-			"ja": "付属のケロロ軍曹はソーサーに搭乗、ソーサーはコクピットとしてロボ本体と合体可能。",
-			"en": "The included Sergeant Keroro rides on a saucer, and the saucer can be combined with the robot body as a cockpit."
-		},
-		{
-			"ja": "武器はライフルとシールドが付属。",
-			"en": "Weapons include a rifle and a seal."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ケロロロボに新バージョン！“ケロロロボMk-II”登場！",
+			"飛行形態“ケロロジェット”に変形可能。",
+			"各関節が可動し、様々なポージングが可能。",
+			"付属のケロロ軍曹はソーサーに搭乗、ソーサーはコクピットとしてロボ本体と合体可能。",
+			"武器はライフルとシールドが付属。"
+		],
+		"en": [
+			"New version of Keroro Robo! “Keroro Robo Mk-II” is here!",
+			"Can be transformed into flight form \"Keroro Jet\".",
+			"Each joint is movable and various poses are possible.",
+			"The included Sergeant Keroro rides on a saucer, and the saucer can be combined with the robot body as a cockpit.",
+			"Weapons include a rifle and a seal."
+		]
+	},
 	"images": [
 		"/images/items/01_2105_0.jpg",
 		"/images/items/01_2105_1.jpg",
@@ -51,16 +43,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2105/",
 	"extractedAt": "2025-12-06T17:48:39.507Z",
 	"brandIds": [],
-	"seriesIds": [
-		"sergeant-keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["sergeant-keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

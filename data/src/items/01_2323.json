@@ -18,30 +18,22 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "BB戦士Hi-νガンダムがガンダムベース限定スペシャルコーティングで登場！",
-			"en": "BB Senshi Hi-νGundam is now available with Gundam base limited special coating!"
-		},
-		{
-			"ja": "• 瞳の有無をパーツ差し替えで選択可能。",
-			"en": "• The presence or absence of eyes can be selected by replacing parts."
-		},
-		{
-			"ja": "• ファンネル射出を再現可能。",
-			"en": "• Funnel injection can be reproduced."
-		},
-		{
-			"ja": "• ビーム・ライフルほか多数の武器が付属。",
-			"en": "• Beam rifle and many other weapons are included."
-		},
-		{
-			"ja": "• ディスプレイ台座付属。",
-			"en": "• Display pedestal included."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"BB戦士Hi-νガンダムがガンダムベース限定スペシャルコーティングで登場！",
+			"• 瞳の有無をパーツ差し替えで選択可能。",
+			"• ファンネル射出を再現可能。",
+			"• ビーム・ライフルほか多数の武器が付属。",
+			"• ディスプレイ台座付属。"
+		],
+		"en": [
+			"BB Senshi Hi-νGundam is now available with Gundam base limited special coating!",
+			"• The presence or absence of eyes can be selected by replacing parts.",
+			"• Funnel injection can be reproduced.",
+			"• Beam rifle and many other weapons are included.",
+			"• Display pedestal included."
+		]
+	},
 	"images": [
 		"/images/items/01_2323_0.jpg",
 		"/images/items/01_2323_1.jpg",
@@ -51,19 +43,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2323/",
 	"extractedAt": "2025-12-06T17:49:07.423Z",
-	"brandIds": [
-		"sd-gundam-bb-senshi"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-chars-counterattack"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4975",
-		"01_4190",
-		"01_46",
-		"01_5834"
-	]
+	"brandIds": ["sd-gundam-bb-senshi"],
+	"seriesIds": ["mobile-suit-gundam-chars-counterattack"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4975", "01_4190", "01_46", "01_5834"]
 }

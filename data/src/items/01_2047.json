@@ -19,68 +19,44 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズ』より、主人公「ミカミ・リク」が制作したガンダムダブルオースカイの決戦仕様が登場！",
-			"en": "From \"Gundam Build Divers \" comes the decisive battle version of Gundam 00 Sky created by the main character \" Mikami Riku\"!"
-		},
-		{
-			"ja": "• ミサイルポッドなどの武装が付属。フルアーマー形態が再現できる。",
-			"en": "• Weapons such as missile pods are included. Full armor form can be reproduced."
-		},
-		{
-			"ja": "• ロングライフル、バスターソードの他、ディスプレイベースも付属。",
-			"en": "• In addition to the long rifle and buster sword, a display base is also included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビームライフル×1",
-			"en": "Beam rifle x 1"
-		},
-		{
-			"ja": "ビームサーベル×2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "バスターソード×1",
-			"en": "Buster sword x1"
-		},
-		{
-			"ja": "ロングライフル×1",
-			"en": "Long rifle x 1"
-		},
-		{
-			"ja": "バックパック用ジョイントパーツ×3",
-			"en": "Backpack joint parts x 3"
-		},
-		{
-			"ja": "手首パーツ（左平手）×1",
-			"en": "Wrist parts (left palm) x 1"
-		},
-		{
-			"ja": "HWSパーツ×1式",
-			"en": "HWS parts x 1 set"
-		},
-		{
-			"ja": "ディスプレイ台座×1",
-			"en": "Display pedestal x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成型品×15",
-			"en": "Molded product x 15"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズ』より、主人公「ミカミ・リク」が制作したガンダムダブルオースカイの決戦仕様が登場！",
+			"• ミサイルポッドなどの武装が付属。フルアーマー形態が再現できる。",
+			"• ロングライフル、バスターソードの他、ディスプレイベースも付属。"
+		],
+		"en": [
+			"From \"Gundam Build Divers \" comes the decisive battle version of Gundam 00 Sky created by the main character \" Mikami Riku\"!",
+			"• Weapons such as missile pods are included. Full armor form can be reproduced.",
+			"• In addition to the long rifle and buster sword, a display base is also included."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ビームライフル×1",
+			"ビームサーベル×2",
+			"バスターソード×1",
+			"ロングライフル×1",
+			"バックパック用ジョイントパーツ×3",
+			"手首パーツ（左平手）×1",
+			"HWSパーツ×1式",
+			"ディスプレイ台座×1"
+		],
+		"en": [
+			"Beam rifle x 1",
+			"Beam saber x2",
+			"Buster sword x1",
+			"Long rifle x 1",
+			"Backpack joint parts x 3",
+			"Wrist parts (left palm) x 1",
+			"HWS parts x 1 set",
+			"Display pedestal x 1"
+		]
+	},
+	"contents": {
+		"ja": ["成型品×15", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 15", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2047_0.jpg",
 		"/images/items/01_2047_1.jpg",
@@ -92,20 +68,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2047/",
 	"extractedAt": "2025-12-06T16:47:13.883Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "1038"
 }

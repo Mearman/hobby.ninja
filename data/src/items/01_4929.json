@@ -18,59 +18,42 @@
 		"day": 16
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "大鎌とシザーに加え、大剣がセットになった武器セットが、オプションパーツセットに登場！",
-			"en": "In addition to the scythe and scissors, a weapon set that includes a large sword is now available as an optional parts set!"
-		},
-		{
-			"ja": "• シザーは分離することで２本の刀としても装備可能。",
-			"en": "• Scissor can be equipped as two swords by separating it."
-		},
-		{
-			"ja": "• 大剣の刀身は複数のパーツにより構成され接続ジョイントを使用することで柔軟に表情付けができる尻尾アーマーとして背部に装着可能。",
-			"en": "• The great sword blade is made up of multiple parts and can be attached to the back as a tail armor that can be flexibly expressed using connecting joints."
-		},
-		{
-			"ja": "• カスタマイズの幅を広げる30MINUTESシリーズ共通の汎用ジョイントランナーが付属。",
-			"en": "• Includes a general-purpose joint runner common to the 30 MINUTES series that expands the range of customization."
-		},
-		{
-			"ja": "• 30 MINUTESシリーズ共通の3mm径の軸を採用。「30 MINUTES MISSIONS」のパーツもオプションとして装着が可能。(※「30 MINUTES MISSIONS」キットの対象年齢は8才以上です)",
-			"en": "• Adopts a 3mm diameter shaft common to the 30 MINUTES series. \"30 MINUTES MISSIONS \" parts can also be installed as options. (*\" 30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "大剣×１",
-			"en": "Great sword x1"
-		},
-		{
-			"ja": "大鎌×1",
-			"en": "Scythe×1"
-		},
-		{
-			"ja": "シザー×１",
-			"en": "Scissor x 1"
-		},
-		{
-			"ja": "ジョイントパーツ×１",
-			"en": "Joint parts x 1"
-		},
-		{
-			"ja": "30MINUTES汎用ジョイントランナー×1",
-			"en": "30MINUTES General purpose joint Runner x 1"
-		},
-		{
-			"ja": "太モモパーツ×1式",
-			"en": "Thick thigh parts x 1 set"
-		},
-		{
-			"ja": "脚部膝上パーツ×1式",
-			"en": "Leg above knee parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"大鎌とシザーに加え、大剣がセットになった武器セットが、オプションパーツセットに登場！",
+			"• シザーは分離することで２本の刀としても装備可能。",
+			"• 大剣の刀身は複数のパーツにより構成され接続ジョイントを使用することで柔軟に表情付けができる尻尾アーマーとして背部に装着可能。",
+			"• カスタマイズの幅を広げる30MINUTESシリーズ共通の汎用ジョイントランナーが付属。",
+			"• 30 MINUTESシリーズ共通の3mm径の軸を採用。「30 MINUTES MISSIONS」のパーツもオプションとして装着が可能。(※「30 MINUTES MISSIONS」キットの対象年齢は8才以上です)"
+		],
+		"en": [
+			"In addition to the scythe and scissors, a weapon set that includes a large sword is now available as an optional parts set!",
+			"• Scissor can be equipped as two swords by separating it.",
+			"• The great sword blade is made up of multiple parts and can be attached to the back as a tail armor that can be flexibly expressed using connecting joints.",
+			"• Includes a general-purpose joint runner common to the 30 MINUTES series that expands the range of customization.",
+			"• Adopts a 3mm diameter shaft common to the 30 MINUTES series. \"30 MINUTES MISSIONS \" parts can also be installed as options. (*\" 30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"大剣×１",
+			"大鎌×1",
+			"シザー×１",
+			"ジョイントパーツ×１",
+			"30MINUTES汎用ジョイントランナー×1",
+			"太モモパーツ×1式",
+			"脚部膝上パーツ×1式"
+		],
+		"en": [
+			"Great sword x1",
+			"Scythe×1",
+			"Scissor x 1",
+			"Joint parts x 1",
+			"30MINUTES General purpose joint Runner x 1",
+			"Thick thigh parts x 1 set",
+			"Leg above knee parts x 1 set"
+		]
+	},
 	"images": [
 		"/images/items/01_4929_0.jpg",
 		"/images/items/01_4929_1.jpg",
@@ -85,14 +68,7 @@
 	"extractedAt": "2025-12-06T17:54:40.787Z",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["product-list"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manualId": "3570"
 }

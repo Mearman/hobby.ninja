@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "銀河漂流バイファムセット1",
-		"en": "Galaxy Drifting Vifam Set 1"
+		"en": "ROUND VERNIAN VIFAM SET 1"
 	},
 	"price": {
 		"amount": 3850,
@@ -18,39 +18,27 @@
 		"day": 28
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "懐かしの『銀河漂流バイファム』のプラモデルキットが当時の記憶をそのままに、豪華セットになって復活！",
-			"en": "The nostalgic \"Galaxy Drifting Vifam\" plastic ModelKit is back as a luxurious set with the memories of those days intact!"
-		},
-		{
-			"ja": "■「バイファム スリング・パニアー装備型」「ディルファム」「ウグ」「オールオーバー」がセットになって登場。",
-			"en": "• \"Vifam sling/pannier equipped type \", \" Dilfam \", \" Ug \", and \" Allover\" are now available as a set."
-		},
-		{
-			"ja": "■当時の商品をベースに、設定に合わせ一部の成形色を再選定。",
-			"en": "• Based on the product at the time, some molding colors were reselected to match the settings."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "1/144 バイファム スリング・パニアー装備型×１",
-			"en": "1/144 Vifam sling pannier equipped type x 1"
-		},
-		{
-			"ja": "1/144 ディルファム×１",
-			"en": "1/144 Dilfam x 1"
-		},
-		{
-			"ja": "1/144 ウグ×１",
-			"en": "1/144 Ugu×1"
-		},
-		{
-			"ja": "1/24 オールオーバー×１",
-			"en": "1/24 Allover x1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"懐かしの『銀河漂流バイファム』のプラモデルキットが当時の記憶をそのままに、豪華セットになって復活！",
+			"■「バイファム スリング・パニアー装備型」「ディルファム」「ウグ」「オールオーバー」がセットになって登場。",
+			"■当時の商品をベースに、設定に合わせ一部の成形色を再選定。"
+		],
+		"en": [
+			"The nostalgic \"Galaxy Drifting Vifam\" plastic ModelKit is back as a luxurious set with the memories of those days intact!",
+			"• \"Vifam sling/pannier equipped type \", \" Dilfam \", \" Ug \", and \" Allover\" are now available as a set.",
+			"• Based on the product at the time, some molding colors were reselected to match the settings."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"1/144 バイファム スリング・パニアー装備型×１",
+			"1/144 ディルファム×１",
+			"1/144 ウグ×１",
+			"1/24 オールオーバー×１"
+		],
+		"en": ["1/144 Vifam sling pannier equipped type x 1", "1/144 Dilfam x 1", "1/144 Ugu×1", "1/24 Allover x1"]
+	},
 	"images": [
 		"/images/items/01_4300_0.jpg",
 		"/images/items/01_4300_1.jpg",
@@ -66,14 +54,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_4300/",
 	"extractedAt": "2025-12-06T17:53:23.803Z",
 	"brandIds": [],
-	"seriesIds": [
-		"galaxy-drifting-vifam"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4301",
-		"item-1000179682"
-	]
+	"seriesIds": ["galaxy-drifting-vifam"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4301", "item-1000179682"]
 }

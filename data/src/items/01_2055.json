@@ -19,60 +19,40 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズ』より、「クジョウ・キョウヤ」が制作した機体の決戦仕様を再現！",
-			"en": "From \"Gundam Build Divers \", we reproduce the decisive battle specifications of the aircraft produced by \" Kyoya Kujo\"!"
-		},
-		{
-			"ja": "• Fファンネル、大型ファンネルのほか、ハイパードッズライフルマグナムなどの武装が付属。",
-			"en": "• In addition to F Funnel and Large Funnel, weapons such as Hyper Dods Rifle Magnum are included."
-		},
-		{
-			"ja": "• 「フェニックスモード（飛行形態）」への変形も再現！",
-			"en": "• Deformation to \"Phoenix mode (flight mode)\" is also reproduced!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ハイパードッズライフルマグナム×1",
-			"en": "Hyper Dods Rifle Magnum x 1"
-		},
-		{
-			"ja": "ビームサーベル×2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "シグルシールド×1",
-			"en": "Sigur Seal × 1"
-		},
-		{
-			"ja": "Fファンネル×4",
-			"en": "F funnel x 4"
-		},
-		{
-			"ja": "大型ファンネル×2",
-			"en": "Large funnel x 2"
-		},
-		{
-			"ja": "ディスプレイ台座×1",
-			"en": "Display pedestal x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×15",
-			"en": "Molded product x 15"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズ』より、「クジョウ・キョウヤ」が制作した機体の決戦仕様を再現！",
+			"• Fファンネル、大型ファンネルのほか、ハイパードッズライフルマグナムなどの武装が付属。",
+			"• 「フェニックスモード（飛行形態）」への変形も再現！"
+		],
+		"en": [
+			"From \"Gundam Build Divers \", we reproduce the decisive battle specifications of the aircraft produced by \" Kyoya Kujo\"!",
+			"• In addition to F Funnel and Large Funnel, weapons such as Hyper Dods Rifle Magnum are included.",
+			"• Deformation to \"Phoenix mode (flight mode)\" is also reproduced!"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ハイパードッズライフルマグナム×1",
+			"ビームサーベル×2",
+			"シグルシールド×1",
+			"Fファンネル×4",
+			"大型ファンネル×2",
+			"ディスプレイ台座×1"
+		],
+		"en": [
+			"Hyper Dods Rifle Magnum x 1",
+			"Beam saber x2",
+			"Sigur Seal × 1",
+			"F funnel x 4",
+			"Large funnel x 2",
+			"Display pedestal x 1"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×15", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 15", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2055_0.jpg",
 		"/images/items/01_2055_1.jpg",
@@ -84,20 +64,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2055/",
 	"extractedAt": "2025-12-06T17:48:33.410Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "1043"
 }

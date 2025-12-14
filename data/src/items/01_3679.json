@@ -18,39 +18,24 @@
 		"day": 4
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "ポケモンプラモコレクション セレクトシリーズに「サーナイト」がラインアップ！",
-			"en": "\"Gardenite\" is now available in the Pokemon Plastic Model Collection Select Series!"
-		},
-		{
-			"ja": "■組み立てやすいパーツ構成ながらも、特徴であるしなかやかなシルエットを再現。",
-			"en": "• Reproduces the characteristic graceful silhouette while having parts that are easy to assemble."
-		},
-		{
-			"ja": "■頭部はボールジョイントで上下左右に可動。",
-			"en": "• The head is movable up, down, left and right with a ball joint."
-		},
-		{
-			"ja": "■腕パーツ・ハンドパーツは組み替えにより複数のポージングが可能。",
-			"en": "• Arm parts and hand parts can be rearranged to create multiple poses."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ポーズ用腕パーツ（左右）×1式",
-			"en": "Arm parts for pose (left and right) x 1 set"
-		},
-		{
-			"ja": "ポーズ用ハンドパーツ（左右）×1式",
-			"en": "Hand parts for pose (left and right) x 1 set"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ポケモンプラモコレクション セレクトシリーズに「サーナイト」がラインアップ！",
+			"■組み立てやすいパーツ構成ながらも、特徴であるしなかやかなシルエットを再現。",
+			"■頭部はボールジョイントで上下左右に可動。",
+			"■腕パーツ・ハンドパーツは組み替えにより複数のポージングが可能。"
+		],
+		"en": [
+			"\"Gardenite\" is now available in the Pokemon Plastic Model Collection Select Series!",
+			"• Reproduces the characteristic graceful silhouette while having parts that are easy to assemble.",
+			"• The head is movable up, down, left and right with a ball joint.",
+			"• Arm parts and hand parts can be rearranged to create multiple poses."
+		]
+	},
+	"accessories": {
+		"ja": ["ポーズ用腕パーツ（左右）×1式", "ポーズ用ハンドパーツ（左右）×1式", "ホイルシール×1"],
+		"en": ["Arm parts for pose (left and right) x 1 set", "Hand parts for pose (left and right) x 1 set", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_3679_0.jpg",
 		"/images/items/01_3679_1.jpg",
@@ -68,16 +53,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_3679/",
 	"extractedAt": "2025-12-06T17:51:58.672Z",
 	"brandIds": [],
-	"seriesIds": [
-		"pocket-monster"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pocket-monster"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

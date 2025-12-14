@@ -18,31 +18,22 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "胴体パーツの差し替えで自分の好みに合わせてシスターをキャラメイキング可能。",
-			"en": "By replacing the body parts, you can customize the sister to your liking."
-		},
-		{
-			"ja": "■「SIS-A00 ティアーシャ」(別売り)と同様のボリュームでシルエットが異なるボディパーツ。",
-			"en": "• Body parts with the same volume as \"SIS-A00 Tearsha\" (sold separately) but with a different silhouette."
-		},
-		{
-			"ja": "■３０MS共通の３mmジョイントを介して別売りのキャラクターと腕・脚の組み替えが可能。",
-			"en": "• Arms and legs can be rearranged with characters sold separately using the 3mm joints common to 30MS."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ボディパーツ×1式",
-			"en": "Body parts x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×１式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"胴体パーツの差し替えで自分の好みに合わせてシスターをキャラメイキング可能。",
+			"■「SIS-A00 ティアーシャ」(別売り)と同様のボリュームでシルエットが異なるボディパーツ。",
+			"■３０MS共通の３mmジョイントを介して別売りのキャラクターと腕・脚の組み替えが可能。"
+		],
+		"en": [
+			"By replacing the body parts, you can customize the sister to your liking.",
+			"• Body parts with the same volume as \"SIS-A00 Tearsha\" (sold separately) but with a different silhouette.",
+			"• Arms and legs can be rearranged with characters sold separately using the 3mm joints common to 30MS."
+		]
+	},
+	"accessories": {
+		"ja": ["ボディパーツ×1式", "ジョイントパーツ×１式"],
+		"en": ["Body parts x 1 set", "Joint parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_3553_0.jpg",
 		"/images/items/01_3553_1.jpg",
@@ -53,18 +44,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3553/",
 	"extractedAt": "2025-12-06T17:51:42.381Z",
-	"brandIds": [
-		"30-minutes-sisters"
-	],
+	"brandIds": ["30-minutes-sisters"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manualId": "3440"
 }

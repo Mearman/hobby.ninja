@@ -18,71 +18,48 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "『ULTRAMAN』より、早田進が装着するゾフィースーツがFigure-rise Standardに堂々参戦！",
-			"en": "From \"ULTRAMAN\", the Sophie suit worn by Susumu Hayata will be participating in Figure-rise Standard!"
-		},
-		{
-			"ja": "■複数のボールジョイントで胸部と腹部を連結し可動させることにより、ひねり方向の可動域の大幅アップに成功。",
-			"en": "• By connecting and moving the chest and abdomen with multiple ball joints, we have succeeded in significantly increasing the range of motion in the twisting direction."
-		},
-		{
-			"ja": "■首パーツがボールジョイントになったことで、頭部の回転方向の可動域が大幅に拡大。",
-			"en": "• The neck part is now a ball joint, which greatly expands the range of motion in the rotational direction of the head."
-		},
-		{
-			"ja": "■胸、肩のほか、エフェクトパーツにも偏光パール素材を用いたクリアパーツを採用。",
-			"en": "• In addition to the chest, shoulders, and effect parts, clear parts using polarized pearl material are used."
-		},
-		{
-			"ja": "■腹部関節は「可動優先時」と「LEDユニット（別売り）内蔵時」の２パターンの選択式。",
-			"en": "• The abdominal joint can be selected from two patterns: \"when movable is prioritized \" and \" when the LED unit (sold separately) is built in\"."
-		},
-		{
-			"ja": "■LEDユニット（別売り）を胸部に収め、胸と目を光らせることができる。",
-			"en": "• An LED unit (sold separately) can be placed in the chest to make the chest and eyes shine."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "マルス１３３改×1",
-			"en": "Mars 133 Kai x1"
-		},
-		{
-			"ja": "スペシウム光線×1",
-			"en": "Specium ray x1"
-		},
-		{
-			"ja": "ウルトラスラッシュ×2",
-			"en": "Ultra Slash x2"
-		},
-		{
-			"ja": "スペシウムブレード×2",
-			"en": "Specium blade x2"
-		},
-		{
-			"ja": "ハンドパーツ　握り手（左右）、表情手（左右）、武器持ち手（右）",
-			"en": "Hand parts Gripping hands (left and right), expression hands (left and right), weapon holders (right)"
-		},
-		{
-			"ja": "ジョイントパーツ×1",
-			"en": "Joint parts x 1"
-		},
-		{
-			"ja": "Figure-rise Effect台座×1",
-			"en": "Figure-rise Effect pedestal x 1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『ULTRAMAN』より、早田進が装着するゾフィースーツがFigure-rise Standardに堂々参戦！",
+			"■複数のボールジョイントで胸部と腹部を連結し可動させることにより、ひねり方向の可動域の大幅アップに成功。",
+			"■首パーツがボールジョイントになったことで、頭部の回転方向の可動域が大幅に拡大。",
+			"■胸、肩のほか、エフェクトパーツにも偏光パール素材を用いたクリアパーツを採用。",
+			"■腹部関節は「可動優先時」と「LEDユニット（別売り）内蔵時」の２パターンの選択式。",
+			"■LEDユニット（別売り）を胸部に収め、胸と目を光らせることができる。"
+		],
+		"en": [
+			"From \"ULTRAMAN\", the Sophie suit worn by Susumu Hayata will be participating in Figure-rise Standard!",
+			"• By connecting and moving the chest and abdomen with multiple ball joints, we have succeeded in significantly increasing the range of motion in the twisting direction.",
+			"• The neck part is now a ball joint, which greatly expands the range of motion in the rotational direction of the head.",
+			"• In addition to the chest, shoulders, and effect parts, clear parts using polarized pearl material are used.",
+			"• The abdominal joint can be selected from two patterns: \"when movable is prioritized \" and \" when the LED unit (sold separately) is built in\".",
+			"• An LED unit (sold separately) can be placed in the chest to make the chest and eyes shine."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"マルス１３３改×1",
+			"スペシウム光線×1",
+			"ウルトラスラッシュ×2",
+			"スペシウムブレード×2",
+			"ハンドパーツ　握り手（左右）、表情手（左右）、武器持ち手（右）",
+			"ジョイントパーツ×1",
+			"Figure-rise Effect台座×1",
+			"ホイルシール×1",
+			"マーキングシール×1"
+		],
+		"en": [
+			"Mars 133 Kai x1",
+			"Specium ray x1",
+			"Ultra Slash x2",
+			"Specium blade x2",
+			"Hand parts Gripping hands (left and right), expression hands (left and right), weapon holders (right)",
+			"Joint parts x 1",
+			"Figure-rise Effect pedestal x 1",
+			"Foil Seal×1",
+			"MarkingSeal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_3653_0.jpg",
 		"/images/items/01_3653_1.jpg",
@@ -95,19 +72,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3653/",
 	"extractedAt": "2025-12-06T17:51:55.619Z",
-	"brandIds": [
-		"figure-rise-standard"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5371",
-		"01_5198",
-		"01_5096",
-		"01_5046"
-	]
+	"brandIds": ["figure-rise-standard"],
+	"seriesIds": ["ultraman"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
 }

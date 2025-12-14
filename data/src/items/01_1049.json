@@ -19,52 +19,28 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "• 『ガンダムビルドファイターズ』新プロジェクトに登場するガンプラが最速HG化！",
-			"en": "• Gunpla appearing in the new “Gundam Build Fighters” project is the fastest HG version!"
-		},
-		{
-			"ja": "• バックパックは、全身を覆うマント形態への変形に加え、大型手裏剣としても装備できる！",
-			"en": "• The backpack can be transformed into a cloak that covers the entire body, and can also be equipped as a large shuriken!"
-		},
-		{
-			"ja": "• さらに、リアスカートも変形させることで、剣として装備可能！",
-			"en": "• Furthermore, by transforming the rear skirt, it can be equipped as a sword!"
-		},
-		{
-			"ja": "• 腕に装備されたブレードはフレキシブルに可動し、忍者のようなポージングを再現することができる！",
-			"en": "• The blade equipped on the arm can be moved flexibly, allowing you to recreate ninja-like poses!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "大型マント×１",
-			"en": "Large cloak x 1"
-		},
-		{
-			"ja": "ソード×１、ビーム×２",
-			"en": "Sword x1, beam x2"
-		},
-		{
-			"ja": "ディスプレイ台座×1",
-			"en": "Display pedestal x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×11",
-			"en": "Molded products x 11"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• 『ガンダムビルドファイターズ』新プロジェクトに登場するガンプラが最速HG化！",
+			"• バックパックは、全身を覆うマント形態への変形に加え、大型手裏剣としても装備できる！",
+			"• さらに、リアスカートも変形させることで、剣として装備可能！",
+			"• 腕に装備されたブレードはフレキシブルに可動し、忍者のようなポージングを再現することができる！"
+		],
+		"en": [
+			"• Gunpla appearing in the new “Gundam Build Fighters” project is the fastest HG version!",
+			"• The backpack can be transformed into a cloak that covers the entire body, and can also be equipped as a large shuriken!",
+			"• Furthermore, by transforming the rear skirt, it can be equipped as a sword!",
+			"• The blade equipped on the arm can be moved flexibly, allowing you to recreate ninja-like poses!"
+		]
+	},
+	"accessories": {
+		"ja": ["大型マント×１", "ソード×１、ビーム×２", "ディスプレイ台座×1"],
+		"en": ["Large cloak x 1", "Sword x1, beam x2", "Display pedestal x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×11", "シール×1", "取扱説明書×1"],
+		"en": ["Molded products x 11", "Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1049_0.jpg",
 		"/images/items/01_1049_1.jpg",
@@ -75,20 +51,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1049/",
 	"extractedAt": "2025-12-06T16:41:21.033Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-fighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-fighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"manualId": "0754"
 }

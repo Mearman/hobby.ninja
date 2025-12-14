@@ -19,43 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「エグザベ専用ギャン（ハクジ装備）」をHGで立体化！",
-			"en": "From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" Exabe's exclusive Gyan (Hakuji equipment)\" is made into a three-dimensional HG!"
-		},
-		{
-			"ja": "• 肘の一軸関節やモノアイの可動を再現。",
-			"en": "• Reproduces the movement of the elbow's uniaxial joint and mono-eye."
-		},
-		{
-			"ja": "• 巨大なスピア「ハクジ」が付属。",
-			"en": "• Comes with a huge spear \"Hakuji\"."
-		},
-		{
-			"ja": "• シールドが付属し、ミサイルハッチ展開ギミックを再現。",
-			"en": "• Comes with a seal to reproduce the missile hatch deployment gimmick."
-		},
-		{
-			"ja": "• ハクジ保持用の台座が付属。",
-			"en": "• Comes with a pedestal for holding Hakuji."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "武装×1式",
-			"en": "Armed x 1 type"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "ハクジ保持用台座",
-			"en": "Hakuji holding pedestal"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「エグザベ専用ギャン（ハクジ装備）」をHGで立体化！",
+			"• 肘の一軸関節やモノアイの可動を再現。",
+			"• 巨大なスピア「ハクジ」が付属。",
+			"• シールドが付属し、ミサイルハッチ展開ギミックを再現。",
+			"• ハクジ保持用の台座が付属。"
+		],
+		"en": [
+			"From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" Exabe's exclusive Gyan (Hakuji equipment)\" is made into a three-dimensional HG!",
+			"• Reproduces the movement of the elbow's uniaxial joint and mono-eye.",
+			"• Comes with a huge spear \"Hakuji\".",
+			"• Comes with a seal to reproduce the missile hatch deployment gimmick.",
+			"• Comes with a pedestal for holding Hakuji."
+		]
+	},
+	"accessories": {
+		"ja": ["武装×1式", "マーキングシール×1", "ハクジ保持用台座"],
+		"en": ["Armed x 1 type", "MarkingSeal×1", "Hakuji holding pedestal"]
+	},
 	"images": [
 		"/images/items/01_5952_0.jpg",
 		"/images/items/01_5952_1.jpg",
@@ -67,20 +50,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5952/",
 	"extractedAt": "2025-12-06T17:56:54.130Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-gquuuuuux"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5951",
-		"01_5935"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-gquuuuuux"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5951", "01_5935"],
 	"manualId": "3236"
 }

@@ -18,35 +18,24 @@
 		"day": 18
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "ポケモンプラモコレクション セレクトシリーズに「メタグロス」がラインアップ！",
-			"en": "\"Metagross\" is now available in the Pokemon Plastic Model Collection Select Series!"
-		},
-		{
-			"ja": "• 脚部は軸可動し、アクションポーズを決めることが可能。",
-			"en": "• The legs can be pivoted to create action poses."
-		},
-		{
-			"ja": "• 脚部パーツの差し替えで印象的な飛行ポーズでのディスプレイが出来る。",
-			"en": "• By replacing the leg parts, you can display it in an impressive flight pose."
-		},
-		{
-			"ja": "• 専用のクリア台座が付属。差し替えパーツは台座へ収納可能。",
-			"en": "• A special clear pedestal is included. Replacement parts can be stored on the pedestal."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "台座×1",
-			"en": "Pedestal x 1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ポケモンプラモコレクション セレクトシリーズに「メタグロス」がラインアップ！",
+			"• 脚部は軸可動し、アクションポーズを決めることが可能。",
+			"• 脚部パーツの差し替えで印象的な飛行ポーズでのディスプレイが出来る。",
+			"• 専用のクリア台座が付属。差し替えパーツは台座へ収納可能。"
+		],
+		"en": [
+			"\"Metagross\" is now available in the Pokemon Plastic Model Collection Select Series!",
+			"• The legs can be pivoted to create action poses.",
+			"• By replacing the leg parts, you can display it in an impressive flight pose.",
+			"• A special clear pedestal is included. Replacement parts can be stored on the pedestal."
+		]
+	},
+	"accessories": {
+		"ja": ["台座×1", "シール×1"],
+		"en": ["Pedestal x 1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_4324_0.jpg",
 		"/images/items/01_4324_1.jpg",
@@ -64,16 +53,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_4324/",
 	"extractedAt": "2025-12-06T17:53:27.478Z",
 	"brandIds": [],
-	"seriesIds": [
-		"pocket-monster"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pocket-monster"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

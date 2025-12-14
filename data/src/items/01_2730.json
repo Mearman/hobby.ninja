@@ -18,39 +18,24 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "夢のハローキティとガンダムのコラボ企画！",
-			"en": "A dream collaboration project between Hello Kitty and Gundam!"
-		},
-		{
-			"ja": "ハローキティとガンダムのコラボレーションに合わせ、驚愕の和解モデルが登場！！",
-			"en": "In conjunction with the collaboration between Hello Kitty and Gundam, an amazing reconciliation model has been released! !"
-		},
-		{
-			"ja": "• 新規造形の耳とリボンが付属、ハナやヒゲ等を付属シールで再現できます。",
-			"en": "• Newly sculpted ears and ribbons are included, and you can reproduce the ears, whiskers, etc. with the included seal."
-		},
-		{
-			"ja": "• 耳と口の開閉や、手足の展開状態に組み換えも可能です。",
-			"en": "• It is also possible to open and close the ears and mouth, and to open and close the arms and legs."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "手足パーツ×1",
-			"en": "Limb parts x 1"
-		},
-		{
-			"ja": "台座×1",
-			"en": "Pedestal x 1"
-		},
-		{
-			"ja": "ホイルシール×１",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"夢のハローキティとガンダムのコラボ企画！",
+			"ハローキティとガンダムのコラボレーションに合わせ、驚愕の和解モデルが登場！！",
+			"• 新規造形の耳とリボンが付属、ハナやヒゲ等を付属シールで再現できます。",
+			"• 耳と口の開閉や、手足の展開状態に組み換えも可能です。"
+		],
+		"en": [
+			"A dream collaboration project between Hello Kitty and Gundam!",
+			"In conjunction with the collaboration between Hello Kitty and Gundam, an amazing reconciliation model has been released! !",
+			"• Newly sculpted ears and ribbons are included, and you can reproduce the ears, whiskers, etc. with the included seal.",
+			"• It is also possible to open and close the ears and mouth, and to open and close the arms and legs."
+		]
+	},
+	"accessories": {
+		"ja": ["手足パーツ×1", "台座×1", "ホイルシール×１"],
+		"en": ["Limb parts x 1", "Pedestal x 1", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_2730_0.jpg",
 		"/images/items/01_2730_1.jpg",
@@ -60,15 +45,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2730/",
 	"extractedAt": "2025-12-06T17:49:58.476Z",
 	"brandIds": [],
-	"seriesIds": [
-		"hello-kitty"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_3495",
-		"01_3295",
-		"01_2587"
-	]
+	"seriesIds": ["hello-kitty"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_3495", "01_3295", "01_2587"]
 }

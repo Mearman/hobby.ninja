@@ -19,80 +19,40 @@
 	},
 	"targetAge": 15,
 	"scale": "1/100",
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズ』よりGBNチャンピオンのクジョウ・キョウヤ使用機がマスターグレードモデルで登場！",
-			"en": "From \"Gundam Build Divers\", the machine used by GBN champion Kujo and Kyoya is now available as a master grade model!"
-		},
-		{
-			"ja": "• 特徴的な頭部の形状などMGならではのシャープな造形で再現。",
-			"en": "• Reproduced with sharp modeling unique to MG, such as the characteristic head shape."
-		},
-		{
-			"ja": "• 新規金型で作られた肩部フレームは保持力を高めた構造になっている。",
-			"en": "• The shoulder frame made with a new mold has a structure with increased holding power."
-		},
-		{
-			"ja": "• 股関節にはロック機構を搭載しMS時の安定した可動域を確保。",
-			"en": "• The hip joint is equipped with a locking mechanism to ensure a stable range of motion during MS."
-		},
-		{
-			"ja": "• 変形時に肩から露出するビームバルカンの形状を精密に再現。",
-			"en": "• Precisely reproduces the shape of the beam vulcan that is exposed from the shoulder when transformed."
-		},
-		{
-			"ja": "• フェニックスモードへの変形が可能。",
-			"en": "• Can be transformed into Phoenix mode."
-		},
-		{
-			"ja": "• 脚部の変形時のシルエットを美しく見せるこだわりの設計。",
-			"en": "• Special design that makes the silhouette look beautiful when the legs are deformed."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ハイパードッズライフルマグナム×1",
-			"en": "Hyper Dods Rifle Magnum x 1"
-		},
-		{
-			"ja": "ビームサーベル×2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "シグルシールド×1",
-			"en": "Sigur Seal × 1"
-		},
-		{
-			"ja": "Fファンネル×4",
-			"en": "F funnel x 4"
-		},
-		{
-			"ja": "ディスプレイベース×1",
-			"en": "Display base x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×23",
-			"en": "Molded product x 23"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "ネーマーシール×1",
-			"en": "Namer Seal×1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズ』よりGBNチャンピオンのクジョウ・キョウヤ使用機がマスターグレードモデルで登場！",
+			"• 特徴的な頭部の形状などMGならではのシャープな造形で再現。",
+			"• 新規金型で作られた肩部フレームは保持力を高めた構造になっている。",
+			"• 股関節にはロック機構を搭載しMS時の安定した可動域を確保。",
+			"• 変形時に肩から露出するビームバルカンの形状を精密に再現。",
+			"• フェニックスモードへの変形が可能。",
+			"• 脚部の変形時のシルエットを美しく見せるこだわりの設計。"
+		],
+		"en": [
+			"From \"Gundam Build Divers\", the machine used by GBN champion Kujo and Kyoya is now available as a master grade model!",
+			"• Reproduced with sharp modeling unique to MG, such as the characteristic head shape.",
+			"• The shoulder frame made with a new mold has a structure with increased holding power.",
+			"• The hip joint is equipped with a locking mechanism to ensure a stable range of motion during MS.",
+			"• Precisely reproduces the shape of the beam vulcan that is exposed from the shoulder when transformed.",
+			"• Can be transformed into Phoenix mode.",
+			"• Special design that makes the silhouette look beautiful when the legs are deformed."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ハイパードッズライフルマグナム×1",
+			"ビームサーベル×2",
+			"シグルシールド×1",
+			"Fファンネル×4",
+			"ディスプレイベース×1"
+		],
+		"en": ["Hyper Dods Rifle Magnum x 1", "Beam saber x2", "Sigur Seal × 1", "F funnel x 4", "Display base x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×23", "マーキングシール×1", "ネーマーシール×1", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 23", "MarkingSeal×1", "Namer Seal×1", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2125_0.jpg",
 		"/images/items/01_2125_1.jpg",
@@ -108,15 +68,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2125/",
 	"extractedAt": "2025-12-06T17:48:42.367Z",
-	"brandIds": [
-		"mg-master-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["mg-master-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": [],
 	"manualId": "0863"
 }

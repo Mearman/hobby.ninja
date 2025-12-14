@@ -18,14 +18,14 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "全長315mmの機体は、下部カーゴ内にHGUC RX-78-2 ガンダム 1体を格納可能にしました。航空機としてのディテールを追求することで、モビルスーツとは異なる存在感を打ち出しています。大型ミサイル6基は、カタパルトを使用してコンテナ内に装備可能です。",
-			"en": "The aircraft has a total length of 315mm and can store one HGUC RX-78-2 Gundam in the lower cargo. By pursuing the details of an aircraft, it has a presence different from that of a mobile suit. Six large missiles can be equipped inside the container using a catapult."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"全長315mmの機体は、下部カーゴ内にHGUC RX-78-2 ガンダム 1体を格納可能にしました。航空機としてのディテールを追求することで、モビルスーツとは異なる存在感を打ち出しています。大型ミサイル6基は、カタパルトを使用してコンテナ内に装備可能です。"
+		],
+		"en": [
+			"The aircraft has a total length of 315mm and can store one HGUC RX-78-2 Gundam in the lower cargo. By pursuing the details of an aircraft, it has a presence different from that of a mobile suit. Six large missiles can be equipped inside the container using a catapult."
+		]
+	},
 	"images": [
 		"/images/items/01_1801_0.jpg",
 		"/images/items/01_1801_1.jpg",
@@ -37,16 +37,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_1801/",
 	"extractedAt": "2025-12-06T17:48:07.878Z",
 	"brandIds": [],
-	"seriesIds": [
-		"mobile-suit-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5992",
-		"01_5473",
-		"01_5474",
-		"01_5475"
-	]
+	"seriesIds": ["mobile-suit-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5992", "01_5473", "01_5474", "01_5475"]
 }

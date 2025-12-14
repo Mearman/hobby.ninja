@@ -18,63 +18,44 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "令和初の仮面ライダー『仮面ライダーゼロワン』よりディテールと表面加工にこだわった「仮面ライダーゼロワン ライジングホッパー」が商品化！",
-			"en": "\"Kamen Rider Zero-One Rising Hopper \", which is particular about detail and surface treatment from Reiwa's first Kamen Rider \" Kamen Rider Zero-One\", has been commercialized!"
-		},
-		{
-			"ja": "• 広い可動域で劇中のダイナミックなポージングを自在に再現可能。",
-			"en": "• Wide range of motion allows you to freely recreate dynamic poses from the movie."
-		},
-		{
-			"ja": "• 腹部は引き出し式で、前屈の可動域を向上。",
-			"en": "• The abdomen can be pulled out to improve range of motion for forward bending."
-		},
-		{
-			"ja": "• 首と頭部の接続をダブルボールジョイントにすることで、“距離”と可動域を確保。",
-			"en": "• A double ball joint connects the neck and head to ensure distance and range of motion."
-		},
-		{
-			"ja": "• ライズアーキテクターは表面加工の違いとモールドで質感の違いを表現。",
-			"en": "• Rise Architector expresses different textures with different surface treatments and molds."
-		},
-		{
-			"ja": "• アタッシュカリバーはパーツの組み替えでアタッシュケース状態を再現。",
-			"en": "• Attache Calibur reproduces the attache case condition by rearranging parts."
-		},
-		{
-			"ja": "• プログライズキーはカードディスクモードとキーモードが付属。アタッシュカリバーへの装填や、ベルトのサイドバックルに収納可能。",
-			"en": "• Progress key comes with card disk mode and key mode. Can be loaded into an attache caliber or stored in the side buckle of a belt."
-		},
-		{
-			"ja": "• プログライズキーを保持する専用のハンドパーツが付属。",
-			"en": "• Comes with a special hand part to hold the progression key."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "プログライズキー（キーモード）×1",
-			"en": "Progress key (key mode) x 1"
-		},
-		{
-			"ja": "プログライズキー（カードディスクモード）×1",
-			"en": "Progress key (card disk mode) x 1"
-		},
-		{
-			"ja": "アタッシュカリバー×1式",
-			"en": "Attache Calibur x 1 set"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "アクションベース6×1",
-			"en": "action base 6×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"令和初の仮面ライダー『仮面ライダーゼロワン』よりディテールと表面加工にこだわった「仮面ライダーゼロワン ライジングホッパー」が商品化！",
+			"• 広い可動域で劇中のダイナミックなポージングを自在に再現可能。",
+			"• 腹部は引き出し式で、前屈の可動域を向上。",
+			"• 首と頭部の接続をダブルボールジョイントにすることで、“距離”と可動域を確保。",
+			"• ライズアーキテクターは表面加工の違いとモールドで質感の違いを表現。",
+			"• アタッシュカリバーはパーツの組み替えでアタッシュケース状態を再現。",
+			"• プログライズキーはカードディスクモードとキーモードが付属。アタッシュカリバーへの装填や、ベルトのサイドバックルに収納可能。",
+			"• プログライズキーを保持する専用のハンドパーツが付属。"
+		],
+		"en": [
+			"\"Kamen Rider Zero-One Rising Hopper \", which is particular about detail and surface treatment from Reiwa's first Kamen Rider \" Kamen Rider Zero-One\", has been commercialized!",
+			"• Wide range of motion allows you to freely recreate dynamic poses from the movie.",
+			"• The abdomen can be pulled out to improve range of motion for forward bending.",
+			"• A double ball joint connects the neck and head to ensure distance and range of motion.",
+			"• Rise Architector expresses different textures with different surface treatments and molds.",
+			"• Attache Calibur reproduces the attache case condition by rearranging parts.",
+			"• Progress key comes with card disk mode and key mode. Can be loaded into an attache caliber or stored in the side buckle of a belt.",
+			"• Comes with a special hand part to hold the progression key."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"プログライズキー（キーモード）×1",
+			"プログライズキー（カードディスクモード）×1",
+			"アタッシュカリバー×1式",
+			"ハンドパーツ×1式",
+			"アクションベース6×1"
+		],
+		"en": [
+			"Progress key (key mode) x 1",
+			"Progress key (card disk mode) x 1",
+			"Attache Calibur x 1 set",
+			"Hand parts x 1 set",
+			"action base 6×1"
+		]
+	},
 	"images": [
 		"/images/items/01_5451_0.jpg",
 		"/images/items/01_5451_1.jpg",
@@ -87,19 +68,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5451/",
 	"extractedAt": "2025-12-06T17:55:57.254Z",
-	"brandIds": [
-		"figure-rise-standard"
-	],
-	"seriesIds": [
-		"kamen-rider-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215369",
-		"01_5276",
-		"01_5175",
-		"01_5068"
-	]
+	"brandIds": ["figure-rise-standard"],
+	"seriesIds": ["kamen-rider-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000215369", "01_5276", "01_5175", "01_5068"]
 }

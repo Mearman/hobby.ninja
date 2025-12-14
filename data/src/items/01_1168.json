@@ -18,63 +18,33 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "メカコレクションに『宇宙戦艦ヤマト2202』に登場の「アンドロメダ級一番艦アンドロメダ」が登場！",
-			"en": "\"Andromeda-class first ship Andromeda \" from \" Space Battleship Yamato 2202\" is now available in the mecha collection!"
-		},
-		{
-			"ja": "• メカコレに『宇宙戦艦ヤマト2202』が登場！",
-			"en": "• \"Space Battleship Yamato 2202\" is now available in Mecha Collection!"
-		},
-		{
-			"ja": "• 手のひらサイズながら、アンドロメダのディテールを精密に再現！",
-			"en": "• Details of Andromeda are precisely reproduced in a palm-sized model!"
-		},
-		{
-			"ja": "• ポールジョイントで角度調整が可能な台座が付属。飛行シーンの再現も可能。",
-			"en": "• A pedestal whose angle can be adjusted with a pole joint is included. It is also possible to reproduce flight scenes."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ディスプレイベース×１",
-			"en": "Display base x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×4",
-			"en": "Molded product x 4"
-		},
-		{
-			"ja": "マーキングシール×１",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "取扱説明書（箱裏側に記載）",
-			"en": "Instruction manual (written on the back of the box)"
-		}
-	],
-	"images": [
-		"/images/items/01_1168_0.jpg",
-		"/images/items/01_1168_1.jpg"
-	],
+	"description": {
+		"ja": [
+			"メカコレクションに『宇宙戦艦ヤマト2202』に登場の「アンドロメダ級一番艦アンドロメダ」が登場！",
+			"• メカコレに『宇宙戦艦ヤマト2202』が登場！",
+			"• 手のひらサイズながら、アンドロメダのディテールを精密に再現！",
+			"• ポールジョイントで角度調整が可能な台座が付属。飛行シーンの再現も可能。"
+		],
+		"en": [
+			"\"Andromeda-class first ship Andromeda \" from \" Space Battleship Yamato 2202\" is now available in the mecha collection!",
+			"• \"Space Battleship Yamato 2202\" is now available in Mecha Collection!",
+			"• Details of Andromeda are precisely reproduced in a palm-sized model!",
+			"• A pedestal whose angle can be adjusted with a pole joint is included. It is also possible to reproduce flight scenes."
+		]
+	},
+	"accessories": {
+		"ja": ["ディスプレイベース×１"],
+		"en": ["Display base x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×4", "マーキングシール×１", "取扱説明書（箱裏側に記載）"],
+		"en": ["Molded product x 4", "MarkingSeal×1", "Instruction manual (written on the back of the box)"]
+	},
+	"images": ["/images/items/01_1168_0.jpg", "/images/items/01_1168_1.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1168/",
 	"extractedAt": "2025-12-06T16:58:12.943Z",
-	"brandIds": [
-		"mecha-collection"
-	],
-	"seriesIds": [
-		"space-battleship-yamato-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3667",
-		"01_3650"
-	]
+	"brandIds": ["mecha-collection"],
+	"seriesIds": ["space-battleship-yamato-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5498", "01_5500", "01_3667", "01_3650"]
 }

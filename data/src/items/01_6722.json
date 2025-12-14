@@ -18,55 +18,35 @@
 		"day": 12
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "自分の手で恐竜を“知りつくす”ブランド『プラノサウルス』より、映画『ジュラシック・ワールド／復活の大地』の「T-レックス」が登場！",
-			"en": "From Planosaurus, a brand that lets you get to know dinosaurs with your own hands, comes the T-Rex from the movie Jurassic World!"
-		},
-		{
-			"ja": "■「骨格ビルド」で恐竜の内部構造から知ることができる。",
-			"en": "• \"Skeleton Build\" allows you to learn about the internal structure of dinosaurs."
-		},
-		{
-			"ja": "■「恐竜ビルド」で骨格の上から外皮パーツを取り付けるプラモデルならではの仕様で恐竜の姿を復元。",
-			"en": "• \"Dinosaur Build\" allows you to restore the dinosaur's appearance using specifications unique to plastic models, where the skin parts are attached to the top of the skeleton."
-		},
-		{
-			"ja": "■ニッパー等の道具や接着剤が必要ないから簡単に組み立てられる。",
-			"en": "• Easy to assemble as there is no need for tools such as nippers or adhesives."
-		},
-		{
-			"ja": "■外皮は全て新規造形。骨格も一部新規造形で、可動箇所も追加。",
-			"en": "• The outer skin is all new modeling. The skeleton is also partially new, and movable parts have been added."
-		},
-		{
-			"ja": "■専用の陸台座には、『ジュラシック・ワールド』のロゴパーツが付属。",
-			"en": "• The dedicated land pedestal comes with \"Jurassic World\" logo parts."
-		},
-		{
-			"ja": "■楽しく飾れる背景イラスト付き！",
-			"en": "• Includes background illustrations for fun decoration!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "シール×1式",
-			"en": "Seal×1 type"
-		},
-		{
-			"ja": "台座×1",
-			"en": "Pedestal x 1"
-		},
-		{
-			"ja": "背景台紙×1",
-			"en": "Background mount x 1"
-		},
-		{
-			"ja": "▼『ジュラシックワールド／復活の大地』アイテム 特設サイトはコチラ！",
-			"en": "▼Click here for the special site for “Jurassic World/Resurrection Earth” items!"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"自分の手で恐竜を“知りつくす”ブランド『プラノサウルス』より、映画『ジュラシック・ワールド／復活の大地』の「T-レックス」が登場！",
+			"■「骨格ビルド」で恐竜の内部構造から知ることができる。",
+			"■「恐竜ビルド」で骨格の上から外皮パーツを取り付けるプラモデルならではの仕様で恐竜の姿を復元。",
+			"■ニッパー等の道具や接着剤が必要ないから簡単に組み立てられる。",
+			"■外皮は全て新規造形。骨格も一部新規造形で、可動箇所も追加。",
+			"■専用の陸台座には、『ジュラシック・ワールド』のロゴパーツが付属。",
+			"■楽しく飾れる背景イラスト付き！"
+		],
+		"en": [
+			"From Planosaurus, a brand that lets you get to know dinosaurs with your own hands, comes the T-Rex from the movie Jurassic World!",
+			"• \"Skeleton Build\" allows you to learn about the internal structure of dinosaurs.",
+			"• \"Dinosaur Build\" allows you to restore the dinosaur's appearance using specifications unique to plastic models, where the skin parts are attached to the top of the skeleton.",
+			"• Easy to assemble as there is no need for tools such as nippers or adhesives.",
+			"• The outer skin is all new modeling. The skeleton is also partially new, and movable parts have been added.",
+			"• The dedicated land pedestal comes with \"Jurassic World\" logo parts.",
+			"• Includes background illustrations for fun decoration!"
+		]
+	},
+	"accessories": {
+		"ja": ["シール×1式", "台座×1", "背景台紙×1", "▼『ジュラシックワールド／復活の大地』アイテム 特設サイトはコチラ！"],
+		"en": [
+			"Seal×1 type",
+			"Pedestal x 1",
+			"Background mount x 1",
+			"▼Click here for the special site for “Jurassic World/Resurrection Earth” items!"
+		]
+	},
 	"images": [
 		"/images/items/01_6722_0.jpg",
 		"/images/items/01_6722_1.jpg",
@@ -84,16 +64,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_6722/",
 	"extractedAt": "2025-12-06T17:57:50.965Z",
 	"brandIds": [],
-	"seriesIds": [
-		"planosaurus"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5501",
-		"01_5390",
-		"01_5389",
-		"01_5248"
-	]
+	"seriesIds": ["planosaurus"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5501", "01_5390", "01_5389", "01_5248"]
 }

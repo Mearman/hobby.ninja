@@ -18,71 +18,48 @@
 		"day": 8
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "『スーパーロボット大戦OG』から、「ヴァイスリッター」がHGで登場！「オクスタン・ランチャー」や「プラズマカッター」が付属！",
-			"en": "\"Weiss Ritter \" from \" Super Robot Wars OG \" appears in HG! \" Oxtan Launcher \" and \" Plasma Cutter\" are included!"
-		},
-		{
-			"ja": "■武装は、オクスタン・ランチャー、プラズマカッター、3連ビームキャノンが付属。",
-			"en": "• Armed with an oxtan launcher, plasma cutter, and triple beam cannon."
-		},
-		{
-			"ja": "■3連ビームキャノンの銃身は差し替えで再現。",
-			"en": "• The barrel of the triple beam cannon is reproduced by replacing it."
-		},
-		{
-			"ja": "■背部テスラ・ドライブ（翼）とスタビライザーはフレキシブルに可動し、躍動感のあるポーズを表現可能。",
-			"en": "• The Tesla Drive (wings) and stabilizer on the back can be flexibly moved, allowing for dynamic poses."
-		},
-		{
-			"ja": "■腰は内部のボールジョイントと軸で前後左右に可動。",
-			"en": "• The waist can be moved forward, backward, left and right using an internal ball joint and axis."
-		},
-		{
-			"ja": "■肩は2軸で可動し、上下可動と前後可動ができる。",
-			"en": "• The shoulder can move in two axes, and can move up and down and back and forth."
-		},
-		{
-			"ja": "■別売りの「HG ゲシュペンスト」に付属するスプリットミサイルを取り付けできるジョイントパーツが付属。",
-			"en": "• Comes with joint parts that allow you to attach the split missile that comes with the separately sold \"HG Gespenst\"."
-		},
-		{
-			"ja": "■ポージングの幅を広げるアクションベース7が付属。",
-			"en": "• Action base 7 is included to expand the range of poses."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "オクスタン・ランチャー×1",
-			"en": "Octane launcher x1"
-		},
-		{
-			"ja": "3連ビームキャノン×1式",
-			"en": "Triple beam cannon x 1 set"
-		},
-		{
-			"ja": "プラズマカッター×1",
-			"en": "Plasma cutter x 1"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		},
-		{
-			"ja": "アクションベース7×1",
-			"en": "action base 7×1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『スーパーロボット大戦OG』から、「ヴァイスリッター」がHGで登場！「オクスタン・ランチャー」や「プラズマカッター」が付属！",
+			"■武装は、オクスタン・ランチャー、プラズマカッター、3連ビームキャノンが付属。",
+			"■3連ビームキャノンの銃身は差し替えで再現。",
+			"■背部テスラ・ドライブ（翼）とスタビライザーはフレキシブルに可動し、躍動感のあるポーズを表現可能。",
+			"■腰は内部のボールジョイントと軸で前後左右に可動。",
+			"■肩は2軸で可動し、上下可動と前後可動ができる。",
+			"■別売りの「HG ゲシュペンスト」に付属するスプリットミサイルを取り付けできるジョイントパーツが付属。",
+			"■ポージングの幅を広げるアクションベース7が付属。"
+		],
+		"en": [
+			"\"Weiss Ritter \" from \" Super Robot Wars OG \" appears in HG! \" Oxtan Launcher \" and \" Plasma Cutter\" are included!",
+			"• Armed with an oxtan launcher, plasma cutter, and triple beam cannon.",
+			"• The barrel of the triple beam cannon is reproduced by replacing it.",
+			"• The Tesla Drive (wings) and stabilizer on the back can be flexibly moved, allowing for dynamic poses.",
+			"• The waist can be moved forward, backward, left and right using an internal ball joint and axis.",
+			"• The shoulder can move in two axes, and can move up and down and back and forth.",
+			"• Comes with joint parts that allow you to attach the split missile that comes with the separately sold \"HG Gespenst\".",
+			"• Action base 7 is included to expand the range of poses."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"オクスタン・ランチャー×1",
+			"3連ビームキャノン×1式",
+			"プラズマカッター×1",
+			"ハンドパーツ×1式",
+			"ジョイントパーツ×1式",
+			"アクションベース7×1",
+			"シール×1"
+		],
+		"en": [
+			"Octane launcher x1",
+			"Triple beam cannon x 1 set",
+			"Plasma cutter x 1",
+			"Hand parts x 1 set",
+			"Joint parts x 1 set",
+			"action base 7×1",
+			"Seal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_5491_0.jpg",
 		"/images/items/01_5491_1.jpg",
@@ -95,19 +72,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5491/",
 	"extractedAt": "2025-12-06T17:56:01.636Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"super-robot-wars-og"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5578",
-		"item-1000214961",
-		"01_5369",
-		"item-1000208235"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["super-robot-wars-og"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5578", "item-1000214961", "01_5369", "item-1000208235"]
 }

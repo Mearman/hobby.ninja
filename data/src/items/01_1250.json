@@ -18,63 +18,35 @@
 		"day": 24
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "メカコレクションに「宇宙戦艦ヤマト2202」に登場！",
-			"en": "\"Space Battleship Yamato 2202\" appears in the mecha collection!"
-		},
-		{
-			"ja": "• 手のひらサイズながら、ヤマト2202のディテールを精密に再現！",
-			"en": "• Details of Yamato 2202 are precisely reproduced in a palm-sized model!"
-		},
-		{
-			"ja": "艦橋やパルスレーザー砲を忠実に再現。",
-			"en": "Faithfully reproduces the bridge and pulse laser cannon."
-		},
-		{
-			"ja": "• ポールジョイントで角度調整が可能な台座が付属。飛行シーンの再現も可能。",
-			"en": "• A pedestal whose angle can be adjusted with a pole joint is included. It is also possible to reproduce flight scenes."
-		},
-		{
-			"ja": "• 船体側面から展開される「安定翼」を選択式で再現可能。",
-			"en": "• The \"stability wings\" deployed from the side of the hull can be selectively reproduced."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ディスプレイベース×1",
-			"en": "Display base x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×5",
-			"en": "Molded product x 5"
-		},
-		{
-			"ja": "取扱説明書（箱裏側に記載）",
-			"en": "Instruction manual (written on the back of the box)"
-		}
-	],
-	"images": [
-		"/images/items/01_1250_0.jpg",
-		"/images/items/01_1250_1.jpg"
-	],
+	"description": {
+		"ja": [
+			"メカコレクションに「宇宙戦艦ヤマト2202」に登場！",
+			"• 手のひらサイズながら、ヤマト2202のディテールを精密に再現！",
+			"艦橋やパルスレーザー砲を忠実に再現。",
+			"• ポールジョイントで角度調整が可能な台座が付属。飛行シーンの再現も可能。",
+			"• 船体側面から展開される「安定翼」を選択式で再現可能。"
+		],
+		"en": [
+			"\"Space Battleship Yamato 2202\" appears in the mecha collection!",
+			"• Details of Yamato 2202 are precisely reproduced in a palm-sized model!",
+			"Faithfully reproduces the bridge and pulse laser cannon.",
+			"• A pedestal whose angle can be adjusted with a pole joint is included. It is also possible to reproduce flight scenes.",
+			"• The \"stability wings\" deployed from the side of the hull can be selectively reproduced."
+		]
+	},
+	"accessories": {
+		"ja": ["ディスプレイベース×1"],
+		"en": ["Display base x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×5", "取扱説明書（箱裏側に記載）"],
+		"en": ["Molded product x 5", "Instruction manual (written on the back of the box)"]
+	},
+	"images": ["/images/items/01_1250_0.jpg", "/images/items/01_1250_1.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1250/",
 	"extractedAt": "2025-12-06T17:04:25.516Z",
-	"brandIds": [
-		"mecha-collection"
-	],
-	"seriesIds": [
-		"space-battleship-yamato-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3667",
-		"01_3650"
-	]
+	"brandIds": ["mecha-collection"],
+	"seriesIds": ["space-battleship-yamato-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5498", "01_5500", "01_3667", "01_3650"]
 }

@@ -17,47 +17,24 @@
 		"month": 0
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "新たなデザインのケロロロボをHGにて商品化であります！",
-			"en": "A new design of Keroro Robo will be commercialized at HG!"
-		},
-		{
-			"ja": "■「ケロロアクションシステム」を搭載し、躍動感のあるポージングが可能",
-			"en": "• Equipped with \"Keroro Action System\", allowing for dynamic posing."
-		},
-		{
-			"ja": "■クリアカラーのエフェクトパーツが付属",
-			"en": "• Comes with clear color effect parts."
-		},
-		{
-			"ja": "■シールド、ライフルが付属",
-			"en": "• Seal and rifle included"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "バックパック×1式",
-			"en": "Backpack x 1 set"
-		},
-		{
-			"ja": "武装×1式",
-			"en": "Armed x 1 type"
-		},
-		{
-			"ja": "エフェクトパーツ×1式",
-			"en": "Effect parts x 1"
-		},
-		{
-			"ja": "自立用パーツ",
-			"en": "Freestanding parts"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"新たなデザインのケロロロボをHGにて商品化であります！",
+			"■「ケロロアクションシステム」を搭載し、躍動感のあるポージングが可能",
+			"■クリアカラーのエフェクトパーツが付属",
+			"■シールド、ライフルが付属"
+		],
+		"en": [
+			"A new design of Keroro Robo will be commercialized at HG!",
+			"• Equipped with \"Keroro Action System\", allowing for dynamic posing.",
+			"• Comes with clear color effect parts.",
+			"• Seal and rifle included"
+		]
+	},
+	"accessories": {
+		"ja": ["バックパック×1式", "武装×1式", "エフェクトパーツ×1式", "自立用パーツ", "シール×1"],
+		"en": ["Backpack x 1 set", "Armed x 1 type", "Effect parts x 1", "Freestanding parts", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_7034_0.jpg",
 		"/images/items/01_7034_1.jpg",
@@ -66,14 +43,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_7034/",
 	"extractedAt": "2025-12-06T17:58:24.788Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"sergeant-keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["sergeant-keroro"],
+	"categoryIds": ["character-plastic-model"],
 	"relatedItemIds": []
 }

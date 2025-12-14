@@ -18,36 +18,21 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
-			"en": "Event-limited Gunpla sold at various event venues."
-		},
-		{
-			"ja": "RG ガンダムアストレイ ゴールドフレーム天ミナがイベント限定のスペシャルコーティングで登場！",
-			"en": "RG Gundam Astray Gold Frame Amina is now available with special event-limited coating!"
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_2190_0.jpg"
-	],
+	"description": {
+		"ja": [
+			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
+			"RG ガンダムアストレイ ゴールドフレーム天ミナがイベント限定のスペシャルコーティングで登場！"
+		],
+		"en": [
+			"Event-limited Gunpla sold at various event venues.",
+			"RG Gundam Astray Gold Frame Amina is now available with special event-limited coating!"
+		]
+	},
+	"images": ["/images/items/01_2190_0.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2190/",
 	"extractedAt": "2025-12-06T17:48:50.376Z",
-	"brandIds": [
-		"rg-real-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-seed-astray"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000116090",
-		"01_833",
-		"01_1908",
-		"01_1903"
-	]
+	"brandIds": ["rg-real-grade"],
+	"seriesIds": ["mobile-suit-gundam-seed-astray"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000116090", "01_833", "01_1908", "01_1903"]
 }

@@ -18,27 +18,20 @@
 		"day": 7
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "「ボールハロ」に続くハロカスタムバリエーションとして、「ザクレロハロ」が登場！",
-			"en": "\"Zakurero Haro \" is now available as a halo custom variation following \" Ball Haro\"!"
-		},
-		{
-			"ja": "• ジオン軍の大型MAザクレロをイメージした鎌とブースターを装備。",
-			"en": "• Equipped with a scythe and booster inspired by Zeon's large MA Zakurero."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "鎌×2",
-			"en": "Sickle x2"
-		},
-		{
-			"ja": "ブースター×2",
-			"en": "Booster x 2"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"「ボールハロ」に続くハロカスタムバリエーションとして、「ザクレロハロ」が登場！",
+			"• ジオン軍の大型MAザクレロをイメージした鎌とブースターを装備。"
+		],
+		"en": [
+			"\"Zakurero Haro \" is now available as a halo custom variation following \" Ball Haro\"!",
+			"• Equipped with a scythe and booster inspired by Zeon's large MA Zakurero."
+		]
+	},
+	"accessories": {
+		"ja": ["鎌×2", "ブースター×2"],
+		"en": ["Sickle x2", "Booster x 2"]
+	},
 	"images": [
 		"/images/items/01_2490_0.jpg",
 		"/images/items/01_2490_1.jpg",
@@ -48,19 +41,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2490/",
 	"extractedAt": "2025-12-06T17:49:28.639Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers-rerise"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5054", "01_3562", "01_3565", "01_3291"]
 }

@@ -19,30 +19,22 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテム。",
-			"en": "A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world."
-		},
-		{
-			"ja": "『機動戦士ムーンガンダム』より、サイコガンダムMk-IVG・ドアーズの頭部とサイコプレートを装着した状態のバルギルがHGで登場！",
-			"en": "From \"Mobile Suit Moon Gundam\", Bargil is now available in HG, wearing the head of Psycho Gundam Mk-IVG Doors and the psycho plate!"
-		},
-		{
-			"ja": "■腕部に装備されたバタフライ・エッジは着脱式。",
-			"en": "• The butterfly edges on the arms are removable."
-		},
-		{
-			"ja": "■ビーム・ライフル用のハンドパーツが付属し、安定した保持が可能。",
-			"en": "• Comes with hand parts for beam rifle, allowing for stable holding."
-		},
-		{
-			"ja": "■サイコプレートは分離・組み替えが可能。ロック機構で、プレート同士をしっかりと結合。",
-			"en": "• Psychoplates can be separated and rearranged. The locking mechanism firmly connects the plates."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテム。",
+			"『機動戦士ムーンガンダム』より、サイコガンダムMk-IVG・ドアーズの頭部とサイコプレートを装着した状態のバルギルがHGで登場！",
+			"■腕部に装備されたバタフライ・エッジは着脱式。",
+			"■ビーム・ライフル用のハンドパーツが付属し、安定した保持が可能。",
+			"■サイコプレートは分離・組み替えが可能。ロック機構で、プレート同士をしっかりと結合。"
+		],
+		"en": [
+			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"From \"Mobile Suit Moon Gundam\", Bargil is now available in HG, wearing the head of Psycho Gundam Mk-IVG Doors and the psycho plate!",
+			"• The butterfly edges on the arms are removable.",
+			"• Comes with hand parts for beam rifle, allowing for stable holding.",
+			"• Psychoplates can be separated and rearranged. The locking mechanism firmly connects the plates."
+		]
+	},
 	"images": [
 		"/images/items/01_6836_0.jpg",
 		"/images/items/01_6836_1.jpg",
@@ -53,14 +45,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_6836/",
 	"extractedAt": "2025-12-06T17:58:02.151Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-moon-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-moon-gundam"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

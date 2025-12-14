@@ -17,18 +17,16 @@
 		"month": 0
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "映画「超劇場版ケロロ軍曹3 ケロロ対ケロロ天空大決戦であります！」に登場する“ダークケロロ”がケロプラにラインナップ！",
-			"en": "“Dark Keroro” that appears in the movie “Super Movie Keroro Sergeant 3 Keroro vs. Keroro Sky Battle!” is now available in Keropura!"
-		},
-		{
-			"ja": "ダークケロロの特徴的な手とマントが付属。",
-			"en": "Dark Keroro's distinctive hands and cloak are included."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"映画「超劇場版ケロロ軍曹3 ケロロ対ケロロ天空大決戦であります！」に登場する“ダークケロロ”がケロプラにラインナップ！",
+			"ダークケロロの特徴的な手とマントが付属。"
+		],
+		"en": [
+			"“Dark Keroro” that appears in the movie “Super Movie Keroro Sergeant 3 Keroro vs. Keroro Sky Battle!” is now available in Keropura!",
+			"Dark Keroro's distinctive hands and cloak are included."
+		]
+	},
 	"images": [
 		"/images/items/01_5337_0.jpg",
 		"/images/items/01_5337_1.jpg",
@@ -40,16 +38,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5337/",
 	"extractedAt": "2025-12-06T17:55:41.531Z",
 	"brandIds": [],
-	"seriesIds": [
-		"sergeant-keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["sergeant-keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

@@ -18,47 +18,24 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "2021年４月より全世界にてアニメがスタート予定の『SDガンダムワールド ヒーローズ』より、大型の火器を装備したエドワードセカンドVが登場！",
-			"en": "Anime will start worldwide in 20214 From Scheduled's \"SD Gundam World Heroes\", Edward Second V equipped with a large firearm appears!"
-		},
-		{
-			"ja": "■大型のキャノン砲は、「仮面」パーツの望遠鏡と共に着脱可能。",
-			"en": "• The large cannon is removable along with the \"mask\" part telescope."
-		},
-		{
-			"ja": "■サーベルはリアアーマーで保持。",
-			"en": "• Saber is held by rear armor."
-		},
-		{
-			"ja": "■角度が付いた武器持ち用の左手でサーベルを突き出すように構える事が可能。",
-			"en": "• It is possible to hold a saber with the angled left hand that holds the weapon."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "大型キャノン砲×１",
-			"en": "Large cannon x 1"
-		},
-		{
-			"ja": "サーベル×１",
-			"en": "Saber x 1"
-		},
-		{
-			"ja": "仮面×１",
-			"en": "Mask x1"
-		},
-		{
-			"ja": "武器持ち手（左）×１",
-			"en": "Weapon holder (left) x 1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"2021年４月より全世界にてアニメがスタート予定の『SDガンダムワールド ヒーローズ』より、大型の火器を装備したエドワードセカンドVが登場！",
+			"■大型のキャノン砲は、「仮面」パーツの望遠鏡と共に着脱可能。",
+			"■サーベルはリアアーマーで保持。",
+			"■角度が付いた武器持ち用の左手でサーベルを突き出すように構える事が可能。"
+		],
+		"en": [
+			"Anime will start worldwide in 20214 From Scheduled's \"SD Gundam World Heroes\", Edward Second V equipped with a large firearm appears!",
+			"• The large cannon is removable along with the \"mask\" part telescope.",
+			"• Saber is held by rear armor.",
+			"• It is possible to hold a saber with the angled left hand that holds the weapon."
+		]
+	},
+	"accessories": {
+		"ja": ["大型キャノン砲×１", "サーベル×１", "仮面×１", "武器持ち手（左）×１", "ホイルシール×1"],
+		"en": ["Large cannon x 1", "Saber x 1", "Mask x1", "Weapon holder (left) x 1", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_3404_0.jpg",
 		"/images/items/01_3404_1.jpg",
@@ -69,16 +46,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_3404/",
 	"extractedAt": "2025-12-06T17:51:23.111Z",
 	"brandIds": [],
-	"seriesIds": [
-		"sd-gundam-world-heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	]
+	"seriesIds": ["sd-gundam-world-heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
 }

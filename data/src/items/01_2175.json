@@ -19,76 +19,48 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動戦士ガンダム THE ORIGIN』に登場するザクII C-6/R6型が登場！",
-			"en": "The Zaku II C-6/R6 type that appears in \"Mobile Suit Gundam THE ORIGIN\" is now available!"
-		},
-		{
-			"ja": "• 劇中同様のファルメル隊を再現したくなる新規造形の武装パーツにより、魅力的な量産機を演出。",
-			"en": "• Newly shaped armed parts that will make you want to recreate the Falmer squad similar to the one in the play, create an attractive mass-produced machine."
-		},
-		{
-			"ja": "• 各部のマーキングによりデニム曹長機、スレンダー伍長機、ジーン兵長機、パチェコ機が再現可能。",
-			"en": "• By marking each part, Sergeant Denim machine, Corporal Slender machine, Corporal Gene machine, and Pacheco machine can be reproduced."
-		},
-		{
-			"ja": "• 肩のスパイクアーマー接続箇所や胸部装甲のバルカン砲も精密に再現されている。",
-			"en": "• The spike armor connection point on the shoulder and the Vulcan cannon on the chest armor are also precisely reproduced."
-		},
-		{
-			"ja": "• ベルト給弾式マシンガンをはじめ、豊富な武装が付属。",
-			"en": "• A wide variety of armaments are included, including a belt-fed machine gun."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ベルト給弾式マシンガン×1",
-			"en": "Belt-fed machine gun x 1"
-		},
-		{
-			"ja": "バズーカ×1",
-			"en": "Bazooka×1"
-		},
-		{
-			"ja": "バズーカ用予備マガジン×2",
-			"en": "Spare magazine for bazooka x 2"
-		},
-		{
-			"ja": "対艦ライフル×1",
-			"en": "Anti-ship rifle x1"
-		},
-		{
-			"ja": "ヒート・ホーク×各1（展開・収納）",
-			"en": "Heat Hawk x 1 each (deployed/stored)"
-		},
-		{
-			"ja": "ライフル/バズーカ用右手首×1",
-			"en": "Right wrist for rifle/bazooka x 1"
-		},
-		{
-			"ja": "拳(左右)×一式",
-			"en": "Fists (left and right) x set"
-		},
-		{
-			"ja": "左平手×1",
-			"en": "Left palm x1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成型品×12",
-			"en": "Molded product x 12"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『機動戦士ガンダム THE ORIGIN』に登場するザクII C-6/R6型が登場！",
+			"• 劇中同様のファルメル隊を再現したくなる新規造形の武装パーツにより、魅力的な量産機を演出。",
+			"• 各部のマーキングによりデニム曹長機、スレンダー伍長機、ジーン兵長機、パチェコ機が再現可能。",
+			"• 肩のスパイクアーマー接続箇所や胸部装甲のバルカン砲も精密に再現されている。",
+			"• ベルト給弾式マシンガンをはじめ、豊富な武装が付属。"
+		],
+		"en": [
+			"The Zaku II C-6/R6 type that appears in \"Mobile Suit Gundam THE ORIGIN\" is now available!",
+			"• Newly shaped armed parts that will make you want to recreate the Falmer squad similar to the one in the play, create an attractive mass-produced machine.",
+			"• By marking each part, Sergeant Denim machine, Corporal Slender machine, Corporal Gene machine, and Pacheco machine can be reproduced.",
+			"• The spike armor connection point on the shoulder and the Vulcan cannon on the chest armor are also precisely reproduced.",
+			"• A wide variety of armaments are included, including a belt-fed machine gun."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ベルト給弾式マシンガン×1",
+			"バズーカ×1",
+			"バズーカ用予備マガジン×2",
+			"対艦ライフル×1",
+			"ヒート・ホーク×各1（展開・収納）",
+			"ライフル/バズーカ用右手首×1",
+			"拳(左右)×一式",
+			"左平手×1"
+		],
+		"en": [
+			"Belt-fed machine gun x 1",
+			"Bazooka×1",
+			"Spare magazine for bazooka x 2",
+			"Anti-ship rifle x1",
+			"Heat Hawk x 1 each (deployed/stored)",
+			"Right wrist for rifle/bazooka x 1",
+			"Fists (left and right) x set",
+			"Left palm x1"
+		]
+	},
+	"contents": {
+		"ja": ["成型品×12", "マーキングシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 12", "MarkingSeal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2175_0.jpg",
 		"/images/items/01_2175_1.jpg",
@@ -101,20 +73,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2175/",
 	"extractedAt": "2025-12-06T17:48:48.967Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-the-origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2828",
-		"01_2707",
-		"item-1000135687"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-the-origin"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3711", "01_2828", "01_2707", "item-1000135687"],
 	"manualId": "0067"
 }

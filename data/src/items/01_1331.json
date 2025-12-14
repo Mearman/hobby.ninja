@@ -18,63 +18,44 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• 香りでシーンを演出したいキミへ！",
-			"en": "• For you who want to create a scene with scent!"
-		},
-		{
-			"ja": "• 好きな匂いをブレンドして発射できる魔法の扇風機！",
-			"en": "• A magical electric fan that can blend and emit your favorite scent!"
-		},
-		{
-			"ja": "• テレビ番組「ポチっと発明 ピカちんキット」に登場するエア臭ターが商品化！",
-			"en": "• The air odor that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!"
-		},
-		{
-			"ja": "• どんな香りも自在にふりまけ！！手元の引き金を引いて複数の香りを発射し、遠くへ香りを飛ばせる発明品！",
-			"en": "• Sprinkle any scent freely! ! An invention that allows you to fire multiple scents by pulling the trigger at hand, and send the scents far away!"
-		},
-		{
-			"ja": "• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！",
-			"en": "• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
-		}
-	],
-	"accessories": [],
-	"contents": [
-		{
-			"ja": "エア臭ター…1（成形品…3）",
-			"en": "Air odor...1 (molded product...3)"
-		},
-		{
-			"ja": "香り玉…2",
-			"en": "Scent ball...2"
-		},
-		{
-			"ja": "輪ゴム…1",
-			"en": "Rubber band...1"
-		},
-		{
-			"ja": "シャフト…4",
-			"en": "Shaft...4"
-		},
-		{
-			"ja": "プロペラ…1",
-			"en": "Propeller...1"
-		},
-		{
-			"ja": "ピカちんQRコードステッカー…1",
-			"en": "Pikachin QR code Sticker...1"
-		},
-		{
-			"ja": "取扱説明書…1",
-			"en": "Handling Manual...1"
-		},
-		{
-			"ja": "ピカちんシート…1",
-			"en": "Pikachin sheet...1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• 香りでシーンを演出したいキミへ！",
+			"• 好きな匂いをブレンドして発射できる魔法の扇風機！",
+			"• テレビ番組「ポチっと発明 ピカちんキット」に登場するエア臭ターが商品化！",
+			"• どんな香りも自在にふりまけ！！手元の引き金を引いて複数の香りを発射し、遠くへ香りを飛ばせる発明品！",
+			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
+		],
+		"en": [
+			"• For you who want to create a scene with scent!",
+			"• A magical electric fan that can blend and emit your favorite scent!",
+			"• The air odor that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
+			"• Sprinkle any scent freely! ! An invention that allows you to fire multiple scents by pulling the trigger at hand, and send the scents far away!",
+			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
+		]
+	},
+	"contents": {
+		"ja": [
+			"エア臭ター…1（成形品…3）",
+			"香り玉…2",
+			"輪ゴム…1",
+			"シャフト…4",
+			"プロペラ…1",
+			"ピカちんQRコードステッカー…1",
+			"取扱説明書…1",
+			"ピカちんシート…1"
+		],
+		"en": [
+			"Air odor...1 (molded product...3)",
+			"Scent ball...2",
+			"Rubber band...1",
+			"Shaft...4",
+			"Propeller...1",
+			"Pikachin QR code Sticker...1",
+			"Handling Manual...1",
+			"Pikachin sheet...1"
+		]
+	},
 	"images": [
 		"/images/items/01_1331_0.jpg",
 		"/images/items/01_1331_1.jpg",
@@ -84,16 +65,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_1331/",
 	"extractedAt": "2025-12-06T17:14:30.621Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2605", "01_2606", "01_2607", "01_2545"]
 }

@@ -19,64 +19,42 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ダブルオーダイバーエースに大改修を行い、新たに生まれ変わったリクのガンプラが登場！",
-			"en": "00 Diver Ace has undergone a major renovation, and Riku's Gunpla has been reborn!"
-		},
-		{
-			"ja": "• GNドライヴにデスティニーのウイングユニットを組み込んだ本機独自の装備「スカイドライヴユニット」の形状を再現！",
-			"en": "• Reproduce the shape of this machine's unique equipment \"Sky Drive Unit\" which incorporates Destiny's wing unit into GN Drive!"
-		},
-		{
-			"ja": "• ビームライフル、ビームサーベル、バスターソード、ロングライフルなど多彩な武装が付属し、バスターソードとロングライフルはスカイドライヴユニットに懸架させることが可能！",
-			"en": "• A variety of weapons are included, including a beam rifle, beam saber, buster sword, and long rifle, and the buster sword and long rifle can be suspended on the sky drive unit!"
-		},
-		{
-			"ja": "• 広い可動域で、劇中同様に迫力あるアクションポーズを楽しめる！",
-			"en": "• With a wide range of motion, you can enjoy powerful action poses just like in the movie!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビームライフル×1",
-			"en": "Beam rifle x 1"
-		},
-		{
-			"ja": "ビームサーベル×2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "バスターソード×1",
-			"en": "Buster sword x1"
-		},
-		{
-			"ja": "ロングライフル×1",
-			"en": "Long rifle x 1"
-		},
-		{
-			"ja": "バックパック用ジョイントパーツ×1",
-			"en": "Backpack joint parts x 1"
-		},
-		{
-			"ja": "手首パーツ（左平手）×1",
-			"en": "Wrist parts (left palm) x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×8",
-			"en": "Molded product x 8"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"ダブルオーダイバーエースに大改修を行い、新たに生まれ変わったリクのガンプラが登場！",
+			"• GNドライヴにデスティニーのウイングユニットを組み込んだ本機独自の装備「スカイドライヴユニット」の形状を再現！",
+			"• ビームライフル、ビームサーベル、バスターソード、ロングライフルなど多彩な武装が付属し、バスターソードとロングライフルはスカイドライヴユニットに懸架させることが可能！",
+			"• 広い可動域で、劇中同様に迫力あるアクションポーズを楽しめる！"
+		],
+		"en": [
+			"00 Diver Ace has undergone a major renovation, and Riku's Gunpla has been reborn!",
+			"• Reproduce the shape of this machine's unique equipment \"Sky Drive Unit\" which incorporates Destiny's wing unit into GN Drive!",
+			"• A variety of weapons are included, including a beam rifle, beam saber, buster sword, and long rifle, and the buster sword and long rifle can be suspended on the sky drive unit!",
+			"• With a wide range of motion, you can enjoy powerful action poses just like in the movie!"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ビームライフル×1",
+			"ビームサーベル×2",
+			"バスターソード×1",
+			"ロングライフル×1",
+			"バックパック用ジョイントパーツ×1",
+			"手首パーツ（左平手）×1"
+		],
+		"en": [
+			"Beam rifle x 1",
+			"Beam saber x2",
+			"Buster sword x1",
+			"Long rifle x 1",
+			"Backpack joint parts x 1",
+			"Wrist parts (left palm) x 1"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×8", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 8", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1409_0.jpg",
 		"/images/items/01_1409_1.jpg",
@@ -86,20 +64,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1409/",
 	"extractedAt": "2025-12-06T17:20:46.903Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "1028"
 }

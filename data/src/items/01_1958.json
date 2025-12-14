@@ -18,58 +18,36 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• 指先の微妙な変化を感じ取るセンサーで、ウソが見抜けるかもしれないピカちんキットS！",
-			"en": "• Pikachin KitS, which has a sensor that senses subtle changes in your fingertips, may be able to detect lies!"
-		},
-		{
-			"ja": "• コインが１％のピラメキ！電子部品も自分で組み立てる！",
-			"en": "• Pirameki with 1% coin! Assemble electronic parts yourself!"
-		},
-		{
-			"ja": "• 「ピカちんロボS02 マイケルJ」（別売）のパーツと合体してパワーアップできる！",
-			"en": "• Can be combined with parts of \"Pikachin Robo S02 Michael J\" (sold separately) to power up!"
-		},
-		{
-			"ja": "• 単3電池×2個（別売）使用。",
-			"en": "• Uses 2 AA batteries (sold separately)."
-		},
-		{
-			"ja": "【セット内容】",
-			"en": "[Set contents]"
-		},
-		{
-			"ja": "ウソ発見機…１（成形品…2）",
-			"en": "Lie detector...1 (molded product...2)"
-		},
-		{
-			"ja": "ピカちんQRコードステッカー…1",
-			"en": "Pikachin QR code Sticker...1"
-		},
-		{
-			"ja": "ホイルシール…1",
-			"en": "Foil Seal...1"
-		},
-		{
-			"ja": "ピカちんシート…1（表：設計図ページ 裏：豆知識ページ）",
-			"en": "Pikachin sheet...1 (front: blueprint page, back: trivia page)"
-		},
-		{
-			"ja": "電子基板…1",
-			"en": "Electronic board...1"
-		},
-		{
-			"ja": "接続金具…5",
-			"en": "Connection fittings...5"
-		},
-		{
-			"ja": "金属プレート…2",
-			"en": "Metal plate...2"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• 指先の微妙な変化を感じ取るセンサーで、ウソが見抜けるかもしれないピカちんキットS！",
+			"• コインが１％のピラメキ！電子部品も自分で組み立てる！",
+			"• 「ピカちんロボS02 マイケルJ」（別売）のパーツと合体してパワーアップできる！",
+			"• 単3電池×2個（別売）使用。",
+			"【セット内容】",
+			"ウソ発見機…１（成形品…2）",
+			"ピカちんQRコードステッカー…1",
+			"ホイルシール…1",
+			"ピカちんシート…1（表：設計図ページ 裏：豆知識ページ）",
+			"電子基板…1",
+			"接続金具…5",
+			"金属プレート…2"
+		],
+		"en": [
+			"• Pikachin KitS, which has a sensor that senses subtle changes in your fingertips, may be able to detect lies!",
+			"• Pirameki with 1% coin! Assemble electronic parts yourself!",
+			"• Can be combined with parts of \"Pikachin Robo S02 Michael J\" (sold separately) to power up!",
+			"• Uses 2 AA batteries (sold separately).",
+			"[Set contents]",
+			"Lie detector...1 (molded product...2)",
+			"Pikachin QR code Sticker...1",
+			"Foil Seal...1",
+			"Pikachin sheet...1 (front: blueprint page, back: trivia page)",
+			"Electronic board...1",
+			"Connection fittings...5",
+			"Metal plate...2"
+		]
+	},
 	"images": [
 		"/images/items/01_1958_0.jpg",
 		"/images/items/01_1958_1.jpg",
@@ -79,16 +57,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_1958/",
 	"extractedAt": "2025-12-06T17:48:27.013Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2605", "01_2606", "01_2607", "01_2545"]
 }

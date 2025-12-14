@@ -19,26 +19,20 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "• 『革命機ヴァルヴレイヴ』より、重装パワータイプのヴァルヴレイヴ３号機を立体化。",
-			"en": "• From ``Kakumeki Valvrave'', the heavily armed power type Valvrave Unit 3 is made into a three-dimensional figure."
-		},
-		{
-			"ja": "• 特徴的な巨大な腕、アームストロンガー・カノンを装備しても自立可能。",
-			"en": "• Can stand on its own even when equipped with its distinctive giant arm, Armstrong Cannon."
-		},
-		{
-			"ja": "• 本体をしっかりホールドする専用台座と専用ジョイントが付属。迫力あるアクションポーズが可能。",
-			"en": "• Comes with a special pedestal and joint that firmly holds the main body. Powerful action poses are possible."
-		},
-		{
-			"ja": "• エネルギーの硬質化を再現するエフェクトパーツも付属。",
-			"en": "• Effect parts that reproduce the hardening of energy are also included."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• 『革命機ヴァルヴレイヴ』より、重装パワータイプのヴァルヴレイヴ３号機を立体化。",
+			"• 特徴的な巨大な腕、アームストロンガー・カノンを装備しても自立可能。",
+			"• 本体をしっかりホールドする専用台座と専用ジョイントが付属。迫力あるアクションポーズが可能。",
+			"• エネルギーの硬質化を再現するエフェクトパーツも付属。"
+		],
+		"en": [
+			"• From ``Kakumeki Valvrave'', the heavily armed power type Valvrave Unit 3 is made into a three-dimensional figure.",
+			"• Can stand on its own even when equipped with its distinctive giant arm, Armstrong Cannon.",
+			"• Comes with a special pedestal and joint that firmly holds the main body. Powerful action poses are possible.",
+			"• Effect parts that reproduce the hardening of energy are also included."
+		]
+	},
 	"images": [
 		"/images/items/01_5813_0.jpg",
 		"/images/items/01_5813_1.jpg",
@@ -52,8 +46,6 @@
 	"extractedAt": "2025-12-06T17:56:38.957Z",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
+	"categoryIds": ["product-list"],
 	"relatedItemIds": []
 }

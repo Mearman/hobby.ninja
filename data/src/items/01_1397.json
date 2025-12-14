@@ -19,48 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "「機動戦士ガンダム THE ORIGIN MSD」に登場するジム・ガードカスタムが立体化！",
-			"en": "The GM Guard custom that appears in \"Mobile Suit Gundam THE ORIGIN MSD\" is now three-dimensional!"
-		},
-		{
-			"ja": "• 頭部バイザーは可動し、バイザーダウンを再現可能！",
-			"en": "• The head visor is movable and the visor down can be reproduced!"
-		},
-		{
-			"ja": "• 大型のガーディアン・シールドに加え、両腕に装備しているビーム・ダガーも付属！",
-			"en": "• In addition to the large guardian Seal, beam daggers equipped on both arms are also included!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ガーディアン・シールド×1",
-			"en": "Guardian Seal×1"
-		},
-		{
-			"ja": "ビーム・ダガー×2",
-			"en": "Beam dagger x2"
-		},
-		{
-			"ja": "ビーム・スプレーガン×1",
-			"en": "Beam spray gun x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×12",
-			"en": "Molded product x 12"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"「機動戦士ガンダム THE ORIGIN MSD」に登場するジム・ガードカスタムが立体化！",
+			"• 頭部バイザーは可動し、バイザーダウンを再現可能！",
+			"• 大型のガーディアン・シールドに加え、両腕に装備しているビーム・ダガーも付属！"
+		],
+		"en": [
+			"The GM Guard custom that appears in \"Mobile Suit Gundam THE ORIGIN MSD\" is now three-dimensional!",
+			"• The head visor is movable and the visor down can be reproduced!",
+			"• In addition to the large guardian Seal, beam daggers equipped on both arms are also included!"
+		]
+	},
+	"accessories": {
+		"ja": ["ガーディアン・シールド×1", "ビーム・ダガー×2", "ビーム・スプレーガン×1"],
+		"en": ["Guardian Seal×1", "Beam dagger x2", "Beam spray gun x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×12", "マーキングシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 12", "MarkingSeal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1397_0.jpg",
 		"/images/items/01_1397_1.jpg",
@@ -74,20 +52,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1397/",
 	"extractedAt": "2025-12-06T17:19:12.899Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-the-origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2828",
-		"01_2707",
-		"item-1000135687"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-the-origin"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3711", "01_2828", "01_2707", "item-1000135687"],
 	"manualId": "0065"
 }

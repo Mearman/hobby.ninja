@@ -18,80 +18,50 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "Figure-riseStandard 孫悟空とクリリンがDXセットで登場！！",
-			"en": "Figure-riseStandard Son Goku and Krillin are now available as a DX set! !"
-		},
-		{
-			"ja": "• DXセット限定の気を纏ったバトルオーラカラーで悟空とクリリンのセットが登場！",
-			"en": "• A set of Goku and Krillin is now available in a battle aura color that is exclusive to the DX set!"
-		},
-		{
-			"ja": "• DXセット限定のFigure-riseEffectのクリア台座が1つ付属。劇中再現がさらに面白く！",
-			"en": "• One clear pedestal of Figure-rise Effect limited to DX set is included. Reenactment from the movie is even more interesting!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "アクションベース×1",
-			"en": "Action base x 1"
-		},
-		{
-			"ja": "ジョイントパーツ×4",
-			"en": "Joint parts x 4"
-		},
-		{
-			"ja": "台座用ジョイントパーツ×1",
-			"en": "Joint parts for pedestal x 1"
-		},
-		{
-			"ja": "＜孫悟空付属品＞",
-			"en": "<Son Goku accessories>"
-		},
-		{
-			"ja": "必殺技エフェクト2種（かめはめ波溜め、かめはめ波放出）×各１",
-			"en": "2 types of special move effects (Kamehameha reservoir, Kamehameha release) x 1 each"
-		},
-		{
-			"ja": "表情パーツ3種（通常、怒り、笑顔）×各1",
-			"en": "3 types of facial expression parts (normal, angry, smiling) x 1 each"
-		},
-		{
-			"ja": "手首パーツ5種（左右握り手、左右かめはめ波手、右平手）×各1",
-			"en": "5 types of wrist parts (left and right grip hands, left and right Kamehameha hands, right palm) x 1 each"
-		},
-		{
-			"ja": "＜クリリン付属品＞",
-			"en": "<Krillin accessories>"
-		},
-		{
-			"ja": "必殺技エフェクト2種（連続気功波、気円斬）×各１",
-			"en": "2 types of special move effects (continuous Qigong wave, Qienzan) x 1 each"
-		},
-		{
-			"ja": "表情",
-			"en": "facial expression"
-		},
-		{
-			"ja": "手首パーツ6種（左右握り手、左右平手、左右持ち手）×各1",
-			"en": "6 types of wrist parts (left and right gripping hands, left and right palms, left and right holding hands) x 1 each"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×13",
-			"en": "Molded products x 13"
-		},
-		{
-			"ja": "シール×2",
-			"en": "Seal×2"
-		},
-		{
-			"ja": "取扱説明書×3",
-			"en": "Handling manual×3"
-		}
-	],
+	"description": {
+		"ja": [
+			"Figure-riseStandard 孫悟空とクリリンがDXセットで登場！！",
+			"• DXセット限定の気を纏ったバトルオーラカラーで悟空とクリリンのセットが登場！",
+			"• DXセット限定のFigure-riseEffectのクリア台座が1つ付属。劇中再現がさらに面白く！"
+		],
+		"en": [
+			"Figure-riseStandard Son Goku and Krillin are now available as a DX set! !",
+			"• A set of Goku and Krillin is now available in a battle aura color that is exclusive to the DX set!",
+			"• One clear pedestal of Figure-rise Effect limited to DX set is included. Reenactment from the movie is even more interesting!"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"アクションベース×1",
+			"ジョイントパーツ×4",
+			"台座用ジョイントパーツ×1",
+			"＜孫悟空付属品＞",
+			"必殺技エフェクト2種（かめはめ波溜め、かめはめ波放出）×各１",
+			"表情パーツ3種（通常、怒り、笑顔）×各1",
+			"手首パーツ5種（左右握り手、左右かめはめ波手、右平手）×各1",
+			"＜クリリン付属品＞",
+			"必殺技エフェクト2種（連続気功波、気円斬）×各１",
+			"表情",
+			"手首パーツ6種（左右握り手、左右平手、左右持ち手）×各1"
+		],
+		"en": [
+			"Action base x 1",
+			"Joint parts x 4",
+			"Joint parts for pedestal x 1",
+			"<Son Goku accessories>",
+			"2 types of special move effects (Kamehameha reservoir, Kamehameha release) x 1 each",
+			"3 types of facial expression parts (normal, angry, smiling) x 1 each",
+			"5 types of wrist parts (left and right grip hands, left and right Kamehameha hands, right palm) x 1 each",
+			"<Krillin accessories>",
+			"2 types of special move effects (continuous Qigong wave, Qienzan) x 1 each",
+			"facial expression",
+			"6 types of wrist parts (left and right gripping hands, left and right palms, left and right holding hands) x 1 each"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×13", "シール×2", "取扱説明書×3"],
+		"en": ["Molded products x 13", "Seal×2", "Handling manual×3"]
+	},
 	"images": [
 		"/images/items/01_1109_0.jpg",
 		"/images/items/01_1109_1.jpg",
@@ -108,19 +78,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1109/",
 	"extractedAt": "2025-12-06T16:53:33.491Z",
-	"brandIds": [
-		"figure-rise-standard"
-	],
-	"seriesIds": [
-		"dragon-ball-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"brandIds": ["figure-rise-standard"],
+	"seriesIds": ["dragon-ball-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4901", "01_4219", "01_2974", "01_2769"]
 }

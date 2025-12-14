@@ -18,32 +18,20 @@
 		"day": 22
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "TVアニメに、映画に、Twitterに、いろんなところで大人気のイーブイがセレクトシリーズで登場！",
-			"en": "Eevee, which is very popular in various places such as TV anime, movies, and Twitter, is now available in a select series!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "表情パーツ×2（通常・笑み）",
-			"en": "Facial expression parts x 2 (normal/smile)"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×3",
-			"en": "Molded product x 3"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": ["TVアニメに、映画に、Twitterに、いろんなところで大人気のイーブイがセレクトシリーズで登場！"],
+		"en": [
+			"Eevee, which is very popular in various places such as TV anime, movies, and Twitter, is now available in a select series!"
+		]
+	},
+	"accessories": {
+		"ja": ["表情パーツ×2（通常・笑み）"],
+		"en": ["Facial expression parts x 2 (normal/smile)"]
+	},
+	"contents": {
+		"ja": ["成形品×3", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 3", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2031_0.jpg",
 		"/images/items/01_2031_1.jpg",
@@ -55,16 +43,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2031/",
 	"extractedAt": "2025-12-06T16:45:39.257Z",
 	"brandIds": [],
-	"seriesIds": [
-		"pocket-monster"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pocket-monster"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

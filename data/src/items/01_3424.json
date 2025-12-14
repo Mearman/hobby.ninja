@@ -18,83 +18,54 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "「戦国」をイメージした武装がセットになったカスタマイズウェポンズが登場！",
-			"en": "Introducing customized Weapons with a set of weapons inspired by \"Sengoku\"!"
-		},
-		{
-			"ja": "• 「戦国」をイメージした近接武器と重火器のウェポンセット。",
-			"en": "• Weapon set of melee weapons and heavy weapons inspired by \"Sengoku\"."
-		},
-		{
-			"ja": "• ライフルをカスタマイズ可能な拡張パーツが付属。",
-			"en": "• Comes with expansion parts that allow you to customize your rifle."
-		},
-		{
-			"ja": "• 印を結んだ状態のハンドパーツが付属。",
-			"en": "• Hand parts with the seal tied are included."
-		},
-		{
-			"ja": "• 複数組み合わせるとこで、弓矢中継ユニットに鞘を接続することで巨大な弓を再現可能。",
-			"en": "• By combining multiple pieces, you can recreate a huge bow by connecting the sheath to the bow and arrow relay unit."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "矢×1",
-			"en": "Arrow x1"
-		},
-		{
-			"ja": "弓矢中継ユニット×1",
-			"en": "Bow and arrow relay unit x 1"
-		},
-		{
-			"ja": "太刀×1",
-			"en": "Long sword x1"
-		},
-		{
-			"ja": "小太刀×1",
-			"en": "Kodachi×1"
-		},
-		{
-			"ja": "鞘×1",
-			"en": "Scabbard x 1"
-		},
-		{
-			"ja": "鞘(短)×1",
-			"en": "Scabbard (short) x 1"
-		},
-		{
-			"ja": "ビームライフル×1",
-			"en": "Beam rifle x 1"
-		},
-		{
-			"ja": "ライフル拡張パーツ×2種",
-			"en": "Rifle expansion parts x 2 types"
-		},
-		{
-			"ja": "ショートブレード×2",
-			"en": "Short blade x2"
-		},
-		{
-			"ja": "柄×1",
-			"en": "Pattern x 1"
-		},
-		{
-			"ja": "先端パーツ(槍、薙刀)×各１",
-			"en": "Tip parts (spear, naginata) x 1 each"
-		},
-		{
-			"ja": "水蜘蛛×2",
-			"en": "Water spider x2"
-		},
-		{
-			"ja": "ハンドパーツ　忍者手（右）",
-			"en": "Hand parts Ninja hand (right)"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"「戦国」をイメージした武装がセットになったカスタマイズウェポンズが登場！",
+			"• 「戦国」をイメージした近接武器と重火器のウェポンセット。",
+			"• ライフルをカスタマイズ可能な拡張パーツが付属。",
+			"• 印を結んだ状態のハンドパーツが付属。",
+			"• 複数組み合わせるとこで、弓矢中継ユニットに鞘を接続することで巨大な弓を再現可能。"
+		],
+		"en": [
+			"Introducing customized Weapons with a set of weapons inspired by \"Sengoku\"!",
+			"• Weapon set of melee weapons and heavy weapons inspired by \"Sengoku\".",
+			"• Comes with expansion parts that allow you to customize your rifle.",
+			"• Hand parts with the seal tied are included.",
+			"• By combining multiple pieces, you can recreate a huge bow by connecting the sheath to the bow and arrow relay unit."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"矢×1",
+			"弓矢中継ユニット×1",
+			"太刀×1",
+			"小太刀×1",
+			"鞘×1",
+			"鞘(短)×1",
+			"ビームライフル×1",
+			"ライフル拡張パーツ×2種",
+			"ショートブレード×2",
+			"柄×1",
+			"先端パーツ(槍、薙刀)×各１",
+			"水蜘蛛×2",
+			"ハンドパーツ　忍者手（右）"
+		],
+		"en": [
+			"Arrow x1",
+			"Bow and arrow relay unit x 1",
+			"Long sword x1",
+			"Kodachi×1",
+			"Scabbard x 1",
+			"Scabbard (short) x 1",
+			"Beam rifle x 1",
+			"Rifle expansion parts x 2 types",
+			"Short blade x2",
+			"Pattern x 1",
+			"Tip parts (spear, naginata) x 1 each",
+			"Water spider x2",
+			"Hand parts Ninja hand (right)"
+		]
+	},
 	"images": [
 		"/images/items/01_3424_0.jpg",
 		"/images/items/01_3424_1.jpg",
@@ -104,19 +75,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3424/",
 	"extractedAt": "2025-12-06T17:51:25.150Z",
-	"brandIds": [
-		"customized-scene-baseeffectsmaterialsweapons",
-		"30-minutes-missions"
-	],
+	"brandIds": ["customized-scene-baseeffectsmaterialsweapons", "30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3717"
 }

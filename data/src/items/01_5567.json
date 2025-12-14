@@ -18,63 +18,30 @@
 		"day": 14
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "（2024/12/20記載）諸般の都合により、商品の発売月を変更させていただきました。",
-			"en": "(Posted on 2024/12/20) Due to various circumstances, we have changed the product release."
-		},
-		{
-			"ja": "自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「30MF アイテムショップ3(ウェポンオプション)」が登場！",
-			"en": "\"30MF Item Shop 3 (Weapon Option)\" is now available from \" 30 MINUTES FANTASY\" where you can create your own fantasy job!"
-		},
-		{
-			"ja": "• “アーマークロス”［装甲換装］の幅を広げる武装やアイテムが詰まったセット。",
-			"en": "• A set packed with weapons and items that expand the range of “Armor Cloth” [Armor Replacement]."
-		},
-		{
-			"ja": "• 「武器ラック」は別売りのフェイスやアーマー、武装などの様々なパーツのディスプレイが可能。",
-			"en": "• The \"weapon rack\" can display various parts such as faces, armor, and weapons (sold separately)."
-		},
-		{
-			"ja": "• 武器ラックは上下左右前後への組み合わせが可能。",
-			"en": "• Weapon racks can be combined up, down, left, right, front and back."
-		},
-		{
-			"ja": "• 武装は「ナイフ」「シミター」「ロングソード」「メイス」が付属。",
-			"en": "• Comes with a knife, scimitar, long sword, and mace."
-		},
-		{
-			"ja": "• 「メイス」はパーツの差し替えで「ホースマンズフレイル」への変形可能。",
-			"en": "• \"Mace \" can be transformed into \" Horseman's Flail\" by replacing parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ロングソード×1",
-			"en": "Long sword x1"
-		},
-		{
-			"ja": "シミター×1",
-			"en": "Scimitar x 1"
-		},
-		{
-			"ja": "ナイフ×1",
-			"en": "Knife x 1"
-		},
-		{
-			"ja": "メイス×1式",
-			"en": "Mace x 1"
-		},
-		{
-			"ja": "武器ラック×1式",
-			"en": "Weapon rack x 1"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"（2024/12/20記載）諸般の都合により、商品の発売月を変更させていただきました。",
+			"自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「30MF アイテムショップ3(ウェポンオプション)」が登場！",
+			"• “アーマークロス”［装甲換装］の幅を広げる武装やアイテムが詰まったセット。",
+			"• 「武器ラック」は別売りのフェイスやアーマー、武装などの様々なパーツのディスプレイが可能。",
+			"• 武器ラックは上下左右前後への組み合わせが可能。",
+			"• 武装は「ナイフ」「シミター」「ロングソード」「メイス」が付属。",
+			"• 「メイス」はパーツの差し替えで「ホースマンズフレイル」への変形可能。"
+		],
+		"en": [
+			"(Posted on 2024/12/20) Due to various circumstances, we have changed the product release.",
+			"\"30MF Item Shop 3 (Weapon Option)\" is now available from \" 30 MINUTES FANTASY\" where you can create your own fantasy job!",
+			"• A set packed with weapons and items that expand the range of “Armor Cloth” [Armor Replacement].",
+			"• The \"weapon rack\" can display various parts such as faces, armor, and weapons (sold separately).",
+			"• Weapon racks can be combined up, down, left, right, front and back.",
+			"• Comes with a knife, scimitar, long sword, and mace.",
+			"• \"Mace \" can be transformed into \" Horseman's Flail\" by replacing parts."
+		]
+	},
+	"accessories": {
+		"ja": ["ロングソード×1", "シミター×1", "ナイフ×1", "メイス×1式", "武器ラック×1式", "ジョイントパーツ×1式"],
+		"en": ["Long sword x1", "Scimitar x 1", "Knife x 1", "Mace x 1", "Weapon rack x 1", "Joint parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_5567_0.jpg",
 		"/images/items/01_5567_1.jpg",
@@ -90,18 +57,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5567/",
 	"extractedAt": "2025-12-06T17:56:11.459Z",
-	"brandIds": [
-		"30-minutes-fantasy"
-	],
+	"brandIds": ["30-minutes-fantasy"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5978",
-		"01_5979",
-		"01_5980",
-		"01_5981"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5981"],
 	"manualId": "3424"
 }

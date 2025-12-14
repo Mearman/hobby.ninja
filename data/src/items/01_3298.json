@@ -19,31 +19,24 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MMのオプションアーマーシリーズに新規金型のシエルノヴァ用アーマーが登場！",
-			"en": "A new molded armor for Ciel Nova is now available in the 30MM optional armor series!"
-		},
-		{
-			"ja": "■カラーはブルーグレー。",
-			"en": "• Color is blue-gray."
-		},
-		{
-			"ja": "■胸アーマーはポルタノヴァへもカスタマイズ可能。",
-			"en": "• Chest armor can also be customized to Portanova."
-		},
-		{
-			"ja": "■脚部延長パーツが付属。シエルノヴァのスタイルチェンジが可能！",
-			"en": "• Includes leg extension parts. Cielnova's style can be changed!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "アーマー×1式",
-			"en": "Armor x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MMのオプションアーマーシリーズに新規金型のシエルノヴァ用アーマーが登場！",
+			"■カラーはブルーグレー。",
+			"■胸アーマーはポルタノヴァへもカスタマイズ可能。",
+			"■脚部延長パーツが付属。シエルノヴァのスタイルチェンジが可能！"
+		],
+		"en": [
+			"A new molded armor for Ciel Nova is now available in the 30MM optional armor series!",
+			"• Color is blue-gray.",
+			"• Chest armor can also be customized to Portanova.",
+			"• Includes leg extension parts. Cielnova's style can be changed!"
+		]
+	},
+	"accessories": {
+		"ja": ["アーマー×1式"],
+		"en": ["Armor x 1 set"]
+	},
 	"images": [
 		"/images/items/01_3298_0.jpg",
 		"/images/items/01_3298_1.jpg",
@@ -53,18 +46,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3298/",
 	"extractedAt": "2025-12-06T17:51:07.801Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3710"
 }

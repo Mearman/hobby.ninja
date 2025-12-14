@@ -18,23 +18,20 @@
 		"day": 27
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "道具不要で簡単組み立て！ポケモンプラモコレクション セレクトシリーズからコライドンが登場！",
-			"en": "Easy assembly with no tools required! Koraidon is now available from the Pokemon Plastic Model Collection Select Series!"
-		},
-		{
-			"ja": "• 各所可動によりカッコイイポーズが再現可能！",
-			"en": "• Cool poses can be reproduced by moving various parts!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "シール",
-			"en": "Seal"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"道具不要で簡単組み立て！ポケモンプラモコレクション セレクトシリーズからコライドンが登場！",
+			"• 各所可動によりカッコイイポーズが再現可能！"
+		],
+		"en": [
+			"Easy assembly with no tools required! Koraidon is now available from the Pokemon Plastic Model Collection Select Series!",
+			"• Cool poses can be reproduced by moving various parts!"
+		]
+	},
+	"accessories": {
+		"ja": ["シール"],
+		"en": ["Seal"]
+	},
 	"images": [
 		"/images/items/01_5984_0.jpg",
 		"/images/items/01_5984_1.jpg",
@@ -47,16 +44,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5984/",
 	"extractedAt": "2025-12-06T17:56:58.392Z",
 	"brandIds": [],
-	"seriesIds": [
-		"pocket-monster"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6780",
-		"01_6762",
-		"01_5958",
-		"01_6895"
-	]
+	"seriesIds": ["pocket-monster"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6780", "01_6762", "01_5958", "01_6895"]
 }

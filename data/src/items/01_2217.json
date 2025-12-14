@@ -18,40 +18,26 @@
 		"day": 13
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "アニメで全話通して使用されたバン仕様のCCMが登場！",
-			"en": "The van-style CCM used throughout the anime is now available!"
-		},
-		{
-			"ja": "• 画面デザインはアキレス対応の新規デザイン。",
-			"en": "• The screen design is a new design compatible with Achilles."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "専用ディスプレイ台座×1",
-			"en": "Dedicated display pedestal x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×2",
-			"en": "Molded product x 2"
-		},
-		{
-			"ja": "カイナスシール×1",
-			"en": "Cainus Seal×1"
-		},
-		{
-			"ja": "コート紙×1",
-			"en": "Coated paper x 1"
-		},
-		{
-			"ja": "取扱説明書（台紙裏に記載）×1",
-			"en": "Handling manual (written on the back of the mount) x 1"
-		}
-	],
+	"description": {
+		"ja": ["アニメで全話通して使用されたバン仕様のCCMが登場！", "• 画面デザインはアキレス対応の新規デザイン。"],
+		"en": [
+			"The van-style CCM used throughout the anime is now available!",
+			"• The screen design is a new design compatible with Achilles."
+		]
+	},
+	"accessories": {
+		"ja": ["専用ディスプレイ台座×1"],
+		"en": ["Dedicated display pedestal x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×2", "カイナスシール×1", "コート紙×1", "取扱説明書（台紙裏に記載）×1"],
+		"en": [
+			"Molded product x 2",
+			"Cainus Seal×1",
+			"Coated paper x 1",
+			"Handling manual (written on the back of the mount) x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_2217_0.jpg",
 		"/images/items/01_2217_1.jpg",
@@ -61,16 +47,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2217/",
 	"extractedAt": "2025-12-06T17:48:54.271Z",
 	"brandIds": [],
-	"seriesIds": [
-		"danball-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"seriesIds": ["danball-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000215196", "item-1000215197", "item-1000210042", "item-1000210041"]
 }

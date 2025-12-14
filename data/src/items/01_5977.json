@@ -18,51 +18,33 @@
 		"day": 13
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "「アイドルマスター」より「星井美希」を30MSフォーマットで立体化！20周年記念衣装「ＹＯＵ ＡＮＤ アイ！」と全身のパーツが同梱されているオールインワンアイテム。",
-			"en": "\"Miki Hoshii \" from \" THE IDOLM@STER \" is made into 3D in 30MS format! An all-in-one item that includes the 20th lap commemorative costume \" YOU AND I!\" and full body parts."
-		},
-		{
-			"ja": "• 表情パーツはタンポ印刷を施した3種類が付属。口の中の色分けはパーツ分割で再現。髪はパーツの組み替えで髪飾りのない状態を再現可能。",
-			"en": "• Three types of facial expression parts with tampo printing are included. The color coding inside the mouth is reproduced by dividing the parts. The hair can be recreated without any hair ornaments by rearranging the parts."
-		},
-		{
-			"ja": "• 衣装は髪飾りや襟元など、細部にクリアパーツを採用し、そのまま組み立てるだけでカラフルな色分けや精密なディテールを再現。",
-			"en": "• The costume uses clear parts for details such as hair ornaments and collars, and reproduces colorful color coding and precise details just by assembling."
-		},
-		{
-			"ja": "• スカートは模様をプリントしたシートで再現。",
-			"en": "• The skirt is reproduced with a sheet with a pattern printed on it."
-		},
-		{
-			"ja": "• 肌パーツや衣装は仕上げの際に金型表面に艶消し処理を施し、柔らかく光を反射する演出がされている。",
-			"en": "• When finishing the skin parts and costumes, a matte treatment is applied to the mold surface to create a soft, light-reflecting effect."
-		},
-		{
-			"ja": "• 表情付きハンドパーツに加えマイクが保持できるハンドパーツが付属。",
-			"en": "• In addition to hand parts with facial expressions, hand parts that can hold a microphone are included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "フェイスパーツ(タンポ印刷)×3種",
-			"en": "Face parts (tampo printing) x 3 types"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "髪パーツ(髪飾りなし)×1式",
-			"en": "Hair parts (no hair ornaments) x 1 set"
-		},
-		{
-			"ja": "マイク×1",
-			"en": "Microphone x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"「アイドルマスター」より「星井美希」を30MSフォーマットで立体化！20周年記念衣装「ＹＯＵ ＡＮＤ アイ！」と全身のパーツが同梱されているオールインワンアイテム。",
+			"• 表情パーツはタンポ印刷を施した3種類が付属。口の中の色分けはパーツ分割で再現。髪はパーツの組み替えで髪飾りのない状態を再現可能。",
+			"• 衣装は髪飾りや襟元など、細部にクリアパーツを採用し、そのまま組み立てるだけでカラフルな色分けや精密なディテールを再現。",
+			"• スカートは模様をプリントしたシートで再現。",
+			"• 肌パーツや衣装は仕上げの際に金型表面に艶消し処理を施し、柔らかく光を反射する演出がされている。",
+			"• 表情付きハンドパーツに加えマイクが保持できるハンドパーツが付属。"
+		],
+		"en": [
+			"\"Miki Hoshii \" from \" THE IDOLM@STER \" is made into 3D in 30MS format! An all-in-one item that includes the 20th lap commemorative costume \" YOU AND I!\" and full body parts.",
+			"• Three types of facial expression parts with tampo printing are included. The color coding inside the mouth is reproduced by dividing the parts. The hair can be recreated without any hair ornaments by rearranging the parts.",
+			"• The costume uses clear parts for details such as hair ornaments and collars, and reproduces colorful color coding and precise details just by assembling.",
+			"• The skirt is reproduced with a sheet with a pattern printed on it.",
+			"• When finishing the skin parts and costumes, a matte treatment is applied to the mold surface to create a soft, light-reflecting effect.",
+			"• In addition to hand parts with facial expressions, hand parts that can hold a microphone are included."
+		]
+	},
+	"accessories": {
+		"ja": ["フェイスパーツ(タンポ印刷)×3種", "ハンドパーツ×1式", "髪パーツ(髪飾りなし)×1式", "マイク×1"],
+		"en": [
+			"Face parts (tampo printing) x 3 types",
+			"Hand parts x 1 set",
+			"Hair parts (no hair ornaments) x 1 set",
+			"Microphone x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_5977_0.jpg",
 		"/images/items/01_5977_1.jpg",
@@ -79,19 +61,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5977/",
 	"extractedAt": "2025-12-06T17:56:58.210Z",
-	"brandIds": [
-		"30-minutes-sisters"
-	],
-	"seriesIds": [
-		"idolmaster-series"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6755",
-		"01_6756",
-		"01_5976",
-		"01_5975"
-	]
+	"brandIds": ["30-minutes-sisters"],
+	"seriesIds": ["idolmaster-series"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6755", "01_6756", "01_5976", "01_5975"]
 }

@@ -18,55 +18,40 @@
 		"day": 17
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• 自動で机を掃除してくれるサイッコーのマシン！",
-			"en": "• A great machine that automatically cleans your desk!"
-		},
-		{
-			"ja": "• テレビ番組「ポチっと発明 ピカちんキット」に登場するケシカスイーパー１０（テン）が商品化！",
-			"en": "• Keshika Sweeper 10 (Ten) that appeared on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!"
-		},
-		{
-			"ja": "• ケシカスイーパー１０（テン）とは、散らかった机の上を自動でお掃除してくれちゃう発明品！",
-			"en": "• Keshika Sweeper 10 is an invention that automatically cleans your messy desk!"
-		},
-		{
-			"ja": "• 自分で掃除するのが面倒な時はこいつにお任せ！",
-			"en": "• If you find it troublesome to clean it yourself, leave it to this guy!"
-		},
-		{
-			"ja": "• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！",
-			"en": "• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
-		}
-	],
-	"accessories": [],
-	"contents": [
-		{
-			"ja": "ケシカスイーパー10×1",
-			"en": "Keishika Sweeper 10×1"
-		},
-		{
-			"ja": "（成形品×4）",
-			"en": "(molded product x 4)"
-		},
-		{
-			"ja": "ピカちんQRコード×1",
-			"en": "Pikachin QR code x 1"
-		},
-		{
-			"ja": "輪ゴム×1",
-			"en": "Rubber band x 1"
-		},
-		{
-			"ja": "シャフト×1",
-			"en": "Shaft x 1"
-		},
-		{
-			"ja": "ピカちんｊシート×1",
-			"en": "Pikachin J sheet x 1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• 自動で机を掃除してくれるサイッコーのマシン！",
+			"• テレビ番組「ポチっと発明 ピカちんキット」に登場するケシカスイーパー１０（テン）が商品化！",
+			"• ケシカスイーパー１０（テン）とは、散らかった机の上を自動でお掃除してくれちゃう発明品！",
+			"• 自分で掃除するのが面倒な時はこいつにお任せ！",
+			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
+		],
+		"en": [
+			"• A great machine that automatically cleans your desk!",
+			"• Keshika Sweeper 10 (Ten) that appeared on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
+			"• Keshika Sweeper 10 is an invention that automatically cleans your messy desk!",
+			"• If you find it troublesome to clean it yourself, leave it to this guy!",
+			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
+		]
+	},
+	"contents": {
+		"ja": [
+			"ケシカスイーパー10×1",
+			"（成形品×4）",
+			"ピカちんQRコード×1",
+			"輪ゴム×1",
+			"シャフト×1",
+			"ピカちんｊシート×1"
+		],
+		"en": [
+			"Keishika Sweeper 10×1",
+			"(molded product x 4)",
+			"Pikachin QR code x 1",
+			"Rubber band x 1",
+			"Shaft x 1",
+			"Pikachin J sheet x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_1216_0.jpg",
 		"/images/items/01_1216_1.jpg",
@@ -77,16 +62,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_1216/",
 	"extractedAt": "2025-12-06T17:01:19.340Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2605", "01_2606", "01_2607", "01_2545"]
 }

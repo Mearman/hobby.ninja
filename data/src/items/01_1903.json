@@ -18,36 +18,18 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
-			"en": "Event-limited Gunpla sold at various event venues."
-		},
-		{
-			"ja": "RG ガンダムアストレイ レッドフレームのベント限定メッキVer.です。",
-			"en": "RG Gundam Astray Red Frame Vent Limited Plating Ver."
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_1903_0.jpg"
-	],
+	"description": {
+		"ja": [
+			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
+			"RG ガンダムアストレイ レッドフレームのベント限定メッキVer.です。"
+		],
+		"en": ["Event-limited Gunpla sold at various event venues.", "RG Gundam Astray Red Frame Vent Limited Plating Ver."]
+	},
+	"images": ["/images/items/01_1903_0.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1903/",
 	"extractedAt": "2025-12-06T17:48:21.153Z",
-	"brandIds": [
-		"rg-real-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-seed-astray"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000134497",
-		"01_4768",
-		"01_2190",
-		"item-1000116090"
-	]
+	"brandIds": ["rg-real-grade"],
+	"seriesIds": ["mobile-suit-gundam-seed-astray"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000134497", "01_4768", "01_2190", "item-1000116090"]
 }

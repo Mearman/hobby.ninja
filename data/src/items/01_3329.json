@@ -18,51 +18,38 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "『ヱヴァンゲリヲン新劇場版:Q』冒頭に登場した8号機αがRGブランドより登場！",
-			"en": "Unit 8 α that appeared at the beginning of \"Evangelion: Rebuild of the Movie: Q\" is now available from the RG brand!"
-		},
-		{
-			"ja": "■「人造人間」という劇中の設定をもとに、ヒトとして自然なアクションポーズの再現を追求。",
-			"en": "• Based on the setting in the play of \"androids,\" we strive to reproduce action poses that are natural for humans."
-		},
-		{
-			"ja": "■「背骨可動」「腕の捻り」などの人間らしい可動性を実現。",
-			"en": "• Realizes human-like mobility such as \"moving the spine \" and \" twisting the arms.\""
-		},
-		{
-			"ja": "■劇中に登場した超長距離ライフルが付属。",
-			"en": "• Includes the ultra-long range rifle that appeared in the movie."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "超長距離ライフル×1",
-			"en": "Super long range rifle x1"
-		},
-		{
-			"ja": "プログレッシブナイフ×2",
-			"en": "Progressive knife x 2"
-		},
-		{
-			"ja": "パレットライフル×1",
-			"en": "Pallet rifle x 1"
-		},
-		{
-			"ja": "アンビリカルケーブル×1",
-			"en": "Umbilical cable x 1"
-		},
-		{
-			"ja": "リアリスティックデカール×1",
-			"en": "Realistic decal x 1"
-		},
-		{
-			"ja": "ハンドパーツ（左右）×各7種、超長距離ライフル用持ち手×1式",
-			"en": "Hand parts (left and right) x 7 types each, ultra-long range rifle handle x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『ヱヴァンゲリヲン新劇場版:Q』冒頭に登場した8号機αがRGブランドより登場！",
+			"■「人造人間」という劇中の設定をもとに、ヒトとして自然なアクションポーズの再現を追求。",
+			"■「背骨可動」「腕の捻り」などの人間らしい可動性を実現。",
+			"■劇中に登場した超長距離ライフルが付属。"
+		],
+		"en": [
+			"Unit 8 α that appeared at the beginning of \"Evangelion: Rebuild of the Movie: Q\" is now available from the RG brand!",
+			"• Based on the setting in the play of \"androids,\" we strive to reproduce action poses that are natural for humans.",
+			"• Realizes human-like mobility such as \"moving the spine \" and \" twisting the arms.\"",
+			"• Includes the ultra-long range rifle that appeared in the movie."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"超長距離ライフル×1",
+			"プログレッシブナイフ×2",
+			"パレットライフル×1",
+			"アンビリカルケーブル×1",
+			"リアリスティックデカール×1",
+			"ハンドパーツ（左右）×各7種、超長距離ライフル用持ち手×1式"
+		],
+		"en": [
+			"Super long range rifle x1",
+			"Progressive knife x 2",
+			"Pallet rifle x 1",
+			"Umbilical cable x 1",
+			"Realistic decal x 1",
+			"Hand parts (left and right) x 7 types each, ultra-long range rifle handle x 1 set"
+		]
+	},
 	"images": [
 		"/images/items/01_3329_0.jpg",
 		"/images/items/01_3329_1.jpg",
@@ -74,19 +61,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3329/",
 	"extractedAt": "2025-12-06T17:51:12.784Z",
-	"brandIds": [
-		"rg-real-grade"
-	],
-	"seriesIds": [
-		"evangelion"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000163344",
-		"01_3617",
-		"01_3413",
-		"01_2855"
-	]
+	"brandIds": ["rg-real-grade"],
+	"seriesIds": ["evangelion"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000163344", "01_3617", "01_3413", "01_2855"]
 }

@@ -18,51 +18,26 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "2023年10月配信予定、『ガンダムビルドシリーズ』10周年記念映像『ガンダムビルドメタバース』より、くノ一（くのいち）モチーフのガンプラ「F9ノ1改」がSDガンダム クロスシルエットに登場！",
-			"en": "From the 202310 distribution scheduled, ``Gundam Build Metaverse'', the 10th anniversary commemorative video of ``Gundam Build Series'', Gunpla \"F9 No 1 Kai\" with Kunoichi motif appears in SD Gundam Cross Silhouette!"
-		},
-		{
-			"ja": "■CS、SDの２種のフレームが同梱！ フレームは選択式で自分好みのプロポーションが楽しめる。",
-			"en": "• Two types of frames, CS and SD, are included! The frame is selectable and you can enjoy proportions to your liking."
-		},
-		{
-			"ja": "■パーツの組み替えで「最大出力モード」と「軽装モード」を再現可能。",
-			"en": "• \"Maximum output mode \" and \" light armor mode\" can be reproduced by rearranging parts."
-		},
-		{
-			"ja": "■拡張性の高いエフェクト、武器パーツが付属。くノ一ならではの武装変更を楽しめる。",
-			"en": "• Comes with highly expandable effects and weapon parts. You can enjoy changing the weapons unique to Kunoichi."
-		},
-		{
-			"ja": "■別売りのLEGEND BB 武者頑駄無、騎士ガンダム、コマンドガンダムとの互換性により劇中の忍法をイメージしたミキシングが可能。",
-			"en": "• Compatibility with LEGEND BB Musha Gundam, Knight Gundam, and Command Gundam (sold separately) allows for mixing based on the ninja techniques in the movie."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "クナイ×2",
-			"en": "Kunai x 2"
-		},
-		{
-			"ja": "忍者刀×1",
-			"en": "Ninja sword x1"
-		},
-		{
-			"ja": "エフェクトパーツ×1式",
-			"en": "Effect parts x 1"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"2023年10月配信予定、『ガンダムビルドシリーズ』10周年記念映像『ガンダムビルドメタバース』より、くノ一（くのいち）モチーフのガンプラ「F9ノ1改」がSDガンダム クロスシルエットに登場！",
+			"■CS、SDの２種のフレームが同梱！ フレームは選択式で自分好みのプロポーションが楽しめる。",
+			"■パーツの組み替えで「最大出力モード」と「軽装モード」を再現可能。",
+			"■拡張性の高いエフェクト、武器パーツが付属。くノ一ならではの武装変更を楽しめる。",
+			"■別売りのLEGEND BB 武者頑駄無、騎士ガンダム、コマンドガンダムとの互換性により劇中の忍法をイメージしたミキシングが可能。"
+		],
+		"en": [
+			"From the 202310 distribution scheduled, ``Gundam Build Metaverse'', the 10th anniversary commemorative video of ``Gundam Build Series'', Gunpla \"F9 No 1 Kai\" with Kunoichi motif appears in SD Gundam Cross Silhouette!",
+			"• Two types of frames, CS and SD, are included! The frame is selectable and you can enjoy proportions to your liking.",
+			"• \"Maximum output mode \" and \" light armor mode\" can be reproduced by rearranging parts.",
+			"• Comes with highly expandable effects and weapon parts. You can enjoy changing the weapons unique to Kunoichi.",
+			"• Compatibility with LEGEND BB Musha Gundam, Knight Gundam, and Command Gundam (sold separately) allows for mixing based on the ninja techniques in the movie."
+		]
+	},
+	"accessories": {
+		"ja": ["クナイ×2", "忍者刀×1", "エフェクトパーツ×1式", "ジョイントパーツ×1式", "シール×1"],
+		"en": ["Kunai x 2", "Ninja sword x1", "Effect parts x 1", "Joint parts x 1 set", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5014_0.jpg",
 		"/images/items/01_5014_1.jpg",
@@ -78,15 +53,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5014/",
 	"extractedAt": "2025-12-06T17:54:55.046Z",
-	"brandIds": [
-		"sd-gundam-cross-silhouette"
-	],
-	"seriesIds": [
-		"gundam-build-metaverse"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["sd-gundam-cross-silhouette"],
+	"seriesIds": ["gundam-build-metaverse"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": [],
 	"manualId": "1102"
 }

@@ -19,72 +19,32 @@
 	},
 	"targetAge": 15,
 	"scale": "1/12",
-	"description": [
-		{
-			"ja": "漫画『ULTRAMAN』より「ULTRAMAN SUIT Ver7.5」がFigure-rise Standardに登場！",
-			"en": "\"ULTRAMAN SUIT Ver7.5 \" from the manga \" ULTRAMAN\" is now available in Figure-rise Standard!"
-		},
-		{
-			"ja": "• 本体表面の銀色はエクストラフィニッシュ、赤色はグロスインジェクションで質感を再現。",
-			"en": "• The silver color on the main body surface is extra finish, and the red color is gloss injection to reproduce the texture."
-		},
-		{
-			"ja": "• 専用のLEDユニットが付属し、目を光らせることが可能。",
-			"en": "• A dedicated LED unit is included, allowing you to keep an eye on it."
-		},
-		{
-			"ja": "• 「ULTRAMAN SUIT Ver7.5」の主要武装のほか、原作者・清水栄一氏デザインの「EYE SLUGGER」がオリジナル武器パーツとして付属。",
-			"en": "• In addition to the main weapons of \"ULTRAMAN SUIT Ver7.5 \", \" EYE SLUGGER\" designed by the original author Eiichi Shimizu is included as an original weapon part."
-		},
-		{
-			"ja": "• 「EYE SLUGGER」は両手に携行することが可能。",
-			"en": "• \"EYE SLUGGER\" can be carried in both hands."
-		},
-		{
-			"ja": "• ２つの「EYE SLUGGER」を合体させることができるジョイントパーツが付属。",
-			"en": "• Comes with joint parts that can combine two \"EYE SLUGGER\"."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "SPACIUM SWORD×1",
-			"en": "SPACIUM SWORD×1"
-		},
-		{
-			"ja": "SPACIUM SWORD用鞘×1",
-			"en": "Sheath for SPACIUM SWORD x 1"
-		},
-		{
-			"ja": "KNIFE×2",
-			"en": "KNIFE×2"
-		},
-		{
-			"ja": "オリジナル武器「EYE SLUGGER」×2",
-			"en": "Original weapon \"EYE SLUGGER\" x 2"
-		}
-	],
-	"contents": [
-		{
-			"ja": "ＬＥＤユニット×1",
-			"en": "LED unit x 1"
-		},
-		{
-			"ja": "成形品×8",
-			"en": "Molded product x 8"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"漫画『ULTRAMAN』より「ULTRAMAN SUIT Ver7.5」がFigure-rise Standardに登場！",
+			"• 本体表面の銀色はエクストラフィニッシュ、赤色はグロスインジェクションで質感を再現。",
+			"• 専用のLEDユニットが付属し、目を光らせることが可能。",
+			"• 「ULTRAMAN SUIT Ver7.5」の主要武装のほか、原作者・清水栄一氏デザインの「EYE SLUGGER」がオリジナル武器パーツとして付属。",
+			"• 「EYE SLUGGER」は両手に携行することが可能。",
+			"• ２つの「EYE SLUGGER」を合体させることができるジョイントパーツが付属。"
+		],
+		"en": [
+			"\"ULTRAMAN SUIT Ver7.5 \" from the manga \" ULTRAMAN\" is now available in Figure-rise Standard!",
+			"• The silver color on the main body surface is extra finish, and the red color is gloss injection to reproduce the texture.",
+			"• A dedicated LED unit is included, allowing you to keep an eye on it.",
+			"• In addition to the main weapons of \"ULTRAMAN SUIT Ver7.5 \", \" EYE SLUGGER\" designed by the original author Eiichi Shimizu is included as an original weapon part.",
+			"• \"EYE SLUGGER\" can be carried in both hands.",
+			"• Comes with joint parts that can combine two \"EYE SLUGGER\"."
+		]
+	},
+	"accessories": {
+		"ja": ["SPACIUM SWORD×1", "SPACIUM SWORD用鞘×1", "KNIFE×2", "オリジナル武器「EYE SLUGGER」×2"],
+		"en": ["SPACIUM SWORD×1", "Sheath for SPACIUM SWORD x 1", "KNIFE×2", "Original weapon \"EYE SLUGGER\" x 2"]
+	},
+	"contents": {
+		"ja": ["ＬＥＤユニット×1", "成形品×8", "マーキングシール×1", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["LED unit x 1", "Molded product x 8", "MarkingSeal×1", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2084_0.jpg",
 		"/images/items/01_2084_1.jpg",
@@ -100,19 +60,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2084/",
 	"extractedAt": "2025-12-06T17:48:37.250Z",
-	"brandIds": [
-		"figure-rise-standard"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5371",
-		"01_5198",
-		"01_5096",
-		"01_5046"
-	]
+	"brandIds": ["figure-rise-standard"],
+	"seriesIds": ["ultraman"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
 }

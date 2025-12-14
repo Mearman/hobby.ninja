@@ -19,22 +19,18 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "• 細部にまでこだわったガンプラ公式改造パーツ。ディテールアップでガンプラをさらに楽しめる。",
-			"en": "• Officially detailed Gunpla modified parts. You can enjoy Gunpla even more by improving the details."
-		},
-		{
-			"ja": "• 小型MSやSEED系などにマッチする小さめサイズ。",
-			"en": "• Small size that matches small MS and SEED type."
-		},
-		{
-			"ja": "• 大きさは、対MSハンド（連邦系）01比90％。",
-			"en": "• Size is 90% compared to MS Hand (Federation system) 01."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• 細部にまでこだわったガンプラ公式改造パーツ。ディテールアップでガンプラをさらに楽しめる。",
+			"• 小型MSやSEED系などにマッチする小さめサイズ。",
+			"• 大きさは、対MSハンド（連邦系）01比90％。"
+		],
+		"en": [
+			"• Officially detailed Gunpla modified parts. You can enjoy Gunpla even more by improving the details.",
+			"• Small size that matches small MS and SEED type.",
+			"• Size is 90% compared to MS Hand (Federation system) 01."
+		]
+	},
 	"images": [
 		"/images/items/01_5822_0.jpg",
 		"/images/items/01_5822_1.jpg",
@@ -44,17 +40,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5822/",
 	"extractedAt": "2025-12-06T17:56:40.932Z",
-	"brandIds": [
-		"builders-parts"
-	],
+	"brandIds": ["builders-parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

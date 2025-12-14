@@ -18,55 +18,35 @@
 		"day": 26
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "30MSシリーズと組み合わせ可能な、汎用性の高い新デザインのオプションボディパーツが登場！",
-			"en": "Introducing highly versatile newly designed optional body parts that can be combined with the 30MS series!"
-		},
-		{
-			"ja": "■島田フミカネ氏による30MSオリジナルデザイン。特徴的な「衣装」、「腕・脚」、「ハンドパーツ」など[カラーＡ]のボディユニット一式をセット。ハンドパーツにはマイクを保持可能な握り手が付属。",
-			"en": "• 30MS original design by Fumikane Shimada. A set of body units in [Color A] including the characteristic \"costume \", \" arms/legs \", \" hand parts\", etc. are included. The hand parts include a grip that can hold the microphone."
-		},
-		{
-			"ja": "■別売りの「30MS 月岡恋鐘」ほか、既存の30MSシリーズとの組み合わせが可能。",
-			"en": "• Can be combined with the existing 30MS series, including the separately sold \"30MS Okakoi Bell\"."
-		},
-		{
-			"ja": "■胸部パーツは選択式で、2種類の異なるデザインが付属。",
-			"en": "• Chest parts are selectable and come with two different designs."
-		},
-		{
-			"ja": "■腹部には[カラーＡ]の選択式のボディパーツを同梱。",
-			"en": "• Selectable body parts of [Color A] are included for the abdomen."
-		},
-		{
-			"ja": "■脚部バインダーは展開し、飛行ポーズをイメージしたディスプレイが演出できる。",
-			"en": "• The leg binders can be unfolded to create a display inspired by a flight pose."
-		},
-		{
-			"ja": "■衣装の各所にジョイント用の3mm穴やピンが設置され、他シリーズ商品と組み合わせてキャラメイキングが可能。",
-			"en": "• 3mm holes and pins for joints are installed in various parts of the costume, allowing for character creation by combining with other series products."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ボディパーツ×1式",
-			"en": "Body parts x 1 set"
-		},
-		{
-			"ja": "腹部パーツ×2種（選択式）",
-			"en": "Abdominal parts x 2 types (selectable)"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "胸部パーツ×2種（選択式）",
-			"en": "Chest parts x 2 types (selectable)"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MSシリーズと組み合わせ可能な、汎用性の高い新デザインのオプションボディパーツが登場！",
+			"■島田フミカネ氏による30MSオリジナルデザイン。特徴的な「衣装」、「腕・脚」、「ハンドパーツ」など[カラーＡ]のボディユニット一式をセット。ハンドパーツにはマイクを保持可能な握り手が付属。",
+			"■別売りの「30MS 月岡恋鐘」ほか、既存の30MSシリーズとの組み合わせが可能。",
+			"■胸部パーツは選択式で、2種類の異なるデザインが付属。",
+			"■腹部には[カラーＡ]の選択式のボディパーツを同梱。",
+			"■脚部バインダーは展開し、飛行ポーズをイメージしたディスプレイが演出できる。",
+			"■衣装の各所にジョイント用の3mm穴やピンが設置され、他シリーズ商品と組み合わせてキャラメイキングが可能。"
+		],
+		"en": [
+			"Introducing highly versatile newly designed optional body parts that can be combined with the 30MS series!",
+			"• 30MS original design by Fumikane Shimada. A set of body units in [Color A] including the characteristic \"costume \", \" arms/legs \", \" hand parts\", etc. are included. The hand parts include a grip that can hold the microphone.",
+			"• Can be combined with the existing 30MS series, including the separately sold \"30MS Okakoi Bell\".",
+			"• Chest parts are selectable and come with two different designs.",
+			"• Selectable body parts of [Color A] are included for the abdomen.",
+			"• The leg binders can be unfolded to create a display inspired by a flight pose.",
+			"• 3mm holes and pins for joints are installed in various parts of the costume, allowing for character creation by combining with other series products."
+		]
+	},
+	"accessories": {
+		"ja": ["ボディパーツ×1式", "腹部パーツ×2種（選択式）", "ハンドパーツ×1式", "胸部パーツ×2種（選択式）"],
+		"en": [
+			"Body parts x 1 set",
+			"Abdominal parts x 2 types (selectable)",
+			"Hand parts x 1 set",
+			"Chest parts x 2 types (selectable)"
+		]
+	},
 	"images": [
 		"/images/items/01_5368_0.jpg",
 		"/images/items/01_5368_1.jpg",
@@ -83,19 +63,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5368/",
 	"extractedAt": "2025-12-06T17:55:46.430Z",
-	"brandIds": [
-		"30-minutes-sisters"
-	],
-	"seriesIds": [
-		"idolmaster-series"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6755",
-		"01_6756",
-		"01_5977",
-		"01_5976"
-	]
+	"brandIds": ["30-minutes-sisters"],
+	"seriesIds": ["idolmaster-series"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6755", "01_6756", "01_5977", "01_5976"]
 }

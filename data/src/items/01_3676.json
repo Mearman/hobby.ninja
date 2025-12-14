@@ -19,31 +19,24 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MMエグザビークルシリーズに「小型量産機Ver.」がラインアップ！",
-			"en": "\"Small mass-produced machine version\" is now available in the 30MM Exa Vehicle series!"
-		},
-		{
-			"ja": "• 30MMシリーズ初のコックピットパーツが付属。",
-			"en": "• Comes with the first cockpit parts of the 30MM series."
-		},
-		{
-			"ja": "• カスタマイズの幅を広げる「スピナティオ」「スピナティア」と共通の「C型」のランナーが付属。",
-			"en": "• Comes with the same \"C-type \" Runner as \" Spinatio \" and \" Spinatia\", which expands the range of customization."
-		},
-		{
-			"ja": "• 分解すればカスタマイズパーツとしても使用可能。",
-			"en": "• Can be used as customized parts if disassembled."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビークル×1体",
-			"en": "Vehicle x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MMエグザビークルシリーズに「小型量産機Ver.」がラインアップ！",
+			"• 30MMシリーズ初のコックピットパーツが付属。",
+			"• カスタマイズの幅を広げる「スピナティオ」「スピナティア」と共通の「C型」のランナーが付属。",
+			"• 分解すればカスタマイズパーツとしても使用可能。"
+		],
+		"en": [
+			"\"Small mass-produced machine version\" is now available in the 30MM Exa Vehicle series!",
+			"• Comes with the first cockpit parts of the 30MM series.",
+			"• Comes with the same \"C-type \" Runner as \" Spinatio \" and \" Spinatia\", which expands the range of customization.",
+			"• Can be used as customized parts if disassembled."
+		]
+	},
+	"accessories": {
+		"ja": ["ビークル×1体"],
+		"en": ["Vehicle x 1"]
+	},
 	"images": [
 		"/images/items/01_3676_0.jpg",
 		"/images/items/01_3676_1.jpg",
@@ -60,18 +53,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3676/",
 	"extractedAt": "2025-12-06T17:51:58.220Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3731"
 }

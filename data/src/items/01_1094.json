@@ -19,68 +19,34 @@
 	},
 	"targetAge": 15,
 	"scale": "1/1000",
-	"description": [
-		{
-			"ja": "宇宙戦艦ヤマト2202 地球連邦 アンドロメダ級二番艦 アルデバラン ムービーエフェクトVer.が登場！",
-			"en": "Space Battleship Yamato 2202 Earth Federation Andromeda Class Second Ship Aldebaran Movie Effect Ver. is now available!"
-		},
-		{
-			"ja": "• LED & SEユニットにより、波動エンジンは明暗とゆらぎ点滅でサウンドと共に劇中の雰囲気を演出。",
-			"en": "• With the LED & SE unit, the wave engine creates the atmosphere of the play along with the sound by lighting and darkening and flickering."
-		},
-		{
-			"ja": "• 波動砲部分はクリアパーツで再現。",
-			"en": "• The wave motion gun part is reproduced with clear parts."
-		},
-		{
-			"ja": "• LEDとサウンドを台座で制御",
-			"en": "• Control the LED and sound with the pedestal"
-		},
-		{
-			"ja": "• LEDを使用し、[赤→青→白]と変化し、リアルな明滅とサウンドで再現。",
-			"en": "• Using LED, it changes from [red → blue → white] and is reproduced with realistic flickering and sound."
-		},
-		{
-			"ja": "• 新設定のリトラクタブル兵装は開閉選択式で再現。",
-			"en": "• The newly set retractable weapon is reproduced with an open/close selection type."
-		},
-		{
-			"ja": "• 艦載機コスモタイガーIIはディスプレイベースで展示することが可能。",
-			"en": "• The carrier-based aircraft Cosmo Tiger II can be displayed on a display base."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ディスプレイベース×1",
-			"en": "Display base x 1"
-		},
-		{
-			"ja": "コスモタイガーII×4",
-			"en": "Cosmo Tiger II×4"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×9",
-			"en": "Molded product x 9"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "水転写式デカール×1",
-			"en": "Water transfer decal x 1"
-		},
-		{
-			"ja": "ＬＥＤ&ＳＥユニット一式",
-			"en": "LED & SE unit set"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"宇宙戦艦ヤマト2202 地球連邦 アンドロメダ級二番艦 アルデバラン ムービーエフェクトVer.が登場！",
+			"• LED & SEユニットにより、波動エンジンは明暗とゆらぎ点滅でサウンドと共に劇中の雰囲気を演出。",
+			"• 波動砲部分はクリアパーツで再現。",
+			"• LEDとサウンドを台座で制御",
+			"• LEDを使用し、[赤→青→白]と変化し、リアルな明滅とサウンドで再現。",
+			"• 新設定のリトラクタブル兵装は開閉選択式で再現。",
+			"• 艦載機コスモタイガーIIはディスプレイベースで展示することが可能。"
+		],
+		"en": [
+			"Space Battleship Yamato 2202 Earth Federation Andromeda Class Second Ship Aldebaran Movie Effect Ver. is now available!",
+			"• With the LED & SE unit, the wave engine creates the atmosphere of the play along with the sound by lighting and darkening and flickering.",
+			"• The wave motion gun part is reproduced with clear parts.",
+			"• Control the LED and sound with the pedestal",
+			"• Using LED, it changes from [red → blue → white] and is reproduced with realistic flickering and sound.",
+			"• The newly set retractable weapon is reproduced with an open/close selection type.",
+			"• The carrier-based aircraft Cosmo Tiger II can be displayed on a display base."
+		]
+	},
+	"accessories": {
+		"ja": ["ディスプレイベース×1", "コスモタイガーII×4"],
+		"en": ["Display base x 1", "Cosmo Tiger II×4"]
+	},
+	"contents": {
+		"ja": ["成形品×9", "シール×1", "水転写式デカール×1", "ＬＥＤ&ＳＥユニット一式", "取扱説明書×1"],
+		"en": ["Molded product x 9", "Seal×1", "Water transfer decal x 1", "LED & SE unit set", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1094_0.jpg",
 		"/images/items/01_1094_1.jpg",
@@ -98,16 +64,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_1094/",
 	"extractedAt": "2025-12-06T16:50:23.157Z",
 	"brandIds": [],
-	"seriesIds": [
-		"space-battleship-yamato-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5971",
-		"01_5498",
-		"01_5500",
-		"01_5388"
-	]
+	"seriesIds": ["space-battleship-yamato-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5971", "01_5498", "01_5500", "01_5388"]
 }

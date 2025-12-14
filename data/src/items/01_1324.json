@@ -19,36 +19,24 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "モモが使用する、カプルをベースとしたペンギンモチーフのカスタム機が登場！",
-			"en": "A custom machine with a penguin motif based on Kaple, used by Momo, is now available!"
-		},
-		{
-			"ja": "• プチカプルが付属し、本体を展開させて搭乗させることが可能！",
-			"en": "• A small couple is included, allowing you to expand the main body and board it!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "プチカプル×1",
-			"en": "Petit couple x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×9",
-			"en": "Molded product x 9"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"モモが使用する、カプルをベースとしたペンギンモチーフのカスタム機が登場！",
+			"• プチカプルが付属し、本体を展開させて搭乗させることが可能！"
+		],
+		"en": [
+			"A custom machine with a penguin motif based on Kaple, used by Momo, is now available!",
+			"• A small couple is included, allowing you to expand the main body and board it!"
+		]
+	},
+	"accessories": {
+		"ja": ["プチカプル×1"],
+		"en": ["Petit couple x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×9", "シール×1", "取扱説明書×1"],
+		"en": ["Molded product x 9", "Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1324_0.jpg",
 		"/images/items/01_1324_1.jpg",
@@ -58,20 +46,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1324/",
 	"extractedAt": "2025-12-06T17:12:59.045Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "1018"
 }

@@ -18,22 +18,14 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "プレミアムバンダイはこちら"
-		},
-		{
-			"ja": "※プレミアムバンダイのトップページに遷移します。"
-		},
-		{
-			"ja": "※一部のエリアでは販売していません。"
-		},
-		{
-			"ja": "※エリアにより申込開始の日時は異なります。"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"プレミアムバンダイはこちら",
+			"※プレミアムバンダイのトップページに遷移します。",
+			"※一部のエリアでは販売していません。",
+			"※エリアにより申込開始の日時は異なります。"
+		]
+	},
 	"images": [
 		"/images/items/01_3919_0.jpg",
 		"/images/items/01_3919_1.jpg",
@@ -47,22 +39,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3919/",
 	"extractedAt": "2025-12-06T17:52:31.280Z",
-	"brandIds": [
-		"rg-real-gradepreban-gunpla",
-		"prevan-gunpla",
-		"rg-real-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-00-double-o"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000224328",
-		"item-1000216602",
-		"item-1000161849",
-		"item-1000137643"
-	],
+	"brandIds": ["rg-real-gradepreban-gunpla", "prevan-gunpla", "rg-real-grade"],
+	"seriesIds": ["mobile-suit-gundam-00-double-o"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000224328", "item-1000216602", "item-1000161849", "item-1000137643"],
 	"manualId": "2203"
 }

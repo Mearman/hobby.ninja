@@ -19,68 +19,34 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動戦士ガンダム 閃光のハサウェイ』より、レーン・エイム中尉が搭乗するMSペーネロペーが遂にHG化！",
-			"en": "From \"Mobile Suit Gundam: Flash Hathaway\", MS Penelope piloted by Lieutenant Lane Aim is finally transformed into HG!"
-		},
-		{
-			"ja": "• カトキハジメ氏による監修のもと、ペーネロペーの複雑な機構をHG最新フォーマットへ落とし込み、その特徴を再現。",
-			"en": "• Under the supervision of Hajime Katoki, Penelope's complex mechanism has been translated into the latest HG format and its characteristics have been reproduced."
-		},
-		{
-			"ja": "• 各部装甲の成形色再現に加え、キャノピーにはクリアパーツを採用。",
-			"en": "• In addition to reproducing the molding colors of each part of the armor, clear parts are used for the canopy."
-		},
-		{
-			"ja": "• 肩アーマーとテール・スタビライザー、脚部バーニアの形状など、背面からのボリュームも圧倒的。",
-			"en": "• The volume from the back is overwhelming, such as the shape of the shoulder armor, tail stabilizer, and leg vernier."
-		},
-		{
-			"ja": "• 肩部アーマーは差し込み位置を変えることで開閉状態を再現可能。",
-			"en": "• Shoulder armor can be recreated in open/closed state by changing the insertion position."
-		},
-		{
-			"ja": "• 各部武装、装甲にはビーム・サーベルが装着できる。",
-			"en": "• Each part is armed, and a beam saber can be attached to the armor."
-		},
-		{
-			"ja": "• ディスプレイ台座が付属。フライトユニットとオデュッセウスガンダムを分離状態でディスプレイすることが可能。",
-			"en": "• Display pedestal included. It is possible to display the flight unit and Odysseus Gundam separately."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビーム・ライフル×1",
-			"en": "Beam rifle x1"
-		},
-		{
-			"ja": "ビーム・サーベル×2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "シールド×2",
-			"en": "Seal × 2"
-		},
-		{
-			"ja": "ディスプレイ台座×1",
-			"en": "Display pedestal x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×20",
-			"en": "Molded product x 20"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『機動戦士ガンダム 閃光のハサウェイ』より、レーン・エイム中尉が搭乗するMSペーネロペーが遂にHG化！",
+			"• カトキハジメ氏による監修のもと、ペーネロペーの複雑な機構をHG最新フォーマットへ落とし込み、その特徴を再現。",
+			"• 各部装甲の成形色再現に加え、キャノピーにはクリアパーツを採用。",
+			"• 肩アーマーとテール・スタビライザー、脚部バーニアの形状など、背面からのボリュームも圧倒的。",
+			"• 肩部アーマーは差し込み位置を変えることで開閉状態を再現可能。",
+			"• 各部武装、装甲にはビーム・サーベルが装着できる。",
+			"• ディスプレイ台座が付属。フライトユニットとオデュッセウスガンダムを分離状態でディスプレイすることが可能。"
+		],
+		"en": [
+			"From \"Mobile Suit Gundam: Flash Hathaway\", MS Penelope piloted by Lieutenant Lane Aim is finally transformed into HG!",
+			"• Under the supervision of Hajime Katoki, Penelope's complex mechanism has been translated into the latest HG format and its characteristics have been reproduced.",
+			"• In addition to reproducing the molding colors of each part of the armor, clear parts are used for the canopy.",
+			"• The volume from the back is overwhelming, such as the shape of the shoulder armor, tail stabilizer, and leg vernier.",
+			"• Shoulder armor can be recreated in open/closed state by changing the insertion position.",
+			"• Each part is armed, and a beam saber can be attached to the armor.",
+			"• Display pedestal included. It is possible to display the flight unit and Odysseus Gundam separately."
+		]
+	},
+	"accessories": {
+		"ja": ["ビーム・ライフル×1", "ビーム・サーベル×2", "シールド×2", "ディスプレイ台座×1"],
+		"en": ["Beam rifle x1", "Beam saber x2", "Seal × 2", "Display pedestal x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×20", "取扱説明書×1", "ホイルシール×1"],
+		"en": ["Molded product x 20", "Handling manual×1", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_2443_0.jpg",
 		"/images/items/01_2443_1.jpg",
@@ -89,21 +55,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2443/",
 	"extractedAt": "2025-12-06T17:49:23.478Z",
-	"brandIds": [
-		"hg-high-grade",
-		"hg-universal-century"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-flash-hathaway"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5594",
-		"01_4971",
-		"01_4269",
-		"item-1000157737"
-	],
+	"brandIds": ["hg-high-grade", "hg-universal-century"],
+	"seriesIds": ["mobile-suit-gundam-flash-hathaway"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5594", "01_4971", "01_4269", "item-1000157737"],
 	"manualId": "0491"
 }

@@ -18,67 +18,46 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "30 MINUTES LABEL 「30 MINUTES PREFERENCE」より『ヱヴァンゲリヲン新劇場版』に登場の綾波レイをプラグスーツ姿で豊富な付属パーツとともに商品化！",
-			"en": "30 MINUTES LABEL From \"30 MINUTES PREFERENCE \", Rei Ayanami, who appeared in \" Evangelion: Rebuild of Evangelion\", is commercialized in a plug suit with a variety of accessory parts!"
-		},
-		{
-			"ja": "■タンポ印刷を施した2種類のフェイスパーツが付属。",
-			"en": "• Two types of face parts with tampo printing are included."
-		},
-		{
-			"ja": "■印刷無しのフェイスパーツと、多数の表情を選択できる水転写式デカールが付属。",
-			"en": "• Comes with unprinted face parts and water transfer decals that allow you to choose from a variety of facial expressions."
-		},
-		{
-			"ja": "■体育座り用の交換パーツが付属。",
-			"en": "• Comes with replacement parts for PE sitting."
-		},
-		{
-			"ja": "■プラグスーツは艶のある質感で表現。",
-			"en": "• The plug suit has a glossy texture."
-		},
-		{
-			"ja": "■ロンギヌスの槍、S-DAT、ゲンドウの眼鏡が付属。",
-			"en": "• Includes Spear of Longinus, S-DAT, and Gendo's glasses."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "フェイスパーツ(タンポ印刷済)×2種",
-			"en": "Face parts (tampo printed) x 2 types"
-		},
-		{
-			"ja": "フェイスパーツ(印刷無し)×1式",
-			"en": "Face parts (no printing) x 1 set"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "ロンギヌスの槍×1",
-			"en": "Spear of Longinus x1"
-		},
-		{
-			"ja": "体育座り用交換パーツ×1式",
-			"en": "Replacement parts for physical education sitting x 1 set"
-		},
-		{
-			"ja": "S-DAT・ゲンドウの眼鏡×1式",
-			"en": "S-DAT Gendo glasses x 1 set"
-		},
-		{
-			"ja": "テトロンシール×1式",
-			"en": "Tetron Seal×1 type"
-		},
-		{
-			"ja": "水転写式デカール×1式",
-			"en": "Water transfer decal x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30 MINUTES LABEL 「30 MINUTES PREFERENCE」より『ヱヴァンゲリヲン新劇場版』に登場の綾波レイをプラグスーツ姿で豊富な付属パーツとともに商品化！",
+			"■タンポ印刷を施した2種類のフェイスパーツが付属。",
+			"■印刷無しのフェイスパーツと、多数の表情を選択できる水転写式デカールが付属。",
+			"■体育座り用の交換パーツが付属。",
+			"■プラグスーツは艶のある質感で表現。",
+			"■ロンギヌスの槍、S-DAT、ゲンドウの眼鏡が付属。"
+		],
+		"en": [
+			"30 MINUTES LABEL From \"30 MINUTES PREFERENCE \", Rei Ayanami, who appeared in \" Evangelion: Rebuild of Evangelion\", is commercialized in a plug suit with a variety of accessory parts!",
+			"• Two types of face parts with tampo printing are included.",
+			"• Comes with unprinted face parts and water transfer decals that allow you to choose from a variety of facial expressions.",
+			"• Comes with replacement parts for PE sitting.",
+			"• The plug suit has a glossy texture.",
+			"• Includes Spear of Longinus, S-DAT, and Gendo's glasses."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"フェイスパーツ(タンポ印刷済)×2種",
+			"フェイスパーツ(印刷無し)×1式",
+			"ハンドパーツ×1式",
+			"ロンギヌスの槍×1",
+			"体育座り用交換パーツ×1式",
+			"S-DAT・ゲンドウの眼鏡×1式",
+			"テトロンシール×1式",
+			"水転写式デカール×1式"
+		],
+		"en": [
+			"Face parts (tampo printed) x 2 types",
+			"Face parts (no printing) x 1 set",
+			"Hand parts x 1 set",
+			"Spear of Longinus x1",
+			"Replacement parts for physical education sitting x 1 set",
+			"S-DAT Gendo glasses x 1 set",
+			"Tetron Seal×1 type",
+			"Water transfer decal x 1 set"
+		]
+	},
 	"images": [
 		"/images/items/01_6757_0.jpg",
 		"/images/items/01_6757_1.jpg",
@@ -95,17 +74,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_6757/",
 	"extractedAt": "2025-12-06T17:57:54.889Z",
-	"brandIds": [
-		"30-minutes-preference"
-	],
-	"seriesIds": [
-		"evangelion"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5982",
-		"01_5492"
-	]
+	"brandIds": ["30-minutes-preference"],
+	"seriesIds": ["evangelion"],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5982", "01_5492"]
 }

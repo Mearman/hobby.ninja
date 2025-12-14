@@ -19,48 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "• 新作ショートフィルム『ガンダムビルドファイターズ バトローグ』第1話に登場する、リボーンズガンダムベースの新ガンプラがHGBF化！",
-			"en": "• The new Gunpla based on Reborns Gundam, which appears in the first episode of the new short film \"Gundam Build Fighters Battlogue\", is now HGBF!"
-		},
-		{
-			"ja": "• 両腕に装備されたGNビームピストルとクローは新規造形で再現され、フレキシブルに可動！",
-			"en": "• The GN beam pistol and claw equipped on both arms are reproduced with new modeling and can be flexibly moved!"
-		},
-		{
-			"ja": "• 差し替えにより、タンクモード、キャノンモードへの変形が可能となっており、両腕のGNドラゴンクローを展開させることで、より攻撃的なスタイルを再現できる！",
-			"en": "• By replacing it, it is possible to transform into tank mode and cannon mode, and by deploying the GN dragon claws on both arms, you can reproduce a more aggressive style!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "GNビームピストル×2",
-			"en": "GN beam pistol x2"
-		},
-		{
-			"ja": "GNドラゴンクロー×2",
-			"en": "GN Dragon Claw x2"
-		},
-		{
-			"ja": "大型GNビームサーベル×2",
-			"en": "Large GN beam saber x2"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×10",
-			"en": "Molded product x 10"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• 新作ショートフィルム『ガンダムビルドファイターズ バトローグ』第1話に登場する、リボーンズガンダムベースの新ガンプラがHGBF化！",
+			"• 両腕に装備されたGNビームピストルとクローは新規造形で再現され、フレキシブルに可動！",
+			"• 差し替えにより、タンクモード、キャノンモードへの変形が可能となっており、両腕のGNドラゴンクローを展開させることで、より攻撃的なスタイルを再現できる！"
+		],
+		"en": [
+			"• The new Gunpla based on Reborns Gundam, which appears in the first episode of the new short film \"Gundam Build Fighters Battlogue\", is now HGBF!",
+			"• The GN beam pistol and claw equipped on both arms are reproduced with new modeling and can be flexibly moved!",
+			"• By replacing it, it is possible to transform into tank mode and cannon mode, and by deploying the GN dragon claws on both arms, you can reproduce a more aggressive style!"
+		]
+	},
+	"accessories": {
+		"ja": ["GNビームピストル×2", "GNドラゴンクロー×2", "大型GNビームサーベル×2"],
+		"en": ["GN beam pistol x2", "GN Dragon Claw x2", "Large GN beam saber x2"]
+	},
+	"contents": {
+		"ja": ["成形品×10", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 10", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1128_0.jpg",
 		"/images/items/01_1128_1.jpg",
@@ -70,20 +48,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1128/",
 	"extractedAt": "2025-12-06T16:55:05.988Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-fighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-fighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"manualId": "0058"
 }

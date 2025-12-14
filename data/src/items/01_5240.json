@@ -18,35 +18,22 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "フレキシブルに可動するアームで連結された支援機と、豊富なジョイントパーツがオプションパーツセットで登場！",
-			"en": "A support machine connected by a flexibly movable arm and a variety of joint parts are now available as an optional parts set!"
-		},
-		{
-			"ja": "• パーツの組み替えにより、飛行形態から合体形態に変形し、様々なMSに装備可能。",
-			"en": "• By rearranging parts, it can transform from flight form to combined form and can be equipped on various MS."
-		},
-		{
-			"ja": "• 本体に加えて一軸ジョイント、二軸ジョイント、大、中、小それぞれのボールジョイントなど豊富なジョイントパーツが付属。",
-			"en": "• In addition to the main body, a variety of joint parts are included, including a single-axis joint, two-axis joint, and large, medium, and small ball joints."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ボールデンアームアームズ×1式",
-			"en": "Bolden Arm Arms x 1 set"
-		},
-		{
-			"ja": "アンカーパーツ×1",
-			"en": "Anchor parts x 1"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"フレキシブルに可動するアームで連結された支援機と、豊富なジョイントパーツがオプションパーツセットで登場！",
+			"• パーツの組み替えにより、飛行形態から合体形態に変形し、様々なMSに装備可能。",
+			"• 本体に加えて一軸ジョイント、二軸ジョイント、大、中、小それぞれのボールジョイントなど豊富なジョイントパーツが付属。"
+		],
+		"en": [
+			"A support machine connected by a flexibly movable arm and a variety of joint parts are now available as an optional parts set!",
+			"• By rearranging parts, it can transform from flight form to combined form and can be equipped on various MS.",
+			"• In addition to the main body, a variety of joint parts are included, including a single-axis joint, two-axis joint, and large, medium, and small ball joints."
+		]
+	},
+	"accessories": {
+		"ja": ["ボールデンアームアームズ×1式", "アンカーパーツ×1", "ジョイントパーツ×1式"],
+		"en": ["Bolden Arm Arms x 1 set", "Anchor parts x 1", "Joint parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_5240_0.jpg",
 		"/images/items/01_5240_1.jpg",
@@ -63,20 +50,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5240/",
 	"extractedAt": "2025-12-06T17:55:29.996Z",
-	"brandIds": [
-		"optional-parts-set"
-	],
-	"seriesIds": [
-		"gundam-build-fighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6765",
-		"01_5237",
-		"01_5238",
-		"01_5239"
-	],
+	"brandIds": ["optional-parts-set"],
+	"seriesIds": ["gundam-build-fighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6765", "01_5237", "01_5238", "01_5239"],
 	"manualId": "1658"
 }

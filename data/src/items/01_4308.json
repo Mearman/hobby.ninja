@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ハインドリー",
-		"en": "HG 1/144 Hindley"
+		"en": "HG 1/144 HEINDREE"
 	},
 	"price": {
 		"amount": 1760,
@@ -19,47 +19,28 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、ハインドリーが商品化！",
-			"en": "Hindley is commercialized from the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\"!"
-		},
-		{
-			"ja": "■挟み込みを避け、後はめ加工をメインとするパーツ構成により組み立てやすさに配慮。",
-			"en": "• Ease of assembly is taken into account by avoiding pinching and using a parts configuration that requires post-fitting."
-		},
-		{
-			"ja": "■首・腰部のボールジョイントは空間を設けた構造で前後傾の姿勢にも対応。",
-			"en": "• The ball joints in the neck and lower back have a spaced structure that allows for forward and backward leaning postures."
-		},
-		{
-			"ja": "■マッシブなフォルムに加え、回転可動を備えた全高ほどもある長さの専用武器を装備。",
-			"en": "• In addition to its massive form, it is equipped with a special weapon that is as long as its total height and can rotate."
-		},
-		{
-			"ja": "■左腕には専用シールドを保持。シールドは正面に向けられるようにアーム部分が可動。",
-			"en": "• He holds a special Seal on his left arm. The arm part of Seal is movable so that it can be facing forward."
-		},
-		{
-			"ja": "■背部には３本のノズルで構成されたバックパックを装備、高い機動性能を有する。",
-			"en": "• Equipped with a backpack consisting of three nozzles on its back, giving it high maneuverability."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "専用シールド×１",
-			"en": "Dedicated Seal × 1"
-		},
-		{
-			"ja": "専用武器×１",
-			"en": "Special weapon x1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、ハインドリーが商品化！",
+			"■挟み込みを避け、後はめ加工をメインとするパーツ構成により組み立てやすさに配慮。",
+			"■首・腰部のボールジョイントは空間を設けた構造で前後傾の姿勢にも対応。",
+			"■マッシブなフォルムに加え、回転可動を備えた全高ほどもある長さの専用武器を装備。",
+			"■左腕には専用シールドを保持。シールドは正面に向けられるようにアーム部分が可動。",
+			"■背部には３本のノズルで構成されたバックパックを装備、高い機動性能を有する。"
+		],
+		"en": [
+			"Hindley is commercialized from the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\"!",
+			"• Ease of assembly is taken into account by avoiding pinching and using a parts configuration that requires post-fitting.",
+			"• The ball joints in the neck and lower back have a spaced structure that allows for forward and backward leaning postures.",
+			"• In addition to its massive form, it is equipped with a special weapon that is as long as its total height and can rotate.",
+			"• He holds a special Seal on his left arm. The arm part of Seal is movable so that it can be facing forward.",
+			"• Equipped with a backpack consisting of three nozzles on its back, giving it high maneuverability."
+		]
+	},
+	"accessories": {
+		"ja": ["専用シールド×１", "専用武器×１", "シール×1"],
+		"en": ["Dedicated Seal × 1", "Special weapon x1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_4308_0.jpg",
 		"/images/items/01_4308_1.jpg",
@@ -73,20 +54,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4308/",
 	"extractedAt": "2025-12-06T17:53:25.191Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-witch-of-mercury"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203129"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-witch-of-mercury"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manualId": "0146"
 }

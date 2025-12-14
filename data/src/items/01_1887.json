@@ -19,68 +19,44 @@
 	},
 	"targetAge": 15,
 	"scale": "1/12",
-	"description": [
-		{
-			"ja": "『スター・ウォーズ』シリーズ全作に登場するR2-D2が新たなギミック・機能を追加して登場！",
-			"en": "R2-D2, who appears in all Star Wars series, is now available with new gimmicks and functions!"
-		},
-		{
-			"ja": "• 『スター・ウォーズ』シリーズに登場するアストロメク・ドロイドを「 ドロイド・コレクション」と銘打ち、1/12スケールのコレクタブルラインに！",
-			"en": "• The astromech droids that appear in the \"Star Wars \" series are now part of the 1/12 Scale collectible line, called the \" Droid Collection\"!"
-		},
-		{
-			"ja": "• コレクションの各ドロイドには、最高のR2-D2を作るため様々なシーンを再現する「ドロイドアクセサリー」が付属。",
-			"en": "• Each droid in the collection comes with a \"Droid Accessory\" that recreates various scenes to create the best R2-D2."
-		},
-		{
-			"ja": "• 浮遊状態で飾れるディスプレイベースが付属！",
-			"en": "• Comes with a display base that can be displayed in a floating state!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ブルックス推進装置製ロケット・ブースター×1",
-			"en": "Brooks propulsion system rocket booster x 1"
-		},
-		{
-			"ja": "油圧式頭部持ち上げ装置×1",
-			"en": "Hydraulic head lifting device x 1"
-		},
-		{
-			"ja": "電子棒×1",
-			"en": "Electronic stick x 1"
-		},
-		{
-			"ja": "油塗布アーム×1",
-			"en": "Oil application arm x 1"
-		},
-		{
-			"ja": "ライトセイバー×1",
-			"en": "Lightsaber x 1"
-		},
-		{
-			"ja": "ツールスタンド×2",
-			"en": "Tool stand x 2"
-		},
-		{
-			"ja": "ディスプレイベース×1",
-			"en": "Display base x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×6",
-			"en": "Molded product x 6"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『スター・ウォーズ』シリーズ全作に登場するR2-D2が新たなギミック・機能を追加して登場！",
+			"• 『スター・ウォーズ』シリーズに登場するアストロメク・ドロイドを「 ドロイド・コレクション」と銘打ち、1/12スケールのコレクタブルラインに！",
+			"• コレクションの各ドロイドには、最高のR2-D2を作るため様々なシーンを再現する「ドロイドアクセサリー」が付属。",
+			"• 浮遊状態で飾れるディスプレイベースが付属！"
+		],
+		"en": [
+			"R2-D2, who appears in all Star Wars series, is now available with new gimmicks and functions!",
+			"• The astromech droids that appear in the \"Star Wars \" series are now part of the 1/12 Scale collectible line, called the \" Droid Collection\"!",
+			"• Each droid in the collection comes with a \"Droid Accessory\" that recreates various scenes to create the best R2-D2.",
+			"• Comes with a display base that can be displayed in a floating state!"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ブルックス推進装置製ロケット・ブースター×1",
+			"油圧式頭部持ち上げ装置×1",
+			"電子棒×1",
+			"油塗布アーム×1",
+			"ライトセイバー×1",
+			"ツールスタンド×2",
+			"ディスプレイベース×1"
+		],
+		"en": [
+			"Brooks propulsion system rocket booster x 1",
+			"Hydraulic head lifting device x 1",
+			"Electronic stick x 1",
+			"Oil application arm x 1",
+			"Lightsaber x 1",
+			"Tool stand x 2",
+			"Display base x 1"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×6", "マーキングシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 6", "MarkingSeal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1887_0.jpg",
 		"/images/items/01_1887_1.jpg",
@@ -98,16 +74,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_1887/",
 	"extractedAt": "2025-12-06T17:48:18.815Z",
 	"brandIds": [],
-	"seriesIds": [
-		"star-wars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"seriesIds": ["star-wars"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4153", "01_4154", "01_3514", "01_3513"]
 }

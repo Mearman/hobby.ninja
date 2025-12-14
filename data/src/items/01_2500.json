@@ -18,31 +18,22 @@
 		"day": 23
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "『ダンボール戦機』より、郷田専用LBXハカイオーの後継機が登場！",
-			"en": "From \"Danball Senki\" comes the successor to Goda's LBX Hakaio!"
-		},
-		{
-			"ja": "• 様々な劇中シーンの再現が可能！",
-			"en": "• It is possible to reproduce various scenes from the play!"
-		},
-		{
-			"ja": "• 基本装備の「絶・破岩刃」が付属。",
-			"en": "• Basic equipment \"Zetsu Rock Breaking Blade\" is included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "絶・破岩刃×1",
-			"en": "Absolute rock-breaking blade x1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『ダンボール戦機』より、郷田専用LBXハカイオーの後継機が登場！",
+			"• 様々な劇中シーンの再現が可能！",
+			"• 基本装備の「絶・破岩刃」が付属。"
+		],
+		"en": [
+			"From \"Danball Senki\" comes the successor to Goda's LBX Hakaio!",
+			"• It is possible to reproduce various scenes from the play!",
+			"• Basic equipment \"Zetsu Rock Breaking Blade\" is included."
+		]
+	},
+	"accessories": {
+		"ja": ["絶・破岩刃×1", "ホイルシール×1"],
+		"en": ["Absolute rock-breaking blade x1", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_2500_0.jpg",
 		"/images/items/01_2500_1.jpg",
@@ -55,16 +46,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2500/",
 	"extractedAt": "2025-12-06T17:49:29.938Z",
 	"brandIds": [],
-	"seriesIds": [
-		"danball-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"seriesIds": ["danball-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000215196", "item-1000215197", "item-1000210042", "item-1000210041"]
 }

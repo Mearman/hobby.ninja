@@ -18,35 +18,24 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "1/144スケールに最適なエフェクトが登場！",
-			"en": "Introducing the perfect effects for 1/144 Scale!"
-		},
-		{
-			"ja": "だれでも簡単にオリジナルの戦闘シーンを作り出せる！カスタマイズエフェクトシリーズにアクションイメージVer.が登場！",
-			"en": "Anyone can easily create their own original battle scenes! Action image version is now available in the customized effect series!"
-		},
-		{
-			"ja": "■激しいアクションシーンを彩るセット。カラーはレッド。",
-			"en": "• Sets for intense action scenes. The color is red."
-		},
-		{
-			"ja": "■エフェクトパーツ一式とジョイントパーツ一式のセット。",
-			"en": "• A set of effect parts and joint parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "エフェクトパーツ×1式",
-			"en": "Effect parts x 1"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"1/144スケールに最適なエフェクトが登場！",
+			"だれでも簡単にオリジナルの戦闘シーンを作り出せる！カスタマイズエフェクトシリーズにアクションイメージVer.が登場！",
+			"■激しいアクションシーンを彩るセット。カラーはレッド。",
+			"■エフェクトパーツ一式とジョイントパーツ一式のセット。"
+		],
+		"en": [
+			"Introducing the perfect effects for 1/144 Scale!",
+			"Anyone can easily create their own original battle scenes! Action image version is now available in the customized effect series!",
+			"• Sets for intense action scenes. The color is red.",
+			"• A set of effect parts and joint parts."
+		]
+	},
+	"accessories": {
+		"ja": ["エフェクトパーツ×1式", "ジョイントパーツ×1式"],
+		"en": ["Effect parts x 1", "Joint parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_3343_0.jpg",
 		"/images/items/01_3343_1.jpg",
@@ -59,19 +48,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3343/",
 	"extractedAt": "2025-12-06T17:51:14.426Z",
-	"brandIds": [
-		"customized-scene-baseeffectsmaterialsweapons",
-		"30-minutes-missions"
-	],
+	"brandIds": ["customized-scene-baseeffectsmaterialsweapons", "30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3841"
 }

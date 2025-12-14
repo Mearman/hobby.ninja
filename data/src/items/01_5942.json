@@ -18,39 +18,26 @@
 		"day": 19
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「クラスアップアーマー (リーベルソーサラー)」が登場！",
-			"en": "From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Class Up Armor (Liber Sorcerer)\" is now available!"
-		},
-		{
-			"ja": "• “アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
-			"en": "• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job."
-		},
-		{
-			"ja": "• 別売りの「30MF リーベルウィザード」と組み合わせることで「リーベルソーサラー」に“クラスアップ”が可能。",
-			"en": "• By combining it with the separately sold \"30MF Liber Wizard \", it is possible to \" class up \" to \" Level Sorcerer\"."
-		},
-		{
-			"ja": "• “エレメントコア”の属性は「氷」。",
-			"en": "• The attribute of “element core” is “ice”."
-		},
-		{
-			"ja": "• 別売りのローザン帝国の「ソーサラー」とは異なるフェイスデザインとカラーリング。",
-			"en": "• Face design and coloring different from the Rozan Empire's \"Sorcerer\" sold separately."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "アーマーパーツ×1式",
-			"en": "Armor parts x 1 set"
-		},
-		{
-			"ja": "武装パーツ×1式",
-			"en": "Armed parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「クラスアップアーマー (リーベルソーサラー)」が登場！",
+			"• “アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
+			"• 別売りの「30MF リーベルウィザード」と組み合わせることで「リーベルソーサラー」に“クラスアップ”が可能。",
+			"• “エレメントコア”の属性は「氷」。",
+			"• 別売りのローザン帝国の「ソーサラー」とは異なるフェイスデザインとカラーリング。"
+		],
+		"en": [
+			"From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Class Up Armor (Liber Sorcerer)\" is now available!",
+			"• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job.",
+			"• By combining it with the separately sold \"30MF Liber Wizard \", it is possible to \" class up \" to \" Level Sorcerer\".",
+			"• The attribute of “element core” is “ice”.",
+			"• Face design and coloring different from the Rozan Empire's \"Sorcerer\" sold separately."
+		]
+	},
+	"accessories": {
+		"ja": ["アーマーパーツ×1式", "武装パーツ×1式"],
+		"en": ["Armor parts x 1 set", "Armed parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_5942_0.jpg",
 		"/images/items/01_5942_1.jpg",
@@ -60,18 +47,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5942/",
 	"extractedAt": "2025-12-06T17:56:53.982Z",
-	"brandIds": [
-		"30-minutes-fantasy"
-	],
+	"brandIds": ["30-minutes-fantasy"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5978",
-		"01_5979",
-		"01_5980",
-		"01_5981"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5981"],
 	"manualId": "3426"
 }

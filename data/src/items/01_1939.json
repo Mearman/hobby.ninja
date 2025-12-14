@@ -17,35 +17,21 @@
 		"month": 0
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテムです。",
-			"en": "A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world."
-		},
-		{
-			"ja": "アクションベース４が、ガンダムベース限定トリコロールカラーで登場。",
-			"en": "Action Base 4 is available in Gundam Base limited tricolor color."
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_1939_0.jpg",
-		"/images/items/01_1939_1.jpg",
-		"/images/items/01_1939_2.jpg"
-	],
+	"description": {
+		"ja": [
+			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定アイテムです。",
+			"アクションベース４が、ガンダムベース限定トリコロールカラーで登場。"
+		],
+		"en": [
+			"A limited edition item from the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"Action Base 4 is available in Gundam Base limited tricolor color."
+		]
+	},
+	"images": ["/images/items/01_1939_0.jpg", "/images/items/01_1939_1.jpg", "/images/items/01_1939_2.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1939/",
 	"extractedAt": "2025-12-06T17:48:24.115Z",
-	"brandIds": [
-		"action-base"
-	],
+	"brandIds": ["action-base"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5934",
-		"01_5256",
-		"01_5258"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5934", "01_5256", "01_5258"]
 }

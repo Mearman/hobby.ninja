@@ -18,39 +18,24 @@
 	},
 	"targetAge": 15,
 	"scale": "1/48",
-	"description": [
-		{
-			"ja": "『GUNDAM FACTORY YOKOHAMA』の動く実物大ガンダムの限定商品！",
-			"en": "Limited edition moving life-sized Gundam from “GUNDAM FACTORY YOKOHAMA”!"
-		},
-		{
-			"ja": "動くガンダムの造形を細部まで忠実に再現した1/48スケールの胸像プラモデルが登場。",
-			"en": "Introducing a 1/48 Scale bust plastic model that faithfully reproduces the moving Gundam in every detail."
-		},
-		{
-			"ja": "• LEDによりツインアイとメインカメラが発光！",
-			"en": "• Twin eyes and main camera light up with LED!"
-		},
-		{
-			"ja": "• オプションパーツを装着して実物大ガンダムのフォルム表現が可能",
-			"en": "• It is possible to express the form of a life-sized Gundam by attaching optional parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "LEDユニット",
-			"en": "LED unit"
-		},
-		{
-			"ja": "ホイルシール",
-			"en": "foil seal"
-		},
-		{
-			"ja": "マーキングシール",
-			"en": "MarkingSeal"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『GUNDAM FACTORY YOKOHAMA』の動く実物大ガンダムの限定商品！",
+			"動くガンダムの造形を細部まで忠実に再現した1/48スケールの胸像プラモデルが登場。",
+			"• LEDによりツインアイとメインカメラが発光！",
+			"• オプションパーツを装着して実物大ガンダムのフォルム表現が可能"
+		],
+		"en": [
+			"Limited edition moving life-sized Gundam from “GUNDAM FACTORY YOKOHAMA”!",
+			"Introducing a 1/48 Scale bust plastic model that faithfully reproduces the moving Gundam in every detail.",
+			"• Twin eyes and main camera light up with LED!",
+			"• It is possible to express the form of a life-sized Gundam by attaching optional parts."
+		]
+	},
+	"accessories": {
+		"ja": ["LEDユニット", "ホイルシール", "マーキングシール"],
+		"en": ["LED unit", "foil seal", "MarkingSeal"]
+	},
 	"images": [
 		"/images/items/01_3369_0.jpg",
 		"/images/items/01_3369_1.jpg",
@@ -63,19 +48,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3369/",
 	"extractedAt": "2025-12-06T17:51:18.060Z",
-	"brandIds": [
-		"gundam-factory-yokohama"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5035",
-		"01_4239",
-		"01_3472",
-		"01_3841"
-	]
+	"brandIds": ["gundam-factory-yokohama"],
+	"seriesIds": ["mobile-suit-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3841"]
 }

@@ -18,51 +18,26 @@
 		"day": 6
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「30MF アイテムショップ4(クエストオプション)」が登場！",
-			"en": "\"30MF Item Shop 4 (Quest Option)\" is now available from \" 30 MINUTES FANTASY\" where you can create your own fantasy job!"
-		},
-		{
-			"ja": "■冒険や探検にかかせない遊びの幅を広げるアイテムが詰まったセット。",
-			"en": "• A set packed with items that expand the range of play essential for adventure and exploration."
-		},
-		{
-			"ja": "■アイテムの内容は「焚火」「トーチ」「ランタン」「魔導書」。",
-			"en": "• Item contents include \"bonfire \", \" torch \", \" lantern \", and \" spellbook\"."
-		},
-		{
-			"ja": "■「トーチ」は各所に取り付け可能なジョイントパーツが付属。",
-			"en": "• \"Torch\" comes with joint parts that can be attached to various places."
-		},
-		{
-			"ja": "■「魔導書」は可動式で開く・閉じることが可能。",
-			"en": "• The \"Magic Book\" is movable and can be opened and closed."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "焚火×1式",
-			"en": "Bonfire x 1 set"
-		},
-		{
-			"ja": "トーチ×1",
-			"en": "Torch x 1"
-		},
-		{
-			"ja": "ランタン×1",
-			"en": "Lantern x 1"
-		},
-		{
-			"ja": "魔導書×1",
-			"en": "Magic book x1"
-		},
-		{
-			"ja": "ジョイントパーツ×1",
-			"en": "Joint parts x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「30MF アイテムショップ4(クエストオプション)」が登場！",
+			"■冒険や探検にかかせない遊びの幅を広げるアイテムが詰まったセット。",
+			"■アイテムの内容は「焚火」「トーチ」「ランタン」「魔導書」。",
+			"■「トーチ」は各所に取り付け可能なジョイントパーツが付属。",
+			"■「魔導書」は可動式で開く・閉じることが可能。"
+		],
+		"en": [
+			"\"30MF Item Shop 4 (Quest Option)\" is now available from \" 30 MINUTES FANTASY\" where you can create your own fantasy job!",
+			"• A set packed with items that expand the range of play essential for adventure and exploration.",
+			"• Item contents include \"bonfire \", \" torch \", \" lantern \", and \" spellbook\".",
+			"• \"Torch\" comes with joint parts that can be attached to various places.",
+			"• The \"Magic Book\" is movable and can be opened and closed."
+		]
+	},
+	"accessories": {
+		"ja": ["焚火×1式", "トーチ×1", "ランタン×1", "魔導書×1", "ジョイントパーツ×1"],
+		"en": ["Bonfire x 1 set", "Torch x 1", "Lantern x 1", "Magic book x1", "Joint parts x 1"]
+	},
 	"images": [
 		"/images/items/01_5981_0.jpg",
 		"/images/items/01_5981_1.jpg",
@@ -76,18 +51,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5981/",
 	"extractedAt": "2025-12-06T17:56:58.308Z",
-	"brandIds": [
-		"30-minutes-fantasy"
-	],
+	"brandIds": ["30-minutes-fantasy"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5978",
-		"01_5979",
-		"01_5980",
-		"01_5941"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5941"],
 	"manualId": "3865"
 }

@@ -18,35 +18,26 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "新作テレビアニメ『魔神創造伝ワタル』制作決定！",
-			"en": "Production of the new TV anime “Mashin Souzouden Wataru” has been decided!"
-		},
-		{
-			"ja": "謎の魔神「重號丸」が登場！",
-			"en": "The mysterious demon \"Jugomaru\" appears!"
-		},
-		{
-			"ja": "• 部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！",
-			"en": "• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!"
-		},
-		{
-			"ja": "• パチパチと手で外せるタッチゲート仕様。接着剤無しで組み立てられる！",
-			"en": "• Touch gate design that can be removed by hand. Can be assembled without adhesive!"
-		},
-		{
-			"ja": "• 2本のナイフ型の武器は前腕部に収納が可能。",
-			"en": "• Two knife-shaped weapons can be stored in the forearm."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ナイフ型の武器×2",
-			"en": "Knife weapon x2"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"新作テレビアニメ『魔神創造伝ワタル』制作決定！",
+			"謎の魔神「重號丸」が登場！",
+			"• 部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！",
+			"• パチパチと手で外せるタッチゲート仕様。接着剤無しで組み立てられる！",
+			"• 2本のナイフ型の武器は前腕部に収納が可能。"
+		],
+		"en": [
+			"Production of the new TV anime “Mashin Souzouden Wataru” has been decided!",
+			"The mysterious demon \"Jugomaru\" appears!",
+			"• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!",
+			"• Touch gate design that can be removed by hand. Can be assembled without adhesive!",
+			"• Two knife-shaped weapons can be stored in the forearm."
+		]
+	},
+	"accessories": {
+		"ja": ["ナイフ型の武器×2"],
+		"en": ["Knife weapon x2"]
+	},
 	"images": [
 		"/images/items/01_5494_0.jpg",
 		"/images/items/01_5494_1.jpg",
@@ -61,16 +52,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5494/",
 	"extractedAt": "2025-12-06T17:56:02.473Z",
 	"brandIds": [],
-	"seriesIds": [
-		"wataru-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	]
+	"seriesIds": ["wataru-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
 }

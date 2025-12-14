@@ -18,43 +18,26 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "SDW HEROESガンプラシリーズに新たなヒーローのキットが登場‼",
-			"en": "A new hero Kit has arrived in the SDW HEROESGunpla series!"
-		},
-		{
-			"ja": "• 両肩・両足に専用の大型ユニットを装備。",
-			"en": "• Equipped with dedicated large units on both shoulders and legs."
-		},
-		{
-			"ja": "• SD ガンダムならではの高密度なメカニカルデザインを、精密な造形で細部まで表現。",
-			"en": "• The high-density mechanical design unique to SD Gundam is expressed in detail with precise modeling."
-		},
-		{
-			"ja": "• ビームサーベルはシールドへ取り付けが可能。",
-			"en": "• Beam saber can be attached to Seal."
-		},
-		{
-			"ja": "• 別売りの「SDW HEROESキャプテンクアンタ GF」「SDW HEROES GF ガンダムアストレアタイプ－B」を揃えることで更なるギミックも!?",
-			"en": "• Even more gimmicks can be made by arranging the separately sold \"SDW HEROES Captain Quanta GF \" and \" SDW HEROES GF Gundam Astrea Type-B\"!?"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビームサーベル×1",
-			"en": "Beam saber x 1"
-		},
-		{
-			"ja": "シールド×1",
-			"en": "Seal × 1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"SDW HEROESガンプラシリーズに新たなヒーローのキットが登場‼",
+			"• 両肩・両足に専用の大型ユニットを装備。",
+			"• SD ガンダムならではの高密度なメカニカルデザインを、精密な造形で細部まで表現。",
+			"• ビームサーベルはシールドへ取り付けが可能。",
+			"• 別売りの「SDW HEROESキャプテンクアンタ GF」「SDW HEROES GF ガンダムアストレアタイプ－B」を揃えることで更なるギミックも!?"
+		],
+		"en": [
+			"A new hero Kit has arrived in the SDW HEROESGunpla series!",
+			"• Equipped with dedicated large units on both shoulders and legs.",
+			"• The high-density mechanical design unique to SD Gundam is expressed in detail with precise modeling.",
+			"• Beam saber can be attached to Seal.",
+			"• Even more gimmicks can be made by arranging the separately sold \"SDW HEROES Captain Quanta GF \" and \" SDW HEROES GF Gundam Astrea Type-B\"!?"
+		]
+	},
+	"accessories": {
+		"ja": ["ビームサーベル×1", "シールド×1", "シール×1"],
+		"en": ["Beam saber x 1", "Seal × 1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5472_0.jpg",
 		"/images/items/01_5472_1.jpg",
@@ -65,16 +48,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5472/",
 	"extractedAt": "2025-12-06T17:55:59.777Z",
 	"brandIds": [],
-	"seriesIds": [
-		"sd-gundam-world-heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5969",
-		"01_5970",
-		"01_5986"
-	]
+	"seriesIds": ["sd-gundam-world-heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5969", "01_5970", "01_5986"]
 }

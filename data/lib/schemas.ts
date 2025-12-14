@@ -104,7 +104,8 @@ export const ItemSchema = z.object({
 	scale: z.string().optional(),
 	price: PriceSchema.optional(),
 	releaseDate: ReleaseDateSchema.optional(),
-	grade: z.string().optional(),
+	// Grade IDs - supports multiple grades per item (e.g., ["hg", "hg-uc"] for hierarchy)
+	gradeIds: z.array(z.string()).default([]),
 
 	// Content and metadata
 	images: z.array(ImageSchema).optional(),

@@ -19,39 +19,24 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MMオプションパーツセットに、カスタマイズの幅が広がる「マルチクロス」のセットが登場！",
-			"en": "A \"multi-cross\" set is now available in the 30MM optional parts set that expands the range of customization!"
-		},
-		{
-			"ja": "• 各種機体に取り付け可能な汎用性の高いマントパーツが２種付属。",
-			"en": "• Two types of highly versatile cloak parts that can be attached to various aircraft are included."
-		},
-		{
-			"ja": "• アチェルビーへのカスタマイズに最適なマントパーツは、各所のボールジョイントにより細かな表情づけが可能。",
-			"en": "• The cloak parts, which are perfect for customizing Achelby, can be detailed with ball joints in various places."
-		},
-		{
-			"ja": "• 2種類のマフラーパーツが付属。",
-			"en": "• Two types of muffler parts are included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "マントパーツ×１式",
-			"en": "Cloak parts x 1 set"
-		},
-		{
-			"ja": "襟巻パーツ×２種",
-			"en": "Collar parts x 2 types"
-		},
-		{
-			"ja": "マフラーパーツ×２種",
-			"en": "Muffler parts x 2 types"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MMオプションパーツセットに、カスタマイズの幅が広がる「マルチクロス」のセットが登場！",
+			"• 各種機体に取り付け可能な汎用性の高いマントパーツが２種付属。",
+			"• アチェルビーへのカスタマイズに最適なマントパーツは、各所のボールジョイントにより細かな表情づけが可能。",
+			"• 2種類のマフラーパーツが付属。"
+		],
+		"en": [
+			"A \"multi-cross\" set is now available in the 30MM optional parts set that expands the range of customization!",
+			"• Two types of highly versatile cloak parts that can be attached to various aircraft are included.",
+			"• The cloak parts, which are perfect for customizing Achelby, can be detailed with ball joints in various places.",
+			"• Two types of muffler parts are included."
+		]
+	},
+	"accessories": {
+		"ja": ["マントパーツ×１式", "襟巻パーツ×２種", "マフラーパーツ×２種"],
+		"en": ["Cloak parts x 1 set", "Collar parts x 2 types", "Muffler parts x 2 types"]
+	},
 	"images": [
 		"/images/items/01_5026_0.jpg",
 		"/images/items/01_5026_1.jpg",
@@ -66,18 +51,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5026/",
 	"extractedAt": "2025-12-06T17:55:00.111Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3769"
 }

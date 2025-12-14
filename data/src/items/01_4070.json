@@ -19,43 +19,23 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "●「機動戦士ガンダム」に登場する機体をエコプラでキット化",
-			"en": "●The aircraft that appears in \"Mobile Suit Gundam\" is made into a kit using Ecopla."
-		},
-		{
-			"ja": "●各関節に新型ポリキャップを使用し、可動範囲、強度を拡大",
-			"en": "●Uses new polycaps for each joint to expand range of motion and strength"
-		},
-		{
-			"ja": "●ヒートロッドは軟質素材星で2タイプ付属",
-			"en": "-Two types of heat rods are included with soft material stars."
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_4070_0.jpg",
-		"/images/items/01_4070_1.jpg"
-	],
+	"description": {
+		"ja": [
+			"●「機動戦士ガンダム」に登場する機体をエコプラでキット化",
+			"●各関節に新型ポリキャップを使用し、可動範囲、強度を拡大",
+			"●ヒートロッドは軟質素材星で2タイプ付属"
+		],
+		"en": [
+			"●The aircraft that appears in \"Mobile Suit Gundam\" is made into a kit using Ecopla.",
+			"●Uses new polycaps for each joint to expand range of motion and strength",
+			"-Two types of heat rods are included with soft material stars."
+		]
+	},
+	"images": ["/images/items/01_4070_0.jpg", "/images/items/01_4070_1.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4070/",
 	"extractedAt": "2025-12-06T17:52:52.498Z",
-	"brandIds": [
-		"eco-plastic-project",
-		"hg-high-grade",
-		"hg-universal-century"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5045",
-		"01_4985",
-		"01_4971",
-		"01_4365"
-	]
+	"brandIds": ["eco-plastic-project", "hg-high-grade", "hg-universal-century"],
+	"seriesIds": ["mobile-suit-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5045", "01_4985", "01_4971", "01_4365"]
 }

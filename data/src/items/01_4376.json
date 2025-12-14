@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "ENTRY GRADE うちはサスケ",
-		"en": "ENTRY GRADE Uchiha Sasuke"
+		"en": "ENTRY GRADE UCHIHA SASUKE"
 	},
 	"price": {
 		"amount": 1760,
@@ -18,51 +18,30 @@
 		"day": 29
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "全てのプラモデル未経験者に贈る入門用シリーズ「ENTRY GRADE」にうちはサスケが登場！",
-			"en": "Sasuke Uchiha appears in the introductory series \"ENTRY GRADE\" given to all plastic model inexperienced people!"
-		},
-		{
-			"ja": "■少ないパーツ数で、プラモデルを初めてつくる方でもサクサクと組み立てが可能。",
-			"en": "• With a small number of parts, even those who are making plastic models for the first time can easily assemble it."
-		},
-		{
-			"ja": "■タッチゲートだからパーツは道具を使わず手で“プチッ！”と取れる。",
-			"en": "• Because it is a touch gate, parts can be removed by hand without using any tools."
-		},
-		{
-			"ja": "■接着剤なしでパズルのように楽しく組み立てられる。",
-			"en": "• Easy to assemble like a puzzle without glue."
-		},
-		{
-			"ja": "■パーツは色が分かれているから、最小限のシールだけで塗装なしでもカッコよく仕上がる。",
-			"en": "• The parts are separated by color, so you can get a cool finish with minimal seals and no painting."
-		},
-		{
-			"ja": "■瞳のシールは「写輪眼」「万華鏡写輪眼」「輪廻眼」の3種類から選択できる。",
-			"en": "• Eye Seals can be selected from three types: \"Sharingan \", \" Mangekyou Sharingan \", and \" Rinnegan\"."
-		},
-		{
-			"ja": "■ポーズを固定し、パーツ数を抑えることで、躍動感あるこだわりの造形表現を実現。",
-			"en": "• By fixing the pose and reducing the number of parts, we have achieved a dynamic and detailed modeling expression."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ランナー×５",
-			"en": "Runner×5"
-		},
-		{
-			"ja": "シール×2種",
-			"en": "Seal×2 types"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"全てのプラモデル未経験者に贈る入門用シリーズ「ENTRY GRADE」にうちはサスケが登場！",
+			"■少ないパーツ数で、プラモデルを初めてつくる方でもサクサクと組み立てが可能。",
+			"■タッチゲートだからパーツは道具を使わず手で“プチッ！”と取れる。",
+			"■接着剤なしでパズルのように楽しく組み立てられる。",
+			"■パーツは色が分かれているから、最小限のシールだけで塗装なしでもカッコよく仕上がる。",
+			"■瞳のシールは「写輪眼」「万華鏡写輪眼」「輪廻眼」の3種類から選択できる。",
+			"■ポーズを固定し、パーツ数を抑えることで、躍動感あるこだわりの造形表現を実現。"
+		],
+		"en": [
+			"Sasuke Uchiha appears in the introductory series \"ENTRY GRADE\" given to all plastic model inexperienced people!",
+			"• With a small number of parts, even those who are making plastic models for the first time can easily assemble it.",
+			"• Because it is a touch gate, parts can be removed by hand without using any tools.",
+			"• Easy to assemble like a puzzle without glue.",
+			"• The parts are separated by color, so you can get a cool finish with minimal seals and no painting.",
+			"• Eye Seals can be selected from three types: \"Sharingan \", \" Mangekyou Sharingan \", and \" Rinnegan\".",
+			"• By fixing the pose and reducing the number of parts, we have achieved a dynamic and detailed modeling expression."
+		]
+	},
+	"accessories": {
+		"ja": ["ランナー×５", "シール×2種", "取扱説明書×1"],
+		"en": ["Runner×5", "Seal×2 types", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_4376_0.jpg",
 		"/images/items/01_4376_1.jpg",
@@ -74,16 +53,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4376/",
 	"extractedAt": "2025-12-06T17:53:34.381Z",
-	"brandIds": [
-		"entry-grade"
-	],
-	"seriesIds": [
-		"naruto"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4375"
-	]
+	"brandIds": ["entry-grade"],
+	"seriesIds": ["naruto"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4375"]
 }

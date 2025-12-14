@@ -19,31 +19,22 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MMのオプションアーマーシリーズにシエルノヴァ用アイテムが登場！",
-			"en": "Items for Ciel Nova are now available in the 30MM optional armor series!"
-		},
-		{
-			"ja": "• アーマー一式と大型ハンドパーツのセット。",
-			"en": "• A set of armor and large hand parts."
-		},
-		{
-			"ja": "• アーマーは開閉ギミックを搭載。",
-			"en": "• The armor is equipped with an opening and closing gimmick."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "アーマー×１式",
-			"en": "Armor x 1 set"
-		},
-		{
-			"ja": "大型ハンドパーツ×１",
-			"en": "Large hand parts x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MMのオプションアーマーシリーズにシエルノヴァ用アイテムが登場！",
+			"• アーマー一式と大型ハンドパーツのセット。",
+			"• アーマーは開閉ギミックを搭載。"
+		],
+		"en": [
+			"Items for Ciel Nova are now available in the 30MM optional armor series!",
+			"• A set of armor and large hand parts.",
+			"• The armor is equipped with an opening and closing gimmick."
+		]
+	},
+	"accessories": {
+		"ja": ["アーマー×１式", "大型ハンドパーツ×１"],
+		"en": ["Armor x 1 set", "Large hand parts x 1"]
+	},
 	"images": [
 		"/images/items/01_2756_0.jpg",
 		"/images/items/01_2756_1.jpg",
@@ -53,18 +44,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2756/",
 	"extractedAt": "2025-12-06T17:50:01.349Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3688"
 }

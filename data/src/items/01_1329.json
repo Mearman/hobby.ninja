@@ -19,44 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "セラヴィーガンダムベースの高火力カスタムガンプラがHGBDで登場！",
-			"en": "High firepower custom Gunpla based on Seravee Gundam is now available in HGBD!"
-		},
-		{
-			"ja": "• GNフィジカルバズーカをはじめ、多様な武装が付属！",
-			"en": "• A variety of weapons are included, including the GN physical bazooka!"
-		},
-		{
-			"ja": "• 背中、腰に装備されたGNコンテナビームは付け替えで砲撃形態や腕武装に変形可能で、付属パーツの付け替えで充実のプレイバリューを実現！",
-			"en": "• The GN container beams installed on the back and waist can be changed into a bombardment mode or arm armament by replacing them, and the included parts can be replaced to achieve enhanced play value!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "GNフィジカルバズーカ×1",
-			"en": "GN physical bazooka x1"
-		},
-		{
-			"ja": "GNコンテナビーム×4",
-			"en": "GN container beam x4"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×13",
-			"en": "Molded products x 13"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"セラヴィーガンダムベースの高火力カスタムガンプラがHGBDで登場！",
+			"• GNフィジカルバズーカをはじめ、多様な武装が付属！",
+			"• 背中、腰に装備されたGNコンテナビームは付け替えで砲撃形態や腕武装に変形可能で、付属パーツの付け替えで充実のプレイバリューを実現！"
+		],
+		"en": [
+			"High firepower custom Gunpla based on Seravee Gundam is now available in HGBD!",
+			"• A variety of weapons are included, including the GN physical bazooka!",
+			"• The GN container beams installed on the back and waist can be changed into a bombardment mode or arm armament by replacing them, and the included parts can be replaced to achieve enhanced play value!"
+		]
+	},
+	"accessories": {
+		"ja": ["GNフィジカルバズーカ×1", "GNコンテナビーム×4"],
+		"en": ["GN physical bazooka x1", "GN container beam x4"]
+	},
+	"contents": {
+		"ja": ["成形品×13", "シール×1", "取扱説明書×1"],
+		"en": ["Molded products x 13", "Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1329_0.jpg",
 		"/images/items/01_1329_1.jpg",
@@ -69,20 +51,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1329/",
 	"extractedAt": "2025-12-06T17:14:31.292Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "1020"
 }

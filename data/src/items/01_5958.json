@@ -18,31 +18,22 @@
 		"day": 8
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "道具不要で簡単組み立て！ポケモンプラモコレクション セレクトシリーズからミライドンが登場！",
-			"en": "Easy assembly with no tools required! Miraidon is now available from the Pokemon Plastic Model Collection Select Series!"
-		},
-		{
-			"ja": "• 各所可動によりカッコイイポーズが再現可能！",
-			"en": "• Cool poses can be reproduced by moving various parts!"
-		},
-		{
-			"ja": "• ディスプレイ台座付き。",
-			"en": "• Includes display pedestal."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "シール",
-			"en": "Seal"
-		},
-		{
-			"ja": "ディスプレイ台座×1",
-			"en": "Display pedestal x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"道具不要で簡単組み立て！ポケモンプラモコレクション セレクトシリーズからミライドンが登場！",
+			"• 各所可動によりカッコイイポーズが再現可能！",
+			"• ディスプレイ台座付き。"
+		],
+		"en": [
+			"Easy assembly with no tools required! Miraidon is now available from the Pokemon Plastic Model Collection Select Series!",
+			"• Cool poses can be reproduced by moving various parts!",
+			"• Includes display pedestal."
+		]
+	},
+	"accessories": {
+		"ja": ["シール", "ディスプレイ台座×1"],
+		"en": ["Seal", "Display pedestal x 1"]
+	},
 	"images": [
 		"/images/items/01_5958_0.jpg",
 		"/images/items/01_5958_1.jpg",
@@ -54,16 +45,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5958/",
 	"extractedAt": "2025-12-06T17:56:55.518Z",
 	"brandIds": [],
-	"seriesIds": [
-		"pocket-monster"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_6780",
-		"01_6762",
-		"01_5984",
-		"01_5947"
-	]
+	"seriesIds": ["pocket-monster"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_6780", "01_6762", "01_5984", "01_5947"]
 }

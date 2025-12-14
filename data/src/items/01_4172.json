@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "SDW HEROES レイフガンダム GP04",
-		"en": "SDW HEROES Leif Gundam GP04"
+		"en": "SDW HEROES LEIF GUNDAM GP04"
 	},
 	"price": {
 		"amount": 880,
@@ -18,47 +18,26 @@
 		"day": 27
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "～『SDガンダムワールド ヒーローズ THE LEGEND OF DRAGON KNIGHT』始動！～",
-			"en": "~ “SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT” has started! ～"
-		},
-		{
-			"ja": "『SDガンダムワールド ヒーローズ』に続く、新たな物語が始動！マント姿や肩のシルエットが特徴的な新ヒーローが参戦！",
-			"en": "A new story following \"SD Gundam World Heroes\" has begun! A new hero with a distinctive cape and shoulder silhouette joins the battle!"
-		},
-		{
-			"ja": "■幻の試作機GP04モチーフの新英雄。",
-			"en": "• A new hero based on the phantom prototype GP04 motif."
-		},
-		{
-			"ja": "■マントパーツの換装でシルエットが一変。形態チェンジを楽しめる。",
-			"en": "• The silhouette changes completely by replacing the cloak parts. You can enjoy changing the shape."
-		},
-		{
-			"ja": "■専用短剣のほか、ナイトストライクガンダム用の盾も付属。さらに、ミキシングを行えば「SDW HEROES ナイトストライクガンダム」（別売り）にもマントの一部を取り付け可能。",
-			"en": "• In addition to a special dagger, a shield for Night Strike Gundam is also included. Furthermore, if you do some mixing, you can also attach part of the cloak to \"SDW HEROES Night Strike Gundam\" (sold separately)."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "マント×1式",
-			"en": "Cloak x 1 set"
-		},
-		{
-			"ja": "ダガー×1",
-			"en": "Dagger x 1"
-		},
-		{
-			"ja": "SDW HEROES  ナイトストライクガンダム用盾×1",
-			"en": "SDW HEROES Night Strike Gundam shield x 1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"～『SDガンダムワールド ヒーローズ THE LEGEND OF DRAGON KNIGHT』始動！～",
+			"『SDガンダムワールド ヒーローズ』に続く、新たな物語が始動！マント姿や肩のシルエットが特徴的な新ヒーローが参戦！",
+			"■幻の試作機GP04モチーフの新英雄。",
+			"■マントパーツの換装でシルエットが一変。形態チェンジを楽しめる。",
+			"■専用短剣のほか、ナイトストライクガンダム用の盾も付属。さらに、ミキシングを行えば「SDW HEROES ナイトストライクガンダム」（別売り）にもマントの一部を取り付け可能。"
+		],
+		"en": [
+			"~ “SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT” has started! ～",
+			"A new story following \"SD Gundam World Heroes\" has begun! A new hero with a distinctive cape and shoulder silhouette joins the battle!",
+			"• A new hero based on the phantom prototype GP04 motif.",
+			"• The silhouette changes completely by replacing the cloak parts. You can enjoy changing the shape.",
+			"• In addition to a special dagger, a shield for Night Strike Gundam is also included. Furthermore, if you do some mixing, you can also attach part of the cloak to \"SDW HEROES Night Strike Gundam\" (sold separately)."
+		]
+	},
+	"accessories": {
+		"ja": ["マント×1式", "ダガー×1", "SDW HEROES  ナイトストライクガンダム用盾×1", "シール×1"],
+		"en": ["Cloak x 1 set", "Dagger x 1", "SDW HEROES Night Strike Gundam shield x 1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_4172_0.jpg",
 		"/images/items/01_4172_1.jpg",
@@ -75,16 +54,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_4172/",
 	"extractedAt": "2025-12-06T17:53:06.624Z",
 	"brandIds": [],
-	"seriesIds": [
-		"sd-gundam-world-heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5470",
-		"01_5471",
-		"01_5472",
-		"01_5347"
-	]
+	"seriesIds": ["sd-gundam-world-heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5470", "01_5471", "01_5472", "01_5347"]
 }

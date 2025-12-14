@@ -19,22 +19,18 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "• HGUCのガンダムと量産型ザクⅠⅠのアニメカラーセット。",
-			"en": "• Anime color set of HGUC's Gundam and mass-produced Zaku ⅠⅠ."
-		},
-		{
-			"ja": "• はじめてでも簡単組み立て",
-			"en": "• Easy assembly even for first-timers"
-		},
-		{
-			"ja": "• HOW TO ガイド説明書付",
-			"en": "• HOW TO guide manual included"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• HGUCのガンダムと量産型ザクⅠⅠのアニメカラーセット。",
+			"• はじめてでも簡単組み立て",
+			"• HOW TO ガイド説明書付"
+		],
+		"en": [
+			"• Anime color set of HGUC's Gundam and mass-produced Zaku ⅠⅠ.",
+			"• Easy assembly even for first-timers",
+			"• HOW TO guide manual included"
+		]
+	},
 	"images": [
 		"/images/items/01_2229_0.jpg",
 		"/images/items/01_2229_1.jpg",
@@ -45,21 +41,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2229/",
 	"extractedAt": "2025-12-06T17:48:56.000Z",
-	"brandIds": [
-		"hg-high-grade",
-		"hg-universal-century"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4985",
-		"01_4971",
-		"01_4365",
-		"01_3669"
-	],
+	"brandIds": ["hg-high-grade", "hg-universal-century"],
+	"seriesIds": ["mobile-suit-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4985", "01_4971", "01_4365", "01_3669"],
 	"manualId": "0426"
 }

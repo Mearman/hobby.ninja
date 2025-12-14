@@ -18,51 +18,38 @@
 		"day": 14
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "シリーズ機体に持たせられる、電気系の武装がセットとなったプラズマ武装が登場！",
-			"en": "Introducing plasma weapons that are a set of electrical weapons that can be equipped with series aircraft!"
-		},
-		{
-			"ja": "• 付属パーツの組み合わせ次第で様々な武器形態を作り出せる。",
-			"en": "• Various weapon forms can be created depending on the combination of attached parts."
-		},
-		{
-			"ja": "• 刃パーツは通常状態／帯電状態から選択可能。",
-			"en": "• Blade parts can be selected from normal/charged state."
-		},
-		{
-			"ja": "• 「30MM 1/144 オプションバックパック 1」などに収録されていた平手パーツが付属。",
-			"en": "• Hirate parts included in \"30MM 1/144 Option Backpack 1\" etc. are included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "プラズマソー×1式",
-			"en": "Plasma saw x 1 set"
-		},
-		{
-			"ja": "プラズマカッター×1式",
-			"en": "Plasma cutter x 1 set"
-		},
-		{
-			"ja": "プラズマナイフ×1式",
-			"en": "Plasma knife x 1 set"
-		},
-		{
-			"ja": "スタンバトン×1式",
-			"en": "Stun baton x 1 set"
-		},
-		{
-			"ja": "ロンググリップ×1",
-			"en": "Long grip x 1"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"シリーズ機体に持たせられる、電気系の武装がセットとなったプラズマ武装が登場！",
+			"• 付属パーツの組み合わせ次第で様々な武器形態を作り出せる。",
+			"• 刃パーツは通常状態／帯電状態から選択可能。",
+			"• 「30MM 1/144 オプションバックパック 1」などに収録されていた平手パーツが付属。"
+		],
+		"en": [
+			"Introducing plasma weapons that are a set of electrical weapons that can be equipped with series aircraft!",
+			"• Various weapon forms can be created depending on the combination of attached parts.",
+			"• Blade parts can be selected from normal/charged state.",
+			"• Hirate parts included in \"30MM 1/144 Option Backpack 1\" etc. are included."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"プラズマソー×1式",
+			"プラズマカッター×1式",
+			"プラズマナイフ×1式",
+			"スタンバトン×1式",
+			"ロンググリップ×1",
+			"ハンドパーツ×1式"
+		],
+		"en": [
+			"Plasma saw x 1 set",
+			"Plasma cutter x 1 set",
+			"Plasma knife x 1 set",
+			"Stun baton x 1 set",
+			"Long grip x 1",
+			"Hand parts x 1 set"
+		]
+	},
 	"images": [
 		"/images/items/01_5572_0.jpg",
 		"/images/items/01_5572_1.jpg",
@@ -72,19 +59,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5572/",
 	"extractedAt": "2025-12-06T17:56:11.919Z",
-	"brandIds": [
-		"customized-scene-baseeffectsmaterialsweapons",
-		"30-minutes-missions"
-	],
+	"brandIds": ["customized-scene-baseeffectsmaterialsweapons", "30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3800"
 }

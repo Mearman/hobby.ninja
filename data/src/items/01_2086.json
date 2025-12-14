@@ -18,40 +18,28 @@
 		"day": 12
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "アクションポーズも楽しめるボディユニットをまとったハロが登場！",
-			"en": "Haro is now available wearing a body unit that allows you to enjoy action poses!"
-		},
-		{
-			"ja": "• ハロをロボットとしてカスタマイズ可能にするメカをキット化。",
-			"en": "• The mechanism that allows Haro to be customized as a robot is made into a kit."
-		},
-		{
-			"ja": "• 搭乗しているハロは着脱が可能。",
-			"en": "• The halo on board is removable."
-		},
-		{
-			"ja": "• 新色のハロも付属。",
-			"en": "• A new color halo is also included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ハロ×1",
-			"en": "Haro x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×5",
-			"en": "Molded product x 5"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"アクションポーズも楽しめるボディユニットをまとったハロが登場！",
+			"• ハロをロボットとしてカスタマイズ可能にするメカをキット化。",
+			"• 搭乗しているハロは着脱が可能。",
+			"• 新色のハロも付属。"
+		],
+		"en": [
+			"Haro is now available wearing a body unit that allows you to enjoy action poses!",
+			"• The mechanism that allows Haro to be customized as a robot is made into a kit.",
+			"• The halo on board is removable.",
+			"• A new color halo is also included."
+		]
+	},
+	"accessories": {
+		"ja": ["ハロ×1"],
+		"en": ["Haro x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×5", "取扱説明書×1"],
+		"en": ["Molded product x 5", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2086_0.jpg",
 		"/images/items/01_2086_1.jpg",
@@ -65,16 +53,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2086/",
 	"extractedAt": "2025-12-06T17:48:37.095Z",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	]
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5189", "01_5190", "01_3063", "01_2623"]
 }

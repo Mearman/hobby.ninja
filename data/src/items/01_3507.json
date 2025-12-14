@@ -18,39 +18,24 @@
 		"day": 28
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『SDガンダムワールド ヒーローズ』より、「曹操ウイングガンダム」が新たな装いで登場!",
-			"en": "From \"SD Gundam World Heroes \", \" Cao Wing Gundam\" appears in a new look!"
-		},
-		{
-			"ja": "■肘関節の採用により、刀を構えたポーズが決まる。",
-			"en": "• The elbow joint determines the pose with the sword held."
-		},
-		{
-			"ja": "■クリアの仮面が付属。",
-			"en": "• Comes with a clear mask."
-		},
-		{
-			"ja": "■刀身にクリアパーツを重ねる事も可能。",
-			"en": "• It is also possible to layer clear parts on the blade."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "刀×1",
-			"en": "Sword x1"
-		},
-		{
-			"ja": "クリアパーツ×1式",
-			"en": "Clear parts x 1 set"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『SDガンダムワールド ヒーローズ』より、「曹操ウイングガンダム」が新たな装いで登場!",
+			"■肘関節の採用により、刀を構えたポーズが決まる。",
+			"■クリアの仮面が付属。",
+			"■刀身にクリアパーツを重ねる事も可能。"
+		],
+		"en": [
+			"From \"SD Gundam World Heroes \", \" Cao Wing Gundam\" appears in a new look!",
+			"• The elbow joint determines the pose with the sword held.",
+			"• Comes with a clear mask.",
+			"• It is also possible to layer clear parts on the blade."
+		]
+	},
+	"accessories": {
+		"ja": ["刀×1", "クリアパーツ×1式", "ホイルシール×1"],
+		"en": ["Sword x1", "Clear parts x 1 set", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_3507_0.jpg",
 		"/images/items/01_3507_1.jpg",
@@ -62,19 +47,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3507/",
 	"extractedAt": "2025-12-06T17:51:37.169Z",
-	"brandIds": [
-		"sd-gundam-series"
-	],
-	"seriesIds": [
-		"sd-gundam-world-heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4312",
-		"01_4634"
-	]
+	"brandIds": ["sd-gundam-series"],
+	"seriesIds": ["sd-gundam-world-heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
 }

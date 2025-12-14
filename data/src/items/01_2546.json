@@ -18,63 +18,35 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "ピカちんトリガー（別売り）にセットして、電動パワーでトリガーを動かそう！",
-			"en": "Set it on the Pikachin trigger (sold separately) and move the trigger with electric power!"
-		},
-		{
-			"ja": "• バッジを取り換えることで、トリガーのパワーを３段階に変えられる！",
-			"en": "• By replacing the badge, you can change the power of the trigger to 3 levels!"
-		},
-		{
-			"ja": "• 服にもつけられる！",
-			"en": "• You can also attach it to your clothes!"
-		},
-		{
-			"ja": "• シールを貼り付けてノットリバージョンのバッジが作れる！",
-			"en": "• You can make a Not Reversion badge by pasting the Seal!"
-		},
-		{
-			"ja": "【セット内容】",
-			"en": "[Set contents]"
-		},
-		{
-			"ja": "• ピカちんバッジ×２",
-			"en": "• Pikachin badge x 2"
-		},
-		{
-			"ja": "• シール×２",
-			"en": "• Seal×2"
-		},
-		{
-			"ja": "【電池】",
-			"en": "[battery]"
-		},
-		{
-			"ja": "• 不要",
-			"en": "• Unnecessary"
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_2546_0.jpg",
-		"/images/items/01_2546_1.jpg"
-	],
+	"description": {
+		"ja": [
+			"ピカちんトリガー（別売り）にセットして、電動パワーでトリガーを動かそう！",
+			"• バッジを取り換えることで、トリガーのパワーを３段階に変えられる！",
+			"• 服にもつけられる！",
+			"• シールを貼り付けてノットリバージョンのバッジが作れる！",
+			"【セット内容】",
+			"• ピカちんバッジ×２",
+			"• シール×２",
+			"【電池】",
+			"• 不要"
+		],
+		"en": [
+			"Set it on the Pikachin trigger (sold separately) and move the trigger with electric power!",
+			"• By replacing the badge, you can change the power of the trigger to 3 levels!",
+			"• You can also attach it to your clothes!",
+			"• You can make a Not Reversion badge by pasting the Seal!",
+			"[Set contents]",
+			"• Pikachin badge x 2",
+			"• Seal×2",
+			"[battery]",
+			"• Unnecessary"
+		]
+	},
+	"images": ["/images/items/01_2546_0.jpg", "/images/items/01_2546_1.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2546/",
 	"extractedAt": "2025-12-06T17:49:35.014Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2605", "01_2606", "01_2607", "01_2545"]
 }

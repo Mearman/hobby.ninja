@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ミカエリス",
-		"en": "HG 1/144 Michaelis"
+		"en": "HG 1/144 MICHAELIS"
 	},
 	"price": {
 		"amount": 1760,
@@ -19,39 +19,22 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、シャディク・ゼネリの搭乗するミカエリスをHGで立体化！",
-			"en": "From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", Michaelis piloted by Shadiq Zeneri is made into a HG figure!"
-		},
-		{
-			"ja": "• グループ内御三家グラスレー社CEOの養子で、グラスレー寮を束ねるシャディク・ゼネリが搭乗するMS。",
-			"en": "• This MS is piloted by Shadiq Zeneri, the adopted son of the CEO of Grassley, one of the three companies in the group, and the person in charge of Grassley Dormitory."
-		},
-		{
-			"ja": "• 右腕には展開可能な大型武装、左腕には小型のシールドが付属。左右ともにクリア成形のビームパーツの取り付けが可能。",
-			"en": "• A large deployable weapon is attached to the right arm, and a small Seal is attached to the left arm. Clear molded beam parts can be installed on both the left and right sides."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "シールド×１",
-			"en": "Seal de x1"
-		},
-		{
-			"ja": "ジョイントパーツ×１式",
-			"en": "Joint parts x 1 set"
-		},
-		{
-			"ja": "ビームサーベルパーツ×２",
-			"en": "Beam saber parts x 2"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、シャディク・ゼネリの搭乗するミカエリスをHGで立体化！",
+			"• グループ内御三家グラスレー社CEOの養子で、グラスレー寮を束ねるシャディク・ゼネリが搭乗するMS。",
+			"• 右腕には展開可能な大型武装、左腕には小型のシールドが付属。左右ともにクリア成形のビームパーツの取り付けが可能。"
+		],
+		"en": [
+			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", Michaelis piloted by Shadiq Zeneri is made into a HG figure!",
+			"• This MS is piloted by Shadiq Zeneri, the adopted son of the CEO of Grassley, one of the three companies in the group, and the person in charge of Grassley Dormitory.",
+			"• A large deployable weapon is attached to the right arm, and a small Seal is attached to the left arm. Clear molded beam parts can be installed on both the left and right sides."
+		]
+	},
+	"accessories": {
+		"ja": ["シールド×１", "ジョイントパーツ×１式", "ビームサーベルパーツ×２", "シール×1"],
+		"en": ["Seal de x1", "Joint parts x 1 set", "Beam saber parts x 2", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_4289_0.jpg",
 		"/images/items/01_4289_1.jpg",
@@ -68,20 +51,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4289/",
 	"extractedAt": "2025-12-06T17:53:22.543Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-witch-of-mercury"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203899"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-witch-of-mercury"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
 	"manualId": "0137"
 }

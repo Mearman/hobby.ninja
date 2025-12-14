@@ -18,66 +18,40 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• アニメに登場するピカちんキットでいろいろな食材をまぜまぜしよう！",
-			"en": "• Let's mix various ingredients with the Pikachin Kit that appears in the anime!"
-		},
-		{
-			"ja": "• 別売りのピカちんトリガーと合体させて、電動にパワーアップ！",
-			"en": "• Combine with the separately sold Pikachin trigger to power up the electric version!"
-		},
-		{
-			"ja": "• ミキサーバッジLV.3が付属。",
-			"en": "• Mixer badge LV.3 is included."
-		},
-		{
-			"ja": "【セット内容】",
-			"en": "[Set contents]"
-		},
-		{
-			"ja": "ギアボックス…1",
-			"en": "Gearbox...1"
-		},
-		{
-			"ja": "ハンドル…1",
-			"en": "Handle...1"
-		},
-		{
-			"ja": "カップ…1",
-			"en": "Cup...1"
-		},
-		{
-			"ja": "パッキン…2",
-			"en": "Packing...2"
-		},
-		{
-			"ja": "刃パーツ…1",
-			"en": "Blade parts...1"
-		},
-		{
-			"ja": "エンブレムパーツ…1",
-			"en": "Emblem parts...1"
-		},
-		{
-			"ja": "ピカちんバッジ…1",
-			"en": "Pikachin badge...1"
-		},
-		{
-			"ja": "ランナー…1",
-			"en": "Runner...1"
-		},
-		{
-			"ja": "取扱説明書…1",
-			"en": "Handling Manual...1"
-		},
-		{
-			"ja": "ピカちんシート…1",
-			"en": "Pikachin sheet...1"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• アニメに登場するピカちんキットでいろいろな食材をまぜまぜしよう！",
+			"• 別売りのピカちんトリガーと合体させて、電動にパワーアップ！",
+			"• ミキサーバッジLV.3が付属。",
+			"【セット内容】",
+			"ギアボックス…1",
+			"ハンドル…1",
+			"カップ…1",
+			"パッキン…2",
+			"刃パーツ…1",
+			"エンブレムパーツ…1",
+			"ピカちんバッジ…1",
+			"ランナー…1",
+			"取扱説明書…1",
+			"ピカちんシート…1"
+		],
+		"en": [
+			"• Let's mix various ingredients with the Pikachin Kit that appears in the anime!",
+			"• Combine with the separately sold Pikachin trigger to power up the electric version!",
+			"• Mixer badge LV.3 is included.",
+			"[Set contents]",
+			"Gearbox...1",
+			"Handle...1",
+			"Cup...1",
+			"Packing...2",
+			"Blade parts...1",
+			"Emblem parts...1",
+			"Pikachin badge...1",
+			"Runner...1",
+			"Handling Manual...1",
+			"Pikachin sheet...1"
+		]
+	},
 	"images": [
 		"/images/items/01_2288_0.jpg",
 		"/images/items/01_2288_1.jpg",
@@ -88,16 +62,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2288/",
 	"extractedAt": "2025-12-06T17:49:02.182Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2605", "01_2606", "01_2607", "01_2545"]
 }

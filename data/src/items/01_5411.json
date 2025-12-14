@@ -18,43 +18,24 @@
 		"day": 14
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "道具不要で簡単組み立てのポケモンプラモコレクション セレクトシリーズに「ハッサム」が登場！",
-			"en": "\"Hassam\" is now available in the Pokemon plastic model collection select series that requires no tools and is easy to assemble!"
-		},
-		{
-			"ja": "• 腕は角度違いで3種類の差し替えパーツが付属。",
-			"en": "• Three types of replacement parts are included for the arms with different angles."
-		},
-		{
-			"ja": "• ハサミは開閉が可能。",
-			"en": "• Scissors can be opened and closed."
-		},
-		{
-			"ja": "• わざエフェクトと台座が付属。作った後はポケプラアクション！",
-			"en": "• Comes with move effects and pedestal. After making it, it's Pokepla action!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ポーズ用腕パーツ（左右）×1式",
-			"en": "Arm parts for pose (left and right) x 1 set"
-		},
-		{
-			"ja": "台座×1",
-			"en": "Pedestal x 1"
-		},
-		{
-			"ja": "わざエフェクト×1",
-			"en": "Move effect x1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"道具不要で簡単組み立てのポケモンプラモコレクション セレクトシリーズに「ハッサム」が登場！",
+			"• 腕は角度違いで3種類の差し替えパーツが付属。",
+			"• ハサミは開閉が可能。",
+			"• わざエフェクトと台座が付属。作った後はポケプラアクション！"
+		],
+		"en": [
+			"\"Hassam\" is now available in the Pokemon plastic model collection select series that requires no tools and is easy to assemble!",
+			"• Three types of replacement parts are included for the arms with different angles.",
+			"• Scissors can be opened and closed.",
+			"• Comes with move effects and pedestal. After making it, it's Pokepla action!"
+		]
+	},
+	"accessories": {
+		"ja": ["ポーズ用腕パーツ（左右）×1式", "台座×1", "わざエフェクト×1", "シール×1"],
+		"en": ["Arm parts for pose (left and right) x 1 set", "Pedestal x 1", "Move effect x1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5411_0.jpg",
 		"/images/items/01_5411_1.jpg",
@@ -72,16 +53,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5411/",
 	"extractedAt": "2025-12-06T17:55:52.640Z",
 	"brandIds": [],
-	"seriesIds": [
-		"pocket-monster"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pocket-monster"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

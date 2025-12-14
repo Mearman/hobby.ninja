@@ -18,31 +18,22 @@
 		"day": 4
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "『スーパーロボット大戦OG』シリーズより、「アルトアイゼン」がHGシリーズで立体化！",
-			"en": "From the \"Super Robot Wars OG \" series, \" Alt Eisen\" is now three-dimensional in the HG series!"
-		},
-		{
-			"ja": "■右腕に搭載された「リボルビング・ステーク」のシリンダーには回転可動機能を搭載。両肩装甲を展開することで「スクエア・クレイモア」の発射直前の状態を再現可能。",
-			"en": "• The \"revolving stake \" cylinder mounted on the right arm has a rotating function. By deploying both shoulder armor, it is possible to reproduce the state immediately before the \" Square Claymore\" is launched."
-		},
-		{
-			"ja": "■ディスプレイ用の台座が付属。",
-			"en": "• Includes display pedestal."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ディスプレイベース",
-			"en": "display base"
-		},
-		{
-			"ja": "シール×１",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『スーパーロボット大戦OG』シリーズより、「アルトアイゼン」がHGシリーズで立体化！",
+			"■右腕に搭載された「リボルビング・ステーク」のシリンダーには回転可動機能を搭載。両肩装甲を展開することで「スクエア・クレイモア」の発射直前の状態を再現可能。",
+			"■ディスプレイ用の台座が付属。"
+		],
+		"en": [
+			"From the \"Super Robot Wars OG \" series, \" Alt Eisen\" is now three-dimensional in the HG series!",
+			"• The \"revolving stake \" cylinder mounted on the right arm has a rotating function. By deploying both shoulder armor, it is possible to reproduce the state immediately before the \" Square Claymore\" is launched.",
+			"• Includes display pedestal."
+		]
+	},
+	"accessories": {
+		"ja": ["ディスプレイベース", "シール×１"],
+		"en": ["display base", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_3614_0.jpg",
 		"/images/items/01_3614_1.jpg",
@@ -55,19 +46,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3614/",
 	"extractedAt": "2025-12-06T17:51:50.112Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"super-robot-wars-og"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5578",
-		"01_5491",
-		"item-1000214961",
-		"01_5369"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["super-robot-wars-og"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"]
 }

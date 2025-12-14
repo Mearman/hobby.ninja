@@ -19,60 +19,33 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "1/144スケール史上最大級のギミックを搭載した「RG サザビー」が登場！",
-			"en": "\"RG Sazabi\" equipped with the largest gimmick in 1/144 Scale history is now available!"
-		},
-		{
-			"ja": "• 腕部のシリンダー、ファンネルなどの武装が忠実に再現され、実機考証によってバーニアやバックパックなどの推進部には展開機構を設置！",
-			"en": "• Weapons such as arm cylinders and funnels have been faithfully reproduced, and deployment mechanisms have been installed in propulsion parts such as verniers and backpacks based on actual machine research!"
-		},
-		{
-			"ja": "• 豊富なハンドパーツ、サザビーを象徴する武装が付属し、各種ハンドパーツと高い可動域によって、両手持ちポーズなど劇中のポージングが再現できる！",
-			"en": "• A wealth of hand parts and armaments that symbolize Sazabi are included, and various hand parts and a high range of motion allow you to recreate poses from the play, such as a two-handed pose!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビーム・ショット・ライフル×1",
-			"en": "Beam shot rifle x1"
-		},
-		{
-			"ja": "ビーム・トマホーク×1",
-			"en": "Beam tomahawk x1"
-		},
-		{
-			"ja": "ビーム・サーベル×2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "シールド×1",
-			"en": "Seal × 1"
-		},
-		{
-			"ja": "ファンネルｘ6",
-			"en": "Funnel x6"
-		},
-		{
-			"ja": "ミサイル×1",
-			"en": "Missile x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×17",
-			"en": "Molded product x 17"
-		},
-		{
-			"ja": "リアリスティックデカール×1",
-			"en": "Realistic decal x 1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"1/144スケール史上最大級のギミックを搭載した「RG サザビー」が登場！",
+			"• 腕部のシリンダー、ファンネルなどの武装が忠実に再現され、実機考証によってバーニアやバックパックなどの推進部には展開機構を設置！",
+			"• 豊富なハンドパーツ、サザビーを象徴する武装が付属し、各種ハンドパーツと高い可動域によって、両手持ちポーズなど劇中のポージングが再現できる！"
+		],
+		"en": [
+			"\"RG Sazabi\" equipped with the largest gimmick in 1/144 Scale history is now available!",
+			"• Weapons such as arm cylinders and funnels have been faithfully reproduced, and deployment mechanisms have been installed in propulsion parts such as verniers and backpacks based on actual machine research!",
+			"• A wealth of hand parts and armaments that symbolize Sazabi are included, and various hand parts and a high range of motion allow you to recreate poses from the play, such as a two-handed pose!"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ビーム・ショット・ライフル×1",
+			"ビーム・トマホーク×1",
+			"ビーム・サーベル×2",
+			"シールド×1",
+			"ファンネルｘ6",
+			"ミサイル×1"
+		],
+		"en": ["Beam shot rifle x1", "Beam tomahawk x1", "Beam saber x2", "Seal × 1", "Funnel x6", "Missile x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×17", "リアリスティックデカール×1", "取扱説明書×1"],
+		"en": ["Molded product x 17", "Realistic decal x 1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1408_0.jpg",
 		"/images/items/01_1408_1.jpg",
@@ -84,17 +57,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1408/",
 	"extractedAt": "2025-12-06T17:20:46.297Z",
-	"brandIds": [
-		"rg-real-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-chars-counterattack"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4121"
-	],
+	"brandIds": ["rg-real-grade"],
+	"seriesIds": ["mobile-suit-gundam-chars-counterattack"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4121"],
 	"manualId": "0677"
 }

@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 デミトレーナー用拡張パーツセット",
-		"en": "HG 1/144 Demi-trainer expansion parts set"
+		"en": "HG 1/144 EXPANSION PARTS SET for DEMI TRAINER"
 	},
 	"price": {
 		"amount": 880,
@@ -19,63 +19,44 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、「ＨＧ 1/144 デミトレーナー」をカスタマイズできる拡張パーツセットが登場！",
-			"en": "From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury \" comes an expansion parts set that allows you to customize the \" HG 1/144 Demi-Trainer\"!"
-		},
-		{
-			"ja": "■大型の銃から近接戦闘用コンバットナイフまで、さまざまな武装を同梱。",
-			"en": "• Includes a variety of weapons, from large guns to combat knives for close combat."
-		},
-		{
-			"ja": "■大型武装もアームパーツを使用して「HG 1/144 デミトレーナー」（別売り）にマウントが可能。",
-			"en": "• Large weapons can also be mounted on the \"HG 1/144 Demi-Trainer\" (sold separately) using arm parts."
-		},
-		{
-			"ja": "■「HG 1/144 デミトレーナー」（別売り）に使用可能な平手のハンドパーツ（左右）が付属。",
-			"en": "• Comes with open hand parts (left and right) that can be used with the \"HG 1/144 Demi-Trainer\" (sold separately)."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビームライフル×１",
-			"en": "Beam rifle x1"
-		},
-		{
-			"ja": "ガトリング×１",
-			"en": "Gatling x1"
-		},
-		{
-			"ja": "給弾ベルト×１",
-			"en": "Bullet feeding belt x 1"
-		},
-		{
-			"ja": "コンバットナイフ×１",
-			"en": "Combat knife x1"
-		},
-		{
-			"ja": "丸ノコパーツ×１",
-			"en": "Circular saw parts x 1"
-		},
-		{
-			"ja": "ドリルパーツ×１",
-			"en": "Drill parts x 1"
-		},
-		{
-			"ja": "ミサイルランチャーパーツ×１",
-			"en": "Missile launcher parts x 1"
-		},
-		{
-			"ja": "ハンドパーツ 平手（左右）×１",
-			"en": "Hand parts Open hand (left and right) x 1"
-		},
-		{
-			"ja": "ジョイントパーツ×１式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、「ＨＧ 1/144 デミトレーナー」をカスタマイズできる拡張パーツセットが登場！",
+			"■大型の銃から近接戦闘用コンバットナイフまで、さまざまな武装を同梱。",
+			"■大型武装もアームパーツを使用して「HG 1/144 デミトレーナー」（別売り）にマウントが可能。",
+			"■「HG 1/144 デミトレーナー」（別売り）に使用可能な平手のハンドパーツ（左右）が付属。"
+		],
+		"en": [
+			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury \" comes an expansion parts set that allows you to customize the \" HG 1/144 Demi-Trainer\"!",
+			"• Includes a variety of weapons, from large guns to combat knives for close combat.",
+			"• Large weapons can also be mounted on the \"HG 1/144 Demi-Trainer\" (sold separately) using arm parts.",
+			"• Comes with open hand parts (left and right) that can be used with the \"HG 1/144 Demi-Trainer\" (sold separately)."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ビームライフル×１",
+			"ガトリング×１",
+			"給弾ベルト×１",
+			"コンバットナイフ×１",
+			"丸ノコパーツ×１",
+			"ドリルパーツ×１",
+			"ミサイルランチャーパーツ×１",
+			"ハンドパーツ 平手（左右）×１",
+			"ジョイントパーツ×１式"
+		],
+		"en": [
+			"Beam rifle x1",
+			"Gatling x1",
+			"Bullet feeding belt x 1",
+			"Combat knife x1",
+			"Circular saw parts x 1",
+			"Drill parts x 1",
+			"Missile launcher parts x 1",
+			"Hand parts Open hand (left and right) x 1",
+			"Joint parts x 1 set"
+		]
+	},
 	"images": [
 		"/images/items/01_4268_0.jpg",
 		"/images/items/01_4268_1.jpg",
@@ -88,20 +69,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4268/",
 	"extractedAt": "2025-12-06T17:53:19.633Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-witch-of-mercury"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203129"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-witch-of-mercury"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manualId": "0136"
 }

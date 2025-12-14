@@ -18,65 +18,31 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• 新コンセプトの拡張性抜群なアクションべ―スが登場！",
-			"en": "• An action base with a new concept and excellent expandability is now available!"
-		},
-		{
-			"ja": "• 支柱（長）と台座が3枚付属。",
-			"en": "• 3 pillars (long) and pedestals are included."
-		},
-		{
-			"ja": "• 豊富なジョイントパーツとサポートパーツが付属。",
-			"en": "• A variety of joint parts and support parts are included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ベースパーツ×3",
-			"en": "Base parts x 3"
-		},
-		{
-			"ja": "支柱パーツ（長）×1",
-			"en": "Support part (long) x 1"
-		},
-		{
-			"ja": "ジョイントパーツ各種",
-			"en": "Various joint parts"
-		},
-		{
-			"ja": "その他サポートパーツ各種",
-			"en": "Various other support parts"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×4",
-			"en": "Molded product x 4"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
-	"images": [
-		"/images/items/01_1172_0.jpg",
-		"/images/items/01_1172_1.jpg",
-		"/images/items/01_1172_2.jpg"
-	],
+	"description": {
+		"ja": [
+			"• 新コンセプトの拡張性抜群なアクションべ―スが登場！",
+			"• 支柱（長）と台座が3枚付属。",
+			"• 豊富なジョイントパーツとサポートパーツが付属。"
+		],
+		"en": [
+			"• An action base with a new concept and excellent expandability is now available!",
+			"• 3 pillars (long) and pedestals are included.",
+			"• A variety of joint parts and support parts are included."
+		]
+	},
+	"accessories": {
+		"ja": ["ベースパーツ×3", "支柱パーツ（長）×1", "ジョイントパーツ各種", "その他サポートパーツ各種"],
+		"en": ["Base parts x 3", "Support part (long) x 1", "Various joint parts", "Various other support parts"]
+	},
+	"contents": {
+		"ja": ["成形品×4", "取扱説明書×1"],
+		"en": ["Molded product x 4", "Handling manual×1"]
+	},
+	"images": ["/images/items/01_1172_0.jpg", "/images/items/01_1172_1.jpg", "/images/items/01_1172_2.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1172/",
 	"extractedAt": "2025-12-06T16:58:12.873Z",
-	"brandIds": [
-		"action-base"
-	],
+	"brandIds": ["action-base"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5934",
-		"01_5256",
-		"01_5258"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5934", "01_5256", "01_5258"]
 }

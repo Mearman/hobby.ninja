@@ -18,35 +18,26 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『魔神創造伝ワタル』より龍王丸が登場！",
-			"en": "Ryuomaru appears from “Mashin Souzouden Wataru”!"
-		},
-		{
-			"ja": "• 部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！",
-			"en": "• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!"
-		},
-		{
-			"ja": "• パチパチと手で外せるタッチゲート仕様。接着剤無しで組み立てられる！",
-			"en": "• Touch gate design that can be removed by hand. Can be assembled without adhesive!"
-		},
-		{
-			"ja": "• 両肩の龍王頭、青龍紋などはゴールドメタリックパーツで再現！",
-			"en": "• The dragon head and blue dragon crest on both shoulders are reproduced with gold metallic parts!"
-		},
-		{
-			"ja": "• 星龍剣はブルーのクリアパーツで再現！",
-			"en": "• Star Dragon Sword is reproduced with blue clear parts!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "星龍剣",
-			"en": "Star Dragon Sword"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『魔神創造伝ワタル』より龍王丸が登場！",
+			"• 部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！",
+			"• パチパチと手で外せるタッチゲート仕様。接着剤無しで組み立てられる！",
+			"• 両肩の龍王頭、青龍紋などはゴールドメタリックパーツで再現！",
+			"• 星龍剣はブルーのクリアパーツで再現！"
+		],
+		"en": [
+			"Ryuomaru appears from “Mashin Souzouden Wataru”!",
+			"• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!",
+			"• Touch gate design that can be removed by hand. Can be assembled without adhesive!",
+			"• The dragon head and blue dragon crest on both shoulders are reproduced with gold metallic parts!",
+			"• Star Dragon Sword is reproduced with blue clear parts!"
+		]
+	},
+	"accessories": {
+		"ja": ["星龍剣"],
+		"en": ["Star Dragon Sword"]
+	},
 	"images": [
 		"/images/items/01_5495_0.jpg",
 		"/images/items/01_5495_1.jpg",
@@ -60,16 +51,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5495/",
 	"extractedAt": "2025-12-06T17:56:02.792Z",
 	"brandIds": [],
-	"seriesIds": [
-		"wataru-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	]
+	"seriesIds": ["wataru-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
 }

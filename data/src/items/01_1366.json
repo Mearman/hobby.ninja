@@ -18,55 +18,40 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• 不思議な仕組みがいっぱいのパック！友だちと一緒に遊んで驚かせちゃおう！",
-			"en": "• A pack full of mysterious mechanisms! Play with your friends and surprise them!"
-		},
-		{
-			"ja": "• 3種のカスタムクラフトとキラキラカスタムステッカーがセットに！",
-			"en": "• 3 types of custom crafts and glitter custom stickers are included in the set!"
-		},
-		{
-			"ja": "• ジオラマ捜索カスタム…おなじみのエイジの家を組み立てて遊べる！さらに！ゼロゼロマーカーで家を照らすと隠されたイラストが浮かびあがるぞ！",
-			"en": "• Diorama search custom...You can play by assembling the familiar Eiji house! moreover! When you shine a zero-zero marker on the house, a hidden illustration will appear!"
-		},
-		{
-			"ja": "• 貯金箱カスタム…お金を入れてたのに見えない！？ミラーを使った不思議な貯金箱！さらに！オレだけロックと組み合わせることで鉄壁ガードの貯金箱が完成！",
-			"en": "• Custom piggy bank...I put money in it but can't see it! ? A mysterious piggy bank using a mirror! moreover! By combining it with my only lock, you can create an impenetrable guard piggy bank!"
-		},
-		{
-			"ja": "• アニメフィルムカスタム…そのままカードとしても使えるぞ！さらにティッシュ箱カメラにカスタムしておうちの懐中電灯を使えばアニメのワンシーンをおうちの壁に再現できちゃう！",
-			"en": "• Anime film custom...Can be used as a card! Furthermore, if you customize the tissue box camera and use your own flashlight, you can recreate a scene from the anime on your wall!"
-		}
-	],
-	"accessories": [],
-	"contents": [
-		{
-			"ja": "貯金箱カスタム…1",
-			"en": "Piggy bank custom...1"
-		},
-		{
-			"ja": "ジオラマ捜索カスタム…1",
-			"en": "Diorama search custom...1"
-		},
-		{
-			"ja": "アニメフィルムカスタム…1",
-			"en": "Anime film custom...1"
-		},
-		{
-			"ja": "キラキラカスタムステッカー…1",
-			"en": "Glitter custom Sticker...1"
-		},
-		{
-			"ja": "取扱説明書…1",
-			"en": "Handling Manual...1"
-		},
-		{
-			"ja": "ピカちんQR コードステッカー…1",
-			"en": "Pikachin QR code Sticker...1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• 不思議な仕組みがいっぱいのパック！友だちと一緒に遊んで驚かせちゃおう！",
+			"• 3種のカスタムクラフトとキラキラカスタムステッカーがセットに！",
+			"• ジオラマ捜索カスタム…おなじみのエイジの家を組み立てて遊べる！さらに！ゼロゼロマーカーで家を照らすと隠されたイラストが浮かびあがるぞ！",
+			"• 貯金箱カスタム…お金を入れてたのに見えない！？ミラーを使った不思議な貯金箱！さらに！オレだけロックと組み合わせることで鉄壁ガードの貯金箱が完成！",
+			"• アニメフィルムカスタム…そのままカードとしても使えるぞ！さらにティッシュ箱カメラにカスタムしておうちの懐中電灯を使えばアニメのワンシーンをおうちの壁に再現できちゃう！"
+		],
+		"en": [
+			"• A pack full of mysterious mechanisms! Play with your friends and surprise them!",
+			"• 3 types of custom crafts and glitter custom stickers are included in the set!",
+			"• Diorama search custom...You can play by assembling the familiar Eiji house! moreover! When you shine a zero-zero marker on the house, a hidden illustration will appear!",
+			"• Custom piggy bank...I put money in it but can't see it! ? A mysterious piggy bank using a mirror! moreover! By combining it with my only lock, you can create an impenetrable guard piggy bank!",
+			"• Anime film custom...Can be used as a card! Furthermore, if you customize the tissue box camera and use your own flashlight, you can recreate a scene from the anime on your wall!"
+		]
+	},
+	"contents": {
+		"ja": [
+			"貯金箱カスタム…1",
+			"ジオラマ捜索カスタム…1",
+			"アニメフィルムカスタム…1",
+			"キラキラカスタムステッカー…1",
+			"取扱説明書…1",
+			"ピカちんQR コードステッカー…1"
+		],
+		"en": [
+			"Piggy bank custom...1",
+			"Diorama search custom...1",
+			"Anime film custom...1",
+			"Glitter custom Sticker...1",
+			"Handling Manual...1",
+			"Pikachin QR code Sticker...1"
+		]
+	},
 	"images": [
 		"/images/items/01_1366_0.jpg",
 		"/images/items/01_1366_1.jpg",
@@ -77,16 +62,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_1366/",
 	"extractedAt": "2025-12-06T17:16:04.748Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2605", "01_2606", "01_2607", "01_2545"]
 }

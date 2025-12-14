@@ -19,39 +19,24 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MMシリーズ地球連合軍に新機体「ラビオット」登場！アルトとの連動でカスタマイズの幅がより広がる！",
-			"en": "A new aircraft \"Rabiot\" appears in the 30MM series Earth Alliance Forces! By linking with Alto, the range of customization is even wider!"
-		},
-		{
-			"ja": "• 外装にCタイプジョイント構造を追加。新たなカスタマイズが可能に。",
-			"en": "• Added C type joint structure to the exterior. New customization is possible."
-		},
-		{
-			"ja": "• 近接戦闘用、長距離狙撃用、指揮官機用など胸部パーツはアルトと連動。",
-			"en": "• Chest parts for close combat, long range sniper use, commander aircraft, etc. are linked with Alto."
-		},
-		{
-			"ja": "• これまでのウェポンセットとの連動が可能。グリップパーツを分離し付属の中継パーツを使用することで、アルト用オプションウェポン１と組み合わせることができる。",
-			"en": "• Can be linked with previous Weapon sets. By separating the grip parts and using the included relay parts, it can be combined with the optional Weapon 1 for Alto."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ショットガン×１",
-			"en": "Shotgun x1"
-		},
-		{
-			"ja": "バックパック×１",
-			"en": "Backpack x 1"
-		},
-		{
-			"ja": "マーキングシール×１",
-			"en": "MarkingSeal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MMシリーズ地球連合軍に新機体「ラビオット」登場！アルトとの連動でカスタマイズの幅がより広がる！",
+			"• 外装にCタイプジョイント構造を追加。新たなカスタマイズが可能に。",
+			"• 近接戦闘用、長距離狙撃用、指揮官機用など胸部パーツはアルトと連動。",
+			"• これまでのウェポンセットとの連動が可能。グリップパーツを分離し付属の中継パーツを使用することで、アルト用オプションウェポン１と組み合わせることができる。"
+		],
+		"en": [
+			"A new aircraft \"Rabiot\" appears in the 30MM series Earth Alliance Forces! By linking with Alto, the range of customization is even wider!",
+			"• Added C type joint structure to the exterior. New customization is possible.",
+			"• Chest parts for close combat, long range sniper use, commander aircraft, etc. are linked with Alto.",
+			"• Can be linked with previous Weapon sets. By separating the grip parts and using the included relay parts, it can be combined with the optional Weapon 1 for Alto."
+		]
+	},
+	"accessories": {
+		"ja": ["ショットガン×１", "バックパック×１", "マーキングシール×１"],
+		"en": ["Shotgun x1", "Backpack x 1", "MarkingSeal×1"]
+	},
 	"images": [
 		"/images/items/01_2714_0.jpg",
 		"/images/items/01_2714_1.jpg",
@@ -61,18 +46,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2714/",
 	"extractedAt": "2025-12-06T17:49:56.278Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3678"
 }

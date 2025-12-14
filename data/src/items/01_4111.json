@@ -18,27 +18,22 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "30MS素体との組み合わせで世界観が広がる！新しいオプションヘアスタイルパーツがラインアップ！",
-			"en": "The world view expands when combined with the 30MS body! New optional hairstyle parts are now available!"
-		},
-		{
-			"ja": "■ホワイトのツインテール。",
-			"en": "• White twintails."
-		},
-		{
-			"ja": "■ヘアスタイルパーツの差し替えで自分の好みに合わせてキャラメイキング。",
-			"en": "• Create a character to suit your taste by replacing hairstyle parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ヘアスタイルパーツ×1",
-			"en": "Hair style parts x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MS素体との組み合わせで世界観が広がる！新しいオプションヘアスタイルパーツがラインアップ！",
+			"■ホワイトのツインテール。",
+			"■ヘアスタイルパーツの差し替えで自分の好みに合わせてキャラメイキング。"
+		],
+		"en": [
+			"The world view expands when combined with the 30MS body! New optional hairstyle parts are now available!",
+			"• White twintails.",
+			"• Create a character to suit your taste by replacing hairstyle parts."
+		]
+	},
+	"accessories": {
+		"ja": ["ヘアスタイルパーツ×1"],
+		"en": ["Hair style parts x 1"]
+	},
 	"images": [
 		"/images/items/01_4111_0.jpg",
 		"/images/items/01_4111_1.jpg",
@@ -47,18 +42,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4111/",
 	"extractedAt": "2025-12-06T17:52:57.660Z",
-	"brandIds": [
-		"30-minutes-sisters"
-	],
+	"brandIds": ["30-minutes-sisters"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manualId": "3471"
 }

@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンキャノン(ククルス・ドアンの島版)",
-		"en": "HG 1/144 Guncannon (Cucrus Doan's island version)"
+		"en": "HG 1/144 GUNCANNON (CUCURUZ DOAN’S ISLAND Ver.)"
 	},
 	"price": {
 		"amount": 2750,
@@ -19,51 +19,38 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動戦士ガンダム ククルス・ドアンの島』より、「ガンキャノン」がHG化！",
-			"en": "From \"Mobile Suit Gundam Cucurrus Doan Island \", \" Guncannon\" is made into HG!"
-		},
-		{
-			"ja": "• 新規造形となるバックパックパーツの差し替えにより、カイ機・ハヤト機の両機を再現可能。",
-			"en": "• Both Kai and Hayato machines can be reproduced by replacing the backpack parts, which are new models."
-		},
-		{
-			"ja": "• HGフォーマットの高い可動性能により、地面に寝そべってキャノン砲を撃つポーズや中腰の発艦ポーズなど印象的なガンキャノンのポーズを実現。",
-			"en": "• The high articulation performance of the HG format allows for impressive gun cannon poses such as lying on the ground and firing a cannon, or a mid-waisted launch pose."
-		},
-		{
-			"ja": "• ククルス・ドアンの島版ガンキャノンのカラーリングを成形色で表現。設定画のディテールを忠実に再現。",
-			"en": "• Expressing the coloring of Cucurrus Doan's island version Guncannon with molded colors. Faithfully reproduces the details of the setting image."
-		},
-		{
-			"ja": "• カトキハジメ氏デザインのプラモデルオリジナルマーキングシールが付属 。カイ機・ハヤト機の識別ナンバーや各所に施されたコーションマークでプラモデルオリジナルのディテールアップを楽しめる。",
-			"en": "• Includes plastic model original marking seal designed by Hajime Katoki. You can enjoy the original details of the plastic model with the identification numbers of Kai and Hayato machines and the caution marks placed in various places."
-		},
-		{
-			"ja": "• バックパック２種、ビーム・ライフル、ハンドパーツが新規造形で付属。",
-			"en": "• Two types of backpacks, beam rifle, and hand parts are included with new modeling."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "バックパックパーツ×2種(カイ機再現用/ハヤト機再現用)",
-			"en": "Backpack parts x 2 types (for reproducing Kai machine/for reproducing Hayato machine)"
-		},
-		{
-			"ja": "ビーム・ライフル×1",
-			"en": "Beam rifle x1"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士ガンダム ククルス・ドアンの島』より、「ガンキャノン」がHG化！",
+			"• 新規造形となるバックパックパーツの差し替えにより、カイ機・ハヤト機の両機を再現可能。",
+			"• HGフォーマットの高い可動性能により、地面に寝そべってキャノン砲を撃つポーズや中腰の発艦ポーズなど印象的なガンキャノンのポーズを実現。",
+			"• ククルス・ドアンの島版ガンキャノンのカラーリングを成形色で表現。設定画のディテールを忠実に再現。",
+			"• カトキハジメ氏デザインのプラモデルオリジナルマーキングシールが付属 。カイ機・ハヤト機の識別ナンバーや各所に施されたコーションマークでプラモデルオリジナルのディテールアップを楽しめる。",
+			"• バックパック２種、ビーム・ライフル、ハンドパーツが新規造形で付属。"
+		],
+		"en": [
+			"From \"Mobile Suit Gundam Cucurrus Doan Island \", \" Guncannon\" is made into HG!",
+			"• Both Kai and Hayato machines can be reproduced by replacing the backpack parts, which are new models.",
+			"• The high articulation performance of the HG format allows for impressive gun cannon poses such as lying on the ground and firing a cannon, or a mid-waisted launch pose.",
+			"• Expressing the coloring of Cucurrus Doan's island version Guncannon with molded colors. Faithfully reproduces the details of the setting image.",
+			"• Includes plastic model original marking seal designed by Hajime Katoki. You can enjoy the original details of the plastic model with the identification numbers of Kai and Hayato machines and the caution marks placed in various places.",
+			"• Two types of backpacks, beam rifle, and hand parts are included with new modeling."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"バックパックパーツ×2種(カイ機再現用/ハヤト機再現用)",
+			"ビーム・ライフル×1",
+			"ハンドパーツ×1式",
+			"マーキングシール×1"
+		],
+		"en": [
+			"Backpack parts x 2 types (for reproducing Kai machine/for reproducing Hayato machine)",
+			"Beam rifle x1",
+			"Hand parts x 1 set",
+			"MarkingSeal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_4381_0.jpg",
 		"/images/items/01_4381_1.jpg",
@@ -74,18 +61,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4381/",
 	"extractedAt": "2025-12-06T17:53:35.832Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-cucurrus-doan-island"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000220189",
-		"01_5514"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-cucurrus-doan-island"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000220189", "01_5514"],
 	"manualId": "1392"
 }

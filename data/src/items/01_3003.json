@@ -18,22 +18,14 @@
 	},
 	"targetAge": 15,
 	"scale": "1/100",
-	"description": [
-		{
-			"ja": "プレミアムバンダイはこちら"
-		},
-		{
-			"ja": "※プレミアムバンダイのトップページに遷移します。"
-		},
-		{
-			"ja": "※一部のエリアでは販売していません。"
-		},
-		{
-			"ja": "※エリアにより申込開始の日時は異なります。"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"プレミアムバンダイはこちら",
+			"※プレミアムバンダイのトップページに遷移します。",
+			"※一部のエリアでは販売していません。",
+			"※エリアにより申込開始の日時は異なります。"
+		]
+	},
 	"images": [
 		"/images/items/01_3003_0.jpg",
 		"/images/items/01_3003_1.jpg",
@@ -48,21 +40,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3003/",
 	"extractedAt": "2025-12-06T17:50:34.831Z",
-	"brandIds": [
-		"mg-master-gradepreban-gunpla",
-		"prevan-gunpla",
-		"mg-master-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"item-1000181726",
-		"01_4272"
-	]
+	"brandIds": ["mg-master-gradepreban-gunpla", "prevan-gunpla", "mg-master-grade"],
+	"seriesIds": ["mobile-suit-gundam-seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5221", "item-1000181726", "01_4272"]
 }

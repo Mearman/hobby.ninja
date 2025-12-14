@@ -18,67 +18,46 @@
 		"day": 17
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• 電子のパワーを秘めたピカちんキットＳがぞくぞく登場！",
-			"en": "• Pikachin KitS, which has hidden electronic power, is now available!"
-		},
-		{
-			"ja": "• 仲間と暗号のやりとりができるピカちんキットＳ！不思議な逆再生録音機でヒミツのメッセージを仲間に送れ！",
-			"en": "• Pikachin KitS allows you to exchange codes with your friends! Send a secret message to your friends using a mysterious reverse playback recorder!"
-		},
-		{
-			"ja": "• ＤＶＤプレイヤーのまきもどし機能がピラメキのカギだ！",
-			"en": "• The DVD player's rewind function is the key to success!"
-		},
-		{
-			"ja": "• ピカちんロボＳと合体するとボイスレコーダー機能の再生スピードが変更可能に！",
-			"en": "• When combined with Pikachin Robo S, the playback speed of the voice recorder function can be changed!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "【セット内容】",
-			"en": "[Set contents]"
-		},
-		{
-			"ja": "逆再生スパイパス…1",
-			"en": "Reverse playback spy pass...1"
-		},
-		{
-			"ja": "イカスPパーツ…1(成形品…3)",
-			"en": "Ikasu P parts...1 (molded product...3)"
-		},
-		{
-			"ja": "ピカちんQRコードステッカー…1",
-			"en": "Pikachin QR code Sticker...1"
-		},
-		{
-			"ja": "シール…1",
-			"en": "Seal...1"
-		},
-		{
-			"ja": "取扱説明書…1",
-			"en": "Handling Manual...1"
-		},
-		{
-			"ja": "ピカちんシート…1（表：設計図ページ　裏：豆知識ページ）",
-			"en": "Pikachin sheet...1 (front: blueprint page, back: trivia page)"
-		},
-		{
-			"ja": "電子基板…1",
-			"en": "Electronic board...1"
-		},
-		{
-			"ja": "接点金具…3",
-			"en": "Contact metal fittings...3"
-		},
-		{
-			"ja": "絶縁テープ…1",
-			"en": "Insulating tape...1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• 電子のパワーを秘めたピカちんキットＳがぞくぞく登場！",
+			"• 仲間と暗号のやりとりができるピカちんキットＳ！不思議な逆再生録音機でヒミツのメッセージを仲間に送れ！",
+			"• ＤＶＤプレイヤーのまきもどし機能がピラメキのカギだ！",
+			"• ピカちんロボＳと合体するとボイスレコーダー機能の再生スピードが変更可能に！"
+		],
+		"en": [
+			"• Pikachin KitS, which has hidden electronic power, is now available!",
+			"• Pikachin KitS allows you to exchange codes with your friends! Send a secret message to your friends using a mysterious reverse playback recorder!",
+			"• The DVD player's rewind function is the key to success!",
+			"• When combined with Pikachin Robo S, the playback speed of the voice recorder function can be changed!"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"【セット内容】",
+			"逆再生スパイパス…1",
+			"イカスPパーツ…1(成形品…3)",
+			"ピカちんQRコードステッカー…1",
+			"シール…1",
+			"取扱説明書…1",
+			"ピカちんシート…1（表：設計図ページ　裏：豆知識ページ）",
+			"電子基板…1",
+			"接点金具…3",
+			"絶縁テープ…1"
+		],
+		"en": [
+			"[Set contents]",
+			"Reverse playback spy pass...1",
+			"Ikasu P parts...1 (molded product...3)",
+			"Pikachin QR code Sticker...1",
+			"Seal...1",
+			"Handling Manual...1",
+			"Pikachin sheet...1 (front: blueprint page, back: trivia page)",
+			"Electronic board...1",
+			"Contact metal fittings...3",
+			"Insulating tape...1"
+		]
+	},
 	"images": [
 		"/images/items/01_2045_0.jpg",
 		"/images/items/01_2045_1.jpg",
@@ -91,16 +70,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2045/",
 	"extractedAt": "2025-12-06T16:47:14.538Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2605", "01_2606", "01_2607", "01_2545"]
 }

@@ -19,35 +19,19 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『アドバンス・オブ・ゼータ』よりギャプランTR-5［フライルー］が登場。"
-		},
-		{
-			"ja": "●本体はディテールとプロポーションを崩すことなく、MS形態からMA形態へ変形可能。"
-		},
-		{
-			"ja": "●背部の隠し腕は展開可能。"
-		},
-		{
-			"ja": "●付属するロングビームライフルは肩のユニットに接続可能。"
-		},
-		{
-			"ja": "●ライフルの前後を取り外しビームガンとしても装備可能。"
-		},
-		{
-			"ja": "付属武装：ロング・ブレード・ライフル/ビーム・ピストル"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ロング・ブレード・ライフル"
-		},
-		{
-			"ja": "ビーム・ピストル"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『アドバンス・オブ・ゼータ』よりギャプランTR-5［フライルー］が登場。",
+			"●本体はディテールとプロポーションを崩すことなく、MS形態からMA形態へ変形可能。",
+			"●背部の隠し腕は展開可能。",
+			"●付属するロングビームライフルは肩のユニットに接続可能。",
+			"●ライフルの前後を取り外しビームガンとしても装備可能。",
+			"付属武装：ロング・ブレード・ライフル/ビーム・ピストル"
+		]
+	},
+	"accessories": {
+		"ja": ["ロング・ブレード・ライフル", "ビーム・ピストル"]
+	},
 	"images": [
 		"/images/items/01_5644_0.jpg",
 		"/images/items/01_5644_1.jpg",
@@ -62,21 +46,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5644/",
 	"extractedAt": "2025-12-06T17:56:21.373Z",
-	"brandIds": [
-		"hg-high-grade",
-		"hg-universal-century"
-	],
-	"seriesIds": [
-		"mobile-suit-z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg-high-grade", "hg-universal-century"],
+	"seriesIds": ["mobile-suit-z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manualId": "0259"
 }

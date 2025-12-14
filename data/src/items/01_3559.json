@@ -18,55 +18,40 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "レディコマンダーアリスに装備できる制服デザインのアーマーが登場！",
-			"en": "Introducing an armor with a uniform design that can be equipped to Lady Commander Alice!"
-		},
-		{
-			"ja": "■30MSシリーズとも連動可能。",
-			"en": "• Can also be linked with the 30MS series."
-		},
-		{
-			"ja": "■換装パーツには各所に3mm径の穴を装備しており、制服化と同時に30MMシリーズとも遊べる仕様。",
-			"en": "• Replacement parts are equipped with 3mm diameter holes in various places, allowing you to play with the 30MM series at the same time as making them into uniforms."
-		},
-		{
-			"ja": "■GGLの象徴である「ガールガン」をモチーフにした3丁の銃が付属。劇中同様に3丁の合体が可能。",
-			"en": "• Three guns with the motif of GGL's symbol \"Girl Gun\" are included. It is possible to combine three guns as in the movie."
-		},
-		{
-			"ja": "■バックパックパーツに接続可能な拡張アームも付属。",
-			"en": "• Also included is an extension arm that can be connected to backpack parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "制服パーツ一式×１(アリス、リシェッタ選択式組付用)",
-			"en": "Uniform parts set x 1 (for Alice and Richetta selection type assembly)"
-		},
-		{
-			"ja": "武器パーツ（アタックガールガン）×１",
-			"en": "Weapon parts (attack girl gun) x 1"
-		},
-		{
-			"ja": "武器パーツ（ブラストガールガン）×１",
-			"en": "Weapon parts (Blast Girl Gun) x 1"
-		},
-		{
-			"ja": "武器パーツ（チェンジガールガン）×１",
-			"en": "Weapon parts (change girl gun) x 1"
-		},
-		{
-			"ja": "バックパック×２種",
-			"en": "Backpack x 2 types"
-		},
-		{
-			"ja": "バックパック拡張アーム×１",
-			"en": "Backpack extension arm x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"レディコマンダーアリスに装備できる制服デザインのアーマーが登場！",
+			"■30MSシリーズとも連動可能。",
+			"■換装パーツには各所に3mm径の穴を装備しており、制服化と同時に30MMシリーズとも遊べる仕様。",
+			"■GGLの象徴である「ガールガン」をモチーフにした3丁の銃が付属。劇中同様に3丁の合体が可能。",
+			"■バックパックパーツに接続可能な拡張アームも付属。"
+		],
+		"en": [
+			"Introducing an armor with a uniform design that can be equipped to Lady Commander Alice!",
+			"• Can also be linked with the 30MS series.",
+			"• Replacement parts are equipped with 3mm diameter holes in various places, allowing you to play with the 30MM series at the same time as making them into uniforms.",
+			"• Three guns with the motif of GGL's symbol \"Girl Gun\" are included. It is possible to combine three guns as in the movie.",
+			"• Also included is an extension arm that can be connected to backpack parts."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"制服パーツ一式×１(アリス、リシェッタ選択式組付用)",
+			"武器パーツ（アタックガールガン）×１",
+			"武器パーツ（ブラストガールガン）×１",
+			"武器パーツ（チェンジガールガン）×１",
+			"バックパック×２種",
+			"バックパック拡張アーム×１"
+		],
+		"en": [
+			"Uniform parts set x 1 (for Alice and Richetta selection type assembly)",
+			"Weapon parts (attack girl gun) x 1",
+			"Weapon parts (Blast Girl Gun) x 1",
+			"Weapon parts (change girl gun) x 1",
+			"Backpack x 2 types",
+			"Backpack extension arm x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_3559_0.jpg",
 		"/images/items/01_3559_1.jpg",
@@ -81,14 +66,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3559/",
 	"extractedAt": "2025-12-06T17:51:42.719Z",
-	"brandIds": [
-		"30-minutes-sisters"
-	],
-	"seriesIds": [
-		"girl-gun-lady"
-	],
-	"categoryIds": [
-		"30-minutes-label"
-	],
+	"brandIds": ["30-minutes-sisters"],
+	"seriesIds": ["girl-gun-lady"],
+	"categoryIds": ["30-minutes-label"],
 	"relatedItemIds": []
 }

@@ -19,68 +19,32 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "「ガンダムダブルオーダイバー」を進化させるカスタムパーツが登場！",
-			"en": "Introducing custom parts that will evolve the \"Gundam 00 Diver\"!"
-		},
-		{
-			"ja": "• バックパックに加え、新たなメイン武装であるGNダイバーソードなどが付属！",
-			"en": "• In addition to the backpack, a new main weapon, the GN Diver Sword, is included!"
-		},
-		{
-			"ja": "• HGBDシリーズをはじめ、これまでに発売された様々なガンプラに装備可能で、バックパックや巨大な剣で高機動格闘仕様ガンプラにカスタムができる！",
-			"en": "• It can be equipped on various Gunplas released so far, including the HGBD series, and you can customize your high-mobility fighting specification Gunpla with a backpack or a giant sword!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "GNダイバーソード×2",
-			"en": "GN Diver Sword x2"
-		},
-		{
-			"ja": "スーパーGNソードII用パーツ×2",
-			"en": "Parts for Super GN Sword II x 2"
-		},
-		{
-			"ja": "バックパック×1",
-			"en": "Backpack x 1"
-		},
-		{
-			"ja": "ジョイントパーツ×1",
-			"en": "Joint parts x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×3",
-			"en": "Molded product x 3"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
-	"images": [
-		"/images/items/01_1326_0.jpg",
-		"/images/items/01_1326_1.jpg"
-	],
+	"description": {
+		"ja": [
+			"「ガンダムダブルオーダイバー」を進化させるカスタムパーツが登場！",
+			"• バックパックに加え、新たなメイン武装であるGNダイバーソードなどが付属！",
+			"• HGBDシリーズをはじめ、これまでに発売された様々なガンプラに装備可能で、バックパックや巨大な剣で高機動格闘仕様ガンプラにカスタムができる！"
+		],
+		"en": [
+			"Introducing custom parts that will evolve the \"Gundam 00 Diver\"!",
+			"• In addition to the backpack, a new main weapon, the GN Diver Sword, is included!",
+			"• It can be equipped on various Gunplas released so far, including the HGBD series, and you can customize your high-mobility fighting specification Gunpla with a backpack or a giant sword!"
+		]
+	},
+	"accessories": {
+		"ja": ["GNダイバーソード×2", "スーパーGNソードII用パーツ×2", "バックパック×1", "ジョイントパーツ×1"],
+		"en": ["GN Diver Sword x2", "Parts for Super GN Sword II x 2", "Backpack x 1", "Joint parts x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×3", "取扱説明書×1"],
+		"en": ["Molded product x 3", "Handling manual×1"]
+	},
+	"images": ["/images/items/01_1326_0.jpg", "/images/items/01_1326_1.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1326/",
 	"extractedAt": "2025-12-06T17:12:57.204Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "0692"
 }

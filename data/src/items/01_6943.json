@@ -18,59 +18,30 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MMシリーズを代表する機体「ポルタノヴァ」が待望のフルアーマー化！強力な武装を携え再び戦場にその姿を現す！",
-			"en": "The long-awaited full armor version of the 30MM series representative aircraft \"Portanova\"! It reappears on the battlefield armed with powerful weapons!"
-		},
-		{
-			"ja": "■従来のポルタノヴァのカスタマイズ性をさらに引き上げる中間アーマーが付属。中間アーマーを経由しフルアーマー状態にグレードアップ。",
-			"en": "• Comes with intermediate armor that further enhances the customizability of the traditional Portanova. Upgraded to full armor state via intermediate armor."
-		},
-		{
-			"ja": "■ライフルが付属。フルアーマー状態でも大胆なアクションポーズが可能。",
-			"en": "• Rifle included. Bold action poses are possible even in full armor."
-		},
-		{
-			"ja": "■アックスは先端が可動。合体させて大型アックスに。",
-			"en": "• The tip of the ax is movable. Combine to form a large axe."
-		},
-		{
-			"ja": "■付属するアックスとライフルはバックパックにマウントが可能。",
-			"en": "• The included ax and rifle can be mounted on a backpack."
-		},
-		{
-			"ja": "■支援メカ「ロイロイ」もフルアーマー化。ジョイントの追加によりカスタマイズ性がアップ。",
-			"en": "• The support mecha \"Roi Roy\" is also fully armored. Customizability is improved by adding joints."
-		},
-		{
-			"ja": "■「30MM 1/144 指揮官機用オプションアーマー[ポルタノヴァ用/レッド]｣（別売り）に付属するアーマーパーツの一部が新規カラーリングで付属。",
-			"en": "• Some of the armor parts included with \"30MM 1/144 Optional Armor for Commander Aircraft [Portanova/Red]\" (sold separately) are included in new coloring."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "アーマーパーツ×1式",
-			"en": "Armor parts x 1 set"
-		},
-		{
-			"ja": "ロイロイ×1",
-			"en": "Loi Loi x 1"
-		},
-		{
-			"ja": "アックス×2",
-			"en": "Ax x2"
-		},
-		{
-			"ja": "ライフル×2",
-			"en": "Rifle x 2"
-		},
-		{
-			"ja": "ガントレット×2",
-			"en": "Gauntlet x 2"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MMシリーズを代表する機体「ポルタノヴァ」が待望のフルアーマー化！強力な武装を携え再び戦場にその姿を現す！",
+			"■従来のポルタノヴァのカスタマイズ性をさらに引き上げる中間アーマーが付属。中間アーマーを経由しフルアーマー状態にグレードアップ。",
+			"■ライフルが付属。フルアーマー状態でも大胆なアクションポーズが可能。",
+			"■アックスは先端が可動。合体させて大型アックスに。",
+			"■付属するアックスとライフルはバックパックにマウントが可能。",
+			"■支援メカ「ロイロイ」もフルアーマー化。ジョイントの追加によりカスタマイズ性がアップ。",
+			"■「30MM 1/144 指揮官機用オプションアーマー[ポルタノヴァ用/レッド]｣（別売り）に付属するアーマーパーツの一部が新規カラーリングで付属。"
+		],
+		"en": [
+			"The long-awaited full armor version of the 30MM series representative aircraft \"Portanova\"! It reappears on the battlefield armed with powerful weapons!",
+			"• Comes with intermediate armor that further enhances the customizability of the traditional Portanova. Upgraded to full armor state via intermediate armor.",
+			"• Rifle included. Bold action poses are possible even in full armor.",
+			"• The tip of the ax is movable. Combine to form a large axe.",
+			"• The included ax and rifle can be mounted on a backpack.",
+			"• The support mecha \"Roi Roy\" is also fully armored. Customizability is improved by adding joints.",
+			"• Some of the armor parts included with \"30MM 1/144 Optional Armor for Commander Aircraft [Portanova/Red]\" (sold separately) are included in new coloring."
+		]
+	},
+	"accessories": {
+		"ja": ["アーマーパーツ×1式", "ロイロイ×1", "アックス×2", "ライフル×2", "ガントレット×2"],
+		"en": ["Armor parts x 1 set", "Loi Loi x 1", "Ax x2", "Rifle x 2", "Gauntlet x 2"]
+	},
 	"images": [
 		"/images/items/01_6943_0.jpg",
 		"/images/items/01_6943_1.jpg",
@@ -83,17 +54,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_6943/",
 	"extractedAt": "2025-12-06T17:58:15.384Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6937",
-		"01_6930",
-		"01_6774",
-		"01_6775"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6937", "01_6930", "01_6774", "01_6775"]
 }

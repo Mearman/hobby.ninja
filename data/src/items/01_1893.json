@@ -19,48 +19,29 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズ』に登場する新機体「インパルスガンダムランシエ」が登場！",
-			"en": "The new aircraft \"Impulse Gundam Rancier \" appearing in \" Gundam Build Divers\" is now available!"
-		},
-		{
-			"ja": "• 変形・分離・合体ができるギミック満載の仕様となっており、特徴的なランス、シールドのほか、背部にマウント可能な水中航行用ブースターも付属！",
-			"en": "• It is full of gimmicks that can be transformed, separated, and combined, and in addition to the characteristic lance and seal, it also comes with an underwater navigation booster that can be mounted on the back!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ランス（仮）×1",
-			"en": "Lance (temporary) x 1"
-		},
-		{
-			"ja": "シールド（仮）×1",
-			"en": "Seal de (temporary) × 1"
-		},
-		{
-			"ja": "水中航行用ブースター×1",
-			"en": "Underwater navigation booster x 1"
-		},
-		{
-			"ja": "変形用ジョイントパーツ×1式",
-			"en": "Deformation joint parts x 1 set"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×12",
-			"en": "Molded product x 12"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズ』に登場する新機体「インパルスガンダムランシエ」が登場！",
+			"• 変形・分離・合体ができるギミック満載の仕様となっており、特徴的なランス、シールドのほか、背部にマウント可能な水中航行用ブースターも付属！"
+		],
+		"en": [
+			"The new aircraft \"Impulse Gundam Rancier \" appearing in \" Gundam Build Divers\" is now available!",
+			"• It is full of gimmicks that can be transformed, separated, and combined, and in addition to the characteristic lance and seal, it also comes with an underwater navigation booster that can be mounted on the back!"
+		]
+	},
+	"accessories": {
+		"ja": ["ランス（仮）×1", "シールド（仮）×1", "水中航行用ブースター×1", "変形用ジョイントパーツ×1式"],
+		"en": [
+			"Lance (temporary) x 1",
+			"Seal de (temporary) × 1",
+			"Underwater navigation booster x 1",
+			"Deformation joint parts x 1 set"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×12", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 12", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1893_0.jpg",
 		"/images/items/01_1893_1.jpg",
@@ -73,20 +54,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1893/",
 	"extractedAt": "2025-12-06T17:48:18.669Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "1035"
 }

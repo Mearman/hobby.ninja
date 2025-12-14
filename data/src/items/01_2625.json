@@ -19,39 +19,24 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MMシリーズに水中を自由に駆け巡るポルタノヴァ（水中仕様）が登場！",
-			"en": "Portanova (underwater specification), which freely runs underwater, is now available in the 30MM series!"
-		},
-		{
-			"ja": "• 水中用タンクは組み替えることで腕や脚に装着できる。",
-			"en": "• The underwater tank can be attached to the arms or legs by rearranging it."
-		},
-		{
-			"ja": "• 既存のアイテムとの連動も可能。",
-			"en": "• Can also be linked with existing items."
-		},
-		{
-			"ja": "• アンカークローが付属。",
-			"en": "• Anchor claw included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "水中用バックパック/装甲×１式",
-			"en": "Underwater backpack/armor x 1 set"
-		},
-		{
-			"ja": "アンカークロー×１",
-			"en": "Anchor claw x 1"
-		},
-		{
-			"ja": "マーキングシール×１",
-			"en": "MarkingSeal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MMシリーズに水中を自由に駆け巡るポルタノヴァ（水中仕様）が登場！",
+			"• 水中用タンクは組み替えることで腕や脚に装着できる。",
+			"• 既存のアイテムとの連動も可能。",
+			"• アンカークローが付属。"
+		],
+		"en": [
+			"Portanova (underwater specification), which freely runs underwater, is now available in the 30MM series!",
+			"• The underwater tank can be attached to the arms or legs by rearranging it.",
+			"• Can also be linked with existing items.",
+			"• Anchor claw included."
+		]
+	},
+	"accessories": {
+		"ja": ["水中用バックパック/装甲×１式", "アンカークロー×１", "マーキングシール×１"],
+		"en": ["Underwater backpack/armor x 1 set", "Anchor claw x 1", "MarkingSeal×1"]
+	},
 	"images": [
 		"/images/items/01_2625_0.jpg",
 		"/images/items/01_2625_1.jpg",
@@ -62,18 +47,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2625/",
 	"extractedAt": "2025-12-06T17:49:45.204Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3675"
 }

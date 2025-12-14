@@ -18,22 +18,18 @@
 		"day": 3
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• 海外で展開されていた「SD ガンダム EXスタンダード」シリーズが日本上陸！",
-			"en": "• The \"SD Gundam EX Standard\" series, which was developed overseas, has finally arrived!"
-		},
-		{
-			"ja": "• 従来のSD ガンダムシリーズキットに比べ可動域が大幅に向上し、様々なポージングが可能で、洗練されたスタイリッシュなプロポーションとの両立を実現！",
-			"en": "• The range of motion has been greatly improved compared to the previous SD Gundam series kit, allowing for a variety of poses and achieving both sophisticated and stylish proportions!"
-		},
-		{
-			"ja": "• さらに、HGシリーズとの互換性を備え、パーツ交換によるカスタマイズの幅を広げている！",
-			"en": "• Furthermore, it is compatible with the HG series, expanding the range of customization by replacing parts!"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• 海外で展開されていた「SD ガンダム EXスタンダード」シリーズが日本上陸！",
+			"• 従来のSD ガンダムシリーズキットに比べ可動域が大幅に向上し、様々なポージングが可能で、洗練されたスタイリッシュなプロポーションとの両立を実現！",
+			"• さらに、HGシリーズとの互換性を備え、パーツ交換によるカスタマイズの幅を広げている！"
+		],
+		"en": [
+			"• The \"SD Gundam EX Standard\" series, which was developed overseas, has finally arrived!",
+			"• The range of motion has been greatly improved compared to the previous SD Gundam series kit, allowing for a variety of poses and achieving both sophisticated and stylish proportions!",
+			"• Furthermore, it is compatible with the HG series, expanding the range of customization by replacing parts!"
+		]
+	},
 	"images": [
 		"/images/items/01_2156_0.jpg",
 		"/images/items/01_2156_1.jpg",
@@ -45,14 +41,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2156/",
 	"extractedAt": "2025-12-06T17:48:46.218Z",
-	"brandIds": [
-		"sdex-standard"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-iron-blooded-orphans"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["sdex-standard"],
+	"seriesIds": ["mobile-suit-gundam-iron-blooded-orphans"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

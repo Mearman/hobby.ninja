@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "アクションベース6 [クリアカラー]",
-		"en": "Action Base 6 [Clear Color]"
+		"en": "ACTION BASE 6 [CLEAR COLOR]"
 	},
 	"price": {
 		"amount": 660,
@@ -18,51 +18,28 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "小柄なプラモデルのディスプレイに最適！２セット同梱のアクションベース最新モデル第６弾！",
-			"en": "Perfect for displaying small plastic models! The 6th latest action base model with 2 sets included!"
-		},
-		{
-			"ja": "• 小柄のプラモデルをすっきりとディスプレイできるシンプルなアクションベース。",
-			"en": "• A simple action base that allows you to neatly display small plastic models."
-		},
-		{
-			"ja": "• ベースパーツは「約90mm×約60ｍｍ」でコンパクト仕様。",
-			"en": "• The base parts are compact, measuring approximately 90mm x 60mm."
-		},
-		{
-			"ja": "• 支柱パーツが３本×２セット付属。先端は、軸接続のジョイントと、C型アームの選択式でカスタム可能。",
-			"en": "• Comes with 2 sets of 3 pillar parts. The tip can be customized with a selection of shaft connection joints and C-shaped arms."
-		},
-		{
-			"ja": "• ナチュラルなクリアカラーで成形。",
-			"en": "• Molded in natural clear color."
-		},
-		{
-			"ja": "• １商品に２セット同梱でコレクションに最適！",
-			"en": "• 2 sets included in 1 product, perfect for collection!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ベースパーツ×2",
-			"en": "Base parts x 2"
-		},
-		{
-			"ja": "支柱パーツ×1式",
-			"en": "Strut parts x 1 set"
-		},
-		{
-			"ja": "C型アーム×2",
-			"en": "C type arm x 2"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"小柄なプラモデルのディスプレイに最適！２セット同梱のアクションベース最新モデル第６弾！",
+			"• 小柄のプラモデルをすっきりとディスプレイできるシンプルなアクションベース。",
+			"• ベースパーツは「約90mm×約60ｍｍ」でコンパクト仕様。",
+			"• 支柱パーツが３本×２セット付属。先端は、軸接続のジョイントと、C型アームの選択式でカスタム可能。",
+			"• ナチュラルなクリアカラーで成形。",
+			"• １商品に２セット同梱でコレクションに最適！"
+		],
+		"en": [
+			"Perfect for displaying small plastic models! The 6th latest action base model with 2 sets included!",
+			"• A simple action base that allows you to neatly display small plastic models.",
+			"• The base parts are compact, measuring approximately 90mm x 60mm.",
+			"• Comes with 2 sets of 3 pillar parts. The tip can be customized with a selection of shaft connection joints and C-shaped arms.",
+			"• Molded in natural clear color.",
+			"• 2 sets included in 1 product, perfect for collection!"
+		]
+	},
+	"accessories": {
+		"ja": ["ベースパーツ×2", "支柱パーツ×1式", "C型アーム×2", "ジョイントパーツ×1式"],
+		"en": ["Base parts x 2", "Strut parts x 1 set", "C type arm x 2", "Joint parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_4245_0.jpg",
 		"/images/items/01_4245_1.jpg",
@@ -73,17 +50,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4245/",
 	"extractedAt": "2025-12-06T17:53:16.776Z",
-	"brandIds": [
-		"action-base"
-	],
+	"brandIds": ["action-base"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5934",
-		"01_5256",
-		"01_5258"
-	],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5934", "01_5256", "01_5258"],
 	"manualId": "1188"
 }

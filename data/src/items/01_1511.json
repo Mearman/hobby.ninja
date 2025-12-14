@@ -18,14 +18,14 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『ガンダムセンチネル』に登場のＳガンダムのＡパーツ飛行形態を独自に再現したこだわりのモデルです。HGUCシリーズＳガンダムと同スケール（1/144）です。",
-			"en": "A special model that uniquely reproduces the A part flight form of S Gundam that appeared in \"Gundam Sentinel\". Same scale as HGUC series S Gundam (1/144)."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『ガンダムセンチネル』に登場のＳガンダムのＡパーツ飛行形態を独自に再現したこだわりのモデルです。HGUCシリーズＳガンダムと同スケール（1/144）です。"
+		],
+		"en": [
+			"A special model that uniquely reproduces the A part flight form of S Gundam that appeared in \"Gundam Sentinel\". Same scale as HGUC series S Gundam (1/144)."
+		]
+	},
 	"images": [
 		"/images/items/01_1511_0.jpg",
 		"/images/items/01_1511_1.jpg",
@@ -36,15 +36,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_1511/",
 	"extractedAt": "2025-12-06T17:28:35.587Z",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam-sentinel"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5593",
-		"01_3408",
-		"01_3062"
-	]
+	"seriesIds": ["gundam-sentinel"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5593", "01_3408", "01_3062"]
 }

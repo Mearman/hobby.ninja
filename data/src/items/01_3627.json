@@ -19,63 +19,44 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ガンプラとゲームが連動する「ガンダムブレイカー バトローグ プロジェクト」が2021年より全世界にて展開スタート！！",
-			"en": "The \"Gundam Breaker Battlogue Project\", which links Gunpla and the game, will start rolling out worldwide in 2021! !"
-		},
-		{
-			"ja": "プロジェクトのオリジナル機体が、2021年10月配信予定の新作ショートフィルム『ガンダムブレイカー バトローグ』に登場。そのオリジナル機体が、ゲーム同様にカスタマイズ可能なHGガンプラシリーズとして登場！",
-			"en": "The project's original aircraft appears in the new short film \"Gundam Breaker Battlogue\" scheduled for distribution in 202110. The original aircraft is now available as the HGGunpla series, which can be customized just like in the game!"
-		},
-		{
-			"ja": "■ダブルオークアンタにコマンドガンダムの要素を加えてカスタマイズされたMS。",
-			"en": "• A customized MS by adding elements of Command Gundam to Double OQuanta."
-		},
-		{
-			"ja": "■ダブルオークアンタのスタイリッシュなシルエットを深い緑色で刷新！",
-			"en": "• Double O Quanta's stylish silhouette has been updated with deep green!"
-		},
-		{
-			"ja": "■ミサイルランチャー、ヘビーマシンガン、アームズシールドといった多数の射撃武器が付属。",
-			"en": "• Includes a large number of shooting weapons such as missile launcher, heavy machine gun, and Arms Seal."
-		},
-		{
-			"ja": "■コマンドソードやアームズシールドに格納された二振りのコンバットナイフなど、斬撃武装も付属し、カラーリングだけでなく、ミリタリー要素もコマンドガンダムの特徴を備えている。",
-			"en": "• Slashing weapons such as the command sword and two combat knives stored in the arms seal are also included, and not only the coloring but also the military elements are characteristic of the command Gundam."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "コマンドソード×1",
-			"en": "Command sword x1"
-		},
-		{
-			"ja": "アームズシールド×1",
-			"en": "Arms Seal × 1"
-		},
-		{
-			"ja": "コンバットナイフ×2",
-			"en": "Combat knife x 2"
-		},
-		{
-			"ja": "ヘビーマシンガン×1",
-			"en": "Heavy machine gun x1"
-		},
-		{
-			"ja": "ミサイルランチャー×1",
-			"en": "Missile launcher x1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "ハンドパーツ×１式",
-			"en": "Hand parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ガンプラとゲームが連動する「ガンダムブレイカー バトローグ プロジェクト」が2021年より全世界にて展開スタート！！",
+			"プロジェクトのオリジナル機体が、2021年10月配信予定の新作ショートフィルム『ガンダムブレイカー バトローグ』に登場。そのオリジナル機体が、ゲーム同様にカスタマイズ可能なHGガンプラシリーズとして登場！",
+			"■ダブルオークアンタにコマンドガンダムの要素を加えてカスタマイズされたMS。",
+			"■ダブルオークアンタのスタイリッシュなシルエットを深い緑色で刷新！",
+			"■ミサイルランチャー、ヘビーマシンガン、アームズシールドといった多数の射撃武器が付属。",
+			"■コマンドソードやアームズシールドに格納された二振りのコンバットナイフなど、斬撃武装も付属し、カラーリングだけでなく、ミリタリー要素もコマンドガンダムの特徴を備えている。"
+		],
+		"en": [
+			"The \"Gundam Breaker Battlogue Project\", which links Gunpla and the game, will start rolling out worldwide in 2021! !",
+			"The project's original aircraft appears in the new short film \"Gundam Breaker Battlogue\" scheduled for distribution in 202110. The original aircraft is now available as the HGGunpla series, which can be customized just like in the game!",
+			"• A customized MS by adding elements of Command Gundam to Double OQuanta.",
+			"• Double O Quanta's stylish silhouette has been updated with deep green!",
+			"• Includes a large number of shooting weapons such as missile launcher, heavy machine gun, and Arms Seal.",
+			"• Slashing weapons such as the command sword and two combat knives stored in the arms seal are also included, and not only the coloring but also the military elements are characteristic of the command Gundam."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"コマンドソード×1",
+			"アームズシールド×1",
+			"コンバットナイフ×2",
+			"ヘビーマシンガン×1",
+			"ミサイルランチャー×1",
+			"ホイルシール×1",
+			"ハンドパーツ×１式"
+		],
+		"en": [
+			"Command sword x1",
+			"Arms Seal × 1",
+			"Combat knife x 2",
+			"Heavy machine gun x1",
+			"Missile launcher x1",
+			"Foil Seal×1",
+			"Hand parts x 1 set"
+		]
+	},
 	"images": [
 		"/images/items/01_3627_0.jpg",
 		"/images/items/01_3627_1.jpg",
@@ -87,20 +68,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3627/",
 	"extractedAt": "2025-12-06T17:51:51.719Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-breaker-battlogue"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4128",
-		"item-1000166359",
-		"item-1000166322",
-		"item-1000166358"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-breaker-battlogue"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4128", "item-1000166359", "item-1000166322", "item-1000166358"],
 	"manualId": "0121"
 }

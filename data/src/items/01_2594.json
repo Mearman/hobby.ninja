@@ -18,27 +18,14 @@
 		"day": 15
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "『ダンボール戦機』より、炎を自在に操るLBXイフリートが登場！",
-			"en": "From \"Danball Senki\" comes LBX Ifrit, who can freely manipulate flames!"
-		},
-		{
-			"ja": "• エフェクトパーツ付属。",
-			"en": "• Effect parts included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "エフェクトパーツ×1",
-			"en": "Effect parts x 1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": ["『ダンボール戦機』より、炎を自在に操るLBXイフリートが登場！", "• エフェクトパーツ付属。"],
+		"en": ["From \"Danball Senki\" comes LBX Ifrit, who can freely manipulate flames!", "• Effect parts included."]
+	},
+	"accessories": {
+		"ja": ["エフェクトパーツ×1", "ホイルシール×1"],
+		"en": ["Effect parts x 1", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_2594_0.jpg",
 		"/images/items/01_2594_1.jpg",
@@ -49,16 +36,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2594/",
 	"extractedAt": "2025-12-06T17:49:41.731Z",
 	"brandIds": [],
-	"seriesIds": [
-		"danball-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"seriesIds": ["danball-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000215196", "item-1000215197", "item-1000210042", "item-1000210041"]
 }

@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 オプションパーツセット9(大型ブースターユニット)",
-		"en": "30MM 1/144 Option parts set 9 (large booster unit)"
+		"en": "30MM 1/144 OPTION PARTS SET 9(LARGE BOOSTER UNIT)"
 	},
 	"price": {
 		"amount": 858,
@@ -19,55 +19,40 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MMオプションパーツセットに、各機体に装着可能な大型ブースターユニットが登場！",
-			"en": "A large booster unit that can be attached to each aircraft is now available in the 30MM optional parts set!"
-		},
-		{
-			"ja": "• 大型ブースターユニットとして単体でもディスプレイが可能。",
-			"en": "• Can be displayed alone as a large booster unit."
-		},
-		{
-			"ja": "• 分解すればカスタマイズパーツとして各機体に装着可能。",
-			"en": "• If disassembled, it can be attached to each aircraft as a customized part."
-		},
-		{
-			"ja": "• シールドバインダー、大型脚部ユニット、ジョイントパーツほかカスタマイズに便利なパーツが多数付属。",
-			"en": "• Seal binder, large leg unit, joint parts, and many other parts convenient for customization are included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "コアパーツ×1",
-			"en": "Core parts x 1"
-		},
-		{
-			"ja": "大型脚部ブースターユニット×1",
-			"en": "Large leg booster unit x 1"
-		},
-		{
-			"ja": "スラスターユニット×1",
-			"en": "Thruster unit x 1"
-		},
-		{
-			"ja": "シールドバインダー×2",
-			"en": "Seal binder x 2"
-		},
-		{
-			"ja": "バックパック中継パーツ×1",
-			"en": "Backpack relay parts x 1"
-		},
-		{
-			"ja": "ジョイントパーツ×1",
-			"en": "Joint parts x 1"
-		},
-		{
-			"ja": ">",
-			"en": ">"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MMオプションパーツセットに、各機体に装着可能な大型ブースターユニットが登場！",
+			"• 大型ブースターユニットとして単体でもディスプレイが可能。",
+			"• 分解すればカスタマイズパーツとして各機体に装着可能。",
+			"• シールドバインダー、大型脚部ユニット、ジョイントパーツほかカスタマイズに便利なパーツが多数付属。"
+		],
+		"en": [
+			"A large booster unit that can be attached to each aircraft is now available in the 30MM optional parts set!",
+			"• Can be displayed alone as a large booster unit.",
+			"• If disassembled, it can be attached to each aircraft as a customized part.",
+			"• Seal binder, large leg unit, joint parts, and many other parts convenient for customization are included."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"コアパーツ×1",
+			"大型脚部ブースターユニット×1",
+			"スラスターユニット×1",
+			"シールドバインダー×2",
+			"バックパック中継パーツ×1",
+			"ジョイントパーツ×1",
+			">"
+		],
+		"en": [
+			"Core parts x 1",
+			"Large leg booster unit x 1",
+			"Thruster unit x 1",
+			"Seal binder x 2",
+			"Backpack relay parts x 1",
+			"Joint parts x 1",
+			">"
+		]
+	},
 	"images": [
 		"/images/items/01_4174_0.jpg",
 		"/images/items/01_4174_1.jpg",
@@ -79,18 +64,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4174/",
 	"extractedAt": "2025-12-06T17:53:06.104Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3743"
 }

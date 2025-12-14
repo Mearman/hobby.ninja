@@ -18,52 +18,36 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "「ケロロ軍曹」20周年を記念した「ケロロ軍曹プラモコレクション」特別パッケージモデルが発売であります！",
-			"en": "\"Keroro Sergeant Plastic Model Collection \" special package model commemorating the 20th anniversary of \" Keroro Sergeant\" has been released!"
-		},
-		{
-			"ja": "■ケロロ軍曹とケロロロボMk-IIがセットになって、成形色も新たに特別仕様で登場！！",
-			"en": "• Sergeant Keroro and Keroro Robo Mk-II are now available as a set, with new special molding colors! !"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ケロボール×1",
-			"en": "Kero ball x1"
-		},
-		{
-			"ja": "ビームライフル(ケロロ軍曹)×1",
-			"en": "Beam rifle (Keroro Sergeant) x 1"
-		},
-		{
-			"ja": "シールド(ケロロ軍曹)×1",
-			"en": "Seal (Sergeant Keroro) x 1"
-		},
-		{
-			"ja": "ビームライフル(ケロロロボMk-II)×1",
-			"en": "Beam rifle (Keroro Robo Mk-II) x 1"
-		},
-		{
-			"ja": "シールド(ケロロロボMk-II)×1",
-			"en": "Seal (Kerororobo Mk-II) x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成型品×6",
-			"en": "Molded product x 6"
-		},
-		{
-			"ja": "シール×2",
-			"en": "Seal×2"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"「ケロロ軍曹」20周年を記念した「ケロロ軍曹プラモコレクション」特別パッケージモデルが発売であります！",
+			"■ケロロ軍曹とケロロロボMk-IIがセットになって、成形色も新たに特別仕様で登場！！"
+		],
+		"en": [
+			"\"Keroro Sergeant Plastic Model Collection \" special package model commemorating the 20th anniversary of \" Keroro Sergeant\" has been released!",
+			"• Sergeant Keroro and Keroro Robo Mk-II are now available as a set, with new special molding colors! !"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ケロボール×1",
+			"ビームライフル(ケロロ軍曹)×1",
+			"シールド(ケロロ軍曹)×1",
+			"ビームライフル(ケロロロボMk-II)×1",
+			"シールド(ケロロロボMk-II)×1"
+		],
+		"en": [
+			"Kero ball x1",
+			"Beam rifle (Keroro Sergeant) x 1",
+			"Seal (Sergeant Keroro) x 1",
+			"Beam rifle (Keroro Robo Mk-II) x 1",
+			"Seal (Kerororobo Mk-II) x 1"
+		]
+	},
+	"contents": {
+		"ja": ["成型品×6", "シール×2", "取扱説明書×1"],
+		"en": ["Molded product x 6", "Seal×2", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2122_0.jpg",
 		"/images/items/01_2122_1.jpg",
@@ -79,15 +63,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2122/",
 	"extractedAt": "2025-12-06T17:48:42.204Z",
 	"brandIds": [],
-	"seriesIds": [
-		"sergeant-keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2104"
-	]
+	"seriesIds": ["sergeant-keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2104"]
 }

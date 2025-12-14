@@ -18,40 +18,19 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "●専用武器“鳳龍双刃刀”は組み換えて4種類の武器に！",
-			"en": "●The special weapon “Horyuu double-edged sword” can be recombined into 4 types of weapons!"
-		},
-		{
-			"ja": "●背中のマントは盾に変形",
-			"en": "-The cloak on the back transforms into a shield"
-		},
-		{
-			"ja": "●鎧は着脱可能",
-			"en": "-Armor is removable"
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_2526_0.jpg",
-		"/images/items/01_2526_1.jpg",
-		"/images/items/01_2526_2.jpg"
-	],
+	"description": {
+		"ja": ["●専用武器“鳳龍双刃刀”は組み換えて4種類の武器に！", "●背中のマントは盾に変形", "●鎧は着脱可能"],
+		"en": [
+			"●The special weapon “Horyuu double-edged sword” can be recombined into 4 types of weapons!",
+			"-The cloak on the back transforms into a shield",
+			"-Armor is removable"
+		]
+	},
+	"images": ["/images/items/01_2526_0.jpg", "/images/items/01_2526_1.jpg", "/images/items/01_2526_2.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2526/",
 	"extractedAt": "2025-12-06T17:49:32.736Z",
-	"brandIds": [
-		"sd-gundam-bb-senshi"
-	],
+	"brandIds": ["sd-gundam-bb-senshi"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

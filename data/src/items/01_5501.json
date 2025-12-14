@@ -17,51 +17,32 @@
 		"month": 0
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "自分の手で恐竜を“知りつくす”ブランド『プラノサウルス』第11弾に、白亜紀後期の大型獣脚類「テリジノサウルス」が登場！",
-			"en": "Therizinosaurus, a large theropod from the late Cretaceous period, is now available in the 11th edition of Planosaurus, a brand that helps you get to know dinosaurs with your own hands!"
-		},
-		{
-			"ja": "• 「骨格ビルド」で恐竜の内部構造から知ることができる。",
-			"en": "• \"Skeleton Build\" allows you to learn about the internal structure of dinosaurs."
-		},
-		{
-			"ja": "• 「恐竜ビルド」で骨格の上から外皮パーツを取り付けるプラモデルならではの仕様で恐竜の姿を復元。",
-			"en": "• \"Dinosaur Build\" allows you to restore the dinosaur's appearance using specifications unique to plastic models, where the skin parts are attached to the top of the skeleton."
-		},
-		{
-			"ja": "• ニッパー等の道具や接着剤が必要ないから簡単に組み立てられる。",
-			"en": "• Easy to assemble as there is no need for tools such as nippers or adhesives."
-		},
-		{
-			"ja": "• 外皮は求愛や威嚇に用いられたとされる腕の風切り羽や発達した尾羽など全身の羽毛を表現。",
-			"en": "• The outer skin depicts feathers all over the body, including the flight feathers on the arms and the developed tail feathers, which are said to have been used for courtship and intimidation."
-		},
-		{
-			"ja": "• 重量級のテリジノサウルスは他の獣脚類と異なり、親指の先端も接地していた。この力強い後肢を学説を基に表現。",
-			"en": "• Unlike other theropods, the heavy Therizinosaurus also had the tip of its thumb touching the ground. This powerful hind limb is expressed based on a theory."
-		},
-		{
-			"ja": "• 縁に粗いギザギザがある木の葉型の強靭な歯列と口前部の頑丈なくちばしを学説に基づいて立体化。",
-			"en": "• Three-dimensional structure based on theory, with strong leaf-shaped teeth with rough jagged edges and a sturdy beak at the front of the mouth."
-		},
-		{
-			"ja": "• ナマケモノと酷似した、長大だが非常に薄く、緩く湾曲した3本の爪(末節骨)を立体化。",
-			"en": "• A three-dimensional model with three long, very thin, and gently curved claws (terminal phalanges) that closely resemble those of a sloth."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "台座×1",
-			"en": "Pedestal x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"自分の手で恐竜を“知りつくす”ブランド『プラノサウルス』第11弾に、白亜紀後期の大型獣脚類「テリジノサウルス」が登場！",
+			"• 「骨格ビルド」で恐竜の内部構造から知ることができる。",
+			"• 「恐竜ビルド」で骨格の上から外皮パーツを取り付けるプラモデルならではの仕様で恐竜の姿を復元。",
+			"• ニッパー等の道具や接着剤が必要ないから簡単に組み立てられる。",
+			"• 外皮は求愛や威嚇に用いられたとされる腕の風切り羽や発達した尾羽など全身の羽毛を表現。",
+			"• 重量級のテリジノサウルスは他の獣脚類と異なり、親指の先端も接地していた。この力強い後肢を学説を基に表現。",
+			"• 縁に粗いギザギザがある木の葉型の強靭な歯列と口前部の頑丈なくちばしを学説に基づいて立体化。",
+			"• ナマケモノと酷似した、長大だが非常に薄く、緩く湾曲した3本の爪(末節骨)を立体化。"
+		],
+		"en": [
+			"Therizinosaurus, a large theropod from the late Cretaceous period, is now available in the 11th edition of Planosaurus, a brand that helps you get to know dinosaurs with your own hands!",
+			"• \"Skeleton Build\" allows you to learn about the internal structure of dinosaurs.",
+			"• \"Dinosaur Build\" allows you to restore the dinosaur's appearance using specifications unique to plastic models, where the skin parts are attached to the top of the skeleton.",
+			"• Easy to assemble as there is no need for tools such as nippers or adhesives.",
+			"• The outer skin depicts feathers all over the body, including the flight feathers on the arms and the developed tail feathers, which are said to have been used for courtship and intimidation.",
+			"• Unlike other theropods, the heavy Therizinosaurus also had the tip of its thumb touching the ground. This powerful hind limb is expressed based on a theory.",
+			"• Three-dimensional structure based on theory, with strong leaf-shaped teeth with rough jagged edges and a sturdy beak at the front of the mouth.",
+			"• A three-dimensional model with three long, very thin, and gently curved claws (terminal phalanges) that closely resemble those of a sloth."
+		]
+	},
+	"accessories": {
+		"ja": ["シール×1", "台座×1"],
+		"en": ["Seal×1", "Pedestal x 1"]
+	},
 	"images": [
 		"/images/items/01_5501_0.jpg",
 		"/images/items/01_5501_1.jpg",
@@ -78,16 +59,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5501/",
 	"extractedAt": "2025-12-06T17:56:03.404Z",
 	"brandIds": [],
-	"seriesIds": [
-		"planosaurus"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	]
+	"seriesIds": ["planosaurus"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
 }

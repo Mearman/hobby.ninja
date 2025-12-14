@@ -19,59 +19,36 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "マクシオン軍の新EXAMACS「アチェルビー」シリーズに新規造形のブレードを携えた「TYPE-E」が登場！",
-			"en": "\"TYPE-E \" with a newly shaped blade is now available in Maxion's new EXAMACS \" Achelby\" series!"
-		},
-		{
-			"ja": "• 素体となる本体のほか、アーマーパーツ、武器パーツがひとつになったオールインワンアイテム。",
-			"en": "• An all-in-one item that includes the main body, armor parts, and weapon parts."
-		},
-		{
-			"ja": "• 肩や腰に接続可能なアーマーが2種付属。",
-			"en": "• Two types of armor that can be connected to the shoulders and waist are included."
-		},
-		{
-			"ja": "• 頭部のバイザーは差し替えで上下位置を調整可能。",
-			"en": "• The head visor can be replaced and its vertical position adjusted."
-		},
-		{
-			"ja": "• バイザーのクリアパーツ部分は取り外して腰部ジョイントパーツに接続可能。",
-			"en": "• The clear part of the visor can be removed and connected to the waist joint part."
-		},
-		{
-			"ja": "• 新規造形のエネルギーブレードは鞘から着脱可能。",
-			"en": "• The newly shaped energy blade can be attached and removed from the sheath."
-		},
-		{
-			"ja": "• 別売りのスピナティアに付属するアーマーを、カスタマイズ可能な胸部パーツが付属。",
-			"en": "• Comes with a chest part that allows you to customize the armor that comes with Spinatia (sold separately)."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "エネルギーブレード×1",
-			"en": "Energy blade x1"
-		},
-		{
-			"ja": "ブレードサブマシンガン×1",
-			"en": "Blade submachine gun x 1"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "アーマー×1式",
-			"en": "Armor x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"マクシオン軍の新EXAMACS「アチェルビー」シリーズに新規造形のブレードを携えた「TYPE-E」が登場！",
+			"• 素体となる本体のほか、アーマーパーツ、武器パーツがひとつになったオールインワンアイテム。",
+			"• 肩や腰に接続可能なアーマーが2種付属。",
+			"• 頭部のバイザーは差し替えで上下位置を調整可能。",
+			"• バイザーのクリアパーツ部分は取り外して腰部ジョイントパーツに接続可能。",
+			"• 新規造形のエネルギーブレードは鞘から着脱可能。",
+			"• 別売りのスピナティアに付属するアーマーを、カスタマイズ可能な胸部パーツが付属。"
+		],
+		"en": [
+			"\"TYPE-E \" with a newly shaped blade is now available in Maxion's new EXAMACS \" Achelby\" series!",
+			"• An all-in-one item that includes the main body, armor parts, and weapon parts.",
+			"• Two types of armor that can be connected to the shoulders and waist are included.",
+			"• The head visor can be replaced and its vertical position adjusted.",
+			"• The clear part of the visor can be removed and connected to the waist joint part.",
+			"• The newly shaped energy blade can be attached and removed from the sheath.",
+			"• Comes with a chest part that allows you to customize the armor that comes with Spinatia (sold separately)."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"エネルギーブレード×1",
+			"ブレードサブマシンガン×1",
+			"ハンドパーツ×1式",
+			"アーマー×1式",
+			"ジョイントパーツ×1式"
+		],
+		"en": ["Energy blade x1", "Blade submachine gun x 1", "Hand parts x 1 set", "Armor x 1 set", "Joint parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_5396_0.jpg",
 		"/images/items/01_5396_1.jpg",
@@ -88,18 +65,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5396/",
 	"extractedAt": "2025-12-06T17:55:49.916Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manualId": "3790"
 }

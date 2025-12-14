@@ -19,26 +19,20 @@
 	},
 	"targetAge": 15,
 	"scale": "1/100",
-	"description": [
-		{
-			"ja": "• 細部にまでこだわった公式改造パーツ。ディテールアップでガンプラをさらに楽しめる。",
-			"en": "• Officially modified parts with great attention to detail. You can enjoy Gunpla even more by improving the details."
-		},
-		{
-			"ja": "• 連邦系の特徴である角ばった指を再現。",
-			"en": "• Reproduces the characteristic angular fingers of the Federation type."
-		},
-		{
-			"ja": "握り手(左右)×各2、平手(左右)×各2、武器持ち",
-			"en": "Gripping hands (left and right) x 2 each, flat hands (left and right) x 2 each, weapon holder"
-		},
-		{
-			"ja": "手(左右)×各2、手甲パーツ×12",
-			"en": "Hands (left and right) x 2 each, back parts x 12"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• 細部にまでこだわった公式改造パーツ。ディテールアップでガンプラをさらに楽しめる。",
+			"• 連邦系の特徴である角ばった指を再現。",
+			"握り手(左右)×各2、平手(左右)×各2、武器持ち",
+			"手(左右)×各2、手甲パーツ×12"
+		],
+		"en": [
+			"• Officially modified parts with great attention to detail. You can enjoy Gunpla even more by improving the details.",
+			"• Reproduces the characteristic angular fingers of the Federation type.",
+			"Gripping hands (left and right) x 2 each, flat hands (left and right) x 2 each, weapon holder",
+			"Hands (left and right) x 2 each, back parts x 12"
+		]
+	},
 	"images": [
 		"/images/items/01_4624_0.jpg",
 		"/images/items/01_4624_1.jpg",
@@ -48,17 +42,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4624/",
 	"extractedAt": "2025-12-06T17:54:04.983Z",
-	"brandIds": [
-		"builders-parts"
-	],
+	"brandIds": ["builders-parts"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3582",
-		"01_3563",
-		"01_3564",
-		"01_636"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3582", "01_3563", "01_3564", "01_636"]
 }

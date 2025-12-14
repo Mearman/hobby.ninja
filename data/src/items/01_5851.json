@@ -19,22 +19,18 @@
 	},
 	"targetAge": 15,
 	"scale": "1/1000",
-	"description": [
-		{
-			"ja": "• ヤマトを超える大型ガミラス戦艦。全長390mm。",
-			"en": "• A large Garmillas battleship that exceeds Yamato. Total length 390mm."
-		},
-		{
-			"ja": "• 航空甲板と戦闘甲板をコンパチで再現。",
-			"en": "• Compatible reproduction of flight deck and battle deck."
-		},
-		{
-			"ja": "• 同スケールの「空間重爆撃機DBG88 ガルント」付属。",
-			"en": "• Includes \"Space Heavy Bomber DBG88 Galunt\" of the same scale."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• ヤマトを超える大型ガミラス戦艦。全長390mm。",
+			"• 航空甲板と戦闘甲板をコンパチで再現。",
+			"• 同スケールの「空間重爆撃機DBG88 ガルント」付属。"
+		],
+		"en": [
+			"• A large Garmillas battleship that exceeds Yamato. Total length 390mm.",
+			"• Compatible reproduction of flight deck and battle deck.",
+			"• Includes \"Space Heavy Bomber DBG88 Galunt\" of the same scale."
+		]
+	},
 	"images": [
 		"/images/items/01_5851_0.jpg",
 		"/images/items/01_5851_1.jpg",
@@ -44,14 +40,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5851/",
 	"extractedAt": "2025-12-06T17:56:43.474Z",
 	"brandIds": [],
-	"seriesIds": [
-		"space-battleship-yamato-series"
-	],
+	"seriesIds": ["space-battleship-yamato-series"],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5971",
-		"01_5498",
-		"01_5500",
-		"01_5388"
-	]
+	"relatedItemIds": ["01_5971", "01_5498", "01_5500", "01_5388"]
 }

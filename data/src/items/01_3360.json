@@ -19,47 +19,36 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "オプションパーツセットで30MMシリーズにさらなるカスタマイズを！",
-			"en": "Further customize the 30MM series with optional parts sets!"
-		},
-		{
-			"ja": "• 組み替えでさまざまなカスタマイズが可能な大型武器。",
-			"en": "• Large weapons that can be rearranged and customized in various ways."
-		},
-		{
-			"ja": "• 大型ソードは小剣、中剣、大剣と形が変えられる仕様。",
-			"en": "• The large sword can be changed into a small sword, medium sword, or large sword."
-		},
-		{
-			"ja": "• 大型ランスか大型ドリルは組み替えで再現可能。",
-			"en": "• Large lance or large drill can be reproduced by rearranging."
-		},
-		{
-			"ja": "• 複数購入すれば、大型シールドの無限連結が可能に。",
-			"en": "• If you purchase more than one, you can connect an unlimited number of large Seals."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "大型ランス用パーツ×１式",
-			"en": "Large lance parts x 1 set"
-		},
-		{
-			"ja": "大型ドリル用パーツ×１式",
-			"en": "Large drill parts x 1 set"
-		},
-		{
-			"ja": "大型ソード用パーツ×１式",
-			"en": "Large sword parts x 1 set"
-		},
-		{
-			"ja": "大型シールド用パーツ×１式",
-			"en": "Large Seal parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"オプションパーツセットで30MMシリーズにさらなるカスタマイズを！",
+			"• 組み替えでさまざまなカスタマイズが可能な大型武器。",
+			"• 大型ソードは小剣、中剣、大剣と形が変えられる仕様。",
+			"• 大型ランスか大型ドリルは組み替えで再現可能。",
+			"• 複数購入すれば、大型シールドの無限連結が可能に。"
+		],
+		"en": [
+			"Further customize the 30MM series with optional parts sets!",
+			"• Large weapons that can be rearranged and customized in various ways.",
+			"• The large sword can be changed into a small sword, medium sword, or large sword.",
+			"• Large lance or large drill can be reproduced by rearranging.",
+			"• If you purchase more than one, you can connect an unlimited number of large Seals."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"大型ランス用パーツ×１式",
+			"大型ドリル用パーツ×１式",
+			"大型ソード用パーツ×１式",
+			"大型シールド用パーツ×１式"
+		],
+		"en": [
+			"Large lance parts x 1 set",
+			"Large drill parts x 1 set",
+			"Large sword parts x 1 set",
+			"Large Seal parts x 1 set"
+		]
+	},
 	"images": [
 		"/images/items/01_3360_0.jpg",
 		"/images/items/01_3360_1.jpg",
@@ -70,18 +59,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3360/",
 	"extractedAt": "2025-12-06T17:51:16.493Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3712"
 }

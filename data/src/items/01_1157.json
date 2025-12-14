@@ -19,80 +19,46 @@
 	},
 	"targetAge": 15,
 	"scale": "1/100",
-	"description": [
-		{
-			"ja": "• 「機動戦士ガンダム MSV」より、ジム・スナイパーカスタムが1/100スケールとして初の立体化！",
-			"en": "• From \"Mobile Suit Gundam MSV\", Jim Sniper Custom is made into 1/100 Scale for the first time!"
-		},
-		{
-			"ja": "• 設定のイメージを踏襲しながらも、最新MGフォーマットのシャープなスタイルとなっており、新規造形の特徴的な頭部は格闘戦時などのバイザー開閉ギミックを搭載！",
-			"en": "• While following the image of the setting, it has the sharp style of the latest MG format, and the distinctive head of the new model is equipped with a visor opening/closing gimmick for use during melee battles!"
-		},
-		{
-			"ja": "• 印象的な狙撃時のポージングは腕部、胸部などに採用されている幅広い可動機構で再現できる！",
-			"en": "• Impressive sniping poses can be recreated with a wide range of movable mechanisms such as the arms and chest!"
-		},
-		{
-			"ja": "• メイン武器となる「R4型ビーム・ライフル」はMG化にあわせた新規デザインとなっており、折りたたみ機構により携行状態も再現可能！",
-			"en": "• The main weapon \"R4 type beam rifle\" has a new design to match the MG version, and the folding mechanism allows it to be carried while being carried!"
-		},
-		{
-			"ja": "• 右腕部の「折り畳み式ハンドガン」など各種武装も付属する！",
-			"en": "• Various weapons such as the \"folding handgun\" on the right arm are also included!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "R4型ビーム・ライフル×１",
-			"en": "R4 type beam rifle x 1"
-		},
-		{
-			"ja": "二連ビームガン×１",
-			"en": "Double beam gun x 1"
-		},
-		{
-			"ja": "ハイパー・バズーカ×１",
-			"en": "Hyper bazooka x1"
-		},
-		{
-			"ja": "ビーム・スプレーガン×1",
-			"en": "Beam spray gun x 1"
-		},
-		{
-			"ja": "ビーム・サーベル×１",
-			"en": "Beam saber x1"
-		},
-		{
-			"ja": "折り畳み式ハンドガン×１",
-			"en": "Foldable hand gun x 1"
-		},
-		{
-			"ja": "シールド×１",
-			"en": "Seal de x1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×16",
-			"en": "Molded product x 16"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "ドライデカール×１",
-			"en": "Dry decal x 1"
-		},
-		{
-			"ja": "マーキングシール×１",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• 「機動戦士ガンダム MSV」より、ジム・スナイパーカスタムが1/100スケールとして初の立体化！",
+			"• 設定のイメージを踏襲しながらも、最新MGフォーマットのシャープなスタイルとなっており、新規造形の特徴的な頭部は格闘戦時などのバイザー開閉ギミックを搭載！",
+			"• 印象的な狙撃時のポージングは腕部、胸部などに採用されている幅広い可動機構で再現できる！",
+			"• メイン武器となる「R4型ビーム・ライフル」はMG化にあわせた新規デザインとなっており、折りたたみ機構により携行状態も再現可能！",
+			"• 右腕部の「折り畳み式ハンドガン」など各種武装も付属する！"
+		],
+		"en": [
+			"• From \"Mobile Suit Gundam MSV\", Jim Sniper Custom is made into 1/100 Scale for the first time!",
+			"• While following the image of the setting, it has the sharp style of the latest MG format, and the distinctive head of the new model is equipped with a visor opening/closing gimmick for use during melee battles!",
+			"• Impressive sniping poses can be recreated with a wide range of movable mechanisms such as the arms and chest!",
+			"• The main weapon \"R4 type beam rifle\" has a new design to match the MG version, and the folding mechanism allows it to be carried while being carried!",
+			"• Various weapons such as the \"folding handgun\" on the right arm are also included!"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"R4型ビーム・ライフル×１",
+			"二連ビームガン×１",
+			"ハイパー・バズーカ×１",
+			"ビーム・スプレーガン×1",
+			"ビーム・サーベル×１",
+			"折り畳み式ハンドガン×１",
+			"シールド×１"
+		],
+		"en": [
+			"R4 type beam rifle x 1",
+			"Double beam gun x 1",
+			"Hyper bazooka x1",
+			"Beam spray gun x 1",
+			"Beam saber x1",
+			"Foldable hand gun x 1",
+			"Seal de x1"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×16", "シール×1", "ドライデカール×１", "マーキングシール×１", "取扱説明書×1"],
+		"en": ["Molded product x 16", "Seal×1", "Dry decal x 1", "MarkingSeal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1157_0.jpg",
 		"/images/items/01_1157_1.jpg",
@@ -105,20 +71,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1157/",
 	"extractedAt": "2025-12-06T16:56:39.796Z",
-	"brandIds": [
-		"mg-master-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5509",
-		"01_4977",
-		"01_3772",
-		"01_3754"
-	],
+	"brandIds": ["mg-master-grade"],
+	"seriesIds": ["mobile-suit-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5509", "01_4977", "01_3772", "01_3754"],
 	"manualId": "0858"
 }

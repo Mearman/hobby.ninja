@@ -18,59 +18,30 @@
 		"day": 14
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "（2024/12/20記載）諸般の都合により、商品の発売月を変更させていただきました。",
-			"en": "(Posted on 2024/12/20) Due to various circumstances, we have changed the product release."
-		},
-		{
-			"ja": "自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「クラスアップアーマー(ローザンアサシンスラッシュ)」が登場！",
-			"en": "\"Class Up Armor (Rozan Assassin Slash)\" is now available from \" 30 MINUTES FANTASY\" where you can create your own fantasy job!"
-		},
-		{
-			"ja": "• “アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
-			"en": "• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job."
-		},
-		{
-			"ja": "• 別売りの「30MF ローザンアサシン」と組み合わせることで「ローザンアサシンスラッシュ」に“クラスアップ”が可能。",
-			"en": "• By combining with the separately sold \"30MF Rozan Assassin \", it is possible to \" class up \" to the \" Lozan Assassin Slash\"."
-		},
-		{
-			"ja": "• 武装には「ロングソード」と「ショートソード」2本が付属。",
-			"en": "• Two weapons are included: a \"long sword \" and a \" short sword.\""
-		},
-		{
-			"ja": "• “エレメントコア”の属性は「水」。",
-			"en": "• The attribute of “element core” is “water”."
-		},
-		{
-			"ja": "• 別売りのリーベル共和国の「アサシンスラッシュ」とは異なるフェイスデザインとカラーリング。",
-			"en": "• The face design and coloring are different from Liber Republic's \"Assassin Slash\", which is sold separately."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ロングソード×1",
-			"en": "Long sword x1"
-		},
-		{
-			"ja": "ショートソード×2",
-			"en": "Short sword x2"
-		},
-		{
-			"ja": "アーマーパーツ×1式",
-			"en": "Armor parts x 1 set"
-		},
-		{
-			"ja": "武装パーツ×1式",
-			"en": "Armed parts x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"（2024/12/20記載）諸般の都合により、商品の発売月を変更させていただきました。",
+			"自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「クラスアップアーマー(ローザンアサシンスラッシュ)」が登場！",
+			"• “アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
+			"• 別売りの「30MF ローザンアサシン」と組み合わせることで「ローザンアサシンスラッシュ」に“クラスアップ”が可能。",
+			"• 武装には「ロングソード」と「ショートソード」2本が付属。",
+			"• “エレメントコア”の属性は「水」。",
+			"• 別売りのリーベル共和国の「アサシンスラッシュ」とは異なるフェイスデザインとカラーリング。"
+		],
+		"en": [
+			"(Posted on 2024/12/20) Due to various circumstances, we have changed the product release.",
+			"\"Class Up Armor (Rozan Assassin Slash)\" is now available from \" 30 MINUTES FANTASY\" where you can create your own fantasy job!",
+			"• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job.",
+			"• By combining with the separately sold \"30MF Rozan Assassin \", it is possible to \" class up \" to the \" Lozan Assassin Slash\".",
+			"• Two weapons are included: a \"long sword \" and a \" short sword.\"",
+			"• The attribute of “element core” is “water”.",
+			"• The face design and coloring are different from Liber Republic's \"Assassin Slash\", which is sold separately."
+		]
+	},
+	"accessories": {
+		"ja": ["ロングソード×1", "ショートソード×2", "アーマーパーツ×1式", "武装パーツ×1式", "ジョイントパーツ×1式"],
+		"en": ["Long sword x1", "Short sword x2", "Armor parts x 1 set", "Armed parts x 1 set", "Joint parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_5566_0.jpg",
 		"/images/items/01_5566_1.jpg",
@@ -80,18 +51,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5566/",
 	"extractedAt": "2025-12-06T17:56:10.837Z",
-	"brandIds": [
-		"30-minutes-fantasy"
-	],
+	"brandIds": ["30-minutes-fantasy"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5978",
-		"01_5979",
-		"01_5980",
-		"01_5981"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5978", "01_5979", "01_5980", "01_5981"],
 	"manualId": "3423"
 }

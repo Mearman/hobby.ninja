@@ -18,64 +18,42 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズ』より、RX-零丸の武装強化仕様を立体化。",
-			"en": "From ``Gundam Build Divers'', the RX-Reimaru's armed enhancement specification is made into a three-dimensional model."
-		},
-		{
-			"ja": "• サイコフレームはグリーンで再現し、覚醒したユニコーンガンダムをイメージした機体に。",
-			"en": "• The Psycho Frame is reproduced in green, making it an aircraft inspired by the awakened unicorn Gundam."
-		},
-		{
-			"ja": "• リアル形態の再現や、武装の組み合わせも可能。",
-			"en": "• It is also possible to reproduce realistic forms and combine weapons."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "新規シールド×3",
-			"en": "New Seal ×3"
-		},
-		{
-			"ja": "バズーカ砲身パーツ×2",
-			"en": "Bazooka barrel parts x 2"
-		},
-		{
-			"ja": "クナイ×2",
-			"en": "Kunai x 2"
-		},
-		{
-			"ja": "刀×1",
-			"en": "Sword x1"
-		},
-		{
-			"ja": "ライフル×1",
-			"en": "Rifle x 1"
-		},
-		{
-			"ja": "エフェクト×1",
-			"en": "Effect x 1"
-		},
-		{
-			"ja": "手首2種（左右）×各1",
-			"en": "2 types of wrists (left and right) x 1 each"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×6",
-			"en": "Molded product x 6"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズ』より、RX-零丸の武装強化仕様を立体化。",
+			"• サイコフレームはグリーンで再現し、覚醒したユニコーンガンダムをイメージした機体に。",
+			"• リアル形態の再現や、武装の組み合わせも可能。"
+		],
+		"en": [
+			"From ``Gundam Build Divers'', the RX-Reimaru's armed enhancement specification is made into a three-dimensional model.",
+			"• The Psycho Frame is reproduced in green, making it an aircraft inspired by the awakened unicorn Gundam.",
+			"• It is also possible to reproduce realistic forms and combine weapons."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"新規シールド×3",
+			"バズーカ砲身パーツ×2",
+			"クナイ×2",
+			"刀×1",
+			"ライフル×1",
+			"エフェクト×1",
+			"手首2種（左右）×各1"
+		],
+		"en": [
+			"New Seal ×3",
+			"Bazooka barrel parts x 2",
+			"Kunai x 2",
+			"Sword x1",
+			"Rifle x 1",
+			"Effect x 1",
+			"2 types of wrists (left and right) x 1 each"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×6", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 6", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2085_0.jpg",
 		"/images/items/01_2085_1.jpg",
@@ -89,17 +67,8 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2085/",
 	"extractedAt": "2025-12-06T17:48:36.931Z",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5189", "01_5190", "01_3063", "01_2623"],
 	"manualId": "1045"
 }

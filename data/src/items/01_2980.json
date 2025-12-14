@@ -18,43 +18,30 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "メールアプリ「カカオトーク」から人気キャラクターをプラモデル化！",
-			"en": "Popular characters from the email app \"Kakao Talk\" are made into plastic models!"
-		},
-		{
-			"ja": "「little FRIENDS」より、にくめないイタズラっ子、リトルアピーチが登場！",
-			"en": "From \"little FRIENDS\" comes Little Apeach, a playful prankster!"
-		},
-		{
-			"ja": "• ニッパーなどの道具を使わずに組み立てが可能。",
-			"en": "• Assembly is possible without using tools such as nippers."
-		},
-		{
-			"ja": "• 組み立ては接着剤を使わない「スナップフィット方式」。",
-			"en": "• Assembly is a \"snap fit\" method that does not use adhesive."
-		},
-		{
-			"ja": "• 塗装をしなくても、色分けした状態で組み上がります。",
-			"en": "• Can be assembled in a color-coded state without painting."
-		},
-		{
-			"ja": "• イチゴの被り物をかぶったリトルアピーチを再現。",
-			"en": "• Reproduce Little Apeach wearing a strawberry headgear."
-		},
-		{
-			"ja": "• スタンドが付属。",
-			"en": "• Comes with stand."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"メールアプリ「カカオトーク」から人気キャラクターをプラモデル化！",
+			"「little FRIENDS」より、にくめないイタズラっ子、リトルアピーチが登場！",
+			"• ニッパーなどの道具を使わずに組み立てが可能。",
+			"• 組み立ては接着剤を使わない「スナップフィット方式」。",
+			"• 塗装をしなくても、色分けした状態で組み上がります。",
+			"• イチゴの被り物をかぶったリトルアピーチを再現。",
+			"• スタンドが付属。"
+		],
+		"en": [
+			"Popular characters from the email app \"Kakao Talk\" are made into plastic models!",
+			"From \"little FRIENDS\" comes Little Apeach, a playful prankster!",
+			"• Assembly is possible without using tools such as nippers.",
+			"• Assembly is a \"snap fit\" method that does not use adhesive.",
+			"• Can be assembled in a color-coded state without painting.",
+			"• Reproduce Little Apeach wearing a strawberry headgear.",
+			"• Comes with stand."
+		]
+	},
+	"accessories": {
+		"ja": ["取扱説明書×1"],
+		"en": ["Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2980_0.jpg",
 		"/images/items/01_2980_1.jpg",
@@ -72,15 +59,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2980/",
 	"extractedAt": "2025-12-06T17:50:31.588Z",
 	"brandIds": [],
-	"seriesIds": [
-		"kakao-friends"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2977",
-		"01_2978",
-		"01_2979"
-	]
+	"seriesIds": ["kakao-friends"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2977", "01_2978", "01_2979"]
 }

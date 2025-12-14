@@ -18,47 +18,30 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "メールアプリ「カカオトーク」から人気キャラクターをプラモデル化！",
-			"en": "Popular characters from the email app \"Kakao Talk\" are made into plastic models!"
-		},
-		{
-			"ja": "「KAKAO FRIENDS」より、いたわりのアイコンであり、頼もしいアドバイザー、たてがみのない牡ライオンであるライアンが登場！",
-			"en": "From \"KAKAO FRIENDS\" comes the maneless male lion Ryan, an icon of compassion and a reliable advisor!"
-		},
-		{
-			"ja": "• ニッパーなどの道具を使わずに組み立てが可能。",
-			"en": "• Assembly is possible without using tools such as nippers."
-		},
-		{
-			"ja": "• 組み立ては接着剤を使わない「スナップフィット方式」。",
-			"en": "• Assembly is a \"snap fit\" method that does not use adhesive."
-		},
-		{
-			"ja": "• 塗装をしなくても、色分けした状態で組み上がります。",
-			"en": "• Can be assembled in a color-coded state without painting."
-		},
-		{
-			"ja": "• ハートとペンライトのオプションパーツが付属。",
-			"en": "• Heart and penlight optional parts are included."
-		},
-		{
-			"ja": "• スタンドが付属。",
-			"en": "• Comes with stand."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"メールアプリ「カカオトーク」から人気キャラクターをプラモデル化！",
+			"「KAKAO FRIENDS」より、いたわりのアイコンであり、頼もしいアドバイザー、たてがみのない牡ライオンであるライアンが登場！",
+			"• ニッパーなどの道具を使わずに組み立てが可能。",
+			"• 組み立ては接着剤を使わない「スナップフィット方式」。",
+			"• 塗装をしなくても、色分けした状態で組み上がります。",
+			"• ハートとペンライトのオプションパーツが付属。",
+			"• スタンドが付属。"
+		],
+		"en": [
+			"Popular characters from the email app \"Kakao Talk\" are made into plastic models!",
+			"From \"KAKAO FRIENDS\" comes the maneless male lion Ryan, an icon of compassion and a reliable advisor!",
+			"• Assembly is possible without using tools such as nippers.",
+			"• Assembly is a \"snap fit\" method that does not use adhesive.",
+			"• Can be assembled in a color-coded state without painting.",
+			"• Heart and penlight optional parts are included.",
+			"• Comes with stand."
+		]
+	},
+	"accessories": {
+		"ja": ["取扱説明書×1", "ホイルシール×1"],
+		"en": ["Handling manual×1", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_2977_0.jpg",
 		"/images/items/01_2977_1.jpg",
@@ -76,15 +59,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2977/",
 	"extractedAt": "2025-12-06T17:50:30.915Z",
 	"brandIds": [],
-	"seriesIds": [
-		"kakao-friends"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2978",
-		"01_2979",
-		"01_2980"
-	]
+	"seriesIds": ["kakao-friends"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2978", "01_2979", "01_2980"]
 }

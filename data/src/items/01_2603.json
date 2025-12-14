@@ -19,35 +19,22 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズRe:RISE』より、主人公機の水中戦特化型ユニットが登場！",
-			"en": "From \"Gundam Build Divers Re:RISE\", the main character's underwater warfare specialized unit appears!"
-		},
-		{
-			"ja": "• コアガンダムに装着する新たな形態の装甲パーツ。",
-			"en": "• A new form of armor parts that can be attached to Core Gundam."
-		},
-		{
-			"ja": "• コアドッキングカスタム対応。",
-			"en": "• Core docking custom supported."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "外装パーツ×1式",
-			"en": "Exterior parts x 1 set"
-		},
-		{
-			"ja": "フレームパーツ×1式",
-			"en": "Frame parts x 1 set"
-		},
-		{
-			"ja": "台座×1",
-			"en": "Pedestal x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズRe:RISE』より、主人公機の水中戦特化型ユニットが登場！",
+			"• コアガンダムに装着する新たな形態の装甲パーツ。",
+			"• コアドッキングカスタム対応。"
+		],
+		"en": [
+			"From \"Gundam Build Divers Re:RISE\", the main character's underwater warfare specialized unit appears!",
+			"• A new form of armor parts that can be attached to Core Gundam.",
+			"• Core docking custom supported."
+		]
+	},
+	"accessories": {
+		"ja": ["外装パーツ×1式", "フレームパーツ×1式", "台座×1"],
+		"en": ["Exterior parts x 1 set", "Frame parts x 1 set", "Pedestal x 1"]
+	},
 	"images": [
 		"/images/items/01_2603_0.jpg",
 		"/images/items/01_2603_1.jpg",
@@ -58,20 +45,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2603/",
 	"extractedAt": "2025-12-06T17:49:42.752Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers-rerise"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5054", "01_3562", "01_3565", "01_3291"],
 	"manualId": "0087"
 }

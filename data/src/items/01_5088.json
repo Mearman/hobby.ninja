@@ -19,51 +19,28 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MM カラバリグランプリ第２位！カラー「レッド」の「エスポジット」が登場！",
-			"en": "30MM Color Variation Grand Prix 2nd place! \"Esposito \" in color \" red\" is now available!"
-		},
-		{
-			"ja": "■「30MM カラバリグランプリ」にて過去最大級の投票数で選ばれた、30MMファン注目のアイテム第２位。",
-			"en": "• The second most popular item among 30MM fans, chosen with the largest number of votes ever at the \"30MM Color Variation Grand Prix.\""
-		},
-		{
-			"ja": "■機体をコアユニット化することで、可変機カスタマイズのベースとなる機構を搭載。",
-			"en": "• By making the aircraft a core unit, it is equipped with a mechanism that becomes the basis for variable machine customization."
-		},
-		{
-			"ja": "■パーツの差し替えで飛行形態への変形が可能。",
-			"en": "• Can be transformed into flight mode by replacing parts."
-		},
-		{
-			"ja": "■カスタマイズ用のアーマーと武装パーツが付属。",
-			"en": "• Comes with armor and weapon parts for customization."
-		},
-		{
-			"ja": "■エスポジット同士や別売りのエグザビークル等と組み合わせることで、さらに強化が可能。",
-			"en": "• It can be further strengthened by combining Esposits with each other or with separately sold Exa Vehicles."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ウィングライフル×2",
-			"en": "Wing rifle x2"
-		},
-		{
-			"ja": "ダブルバレルライフル×1",
-			"en": "Double barrel rifle x 1"
-		},
-		{
-			"ja": "アーマー×1式",
-			"en": "Armor x 1 set"
-		},
-		{
-			"ja": "ショイントパーツ×1式",
-			"en": "Point parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MM カラバリグランプリ第２位！カラー「レッド」の「エスポジット」が登場！",
+			"■「30MM カラバリグランプリ」にて過去最大級の投票数で選ばれた、30MMファン注目のアイテム第２位。",
+			"■機体をコアユニット化することで、可変機カスタマイズのベースとなる機構を搭載。",
+			"■パーツの差し替えで飛行形態への変形が可能。",
+			"■カスタマイズ用のアーマーと武装パーツが付属。",
+			"■エスポジット同士や別売りのエグザビークル等と組み合わせることで、さらに強化が可能。"
+		],
+		"en": [
+			"30MM Color Variation Grand Prix 2nd place! \"Esposito \" in color \" red\" is now available!",
+			"• The second most popular item among 30MM fans, chosen with the largest number of votes ever at the \"30MM Color Variation Grand Prix.\"",
+			"• By making the aircraft a core unit, it is equipped with a mechanism that becomes the basis for variable machine customization.",
+			"• Can be transformed into flight mode by replacing parts.",
+			"• Comes with armor and weapon parts for customization.",
+			"• It can be further strengthened by combining Esposits with each other or with separately sold Exa Vehicles."
+		]
+	},
+	"accessories": {
+		"ja": ["ウィングライフル×2", "ダブルバレルライフル×1", "アーマー×1式", "ショイントパーツ×1式"],
+		"en": ["Wing rifle x2", "Double barrel rifle x 1", "Armor x 1 set", "Point parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_5088_0.jpg",
 		"/images/items/01_5088_1.jpg",
@@ -80,18 +57,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5088/",
 	"extractedAt": "2025-12-06T17:55:10.295Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3774"
 }

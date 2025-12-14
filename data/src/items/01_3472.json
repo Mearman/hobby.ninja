@@ -18,35 +18,24 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『GUNDAM FACTORY YOKOHAMA』限定のハロプラが登場！",
-			"en": "\"GUNDAM FACTORY YOKOHAMA\" limited Haropura is now available!"
-		},
-		{
-			"ja": "• 接着剤不要・塗装不要・ニッパー不要。道具を使わず、簡単に楽しく組み立てられる。",
-			"en": "• No adhesive, painting, or nippers required. Easy and fun assembly without using any tools."
-		},
-		{
-			"ja": "• パーツの組み替えで手足の収納も再現可能。",
-			"en": "• Storing the limbs can also be recreated by rearranging the parts."
-		},
-		{
-			"ja": "• GUNDAM FACTORY YOKOHAMAのロゴのマーキングシールが付属。",
-			"en": "• Comes with GUNDAM FACTORY YOKOHAMA logo MarkingSeal."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "台座×１",
-			"en": "Pedestal x 1"
-		},
-		{
-			"ja": "マーキングシール×１",
-			"en": "MarkingSeal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『GUNDAM FACTORY YOKOHAMA』限定のハロプラが登場！",
+			"• 接着剤不要・塗装不要・ニッパー不要。道具を使わず、簡単に楽しく組み立てられる。",
+			"• パーツの組み替えで手足の収納も再現可能。",
+			"• GUNDAM FACTORY YOKOHAMAのロゴのマーキングシールが付属。"
+		],
+		"en": [
+			"\"GUNDAM FACTORY YOKOHAMA\" limited Haropura is now available!",
+			"• No adhesive, painting, or nippers required. Easy and fun assembly without using any tools.",
+			"• Storing the limbs can also be recreated by rearranging the parts.",
+			"• Comes with GUNDAM FACTORY YOKOHAMA logo MarkingSeal."
+		]
+	},
+	"accessories": {
+		"ja": ["台座×１", "マーキングシール×１"],
+		"en": ["Pedestal x 1", "MarkingSeal×1"]
+	},
 	"images": [
 		"/images/items/01_3472_0.jpg",
 		"/images/items/01_3472_1.jpg",
@@ -55,19 +44,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3472/",
 	"extractedAt": "2025-12-06T17:51:31.562Z",
-	"brandIds": [
-		"gundam-factory-yokohama"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5035",
-		"01_4239",
-		"01_3841",
-		"01_3471"
-	]
+	"brandIds": ["gundam-factory-yokohama"],
+	"seriesIds": ["mobile-suit-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5035", "01_4239", "01_3841", "01_3471"]
 }

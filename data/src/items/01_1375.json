@@ -19,48 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズ』に登場する、長い尻尾の真っ青なカラーが印象的なライバルガンプラが立体化！",
-			"en": "The rival Gunpla that appears in \"Gundam Build Divers\", with its long tail and impressive deep blue color, is now three-dimensional!"
-		},
-		{
-			"ja": "• ベースとなった「HG ギラーガ」のものより約3倍の数の節が採用された尻尾は、取り外して鞭の様に使用することが可能！",
-			"en": "• The tail has three times as many knots as the base \"HG Giraga\" and can be removed and used like a whip!"
-		},
-		{
-			"ja": "• 節はそれぞれが独立し、アクションポーズに制限が起きず自由自在に可動する！全身に追加されたクリアパーツによりシルエットも大きく変化！",
-			"en": "• Each joint is independent, so there are no restrictions on action poses and you can move freely! The clear parts added to the whole body have changed the silhouette greatly!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ギラーガギラスピア×1",
-			"en": "Giraga Gira Spear x 1"
-		},
-		{
-			"ja": "ギラーガギラテイル×1",
-			"en": "Giraga Giratail x1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×13",
-			"en": "Molded products x 13"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "リード線×1",
-			"en": "Lead wire x 1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズ』に登場する、長い尻尾の真っ青なカラーが印象的なライバルガンプラが立体化！",
+			"• ベースとなった「HG ギラーガ」のものより約3倍の数の節が採用された尻尾は、取り外して鞭の様に使用することが可能！",
+			"• 節はそれぞれが独立し、アクションポーズに制限が起きず自由自在に可動する！全身に追加されたクリアパーツによりシルエットも大きく変化！"
+		],
+		"en": [
+			"The rival Gunpla that appears in \"Gundam Build Divers\", with its long tail and impressive deep blue color, is now three-dimensional!",
+			"• The tail has three times as many knots as the base \"HG Giraga\" and can be removed and used like a whip!",
+			"• Each joint is independent, so there are no restrictions on action poses and you can move freely! The clear parts added to the whole body have changed the silhouette greatly!"
+		]
+	},
+	"accessories": {
+		"ja": ["ギラーガギラスピア×1", "ギラーガギラテイル×1"],
+		"en": ["Giraga Gira Spear x 1", "Giraga Giratail x1"]
+	},
+	"contents": {
+		"ja": ["成形品×13", "ホイルシール×1", "リード線×1", "取扱説明書×1"],
+		"en": ["Molded products x 13", "Foil Seal×1", "Lead wire x 1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1375_0.jpg",
 		"/images/items/01_1375_1.jpg",
@@ -70,20 +48,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1375/",
 	"extractedAt": "2025-12-06T17:17:39.666Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "1022"
 }

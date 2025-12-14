@@ -19,43 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「軽キャノン」をHGで立体化！",
-			"en": "From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" Light Cannon\" is made into HG!"
-		},
-		{
-			"ja": "• 劇中の動きを再現できる可動性能を追求。",
-			"en": "• Pursuing movable performance that can reproduce the movements in the play."
-		},
-		{
-			"ja": "• 武装はライフルやサーベルが付属。",
-			"en": "• Armed with a rifle and saber."
-		},
-		{
-			"ja": "• キャノン部は1軸で可動。",
-			"en": "• The cannon part moves on one axis."
-		},
-		{
-			"ja": "• 平手のハンドパーツが付属。",
-			"en": "• Comes with flat hand parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "武装×1式",
-			"en": "Armed x 1 type"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「軽キャノン」をHGで立体化！",
+			"• 劇中の動きを再現できる可動性能を追求。",
+			"• 武装はライフルやサーベルが付属。",
+			"• キャノン部は1軸で可動。",
+			"• 平手のハンドパーツが付属。"
+		],
+		"en": [
+			"From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" Light Cannon\" is made into HG!",
+			"• Pursuing movable performance that can reproduce the movements in the play.",
+			"• Armed with a rifle and saber.",
+			"• The cannon part moves on one axis.",
+			"• Comes with flat hand parts."
+		]
+	},
+	"accessories": {
+		"ja": ["武装×1式", "ハンドパーツ×1式", "シール×1"],
+		"en": ["Armed x 1 type", "Hand parts x 1 set", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5951_0.jpg",
 		"/images/items/01_5951_1.jpg",
@@ -66,20 +49,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5951/",
 	"extractedAt": "2025-12-06T17:56:54.015Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-gquuuuuux"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5952",
-		"01_5935"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-gquuuuuux"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5952", "01_5935"],
 	"manualId": "3235"
 }

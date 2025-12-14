@@ -19,55 +19,40 @@
 	},
 	"targetAge": 15,
 	"scale": "1/12",
-	"description": [
-		{
-			"ja": "『スター・ウォーズ／スカイウォーカーの夜明け』より、ファースト・オーダー ストームトルーパーが1/12プラモデルで登場！",
-			"en": "From \"Star Wars: The Rise of Skywalker\", the First Order Stormtrooper is now available as a 1/12 plastic model!"
-		},
-		{
-			"ja": "• 新規造形の肩パーツはマーキングシールまたは水転写式デカールを使用することで、黒、白、赤の３色を再現できる。",
-			"en": "• The newly sculpted shoulder parts can be reproduced in three colors: black, white, and red by using MarkingSeal or water transfer decals."
-		},
-		{
-			"ja": "• ブラスターピストルを新規造形でプラモデル化。",
-			"en": "• The blaster pistol has been made into a plastic model with a new shape."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "専用ディスプレイベース×1",
-			"en": "Dedicated display base x 1"
-		},
-		{
-			"ja": "肩パーツ×3",
-			"en": "Shoulder parts x 3"
-		},
-		{
-			"ja": "ブラスター×2種",
-			"en": "Blaster x 2 types"
-		},
-		{
-			"ja": "トンファー×1",
-			"en": "Tonfa x1"
-		},
-		{
-			"ja": "シールド×1",
-			"en": "Seal × 1"
-		},
-		{
-			"ja": "ハンドパーツ×6種(武器持ち手×2、平手×2、こぶし×2）",
-			"en": "Hand parts x 6 types (weapon holder x 2, open hand x 2, fist x 2)"
-		},
-		{
-			"ja": "水転写式デカール×1",
-			"en": "Water transfer decal x 1"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『スター・ウォーズ／スカイウォーカーの夜明け』より、ファースト・オーダー ストームトルーパーが1/12プラモデルで登場！",
+			"• 新規造形の肩パーツはマーキングシールまたは水転写式デカールを使用することで、黒、白、赤の３色を再現できる。",
+			"• ブラスターピストルを新規造形でプラモデル化。"
+		],
+		"en": [
+			"From \"Star Wars: The Rise of Skywalker\", the First Order Stormtrooper is now available as a 1/12 plastic model!",
+			"• The newly sculpted shoulder parts can be reproduced in three colors: black, white, and red by using MarkingSeal or water transfer decals.",
+			"• The blaster pistol has been made into a plastic model with a new shape."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"専用ディスプレイベース×1",
+			"肩パーツ×3",
+			"ブラスター×2種",
+			"トンファー×1",
+			"シールド×1",
+			"ハンドパーツ×6種(武器持ち手×2、平手×2、こぶし×2）",
+			"水転写式デカール×1",
+			"マーキングシール×1"
+		],
+		"en": [
+			"Dedicated display base x 1",
+			"Shoulder parts x 3",
+			"Blaster x 2 types",
+			"Tonfa x1",
+			"Seal × 1",
+			"Hand parts x 6 types (weapon holder x 2, open hand x 2, fist x 2)",
+			"Water transfer decal x 1",
+			"MarkingSeal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_2561_0.jpg",
 		"/images/items/01_2561_1.jpg",
@@ -83,16 +68,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2561/",
 	"extractedAt": "2025-12-06T17:49:37.564Z",
 	"brandIds": [],
-	"seriesIds": [
-		"star-wars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"seriesIds": ["star-wars"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4153", "01_4154", "01_3514", "01_3513"]
 }

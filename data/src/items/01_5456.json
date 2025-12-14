@@ -18,35 +18,25 @@
 		"day": 8
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『機動戦士ガンダム』より、人気のSD ガンダムがセットになって復活！",
-			"en": "From \"Mobile Suit Gundam\", the popular SD Gundam is back as a set!"
-		},
-		{
-			"ja": "• 「ザクII F型」「ザクII S型」「ゴッグ&アッガイ&ゾック」がセットになって登場。",
-			"en": "• \"Zaku II F type \", \" Zaku II S type \", and \" Gog & Acguy & Zock\" are now available as a set."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "BB戦士218 ザクII F型×1",
-			"en": "BB Senshi 218 Zaku II F type x 1"
-		},
-		{
-			"ja": "BB戦士231 ザクII S型×1",
-			"en": "BB Senshi 231 Zaku II S type x 1"
-		},
-		{
-			"ja": "BB戦士238 ゴッグ&アッガイ&ゾック×1",
-			"en": "BB Senshi 238 Gog & Acguy & Zock x 1"
-		},
-		{
-			"ja": "シール×3",
-			"en": "Seal×3"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士ガンダム』より、人気のSD ガンダムがセットになって復活！",
+			"• 「ザクII F型」「ザクII S型」「ゴッグ&アッガイ&ゾック」がセットになって登場。"
+		],
+		"en": [
+			"From \"Mobile Suit Gundam\", the popular SD Gundam is back as a set!",
+			"• \"Zaku II F type \", \" Zaku II S type \", and \" Gog & Acguy & Zock\" are now available as a set."
+		]
+	},
+	"accessories": {
+		"ja": ["BB戦士218 ザクII F型×1", "BB戦士231 ザクII S型×1", "BB戦士238 ゴッグ&アッガイ&ゾック×1", "シール×3"],
+		"en": [
+			"BB Senshi 218 Zaku II F type x 1",
+			"BB Senshi 231 Zaku II S type x 1",
+			"BB Senshi 238 Gog & Acguy & Zock x 1",
+			"Seal×3"
+		]
+	},
 	"images": [
 		"/images/items/01_5456_0.jpg",
 		"/images/items/01_5456_1.jpg",
@@ -62,19 +52,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5456/",
 	"extractedAt": "2025-12-06T17:55:58.461Z",
-	"brandIds": [
-		"sd-gundam-bb-senshi"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4789",
-		"01_4783",
-		"01_2038",
-		"01_1916"
-	]
+	"brandIds": ["sd-gundam-bb-senshi"],
+	"seriesIds": ["mobile-suit-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4789", "01_4783", "01_2038", "01_1916"]
 }

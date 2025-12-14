@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ガンダムファラクト",
-		"en": "HG 1/144 Gundam Faract"
+		"en": "HG 1/144 GUNDAM PHARACT"
 	},
 	"price": {
 		"amount": 2090,
@@ -19,59 +19,32 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、ペイル寮の筆頭エラン・ケレスが搭乗するガンダム・ファラクトがHGで登場！",
-			"en": "From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", Gundam Faract, piloted by Pale Dormitory leader Elan Ceres, is now available in HG!"
-		},
-		{
-			"ja": "• 大型ライフルを装備したモビルスーツ。",
-			"en": "• Mobile suit equipped with a large rifle."
-		},
-		{
-			"ja": "• 肩の装甲は先端部分を押し込むことで内蔵されたバックブースターが展開するギミックを搭載。",
-			"en": "• The shoulder armor has a gimmick that deploys a built-in back booster by pushing in the tip."
-		},
-		{
-			"ja": "• 腕部装甲の展開によりビームサーベルのグリップを格納可能。",
-			"en": "• Beam saber grip can be stored by deploying the arm armor."
-		},
-		{
-			"ja": "• クリアパーツと成形色、シールによりシェルユニットの輝きを表現。",
-			"en": "• Express the shine of the shell unit with clear parts, molding color, and seal."
-		},
-		{
-			"ja": "• 足先は折りたたむことが可能。",
-			"en": "• Feet can be folded."
-		},
-		{
-			"ja": "• 大型ライフル、表情付きの平手(左手)、ビームサーベルが付属。",
-			"en": "• Includes a large rifle, a palm with an expression (left hand), and a beam saber."
-		},
-		{
-			"ja": "• 両肩部のバックブースターに格納できる４対のガンビットが付属。",
-			"en": "• Comes with 4 pairs of gambits that can be stored in the back boosters on both shoulders."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "大型ライフル×１",
-			"en": "Large rifle x1"
-		},
-		{
-			"ja": "ビームサーベル×2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "ハンドパーツ×１式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "シール×１",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、ペイル寮の筆頭エラン・ケレスが搭乗するガンダム・ファラクトがHGで登場！",
+			"• 大型ライフルを装備したモビルスーツ。",
+			"• 肩の装甲は先端部分を押し込むことで内蔵されたバックブースターが展開するギミックを搭載。",
+			"• 腕部装甲の展開によりビームサーベルのグリップを格納可能。",
+			"• クリアパーツと成形色、シールによりシェルユニットの輝きを表現。",
+			"• 足先は折りたたむことが可能。",
+			"• 大型ライフル、表情付きの平手(左手)、ビームサーベルが付属。",
+			"• 両肩部のバックブースターに格納できる４対のガンビットが付属。"
+		],
+		"en": [
+			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", Gundam Faract, piloted by Pale Dormitory leader Elan Ceres, is now available in HG!",
+			"• Mobile suit equipped with a large rifle.",
+			"• The shoulder armor has a gimmick that deploys a built-in back booster by pushing in the tip.",
+			"• Beam saber grip can be stored by deploying the arm armor.",
+			"• Express the shine of the shell unit with clear parts, molding color, and seal.",
+			"• Feet can be folded.",
+			"• Includes a large rifle, a palm with an expression (left hand), and a beam saber.",
+			"• Comes with 4 pairs of gambits that can be stored in the back boosters on both shoulders."
+		]
+	},
+	"accessories": {
+		"ja": ["大型ライフル×１", "ビームサーベル×2", "ハンドパーツ×１式", "シール×１"],
+		"en": ["Large rifle x1", "Beam saber x2", "Hand parts x 1 set", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_4265_0.jpg",
 		"/images/items/01_4265_1.jpg",
@@ -88,20 +61,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4265/",
 	"extractedAt": "2025-12-06T17:53:19.719Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-witch-of-mercury"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203899"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-witch-of-mercury"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
 	"manualId": "0133"
 }

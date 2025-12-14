@@ -18,62 +18,38 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• 全てのピカちんバッジを検出可能なアイテム登場！",
-			"en": "• Introducing an item that can detect all Pikachin badges!"
-		},
-		{
-			"ja": "• ピカちんバッジ差し込みスロットにバッジをセットしてサウンドを呼び出せ！",
-			"en": "• Set the badge into the Pikachin badge insertion slot and call out the sound!"
-		},
-		{
-			"ja": "• ターンテーブルの機能を持つディスクを回転させれば、音声を高くしたり低くしたりできる！DJ遊びにチャレンジ！",
-			"en": "• By rotating the disc that functions as a turntable, you can make the sound higher or lower! Challenge yourself to DJ!"
-		},
-		{
-			"ja": "• バッジをセットすれば、すべてのピカちんバッジのキャラサウンドを召喚することができる！",
-			"en": "• If you set the badge, you can summon the character sounds of all Pikachin badges!"
-		},
-		{
-			"ja": "• 「フリー合いの手ボタン」「サウンド選択ボタン」も使って遊びつくせ！",
-			"en": "• Have fun using the \"free hand button \" and \" sound selection button\"!"
-		},
-		{
-			"ja": "• サウンドと一緒に７色に光るLEDが点滅！",
-			"en": "• LED flashes in 7 colors along with the sound!"
-		},
-		{
-			"ja": "【セット内容】",
-			"en": "[Set contents]"
-		},
-		{
-			"ja": "• 本体×1",
-			"en": "• Body x 1"
-		},
-		{
-			"ja": "• ランナー×3(バッジ)",
-			"en": "• Runner×3 (badge)"
-		},
-		{
-			"ja": "• 取扱説明書×1",
-			"en": "• Handling Manual×1"
-		},
-		{
-			"ja": "• シール×1",
-			"en": "• Seal×1"
-		},
-		{
-			"ja": "【電池】",
-			"en": "[battery]"
-		},
-		{
-			"ja": "• 単4電池×3（別売）",
-			"en": "• AAA batteries x 3 (sold separately)"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• 全てのピカちんバッジを検出可能なアイテム登場！",
+			"• ピカちんバッジ差し込みスロットにバッジをセットしてサウンドを呼び出せ！",
+			"• ターンテーブルの機能を持つディスクを回転させれば、音声を高くしたり低くしたりできる！DJ遊びにチャレンジ！",
+			"• バッジをセットすれば、すべてのピカちんバッジのキャラサウンドを召喚することができる！",
+			"• 「フリー合いの手ボタン」「サウンド選択ボタン」も使って遊びつくせ！",
+			"• サウンドと一緒に７色に光るLEDが点滅！",
+			"【セット内容】",
+			"• 本体×1",
+			"• ランナー×3(バッジ)",
+			"• 取扱説明書×1",
+			"• シール×1",
+			"【電池】",
+			"• 単4電池×3（別売）"
+		],
+		"en": [
+			"• Introducing an item that can detect all Pikachin badges!",
+			"• Set the badge into the Pikachin badge insertion slot and call out the sound!",
+			"• By rotating the disc that functions as a turntable, you can make the sound higher or lower! Challenge yourself to DJ!",
+			"• If you set the badge, you can summon the character sounds of all Pikachin badges!",
+			"• Have fun using the \"free hand button \" and \" sound selection button\"!",
+			"• LED flashes in 7 colors along with the sound!",
+			"[Set contents]",
+			"• Body x 1",
+			"• Runner×3 (badge)",
+			"• Handling Manual×1",
+			"• Seal×1",
+			"[battery]",
+			"• AAA batteries x 3 (sold separately)"
+		]
+	},
 	"images": [
 		"/images/items/01_2605_0.jpg",
 		"/images/items/01_2605_1.jpg",
@@ -90,16 +66,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2605/",
 	"extractedAt": "2025-12-06T17:49:43.706Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2606",
-		"01_2607",
-		"01_2545",
-		"01_2546"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2606", "01_2607", "01_2545", "01_2546"]
 }

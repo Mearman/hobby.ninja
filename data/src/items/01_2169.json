@@ -18,33 +18,15 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "LEDライトユニット（緑）登場",
-			"en": "LED light unit (green) now available"
-		},
-		{
-			"ja": "ボタン電池（LR41）（別売り）を２個ご使用ください。",
-			"en": "Please use two button batteries (LR41) (sold separately)."
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_2169_0.jpg",
-		"/images/items/01_2169_1.jpg"
-	],
+	"description": {
+		"ja": ["LEDライトユニット（緑）登場", "ボタン電池（LR41）（別売り）を２個ご使用ください。"],
+		"en": ["LED light unit (green) now available", "Please use two button batteries (LR41) (sold separately)."]
+	},
+	"images": ["/images/items/01_2169_0.jpg", "/images/items/01_2169_1.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2169/",
 	"extractedAt": "2025-12-06T17:48:48.288Z",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5987",
-		"01_5988",
-		"01_5969"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5987", "01_5988", "01_5969"]
 }

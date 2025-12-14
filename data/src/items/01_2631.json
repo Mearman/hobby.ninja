@@ -19,59 +19,42 @@
 	},
 	"targetAge": 15,
 	"scale": "1/60",
-	"description": [
-		{
-			"ja": "マジンガーZが1/60ならではのディテール再現の極地に到達！",
-			"en": "Mazinger Z has reached the pinnacle of detail reproduction unique to 1/60!"
-		},
-		{
-			"ja": "• メカデザイナー柳瀬敬之氏によって劇場版用に描かれたコンセプトデザインを元にディテール、パーツ分割を追求。全高約423mm。",
-			"en": "• Pursuing details and parts division based on the concept design drawn for the movie version by mechanical designer Noriyuki Yanase. Overall height approximately 423mm."
-		},
-		{
-			"ja": "• ジェットスクランダーは上下方向への可動に加え、設定である垂直方向の可動を再現。更にプラモデルオリジナルとして垂直方向以上の可動範囲を持たせることにより翼の収納が可能に。",
-			"en": "• Jet Scrander reproduces vertical movement in addition to vertical movement. Furthermore, as an original plastic model, it has a range of movement that extends beyond the vertical direction, making it possible to store the wings."
-		},
-		{
-			"ja": "• ホバーバイルダーは飛行時、バイルダーオン時の再現が可能。",
-			"en": "• Hover Bilder can reproduce when it is in flight and when Bilder is on."
-		},
-		{
-			"ja": "• アイアンカッター、ドリルミサイル、ロケットパンチは各部のパーツ差し替え可能。",
-			"en": "• Each part of the iron cutter, drill missile, and rocket punch can be replaced."
-		},
-		{
-			"ja": "• カメラアイのディテールを詳細に再現。同梱のLEDユニットを組み込むことでマジンガ―Zの起動を演出できる。",
-			"en": "• Details of the camera eye are reproduced in detail. By incorporating the included LED unit, you can create the activation of Mazinger Z."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ホバーパイルダー×１",
-			"en": "Hover piler x 1"
-		},
-		{
-			"ja": "ジェットスクランダー×１",
-			"en": "Jet Scrander x1"
-		},
-		{
-			"ja": "アイアンカッターパーツ、専用平手（左右）×各１種",
-			"en": "Iron cutter parts, dedicated flat hands (left and right) x 1 type each"
-		},
-		{
-			"ja": "ドリルミサイル専用パーツ（左右）×各１種",
-			"en": "Drill missile dedicated parts (left and right) x 1 type each"
-		},
-		{
-			"ja": "ロケットパンチ専用パーツ（左右）×各１種",
-			"en": "Rocket Punch exclusive parts (left and right) x 1 type each"
-		},
-		{
-			"ja": "LEDユニット×１※電池別売り",
-			"en": "LED unit x 1 *Battery sold separately"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"マジンガーZが1/60ならではのディテール再現の極地に到達！",
+			"• メカデザイナー柳瀬敬之氏によって劇場版用に描かれたコンセプトデザインを元にディテール、パーツ分割を追求。全高約423mm。",
+			"• ジェットスクランダーは上下方向への可動に加え、設定である垂直方向の可動を再現。更にプラモデルオリジナルとして垂直方向以上の可動範囲を持たせることにより翼の収納が可能に。",
+			"• ホバーバイルダーは飛行時、バイルダーオン時の再現が可能。",
+			"• アイアンカッター、ドリルミサイル、ロケットパンチは各部のパーツ差し替え可能。",
+			"• カメラアイのディテールを詳細に再現。同梱のLEDユニットを組み込むことでマジンガ―Zの起動を演出できる。"
+		],
+		"en": [
+			"Mazinger Z has reached the pinnacle of detail reproduction unique to 1/60!",
+			"• Pursuing details and parts division based on the concept design drawn for the movie version by mechanical designer Noriyuki Yanase. Overall height approximately 423mm.",
+			"• Jet Scrander reproduces vertical movement in addition to vertical movement. Furthermore, as an original plastic model, it has a range of movement that extends beyond the vertical direction, making it possible to store the wings.",
+			"• Hover Bilder can reproduce when it is in flight and when Bilder is on.",
+			"• Each part of the iron cutter, drill missile, and rocket punch can be replaced.",
+			"• Details of the camera eye are reproduced in detail. By incorporating the included LED unit, you can create the activation of Mazinger Z."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ホバーパイルダー×１",
+			"ジェットスクランダー×１",
+			"アイアンカッターパーツ、専用平手（左右）×各１種",
+			"ドリルミサイル専用パーツ（左右）×各１種",
+			"ロケットパンチ専用パーツ（左右）×各１種",
+			"LEDユニット×１※電池別売り"
+		],
+		"en": [
+			"Hover piler x 1",
+			"Jet Scrander x1",
+			"Iron cutter parts, dedicated flat hands (left and right) x 1 type each",
+			"Drill missile dedicated parts (left and right) x 1 type each",
+			"Rocket Punch exclusive parts (left and right) x 1 type each",
+			"LED unit x 1 *Battery sold separately"
+		]
+	},
 	"images": [
 		"/images/items/01_2631_0.jpg",
 		"/images/items/01_2631_1.jpg",
@@ -89,16 +72,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2631/",
 	"extractedAt": "2025-12-06T17:49:46.735Z",
 	"brandIds": [],
-	"seriesIds": [
-		"mazinger-zinfinity"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000180606",
-		"01_4234",
-		"01_3528",
-		"01_3332"
-	]
+	"seriesIds": ["mazinger-zinfinity"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000180606", "01_4234", "01_3528", "01_3332"]
 }

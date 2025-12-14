@@ -19,47 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「赤いガンダム」をHGで立体化！",
-			"en": "From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" Red Gundam\" is made into HG!"
-		},
-		{
-			"ja": "• 特徴的な頭部・胴体周りのカラーリングを再現。",
-			"en": "• Reproduce the characteristic coloring around the head and torso."
-		},
-		{
-			"ja": "• バリエーション豊かな武装が付属。",
-			"en": "• Comes with a wide variety of weapons."
-		},
-		{
-			"ja": "• シールドはジョイントパーツを介して腕部、バックパックへマウントができる。",
-			"en": "• Seal can be mounted on the arm or backpack via joint parts."
-		},
-		{
-			"ja": "• ビットは2個付属。ジョイントパーツを介して機体へ取り付け可能。",
-			"en": "• Two bits are included. Can be attached to the aircraft via joint parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "武装×1式",
-			"en": "Armed x 1 type"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "ハンドパーツ×1",
-			"en": "Hand parts x 1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「赤いガンダム」をHGで立体化！",
+			"• 特徴的な頭部・胴体周りのカラーリングを再現。",
+			"• バリエーション豊かな武装が付属。",
+			"• シールドはジョイントパーツを介して腕部、バックパックへマウントができる。",
+			"• ビットは2個付属。ジョイントパーツを介して機体へ取り付け可能。"
+		],
+		"en": [
+			"From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" Red Gundam\" is made into HG!",
+			"• Reproduce the characteristic coloring around the head and torso.",
+			"• Comes with a wide variety of weapons.",
+			"• Seal can be mounted on the arm or backpack via joint parts.",
+			"• Two bits are included. Can be attached to the aircraft via joint parts."
+		]
+	},
+	"accessories": {
+		"ja": ["武装×1式", "マーキングシール×1", "ハンドパーツ×1", "シール×1"],
+		"en": ["Armed x 1 type", "MarkingSeal×1", "Hand parts x 1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5933_0.jpg",
 		"/images/items/01_5933_1.jpg",
@@ -71,20 +50,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5933/",
 	"extractedAt": "2025-12-06T17:56:52.393Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-gquuuuuux"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5951",
-		"01_5952"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-gquuuuuux"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5951", "01_5952"],
 	"manualId": "3103"
 }

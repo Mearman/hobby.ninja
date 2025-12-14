@@ -18,39 +18,24 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "TVアニメ『デジモンフロンティア』より「カイゼルグレイモン」がAmplifiedアレンジで登場！",
-			"en": "\"Kaiser Greymon \" from the TV anime \" Digimon Frontier\" appears in an amplified arrangement!"
-		},
-		{
-			"ja": "• 「As'まりあ氏」により魅力が“増幅”されたアレンジデザイン。",
-			"en": "• Arranged design with \"amplified \" charm by \" As'Maria\"."
-		},
-		{
-			"ja": "• 全身をAmplified解釈のプロポーション＆アレンジで新規造形で立体化。",
-			"en": "• The whole body is made into a three-dimensional model with new proportions and arrangements based on Amplified interpretation."
-		},
-		{
-			"ja": "• メイン武装の「龍魂剣」にはAmplifiedオリジナルのギミックを搭載。",
-			"en": "• The main weapon \"Dragon Soul Sword\" is equipped with Amplified's original gimmick."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "龍魂剣×1",
-			"en": "Dragon soul sword x1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "ジュエルシール×3種",
-			"en": "Jewel Seal x 3 types"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"TVアニメ『デジモンフロンティア』より「カイゼルグレイモン」がAmplifiedアレンジで登場！",
+			"• 「As'まりあ氏」により魅力が“増幅”されたアレンジデザイン。",
+			"• 全身をAmplified解釈のプロポーション＆アレンジで新規造形で立体化。",
+			"• メイン武装の「龍魂剣」にはAmplifiedオリジナルのギミックを搭載。"
+		],
+		"en": [
+			"\"Kaiser Greymon \" from the TV anime \" Digimon Frontier\" appears in an amplified arrangement!",
+			"• Arranged design with \"amplified \" charm by \" As'Maria\".",
+			"• The whole body is made into a three-dimensional model with new proportions and arrangements based on Amplified interpretation.",
+			"• The main weapon \"Dragon Soul Sword\" is equipped with Amplified's original gimmick."
+		]
+	},
+	"accessories": {
+		"ja": ["龍魂剣×1", "シール×1", "ジュエルシール×3種"],
+		"en": ["Dragon soul sword x1", "Seal×1", "Jewel Seal x 3 types"]
+	},
 	"images": [
 		"/images/items/01_5983_0.jpg",
 		"/images/items/01_5983_1.jpg",
@@ -66,19 +51,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5983/",
 	"extractedAt": "2025-12-06T17:56:59.000Z",
-	"brandIds": [
-		"figure-rise-standard-amplified"
-	],
-	"seriesIds": [
-		"digimon-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000216437",
-		"01_5277",
-		"item-1000198198",
-		"01_5022"
-	]
+	"brandIds": ["figure-rise-standard-amplified"],
+	"seriesIds": ["digimon-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000216437", "01_5277", "item-1000198198", "01_5022"]
 }

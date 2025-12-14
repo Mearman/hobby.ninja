@@ -19,39 +19,26 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『重戦機エルガイム』より、オージがアップグレードしてHGシリーズにラインアップ！",
-			"en": "From \"Heavy Battle Machine L-Gaim\", Oji has been upgraded and added to the HG series!"
-		},
-		{
-			"ja": "■額はクリアパーツを使用。",
-			"en": "• Clear parts are used for the forehead."
-		},
-		{
-			"ja": "■肩の色分けはパーツ分割で再現。",
-			"en": "• The color coding of the shoulders is reproduced by dividing the parts."
-		},
-		{
-			"ja": "■股関節割を変更し、可動域の拡大を実現。",
-			"en": "• Changed the hip joint split and expanded the range of motion."
-		},
-		{
-			"ja": "■新規サーベルが付属。",
-			"en": "• New saber included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "大鎌×1",
-			"en": "Scythe×1"
-		},
-		{
-			"ja": "ビームセイバー×2",
-			"en": "Beam saver x2"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『重戦機エルガイム』より、オージがアップグレードしてHGシリーズにラインアップ！",
+			"■額はクリアパーツを使用。",
+			"■肩の色分けはパーツ分割で再現。",
+			"■股関節割を変更し、可動域の拡大を実現。",
+			"■新規サーベルが付属。"
+		],
+		"en": [
+			"From \"Heavy Battle Machine L-Gaim\", Oji has been upgraded and added to the HG series!",
+			"• Clear parts are used for the forehead.",
+			"• The color coding of the shoulders is reproduced by dividing the parts.",
+			"• Changed the hip joint split and expanded the range of motion.",
+			"• New saber included."
+		]
+	},
+	"accessories": {
+		"ja": ["大鎌×1", "ビームセイバー×2"],
+		"en": ["Scythe×1", "Beam saver x2"]
+	},
 	"images": [
 		"/images/items/01_3350_0.jpg",
 		"/images/items/01_3350_1.jpg",
@@ -63,19 +50,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3350/",
 	"extractedAt": "2025-12-06T17:51:15.375Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"heavy-fighter-l-gaim"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000216436",
-		"item-1000205639",
-		"01_3351",
-		"01_3352"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["heavy-fighter-l-gaim"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000216436", "item-1000205639", "01_3351", "01_3352"]
 }

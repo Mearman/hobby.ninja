@@ -19,59 +19,32 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動戦士Ｚガンダム』より、「ボリノーク・サマーン」を最新ギミックを搭載しHGで商品化！",
-			"en": "From \"Mobile Suit Z Gundam \", \" Borinok Samaan\" is commercialized in HG with the latest gimmick!"
-		},
-		{
-			"ja": "• 「専用シールド」はクロー部分の可動ギミックに加え、先端のビーム出力部など細かなディテールも再現。",
-			"en": "• In addition to the movable gimmick of the claw part, the \"Special Seal Do\" also reproduces fine details such as the beam output part at the tip."
-		},
-		{
-			"ja": "• 「専用シールド」の裏に格納しているグリップにエフェクトパーツを取り付けることで「ビーム・トマホーク」や「ビーム・サーベル」が再現可能。",
-			"en": "• \"Beam Tomahawk \" and \" Beam Saber \" can be reproduced by attaching effect parts to the grip stored on the back of the \" Special Seal\"."
-		},
-		{
-			"ja": "• 肩アーマーに「炸裂弾ランチャー」発射再現用の展開ギミックを搭載。",
-			"en": "• Equipped with a deployment gimmick on the shoulder armor to reproduce the firing of the \"explosive bullet launcher\"."
-		},
-		{
-			"ja": "• レドームの“発光状態”を表現する頭部パーツが付属。「リフレクションカット」と「シール」により、特徴的なレドームの輝きを差し替え式で再現。",
-			"en": "• A head part is included to express the radome's \"light-emitting state \". \" Reflection cut \" and \" Seal\" reproduce the characteristic shine of the radome with replacement."
-		},
-		{
-			"ja": "• 頭部はボール可動に加え、首の基部に可動軸を設けることで、大きく前後へスイングが可能。",
-			"en": "• In addition to the ball movable head, a movable axis is provided at the base of the neck, allowing it to swing back and forth."
-		},
-		{
-			"ja": "• 肩に引き出し機構を搭載し、腕部の可動範囲を拡大。",
-			"en": "• Equipped with a pull-out mechanism on the shoulder to expand the range of motion of the arm."
-		},
-		{
-			"ja": "• 高い機動性の要となるバックパックは、複数のボールジョイントにより個別に可動。",
-			"en": "• The backpack, which is the key to high mobility, can be moved individually using multiple ball joints."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "頭部パーツ（発光状態）×1",
-			"en": "Head parts (light emitting state) x 1"
-		},
-		{
-			"ja": "エフェクトパーツ×1式",
-			"en": "Effect parts x 1"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士Ｚガンダム』より、「ボリノーク・サマーン」を最新ギミックを搭載しHGで商品化！",
+			"• 「専用シールド」はクロー部分の可動ギミックに加え、先端のビーム出力部など細かなディテールも再現。",
+			"• 「専用シールド」の裏に格納しているグリップにエフェクトパーツを取り付けることで「ビーム・トマホーク」や「ビーム・サーベル」が再現可能。",
+			"• 肩アーマーに「炸裂弾ランチャー」発射再現用の展開ギミックを搭載。",
+			"• レドームの“発光状態”を表現する頭部パーツが付属。「リフレクションカット」と「シール」により、特徴的なレドームの輝きを差し替え式で再現。",
+			"• 頭部はボール可動に加え、首の基部に可動軸を設けることで、大きく前後へスイングが可能。",
+			"• 肩に引き出し機構を搭載し、腕部の可動範囲を拡大。",
+			"• 高い機動性の要となるバックパックは、複数のボールジョイントにより個別に可動。"
+		],
+		"en": [
+			"From \"Mobile Suit Z Gundam \", \" Borinok Samaan\" is commercialized in HG with the latest gimmick!",
+			"• In addition to the movable gimmick of the claw part, the \"Special Seal Do\" also reproduces fine details such as the beam output part at the tip.",
+			"• \"Beam Tomahawk \" and \" Beam Saber \" can be reproduced by attaching effect parts to the grip stored on the back of the \" Special Seal\".",
+			"• Equipped with a deployment gimmick on the shoulder armor to reproduce the firing of the \"explosive bullet launcher\".",
+			"• A head part is included to express the radome's \"light-emitting state \". \" Reflection cut \" and \" Seal\" reproduce the characteristic shine of the radome with replacement.",
+			"• In addition to the ball movable head, a movable axis is provided at the base of the neck, allowing it to swing back and forth.",
+			"• Equipped with a pull-out mechanism on the shoulder to expand the range of motion of the arm.",
+			"• The backpack, which is the key to high mobility, can be moved individually using multiple ball joints."
+		]
+	},
+	"accessories": {
+		"ja": ["頭部パーツ（発光状態）×1", "エフェクトパーツ×1式", "ハンドパーツ×1式", "シール×1"],
+		"en": ["Head parts (light emitting state) x 1", "Effect parts x 1", "Hand parts x 1 set", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5375_0.jpg",
 		"/images/items/01_5375_1.jpg",
@@ -84,20 +57,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5375/",
 	"extractedAt": "2025-12-06T17:55:46.933Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5162",
-		"01_4985",
-		"01_4972"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5162", "01_4985", "01_4972"],
 	"manualId": "1949"
 }

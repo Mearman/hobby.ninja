@@ -18,79 +18,52 @@
 		"day": 23
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "サポートメカが分解して武装になる！ 組み合わせることで様々に可動する豊富なジョイントパーツと武装のセット。",
-			"en": "The support mech disassembles and becomes a weapon! A set of abundant joint parts and weapons that can be moved in various ways by combining them."
-		},
-		{
-			"ja": "• 豊富な武装とジョイントパーツのフルセット。",
-			"en": "• Full set of rich weapons and joint parts."
-		},
-		{
-			"ja": "• シールドとスタビライザーを組み合わせ、迫力の巨大格闘武器に。",
-			"en": "• Combine Seal and Stabilizer to create a huge and powerful melee weapon."
-		},
-		{
-			"ja": "• アックスとソードは、ライフルとしても装備可能。",
-			"en": "• Ax and sword can also be equipped as rifles."
-		},
-		{
-			"ja": "• バックパックが変形して、ミサイルランチャーが展開。",
-			"en": "• Backpack transforms and missile launcher deploys."
-		},
-		{
-			"ja": "• アームの関節を利用すれば、「変形」や「可動」ギミックを搭載したカスタマイズも可能。",
-			"en": "• By using the arm joints, you can customize it with \"transformation \" and \" movable\" gimmicks."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ソード×1",
-			"en": "Sword x1"
-		},
-		{
-			"ja": "アックス×1",
-			"en": "Ax x1"
-		},
-		{
-			"ja": "ブースター×2",
-			"en": "Booster x 2"
-		},
-		{
-			"ja": "ミサイルランチャー×2",
-			"en": "Missile launcher x2"
-		},
-		{
-			"ja": "スタビライザー×2",
-			"en": "Stabilizer x 2"
-		},
-		{
-			"ja": "シールド×1",
-			"en": "Seal × 1"
-		},
-		{
-			"ja": "マルチマウント×1",
-			"en": "Multi mount x 1"
-		},
-		{
-			"ja": "ウエストアーマー×1",
-			"en": "Waist armor x 1"
-		},
-		{
-			"ja": "インテーク×2",
-			"en": "Intake x 2"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"サポートメカが分解して武装になる！ 組み合わせることで様々に可動する豊富なジョイントパーツと武装のセット。",
+			"• 豊富な武装とジョイントパーツのフルセット。",
+			"• シールドとスタビライザーを組み合わせ、迫力の巨大格闘武器に。",
+			"• アックスとソードは、ライフルとしても装備可能。",
+			"• バックパックが変形して、ミサイルランチャーが展開。",
+			"• アームの関節を利用すれば、「変形」や「可動」ギミックを搭載したカスタマイズも可能。"
+		],
+		"en": [
+			"The support mech disassembles and becomes a weapon! A set of abundant joint parts and weapons that can be moved in various ways by combining them.",
+			"• Full set of rich weapons and joint parts.",
+			"• Combine Seal and Stabilizer to create a huge and powerful melee weapon.",
+			"• Ax and sword can also be equipped as rifles.",
+			"• Backpack transforms and missile launcher deploys.",
+			"• By using the arm joints, you can customize it with \"transformation \" and \" movable\" gimmicks."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ソード×1",
+			"アックス×1",
+			"ブースター×2",
+			"ミサイルランチャー×2",
+			"スタビライザー×2",
+			"シールド×1",
+			"マルチマウント×1",
+			"ウエストアーマー×1",
+			"インテーク×2",
+			"ジョイントパーツ×1式",
+			"シール×1"
+		],
+		"en": [
+			"Sword x1",
+			"Ax x1",
+			"Booster x 2",
+			"Missile launcher x2",
+			"Stabilizer x 2",
+			"Seal × 1",
+			"Multi mount x 1",
+			"Waist armor x 1",
+			"Intake x 2",
+			"Joint parts x 1 set",
+			"Seal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_5376_0.jpg",
 		"/images/items/01_5376_1.jpg",
@@ -103,20 +76,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5376/",
 	"extractedAt": "2025-12-06T17:55:47.174Z",
-	"brandIds": [
-		"optional-parts-set"
-	],
-	"seriesIds": [
-		"gundam-build-fighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6765",
-		"01_5240",
-		"01_5241",
-		"01_5242"
-	],
+	"brandIds": ["optional-parts-set"],
+	"seriesIds": ["gundam-build-fighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6765", "01_5240", "01_5241", "01_5242"],
 	"manualId": "1950"
 }

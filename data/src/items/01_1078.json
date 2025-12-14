@@ -18,18 +18,16 @@
 	},
 	"targetAge": 15,
 	"scale": "1/100",
-	"description": [
-		{
-			"ja": "全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"en": "A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world."
-		},
-		{
-			"ja": "マスターグレード エールストライクガンダムがクリアカラーで登場。",
-			"en": "Master Grade Ale Strike Gundam is now available in clear color."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
+			"マスターグレード エールストライクガンダムがクリアカラーで登場。"
+		],
+		"en": [
+			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"Master Grade Ale Strike Gundam is now available in clear color."
+		]
+	},
 	"images": [
 		"/images/items/01_1078_0.jpg",
 		"/images/items/01_1078_1.jpg",
@@ -41,19 +39,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1078/",
 	"extractedAt": "2025-12-06T16:48:47.794Z",
-	"brandIds": [
-		"mg-master-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5994",
-		"01_5221",
-		"01_4272",
-		"01_4195"
-	]
+	"brandIds": ["mg-master-grade"],
+	"seriesIds": ["mobile-suit-gundam-seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5994", "01_5221", "01_4272", "01_4195"]
 }

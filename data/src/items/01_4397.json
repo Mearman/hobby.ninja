@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 境界戦機ウェポンセット5",
-		"en": "HG 1/72 Kyoukai Senki Weapon Set 5"
+		"en": "HG 1/72 AMAIM Warrior at the Borderline Weapon Set5"
 	},
 	"price": {
 		"amount": 1320,
@@ -19,55 +19,40 @@
 	},
 	"targetAge": 15,
 	"scale": "1/72",
-	"description": [
-		{
-			"ja": "『境界戦機』より、メイレス系機体のカスタマイズの幅を広げるウェポンセットが登場！",
-			"en": "From \"Kyoukai Senki\" comes a Weapon set that expands the range of customization of Meires-type aircraft!"
-		},
-		{
-			"ja": "■超熱振式戦闘湾曲刀や180mm背部懸架型自動擲弾砲などの武装および装甲パーツのセット。",
-			"en": "• A set of armed and armored parts such as a super-heat swing combat curved sword and a 180mm back-suspended automatic grenade gun."
-		},
-		{
-			"ja": "■200mm戦闘杭射出機の杭部分はスライド可動し、差し替えなしで射出状態を再現。",
-			"en": "• The pile part of the 200mm combat pile injection machine can slide and reproduce the injection condition without replacement."
-		},
-		{
-			"ja": "■左手の武器持ち手も付属。",
-			"en": "• A left hand weapon holder is also included."
-		},
-		{
-			"ja": "■「HG 1/72 メイレスビャクチ」（別売り）と組み合わせることで、外伝の最終決戦時をイメージさせるカスタマイズが可能。",
-			"en": "• By combining it with \"HG 1/72 Meires Byakuchi\" (sold separately), you can customize it to resemble the final battle of the side story."
-		},
-		{
-			"ja": "■「ビャクチ」以外のメイレス系機体へのカスタマイズにも最適。",
-			"en": "• Ideal for customizing Meires type aircraft other than \"Byakuchi\"."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "装甲パーツ×1式",
-			"en": "Armor parts x 1 set"
-		},
-		{
-			"ja": "180mm背部懸架型自動擲弾砲×2",
-			"en": "180mm back-suspended automatic grenade gun x 2"
-		},
-		{
-			"ja": "200mm戦闘杭射出機×2",
-			"en": "200mm combat pile injector x 2"
-		},
-		{
-			"ja": "超熱振式戦闘湾曲刀×2",
-			"en": "Super heat wave combat curved sword x 2"
-		},
-		{
-			"ja": "ハンドパーツ 武器持ち手（左）×2",
-			"en": "Hand parts Weapon holder (left) x 2"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『境界戦機』より、メイレス系機体のカスタマイズの幅を広げるウェポンセットが登場！",
+			"■超熱振式戦闘湾曲刀や180mm背部懸架型自動擲弾砲などの武装および装甲パーツのセット。",
+			"■200mm戦闘杭射出機の杭部分はスライド可動し、差し替えなしで射出状態を再現。",
+			"■左手の武器持ち手も付属。",
+			"■「HG 1/72 メイレスビャクチ」（別売り）と組み合わせることで、外伝の最終決戦時をイメージさせるカスタマイズが可能。",
+			"■「ビャクチ」以外のメイレス系機体へのカスタマイズにも最適。"
+		],
+		"en": [
+			"From \"Kyoukai Senki\" comes a Weapon set that expands the range of customization of Meires-type aircraft!",
+			"• A set of armed and armored parts such as a super-heat swing combat curved sword and a 180mm back-suspended automatic grenade gun.",
+			"• The pile part of the 200mm combat pile injection machine can slide and reproduce the injection condition without replacement.",
+			"• A left hand weapon holder is also included.",
+			"• By combining it with \"HG 1/72 Meires Byakuchi\" (sold separately), you can customize it to resemble the final battle of the side story.",
+			"• Ideal for customizing Meires type aircraft other than \"Byakuchi\"."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"装甲パーツ×1式",
+			"180mm背部懸架型自動擲弾砲×2",
+			"200mm戦闘杭射出機×2",
+			"超熱振式戦闘湾曲刀×2",
+			"ハンドパーツ 武器持ち手（左）×2"
+		],
+		"en": [
+			"Armor parts x 1 set",
+			"180mm back-suspended automatic grenade gun x 2",
+			"200mm combat pile injector x 2",
+			"Super heat wave combat curved sword x 2",
+			"Hand parts Weapon holder (left) x 2"
+		]
+	},
 	"images": [
 		"/images/items/01_4397_0.jpg",
 		"/images/items/01_4397_1.jpg",
@@ -82,19 +67,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4397/",
 	"extractedAt": "2025-12-06T17:53:38.132Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"kyoukai-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["kyoukai-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
 }

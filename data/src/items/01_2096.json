@@ -18,56 +18,29 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "『宇宙戦艦ヤマト2202 愛の戦士たち』より、メカコレクションに地球連邦艦隊の主力戦艦が合流！",
-			"en": "From \"Space Battleship Yamato 2202 Warriors of Love\", the main battleship of the Earth Federation fleet joins the mecha collection!"
-		},
-		{
-			"ja": "• セット１は、地球艦隊の主力戦艦セット（D-class）と火星地球間防衛ラインのセット。",
-			"en": "• Set 1 is the Earth Fleet's main battleship set (D-class) and the Mars-Earth Defense Line set."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ディスプレイベース×2",
-			"en": "Display base x 2"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×6",
-			"en": "Molded product x 6"
-		},
-		{
-			"ja": "水転写式デカール×1",
-			"en": "Water transfer decal x 1"
-		},
-		{
-			"ja": "取扱説明書(箱裏側に記載)",
-			"en": "Instruction manual (written on the back of the box)"
-		}
-	],
-	"images": [
-		"/images/items/01_2096_0.jpg",
-		"/images/items/01_2096_1.jpg",
-		"/images/items/01_2096_2.jpg"
-	],
+	"description": {
+		"ja": [
+			"『宇宙戦艦ヤマト2202 愛の戦士たち』より、メカコレクションに地球連邦艦隊の主力戦艦が合流！",
+			"• セット１は、地球艦隊の主力戦艦セット（D-class）と火星地球間防衛ラインのセット。"
+		],
+		"en": [
+			"From \"Space Battleship Yamato 2202 Warriors of Love\", the main battleship of the Earth Federation fleet joins the mecha collection!",
+			"• Set 1 is the Earth Fleet's main battleship set (D-class) and the Mars-Earth Defense Line set."
+		]
+	},
+	"accessories": {
+		"ja": ["ディスプレイベース×2"],
+		"en": ["Display base x 2"]
+	},
+	"contents": {
+		"ja": ["成形品×6", "水転写式デカール×1", "取扱説明書(箱裏側に記載)"],
+		"en": ["Molded product x 6", "Water transfer decal x 1", "Instruction manual (written on the back of the box)"]
+	},
+	"images": ["/images/items/01_2096_0.jpg", "/images/items/01_2096_1.jpg", "/images/items/01_2096_2.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2096/",
 	"extractedAt": "2025-12-06T17:48:38.495Z",
-	"brandIds": [
-		"mecha-collection"
-	],
-	"seriesIds": [
-		"space-battleship-yamato-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_5500",
-		"01_3667",
-		"01_3650"
-	]
+	"brandIds": ["mecha-collection"],
+	"seriesIds": ["space-battleship-yamato-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5498", "01_5500", "01_3667", "01_3650"]
 }

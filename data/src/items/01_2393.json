@@ -18,56 +18,38 @@
 		"day": 28
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "TVアニメ『ドラゴンボール超』に登場の超サイヤ人ゴッド超サイヤ人ベジータがパッケージをリニューアルして登場！！マッスルをビルドせよ！",
-			"en": "Super Saiyan God Super Saiyan Vegeta from the TV anime “Dragon Ball Super” is now available with a renewed package! ! Build muscle!"
-		},
-		{
-			"ja": "• 超サイヤ人ゴッド超サイヤ人の特徴の青く輝く頭髪はメタリックの成形色で再現！",
-			"en": "• Super Saiyan God The shining blue hair that characterizes Super Saiyan is reproduced in metallic molding color!"
-		},
-		{
-			"ja": "• 表情パーツには「平常」・「叫び」の２種類が付属。ベジータの魅力を余すことなく入れ込んだ商品！",
-			"en": "• Two types of expression parts are included: \"normal \" and \" screaming\". A product that fully incorporates Vegeta's charm!"
-		},
-		{
-			"ja": "• エフェクトパーツには「ビッグバンアタック」と「ファイナルフラッシュ」の２種が付属。",
-			"en": "• Two types of effect parts are included: \"Big Bang Attack \" and \" Final Flash\"."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "必殺技エフェクト2種（ファイナルフラッシュ、ビックバンアタック）×各1",
-			"en": "2 types of special move effects (Final Flash, Big Bang Attack) x 1 each"
-		},
-		{
-			"ja": "表情パーツ2種（平常、叫び）×各1",
-			"en": "2 types of facial expression parts (normal, screaming) x 1 each"
-		},
-		{
-			"ja": "手首パーツ6種（左右握り手、左右ファイナルフラッシュ手、左右ビック・バン・アタック手）×各1",
-			"en": "6 types of wrist parts (left and right grip hands, left and right final flash hands, left and right big bang attack hands) x 1 each"
-		},
-		{
-			"ja": "エフェクト台座×1",
-			"en": "Effect pedestal x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×7",
-			"en": "Molded product x 7"
-		},
-		{
-			"ja": "シール×１",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "組立説明書×１",
-			"en": "Assembly Manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"TVアニメ『ドラゴンボール超』に登場の超サイヤ人ゴッド超サイヤ人ベジータがパッケージをリニューアルして登場！！マッスルをビルドせよ！",
+			"• 超サイヤ人ゴッド超サイヤ人の特徴の青く輝く頭髪はメタリックの成形色で再現！",
+			"• 表情パーツには「平常」・「叫び」の２種類が付属。ベジータの魅力を余すことなく入れ込んだ商品！",
+			"• エフェクトパーツには「ビッグバンアタック」と「ファイナルフラッシュ」の２種が付属。"
+		],
+		"en": [
+			"Super Saiyan God Super Saiyan Vegeta from the TV anime “Dragon Ball Super” is now available with a renewed package! ! Build muscle!",
+			"• Super Saiyan God The shining blue hair that characterizes Super Saiyan is reproduced in metallic molding color!",
+			"• Two types of expression parts are included: \"normal \" and \" screaming\". A product that fully incorporates Vegeta's charm!",
+			"• Two types of effect parts are included: \"Big Bang Attack \" and \" Final Flash\"."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"必殺技エフェクト2種（ファイナルフラッシュ、ビックバンアタック）×各1",
+			"表情パーツ2種（平常、叫び）×各1",
+			"手首パーツ6種（左右握り手、左右ファイナルフラッシュ手、左右ビック・バン・アタック手）×各1",
+			"エフェクト台座×1"
+		],
+		"en": [
+			"2 types of special move effects (Final Flash, Big Bang Attack) x 1 each",
+			"2 types of facial expression parts (normal, screaming) x 1 each",
+			"6 types of wrist parts (left and right grip hands, left and right final flash hands, left and right big bang attack hands) x 1 each",
+			"Effect pedestal x 1"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×7", "シール×１", "組立説明書×１"],
+		"en": ["Molded product x 7", "Seal×1", "Assembly Manual×1"]
+	},
 	"images": [
 		"/images/items/01_2393_0.jpg",
 		"/images/items/01_2393_1.jpg",
@@ -84,19 +66,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2393/",
 	"extractedAt": "2025-12-06T17:49:16.489Z",
-	"brandIds": [
-		"figure-rise-standard"
-	],
-	"seriesIds": [
-		"dragon-ball-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"brandIds": ["figure-rise-standard"],
+	"seriesIds": ["dragon-ball-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4901", "01_4219", "01_2974", "01_2769"]
 }

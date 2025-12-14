@@ -18,35 +18,22 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "1/144スケールプラモデルの展示に最適！",
-			"en": "Perfect for displaying 1/144 Scale plastic models!"
-		},
-		{
-			"ja": "さまざまなシーンを再現できるカスタマイズシーンベースが登場！自分だけの世界観を広げよう！",
-			"en": "Introducing a customized scene base that allows you to reproduce various scenes! Expand your own worldview!"
-		},
-		{
-			"ja": "• 格納庫シーンをイメージしたパーツセット。複数繋げてディスプレイせよ！",
-			"en": "• A parts set inspired by a hangar scene. Connect multiple items and display them!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ベース×１",
-			"en": "Base x 1"
-		},
-		{
-			"ja": "支柱パーツ×１式",
-			"en": "Strut parts x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×１式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"1/144スケールプラモデルの展示に最適！",
+			"さまざまなシーンを再現できるカスタマイズシーンベースが登場！自分だけの世界観を広げよう！",
+			"• 格納庫シーンをイメージしたパーツセット。複数繋げてディスプレイせよ！"
+		],
+		"en": [
+			"Perfect for displaying 1/144 Scale plastic models!",
+			"Introducing a customized scene base that allows you to reproduce various scenes! Expand your own worldview!",
+			"• A parts set inspired by a hangar scene. Connect multiple items and display them!"
+		]
+	},
+	"accessories": {
+		"ja": ["ベース×１", "支柱パーツ×１式", "ジョイントパーツ×１式"],
+		"en": ["Base x 1", "Strut parts x 1 set", "Joint parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_2718_0.jpg",
 		"/images/items/01_2718_1.jpg",
@@ -61,19 +48,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2718/",
 	"extractedAt": "2025-12-06T17:49:56.753Z",
-	"brandIds": [
-		"customized-scene-baseeffectsmaterialsweapons",
-		"30-minutes-missions"
-	],
+	"brandIds": ["customized-scene-baseeffectsmaterialsweapons", "30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3830"
 }

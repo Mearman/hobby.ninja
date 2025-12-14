@@ -19,48 +19,28 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズ』のダイバー「マギー」が使用するガンダムラヴファントムがHGBDで立体化！",
-			"en": "The Gundam Love Phantom used by the diver \"Maggie \" from \" Gundam Build Divers\" is now three-dimensional with HGBD!"
-		},
-		{
-			"ja": "• 背部のノワールストライカーは可動域とアクション性を追求した完全新規金型！",
-			"en": "• The Noir Striker on the back is a completely new mold that pursues range of motion and action!"
-		},
-		{
-			"ja": "• 特徴的な額のハート形状や、ウイング部のキャノン、大鎌等を再現。",
-			"en": "• Reproduce the characteristic heart shape of the forehead, cannon on the wing, scythe, etc."
-		},
-		{
-			"ja": "• 機全体が醸し出す悪魔のようなシルエットをシャープな造形と色分けで表現。",
-			"en": "• The devilish silhouette of the entire machine is expressed with sharp shapes and color coding."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビームカマ×1",
-			"en": "Beam kama x 1"
-		},
-		{
-			"ja": "ストライカーサイズ×2",
-			"en": "Striker size x 2"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×15",
-			"en": "Molded product x 15"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズ』のダイバー「マギー」が使用するガンダムラヴファントムがHGBDで立体化！",
+			"• 背部のノワールストライカーは可動域とアクション性を追求した完全新規金型！",
+			"• 特徴的な額のハート形状や、ウイング部のキャノン、大鎌等を再現。",
+			"• 機全体が醸し出す悪魔のようなシルエットをシャープな造形と色分けで表現。"
+		],
+		"en": [
+			"The Gundam Love Phantom used by the diver \"Maggie \" from \" Gundam Build Divers\" is now three-dimensional with HGBD!",
+			"• The Noir Striker on the back is a completely new mold that pursues range of motion and action!",
+			"• Reproduce the characteristic heart shape of the forehead, cannon on the wing, scythe, etc.",
+			"• The devilish silhouette of the entire machine is expressed with sharp shapes and color coding."
+		]
+	},
+	"accessories": {
+		"ja": ["ビームカマ×1", "ストライカーサイズ×2"],
+		"en": ["Beam kama x 1", "Striker size x 2"]
+	},
+	"contents": {
+		"ja": ["成形品×15", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 15", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1988_0.jpg",
 		"/images/items/01_1988_1.jpg",
@@ -75,20 +55,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1988/",
 	"extractedAt": "2025-12-06T17:48:31.044Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "1037"
 }

@@ -17,51 +17,26 @@
 		"month": 0
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「クラスアップアーマー(リーベルグラディエーター)」が登場！",
-			"en": "From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Class Up Armor (Liber Gladiator)\" is now available!"
-		},
-		{
-			"ja": "■“アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
-			"en": "• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job."
-		},
-		{
-			"ja": "■別売りの「30MF リーベルソードマン」と組み合わせることで「リーベルグラディエーター」に“クラスアップ”が可能。",
-			"en": "• By combining with the separately sold \"30MF Liber Swordsman \", it is possible to \" class up \" to the \" Libel Gladiator\"."
-		},
-		{
-			"ja": "■“エレメントコア”の属性は「火」。",
-			"en": "• The attribute of “element core” is “fire”."
-		},
-		{
-			"ja": "■別売りのローザン帝国の「グラディエーター」とは異なるフェイスデザインとカラーリング。",
-			"en": "• The face design and coloring are different from the Rosean Empire's \"Gladiator\", which is sold separately."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ソード×1",
-			"en": "Sword x1"
-		},
-		{
-			"ja": "槍×1",
-			"en": "Spear x1"
-		},
-		{
-			"ja": "アーマーパーツ×1式",
-			"en": "Armor parts x 1 set"
-		},
-		{
-			"ja": "武装パーツ×1式",
-			"en": "Armed parts x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「クラスアップアーマー(リーベルグラディエーター)」が登場！",
+			"■“アーマークロス”［装甲換装］することで上位ジョブへ“クラスアップ”が可能なアーマーや武装のセット。",
+			"■別売りの「30MF リーベルソードマン」と組み合わせることで「リーベルグラディエーター」に“クラスアップ”が可能。",
+			"■“エレメントコア”の属性は「火」。",
+			"■別売りのローザン帝国の「グラディエーター」とは異なるフェイスデザインとカラーリング。"
+		],
+		"en": [
+			"From \"30 MINUTES FANTASY \", where you can create your own fantasy job, \" Class Up Armor (Liber Gladiator)\" is now available!",
+			"• “Armor Cross” [Armor Replacement] A set of armor and weapons that can be “classed up” to a higher-level job.",
+			"• By combining with the separately sold \"30MF Liber Swordsman \", it is possible to \" class up \" to the \" Libel Gladiator\".",
+			"• The attribute of “element core” is “fire”.",
+			"• The face design and coloring are different from the Rosean Empire's \"Gladiator\", which is sold separately."
+		]
+	},
+	"accessories": {
+		"ja": ["ソード×1", "槍×1", "アーマーパーツ×1式", "武装パーツ×1式", "ジョイントパーツ×1式"],
+		"en": ["Sword x1", "Spear x1", "Armor parts x 1 set", "Armed parts x 1 set", "Joint parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_6932_0.jpg",
 		"/images/items/01_6932_1.jpg",
@@ -71,17 +46,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_6932/",
 	"extractedAt": "2025-12-06T17:58:13.372Z",
-	"brandIds": [
-		"30-minutes-fantasy"
-	],
+	"brandIds": ["30-minutes-fantasy"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6931",
-		"01_6776",
-		"01_6912",
-		"01_6769"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6931", "01_6776", "01_6912", "01_6769"]
 }

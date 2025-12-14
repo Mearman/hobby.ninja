@@ -18,46 +18,30 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"en": "A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world."
-		},
-		{
-			"ja": "1/144スケール、1/100スケール、1/60スケールに対応可能なモビルスーツハンガーが登場！",
-			"en": "Mobile suit hangers compatible with 1/144Scale, 1/100Scale, and 1/60Scale are now available!"
-		},
-		{
-			"ja": "大型MS、小型MSに合わせた細やかなサイズ調整も可能！",
-			"en": "Fine size adjustment is also possible to suit large MS and small MS!"
-		},
-		{
-			"ja": "様々なスケールに合わせて、自分だけのカスタマイズハンガーに組み換えが可能です！",
-			"en": "You can customize your own hanger to suit various scales!"
-		},
-		{
-			"ja": "組み換え例",
-			"en": "Recombination example"
-		},
-		{
-			"ja": "• <例1>1/60スケール(大型)用1個",
-			"en": "• <Example 1> 1 piece for 1/60 Scale (large size)"
-		},
-		{
-			"ja": "• <例2>1/60スケール用1個、1/144スケール(小・中型)用2個",
-			"en": "• <Example 2> 1 piece for 1/60 Scale, 2 pieces for 1/144 Scale (small/medium size)"
-		},
-		{
-			"ja": "• <例3>1/100スケール用1個、1/144スケール(小・中型)用1個",
-			"en": "• <Example 3> 1 piece for 1/100 Scale, 1 piece for 1/144 Scale (small/medium size)"
-		},
-		{
-			"ja": "• <例4>1/144スケール(大型)用1個、1/144スケール(小・中型)用2個",
-			"en": "• <Example 4> 1 piece for 1/144Scale (large size), 2 pieces for 1/144Scale (small/medium size)"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
+			"1/144スケール、1/100スケール、1/60スケールに対応可能なモビルスーツハンガーが登場！",
+			"大型MS、小型MSに合わせた細やかなサイズ調整も可能！",
+			"様々なスケールに合わせて、自分だけのカスタマイズハンガーに組み換えが可能です！",
+			"組み換え例",
+			"• <例1>1/60スケール(大型)用1個",
+			"• <例2>1/60スケール用1個、1/144スケール(小・中型)用2個",
+			"• <例3>1/100スケール用1個、1/144スケール(小・中型)用1個",
+			"• <例4>1/144スケール(大型)用1個、1/144スケール(小・中型)用2個"
+		],
+		"en": [
+			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"Mobile suit hangers compatible with 1/144Scale, 1/100Scale, and 1/60Scale are now available!",
+			"Fine size adjustment is also possible to suit large MS and small MS!",
+			"You can customize your own hanger to suit various scales!",
+			"Recombination example",
+			"• <Example 1> 1 piece for 1/60 Scale (large size)",
+			"• <Example 2> 1 piece for 1/60 Scale, 2 pieces for 1/144 Scale (small/medium size)",
+			"• <Example 3> 1 piece for 1/100 Scale, 1 piece for 1/144 Scale (small/medium size)",
+			"• <Example 4> 1 piece for 1/144Scale (large size), 2 pieces for 1/144Scale (small/medium size)"
+		]
+	},
 	"images": [
 		"/images/items/01_2830_0.jpg",
 		"/images/items/01_2830_1.jpg",
@@ -75,13 +59,6 @@
 	"extractedAt": "2025-12-06T17:50:12.335Z",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5987",
-		"01_5988",
-		"01_5969"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5987", "01_5988", "01_5969"]
 }

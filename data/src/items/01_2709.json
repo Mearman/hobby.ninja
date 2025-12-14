@@ -19,39 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "新たな機体「ガンダム GP-羅刹天」が登場！",
-			"en": "A new aircraft \"Gundam GP-Rakshaten\" is now available!"
-		},
-		{
-			"ja": "• 選択式で『ガンダムビルドダイバーズ』に登場した「GP-羅刹」も組み立てられる。",
-			"en": "• \"GP-Rakshasa \" that appeared in \" Gundam Build Divers\" can also be assembled in the selection system."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "金棒型ビームバズーカ×１",
-			"en": "Metal rod type beam bazooka x 1"
-		},
-		{
-			"ja": "GNオーガソード×２",
-			"en": "GN Ogre Sword x2"
-		},
-		{
-			"ja": "GP-羅刹用パーツ×１式",
-			"en": "GP-Rakshasa parts x 1 set"
-		},
-		{
-			"ja": "バズーカ×２",
-			"en": "Bazooka x2"
-		},
-		{
-			"ja": "ホイルシール×１",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"新たな機体「ガンダム GP-羅刹天」が登場！",
+			"• 選択式で『ガンダムビルドダイバーズ』に登場した「GP-羅刹」も組み立てられる。"
+		],
+		"en": [
+			"A new aircraft \"Gundam GP-Rakshaten\" is now available!",
+			"• \"GP-Rakshasa \" that appeared in \" Gundam Build Divers\" can also be assembled in the selection system."
+		]
+	},
+	"accessories": {
+		"ja": ["金棒型ビームバズーカ×１", "GNオーガソード×２", "GP-羅刹用パーツ×１式", "バズーカ×２", "ホイルシール×１"],
+		"en": [
+			"Metal rod type beam bazooka x 1",
+			"GN Ogre Sword x2",
+			"GP-Rakshasa parts x 1 set",
+			"Bazooka x2",
+			"Foil Seal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_2709_0.jpg",
 		"/images/items/01_2709_1.jpg",
@@ -64,20 +51,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2709/",
 	"extractedAt": "2025-12-06T17:49:56.396Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers-rerise"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5054", "01_3562", "01_3565", "01_3291"],
 	"manualId": "0091"
 }

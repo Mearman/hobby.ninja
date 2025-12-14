@@ -19,59 +19,42 @@
 	},
 	"targetAge": 15,
 	"scale": "1/72",
-	"description": [
-		{
-			"ja": "『境界戦機 極鋼ノ装鬼』（きょうかいせんき きょっこうのそうき）より、武装と支援機を合わせた「境界戦機ウェポンセット8」が登場！",
-			"en": "From ``Kyoukai Senki Kyokko no Souki'' comes the ``Kyoukai Senki Weapon Set 8'', which combines weapons and support aircraft!"
-		},
-		{
-			"ja": "• AMAIM輸送用車両「ドレッドノータス」とガトリングガン、ミサイルランチャー、スモークディスチャージャーなどの武装をまとめたセット。",
-			"en": "• A set that includes the AMAIM transport vehicle \"Dreadnoughtus\" and weapons such as a Gatling gun, missile launcher, and smoke discharger."
-		},
-		{
-			"ja": "• ドレッドノータスは拡張性を重視しカスタマイズ用の３mm径の接続穴を各所に配置。",
-			"en": "• Dreadnoughtus emphasizes expandability and has 3mm diameter connection holes placed throughout for customization."
-		},
-		{
-			"ja": "• タイヤの回転、車両後方の荷台ゲート部分の展開など各種ギミックを再現。",
-			"en": "• Reproduce various gimmicks such as rotating tires and deploying the loading platform gate at the rear of the vehicle."
-		},
-		{
-			"ja": "• ミサイルランチャーには機体への装備も可能なグリップも付属。",
-			"en": "• The missile launcher also comes with a grip that can be attached to the aircraft."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ドレッドノータスｘ1",
-			"en": "Dreadnoughtus x1"
-		},
-		{
-			"ja": "ミサイルランチャー×2",
-			"en": "Missile launcher x2"
-		},
-		{
-			"ja": "スモークディスチャージャー×4",
-			"en": "Smoke discharger x 4"
-		},
-		{
-			"ja": "ガトリングガン×1",
-			"en": "Gatling gun x 1"
-		},
-		{
-			"ja": "グリップ×2",
-			"en": "Grip x 2"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『境界戦機 極鋼ノ装鬼』（きょうかいせんき きょっこうのそうき）より、武装と支援機を合わせた「境界戦機ウェポンセット8」が登場！",
+			"• AMAIM輸送用車両「ドレッドノータス」とガトリングガン、ミサイルランチャー、スモークディスチャージャーなどの武装をまとめたセット。",
+			"• ドレッドノータスは拡張性を重視しカスタマイズ用の３mm径の接続穴を各所に配置。",
+			"• タイヤの回転、車両後方の荷台ゲート部分の展開など各種ギミックを再現。",
+			"• ミサイルランチャーには機体への装備も可能なグリップも付属。"
+		],
+		"en": [
+			"From ``Kyoukai Senki Kyokko no Souki'' comes the ``Kyoukai Senki Weapon Set 8'', which combines weapons and support aircraft!",
+			"• A set that includes the AMAIM transport vehicle \"Dreadnoughtus\" and weapons such as a Gatling gun, missile launcher, and smoke discharger.",
+			"• Dreadnoughtus emphasizes expandability and has 3mm diameter connection holes placed throughout for customization.",
+			"• Reproduce various gimmicks such as rotating tires and deploying the loading platform gate at the rear of the vehicle.",
+			"• The missile launcher also comes with a grip that can be attached to the aircraft."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ドレッドノータスｘ1",
+			"ミサイルランチャー×2",
+			"スモークディスチャージャー×4",
+			"ガトリングガン×1",
+			"グリップ×2",
+			"ジョイントパーツ×1式",
+			"シール×1"
+		],
+		"en": [
+			"Dreadnoughtus x1",
+			"Missile launcher x2",
+			"Smoke discharger x 4",
+			"Gatling gun x 1",
+			"Grip x 2",
+			"Joint parts x 1 set",
+			"Seal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_5171_0.jpg",
 		"/images/items/01_5171_1.jpg",
@@ -87,19 +70,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5171/",
 	"extractedAt": "2025-12-06T17:55:21.128Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"kyoukai-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5080"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["kyoukai-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5080"]
 }

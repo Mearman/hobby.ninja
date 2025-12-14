@@ -18,43 +18,26 @@
 		"day": 18
 	},
 	"targetAge": 3,
-	"description": [
-		{
-			"ja": "大好きなヒーローをキミの手でつくろう！全てのプラモデル未経験者に贈る入門用シリーズ「ENTRY GRADE」に、ドラえもんが登場！",
-			"en": "Create your favorite hero with your own hands! Doraemon appears in the introductory series \"ENTRY GRADE\" for all those who have no experience with plastic models!"
-		},
-		{
-			"ja": "• タッチゲートだからパーツは手で“プチッ！”と取れる！",
-			"en": "• Because it is a touch gate, parts can be removed by hand!"
-		},
-		{
-			"ja": "• 少ないパーツ数（13パーツ）で、プラモデルを初めてつくる方でもサクサクと組み立てが可能！",
-			"en": "• With a small number of parts (13 parts), even those who are making plastic models for the first time can easily assemble it!"
-		},
-		{
-			"ja": "• 各部位の色分けはパーツにより再現！",
-			"en": "• Color coding of each part is reproduced by parts!"
-		},
-		{
-			"ja": "• 接着剤や工具は不要。説明書は見やすい色付き。",
-			"en": "• No glue or tools required. The manual is colored for easy viewing."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ランナー×3",
-			"en": "Runner×3"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"大好きなヒーローをキミの手でつくろう！全てのプラモデル未経験者に贈る入門用シリーズ「ENTRY GRADE」に、ドラえもんが登場！",
+			"• タッチゲートだからパーツは手で“プチッ！”と取れる！",
+			"• 少ないパーツ数（13パーツ）で、プラモデルを初めてつくる方でもサクサクと組み立てが可能！",
+			"• 各部位の色分けはパーツにより再現！",
+			"• 接着剤や工具は不要。説明書は見やすい色付き。"
+		],
+		"en": [
+			"Create your favorite hero with your own hands! Doraemon appears in the introductory series \"ENTRY GRADE\" for all those who have no experience with plastic models!",
+			"• Because it is a touch gate, parts can be removed by hand!",
+			"• With a small number of parts (13 parts), even those who are making plastic models for the first time can easily assemble it!",
+			"• Color coding of each part is reproduced by parts!",
+			"• No glue or tools required. The manual is colored for easy viewing."
+		]
+	},
+	"accessories": {
+		"ja": ["ランナー×3", "取扱説明書×1", "シール×1"],
+		"en": ["Runner×3", "Handling manual×1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_2807_0.jpg",
 		"/images/items/01_2807_1.jpg",
@@ -70,14 +53,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2807/",
 	"extractedAt": "2025-12-06T17:50:09.176Z",
-	"brandIds": [
-		"entry-grade"
-	],
-	"seriesIds": [
-		"doraemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
+	"brandIds": ["entry-grade"],
+	"seriesIds": ["doraemon"],
+	"categoryIds": ["character-plastic-model"],
 	"relatedItemIds": []
 }

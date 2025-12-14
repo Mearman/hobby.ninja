@@ -19,64 +19,36 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "汎用性の高いハンドパーツがパワーアップしてビルドカスタムシリーズに登場！",
-			"en": "Highly versatile hand parts have been powered up and now available in the Build Custom Series!"
-		},
-		{
-			"ja": "• 次元ビルドナックルズ（丸）にモールドが追加され、ジーエンアルトロンなど格闘系ガンプラに最適なカスタムパーツとなっている！",
-			"en": "• A mold has been added to Dimensional Build Knuckles (circle), making it the perfect custom part for fighting Gunpla such as Gien Altron!"
-		},
-		{
-			"ja": "• パッケージはビルドダイバーズ仕様！",
-			"en": "• Package is Build Divers specification!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ハンドパーツS（3種×左右）×各１",
-			"en": "Hand parts S (3 types x left and right) x 1 each"
-		},
-		{
-			"ja": "ハンドパーツM（3種×左右）×各１",
-			"en": "Hand parts M (3 types x left and right) x 1 each"
-		},
-		{
-			"ja": "ハンドパーツL（3種×左右）×各１",
-			"en": "Hand parts L (3 types x left and right) x 1 each"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×2",
-			"en": "Molded product x 2"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
-	"images": [
-		"/images/items/01_1415_0.jpg",
-		"/images/items/01_1415_1.jpg"
-	],
+	"description": {
+		"ja": [
+			"汎用性の高いハンドパーツがパワーアップしてビルドカスタムシリーズに登場！",
+			"• 次元ビルドナックルズ（丸）にモールドが追加され、ジーエンアルトロンなど格闘系ガンプラに最適なカスタムパーツとなっている！",
+			"• パッケージはビルドダイバーズ仕様！"
+		],
+		"en": [
+			"Highly versatile hand parts have been powered up and now available in the Build Custom Series!",
+			"• A mold has been added to Dimensional Build Knuckles (circle), making it the perfect custom part for fighting Gunpla such as Gien Altron!",
+			"• Package is Build Divers specification!"
+		]
+	},
+	"accessories": {
+		"ja": ["ハンドパーツS（3種×左右）×各１", "ハンドパーツM（3種×左右）×各１", "ハンドパーツL（3種×左右）×各１"],
+		"en": [
+			"Hand parts S (3 types x left and right) x 1 each",
+			"Hand parts M (3 types x left and right) x 1 each",
+			"Hand parts L (3 types x left and right) x 1 each"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×2", "取扱説明書×1"],
+		"en": ["Molded product x 2", "Handling manual×1"]
+	},
+	"images": ["/images/items/01_1415_0.jpg", "/images/items/01_1415_1.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1415/",
 	"extractedAt": "2025-12-06T17:20:46.875Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "0701"
 }

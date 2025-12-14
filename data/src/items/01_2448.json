@@ -18,52 +18,28 @@
 		"day": 19
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "『ダンボール戦機』より、山野バン専用の可変型LBXが登場！",
-			"en": "From \"Danball Senki\" comes a variable LBX exclusively for Yamano Van!"
-		},
-		{
-			"ja": "• 青と白のランナーを追加し頭部と腕部の色分け再現。",
-			"en": "• Added blue and white Runner and reproduced the color-coded head and arms."
-		},
-		{
-			"ja": "• 飛行形態への変形機構を再現。",
-			"en": "• Reproduce the mechanism of transformation into flight form."
-		},
-		{
-			"ja": "• 専用台座が付属し、飛行携帯でのディスプレイが可能。",
-			"en": "• A special pedestal is included, allowing display on a mobile phone."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "リタリエイター×1",
-			"en": "Retaliator x 1"
-		},
-		{
-			"ja": "専用ディスプレイベース×1",
-			"en": "Dedicated display base x 1"
-		},
-		{
-			"ja": "変形用腕差し替えパーツ×2",
-			"en": "Deformation arm replacement parts x 2"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×7",
-			"en": "Molded product x 7"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『ダンボール戦機』より、山野バン専用の可変型LBXが登場！",
+			"• 青と白のランナーを追加し頭部と腕部の色分け再現。",
+			"• 飛行形態への変形機構を再現。",
+			"• 専用台座が付属し、飛行携帯でのディスプレイが可能。"
+		],
+		"en": [
+			"From \"Danball Senki\" comes a variable LBX exclusively for Yamano Van!",
+			"• Added blue and white Runner and reproduced the color-coded head and arms.",
+			"• Reproduce the mechanism of transformation into flight form.",
+			"• A special pedestal is included, allowing display on a mobile phone."
+		]
+	},
+	"accessories": {
+		"ja": ["リタリエイター×1", "専用ディスプレイベース×1", "変形用腕差し替えパーツ×2"],
+		"en": ["Retaliator x 1", "Dedicated display base x 1", "Deformation arm replacement parts x 2"]
+	},
+	"contents": {
+		"ja": ["成形品×7", "シール×1", "取扱説明書×1"],
+		"en": ["Molded product x 7", "Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2448_0.jpg",
 		"/images/items/01_2448_1.jpg",
@@ -80,16 +56,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2448/",
 	"extractedAt": "2025-12-06T17:49:24.321Z",
 	"brandIds": [],
-	"seriesIds": [
-		"danball-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000215196",
-		"item-1000215197",
-		"item-1000210042",
-		"item-1000210041"
-	]
+	"seriesIds": ["danball-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000215196", "item-1000215197", "item-1000210042", "item-1000210041"]
 }

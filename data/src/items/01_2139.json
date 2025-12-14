@@ -17,26 +17,20 @@
 		"month": 0
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "荒武者を彷彿とする“浪人ギロロロボ”戦国ラン星に参上！",
-			"en": "“Ronin Girororobo”, who is reminiscent of Aramusha, has arrived at Sengoku Ran!"
-		},
-		{
-			"ja": "巨大な右腕はフレキシブルに可動し、力強いポージングが再現可能。",
-			"en": "The huge right arm can be flexibly moved to recreate powerful poses."
-		},
-		{
-			"ja": "パーツの組み換えで鉄拳砲撃形態に変形。",
-			"en": "Transforms into Tekken bombardment form by rearranging parts."
-		},
-		{
-			"ja": "浪人ギロロが乗った木馬型ソーサーは着脱可能。",
-			"en": "The wooden horse-shaped saucer that Ronin Giroro rides on is removable."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"荒武者を彷彿とする“浪人ギロロロボ”戦国ラン星に参上！",
+			"巨大な右腕はフレキシブルに可動し、力強いポージングが再現可能。",
+			"パーツの組み換えで鉄拳砲撃形態に変形。",
+			"浪人ギロロが乗った木馬型ソーサーは着脱可能。"
+		],
+		"en": [
+			"“Ronin Girororobo”, who is reminiscent of Aramusha, has arrived at Sengoku Ran!",
+			"The huge right arm can be flexibly moved to recreate powerful poses.",
+			"Transforms into Tekken bombardment form by rearranging parts.",
+			"The wooden horse-shaped saucer that Ronin Giroro rides on is removable."
+		]
+	},
 	"images": [
 		"/images/items/01_2139_0.jpg",
 		"/images/items/01_2139_1.jpg",
@@ -47,16 +41,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2139/",
 	"extractedAt": "2025-12-06T17:48:44.478Z",
 	"brandIds": [],
-	"seriesIds": [
-		"sergeant-keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["sergeant-keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

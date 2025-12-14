@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "ポケモンプラモコレクション 52 セレクトシリーズ ギャラドス",
-		"en": "Pokemon Plastic Model Collection 52 Select Series Gyarados"
+		"en": "Pokémon Model Kit GYARADOS"
 	},
 	"price": {
 		"amount": 1430,
@@ -18,39 +18,26 @@
 		"day": 10
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "ポケモンプラモコレクション セレクトシリーズに「ギャラドス」がラインアップ！",
-			"en": "\"Gyarados\" is now available in the Pokemon Plastic Model Collection Select Series!"
-		},
-		{
-			"ja": "• 胴体の模様はシールを使用しないパーツ分割で再現。",
-			"en": "• The pattern of the fuselage is reproduced by dividing the parts without using seals."
-		},
-		{
-			"ja": "• 各部の可動で、迫力のあるポーズを表現可能！",
-			"en": "• Each part can be moved to create powerful poses!"
-		},
-		{
-			"ja": "• ツノやヒゲ、しっぽには軟質パーツを採用。",
-			"en": "• Soft parts are used for the horns, whiskers, and tail."
-		},
-		{
-			"ja": "• 胴体を支える台座が付属。",
-			"en": "• Comes with a pedestal to support the torso."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "台座×1",
-			"en": "Pedestal x 1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ポケモンプラモコレクション セレクトシリーズに「ギャラドス」がラインアップ！",
+			"• 胴体の模様はシールを使用しないパーツ分割で再現。",
+			"• 各部の可動で、迫力のあるポーズを表現可能！",
+			"• ツノやヒゲ、しっぽには軟質パーツを採用。",
+			"• 胴体を支える台座が付属。"
+		],
+		"en": [
+			"\"Gyarados\" is now available in the Pokemon Plastic Model Collection Select Series!",
+			"• The pattern of the fuselage is reproduced by dividing the parts without using seals.",
+			"• Each part can be moved to create powerful poses!",
+			"• Soft parts are used for the horns, whiskers, and tail.",
+			"• Comes with a pedestal to support the torso."
+		]
+	},
+	"accessories": {
+		"ja": ["台座×1", "シール×1"],
+		"en": ["Pedestal x 1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_4237_0.jpg",
 		"/images/items/01_4237_1.jpg",
@@ -64,16 +51,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_4237/",
 	"extractedAt": "2025-12-06T17:53:16.670Z",
 	"brandIds": [],
-	"seriesIds": [
-		"pocket-monster"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pocket-monster"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

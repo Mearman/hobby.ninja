@@ -19,22 +19,18 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "• 細部にまでこだわった公式改造パーツ。ディテールアップでガンプラをさらに楽しめる。",
-			"en": "• Officially modified parts with great attention to detail. You can enjoy Gunpla even more by improving the details."
-		},
-		{
-			"ja": "• 台座３種、ニードル３種の組み合わせで、９種類のバリエーションが可能。",
-			"en": "• 9 types of variations are possible by combining 3 types of pedestals and 3 types of needles."
-		},
-		{
-			"ja": "ニードル×3種、台座×3種 ＜×2セット＞",
-			"en": "Needle x 3 types, pedestal x 3 types <x 2 sets>"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• 細部にまでこだわった公式改造パーツ。ディテールアップでガンプラをさらに楽しめる。",
+			"• 台座３種、ニードル３種の組み合わせで、９種類のバリエーションが可能。",
+			"ニードル×3種、台座×3種 ＜×2セット＞"
+		],
+		"en": [
+			"• Officially modified parts with great attention to detail. You can enjoy Gunpla even more by improving the details.",
+			"• 9 types of variations are possible by combining 3 types of pedestals and 3 types of needles.",
+			"Needle x 3 types, pedestal x 3 types <x 2 sets>"
+		]
+	},
 	"images": [
 		"/images/items/01_3725_0.jpg",
 		"/images/items/01_3725_1.jpg",
@@ -45,13 +41,6 @@
 	"extractedAt": "2025-12-06T17:52:04.064Z",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5986", "01_5987", "01_5988"]
 }

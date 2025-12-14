@@ -19,36 +19,21 @@
 	},
 	"targetAge": 15,
 	"scale": "1/100",
-	"description": [
-		{
-			"ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
-			"en": "Event-limited Gunpla sold at various event venues."
-		},
-		{
-			"ja": "MG フルアーマー・ガンダム Ver.Ka がイベント限定のハーフメカニカルクリアで登場！",
-			"en": "MG Full Armor Gundam Ver.Ka appears in event-limited half mechanical clear!"
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_1949_0.jpg"
-	],
+	"description": {
+		"ja": [
+			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
+			"MG フルアーマー・ガンダム Ver.Ka がイベント限定のハーフメカニカルクリアで登場！"
+		],
+		"en": [
+			"Event-limited Gunpla sold at various event venues.",
+			"MG Full Armor Gundam Ver.Ka appears in event-limited half mechanical clear!"
+		]
+	},
+	"images": ["/images/items/01_1949_0.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1949/",
 	"extractedAt": "2025-12-06T17:48:25.639Z",
-	"brandIds": [
-		"mg-verka-master-grade-version-katoki"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-thunderbolt"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2307",
-		"01_767",
-		"item-1000110056",
-		"01_608"
-	]
+	"brandIds": ["mg-verka-master-grade-version-katoki"],
+	"seriesIds": ["mobile-suit-gundam-thunderbolt"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2307", "01_767", "item-1000110056", "01_608"]
 }

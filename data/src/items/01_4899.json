@@ -18,35 +18,24 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "様々な表情で自分好みのキャラクターメイキングが可能！",
-			"en": "You can create your own character with various facial expressions!"
-		},
-		{
-			"ja": "• 表情パーツ３種が付属。",
-			"en": "• Three types of facial expression parts are included."
-		},
-		{
-			"ja": "• フェイスパーツの瞳、眉、チークなどの表情はタンポ印刷を採用。シーンに合わせた表情の付け替えを楽しめる。",
-			"en": "• Face parts such as eyes, eyebrows, and cheeks use tampo printing. You can enjoy changing the facial expressions according to the scene."
-		},
-		{
-			"ja": "• 表情パーツの組み合わせにより、同じキャラクター素体でも大きく印象が変わる。",
-			"en": "• The impression of the same character body can change greatly by combining facial expression parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "フェイスパーツ(タンポ印刷)×３種",
-			"en": "Face parts (tampo printing) x 3 types"
-		},
-		{
-			"ja": "首パーツ×1式",
-			"en": "Neck parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"様々な表情で自分好みのキャラクターメイキングが可能！",
+			"• 表情パーツ３種が付属。",
+			"• フェイスパーツの瞳、眉、チークなどの表情はタンポ印刷を採用。シーンに合わせた表情の付け替えを楽しめる。",
+			"• 表情パーツの組み合わせにより、同じキャラクター素体でも大きく印象が変わる。"
+		],
+		"en": [
+			"You can create your own character with various facial expressions!",
+			"• Three types of facial expression parts are included.",
+			"• Face parts such as eyes, eyebrows, and cheeks use tampo printing. You can enjoy changing the facial expressions according to the scene.",
+			"• The impression of the same character body can change greatly by combining facial expression parts."
+		]
+	},
+	"accessories": {
+		"ja": ["フェイスパーツ(タンポ印刷)×３種", "首パーツ×1式"],
+		"en": ["Face parts (tampo printing) x 3 types", "Neck parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_4899_0.jpg",
 		"/images/items/01_4899_1.jpg",
@@ -57,18 +46,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4899/",
 	"extractedAt": "2025-12-06T17:54:36.857Z",
-	"brandIds": [
-		"30-minutes-sisters"
-	],
+	"brandIds": ["30-minutes-sisters"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manualId": "3565"
 }

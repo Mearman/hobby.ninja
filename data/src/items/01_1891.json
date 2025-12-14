@@ -19,52 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズ』に登場する新機体「ジェガンブラストマスター」がキット化！",
-			"en": "The new aircraft \"Jegan Blast Master \" appearing in \" Gundam Build Divers\" is now a kit!"
-		},
-		{
-			"ja": "• 肩部、脚部のビーム砲は展開可能なほか、特徴的な背部の武装はパネルの展開、砲身の伸縮、グリップの展開など様々なギミックを搭載！",
-			"en": "• In addition to the beam cannons on the shoulders and legs that can be deployed, the distinctive back armament is equipped with various gimmicks such as panel deployment, gun barrel extension and contraction, and grip deployment!"
-		},
-		{
-			"ja": "• さらにバックパックはパーツ差し替えで、一部HGシリーズにも装備可能！",
-			"en": "• In addition, the backpack can be equipped on some HG series by replacing parts!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "サテライトキャノン×2",
-			"en": "Satellite cannon x2"
-		},
-		{
-			"ja": "ライフル（仮）×2",
-			"en": "Rifle (temporary) x 2"
-		},
-		{
-			"ja": "ビームサーベル×2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "バックパック用ジョイントパーツ×1",
-			"en": "Backpack joint parts x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×12",
-			"en": "Molded product x 12"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズ』に登場する新機体「ジェガンブラストマスター」がキット化！",
+			"• 肩部、脚部のビーム砲は展開可能なほか、特徴的な背部の武装はパネルの展開、砲身の伸縮、グリップの展開など様々なギミックを搭載！",
+			"• さらにバックパックはパーツ差し替えで、一部HGシリーズにも装備可能！"
+		],
+		"en": [
+			"The new aircraft \"Jegan Blast Master \" appearing in \" Gundam Build Divers\" is now a kit!",
+			"• In addition to the beam cannons on the shoulders and legs that can be deployed, the distinctive back armament is equipped with various gimmicks such as panel deployment, gun barrel extension and contraction, and grip deployment!",
+			"• In addition, the backpack can be equipped on some HG series by replacing parts!"
+		]
+	},
+	"accessories": {
+		"ja": ["サテライトキャノン×2", "ライフル（仮）×2", "ビームサーベル×2", "バックパック用ジョイントパーツ×1"],
+		"en": ["Satellite cannon x2", "Rifle (temporary) x 2", "Beam saber x2", "Backpack joint parts x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×12", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 12", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1891_0.jpg",
 		"/images/items/01_1891_1.jpg",
@@ -75,15 +49,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1891/",
 	"extractedAt": "2025-12-06T17:48:18.878Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": [],
 	"manualId": "1031"
 }

@@ -18,51 +18,32 @@
 		"day": 28
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "（11/8記載）諸般の都合により、商品の発売月を変更させていただきました。",
-			"en": "(Posted on 11/8) Due to various circumstances, we have changed the product release."
-		},
-		{
-			"ja": "～『SD ガンダムワールド ヒーローズ』外伝始動！～",
-			"en": "~ “SD Gundam World Heroes” side story starts! ～"
-		},
-		{
-			"ja": "『SD ガンダムワールド ヒーローズ』に続く、新たな物語が始動！主役キャラクター「ナイトストライクガンダム」を商品化！",
-			"en": "A new story following \"SD Gundam World Heroes \" has begun! Commercialization of the main character \" Night Strike Gundam\"!"
-		},
-		{
-			"ja": "• 新外伝の主役キャラクター。往年のナイトガンダムの要素とSD ガンダムワールドシリーズのデザインが織りなす新世代のナイトガンダム！",
-			"en": "• Main character of Shin Gaiden. A new generation of Knight Gundam that combines elements of the old Knight Gundam and the design of the SD Gundam World Series!"
-		},
-		{
-			"ja": "• クリアパーツとの組み合わせにより、密度の高い全身の武装を表現。",
-			"en": "• By combining with clear parts, a highly dense whole body armament is expressed."
-		},
-		{
-			"ja": "• 武装にはナイトガンダムの意匠を盛り込んだ大剣が付属。大剣は背面に取り付け可能。",
-			"en": "• The weapon comes with a large sword that incorporates the design of Knight Gundam. The large sword can be attached to the back."
-		},
-		{
-			"ja": "• ナイトガンダムの特徴的なマントを表情豊かな形状で再現。",
-			"en": "• Reproduce Knight Gundam's characteristic cloak with a richly expressive shape."
-		},
-		{
-			"ja": "• 一部パーツの着脱により、別売りのトリニティバイクや軍馬にも搭乗可能。",
-			"en": "• By attaching and detaching some parts, you can also ride the optional Trinity Bike and War Horse."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "剣×1",
-			"en": "Sword x1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"（11/8記載）諸般の都合により、商品の発売月を変更させていただきました。",
+			"～『SD ガンダムワールド ヒーローズ』外伝始動！～",
+			"『SD ガンダムワールド ヒーローズ』に続く、新たな物語が始動！主役キャラクター「ナイトストライクガンダム」を商品化！",
+			"• 新外伝の主役キャラクター。往年のナイトガンダムの要素とSD ガンダムワールドシリーズのデザインが織りなす新世代のナイトガンダム！",
+			"• クリアパーツとの組み合わせにより、密度の高い全身の武装を表現。",
+			"• 武装にはナイトガンダムの意匠を盛り込んだ大剣が付属。大剣は背面に取り付け可能。",
+			"• ナイトガンダムの特徴的なマントを表情豊かな形状で再現。",
+			"• 一部パーツの着脱により、別売りのトリニティバイクや軍馬にも搭乗可能。"
+		],
+		"en": [
+			"(Posted on 11/8) Due to various circumstances, we have changed the product release.",
+			"~ “SD Gundam World Heroes” side story starts! ～",
+			"A new story following \"SD Gundam World Heroes \" has begun! Commercialization of the main character \" Night Strike Gundam\"!",
+			"• Main character of Shin Gaiden. A new generation of Knight Gundam that combines elements of the old Knight Gundam and the design of the SD Gundam World Series!",
+			"• By combining with clear parts, a highly dense whole body armament is expressed.",
+			"• The weapon comes with a large sword that incorporates the design of Knight Gundam. The large sword can be attached to the back.",
+			"• Reproduce Knight Gundam's characteristic cloak with a richly expressive shape.",
+			"• By attaching and detaching some parts, you can also ride the optional Trinity Bike and War Horse."
+		]
+	},
+	"accessories": {
+		"ja": ["剣×1", "ホイルシール×1"],
+		"en": ["Sword x1", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_3756_0.jpg",
 		"/images/items/01_3756_1.jpg",
@@ -73,14 +54,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3756/",
 	"extractedAt": "2025-12-06T17:52:08.572Z",
-	"brandIds": [
-		"sd-gundam-series"
-	],
-	"seriesIds": [
-		"sd-gundam-world-heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["sd-gundam-series"],
+	"seriesIds": ["sd-gundam-world-heroes"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

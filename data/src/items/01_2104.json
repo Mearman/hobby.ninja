@@ -18,26 +18,20 @@
 		"day": 28
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "「ケロロ軍曹」より“ガルル中尉”がケロプラにラインナップ！",
-			"en": "“Lieutenant Garuru” from “Keroro Sergeant” is now available in Keropura!"
-		},
-		{
-			"ja": "帽子の耳は可動し、大型武器を持っても干渉せずに構えることが可能 。",
-			"en": "The ears of the hat are movable, allowing you to hold large weapons without interference."
-		},
-		{
-			"ja": "バックパックのビームウイングは上下に可動 。",
-			"en": "The beam wing of the backpack can be moved up and down."
-		},
-		{
-			"ja": "ルルの銃、スナイパーライフル、専用スタンドが付属 。",
-			"en": "Lulu's gun, sniper rifle, and special stand are included."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"「ケロロ軍曹」より“ガルル中尉”がケロプラにラインナップ！",
+			"帽子の耳は可動し、大型武器を持っても干渉せずに構えることが可能 。",
+			"バックパックのビームウイングは上下に可動 。",
+			"ルルの銃、スナイパーライフル、専用スタンドが付属 。"
+		],
+		"en": [
+			"“Lieutenant Garuru” from “Keroro Sergeant” is now available in Keropura!",
+			"The ears of the hat are movable, allowing you to hold large weapons without interference.",
+			"The beam wing of the backpack can be moved up and down.",
+			"Lulu's gun, sniper rifle, and special stand are included."
+		]
+	},
 	"images": [
 		"/images/items/01_2104_0.jpg",
 		"/images/items/01_2104_1.jpg",
@@ -48,16 +42,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2104/",
 	"extractedAt": "2025-12-06T17:48:39.492Z",
 	"brandIds": [],
-	"seriesIds": [
-		"sergeant-keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2140"
-	]
+	"seriesIds": ["sergeant-keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2140"]
 }

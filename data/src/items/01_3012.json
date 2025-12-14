@@ -19,39 +19,24 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ガンダムビルドダイバーズRe:RISE』 2nd Seasonより、ガンダムアストレイの流れを汲む新機体用の武装が登場！",
-			"en": "From Gundam Build Divers Re:RISE's 2nd Season, weapons for new aircraft that follow the flow of Gundam Astray are now available!"
-		},
-		{
-			"ja": "■バックパックはダブルライフルに変形可能。",
-			"en": "• Backpack can be transformed into a double rifle."
-		},
-		{
-			"ja": "■リード線付属。リード線を利用した武器の演出を楽しめる。",
-			"en": "• Lead wire included. You can enjoy the production of weapons using lead wires."
-		},
-		{
-			"ja": "■さまざまなHGに使用可能なジョイントパーツが付属。",
-			"en": "• Comes with joint parts that can be used with various HGs."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "バックパックユニット×1",
-			"en": "Backpack unit x 1"
-		},
-		{
-			"ja": "リード線×2",
-			"en": "Lead wire x 2"
-		},
-		{
-			"ja": "HG対応ジョイントパーツ×1",
-			"en": "HG compatible joint parts x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ガンダムビルドダイバーズRe:RISE』 2nd Seasonより、ガンダムアストレイの流れを汲む新機体用の武装が登場！",
+			"■バックパックはダブルライフルに変形可能。",
+			"■リード線付属。リード線を利用した武器の演出を楽しめる。",
+			"■さまざまなHGに使用可能なジョイントパーツが付属。"
+		],
+		"en": [
+			"From Gundam Build Divers Re:RISE's 2nd Season, weapons for new aircraft that follow the flow of Gundam Astray are now available!",
+			"• Backpack can be transformed into a double rifle.",
+			"• Lead wire included. You can enjoy the production of weapons using lead wires.",
+			"• Comes with joint parts that can be used with various HGs."
+		]
+	},
+	"accessories": {
+		"ja": ["バックパックユニット×1", "リード線×2", "HG対応ジョイントパーツ×1"],
+		"en": ["Backpack unit x 1", "Lead wire x 2", "HG compatible joint parts x 1"]
+	},
 	"images": [
 		"/images/items/01_3012_0.jpg",
 		"/images/items/01_3012_1.jpg",
@@ -61,20 +46,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3012/",
 	"extractedAt": "2025-12-06T17:50:35.594Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers-rerise"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5054", "01_3562", "01_3565", "01_3291"],
 	"manualId": "0100"
 }

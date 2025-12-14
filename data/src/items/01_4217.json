@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "SDW HEROES ダークグラスパードラゴン",
-		"en": "SDW HEROES Dark Glasper Dragon"
+		"en": "SDW HEROES DARK GRASPER DRAGON"
 	},
 	"price": {
 		"amount": 770,
@@ -18,31 +18,24 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "外伝プロジェクト『SDガンダムワールド ヒーローズ THE LEGEND OF DRAGON KNIGHT』より、「SDW HEROES シャイングラスパードラゴン」と対になる闇のドラゴンが登場！",
-			"en": "From the side story project \"SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT \" comes a dark dragon that pairs with \" SDW HEROES Shine Glasper Dragon\"!"
-		},
-		{
-			"ja": "■全身１２か所以上が可動し、様々なポージングでディスプレイを楽しめる。",
-			"en": "•More than 12 parts of the body can be moved, allowing you to enjoy display in various poses."
-		},
-		{
-			"ja": "■頭部のパーツは一部新規造形。",
-			"en": "• Some of the head parts are newly sculpted."
-		},
-		{
-			"ja": "■SDW HEROESシリーズはもちろんSD三国創傑伝シリーズのキャラクターも騎乗可能。",
-			"en": "• Characters from the SDW HEROES series as well as the SD Sangoku Soketsuden series can be ridden."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ジョイントパーツ×1",
-			"en": "Joint parts x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"外伝プロジェクト『SDガンダムワールド ヒーローズ THE LEGEND OF DRAGON KNIGHT』より、「SDW HEROES シャイングラスパードラゴン」と対になる闇のドラゴンが登場！",
+			"■全身１２か所以上が可動し、様々なポージングでディスプレイを楽しめる。",
+			"■頭部のパーツは一部新規造形。",
+			"■SDW HEROESシリーズはもちろんSD三国創傑伝シリーズのキャラクターも騎乗可能。"
+		],
+		"en": [
+			"From the side story project \"SD Gundam World Heroes THE LEGEND OF DRAGON KNIGHT \" comes a dark dragon that pairs with \" SDW HEROES Shine Glasper Dragon\"!",
+			"•More than 12 parts of the body can be moved, allowing you to enjoy display in various poses.",
+			"• Some of the head parts are newly sculpted.",
+			"• Characters from the SDW HEROES series as well as the SD Sangoku Soketsuden series can be ridden."
+		]
+	},
+	"accessories": {
+		"ja": ["ジョイントパーツ×1"],
+		"en": ["Joint parts x 1"]
+	},
 	"images": [
 		"/images/items/01_4217_0.jpg",
 		"/images/items/01_4217_1.jpg",
@@ -52,19 +45,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4217/",
 	"extractedAt": "2025-12-06T17:53:13.175Z",
-	"brandIds": [
-		"sd-gundam-series"
-	],
-	"seriesIds": [
-		"sd-gundam-world-heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4312",
-		"01_4634"
-	]
+	"brandIds": ["sd-gundam-series"],
+	"seriesIds": ["sd-gundam-world-heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
 }

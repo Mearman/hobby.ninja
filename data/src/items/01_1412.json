@@ -18,44 +18,26 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "汎用性の高いビークルがビルドカスタムシリーズに登場！",
-			"en": "A highly versatile vehicle is now available in the Build Custom series!"
-		},
-		{
-			"ja": "• バイク形態とライドメカ形態に変形し、アイディア次第で様々なガンプラが搭乗可能！",
-			"en": "• It transforms into a motorcycle form and a ride mecha form, and you can ride various Gunpla depending on your ideas!"
-		},
-		{
-			"ja": "• フロントカウル部分は3パターンが付属する！",
-			"en": "• 3 patterns are included for the front cowl part!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "バイク本体×1",
-			"en": "Bike body x 1"
-		},
-		{
-			"ja": "フロントカウルパーツ×３",
-			"en": "Front cowl parts x 3"
-		},
-		{
-			"ja": "ディスプレイベース×1",
-			"en": "Display base x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×7",
-			"en": "Molded product x 7"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"汎用性の高いビークルがビルドカスタムシリーズに登場！",
+			"• バイク形態とライドメカ形態に変形し、アイディア次第で様々なガンプラが搭乗可能！",
+			"• フロントカウル部分は3パターンが付属する！"
+		],
+		"en": [
+			"A highly versatile vehicle is now available in the Build Custom series!",
+			"• It transforms into a motorcycle form and a ride mecha form, and you can ride various Gunpla depending on your ideas!",
+			"• 3 patterns are included for the front cowl part!"
+		]
+	},
+	"accessories": {
+		"ja": ["バイク本体×1", "フロントカウルパーツ×３", "ディスプレイベース×1"],
+		"en": ["Bike body x 1", "Front cowl parts x 3", "Display base x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×7", "取扱説明書×1"],
+		"en": ["Molded product x 7", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1412_0.jpg",
 		"/images/items/01_1412_1.jpg",
@@ -68,20 +50,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1412/",
 	"extractedAt": "2025-12-06T17:20:46.780Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "0697"
 }

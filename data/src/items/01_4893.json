@@ -18,67 +18,46 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "「ユニコーンガンダム２号機バンシィ」がSDガンダムクロスシルエットシリーズにスペシャルセットでラインアップ！",
-			"en": "\"Unicorn Gundam 02 Banshee\" is now available as a special set in the SD Gundam Cross Silhouette series!"
-		},
-		{
-			"ja": "■SD／CSフレーム同梱。組み替えによって、頭身に加えバンシィ／バンシィ・ノルンを再現できる豊富な武装が付属。",
-			"en": "• SD/CS frame included. In addition to the head and body, a variety of weapons are included that can be rearranged to recreate the Banshee/Banshee Norn."
-		},
-		{
-			"ja": "■アンテナパーツに加え、アームド・アーマー３種、リボルビング・ランチャーは新規造形。",
-			"en": "• In addition to antenna parts, 3 types of armed armor and revolving launcher are new models."
-		},
-		{
-			"ja": "■アームド・アーマーBS用の3Dメタリックシールが付属。",
-			"en": "• Includes 3D metallic seal for Armed Armor BS."
-		},
-		{
-			"ja": "■瞳の表情シールは２種付属。",
-			"en": "• Two types of eye expression seals are included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "アームド・アーマーBS×1",
-			"en": "Armed Armor BS×1"
-		},
-		{
-			"ja": "アームド・アーマーVN×1",
-			"en": "Armed Armor VN×1"
-		},
-		{
-			"ja": "アームド・アーマーDE×1",
-			"en": "Armed Armor DE×1"
-		},
-		{
-			"ja": "アームド・アーマーXC×1",
-			"en": "Armed Armor XC×1"
-		},
-		{
-			"ja": "ビーム・マグナム×1",
-			"en": "Beam Magnum x 1"
-		},
-		{
-			"ja": "リボルビング・ランチャー×1",
-			"en": "Revolving launcher x 1"
-		},
-		{
-			"ja": "ビーム・サーベル×2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "３Ｄメタリックシール×1",
-			"en": "3D metallic seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"「ユニコーンガンダム２号機バンシィ」がSDガンダムクロスシルエットシリーズにスペシャルセットでラインアップ！",
+			"■SD／CSフレーム同梱。組み替えによって、頭身に加えバンシィ／バンシィ・ノルンを再現できる豊富な武装が付属。",
+			"■アンテナパーツに加え、アームド・アーマー３種、リボルビング・ランチャーは新規造形。",
+			"■アームド・アーマーBS用の3Dメタリックシールが付属。",
+			"■瞳の表情シールは２種付属。"
+		],
+		"en": [
+			"\"Unicorn Gundam 02 Banshee\" is now available as a special set in the SD Gundam Cross Silhouette series!",
+			"• SD/CS frame included. In addition to the head and body, a variety of weapons are included that can be rearranged to recreate the Banshee/Banshee Norn.",
+			"• In addition to antenna parts, 3 types of armed armor and revolving launcher are new models.",
+			"• Includes 3D metallic seal for Armed Armor BS.",
+			"• Two types of eye expression seals are included."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"アームド・アーマーBS×1",
+			"アームド・アーマーVN×1",
+			"アームド・アーマーDE×1",
+			"アームド・アーマーXC×1",
+			"ビーム・マグナム×1",
+			"リボルビング・ランチャー×1",
+			"ビーム・サーベル×2",
+			"シール×1",
+			"３Ｄメタリックシール×1"
+		],
+		"en": [
+			"Armed Armor BS×1",
+			"Armed Armor VN×1",
+			"Armed Armor DE×1",
+			"Armed Armor XC×1",
+			"Beam Magnum x 1",
+			"Revolving launcher x 1",
+			"Beam saber x2",
+			"Seal×1",
+			"3D metallic seal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_4893_0.jpg",
 		"/images/items/01_4893_1.jpg",
@@ -95,16 +74,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4893/",
 	"extractedAt": "2025-12-06T17:54:36.544Z",
-	"brandIds": [
-		"sd-gundam-cross-silhouette"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-uc-unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2374"
-	]
+	"brandIds": ["sd-gundam-cross-silhouette"],
+	"seriesIds": ["mobile-suit-gundam-uc-unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2374"]
 }

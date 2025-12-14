@@ -19,51 +19,38 @@
 	},
 	"targetAge": 15,
 	"scale": "1/60",
-	"description": [
-		{
-			"ja": "『機動戦士ガンダム SEED』より、最新のフォーマットにリニューアルされたPGストライクガンダムが登場！",
-			"en": "From \"Mobile Suit Gundam SEED\" comes the PG Strike Gundam, which has been renewed to the latest format!"
-		},
-		{
-			"ja": "• 頭部をはじめ、装甲各所に新規造形を追加。より洗練されたストライクガンダムに。",
-			"en": "• New modeling added to various parts of the armor, including the head. A more sophisticated Strike Gundam."
-		},
-		{
-			"ja": "• 内部フレームにガンメタル、メッキ部にはクロム表現を採用。成形色の青はより濃い色に変更することで、存在感をさらに強めた。",
-			"en": "• Gunmetal is used for the internal frame, and chrome is used for the plating part. The blue molding color was changed to a darker color to further strengthen its presence."
-		},
-		{
-			"ja": "• 新規装甲の各所にエクストラフィニッシュパーツが導入され、より洗練されたデザインとなっている。",
-			"en": "• Extra finish parts have been introduced in various parts of the new armor, resulting in a more sophisticated design."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "LEDパーツ（黄）×1",
-			"en": "LED parts (yellow) x 1"
-		},
-		{
-			"ja": "ストライク新規装甲パーツ×1式",
-			"en": "Strike new armor parts x 1 set"
-		},
-		{
-			"ja": "エールストライカーパック×1式",
-			"en": "Ale Striker Pack x 1"
-		},
-		{
-			"ja": "ソードストライカーパック×1式",
-			"en": "Sword striker pack x 1 set"
-		},
-		{
-			"ja": "ランチャーストライカーパック×1式",
-			"en": "Launcher Striker Pack x 1 set"
-		},
-		{
-			"ja": "テトロンシール×1",
-			"en": "Tetron Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士ガンダム SEED』より、最新のフォーマットにリニューアルされたPGストライクガンダムが登場！",
+			"• 頭部をはじめ、装甲各所に新規造形を追加。より洗練されたストライクガンダムに。",
+			"• 内部フレームにガンメタル、メッキ部にはクロム表現を採用。成形色の青はより濃い色に変更することで、存在感をさらに強めた。",
+			"• 新規装甲の各所にエクストラフィニッシュパーツが導入され、より洗練されたデザインとなっている。"
+		],
+		"en": [
+			"From \"Mobile Suit Gundam SEED\" comes the PG Strike Gundam, which has been renewed to the latest format!",
+			"• New modeling added to various parts of the armor, including the head. A more sophisticated Strike Gundam.",
+			"• Gunmetal is used for the internal frame, and chrome is used for the plating part. The blue molding color was changed to a darker color to further strengthen its presence.",
+			"• Extra finish parts have been introduced in various parts of the new armor, resulting in a more sophisticated design."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"LEDパーツ（黄）×1",
+			"ストライク新規装甲パーツ×1式",
+			"エールストライカーパック×1式",
+			"ソードストライカーパック×1式",
+			"ランチャーストライカーパック×1式",
+			"テトロンシール×1"
+		],
+		"en": [
+			"LED parts (yellow) x 1",
+			"Strike new armor parts x 1 set",
+			"Ale Striker Pack x 1",
+			"Sword striker pack x 1 set",
+			"Launcher Striker Pack x 1 set",
+			"Tetron Seal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_2583_0.jpg",
 		"/images/items/01_2583_1.jpg",
@@ -79,20 +66,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2583/",
 	"extractedAt": "2025-12-06T17:49:40.694Z",
-	"brandIds": [
-		"pg-perfect-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000140845",
-		"01_1913",
-		"01_4873",
-		"01_4669"
-	],
+	"brandIds": ["pg-perfect-grade"],
+	"seriesIds": ["mobile-suit-gundam-seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000140845", "01_1913", "01_4873", "01_4669"],
 	"manualId": "1061"
 }

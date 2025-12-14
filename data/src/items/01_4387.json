@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/72 境界戦機ウェポンセット4 マルチジョイントフレーム",
-		"en": "HG 1/72 Kyoukai Senki Weapon Set 4 Multi-Joint Frame"
+		"en": "HG 1/72 AMAIM Warrior at the Borderline Weapon Set4 Multi Joint Frame"
 	},
 	"price": {
 		"amount": 1320,
@@ -19,59 +19,42 @@
 	},
 	"targetAge": 15,
 	"scale": "1/72",
-	"description": [
-		{
-			"ja": "カスタマイズ特化型の新規アーム・レッグパーツ等がセットになった「境界戦機ウェポンセット4 マルチジョイントフレーム」が登場！",
-			"en": "Introducing the \"Kyoukai Senki Weapon Set 4 Multi-Joint Frame\", which includes customization-specific new arm and leg parts!"
-		},
-		{
-			"ja": "■新規アーム・レッグパーツには拡張性の高いカスタマイズ用3mm径の接続穴を各所に配置。",
-			"en": "• New arm and leg parts are equipped with 3mm diameter connection holes for highly expandable customization."
-		},
-		{
-			"ja": "■拡張性の高いウェポンラックやリアスカートラックが付属し、背部のカスタマイズの自由度もアップ。",
-			"en": "• Comes with a highly expandable weapon rack and rear skirt rack, giving you more freedom in customizing the back."
-		},
-		{
-			"ja": "■新規デザインのヘッドパーツが付属。",
-			"en": "• Includes newly designed head parts."
-		},
-		{
-			"ja": "■別売りの既存の機体や「ウェポンセット」と組み合わせることで、これまで以上に幅広いカスタマイズが可能。",
-			"en": "• By combining with existing aircraft and \"Weapon Sets\" sold separately, a wider range of customization is possible than ever before."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "アームパーツ （左右）",
-			"en": "Arm parts (left and right)"
-		},
-		{
-			"ja": "レッグパーツ （左右）",
-			"en": "Leg parts (left and right)"
-		},
-		{
-			"ja": "ウェポンラック×１",
-			"en": "Weapon rack x 1"
-		},
-		{
-			"ja": "リアスカートラック×１",
-			"en": "Rear skirt track x 1"
-		},
-		{
-			"ja": "ヘッドパーツ×1",
-			"en": "Head parts x 1"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"カスタマイズ特化型の新規アーム・レッグパーツ等がセットになった「境界戦機ウェポンセット4 マルチジョイントフレーム」が登場！",
+			"■新規アーム・レッグパーツには拡張性の高いカスタマイズ用3mm径の接続穴を各所に配置。",
+			"■拡張性の高いウェポンラックやリアスカートラックが付属し、背部のカスタマイズの自由度もアップ。",
+			"■新規デザインのヘッドパーツが付属。",
+			"■別売りの既存の機体や「ウェポンセット」と組み合わせることで、これまで以上に幅広いカスタマイズが可能。"
+		],
+		"en": [
+			"Introducing the \"Kyoukai Senki Weapon Set 4 Multi-Joint Frame\", which includes customization-specific new arm and leg parts!",
+			"• New arm and leg parts are equipped with 3mm diameter connection holes for highly expandable customization.",
+			"• Comes with a highly expandable weapon rack and rear skirt rack, giving you more freedom in customizing the back.",
+			"• Includes newly designed head parts.",
+			"• By combining with existing aircraft and \"Weapon Sets\" sold separately, a wider range of customization is possible than ever before."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"アームパーツ （左右）",
+			"レッグパーツ （左右）",
+			"ウェポンラック×１",
+			"リアスカートラック×１",
+			"ヘッドパーツ×1",
+			"ハンドパーツ×1式",
+			"ジョイントパーツ×1式"
+		],
+		"en": [
+			"Arm parts (left and right)",
+			"Leg parts (left and right)",
+			"Weapon rack x 1",
+			"Rear skirt track x 1",
+			"Head parts x 1",
+			"Hand parts x 1 set",
+			"Joint parts x 1 set"
+		]
+	},
 	"images": [
 		"/images/items/01_4387_0.jpg",
 		"/images/items/01_4387_1.jpg",
@@ -84,19 +67,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4387/",
 	"extractedAt": "2025-12-06T17:53:35.848Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"kyoukai-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["kyoukai-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
 }

@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "30MS オプションボディパーツ タイプS04[カラーC]",
-		"en": "30MS Option Body Parts Type S04 [Color C]"
+		"en": "30MS OPTION BODY PARTS TYPE S04 [COLOR C]"
 	},
 	"price": {
 		"amount": 880,
@@ -18,31 +18,22 @@
 		"day": 24
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "30MS素体との組み合わせで世界観が広がる！オプションボディパーツに水着タイプがラインアップ！",
-			"en": "The world view expands when combined with the 30MS body! Swimsuit types are available as optional body parts!"
-		},
-		{
-			"ja": "• さわやかな白い水着のオプションボディパーツ。",
-			"en": "• Optional body parts for a crisp white swimsuit."
-		},
-		{
-			"ja": "• 30MS共通の3mmジョイントを介して別売りのキャラクターと腕・脚の組み替えが可能。",
-			"en": "• Arms and legs can be rearranged with characters sold separately via 3mm joints common to 30MS."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ボディパーツ×1式",
-			"en": "Body parts x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MS素体との組み合わせで世界観が広がる！オプションボディパーツに水着タイプがラインアップ！",
+			"• さわやかな白い水着のオプションボディパーツ。",
+			"• 30MS共通の3mmジョイントを介して別売りのキャラクターと腕・脚の組み替えが可能。"
+		],
+		"en": [
+			"The world view expands when combined with the 30MS body! Swimsuit types are available as optional body parts!",
+			"• Optional body parts for a crisp white swimsuit.",
+			"• Arms and legs can be rearranged with characters sold separately via 3mm joints common to 30MS."
+		]
+	},
+	"accessories": {
+		"ja": ["ボディパーツ×1式", "ジョイントパーツ×1式"],
+		"en": ["Body parts x 1 set", "Joint parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_4396_0.jpg",
 		"/images/items/01_4396_1.jpg",
@@ -55,18 +46,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4396/",
 	"extractedAt": "2025-12-06T17:53:37.550Z",
-	"brandIds": [
-		"30-minutes-sisters"
-	],
+	"brandIds": ["30-minutes-sisters"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manualId": "3496"
 }

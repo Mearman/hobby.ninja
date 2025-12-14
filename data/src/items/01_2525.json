@@ -18,40 +18,23 @@
 		"day": 19
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "●軍配が鳥に変形、そのまま背部に装備することも可能",
-			"en": "- Gunbai transforms into a bird and can be equipped on the back as is"
-		},
-		{
-			"ja": "●マスクを装着することでガンダムフェイスに変身",
-			"en": "- Transform into Gundam face by wearing a mask"
-		},
-		{
-			"ja": "●鎧は着脱可能",
-			"en": "-Armor is removable"
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_2525_0.jpg",
-		"/images/items/01_2525_1.jpg",
-		"/images/items/01_2525_2.jpg"
-	],
+	"description": {
+		"ja": [
+			"●軍配が鳥に変形、そのまま背部に装備することも可能",
+			"●マスクを装着することでガンダムフェイスに変身",
+			"●鎧は着脱可能"
+		],
+		"en": [
+			"- Gunbai transforms into a bird and can be equipped on the back as is",
+			"- Transform into Gundam face by wearing a mask",
+			"-Armor is removable"
+		]
+	},
+	"images": ["/images/items/01_2525_0.jpg", "/images/items/01_2525_1.jpg", "/images/items/01_2525_2.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2525/",
 	"extractedAt": "2025-12-06T17:49:32.933Z",
-	"brandIds": [
-		"sd-gundam-bb-senshi"
-	],
+	"brandIds": ["sd-gundam-bb-senshi"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

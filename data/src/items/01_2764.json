@@ -18,63 +18,44 @@
 		"day": 20
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "人造人間としてのリアルを追求したRGエヴァンゲリオンシリーズより、試作零号機がラインアップ！",
-			"en": "From the RG Evangelion series, which pursues the reality of an android, prototype 0 is now available in the lineup!"
-		},
-		{
-			"ja": "• エヴァンゲリオンのアクションポーズ再現をRGで追求した第２弾。",
-			"en": "• The second edition that uses RG to recreate Evangelion's action poses."
-		},
-		{
-			"ja": "• 背骨と肩甲骨の可動、各部装甲の連動、腕部にはひねりを加えると装甲が追従するギミックなど、「リアルグレード」としてエヴァンゲリオン零号機を更に深く考察・表現。",
-			"en": "• A deeper consideration and expression of Evangelion Unit 0 as a \"real grade\" model, such as the movement of the spine and shoulder blades, the interlocking of the armor of each part, and the gimmick that the arm armor follows when you twist it."
-		},
-		{
-			"ja": "• パーツ選択式で改修前後を組み立てられる。",
-			"en": "• You can assemble before and after modification by selecting parts."
-		},
-		{
-			"ja": "• 頭部は細かいパーツ分割により色分けを再現。",
-			"en": "• The head is divided into fine parts to reproduce color coding."
-		},
-		{
-			"ja": "• 『エヴァンゲリオン 新劇場版：序』に登場した装備も、選択式で組み立てることが可能。",
-			"en": "• Equipment that appeared in ``Evangelion: New Theatrical Version: Introduction'' can also be assembled by selection."
-		},
-		{
-			"ja": "• ハンドパーツ左右各７種、アンビリカルケーブル１種、プログレッシブナイフ２種、パレットライフル１種も付属。",
-			"en": "• Also included are 7 types of left and right hand parts, 1 type of umbilical cable, 2 types of progressive knives, and 1 type of pallet rifle."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "改修後パーツ×1式",
-			"en": "After repair parts x 1 set"
-		},
-		{
-			"ja": "プログレッシブナイフ×2種（通常時・格納時）",
-			"en": "Progressive knife x 2 types (normal/stored)"
-		},
-		{
-			"ja": "パレットライフル×1",
-			"en": "Pallet rifle x 1"
-		},
-		{
-			"ja": "ハンドパーツ（左右）×各7種",
-			"en": "Hand parts (left and right) x 7 types each"
-		},
-		{
-			"ja": "アンビリカルケーブル×1",
-			"en": "Umbilical cable x 1"
-		},
-		{
-			"ja": "リアリスティックデカール×1",
-			"en": "Realistic decal x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"人造人間としてのリアルを追求したRGエヴァンゲリオンシリーズより、試作零号機がラインアップ！",
+			"• エヴァンゲリオンのアクションポーズ再現をRGで追求した第２弾。",
+			"• 背骨と肩甲骨の可動、各部装甲の連動、腕部にはひねりを加えると装甲が追従するギミックなど、「リアルグレード」としてエヴァンゲリオン零号機を更に深く考察・表現。",
+			"• パーツ選択式で改修前後を組み立てられる。",
+			"• 頭部は細かいパーツ分割により色分けを再現。",
+			"• 『エヴァンゲリオン 新劇場版：序』に登場した装備も、選択式で組み立てることが可能。",
+			"• ハンドパーツ左右各７種、アンビリカルケーブル１種、プログレッシブナイフ２種、パレットライフル１種も付属。"
+		],
+		"en": [
+			"From the RG Evangelion series, which pursues the reality of an android, prototype 0 is now available in the lineup!",
+			"• The second edition that uses RG to recreate Evangelion's action poses.",
+			"• A deeper consideration and expression of Evangelion Unit 0 as a \"real grade\" model, such as the movement of the spine and shoulder blades, the interlocking of the armor of each part, and the gimmick that the arm armor follows when you twist it.",
+			"• You can assemble before and after modification by selecting parts.",
+			"• The head is divided into fine parts to reproduce color coding.",
+			"• Equipment that appeared in ``Evangelion: New Theatrical Version: Introduction'' can also be assembled by selection.",
+			"• Also included are 7 types of left and right hand parts, 1 type of umbilical cable, 2 types of progressive knives, and 1 type of pallet rifle."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"改修後パーツ×1式",
+			"プログレッシブナイフ×2種（通常時・格納時）",
+			"パレットライフル×1",
+			"ハンドパーツ（左右）×各7種",
+			"アンビリカルケーブル×1",
+			"リアリスティックデカール×1"
+		],
+		"en": [
+			"After repair parts x 1 set",
+			"Progressive knife x 2 types (normal/stored)",
+			"Pallet rifle x 1",
+			"Hand parts (left and right) x 7 types each",
+			"Umbilical cable x 1",
+			"Realistic decal x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_2764_0.jpg",
 		"/images/items/01_2764_1.jpg",
@@ -90,19 +71,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2764/",
 	"extractedAt": "2025-12-06T17:50:03.709Z",
-	"brandIds": [
-		"rg-real-grade"
-	],
-	"seriesIds": [
-		"evangelion"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000163344",
-		"01_3617",
-		"01_2855",
-		"01_2765"
-	]
+	"brandIds": ["rg-real-grade"],
+	"seriesIds": ["evangelion"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000163344", "01_3617", "01_2855", "01_2765"]
 }

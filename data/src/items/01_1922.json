@@ -18,33 +18,21 @@
 	},
 	"targetAge": 15,
 	"scale": "1/100",
-	"description": [
-		{
-			"ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
-			"en": "Event-limited Gunpla sold at various event venues."
-		},
-		{
-			"ja": "RE/100 イフリート改がイベント限定のクリアカラーで登場！",
-			"en": "RE/100 Ifrit Kai now available in event-limited clear color!"
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_1922_0.jpg"
-	],
+	"description": {
+		"ja": [
+			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
+			"RE/100 イフリート改がイベント限定のクリアカラーで登場！"
+		],
+		"en": [
+			"Event-limited Gunpla sold at various event venues.",
+			"RE/100 Ifrit Kai now available in event-limited clear color!"
+		]
+	},
+	"images": ["/images/items/01_1922_0.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1922/",
 	"extractedAt": "2025-12-06T17:48:21.789Z",
-	"brandIds": [
-		"re100-reborn-one-hundred"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_540"
-	]
+	"brandIds": ["re100-reborn-one-hundred"],
+	"seriesIds": ["mobile-suit-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_540"]
 }

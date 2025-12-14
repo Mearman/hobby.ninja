@@ -19,52 +19,28 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "外伝『ガンダムビルドダイバーズブレイク』に登場する主人公のガンプラを1／144スケールでキット化！",
-			"en": "The main character Gunpla that appears in the side story \"Gundam Build Divers Break\" is made into a kit in 1/144 scale!"
-		},
-		{
-			"ja": "• 月刊ガンダムエースにて、好評連載中の公式外伝『ガンダムビルドダイバーズブレイク』に登場！",
-			"en": "• Appeared in the official side story \"Gundam Build Divers Break\" currently being serialized in Gundam Ace!"
-		},
-		{
-			"ja": "• シャイニングガンダムベースとした主人公アークの改造ガンプラ。",
-			"en": "• A modified Gunpla of the main character arc based on Shining Gundam."
-		},
-		{
-			"ja": "• MS形態から飛行形態へ変形が可能。",
-			"en": "• Can transform from MS form to flight form."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ライフル(仮)×1",
-			"en": "Rifle (temporary) x 1"
-		},
-		{
-			"ja": "シールド（仮）×１",
-			"en": "Seal de (temporary) x 1"
-		},
-		{
-			"ja": "ビームサーベル×2",
-			"en": "Beam saber x2"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×10",
-			"en": "Molded product x 10"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"外伝『ガンダムビルドダイバーズブレイク』に登場する主人公のガンプラを1／144スケールでキット化！",
+			"• 月刊ガンダムエースにて、好評連載中の公式外伝『ガンダムビルドダイバーズブレイク』に登場！",
+			"• シャイニングガンダムベースとした主人公アークの改造ガンプラ。",
+			"• MS形態から飛行形態へ変形が可能。"
+		],
+		"en": [
+			"The main character Gunpla that appears in the side story \"Gundam Build Divers Break\" is made into a kit in 1/144 scale!",
+			"• Appeared in the official side story \"Gundam Build Divers Break\" currently being serialized in Gundam Ace!",
+			"• A modified Gunpla of the main character arc based on Shining Gundam.",
+			"• Can transform from MS form to flight form."
+		]
+	},
+	"accessories": {
+		"ja": ["ライフル(仮)×1", "シールド（仮）×１", "ビームサーベル×2"],
+		"en": ["Rifle (temporary) x 1", "Seal de (temporary) x 1", "Beam saber x2"]
+	},
+	"contents": {
+		"ja": ["成形品×10", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 10", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2024_0.jpg",
 		"/images/items/01_2024_1.jpg",
@@ -77,20 +53,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2024/",
 	"extractedAt": "2025-12-06T16:45:39.361Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "1042"
 }

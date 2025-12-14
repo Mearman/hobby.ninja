@@ -19,47 +19,30 @@
 	},
 	"targetAge": 15,
 	"scale": "1/100",
-	"description": [
-		{
-			"ja": "『GUNDAM FACTORY YOKOHAMA』の動く実物大ガンダムのオリジナル商品。チタニウムフィニッシュを施した特別仕様で登場！",
-			"en": "An original moving life-sized Gundam product from \"GUNDAM FACTORY YOKOHAMA\". Introducing a special specification with titanium finish!"
-		},
-		{
-			"ja": "• チタニウムフィニッシュ加工を施した高級感溢れる仕上がり",
-			"en": "• Luxury finish with titanium finish processing"
-		},
-		{
-			"ja": "• 歩行、右腕上げ、両腕あげなど動くガンダムの挙動を再現できる可動域！",
-			"en": "• Range of motion that allows you to reproduce Gundam's movements such as walking, raising the right arm, raising both arms, etc.!"
-		},
-		{
-			"ja": "• ガンプラREシリーズと同等の可動を再現",
-			"en": "• Reproduces the same movement as the GunplaRE series"
-		},
-		{
-			"ja": "• 動くガンダム「RX-78F00」のディティール、カラーリングを徹底再現",
-			"en": "• Thorough reproduction of the details and coloring of the moving Gundam \"RX-78F00\""
-		},
-		{
-			"ja": "• 商品オリジナルとして専用台座、ライフル、シールドが付属",
-			"en": "• Comes with a special pedestal, rifle, and seal as an original product."
-		},
-		{
-			"ja": "• 実際の動く実物大ガンダムの挙動を再現するハンドパーツが付属",
-			"en": "• Comes with hand parts that reproduce the behavior of the actual moving life-sized Gundam."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ホイルシール",
-			"en": "foil seal"
-		},
-		{
-			"ja": "マーキングシール",
-			"en": "MarkingSeal"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『GUNDAM FACTORY YOKOHAMA』の動く実物大ガンダムのオリジナル商品。チタニウムフィニッシュを施した特別仕様で登場！",
+			"• チタニウムフィニッシュ加工を施した高級感溢れる仕上がり",
+			"• 歩行、右腕上げ、両腕あげなど動くガンダムの挙動を再現できる可動域！",
+			"• ガンプラREシリーズと同等の可動を再現",
+			"• 動くガンダム「RX-78F00」のディティール、カラーリングを徹底再現",
+			"• 商品オリジナルとして専用台座、ライフル、シールドが付属",
+			"• 実際の動く実物大ガンダムの挙動を再現するハンドパーツが付属"
+		],
+		"en": [
+			"An original moving life-sized Gundam product from \"GUNDAM FACTORY YOKOHAMA\". Introducing a special specification with titanium finish!",
+			"• Luxury finish with titanium finish processing",
+			"• Range of motion that allows you to reproduce Gundam's movements such as walking, raising the right arm, raising both arms, etc.!",
+			"• Reproduces the same movement as the GunplaRE series",
+			"• Thorough reproduction of the details and coloring of the moving Gundam \"RX-78F00\"",
+			"• Comes with a special pedestal, rifle, and seal as an original product.",
+			"• Comes with hand parts that reproduce the behavior of the actual moving life-sized Gundam."
+		]
+	},
+	"accessories": {
+		"ja": ["ホイルシール", "マーキングシール"],
+		"en": ["foil seal", "MarkingSeal"]
+	},
 	"images": [
 		"/images/items/01_3638_0.jpg",
 		"/images/items/01_3638_1.jpg",
@@ -73,19 +56,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3638/",
 	"extractedAt": "2025-12-06T17:51:54.139Z",
-	"brandIds": [
-		"gundam-factory-yokohama"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5035",
-		"01_4239",
-		"01_3472",
-		"01_3841"
-	]
+	"brandIds": ["gundam-factory-yokohama"],
+	"seriesIds": ["mobile-suit-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5035", "01_4239", "01_3472", "01_3841"]
 }

@@ -18,44 +18,26 @@
 		"day": 24
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "謎に包まれたイェーガー、オブシディアン・フューリーがHGシリーズから登場！",
-			"en": "Obsidian Fury, the mysterious Jaeger, is now available in the HG series!"
-		},
-		{
-			"ja": "フォルムを忠実に再現し、幅広い可動域でダイナミックなポージングが可能！",
-			"en": "The form is faithfully reproduced and dynamic poses are possible with a wide range of motion!"
-		},
-		{
-			"ja": "特徴的な両腕の武装「ツインプラズマチェンソー」は差し替えで再現可能！",
-			"en": "The characteristic armament on both arms \"twin plasma chainsaw\" can be reproduced by replacing it!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ツインプラズマチェーンソー×1式",
-			"en": "Twin plasma chainsaw x 1 set"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×5",
-			"en": "Molded product x 5"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"謎に包まれたイェーガー、オブシディアン・フューリーがHGシリーズから登場！",
+			"フォルムを忠実に再現し、幅広い可動域でダイナミックなポージングが可能！",
+			"特徴的な両腕の武装「ツインプラズマチェンソー」は差し替えで再現可能！"
+		],
+		"en": [
+			"Obsidian Fury, the mysterious Jaeger, is now available in the HG series!",
+			"The form is faithfully reproduced and dynamic poses are possible with a wide range of motion!",
+			"The characteristic armament on both arms \"twin plasma chainsaw\" can be reproduced by replacing it!"
+		]
+	},
+	"accessories": {
+		"ja": ["ツインプラズマチェーンソー×1式"],
+		"en": ["Twin plasma chainsaw x 1 set"]
+	},
+	"contents": {
+		"ja": ["成形品×5", "マーキングシール×1", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 5", "MarkingSeal×1", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1273_0.jpg",
 		"/images/items/01_1273_1.jpg",
@@ -71,19 +53,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1273/",
 	"extractedAt": "2025-12-06T17:06:34.765Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"pacific-rim"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2083",
-		"01_1270",
-		"01_1271",
-		"01_1272"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["pacific-rim"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2083", "01_1270", "01_1271", "01_1272"]
 }

@@ -18,55 +18,40 @@
 		"day": 2
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• スピーディーにかっこよく紙飛行機をとばしたいキミへ！",
-			"en": "• For you who want to fly paper airplanes quickly and coolly!"
-		},
-		{
-			"ja": "• 長距離&超スピードで紙飛行機をとばせるスーパーランチャー！",
-			"en": "• Super launcher that lets you fly paper airplanes over long distances and super speed!"
-		},
-		{
-			"ja": "• テレビ番組「ポチっと発明 ピカちんキット」に登場する紙飛行機ランチャーが商品化！",
-			"en": "• The paper airplane launcher that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!"
-		},
-		{
-			"ja": "• 狙いを定めてバーを引っぱるだけで超スピードで紙飛行機をとばせちゃう発明品！",
-			"en": "• An invention that allows you to fly a paper airplane at super speed just by aiming and pulling the bar!"
-		},
-		{
-			"ja": "• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！",
-			"en": "• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
-		}
-	],
-	"accessories": [],
-	"contents": [
-		{
-			"ja": "紙飛行機ランチャー…1（成形品…5）",
-			"en": "Paper airplane launcher...1 (molded product...5)"
-		},
-		{
-			"ja": "紙飛行機ペーパー…1",
-			"en": "Paper airplane paper...1"
-		},
-		{
-			"ja": "輪ゴム…3",
-			"en": "rubber band...3"
-		},
-		{
-			"ja": "ピカちんQRコードステッカー…1",
-			"en": "Pikachin QR code Sticker...1"
-		},
-		{
-			"ja": "取扱説明書…1",
-			"en": "Handling Manual...1"
-		},
-		{
-			"ja": "ピカちんシート…1",
-			"en": "Pikachin sheet...1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• スピーディーにかっこよく紙飛行機をとばしたいキミへ！",
+			"• 長距離&超スピードで紙飛行機をとばせるスーパーランチャー！",
+			"• テレビ番組「ポチっと発明 ピカちんキット」に登場する紙飛行機ランチャーが商品化！",
+			"• 狙いを定めてバーを引っぱるだけで超スピードで紙飛行機をとばせちゃう発明品！",
+			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
+		],
+		"en": [
+			"• For you who want to fly paper airplanes quickly and coolly!",
+			"• Super launcher that lets you fly paper airplanes over long distances and super speed!",
+			"• The paper airplane launcher that appears on the TV program \"Pochitto Invention Pikachin Kit\" has been commercialized!",
+			"• An invention that allows you to fly a paper airplane at super speed just by aiming and pulling the bar!",
+			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
+		]
+	},
+	"contents": {
+		"ja": [
+			"紙飛行機ランチャー…1（成形品…5）",
+			"紙飛行機ペーパー…1",
+			"輪ゴム…3",
+			"ピカちんQRコードステッカー…1",
+			"取扱説明書…1",
+			"ピカちんシート…1"
+		],
+		"en": [
+			"Paper airplane launcher...1 (molded product...5)",
+			"Paper airplane paper...1",
+			"rubber band...3",
+			"Pikachin QR code Sticker...1",
+			"Handling Manual...1",
+			"Pikachin sheet...1"
+		]
+	},
 	"images": [
 		"/images/items/01_1333_0.jpg",
 		"/images/items/01_1333_1.jpg",
@@ -77,16 +62,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_1333/",
 	"extractedAt": "2025-12-06T17:14:32.025Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2605", "01_2606", "01_2607", "01_2545"]
 }

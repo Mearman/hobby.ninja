@@ -18,51 +18,31 @@
 		"day": 13
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "「ファンタジー」をモチーフにした武装セットがカスタマイズウェポンズにラインアップ！",
-			"en": "Armed sets with a \"fantasy\" motif are now available in the Customized Weapons lineup!"
-		},
-		{
-			"ja": "■鎖鎌、ハンマー、合体銃などのセット。",
-			"en": "• A set of Kusarigama, Hammer, Combined Gun, etc."
-		},
-		{
-			"ja": "■先端パーツを組み替えでハンマーや、スピアなどの武装にカスタマイズできる。",
-			"en": "• The tip parts can be rearranged to customize weapons such as hammers and spears."
-		},
-		{
-			"ja": "■銃はカスタマイズすることで、大型の合体銃から小型のハンドガンまで組み合わせ可能。",
-			"en": "• Guns can be customized to combine everything from large combined guns to small handguns."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "鎖鎌×1",
-			"en": "Kusarigama×1"
-		},
-		{
-			"ja": "モーニングスター×１",
-			"en": "Morning star x1"
-		},
-		{
-			"ja": "銃×1",
-			"en": "Gun x 1"
-		},
-		{
-			"ja": "銃カスタマイズパーツ×1式",
-			"en": "Gun customization parts x 1 set"
-		},
-		{
-			"ja": "ハンマー×1",
-			"en": "Hammer x 1"
-		},
-		{
-			"ja": "リード線×1",
-			"en": "Lead wire x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"「ファンタジー」をモチーフにした武装セットがカスタマイズウェポンズにラインアップ！",
+			"■鎖鎌、ハンマー、合体銃などのセット。",
+			"■先端パーツを組み替えでハンマーや、スピアなどの武装にカスタマイズできる。",
+			"■銃はカスタマイズすることで、大型の合体銃から小型のハンドガンまで組み合わせ可能。"
+		],
+		"en": [
+			"Armed sets with a \"fantasy\" motif are now available in the Customized Weapons lineup!",
+			"• A set of Kusarigama, Hammer, Combined Gun, etc.",
+			"• The tip parts can be rearranged to customize weapons such as hammers and spears.",
+			"• Guns can be customized to combine everything from large combined guns to small handguns."
+		]
+	},
+	"accessories": {
+		"ja": ["鎖鎌×1", "モーニングスター×１", "銃×1", "銃カスタマイズパーツ×1式", "ハンマー×1", "リード線×1"],
+		"en": [
+			"Kusarigama×1",
+			"Morning star x1",
+			"Gun x 1",
+			"Gun customization parts x 1 set",
+			"Hammer x 1",
+			"Lead wire x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_3658_0.jpg",
 		"/images/items/01_3658_1.jpg",
@@ -73,19 +53,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3658/",
 	"extractedAt": "2025-12-06T17:51:55.474Z",
-	"brandIds": [
-		"customized-scene-baseeffectsmaterialsweapons",
-		"30-minutes-missions"
-	],
+	"brandIds": ["customized-scene-baseeffectsmaterialsweapons", "30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3730"
 }

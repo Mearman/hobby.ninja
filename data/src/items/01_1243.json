@@ -18,72 +18,46 @@
 		"day": 24
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• 「歴戦の老将軍」黄蓋グフが装いを新たに再キット化！",
-			"en": "• \"The veteran general\" Hwang Gai Gouf has been re-kitted with a new look!"
-		},
-		{
-			"ja": "• 一部にメタリックグロスインジェクションが使用され、高級感のある本体色に変更されている！",
-			"en": "• Metallic gloss injection is used in some parts and the color of the main body has been changed to give it a luxurious feel!"
-		},
-		{
-			"ja": "• メタリック成形の合体武装6種（乙）が付属し、「典韋アッシマー 賈詡アシュタロン 攻城兵器セット＆合体武装6種（甲）」付属の（甲）と組み合わせることで12合体巨大武装を再現できる！",
-			"en": "• Metallic molded 6 types of combined weapons (Part 2) are included, and by combining them with the ``Dian Wei Assimar Jia Xu Ashtalon Siege Weapon Set & 6 types of combined weapons (Part 1)'' included (Part 1), you can recreate 12 combined huge weapons!"
-		},
-		{
-			"ja": "• パッケージイラストは新規描き起こし！",
-			"en": "• The package illustration is newly drawn!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "虎爪盾×1",
-			"en": "Tiger claw shield x1"
-		},
-		{
-			"ja": "鉄砕鞭×1",
-			"en": "Iron crushing whip×1"
-		},
-		{
-			"ja": "五ノ刃　五虎刃×1",
-			"en": "Five Blades Five Tiger Blades x 1"
-		},
-		{
-			"ja": "六ノ鋸　六道鋸×1",
-			"en": "Rokunosaw Rokudo saw × 1"
-		},
-		{
-			"ja": "七ノ輪　七賢輪×1",
-			"en": "Seven Rings Seven Kenrin×1"
-		},
-		{
-			"ja": "八ノ杖　八校杖×1",
-			"en": "Eight Canes Eight School Canes x1"
-		},
-		{
-			"ja": "十一ノ甲　十一海甲×1",
-			"en": "Eleven Sea Shells Eleven Sea Shells x 1"
-		},
-		{
-			"ja": "十二ノ盾　十二天盾×1",
-			"en": "Twelve Shields Twelve Heavenly Shields x1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×6",
-			"en": "Molded product x 6"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• 「歴戦の老将軍」黄蓋グフが装いを新たに再キット化！",
+			"• 一部にメタリックグロスインジェクションが使用され、高級感のある本体色に変更されている！",
+			"• メタリック成形の合体武装6種（乙）が付属し、「典韋アッシマー 賈詡アシュタロン 攻城兵器セット＆合体武装6種（甲）」付属の（甲）と組み合わせることで12合体巨大武装を再現できる！",
+			"• パッケージイラストは新規描き起こし！"
+		],
+		"en": [
+			"• \"The veteran general\" Hwang Gai Gouf has been re-kitted with a new look!",
+			"• Metallic gloss injection is used in some parts and the color of the main body has been changed to give it a luxurious feel!",
+			"• Metallic molded 6 types of combined weapons (Part 2) are included, and by combining them with the ``Dian Wei Assimar Jia Xu Ashtalon Siege Weapon Set & 6 types of combined weapons (Part 1)'' included (Part 1), you can recreate 12 combined huge weapons!",
+			"• The package illustration is newly drawn!"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"虎爪盾×1",
+			"鉄砕鞭×1",
+			"五ノ刃　五虎刃×1",
+			"六ノ鋸　六道鋸×1",
+			"七ノ輪　七賢輪×1",
+			"八ノ杖　八校杖×1",
+			"十一ノ甲　十一海甲×1",
+			"十二ノ盾　十二天盾×1"
+		],
+		"en": [
+			"Tiger claw shield x1",
+			"Iron crushing whip×1",
+			"Five Blades Five Tiger Blades x 1",
+			"Rokunosaw Rokudo saw × 1",
+			"Seven Rings Seven Kenrin×1",
+			"Eight Canes Eight School Canes x1",
+			"Eleven Sea Shells Eleven Sea Shells x 1",
+			"Twelve Shields Twelve Heavenly Shields x1"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×6", "シール×1", "取扱説明書×1"],
+		"en": ["Molded product x 6", "Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1243_0.jpg",
 		"/images/items/01_1243_1.jpg",
@@ -94,17 +68,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1243/",
 	"extractedAt": "2025-12-06T17:02:52.909Z",
-	"brandIds": [
-		"sd-gundam-bb-warrior"
-	],
+	"brandIds": ["sd-gundam-bb-warrior"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

@@ -18,48 +18,26 @@
 		"day": 11
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• 真駆参大将軍の先祖がLEGENDBB化！",
-			"en": "• Ancestors of Shinkokusan Taishogun are now LEGENDBB!"
-		},
-		{
-			"ja": "• 真悪参が持ち出した頑駄無軍団の秘宝「銀の楯」と「銀狼剣」は新規造形となっており、「銀狼剣」は「銀の楯」に収納することができる！",
-			"en": "• The secret treasures of the Gundam Corps that Shinakusan brought out, the \"Silver Shield \" and the \" Ginro Sword \", are new models, and the \" Ginro Sword \" can be stored in the \" Silver Shield\"!"
-		},
-		{
-			"ja": "• 「三叉の槍」も付属し、幅広い可動範囲で特徴的なポージングが可能！",
-			"en": "• A \"three-pronged spear\" is also included, allowing for distinctive poses with a wide range of motion!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "銀狼剣×１",
-			"en": "Silver wolf sword x1"
-		},
-		{
-			"ja": "銀の楯×１",
-			"en": "Silver shield x1"
-		},
-		{
-			"ja": "三叉の槍×１",
-			"en": "Trident spear x1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×9",
-			"en": "Molded product x 9"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• 真駆参大将軍の先祖がLEGENDBB化！",
+			"• 真悪参が持ち出した頑駄無軍団の秘宝「銀の楯」と「銀狼剣」は新規造形となっており、「銀狼剣」は「銀の楯」に収納することができる！",
+			"• 「三叉の槍」も付属し、幅広い可動範囲で特徴的なポージングが可能！"
+		],
+		"en": [
+			"• Ancestors of Shinkokusan Taishogun are now LEGENDBB!",
+			"• The secret treasures of the Gundam Corps that Shinakusan brought out, the \"Silver Shield \" and the \" Ginro Sword \", are new models, and the \" Ginro Sword \" can be stored in the \" Silver Shield\"!",
+			"• A \"three-pronged spear\" is also included, allowing for distinctive poses with a wide range of motion!"
+		]
+	},
+	"accessories": {
+		"ja": ["銀狼剣×１", "銀の楯×１", "三叉の槍×１"],
+		"en": ["Silver wolf sword x1", "Silver shield x1", "Trident spear x1"]
+	},
+	"contents": {
+		"ja": ["成形品×9", "シール×1", "取扱説明書×1"],
+		"en": ["Molded product x 9", "Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1155_0.jpg",
 		"/images/items/01_1155_1.jpg",
@@ -71,15 +49,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1155/",
 	"extractedAt": "2025-12-06T16:56:39.119Z",
-	"brandIds": [
-		"sd-gundam-bb-warrior"
-	],
+	"brandIds": ["sd-gundam-bb-warrior"],
 	"seriesIds": [],
 	"categoryIds": [],
-	"relatedItemIds": [
-		"01_5456",
-		"01_5442",
-		"01_5395",
-		"01_5378"
-	]
+	"relatedItemIds": ["01_5456", "01_5442", "01_5395", "01_5378"]
 }

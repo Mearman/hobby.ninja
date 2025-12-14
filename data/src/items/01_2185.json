@@ -19,72 +19,42 @@
 	},
 	"targetAge": 15,
 	"scale": "1/12",
-	"description": [
-		{
-			"ja": "「月刊ヒーローズ」で連載中の『ULTRAMAN』より「ULTRAMAN SUIT A」がFigure-rise Standardに登場！",
-			"en": "\"ULTRAMAN SUIT A \" from \" ULTRAMAN \" currently being serialized in \" Heroes\" is now available in Figure-rise Standard!"
-		},
-		{
-			"ja": "• 本体表面の銀色はエクストラフィニッシュ、赤色はグロスインジェクションで質感を再現。",
-			"en": "• The silver color on the main body surface is extra finish, and the red color is gloss injection to reproduce the texture."
-		},
-		{
-			"ja": "• ボディに収めることができるLEDユニットが付属。目と胸のS.S.Cジェネレーターを光らせることができる。",
-			"en": "• Comes with an LED unit that can be stored in the body. The eyes and chest S.S.C generator can be made to glow."
-		},
-		{
-			"ja": "• 胸のS.S.Cジェネレーターは青と赤の２色を再現。",
-			"en": "• The S.S.C generator on the chest reproduces two colors: blue and red."
-		},
-		{
-			"ja": "• バーチカルギロチンのエフェクトパーツが付属。",
-			"en": "• Vertical guillotine effect parts are included."
-		},
-		{
-			"ja": "• 原作者・清水栄一氏によるオリジナルデザインのガントレットがオリジナルの武器パーツとして付属。",
-			"en": "• A gauntlet originally designed by the original author Eiichi Shimizu is included as an original weapon part."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "オリジナル武器ガントレット×2",
-			"en": "Original weapon gauntlet x2"
-		},
-		{
-			"ja": "バーチカルギロチンエフェクトパーツ×1",
-			"en": "Vertical guillotine effect parts x 1"
-		},
-		{
-			"ja": "ビーム発生装置パーツ×1",
-			"en": "Beam generator parts x 1"
-		},
-		{
-			"ja": "ディスプレイ台座×1",
-			"en": "Display pedestal x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成型品×9",
-			"en": "Molded product x 9"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "LEDユニット×1",
-			"en": "LED unit x 1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"「月刊ヒーローズ」で連載中の『ULTRAMAN』より「ULTRAMAN SUIT A」がFigure-rise Standardに登場！",
+			"• 本体表面の銀色はエクストラフィニッシュ、赤色はグロスインジェクションで質感を再現。",
+			"• ボディに収めることができるLEDユニットが付属。目と胸のS.S.Cジェネレーターを光らせることができる。",
+			"• 胸のS.S.Cジェネレーターは青と赤の２色を再現。",
+			"• バーチカルギロチンのエフェクトパーツが付属。",
+			"• 原作者・清水栄一氏によるオリジナルデザインのガントレットがオリジナルの武器パーツとして付属。"
+		],
+		"en": [
+			"\"ULTRAMAN SUIT A \" from \" ULTRAMAN \" currently being serialized in \" Heroes\" is now available in Figure-rise Standard!",
+			"• The silver color on the main body surface is extra finish, and the red color is gloss injection to reproduce the texture.",
+			"• Comes with an LED unit that can be stored in the body. The eyes and chest S.S.C generator can be made to glow.",
+			"• The S.S.C generator on the chest reproduces two colors: blue and red.",
+			"• Vertical guillotine effect parts are included.",
+			"• A gauntlet originally designed by the original author Eiichi Shimizu is included as an original weapon part."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"オリジナル武器ガントレット×2",
+			"バーチカルギロチンエフェクトパーツ×1",
+			"ビーム発生装置パーツ×1",
+			"ディスプレイ台座×1"
+		],
+		"en": [
+			"Original weapon gauntlet x2",
+			"Vertical guillotine effect parts x 1",
+			"Beam generator parts x 1",
+			"Display pedestal x 1"
+		]
+	},
+	"contents": {
+		"ja": ["成型品×9", "ホイルシール×1", "マーキングシール×1", "LEDユニット×1", "取扱説明書×1"],
+		"en": ["Molded product x 9", "Foil Seal×1", "MarkingSeal×1", "LED unit x 1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2185_0.jpg",
 		"/images/items/01_2185_1.jpg",
@@ -99,19 +69,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2185/",
 	"extractedAt": "2025-12-06T17:48:50.381Z",
-	"brandIds": [
-		"figure-rise-standard"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5371",
-		"01_5198",
-		"01_5096",
-		"01_5046"
-	]
+	"brandIds": ["figure-rise-standard"],
+	"seriesIds": ["ultraman"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
 }

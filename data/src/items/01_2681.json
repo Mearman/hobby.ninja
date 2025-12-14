@@ -19,51 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動戦士ガンダム 鉄血のオルフェンズ』シリーズより、「HG 1/144 ガンダムマルコシアス」が商品化！",
-			"en": "From the \"Mobile Suit Gundam Iron-Blooded Orphans \" series, \" HG 1/144 Gundam Marcosias\" is commercialized!"
-		},
-		{
-			"ja": "厄祭戦の最中に失われたと思われる幻の機体。マルコシアスの最大の特徴は背部と腰部に装備した計4枚のバインダー。これらはすべてサブアームとして機能し、人型の形状を持たないMAとのあらゆる戦闘に対処するために設計されたと言われる。",
-			"en": "A phantom machine that is thought to have been lost during the Battle of Calamity. Marcosias' biggest feature is a total of four binders attached to his back and waist. All of these function as sub-arms, and are said to be designed to deal with any type of battle against MA, which does not have a humanoid shape."
-		},
-		{
-			"ja": "• バスタードメイスは鞘自体に重量を持たせメイスとしても使用可能なマルコシアスの主力武装。",
-			"en": "• The Bastard Mace is Marcosias' main weapon, which has a weight in its scabbard and can be used as a mace."
-		},
-		{
-			"ja": "• 背部と腰部にある４枚のバインダーには、サブアームと短剣が収納されている。",
-			"en": "• The four binders on the back and waist store the sub-arm and dagger."
-		},
-		{
-			"ja": "• 腕部装甲は、打撃武装としても有用であり、反転させることでクローとしても使用可能。",
-			"en": "• The arm armor is also useful as a striking weapon, and can be reversed to be used as a claw."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "バスタードメイス×１",
-			"en": "Bastard Mace x1"
-		},
-		{
-			"ja": "短剣×４",
-			"en": "Dagger x 4"
-		},
-		{
-			"ja": "シールド×１",
-			"en": "Seal de x1"
-		},
-		{
-			"ja": "ナックルガード×２",
-			"en": "Knuckle guard x 2"
-		},
-		{
-			"ja": "ホイルシール×１",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士ガンダム 鉄血のオルフェンズ』シリーズより、「HG 1/144 ガンダムマルコシアス」が商品化！",
+			"厄祭戦の最中に失われたと思われる幻の機体。マルコシアスの最大の特徴は背部と腰部に装備した計4枚のバインダー。これらはすべてサブアームとして機能し、人型の形状を持たないMAとのあらゆる戦闘に対処するために設計されたと言われる。",
+			"• バスタードメイスは鞘自体に重量を持たせメイスとしても使用可能なマルコシアスの主力武装。",
+			"• 背部と腰部にある４枚のバインダーには、サブアームと短剣が収納されている。",
+			"• 腕部装甲は、打撃武装としても有用であり、反転させることでクローとしても使用可能。"
+		],
+		"en": [
+			"From the \"Mobile Suit Gundam Iron-Blooded Orphans \" series, \" HG 1/144 Gundam Marcosias\" is commercialized!",
+			"A phantom machine that is thought to have been lost during the Battle of Calamity. Marcosias' biggest feature is a total of four binders attached to his back and waist. All of these function as sub-arms, and are said to be designed to deal with any type of battle against MA, which does not have a humanoid shape.",
+			"• The Bastard Mace is Marcosias' main weapon, which has a weight in its scabbard and can be used as a mace.",
+			"• The four binders on the back and waist store the sub-arm and dagger.",
+			"• The arm armor is also useful as a striking weapon, and can be reversed to be used as a claw."
+		]
+	},
+	"accessories": {
+		"ja": ["バスタードメイス×１", "短剣×４", "シールド×１", "ナックルガード×２", "ホイルシール×１"],
+		"en": ["Bastard Mace x1", "Dagger x 4", "Seal de x1", "Knuckle guard x 2", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_2681_0.jpg",
 		"/images/items/01_2681_1.jpg",
@@ -75,20 +50,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2681/",
 	"extractedAt": "2025-12-06T17:49:52.909Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-iron-blooded-orphans"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4103",
-		"01_4240",
-		"01_4188",
-		"01_4094"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-iron-blooded-orphans"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4103", "01_4240", "01_4188", "01_4094"],
 	"manualId": "0805"
 }

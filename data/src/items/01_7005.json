@@ -17,96 +17,45 @@
 		"month": 0
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「ネクロスナイト」が登場！",
-			"en": "\"Necros Knight \" is now available from \" 30 MINUTES FANTASY\", where you can create your own fantasy job!"
-		},
-		{
-			"ja": "■CLASSⅢ、禍々しい呪詛の力を秘めた巨大な鎌を振るう死の騎士。",
-			"en": "• CLASS III, a death knight who wields a gigantic scythe with the power of a sinister curse."
-		},
-		{
-			"ja": "■ベースとなる“シルエット”［素体］の他にアーマー・武装パーツがひとつになったスターターセット。",
-			"en": "• A starter set that includes armor and armed parts in addition to the base \"silhouette\" [elementary body]."
-		},
-		{
-			"ja": "■別売りの「30MF ローザンナイト」と同様のフォルムの“シルエット”［素体］が付属。",
-			"en": "• A “silhouette” [body] with the same form as the separately sold “30MF Rose Night” is included."
-		},
-		{
-			"ja": "■“シルエット”［素体］は人間のような柔軟性のあるアクションが可能であらゆるジョブに適応。",
-			"en": "• The “silhouette” [elementary body] is capable of flexible human-like actions and is adaptable to any job."
-		},
-		{
-			"ja": "■頭部・首に可動軸を設けることで顎を引く、顔を突き出すなどの演出が可能。",
-			"en": "• By providing movable axes in the head and neck, it is possible to pull the chin, stick out the face, etc."
-		},
-		{
-			"ja": "■肩関節は、こだわりの構造により大胆なポージングでも身体のラインが崩れない。",
-			"en": "• The shoulder joint has a carefully designed structure that maintains the body's line even in bold poses."
-		},
-		{
-			"ja": "■胸・胴・腰の可動軸と腰ジョイントの根元のスライド機構が連動し、自然なポージングを実現。",
-			"en": "• The movable axes of the chest, torso, and waist work together with the sliding mechanism at the base of the waist joint to create natural poses."
-		},
-		{
-			"ja": "■“シルエット”［素体］と組み合わせ「ネクロスナイト」へ“ジョブチェンジ”するためのアーマー・武装パーツが付属。",
-			"en": "• Comes with armor and armed parts to “job change” to “Necros Knight” in combination with “Silhouette” [base body]."
-		},
-		{
-			"ja": "■武装には「大剣」「大鎌」が付属。",
-			"en": "• A large sword and a large scythe are included as weapons."
-		},
-		{
-			"ja": "■肩や腰アーマーの取り付けを背中のジョイントを経由する機構にすることで、フレキシブルな可動を実現。",
-			"en": "• Flexible movement is achieved by attaching the shoulder and waist armor via the joints on the back."
-		},
-		{
-			"ja": "■“エレメントコア”の属性は「無」。",
-			"en": "• The attribute of “Element Core” is “None”."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "大剣×1",
-			"en": "Great sword x1"
-		},
-		{
-			"ja": "大鎌×1",
-			"en": "Scythe×1"
-		},
-		{
-			"ja": "アーマーパーツ×1式",
-			"en": "Armor parts x 1 set"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
-	"images": [
-		"/images/items/01_7005_0.jpg",
-		"/images/items/01_7005_1.jpg"
-	],
+	"description": {
+		"ja": [
+			"自分だけのファンタジージョブを創り出すことが出来る『30 MINUTES FANTASY』より、「ネクロスナイト」が登場！",
+			"■CLASSⅢ、禍々しい呪詛の力を秘めた巨大な鎌を振るう死の騎士。",
+			"■ベースとなる“シルエット”［素体］の他にアーマー・武装パーツがひとつになったスターターセット。",
+			"■別売りの「30MF ローザンナイト」と同様のフォルムの“シルエット”［素体］が付属。",
+			"■“シルエット”［素体］は人間のような柔軟性のあるアクションが可能であらゆるジョブに適応。",
+			"■頭部・首に可動軸を設けることで顎を引く、顔を突き出すなどの演出が可能。",
+			"■肩関節は、こだわりの構造により大胆なポージングでも身体のラインが崩れない。",
+			"■胸・胴・腰の可動軸と腰ジョイントの根元のスライド機構が連動し、自然なポージングを実現。",
+			"■“シルエット”［素体］と組み合わせ「ネクロスナイト」へ“ジョブチェンジ”するためのアーマー・武装パーツが付属。",
+			"■武装には「大剣」「大鎌」が付属。",
+			"■肩や腰アーマーの取り付けを背中のジョイントを経由する機構にすることで、フレキシブルな可動を実現。",
+			"■“エレメントコア”の属性は「無」。"
+		],
+		"en": [
+			"\"Necros Knight \" is now available from \" 30 MINUTES FANTASY\", where you can create your own fantasy job!",
+			"• CLASS III, a death knight who wields a gigantic scythe with the power of a sinister curse.",
+			"• A starter set that includes armor and armed parts in addition to the base \"silhouette\" [elementary body].",
+			"• A “silhouette” [body] with the same form as the separately sold “30MF Rose Night” is included.",
+			"• The “silhouette” [elementary body] is capable of flexible human-like actions and is adaptable to any job.",
+			"• By providing movable axes in the head and neck, it is possible to pull the chin, stick out the face, etc.",
+			"• The shoulder joint has a carefully designed structure that maintains the body's line even in bold poses.",
+			"• The movable axes of the chest, torso, and waist work together with the sliding mechanism at the base of the waist joint to create natural poses.",
+			"• Comes with armor and armed parts to “job change” to “Necros Knight” in combination with “Silhouette” [base body].",
+			"• A large sword and a large scythe are included as weapons.",
+			"• Flexible movement is achieved by attaching the shoulder and waist armor via the joints on the back.",
+			"• The attribute of “Element Core” is “None”."
+		]
+	},
+	"accessories": {
+		"ja": ["大剣×1", "大鎌×1", "アーマーパーツ×1式", "ハンドパーツ×1式", "ジョイントパーツ×1式"],
+		"en": ["Great sword x1", "Scythe×1", "Armor parts x 1 set", "Hand parts x 1 set", "Joint parts x 1 set"]
+	},
+	"images": ["/images/items/01_7005_0.jpg", "/images/items/01_7005_1.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_7005/",
 	"extractedAt": "2025-12-06T17:58:20.547Z",
-	"brandIds": [
-		"30-minutes-fantasy"
-	],
+	"brandIds": ["30-minutes-fantasy"],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7024",
-		"01_7025",
-		"01_7026",
-		"01_7007"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7024", "01_7025", "01_7026", "01_7007"]
 }

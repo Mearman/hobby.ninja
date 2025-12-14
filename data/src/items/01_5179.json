@@ -19,39 +19,28 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MM カラバリグランプリより、投票上位アイテムの「レヴェルノヴァ [ブラウン]」が登場！",
-			"en": "From the 30MM Color Variation Grand Prix, the top voted item \"Level Nova [Brown]\" is now available!"
-		},
-		{
-			"ja": "• 重装甲の機体を支える大ボリュームの脚部。",
-			"en": "• Large volume legs that support the heavily armored aircraft."
-		},
-		{
-			"ja": "• 腰部に可動式のフロントアーマーを採用。",
-			"en": "• Adopts a movable front armor at the waist."
-		},
-		{
-			"ja": "• 武装は高出力ライフルが付属。",
-			"en": "• Armed with a high-power rifle."
-		},
-		{
-			"ja": "• 量産機同士の合体機構を搭載。別売りの「ガルドノヴァ」と合体すれば、重装甲機体を組み合わせて更に大型機体に。",
-			"en": "• Equipped with a mechanism for combining mass-produced machines. If you combine it with \"Gardonova\" (sold separately), you can combine a heavily armored aircraft to create an even larger aircraft."
-		},
-		{
-			"ja": "• 既存機体やオプションパーツとのカスタマイズも可能。",
-			"en": "• Can also be customized with existing aircraft and optional parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "高出力ライフル×1",
-			"en": "High power rifle x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MM カラバリグランプリより、投票上位アイテムの「レヴェルノヴァ [ブラウン]」が登場！",
+			"• 重装甲の機体を支える大ボリュームの脚部。",
+			"• 腰部に可動式のフロントアーマーを採用。",
+			"• 武装は高出力ライフルが付属。",
+			"• 量産機同士の合体機構を搭載。別売りの「ガルドノヴァ」と合体すれば、重装甲機体を組み合わせて更に大型機体に。",
+			"• 既存機体やオプションパーツとのカスタマイズも可能。"
+		],
+		"en": [
+			"From the 30MM Color Variation Grand Prix, the top voted item \"Level Nova [Brown]\" is now available!",
+			"• Large volume legs that support the heavily armored aircraft.",
+			"• Adopts a movable front armor at the waist.",
+			"• Armed with a high-power rifle.",
+			"• Equipped with a mechanism for combining mass-produced machines. If you combine it with \"Gardonova\" (sold separately), you can combine a heavily armored aircraft to create an even larger aircraft.",
+			"• Can also be customized with existing aircraft and optional parts."
+		]
+	},
+	"accessories": {
+		"ja": ["高出力ライフル×1"],
+		"en": ["High power rifle x 1"]
+	},
 	"images": [
 		"/images/items/01_5179_0.jpg",
 		"/images/items/01_5179_1.jpg",
@@ -64,18 +53,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5179/",
 	"extractedAt": "2025-12-06T17:55:21.006Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3778"
 }

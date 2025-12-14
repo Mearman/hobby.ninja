@@ -18,36 +18,21 @@
 	},
 	"targetAge": 15,
 	"scale": "1/100",
-	"description": [
-		{
-			"ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
-			"en": "Event-limited Gunpla sold at various event venues."
-		},
-		{
-			"ja": "MG ダブルオーガンダム セブンソード/G がイベント限定のクリアカラーで登場！",
-			"en": "MG 00 Gundam Seven Sword/G is now available in event-limited clear color!"
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_1952_0.jpg"
-	],
+	"description": {
+		"ja": [
+			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
+			"MG ダブルオーガンダム セブンソード/G がイベント限定のクリアカラーで登場！"
+		],
+		"en": [
+			"Event-limited Gunpla sold at various event venues.",
+			"MG 00 Gundam Seven Sword/G is now available in event-limited clear color!"
+		]
+	},
+	"images": ["/images/items/01_1952_0.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1952/",
 	"extractedAt": "2025-12-06T17:48:25.952Z",
-	"brandIds": [
-		"mg-master-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-00-double-o"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216602",
-		"01_5526",
-		"01_5102",
-		"01_4422"
-	]
+	"brandIds": ["mg-master-grade"],
+	"seriesIds": ["mobile-suit-gundam-00-double-o"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216602", "01_5526", "01_5102", "01_4422"]
 }

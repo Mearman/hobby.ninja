@@ -18,55 +18,40 @@
 		"day": 27
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "• 組み立て易さ、作業導線を意識し、「最適」を追求したランナーのパーツ配置により、スムーズな組み立てが可能。",
-			"en": "• Smooth assembly is possible due to the ``optimum'' Runner parts arrangement, with consideration for ease of assembly and work flow."
-		},
-		{
-			"ja": "• 印刷されていないフェイスパーツ２個に加え、頭部パーツ(FP-I型)が２種類付属。「30 MINUTES SISTERS 水転写式デカール 汎用」(別売り)との組み合わせで表情豊かなキャラメイキングを実現！",
-			"en": "• In addition to 2 unprinted face parts, 2 types of head parts (FP-I type) are included. In combination with \"30 MINUTES SISTERS Water Transfer Decal General Purpose\" (sold separately), you can create expressive characters!"
-		},
-		{
-			"ja": "• ヘアスタイルパーツとヘッドギアパーツが付属。",
-			"en": "• Hairstyle parts and headgear parts are included."
-		},
-		{
-			"ja": "• 「30 MINUTES SISTERS」はフェイスパーツ/ヘアスタイルパーツ/ボディパーツを部位ごとにラインアップ展開。別売りのパーツと組み替えて自分好みのシスターを創ることができる。",
-			"en": "• \"30 MINUTES SISTERS\" offers a lineup of face parts, hairstyle parts, and body parts by body part. You can create your own sister by combining parts sold separately."
-		},
-		{
-			"ja": "• 30 MINUTESシリーズ共通の3mmジョイントを採用。「30 MINUTES MISSIONS」のパーツもオプションとして装着が可能。(※「30 MINUTES MISSIONS」キットの対象年齢は8才以上です)",
-			"en": "• Adopts a 3mm joint common to the 30 MINUTES series. \"30 MINUTES MISSIONS \" parts can also be installed as options. (*\" 30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ボディパーツ×1式",
-			"en": "Body parts x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		},
-		{
-			"ja": "無塗装フェイスパーツ×2",
-			"en": "Unpainted face parts x 2"
-		},
-		{
-			"ja": "頭部パーツ×2種",
-			"en": "Head parts x 2 types"
-		},
-		{
-			"ja": "ヘアスタイルパーツ×1",
-			"en": "Hair style parts x 1"
-		},
-		{
-			"ja": "首パーツ×1式",
-			"en": "Neck parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• 組み立て易さ、作業導線を意識し、「最適」を追求したランナーのパーツ配置により、スムーズな組み立てが可能。",
+			"• 印刷されていないフェイスパーツ２個に加え、頭部パーツ(FP-I型)が２種類付属。「30 MINUTES SISTERS 水転写式デカール 汎用」(別売り)との組み合わせで表情豊かなキャラメイキングを実現！",
+			"• ヘアスタイルパーツとヘッドギアパーツが付属。",
+			"• 「30 MINUTES SISTERS」はフェイスパーツ/ヘアスタイルパーツ/ボディパーツを部位ごとにラインアップ展開。別売りのパーツと組み替えて自分好みのシスターを創ることができる。",
+			"• 30 MINUTESシリーズ共通の3mmジョイントを採用。「30 MINUTES MISSIONS」のパーツもオプションとして装着が可能。(※「30 MINUTES MISSIONS」キットの対象年齢は8才以上です)"
+		],
+		"en": [
+			"• Smooth assembly is possible due to the ``optimum'' Runner parts arrangement, with consideration for ease of assembly and work flow.",
+			"• In addition to 2 unprinted face parts, 2 types of head parts (FP-I type) are included. In combination with \"30 MINUTES SISTERS Water Transfer Decal General Purpose\" (sold separately), you can create expressive characters!",
+			"• Hairstyle parts and headgear parts are included.",
+			"• \"30 MINUTES SISTERS\" offers a lineup of face parts, hairstyle parts, and body parts by body part. You can create your own sister by combining parts sold separately.",
+			"• Adopts a 3mm joint common to the 30 MINUTES series. \"30 MINUTES MISSIONS \" parts can also be installed as options. (*\" 30 MINUTES MISSIONS\" Kit is for ages 8 and up)"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ボディパーツ×1式",
+			"ジョイントパーツ×1式",
+			"無塗装フェイスパーツ×2",
+			"頭部パーツ×2種",
+			"ヘアスタイルパーツ×1",
+			"首パーツ×1式"
+		],
+		"en": [
+			"Body parts x 1 set",
+			"Joint parts x 1 set",
+			"Unpainted face parts x 2",
+			"Head parts x 2 types",
+			"Hair style parts x 1",
+			"Neck parts x 1 set"
+		]
+	},
 	"images": [
 		"/images/items/01_5231_0.jpg",
 		"/images/items/01_5231_1.jpg",
@@ -83,18 +68,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5231/",
 	"extractedAt": "2025-12-06T17:55:28.513Z",
-	"brandIds": [
-		"30-minutes-sisters"
-	],
+	"brandIds": ["30-minutes-sisters"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manualId": "3587"
 }

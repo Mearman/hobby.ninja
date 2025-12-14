@@ -19,47 +19,30 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズRe:RISE』 より、ジオン軍のエンブレムを模した大剣を携えた赤きνガンダムが登場！",
-			"en": "From \"Gundam Build Divers Re:RISE\" comes a red νGundam carrying a great sword modeled after the Zeon army emblem!"
-		},
-		{
-			"ja": "• 背部にはケープスラスターを４個装備。",
-			"en": "• Equipped with 4 cape thrusters on the back."
-		},
-		{
-			"ja": "• ジオニックソードは通常モードからボウガンモード、ビームソードモードへと変形。",
-			"en": "• Zeonic sword transforms from normal mode to bowgun mode and beam sword mode."
-		},
-		{
-			"ja": "• 別売りのスタンドで浮遊したディスプレイが可能。",
-			"en": "• A floating display is possible with the stand sold separately."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ジオニックソード×1",
-			"en": "Geonic sword x1"
-		},
-		{
-			"ja": "ビーム刃×1",
-			"en": "Beam blade x 1"
-		},
-		{
-			"ja": "スラスター×4",
-			"en": "Thruster x 4"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "専用台座（ジオニックソード用）×1",
-			"en": "Dedicated pedestal (for Zionic sword) x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズRe:RISE』 より、ジオン軍のエンブレムを模した大剣を携えた赤きνガンダムが登場！",
+			"• 背部にはケープスラスターを４個装備。",
+			"• ジオニックソードは通常モードからボウガンモード、ビームソードモードへと変形。",
+			"• 別売りのスタンドで浮遊したディスプレイが可能。"
+		],
+		"en": [
+			"From \"Gundam Build Divers Re:RISE\" comes a red νGundam carrying a great sword modeled after the Zeon army emblem!",
+			"• Equipped with 4 cape thrusters on the back.",
+			"• Zeonic sword transforms from normal mode to bowgun mode and beam sword mode.",
+			"• A floating display is possible with the stand sold separately."
+		]
+	},
+	"accessories": {
+		"ja": ["ジオニックソード×1", "ビーム刃×1", "スラスター×4", "ホイルシール×1", "専用台座（ジオニックソード用）×1"],
+		"en": [
+			"Geonic sword x1",
+			"Beam blade x 1",
+			"Thruster x 4",
+			"Foil Seal×1",
+			"Dedicated pedestal (for Zionic sword) x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_2483_0.jpg",
 		"/images/items/01_2483_1.jpg",
@@ -71,20 +54,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2483/",
 	"extractedAt": "2025-12-06T17:49:27.731Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers-rerise"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5054", "01_3562", "01_3565", "01_3291"],
 	"manualId": "0072"
 }

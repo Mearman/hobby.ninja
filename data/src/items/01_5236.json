@@ -19,55 +19,30 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "（7/5記載）諸般の都合により、商品の発売日を変更させていただきました。",
-			"en": "(Posted on 7/5) Due to various circumstances, we have changed the product release."
-		},
-		{
-			"ja": "「ガンダムビルドシリーズ」10周年記念映像『ガンダムビルドメタバース』より、三代目メイジン・カワグチが手がけた「ガンダム・アメイジングバルバトスルプス」がHGで登場！",
-			"en": "From the 10th anniversary video of the \"Gundam Build Series \" \" Gundam Build Metaverse \", \" Gundam Amazing Barbatos Lupus\" created by the third generation Meijin Kawaguchi is now available in HG!"
-		},
-		{
-			"ja": "• 本体とブースターは分離・合体が可能。ブースターとメイスの合体武器も再現できる。",
-			"en": "• The main body and booster can be separated and combined. A combined weapon of booster and mace can also be reproduced."
-		},
-		{
-			"ja": "• 背部にメイスをマウント可能。",
-			"en": "• Mace can be mounted on the back."
-		},
-		{
-			"ja": "• ブースターから分離して腕部に装着可能なクローは展開・回転ギミックを搭載。",
-			"en": "• The claw, which can be separated from the booster and attached to the arm, has an expansion and rotation gimmick."
-		},
-		{
-			"ja": "• テイルブレードはリード線で表現。",
-			"en": "• The tail blade is represented by a lead wire."
-		},
-		{
-			"ja": "• メイスはグリップが展開し射撃モードを再現可能。砲身は着脱して90度刻みに回転ができる。",
-			"en": "• The grip of the mace can be expanded to recreate shooting mode. The gun barrel can be attached and detached and rotated in 90 degree increments."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "メイス×1",
-			"en": "Mace x 1"
-		},
-		{
-			"ja": "ディスプレイ台座×1",
-			"en": "Display pedestal x 1"
-		},
-		{
-			"ja": "リード線×1",
-			"en": "Lead wire x 1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"（7/5記載）諸般の都合により、商品の発売日を変更させていただきました。",
+			"「ガンダムビルドシリーズ」10周年記念映像『ガンダムビルドメタバース』より、三代目メイジン・カワグチが手がけた「ガンダム・アメイジングバルバトスルプス」がHGで登場！",
+			"• 本体とブースターは分離・合体が可能。ブースターとメイスの合体武器も再現できる。",
+			"• 背部にメイスをマウント可能。",
+			"• ブースターから分離して腕部に装着可能なクローは展開・回転ギミックを搭載。",
+			"• テイルブレードはリード線で表現。",
+			"• メイスはグリップが展開し射撃モードを再現可能。砲身は着脱して90度刻みに回転ができる。"
+		],
+		"en": [
+			"(Posted on 7/5) Due to various circumstances, we have changed the product release.",
+			"From the 10th anniversary video of the \"Gundam Build Series \" \" Gundam Build Metaverse \", \" Gundam Amazing Barbatos Lupus\" created by the third generation Meijin Kawaguchi is now available in HG!",
+			"• The main body and booster can be separated and combined. A combined weapon of booster and mace can also be reproduced.",
+			"• Mace can be mounted on the back.",
+			"• The claw, which can be separated from the booster and attached to the arm, has an expansion and rotation gimmick.",
+			"• The tail blade is represented by a lead wire.",
+			"• The grip of the mace can be expanded to recreate shooting mode. The gun barrel can be attached and detached and rotated in 90 degree increments."
+		]
+	},
+	"accessories": {
+		"ja": ["メイス×1", "ディスプレイ台座×1", "リード線×1", "シール×1"],
+		"en": ["Mace x 1", "Display pedestal x 1", "Lead wire x 1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5236_0.jpg",
 		"/images/items/01_5236_1.jpg",
@@ -80,20 +55,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5236/",
 	"extractedAt": "2025-12-06T17:55:29.280Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-metaverse"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5235",
-		"01_5083",
-		"01_5071",
-		"01_5025"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-metaverse"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5235", "01_5083", "01_5071", "01_5025"],
 	"manualId": "1654"
 }

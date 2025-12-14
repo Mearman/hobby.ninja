@@ -18,26 +18,20 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "TVアニメ「ケロロ軍曹」に登場するちょっと陰湿な発明家“クルル曹長”がプラモデル化 。",
-			"en": "The slightly insidious inventor \"Sergeant Major Kururu \" who appears in the TV anime \" Sergeant Keroro\" has been made into a plastic model."
-		},
-		{
-			"ja": "腕と足のパーツが複数付属、差し替えでさまざまなアクションポーズを再現可能 。",
-			"en": "Multiple arm and leg parts are included, allowing you to recreate various action poses by replacing them."
-		},
-		{
-			"ja": "目は回転ギミックで表情が変化。",
-			"en": "The eyes have a rotating gimmick and their expressions change."
-		},
-		{
-			"ja": "様々な武器が付属。",
-			"en": "Comes with various weapons."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"TVアニメ「ケロロ軍曹」に登場するちょっと陰湿な発明家“クルル曹長”がプラモデル化 。",
+			"腕と足のパーツが複数付属、差し替えでさまざまなアクションポーズを再現可能 。",
+			"目は回転ギミックで表情が変化。",
+			"様々な武器が付属。"
+		],
+		"en": [
+			"The slightly insidious inventor \"Sergeant Major Kururu \" who appears in the TV anime \" Sergeant Keroro\" has been made into a plastic model.",
+			"Multiple arm and leg parts are included, allowing you to recreate various action poses by replacing them.",
+			"The eyes have a rotating gimmick and their expressions change.",
+			"Comes with various weapons."
+		]
+	},
 	"images": [
 		"/images/items/01_4958_0.jpg",
 		"/images/items/01_4958_1.jpg",
@@ -48,16 +42,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_4958/",
 	"extractedAt": "2025-12-06T17:54:48.244Z",
 	"brandIds": [],
-	"seriesIds": [
-		"sergeant-keroro"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7034",
-		"01_2120",
-		"01_2122",
-		"01_2104"
-	]
+	"seriesIds": ["sergeant-keroro"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7034", "01_2120", "01_2122", "01_2104"]
 }

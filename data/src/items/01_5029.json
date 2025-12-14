@@ -18,71 +18,48 @@
 		"day": 16
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "『魔神英雄伝ワタル』より、虎王が搭乗する魔神「邪虎丸」がラインアップ！",
-			"en": "From \"Mashin Hero Wataru \", the genie \" Jatoramaru\" piloted by Toraoh is now available!"
-		},
-		{
-			"ja": "• 原作シルエットに忠実なプロポーションを追求。",
-			"en": "• Pursuing proportions that are faithful to the original silhouette."
-		},
-		{
-			"ja": "• 一部差し替えパーツと、各所に内蔵するスライド・回転ギミックにより、「猛虎形態」への変形を実現。",
-			"en": "• Achieves transformation into a \"fierce tiger form\" with some replacement parts and sliding/rotating gimmicks built into various parts."
-		},
-		{
-			"ja": "• 肩関節の構造により、タイガーソードを引き出すポージングも再現可能。",
-			"en": "• Due to the structure of the shoulder joint, it is possible to recreate the pose of pulling out the tiger sword."
-		},
-		{
-			"ja": "• タイガーソードはタイガーシールドに収納が可能。",
-			"en": "• The Tiger Sword can be stored in the Tiger Seal."
-		},
-		{
-			"ja": "• タイガーシールドは付属の持ち手で保持と、接続パーツを使用することで腕への取り付けが可能。猛虎形態時にはシールドを背中へ接続が可能。",
-			"en": "• Tiger Seal can be held with the included handle and attached to the arm using the connecting parts. When in fierce tiger form, Seal can be connected to the back."
-		},
-		{
-			"ja": "• エビルタイガーミサイルが付属し専用台座を使用することで、発射状態でディスプレイを楽しめる。",
-			"en": "• By using the special pedestal that comes with the Evil Tiger missile, you can enjoy displaying it in its firing state."
-		},
-		{
-			"ja": "• タイガーソード、タイガーシールドなど豊富な武装に加え、各種ハンドパーツが付属。",
-			"en": "• In addition to a wide variety of weapons such as the Tiger Sword and Tiger Seal, various hand parts are included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "タイガーソード×1",
-			"en": "Tiger sword x1"
-		},
-		{
-			"ja": "タイガーシールド×1",
-			"en": "Tiger Seal × 1"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "エビルタイガーミサイル×1",
-			"en": "Evil Tiger Missile x1"
-		},
-		{
-			"ja": "エビルタイガーミサイル台座×1",
-			"en": "Evil Tiger missile pedestal x 1"
-		},
-		{
-			"ja": "猛虎形態再現パーツ×1式",
-			"en": "Fierce tiger form reproduction parts x 1 set"
-		},
-		{
-			"ja": "シールド接続パーツ×1式",
-			"en": "Seal connection parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『魔神英雄伝ワタル』より、虎王が搭乗する魔神「邪虎丸」がラインアップ！",
+			"• 原作シルエットに忠実なプロポーションを追求。",
+			"• 一部差し替えパーツと、各所に内蔵するスライド・回転ギミックにより、「猛虎形態」への変形を実現。",
+			"• 肩関節の構造により、タイガーソードを引き出すポージングも再現可能。",
+			"• タイガーソードはタイガーシールドに収納が可能。",
+			"• タイガーシールドは付属の持ち手で保持と、接続パーツを使用することで腕への取り付けが可能。猛虎形態時にはシールドを背中へ接続が可能。",
+			"• エビルタイガーミサイルが付属し専用台座を使用することで、発射状態でディスプレイを楽しめる。",
+			"• タイガーソード、タイガーシールドなど豊富な武装に加え、各種ハンドパーツが付属。"
+		],
+		"en": [
+			"From \"Mashin Hero Wataru \", the genie \" Jatoramaru\" piloted by Toraoh is now available!",
+			"• Pursuing proportions that are faithful to the original silhouette.",
+			"• Achieves transformation into a \"fierce tiger form\" with some replacement parts and sliding/rotating gimmicks built into various parts.",
+			"• Due to the structure of the shoulder joint, it is possible to recreate the pose of pulling out the tiger sword.",
+			"• The Tiger Sword can be stored in the Tiger Seal.",
+			"• Tiger Seal can be held with the included handle and attached to the arm using the connecting parts. When in fierce tiger form, Seal can be connected to the back.",
+			"• By using the special pedestal that comes with the Evil Tiger missile, you can enjoy displaying it in its firing state.",
+			"• In addition to a wide variety of weapons such as the Tiger Sword and Tiger Seal, various hand parts are included."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"タイガーソード×1",
+			"タイガーシールド×1",
+			"ハンドパーツ×1式",
+			"エビルタイガーミサイル×1",
+			"エビルタイガーミサイル台座×1",
+			"猛虎形態再現パーツ×1式",
+			"シールド接続パーツ×1式"
+		],
+		"en": [
+			"Tiger sword x1",
+			"Tiger Seal × 1",
+			"Hand parts x 1 set",
+			"Evil Tiger Missile x1",
+			"Evil Tiger missile pedestal x 1",
+			"Fierce tiger form reproduction parts x 1 set",
+			"Seal connection parts x 1 set"
+		]
+	},
 	"images": [
 		"/images/items/01_5029_0.jpg",
 		"/images/items/01_5029_1.jpg",
@@ -99,18 +76,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5029/",
 	"extractedAt": "2025-12-06T17:55:02.569Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"wataru-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"item-1000209764",
-		"item-1000184927",
-		"item-1000166277"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["wataru-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["item-1000209764", "item-1000184927", "item-1000166277"]
 }

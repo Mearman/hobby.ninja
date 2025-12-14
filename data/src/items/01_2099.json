@@ -19,40 +19,24 @@
 	},
 	"targetAge": 15,
 	"scale": "1/12",
-	"description": [
-		{
-			"ja": "デス・スターIIに配備された帝国のアストロメク・ドロイドがドロイド・コレクションにラインアップ！",
-			"en": "The Imperial astromech droid deployed on Death Star II is now available in the droid collection!"
-		},
-		{
-			"ja": "• 各エピソードのR2-D2を再現できるドロイド・アクセサリーが付属。R5-J2には、R2-D2用コンピューター・インターフェース・アーム収納ボックスが付属。",
-			"en": "• Droid Accessory that can reproduce R2-D2 from each episode is included. R5-J2 comes with a computer interface arm storage box for R2-D2."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "R2-D2用コンピューター・インターフェース・アーム収納ボックス×2",
-			"en": "Computer interface arm storage box for R2-D2 x 2"
-		},
-		{
-			"ja": "デイスプレイベース×1",
-			"en": "Display base x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×5",
-			"en": "Molded product x 5"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"デス・スターIIに配備された帝国のアストロメク・ドロイドがドロイド・コレクションにラインアップ！",
+			"• 各エピソードのR2-D2を再現できるドロイド・アクセサリーが付属。R5-J2には、R2-D2用コンピューター・インターフェース・アーム収納ボックスが付属。"
+		],
+		"en": [
+			"The Imperial astromech droid deployed on Death Star II is now available in the droid collection!",
+			"• Droid Accessory that can reproduce R2-D2 from each episode is included. R5-J2 comes with a computer interface arm storage box for R2-D2."
+		]
+	},
+	"accessories": {
+		"ja": ["R2-D2用コンピューター・インターフェース・アーム収納ボックス×2", "デイスプレイベース×1"],
+		"en": ["Computer interface arm storage box for R2-D2 x 2", "Display base x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×5", "マーキングシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 5", "MarkingSeal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2099_0.jpg",
 		"/images/items/01_2099_1.jpg",
@@ -68,16 +52,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2099/",
 	"extractedAt": "2025-12-06T17:48:39.318Z",
 	"brandIds": [],
-	"seriesIds": [
-		"star-wars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"seriesIds": ["star-wars"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4153", "01_4154", "01_3514", "01_3513"]
 }

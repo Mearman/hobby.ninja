@@ -18,67 +18,46 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "ULTRAMAN [B TYPE]が新仕様「-ACTION-」として登場！",
-			"en": "ULTRAMAN [B TYPE] is now available as a new specification \"-ACTION-\"!"
-		},
-		{
-			"ja": "• 特徴的な前かがみの構えや躍動感のあるアクションなど、自然なポージングが再現できる。",
-			"en": "• Natural poses such as the characteristic leaning forward stance and dynamic actions can be reproduced."
-		},
-		{
-			"ja": "• 首パーツがボールジョイントになったことで、頭部の回転方向の可動域が大幅に拡大。",
-			"en": "• The neck part is now a ball joint, which greatly expands the range of motion in the rotational direction of the head."
-		},
-		{
-			"ja": "• LEDを排除し、複数のボールジョイントで胸部と腹部を連結し可動させる新技術を採用することにより、ひねり方向の可動域の大幅アップに成功。",
-			"en": "• By eliminating LEDs and adopting new technology that connects and moves the chest and abdomen using multiple ball joints, we have succeeded in greatly increasing the range of motion in the twisting direction."
-		},
-		{
-			"ja": "• 足首はパーツ同士が干渉している形状を改善し、可動範囲を拡大。",
-			"en": "• The shape of the ankle where parts interfere with each other has been improved and the range of motion has been expanded."
-		},
-		{
-			"ja": "• 各種エフェクトや武装など充実のオプションパーツ付属。",
-			"en": "• Comes with a variety of optional parts such as various effects and weapons."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "クリアエフェクトパーツ",
-			"en": "clear effect parts"
-		},
-		{
-			"ja": "(スペシウムスラッシュ×２)",
-			"en": "(Specium Slash x 2)"
-		},
-		{
-			"ja": "(スペシウムブレード×２)",
-			"en": "(Specium Blade x 2)"
-		},
-		{
-			"ja": "(スペシウム光線×１)",
-			"en": "(Specium ray x 1)"
-		},
-		{
-			"ja": "オリジナル武器「マルス133改」×１",
-			"en": "Original weapon \"Marth 133 Kai\" x 1"
-		},
-		{
-			"ja": "Figure-rise Effect 台座×１",
-			"en": "Figure-rise Effect pedestal x 1"
-		},
-		{
-			"ja": "マーキングシール×１",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "ホイルシール×１",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ULTRAMAN [B TYPE]が新仕様「-ACTION-」として登場！",
+			"• 特徴的な前かがみの構えや躍動感のあるアクションなど、自然なポージングが再現できる。",
+			"• 首パーツがボールジョイントになったことで、頭部の回転方向の可動域が大幅に拡大。",
+			"• LEDを排除し、複数のボールジョイントで胸部と腹部を連結し可動させる新技術を採用することにより、ひねり方向の可動域の大幅アップに成功。",
+			"• 足首はパーツ同士が干渉している形状を改善し、可動範囲を拡大。",
+			"• 各種エフェクトや武装など充実のオプションパーツ付属。"
+		],
+		"en": [
+			"ULTRAMAN [B TYPE] is now available as a new specification \"-ACTION-\"!",
+			"• Natural poses such as the characteristic leaning forward stance and dynamic actions can be reproduced.",
+			"• The neck part is now a ball joint, which greatly expands the range of motion in the rotational direction of the head.",
+			"• By eliminating LEDs and adopting new technology that connects and moves the chest and abdomen using multiple ball joints, we have succeeded in greatly increasing the range of motion in the twisting direction.",
+			"• The shape of the ankle where parts interfere with each other has been improved and the range of motion has been expanded.",
+			"• Comes with a variety of optional parts such as various effects and weapons."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"クリアエフェクトパーツ",
+			"(スペシウムスラッシュ×２)",
+			"(スペシウムブレード×２)",
+			"(スペシウム光線×１)",
+			"オリジナル武器「マルス133改」×１",
+			"Figure-rise Effect 台座×１",
+			"マーキングシール×１",
+			"ホイルシール×１"
+		],
+		"en": [
+			"clear effect parts",
+			"(Specium Slash x 2)",
+			"(Specium Blade x 2)",
+			"(Specium ray x 1)",
+			"Original weapon \"Marth 133 Kai\" x 1",
+			"Figure-rise Effect pedestal x 1",
+			"MarkingSeal×1",
+			"Foil Seal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_2720_0.jpg",
 		"/images/items/01_2720_1.jpg",
@@ -94,19 +73,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2720/",
 	"extractedAt": "2025-12-06T17:49:57.420Z",
-	"brandIds": [
-		"figure-rise-standard"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5371",
-		"01_5198",
-		"01_5096",
-		"01_5046"
-	]
+	"brandIds": ["figure-rise-standard"],
+	"seriesIds": ["ultraman"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5371", "01_5198", "01_5096", "01_5046"]
 }

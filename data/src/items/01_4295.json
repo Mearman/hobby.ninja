@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "30MM 1/144 オプションパーツセット11(大型キャノン/アームユニット)",
-		"en": "30MM 1/144 Option parts set 11 (large cannon/arm unit)"
+		"en": "30MM 1/144 OPTION PARTS SET 11 (LARGE CANNON / ARM UNIT)"
 	},
 	"price": {
 		"amount": 968,
@@ -19,43 +19,34 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MMオプションパーツセットに、各機体へ装着可能な大型キャノン＆アームユニットが登場！",
-			"en": "A large cannon and arm unit that can be attached to each aircraft is now available in the 30MM optional parts set!"
-		},
-		{
-			"ja": "■大型キャノン、アームユニット、大型ハンドパーツ、カスタマイズヘッドパーツが付属。",
-			"en": "• Includes large cannon, arm unit, large hand parts, and customized head parts."
-		},
-		{
-			"ja": "■大型キャノン、アームユニットは、別売りの「30MM 1/144 オプションパーツセット9(大型ブースターユニット)」「30MM 1/144 オプションパーツセット10(大型プロペラントタンクユニット)」と組み合わせることで、フルアーマー形態にスタマイズが可能。",
-			"en": "• The large cannon and arm unit can be customized into full armor form by combining them with the separately sold \"30MM 1/144 Option Parts Set 9 (Large Booster Unit)\" and \" 30MM 1/144 Option Parts Set 10 (Large Propellant Tank Unit).\""
-		},
-		{
-			"ja": "■付属するカスタマイズヘッドパーツは、別売りの「30MM 1/144 オプションパーツセット6(カスタマイズヘッドA)」「30MM 1/144 オプションパーツセット7(カスタマイズヘッドB)」等のアイテムとの組み合わせが楽しめる。",
-			"en": "• The included customized head parts can be combined with items such as \"30MM 1/144 Option Parts Set 6 (Customized Head A)\" ​​and \" 30MM 1/144 Option Parts Set 7 (Customized Head B)\" which are sold separately."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "大型キャノン×１",
-			"en": "Large cannon x 1"
-		},
-		{
-			"ja": "アームユニット(左右)×１式",
-			"en": "Arm unit (left and right) x 1 set"
-		},
-		{
-			"ja": "大型ハンドパーツ平手(左右)、握り手(左右)",
-			"en": "Large hand parts Open hands (left and right), grip hands (left and right)"
-		},
-		{
-			"ja": "カスタマイズヘッドパーツ(マスク×１、ベースパーツ×２)",
-			"en": "Customized head parts (mask x 1, base parts x 2)"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MMオプションパーツセットに、各機体へ装着可能な大型キャノン＆アームユニットが登場！",
+			"■大型キャノン、アームユニット、大型ハンドパーツ、カスタマイズヘッドパーツが付属。",
+			"■大型キャノン、アームユニットは、別売りの「30MM 1/144 オプションパーツセット9(大型ブースターユニット)」「30MM 1/144 オプションパーツセット10(大型プロペラントタンクユニット)」と組み合わせることで、フルアーマー形態にスタマイズが可能。",
+			"■付属するカスタマイズヘッドパーツは、別売りの「30MM 1/144 オプションパーツセット6(カスタマイズヘッドA)」「30MM 1/144 オプションパーツセット7(カスタマイズヘッドB)」等のアイテムとの組み合わせが楽しめる。"
+		],
+		"en": [
+			"A large cannon and arm unit that can be attached to each aircraft is now available in the 30MM optional parts set!",
+			"• Includes large cannon, arm unit, large hand parts, and customized head parts.",
+			"• The large cannon and arm unit can be customized into full armor form by combining them with the separately sold \"30MM 1/144 Option Parts Set 9 (Large Booster Unit)\" and \" 30MM 1/144 Option Parts Set 10 (Large Propellant Tank Unit).\"",
+			"• The included customized head parts can be combined with items such as \"30MM 1/144 Option Parts Set 6 (Customized Head A)\" ​​and \" 30MM 1/144 Option Parts Set 7 (Customized Head B)\" which are sold separately."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"大型キャノン×１",
+			"アームユニット(左右)×１式",
+			"大型ハンドパーツ平手(左右)、握り手(左右)",
+			"カスタマイズヘッドパーツ(マスク×１、ベースパーツ×２)"
+		],
+		"en": [
+			"Large cannon x 1",
+			"Arm unit (left and right) x 1 set",
+			"Large hand parts Open hands (left and right), grip hands (left and right)",
+			"Customized head parts (mask x 1, base parts x 2)"
+		]
+	},
 	"images": [
 		"/images/items/01_4295_0.jpg",
 		"/images/items/01_4295_1.jpg",
@@ -70,18 +61,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4295/",
 	"extractedAt": "2025-12-06T17:53:22.669Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3750"
 }

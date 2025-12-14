@@ -19,40 +19,26 @@
 	},
 	"targetAge": 15,
 	"scale": "1/12",
-	"description": [
-		{
-			"ja": "『スター・ウォーズ エピソード4／新たなる希望』に登場するアストロメク・ドロイド「R2-Q2」がドロイドシリーズに登場！",
-			"en": "The astromech droid \"R2-Q2 \" that appears in \" Star Wars Episode IV: A New Hope\" is now available in the droid series!"
-		},
-		{
-			"ja": "• 特徴的な本体カラー、ディテールをパーツ分けと各部マーキングシールにより忠実に再現。",
-			"en": "• The characteristic body color and details are faithfully reproduced by dividing the parts and marking seals on each part."
-		},
-		{
-			"ja": "• 専用のディスプレイベースが付属。",
-			"en": "• A dedicated display base is included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "専用ディスプレイベース×1",
-			"en": "Dedicated display base x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成型品×5",
-			"en": "Molded product x 5"
-		},
-		{
-			"ja": "カイナスシール×1",
-			"en": "Cainus Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『スター・ウォーズ エピソード4／新たなる希望』に登場するアストロメク・ドロイド「R2-Q2」がドロイドシリーズに登場！",
+			"• 特徴的な本体カラー、ディテールをパーツ分けと各部マーキングシールにより忠実に再現。",
+			"• 専用のディスプレイベースが付属。"
+		],
+		"en": [
+			"The astromech droid \"R2-Q2 \" that appears in \" Star Wars Episode IV: A New Hope\" is now available in the droid series!",
+			"• The characteristic body color and details are faithfully reproduced by dividing the parts and marking seals on each part.",
+			"• A dedicated display base is included."
+		]
+	},
+	"accessories": {
+		"ja": ["専用ディスプレイベース×1"],
+		"en": ["Dedicated display base x 1"]
+	},
+	"contents": {
+		"ja": ["成型品×5", "カイナスシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 5", "Cainus Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2304_0.jpg",
 		"/images/items/01_2304_1.jpg",
@@ -69,16 +55,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2304/",
 	"extractedAt": "2025-12-06T17:49:05.093Z",
 	"brandIds": [],
-	"seriesIds": [
-		"star-wars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"seriesIds": ["star-wars"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4153", "01_4154", "01_3514", "01_3513"]
 }

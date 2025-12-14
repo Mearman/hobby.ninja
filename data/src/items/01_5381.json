@@ -19,43 +19,28 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "人気の30MMオプションパーツセットに、様々な機体へ取り付け可能な「ウィングユニット」が登場！",
-			"en": "A \"wing unit\" that can be attached to various aircraft is now available in the popular 30MM optional parts set!"
-		},
-		{
-			"ja": "• 連結の仕方で様々なバリエーションを生み出せる。",
-			"en": "• Various variations can be created depending on how they are connected."
-		},
-		{
-			"ja": "• 別売りの「アクションベース7」を使用することで単独で飛行している状態を再現可能。",
-			"en": "• By using \"Action Base 7\" (sold separately), it is possible to reproduce the state of flying alone."
-		},
-		{
-			"ja": "• 同梱のジョイントパーツを使用することで様々な機体に取り付けが可能。",
-			"en": "• Can be attached to various aircraft by using the included joint parts."
-		},
-		{
-			"ja": "• 各連結箇所が可動し表情付けが可能。",
-			"en": "• Each connection point can be moved to create different expressions."
-		},
-		{
-			"ja": "• 分離してカスタマイズパーツとしても活用できる。",
-			"en": "• Can be separated and used as customized parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ウィングユニット×1",
-			"en": "Wing unit x 1"
-		},
-		{
-			"ja": "ジョイントパーツ×2",
-			"en": "Joint parts x 2"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"人気の30MMオプションパーツセットに、様々な機体へ取り付け可能な「ウィングユニット」が登場！",
+			"• 連結の仕方で様々なバリエーションを生み出せる。",
+			"• 別売りの「アクションベース7」を使用することで単独で飛行している状態を再現可能。",
+			"• 同梱のジョイントパーツを使用することで様々な機体に取り付けが可能。",
+			"• 各連結箇所が可動し表情付けが可能。",
+			"• 分離してカスタマイズパーツとしても活用できる。"
+		],
+		"en": [
+			"A \"wing unit\" that can be attached to various aircraft is now available in the popular 30MM optional parts set!",
+			"• Various variations can be created depending on how they are connected.",
+			"• By using \"Action Base 7\" (sold separately), it is possible to reproduce the state of flying alone.",
+			"• Can be attached to various aircraft by using the included joint parts.",
+			"• Each connection point can be moved to create different expressions.",
+			"• Can be separated and used as customized parts."
+		]
+	},
+	"accessories": {
+		"ja": ["ウィングユニット×1", "ジョイントパーツ×2"],
+		"en": ["Wing unit x 1", "Joint parts x 2"]
+	},
 	"images": [
 		"/images/items/01_5381_0.jpg",
 		"/images/items/01_5381_1.jpg",
@@ -70,18 +55,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5381/",
 	"extractedAt": "2025-12-06T17:55:47.412Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"],
 	"manualId": "3788"
 }

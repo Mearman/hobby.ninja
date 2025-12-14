@@ -17,51 +17,28 @@
 		"month": 0
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "30MSシリーズ3人目のシスターであるルルチェが別衣装で登場！",
-			"en": "The third Sister Luce in the 30MS series appears in a different costume!"
-		},
-		{
-			"ja": "■フェイスパーツはタンポ印刷により3種の豊かな表情が付属。",
-			"en": "• Face parts come with 3 types of rich expressions by tampo printing."
-		},
-		{
-			"ja": "■武器パーツはバックパックにも取り付け可能。",
-			"en": "• Weapon parts can also be attached to backpacks."
-		},
-		{
-			"ja": "■クローパーツは手に装着するほか、腰にも懸架できる。",
-			"en": "• In addition to being attached to the hands, the claw parts can also be hung on the waist."
-		},
-		{
-			"ja": "■「30 MINUTES SISTERS」はフェイスパーツ/ヘアスタイルパーツ/ボディパーツを部位ごとにラインアップ展開。別売りのパーツと組み替えて自分好みのシスターを創ることができる。",
-			"en": "• \"30 MINUTES SISTERS\" offers a lineup of face parts, hairstyle parts, and body parts by body part. You can create your own sister by combining parts sold separately."
-		},
-		{
-			"ja": "■30 MINUTES LABEL共通の3mmジョイントを採用。他シリーズのパーツもオプションとして装着が可能。",
-			"en": "• Adopts 3mm joint common to 30 MINUTES LABEL. Parts from other series can also be installed as options."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "フェイスパーツ(タンポ印刷)×3種",
-			"en": "Face parts (tampo printing) x 3 types"
-		},
-		{
-			"ja": "武装パーツ×1式",
-			"en": "Armed parts x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MSシリーズ3人目のシスターであるルルチェが別衣装で登場！",
+			"■フェイスパーツはタンポ印刷により3種の豊かな表情が付属。",
+			"■武器パーツはバックパックにも取り付け可能。",
+			"■クローパーツは手に装着するほか、腰にも懸架できる。",
+			"■「30 MINUTES SISTERS」はフェイスパーツ/ヘアスタイルパーツ/ボディパーツを部位ごとにラインアップ展開。別売りのパーツと組み替えて自分好みのシスターを創ることができる。",
+			"■30 MINUTES LABEL共通の3mmジョイントを採用。他シリーズのパーツもオプションとして装着が可能。"
+		],
+		"en": [
+			"The third Sister Luce in the 30MS series appears in a different costume!",
+			"• Face parts come with 3 types of rich expressions by tampo printing.",
+			"• Weapon parts can also be attached to backpacks.",
+			"• In addition to being attached to the hands, the claw parts can also be hung on the waist.",
+			"• \"30 MINUTES SISTERS\" offers a lineup of face parts, hairstyle parts, and body parts by body part. You can create your own sister by combining parts sold separately.",
+			"• Adopts 3mm joint common to 30 MINUTES LABEL. Parts from other series can also be installed as options."
+		]
+	},
+	"accessories": {
+		"ja": ["フェイスパーツ(タンポ印刷)×3種", "武装パーツ×1式", "ジョイントパーツ×1式", "ハンドパーツ×1式"],
+		"en": ["Face parts (tampo printing) x 3 types", "Armed parts x 1 set", "Joint parts x 1 set", "Hand parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_6939_0.jpg",
 		"/images/items/01_6939_1.jpg",
@@ -72,17 +49,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_6939/",
 	"extractedAt": "2025-12-06T17:58:12.828Z",
-	"brandIds": [
-		"30-minutes-sisters"
-	],
+	"brandIds": ["30-minutes-sisters"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6933",
-		"01_6934",
-		"01_6935",
-		"01_6936"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6933", "01_6934", "01_6935", "01_6936"]
 }

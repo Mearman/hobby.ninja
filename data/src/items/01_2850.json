@@ -19,43 +19,24 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ガンダムチャンネルにて2nd Seasonが好評配信中の『ガンダムビルドダイバーズRe:RISE』より、ガンダムテルティウムの新武装がHGで立体化！",
-			"en": "From \"Gundam Build Divers Re:RISE\", whose 2nd season is currently being distributed on the Gundam channel, Gundam Tertium's new weapon is now three-dimensional in HG!"
-		},
-		{
-			"ja": "■大ボリュームのバックパックとライフルの新武装。",
-			"en": "• Large backpack and new rifle armament."
-		},
-		{
-			"ja": "■ライフルは収納状態への変形機構を搭載。未組み立て状態の「HGBD:R 1/144 ゼルトザームアームズ」（別売り）との組み合わせも可能。",
-			"en": "• The rifle is equipped with a deformation mechanism to the stored state. It can also be combined with the unassembled \"HGBD:R 1/144 Zeltsam Arms\" (sold separately)."
-		},
-		{
-			"ja": "■２つのシールドは組み合わせることが可能。",
-			"en": "• Two seals can be combined."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "バックパック×1",
-			"en": "Backpack x 1"
-		},
-		{
-			"ja": "シールド×2",
-			"en": "Seal × 2"
-		},
-		{
-			"ja": "ライフル×1",
-			"en": "Rifle x 1"
-		},
-		{
-			"ja": "HG用汎用ジョイントパーツ×1",
-			"en": "General purpose joint parts for HG x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ガンダムチャンネルにて2nd Seasonが好評配信中の『ガンダムビルドダイバーズRe:RISE』より、ガンダムテルティウムの新武装がHGで立体化！",
+			"■大ボリュームのバックパックとライフルの新武装。",
+			"■ライフルは収納状態への変形機構を搭載。未組み立て状態の「HGBD:R 1/144 ゼルトザームアームズ」（別売り）との組み合わせも可能。",
+			"■２つのシールドは組み合わせることが可能。"
+		],
+		"en": [
+			"From \"Gundam Build Divers Re:RISE\", whose 2nd season is currently being distributed on the Gundam channel, Gundam Tertium's new weapon is now three-dimensional in HG!",
+			"• Large backpack and new rifle armament.",
+			"• The rifle is equipped with a deformation mechanism to the stored state. It can also be combined with the unassembled \"HGBD:R 1/144 Zeltsam Arms\" (sold separately).",
+			"• Two seals can be combined."
+		]
+	},
+	"accessories": {
+		"ja": ["バックパック×1", "シールド×2", "ライフル×1", "HG用汎用ジョイントパーツ×1"],
+		"en": ["Backpack x 1", "Seal × 2", "Rifle x 1", "General purpose joint parts for HG x 1"]
+	},
 	"images": [
 		"/images/items/01_2850_0.jpg",
 		"/images/items/01_2850_1.jpg",
@@ -66,20 +47,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2850/",
 	"extractedAt": "2025-12-06T17:50:14.973Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers-rerise"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5054", "01_3562", "01_3565", "01_3291"],
 	"manualId": "0104"
 }

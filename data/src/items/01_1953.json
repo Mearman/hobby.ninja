@@ -18,18 +18,16 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
-			"en": "Event-limited Gunpla sold at various event venues."
-		},
-		{
-			"ja": "HG 「機動戦士ガンダム 00」 1st Season MSセットがイベント限定のクリアカラーで登場！",
-			"en": "HG \"Mobile Suit Gundam 00\" 1st Season MS set is now available in event-limited clear color!"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
+			"HG 「機動戦士ガンダム 00」 1st Season MSセットがイベント限定のクリアカラーで登場！"
+		],
+		"en": [
+			"Event-limited Gunpla sold at various event venues.",
+			"HG \"Mobile Suit Gundam 00\" 1st Season MS set is now available in event-limited clear color!"
+		]
+	},
 	"images": [
 		"/images/items/01_1953_0.jpg",
 		"/images/items/01_1953_1.jpg",
@@ -41,19 +39,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1953/",
 	"extractedAt": "2025-12-06T17:48:26.589Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-00-double-o"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1954",
-		"item-1000114085",
-		"01_957",
-		"01_958"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-00-double-o"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1954", "item-1000114085", "01_957", "01_958"]
 }

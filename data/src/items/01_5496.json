@@ -18,35 +18,26 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『魔神創造伝ワタル』より皇龍丸が登場！",
-			"en": "Koryumaru appears from “Mashin Souzouden Wataru”!"
-		},
-		{
-			"ja": "• 部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！",
-			"en": "• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!"
-		},
-		{
-			"ja": "• パチパチと手で外せるタッチゲート仕様。接着剤無しで組み立てられる！",
-			"en": "• Touch gate design that can be removed by hand. Can be assembled without adhesive!"
-		},
-		{
-			"ja": "• 両肩の皇龍頭などはゴールドメタリックパーツで再現！",
-			"en": "• The imperial dragon heads on both shoulders are reproduced with gold metallic parts!"
-		},
-		{
-			"ja": "• 皇龍杖の皇輪はブルーのクリアパーツで再現！",
-			"en": "• The imperial ring of the Imperial Dragon Staff is reproduced with blue clear parts!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "皇龍杖",
-			"en": "Emperor Dragon Staff"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『魔神創造伝ワタル』より皇龍丸が登場！",
+			"• 部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！",
+			"• パチパチと手で外せるタッチゲート仕様。接着剤無しで組み立てられる！",
+			"• 両肩の皇龍頭などはゴールドメタリックパーツで再現！",
+			"• 皇龍杖の皇輪はブルーのクリアパーツで再現！"
+		],
+		"en": [
+			"Koryumaru appears from “Mashin Souzouden Wataru”!",
+			"• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!",
+			"• Touch gate design that can be removed by hand. Can be assembled without adhesive!",
+			"• The imperial dragon heads on both shoulders are reproduced with gold metallic parts!",
+			"• The imperial ring of the Imperial Dragon Staff is reproduced with blue clear parts!"
+		]
+	},
+	"accessories": {
+		"ja": ["皇龍杖"],
+		"en": ["Emperor Dragon Staff"]
+	},
 	"images": [
 		"/images/items/01_5496_0.jpg",
 		"/images/items/01_5496_1.jpg",
@@ -60,16 +51,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5496/",
 	"extractedAt": "2025-12-06T17:56:02.551Z",
 	"brandIds": [],
-	"seriesIds": [
-		"wataru-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	]
+	"seriesIds": ["wataru-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
 }

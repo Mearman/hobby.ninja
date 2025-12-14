@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "SD ガンダムクロスシルエット トルネードガンダム",
-		"en": "SD Gundam Cross Silhouette Tornado Gundam"
+		"en": "SD GUNDAM CROSS SILHOUETTE TORNADO GUNDAM"
 	},
 	"price": {
 		"amount": 1760,
@@ -18,55 +18,28 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『SDガンダム ジージェネレーション』シリーズより、トルネードガンダムがSDガンダム クロスシルエットにラインアップ！",
-			"en": "From the \"SD Gundam G Generation\" series, Tornado Gundam is now available in the SD Gundam Cross Silhouette lineup!"
-		},
-		{
-			"ja": "■腕部のガトリングガンはパーツ着脱で通常／展開状態を再現。",
-			"en": "• The Gatling gun on the arm can be recreated in its normal/expanded state by attaching and detaching parts."
-		},
-		{
-			"ja": "■ビームサーベルは連結が可能。",
-			"en": "• Beam sabers can be connected."
-		},
-		{
-			"ja": "■CS、SDの２種のフレームが同梱！ フレームは選択式で自分好みのプロポーションが楽しめる。",
-			"en": "• Two types of frames, CS and SD, are included! The frame is selectable and you can enjoy proportions to your liking."
-		},
-		{
-			"ja": "■背部のバインダーは各部が可動。",
-			"en": "• Each part of the binder on the back is movable."
-		},
-		{
-			"ja": "■ビームライフル等豊富な武装や差し替え手首が付属。",
-			"en": "• Comes with a variety of weapons such as beam rifles and replacement wrists."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "展開用ガトリング×1式",
-			"en": "Deployment gatling x 1 set"
-		},
-		{
-			"ja": "ビームライフル×１",
-			"en": "Beam rifle x1"
-		},
-		{
-			"ja": "ビームサーベル×２",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『SDガンダム ジージェネレーション』シリーズより、トルネードガンダムがSDガンダム クロスシルエットにラインアップ！",
+			"■腕部のガトリングガンはパーツ着脱で通常／展開状態を再現。",
+			"■ビームサーベルは連結が可能。",
+			"■CS、SDの２種のフレームが同梱！ フレームは選択式で自分好みのプロポーションが楽しめる。",
+			"■背部のバインダーは各部が可動。",
+			"■ビームライフル等豊富な武装や差し替え手首が付属。"
+		],
+		"en": [
+			"From the \"SD Gundam G Generation\" series, Tornado Gundam is now available in the SD Gundam Cross Silhouette lineup!",
+			"• The Gatling gun on the arm can be recreated in its normal/expanded state by attaching and detaching parts.",
+			"• Beam sabers can be connected.",
+			"• Two types of frames, CS and SD, are included! The frame is selectable and you can enjoy proportions to your liking.",
+			"• Each part of the binder on the back is movable.",
+			"• Comes with a variety of weapons such as beam rifles and replacement wrists."
+		]
+	},
+	"accessories": {
+		"ja": ["ハンドパーツ×1式", "展開用ガトリング×1式", "ビームライフル×１", "ビームサーベル×２", "シール×1"],
+		"en": ["Hand parts x 1 set", "Deployment gatling x 1 set", "Beam rifle x1", "Beam saber x2", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_4377_0.jpg",
 		"/images/items/01_4377_1.jpg",
@@ -78,17 +51,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4377/",
 	"extractedAt": "2025-12-06T17:53:35.818Z",
-	"brandIds": [
-		"sd-gundam-cross-silhouette"
-	],
+	"brandIds": ["sd-gundam-cross-silhouette"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5275",
-		"01_5191",
-		"01_5014",
-		"01_4893"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5275", "01_5191", "01_5014", "01_4893"]
 }

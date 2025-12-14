@@ -19,64 +19,36 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "• 1/144で変身ギミックを搭載した黒き獅子「RG ユニコーンガンダム 2号機 バンシィ・ノルン」がついに登場！",
-			"en": "• 1/144 black lion \"RG Unicorn Gundam Unit 2 Banshee Norn\" equipped with a transformation gimmick is finally here!"
-		},
-		{
-			"ja": "• 紺色のカラーリングは3色の成形色で再現され、特徴的な頭部アンテナは選択式で可動1種と固定2種が付属！",
-			"en": "• The dark blue coloring is reproduced in 3 molded colors, and the characteristic head antenna is selectable and comes with 1 movable type and 2 fixed types!"
-		},
-		{
-			"ja": "• アームド・アーマーXCは新規造形となっており、デストロイモード時に露出するサイコ・フレームに一部クリアパーツが採用されているほか、アームド・アーマーDEも新規追加パーツで再現されている！",
-			"en": "• Armed Armor"
-		},
-		{
-			"ja": "• ビーム・マグナムにはパーツ差替えでビーム・ジュッテを装着することができるほか、弾倉はリア・アーマーに装着することも可能！",
-			"en": "• Beam Jutte can be attached to the Beam Magnum by replacing parts, and the magazine can also be attached to the rear armor!"
-		},
-		{
-			"ja": "• 通常パッケージのほか、初回限定パッケージ［プレミアム“ユニコーンモード”ボックス］も登場！",
-			"en": "• In addition to the regular package, a first-time limited package [Premium “Unicorn Mode” Box] is also available!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビーム・マグナム×1",
-			"en": "Beam Magnum x 1"
-		},
-		{
-			"ja": "リボルビング・ランチャー×1",
-			"en": "Revolving launcher x 1"
-		},
-		{
-			"ja": "アームド・アーマーＤＥ×1",
-			"en": "Armed Armor DE×1"
-		},
-		{
-			"ja": "アームド・アーマーＸＣ×1",
-			"en": "Armed Armor XC×1"
-		},
-		{
-			"ja": "ビーム・サーベルｘ2",
-			"en": "Beam saber x2"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×20",
-			"en": "Molded product x 20"
-		},
-		{
-			"ja": "リアリスティックデカール×1",
-			"en": "Realistic decal x 1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• 1/144で変身ギミックを搭載した黒き獅子「RG ユニコーンガンダム 2号機 バンシィ・ノルン」がついに登場！",
+			"• 紺色のカラーリングは3色の成形色で再現され、特徴的な頭部アンテナは選択式で可動1種と固定2種が付属！",
+			"• アームド・アーマーXCは新規造形となっており、デストロイモード時に露出するサイコ・フレームに一部クリアパーツが採用されているほか、アームド・アーマーDEも新規追加パーツで再現されている！",
+			"• ビーム・マグナムにはパーツ差替えでビーム・ジュッテを装着することができるほか、弾倉はリア・アーマーに装着することも可能！",
+			"• 通常パッケージのほか、初回限定パッケージ［プレミアム“ユニコーンモード”ボックス］も登場！"
+		],
+		"en": [
+			"• 1/144 black lion \"RG Unicorn Gundam Unit 2 Banshee Norn\" equipped with a transformation gimmick is finally here!",
+			"• The dark blue coloring is reproduced in 3 molded colors, and the characteristic head antenna is selectable and comes with 1 movable type and 2 fixed types!",
+			"• Armed Armor",
+			"• Beam Jutte can be attached to the Beam Magnum by replacing parts, and the magazine can also be attached to the rear armor!",
+			"• In addition to the regular package, a first-time limited package [Premium “Unicorn Mode” Box] is also available!"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ビーム・マグナム×1",
+			"リボルビング・ランチャー×1",
+			"アームド・アーマーＤＥ×1",
+			"アームド・アーマーＸＣ×1",
+			"ビーム・サーベルｘ2"
+		],
+		"en": ["Beam Magnum x 1", "Revolving launcher x 1", "Armed Armor DE×1", "Armed Armor XC×1", "Beam saber x2"]
+	},
+	"contents": {
+		"ja": ["成形品×20", "リアリスティックデカール×1", "取扱説明書×1"],
+		"en": ["Molded product x 20", "Realistic decal x 1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1260_0.jpg",
 		"/images/items/01_1260_1.jpg",
@@ -93,19 +65,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1260/",
 	"extractedAt": "2025-12-06T17:04:26.382Z",
-	"brandIds": [
-		"rg-real-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-uc-unicorn"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_1899",
-		"01_1259",
-		"01_1950",
-		"01_1926"
-	]
+	"brandIds": ["rg-real-grade"],
+	"seriesIds": ["mobile-suit-gundam-uc-unicorn"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_1899", "01_1259", "01_1950", "01_1926"]
 }

@@ -18,39 +18,26 @@
 		"day": 22
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "新作テレビアニメ『魔神創造伝ワタル』制作決定！",
-			"en": "Production of the new TV anime “Mashin Souzouden Wataru” has been decided!"
-		},
-		{
-			"ja": "謎の魔神「天翔丸」が登場！",
-			"en": "The mysterious demon \"Tenshomaru\" appears!"
-		},
-		{
-			"ja": "• 部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！",
-			"en": "• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!"
-		},
-		{
-			"ja": "• パチパチと手で外せるタッチゲート仕様。接着剤無しで組み立てられる！",
-			"en": "• Touch gate design that can be removed by hand. Can be assembled without adhesive!"
-		},
-		{
-			"ja": "• 2本のダガー型の武器は背面へ取り付けが可能。",
-			"en": "• Two dagger-shaped weapons can be attached to the back."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ダガー型の武器×2",
-			"en": "Dagger type weapon x2"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"新作テレビアニメ『魔神創造伝ワタル』制作決定！",
+			"謎の魔神「天翔丸」が登場！",
+			"• 部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！",
+			"• パチパチと手で外せるタッチゲート仕様。接着剤無しで組み立てられる！",
+			"• 2本のダガー型の武器は背面へ取り付けが可能。"
+		],
+		"en": [
+			"Production of the new TV anime “Mashin Souzouden Wataru” has been decided!",
+			"The mysterious demon \"Tenshomaru\" appears!",
+			"• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!",
+			"• Touch gate design that can be removed by hand. Can be assembled without adhesive!",
+			"• Two dagger-shaped weapons can be attached to the back."
+		]
+	},
+	"accessories": {
+		"ja": ["ダガー型の武器×2", "シール×1"],
+		"en": ["Dagger type weapon x2", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5493_0.jpg",
 		"/images/items/01_5493_1.jpg",
@@ -64,16 +51,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5493/",
 	"extractedAt": "2025-12-06T17:56:01.862Z",
 	"brandIds": [],
-	"seriesIds": [
-		"wataru-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	]
+	"seriesIds": ["wataru-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
 }

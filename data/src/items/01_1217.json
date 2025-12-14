@@ -18,59 +18,42 @@
 		"day": 10
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• テレビ番組「ポチっと発明 ピカちんキット」に登場するデュークとシャーロックが商品化！",
-			"en": "• Duke and Sherlock from the TV program \"Pochitto Invention Pikachin Kit\" have been commercialized!"
-		},
-		{
-			"ja": "• お掃除カラスのデュークはケシカスイーパー１０（テン）のピラメキから生まれたピカちんロボ！",
-			"en": "• Duke the cleaning crow is a Pikachin robot born from the pyramid of Keshika Sweeper 10 (Ten)!"
-		},
-		{
-			"ja": "• 迷探偵アルマジロのシャーロックはオレだけロックのピラメキから生まれたピカちんロボだぞ！",
-			"en": "• Sherlock from the Lost Detective Armadillo is the only Pikachin robot born from Rock's Pyrameki!"
-		},
-		{
-			"ja": "• ケシカスイーパー１０（テン）とオレだけロックをカスタムできるパーツも付属！",
-			"en": "• Keshika Sweeper 10 (Ten) and parts that allow you to customize the lock are also included!"
-		},
-		{
-			"ja": "• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！",
-			"en": "• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
-		}
-	],
-	"accessories": [],
-	"contents": [
-		{
-			"ja": "お掃除カラスのデューク×1",
-			"en": "Cleaning Crow Duke x1"
-		},
-		{
-			"ja": "ケシカスイーパー10 カスタムパーツ×1",
-			"en": "Keshika Sweeper 10 Custom Parts x 1"
-		},
-		{
-			"ja": "迷探偵アルマジロのシャーロック×1",
-			"en": "Lost Detective Armadillo Sherlock x1"
-		},
-		{
-			"ja": "オレだけロックカスタムパーツ×1",
-			"en": "Only me rock custom parts x 1"
-		},
-		{
-			"ja": "（成形品×8）",
-			"en": "(molded product x 8)"
-		},
-		{
-			"ja": "ピカちんQRコード×1",
-			"en": "Pikachin QR code x 1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• テレビ番組「ポチっと発明 ピカちんキット」に登場するデュークとシャーロックが商品化！",
+			"• お掃除カラスのデュークはケシカスイーパー１０（テン）のピラメキから生まれたピカちんロボ！",
+			"• 迷探偵アルマジロのシャーロックはオレだけロックのピラメキから生まれたピカちんロボだぞ！",
+			"• ケシカスイーパー１０（テン）とオレだけロックをカスタムできるパーツも付属！",
+			"• ピカちん大百科に綴じられるピカちんシートも付いてくるぞ！"
+		],
+		"en": [
+			"• Duke and Sherlock from the TV program \"Pochitto Invention Pikachin Kit\" have been commercialized!",
+			"• Duke the cleaning crow is a Pikachin robot born from the pyramid of Keshika Sweeper 10 (Ten)!",
+			"• Sherlock from the Lost Detective Armadillo is the only Pikachin robot born from Rock's Pyrameki!",
+			"• Keshika Sweeper 10 (Ten) and parts that allow you to customize the lock are also included!",
+			"• It also comes with a Pikachin sheet that can be bound into the Pikachin Encyclopedia!"
+		]
+	},
+	"contents": {
+		"ja": [
+			"お掃除カラスのデューク×1",
+			"ケシカスイーパー10 カスタムパーツ×1",
+			"迷探偵アルマジロのシャーロック×1",
+			"オレだけロックカスタムパーツ×1",
+			"（成形品×8）",
+			"ピカちんQRコード×1",
+			"ホイルシール×1"
+		],
+		"en": [
+			"Cleaning Crow Duke x1",
+			"Keshika Sweeper 10 Custom Parts x 1",
+			"Lost Detective Armadillo Sherlock x1",
+			"Only me rock custom parts x 1",
+			"(molded product x 8)",
+			"Pikachin QR code x 1",
+			"Foil Seal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_1217_0.jpg",
 		"/images/items/01_1217_1.jpg",
@@ -88,16 +71,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_1217/",
 	"extractedAt": "2025-12-06T17:01:19.847Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2605", "01_2606", "01_2607", "01_2545"]
 }

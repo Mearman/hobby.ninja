@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ディランザ (グエル専用機)",
-		"en": "HG 1/144 Dilanza (Guell exclusive machine)"
+		"en": "HG 1/144 GUEL'S DILANZA"
 	},
 	"price": {
 		"amount": 1760,
@@ -19,63 +19,34 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、グエル・ジェタークの専用機ディランザ（グエル専用機）がHGで登場！",
-			"en": "From the latest Gundam series \"Mobile Suit Gundam: Witch of Mercury\", Guell Jetak's personal machine Dilanza (Guell's personal machine) is now available in HG!"
-		},
-		{
-			"ja": "• 大胆なアクションポーズに最適な可動軸を随所に採用。",
-			"en": "• Adopts movable axes throughout that are perfect for bold action poses."
-		},
-		{
-			"ja": "• 頭部と胴体を接続する首ブロックはダブルボールジョイントにより頭部の可動域を確保。",
-			"en": "• The neck block that connects the head and body uses a double ball joint to ensure the range of motion of the head."
-		},
-		{
-			"ja": "• 肩部シールドは検証を重ねたジョイントパーツによりフレキシブルな動きを実現。",
-			"en": "• The shoulder seal realizes flexible movement with joint parts that have been repeatedly verified."
-		},
-		{
-			"ja": "• 胴体各所は可動のためのギミックを内蔵することで重厚感のある大胆なアクションが可能。",
-			"en": "• Various parts of the torso have built-in gimmicks for movement, allowing for bold and profound actions."
-		},
-		{
-			"ja": "• 頭部には特徴的なアンテナと羽飾りを再現。",
-			"en": "• The characteristic antenna and feather decoration are reproduced on the head."
-		},
-		{
-			"ja": "• バックパックは着脱が可能。",
-			"en": "• Backpack is removable."
-		},
-		{
-			"ja": "• ライフルやトーチはシールド裏へ格納できる。",
-			"en": "• Rifles and torches can be stored behind the seal."
-		},
-		{
-			"ja": "• ビームパルチザン、ビームトーチ、ビームライフルが付属。",
-			"en": "• Beam Partisan, Beam Torch, and Beam Rifle are included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビームパルチザン×１",
-			"en": "Beam partisan x1"
-		},
-		{
-			"ja": "ビームトーチ×１",
-			"en": "Beam torch x1"
-		},
-		{
-			"ja": "ビームライフル×１",
-			"en": "Beam rifle x1"
-		},
-		{
-			"ja": "シール×１",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、グエル・ジェタークの専用機ディランザ（グエル専用機）がHGで登場！",
+			"• 大胆なアクションポーズに最適な可動軸を随所に採用。",
+			"• 頭部と胴体を接続する首ブロックはダブルボールジョイントにより頭部の可動域を確保。",
+			"• 肩部シールドは検証を重ねたジョイントパーツによりフレキシブルな動きを実現。",
+			"• 胴体各所は可動のためのギミックを内蔵することで重厚感のある大胆なアクションが可能。",
+			"• 頭部には特徴的なアンテナと羽飾りを再現。",
+			"• バックパックは着脱が可能。",
+			"• ライフルやトーチはシールド裏へ格納できる。",
+			"• ビームパルチザン、ビームトーチ、ビームライフルが付属。"
+		],
+		"en": [
+			"From the latest Gundam series \"Mobile Suit Gundam: Witch of Mercury\", Guell Jetak's personal machine Dilanza (Guell's personal machine) is now available in HG!",
+			"• Adopts movable axes throughout that are perfect for bold action poses.",
+			"• The neck block that connects the head and body uses a double ball joint to ensure the range of motion of the head.",
+			"• The shoulder seal realizes flexible movement with joint parts that have been repeatedly verified.",
+			"• Various parts of the torso have built-in gimmicks for movement, allowing for bold and profound actions.",
+			"• The characteristic antenna and feather decoration are reproduced on the head.",
+			"• Backpack is removable.",
+			"• Rifles and torches can be stored behind the seal.",
+			"• Beam Partisan, Beam Torch, and Beam Rifle are included."
+		]
+	},
+	"accessories": {
+		"ja": ["ビームパルチザン×１", "ビームトーチ×１", "ビームライフル×１", "シール×１"],
+		"en": ["Beam partisan x1", "Beam torch x1", "Beam rifle x1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_4258_0.jpg",
 		"/images/items/01_4258_1.jpg",
@@ -90,20 +61,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4258/",
 	"extractedAt": "2025-12-06T17:53:18.960Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-witch-of-mercury"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203899"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-witch-of-mercury"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203899"],
 	"manualId": "0130"
 }

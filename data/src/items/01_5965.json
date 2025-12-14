@@ -19,59 +19,30 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ミサイルに特化したオプションパーツセットが登場！組み替え可能なミサイルに加えてエフェクトパーツも付属！",
-			"en": "An optional parts set specializing in missiles is now available! In addition to recombinable missiles, effect parts are also included!"
-		},
-		{
-			"ja": "• パーツを組み合わせて自由自在にオリジナルのミサイルを作り出せる。",
-			"en": "• You can freely create your own original missiles by combining parts."
-		},
-		{
-			"ja": "• 煙エフェクトパーツと組み合わせることでミサイル発射時の再現が可能。",
-			"en": "• By combining with smoke effect parts, it is possible to reproduce the missile launch."
-		},
-		{
-			"ja": "• パイロンを介することでバックパックや外装の3mmジョイント等へ装着できる。",
-			"en": "• Can be attached to backpacks, exterior 3mm joints, etc. via a pylon."
-		},
-		{
-			"ja": "• 商品内のパーツを組み合わせることで4連ミサイル砲台を再現可能。",
-			"en": "• It is possible to reproduce a 4-barreled missile turret by combining the parts in the product."
-		},
-		{
-			"ja": "• グリップをパイロンに取り付けることで携帯用ミサイルランチャーとしても使用できる。",
-			"en": "• Can also be used as a portable missile launcher by attaching the grip to the pylon."
-		},
-		{
-			"ja": "• 煙エフェクトパーツの組み合わせで長距離の軌道を再現することも可能。",
-			"en": "• It is also possible to reproduce long-distance trajectories by combining smoke effect parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ミサイル×1式",
-			"en": "Missile x 1 type"
-		},
-		{
-			"ja": "煙エフェクトパーツ×1式",
-			"en": "Smoke effect parts x 1 set"
-		},
-		{
-			"ja": "砲台用支柱×1式",
-			"en": "Battery strut x 1 set"
-		},
-		{
-			"ja": "グリップ×2",
-			"en": "Grip x 2"
-		},
-		{
-			"ja": "パイロン×2",
-			"en": "Pylon x 2"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ミサイルに特化したオプションパーツセットが登場！組み替え可能なミサイルに加えてエフェクトパーツも付属！",
+			"• パーツを組み合わせて自由自在にオリジナルのミサイルを作り出せる。",
+			"• 煙エフェクトパーツと組み合わせることでミサイル発射時の再現が可能。",
+			"• パイロンを介することでバックパックや外装の3mmジョイント等へ装着できる。",
+			"• 商品内のパーツを組み合わせることで4連ミサイル砲台を再現可能。",
+			"• グリップをパイロンに取り付けることで携帯用ミサイルランチャーとしても使用できる。",
+			"• 煙エフェクトパーツの組み合わせで長距離の軌道を再現することも可能。"
+		],
+		"en": [
+			"An optional parts set specializing in missiles is now available! In addition to recombinable missiles, effect parts are also included!",
+			"• You can freely create your own original missiles by combining parts.",
+			"• By combining with smoke effect parts, it is possible to reproduce the missile launch.",
+			"• Can be attached to backpacks, exterior 3mm joints, etc. via a pylon.",
+			"• It is possible to reproduce a 4-barreled missile turret by combining the parts in the product.",
+			"• Can also be used as a portable missile launcher by attaching the grip to the pylon.",
+			"• It is also possible to reproduce long-distance trajectories by combining smoke effect parts."
+		]
+	},
+	"accessories": {
+		"ja": ["ミサイル×1式", "煙エフェクトパーツ×1式", "砲台用支柱×1式", "グリップ×2", "パイロン×2"],
+		"en": ["Missile x 1 type", "Smoke effect parts x 1 set", "Battery strut x 1 set", "Grip x 2", "Pylon x 2"]
+	},
 	"images": [
 		"/images/items/01_5965_0.jpg",
 		"/images/items/01_5965_1.jpg",
@@ -83,18 +54,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5965/",
 	"extractedAt": "2025-12-06T17:56:56.216Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3806"
 }

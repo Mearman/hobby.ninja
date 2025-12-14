@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "カスタマイズウェポンズ(エネルギー武装)",
-		"en": "Customized Weapons (Energy Weapons)"
+		"en": "CUSTOMIZE WEAPONS (ENERGY WEAPON)"
 	},
 	"price": {
 		"amount": 825,
@@ -18,51 +18,38 @@
 		"day": 20
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "1/144スケールのキットに最適なカスタマイズウェポンズにエネルギー武装が登場！",
-			"en": "Energy weapons are now available in Customized Weapons, perfect for 1/144 Scale Kits!"
-		},
-		{
-			"ja": "• 合体剣は展開ギミックを搭載。分解すれば小型剣やカスタマイズパーツとしても活用可能。",
-			"en": "• The combined sword is equipped with an expansion gimmick. If disassembled, it can be used as a small sword or customized parts."
-		},
-		{
-			"ja": "• 中型剣は様々な形状の刀身を選択可能。刀身パーツはそれぞれクリアブルーとグレーの2色展開。",
-			"en": "• You can choose from a variety of blade shapes for medium-sized swords. Each blade part is available in two colors: clear blue and gray."
-		},
-		{
-			"ja": "• 丸型と角型のエネルギータンクが付属。各機体や武器への装着が可能。",
-			"en": "• Comes with round and square energy tanks. Can be attached to each aircraft and weapon."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "合体剣×1式",
-			"en": "Combined sword x 1 type"
-		},
-		{
-			"ja": "刀身パーツ(クリアブルー)×1式",
-			"en": "Blade parts (clear blue) x 1 set"
-		},
-		{
-			"ja": "刀身パーツ(グレー)×1式",
-			"en": "Blade parts (gray) x 1 set"
-		},
-		{
-			"ja": "中型剣持ち手パーツ(柄＋鍔)×2セット",
-			"en": "Medium-sized sword handle parts (handle + tsuba) x 2 sets"
-		},
-		{
-			"ja": "エネルギータンクパーツ(クリアブルー)角型×1、丸型×1",
-			"en": "Energy tank parts (clear blue) square type x 1, round type x 1"
-		},
-		{
-			"ja": "エネルギータンクパーツ(グレー)角型×1、丸型×1",
-			"en": "Energy tank parts (gray) square type x 1, round type x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"1/144スケールのキットに最適なカスタマイズウェポンズにエネルギー武装が登場！",
+			"• 合体剣は展開ギミックを搭載。分解すれば小型剣やカスタマイズパーツとしても活用可能。",
+			"• 中型剣は様々な形状の刀身を選択可能。刀身パーツはそれぞれクリアブルーとグレーの2色展開。",
+			"• 丸型と角型のエネルギータンクが付属。各機体や武器への装着が可能。"
+		],
+		"en": [
+			"Energy weapons are now available in Customized Weapons, perfect for 1/144 Scale Kits!",
+			"• The combined sword is equipped with an expansion gimmick. If disassembled, it can be used as a small sword or customized parts.",
+			"• You can choose from a variety of blade shapes for medium-sized swords. Each blade part is available in two colors: clear blue and gray.",
+			"• Comes with round and square energy tanks. Can be attached to each aircraft and weapon."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"合体剣×1式",
+			"刀身パーツ(クリアブルー)×1式",
+			"刀身パーツ(グレー)×1式",
+			"中型剣持ち手パーツ(柄＋鍔)×2セット",
+			"エネルギータンクパーツ(クリアブルー)角型×1、丸型×1",
+			"エネルギータンクパーツ(グレー)角型×1、丸型×1"
+		],
+		"en": [
+			"Combined sword x 1 type",
+			"Blade parts (clear blue) x 1 set",
+			"Blade parts (gray) x 1 set",
+			"Medium-sized sword handle parts (handle + tsuba) x 2 sets",
+			"Energy tank parts (clear blue) square type x 1, round type x 1",
+			"Energy tank parts (gray) square type x 1, round type x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_4383_0.jpg",
 		"/images/items/01_4383_1.jpg",
@@ -77,19 +64,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4383/",
 	"extractedAt": "2025-12-06T17:53:35.062Z",
-	"brandIds": [
-		"customized-scene-baseeffectsmaterialsweapons",
-		"30-minutes-missions"
-	],
+	"brandIds": ["customized-scene-baseeffectsmaterialsweapons", "30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3759"
 }

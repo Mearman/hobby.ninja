@@ -17,59 +17,36 @@
 		"month": 0
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "『ヤマトよ永遠に REBEL3199』より、選択式で2種のコスモパイソンを再現可能なセットがメカコレクションDXとして新登場！",
-			"en": "From \"Yamato Forever REBEL 3199\", a set that allows you to select from two types of Cosmo Python is now available as Mecha Collection DX!"
-		},
-		{
-			"ja": "• 完全新規造形によりコスモパイソンの機体形状を再現。",
-			"en": "• Reproduce the body shape of Cosmo Python with completely new modeling."
-		},
-		{
-			"ja": "• キャノピーは極薄の偏光成形を採用。劇中のイメージを表現。",
-			"en": "• The canopy uses ultra-thin polarized molding. Expressing images from the play."
-		},
-		{
-			"ja": "• イロプラにより機体設定のカラーリングを追求。",
-			"en": "• Pursuing the coloring of the aircraft settings using Elopura."
-		},
-		{
-			"ja": "• 通常戦闘モードと高機動モードのどちらかを選択して2機作成可能。",
-			"en": "• You can create two aircraft by selecting either normal combat mode or high maneuverability mode."
-		},
-		{
-			"ja": "• ディスプレイベースにより姿勢調整を行った展示が可能。",
-			"en": "• The display base allows for exhibitions with adjusted posture."
-		},
-		{
-			"ja": "• 各種マーキングを収録した水転写式デカールが付属。",
-			"en": "• Water transfer decals containing various markings are included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "共通パーツ×1式",
-			"en": "Common parts x 1 set"
-		},
-		{
-			"ja": "通常戦闘モードボディ×2",
-			"en": "Normal battle mode body x 2"
-		},
-		{
-			"ja": "高機動モードボディ×2",
-			"en": "High mobility mode body x 2"
-		},
-		{
-			"ja": "台座×2",
-			"en": "Pedestal x 2"
-		},
-		{
-			"ja": "水転写式デカール×1",
-			"en": "Water transfer decal x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『ヤマトよ永遠に REBEL3199』より、選択式で2種のコスモパイソンを再現可能なセットがメカコレクションDXとして新登場！",
+			"• 完全新規造形によりコスモパイソンの機体形状を再現。",
+			"• キャノピーは極薄の偏光成形を採用。劇中のイメージを表現。",
+			"• イロプラにより機体設定のカラーリングを追求。",
+			"• 通常戦闘モードと高機動モードのどちらかを選択して2機作成可能。",
+			"• ディスプレイベースにより姿勢調整を行った展示が可能。",
+			"• 各種マーキングを収録した水転写式デカールが付属。"
+		],
+		"en": [
+			"From \"Yamato Forever REBEL 3199\", a set that allows you to select from two types of Cosmo Python is now available as Mecha Collection DX!",
+			"• Reproduce the body shape of Cosmo Python with completely new modeling.",
+			"• The canopy uses ultra-thin polarized molding. Expressing images from the play.",
+			"• Pursuing the coloring of the aircraft settings using Elopura.",
+			"• You can create two aircraft by selecting either normal combat mode or high maneuverability mode.",
+			"• The display base allows for exhibitions with adjusted posture.",
+			"• Water transfer decals containing various markings are included."
+		]
+	},
+	"accessories": {
+		"ja": ["共通パーツ×1式", "通常戦闘モードボディ×2", "高機動モードボディ×2", "台座×2", "水転写式デカール×1"],
+		"en": [
+			"Common parts x 1 set",
+			"Normal battle mode body x 2",
+			"High mobility mode body x 2",
+			"Pedestal x 2",
+			"Water transfer decal x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_5500_0.jpg",
 		"/images/items/01_5500_1.jpg",
@@ -81,19 +58,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5500/",
 	"extractedAt": "2025-12-06T17:56:03.498Z",
-	"brandIds": [
-		"mecha-collection"
-	],
-	"seriesIds": [
-		"space-battleship-yamato-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5498",
-		"01_3667",
-		"01_3650",
-		"01_2854"
-	]
+	"brandIds": ["mecha-collection"],
+	"seriesIds": ["space-battleship-yamato-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5498", "01_3667", "01_3650", "01_2854"]
 }

@@ -19,44 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズ』よりガンダムジーエンアルトロンが登場！",
-			"en": "Gundam Gien Altron appears from “Gundam Build Divers”!"
-		},
-		{
-			"ja": "• 両肩に虎と狼の意匠のパーツを追加したカスタムガンプラで、両肩のツインジーエンハングは伸ばすことができる！",
-			"en": "• A custom Gunpla with tiger and wolf design parts added to both shoulders, allowing you to extend the twin gee-enhangs on both shoulders!"
-		},
-		{
-			"ja": "• 付属のジョイントパーツにより、肩のパーツを手に持たせて武器とすることも可能！",
-			"en": "• With the included joint parts, you can also hold the shoulder parts in your hand and use it as a weapon!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ジーエンシールド×1",
-			"en": "Jien Seal×1"
-		},
-		{
-			"ja": "ツインジーエンハング×2",
-			"en": "Twin G-enhung x2"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×13",
-			"en": "Molded products x 13"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズ』よりガンダムジーエンアルトロンが登場！",
+			"• 両肩に虎と狼の意匠のパーツを追加したカスタムガンプラで、両肩のツインジーエンハングは伸ばすことができる！",
+			"• 付属のジョイントパーツにより、肩のパーツを手に持たせて武器とすることも可能！"
+		],
+		"en": [
+			"Gundam Gien Altron appears from “Gundam Build Divers”!",
+			"• A custom Gunpla with tiger and wolf design parts added to both shoulders, allowing you to extend the twin gee-enhangs on both shoulders!",
+			"• With the included joint parts, you can also hold the shoulder parts in your hand and use it as a weapon!"
+		]
+	},
+	"accessories": {
+		"ja": ["ジーエンシールド×1", "ツインジーエンハング×2"],
+		"en": ["Jien Seal×1", "Twin G-enhung x2"]
+	},
+	"contents": {
+		"ja": ["成形品×13", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded products x 13", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1399_0.jpg",
 		"/images/items/01_1399_1.jpg",
@@ -67,20 +49,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1399/",
 	"extractedAt": "2025-12-06T17:19:13.911Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_2623",
-		"item-1000138336",
-		"01_2518",
-		"01_2403"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_2623", "item-1000138336", "01_2518", "01_2403"],
 	"manualId": "1024"
 }

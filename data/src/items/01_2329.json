@@ -18,50 +18,29 @@
 		"day": 29
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• ピカちんバッジをコレクション！",
-			"en": "• Collect Pikachin badges!"
-		},
-		{
-			"ja": "• ページを外してピカちん大百科にファイリングすることも可能。",
-			"en": "• You can also remove pages and file them in Pikachin Encyclopedia."
-		},
-		{
-			"ja": "【セット内容】",
-			"en": "[Set contents]"
-		},
-		{
-			"ja": "• コレクションファイル…1",
-			"en": "• Collection file...1"
-		},
-		{
-			"ja": "【電池】",
-			"en": "[battery]"
-		},
-		{
-			"ja": "• 不要",
-			"en": "• Unnecessary"
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_2329_0.jpg"
-	],
+	"description": {
+		"ja": [
+			"• ピカちんバッジをコレクション！",
+			"• ページを外してピカちん大百科にファイリングすることも可能。",
+			"【セット内容】",
+			"• コレクションファイル…1",
+			"【電池】",
+			"• 不要"
+		],
+		"en": [
+			"• Collect Pikachin badges!",
+			"• You can also remove pages and file them in Pikachin Encyclopedia.",
+			"[Set contents]",
+			"• Collection file...1",
+			"[battery]",
+			"• Unnecessary"
+		]
+	},
+	"images": ["/images/items/01_2329_0.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2329/",
 	"extractedAt": "2025-12-06T17:49:07.334Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2605", "01_2606", "01_2607", "01_2545"]
 }

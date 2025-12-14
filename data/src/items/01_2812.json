@@ -19,27 +19,20 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "単体で遊ぶも良し、組み合わせて遊ぶも良しの30MM「エグザビークルシリーズ」にタンクが登場！",
-			"en": "A tank appears in the 30MM \"Exa Vehicle Series\" that can be played alone or in combination!"
-		},
-		{
-			"ja": "• タンク形態のほか、各機体と組み合わせてビークル形態としても楽しめる。",
-			"en": "• In addition to tank form, it can also be enjoyed as vehicle form by combining with each aircraft."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビークル×1体",
-			"en": "Vehicle x 1"
-		},
-		{
-			"ja": "ビークル用グリップ×2",
-			"en": "Vehicle grip x 2"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"単体で遊ぶも良し、組み合わせて遊ぶも良しの30MM「エグザビークルシリーズ」にタンクが登場！",
+			"• タンク形態のほか、各機体と組み合わせてビークル形態としても楽しめる。"
+		],
+		"en": [
+			"A tank appears in the 30MM \"Exa Vehicle Series\" that can be played alone or in combination!",
+			"• In addition to tank form, it can also be enjoyed as vehicle form by combining with each aircraft."
+		]
+	},
+	"accessories": {
+		"ja": ["ビークル×1体", "ビークル用グリップ×2"],
+		"en": ["Vehicle x 1", "Vehicle grip x 2"]
+	},
 	"images": [
 		"/images/items/01_2812_0.jpg",
 		"/images/items/01_2812_1.jpg",
@@ -53,18 +46,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2812/",
 	"extractedAt": "2025-12-06T17:50:09.551Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3692"
 }

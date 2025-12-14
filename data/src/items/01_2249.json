@@ -18,64 +18,30 @@
 		"day": 18
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『機動戦士ガンダム 第08MS小隊』より陸戦型ガンダムをSDCSシリーズで立体化！",
-			"en": "From \"Mobile Suit Gundam 08th MS Platoon\", the ground battle type Gundam is made into a three-dimensional figure in the SDCS series!"
-		},
-		{
-			"ja": "• ウェポンコンテナは設定通りバックパックにマウントが可能。",
-			"en": "• Weapon containers can be mounted on backpacks as configured."
-		},
-		{
-			"ja": "• コンテナには武器を収納できる。",
-			"en": "• Weapons can be stored in containers."
-		},
-		{
-			"ja": "• シールドは自立可能。",
-			"en": "• Seal can stand on its own."
-		},
-		{
-			"ja": "• CSフレーム用腰パーツが付属。別売りのCSフレームと組み合わせることで膝立ちポーズを再現できる。180mmキャノン射撃時のポーズも可能。",
-			"en": "• Waist parts for CS frame are included. By combining it with the CS frame (sold separately), you can recreate the kneeling pose. It is also possible to pose while shooting a 180mm cannon."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビーム・ライフル×1",
-			"en": "Beam rifle x1"
-		},
-		{
-			"ja": "100mmマシンガン×1",
-			"en": "100mm machine gun x 1"
-		},
-		{
-			"ja": "180mmキャノン×1",
-			"en": "180mm cannon x 1"
-		},
-		{
-			"ja": "ＣＳフレーム用腰パーツ×1",
-			"en": "Waist parts for CS frame x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×5",
-			"en": "Molded product x 5"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "マーキングシール×１",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『機動戦士ガンダム 第08MS小隊』より陸戦型ガンダムをSDCSシリーズで立体化！",
+			"• ウェポンコンテナは設定通りバックパックにマウントが可能。",
+			"• コンテナには武器を収納できる。",
+			"• シールドは自立可能。",
+			"• CSフレーム用腰パーツが付属。別売りのCSフレームと組み合わせることで膝立ちポーズを再現できる。180mmキャノン射撃時のポーズも可能。"
+		],
+		"en": [
+			"From \"Mobile Suit Gundam 08th MS Platoon\", the ground battle type Gundam is made into a three-dimensional figure in the SDCS series!",
+			"• Weapon containers can be mounted on backpacks as configured.",
+			"• Weapons can be stored in containers.",
+			"• Seal can stand on its own.",
+			"• Waist parts for CS frame are included. By combining it with the CS frame (sold separately), you can recreate the kneeling pose. It is also possible to pose while shooting a 180mm cannon."
+		]
+	},
+	"accessories": {
+		"ja": ["ビーム・ライフル×1", "100mmマシンガン×1", "180mmキャノン×1", "ＣＳフレーム用腰パーツ×1"],
+		"en": ["Beam rifle x1", "100mm machine gun x 1", "180mm cannon x 1", "Waist parts for CS frame x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×5", "シール×1", "マーキングシール×１", "取扱説明書×1"],
+		"en": ["Molded product x 5", "Seal×1", "MarkingSeal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2249_0.jpg",
 		"/images/items/01_2249_1.jpg",
@@ -92,17 +58,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2249/",
 	"extractedAt": "2025-12-06T17:48:58.654Z",
-	"brandIds": [
-		"sd-gundam-cross-silhouette"
-	],
+	"brandIds": ["sd-gundam-cross-silhouette"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5275",
-		"01_5191",
-		"01_5014",
-		"01_4893"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5275", "01_5191", "01_5014", "01_4893"]
 }

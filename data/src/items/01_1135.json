@@ -18,56 +18,34 @@
 		"day": 28
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "“一段”上げれば、イチダンと輝く ！",
-			"en": "If you step it up a notch, it will shine!"
-		},
-		{
-			"ja": "手軽にディスプレイをグレードアップ!!",
-			"en": "Easily upgrade your display!"
-		},
-		{
-			"ja": "幅広いプラモデルシリーズに対応したコレクションステージが登場!!",
-			"en": "A collection stage compatible with a wide range of plastic model series is now available!!"
-		},
-		{
-			"ja": "• 透明感あるクリアブルーで、ディスプレイを爽やかに演出。",
-			"en": "• Transparent clear blue color gives the display a refreshing look."
-		},
-		{
-			"ja": "• 付属のジョイントパーツを使用することで、縦方向、横方向に連結可能。",
-			"en": "• Can be connected vertically and horizontally using the included joint parts."
-		},
-		{
-			"ja": "• 約255mm×173mmのコンパクトサイズで、ディスプレイに適したサイズ。デスクトップの一画をコレクションブースにすることも可能に。",
-			"en": "• Compact size of approximately 255mm x 173mm, suitable for display. It is also possible to turn a corner of your desktop into a collection booth."
-		},
-		{
-			"ja": "• ロゴを商品パッケージから切り取り、貼りつけるなど、自由な工夫で作品イメージにあわせたディスプレイも楽しめる。",
-			"en": "• You can enjoy creating a display that matches the image of your work by cutting out the logo from the product package and pasting it on."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "縦ジョイントパーツ×２",
-			"en": "Vertical joint parts x 2"
-		},
-		{
-			"ja": "横ジョイントパーツ×１",
-			"en": "Horizontal joint parts x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×2",
-			"en": "Molded product x 2"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"“一段”上げれば、イチダンと輝く ！",
+			"手軽にディスプレイをグレードアップ!!",
+			"幅広いプラモデルシリーズに対応したコレクションステージが登場!!",
+			"• 透明感あるクリアブルーで、ディスプレイを爽やかに演出。",
+			"• 付属のジョイントパーツを使用することで、縦方向、横方向に連結可能。",
+			"• 約255mm×173mmのコンパクトサイズで、ディスプレイに適したサイズ。デスクトップの一画をコレクションブースにすることも可能に。",
+			"• ロゴを商品パッケージから切り取り、貼りつけるなど、自由な工夫で作品イメージにあわせたディスプレイも楽しめる。"
+		],
+		"en": [
+			"If you step it up a notch, it will shine!",
+			"Easily upgrade your display!",
+			"A collection stage compatible with a wide range of plastic model series is now available!!",
+			"• Transparent clear blue color gives the display a refreshing look.",
+			"• Can be connected vertically and horizontally using the included joint parts.",
+			"• Compact size of approximately 255mm x 173mm, suitable for display. It is also possible to turn a corner of your desktop into a collection booth.",
+			"• You can enjoy creating a display that matches the image of your work by cutting out the logo from the product package and pasting it on."
+		]
+	},
+	"accessories": {
+		"ja": ["縦ジョイントパーツ×２", "横ジョイントパーツ×１"],
+		"en": ["Vertical joint parts x 2", "Horizontal joint parts x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×2", "取扱説明書×1"],
+		"en": ["Molded product x 2", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1135_0.jpg",
 		"/images/items/01_1135_1.jpg",
@@ -79,13 +57,6 @@
 	"extractedAt": "2025-12-06T16:55:06.067Z",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5990",
-		"01_5989",
-		"01_5972",
-		"01_5973"
-	]
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5990", "01_5989", "01_5972", "01_5973"]
 }

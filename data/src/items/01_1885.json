@@ -18,48 +18,30 @@
 		"day": 1
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "「元祖ドラえもん」がFigure-rise Mechanicsにラインアップ！",
-			"en": "\"Original Doraemon\" is now available in Figure-rise Mechanics!"
-		},
-		{
-			"ja": "• 黄色いボディを成形色で再現し、元祖ドラえもんの特徴的な耳も新規造形で再現。",
-			"en": "• The yellow body is reproduced in molding color, and the original Doraemon's distinctive ears are also reproduced with new modeling."
-		},
-		{
-			"ja": "• 口を別パーツにすることでシールレスを実現。さらに作りやすくなった！",
-			"en": "• Seal-less is achieved by making the mouth a separate part. It's even easier to make!"
-		},
-		{
-			"ja": "• クリアパーツ外装付属で、内部メカが丸わかり！",
-			"en": "• Comes with clear parts for the exterior, allowing you to fully understand the internal mechanism!"
-		},
-		{
-			"ja": "• 「タケコプター」が付属！別売りの「Figure-rise Mechanicsドラえもん」にもつけられるタケコプター取り付け用パーツも付属。",
-			"en": "• \"Takecopter \" is included! Also included are Takecopter mounting parts that can be attached to the separately sold \" Figure-rise Mechanics Doraemon\"."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "クリア外装×1式",
-			"en": "Clear exterior x 1 set"
-		},
-		{
-			"ja": "ドラえもん用タケコプターパーツ×1式",
-			"en": "Takecopter parts for Doraemon x 1 set"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×9",
-			"en": "Molded product x 9"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"「元祖ドラえもん」がFigure-rise Mechanicsにラインアップ！",
+			"• 黄色いボディを成形色で再現し、元祖ドラえもんの特徴的な耳も新規造形で再現。",
+			"• 口を別パーツにすることでシールレスを実現。さらに作りやすくなった！",
+			"• クリアパーツ外装付属で、内部メカが丸わかり！",
+			"• 「タケコプター」が付属！別売りの「Figure-rise Mechanicsドラえもん」にもつけられるタケコプター取り付け用パーツも付属。"
+		],
+		"en": [
+			"\"Original Doraemon\" is now available in Figure-rise Mechanics!",
+			"• The yellow body is reproduced in molding color, and the original Doraemon's distinctive ears are also reproduced with new modeling.",
+			"• Seal-less is achieved by making the mouth a separate part. It's even easier to make!",
+			"• Comes with clear parts for the exterior, allowing you to fully understand the internal mechanism!",
+			"• \"Takecopter \" is included! Also included are Takecopter mounting parts that can be attached to the separately sold \" Figure-rise Mechanics Doraemon\"."
+		]
+	},
+	"accessories": {
+		"ja": ["クリア外装×1式", "ドラえもん用タケコプターパーツ×1式"],
+		"en": ["Clear exterior x 1 set", "Takecopter parts for Doraemon x 1 set"]
+	},
+	"contents": {
+		"ja": ["成形品×9", "取扱説明書×1"],
+		"en": ["Molded product x 9", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1885_0.jpg",
 		"/images/items/01_1885_1.jpg",
@@ -76,18 +58,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1885/",
 	"extractedAt": "2025-12-06T17:48:18.476Z",
-	"brandIds": [
-		"figure-rise-mechanics"
-	],
-	"seriesIds": [
-		"doraemon"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_1206",
-		"01_1208",
-		"01_1207"
-	]
+	"brandIds": ["figure-rise-mechanics"],
+	"seriesIds": ["doraemon"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_1206", "01_1208", "01_1207"]
 }

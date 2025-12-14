@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "カスタマイズマテリアル（３Dメタリックシール）",
-		"en": "Customized material (3D metallic seal)"
+		"en": "CUSTOMIZE MATERIAL (3D METALLIC STICKERS)"
 	},
 	"price": {
 		"amount": 528,
@@ -18,35 +18,26 @@
 		"day": 21
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "BANDAI SPIRITS公式のマテリアルパーツの新ブランド「カスタイズマテリアル」！",
-			"en": "BANDAI SPIRITS official new brand of material parts \"Customized Material\"!"
-		},
-		{
-			"ja": "カスタマイズ入門者でも手軽にディテールアップが出来る、1/144スケールモデルに最適なカスタイズマテリアルシリーズに「３Dメタリックシール」が登場！",
-			"en": "\"3D Metallic Seal\" is now available in the customization material series that is perfect for 1/144 Scale Models, allowing even beginners to easily improve details!"
-		},
-		{
-			"ja": "• メタリックレイヤーを挟みこんだ、立体感のあるプラスチックシール。",
-			"en": "• A three-dimensional plastic seal sandwiching a metallic layer."
-		},
-		{
-			"ja": "• カラーは「レッド」「イエロー」「グリーン」の3色。",
-			"en": "• There are 3 colors: \"red \", \" yellow \" and \" green\"."
-		},
-		{
-			"ja": "• 貼り付けるだけで簡単に機体へアクセントが加えられる。センサーやレンズ等の発光イメージの演出が可能。",
-			"en": "• Easily add accents to the aircraft by simply pasting it on. It is possible to create luminous images of sensors, lenses, etc."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "３Dメタリックシール×1",
-			"en": "3D metallic seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"BANDAI SPIRITS公式のマテリアルパーツの新ブランド「カスタイズマテリアル」！",
+			"カスタマイズ入門者でも手軽にディテールアップが出来る、1/144スケールモデルに最適なカスタイズマテリアルシリーズに「３Dメタリックシール」が登場！",
+			"• メタリックレイヤーを挟みこんだ、立体感のあるプラスチックシール。",
+			"• カラーは「レッド」「イエロー」「グリーン」の3色。",
+			"• 貼り付けるだけで簡単に機体へアクセントが加えられる。センサーやレンズ等の発光イメージの演出が可能。"
+		],
+		"en": [
+			"BANDAI SPIRITS official new brand of material parts \"Customized Material\"!",
+			"\"3D Metallic Seal\" is now available in the customization material series that is perfect for 1/144 Scale Models, allowing even beginners to easily improve details!",
+			"• A three-dimensional plastic seal sandwiching a metallic layer.",
+			"• There are 3 colors: \"red \", \" yellow \" and \" green\".",
+			"• Easily add accents to the aircraft by simply pasting it on. It is possible to create luminous images of sensors, lenses, etc."
+		]
+	},
+	"accessories": {
+		"ja": ["３Dメタリックシール×1"],
+		"en": ["3D metallic seal×1"]
+	},
 	"images": [
 		"/images/items/01_4298_0.jpg",
 		"/images/items/01_4298_1.jpg",
@@ -56,18 +47,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4298/",
 	"extractedAt": "2025-12-06T17:53:25.351Z",
-	"brandIds": [
-		"customized-scene-baseeffectsmaterialsweapons",
-		"30-minutes-missions"
-	],
+	"brandIds": ["customized-scene-baseeffectsmaterialsweapons", "30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"]
 }

@@ -19,40 +19,26 @@
 	},
 	"targetAge": 15,
 	"scale": "1/12",
-	"description": [
-		{
-			"ja": "『スター・ウォーズ エピソード4／新たなる希望』のオープニング後、ブロッケード・ランナーで拘束された帝国軍のアストロメク・ドロイドが登場！",
-			"en": "After the opening of Star Wars Episode IV: A New Hope, an Imperial astromech droid restrained by Blockade Runner appears!"
-		},
-		{
-			"ja": "• 設定カラーをイメージしたパーツ分けと各部マーキングシールにより、ディテールを忠実に本体を再現。",
-			"en": "• The main body is faithfully reproduced in detail by dividing the parts based on the setting color and marking seals on each part."
-		},
-		{
-			"ja": "• 専用のディスプレイベースが付属。",
-			"en": "• A dedicated display base is included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ディスプレイベース×1",
-			"en": "Display base x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×6",
-			"en": "Molded product x 6"
-		},
-		{
-			"ja": "マーキングシール×１",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "取扱説明書×１",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『スター・ウォーズ エピソード4／新たなる希望』のオープニング後、ブロッケード・ランナーで拘束された帝国軍のアストロメク・ドロイドが登場！",
+			"• 設定カラーをイメージしたパーツ分けと各部マーキングシールにより、ディテールを忠実に本体を再現。",
+			"• 専用のディスプレイベースが付属。"
+		],
+		"en": [
+			"After the opening of Star Wars Episode IV: A New Hope, an Imperial astromech droid restrained by Blockade Runner appears!",
+			"• The main body is faithfully reproduced in detail by dividing the parts based on the setting color and marking seals on each part.",
+			"• A dedicated display base is included."
+		]
+	},
+	"accessories": {
+		"ja": ["ディスプレイベース×1"],
+		"en": ["Display base x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×6", "マーキングシール×１", "取扱説明書×１"],
+		"en": ["Molded product x 6", "MarkingSeal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2380_0.jpg",
 		"/images/items/01_2380_1.jpg",
@@ -69,16 +55,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2380/",
 	"extractedAt": "2025-12-06T17:49:15.059Z",
 	"brandIds": [],
-	"seriesIds": [
-		"star-wars"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4153",
-		"01_4154",
-		"01_3514",
-		"01_3513"
-	]
+	"seriesIds": ["star-wars"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4153", "01_4154", "01_3514", "01_3513"]
 }

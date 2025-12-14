@@ -19,64 +19,42 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "• 『ガンダムビルドファイターズ』のエンディングにも登場するチナッガイがついにHGで登場！",
-			"en": "• Chinagguy, who also appears at the ending of \"Gundam Build Fighters\", is finally available in HG!"
-		},
-		{
-			"ja": "• 胸部、脚部関節にKPS素材が使用され、広い可動域を実現！",
-			"en": "• KPS material is used in the chest and leg joints to achieve a wide range of motion!"
-		},
-		{
-			"ja": "• 肩フリルとエプロンは軟質素材で、様々なポージングが可能となっている！",
-			"en": "• The shoulder frills and apron are made of soft material, allowing for various poses!"
-		},
-		{
-			"ja": "• 瞳はクリアパーツ式とレンズ式が採用され、メガネはレンズの有り無しを選択できる！",
-			"en": "• Clear parts type and lens type are used for the eyes, and you can choose between glasses with or without lenses!"
-		},
-		{
-			"ja": "• 頭部パーツは取り外すことでチナ本来の頭部が再現でき、前腕を差し替えることで素手に変更ができるなどギミックも満載！",
-			"en": "• By removing the head parts, you can recreate China's original head, and by replacing the forearms, you can change to bare hands, and it's full of gimmicks!"
-		},
-		{
-			"ja": "• さらに、カチューシャはクマ耳バージョンと通常バージョンが付属！",
-			"en": "• In addition, the headband comes with a bear ear version and a regular version!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "メガネパーツ２種（クリア、フレームのみ）×各1",
-			"en": "2 types of glasses parts (clear, frame only) x 1 each"
-		},
-		{
-			"ja": "ディスプレイ台座×1",
-			"en": "Display pedestal x 1"
-		},
-		{
-			"ja": "カチューシャ×２種",
-			"en": "Headband x 2 types"
-		},
-		{
-			"ja": "差し替え用前腕パーツ（左右）×各１",
-			"en": "Replacement forearm parts (left and right) x 1 each"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×7",
-			"en": "Molded product x 7"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• 『ガンダムビルドファイターズ』のエンディングにも登場するチナッガイがついにHGで登場！",
+			"• 胸部、脚部関節にKPS素材が使用され、広い可動域を実現！",
+			"• 肩フリルとエプロンは軟質素材で、様々なポージングが可能となっている！",
+			"• 瞳はクリアパーツ式とレンズ式が採用され、メガネはレンズの有り無しを選択できる！",
+			"• 頭部パーツは取り外すことでチナ本来の頭部が再現でき、前腕を差し替えることで素手に変更ができるなどギミックも満載！",
+			"• さらに、カチューシャはクマ耳バージョンと通常バージョンが付属！"
+		],
+		"en": [
+			"• Chinagguy, who also appears at the ending of \"Gundam Build Fighters\", is finally available in HG!",
+			"• KPS material is used in the chest and leg joints to achieve a wide range of motion!",
+			"• The shoulder frills and apron are made of soft material, allowing for various poses!",
+			"• Clear parts type and lens type are used for the eyes, and you can choose between glasses with or without lenses!",
+			"• By removing the head parts, you can recreate China's original head, and by replacing the forearms, you can change to bare hands, and it's full of gimmicks!",
+			"• In addition, the headband comes with a bear ear version and a regular version!"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"メガネパーツ２種（クリア、フレームのみ）×各1",
+			"ディスプレイ台座×1",
+			"カチューシャ×２種",
+			"差し替え用前腕パーツ（左右）×各１"
+		],
+		"en": [
+			"2 types of glasses parts (clear, frame only) x 1 each",
+			"Display pedestal x 1",
+			"Headband x 2 types",
+			"Replacement forearm parts (left and right) x 1 each"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×7", "シール×1", "取扱説明書×1"],
+		"en": ["Molded product x 7", "Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1051_0.jpg",
 		"/images/items/01_1051_1.jpg",
@@ -88,20 +66,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1051/",
 	"extractedAt": "2025-12-06T16:28:11.373Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-fighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-fighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"manualId": "0755"
 }

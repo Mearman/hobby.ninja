@@ -18,92 +18,57 @@
 		"day": 26
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "大人気ガルパンラッピング列車第３弾！",
-			"en": "The third installment of the extremely popular Garupan wrapping train!"
-		},
-		{
-			"ja": "２号車は２０１４年発売Ver.から一部デザインを変更！",
-			"en": "Part of the design of Car 2 has been changed from the 2014 Release Ver.!"
-		},
-		{
-			"ja": "• ポイント１：世界最小「西住みほ」彩色フィギュアが付属！",
-			"en": "• Point 1: The world's smallest \"Nishizumiho\" colored figure is included!"
-		},
-		{
-			"ja": "• ポイント２：ガルパンファンに大好評だった「Ⅳ号戦車H型（D型改）」が付属！",
-			"en": "• Point 2: Includes the \"Platform IV tank H type (D type modified)\" which was very popular among Garupan fans!"
-		},
-		{
-			"ja": "Bトレインショーティーは彩色済みの鉄道プラモデルです。",
-			"en": "B Train Shorty is a painted railway plastic model."
-		},
-		{
-			"ja": "車体の長さを約半分にショーティー化した以外は出来るだけ実車のイメージを忠実に再現しています。",
-			"en": "We have tried to faithfully reproduce the image of the actual car as much as possible, except for shortening the length of the car by about half."
-		},
-		{
-			"ja": "だから「短いけど、とってもリアル」なんです。",
-			"en": "That's why it's \"short, but very real.\""
-		},
-		{
-			"ja": "組み立て方はとても簡単。",
-			"en": "Assembly is very easy."
-		},
-		{
-			"ja": "接着剤不要なのでランナーから部品を切り離しパチパチはめ込むだけで鉄道模型顔負けのリアルな鉄道車両モデルが出来上がります。",
-			"en": "No adhesive is required, so just cut out the parts from the Runner and snap them together to create a realistic railway vehicle model that rivals any railway model."
-		},
-		{
-			"ja": "別売りの動力ユニット3、走行台車Tを取付けることでNゲージに対応します。",
-			"en": "Compatible with N scale by attaching power unit 3 and traveling trolley T (sold separately)."
-		}
-	],
-	"accessories": [],
-	"contents": [
-		{
-			"ja": "2両入り（2号車×1、3号車×1）",
-			"en": "Contains 2 cars (No. 2 car x 1, No. 3 car x 1)"
-		},
-		{
-			"ja": "戦車×1",
-			"en": "Tank x 1"
-		},
-		{
-			"ja": "戦車用貨車×１",
-			"en": "Tank wagon x1"
-		},
-		{
-			"ja": "フィギュア×2（西住みほ上半身×１全身×１）",
-			"en": "Figure x 2 (Nishizumiho upper body x 1 whole body x 1)"
-		},
-		{
-			"ja": "NewSGフレーム",
-			"en": "NewSG frame"
-		},
-		{
-			"ja": "ステッカー",
-			"en": "Sticker"
-		},
-		{
-			"ja": "取扱説明書",
-			"en": "Handling manual"
-		}
-	],
-	"images": [
-		"/images/items/01_1102_0.jpg",
-		"/images/items/01_1102_1.jpg",
-		"/images/items/01_1102_2.jpg"
-	],
+	"description": {
+		"ja": [
+			"大人気ガルパンラッピング列車第３弾！",
+			"２号車は２０１４年発売Ver.から一部デザインを変更！",
+			"• ポイント１：世界最小「西住みほ」彩色フィギュアが付属！",
+			"• ポイント２：ガルパンファンに大好評だった「Ⅳ号戦車H型（D型改）」が付属！",
+			"Bトレインショーティーは彩色済みの鉄道プラモデルです。",
+			"車体の長さを約半分にショーティー化した以外は出来るだけ実車のイメージを忠実に再現しています。",
+			"だから「短いけど、とってもリアル」なんです。",
+			"組み立て方はとても簡単。",
+			"接着剤不要なのでランナーから部品を切り離しパチパチはめ込むだけで鉄道模型顔負けのリアルな鉄道車両モデルが出来上がります。",
+			"別売りの動力ユニット3、走行台車Tを取付けることでNゲージに対応します。"
+		],
+		"en": [
+			"The third installment of the extremely popular Garupan wrapping train!",
+			"Part of the design of Car 2 has been changed from the 2014 Release Ver.!",
+			"• Point 1: The world's smallest \"Nishizumiho\" colored figure is included!",
+			"• Point 2: Includes the \"Platform IV tank H type (D type modified)\" which was very popular among Garupan fans!",
+			"B Train Shorty is a painted railway plastic model.",
+			"We have tried to faithfully reproduce the image of the actual car as much as possible, except for shortening the length of the car by about half.",
+			"That's why it's \"short, but very real.\"",
+			"Assembly is very easy.",
+			"No adhesive is required, so just cut out the parts from the Runner and snap them together to create a realistic railway vehicle model that rivals any railway model.",
+			"Compatible with N scale by attaching power unit 3 and traveling trolley T (sold separately)."
+		]
+	},
+	"contents": {
+		"ja": [
+			"2両入り（2号車×1、3号車×1）",
+			"戦車×1",
+			"戦車用貨車×１",
+			"フィギュア×2（西住みほ上半身×１全身×１）",
+			"NewSGフレーム",
+			"ステッカー",
+			"取扱説明書"
+		],
+		"en": [
+			"Contains 2 cars (No. 2 car x 1, No. 3 car x 1)",
+			"Tank x 1",
+			"Tank wagon x1",
+			"Figure x 2 (Nishizumiho upper body x 1 whole body x 1)",
+			"NewSG frame",
+			"Sticker",
+			"Handling manual"
+		]
+	},
+	"images": ["/images/items/01_1102_0.jpg", "/images/items/01_1102_1.jpg", "/images/items/01_1102_2.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1102/",
 	"extractedAt": "2025-12-06T16:50:21.960Z",
-	"brandIds": [
-		"b-train-shorty"
-	],
-	"seriesIds": [
-		"girls-and-panzer"
-	],
+	"brandIds": ["b-train-shorty"],
+	"seriesIds": ["girls-and-panzer"],
 	"categoryIds": [],
 	"relatedItemIds": []
 }

@@ -19,60 +19,32 @@
 	},
 	"targetAge": 15,
 	"scale": "1/100",
-	"description": [
-		{
-			"ja": "『機動戦士ガンダム F91』のモビルスーツバリエーション「F91-MSV」よりビギナ・ギナIIが立体化！",
-			"en": "Begina Gina II from the mobile suit variation \"F91-MSV \" of \" Mobile Suit Gundam F91\" is now three-dimensional!"
-		},
-		{
-			"ja": "• ガンダムタイプの頭部やフレキシブルウイングノズルなどの形状は設定をイメージしたデザインに新規造形。",
-			"en": "• The shapes of the Gundam type head and flexible wing nozzle are newly designed based on the setting."
-		},
-		{
-			"ja": "• ショット・ランサーやビーム・シールドなどの武装が付属。",
-			"en": "• Weapons such as shot lancer and beam seal are included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビーム・サーベル×2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "ショット・ランサー×1",
-			"en": "Shot Lancer x1"
-		},
-		{
-			"ja": "ビーム・シールド×1",
-			"en": "Beam Seal×1"
-		},
-		{
-			"ja": "銃持ち手(右)×1",
-			"en": "Gun handle (right) x 1"
-		},
-		{
-			"ja": "平手(左右)×各1",
-			"en": "Hirate (left and right) x 1 each"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×15",
-			"en": "Molded product x 15"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『機動戦士ガンダム F91』のモビルスーツバリエーション「F91-MSV」よりビギナ・ギナIIが立体化！",
+			"• ガンダムタイプの頭部やフレキシブルウイングノズルなどの形状は設定をイメージしたデザインに新規造形。",
+			"• ショット・ランサーやビーム・シールドなどの武装が付属。"
+		],
+		"en": [
+			"Begina Gina II from the mobile suit variation \"F91-MSV \" of \" Mobile Suit Gundam F91\" is now three-dimensional!",
+			"• The shapes of the Gundam type head and flexible wing nozzle are newly designed based on the setting.",
+			"• Weapons such as shot lancer and beam seal are included."
+		]
+	},
+	"accessories": {
+		"ja": ["ビーム・サーベル×2", "ショット・ランサー×1", "ビーム・シールド×1", "銃持ち手(右)×1", "平手(左右)×各1"],
+		"en": [
+			"Beam saber x2",
+			"Shot Lancer x1",
+			"Beam Seal×1",
+			"Gun handle (right) x 1",
+			"Hirate (left and right) x 1 each"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×15", "シール×1", "マーキングシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 15", "Seal×1", "MarkingSeal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2252_0.jpg",
 		"/images/items/01_2252_1.jpg",
@@ -87,17 +59,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2252/",
 	"extractedAt": "2025-12-06T17:48:59.144Z",
-	"brandIds": [
-		"re100-reborn-one-hundred"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-f91"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3484",
-		"01_1354"
-	]
+	"brandIds": ["re100-reborn-one-hundred"],
+	"seriesIds": ["mobile-suit-gundam-f91"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3484", "01_1354"]
 }

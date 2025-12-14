@@ -18,36 +18,21 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
-			"en": "Event-limited Gunpla sold at various event venues."
-		},
-		{
-			"ja": "ＨＧ　ガンダムバルバトスルプスが、アイアンブラッドコーティング版で登場！",
-			"en": "HG Gundam Barbatos Lupus is now available in Iron Blood coating version!"
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_2001_0.jpg"
-	],
+	"description": {
+		"ja": [
+			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
+			"ＨＧ　ガンダムバルバトスルプスが、アイアンブラッドコーティング版で登場！"
+		],
+		"en": [
+			"Event-limited Gunpla sold at various event venues.",
+			"HG Gundam Barbatos Lupus is now available in Iron Blood coating version!"
+		]
+	},
+	"images": ["/images/items/01_2001_0.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2001/",
 	"extractedAt": "2025-12-06T16:44:05.512Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-iron-blooded-orphans"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4103",
-		"01_4240",
-		"01_4188",
-		"01_4094"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-iron-blooded-orphans"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4103", "01_4240", "01_4188", "01_4094"]
 }

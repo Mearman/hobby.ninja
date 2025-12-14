@@ -18,18 +18,16 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"en": "A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world."
-		},
-		{
-			"ja": "『機動戦士ガンダム THE ORIGIN』より、シャア専用ザクIIがメタリックカラーで登場。ガンダムベースのロゴがデザインされた、ディスプレイ台座が付属。",
-			"en": "From \"Mobile Suit Gundam THE ORIGIN\", Char's Zaku II appears in metallic color. A display pedestal with the Gundam base logo designed is included."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
+			"『機動戦士ガンダム THE ORIGIN』より、シャア専用ザクIIがメタリックカラーで登場。ガンダムベースのロゴがデザインされた、ディスプレイ台座が付属。"
+		],
+		"en": [
+			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"From \"Mobile Suit Gundam THE ORIGIN\", Char's Zaku II appears in metallic color. A display pedestal with the Gundam base logo designed is included."
+		]
+	},
 	"images": [
 		"/images/items/01_1938_0.jpg",
 		"/images/items/01_1938_1.jpg",
@@ -44,19 +42,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1938/",
 	"extractedAt": "2025-12-06T17:48:25.228Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-the-origin"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_3711",
-		"01_2828",
-		"01_2707",
-		"item-1000135687"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-the-origin"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_3711", "01_2828", "01_2707", "item-1000135687"]
 }

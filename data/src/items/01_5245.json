@@ -19,32 +19,18 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動戦士Zガンダム』よりガブスレイが登場。"
-		},
-		{
-			"ja": "●スネパーツの差し替えによりMS、中間、MAの３形態へ変形可能 。"
-		},
-		{
-			"ja": "●肩部ビーム砲やムーバブルフレーム・クローアームは各々可動 。"
-		},
-		{
-			"ja": "●付属のディスプレイスタンドには手首パーツやビームサーベルのビーム部分など細かいパーツが収納可能。"
-		},
-		{
-			"ja": "付属武装：フェダーインライフル/ビーム・サーベル"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "フェダーインライフル"
-		},
-		{
-			"ja": "ビーム・サーベル"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士Zガンダム』よりガブスレイが登場。",
+			"●スネパーツの差し替えによりMS、中間、MAの３形態へ変形可能 。",
+			"●肩部ビーム砲やムーバブルフレーム・クローアームは各々可動 。",
+			"●付属のディスプレイスタンドには手首パーツやビームサーベルのビーム部分など細かいパーツが収納可能。",
+			"付属武装：フェダーインライフル/ビーム・サーベル"
+		]
+	},
+	"accessories": {
+		"ja": ["フェダーインライフル", "ビーム・サーベル"]
+	},
 	"images": [
 		"/images/items/01_5245_0.jpg",
 		"/images/items/01_5245_1.jpg",
@@ -59,21 +45,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5245/",
 	"extractedAt": "2025-12-06T17:55:30.291Z",
-	"brandIds": [
-		"hg-high-grade",
-		"hg-universal-century"
-	],
-	"seriesIds": [
-		"mobile-suit-z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg-high-grade", "hg-universal-century"],
+	"seriesIds": ["mobile-suit-z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manualId": "0895"
 }

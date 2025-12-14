@@ -18,35 +18,22 @@
 		"day": 16
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "1/144スケールプラモデルの展示に最適！",
-			"en": "Perfect for displaying 1/144 Scale plastic models!"
-		},
-		{
-			"ja": "さまざまなシーンを再現できるカスタマイズシーンベースが登場！自分だけの世界観を広げよう！",
-			"en": "Introducing a customized scene base that allows you to reproduce various scenes! Expand your own worldview!"
-		},
-		{
-			"ja": "• 砂漠をイメージしたパーツセット。組み合わせによりアレンジが可能な砂塵パーツ付き。",
-			"en": "• Parts set inspired by the desert. Comes with dust parts that can be arranged by combining."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "シーンベース×１",
-			"en": "Scene base x 1"
-		},
-		{
-			"ja": "岩×１式",
-			"en": "Rock x 1 set"
-		},
-		{
-			"ja": "着弾エフェクト×１式",
-			"en": "Impact effect x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"1/144スケールプラモデルの展示に最適！",
+			"さまざまなシーンを再現できるカスタマイズシーンベースが登場！自分だけの世界観を広げよう！",
+			"• 砂漠をイメージしたパーツセット。組み合わせによりアレンジが可能な砂塵パーツ付き。"
+		],
+		"en": [
+			"Perfect for displaying 1/144 Scale plastic models!",
+			"Introducing a customized scene base that allows you to reproduce various scenes! Expand your own worldview!",
+			"• Parts set inspired by the desert. Comes with dust parts that can be arranged by combining."
+		]
+	},
+	"accessories": {
+		"ja": ["シーンベース×１", "岩×１式", "着弾エフェクト×１式"],
+		"en": ["Scene base x 1", "Rock x 1 set", "Impact effect x 1"]
+	},
 	"images": [
 		"/images/items/01_2719_0.jpg",
 		"/images/items/01_2719_1.jpg",
@@ -59,19 +46,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2719/",
 	"extractedAt": "2025-12-06T17:49:56.917Z",
-	"brandIds": [
-		"customized-scene-baseeffectsmaterialsweapons",
-		"30-minutes-missions"
-	],
+	"brandIds": ["customized-scene-baseeffectsmaterialsweapons", "30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3831"
 }

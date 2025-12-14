@@ -17,61 +17,31 @@
 		"month": 0
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "道具不要で簡単組み立て！ポケモンプラモコレクション セレクトシリーズからカイオーガが登場！",
-			"en": "Easy assembly with no tools required! Kyogre appears from the Pokemon Plastic Model Collection Select Series!"
-		},
-		{
-			"ja": "■全長約180mmの迫力あるサイズ！",
-			"en": "• Impressive size with a total length of approximately 180mm!"
-		},
-		{
-			"ja": "■各所可動によりカッコイイポーズが再現可能！",
-			"en": "• Cool poses can be reproduced by moving various parts!"
-		},
-		{
-			"ja": "■口の開閉を差し替えパーツで再現。",
-			"en": "• Reproduce the opening and closing of the mouth with replacement parts."
-		},
-		{
-			"ja": "■波をイメージした専用台座が付属。",
-			"en": "• Comes with a special pedestal inspired by waves."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "口差し替えパーツ×1",
-			"en": "Mouth replacement parts x 1"
-		},
-		{
-			"ja": "ディスプレイ台座×1",
-			"en": "Display pedestal x 1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
-	"images": [
-		"/images/items/01_7038_0.jpg",
-		"/images/items/01_7038_1.jpg",
-		"/images/items/01_7038_2.jpg"
-	],
+	"description": {
+		"ja": [
+			"道具不要で簡単組み立て！ポケモンプラモコレクション セレクトシリーズからカイオーガが登場！",
+			"■全長約180mmの迫力あるサイズ！",
+			"■各所可動によりカッコイイポーズが再現可能！",
+			"■口の開閉を差し替えパーツで再現。",
+			"■波をイメージした専用台座が付属。"
+		],
+		"en": [
+			"Easy assembly with no tools required! Kyogre appears from the Pokemon Plastic Model Collection Select Series!",
+			"• Impressive size with a total length of approximately 180mm!",
+			"• Cool poses can be reproduced by moving various parts!",
+			"• Reproduce the opening and closing of the mouth with replacement parts.",
+			"• Comes with a special pedestal inspired by waves."
+		]
+	},
+	"accessories": {
+		"ja": ["口差し替えパーツ×1", "ディスプレイ台座×1", "シール×1"],
+		"en": ["Mouth replacement parts x 1", "Display pedestal x 1", "Seal×1"]
+	},
+	"images": ["/images/items/01_7038_0.jpg", "/images/items/01_7038_1.jpg", "/images/items/01_7038_2.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_7038/",
 	"extractedAt": "2025-12-06T17:58:24.312Z",
 	"brandIds": [],
-	"seriesIds": [
-		"pocket-monster"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_7015",
-		"01_7010",
-		"01_6895",
-		"01_6897"
-	]
+	"seriesIds": ["pocket-monster"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_7015", "01_7010", "01_6895", "01_6897"]
 }

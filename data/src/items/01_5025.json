@@ -19,71 +19,48 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "2023年10月6日より、いよいよ配信開始！「ガンダムビルドシリーズ」10周年記念映像『ガンダムビルドメタバース』より、大型機体「ティフォエウスガンダム・キメラ」が登場！",
-			"en": "Distribution starts from 2023106! From the 10th anniversary video of the \"Gundam Build Series \" \" Gundam Build Metaverse \", the large aircraft \" Typhoeus Gundam Chimera\" appears!"
-		},
-		{
-			"ja": "■全高約257mmの大型機体。",
-			"en": "• Large aircraft with a total height of approximately 257mm."
-		},
-		{
-			"ja": "■外装を外せば「ティフォエウスガンダム」状態も再現可能。",
-			"en": "• \"Typhoeus Gundam\" state can be reproduced by removing the exterior."
-		},
-		{
-			"ja": "■MA形態を再現可能。ディスプレイ台座が付属し浮遊状態でのディスプレイができる。",
-			"en": "• MA morphology can be reproduced. A display pedestal is included so you can display it in a floating state."
-		},
-		{
-			"ja": "■リフレクタービット用のディスプレイ台座が付属し、リフレクタービットを接続可能。",
-			"en": "• A display pedestal for the reflector bit is included, allowing you to connect the reflector bit."
-		},
-		{
-			"ja": "■脚部ユニット、腕部の射出状態を再現するためのジョイントパーツと2種のリード線が付属。脚部ユニット用のリード線は大型ユニットをつなぐための5本接着タイプ。",
-			"en": "• Comes with joint parts and two types of lead wires to reproduce the injection state of the leg unit and arm. The lead wires for the leg units are 5 adhesive type for connecting large units."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビームライフル×１",
-			"en": "Beam rifle x1"
-		},
-		{
-			"ja": "滑腔砲×２",
-			"en": "Smoothbore gun x 2"
-		},
-		{
-			"ja": "リフレクタービット(収納状態)×１式",
-			"en": "Reflector bit (stored) x 1 set"
-		},
-		{
-			"ja": "リフレクタービット(展開状態)×１式",
-			"en": "Reflector bit (expanded) x 1 set"
-		},
-		{
-			"ja": "リフレクタービット用ディスプレイ台座×１式",
-			"en": "Display pedestal for reflector bit x 1 set"
-		},
-		{
-			"ja": "ジョイントパーツ×１式",
-			"en": "Joint parts x 1 set"
-		},
-		{
-			"ja": "リード線×２",
-			"en": "Lead wire x 2"
-		},
-		{
-			"ja": "リード線(５本接着タイプ)×２",
-			"en": "Lead wire (5 adhesive type) x 2"
-		},
-		{
-			"ja": "ディプレイ台座×１",
-			"en": "Display pedestal x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"2023年10月6日より、いよいよ配信開始！「ガンダムビルドシリーズ」10周年記念映像『ガンダムビルドメタバース』より、大型機体「ティフォエウスガンダム・キメラ」が登場！",
+			"■全高約257mmの大型機体。",
+			"■外装を外せば「ティフォエウスガンダム」状態も再現可能。",
+			"■MA形態を再現可能。ディスプレイ台座が付属し浮遊状態でのディスプレイができる。",
+			"■リフレクタービット用のディスプレイ台座が付属し、リフレクタービットを接続可能。",
+			"■脚部ユニット、腕部の射出状態を再現するためのジョイントパーツと2種のリード線が付属。脚部ユニット用のリード線は大型ユニットをつなぐための5本接着タイプ。"
+		],
+		"en": [
+			"Distribution starts from 2023106! From the 10th anniversary video of the \"Gundam Build Series \" \" Gundam Build Metaverse \", the large aircraft \" Typhoeus Gundam Chimera\" appears!",
+			"• Large aircraft with a total height of approximately 257mm.",
+			"• \"Typhoeus Gundam\" state can be reproduced by removing the exterior.",
+			"• MA morphology can be reproduced. A display pedestal is included so you can display it in a floating state.",
+			"• A display pedestal for the reflector bit is included, allowing you to connect the reflector bit.",
+			"• Comes with joint parts and two types of lead wires to reproduce the injection state of the leg unit and arm. The lead wires for the leg units are 5 adhesive type for connecting large units."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ビームライフル×１",
+			"滑腔砲×２",
+			"リフレクタービット(収納状態)×１式",
+			"リフレクタービット(展開状態)×１式",
+			"リフレクタービット用ディスプレイ台座×１式",
+			"ジョイントパーツ×１式",
+			"リード線×２",
+			"リード線(５本接着タイプ)×２",
+			"ディプレイ台座×１"
+		],
+		"en": [
+			"Beam rifle x1",
+			"Smoothbore gun x 2",
+			"Reflector bit (stored) x 1 set",
+			"Reflector bit (expanded) x 1 set",
+			"Display pedestal for reflector bit x 1 set",
+			"Joint parts x 1 set",
+			"Lead wire x 2",
+			"Lead wire (5 adhesive type) x 2",
+			"Display pedestal x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_5025_0.jpg",
 		"/images/items/01_5025_1.jpg",
@@ -97,20 +74,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5025/",
 	"extractedAt": "2025-12-06T17:55:02.529Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-metaverse"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5236",
-		"01_5235",
-		"01_5083",
-		"01_5071"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-metaverse"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5236", "01_5235", "01_5083", "01_5071"],
 	"manualId": "1224"
 }

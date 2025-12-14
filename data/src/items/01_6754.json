@@ -19,47 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "マクシオン軍から、近接戦闘に特化した強力な最新機体「レヴィニクス」がロールアウト！！",
-			"en": "Maxion's army rolls out the latest, powerful aircraft specializing in close combat, \"Levinix\"! !"
-		},
-		{
-			"ja": "■クリアパーツを多く使用した様々な武装が付属。",
-			"en": "• Comes with various weapons using many clear parts."
-		},
-		{
-			"ja": "■武装はエネルギーダガー、リボルバーソード、エネルギーシールドが付属。",
-			"en": "• Armed with energy dagger, revolver sword, and energy seal."
-		},
-		{
-			"ja": "■ダガーホルダーは3mmジョイントにより、任意の箇所に懸架できる。",
-			"en": "• The dagger holder can be suspended anywhere with a 3mm joint."
-		},
-		{
-			"ja": "■小型アーマーは3mmジョイントにより、任意の箇所に取り付けが可能。",
-			"en": "• The small armor can be attached to any location using a 3mm joint."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "エネルギーダガー×4",
-			"en": "Energy dagger x 4"
-		},
-		{
-			"ja": "リボルバーソード×2",
-			"en": "Revolver sword x2"
-		},
-		{
-			"ja": "エネルギーシールド×1",
-			"en": "Energy Seal×1"
-		},
-		{
-			"ja": "小型アーマー×2",
-			"en": "Small armor x2"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"マクシオン軍から、近接戦闘に特化した強力な最新機体「レヴィニクス」がロールアウト！！",
+			"■クリアパーツを多く使用した様々な武装が付属。",
+			"■武装はエネルギーダガー、リボルバーソード、エネルギーシールドが付属。",
+			"■ダガーホルダーは3mmジョイントにより、任意の箇所に懸架できる。",
+			"■小型アーマーは3mmジョイントにより、任意の箇所に取り付けが可能。"
+		],
+		"en": [
+			"Maxion's army rolls out the latest, powerful aircraft specializing in close combat, \"Levinix\"! !",
+			"• Comes with various weapons using many clear parts.",
+			"• Armed with energy dagger, revolver sword, and energy seal.",
+			"• The dagger holder can be suspended anywhere with a 3mm joint.",
+			"• The small armor can be attached to any location using a 3mm joint."
+		]
+	},
+	"accessories": {
+		"ja": ["エネルギーダガー×4", "リボルバーソード×2", "エネルギーシールド×1", "小型アーマー×2"],
+		"en": ["Energy dagger x 4", "Revolver sword x2", "Energy Seal×1", "Small armor x2"]
+	},
 	"images": [
 		"/images/items/01_6754_0.jpg",
 		"/images/items/01_6754_1.jpg",
@@ -76,17 +55,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_6754/",
 	"extractedAt": "2025-12-06T17:57:53.272Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	]
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"]
 }

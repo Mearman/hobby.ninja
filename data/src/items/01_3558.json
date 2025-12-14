@@ -18,47 +18,36 @@
 		"day": 10
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "プラモデルで戦う特撮ドラマ『ガールガンレディ』始動！",
-			"en": "Special effects drama “Girl Gun Lady” that uses plastic models to fight has started!"
-		},
-		{
-			"ja": "• プラモデル『ガールガンレディ』シリーズ、登場のレディコマンダーシリーズに新たにレディコマンダーアマツが登場。その存在の多くは謎に包まれている。",
-			"en": "• Lady Commander Amatsu has newly appeared in the plastic model ``Girl Gun Lady'' series and the Lady Commander series. Much of its existence is shrouded in mystery."
-		},
-		{
-			"ja": "• 付属の表情パーツでキャラクターの個性を再現。",
-			"en": "• Reproduce the character's personality with the included facial parts."
-		},
-		{
-			"ja": "• ハンドパーツは平手のほか、握り手、指差し手も付属。",
-			"en": "• In addition to the open hand, hand parts include a gripping hand and a pointing hand."
-		},
-		{
-			"ja": "• 専用台座付属。",
-			"en": "• Comes with a special pedestal."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "表情パーツ×3",
-			"en": "Facial expression parts x 3"
-		},
-		{
-			"ja": "ハンドパーツ　平手（左右）、握り手（左右）、指差し手（左右）",
-			"en": "Hand parts Open hand (left and right), gripping hand (left and right), pointing hand (left and right)"
-		},
-		{
-			"ja": "専用台座×1",
-			"en": "Dedicated pedestal x 1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"プラモデルで戦う特撮ドラマ『ガールガンレディ』始動！",
+			"• プラモデル『ガールガンレディ』シリーズ、登場のレディコマンダーシリーズに新たにレディコマンダーアマツが登場。その存在の多くは謎に包まれている。",
+			"• 付属の表情パーツでキャラクターの個性を再現。",
+			"• ハンドパーツは平手のほか、握り手、指差し手も付属。",
+			"• 専用台座付属。"
+		],
+		"en": [
+			"Special effects drama “Girl Gun Lady” that uses plastic models to fight has started!",
+			"• Lady Commander Amatsu has newly appeared in the plastic model ``Girl Gun Lady'' series and the Lady Commander series. Much of its existence is shrouded in mystery.",
+			"• Reproduce the character's personality with the included facial parts.",
+			"• In addition to the open hand, hand parts include a gripping hand and a pointing hand.",
+			"• Comes with a special pedestal."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"表情パーツ×3",
+			"ハンドパーツ　平手（左右）、握り手（左右）、指差し手（左右）",
+			"専用台座×1",
+			"ホイルシール×1"
+		],
+		"en": [
+			"Facial expression parts x 3",
+			"Hand parts Open hand (left and right), gripping hand (left and right), pointing hand (left and right)",
+			"Dedicated pedestal x 1",
+			"Foil Seal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_3558_0.jpg",
 		"/images/items/01_3558_1.jpg",
@@ -73,16 +62,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_3558/",
 	"extractedAt": "2025-12-06T17:51:43.013Z",
 	"brandIds": [],
-	"seriesIds": [
-		"girl-gun-lady"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_3559",
-		"01_3451",
-		"01_3449",
-		"01_3450"
-	]
+	"seriesIds": ["girl-gun-lady"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_3559", "01_3451", "01_3449", "01_3450"]
 }

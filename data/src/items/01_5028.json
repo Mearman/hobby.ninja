@@ -18,35 +18,26 @@
 		"day": 16
 	},
 	"targetAge": 6,
-	"description": [
-		{
-			"ja": "ポケモンプラモコレクション セレクトシリーズに「グラードン」がラインアップ！",
-			"en": "\"Groudon\" is now available in the Pokemon Plastic Model Collection Select Series!"
-		},
-		{
-			"ja": "• 全高約108mm。",
-			"en": "• Overall height approximately 108mm."
-		},
-		{
-			"ja": "• 肩関節に可動軸を設けることで、迫力のあるポージングが可能。",
-			"en": "• By providing a movable axis in the shoulder joint, powerful poses are possible."
-		},
-		{
-			"ja": "• グラードンの模様はパーツ分割で再現。",
-			"en": "• Groudon's pattern is reproduced by dividing it into parts."
-		},
-		{
-			"ja": "• こだわりのパーツ構成で「色分け」と「組み立てやすさ」を両立。",
-			"en": "• Achieves both \"color-coding \" and \" ease of assembly\" with carefully selected parts configuration."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ポケモンプラモコレクション セレクトシリーズに「グラードン」がラインアップ！",
+			"• 全高約108mm。",
+			"• 肩関節に可動軸を設けることで、迫力のあるポージングが可能。",
+			"• グラードンの模様はパーツ分割で再現。",
+			"• こだわりのパーツ構成で「色分け」と「組み立てやすさ」を両立。"
+		],
+		"en": [
+			"\"Groudon\" is now available in the Pokemon Plastic Model Collection Select Series!",
+			"• Overall height approximately 108mm.",
+			"• By providing a movable axis in the shoulder joint, powerful poses are possible.",
+			"• Groudon's pattern is reproduced by dividing it into parts.",
+			"• Achieves both \"color-coding \" and \" ease of assembly\" with carefully selected parts configuration."
+		]
+	},
+	"accessories": {
+		"ja": ["シール×1"],
+		"en": ["Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5028_0.jpg",
 		"/images/items/01_5028_1.jpg",
@@ -64,16 +55,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5028/",
 	"extractedAt": "2025-12-06T17:55:02.082Z",
 	"brandIds": [],
-	"seriesIds": [
-		"pocket-monster"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5984",
-		"01_5958",
-		"01_5947",
-		"01_5568"
-	]
+	"seriesIds": ["pocket-monster"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5984", "01_5958", "01_5947", "01_5568"]
 }

@@ -18,27 +18,22 @@
 		"day": 11
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "ガンプラの楽しさを伝えるキャラクター「ガンプラくん」のグッズが登場！ガンダムベース東京・福岡、ガンダムベースサテライト名古屋・京都・横浜にて発売！",
-			"en": "Goods featuring the character \"Gunpla-kun\" that conveys the fun of Gunpla are now available! Released at Gundam Base Tokyo/Fukuoka and Gundam Base Satellite Nagoya/Kyoto/Yokohama!"
-		},
-		{
-			"ja": "• 「ガンプラくん」ランナーVer.のアクリル製キーチェーン",
-			"en": "• \"Gunpla-kun\" Runner Ver. acrylic key chain"
-		},
-		{
-			"ja": "• ぶら下げるだけでなく、台座に付けて置いて飾ることもできる！",
-			"en": "• In addition to hanging it, you can also decorate it by placing it on a pedestal!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "台座×１",
-			"en": "Pedestal x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ガンプラの楽しさを伝えるキャラクター「ガンプラくん」のグッズが登場！ガンダムベース東京・福岡、ガンダムベースサテライト名古屋・京都・横浜にて発売！",
+			"• 「ガンプラくん」ランナーVer.のアクリル製キーチェーン",
+			"• ぶら下げるだけでなく、台座に付けて置いて飾ることもできる！"
+		],
+		"en": [
+			"Goods featuring the character \"Gunpla-kun\" that conveys the fun of Gunpla are now available! Released at Gundam Base Tokyo/Fukuoka and Gundam Base Satellite Nagoya/Kyoto/Yokohama!",
+			"• \"Gunpla-kun\" Runner Ver. acrylic key chain",
+			"• In addition to hanging it, you can also decorate it by placing it on a pedestal!"
+		]
+	},
+	"accessories": {
+		"ja": ["台座×１"],
+		"en": ["Pedestal x 1"]
+	},
 	"images": [
 		"/images/items/01_3732_0.jpg",
 		"/images/items/01_3732_1.jpg",
@@ -49,16 +44,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_3732/",
 	"extractedAt": "2025-12-06T17:52:04.856Z",
 	"brandIds": [],
-	"seriesIds": [
-		"mobile-suit-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5571",
-		"01_5556",
-		"01_5992",
-		"01_5478"
-	]
+	"seriesIds": ["mobile-suit-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5571", "01_5556", "01_5992", "01_5478"]
 }

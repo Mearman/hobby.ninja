@@ -19,60 +19,40 @@
 	},
 	"targetAge": 15,
 	"scale": "1/60",
-	"description": [
-		{
-			"ja": "• クルツや宗介など多くのキャラクターが搭乗したガーンズバックが1/60スケールでついにキット化！",
-			"en": "• Gernsback with many characters such as Kurtz and Sousuke on board is finally available as a kit in 1/60 scale!"
-		},
-		{
-			"ja": "• ガーンズバックの特徴的なE系列の頭部を再現。",
-			"en": "• Reproduce Gernsback's characteristic E series head."
-		},
-		{
-			"ja": "• クルツが使用した「狙撃砲」や、アーバレストにも装備可能な「対戦車ダガー」など、豊富な武装パーツが付属する。",
-			"en": "• A variety of armed parts are included, such as the \"sniper cannon \" used by Kurtz and the \" anti-tank dagger\" that can also be equipped on Arbalest."
-		},
-		{
-			"ja": "• メカデザイナー海老川兼武氏がデザインを手がけたプラモデルオリジナルウェポン「グラーツ・マンリッヒャー AWS2000 アサルト・カービンタイプ」が付属する。",
-			"en": "• Includes plastic model original weapon \"Graz Mannlicher AWS2000 Assault Carbine Type\" designed by mechanical designer Kanetake Ebikawa."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "76mm 狙撃砲×1",
-			"en": "76mm sniper gun x 1"
-		},
-		{
-			"ja": "GEC-B 40mm ライフル×1",
-			"en": "GEC-B 40mm rifle x 1"
-		},
-		{
-			"ja": "GRAW-2 単分子カッター×1",
-			"en": "GRAW-2 Single molecule cutter x 1"
-		},
-		{
-			"ja": "M1108 対戦車ダガー×1",
-			"en": "M1108 Anti-tank dagger x 1"
-		},
-		{
-			"ja": "グラーツ・マンリッヒャー AWS2000(アサルト・カービンタイプ)×1",
-			"en": "Graz Mannlicher AWS2000 (assault carbine type) x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×13",
-			"en": "Molded products x 13"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• クルツや宗介など多くのキャラクターが搭乗したガーンズバックが1/60スケールでついにキット化！",
+			"• ガーンズバックの特徴的なE系列の頭部を再現。",
+			"• クルツが使用した「狙撃砲」や、アーバレストにも装備可能な「対戦車ダガー」など、豊富な武装パーツが付属する。",
+			"• メカデザイナー海老川兼武氏がデザインを手がけたプラモデルオリジナルウェポン「グラーツ・マンリッヒャー AWS2000 アサルト・カービンタイプ」が付属する。"
+		],
+		"en": [
+			"• Gernsback with many characters such as Kurtz and Sousuke on board is finally available as a kit in 1/60 scale!",
+			"• Reproduce Gernsback's characteristic E series head.",
+			"• A variety of armed parts are included, such as the \"sniper cannon \" used by Kurtz and the \" anti-tank dagger\" that can also be equipped on Arbalest.",
+			"• Includes plastic model original weapon \"Graz Mannlicher AWS2000 Assault Carbine Type\" designed by mechanical designer Kanetake Ebikawa."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"76mm 狙撃砲×1",
+			"GEC-B 40mm ライフル×1",
+			"GRAW-2 単分子カッター×1",
+			"M1108 対戦車ダガー×1",
+			"グラーツ・マンリッヒャー AWS2000(アサルト・カービンタイプ)×1"
+		],
+		"en": [
+			"76mm sniper gun x 1",
+			"GEC-B 40mm rifle x 1",
+			"GRAW-2 Single molecule cutter x 1",
+			"M1108 Anti-tank dagger x 1",
+			"Graz Mannlicher AWS2000 (assault carbine type) x 1"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×13", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded products x 13", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1306_0.jpg",
 		"/images/items/01_1306_1.jpg",
@@ -86,19 +66,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1306/",
 	"extractedAt": "2025-12-06T17:08:09.180Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"full-metal-panic"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2186",
-		"01_2128",
-		"01_2119",
-		"01_1889"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["full-metal-panic"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2186", "01_2128", "01_2119", "01_1889"]
 }

@@ -18,55 +18,40 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "1/144スケールのキットに最適なカスタマイズウェポンズに重火器・大型武装のセットが登場！各種武装に施されたハードポイントと付属する豊富なジョイントにより幅広いカスタマイズが楽しめる。",
-			"en": "A set of heavy weapons and large armaments is now available in Customized Weapons, which is perfect for the 1/144 Scale Kit! You can enjoy a wide range of customization with the hard points attached to various weapons and the abundant joints included."
-		},
-		{
-			"ja": "• バックパックにはキャノン、ミサイルポッドを接続可能。",
-			"en": "• Cannons and missile pods can be connected to the backpack."
-		},
-		{
-			"ja": "• ミサイルポッドは付属するジョイントを使用して縦連結、別売り商品を組み合わせれば縦横連結も可能。",
-			"en": "• Missile pods can be connected vertically using the included joints, and can also be connected vertically and horizontally by combining items sold separately."
-		},
-		{
-			"ja": "• 大型ソードはハンドブレード、ショートアックスに分割が可能。",
-			"en": "• Large sword can be divided into hand blade and short axe."
-		},
-		{
-			"ja": "• 大型シールドには別売りの「30MM 1/144 eEXM GIG-R01 プロヴェデル(type-REX 01)」の武装を収納できる。",
-			"en": "• The large Seal can store the separately sold \"30MM 1/144 eEXM GIG-R01 Provedel (type-REX 01)\" armament."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "キャノン×２",
-			"en": "Cannon x 2"
-		},
-		{
-			"ja": "ミサイルポッド×２",
-			"en": "Missile pod x 2"
-		},
-		{
-			"ja": "バックパック×1",
-			"en": "Backpack x 1"
-		},
-		{
-			"ja": "大型ソード(ハンドブレード＋ショートアックス)×１",
-			"en": "Large sword (hand blade + short ax) x 1"
-		},
-		{
-			"ja": "大型シールド×１",
-			"en": "Large Seal × 1"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"1/144スケールのキットに最適なカスタマイズウェポンズに重火器・大型武装のセットが登場！各種武装に施されたハードポイントと付属する豊富なジョイントにより幅広いカスタマイズが楽しめる。",
+			"• バックパックにはキャノン、ミサイルポッドを接続可能。",
+			"• ミサイルポッドは付属するジョイントを使用して縦連結、別売り商品を組み合わせれば縦横連結も可能。",
+			"• 大型ソードはハンドブレード、ショートアックスに分割が可能。",
+			"• 大型シールドには別売りの「30MM 1/144 eEXM GIG-R01 プロヴェデル(type-REX 01)」の武装を収納できる。"
+		],
+		"en": [
+			"A set of heavy weapons and large armaments is now available in Customized Weapons, which is perfect for the 1/144 Scale Kit! You can enjoy a wide range of customization with the hard points attached to various weapons and the abundant joints included.",
+			"• Cannons and missile pods can be connected to the backpack.",
+			"• Missile pods can be connected vertically using the included joints, and can also be connected vertically and horizontally by combining items sold separately.",
+			"• Large sword can be divided into hand blade and short axe.",
+			"• The large Seal can store the separately sold \"30MM 1/144 eEXM GIG-R01 Provedel (type-REX 01)\" armament."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"キャノン×２",
+			"ミサイルポッド×２",
+			"バックパック×1",
+			"大型ソード(ハンドブレード＋ショートアックス)×１",
+			"大型シールド×１",
+			"ジョイントパーツ×1式"
+		],
+		"en": [
+			"Cannon x 2",
+			"Missile pod x 2",
+			"Backpack x 1",
+			"Large sword (hand blade + short ax) x 1",
+			"Large Seal × 1",
+			"Joint parts x 1 set"
+		]
+	},
 	"images": [
 		"/images/items/01_4909_0.jpg",
 		"/images/items/01_4909_1.jpg",
@@ -80,18 +65,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4909/",
 	"extractedAt": "2025-12-06T17:54:38.079Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_6774",
-		"01_6775",
-		"01_6766",
-		"01_6767"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_6774", "01_6775", "01_6766", "01_6767"],
 	"manualId": "3763"
 }

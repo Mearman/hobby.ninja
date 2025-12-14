@@ -18,23 +18,20 @@
 		"day": 23
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "腕部、脚部パーツの組み替えで自分好みのシスターにカスタマイズ！",
-			"en": "Customize your sister to your liking by rearranging the arm and leg parts!"
-		},
-		{
-			"ja": "• 両腕、両脚を組み替える事で印象を大きく変えるカスタマイズが可能。",
-			"en": "• You can customize the look by rearranging both arms and legs."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "オプションアーマー×1式",
-			"en": "Optional armor x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"腕部、脚部パーツの組み替えで自分好みのシスターにカスタマイズ！",
+			"• 両腕、両脚を組み替える事で印象を大きく変えるカスタマイズが可能。"
+		],
+		"en": [
+			"Customize your sister to your liking by rearranging the arm and leg parts!",
+			"• You can customize the look by rearranging both arms and legs."
+		]
+	},
+	"accessories": {
+		"ja": ["オプションアーマー×1式"],
+		"en": ["Optional armor x 1 set"]
+	},
 	"images": [
 		"/images/items/01_3556_0.jpg",
 		"/images/items/01_3556_1.jpg",
@@ -46,18 +43,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3556/",
 	"extractedAt": "2025-12-06T17:51:42.591Z",
-	"brandIds": [
-		"30-minutes-sisters"
-	],
+	"brandIds": ["30-minutes-sisters"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manualId": "3448"
 }

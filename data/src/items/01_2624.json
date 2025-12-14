@@ -19,35 +19,20 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ますます拡がる30MMシリーズのカラーバリエーション！アルトにグレーが登場！",
-			"en": "Expanding color variations of the 30MM series! Gray is now available for Alto!"
-		},
-		{
-			"ja": "• サブマシンガン、アイコンメカ、バックパック、ナックル、マーキングシールが付属。",
-			"en": "• Submachine gun, icon mechanism, backpack, knuckles, and MarkingSeal are included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "サブマシンガン×１",
-			"en": "Submachine gun x1"
-		},
-		{
-			"ja": "アイコンメカ×１",
-			"en": "Icon mecha x 1"
-		},
-		{
-			"ja": "バックパック×１",
-			"en": "Backpack x 1"
-		},
-		{
-			"ja": "ナックル×１",
-			"en": "Knuckle x1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ますます拡がる30MMシリーズのカラーバリエーション！アルトにグレーが登場！",
+			"• サブマシンガン、アイコンメカ、バックパック、ナックル、マーキングシールが付属。"
+		],
+		"en": [
+			"Expanding color variations of the 30MM series! Gray is now available for Alto!",
+			"• Submachine gun, icon mechanism, backpack, knuckles, and MarkingSeal are included."
+		]
+	},
+	"accessories": {
+		"ja": ["サブマシンガン×１", "アイコンメカ×１", "バックパック×１", "ナックル×１"],
+		"en": ["Submachine gun x1", "Icon mecha x 1", "Backpack x 1", "Knuckle x1"]
+	},
 	"images": [
 		"/images/items/01_2624_0.jpg",
 		"/images/items/01_2624_1.jpg",
@@ -62,18 +47,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2624/",
 	"extractedAt": "2025-12-06T17:49:45.361Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3674"
 }

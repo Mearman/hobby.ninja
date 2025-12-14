@@ -19,47 +19,30 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動戦士ガンダム 鉄血のオルフェンズG』より、ゲームオリジナルの機体が登場！",
-			"en": "From \"Mobile Suit Gundam Iron-Blooded Orphans G\", a game original aircraft appears!"
-		},
-		{
-			"ja": "■ヴァルキュリア・フレーム機体のジークルーネを立体化。",
-			"en": "• Three-dimensional version of Valkyria Frame's Siegrune."
-		},
-		{
-			"ja": "■ヴァルキュリアレイピア、ヴァルキュリアラウンドシールドといった専用武装が付属。",
-			"en": "• Comes with special weapons such as Valkyria Rapier and Valkyria Round Seal."
-		},
-		{
-			"ja": "■レイピア用の持ち手や平手などのハンドパーツが付属。",
-			"en": "• Hand parts such as a rapier handle and open hand are included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ヴァルキュリアレイピア×1",
-			"en": "Valkyria Rapier x1"
-		},
-		{
-			"ja": "ヴァルキュリアラウンドシールド×1",
-			"en": "Valkyria Round Seal × 1"
-		},
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "リード線×１式",
-			"en": "Lead wire x 1 set"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士ガンダム 鉄血のオルフェンズG』より、ゲームオリジナルの機体が登場！",
+			"■ヴァルキュリア・フレーム機体のジークルーネを立体化。",
+			"■ヴァルキュリアレイピア、ヴァルキュリアラウンドシールドといった専用武装が付属。",
+			"■レイピア用の持ち手や平手などのハンドパーツが付属。"
+		],
+		"en": [
+			"From \"Mobile Suit Gundam Iron-Blooded Orphans G\", a game original aircraft appears!",
+			"• Three-dimensional version of Valkyria Frame's Siegrune.",
+			"• Comes with special weapons such as Valkyria Rapier and Valkyria Round Seal.",
+			"• Hand parts such as a rapier handle and open hand are included."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ヴァルキュリアレイピア×1",
+			"ヴァルキュリアラウンドシールド×1",
+			"ハンドパーツ×1式",
+			"リード線×１式",
+			"シール×1"
+		],
+		"en": ["Valkyria Rapier x1", "Valkyria Round Seal × 1", "Hand parts x 1 set", "Lead wire x 1 set", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_4103_0.jpg",
 		"/images/items/01_4103_1.jpg",
@@ -70,20 +53,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4103/",
 	"extractedAt": "2025-12-06T17:52:57.244Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-iron-blooded-orphans"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_6773",
-		"01_6763",
-		"01_4240",
-		"01_4188"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-iron-blooded-orphans"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_6773", "01_6763", "01_4240", "01_4188"],
 	"manualId": "0139"
 }

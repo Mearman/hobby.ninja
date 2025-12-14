@@ -18,39 +18,24 @@
 		"day": 25
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "キャラクター素体(別売り)への盛りカスタマイズが可能！",
-			"en": "It is possible to customize the character body (sold separately)!"
-		},
-		{
-			"ja": "■主に「SIS-A00 ティアーシャ」への装着が可能な、鳥をイメージしたデザインのオプションパーツセット。",
-			"en": "• An optional parts set with a bird-inspired design that can be attached primarily to \"SIS-A00 Tearsha\"."
-		},
-		{
-			"ja": "■太モモパーツはティアーシャと異なるカラーのパーツが付属。",
-			"en": "• Thick thigh parts come with parts in a different color from Tiasha."
-		},
-		{
-			"ja": "■”脚部膝上パーツ”を介して、別売りの「３０MM」シリーズのメカニカルな脚パーツが装着可能となっている。(※「30 MINUTES MISSIONS」キットの対象年齢は8才です。)",
-			"en": "• Mechanical leg parts from the \"30MM \" series (sold separately) can be attached via the \" leg parts above the knee \". (*The target age for the \" 30 MINUTES MISSIONS\" Kit is 8 years old.)"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "オプションアーマー×1式",
-			"en": "Optional armor x 1 set"
-		},
-		{
-			"ja": "太モモパーツ×1式",
-			"en": "Thick thigh parts x 1 set"
-		},
-		{
-			"ja": "脚部膝上パーツ×1式",
-			"en": "Leg above knee parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"キャラクター素体(別売り)への盛りカスタマイズが可能！",
+			"■主に「SIS-A00 ティアーシャ」への装着が可能な、鳥をイメージしたデザインのオプションパーツセット。",
+			"■太モモパーツはティアーシャと異なるカラーのパーツが付属。",
+			"■”脚部膝上パーツ”を介して、別売りの「３０MM」シリーズのメカニカルな脚パーツが装着可能となっている。(※「30 MINUTES MISSIONS」キットの対象年齢は8才です。)"
+		],
+		"en": [
+			"It is possible to customize the character body (sold separately)!",
+			"• An optional parts set with a bird-inspired design that can be attached primarily to \"SIS-A00 Tearsha\".",
+			"• Thick thigh parts come with parts in a different color from Tiasha.",
+			"• Mechanical leg parts from the \"30MM \" series (sold separately) can be attached via the \" leg parts above the knee \". (*The target age for the \" 30 MINUTES MISSIONS\" Kit is 8 years old.)"
+		]
+	},
+	"accessories": {
+		"ja": ["オプションアーマー×1式", "太モモパーツ×1式", "脚部膝上パーツ×1式"],
+		"en": ["Optional armor x 1 set", "Thick thigh parts x 1 set", "Leg above knee parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_3554_0.jpg",
 		"/images/items/01_3554_1.jpg",
@@ -60,18 +45,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3554/",
 	"extractedAt": "2025-12-06T17:51:42.326Z",
-	"brandIds": [
-		"30-minutes-sisters"
-	],
+	"brandIds": ["30-minutes-sisters"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manualId": "3442"
 }

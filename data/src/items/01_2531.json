@@ -19,63 +19,44 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "[数量限定生産]",
-			"en": "[Limited quantity production]"
-		},
-		{
-			"ja": "『機動戦士ガンダム 逆襲のシャア』より、「RG 1/144 νガンダム」にエフェクトパーツと台座が付属したセットアイテムが登場！",
-			"en": "From \"Mobile Suit Gundam: Char's Counterattack \" comes a set item that includes \" RG 1/144 νGundam\" with effect parts and a pedestal!"
-		},
-		{
-			"ja": "• 「RG 1/144 νガンダム」、アクションべース４クリア×１、Figure-rise Effect ジェットエフェクト（クリアイエロー）×２のセット。",
-			"en": "• \"RG 1/144 νGundam\", Action Base 4 Clear x 1, Figure-rise Effect Jet Effect (Clear Yellow) x 2 set."
-		},
-		{
-			"ja": "• 付属のフィン・ファンネル６基全てを、エフェクト付きでディスプレイできる！",
-			"en": "• You can display all 6 included fins and funnels with effects!"
-		},
-		{
-			"ja": "• 「RG 1/144 サザビー」（別売り）にも使用可能。",
-			"en": "• Can also be used for \"RG 1/144 Sazabi\" (sold separately)."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビーム・ライフル×1",
-			"en": "Beam rifle x1"
-		},
-		{
-			"ja": "フィン・ファンネル×6",
-			"en": "Fin Funnel x 6"
-		},
-		{
-			"ja": "ニュー・ハイパー・バズーカ×1",
-			"en": "New hyper bazooka x1"
-		},
-		{
-			"ja": "シールド（ビーム・キャノン）×1",
-			"en": "Seal (beam cannon) x 1"
-		},
-		{
-			"ja": "ビーム・サーベル（バックパック部・腕部）×各1",
-			"en": "Beam saber (backpack part/arm part) x 1 each"
-		},
-		{
-			"ja": "ミサイル×1式",
-			"en": "Missile x 1 type"
-		},
-		{
-			"ja": "フィン・ファンネルエフェクトセット×1",
-			"en": "Fin funnel effect set x 1"
-		},
-		{
-			"ja": "リアリスティックデカール×1",
-			"en": "Realistic decal x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"[数量限定生産]",
+			"『機動戦士ガンダム 逆襲のシャア』より、「RG 1/144 νガンダム」にエフェクトパーツと台座が付属したセットアイテムが登場！",
+			"• 「RG 1/144 νガンダム」、アクションべース４クリア×１、Figure-rise Effect ジェットエフェクト（クリアイエロー）×２のセット。",
+			"• 付属のフィン・ファンネル６基全てを、エフェクト付きでディスプレイできる！",
+			"• 「RG 1/144 サザビー」（別売り）にも使用可能。"
+		],
+		"en": [
+			"[Limited quantity production]",
+			"From \"Mobile Suit Gundam: Char's Counterattack \" comes a set item that includes \" RG 1/144 νGundam\" with effect parts and a pedestal!",
+			"• \"RG 1/144 νGundam\", Action Base 4 Clear x 1, Figure-rise Effect Jet Effect (Clear Yellow) x 2 set.",
+			"• You can display all 6 included fins and funnels with effects!",
+			"• Can also be used for \"RG 1/144 Sazabi\" (sold separately)."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ビーム・ライフル×1",
+			"フィン・ファンネル×6",
+			"ニュー・ハイパー・バズーカ×1",
+			"シールド（ビーム・キャノン）×1",
+			"ビーム・サーベル（バックパック部・腕部）×各1",
+			"ミサイル×1式",
+			"フィン・ファンネルエフェクトセット×1",
+			"リアリスティックデカール×1"
+		],
+		"en": [
+			"Beam rifle x1",
+			"Fin Funnel x 6",
+			"New hyper bazooka x1",
+			"Seal (beam cannon) x 1",
+			"Beam saber (backpack part/arm part) x 1 each",
+			"Missile x 1 type",
+			"Fin funnel effect set x 1",
+			"Realistic decal x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_2531_0.jpg",
 		"/images/items/01_2531_1.jpg",
@@ -85,19 +66,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2531/",
 	"extractedAt": "2025-12-06T17:49:33.544Z",
-	"brandIds": [
-		"rg-real-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-chars-counterattack"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_4121",
-		"01_2734",
-		"item-1000136789",
-		"01_2343"
-	]
+	"brandIds": ["rg-real-grade"],
+	"seriesIds": ["mobile-suit-gundam-chars-counterattack"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_4121", "01_2734", "item-1000136789", "01_2343"]
 }

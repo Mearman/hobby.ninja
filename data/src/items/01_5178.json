@@ -18,67 +18,46 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『機動戦士ガンダム SEED』シリーズで印象的なエールストライカーが完全新規造形でオプションパーツで登場！",
-			"en": "The impressive Ale Striker from the \"Mobile Suit Gundam SEED\" series is now available as optional parts with a completely new model!"
-		},
-		{
-			"ja": "• 別売りの「ENTRY GRADE 1/144 ストライクガンダム」等と組み合わせてエールストライクガンダムを再現可能。その他HGアイテムにも対応！",
-			"en": "• Ale Strike Gundam can be reproduced by combining with the separately sold \"ENTRY GRADE 1/144 Strike Gundam\" etc. Also compatible with other HG items!"
-		},
-		{
-			"ja": "• キットに応じて選べるジョイントパーツが付属。",
-			"en": "• Comes with joint parts that can be selected depending on the kit."
-		},
-		{
-			"ja": "• 各部の3mmジョイントやCタイプジョイントにより各部の可動を実現。",
-			"en": "• 3mm joints and C-type joints make each part movable."
-		},
-		{
-			"ja": "• エールストライカーの組み換えによりプラモデルオリジナル装備としても装着可能！",
-			"en": "• By recombining the Ale Striker, it can be installed as original equipment for the plastic model!"
-		},
-		{
-			"ja": "• バズーカやグランドスラムなど豊富な武装も付属。",
-			"en": "• Includes a variety of weapons such as bazooka and grand slam."
-		},
-		{
-			"ja": "• 別売りの「オプションパーツセット ガンプラ 02 (ランチャーストライカー&ソードストライカー)」と組み合わせてパーフェクトストライクガンダムが再現可能！",
-			"en": "• Perfect Strike Gundam can be recreated by combining with the optional parts set Gunpla 02 (Launcher Striker & Sword Striker) sold separately!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "エールストライカー×1式",
-			"en": "Ale Striker x 1 type"
-		},
-		{
-			"ja": "ビームサーベル×2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "エネルギーパック×1",
-			"en": "Energy pack x 1"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		},
-		{
-			"ja": "グランドスラム×1",
-			"en": "Grand Slam x1"
-		},
-		{
-			"ja": "バズーカ×1",
-			"en": "Bazooka×1"
-		},
-		{
-			"ja": "MMI-M1001 90mm対空散弾銃×1",
-			"en": "MMI-M1001 90mm anti-aircraft shotgun x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士ガンダム SEED』シリーズで印象的なエールストライカーが完全新規造形でオプションパーツで登場！",
+			"• 別売りの「ENTRY GRADE 1/144 ストライクガンダム」等と組み合わせてエールストライクガンダムを再現可能。その他HGアイテムにも対応！",
+			"• キットに応じて選べるジョイントパーツが付属。",
+			"• 各部の3mmジョイントやCタイプジョイントにより各部の可動を実現。",
+			"• エールストライカーの組み換えによりプラモデルオリジナル装備としても装着可能！",
+			"• バズーカやグランドスラムなど豊富な武装も付属。",
+			"• 別売りの「オプションパーツセット ガンプラ 02 (ランチャーストライカー&ソードストライカー)」と組み合わせてパーフェクトストライクガンダムが再現可能！"
+		],
+		"en": [
+			"The impressive Ale Striker from the \"Mobile Suit Gundam SEED\" series is now available as optional parts with a completely new model!",
+			"• Ale Strike Gundam can be reproduced by combining with the separately sold \"ENTRY GRADE 1/144 Strike Gundam\" etc. Also compatible with other HG items!",
+			"• Comes with joint parts that can be selected depending on the kit.",
+			"• 3mm joints and C-type joints make each part movable.",
+			"• By recombining the Ale Striker, it can be installed as original equipment for the plastic model!",
+			"• Includes a variety of weapons such as bazooka and grand slam.",
+			"• Perfect Strike Gundam can be recreated by combining with the optional parts set Gunpla 02 (Launcher Striker & Sword Striker) sold separately!"
+		]
+	},
+	"accessories": {
+		"ja": [
+			"エールストライカー×1式",
+			"ビームサーベル×2",
+			"エネルギーパック×1",
+			"ジョイントパーツ×1式",
+			"グランドスラム×1",
+			"バズーカ×1",
+			"MMI-M1001 90mm対空散弾銃×1"
+		],
+		"en": [
+			"Ale Striker x 1 type",
+			"Beam saber x2",
+			"Energy pack x 1",
+			"Joint parts x 1 set",
+			"Grand Slam x1",
+			"Bazooka×1",
+			"MMI-M1001 90mm anti-aircraft shotgun x 1"
+		]
+	},
 	"images": [
 		"/images/items/01_5178_0.jpg",
 		"/images/items/01_5178_1.jpg",
@@ -95,18 +74,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5178/",
 	"extractedAt": "2025-12-06T17:55:21.115Z",
-	"brandIds": [
-		"optional-parts-set"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-seed"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5441",
-		"01_5178"
-	],
+	"brandIds": ["optional-parts-set"],
+	"seriesIds": ["mobile-suit-gundam-seed"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5441", "01_5178"],
 	"manualId": "1553"
 }

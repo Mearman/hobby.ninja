@@ -18,64 +18,42 @@
 		"day": 31
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "『ドラゴンボールZ』より悟天とトランクスがフュージョンし、超サイヤ人化した「超サイヤ人ゴテンクス」が登場！",
-			"en": "From \"Dragon Ball Z \" comes the fusion of Goten and Trunks, \" Super Saiyan Gotenks\" who has become a Super Saiyan!"
-		},
-		{
-			"ja": "• Figure-rise Standardならではの、肉体や服を自然な造形と組み立てで再現。",
-			"en": "• The body and clothes are reproduced with natural shapes and assemblies that are unique to Figure-rise Standard."
-		},
-		{
-			"ja": "• 充実のエフェクトパーツで独特な必殺技の再現ができる。",
-			"en": "• You can reproduce unique special moves with a wide range of effect parts."
-		},
-		{
-			"ja": "• 表情パーツ２種のほか、かめはめ波（両手）、ピ－ス（左手のみ）、人差し（右手のみ）といったポーズを演出するハンドパーツが付属。",
-			"en": "• In addition to two types of expression parts, hand parts are included to create poses such as Kamehameha (both hands), peace (left hand only), and pointing finger (right hand only)."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "スーパーゴースト×1セット",
-			"en": "Super Ghost x 1 set"
-		},
-		{
-			"ja": "ギャラクティカドーナツ×1",
-			"en": "Galactica donut x1"
-		},
-		{
-			"ja": "握り手(左右)×各1",
-			"en": "Gripping hands (left and right) x 1 each"
-		},
-		{
-			"ja": "ピース手(左)×1",
-			"en": "Peace hand (left) x 1"
-		},
-		{
-			"ja": "人指し手(左右)×各1",
-			"en": "Pointing hand (left and right) x 1 each"
-		},
-		{
-			"ja": "かめはめ波手×1セット",
-			"en": "Kamehame wave hand x 1 set"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×10",
-			"en": "Molded product x 10"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『ドラゴンボールZ』より悟天とトランクスがフュージョンし、超サイヤ人化した「超サイヤ人ゴテンクス」が登場！",
+			"• Figure-rise Standardならではの、肉体や服を自然な造形と組み立てで再現。",
+			"• 充実のエフェクトパーツで独特な必殺技の再現ができる。",
+			"• 表情パーツ２種のほか、かめはめ波（両手）、ピ－ス（左手のみ）、人差し（右手のみ）といったポーズを演出するハンドパーツが付属。"
+		],
+		"en": [
+			"From \"Dragon Ball Z \" comes the fusion of Goten and Trunks, \" Super Saiyan Gotenks\" who has become a Super Saiyan!",
+			"• The body and clothes are reproduced with natural shapes and assemblies that are unique to Figure-rise Standard.",
+			"• You can reproduce unique special moves with a wide range of effect parts.",
+			"• In addition to two types of expression parts, hand parts are included to create poses such as Kamehameha (both hands), peace (left hand only), and pointing finger (right hand only)."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"スーパーゴースト×1セット",
+			"ギャラクティカドーナツ×1",
+			"握り手(左右)×各1",
+			"ピース手(左)×1",
+			"人指し手(左右)×各1",
+			"かめはめ波手×1セット"
+		],
+		"en": [
+			"Super Ghost x 1 set",
+			"Galactica donut x1",
+			"Gripping hands (left and right) x 1 each",
+			"Peace hand (left) x 1",
+			"Pointing hand (left and right) x 1 each",
+			"Kamehame wave hand x 1 set"
+		]
+	},
+	"contents": {
+		"ja": ["成形品×10", "シール×1", "取扱説明書×1"],
+		"en": ["Molded product x 10", "Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2253_0.jpg",
 		"/images/items/01_2253_1.jpg",
@@ -91,19 +69,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2253/",
 	"extractedAt": "2025-12-06T17:48:59.428Z",
-	"brandIds": [
-		"figure-rise-standard"
-	],
-	"seriesIds": [
-		"dragon-ball-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_4901",
-		"01_4219",
-		"01_2974",
-		"01_2769"
-	]
+	"brandIds": ["figure-rise-standard"],
+	"seriesIds": ["dragon-ball-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_4901", "01_4219", "01_2974", "01_2769"]
 }

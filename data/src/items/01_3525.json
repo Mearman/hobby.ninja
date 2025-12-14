@@ -18,39 +18,24 @@
 		"day": 30
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『SDガンダムワールド ヒーローズ』より、「信長ガンダムエピオン」が謎に包まれた別カラーバージョンで登場！",
-			"en": "From \"SD Gundam World Heroes \", \" Nobunaga Gundam Epyon\" appears in a mysterious different color version!"
-		},
-		{
-			"ja": "■肘に可動パーツを採用、抜刀アクションを表現できる。",
-			"en": "• Movable parts are used on the elbows, allowing you to express the action of drawing a sword."
-		},
-		{
-			"ja": "■刀身にクリアパーツを重ね、必殺技「絶刀・燬灼龍穿」を再現。",
-			"en": "• Clear parts are layered on the blade to reproduce the special move \"Zetsutou - Sakuro Ryukaku\"."
-		},
-		{
-			"ja": "■ダークマスクが付属。",
-			"en": "• Comes with dark mask."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "刀(へし切長谷部)×1",
-			"en": "Sword (Heshikiri Hasebe) x 1"
-		},
-		{
-			"ja": "クリアパーツ(仮面/ヒートロッド)×1",
-			"en": "Clear parts (mask/heat rod) x 1"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『SDガンダムワールド ヒーローズ』より、「信長ガンダムエピオン」が謎に包まれた別カラーバージョンで登場！",
+			"■肘に可動パーツを採用、抜刀アクションを表現できる。",
+			"■刀身にクリアパーツを重ね、必殺技「絶刀・燬灼龍穿」を再現。",
+			"■ダークマスクが付属。"
+		],
+		"en": [
+			"From \"SD Gundam World Heroes \", \" Nobunaga Gundam Epyon\" appears in a mysterious different color version!",
+			"• Movable parts are used on the elbows, allowing you to express the action of drawing a sword.",
+			"• Clear parts are layered on the blade to reproduce the special move \"Zetsutou - Sakuro Ryukaku\".",
+			"• Comes with dark mask."
+		]
+	},
+	"accessories": {
+		"ja": ["刀(へし切長谷部)×1", "クリアパーツ(仮面/ヒートロッド)×1", "ホイルシール×1"],
+		"en": ["Sword (Heshikiri Hasebe) x 1", "Clear parts (mask/heat rod) x 1", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_3525_0.jpg",
 		"/images/items/01_3525_1.jpg",
@@ -61,19 +46,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3525/",
 	"extractedAt": "2025-12-06T17:51:40.296Z",
-	"brandIds": [
-		"sd-gundam-series"
-	],
-	"seriesIds": [
-		"sd-gundam-world-heroes"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000193966",
-		"01_4336",
-		"01_4312",
-		"01_4634"
-	]
+	"brandIds": ["sd-gundam-series"],
+	"seriesIds": ["sd-gundam-world-heroes"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000193966", "01_4336", "01_4312", "01_4634"]
 }

@@ -19,55 +19,40 @@
 	},
 	"targetAge": 15,
 	"scale": "1/72",
-	"description": [
-		{
-			"ja": "「境界戦機」よりレジスタンスの鉄塚ガシンが搭乗するI-LeS(自律思考型AI)を搭載したAMAIM(アメイン)「ジョウガン」をHGで立体化。",
-			"en": "From \"Kyoukai Senki \", the AMAIM \" Jougan\" equipped with I-LeS (autonomous thinking AI), piloted by Gasin Tetsuzuka of the Resistance, is made into a three-dimensional HG."
-		},
-		{
-			"ja": "■商品化に於いてKEN OKUYAMA DESIGNによる可動構造の検証を経て立体化されたAMAIM(アメイン)。",
-			"en": "• AMAIM was made into a three-dimensional product after verification of its movable structure by KEN OKUYAMA DESIGN."
-		},
-		{
-			"ja": "■リアアーマーにはアウトリガー展開状態をパーツの差し替えで再現。カカト部分も展開し、射撃ポーズの再現が可能。",
-			"en": "• The outrigger deployment state is reproduced on the rear armor by replacing parts. The heel part can also be expanded to recreate shooting poses."
-		},
-		{
-			"ja": "■120mm二連装狙撃砲が付属。銃床パーツはスライド式のストックで射撃ポーズを再現。",
-			"en": "• 120mm dual sniper gun included. The gun stock part reproduces the shooting pose with a sliding stock."
-		},
-		{
-			"ja": "■左肩シールド裏への戦闘短刀の収納が可能。",
-			"en": "• A combat dagger can be stored on the back of the left shoulder seal."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "120mm二連装狙撃砲×１",
-			"en": "120mm dual sniper gun x 1"
-		},
-		{
-			"ja": "戦闘短刀×１",
-			"en": "Combat dagger x1"
-		},
-		{
-			"ja": "左肩用シールド×１",
-			"en": "Seal for left shoulder x 1"
-		},
-		{
-			"ja": "ハンドパーツ 平手（左右）、武器持ち手(左右)、ライフル持ち手(右)",
-			"en": "Hand parts Open hand (left and right), weapon handle (left and right), rifle handle (right)"
-		},
-		{
-			"ja": "リアアーマー展開用パーツ×１",
-			"en": "Rear armor deployment parts x 1"
-		},
-		{
-			"ja": "シール×１",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"「境界戦機」よりレジスタンスの鉄塚ガシンが搭乗するI-LeS(自律思考型AI)を搭載したAMAIM(アメイン)「ジョウガン」をHGで立体化。",
+			"■商品化に於いてKEN OKUYAMA DESIGNによる可動構造の検証を経て立体化されたAMAIM(アメイン)。",
+			"■リアアーマーにはアウトリガー展開状態をパーツの差し替えで再現。カカト部分も展開し、射撃ポーズの再現が可能。",
+			"■120mm二連装狙撃砲が付属。銃床パーツはスライド式のストックで射撃ポーズを再現。",
+			"■左肩シールド裏への戦闘短刀の収納が可能。"
+		],
+		"en": [
+			"From \"Kyoukai Senki \", the AMAIM \" Jougan\" equipped with I-LeS (autonomous thinking AI), piloted by Gasin Tetsuzuka of the Resistance, is made into a three-dimensional HG.",
+			"• AMAIM was made into a three-dimensional product after verification of its movable structure by KEN OKUYAMA DESIGN.",
+			"• The outrigger deployment state is reproduced on the rear armor by replacing parts. The heel part can also be expanded to recreate shooting poses.",
+			"• 120mm dual sniper gun included. The gun stock part reproduces the shooting pose with a sliding stock.",
+			"• A combat dagger can be stored on the back of the left shoulder seal."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"120mm二連装狙撃砲×１",
+			"戦闘短刀×１",
+			"左肩用シールド×１",
+			"ハンドパーツ 平手（左右）、武器持ち手(左右)、ライフル持ち手(右)",
+			"リアアーマー展開用パーツ×１",
+			"シール×１"
+		],
+		"en": [
+			"120mm dual sniper gun x 1",
+			"Combat dagger x1",
+			"Seal for left shoulder x 1",
+			"Hand parts Open hand (left and right), weapon handle (left and right), rifle handle (right)",
+			"Rear armor deployment parts x 1",
+			"Seal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_3690_0.jpg",
 		"/images/items/01_3690_1.jpg",
@@ -80,19 +65,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3690/",
 	"extractedAt": "2025-12-06T17:51:59.827Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"kyoukai-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["kyoukai-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
 }

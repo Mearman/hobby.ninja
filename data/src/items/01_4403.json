@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 デミバーディング",
-		"en": "HG 1/144 Demibirding"
+		"en": "HG 1/144 DEMI BARDING"
 	},
 	"price": {
 		"amount": 2090,
@@ -19,39 +19,24 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、デミバーディングをHGで立体化！",
-			"en": "From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", Demibirding is made into HG!"
-		},
-		{
-			"ja": "■機体背部には大型のバックパックを装備。",
-			"en": "• Equipped with a large backpack on the back of the aircraft."
-		},
-		{
-			"ja": "■脚部に装着されたスラスターは前方に可動し、ビームサーベルを格納。",
-			"en": "• The thrusters attached to the legs move forward and store the beam saber."
-		},
-		{
-			"ja": "■ビームライフルは補助グリップを可動させることで両手持ちで装備可能。",
-			"en": "• The beam rifle can be equipped with both hands by moving the auxiliary grip."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビームライフル×１",
-			"en": "Beam rifle x1"
-		},
-		{
-			"ja": "ビームサーベル×２",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、デミバーディングをHGで立体化！",
+			"■機体背部には大型のバックパックを装備。",
+			"■脚部に装着されたスラスターは前方に可動し、ビームサーベルを格納。",
+			"■ビームライフルは補助グリップを可動させることで両手持ちで装備可能。"
+		],
+		"en": [
+			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", Demibirding is made into HG!",
+			"• Equipped with a large backpack on the back of the aircraft.",
+			"• The thrusters attached to the legs move forward and store the beam saber.",
+			"• The beam rifle can be equipped with both hands by moving the auxiliary grip."
+		]
+	},
+	"accessories": {
+		"ja": ["ビームライフル×１", "ビームサーベル×２", "シール×1"],
+		"en": ["Beam rifle x1", "Beam saber x2", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_4403_0.jpg",
 		"/images/items/01_4403_1.jpg",
@@ -65,20 +50,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4403/",
 	"extractedAt": "2025-12-06T17:53:38.811Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-witch-of-mercury"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203129"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-witch-of-mercury"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manualId": "1389"
 }

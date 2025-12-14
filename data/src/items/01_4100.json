@@ -18,63 +18,44 @@
 		"day": 21
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "『スーパーロボット大戦OG』より、パーソナルトルーパーの元祖「ゲシュペンスト」がHGシリーズに登場！",
-			"en": "From \"Super Robot Wars OG \", the original personal trooper \" Gespenst\" appears in the HG series!"
-		},
-		{
-			"ja": "■腕部、股関節、フロントアーマーに可動ギミックを搭載。可動範囲が拡大し、劇中イメージの大胆なポージングが可能。",
-			"en": "• Equipped with movable gimmicks on the arms, hip joints, and front armor. The range of motion has been expanded, allowing bold poses similar to those in the play."
-		},
-		{
-			"ja": "■腹部のスライドギミックにより内部のパーツが左右に動き、隙間が見えない仕様。",
-			"en": "• The internal parts move left and right due to the abdominal slide gimmick, making it impossible to see any gaps."
-		},
-		{
-			"ja": "■PETシートでエフェクトを再現した「スラッシュ・リッパー」の他に「ニュートロンビーム」「プラズマカッター」など豊富な武装が付属。",
-			"en": "• In addition to the \"Slash Ripper \" whose effects are recreated using PET sheets, it comes with a wealth of weapons such as the \" Neutron Beam \" and \" Plasma Cutter\"."
-		},
-		{
-			"ja": "■ジョイントパーツを使用することで、スプリットミサイルやスラッシュ・リッパーのスタビライザーへの着脱が可能。",
-			"en": "• By using joint parts, it is possible to attach and detach split missiles and slash rippers to the stabilizer."
-		},
-		{
-			"ja": "■ディスプレイ用の台座が付属。",
-			"en": "• Includes display pedestal."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ハンドパーツ×１式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "ニュートロンビーム×１",
-			"en": "Neutron beam x1"
-		},
-		{
-			"ja": "スプリットミサイル×１式",
-			"en": "Split missile x 1"
-		},
-		{
-			"ja": "プラズマカッターエフェクト×１式",
-			"en": "Plasma cutter effect x 1 set"
-		},
-		{
-			"ja": "スラッシュ・リッパーエフェクトPETシート×１式",
-			"en": "Slash ripper effect PET sheet x 1 set"
-		},
-		{
-			"ja": "ディスプレイベース×１式",
-			"en": "Display base x 1"
-		},
-		{
-			"ja": "シール×１",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『スーパーロボット大戦OG』より、パーソナルトルーパーの元祖「ゲシュペンスト」がHGシリーズに登場！",
+			"■腕部、股関節、フロントアーマーに可動ギミックを搭載。可動範囲が拡大し、劇中イメージの大胆なポージングが可能。",
+			"■腹部のスライドギミックにより内部のパーツが左右に動き、隙間が見えない仕様。",
+			"■PETシートでエフェクトを再現した「スラッシュ・リッパー」の他に「ニュートロンビーム」「プラズマカッター」など豊富な武装が付属。",
+			"■ジョイントパーツを使用することで、スプリットミサイルやスラッシュ・リッパーのスタビライザーへの着脱が可能。",
+			"■ディスプレイ用の台座が付属。"
+		],
+		"en": [
+			"From \"Super Robot Wars OG \", the original personal trooper \" Gespenst\" appears in the HG series!",
+			"• Equipped with movable gimmicks on the arms, hip joints, and front armor. The range of motion has been expanded, allowing bold poses similar to those in the play.",
+			"• The internal parts move left and right due to the abdominal slide gimmick, making it impossible to see any gaps.",
+			"• In addition to the \"Slash Ripper \" whose effects are recreated using PET sheets, it comes with a wealth of weapons such as the \" Neutron Beam \" and \" Plasma Cutter\".",
+			"• By using joint parts, it is possible to attach and detach split missiles and slash rippers to the stabilizer.",
+			"• Includes display pedestal."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"ハンドパーツ×１式",
+			"ニュートロンビーム×１",
+			"スプリットミサイル×１式",
+			"プラズマカッターエフェクト×１式",
+			"スラッシュ・リッパーエフェクトPETシート×１式",
+			"ディスプレイベース×１式",
+			"シール×１"
+		],
+		"en": [
+			"Hand parts x 1 set",
+			"Neutron beam x1",
+			"Split missile x 1",
+			"Plasma cutter effect x 1 set",
+			"Slash ripper effect PET sheet x 1 set",
+			"Display base x 1",
+			"Seal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_4100_0.jpg",
 		"/images/items/01_4100_1.jpg",
@@ -86,19 +67,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4100/",
 	"extractedAt": "2025-12-06T17:52:57.872Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"super-robot-wars-og"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5578",
-		"01_5491",
-		"item-1000214961",
-		"01_5369"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["super-robot-wars-og"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5578", "01_5491", "item-1000214961", "01_5369"]
 }

@@ -19,56 +19,28 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "• イオリ・セイたちを新たに描く完全新規オリジナルストーリー『ガンダムビルドファイターズ GMの逆襲』に登場する新ガンダムがHGで登場！",
-			"en": "• The new Gundam that appears in \"Gundam Build Fighters GM's Counterattack\", a completely new original story that depicts Iori Sei and others, is now available in HG!"
-		},
-		{
-			"ja": "• 拳パーツは手首が可動するハンドパーツ3種類および武器持ち用1種類の合計4種類が付属！",
-			"en": "• A total of 4 types of fist parts are included: 3 types of hand parts with movable wrists and 1 type for holding a weapon!"
-		},
-		{
-			"ja": "• 幅広いアクション性のほか、様々な格闘ポーズが躍動感と共に再現できる！",
-			"en": "• In addition to a wide range of action features, various fighting poses can be reproduced with a sense of dynamism!"
-		},
-		{
-			"ja": "• ビームライフルは可動式でロングバレル形態を再現できるほか、シールドは分割可能で、手持ち用のジョイントも付属する！",
-			"en": "• Beam rifle is movable and can reproduce the long barrel form, Seal can be split, and a hand-held joint is also included!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビームライフル×1",
-			"en": "Beam rifle x 1"
-		},
-		{
-			"ja": "シールド×1",
-			"en": "Seal × 1"
-		},
-		{
-			"ja": "ビームサーベル×２",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "拳パーツ（4種）×各１",
-			"en": "Fist parts (4 types) x 1 each"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×7",
-			"en": "Molded product x 7"
-		},
-		{
-			"ja": "シール×１",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "取扱説明書×１",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• イオリ・セイたちを新たに描く完全新規オリジナルストーリー『ガンダムビルドファイターズ GMの逆襲』に登場する新ガンダムがHGで登場！",
+			"• 拳パーツは手首が可動するハンドパーツ3種類および武器持ち用1種類の合計4種類が付属！",
+			"• 幅広いアクション性のほか、様々な格闘ポーズが躍動感と共に再現できる！",
+			"• ビームライフルは可動式でロングバレル形態を再現できるほか、シールドは分割可能で、手持ち用のジョイントも付属する！"
+		],
+		"en": [
+			"• The new Gundam that appears in \"Gundam Build Fighters GM's Counterattack\", a completely new original story that depicts Iori Sei and others, is now available in HG!",
+			"• A total of 4 types of fist parts are included: 3 types of hand parts with movable wrists and 1 type for holding a weapon!",
+			"• In addition to a wide range of action features, various fighting poses can be reproduced with a sense of dynamism!",
+			"• Beam rifle is movable and can reproduce the long barrel form, Seal can be split, and a hand-held joint is also included!"
+		]
+	},
+	"accessories": {
+		"ja": ["ビームライフル×1", "シールド×1", "ビームサーベル×２", "拳パーツ（4種）×各１"],
+		"en": ["Beam rifle x 1", "Seal × 1", "Beam saber x2", "Fist parts (4 types) x 1 each"]
+	},
+	"contents": {
+		"ja": ["成形品×7", "シール×１", "取扱説明書×１"],
+		"en": ["Molded product x 7", "Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1080_0.jpg",
 		"/images/items/01_1080_1.jpg",
@@ -78,20 +50,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1080/",
 	"extractedAt": "2025-12-06T16:48:48.147Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"gundam-build-fighters"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5057",
-		"01_1942",
-		"01_1288",
-		"01_1261"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["gundam-build-fighters"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5057", "01_1942", "01_1288", "01_1261"],
 	"manualId": "0054"
 }

@@ -18,43 +18,28 @@
 		"day": 28
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "新作テレビアニメ『魔神創造伝ワタル』制作決定！",
-			"en": "Production of the new TV anime “Mashin Souzouden Wataru” has been decided!"
-		},
-		{
-			"ja": "主人公「星部ワタル」のイトコ「天部カケル」の魔神「麒麟丸」がラインアップ！",
-			"en": "The main character \"Wataru Hoshibe \"'s cousin \" Kakeru Amabe \"'s demon \" Kirinmaru\" is now available in the lineup!"
-		},
-		{
-			"ja": "• 部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！",
-			"en": "• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!"
-		},
-		{
-			"ja": "• パチパチと手で外せるタッチゲート仕様。接着剤無しで組み立てられる！",
-			"en": "• Touch gate design that can be removed by hand. Can be assembled without adhesive!"
-		},
-		{
-			"ja": "• チャクラム型の武器は背面に取り付け可能。",
-			"en": "• Chakram-type weapons can be attached to the back."
-		},
-		{
-			"ja": "• 武器や頭部などはメタリックなゴールド成形色で再現。",
-			"en": "• Weapons and heads are reproduced in metallic gold molding color."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "チャクラム型の武器×2",
-			"en": "Chakram type weapon x2"
-		},
-		{
-			"ja": "カスタムパーツ×1式",
-			"en": "Custom parts x 1 set"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"新作テレビアニメ『魔神創造伝ワタル』制作決定！",
+			"主人公「星部ワタル」のイトコ「天部カケル」の魔神「麒麟丸」がラインアップ！",
+			"• 部位ごとにパーツを分けられるシリーズ共通フレームを採用。他の魔神と組み合わせて遊ぼう！",
+			"• パチパチと手で外せるタッチゲート仕様。接着剤無しで組み立てられる！",
+			"• チャクラム型の武器は背面に取り付け可能。",
+			"• 武器や頭部などはメタリックなゴールド成形色で再現。"
+		],
+		"en": [
+			"Production of the new TV anime “Mashin Souzouden Wataru” has been decided!",
+			"The main character \"Wataru Hoshibe \"'s cousin \" Kakeru Amabe \"'s demon \" Kirinmaru\" is now available in the lineup!",
+			"• Adopts a common frame across the series that allows parts to be separated by area. Let's play in combination with other genies!",
+			"• Touch gate design that can be removed by hand. Can be assembled without adhesive!",
+			"• Chakram-type weapons can be attached to the back.",
+			"• Weapons and heads are reproduced in metallic gold molding color."
+		]
+	},
+	"accessories": {
+		"ja": ["チャクラム型の武器×2", "カスタムパーツ×1式"],
+		"en": ["Chakram type weapon x2", "Custom parts x 1 set"]
+	},
 	"images": [
 		"/images/items/01_5438_0.jpg",
 		"/images/items/01_5438_1.jpg",
@@ -71,16 +56,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_5438/",
 	"extractedAt": "2025-12-06T17:55:56.449Z",
 	"brandIds": [],
-	"seriesIds": [
-		"wataru-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5504",
-		"01_5502",
-		"01_5503",
-		"01_5493"
-	]
+	"seriesIds": ["wataru-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5504", "01_5502", "01_5503", "01_5493"]
 }

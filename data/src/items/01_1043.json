@@ -18,22 +18,14 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "プレミアムバンダイはこちら"
-		},
-		{
-			"ja": "※プレミアムバンダイのトップページに遷移します。"
-		},
-		{
-			"ja": "※一部のエリアでは販売していません。"
-		},
-		{
-			"ja": "※エリアにより申込開始の日時は異なります。"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"プレミアムバンダイはこちら",
+			"※プレミアムバンダイのトップページに遷移します。",
+			"※一部のエリアでは販売していません。",
+			"※エリアにより申込開始の日時は異なります。"
+		]
+	},
 	"images": [
 		"/images/items/01_1043_0.jpg",
 		"/images/items/01_1043_1.jpg",
@@ -48,20 +40,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1043/",
 	"extractedAt": "2025-12-06T16:41:23.206Z",
-	"brandIds": [
-		"hg-high-grade",
-		"hg-high-gradepreban-gunpla",
-		"prevan-gunpla",
-		"hg-universal-century"
-	],
+	"brandIds": ["hg-high-grade", "hg-high-gradepreban-gunpla", "prevan-gunpla", "hg-universal-century"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"]
 }

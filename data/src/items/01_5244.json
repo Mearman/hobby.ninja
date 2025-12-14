@@ -18,51 +18,30 @@
 		"day": 6
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "Netflix映画『ULTRAMAN： RISING』より特徴的なシルエットのULTRAMANが、全てのプラモデル未経験者に贈る入門用シリーズ「ENTRY GRADE」に登場！",
-			"en": "ULTRAMAN with a distinctive silhouette from the Netflix movie \"ULTRAMAN: RISING \" appears in the introductory series \" ENTRY GRADE\" for all those who have no experience with plastic models!"
-		},
-		{
-			"ja": "• 劇中さながらのプロポーションを再現。",
-			"en": "• Reproduce the proportions just like in the movie."
-		},
-		{
-			"ja": "• 全高約15cm。固定モデルだから構えポーズがしっかり決まる。",
-			"en": "• Total height approximately 15cm. Since it is a fixed model, the stance pose is well determined."
-		},
-		{
-			"ja": "• タッチゲートだからパーツは手で“プチッ！”ととれる。",
-			"en": "• Because it is a touch gate, parts can be removed by hand."
-		},
-		{
-			"ja": "• 少ないパーツ数でプラモデルが初めてでも道具不要でサクサク組み立て可能。",
-			"en": "• With a small number of parts, even if it is your first time building a plastic model, you can easily assemble it without any tools."
-		},
-		{
-			"ja": "• 体の模様が緻密に再現されたEMIのフィギュアが付属。",
-			"en": "• Comes with an EMI figure whose body pattern is precisely reproduced."
-		},
-		{
-			"ja": "• 最小限の可動で、劇中で印象的なEMIを抱き上げるシーンが再現可能。ポーズを安定させる専用台座も付属。",
-			"en": "• With minimal movement, you can recreate the memorable scene in the movie where EMI is picked up. A special pedestal is also included to stabilize the pose."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "EMIフィギュア×1",
-			"en": "EMI figure x1"
-		},
-		{
-			"ja": "専用台座×1",
-			"en": "Dedicated pedestal x 1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"Netflix映画『ULTRAMAN： RISING』より特徴的なシルエットのULTRAMANが、全てのプラモデル未経験者に贈る入門用シリーズ「ENTRY GRADE」に登場！",
+			"• 劇中さながらのプロポーションを再現。",
+			"• 全高約15cm。固定モデルだから構えポーズがしっかり決まる。",
+			"• タッチゲートだからパーツは手で“プチッ！”ととれる。",
+			"• 少ないパーツ数でプラモデルが初めてでも道具不要でサクサク組み立て可能。",
+			"• 体の模様が緻密に再現されたEMIのフィギュアが付属。",
+			"• 最小限の可動で、劇中で印象的なEMIを抱き上げるシーンが再現可能。ポーズを安定させる専用台座も付属。"
+		],
+		"en": [
+			"ULTRAMAN with a distinctive silhouette from the Netflix movie \"ULTRAMAN: RISING \" appears in the introductory series \" ENTRY GRADE\" for all those who have no experience with plastic models!",
+			"• Reproduce the proportions just like in the movie.",
+			"• Total height approximately 15cm. Since it is a fixed model, the stance pose is well determined.",
+			"• Because it is a touch gate, parts can be removed by hand.",
+			"• With a small number of parts, even if it is your first time building a plastic model, you can easily assemble it without any tools.",
+			"• Comes with an EMI figure whose body pattern is precisely reproduced.",
+			"• With minimal movement, you can recreate the memorable scene in the movie where EMI is picked up. A special pedestal is also included to stabilize the pose."
+		]
+	},
+	"accessories": {
+		"ja": ["EMIフィギュア×1", "専用台座×1", "シール×1"],
+		"en": ["EMI figure x1", "Dedicated pedestal x 1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5244_0.jpg",
 		"/images/items/01_5244_1.jpg",
@@ -72,16 +51,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5244/",
 	"extractedAt": "2025-12-06T17:55:29.864Z",
-	"brandIds": [
-		"entry-grade"
-	],
-	"seriesIds": [
-		"ultraman"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2808"
-	]
+	"brandIds": ["entry-grade"],
+	"seriesIds": ["ultraman"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2808"]
 }

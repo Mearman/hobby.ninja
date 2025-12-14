@@ -18,22 +18,18 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
-			"en": "A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world."
-		},
-		{
-			"ja": "ゼータガンダム 3号機 初期検証型がハイグレードで登場。成形色とマーキングシールで忠実に再現。",
-			"en": "Zeta Gundam Unit 3 initial verification type is now available in high grade. Faithfully reproduced with molding color and MarkingSeal."
-		},
-		{
-			"ja": "ガンダムベースロゴがデザインされたオリジナルディスプレイ台座が付属。",
-			"en": "An original display pedestal with the Gundam base logo designed is included."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"全世界のガンプラファンにむけた、公式ガンプラ総合施設「ガンダムベース」の限定ガンプラです。",
+			"ゼータガンダム 3号機 初期検証型がハイグレードで登場。成形色とマーキングシールで忠実に再現。",
+			"ガンダムベースロゴがデザインされたオリジナルディスプレイ台座が付属。"
+		],
+		"en": [
+			"A limited edition Gunpla at the official Gunpla facility \"Gundam Base\" for Gunpla fans around the world.",
+			"Zeta Gundam Unit 3 initial verification type is now available in high grade. Faithfully reproduced with molding color and MarkingSeal.",
+			"An original display pedestal with the Gundam base logo designed is included."
+		]
+	},
 	"images": [
 		"/images/items/01_1936_0.jpg",
 		"/images/items/01_1936_1.jpg",
@@ -45,19 +41,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1936/",
 	"extractedAt": "2025-12-06T17:48:24.426Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"]
 }

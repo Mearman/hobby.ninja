@@ -18,30 +18,22 @@
 		"day": 25
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "• ピカちんトリガーにセットして電動モーターのパワーをON！",
-			"en": "• Set it to the Pikachin trigger and turn on the power of the electric motor!"
-		},
-		{
-			"ja": "• バッジを取り換えることで、ピカちんトリガーのパワーをLV.1～LV.3に切り替えられる！",
-			"en": "• By replacing the badge, you can switch the power of Pikachin Trigger from LV.1 to LV.3!"
-		},
-		{
-			"ja": "• 服にもつけられる！",
-			"en": "• You can also attach it to your clothes!"
-		},
-		{
-			"ja": "【セット内容】",
-			"en": "[Set contents]"
-		},
-		{
-			"ja": "ピカちんバッジランダムで2枚入り(完成品)",
-			"en": "2 random Pikachin badges (completed product)"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• ピカちんトリガーにセットして電動モーターのパワーをON！",
+			"• バッジを取り換えることで、ピカちんトリガーのパワーをLV.1～LV.3に切り替えられる！",
+			"• 服にもつけられる！",
+			"【セット内容】",
+			"ピカちんバッジランダムで2枚入り(完成品)"
+		],
+		"en": [
+			"• Set it to the Pikachin trigger and turn on the power of the electric motor!",
+			"• By replacing the badge, you can switch the power of Pikachin Trigger from LV.1 to LV.3!",
+			"• You can also attach it to your clothes!",
+			"[Set contents]",
+			"2 random Pikachin badges (completed product)"
+		]
+	},
 	"images": [
 		"/images/items/01_2287_0.jpg",
 		"/images/items/01_2287_1.jpg",
@@ -52,16 +44,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2287/",
 	"extractedAt": "2025-12-06T17:49:02.262Z",
 	"brandIds": [],
-	"seriesIds": [
-		"invention-pikachin-kit"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2605",
-		"01_2606",
-		"01_2607",
-		"01_2545"
-	]
+	"seriesIds": ["invention-pikachin-kit"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2605", "01_2606", "01_2607", "01_2545"]
 }

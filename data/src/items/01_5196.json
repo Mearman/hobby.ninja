@@ -19,55 +19,28 @@
 	},
 	"targetAge": 15,
 	"scale": "1/72",
-	"description": [
-		{
-			"ja": "『境界戦機 極鋼ノ装鬼』（きょうかいせんき きょっこうのそうき）より、変形可能な大型AMAIM「バンイップジンガー」が立体化！",
-			"en": "From ``Kyoukai Senki Kyokko no Souki'', the large deformable AMAIM ``Ban Yip Singer'' is now three-dimensional!"
-		},
-		{
-			"ja": "• 拡張性を重視しカスタマイズ用の３mm径の接続穴を各所に配置。別売りのウェポンセットシリーズと組み合わせればプラモデルオリジナルアレンジも可能。",
-			"en": "• 3mm diameter connection holes are placed in various locations for customization with emphasis on expandability. If you combine it with the separately sold Weapon set series, you can create an original plastic model arrangement."
-		},
-		{
-			"ja": "• パーツ差し替え不要で高速移動形態への変形が可能。",
-			"en": "• Can be transformed into high-speed movement mode without replacing parts."
-		},
-		{
-			"ja": "• 脚部に付属した車輪はそれぞれ独立して回転可能。",
-			"en": "• The wheels attached to the legs can rotate independently."
-		},
-		{
-			"ja": "• シールド裏側には左右それぞれに機関砲を搭載。",
-			"en": "• Machine guns are mounted on the left and right sides of the Seal."
-		},
-		{
-			"ja": "• フレイムスロワー、ガトリングガンなど多彩な武装が付属。",
-			"en": "• Comes with a variety of weapons such as Flame Thrower and Gatling Gun."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "機関砲×2",
-			"en": "Machine gun x 2"
-		},
-		{
-			"ja": "ガトリングガン×1",
-			"en": "Gatling gun x 1"
-		},
-		{
-			"ja": "フレイムスロワー×1",
-			"en": "Flame thrower x1"
-		},
-		{
-			"ja": "ジョイントパーツ×1式",
-			"en": "Joint parts x 1 set"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『境界戦機 極鋼ノ装鬼』（きょうかいせんき きょっこうのそうき）より、変形可能な大型AMAIM「バンイップジンガー」が立体化！",
+			"• 拡張性を重視しカスタマイズ用の３mm径の接続穴を各所に配置。別売りのウェポンセットシリーズと組み合わせればプラモデルオリジナルアレンジも可能。",
+			"• パーツ差し替え不要で高速移動形態への変形が可能。",
+			"• 脚部に付属した車輪はそれぞれ独立して回転可能。",
+			"• シールド裏側には左右それぞれに機関砲を搭載。",
+			"• フレイムスロワー、ガトリングガンなど多彩な武装が付属。"
+		],
+		"en": [
+			"From ``Kyoukai Senki Kyokko no Souki'', the large deformable AMAIM ``Ban Yip Singer'' is now three-dimensional!",
+			"• 3mm diameter connection holes are placed in various locations for customization with emphasis on expandability. If you combine it with the separately sold Weapon set series, you can create an original plastic model arrangement.",
+			"• Can be transformed into high-speed movement mode without replacing parts.",
+			"• The wheels attached to the legs can rotate independently.",
+			"• Machine guns are mounted on the left and right sides of the Seal.",
+			"• Comes with a variety of weapons such as Flame Thrower and Gatling Gun."
+		]
+	},
+	"accessories": {
+		"ja": ["機関砲×2", "ガトリングガン×1", "フレイムスロワー×1", "ジョイントパーツ×1式", "シール×1"],
+		"en": ["Machine gun x 2", "Gatling gun x 1", "Flame thrower x1", "Joint parts x 1 set", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5196_0.jpg",
 		"/images/items/01_5196_1.jpg",
@@ -84,19 +57,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5196/",
 	"extractedAt": "2025-12-06T17:55:24.258Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"kyoukai-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5183",
-		"01_5170",
-		"01_5171",
-		"01_5080"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["kyoukai-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5183", "01_5170", "01_5171", "01_5080"]
 }

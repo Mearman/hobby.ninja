@@ -19,34 +19,24 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "• 『革命機ヴァルヴレイヴ』の主役機を立体化。",
-			"en": "• Three-dimensional version of the main character of \"Revolutionary Machine Valvrave\"."
-		},
-		{
-			"ja": "• 頭部や背部のセンサー「センシズ・ナーヴ」はすべてクリアパーツ製。装甲との素材の違いを再現できる。",
-			"en": "• The sensors on the head and back \"Senses Nerve\" are all made of clear parts. You can reproduce the difference in material from the armor."
-		},
-		{
-			"ja": "• 腕部から放たれるエネルギーや踵からの推進力など、劇中のシーンを再現するエフェクトパーツが付属。",
-			"en": "• Comes with effect parts that recreate scenes from the movie, such as energy emitted from the arms and propulsion from the heels."
-		},
-		{
-			"ja": "• 斬る、刺す、叩く、撃つといったあらゆる攻撃要素を兼ね備えた大型合体兵器ヴルトガを再現できる。",
-			"en": "• You can recreate Vurtoga, a large combined weapon that combines all attack elements such as cutting, stabbing, hitting, and shooting."
-		},
-		{
-			"ja": "• ポージングの幅を広げる各種ハンドパーツが付属。",
-			"en": "• Various hand parts are included to expand the range of poses."
-		},
-		{
-			"ja": "• 専用台座付属。",
-			"en": "• Comes with a special pedestal."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"• 『革命機ヴァルヴレイヴ』の主役機を立体化。",
+			"• 頭部や背部のセンサー「センシズ・ナーヴ」はすべてクリアパーツ製。装甲との素材の違いを再現できる。",
+			"• 腕部から放たれるエネルギーや踵からの推進力など、劇中のシーンを再現するエフェクトパーツが付属。",
+			"• 斬る、刺す、叩く、撃つといったあらゆる攻撃要素を兼ね備えた大型合体兵器ヴルトガを再現できる。",
+			"• ポージングの幅を広げる各種ハンドパーツが付属。",
+			"• 専用台座付属。"
+		],
+		"en": [
+			"• Three-dimensional version of the main character of \"Revolutionary Machine Valvrave\".",
+			"• The sensors on the head and back \"Senses Nerve\" are all made of clear parts. You can reproduce the difference in material from the armor.",
+			"• Comes with effect parts that recreate scenes from the movie, such as energy emitted from the arms and propulsion from the heels.",
+			"• You can recreate Vurtoga, a large combined weapon that combines all attack elements such as cutting, stabbing, hitting, and shooting.",
+			"• Various hand parts are included to expand the range of poses.",
+			"• Comes with a special pedestal."
+		]
+	},
 	"images": [
 		"/images/items/01_5803_0.jpg",
 		"/images/items/01_5803_1.jpg",
@@ -61,8 +51,6 @@
 	"extractedAt": "2025-12-06T17:56:38.293Z",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"product-list"
-	],
+	"categoryIds": ["product-list"],
 	"relatedItemIds": []
 }

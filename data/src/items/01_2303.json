@@ -19,60 +19,35 @@
 	},
 	"targetAge": 15,
 	"scale": "1/300",
-	"description": [
-		{
-			"ja": "『熱血最強ゴウザウラー』よりマグナザウラーが登場！",
-			"en": "Magna Saurer appears from “Nekketsu Saikyo Gousaurer”!"
-		},
-		{
-			"ja": "• マグナティラノ形態からマグナザウラー形態への変形を、一部パーツ差し替えにより再現可能。",
-			"en": "• The transformation from Magna Tyrano form to Magna Saurer form can be reproduced by replacing some parts."
-		},
-		{
-			"ja": "• 変形ギミックを搭載しながらも、マグナティラノ形態のプロポーションを迫力の再現。",
-			"en": "• While equipped with a deformation gimmick, the proportions of the Magna Tyrano form are impressively reproduced."
-		},
-		{
-			"ja": "• マグナザウラー形態でのアクションポーズに対応した関節構造。",
-			"en": "• Joint structure compatible with action poses in Magnasauler form."
-		},
-		{
-			"ja": "• HG 1/300 ゴウザウラー（別売り）と組み合わせることで、スーパーザウラージェットや熱血武装マグナバスターを再現！",
-			"en": "• By combining with HG 1/300 Go-Saurer (sold separately), you can recreate the Super Saurer Jet and Hot-Blooded Armed Magnabuster!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "マグナブレード×1",
-			"en": "Magna blade x1"
-		},
-		{
-			"ja": "ゴウザウラー変形用パーツ×1式",
-			"en": "Goosaurer transformation parts x 1 set"
-		},
-		{
-			"ja": "変形パーツ格納パーツ×1",
-			"en": "Deformed parts storage parts x 1"
-		},
-		{
-			"ja": "アクションベース×1",
-			"en": "Action base x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成型品×19",
-			"en": "Molded product x 19"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"『熱血最強ゴウザウラー』よりマグナザウラーが登場！",
+			"• マグナティラノ形態からマグナザウラー形態への変形を、一部パーツ差し替えにより再現可能。",
+			"• 変形ギミックを搭載しながらも、マグナティラノ形態のプロポーションを迫力の再現。",
+			"• マグナザウラー形態でのアクションポーズに対応した関節構造。",
+			"• HG 1/300 ゴウザウラー（別売り）と組み合わせることで、スーパーザウラージェットや熱血武装マグナバスターを再現！"
+		],
+		"en": [
+			"Magna Saurer appears from “Nekketsu Saikyo Gousaurer”!",
+			"• The transformation from Magna Tyrano form to Magna Saurer form can be reproduced by replacing some parts.",
+			"• While equipped with a deformation gimmick, the proportions of the Magna Tyrano form are impressively reproduced.",
+			"• Joint structure compatible with action poses in Magnasauler form.",
+			"• By combining with HG 1/300 Go-Saurer (sold separately), you can recreate the Super Saurer Jet and Hot-Blooded Armed Magnabuster!"
+		]
+	},
+	"accessories": {
+		"ja": ["マグナブレード×1", "ゴウザウラー変形用パーツ×1式", "変形パーツ格納パーツ×1", "アクションベース×1"],
+		"en": [
+			"Magna blade x1",
+			"Goosaurer transformation parts x 1 set",
+			"Deformed parts storage parts x 1",
+			"Action base x 1"
+		]
+	},
+	"contents": {
+		"ja": ["成型品×19", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 19", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2303_0.jpg",
 		"/images/items/01_2303_1.jpg",
@@ -88,18 +63,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2303/",
 	"extractedAt": "2025-12-06T17:49:04.759Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"hot-blooded-strongest-gozaurer"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_2820",
-		"item-1000132814",
-		"01_1994"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["hot-blooded-strongest-gozaurer"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_2820", "item-1000132814", "01_1994"]
 }

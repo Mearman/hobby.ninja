@@ -19,63 +19,44 @@
 	},
 	"targetAge": 15,
 	"scale": "1/72",
-	"description": [
-		{
-			"ja": "■月刊ホビージャパンで連載の外伝「境界戦機フロストフラワー」に登場するI-LeS(自律思考型AI)を搭載したAMAIM(アメイン)。",
-			"en": "• AMAIM equipped with I-LeS (autonomous thinking AI) that appears in the side story \"Kyoukai Senki Frost Flower\" serialized in Hobby Japan."
-		},
-		{
-			"ja": "■北条カイがパイロットとして搭乗。",
-			"en": "• Kai Hojo was on board as the pilot."
-		},
-		{
-			"ja": "■商品化に於いてKEN OKUYAMA DESIGNによる可動構造の検証を経て立体化されたAMAIM(アメイン)。",
-			"en": "• AMAIM was made into a three-dimensional product after verification of its movable structure by KEN OKUYAMA DESIGN."
-		},
-		{
-			"ja": "■胸部シリンダーギミックの再現。",
-			"en": "• Reproduction of chest cylinder gimmick."
-		},
-		{
-			"ja": "■各所に設けられたハードポイント、背部ウェポンラックにより各種兵装・ユニットを換装可能。",
-			"en": "• Various weapons and units can be replaced with hard points installed in various places and weapon racks on the back."
-		},
-		{
-			"ja": "■肩、シールドなどに使用可能なマーキングシールが付属。",
-			"en": "• Comes with MarkingSeal that can be used on shoulders, seals, etc."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "60mm携行機関砲(多弾倉型)×１",
-			"en": "60mm portable machine gun (multi-magazine type) x 1"
-		},
-		{
-			"ja": "四連装誘導弾携行発射機×１",
-			"en": "Quadruple guided missile portable launcher x 1"
-		},
-		{
-			"ja": "汎用携行盾×１",
-			"en": "General-purpose carrying shield x 1"
-		},
-		{
-			"ja": "ウェポンラック×１",
-			"en": "Weapon rack x 1"
-		},
-		{
-			"ja": "ハンドパーツ 平手（左右）、武器持ち手（左右）、銃持ち手（右）",
-			"en": "Hand parts Open hands (left and right), weapon handles (left and right), gun handles (right)"
-		},
-		{
-			"ja": "シール×１",
-			"en": "Seal×1"
-		},
-		{
-			"ja": "マーキングシール×１",
-			"en": "MarkingSeal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"■月刊ホビージャパンで連載の外伝「境界戦機フロストフラワー」に登場するI-LeS(自律思考型AI)を搭載したAMAIM(アメイン)。",
+			"■北条カイがパイロットとして搭乗。",
+			"■商品化に於いてKEN OKUYAMA DESIGNによる可動構造の検証を経て立体化されたAMAIM(アメイン)。",
+			"■胸部シリンダーギミックの再現。",
+			"■各所に設けられたハードポイント、背部ウェポンラックにより各種兵装・ユニットを換装可能。",
+			"■肩、シールドなどに使用可能なマーキングシールが付属。"
+		],
+		"en": [
+			"• AMAIM equipped with I-LeS (autonomous thinking AI) that appears in the side story \"Kyoukai Senki Frost Flower\" serialized in Hobby Japan.",
+			"• Kai Hojo was on board as the pilot.",
+			"• AMAIM was made into a three-dimensional product after verification of its movable structure by KEN OKUYAMA DESIGN.",
+			"• Reproduction of chest cylinder gimmick.",
+			"• Various weapons and units can be replaced with hard points installed in various places and weapon racks on the back.",
+			"• Comes with MarkingSeal that can be used on shoulders, seals, etc."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"60mm携行機関砲(多弾倉型)×１",
+			"四連装誘導弾携行発射機×１",
+			"汎用携行盾×１",
+			"ウェポンラック×１",
+			"ハンドパーツ 平手（左右）、武器持ち手（左右）、銃持ち手（右）",
+			"シール×１",
+			"マーキングシール×１"
+		],
+		"en": [
+			"60mm portable machine gun (multi-magazine type) x 1",
+			"Quadruple guided missile portable launcher x 1",
+			"General-purpose carrying shield x 1",
+			"Weapon rack x 1",
+			"Hand parts Open hands (left and right), weapon handles (left and right), gun handles (right)",
+			"Seal×1",
+			"MarkingSeal×1"
+		]
+	},
 	"images": [
 		"/images/items/01_3688_0.jpg",
 		"/images/items/01_3688_1.jpg",
@@ -87,19 +68,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3688/",
 	"extractedAt": "2025-12-06T17:51:59.728Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"kyoukai-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["kyoukai-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
 }

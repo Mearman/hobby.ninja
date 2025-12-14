@@ -19,39 +19,24 @@
 	},
 	"targetAge": 15,
 	"scale": "1/72",
-	"description": [
-		{
-			"ja": "「境界戦機」より、オセアニア連合が所有する無人機AMAIM(アメイン)「バンイップ・ブーメラン」をＨＧで商品化！",
-			"en": "From \"Kyoukai Senki \", the unmanned aircraft AMAIM \" Bunyip Boomerang\" owned by the Oceania Alliance is commercialized in HG!"
-		},
-		{
-			"ja": "■商品化に於いてKEN OKUYAMA DESIGNによる可動構造の検証を経て立体化されたAMAIM(アメイン)。",
-			"en": "• AMAIM was made into a three-dimensional product after verification of its movable structure by KEN OKUYAMA DESIGN."
-		},
-		{
-			"ja": "■頭部ユニットの収納、左右機関砲の展開、差し替えにより、小型アームの隠しナイフギミックなども再現可能。",
-			"en": "• By storing the head unit, deploying the left and right cannons, and replacing them, you can also recreate the hidden knife gimmick of the small arm."
-		},
-		{
-			"ja": "■哨戒状態/高機動戦闘状態/駐機状態など各形態を一部パーツの差し替えにより再現。",
-			"en": "• Reproduce various modes such as patrol state/high mobility combat state/parked state by replacing some parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ナイフパーツ（左右）",
-			"en": "Knife parts (left and right)"
-		},
-		{
-			"ja": "自立補助パーツ×２",
-			"en": "Self-supporting auxiliary parts x 2"
-		},
-		{
-			"ja": "シール×１",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"「境界戦機」より、オセアニア連合が所有する無人機AMAIM(アメイン)「バンイップ・ブーメラン」をＨＧで商品化！",
+			"■商品化に於いてKEN OKUYAMA DESIGNによる可動構造の検証を経て立体化されたAMAIM(アメイン)。",
+			"■頭部ユニットの収納、左右機関砲の展開、差し替えにより、小型アームの隠しナイフギミックなども再現可能。",
+			"■哨戒状態/高機動戦闘状態/駐機状態など各形態を一部パーツの差し替えにより再現。"
+		],
+		"en": [
+			"From \"Kyoukai Senki \", the unmanned aircraft AMAIM \" Bunyip Boomerang\" owned by the Oceania Alliance is commercialized in HG!",
+			"• AMAIM was made into a three-dimensional product after verification of its movable structure by KEN OKUYAMA DESIGN.",
+			"• By storing the head unit, deploying the left and right cannons, and replacing them, you can also recreate the hidden knife gimmick of the small arm.",
+			"• Reproduce various modes such as patrol state/high mobility combat state/parked state by replacing some parts."
+		]
+	},
+	"accessories": {
+		"ja": ["ナイフパーツ（左右）", "自立補助パーツ×２", "シール×１"],
+		"en": ["Knife parts (left and right)", "Self-supporting auxiliary parts x 2", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_3689_0.jpg",
 		"/images/items/01_3689_1.jpg",
@@ -67,19 +52,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3689/",
 	"extractedAt": "2025-12-06T17:52:00.097Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"kyoukai-senki"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5196",
-		"01_5183",
-		"01_5170",
-		"01_5171"
-	]
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["kyoukai-senki"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5196", "01_5183", "01_5170", "01_5171"]
 }

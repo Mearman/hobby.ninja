@@ -18,30 +18,22 @@
 	},
 	"targetAge": 8,
 	"scale": "1/100",
-	"description": [
-		{
-			"ja": "●「機動戦士ガンダム SEED VS ASTRAY（ヴァーサスアストレイ）」より“レーゲンデュエルガンダム”が1/100スケールでキット化。",
-			"en": "●“Regen Duel Gundam” from “Mobile Suit Gundam SEED VS ASTRAY” has been made into a kit in 1/100 scale."
-		},
-		{
-			"ja": "●各部に新造パーツを組み込み、全身のプロポーションを刷新。",
-			"en": "-Incorporate new parts in each part and revamp the proportions of the whole body."
-		},
-		{
-			"ja": "●ビームライフルとレールガンを腰にマウント可能。",
-			"en": "- Beam rifle and rail gun can be mounted on the waist."
-		},
-		{
-			"ja": "●バズーカはフレキシブルアームにより前方に展開可能。",
-			"en": "-The bazooka can be deployed forward with a flexible arm."
-		},
-		{
-			"ja": "●バックパックは着脱可能。同シリーズのバックパックと交換可能。",
-			"en": "●The backpack is removable. Can be exchanged with a backpack from the same series."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"●「機動戦士ガンダム SEED VS ASTRAY（ヴァーサスアストレイ）」より“レーゲンデュエルガンダム”が1/100スケールでキット化。",
+			"●各部に新造パーツを組み込み、全身のプロポーションを刷新。",
+			"●ビームライフルとレールガンを腰にマウント可能。",
+			"●バズーカはフレキシブルアームにより前方に展開可能。",
+			"●バックパックは着脱可能。同シリーズのバックパックと交換可能。"
+		],
+		"en": [
+			"●“Regen Duel Gundam” from “Mobile Suit Gundam SEED VS ASTRAY” has been made into a kit in 1/100 scale.",
+			"-Incorporate new parts in each part and revamp the proportions of the whole body.",
+			"- Beam rifle and rail gun can be mounted on the waist.",
+			"-The bazooka can be deployed forward with a flexible arm.",
+			"●The backpack is removable. Can be exchanged with a backpack from the same series."
+		]
+	},
 	"images": [
 		"/images/items/01_2656_0.jpg",
 		"/images/items/01_2656_1.jpg",
@@ -53,13 +45,6 @@
 	"extractedAt": "2025-12-06T17:49:49.039Z",
 	"brandIds": [],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5968",
-		"01_5986",
-		"01_5987",
-		"01_5988"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5968", "01_5986", "01_5987", "01_5988"]
 }

@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "HG 1/144 ミラソウル社製フライトユニット装備",
-		"en": "HG 1/144 Equipped with Mirasoul flight unit"
+		"en": "HG 1/144 MIRASOUL FLIGHT UNIT"
 	},
 	"price": {
 		"amount": 880,
@@ -19,39 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』で、ガンダム・エアリアルが装備するミラソウル社製のフライトユニットが商品化！",
-			"en": "In the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", the flight unit manufactured by Mirasoul equipped by Gundam Aerial is commercialized!"
-		},
-		{
-			"ja": "■バックパックから伸びるアームは先端、基部ともにボールジョイントで接続。左右にフレキシブルな可動を有したフライトユニット。",
-			"en": "• The arm that extends from the backpack is connected at the tip and base with a ball joint. A flight unit with flexible movement left and right."
-		},
-		{
-			"ja": "■一部に露出するメカパーツが内蔵されており、内部のメカモールドも表現されている。",
-			"en": "• It has some internal mechanical parts that are exposed, and the internal mechanical mold is also expressed."
-		},
-		{
-			"ja": "■「HG 1/144 ガンダムエアリアル」(別売り)にも使用可能な、表情付きの平手が付属。",
-			"en": "• Comes with a flat hand with expressions that can also be used with \"HG 1/144 Gundam Aerial\" (sold separately)."
-		},
-		{
-			"ja": "■ユニット内には、「HG 1/144 ガンダムエアリアル」(別売り)のビームサーベルのグリップを取り付け可能。",
-			"en": "• A beam saber grip from \"HG 1/144 Gundam Aerial\" (sold separately) can be installed inside the unit."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ハンドパーツ×1式",
-			"en": "Hand parts x 1 set"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』で、ガンダム・エアリアルが装備するミラソウル社製のフライトユニットが商品化！",
+			"■バックパックから伸びるアームは先端、基部ともにボールジョイントで接続。左右にフレキシブルな可動を有したフライトユニット。",
+			"■一部に露出するメカパーツが内蔵されており、内部のメカモールドも表現されている。",
+			"■「HG 1/144 ガンダムエアリアル」(別売り)にも使用可能な、表情付きの平手が付属。",
+			"■ユニット内には、「HG 1/144 ガンダムエアリアル」(別売り)のビームサーベルのグリップを取り付け可能。"
+		],
+		"en": [
+			"In the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", the flight unit manufactured by Mirasoul equipped by Gundam Aerial is commercialized!",
+			"• The arm that extends from the backpack is connected at the tip and base with a ball joint. A flight unit with flexible movement left and right.",
+			"• It has some internal mechanical parts that are exposed, and the internal mechanical mold is also expressed.",
+			"• Comes with a flat hand with expressions that can also be used with \"HG 1/144 Gundam Aerial\" (sold separately).",
+			"• A beam saber grip from \"HG 1/144 Gundam Aerial\" (sold separately) can be installed inside the unit."
+		]
+	},
+	"accessories": {
+		"ja": ["ハンドパーツ×1式", "シール×1"],
+		"en": ["Hand parts x 1 set", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_4291_0.jpg",
 		"/images/items/01_4291_1.jpg",
@@ -64,20 +51,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4291/",
 	"extractedAt": "2025-12-06T17:53:22.355Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-witch-of-mercury"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"item-1000216474",
-		"item-1000211616",
-		"01_5422",
-		"item-1000203129"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-witch-of-mercury"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["item-1000216474", "item-1000211616", "01_5422", "item-1000203129"],
 	"manualId": "0138"
 }

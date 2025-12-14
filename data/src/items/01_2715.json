@@ -19,39 +19,24 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "30MMのオプションアーマーシリーズにラビオット用アイテムが登場！",
-			"en": "Items for Rabiot are now available in the 30MM optional armor series!"
-		},
-		{
-			"ja": "• アーマー一式とアームユニットのセット。シール付属。",
-			"en": "• Complete armor and arm unit set. Seal included."
-		},
-		{
-			"ja": "• アルトにもカスタマイズ可能。",
-			"en": "• Can also be customized for alto."
-		},
-		{
-			"ja": "• ロイロイ用カスタマイズパーツとしても使える。",
-			"en": "• Can also be used as customized parts for Loi Loi."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "アーマー×１式",
-			"en": "Armor x 1 set"
-		},
-		{
-			"ja": "アームユニット×１",
-			"en": "Arm unit x 1"
-		},
-		{
-			"ja": "シール×１",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"30MMのオプションアーマーシリーズにラビオット用アイテムが登場！",
+			"• アーマー一式とアームユニットのセット。シール付属。",
+			"• アルトにもカスタマイズ可能。",
+			"• ロイロイ用カスタマイズパーツとしても使える。"
+		],
+		"en": [
+			"Items for Rabiot are now available in the 30MM optional armor series!",
+			"• Complete armor and arm unit set. Seal included.",
+			"• Can also be customized for alto.",
+			"• Can also be used as customized parts for Loi Loi."
+		]
+	},
+	"accessories": {
+		"ja": ["アーマー×１式", "アームユニット×１", "シール×１"],
+		"en": ["Armor x 1 set", "Arm unit x 1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_2715_0.jpg",
 		"/images/items/01_2715_1.jpg",
@@ -61,18 +46,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2715/",
 	"extractedAt": "2025-12-06T17:49:55.948Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3679"
 }

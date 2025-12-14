@@ -19,47 +19,36 @@
 	},
 	"targetAge": 15,
 	"scale": "1/72",
-	"description": [
-		{
-			"ja": "『マクロスΔ』よりドラケンIIIにリル・ドラケンやミサイルポッドを付属したスペシャルパックが登場！",
-			"en": "From \"Macross Delta\" comes a special pack that includes Draken III with Lil Draken and a missile pod!"
-		},
-		{
-			"ja": "■劇場版オリジナルのカラーリング機体を再現。",
-			"en": "• Reproduces the original livery version of the movie."
-		},
-		{
-			"ja": "■リル・ドラケンとミサイルポッドはファイター、ガウォーク、バトロイド形態への三段変形にも対応。",
-			"en": "• Lil Draken and missile pod can also be transformed into three stages: fighter, gerwalk, and battroid form."
-		},
-		{
-			"ja": "■ミラージュ・ファリーナ・ジーナスのパイロットフィギュア付属。",
-			"en": "• Mirage Farina Genus pilot figure included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "パイロットパーツ（ミラージュ・ファリーナ・ジーナス）",
-			"en": "Pilot parts (Mirage Farina Genus)"
-		},
-		{
-			"ja": "リル・ドラケン×2",
-			"en": "Lil Draken×2"
-		},
-		{
-			"ja": "ミサイルポッド×2",
-			"en": "Missile pod x2"
-		},
-		{
-			"ja": "ホイルシール×2",
-			"en": "Foil Seal×2"
-		},
-		{
-			"ja": "水転写式デカール×2",
-			"en": "Water transfer decal x 2"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『マクロスΔ』よりドラケンIIIにリル・ドラケンやミサイルポッドを付属したスペシャルパックが登場！",
+			"■劇場版オリジナルのカラーリング機体を再現。",
+			"■リル・ドラケンとミサイルポッドはファイター、ガウォーク、バトロイド形態への三段変形にも対応。",
+			"■ミラージュ・ファリーナ・ジーナスのパイロットフィギュア付属。"
+		],
+		"en": [
+			"From \"Macross Delta\" comes a special pack that includes Draken III with Lil Draken and a missile pod!",
+			"• Reproduces the original livery version of the movie.",
+			"• Lil Draken and missile pod can also be transformed into three stages: fighter, gerwalk, and battroid form.",
+			"• Mirage Farina Genus pilot figure included."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"パイロットパーツ（ミラージュ・ファリーナ・ジーナス）",
+			"リル・ドラケン×2",
+			"ミサイルポッド×2",
+			"ホイルシール×2",
+			"水転写式デカール×2"
+		],
+		"en": [
+			"Pilot parts (Mirage Farina Genus)",
+			"Lil Draken×2",
+			"Missile pod x2",
+			"Foil Seal×2",
+			"Water transfer decal x 2"
+		]
+	},
 	"images": [
 		"/images/items/01_3354_0.jpg",
 		"/images/items/01_3354_1.jpg",
@@ -77,16 +66,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_3354/",
 	"extractedAt": "2025-12-06T17:51:16.127Z",
 	"brandIds": [],
-	"seriesIds": [
-		"macross-series"
-	],
-	"categoryIds": [
-		"character-plastic-model"
-	],
-	"relatedItemIds": [
-		"01_5944",
-		"01_5945",
-		"01_5946",
-		"01_5465"
-	]
+	"seriesIds": ["macross-series"],
+	"categoryIds": ["character-plastic-model"],
+	"relatedItemIds": ["01_5944", "01_5945", "01_5946", "01_5465"]
 }

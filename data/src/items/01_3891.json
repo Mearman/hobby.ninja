@@ -18,39 +18,32 @@
 		"day": 29
 	},
 	"targetAge": 15,
-	"description": [
-		{
-			"ja": "豊富な種類のハンドパーツと、可動の広がりを実現した新規の首パーツで、各キャラクターの仕草を表情豊かに表現！",
-			"en": "With a wide variety of hand parts and a new neck part that offers greater range of movement, each character's gestures can be expressively expressed!"
-		},
-		{
-			"ja": "■4種の表情手が白、黒の各色で付属。",
-			"en": "• 4 types of expression hands are included in each color, white and black."
-		},
-		{
-			"ja": "■「左右の可動」「前後の可動」を実現する可動方向の異なる首パーツが2種付属。",
-			"en": "• Two types of neck parts with different movable directions are included to achieve \"left and right movement \" and \" front and back movement.\""
-		},
-		{
-			"ja": "■素体の表情パーツを取り付ける頭部パーツが2点付属。",
-			"en": "• Two head parts are included to attach the body's expression parts."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "表情付きハンドパーツ(左右)「4種×2色(黒・白)」",
-			"en": "Hand parts with expressions (left and right) \"4 types x 2 colors (black and white)\""
-		},
-		{
-			"ja": "可動方向の異なる首パーツ(カラーA)「2種×2点」",
-			"en": "Neck parts with different movable directions (color A) \"2 types x 2 pieces\""
-		},
-		{
-			"ja": "素体(カラーA)共通の頭部パーツ「2点」",
-			"en": "2 common head parts for body (color A)"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"豊富な種類のハンドパーツと、可動の広がりを実現した新規の首パーツで、各キャラクターの仕草を表情豊かに表現！",
+			"■4種の表情手が白、黒の各色で付属。",
+			"■「左右の可動」「前後の可動」を実現する可動方向の異なる首パーツが2種付属。",
+			"■素体の表情パーツを取り付ける頭部パーツが2点付属。"
+		],
+		"en": [
+			"With a wide variety of hand parts and a new neck part that offers greater range of movement, each character's gestures can be expressively expressed!",
+			"• 4 types of expression hands are included in each color, white and black.",
+			"• Two types of neck parts with different movable directions are included to achieve \"left and right movement \" and \" front and back movement.\"",
+			"• Two head parts are included to attach the body's expression parts."
+		]
+	},
+	"accessories": {
+		"ja": [
+			"表情付きハンドパーツ(左右)「4種×2色(黒・白)」",
+			"可動方向の異なる首パーツ(カラーA)「2種×2点」",
+			"素体(カラーA)共通の頭部パーツ「2点」"
+		],
+		"en": [
+			"Hand parts with expressions (left and right) \"4 types x 2 colors (black and white)\"",
+			"Neck parts with different movable directions (color A) \"2 types x 2 pieces\"",
+			"2 common head parts for body (color A)"
+		]
+	},
 	"images": [
 		"/images/items/01_3891_0.jpg",
 		"/images/items/01_3891_1.jpg",
@@ -67,18 +60,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3891/",
 	"extractedAt": "2025-12-06T17:52:27.206Z",
-	"brandIds": [
-		"30-minutes-sisters"
-	],
+	"brandIds": ["30-minutes-sisters"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5975",
-		"01_5976",
-		"01_5977",
-		"01_5954"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5975", "01_5976", "01_5977", "01_5954"],
 	"manualId": "3454"
 }

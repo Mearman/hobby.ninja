@@ -19,43 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「軍警ザク」をHGで立体化！",
-			"en": "From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" Military Police Zaku\" is made into a three-dimensional HG!"
-		},
-		{
-			"ja": "• 肩のライトはクリアパーツで再現。",
-			"en": "• The shoulder lights are reproduced with clear parts."
-		},
-		{
-			"ja": "• 肩部ブロックは独立して可動し、ダイナミックなアクションポーズが可能。",
-			"en": "• The shoulder blocks can move independently, allowing for dynamic action poses."
-		},
-		{
-			"ja": "• モノアイは可動式。",
-			"en": "• Monoeye is movable."
-		},
-		{
-			"ja": "• 劇中イメージを再現するマーキングシールが付属。",
-			"en": "• Comes with a MarkingSeal that reproduces the image from the play."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "武装×1式",
-			"en": "Armed x 1 type"
-		},
-		{
-			"ja": "ハンドパーツ×1",
-			"en": "Hand parts x 1"
-		},
-		{
-			"ja": "マーキングシール×1",
-			"en": "MarkingSeal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士Gundam GQuuuuuuX』(ジークアクス)より、「軍警ザク」をHGで立体化！",
+			"• 肩のライトはクリアパーツで再現。",
+			"• 肩部ブロックは独立して可動し、ダイナミックなアクションポーズが可能。",
+			"• モノアイは可動式。",
+			"• 劇中イメージを再現するマーキングシールが付属。"
+		],
+		"en": [
+			"From \"Mobile Suit Gundam GQuuuuuuX \" (Sieg Ax), \" Military Police Zaku\" is made into a three-dimensional HG!",
+			"• The shoulder lights are reproduced with clear parts.",
+			"• The shoulder blocks can move independently, allowing for dynamic action poses.",
+			"• Monoeye is movable.",
+			"• Comes with a MarkingSeal that reproduces the image from the play."
+		]
+	},
+	"accessories": {
+		"ja": ["武装×1式", "ハンドパーツ×1", "マーキングシール×1"],
+		"en": ["Armed x 1 type", "Hand parts x 1", "MarkingSeal×1"]
+	},
 	"images": [
 		"/images/items/01_5931_0.jpg",
 		"/images/items/01_5931_1.jpg",
@@ -68,20 +51,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5931/",
 	"extractedAt": "2025-12-06T17:56:52.238Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-gquuuuuux"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5961",
-		"01_5952",
-		"01_5951"
-	],
+	"brandIds": ["hg-high-grade"],
+	"seriesIds": ["mobile-suit-gundam-gquuuuuux"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5961", "01_5952", "01_5951"],
 	"manualId": "2971"
 }

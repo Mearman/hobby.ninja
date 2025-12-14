@@ -19,56 +19,30 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "• 『機動戦士Ζガンダム』より、ティターンズ最後の量産機“バーザム”が、最新フォーマットのプロポーションでキット化！",
-			"en": "• From \"Mobile Suit Zeta Gundam \", the Titans' last mass-produced machine \" Barzam\" is now a kit with the latest format proportions!"
-		},
-		{
-			"ja": "• 特徴的なMSデザインや背部バーニアを完全再現！",
-			"en": "• Complete reproduction of the characteristic MS design and back vernier!"
-		},
-		{
-			"ja": "• 肩部分はボールジョイントパーツの使用で前後・上下への可動が可能となっており、多彩なポージングを可能にする広い可動域を持つ！",
-			"en": "• The shoulders can be moved forward and backward and up and down using ball joint parts, allowing for a wide range of motion that allows for a variety of poses!"
-		},
-		{
-			"ja": "• モノアイのクリアパーツや、胸と腰の黄色ラインなど細部まで機体のカラーリングが再現されている。",
-			"en": "• The coloring of the aircraft has been reproduced down to the smallest detail, such as the clear parts of the mono-eye and the yellow lines on the chest and waist."
-		},
-		{
-			"ja": "• 特徴的なビーム・ライフル、バルカン・ポッド・システムやビーム・サーベルなどが付属！",
-			"en": "• Includes distinctive beam rifle, Vulcan pod system, beam saber, and more!"
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビーム・ライフルｘ1",
-			"en": "Beam rifle x1"
-		},
-		{
-			"ja": "ビーム・サーベルｘ2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "バルカン・ポッド・システムｘ1",
-			"en": "Vulcan Pod System x1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品ｘ8",
-			"en": "Molded product x8"
-		},
-		{
-			"ja": "シールｘ1",
-			"en": "Sealx1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"• 『機動戦士Ζガンダム』より、ティターンズ最後の量産機“バーザム”が、最新フォーマットのプロポーションでキット化！",
+			"• 特徴的なMSデザインや背部バーニアを完全再現！",
+			"• 肩部分はボールジョイントパーツの使用で前後・上下への可動が可能となっており、多彩なポージングを可能にする広い可動域を持つ！",
+			"• モノアイのクリアパーツや、胸と腰の黄色ラインなど細部まで機体のカラーリングが再現されている。",
+			"• 特徴的なビーム・ライフル、バルカン・ポッド・システムやビーム・サーベルなどが付属！"
+		],
+		"en": [
+			"• From \"Mobile Suit Zeta Gundam \", the Titans' last mass-produced machine \" Barzam\" is now a kit with the latest format proportions!",
+			"• Complete reproduction of the characteristic MS design and back vernier!",
+			"• The shoulders can be moved forward and backward and up and down using ball joint parts, allowing for a wide range of motion that allows for a variety of poses!",
+			"• The coloring of the aircraft has been reproduced down to the smallest detail, such as the clear parts of the mono-eye and the yellow lines on the chest and waist.",
+			"• Includes distinctive beam rifle, Vulcan pod system, beam saber, and more!"
+		]
+	},
+	"accessories": {
+		"ja": ["ビーム・ライフルｘ1", "ビーム・サーベルｘ2", "バルカン・ポッド・システムｘ1"],
+		"en": ["Beam rifle x1", "Beam saber x2", "Vulcan Pod System x1"]
+	},
+	"contents": {
+		"ja": ["成形品ｘ8", "シールｘ1", "取扱説明書×1"],
+		"en": ["Molded product x8", "Sealx1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_1000_0.jpg",
 		"/images/items/01_1000_1.jpg",
@@ -80,21 +54,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_1000/",
 	"extractedAt": "2025-12-06T16:20:43.606Z",
-	"brandIds": [
-		"hg-high-grade",
-		"hg-universal-century"
-	],
-	"seriesIds": [
-		"mobile-suit-z-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5468",
-		"01_5375",
-		"01_5162",
-		"01_4985"
-	],
+	"brandIds": ["hg-high-grade", "hg-universal-century"],
+	"seriesIds": ["mobile-suit-z-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5468", "01_5375", "01_5162", "01_4985"],
 	"manualId": "0472"
 }

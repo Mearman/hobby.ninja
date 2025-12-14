@@ -19,39 +19,26 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "カスタマイズの幅を広げる30MM「エグザビークルシリーズ」にスペースクラフトVer.が登場！",
-			"en": "Spacecraft Ver. is now available in the 30MM \"Exa Vehicle Series\" that expands the range of customization!"
-		},
-		{
-			"ja": "• 変形可能な宇宙仕様のビークル。",
-			"en": "• Transformable space vehicle."
-		},
-		{
-			"ja": "• 組み替えで航行形態にも変形可能。",
-			"en": "• It can also be transformed into a sailing mode by rearranging it."
-		},
-		{
-			"ja": "• フェイスパーツが付属。",
-			"en": "• Face parts included."
-		},
-		{
-			"ja": "• 分解すればカスタマイズパーツとしても使える。",
-			"en": "• It can be used as customized parts by disassembling it."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビークル×1体",
-			"en": "Vehicle x 1"
-		},
-		{
-			"ja": "フェイスパーツ×1",
-			"en": "Face parts x 1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"カスタマイズの幅を広げる30MM「エグザビークルシリーズ」にスペースクラフトVer.が登場！",
+			"• 変形可能な宇宙仕様のビークル。",
+			"• 組み替えで航行形態にも変形可能。",
+			"• フェイスパーツが付属。",
+			"• 分解すればカスタマイズパーツとしても使える。"
+		],
+		"en": [
+			"Spacecraft Ver. is now available in the 30MM \"Exa Vehicle Series\" that expands the range of customization!",
+			"• Transformable space vehicle.",
+			"• It can also be transformed into a sailing mode by rearranging it.",
+			"• Face parts included.",
+			"• It can be used as customized parts by disassembling it."
+		]
+	},
+	"accessories": {
+		"ja": ["ビークル×1体", "フェイスパーツ×1"],
+		"en": ["Vehicle x 1", "Face parts x 1"]
+	},
 	"images": [
 		"/images/items/01_3341_0.jpg",
 		"/images/items/01_3341_1.jpg",
@@ -68,18 +55,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3341/",
 	"extractedAt": "2025-12-06T17:51:14.082Z",
-	"brandIds": [
-		"30-minutes-missions"
-	],
+	"brandIds": ["30-minutes-missions"],
 	"seriesIds": [],
-	"categoryIds": [
-		"30-minutes-label"
-	],
-	"relatedItemIds": [
-		"01_5972",
-		"01_5973",
-		"01_5974",
-		"01_5964"
-	],
+	"categoryIds": ["30-minutes-label"],
+	"relatedItemIds": ["01_5972", "01_5973", "01_5974", "01_5964"],
 	"manualId": "3711"
 }

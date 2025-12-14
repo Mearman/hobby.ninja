@@ -18,48 +18,30 @@
 		"day": 3
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "内部機構まで再現しながらも簡単に組み立てられるハロプラから、黒い三連星仕様のハロが登場！",
-			"en": "From Haropura, which reproduces the internal mechanism and is easy to assemble, a black triple-star Haro is now available!"
-		},
-		{
-			"ja": "• 耳は開閉し、手足は差し替えで再現！",
-			"en": "• The ears can be opened and closed, and the limbs can be recreated by replacing them!"
-		},
-		{
-			"ja": "• 他のハロプラやプチッガイとの連結が可能！",
-			"en": "• Can be connected with other Haropla and Petitgguy!"
-		},
-		{
-			"ja": "• 余剰パーツは台座に収納できる。",
-			"en": "• Excess parts can be stored on the pedestal."
-		},
-		{
-			"ja": "• ３機分のナンバーを再現できるホイルシールが付属。",
-			"en": "• Comes with a foil seal that can reproduce the numbers of 3 aircraft."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "台座×１",
-			"en": "Pedestal x 1"
-		}
-	],
-	"contents": [
-		{
-			"ja": "成形品×3",
-			"en": "Molded product x 3"
-		},
-		{
-			"ja": "ホイルシール×1",
-			"en": "Foil Seal×1"
-		},
-		{
-			"ja": "取扱説明書×1",
-			"en": "Handling manual×1"
-		}
-	],
+	"description": {
+		"ja": [
+			"内部機構まで再現しながらも簡単に組み立てられるハロプラから、黒い三連星仕様のハロが登場！",
+			"• 耳は開閉し、手足は差し替えで再現！",
+			"• 他のハロプラやプチッガイとの連結が可能！",
+			"• 余剰パーツは台座に収納できる。",
+			"• ３機分のナンバーを再現できるホイルシールが付属。"
+		],
+		"en": [
+			"From Haropura, which reproduces the internal mechanism and is easy to assemble, a black triple-star Haro is now available!",
+			"• The ears can be opened and closed, and the limbs can be recreated by replacing them!",
+			"• Can be connected with other Haropla and Petitgguy!",
+			"• Excess parts can be stored on the pedestal.",
+			"• Comes with a foil seal that can reproduce the numbers of 3 aircraft."
+		]
+	},
+	"accessories": {
+		"ja": ["台座×１"],
+		"en": ["Pedestal x 1"]
+	},
+	"contents": {
+		"ja": ["成形品×3", "ホイルシール×1", "取扱説明書×1"],
+		"en": ["Molded product x 3", "Foil Seal×1", "Handling manual×1"]
+	},
 	"images": [
 		"/images/items/01_2377_0.jpg",
 		"/images/items/01_2377_1.jpg",
@@ -71,16 +53,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_2377/",
 	"extractedAt": "2025-12-06T17:49:13.432Z",
 	"brandIds": [],
-	"seriesIds": [
-		"gundam-build-divers"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5189",
-		"01_5190",
-		"01_3063",
-		"01_2623"
-	]
+	"seriesIds": ["gundam-build-divers"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5189", "01_5190", "01_3063", "01_2623"]
 }

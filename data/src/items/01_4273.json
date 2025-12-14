@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "1/144 デビルガンダム[クリアカラー]",
-		"en": "1/144 Devil Gundam [Clear color]"
+		"en": "1/144 DEVIL GUNDAM [CLEAR COLOR]"
 	},
 	"price": {
 		"amount": 1650,
@@ -19,26 +19,20 @@
 	},
 	"targetAge": 15,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『機動武闘伝G ガンダム』より1/144 デビルガンダムがクリアカラーになって登場！",
-			"en": "1/144 Devil Gundam from \"Mobile Fighter G Gundam\" is now available in clear color!"
-		},
-		{
-			"ja": "• 究極のモビルファイターでありながら驚異的な自己再生と自己進化と自己増殖能力により暴走、次々と変化を遂げていったその最終形態をモデル化。",
-			"en": "• Although it was the ultimate mobile fighter, it went out of control due to its amazing self-regeneration, self-evolution, and self-propagation abilities, and has been made into a model of its final form, which underwent changes one after another."
-		},
-		{
-			"ja": "• クリアカラーの成形色で立体化、腰パーツは2種類付属しており、劇中同様の独特なシルエットを再現。",
-			"en": "• Three-dimensional with clear molding color, two types of waist parts are included, reproducing the unique silhouette similar to the one in the play."
-		},
-		{
-			"ja": "• パーツの差し替えによりガンダムヘッド型のモビルアーマー形態への変形が可能。",
-			"en": "• Can be transformed into a Gundam head-type mobile armor form by replacing parts."
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動武闘伝G ガンダム』より1/144 デビルガンダムがクリアカラーになって登場！",
+			"• 究極のモビルファイターでありながら驚異的な自己再生と自己進化と自己増殖能力により暴走、次々と変化を遂げていったその最終形態をモデル化。",
+			"• クリアカラーの成形色で立体化、腰パーツは2種類付属しており、劇中同様の独特なシルエットを再現。",
+			"• パーツの差し替えによりガンダムヘッド型のモビルアーマー形態への変形が可能。"
+		],
+		"en": [
+			"1/144 Devil Gundam from \"Mobile Fighter G Gundam\" is now available in clear color!",
+			"• Although it was the ultimate mobile fighter, it went out of control due to its amazing self-regeneration, self-evolution, and self-propagation abilities, and has been made into a model of its final form, which underwent changes one after another.",
+			"• Three-dimensional with clear molding color, two types of waist parts are included, reproducing the unique silhouette similar to the one in the play.",
+			"• Can be transformed into a Gundam head-type mobile armor form by replacing parts."
+		]
+	},
 	"images": [
 		"/images/items/01_4273_0.jpg",
 		"/images/items/01_4273_1.jpg",
@@ -48,16 +42,7 @@
 	"sourceUrl": "https://bandai-hobby.net/item/01_4273/",
 	"extractedAt": "2025-12-06T17:53:19.290Z",
 	"brandIds": [],
-	"seriesIds": [
-		"mobile-fighter-g-gundam"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5544",
-		"01_5995",
-		"item-1000213247",
-		"item-1000194970"
-	]
+	"seriesIds": ["mobile-fighter-g-gundam"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5544", "01_5995", "item-1000213247", "item-1000194970"]
 }

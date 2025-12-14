@@ -19,47 +19,24 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "『ガンダムビルドダイバーズRe:RISE』よりガンダムジャスティスナイトをベースとしたプチッガイが登場。",
-			"en": "From \"Gundam Build Divers Re:RISE\" comes Petit'g Guy based on Gundam Justice Knight."
-		},
-		{
-			"ja": "• ランス、シールド、マント付属。",
-			"en": "• Lance, seal, and cloak included."
-		},
-		{
-			"ja": "• アンテナはシールで再現。",
-			"en": "• The antenna is reproduced with Seal."
-		},
-		{
-			"ja": "• 専用台座付属。",
-			"en": "• Special pedestal included."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ランス×１",
-			"en": "Lance x1"
-		},
-		{
-			"ja": "シールド×１",
-			"en": "Seal de x1"
-		},
-		{
-			"ja": "マント×１",
-			"en": "Cloak x 1"
-		},
-		{
-			"ja": "専用台座×１",
-			"en": "Dedicated pedestal x 1"
-		},
-		{
-			"ja": "ホイルシール×１",
-			"en": "Foil Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『ガンダムビルドダイバーズRe:RISE』よりガンダムジャスティスナイトをベースとしたプチッガイが登場。",
+			"• ランス、シールド、マント付属。",
+			"• アンテナはシールで再現。",
+			"• 専用台座付属。"
+		],
+		"en": [
+			"From \"Gundam Build Divers Re:RISE\" comes Petit'g Guy based on Gundam Justice Knight.",
+			"• Lance, seal, and cloak included.",
+			"• The antenna is reproduced with Seal.",
+			"• Special pedestal included."
+		]
+	},
+	"accessories": {
+		"ja": ["ランス×１", "シールド×１", "マント×１", "専用台座×１", "ホイルシール×１"],
+		"en": ["Lance x1", "Seal de x1", "Cloak x 1", "Dedicated pedestal x 1", "Foil Seal×1"]
+	},
 	"images": [
 		"/images/items/01_2621_0.jpg",
 		"/images/items/01_2621_1.jpg",
@@ -68,20 +45,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2621/",
 	"extractedAt": "2025-12-06T17:49:45.167Z",
-	"brandIds": [
-		"hg-high-grade",
-		"petitgguybeargguy"
-	],
-	"seriesIds": [
-		"gundam-build-divers-rerise"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5054",
-		"01_3562",
-		"01_3565",
-		"01_3291"
-	]
+	"brandIds": ["hg-high-grade", "petitgguybeargguy"],
+	"seriesIds": ["gundam-build-divers-rerise"],
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5054", "01_3562", "01_3565", "01_3291"]
 }

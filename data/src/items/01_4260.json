@@ -3,7 +3,7 @@
 	"type": "item",
 	"name": {
 		"ja": "SD ガンダム EXスタンダード ガンダムエアリアル",
-		"en": "SD Gundam EX Standard Gundam Aerial"
+		"en": "SD GUNDAM EX-STANDARD GUNDAM AERIAL"
 	},
 	"price": {
 		"amount": 660,
@@ -18,47 +18,26 @@
 		"day": 15
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、主人公機ガンダム・エアリアルを、SDEXスタンダードシリーズで立体化！",
-			"en": "From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", the main character Gundam Aerial has been made into a three-dimensional version of the SDEX Standard Series!"
-		},
-		{
-			"ja": "• SD ガンダム EXスタンダードならではのデザインアレンジ。",
-			"en": "• Design arrangement unique to SD Gundam EX Standard."
-		},
-		{
-			"ja": "• 大胆なアクションポーズを実現する可動範囲を確保。",
-			"en": "• Ensures a range of motion that allows for bold action poses."
-		},
-		{
-			"ja": "• ディテールや造形の密度感をスタイリッシュに演出。",
-			"en": "• Stylishly creates a sense of detail and density."
-		},
-		{
-			"ja": "• ビームライフル、ビームサーベル、シールドが付属。ライフルは背中に組み付け可能。シールドは分離させて本体肩に接続可能。",
-			"en": "• Beam rifle, beam saber, and Seal are included. The rifle can be attached to the back. Seal can be separated and connected to the main body shoulder."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビームサーベル×１",
-			"en": "Beam saber x1"
-		},
-		{
-			"ja": "ビームライフル×１",
-			"en": "Beam rifle x1"
-		},
-		{
-			"ja": "シールド×１",
-			"en": "Seal de x1"
-		},
-		{
-			"ja": "シール×１",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"ガンダムシリーズ最新作『機動戦士ガンダム 水星の魔女』より、主人公機ガンダム・エアリアルを、SDEXスタンダードシリーズで立体化！",
+			"• SD ガンダム EXスタンダードならではのデザインアレンジ。",
+			"• 大胆なアクションポーズを実現する可動範囲を確保。",
+			"• ディテールや造形の密度感をスタイリッシュに演出。",
+			"• ビームライフル、ビームサーベル、シールドが付属。ライフルは背中に組み付け可能。シールドは分離させて本体肩に接続可能。"
+		],
+		"en": [
+			"From the latest Gundam series \"Mobile Suit Gundam Witch of Mercury\", the main character Gundam Aerial has been made into a three-dimensional version of the SDEX Standard Series!",
+			"• Design arrangement unique to SD Gundam EX Standard.",
+			"• Ensures a range of motion that allows for bold action poses.",
+			"• Stylishly creates a sense of detail and density.",
+			"• Beam rifle, beam saber, and Seal are included. The rifle can be attached to the back. Seal can be separated and connected to the main body shoulder."
+		]
+	},
+	"accessories": {
+		"ja": ["ビームサーベル×１", "ビームライフル×１", "シールド×１", "シール×１"],
+		"en": ["Beam saber x1", "Beam rifle x1", "Seal de x1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_4260_0.jpg",
 		"/images/items/01_4260_1.jpg",
@@ -70,15 +49,9 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_4260/",
 	"extractedAt": "2025-12-06T17:53:19.148Z",
-	"brandIds": [
-		"sdex-standard"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-witch-of-mercury"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["sdex-standard"],
+	"seriesIds": ["mobile-suit-gundam-witch-of-mercury"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": [],
 	"manualId": "1052"
 }

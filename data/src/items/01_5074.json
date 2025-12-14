@@ -18,51 +18,28 @@
 		"day": 26
 	},
 	"targetAge": 8,
-	"description": [
-		{
-			"ja": "『機動戦士ガンダム SEED FREEDOM』に登場する「ライジングフリーダムガンダム」を、SD ガンダム EXスタンダードで立体化！",
-			"en": "The \"Rising Freedom Gundam \" that appears in \" Mobile Suit Gundam SEED FREEDOM\" is now three-dimensional with SD Gundam EX Standard!"
-		},
-		{
-			"ja": "• SD ガンダム EXスタンダードならではのデザインアレンジ。",
-			"en": "• Design arrangement unique to SD Gundam EX Standard."
-		},
-		{
-			"ja": "• 一部パーツの差し替えによりMA形態への簡易変形が可能。",
-			"en": "• Can be easily transformed into MA form by replacing some parts."
-		},
-		{
-			"ja": "• 大胆なアクションポーズを実現する可動範囲を確保。",
-			"en": "• Ensures a range of motion that allows for bold action poses."
-		},
-		{
-			"ja": "• ビームライフル、ビームサーベル、シールドが付属。",
-			"en": "• Beam rifle, beam saber, and Seal are included."
-		},
-		{
-			"ja": "• 装備を組み合わせることでHGシリーズとのカスタマイズ遊びが可能。",
-			"en": "• Customize play with the HG series by combining equipment."
-		}
-	],
-	"accessories": [
-		{
-			"ja": "ビームライフル×１",
-			"en": "Beam rifle x1"
-		},
-		{
-			"ja": "ビームサーベル×2",
-			"en": "Beam saber x2"
-		},
-		{
-			"ja": "シールド×１",
-			"en": "Seal de x1"
-		},
-		{
-			"ja": "シール×1",
-			"en": "Seal×1"
-		}
-	],
-	"contents": [],
+	"description": {
+		"ja": [
+			"『機動戦士ガンダム SEED FREEDOM』に登場する「ライジングフリーダムガンダム」を、SD ガンダム EXスタンダードで立体化！",
+			"• SD ガンダム EXスタンダードならではのデザインアレンジ。",
+			"• 一部パーツの差し替えによりMA形態への簡易変形が可能。",
+			"• 大胆なアクションポーズを実現する可動範囲を確保。",
+			"• ビームライフル、ビームサーベル、シールドが付属。",
+			"• 装備を組み合わせることでHGシリーズとのカスタマイズ遊びが可能。"
+		],
+		"en": [
+			"The \"Rising Freedom Gundam \" that appears in \" Mobile Suit Gundam SEED FREEDOM\" is now three-dimensional with SD Gundam EX Standard!",
+			"• Design arrangement unique to SD Gundam EX Standard.",
+			"• Can be easily transformed into MA form by replacing some parts.",
+			"• Ensures a range of motion that allows for bold action poses.",
+			"• Beam rifle, beam saber, and Seal are included.",
+			"• Customize play with the HG series by combining equipment."
+		]
+	},
+	"accessories": {
+		"ja": ["ビームライフル×１", "ビームサーベル×2", "シールド×１", "シール×1"],
+		"en": ["Beam rifle x1", "Beam saber x2", "Seal de x1", "Seal×1"]
+	},
 	"images": [
 		"/images/items/01_5074_0.jpg",
 		"/images/items/01_5074_1.jpg",
@@ -75,14 +52,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_5074/",
 	"extractedAt": "2025-12-06T17:55:06.906Z",
-	"brandIds": [
-		"sdex-standard"
-	],
-	"seriesIds": [
-		"mobile-suit-gundam-seed-freedom"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["sdex-standard"],
+	"seriesIds": ["mobile-suit-gundam-seed-freedom"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }

@@ -19,22 +19,18 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "■「ガンプラビルダーズビギニングG」に登場する改造ガンプラ。",
-			"en": "• Modified Gunpla that appears in \"Gunpla Builders Beginning G\"."
-		},
-		{
-			"ja": "■ヒロイン「リナ」がアッガイを改造。",
-			"en": "• Heroine \"Lina\" modifies Acguy."
-		},
-		{
-			"ja": "成形品×7、ホイルシール×1、組立説明書",
-			"en": "Molded product x 7, foil seal x 1, assembly manual"
-		}
-	],
-	"accessories": [],
-	"contents": [],
+	"description": {
+		"ja": [
+			"■「ガンプラビルダーズビギニングG」に登場する改造ガンプラ。",
+			"■ヒロイン「リナ」がアッガイを改造。",
+			"成形品×7、ホイルシール×1、組立説明書"
+		],
+		"en": [
+			"• Modified Gunpla that appears in \"Gunpla Builders Beginning G\".",
+			"• Heroine \"Lina\" modifies Acguy.",
+			"Molded product x 7, foil seal x 1, assembly manual"
+		]
+	},
 	"images": [
 		"/images/items/01_3284_0.jpg",
 		"/images/items/01_3284_1.jpg",
@@ -44,17 +40,8 @@
 	],
 	"sourceUrl": "https://bandai-hobby.net/item/01_3284/",
 	"extractedAt": "2025-12-06T17:51:06.152Z",
-	"brandIds": [
-		"hg-high-grade"
-	],
+	"brandIds": ["hg-high-grade"],
 	"seriesIds": [],
-	"categoryIds": [
-		"gunpla"
-	],
-	"relatedItemIds": [
-		"01_5986",
-		"01_5963",
-		"01_5961",
-		"01_5951"
-	]
+	"categoryIds": ["gunpla"],
+	"relatedItemIds": ["01_5986", "01_5963", "01_5961", "01_5951"]
 }

@@ -18,32 +18,21 @@
 	},
 	"targetAge": 8,
 	"scale": "1/144",
-	"description": [
-		{
-			"ja": "各種イベント会場等で販売を行う、イベント限定ガンプラです。",
-			"en": "Event-limited Gunpla sold at various event venues."
-		},
-		{
-			"ja": "HG アスタロトリナシメントがイベント限定のアイアンブラッドコーティングで登場！",
-			"en": "HG Astaroth Trinascimento now available in event-limited Iron Blood coating!"
-		}
-	],
-	"accessories": [],
-	"contents": [],
-	"images": [
-		"/images/items/01_2191_0.jpg"
-	],
+	"description": {
+		"ja": [
+			"各種イベント会場等で販売を行う、イベント限定ガンプラです。",
+			"HG アスタロトリナシメントがイベント限定のアイアンブラッドコーティングで登場！"
+		],
+		"en": [
+			"Event-limited Gunpla sold at various event venues.",
+			"HG Astaroth Trinascimento now available in event-limited Iron Blood coating!"
+		]
+	},
+	"images": ["/images/items/01_2191_0.jpg"],
 	"sourceUrl": "https://bandai-hobby.net/item/01_2191/",
 	"extractedAt": "2025-12-06T17:48:50.163Z",
-	"brandIds": [
-		"hg-high-grade",
-		"hg-universal-century"
-	],
-	"seriesIds": [
-		"iron-blooded-orphans-1100-full-mechanics"
-	],
-	"categoryIds": [
-		"gunpla"
-	],
+	"brandIds": ["hg-high-grade", "hg-universal-century"],
+	"seriesIds": ["iron-blooded-orphans-1100-full-mechanics"],
+	"categoryIds": ["gunpla"],
 	"relatedItemIds": []
 }
