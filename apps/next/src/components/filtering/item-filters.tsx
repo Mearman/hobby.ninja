@@ -73,6 +73,23 @@ const FILTER_IMAGE_STYLE: React.CSSProperties = {
 	display: "block",
 };
 
+// Style for text-only chips to match image chip dimensions
+const TEXT_CHIP_STYLE: React.CSSProperties = {
+	height: FILTER_IMAGE_HEIGHT,
+	minWidth: 80,
+	maxWidth: 200,
+	borderRadius: 8,
+	padding: "0 12px",
+	display: "flex",
+	alignItems: "center",
+	justifyContent: "center",
+	textAlign: "center",
+	fontSize: 12,
+	fontWeight: 500,
+	lineHeight: 1.2,
+	overflow: "hidden",
+};
+
 interface ItemFiltersProps {
 	filterState: FilterState;
 	availableOptions: {
@@ -192,16 +209,21 @@ function FilterSection({
 							);
 						}
 						return (
-							<Chip
-								key={value}
-								checked={true}
-								onChange={() => { onToggle(field, value); }}
-								size="xs"
-								variant="filled"
-								color={color}
-							>
-								{formatValue(value)}
-							</Chip>
+							<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
+								<UnstyledButton
+									onClick={() => { onToggle(field, value); }}
+									style={{
+										...TEXT_CHIP_STYLE,
+										border: `2px solid var(--mantine-color-${color}-filled)`,
+										background: `var(--mantine-color-${color}-filled)`,
+										color: "white",
+									}}
+								>
+									<Text size="xs" fw={500} lineClamp={2} ta="center">
+										{formatValue(value)}
+									</Text>
+								</UnstyledButton>
+							</Tooltip>
 						);
 					})}
 				</Group>
@@ -233,16 +255,22 @@ function FilterSection({
 							);
 						}
 						return (
-							<Chip
-								key={value}
-								checked={isSelected}
-								onChange={() => { onToggle(field, value); }}
-								size="xs"
-								variant="outline"
-								color={color}
-							>
-								{formatValue(value)}
-							</Chip>
+							<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
+								<UnstyledButton
+									onClick={() => { onToggle(field, value); }}
+									style={{
+										...TEXT_CHIP_STYLE,
+										border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
+										background: isSelected ? `var(--mantine-color-${color}-filled)` : "white",
+										color: isSelected ? "white" : `var(--mantine-color-${color}-filled)`,
+										opacity: hasAnySelection && !isSelected ? 0.7 : 1,
+									}}
+								>
+									<Text size="xs" fw={500} lineClamp={2} ta="center">
+										{formatValue(value)}
+									</Text>
+								</UnstyledButton>
+							</Tooltip>
 						);
 					})}
 				</Group>
