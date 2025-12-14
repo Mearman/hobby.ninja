@@ -112,11 +112,10 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 			);
 		}
 
-		// Scale filter (only for items)
+		// Scale filter (for both items and manuals)
 		if (filterState.scales.length > 0) {
 			filtered = filtered.filter(
 				(entry) =>
-					entry.type === "item" &&
 					entry.scale &&
 					filterState.scales.includes(entry.scale),
 			);
@@ -267,6 +266,7 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 
 		for (const manual of manuals) {
 			if (manual.language) languages.add(manual.language);
+			if (manual.scale) scales.add(manual.scale);
 		}
 
 		return {
