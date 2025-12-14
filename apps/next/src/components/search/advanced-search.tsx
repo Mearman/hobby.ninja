@@ -297,11 +297,13 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 						{filters.brands?.map(brand => {
 							const brandImage = getBrandImage(brand);
 							return (
-								<Badge key={brand} size="sm" variant="light" title={brand} leftSection={
-									brandImage ? (
-										<Image src={brandImage} alt={brand} width={16} height={16} style={{ objectFit: "contain" }} />
-									) : null
-								}>
+								<Badge key={brand} size={brandImage ? "lg" : "sm"} variant="light" title={brand}
+									styles={brandImage ? { root: { paddingLeft: 4, paddingRight: 4 } } : undefined}
+									leftSection={
+										brandImage ? (
+											<Image src={brandImage} alt={brand} width={28} height={28} style={{ objectFit: "cover", borderRadius: 4 }} />
+										) : null
+									}>
 									{brandImage ? null : brand}
 								</Badge>
 							);
@@ -314,11 +316,13 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 						{filters.series?.map(serie => {
 							const seriesImage = getSeriesImage(serie);
 							return (
-								<Badge key={serie} size="sm" variant="light" color="orange" title={serie} leftSection={
-									seriesImage ? (
-										<Image src={seriesImage} alt={serie} width={16} height={16} style={{ objectFit: "contain" }} />
-									) : null
-								}>
+								<Badge key={serie} size={seriesImage ? "lg" : "sm"} variant="light" color="orange" title={serie}
+									styles={seriesImage ? { root: { paddingLeft: 4, paddingRight: 4 } } : undefined}
+									leftSection={
+										seriesImage ? (
+											<Image src={seriesImage} alt={serie} width={28} height={28} style={{ objectFit: "cover", borderRadius: 4 }} />
+										) : null
+									}>
 									{seriesImage ? null : serie}
 								</Badge>
 							);
@@ -326,11 +330,13 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 						{filters.grades?.map(grade => {
 							const gradeImage = getGradeImage(grade);
 							return (
-								<Badge key={grade} size="sm" variant="light" color="purple" title={formatGradeName(grade)} leftSection={
-									gradeImage ? (
-										<Image src={gradeImage} alt={formatGradeName(grade)} width={16} height={16} style={{ objectFit: "contain" }} />
-									) : null
-								}>
+								<Badge key={grade} size={gradeImage ? "lg" : "sm"} variant="light" color="purple" title={formatGradeName(grade)}
+									styles={gradeImage ? { root: { paddingLeft: 4, paddingRight: 4 } } : undefined}
+									leftSection={
+										gradeImage ? (
+											<Image src={gradeImage} alt={formatGradeName(grade)} width={28} height={28} style={{ objectFit: "cover", borderRadius: 4 }} />
+										) : null
+									}>
 									{gradeImage ? null : formatGradeName(grade)}
 								</Badge>
 							);

@@ -114,14 +114,17 @@ function FilterSection({
 					src={imageSrc}
 					alt={formatValue(value)}
 					title={formatValue(value)}
-					width={20}
-					height={20}
-					style={{ objectFit: "contain" }}
+					width={28}
+					height={28}
+					style={{ objectFit: "cover", borderRadius: 4 }}
 				/>
 			);
 		}
 		return formatValue(value);
 	};
+
+	// Determine chip size based on whether it has an image
+	const getChipSize = (value: string) => getImage?.(value) ? "md" : "xs";
 
 	return (
 		<Box>
@@ -156,7 +159,7 @@ function FilterSection({
 							key={value}
 							checked={true}
 							onChange={() => { onToggle(field, value); }}
-							size="xs"
+							size={getChipSize(value)}
 							variant="filled"
 							color={color}
 						>
@@ -174,7 +177,7 @@ function FilterSection({
 							key={value}
 							checked={selectedValues.includes(value)}
 							onChange={() => { onToggle(field, value); }}
-							size="xs"
+							size={getChipSize(value)}
 							variant="outline"
 							color={color}
 						>
@@ -362,18 +365,19 @@ export function ItemFilters({
 							return (
 								<Badge
 									key={`brand-${brand}`}
-									size="sm"
+									size={brandImage ? "lg" : "sm"}
 									variant="light"
 									color="blue"
 									title={formatBrandName(brand)}
+									styles={brandImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										brandImage ? (
-											<Image src={brandImage} alt={formatBrandName(brand)} width={16} height={16} style={{ objectFit: "contain" }} />
+											<Image src={brandImage} alt={formatBrandName(brand)} width={28} height={28} style={{ objectFit: "cover", borderRadius: 4 }} />
 										) : null
 									}
 									rightSection={
 										<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("brands", brand); }}>
-											<IconX size={10} />
+											<IconX size={12} />
 										</ActionIcon>
 									}
 								>
@@ -386,18 +390,19 @@ export function ItemFilters({
 							return (
 								<Badge
 									key={`grade-${grade}`}
-									size="sm"
+									size={gradeImage ? "lg" : "sm"}
 									variant="light"
 									color="teal"
 									title={formatGradeName(grade)}
+									styles={gradeImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										gradeImage ? (
-											<Image src={gradeImage} alt={formatGradeName(grade)} width={16} height={16} style={{ objectFit: "contain" }} />
+											<Image src={gradeImage} alt={formatGradeName(grade)} width={28} height={28} style={{ objectFit: "cover", borderRadius: 4 }} />
 										) : null
 									}
 									rightSection={
 										<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("grades", grade); }}>
-											<IconX size={10} />
+											<IconX size={12} />
 										</ActionIcon>
 									}
 								>
@@ -425,18 +430,19 @@ export function ItemFilters({
 							return (
 								<Badge
 									key={`series-${s}`}
-									size="sm"
+									size={seriesImage ? "lg" : "sm"}
 									variant="light"
 									color="violet"
 									title={formatSeriesName(s)}
+									styles={seriesImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										seriesImage ? (
-											<Image src={seriesImage} alt={formatSeriesName(s)} width={16} height={16} style={{ objectFit: "contain" }} />
+											<Image src={seriesImage} alt={formatSeriesName(s)} width={28} height={28} style={{ objectFit: "cover", borderRadius: 4 }} />
 										) : null
 									}
 									rightSection={
 										<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("series", s); }}>
-											<IconX size={10} />
+											<IconX size={12} />
 										</ActionIcon>
 									}
 								>
