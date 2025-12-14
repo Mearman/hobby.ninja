@@ -56,7 +56,10 @@
       "Bash(while read f)",
       "Bash(do grep -L \"\"releaseDate\"\" $f)",
       "Bash(do grep -l \"\"releaseDate\"\" $f)",
-      "Bash(sort grep -L \"\"releaseDate\"\" apps/next/public/data/items/*.json)"
+      "Bash(sort grep -L \"\"releaseDate\"\" apps/next/public/data/items/*.json)",
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__fill",
+      "mcp__chrome-devtools__click"
     ],
     "deny": [
       "Bash(git add .)",
