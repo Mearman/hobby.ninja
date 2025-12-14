@@ -5,7 +5,30 @@ import type { Element } from "domhandler";
 
 import { BaseScraper } from "./base-scraper";
 
+/**
+ * Data extracted from global.bandai-hobby.net English site
+ */
+export interface GlobalSiteData {
+	/** English product name */
+	name?: string;
+	/** Description bullet points (from PRODUCTS INFO section) */
+	description?: string[];
+	/** English release date text */
+	releaseDate?: string;
+	/** Brand name (e.g., "REAL GRADE") */
+	brand?: string;
+	/** Series name (e.g., "Mobile Suit Gundam") */
+	series?: string;
+	/** Whether the page exists */
+	hasPage: boolean;
+	/** Error message if lookup failed (not for 404s) */
+	error?: string;
+}
+
 export class BandaiHobbyScraper extends BaseScraper {
+	/** Base URL for the global English site */
+	private static readonly GLOBAL_BASE_URL = "https://global.bandai-hobby.net/en-us";
+
 	constructor() {
 		super({
 			baseUrl: "https://bandai-hobby.net",
@@ -345,5 +368,131 @@ export class BandaiHobbyScraper extends BaseScraper {
 		});
 
 		return manualId;
+	}
+
+	// =========================================================================
+	// Global Site (English) Lookup Methods
+	// =========================================================================
+
+	/**
+	 * Look up canonical English translation from global.bandai-hobby.net
+	 * @param itemId The item ID (e.g., "01_5261")
+	 * @returns GlobalSiteData with translation info or hasPage: false
+	 */
+	async lookupEnglishTranslation(itemId: string): Promise<GlobalSiteData> {
+		const url = `${BandaiHobbyScraper.GLOBAL_BASE_URL}/item/${itemId}/`;
+
+		try {
+			const result = await this.fetchPage(url);
+			const $ = cheerio.load(result.html);
+
+			// Check if page has actual content (not error page)
+			const hasContent = $("main h1").length > 0;
+			if (!hasContent) {
+				return { hasPage: false };
+			}
+
+			// Check for generic error title
+			const title = $("title").text().trim();
+			if (title.includes("404") || title.includes("Not Found")) {
+				return { hasPage: false };
+			}
+
+			return {
+				name: this.extractGlobalName($),
+				description: this.extractGlobalDescriptionBullets($),
+				releaseDate: this.extractGlobalReleaseDate($),
+				brand: this.extractGlobalBrand($),
+				series: this.extractGlobalSeries($),
+				hasPage: true,
+			};
+		} catch (error) {
+			const errorMsg = error instanceof Error ? error.message : "Unknown error";
+			// 404 is expected for items without global pages
+			const is404 = errorMsg.includes("404") || errorMsg.includes("Not Found");
+			return {
+				hasPage: false,
+				error: is404 ? undefined : errorMsg,
+			};
+		}
+	}
+
+	/**
+	 * Extract product name from global site H1
+	 */
+	private extractGlobalName($: cheerio.CheerioAPI): string {
+		return $("main h1").first().text().trim();
+	}
+
+	/**
+	 * Extract release date from global site
+	 * Looks for "Launch date" text pattern
+	 */
+	private extractGlobalReleaseDate($: cheerio.CheerioAPI): string | undefined {
+		const mainText = $("main").text();
+		const match = /Launch date\s*([\w\s,()]+?)(?=Age|$)/i.exec(mainText);
+		return match?.[1]?.trim();
+	}
+
+	/**
+	 * Extract description bullets from PRODUCTS INFO section
+	 * These are the detailed feature descriptions prefixed with a bullet marker
+	 */
+	private extractGlobalDescriptionBullets($: cheerio.CheerioAPI): string[] {
+		const bullets: string[] = [];
+
+		// Find PRODUCTS INFO section and extract bullet points
+		$("main").find("h2, h3").each((_, heading) => {
+			const headingText = $(heading).text();
+			if (headingText.includes("PRODUCTS INFO") || headingText.includes("PRODUCT INFO")) {
+				// Get content after this heading until next heading
+				let node = $(heading).next();
+				while (node.length && !node.is("h2, h3")) {
+					const text = node.text().trim();
+					// Look for bullet points (square bullet or round bullet prefixed)
+					if (text.startsWith("\u25A0") || text.startsWith("\u2022")) {
+						bullets.push(text.slice(1).trim());
+					} else if (text.length > 0) {
+						// Also check for list items
+						node.find("li").each((_, li) => {
+							const liText = $(li).text().trim();
+							if (liText) {
+								bullets.push(liText.replace(/^[\u25A0\u2022]\s*/, "").trim());
+							}
+						});
+					}
+					node = node.next();
+				}
+			}
+		});
+
+		// If no bullets found from PRODUCTS INFO, try to find any square-bullet-prefixed text
+		if (bullets.length === 0) {
+			const mainText = $("main").text();
+			const bulletMatches = mainText.match(/\u25A0[^\u25A0\n]+/g);
+			if (bulletMatches) {
+				for (const match of bulletMatches) {
+					bullets.push(match.slice(1).trim());
+				}
+			}
+		}
+
+		return bullets;
+	}
+
+	/**
+	 * Extract brand from global site (e.g., "REAL GRADE")
+	 */
+	private extractGlobalBrand($: cheerio.CheerioAPI): string | undefined {
+		const brandLink = $("a[href*='/brand/']").first();
+		return brandLink.length > 0 ? brandLink.text().trim() : undefined;
+	}
+
+	/**
+	 * Extract series from global site (e.g., "Mobile Suit Gundam")
+	 */
+	private extractGlobalSeries($: cheerio.CheerioAPI): string | undefined {
+		const seriesLink = $("a[href*='/series/']").first();
+		return seriesLink.length > 0 ? seriesLink.text().trim() : undefined;
 	}
 }
