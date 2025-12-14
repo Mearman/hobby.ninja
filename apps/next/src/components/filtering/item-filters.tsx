@@ -65,13 +65,13 @@ function formatGradeName(id: string): string {
 
 type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
 
-// Shared style for filter images
-const FILTER_IMAGE_SIZE = 36;
+// Shared style for filter images - preserve aspect ratio
+const FILTER_IMAGE_HEIGHT = 32;
 const FILTER_IMAGE_STYLE: React.CSSProperties = {
-	width: FILTER_IMAGE_SIZE,
-	height: FILTER_IMAGE_SIZE,
-	objectFit: "cover",
-	borderRadius: 6,
+	height: FILTER_IMAGE_HEIGHT,
+	width: "auto",
+	objectFit: "contain",
+	display: "block",
 };
 
 interface ItemFiltersProps {
@@ -134,8 +134,8 @@ function FilterSection({
 				<Image
 					src={imageSrc}
 					alt={formatValue(value)}
-					width={FILTER_IMAGE_SIZE}
-					height={FILTER_IMAGE_SIZE}
+					width={64}
+					height={FILTER_IMAGE_HEIGHT}
 					style={FILTER_IMAGE_STYLE}
 				/>
 			);
@@ -146,18 +146,23 @@ function FilterSection({
 	// Determine chip size based on display mode and whether it has an image
 	const getChipSize = (value: string) => hasImage(value) ? "lg" : "xs";
 
-	// Custom styles for image chips - override height to fit image
+	// Custom styles for image chips - no padding, image fills chip
 	const getChipStyles = (value: string) => {
 		if (hasImage(value)) {
 			return {
 				root: {
-					height: FILTER_IMAGE_SIZE + 8,
+					height: FILTER_IMAGE_HEIGHT,
+					borderRadius: 6,
+					overflow: "hidden",
 				},
 				label: {
-					padding: 4,
-					height: FILTER_IMAGE_SIZE + 8,
+					padding: 0,
+					height: FILTER_IMAGE_HEIGHT,
 					display: "flex",
 					alignItems: "center",
+				},
+				iconWrapper: {
+					display: "none",
 				},
 			};
 		}
@@ -447,7 +452,7 @@ export function ItemFilters({
 									styles={brandImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										brandImage ? (
-											<Image src={brandImage} alt={formatBrandName(brand)} width={FILTER_IMAGE_SIZE} height={FILTER_IMAGE_SIZE} style={FILTER_IMAGE_STYLE} />
+											<Image src={brandImage} alt={formatBrandName(brand)} width={FILTER_IMAGE_HEIGHT} height={FILTER_IMAGE_HEIGHT} style={FILTER_IMAGE_STYLE} />
 										) : null
 									}
 									rightSection={
@@ -476,7 +481,7 @@ export function ItemFilters({
 									styles={gradeImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										gradeImage ? (
-											<Image src={gradeImage} alt={formatGradeName(grade)} width={FILTER_IMAGE_SIZE} height={FILTER_IMAGE_SIZE} style={FILTER_IMAGE_STYLE} />
+											<Image src={gradeImage} alt={formatGradeName(grade)} width={FILTER_IMAGE_HEIGHT} height={FILTER_IMAGE_HEIGHT} style={FILTER_IMAGE_STYLE} />
 										) : null
 									}
 									rightSection={
@@ -520,7 +525,7 @@ export function ItemFilters({
 									styles={seriesImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										seriesImage ? (
-											<Image src={seriesImage} alt={formatSeriesName(s)} width={FILTER_IMAGE_SIZE} height={FILTER_IMAGE_SIZE} style={FILTER_IMAGE_STYLE} />
+											<Image src={seriesImage} alt={formatSeriesName(s)} width={FILTER_IMAGE_HEIGHT} height={FILTER_IMAGE_HEIGHT} style={FILTER_IMAGE_STYLE} />
 										) : null
 									}
 									rightSection={
