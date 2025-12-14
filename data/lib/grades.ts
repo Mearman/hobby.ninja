@@ -110,4 +110,35 @@ export function getGradesSorted(): GradeData[] {
 	return [...gradesList].toSorted((a, b) => a.sortOrder - b.sortOrder);
 }
 
+/**
+ * Grade hierarchy entry with root grade and its children
+ */
+export interface GradeHierarchyEntry {
+	root: GradeData;
+	children: GradeData[];
+}
+
+/**
+ * Get grades organized by hierarchy for UI rendering
+ * Returns root grades with their children, sorted by sortOrder
+ */
+export function getGradesHierarchy(): GradeHierarchyEntry[] {
+	const rootGrades = getRootGrades();
+	return rootGrades
+		.toSorted((a, b) => a.sortOrder - b.sortOrder)
+		.map((root) => ({
+			root,
+			children: getChildGrades(root.id).toSorted((a, b) => a.sortOrder - b.sortOrder),
+		}));
+}
+
+/**
+ * Get all grade IDs in a grade family (root + all children)
+ */
+export function getGradeFamilyIds(rootGradeId: string): string[] {
+	const root = gradesMap.get(rootGradeId);
+	if (!root) return [];
+	return [root.id, ...root.children];
+}
+
 export type { GradeData } from "./schemas.js";

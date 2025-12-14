@@ -1,6 +1,6 @@
 "use client";
 
-import { getGradeSortOrder, getNodeDisplayName, getNodeReleaseDateSortable, isItem, sortGradeIds, type Item } from "@hobby-ninja/data";
+import { getGradeFamilyIds, getGradeSortOrder, getNodeDisplayName, getNodeReleaseDateSortable, isItem, sortGradeIds, type Item } from "@hobby-ninja/data";
 import { useState, useMemo, useCallback } from "react";
 
 /**
@@ -54,6 +54,7 @@ export interface UseFilteredItemsReturn {
 	updateFilter: (updates: Partial<FilterState>) => void;
 	updateSearch: (value: string) => void;
 	toggleFilterValue: (field: keyof Pick<FilterState, "brands" | "grades" | "scales" | "series" | "categories">, value: string) => void;
+	toggleGradeFamily: (rootGradeId: string) => void;
 	clearFilters: () => void;
 	hasActiveFilters: boolean;
 	activeFilterCount: number;
@@ -268,6 +269,25 @@ export function useFilteredItems(
 		});
 	}, []);
 
+	// Toggle all grades in a family (root + children)
+	const toggleGradeFamily = useCallback((rootGradeId: string) => {
+		const familyIds = getGradeFamilyIds(rootGradeId);
+		// Filter to only available grades
+		const availableFamilyIds = familyIds.filter(id => availableOptions.grades.includes(id));
+
+		setFilterState(prev => {
+			const currentGrades = prev.grades;
+			const selectedInFamily = availableFamilyIds.filter(id => currentGrades.includes(id));
+
+			// If any in family are selected, deselect all; otherwise select all
+			const newGrades = selectedInFamily.length > 0
+				? currentGrades.filter(id => !availableFamilyIds.includes(id))
+				: [...currentGrades, ...availableFamilyIds.filter(id => !currentGrades.includes(id))];
+
+			return { ...prev, grades: newGrades };
+		});
+	}, [availableOptions.grades]);
+
 	// Clear all filters
 	const clearFilters = useCallback(() => {
 		setFilterState(DEFAULT_FILTER_STATE);
@@ -306,6 +326,7 @@ export function useFilteredItems(
 		updateFilter,
 		updateSearch,
 		toggleFilterValue,
+		toggleGradeFamily,
 		clearFilters,
 		hasActiveFilters,
 		activeFilterCount,

@@ -1,6 +1,6 @@
 "use client";
 
-import type { Item } from "@hobby-ninja/data";
+import { getGradeFamilyIds, type Item } from "@hobby-ninja/data";
 
 import type { FilterProps } from "./types";
 
@@ -47,6 +47,23 @@ export function ItemFiltersWrapper({
 			? currentValues.filter((v) => v !== value)
 			: [...currentValues, value];
 		onFilterChange({ [field]: newValues });
+	};
+
+	const handleToggleGradeFamily = (rootGradeId: string) => {
+		const familyIds = getGradeFamilyIds(rootGradeId);
+		// Filter to only available grades
+		const availableGrades = isStringArray(availableOptions.grades) ? availableOptions.grades : [];
+		const availableFamilyIds = familyIds.filter(id => availableGrades.includes(id));
+
+		const currentGrades = currentFilterState.grades;
+		const selectedInFamily = availableFamilyIds.filter(id => currentGrades.includes(id));
+
+		// If any in family are selected, deselect all; otherwise select all
+		const newGrades = selectedInFamily.length > 0
+			? currentGrades.filter(id => !availableFamilyIds.includes(id))
+			: [...currentGrades, ...availableFamilyIds.filter(id => !currentGrades.includes(id))];
+
+		onFilterChange({ grades: newGrades });
 	};
 
 	const handleClearFilters = () => {
@@ -116,6 +133,7 @@ export function ItemFiltersWrapper({
 			onFilterChange={handleUpdateFilter}
 			onSearchChange={handleUpdateSearch}
 			onToggleFilterValue={handleToggleFilterValue}
+			onToggleGradeFamily={handleToggleGradeFamily}
 			onClearFilters={handleClearFilters}
 			hasActiveFilters={hasActiveFilters}
 			activeFilterCount={activeFilterCount}

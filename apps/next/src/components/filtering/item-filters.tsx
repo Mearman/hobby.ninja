@@ -28,16 +28,15 @@ import {
 	IconChevronDown,
 	IconChevronUp,
 	IconFilter,
-	IconPhoto,
 	IconSearch,
 	IconSortAscending,
 	IconSortDescending,
-	IconTextSize,
 	IconX,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import { useState } from "react";
 
+import { HierarchicalGradeFilter } from "@/components/filtering/hierarchical-grade-filter";
 import { FilterState } from "@/hooks/use-filtered-items";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
 import { getBrandImage, getGradeImage, getSeriesImage } from "@/lib/image-lookup";
@@ -86,6 +85,7 @@ interface ItemFiltersProps {
 	onFilterChange: (updates: Partial<FilterState>) => void;
 	onSearchChange: (value: string) => void;
 	onToggleFilterValue: (field: ArrayFilterField, value: string) => void;
+	onToggleGradeFamily: (rootGradeId: string) => void;
 	onClearFilters: () => void;
 	hasActiveFilters?: boolean;
 	activeFilterCount?: number;
@@ -257,6 +257,7 @@ export function ItemFilters({
 	onFilterChange,
 	onSearchChange,
 	onToggleFilterValue,
+	onToggleGradeFamily,
 	onClearFilters,
 	hasActiveFilters = false,
 	activeFilterCount = 0,
@@ -390,26 +391,14 @@ export function ItemFilters({
 								displayMode={displayMode}
 							/>
 
-							<FilterSection
-								label="Grades"
-								field="grades"
-								options={availableOptions.grades}
-								selectedValues={filterState.grades}
-								onToggle={onToggleFilterValue}
-								formatValue={formatGradeName}
-								getImage={getGradeImage}
-								color="teal"
+							<HierarchicalGradeFilter
+								availableGrades={availableOptions.grades}
+								selectedGrades={filterState.grades}
+								onToggle={(gradeId) => { onToggleFilterValue("grades", gradeId); }}
+								onToggleFamily={onToggleGradeFamily}
 								displayMode={displayMode}
-								headerAction={
-									<ActionIcon
-										variant={displayMode === "icon" ? "filled" : "light"}
-										size="sm"
-										onClick={(e) => { e.stopPropagation(); toggleDisplayMode(); }}
-										title={displayMode === "icon" ? "Switch to text labels" : "Switch to icons"}
-									>
-										{displayMode === "icon" ? <IconPhoto size={16} /> : <IconTextSize size={16} />}
-									</ActionIcon>
-								}
+								onDisplayModeToggle={toggleDisplayMode}
+								color="teal"
 							/>
 
 							<FilterSection
