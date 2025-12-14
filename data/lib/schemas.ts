@@ -104,8 +104,10 @@ export const ItemSchema = z.object({
 	scale: z.string().optional(),
 	price: PriceSchema.optional(),
 	releaseDate: ReleaseDateSchema.optional(),
-	// Grade IDs - supports multiple grades per item (e.g., ["hg", "hg-uc"] for hierarchy)
-	gradeIds: z.array(z.string()).default([]),
+	// Grades - keyed by root grade, value is array of specific grades
+	// e.g., { "hg": ["hg-uc", "hg-ce"], "mg": [] }
+	// Empty array means matched root directly, non-empty means matched specific variants
+	grades: z.record(z.string(), z.array(z.string())).default({}),
 
 	// Content and metadata
 	images: z.array(ImageSchema).optional(),
@@ -372,6 +374,33 @@ export const getNodePrice = (item: Item): string | null => {
 	const { amount, currency } = item.price;
 	const symbol = currency === "JPY" ? "¥" : currency;
 	return `${symbol}${amount.toLocaleString()}`;
+};
+
+/**
+ * Get primary grade from an item (first root grade key)
+ * Returns the first root grade or null if no grades
+ */
+export const getNodePrimaryGrade = (item: Item): string | null => {
+	const rootGrades = Object.keys(item.grades);
+	return rootGrades[0] ?? null;
+};
+
+/**
+ * Get all grades from an item (root + specific) as a flat array
+ */
+export const getNodeAllGrades = (item: Item): string[] => {
+	const allGrades: string[] = [];
+	for (const [rootGrade, specificGrades] of Object.entries(item.grades)) {
+		allGrades.push(rootGrade, ...specificGrades);
+	}
+	return allGrades;
+};
+
+/**
+ * Check if item has a specific grade (root or specific)
+ */
+export const itemHasGrade = (item: Item, gradeId: string): boolean => {
+	return gradeId in item.grades || Object.values(item.grades).flat().includes(gradeId);
 };
 
 /**
