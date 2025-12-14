@@ -1,12 +1,13 @@
-import { useCallback, useMemo } from "react";
-
+import { getNodeAllGrades, itemHasGrade } from "@hobby-ninja/data";
+import { getItemById } from "@hobby-ninja/data/items";
 import {
 	search as dataSearch,
 	searchRecords,
-	getSearchInstance,
+	
 	type SearchRecord,
 } from "@hobby-ninja/data/search";
-import { getItemById } from "@hobby-ninja/data/items";
+import { useCallback, useMemo } from "react";
+
 
 // Re-export SearchRecord as SearchIndexItem for compatibility
 export type SearchIndexItem = SearchRecord;
@@ -139,29 +140,20 @@ class SearchService {
 				if (!item) return false;
 
 				if (filters.grades?.length) {
-					// Item has grade as a direct string field
-					if (!item.grade || !filters.grades.includes(item.grade)) return false;
+					// Check if item has any of the selected grades (root or specific)
+					const hasMatchingGrade = filters.grades.some(grade => itemHasGrade(item, grade));
+					if (!hasMatchingGrade) return false;
 				}
 
-				if (filters.scales?.length) {
-					if (!filters.scales.includes(item.scale ?? "")) return false;
-				}
+				if (filters.scales?.length && !filters.scales.includes(item.scale ?? "")) return false;
 
-				if (filters.minPrice !== undefined) {
-					if ((item.price?.amount ?? 0) < filters.minPrice) return false;
-				}
+				if (filters.minPrice !== undefined && (item.price?.amount ?? 0) < filters.minPrice) return false;
 
-				if (filters.maxPrice !== undefined) {
-					if ((item.price?.amount ?? 0) > filters.maxPrice) return false;
-				}
+				if (filters.maxPrice !== undefined && (item.price?.amount ?? 0) > filters.maxPrice) return false;
 
-				if (filters.minYear !== undefined) {
-					if ((item.releaseDate?.year ?? 0) < filters.minYear) return false;
-				}
+				if (filters.minYear !== undefined && (item.releaseDate?.year ?? 0) < filters.minYear) return false;
 
-				if (filters.maxYear !== undefined) {
-					if ((item.releaseDate?.year ?? 0) > filters.maxYear) return false;
-				}
+				if (filters.maxYear !== undefined && (item.releaseDate?.year ?? 0) > filters.maxYear) return false;
 
 				return true;
 			});
@@ -190,7 +182,10 @@ class SearchService {
 			const item = getItemById(record.id);
 			if (item) {
 				if (item.scale) scales.add(item.scale);
-				if (item.grade) grades.add(item.grade);
+				// Collect all grades (root and specific) from hierarchical structure
+				for (const grade of getNodeAllGrades(item)) {
+					grades.add(grade);
+				}
 			}
 		}
 
@@ -225,4 +220,6 @@ export function useSearch() {
 }
 
 // Re-export for compatibility
-export { searchRecords, getSearchInstance };
+
+
+export {searchRecords, getSearchInstance} from "@hobby-ninja/data/search";

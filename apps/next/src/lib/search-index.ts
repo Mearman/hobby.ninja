@@ -1,18 +1,19 @@
+import { getNodePrimaryGrade, getNodeAllGrades } from "@hobby-ninja/data";
+import { brandsList, type Brand } from "@hobby-ninja/data/brands";
+import { categoriesList, type Category } from "@hobby-ninja/data/categories";
+import { getItemById } from "@hobby-ninja/data/items";
+import { searchRecords } from "@hobby-ninja/data/search";
+import { seriesList, type Series } from "@hobby-ninja/data/series";
 import Fuse, { type IFuseOptions, type FuseResult } from "fuse.js";
 
 import { PAGINATION, FILTER } from "./constants";
 
-import { searchRecords } from "@hobby-ninja/data/search";
-import { brandsList, type Brand } from "@hobby-ninja/data/brands";
-import { categoriesList, type Category } from "@hobby-ninja/data/categories";
-import { seriesList, type Series } from "@hobby-ninja/data/series";
-import { getItemById } from "@hobby-ninja/data/items";
 
 // Helper function to extract string from localized text
 function getLocalizedString(text: string | { ja: string; en?: string } | undefined): string {
 	if (!text) return "";
 	if (typeof text === "string") return text;
-	return text.ja || text.en || "";
+	return text.ja;
 }
 
 export interface SearchableItem {
@@ -48,7 +49,7 @@ export interface SearchOptions {
 export interface SearchResult {
   item: SearchableItem;
   score: number;
-  matches?: FuseResult<SearchableItem>['matches'] | undefined;
+  matches?: FuseResult<SearchableItem>["matches"] | undefined;
 }
 
 export class SearchIndex {
@@ -115,7 +116,7 @@ export class SearchIndex {
 					brand: record.brand,
 					category: record.category,
 					series: record.series,
-					grade: fullItem?.grade,
+					grade: fullItem ? getNodePrimaryGrade(fullItem) ?? undefined : undefined,
 					scale: fullItem?.scale,
 					price: fullItem?.price?.amount ?? undefined,
 					releaseYear: fullItem?.releaseDate?.year ?? undefined,
@@ -128,7 +129,12 @@ export class SearchIndex {
 				// Build filter sets
 				if (record.category) this.categories.add(record.category);
 				if (record.brand) this.brands.add(record.brand);
-				if (fullItem?.grade) this.grades.add(fullItem.grade);
+				// Collect all grades (root and specific) from hierarchical structure
+				if (fullItem) {
+					for (const grade of getNodeAllGrades(fullItem)) {
+						this.grades.add(grade);
+					}
+				}
 				if (fullItem?.scale) this.scales.add(fullItem.scale);
 				if (record.series) this.series.add(record.series);
 			}
