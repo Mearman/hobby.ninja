@@ -24,7 +24,7 @@ import {
 	IconTextSize,
 } from "@tabler/icons-react";
 import Image from "next/image";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 import { getGradeImage } from "@/lib/image-lookup";
 
@@ -84,37 +84,34 @@ export function HierarchicalGradeFilter({
 		});
 	};
 
-	// Render a grade chip (for both root and child grades)
-	const renderGradeChip = (gradeId: string, isChild = false) => {
+	// Render a single grade chip (same size for all)
+	const renderGradeChip = (gradeId: string, options?: { dashed?: boolean; label?: string }) => {
 		const isSelected = selectedGrades.includes(gradeId);
 		const imageSrc = getGradeImage(gradeId);
 		const hasAnySelection = selectedGrades.length > 0;
+		const label = options?.label ?? formatGradeName(gradeId);
+		const borderStyle = options?.dashed ? "dashed" : "solid";
 
 		if (displayMode === "icon" && imageSrc) {
 			return (
-				<Tooltip key={gradeId} label={formatGradeName(gradeId)} position="top" withArrow={true}>
+				<Tooltip key={gradeId} label={label} position="top" withArrow={true}>
 					<UnstyledButton
 						onClick={() => { onToggle(gradeId); }}
 						style={{
-							height: isChild ? 40 : FILTER_IMAGE_HEIGHT,
+							height: FILTER_IMAGE_HEIGHT,
 							borderRadius: 8,
 							overflow: "hidden",
-							border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
+							border: `2px ${borderStyle} var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
 							background: isSelected ? `var(--mantine-color-${color}-filled)` : "transparent",
 							opacity: hasAnySelection && !isSelected ? 0.7 : 1,
 						}}
 					>
 						<Image
 							src={imageSrc}
-							alt={formatGradeName(gradeId)}
-							width={isChild ? 80 : 120}
-							height={isChild ? 40 : FILTER_IMAGE_HEIGHT}
-							style={{
-								height: isChild ? 40 : FILTER_IMAGE_HEIGHT,
-								width: "auto",
-								objectFit: "contain",
-								display: "block",
-							}}
+							alt={label}
+							width={120}
+							height={FILTER_IMAGE_HEIGHT}
+							style={FILTER_IMAGE_STYLE}
 						/>
 					</UnstyledButton>
 				</Tooltip>
@@ -126,11 +123,12 @@ export function HierarchicalGradeFilter({
 				key={gradeId}
 				checked={isSelected}
 				onChange={() => { onToggle(gradeId); }}
-				size={isChild ? "xs" : "sm"}
+				size="sm"
 				variant="outline"
 				color={color}
+				styles={options?.dashed ? { label: { fontStyle: "italic" } } : undefined}
 			>
-				{formatGradeName(gradeId)}
+				{label}
 			</Chip>
 		);
 	};
@@ -150,26 +148,125 @@ export function HierarchicalGradeFilter({
 		// Get selection state for family
 		const familyIds = getGradeFamilyIds(root.id).filter((id) => availableGrades.includes(id));
 		const selectedInFamily = familyIds.filter((id) => selectedGrades.includes(id));
-		const isSelected = selectedGrades.includes(root.id);
 		const imageSrc = getGradeImage(root.id);
 		const hasAnySelection = selectedGrades.length > 0;
 
-		// Simple grade without children
+		// Simple grade without children - render as regular chip
 		if (!hasChildren) {
-			return renderGradeChip(root.id);
+			return <Fragment key={root.id}>{renderGradeChip(root.id)}</Fragment>;
 		}
 
 		// Grade with children - render with expand toggle
-		const elements: React.ReactNode[] = [];
+		// When expanded, wrap in a background container
+		if (isExpanded) {
+			return (
+				<Box
+					key={root.id}
+					style={{
+						background: `var(--mantine-color-${color}-light)`,
+						borderRadius: 12,
+					}}
+				>
+					<Group gap="xs" wrap="wrap" align="center">
+						{/* Parent grade with toggle */}
+						{displayMode === "icon" && imageSrc ? (
+							<Group gap={4} wrap="nowrap">
+								<Tooltip label={`${formatGradeName(root.id)} (select all)`} position="top" withArrow={true}>
+									<UnstyledButton
+										onClick={() => { onToggleFamily(root.id); }}
+										style={{
+											position: "relative",
+											height: FILTER_IMAGE_HEIGHT,
+											borderRadius: 8,
+											overflow: "hidden",
+											border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
+											background: selectedInFamily.length === familyIds.length ? `var(--mantine-color-${color}-filled)` : "transparent",
+											opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+										}}
+									>
+										<Image
+											src={imageSrc}
+											alt={formatGradeName(root.id)}
+											width={120}
+											height={FILTER_IMAGE_HEIGHT}
+											style={FILTER_IMAGE_STYLE}
+										/>
+										{selectedInFamily.length > 0 && (
+											<Badge
+												size="xs"
+												variant="filled"
+												color={color}
+												style={{
+													position: "absolute",
+													top: 2,
+													right: 2,
+												}}
+											>
+												{selectedInFamily.length}/{familyIds.length}
+											</Badge>
+										)}
+									</UnstyledButton>
+								</Tooltip>
+								<ActionIcon
+									variant="filled"
+									size="sm"
+									color={color}
+									onClick={() => { toggleFamilyExpand(root.id); }}
+									title="Collapse sub-grades"
+								>
+									<IconChevronDown size={14} />
+								</ActionIcon>
+							</Group>
+						) : (
+							<Group gap={4} wrap="nowrap">
+								<Chip
+									checked={selectedInFamily.length > 0}
+									onChange={() => { onToggleFamily(root.id); }}
+									size="sm"
+									variant="outline"
+									color={color}
+								>
+									{formatGradeName(root.id)}
+								</Chip>
+								<ActionIcon
+									variant="filled"
+									size="sm"
+									color={color}
+									onClick={() => { toggleFamilyExpand(root.id); }}
+									title="Collapse sub-grades"
+								>
+									<IconChevronDown size={14} />
+								</ActionIcon>
+								{selectedInFamily.length > 0 && (
+									<Badge size="xs" variant="filled" color={color}>
+										{selectedInFamily.length}/{familyIds.length}
+									</Badge>
+								)}
+							</Group>
+						)}
 
-		// Root grade chip with expand button
+						{/* Root-only option (if root is available as standalone) */}
+						{isRootAvailable && renderGradeChip(root.id, {
+							dashed: true,
+							label: `${formatGradeName(root.id)} (root only)`,
+						})}
+
+						{/* Child grades - same size as parent */}
+						{availableChildren.map((child) => renderGradeChip(child.id))}
+					</Group>
+				</Box>
+			);
+		}
+
+		// Collapsed state - just show parent with expand button
 		if (displayMode === "icon" && imageSrc) {
-			elements.push(
+			return (
 				<Group key={root.id} gap={4} wrap="nowrap">
 					<Tooltip label={formatGradeName(root.id)} position="top" withArrow={true}>
 						<UnstyledButton
 							onClick={() => { onToggleFamily(root.id); }}
 							style={{
+								position: "relative",
 								height: FILTER_IMAGE_HEIGHT,
 								borderRadius: 8,
 								overflow: "hidden",
@@ -185,104 +282,60 @@ export function HierarchicalGradeFilter({
 								height={FILTER_IMAGE_HEIGHT}
 								style={FILTER_IMAGE_STYLE}
 							/>
+							{selectedInFamily.length > 0 && (
+								<Badge
+									size="xs"
+									variant="filled"
+									color={color}
+									style={{
+										position: "absolute",
+										top: 2,
+										right: 2,
+									}}
+								>
+									{selectedInFamily.length}/{familyIds.length}
+								</Badge>
+							)}
 						</UnstyledButton>
 					</Tooltip>
 					<ActionIcon
 						variant="subtle"
 						size="sm"
 						onClick={() => { toggleFamilyExpand(root.id); }}
-						title={isExpanded ? "Collapse" : "Expand sub-grades"}
+						title="Expand sub-grades"
 					>
-						{isExpanded ? <IconChevronDown size={14} /> : <IconChevronRight size={14} />}
+						<IconChevronRight size={14} />
 					</ActionIcon>
-					{selectedInFamily.length > 0 && (
-						<Badge size="xs" variant="light" color={color}>
-							{selectedInFamily.length}/{familyIds.length}
-						</Badge>
-					)}
-				</Group>,
-			);
-		} else {
-			elements.push(
-				<Group key={root.id} gap={4} wrap="nowrap">
-					<Chip
-						checked={selectedInFamily.length > 0}
-						onChange={() => { onToggleFamily(root.id); }}
-						size="sm"
-						variant="outline"
-						color={color}
-					>
-						{formatGradeName(root.id)}
-					</Chip>
-					<ActionIcon
-						variant="subtle"
-						size="sm"
-						onClick={() => { toggleFamilyExpand(root.id); }}
-						title={isExpanded ? "Collapse" : "Expand sub-grades"}
-					>
-						{isExpanded ? <IconChevronDown size={14} /> : <IconChevronRight size={14} />}
-					</ActionIcon>
-					{selectedInFamily.length > 0 && (
-						<Badge size="xs" variant="light" color={color}>
-							{selectedInFamily.length}/{familyIds.length}
-						</Badge>
-					)}
-				</Group>,
+				</Group>
 			);
 		}
 
-		// If expanded, add children inline
-		if (isExpanded) {
-			// Add root-only option if available
-			if (isRootAvailable) {
-				if (displayMode === "icon" && imageSrc) {
-					elements.push(
-						<Tooltip key={`${root.id}-only`} label={`${formatGradeName(root.id)} (root only)`} position="top" withArrow={true}>
-							<UnstyledButton
-								onClick={() => { onToggle(root.id); }}
-								style={{
-									height: 40,
-									borderRadius: 8,
-									overflow: "hidden",
-									border: `2px dashed var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
-									background: isSelected ? `var(--mantine-color-${color}-light)` : "transparent",
-									opacity: hasAnySelection && !isSelected ? 0.7 : 1,
-								}}
-							>
-								<Image
-									src={imageSrc}
-									alt={`${formatGradeName(root.id)} (root)`}
-									width={80}
-									height={40}
-									style={{ height: 40, width: "auto", objectFit: "contain", display: "block" }}
-								/>
-							</UnstyledButton>
-						</Tooltip>,
-					);
-				} else {
-					elements.push(
-						<Chip
-							key={`${root.id}-only`}
-							checked={isSelected}
-							onChange={() => { onToggle(root.id); }}
-							size="xs"
-							variant="outline"
-							color={color}
-							styles={{ label: { fontStyle: "italic" } }}
-						>
-							{formatGradeName(root.id)} (root)
-						</Chip>,
-					);
-				}
-			}
-
-			// Add child grades
-			for (const child of availableChildren) {
-				elements.push(renderGradeChip(child.id, true));
-			}
-		}
-
-		return elements;
+		return (
+			<Group key={root.id} gap={4} wrap="nowrap">
+				<Chip
+					checked={selectedInFamily.length > 0}
+					onChange={() => { onToggleFamily(root.id); }}
+					size="sm"
+					variant="outline"
+					color={color}
+				>
+					{formatGradeName(root.id)}
+				</Chip>
+				<ActionIcon
+					variant="subtle"
+					size="sm"
+					onClick={() => { toggleFamilyExpand(root.id); }}
+					title="Expand sub-grades"
+				>
+					<IconChevronRight size={14} />
+				</ActionIcon>
+				{selectedInFamily.length > 0 && (
+					<Badge size="xs" variant="light" color={color}>
+						{selectedInFamily.length}/{familyIds.length}
+					</Badge>
+				)}
+			</Group>
+		);
 	};
 
 	return (
@@ -365,8 +418,8 @@ export function HierarchicalGradeFilter({
 
 			{/* Expanded: Show all grades in horizontal flow */}
 			{expanded && (
-				<Group gap="xs" wrap="wrap" mt="xs" align="center">
-					{availableHierarchy.flatMap((entry) => renderRootGrade(entry))}
+				<Group gap="xs" wrap="wrap" mt="xs" align="flex-start">
+					{availableHierarchy.map((entry) => renderRootGrade(entry))}
 				</Group>
 			)}
 		</Box>
