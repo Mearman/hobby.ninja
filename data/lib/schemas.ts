@@ -15,6 +15,16 @@ export const LocalizedStringSchema = z.object({
 
 export type LocalizedString = z.infer<typeof LocalizedStringSchema>;
 
+/**
+ * Localized text arrays - for content that may differ between languages (not 1:1 translations)
+ */
+export const LocalizedTextArraySchema = z.object({
+	ja: z.array(z.string()),
+	en: z.array(z.string()).optional(),
+});
+
+export type LocalizedTextArray = z.infer<typeof LocalizedTextArraySchema>;
+
 // Price schema
 export const PriceSchema = z.object({
 	amount: z.number().min(0),
@@ -99,8 +109,8 @@ export const ItemSchema = z.object({
 	// Content and metadata
 	images: z.array(ImageSchema).optional(),
 	displayImage: z.string().optional(), // Computed: first image or manual.productImage fallback
-	description: z.array(LocalizedStringSchema).optional(),
-	accessories: z.array(AccessorySchema).optional(),
+	description: LocalizedTextArraySchema.optional(),
+	accessories: LocalizedTextArraySchema.optional(),
 	targetAge: z.number().optional(),
 	tags: z.array(z.string()).optional(),
 	specifications: z.record(z.string(), z.unknown()).optional(),
@@ -485,16 +495,13 @@ export const getNodeImages = (item: Item): string[] => {
 };
 
 /**
- * Get description text from an item, preferring English if available
+ * Get description array from an item, preferring English if available
  */
-export const getNodeDescription = (item: Item): string => {
-	if (!item.description) return "";
+export const getNodeDescription = (item: Item): string[] => {
+	if (!item.description) return [];
 
-	// Find English description first, fallback to Japanese
-	const englishDesc = item.description.find(d => d.en)?.en;
-	const japaneseDesc = item.description.find(d => d.ja)?.ja;
-
-	return englishDesc ?? japaneseDesc ?? "";
+	// Return English array if available, otherwise Japanese
+	return item.description.en ?? item.description.ja;
 };
 
 /**
@@ -503,10 +510,8 @@ export const getNodeDescription = (item: Item): string => {
 export const getNodeAccessories = (item: Item): string[] => {
 	if (!item.accessories) return [];
 
-	return item.accessories.map(acc => {
-		if (typeof acc === "string") return acc;
-		return acc.en ?? acc.ja;
-	});
+	// Return English array if available, otherwise Japanese
+	return item.accessories.en ?? item.accessories.ja;
 };
 
 /**
