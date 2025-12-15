@@ -7,6 +7,7 @@ import {
 	getNodeDisplayName,
 	getNodeReleaseDateSortable,
 	getSeriesById,
+	isItem,
 	Item,
 } from "@hobby-ninja/data";
 import {
@@ -38,7 +39,7 @@ import {
 	IconX,
 } from "@tabler/icons-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 import { HierarchicalGradeFilter } from "@/components/filtering/hierarchical-grade-filter";
 import { FilterState } from "@/hooks/use-filtered-items";
@@ -253,9 +254,11 @@ function getDateRangeFromItems(items: Item[]): { minDate: string; maxDate: strin
 
 type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
 
-// Shared style for filter images - match aspect ratio of reference images (300x170 ≈ 1.76:1)
-const FILTER_IMAGE_HEIGHT = 56;
-const FILTER_IMAGE_WIDTH = 99; // 56 * (300/170) to match reference image aspect ratio
+// Shared style for filter chips - using brand image aspect ratio (300x170)
+const FILTER_IMAGE_WIDTH = 300;
+const FILTER_IMAGE_HEIGHT = 170;
+const FILTER_CHIP_WIDTH = 100;
+const FILTER_CHIP_HEIGHT = Math.round(FILTER_CHIP_WIDTH * (FILTER_IMAGE_HEIGHT / FILTER_IMAGE_WIDTH));
 
 // Drop shadow for images that may have transparency (PNG/SVG) - makes white logos visible on white background
 const TRANSPARENT_IMAGE_FILTER = "drop-shadow(0 0 1px rgba(0,0,0,0.7)) drop-shadow(0 0 2px rgba(0,0,0,0.5))";
@@ -264,24 +267,39 @@ const TRANSPARENT_IMAGE_FILTER = "drop-shadow(0 0 1px rgba(0,0,0,0.7)) drop-shad
 const mightHaveTransparency = (src: string) => /\.(png|svg)$/i.test(src);
 
 const getFilterImageStyle = (src: string): React.CSSProperties => ({
-	maxHeight: "100%",
-	maxWidth: "100%",
+	display: "block",
+	width: "100%",
+	height: "100%",
 	objectFit: "contain",
+	margin: 0,
+	padding: 0,
 	filter: mightHaveTransparency(src) ? TRANSPARENT_IMAGE_FILTER : undefined,
 });
 
 // Background color for filter buttons
 const FILTER_BUTTON_BG_UNSELECTED = "white";
 
-// Base style for all filter button containers - consistent sizing with aspect ratio matching reference images
+// Text colors for count displays
+const COUNT_PRIMARY_COLOR = "rgba(255,255,255,0.7)";
+const COUNT_PRIMARY_COLOR_DARK = "rgba(0,0,0,0.6)";
+const COUNT_SECONDARY_COLOR = "white";
+const COUNT_SECONDARY_COLOR_DARK = "black";
+
+// Base style for all filter button containers - using correct aspect ratio
 const FILTER_BUTTON_BASE_STYLE: React.CSSProperties = {
-	height: FILTER_IMAGE_HEIGHT,
-	width: FILTER_IMAGE_WIDTH,
+	width: FILTER_CHIP_WIDTH,
+	height: "auto",
 	borderRadius: 8,
-	overflow: "hidden",
 	display: "flex",
+	flexDirection: "column",
 	alignItems: "center",
 	justifyContent: "center",
+	position: "relative",
+	cursor: "pointer",
+	padding: 0,
+	margin: 0,
+	transition: "all 0.2s ease",
+	overflow: "hidden",
 };
 
 interface ItemFiltersProps {
@@ -292,6 +310,13 @@ interface ItemFiltersProps {
 		scales: string[];
 		series: string[];
 		categories: string[];
+	};
+	filterCounts?: {
+		brands?: Record<string, number>;
+		grades?: Record<string, number>;
+		scales?: Record<string, number>;
+		series?: Record<string, number>;
+		categories?: Record<string, number>;
 	};
 	items?: Item[];
 	onFilterChange: (updates: Partial<FilterState>) => void;
@@ -317,6 +342,8 @@ interface FilterSectionProps {
 	displayMode?: "icon" | "text";
 	headerAction?: React.ReactNode;
 	children?: React.ReactNode;
+	filterCounts?: Record<string, number>;
+	totalCounts?: Record<string, number>;
 }
 
 function FilterSection({
@@ -331,6 +358,8 @@ function FilterSection({
 	displayMode,
 	headerAction,
 	children,
+	filterCounts = {},
+	totalCounts = {},
 }: FilterSectionProps) {
 	const [expanded, setExpanded] = useState(false);
 
@@ -341,21 +370,145 @@ function FilterSection({
 	const hasImage = (value: string) => displayMode === "icon" && Boolean(getImage?.(value));
 
 	// Helper to render chip content based on display mode
-	const renderChipContent = (value: string) => {
+	const renderChipContent = (value: string, isSelected: boolean) => {
 		const imageSrc = getImage?.(value);
+		const currentCount = filterCounts[value] || 0;
+		const totalCount = totalCounts[value] || 0;
+
 		// Only show icon if in icon mode AND image exists
 		if (displayMode === "icon" && imageSrc) {
 			return (
-				<Image
-					src={imageSrc}
-					alt={formatValue(value)}
-					width={120}
-					height={FILTER_IMAGE_HEIGHT}
-					style={getFilterImageStyle(imageSrc)}
-				/>
+				<div style={{
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "center",
+					gap: "2px",
+				}}>
+					<Image
+						src={imageSrc}
+						alt={formatValue(value)}
+						width={FILTER_CHIP_WIDTH}
+						height={FILTER_CHIP_HEIGHT}
+						style={getFilterImageStyle(imageSrc)}
+					/>
+					{/* Count display below chip */}
+					<div
+						style={{
+							background: isSelected ? "rgba(0,0,0,0.8)" : "rgba(255,255,255,0.9)",
+							borderRadius: 3,
+							padding: "1px 4px",
+							display: "flex",
+							alignItems: "center",
+							width: "100%",
+						}}
+					>
+						<div
+							style={{
+								color: isSelected ? COUNT_SECONDARY_COLOR : COUNT_SECONDARY_COLOR_DARK,
+								fontSize: "11px",
+								fontWeight: 600,
+								lineHeight: 1.2,
+								flex: 1,
+								textAlign: "center",
+							}}
+						>
+							{currentCount}
+						</div>
+						<div
+							style={{
+								color: isSelected ? COUNT_PRIMARY_COLOR : COUNT_PRIMARY_COLOR_DARK,
+								fontSize: "11px",
+								fontWeight: 600,
+								lineHeight: 1.2,
+								flex: "none",
+							}}
+						>
+							/
+						</div>
+						<div
+							style={{
+								color: isSelected ? COUNT_PRIMARY_COLOR : COUNT_PRIMARY_COLOR_DARK,
+								fontSize: "11px",
+								fontWeight: 600,
+								lineHeight: 1.2,
+								flex: 1,
+								textAlign: "center",
+							}}
+						>
+							{totalCount}
+						</div>
+					</div>
+				</div>
 			);
 		}
-		return formatValue(value);
+
+		return (
+			<div style={{
+				display: "flex",
+				flexDirection: "column",
+				alignItems: "center",
+				gap: "2px",
+			}}>
+				<div style={{
+					width: FILTER_CHIP_WIDTH,
+					height: FILTER_CHIP_HEIGHT,
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "center",
+				}}>
+					<Text size="xs" fw={500} lineClamp={1} ta="center" c={isSelected ? COUNT_SECONDARY_COLOR : "inherit"}>
+						{formatValue(value)}
+					</Text>
+				</div>
+				{/* Count display below chip */}
+				<div
+					style={{
+						background: isSelected ? "rgba(0,0,0,0.8)" : "rgba(255,255,255,0.9)",
+						borderRadius: 3,
+						padding: "1px 4px",
+						display: "flex",
+						alignItems: "center",
+						width: "100%",
+					}}
+				>
+					<div
+						style={{
+							color: isSelected ? COUNT_SECONDARY_COLOR : COUNT_SECONDARY_COLOR_DARK,
+							fontSize: "11px",
+							fontWeight: 600,
+							lineHeight: 1.2,
+							flex: 1,
+							textAlign: "center",
+						}}
+					>
+						{currentCount}
+					</div>
+					<div
+						style={{
+							color: isSelected ? COUNT_PRIMARY_COLOR : COUNT_PRIMARY_COLOR_DARK,
+							fontSize: "11px",
+							fontWeight: 600,
+							lineHeight: 1.2,
+							flex: "none",
+						}}
+					>
+						/
+					</div>
+					<div
+						style={{
+							color: isSelected ? COUNT_PRIMARY_COLOR : COUNT_PRIMARY_COLOR_DARK,
+							fontSize: "11px",
+							fontWeight: 600,
+							lineHeight: 1.2,
+							flex: 1,
+							textAlign: "center",
+						}}
+					>
+						{totalCount}
+					</div>
+				</div>
+			</div>
+		);
 	};
 
 	// Render filter options content
@@ -385,7 +538,7 @@ function FilterSection({
 											opacity: hasAnySelection && !isSelected ? 0.7 : 1,
 										}}
 									>
-										{renderChipContent(value)}
+										{renderChipContent(value, true)}
 									</UnstyledButton>
 								</Tooltip>
 							);
@@ -402,9 +555,7 @@ function FilterSection({
 										opacity: hasAnySelection && !isSelected ? 0.7 : 1,
 									}}
 								>
-									<Text size="xs" fw={500} lineClamp={2} ta="center">
-										{formatValue(value)}
-									</Text>
+									{renderChipContent(value, true)}
 								</UnstyledButton>
 							</Tooltip>
 						);
@@ -457,7 +608,7 @@ function FilterSection({
 											background: `var(--mantine-color-${color}-filled)`,
 										}}
 									>
-										{renderChipContent(value)}
+										{renderChipContent(value, true)}
 									</UnstyledButton>
 								</Tooltip>
 							);
@@ -473,9 +624,7 @@ function FilterSection({
 										color: "white",
 									}}
 								>
-									<Text size="xs" fw={500} lineClamp={2} ta="center">
-										{formatValue(value)}
-									</Text>
+									{renderChipContent(value, true)}
 								</UnstyledButton>
 							</Tooltip>
 						);
@@ -505,6 +654,7 @@ function FilterSection({
 export function ItemFilters({
 	filterState,
 	availableOptions,
+	filterCounts = {},
 	items,
 	onFilterChange,
 	onSearchChange,
@@ -540,6 +690,96 @@ export function ItemFilters({
 			return !brand?.isGrade;
 		});
 	};
+
+	// Calculate total counts for each filter option (all items regardless of current filters)
+	const totalCounts = useMemo(() => {
+		if (!items) {
+			return {
+				brands: {},
+				grades: {},
+				scales: {},
+				series: {},
+				categories: {},
+			};
+		}
+
+		const validItems: Item[] = items.filter((item): item is Item => isItem(item));
+		const brandCounts: Record<string, number> = {};
+		const gradeCounts: Record<string, number> = {};
+		const scaleCounts: Record<string, number> = {};
+		const seriesCounts: Record<string, number> = {};
+		const categoryCounts: Record<string, number> = {};
+
+		// Initialize counts with available options
+		for (const brand of availableOptions.brands) { brandCounts[brand] = 0; }
+		for (const grade of availableOptions.grades) { gradeCounts[grade] = 0; }
+		for (const scale of availableOptions.scales) { scaleCounts[scale] = 0; }
+		for (const series of availableOptions.series) { seriesCounts[series] = 0; }
+		for (const category of availableOptions.categories) { categoryCounts[category] = 0; }
+
+		// Count all items for each filter option
+		for (const item of validItems) {
+			// Brand counts
+			for (const brandId of item.brandIds) {
+				if (brandId in brandCounts) {
+					brandCounts[brandId]++;
+				}
+			}
+			// Handle "Other" brands
+			if (item.brandIds.length === 0 && "Other" in brandCounts) {
+				brandCounts.Other++;
+			}
+
+			// Grade counts
+			for (const rootGrade of Object.keys(item.grades)) {
+				if (rootGrade in gradeCounts) {
+					gradeCounts[rootGrade]++;
+				}
+			}
+			for (const specificGrades of Object.values(item.grades)) {
+				for (const specific of specificGrades) {
+					if (specific in gradeCounts) {
+						gradeCounts[specific]++;
+					}
+				}
+			}
+			// Handle "Other" grades
+			if (Object.keys(item.grades).length === 0 && "Other" in gradeCounts) {
+				gradeCounts.Other++;
+			}
+
+			// Scale counts
+			if (item.scale && item.scale in scaleCounts) {
+				scaleCounts[item.scale]++;
+			}
+
+			// Series counts
+			for (const seriesId of item.seriesIds) {
+				if (seriesId in seriesCounts) {
+					seriesCounts[seriesId]++;
+				}
+			}
+			// Handle "Other" series
+			if (item.seriesIds.length === 0 && "Other" in seriesCounts) {
+				seriesCounts.Other++;
+			}
+
+			// Category counts
+			for (const categoryId of item.categoryIds) {
+				if (categoryId in categoryCounts) {
+					categoryCounts[categoryId]++;
+				}
+			}
+		}
+
+		return {
+			brands: brandCounts,
+			grades: gradeCounts,
+			scales: scaleCounts,
+			series: seriesCounts,
+			categories: categoryCounts,
+		};
+	}, [items, availableOptions]);
 
 	// Get filtered brands before using them
 	const filteredBrands = getFilteredBrands();
@@ -710,6 +950,8 @@ export function ItemFilters({
 								formatValue={formatCategoryName}
 								color="grape"
 								displayMode={displayMode}
+								filterCounts={filterCounts.categories}
+								totalCounts={totalCounts.categories}
 								headerAction={createFilterActions(
 									filterState.categories.length,
 									availableOptions.categories.length,
@@ -729,6 +971,8 @@ export function ItemFilters({
 								getImage={(id) => getBrandById(id)?.image}
 								color="blue"
 								displayMode={displayMode}
+								filterCounts={filterCounts.brands}
+								totalCounts={totalCounts.brands}
 								headerAction={createFilterActions(
 									filterState.brands.length,
 									availableOptions.brands.length,
@@ -748,6 +992,8 @@ export function ItemFilters({
 								getImage={(id) => getSeriesById(id)?.image}
 								color="violet"
 								displayMode={displayMode}
+								filterCounts={filterCounts.series}
+								totalCounts={totalCounts.series}
 								headerAction={createFilterActions(
 									filterState.series.length,
 									availableOptions.series.length,
@@ -777,6 +1023,8 @@ export function ItemFilters({
 								onToggle={onToggleFilterValue}
 								color="orange"
 								displayMode={displayMode}
+								filterCounts={filterCounts.scales}
+								totalCounts={totalCounts.scales}
 								headerAction={createFilterActions(
 									filterState.scales.length,
 									availableOptions.scales.length,
@@ -964,7 +1212,7 @@ export function ItemFilters({
 									styles={brandImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										brandImage ? (
-											<Image src={brandImage} alt={formatBrandName(brand)} width={FILTER_IMAGE_HEIGHT} height={FILTER_IMAGE_HEIGHT} style={getFilterImageStyle(brandImage)} />
+											<Image src={brandImage} alt={formatBrandName(brand)} width={40} height={40} style={getFilterImageStyle(brandImage)} />
 										) : null
 									}
 									rightSection={
@@ -994,7 +1242,7 @@ export function ItemFilters({
 									styles={gradeImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										gradeImage ? (
-											<Image src={gradeImage} alt={formatGradeName(grade)} width={FILTER_IMAGE_HEIGHT} height={FILTER_IMAGE_HEIGHT} style={getFilterImageStyle(gradeImage)} />
+											<Image src={gradeImage} alt={formatGradeName(grade)} width={40} height={40} style={getFilterImageStyle(gradeImage)} />
 										) : null
 									}
 									rightSection={
@@ -1079,7 +1327,7 @@ export function ItemFilters({
 									styles={seriesImage ? { root: { paddingLeft: 4, paddingRight: 6 } } : undefined}
 									leftSection={
 										seriesImage ? (
-											<Image src={seriesImage} alt={formatSeriesName(s)} width={FILTER_IMAGE_HEIGHT} height={FILTER_IMAGE_HEIGHT} style={getFilterImageStyle(seriesImage)} />
+											<Image src={seriesImage} alt={formatSeriesName(s)} width={40} height={40} style={getFilterImageStyle(seriesImage)} />
 										) : null
 									}
 									rightSection={

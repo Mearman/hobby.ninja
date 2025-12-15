@@ -31,6 +31,7 @@ export interface FilterProps<T, TFilterState = Record<string, unknown>, TAvailab
 	availableOptions: TAvailableOptions;
 	onFilterChange: (updates: Partial<TFilterState>) => void;
 	items?: T[];
+	filterCounts?: TAvailableOptions;
 }
 
 export interface FilterResult<T, TFilterState = Record<string, unknown>, TAvailableOptions = Record<string, unknown>> {
@@ -40,6 +41,7 @@ export interface FilterResult<T, TFilterState = Record<string, unknown>, TAvaila
 	clearFilters: () => void;
 	hasActiveFilters: boolean;
 	availableOptions: TAvailableOptions;
+	filterCounts?: TAvailableOptions;
 }
 
 export interface GenericListPageProps<T, TFilterState = Record<string, unknown>, TAvailableOptions = Record<string, unknown>> {

@@ -27,6 +27,7 @@ export function ItemFiltersWrapper({
 	availableOptions,
 	onFilterChange,
 	items,
+	filterCounts,
 }: FilterProps<Item, FilterState>) {
 	const currentFilterState = filterState;
 
@@ -131,6 +132,7 @@ export function ItemFiltersWrapper({
 		<ItemFilters
 			filterState={currentFilterState}
 			availableOptions={formattedAvailableOptions}
+			filterCounts={filterCounts}
 			onFilterChange={handleUpdateFilter}
 			onSearchChange={handleUpdateSearch}
 			onToggleFilterValue={handleToggleFilterValue}
