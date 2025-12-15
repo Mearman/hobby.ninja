@@ -73,51 +73,45 @@ function scaleToNumber(scale: string): number {
 	return match ? Number.parseInt(match[1], 10) : 1;
 }
 
-// Generate scale marks for logarithmic slider from available scale data
+// Generate scale marks for slider using linear positions
 function getScaleMarks(availableScales: string[]) {
+	console.log('=== GENERATING MARKS ===');
+	console.log('Available scales:', availableScales);
+
 	const scaleNumbers = availableScales
 		.map(scale => scaleToNumber(scale))
-		.toSorted((a, b) => a - b);
+		.toSorted((a, b) => b - a); // Sort descending: [2400, 2200, ..., 1]
+
+	console.log('Scale numbers (descending):', scaleNumbers);
 
 	if (scaleNumbers.length === 0) return [];
 
-	// Common scales to show marks for (avoid overcrowding)
-	const commonScales = [1, 2, 4, 6, 8, 12, 20, 24, 35, 48, 60, 72, 100, 144, 220, 300, 500, 700, 1000, 1200, 1700, 2200, 2400, 5000, 8000, 100_000];
+	// Show strategic marks to avoid overcrowding
+	const step = Math.max(1, Math.floor(scaleNumbers.length / 8)); // Show max 8 marks
+	console.log('Step for marks:', step);
 
-	// Filter to only show marks for scales that actually exist in our data
-	const marksToShow = commonScales.filter(scale => scaleNumbers.includes(scale));
+	const marks = scaleNumbers
+		.map((scaleNumber, index) => ({
+			value: index, // Use linear position (0, 1, 2, ...)
+			label: `1/${scaleNumber.toLocaleString()}`,
+		}))
+		.filter((_, index) => index % step === 0 || index === scaleNumbers.length - 1);
 
-	// Use the actual scale values for marks
-	return marksToShow.map(scale => ({
-		value: scale,
-		label: `1/${scale.toLocaleString()}`,
-	}));
+	console.log('Generated marks:', marks);
+	return marks;
 }
 
-// Snap logarithmic value to nearest actual scale from data
-function snapToNearestScale(logValue: number, availableScales: string[]): number {
-	const scaleNumbers = availableScales
-		.map(scale => scaleToNumber(scale))
-		.toSorted((a, b) => a - b);
+// Find the nearest scale number to a slider position
+function findNearestScale(position: number, scaleNumbers: number[]): number {
+	if (scaleNumbers.length === 0) return 1;
 
-	if (scaleNumbers.length === 0) return logValue;
+	// Clamp position to valid range
+	const clampedPosition = Math.max(0, Math.min(scaleNumbers.length - 1, position));
 
-	// Convert actual scales to logarithmic space for comparison
-	const logScales = scaleNumbers.map(scale => Math.log10(scale));
+	// Find the closest index (round to nearest integer)
+	const nearestIndex = Math.round(clampedPosition);
 
-	// Find the index of the closest logarithmic scale
-	let nearestIndex = 0;
-	let minDistance = Math.abs(logScales[0] - logValue);
-
-	for (let i = 1; i < logScales.length; i++) {
-		const distance = Math.abs(logScales[i] - logValue);
-		if (distance < minDistance) {
-			minDistance = distance;
-			nearestIndex = i;
-		}
-	}
-
-	return logScales[nearestIndex];
+	return scaleNumbers[nearestIndex];
 }
 
 // Helper function to format date string from YYYYMMDD to YYYY/MM/DD
@@ -678,8 +672,16 @@ export function ItemFilters({
 									const minScale = scaleNumbers.length > 0 ? Math.min(...scaleNumbers) : 1;
 									const maxScale = scaleNumbers.length > 0 ? Math.max(...scaleNumbers) : FALLBACK_MAX_SCALE;
 
-									// Use active range or default to full range
-									const currentRange = filterState.scaleRange ?? [minScale, maxScale];
+									// Use active range, or derive from selected individual scales, or default to full range
+									let currentRange = filterState.scaleRange ?? [minScale, maxScale];
+
+									// If individual scales are selected but no range is set, sync the slider to show the selected range
+									if (!filterState.scaleRange && filterState.scales.length > 0) {
+										const selectedScaleNumbers = filterState.scales.map(scale => scaleToNumber(scale));
+										const selectedMin = Math.min(...selectedScaleNumbers);
+										const selectedMax = Math.max(...selectedScaleNumbers);
+										currentRange = [selectedMin, selectedMax];
+									}
 
 									return (
 										<>
@@ -697,30 +699,99 @@ export function ItemFilters({
 											</Group>
 											<RangeSlider
 												size="sm"
-												min={Math.log10(minScale)}
-												max={Math.log10(maxScale)}
-												value={currentRange.map(v => Math.log10(v)) as [number, number]}
-												onChange={(logValue) => {
-													const snappedLogRange = [
-														snapToNearestScale(logValue[0], availableOptions.scales),
-														snapToNearestScale(logValue[1], availableOptions.scales),
-													];
+												min={0}
+												max={availableOptions.scales.length - 1}
+												value={(() => {
+													console.log('=== SLIDER INITIALIZATION ===');
+													console.log('Available scales:', availableOptions.scales);
 
-													const actualRange = [
-														Math.round(Math.pow(10, snappedLogRange[0])),
-														Math.round(Math.pow(10, snappedLogRange[1])),
-													];
+													const scaleNumbers = availableOptions.scales
+														.map(scale => scaleToNumber(scale))
+														.toSorted((a, b) => b - a); // Sort descending: [2400, 2200, ..., 1]
 
-													onFilterChange({ scaleRange: actualRange as [number, number] });
+													console.log('Scale numbers (descending):', scaleNumbers);
+
+													if (!currentRange || currentRange.length !== 2) {
+														console.log('No current range, using full range');
+														return [0, scaleNumbers.length - 1]; // Full range
+													}
+
+													// Convert current scale range to positions
+													const minPosition = scaleNumbers.indexOf(currentRange[0]);
+													const maxPosition = scaleNumbers.indexOf(currentRange[1]);
+
+													console.log('Current range:', currentRange);
+													console.log('Scale positions:', [minPosition, maxPosition]);
+
+													// Ensure valid positions and order
+													const positions = [
+														minPosition !== -1 ? minPosition : 0,
+														maxPosition !== -1 ? maxPosition : scaleNumbers.length - 1
+													].sort((a, b) => a - b);
+
+													console.log('Slider positions:', positions);
+													return positions;
+												})()}
+												step={1} // Snap to integer positions
+												onChange={(positions) => {
+													console.log('=== ON CHANGE ===');
+													console.log('Raw positions:', positions);
 												}}
-												marks={getScaleMarks(availableOptions.scales).map(mark => ({
-													value: Math.log10(mark.value),
-													label: mark.label,
-												}))}
-												label={(logValue) => {
-												// Find the nearest scale for display, using same logic as snapping
-													const nearestScale = snapToNearestScale(logValue, availableOptions.scales);
-													return `1/${Math.round(Math.pow(10, nearestScale)).toLocaleString()}`;
+												onChangeEnd={(positions) => {
+													console.log('=== ON CHANGE END ===');
+													console.log('Raw positions:', positions);
+
+													// Sort to ensure min <= max
+													const sortedPositions = [...positions].sort((a, b) => a - b);
+													const [minPosition, maxPosition] = sortedPositions;
+
+													console.log('Sorted positions:', [minPosition, maxPosition]);
+
+													// Convert positions back to scale numbers
+													const scaleNumbers = availableOptions.scales
+														.map(scale => scaleToNumber(scale))
+														.toSorted((a, b) => b - a); // Sort descending: [2400, 2200, ..., 1]
+
+													console.log('Scale numbers:', scaleNumbers);
+
+													// Clamp positions to valid range
+													const clampedMinPos = Math.max(0, Math.min(scaleNumbers.length - 1, minPosition));
+													const clampedMaxPos = Math.max(0, Math.min(scaleNumbers.length - 1, maxPosition));
+
+													console.log('Clamped positions:', [clampedMinPos, clampedMaxPos]);
+
+													const minScale = scaleNumbers[clampedMinPos];
+													const maxScale = scaleNumbers[clampedMaxPos];
+
+													console.log('Scales from positions:', {
+														minPosition: clampedMinPos,
+														minScale: minScale,
+														maxPosition: clampedMaxPos,
+														maxScale: maxScale
+													});
+
+													// Set the range (minScale is larger number = smaller scale value)
+													console.log('Final range for filter:', [minScale, maxScale], '=>', [`1/${minScale}`, `1/${maxScale}`]);
+													onFilterChange({ scaleRange: [minScale, maxScale] as [number, number] });
+												}}
+												marks={getScaleMarks(availableOptions.scales)}
+												label={(position) => {
+													console.log('=== LABEL FUNCTION ===');
+													console.log('Position for label:', position);
+
+													const scaleNumbers = availableOptions.scales
+														.map(scale => scaleToNumber(scale))
+														.toSorted((a, b) => b - a);
+
+													// Clamp position to valid range
+													const clampedPosition = Math.max(0, Math.min(scaleNumbers.length - 1, position));
+													const nearestIndex = Math.round(clampedPosition);
+													const scale = scaleNumbers[nearestIndex];
+
+													console.log('Position -> scale:', clampedPosition, '->', nearestIndex, '->', scale);
+													const label = `1/${scale.toLocaleString()}`;
+													console.log('Returning label:', label);
+													return label;
 												}}
 												styles={{
 													label: { fontSize: "10px" },
