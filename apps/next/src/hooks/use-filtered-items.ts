@@ -182,107 +182,6 @@ export function useFilteredItems(
 	const filterCounts = useMemo((): FilterCounts => {
 		const validItems: Item[] = items.filter((item): item is Item => isItem(item));
 
-		// Apply current filters to get the base set of visible items
-		const currentVisibleItems = validItems.filter(item => {
-			// Apply search filter
-			if (filterState.search) {
-				const query = filterState.search.toLowerCase();
-				const name = getNodeDisplayName(item).toLowerCase();
-				const brandIds = item.brandIds.join(" ").toLowerCase();
-				const seriesIds = item.seriesIds.join(" ").toLowerCase();
-				const gradesMatch =
-					Object.keys(item.grades).some(g => g.toLowerCase().includes(query)) ||
-					Object.values(item.grades).flat().some(g => g.toLowerCase().includes(query));
-				const scale = item.scale?.toLowerCase() ?? "";
-				if (!(name.includes(query) ||
-					brandIds.includes(query) ||
-					seriesIds.includes(query) ||
-					gradesMatch ||
-					scale.includes(query))) {
-					return false;
-				}
-			}
-
-			// Apply brand filter
-			if (filterState.brands.length > 0 && !item.brandIds.some(brandId => filterState.brands.includes(brandId))) {
-				const hasOtherBrand = filterState.brands.includes("Other");
-				const hasNoBrands = item.brandIds.length === 0;
-				if (!hasOtherBrand || !hasNoBrands) {
-					return false;
-				}
-			}
-
-			// Apply grade filter
-			if (filterState.grades.length > 0) {
-				const hasOtherGrade = filterState.grades.includes("Other");
-				const hasNoGrades = Object.keys(item.grades).length === 0;
-				const hasMatchingGrade = filterState.grades.some(
-					(selectedGrade) =>
-						selectedGrade in item.grades ||
-						Object.values(item.grades).flat().includes(selectedGrade),
-				);
-				if (hasOtherGrade ? !(hasNoGrades || hasMatchingGrade) : !hasMatchingGrade) {
-					return false;
-				}
-			}
-
-			// Apply scale filter
-			if (filterState.scales.length > 0 && !(item.scale != null && filterState.scales.includes(item.scale))) {
-				return false;
-			}
-
-			// Apply scale range filter
-			if (filterState.scaleRange) {
-				const [minDenom, maxDenom] = filterState.scaleRange;
-				if (!item.scale) return false;
-				const denom = parseScaleDenominator(item.scale);
-				if (!(denom >= minDenom && denom <= maxDenom)) {
-					return false;
-				}
-			}
-
-			// Apply series filter
-			if (filterState.series.length > 0) {
-				const hasOtherSeries = filterState.series.includes("Other");
-				const hasNoSeries = item.seriesIds.length === 0;
-				const hasMatchingSeries = item.seriesIds.some(seriesId => filterState.series.includes(seriesId));
-				if (hasOtherSeries ? !(hasNoSeries || hasMatchingSeries) : !hasMatchingSeries) {
-					return false;
-				}
-			}
-
-			// Apply categories filter
-			if (filterState.categories.length > 0 && !item.categoryIds.some(categoryId => filterState.categories.includes(categoryId))) {
-				return false;
-			}
-
-			// Apply date filter
-			if (filterState.dateRange || filterState.showNoDate) {
-				const itemDateStr = getNodeReleaseDateSortable(item);
-				const hasNoDate = !itemDateStr;
-
-				if (hasNoDate && filterState.showNoDate) {
-					return true;
-				}
-
-				if (filterState.dateRange && !hasNoDate) {
-					const [startDate, endDate] = filterState.dateRange;
-					if (!(itemDateStr >= startDate && itemDateStr <= endDate)) {
-						return false;
-					}
-				}
-
-				if (!filterState.dateRange && !hasNoDate) {
-					return true;
-				}
-
-				return false;
-			}
-
-			return true;
-		});
-
-		// Count items for each filter option from currently visible items
 		const brandCounts: Record<string, number> = {};
 		const gradeCounts: Record<string, number> = {};
 		const scaleCounts: Record<string, number> = {};
@@ -296,62 +195,192 @@ export function useFilteredItems(
 		for (const series of availableOptions.series) { seriesCounts[series] = 0; }
 		for (const category of availableOptions.categories) { categoryCounts[category] = 0; }
 
-		// Count items for each filter option from currently visible items
-		for (const item of currentVisibleItems) {
-			// Brand counts
-			for (const brandId of item.brandIds) {
-				if (brandId in brandCounts) {
-					brandCounts[brandId]++;
-				}
-			}
-			// Handle "Other" brands
-			if (item.brandIds.length === 0 && "Other" in brandCounts) {
-				brandCounts.Other++;
+		// Helper function to apply global filters (search, date range, scale range)
+		const applyGlobalFilters = (items: Item[]): Item[] => {
+			let result = [...items];
+
+			// Apply search filter
+			if (filterState.search) {
+				const query = filterState.search.toLowerCase();
+				result = result.filter(item => {
+					const name = getNodeDisplayName(item).toLowerCase();
+					const brandIds = item.brandIds.join(" ").toLowerCase();
+					const seriesIds = item.seriesIds.join(" ").toLowerCase();
+					const gradesMatch =
+						Object.keys(item.grades).some(g => g.toLowerCase().includes(query)) ||
+						Object.values(item.grades).flat().some(g => g.toLowerCase().includes(query));
+					const scale = item.scale?.toLowerCase() ?? "";
+					return (
+						name.includes(query) ||
+						brandIds.includes(query) ||
+						seriesIds.includes(query) ||
+						gradesMatch ||
+						scale.includes(query)
+					);
+				});
 			}
 
-			// Grade counts
-			for (const rootGrade of Object.keys(item.grades)) {
-				if (rootGrade in gradeCounts) {
-					gradeCounts[rootGrade]++;
-				}
+			// Apply scale range filter
+			if (filterState.scaleRange) {
+				const [minDenom, maxDenom] = filterState.scaleRange;
+				result = result.filter(item => {
+					if (!item.scale) return false;
+					const denom = parseScaleDenominator(item.scale);
+					return denom >= minDenom && denom <= maxDenom;
+				});
 			}
-			for (const specificGrades of Object.values(item.grades)) {
-				for (const specific of specificGrades) {
-					if (specific in gradeCounts) {
-						gradeCounts[specific]++;
+
+			// Apply date range filter
+			if (filterState.dateRange || filterState.showNoDate) {
+				result = result.filter(item => {
+					const itemDateStr = getNodeReleaseDateSortable(item);
+					const hasNoDate = !itemDateStr;
+
+					if (hasNoDate && filterState.showNoDate) {
+						return true;
+					}
+
+					if (filterState.dateRange && !hasNoDate) {
+						const [startDate, endDate] = filterState.dateRange;
+						return itemDateStr >= startDate && itemDateStr <= endDate;
+					}
+
+					if (!filterState.dateRange && !hasNoDate) {
+						return true;
+					}
+
+					return false;
+				});
+			}
+
+			return result;
+		};
+
+		// Helper function to apply filters from the same type (within-type intersection)
+		const applyFiltersWithinType = (items: Item[], filterType: "brands" | "grades" | "scales" | "series" | "categories", selectedValues: string[]): Item[] => {
+			if (selectedValues.length === 0) {
+				return items;
+			}
+
+			return items.filter(item => {
+				switch (filterType) {
+					case "brands":
+					{
+						const hasOtherBrand = selectedValues.includes("Other");
+						const hasNoBrands = item.brandIds.length === 0;
+						const hasMatchingBrand = item.brandIds.some(brandId => selectedValues.includes(brandId));
+						return hasOtherBrand ? (hasNoBrands || hasMatchingBrand) : hasMatchingBrand;
+					}
+					case "grades":
+					{
+						const hasOtherGrade = selectedValues.includes("Other");
+						const hasNoGrades = Object.keys(item.grades).length === 0;
+						const hasMatchingGrade = selectedValues.some(
+							(selectedGrade) =>
+								selectedGrade in item.grades ||
+									Object.values(item.grades).flat().includes(selectedGrade),
+						);
+						return hasOtherGrade ? (hasNoGrades || hasMatchingGrade) : hasMatchingGrade;
+					}
+					case "scales": {
+						return item.scale != null && selectedValues.includes(item.scale);
+					}
+					case "series":
+					{
+						const hasOtherSeries = selectedValues.includes("Other");
+						const hasNoSeries = item.seriesIds.length === 0;
+						const hasMatchingSeries = item.seriesIds.some(seriesId => selectedValues.includes(seriesId));
+						return hasOtherSeries ? (hasNoSeries || hasMatchingSeries) : hasMatchingSeries;
+					}
+					case "categories": {
+						return item.categoryIds.some(categoryId => selectedValues.includes(categoryId));
+					}
+					default: {
+						return true;
 					}
 				}
-			}
-			// Handle "Other" grades
-			if (Object.keys(item.grades).length === 0 && "Other" in gradeCounts) {
-				gradeCounts.Other++;
+			});
+		};
+
+		// Helper function to apply filters from DIFFERENT types only (ignoring same-type filters)
+		// This creates the most intuitive behavior: brands don't affect other brands, but affect grades, etc.
+		const applyFiltersFromDifferentTypes = (items: Item[], excludeFilterType: "brands" | "grades" | "scales" | "series" | "categories"): Item[] => {
+			let result = applyGlobalFilters(items);
+
+			// Apply filters from different types only (cross-type intersection)
+			if (excludeFilterType !== "brands" && filterState.brands.length > 0) {
+				result = applyFiltersWithinType(result, "brands", filterState.brands);
 			}
 
-			// Scale counts
-			if (item.scale && item.scale in scaleCounts) {
-				scaleCounts[item.scale]++;
+			if (excludeFilterType !== "grades" && filterState.grades.length > 0) {
+				result = applyFiltersWithinType(result, "grades", filterState.grades);
 			}
 
-			// Series counts
-			for (const seriesId of item.seriesIds) {
-				if (seriesId in seriesCounts) {
-					seriesCounts[seriesId]++;
-				}
-			}
-			// Handle "Other" series
-			if (item.seriesIds.length === 0 && "Other" in seriesCounts) {
-				seriesCounts.Other++;
+			if (excludeFilterType !== "scales" && filterState.scales.length > 0) {
+				result = applyFiltersWithinType(result, "scales", filterState.scales);
 			}
 
-			// Category counts
-			for (const categoryId of item.categoryIds) {
-				if (categoryId in categoryCounts) {
-					categoryCounts[categoryId]++;
-				}
+			if (excludeFilterType !== "series" && filterState.series.length > 0) {
+				result = applyFiltersWithinType(result, "series", filterState.series);
 			}
+
+			if (excludeFilterType !== "categories" && filterState.categories.length > 0) {
+				result = applyFiltersWithinType(result, "categories", filterState.categories);
+			}
+
+			return result;
+		};
+
+		// Count items for each filter option using intuitive logic (ignore same-type filters, apply cross-type filters)
+		for (const brand of availableOptions.brands) {
+			const itemsWithBrand = validItems.filter(item =>
+				brand === "Other"
+					? item.brandIds.length === 0
+					: item.brandIds.includes(brand),
+			);
+			// Apply filters from different types only (brands don't affect other brand counts)
+			const visibleItemsWithBrand = applyFiltersFromDifferentTypes(itemsWithBrand, "brands");
+			brandCounts[brand] = visibleItemsWithBrand.length;
 		}
 
-		
+		for (const grade of availableOptions.grades) {
+			const itemsWithGrade = validItems.filter(item =>
+				grade === "Other"
+					? Object.keys(item.grades).length === 0
+					: grade in item.grades || Object.values(item.grades).flat().includes(grade),
+			);
+			// Apply filters from different types only (grades don't affect other grade counts)
+			const visibleItemsWithGrade = applyFiltersFromDifferentTypes(itemsWithGrade, "grades");
+			gradeCounts[grade] = visibleItemsWithGrade.length;
+		}
+
+		for (const scale of availableOptions.scales) {
+			const itemsWithScale = validItems.filter(item => item.scale === scale);
+			// Apply filters from different types only (scales don't affect other scale counts)
+			const visibleItemsWithScale = applyFiltersFromDifferentTypes(itemsWithScale, "scales");
+			scaleCounts[scale] = visibleItemsWithScale.length;
+		}
+
+		for (const series of availableOptions.series) {
+			const itemsWithSeries = validItems.filter(item =>
+				series === "Other"
+					? item.seriesIds.length === 0
+					: item.seriesIds.includes(series),
+			);
+			// Apply filters from different types only (series don't affect other series counts)
+			const visibleItemsWithSeries = applyFiltersFromDifferentTypes(itemsWithSeries, "series");
+			seriesCounts[series] = visibleItemsWithSeries.length;
+		}
+
+		for (const category of availableOptions.categories) {
+			const itemsWithCategory = validItems.filter(item =>
+				item.categoryIds.includes(category),
+			);
+			// Apply filters from different types only (categories don't affect other category counts)
+			const visibleItemsWithCategory = applyFiltersFromDifferentTypes(itemsWithCategory, "categories");
+			categoryCounts[category] = visibleItemsWithCategory.length;
+		}
+
 		return {
 			brands: brandCounts,
 			grades: gradeCounts,

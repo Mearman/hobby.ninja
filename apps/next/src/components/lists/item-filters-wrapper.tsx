@@ -31,7 +31,6 @@ export function ItemFiltersWrapper({
 }: FilterProps<Item, FilterState>) {
 	const currentFilterState = filterState;
 
-	
 	// Derive the specialized methods from the generic onFilterChange
 	const handleUpdateFilter = (updates: Partial<FilterState>) => {
 		onFilterChange(updates);

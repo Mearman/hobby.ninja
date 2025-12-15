@@ -376,7 +376,7 @@ function FilterSection({
 	// Helper to render chip content based on display mode
 	const renderChipContent = (value: string, isSelected: boolean) => {
 		const imageSrc = getImage?.(value);
-		const currentCount = filterCounts[value] || totalCounts[value] || 0; // TEMPORARY: Use total count as visible count
+		const currentCount = filterCounts[value] || 0;
 		const totalCount = totalCounts[value] || 0;
 
 		
@@ -464,7 +464,6 @@ function FilterSection({
 					<Text
 						size="xs"
 						fw={900}
-						letterSpacing={-0.5}
 						lineClamp={1}
 						ta="center"
 						style={{
@@ -472,6 +471,7 @@ function FilterSection({
 							fontFamily: "Inter, system-ui, -apple-system, sans-serif",
 							fontVariantNumeric: "tabular-nums",
 							textTransform: "uppercase",
+							letterSpacing: -0.5,
 						}}
 					>
 						{formatValue(value)}

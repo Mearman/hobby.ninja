@@ -36,7 +36,7 @@ export function GenericListPage<T, TFilterState = Record<string, unknown>, TAvai
 	const { viewMode, setViewMode } = useViewMode();
 
 	// Apply filtering using the config's filter hook
-	const { filteredItems, filterState, updateFilter, hasActiveFilters, availableOptions } =
+	const { filteredItems, filterState, updateFilter, hasActiveFilters, availableOptions, filterCounts } =
 		config.filters.hook(items);
 
 	// Apply infinite scroll if enabled
@@ -80,6 +80,7 @@ export function GenericListPage<T, TFilterState = Record<string, unknown>, TAvai
 					<FilterComponent
 						filterState={filterState}
 						availableOptions={availableOptions}
+						filterCounts={filterCounts}
 						onFilterChange={handleFilterChange}
 						items={items}
 					/>
