@@ -94,10 +94,10 @@ function generateYearMarks(minDate: string, maxDate: string): Array<{ value: num
 		// For the end year, only add if it's exactly on a 5-year interval
 		if (year === endYear && endYear % 5 !== 0) break;
 
-		// Create a date for the middle of each year to avoid edge cases
-		const midYearDate = `${year}0615`; // June 15th of each year
+		// Create a date for January 1st of each year (actual year boundary)
+		const yearStartDate = `${year}0101`; // January 1st of each year
 		marks.push({
-			value: dateToNumber(midYearDate),
+			value: dateToNumber(yearStartDate),
 			label: year.toString()
 		});
 	}
@@ -114,9 +114,9 @@ function generateYearSnapPoints(minDate: string, maxDate: string): number[] {
 
 	// Add all years as snap points
 	for (let year = startYear; year <= endYear; year++) {
-		// Create a date for the middle of each year
-		const midYearDate = `${year}0615`; // June 15th of each year
-		snapPoints.push(dateToNumber(midYearDate));
+		// Create a date for January 1st of each year (actual year boundary)
+		const yearStartDate = `${year}0101`; // January 1st of each year
+		snapPoints.push(dateToNumber(yearStartDate));
 	}
 
 	return snapPoints;
