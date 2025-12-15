@@ -474,6 +474,8 @@ export function ItemFilters({
 
 	// Local state for immediate slider visual feedback (debounced filtering)
 	const [sliderValue, setSliderValue] = useState<[number, number] | null>(null);
+	// Local state for date input values that sync with slider during drag
+	const [dateInputValues, setDateInputValues] = useState<[string, string] | null>(null);
 	const { preferences, updatePreference } = useUserPreferences();
 	const displayMode = preferences.filterDisplayMode;
 
@@ -777,10 +779,16 @@ export function ItemFilters({
 													onChange={(values) => {
 														// Immediate visual feedback without filtering
 														setSliderValue(values);
+														// Update date input values in real-time
+														const [startTimestamp, endTimestamp] = values;
+														const startDate = numberToDate(startTimestamp);
+														const endDate = numberToDate(endTimestamp);
+														setDateInputValues([startDate, endDate]);
 													}}
 													onChangeEnd={(values) => {
 														// Clear local state and trigger actual filtering
 														setSliderValue(null);
+														setDateInputValues(null);
 														const [startTimestamp, endTimestamp] = values;
 														const startDate = numberToDate(startTimestamp);
 														const endDate = numberToDate(endTimestamp);
@@ -801,10 +809,13 @@ export function ItemFilters({
 														size="xs"
 														type="date"
 														placeholder="Start date"
-														value={formatForDateInput(defaultStartDate)}
+														value={formatForDateInput(dateInputValues?.[0] ?? defaultStartDate)}
 														onChange={(e) => {
 															const dateValue = e.target.value;
 															if (dateValue) {
+																// Clear local slider states when user manually types
+																setSliderValue(null);
+																setDateInputValues(null);
 																const formatted = parseDateInput(dateValue);
 																const currentRange = filterState.dateRange ?? [minDate, maxDate];
 																onFilterChange({ dateRange: [formatted, currentRange[1]] });
@@ -819,10 +830,13 @@ export function ItemFilters({
 														size="xs"
 														type="date"
 														placeholder="End date"
-														value={formatForDateInput(defaultEndDate)}
+														value={formatForDateInput(dateInputValues?.[1] ?? defaultEndDate)}
 														onChange={(e) => {
 															const dateValue = e.target.value;
 															if (dateValue) {
+																// Clear local slider states when user manually types
+																setSliderValue(null);
+																setDateInputValues(null);
 																const formatted = parseDateInput(dateValue);
 																const currentRange = filterState.dateRange ?? [minDate, maxDate];
 																onFilterChange({ dateRange: [currentRange[0], formatted] });
