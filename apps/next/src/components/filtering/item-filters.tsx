@@ -21,6 +21,7 @@ import {
 	RangeSlider,
 	Select,
 	Stack,
+	Switch,
 	Text,
 	TextInput,
 	Tooltip,
@@ -917,26 +918,15 @@ export function ItemFilters({
 													/>
 												</Group>
 												<Group gap="sm" mt="xs">
-													<Badge
+													<Switch
 														size="sm"
-														variant={filterState.showNoDate ? "filled" : "light"}
-														color="gray"
-														onClick={() => {
-															onFilterChange({ showNoDate: !filterState.showNoDate });
+														checked={filterState.showNoDate}
+														onChange={(event) => {
+															onFilterChange({ showNoDate: event.currentTarget.checked });
 														}}
-														rightSection={
-															filterState.showNoDate ? (
-																<ActionIcon size="xs" variant="transparent" onClick={(e) => {
-																	e.stopPropagation();
-																	onFilterChange({ showNoDate: false });
-																}}>
-																	<IconX size={10} />
-																</ActionIcon>
-															) : null
-														}
-													>
-														{filterState.showNoDate ? "Hide Other" : "Show Other"}
-													</Badge>
+														label="Show items with no date"
+														color="gray"
+													/>
 												</Group>
 											</>
 										);
