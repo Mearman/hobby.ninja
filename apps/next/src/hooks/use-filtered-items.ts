@@ -38,6 +38,9 @@ export interface FilterState {
 	categories: string[];
 	dateRange: [string, string] | null;
 	showNoDate: boolean;
+	showNoBrand: boolean;
+	showNoSeries: boolean;
+	showNoGrade: boolean;
 	sortField: string;
 	sortDirection: "asc" | "desc";
 }
@@ -80,6 +83,9 @@ const DEFAULT_FILTER_STATE: FilterState = {
 	categories: [],
 	dateRange: null,
 	showNoDate: false,
+	showNoBrand: false,
+	showNoSeries: false,
+	showNoGrade: false,
 	sortField: "date",
 	sortDirection: "desc",
 };
@@ -159,7 +165,7 @@ export function useFilteredItems(
 			});
 		}
 
-		// Apply array-based filters (show all if array is empty)
+			// Apply brand filter
 		if (filterState.brands.length > 0) {
 			result = result.filter(item =>
 				item.brandIds.some(brandId => filterState.brands.includes(brandId)),
@@ -215,6 +221,7 @@ export function useFilteredItems(
 				return false;
 			});
 		}
+		// Apply series filter
 		if (filterState.series.length > 0) {
 			result = result.filter(item =>
 				item.seriesIds.some(seriesId => filterState.series.includes(seriesId)),
@@ -338,7 +345,7 @@ export function useFilteredItems(
 
 	// Check if any filters are active
 	const hasActiveFilters = useMemo(() => {
-		const { sortField, sortDirection, search, scaleRange, dateRange, showNoDate, ...arrayFilters } = filterState;
+		const { sortField, sortDirection, search, scaleRange, dateRange, showNoDate, showNoBrand, showNoSeries, showNoGrade, ...arrayFilters } = filterState;
 		const defaultSortField = DEFAULT_FILTER_STATE.sortField;
 		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
 
@@ -348,13 +355,16 @@ export function useFilteredItems(
 		const hasNonDefaultScaleRange = scaleRange !== null;
 		const hasDateRange = dateRange !== null;
 		const hasNoDateFilter = showNoDate !== false;
+		const hasNoBrandFilter = showNoBrand !== false;
+		const hasNoSeriesFilter = showNoSeries !== false;
+		const hasNoGradeFilter = showNoGrade !== false;
 
-		return hasSearch || hasArrayFilters || hasNonDefaultSort || hasNonDefaultScaleRange || hasDateRange || hasNoDateFilter;
+		return hasSearch || hasArrayFilters || hasNonDefaultSort || hasNonDefaultScaleRange || hasDateRange || hasNoDateFilter || hasNoBrandFilter || hasNoSeriesFilter || hasNoGradeFilter;
 	}, [filterState]);
 
 	// Count active filters
 	const activeFilterCount = useMemo(() => {
-		const { sortField, sortDirection, search, scaleRange, dateRange, showNoDate, ...arrayFilters } = filterState;
+		const { sortField, sortDirection, search, scaleRange, dateRange, showNoDate, showNoBrand, showNoSeries, showNoGrade, ...arrayFilters } = filterState;
 		const defaultSortField = DEFAULT_FILTER_STATE.sortField;
 		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
 
@@ -365,8 +375,11 @@ export function useFilteredItems(
 		const scaleRangeCount = scaleRange === null ? 0 : 1;
 		const dateRangeCount = dateRange === null ? 0 : 1;
 		const noDateCount = showNoDate ? 1 : 0;
+		const noBrandCount = showNoBrand ? 1 : 0;
+		const noSeriesCount = showNoSeries ? 1 : 0;
+		const noGradeCount = showNoGrade ? 1 : 0;
 
-		return searchCount + arrayFilterCount + sortCount + scaleRangeCount + dateRangeCount + noDateCount;
+		return searchCount + arrayFilterCount + sortCount + scaleRangeCount + dateRangeCount + noDateCount + noBrandCount + noSeriesCount + noGradeCount;
 	}, [filterState]);
 
 	return {
