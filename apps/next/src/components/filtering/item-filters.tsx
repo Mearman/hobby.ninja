@@ -366,6 +366,7 @@ function FilterSection({
 }: FilterSectionProps) {
 	const [expanded, setExpanded] = useState(false);
 
+	
 	// Return early if no options and no children
 	if (options.length === 0 && !children) return null;
 
@@ -375,7 +376,7 @@ function FilterSection({
 	// Helper to render chip content based on display mode
 	const renderChipContent = (value: string, isSelected: boolean) => {
 		const imageSrc = getImage?.(value);
-		const currentCount = filterCounts[value] || 0;
+		const currentCount = filterCounts[value] || totalCounts[value] || 0; // TEMPORARY: Use total count as visible count
 		const totalCount = totalCounts[value] || 0;
 
 		

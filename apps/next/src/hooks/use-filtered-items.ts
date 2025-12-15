@@ -351,6 +351,7 @@ export function useFilteredItems(
 			}
 		}
 
+		
 		return {
 			brands: brandCounts,
 			grades: gradeCounts,
