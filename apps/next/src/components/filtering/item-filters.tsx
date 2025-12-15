@@ -76,6 +76,19 @@ function formatDisplayDate(dateStr: string): string {
 	return `${year}/${month}/${day}`;
 }
 
+// Helper function to format YYYYMMDD to YYYY-MM-DD for date input
+function formatForDateInput(dateStr: string): string {
+	if (dateStr.length !== 8) return "";
+	const year = dateStr.slice(0, 4);
+	const month = dateStr.slice(4, 6);
+	const day = dateStr.slice(6, 8);
+	return `${year}-${month}-${day}`;
+}
+
+// Helper function to parse YYYY-MM-DD to YYYYMMDD
+function parseDateInput(dateStr: string): string {
+	return dateStr.replaceAll("-", "");
+}
 
 // Helper function to convert YYYYMMDD to numeric value for slider (days since epoch)
 function dateToNumber(dateStr: string): number {
@@ -754,6 +767,43 @@ export function ItemFilters({
 														label: { transform: "translate(-50%, -10px)" },
 													}}
 												/>
+												<Group gap="sm" mt="md">
+													<TextInput
+														size="xs"
+														type="date"
+														placeholder="Start date"
+														value={formatForDateInput(defaultStartDate)}
+														onChange={(e) => {
+															const dateValue = e.target.value;
+															if (dateValue) {
+																const formatted = parseDateInput(dateValue);
+																const currentRange = filterState.dateRange ?? [minDate, maxDate];
+																onFilterChange({ dateRange: [formatted, currentRange[1]] });
+															}
+														}}
+														style={{ flex: 1 }}
+														min={formatForDateInput(minDate)}
+														max={formatForDateInput(maxDate)}
+													/>
+													<Text size="xs" c="dimmed">to</Text>
+													<TextInput
+														size="xs"
+														type="date"
+														placeholder="End date"
+														value={formatForDateInput(defaultEndDate)}
+														onChange={(e) => {
+															const dateValue = e.target.value;
+															if (dateValue) {
+																const formatted = parseDateInput(dateValue);
+																const currentRange = filterState.dateRange ?? [minDate, maxDate];
+																onFilterChange({ dateRange: [currentRange[0], formatted] });
+															}
+														}}
+														style={{ flex: 1 }}
+														min={formatForDateInput(defaultStartDate)}
+														max={formatForDateInput(maxDate)}
+													/>
+												</Group>
 											</>
 										);
 									})()}
