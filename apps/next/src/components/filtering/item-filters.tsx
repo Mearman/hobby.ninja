@@ -746,14 +746,6 @@ export function ItemFilters({
 														max={formatForDateInput(maxDate)}
 													/>
 												</Group>
-												<Text size="xs" c="dimmed" mt="xs">
-													Range: {formatDisplayDate(minDate)} to {formatDisplayDate(maxDate)}
-												</Text>
-												{filterState.dateRange?.[0] && filterState.dateRange[1] ? (
-													<Text size="xs" c="blue" mt="xs" fw={500}>
-														Selected: {formatDisplayDate(filterState.dateRange[0])} to {formatDisplayDate(filterState.dateRange[1])}
-													</Text>
-												) : null}
 											</>
 										);
 									})()}
