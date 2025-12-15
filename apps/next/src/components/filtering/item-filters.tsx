@@ -794,16 +794,22 @@ export function ItemFilters({
 														const endDate = numberToDate(endTimestamp);
 														onFilterChange({ dateRange: [startDate, endDate] });
 													}}
+													label={false}
+													showLabelOnHover={false}
+													tooltipProps={{
+														opened: false,
+														disabled: true
+													}}
 													marks={generateYearMarks(minDate, maxDate)}
 													styles={{
 														track: { height: 6 },
 														trackContainer: { height: 6 },
 														bar: { height: 6 },
 														thumb: { borderWidth: 2, width: 20, height: 20 },
-														label: { transform: "translate(-50%, -10px)" },
 														dragged: { transform: "scale(1.05)" },
-														// Hide tooltips
-														valueLabel: { display: "none" },
+														// Complete tooltip removal
+														label: { display: "none" },
+														tooltip: { display: "none !important" },
 													}}
 												/>
 												<Group gap="sm" mt="md">
