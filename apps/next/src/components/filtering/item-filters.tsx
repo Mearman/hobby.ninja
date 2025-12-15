@@ -81,8 +81,14 @@ function getScaleMarks(availableScales: string[]) {
 
 	if (scaleNumbers.length === 0) return [];
 
+	// Common scales to show marks for (avoid overcrowding)
+	const commonScales = [1, 2, 4, 6, 8, 12, 20, 24, 35, 48, 60, 72, 100, 144, 220, 300, 500, 700, 1000, 1200, 1700, 2200, 2400, 5000, 8000, 100_000];
+
+	// Filter to only show marks for scales that actually exist in our data
+	const marksToShow = commonScales.filter(scale => scaleNumbers.includes(scale));
+
 	// Use the actual scale values for marks
-	return scaleNumbers.map(scale => ({
+	return marksToShow.map(scale => ({
 		value: scale,
 		label: `1/${scale.toLocaleString()}`,
 	}));
@@ -99,20 +105,19 @@ function snapToNearestScale(logValue: number, availableScales: string[]): number
 	// Convert actual scales to logarithmic space for comparison
 	const logScales = scaleNumbers.map(scale => Math.log10(scale));
 
-	
-	let nearestLogScale = logScales[0];
+	// Find the index of the closest logarithmic scale
+	let nearestIndex = 0;
 	let minDistance = Math.abs(logScales[0] - logValue);
 
-	for (const logScale of logScales) {
-		const distance = Math.abs(logScale - logValue);
+	for (let i = 1; i < logScales.length; i++) {
+		const distance = Math.abs(logScales[i] - logValue);
 		if (distance < minDistance) {
 			minDistance = distance;
-			nearestLogScale = logScale;
+			nearestIndex = i;
 		}
 	}
 
-	
-	return nearestLogScale;
+	return logScales[nearestIndex];
 }
 
 // Helper function to format date string from YYYYMMDD to YYYY/MM/DD
@@ -712,7 +717,11 @@ export function ItemFilters({
 													value: Math.log10(mark.value),
 													label: mark.label,
 												}))}
-												label={(logValue) => `1/${Math.round(Math.pow(10, logValue)).toLocaleString()}`}
+												label={(logValue) => {
+												// Find the nearest scale for display, using same logic as snapping
+													const nearestScale = snapToNearestScale(logValue, availableOptions.scales);
+													return `1/${Math.round(Math.pow(10, nearestScale)).toLocaleString()}`;
+												}}
 												styles={{
 													label: { fontSize: "10px" },
 													markLabel: { fontSize: "9px" },
