@@ -19,8 +19,10 @@ import {
 import {
 	IconChevronDown,
 	IconChevronRight,
+	IconChecks,
 	IconPhoto,
 	IconTextSize,
+	IconX,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import { Fragment, useState } from "react";
@@ -70,6 +72,8 @@ interface HierarchicalGradeFilterProps {
 	displayMode: "icon" | "text";
 	onDisplayModeToggle: () => void;
 	color?: string;
+	onSelectAll?: () => void;
+	onClearSection?: () => void;
 }
 
 export function HierarchicalGradeFilter({
@@ -80,6 +84,8 @@ export function HierarchicalGradeFilter({
 	displayMode,
 	onDisplayModeToggle,
 	color = "teal",
+	onSelectAll,
+	onClearSection,
 }: HierarchicalGradeFilterProps) {
 	const [expanded, setExpanded] = useState(false);
 	const [expandedFamilies, setExpandedFamilies] = useState<Set<string>>(new Set());
@@ -431,14 +437,48 @@ export function HierarchicalGradeFilter({
 						)}
 					</Group>
 				</UnstyledButton>
-				<ActionIcon
-					variant={displayMode === "icon" ? "filled" : "light"}
-					size="sm"
-					onClick={(e) => { e.stopPropagation(); onDisplayModeToggle(); }}
-					title={displayMode === "icon" ? "Switch to text labels" : "Switch to icons"}
-				>
-					{displayMode === "icon" ? <IconPhoto size={16} /> : <IconTextSize size={16} />}
-				</ActionIcon>
+
+				{/* Action Buttons */}
+				<Group gap="xs">
+					{expanded && (
+						<>
+							{onSelectAll && selectedGrades.length < availableGrades.length && (
+								<Tooltip label="Select all grades">
+									<ActionIcon
+										variant="light"
+										size="sm"
+										color={color}
+										onClick={(e) => { e.stopPropagation(); onSelectAll(); }}
+										title="Select all grades"
+									>
+										<IconChecks size={14} />
+									</ActionIcon>
+								</Tooltip>
+							)}
+							{onClearSection && selectedGrades.length > 0 && (
+								<Tooltip label="Clear grade selection">
+									<ActionIcon
+										variant="light"
+										size="sm"
+										color="red"
+										onClick={(e) => { e.stopPropagation(); onClearSection(); }}
+										title="Clear grade selection"
+									>
+										<IconX size={14} />
+									</ActionIcon>
+								</Tooltip>
+							)}
+						</>
+					)}
+					<ActionIcon
+						variant={displayMode === "icon" ? "filled" : "light"}
+						size="sm"
+						onClick={(e) => { e.stopPropagation(); onDisplayModeToggle(); }}
+						title={displayMode === "icon" ? "Switch to text labels" : "Switch to icons"}
+					>
+						{displayMode === "icon" ? <IconPhoto size={16} /> : <IconTextSize size={16} />}
+					</ActionIcon>
+				</Group>
 			</Group>
 
 			{/* Collapsed: Show selected values only */}

@@ -26,6 +26,7 @@ import {
 import {
 	IconChevronDown,
 	IconChevronUp,
+	IconChecks,
 	IconFilter,
 	IconSearch,
 	IconSortAscending,
@@ -299,6 +300,79 @@ export function ItemFilters({
 		updatePreference("filterDisplayMode", displayMode === "icon" ? "text" : "icon");
 	};
 
+	// Bulk operations for filter sections
+	const selectAllGrades = () => {
+		onFilterChange({ grades: availableOptions.grades });
+	};
+
+	const clearGrades = () => {
+		onFilterChange({ grades: [] });
+	};
+
+	const selectAllBrands = () => {
+		onFilterChange({ brands: availableOptions.brands });
+	};
+
+	const clearBrands = () => {
+		onFilterChange({ brands: [] });
+	};
+
+	const selectAllSeries = () => {
+		onFilterChange({ series: availableOptions.series });
+	};
+
+	const clearSeries = () => {
+		onFilterChange({ series: [] });
+	};
+
+	const selectAllCategories = () => {
+		onFilterChange({ categories: availableOptions.categories });
+	};
+
+	const clearCategories = () => {
+		onFilterChange({ categories: [] });
+	};
+
+	const selectAllScales = () => {
+		onFilterChange({ scales: availableOptions.scales });
+	};
+
+	const clearScales = () => {
+		onFilterChange({ scales: [] });
+	};
+
+	// Helper function to create select all and clear buttons for filter sections
+	const createFilterActions = (selectedCount: number, totalCount: number, onSelectAll: () => void, onClear: () => void, color: string) => (
+		<Group gap="xs">
+			{selectedCount < totalCount && (
+				<Tooltip label="Select all">
+					<ActionIcon
+						variant="light"
+						size="sm"
+						color={color}
+						onClick={(e) => { e.stopPropagation(); onSelectAll(); }}
+						title="Select all"
+					>
+						<IconChecks size={14} />
+					</ActionIcon>
+				</Tooltip>
+			)}
+			{selectedCount > 0 && (
+				<Tooltip label="Clear selection">
+					<ActionIcon
+						variant="light"
+						size="sm"
+						color="red"
+						onClick={(e) => { e.stopPropagation(); onClear(); }}
+						title="Clear selection"
+					>
+						<IconX size={14} />
+					</ActionIcon>
+				</Tooltip>
+			)}
+		</Group>
+	);
+
 	return (
 		<Card p="lg" radius="md" withBorder={true}>
 			<Stack gap="md">
@@ -392,6 +466,13 @@ export function ItemFilters({
 								formatValue={formatCategoryName}
 								color="grape"
 								displayMode={displayMode}
+								headerAction={createFilterActions(
+									filterState.categories.length,
+									availableOptions.categories.length,
+									selectAllCategories,
+									clearCategories,
+									"grape",
+								)}
 							/>
 
 							<FilterSection
@@ -404,6 +485,13 @@ export function ItemFilters({
 								getImage={(id) => getBrandById(id)?.image}
 								color="blue"
 								displayMode={displayMode}
+								headerAction={createFilterActions(
+									filterState.brands.length,
+									availableOptions.brands.length,
+									selectAllBrands,
+									clearBrands,
+									"blue",
+								)}
 							/>
 
 							<FilterSection
@@ -416,6 +504,13 @@ export function ItemFilters({
 								getImage={(id) => getSeriesById(id)?.image}
 								color="violet"
 								displayMode={displayMode}
+								headerAction={createFilterActions(
+									filterState.series.length,
+									availableOptions.series.length,
+									selectAllSeries,
+									clearSeries,
+									"violet",
+								)}
 							/>
 
 							<HierarchicalGradeFilter
@@ -426,6 +521,8 @@ export function ItemFilters({
 								displayMode={displayMode}
 								onDisplayModeToggle={toggleDisplayMode}
 								color="teal"
+								onSelectAll={selectAllGrades}
+								onClearSection={clearGrades}
 							/>
 
 							<FilterSection
@@ -436,6 +533,13 @@ export function ItemFilters({
 								onToggle={onToggleFilterValue}
 								color="orange"
 								displayMode={displayMode}
+								headerAction={createFilterActions(
+									filterState.scales.length,
+									availableOptions.scales.length,
+									selectAllScales,
+									clearScales,
+									"orange",
+								)}
 							/>
 						</Stack>
 					</Stack>
