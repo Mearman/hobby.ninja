@@ -178,12 +178,12 @@ export function useFilteredItems(
 		};
 	}, [items]);
 
-	// Calculate filter counts (current visible items for each filter option)
+	// Calculate filter counts (items matching each filter option with current filters applied)
 	const filterCounts = useMemo((): FilterCounts => {
 		const validItems: Item[] = items.filter((item): item is Item => isItem(item));
 
-		// Apply all filters EXCEPT the one we're counting for
-		const baseFilteredItems = validItems.filter(item => {
+		// Apply current filters to get the base set of visible items
+		const currentVisibleItems = validItems.filter(item => {
 			// Apply search filter
 			if (filterState.search) {
 				const query = filterState.search.toLowerCase();
@@ -203,6 +203,29 @@ export function useFilteredItems(
 				}
 			}
 
+			// Apply brand filter
+			if (filterState.brands.length > 0 && !item.brandIds.some(brandId => filterState.brands.includes(brandId))) {
+				const hasOtherBrand = filterState.brands.includes("Other");
+				const hasNoBrands = item.brandIds.length === 0;
+				if (!hasOtherBrand || !hasNoBrands) {
+					return false;
+				}
+			}
+
+			// Apply grade filter
+			if (filterState.grades.length > 0) {
+				const hasOtherGrade = filterState.grades.includes("Other");
+				const hasNoGrades = Object.keys(item.grades).length === 0;
+				const hasMatchingGrade = filterState.grades.some(
+					(selectedGrade) =>
+						selectedGrade in item.grades ||
+						Object.values(item.grades).flat().includes(selectedGrade),
+				);
+				if (hasOtherGrade ? !(hasNoGrades || hasMatchingGrade) : !hasMatchingGrade) {
+					return false;
+				}
+			}
+
 			// Apply scale filter
 			if (filterState.scales.length > 0 && !(item.scale != null && filterState.scales.includes(item.scale))) {
 				return false;
@@ -216,6 +239,21 @@ export function useFilteredItems(
 				if (!(denom >= minDenom && denom <= maxDenom)) {
 					return false;
 				}
+			}
+
+			// Apply series filter
+			if (filterState.series.length > 0) {
+				const hasOtherSeries = filterState.series.includes("Other");
+				const hasNoSeries = item.seriesIds.length === 0;
+				const hasMatchingSeries = item.seriesIds.some(seriesId => filterState.series.includes(seriesId));
+				if (hasOtherSeries ? !(hasNoSeries || hasMatchingSeries) : !hasMatchingSeries) {
+					return false;
+				}
+			}
+
+			// Apply categories filter
+			if (filterState.categories.length > 0 && !item.categoryIds.some(categoryId => filterState.categories.includes(categoryId))) {
+				return false;
 			}
 
 			// Apply date filter
@@ -241,15 +279,10 @@ export function useFilteredItems(
 				return false;
 			}
 
-			// Apply categories filter
-			if (filterState.categories.length > 0 && !item.categoryIds.some(categoryId => filterState.categories.includes(categoryId))) {
-				return false;
-			}
-
 			return true;
 		});
 
-		// Count items for each filter option
+		// Count items for each filter option from currently visible items
 		const brandCounts: Record<string, number> = {};
 		const gradeCounts: Record<string, number> = {};
 		const scaleCounts: Record<string, number> = {};
@@ -263,8 +296,8 @@ export function useFilteredItems(
 		for (const series of availableOptions.series) { seriesCounts[series] = 0; }
 		for (const category of availableOptions.categories) { categoryCounts[category] = 0; }
 
-		// Count items for each filter option
-		for (const item of baseFilteredItems) {
+		// Count items for each filter option from currently visible items
+		for (const item of currentVisibleItems) {
 			// Brand counts
 			for (const brandId of item.brandIds) {
 				if (brandId in brandCounts) {

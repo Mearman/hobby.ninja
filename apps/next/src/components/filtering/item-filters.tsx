@@ -378,6 +378,7 @@ function FilterSection({
 		const currentCount = filterCounts[value] || 0;
 		const totalCount = totalCounts[value] || 0;
 
+		
 		// Only show icon if in icon mode AND image exists
 		if (displayMode === "icon" && imageSrc) {
 			return (
