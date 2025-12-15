@@ -76,6 +76,38 @@ function formatDisplayDate(dateStr: string): string {
 	return `${year}/${month}/${day}`;
 }
 
+// Generate year marks for the slider
+function generateYearMarks(minDate: string, maxDate: string): Array<{ value: number; label: string }> {
+	const marks: Array<{ value: number; label: string }> = [];
+
+	const startYear = parseInt(minDate.slice(0, 4));
+	const endYear = parseInt(maxDate.slice(0, 4));
+
+	// Always include min and max dates
+	marks.push({
+		value: dateToNumber(minDate),
+		label: formatDisplayDate(minDate)
+	});
+
+	// Add year marks between the range
+	for (let year = startYear + 1; year < endYear; year++) {
+		// Create a date for the middle of each year to avoid edge cases
+		const midYearDate = `${year}0615`; // June 15th of each year
+		marks.push({
+			value: dateToNumber(midYearDate),
+			label: year.toString()
+		});
+	}
+
+	// Always include max date
+	marks.push({
+		value: dateToNumber(maxDate),
+		label: formatDisplayDate(maxDate)
+	});
+
+	return marks;
+}
+
 // Helper function to format YYYYMMDD to YYYY-MM-DD for date input
 function formatForDateInput(dateStr: string): string {
 	if (dateStr.length !== 8) return "";
@@ -758,10 +790,7 @@ export function ItemFilters({
 														onFilterChange({ dateRange: [startDate, endDate] });
 													}}
 													label="Date Range"
-													marks={[
-														{ value: dateToNumber(minDate), label: formatDisplayDate(minDate) },
-														{ value: dateToNumber(maxDate), label: formatDisplayDate(maxDate) },
-													]}
+													marks={generateYearMarks(minDate, maxDate)}
 													styles={{
 														track: { height: 6 },
 														trackContainer: { height: 6 },
