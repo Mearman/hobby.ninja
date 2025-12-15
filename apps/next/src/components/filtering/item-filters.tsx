@@ -196,38 +196,8 @@ function FilterSection({
 }: FilterSectionProps) {
 	const [expanded, setExpanded] = useState(false);
 
-	// If children are provided, this is a custom filter section
-	if (children) {
-		return (
-			<Box>
-				{/* Accordion Header */}
-				<Group justify="space-between" mb={expanded ? "xs" : 0}>
-					<UnstyledButton
-						onClick={() => { setExpanded(!expanded); }}
-						style={{ flex: 1 }}
-					>
-						<Group gap="xs">
-							{expanded ? <IconChevronUp size={14} /> : <IconChevronDown size={14} />}
-							<Text size="sm" fw={500}>
-								{label}
-							</Text>
-						</Group>
-					</UnstyledButton>
-					{headerAction}
-				</Group>
-
-				{/* Custom Content */}
-				{expanded && (
-					<Box mt="xs">
-						{children}
-					</Box>
-				)}
-			</Box>
-		);
-	}
-
-	// Original filter logic for array-based filters
-	if (options.length === 0) return null;
+	// Return early if no options and no children
+	if (options.length === 0 && !children) return null;
 
 	// Check if a value has an image available
 	const hasImage = (value: string) => displayMode === "icon" && Boolean(getImage?.(value));
@@ -250,6 +220,58 @@ function FilterSection({
 		return formatValue(value);
 	};
 
+	// Render filter options content
+	const renderFilterOptions = () => {
+		if (!field || !onToggle || options.length === 0) return null;
+
+		return (
+			<>
+				{/* Show all options when expanded */}
+				<Group gap="xs" wrap="wrap" mt="xs">
+					{options.map((value) => {
+						const isSelected = selectedValues.includes(value);
+						const hasAnySelection = selectedValues.length > 0;
+						if (hasImage(value)) {
+							return (
+								<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
+									<UnstyledButton
+										onClick={() => { onToggle(field, value); }}
+										style={{
+											...FILTER_BUTTON_BASE_STYLE,
+											border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
+											background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
+											opacity: hasAnySelection && !isSelected ? 0.7 : 1,
+										}}
+									>
+										{renderChipContent(value)}
+									</UnstyledButton>
+								</Tooltip>
+							);
+						}
+						return (
+							<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
+								<UnstyledButton
+									onClick={() => { onToggle(field, value); }}
+									style={{
+										...FILTER_BUTTON_BASE_STYLE,
+										border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
+										background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
+										color: isSelected ? "white" : `var(--mantine-color-${color}-filled)`,
+										opacity: hasAnySelection && !isSelected ? 0.7 : 1,
+									}}
+								>
+									<Text size="xs" fw={500} lineClamp={2} ta="center">
+										{formatValue(value)}
+									</Text>
+								</UnstyledButton>
+							</Tooltip>
+						);
+					})}
+				</Group>
+			</>
+		);
+	};
+
 	return (
 		<Box>
 			{/* Accordion Header */}
@@ -263,9 +285,11 @@ function FilterSection({
 						<Text size="sm" fw={500}>
 							{label}
 						</Text>
-						<Text size="xs" c="dimmed">
-							({options.length})
-						</Text>
+						{options.length > 0 && (
+							<Text size="xs" c="dimmed">
+								({options.length})
+							</Text>
+						)}
 						{selectedValues.length > 0 && (
 							<Badge size="xs" variant="filled" color={color}>
 								{selectedValues.length} selected
@@ -284,7 +308,7 @@ function FilterSection({
 							return (
 								<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
 									<UnstyledButton
-										onClick={() => { if (onToggle && field) onToggle(field, value); }}
+										onClick={() => { onToggle(field, value); }}
 										style={{
 											...FILTER_BUTTON_BASE_STYLE,
 											border: `2px solid var(--mantine-color-${color}-filled)`,
@@ -299,7 +323,7 @@ function FilterSection({
 						return (
 							<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
 								<UnstyledButton
-									onClick={() => { if (onToggle && field) onToggle(field, value); }}
+									onClick={() => { onToggle(field, value); }}
 									style={{
 										...FILTER_BUTTON_BASE_STYLE,
 										border: `2px solid var(--mantine-color-${color}-filled)`,
@@ -317,50 +341,21 @@ function FilterSection({
 				</Group>
 			)}
 
-			{/* Expanded: Show all options */}
-			<Collapse in={expanded}>
-				<Group gap="xs" wrap="wrap" mt="xs">
-					{options.map((value) => {
-						const isSelected = selectedValues.includes(value);
-						const hasAnySelection = selectedValues.length > 0;
-						if (hasImage(value)) {
-							return (
-								<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
-									<UnstyledButton
-										onClick={() => { if (onToggle && field) onToggle(field, value); }}
-										style={{
-											...FILTER_BUTTON_BASE_STYLE,
-											border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
-											background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
-											opacity: hasAnySelection && !isSelected ? 0.7 : 1,
-										}}
-									>
-										{renderChipContent(value)}
-									</UnstyledButton>
-								</Tooltip>
-							);
-						}
-						return (
-							<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
-								<UnstyledButton
-									onClick={() => { if (onToggle && field) onToggle(field, value); }}
-									style={{
-										...FILTER_BUTTON_BASE_STYLE,
-										border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
-										background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
-										color: isSelected ? "white" : `var(--mantine-color-${color}-filled)`,
-										opacity: hasAnySelection && !isSelected ? 0.7 : 1,
-									}}
-								>
-									<Text size="xs" fw={500} lineClamp={2} ta="center">
-										{formatValue(value)}
-									</Text>
-								</UnstyledButton>
-							</Tooltip>
-						);
-					})}
-				</Group>
-			</Collapse>
+			{/* Content when expanded */}
+			{expanded && (
+				<Box mt="xs">
+					{/* Show filter options */}
+					{renderFilterOptions()}
+
+					{/* Show custom content with divider if both exist */}
+					{children && (
+						<>
+							{field && options.length > 0 && <Divider my="sm" />}
+							{children}
+						</>
+					)}
+				</Box>
+			)}
 		</Box>
 	);
 }
