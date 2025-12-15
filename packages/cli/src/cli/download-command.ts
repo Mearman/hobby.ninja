@@ -11,6 +11,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
+import { load as cheerioLoad } from "cheerio";
 import type { Browser, BrowserContext, Page } from "playwright";
 
 const IMAGE_DELAY_MS = 50;
@@ -22,6 +23,8 @@ export interface DownloadOptions {
 	manualsSourceDir: string; // Directory containing manual JSON files
 	manualsDir: string; // Output directory for manual assets (images, PDFs)
 	catalogDir: string;
+	catalogImagesDir: string; // Output directory for catalog images
+	catalogIds?: string[]; // Specific catalog IDs to download
 	concurrency: number;
 	delayMs: number;
 	dryRun: boolean;
@@ -33,6 +36,182 @@ export interface DownloadOptions {
 let playwrightBrowser: Browser | null = null;
 let playwrightContext: BrowserContext | null = null;
 let playwrightPage: Page | null = null;
+
+/**
+ * Scrape and immediately download images using the shared Playwright instance
+ */
+async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, outputDir: string): Promise<string[]> {
+	const localPaths: string[] = [];
+
+	try {
+		// Initialize Playwright browser first to get fresh URLs from live page
+		if (!playwrightPage) {
+			await initPlaywright();
+		}
+		if (!playwrightPage) throw new Error("Playwright not initialized");
+
+		console.log(`  Visiting page to get fresh image URLs...`);
+		// Clear cache and cookies to ensure fresh content
+		await playwrightPage.context().clearCookies();
+
+		// Visit the page with cache-busting to get fresh URLs
+		await playwrightPage.goto(`${sourceUrl}?_=${Date.now()}`, {
+			waitUntil: "networkidle",
+			timeout: 30_000,
+			extraHTTPHeaders: {
+				"Cache-Control": "no-cache, no-store, must-revalidate",
+				"Pragma": "no-cache",
+				"Expires": "0",
+			},
+		});
+		await playwrightPage.waitForTimeout(3000); // Longer wait for dynamic content
+
+		// Try to trigger any lazy loading or dynamic content
+		await playwrightPage.evaluate(() => {
+			// Scroll to bottom to trigger lazy loading
+			window.scrollTo(0, document.body.scrollHeight);
+		});
+		await playwrightPage.waitForTimeout(2000);
+		await playwrightPage.evaluate(() => {
+			// Scroll back to top
+			window.scrollTo(0, 0);
+		});
+		await playwrightPage.waitForTimeout(1000);
+
+		// Try to force image reload to get fresh URLs
+		await playwrightPage.evaluate(() => {
+			// Find all CloudFront images and force reload
+			const images = document.querySelectorAll("img[src*='cloudfront.net'][src*='/product/']");
+			for (const img of images) {
+				const imgEl = img as HTMLImageElement;
+				const src = imgEl.src;
+				// Add timestamp to force reload
+				imgEl.src = src.includes("?") ? src + "&_=" + Date.now() : src + "?_=" + Date.now();
+			}
+		});
+		await playwrightPage.waitForTimeout(2000);
+
+		// Get image URLs directly from the live browser page
+		const imageUrls = await playwrightPage.evaluate(() => {
+			const urls = [];
+			const seen = new Set();
+
+			console.log("Looking for CloudFront images on live page...");
+
+			// CloudFront product images (excluding brand images)
+			const images = document.querySelectorAll("img[src*='cloudfront.net'][src*='/product/']");
+			console.log(`Found ${images.length} CloudFront product images`);
+			for (const element of images) {
+				const src = (element as HTMLImageElement).src || "";
+				console.log(`Found image: ${src.slice(0, 100)}...`);
+				if (!seen.has(src) && !src.includes("/brand/")) {
+					seen.add(src);
+					urls.push(src);
+				}
+			}
+
+			// Also check data-src attributes
+			const dataSrcImages = document.querySelectorAll("img[data-src*='cloudfront.net'][data-src*='/product/']");
+			console.log(`Found ${dataSrcImages.length} CloudFront data-src images`);
+			for (const element of dataSrcImages) {
+				const src = element as HTMLImageElement.dataset.src || "";
+				console.log(`Found data-src: ${src.slice(0, 100)}...`);
+				if (!seen.has(src) && !src.includes("/brand/")) {
+					seen.add(src);
+					urls.push(src);
+				}
+			}
+
+			return urls;
+		});
+
+		console.log(`  Found ${imageUrls.length} product images`);
+
+		// Debug: Print the first few URLs
+		for (const [i, url] of imageUrls.slice(0, 3).entries()) {
+			console.log(`  URL ${i}: ${url.slice(0, 120)}...`);
+		}
+
+		if (imageUrls.length === 0) {
+			return [];
+		}
+
+		// Ensure output directory exists
+		await fs.mkdir(outputDir, { recursive: true });
+
+		// Download images immediately - get fresh URL for each image
+		for (let i = 0; i < imageUrls.length; i++) {
+			const ext = imageUrls[i].split(".").pop()?.split("?")[0] || "jpg";
+			const filename = `${itemId}_${i}.${ext}`;
+			const localPath = path.join(outputDir, filename);
+
+			// Skip if already exists
+			try {
+				await fs.access(localPath);
+				console.log(`  Skipped (exists): ${filename}`);
+				localPaths.push(`/images/items/${filename}`);
+				continue;
+			} catch {
+				// File doesn't exist, download it
+			}
+
+			try {
+				console.log(`  Getting fresh URL for ${filename}...`);
+
+				// Re-visit the page to get fresh URLs for each image download
+				await playwrightPage.goto(`${sourceUrl}?_=${Date.now()}`, {
+					waitUntil: "networkidle",
+					timeout: 30_000,
+					extraHTTPHeaders: {
+						"Cache-Control": "no-cache, no-store, must-revalidate",
+						"Pragma": "no-cache",
+						"Expires": "0",
+					},
+				});
+				await playwrightPage.waitForTimeout(2000);
+
+				// Get fresh URLs and use the one at position i
+				const freshUrls = await playwrightPage.evaluate(() => {
+					const images = document.querySelectorAll("img[src*='cloudfront.net'][src*='/product/']");
+					return [...images].map(img => (img as HTMLImageElement).src);
+				});
+
+				if (freshUrls[i]) {
+					console.log(`  Downloading: ${filename}...`);
+
+					// Navigate to image URL immediately
+					const response = await playwrightPage.goto(freshUrls[i], {
+						waitUntil: "load",
+						timeout: 30_000,
+					});
+
+					if (response && response.ok()) {
+						const buffer = await response.body();
+						await fs.writeFile(localPath, buffer);
+						console.log(`  ✓ Downloaded: ${filename}`);
+						localPaths.push(`/images/items/${filename}`);
+					} else {
+						throw new Error(`HTTP ${response?.status() || "unknown"}`);
+					}
+				} else {
+					throw new Error("No fresh URL available for this image");
+				}
+			} catch (error) {
+				console.error(`  ✗ Failed to download ${filename}:`, error instanceof Error ? error.message : error);
+			}
+
+			// Small delay between downloads
+			if (i < imageUrls.length - 1) {
+				await sleep(100);
+			}
+		}
+
+		return localPaths;
+	} catch (error) {
+		console.error(`Failed to scrape/download images from ${sourceUrl}:`, error instanceof Error ? error.message : error);
+		return [];
+	}
+}
 
 export interface DownloadResult {
 	totalItems: number;
@@ -293,58 +472,67 @@ async function downloadManualAssets(
 }
 
 async function downloadCatalogAssets(
-	itemDir: string,
 	item: CatalogItemJson,
 	options: DownloadOptions,
+	jsonPath?: string,
 ): Promise<{ downloaded: number; skipped: number; failed: number; errors: string[] }> {
 	const stats = { downloaded: 0, skipped: 0, failed: 0, errors: [] as string[] };
 
+	// Handle missing images array by scraping and downloading immediately
 	if (!item.images || item.images.length === 0) {
-		return stats;
-	}
-
-	// Check if any images require Playwright (CloudFront/Akamai signed URLs)
-	const needsPlaywright = item.images.some((url) => url && requiresPlaywright(url));
-
-	// If signed URLs and we have a source URL, visit the page first to get cookies
-	if (needsPlaywright && item.sourceUrl && !options.dryRun) {
-		try {
-			await visitPageForSession(item.sourceUrl);
-		} catch (error) {
-			const msg = error instanceof Error ? error.message : String(error);
-			stats.errors.push(`${item.id}: Failed to load source page: ${msg}`);
-			stats.failed += item.images.length;
+		if (!item.sourceUrl) {
+			if (options.verbose) {
+				console.log(`[${item.id}] No images array and no sourceUrl - skipping`);
+			}
 			return stats;
 		}
-	}
 
-	for (let i = 0; i < item.images.length; i++) {
-		const imageUrl = item.images[i];
-		if (!imageUrl) continue;
+		if (options.verbose) {
+			console.log(`[${item.id}] No images array - scraping and downloading immediately...`);
+		}
 
-		const ext = getImageExtension(imageUrl);
-		// Name images as {id}_0.jpg, {id}_1.jpg, etc.
-		const imagePath = path.join(itemDir, `${item.id}_${i}.${ext}`);
+		// Ensure output directory exists
+		await fs.mkdir(options.catalogImagesDir, { recursive: true });
 
-		if (options.dryRun) {
-			console.log(`  Would download: ${imageUrl} -> ${path.basename(imagePath)}`);
-			stats.skipped++;
+		// Scrape and download images in one go
+		const localImagePaths = options.dryRun
+			? []
+			: await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir);
+
+		if (localImagePaths.length > 0) {
+			stats.downloaded = localImagePaths.length;
+			if (options.verbose) {
+				console.log(`  ✓ Downloaded ${localImagePaths.length} images`);
+			}
+
+			// Update the JSON file with local paths
+			if (jsonPath && !options.dryRun) {
+				try {
+					// Read the original file to preserve other fields
+					const originalContent = await fs.readFile(jsonPath, "utf8");
+					const originalItem = JSON.parse(originalContent);
+
+					// Update only the images array
+					originalItem.images = localImagePaths;
+
+					// Write back to file
+					await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf-8");
+
+					if (options.verbose) {
+						console.log(`  ✓ Updated JSON with ${localImagePaths.length} local image paths`);
+					}
+				} catch (error) {
+					const msg = error instanceof Error ? error.message : String(error);
+					stats.errors.push(`${item.id}: Failed to update JSON file: ${msg}`);
+				}
+			}
 		} else {
-			const result = await downloadFile(imageUrl, imagePath, options.verbose, needsPlaywright);
-			if (result.downloaded) {
-				stats.downloaded++;
-			} else if (result.error) {
-				stats.failed++;
-				stats.errors.push(`${item.id} image[${i}]: ${result.error}`);
-			} else {
-				stats.skipped++;
+			if (options.verbose) {
+				console.log(`[${item.id}] No images found or downloaded`);
 			}
 		}
 
-		// Small delay between images in same item
-		if (i < item.images.length - 1 && !options.dryRun) {
-			await sleep(IMAGE_DELAY_MS);
-		}
+		return stats;
 	}
 
 	return stats;
@@ -443,7 +631,16 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 
 	try {
 		const entries = await fs.readdir(options.catalogDir, { withFileTypes: true });
-		const ids = entries.filter((e) => e.isDirectory()).map((e) => e.name).toSorted();
+		let ids = entries
+			.filter((e) => e.isFile() && e.name.endsWith(".json"))
+			.map((e) => e.name.replace(".json", ""))
+			.toSorted();
+
+		// Filter by specific IDs if provided
+		if (options.catalogIds && options.catalogIds.length > 0) {
+			ids = ids.filter(id => options.catalogIds.includes(id));
+		}
+
 		result.totalItems = ids.length;
 
 		console.log(`Processing ${ids.length} catalog items from ${options.catalogDir}`);
@@ -454,8 +651,7 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 
 			const batchResults = await Promise.all(
 				batch.map(async (id) => {
-					const itemDir = path.join(options.catalogDir, id);
-					const jsonPath = path.join(itemDir, `${id}.json`);
+					const jsonPath = path.join(options.catalogDir, `${id}.json`);
 
 					try {
 						const content = await fs.readFile(jsonPath, "utf8");
@@ -465,7 +661,7 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 							console.log(`[${id}] Processing ${item.images?.length ?? 0} images...`);
 						}
 
-						return await downloadCatalogAssets(itemDir, item, options);
+						return await downloadCatalogAssets(item, options, jsonPath);
 					} catch (error) {
 						const msg = error instanceof Error ? error.message : String(error);
 						return { downloaded: 0, skipped: 0, failed: 1, errors: [`${id}: ${msg}`] };
