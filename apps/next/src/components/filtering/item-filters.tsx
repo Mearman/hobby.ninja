@@ -300,6 +300,18 @@ export function ItemFilters({
 		updatePreference("filterDisplayMode", displayMode === "icon" ? "text" : "icon");
 	};
 
+	// Filter out brands that are actually grades to avoid duplication
+	const getFilteredBrands = () => {
+		return availableOptions.brands.filter(brandId => {
+			const brand = getBrandById(brandId);
+			// Filter out if the brand is marked as a grade
+			return !brand?.isGrade;
+		});
+	};
+
+	// Get filtered brands before using them
+	const filteredBrands = getFilteredBrands();
+
 	// Bulk operations for filter sections
 	const selectAllGrades = () => {
 		onFilterChange({ grades: availableOptions.grades });
@@ -310,7 +322,7 @@ export function ItemFilters({
 	};
 
 	const selectAllBrands = () => {
-		onFilterChange({ brands: availableOptions.brands });
+		onFilterChange({ brands: filteredBrands });
 	};
 
 	const clearBrands = () => {
@@ -478,7 +490,7 @@ export function ItemFilters({
 							<FilterSection
 								label="Brands"
 								field="brands"
-								options={availableOptions.brands}
+								options={filteredBrands}
 								selectedValues={filterState.brands}
 								onToggle={onToggleFilterValue}
 								formatValue={formatBrandName}
@@ -487,7 +499,7 @@ export function ItemFilters({
 								displayMode={displayMode}
 								headerAction={createFilterActions(
 									filterState.brands.length,
-									availableOptions.brands.length,
+									filteredBrands.length,
 									selectAllBrands,
 									clearBrands,
 									"blue",

@@ -146,6 +146,11 @@ export const BrandSchema = z.object({
 	description: z.string().optional(),
 	itemCount: z.number().optional(),
 
+	// Grade relationship
+	gradeId: z.string().optional(),
+	grade: z.boolean().optional(),
+	isGrade: z.boolean().optional(),
+
 	// Source tracking
 	sourceUrl: z.string().url().optional(),
 	extractedAt: z.string().datetime().optional(),
