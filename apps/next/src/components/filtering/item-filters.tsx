@@ -15,6 +15,7 @@ import {
 	Box,
 	Button,
 	Card,
+	Checkbox,
 	Collapse,
 	Divider,
 	Group,
@@ -914,6 +915,16 @@ export function ItemFilters({
 														style={{ flex: 1 }}
 														min={formatForDateInput(defaultStartDate)}
 														max={formatForDateInput(maxDate)}
+													/>
+												</Group>
+												<Group gap="sm" mt="xs">
+													<Checkbox
+														size="xs"
+														checked={filterState.showNoDate}
+														onChange={(e) => {
+															onFilterChange({ showNoDate: e.target.checked });
+														}}
+														label="Other (no date)"
 													/>
 												</Group>
 											</>

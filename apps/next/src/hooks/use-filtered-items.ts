@@ -37,6 +37,7 @@ export interface FilterState {
 	series: string[];
 	categories: string[];
 	dateRange: [string, string] | null;
+	showNoDate: boolean;
 	sortField: string;
 	sortDirection: "asc" | "desc";
 }
@@ -78,6 +79,7 @@ const DEFAULT_FILTER_STATE: FilterState = {
 	series: [],
 	categories: [],
 	dateRange: null,
+	showNoDate: false,
 	sortField: "date",
 	sortDirection: "desc",
 };
@@ -187,13 +189,25 @@ export function useFilteredItems(
 			});
 		}
 
-		// Apply date range filter (if active)
-		if (filterState.dateRange) {
-			const [startDate, endDate] = filterState.dateRange;
+		// Apply date filter (if active)
+		if (filterState.dateRange || filterState.showNoDate) {
 			result = result.filter(item => {
 				const itemDateStr = getNodeReleaseDateSortable(item);
-				if (!itemDateStr) return false; // Exclude items without dates
-				return itemDateStr >= startDate && itemDateStr <= endDate;
+				const hasNoDate = !itemDateStr;
+
+				// If showing no-date items, include them
+				if (hasNoDate && filterState.showNoDate) {
+					return true;
+				}
+
+				// If showing date range, filter items with dates
+				if (filterState.dateRange && !hasNoDate) {
+					const [startDate, endDate] = filterState.dateRange;
+					return itemDateStr >= startDate && itemDateStr <= endDate;
+				}
+
+				// If neither filter is active or item doesn't match current filter, exclude it
+				return false;
 			});
 		}
 		if (filterState.series.length > 0) {
@@ -319,33 +333,35 @@ export function useFilteredItems(
 
 	// Check if any filters are active
 	const hasActiveFilters = useMemo(() => {
-		const { sortField, sortDirection, search, scaleRange, dateRange, ...arrayFilters } = filterState;
+		const { sortField, sortDirection, search, scaleRange, dateRange, showNoDate, ...arrayFilters } = filterState;
 		const defaultSortField = DEFAULT_FILTER_STATE.sortField;
 		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
-		
+
 		const hasSearch = search !== "";
 		const hasArrayFilters = Object.values(arrayFilters).some(arr => arr.length > 0);
 		const hasNonDefaultSort = sortField !== defaultSortField || sortDirection !== defaultSortDirection;
 		const hasNonDefaultScaleRange = scaleRange !== null;
 		const hasDateRange = dateRange !== null;
+		const hasNoDateFilter = showNoDate !== false;
 
-		return hasSearch || hasArrayFilters || hasNonDefaultSort || hasNonDefaultScaleRange || hasDateRange;
+		return hasSearch || hasArrayFilters || hasNonDefaultSort || hasNonDefaultScaleRange || hasDateRange || hasNoDateFilter;
 	}, [filterState]);
 
 	// Count active filters
 	const activeFilterCount = useMemo(() => {
-		const { sortField, sortDirection, search, scaleRange, dateRange, ...arrayFilters } = filterState;
+		const { sortField, sortDirection, search, scaleRange, dateRange, showNoDate, ...arrayFilters } = filterState;
 		const defaultSortField = DEFAULT_FILTER_STATE.sortField;
 		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
-		
+
 		const searchCount = search === "" ? 0 : 1;
 		// Count total number of selected filter values across all arrays
 		const arrayFilterCount = Object.values(arrayFilters).reduce((sum, arr) => sum + arr.length, 0);
 		const sortCount = (sortField === defaultSortField ? 0 : 1) + (sortDirection === defaultSortDirection ? 0 : 1);
 		const scaleRangeCount = scaleRange === null ? 0 : 1;
 		const dateRangeCount = dateRange === null ? 0 : 1;
+		const noDateCount = showNoDate ? 1 : 0;
 
-		return searchCount + arrayFilterCount + sortCount + scaleRangeCount + dateRangeCount;
+		return searchCount + arrayFilterCount + sortCount + scaleRangeCount + dateRangeCount + noDateCount;
 	}, [filterState]);
 
 	return {
