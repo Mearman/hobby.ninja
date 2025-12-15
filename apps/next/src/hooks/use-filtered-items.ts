@@ -38,9 +38,6 @@ export interface FilterState {
 	categories: string[];
 	dateRange: [string, string] | null;
 	showNoDate: boolean;
-	showNoBrand: boolean;
-	showNoSeries: boolean;
-	showNoGrade: boolean;
 	sortField: string;
 	sortDirection: "asc" | "desc";
 }
@@ -83,9 +80,6 @@ const DEFAULT_FILTER_STATE: FilterState = {
 	categories: [],
 	dateRange: null,
 	showNoDate: false,
-	showNoBrand: false,
-	showNoSeries: false,
-	showNoGrade: false,
 	sortField: "date",
 	sortDirection: "desc",
 };
@@ -105,6 +99,11 @@ export function useFilteredItems(
 		const categories = new Set<string>();
 
 		const validItems: Item[] = items.filter((item): item is Item => isItem(item));
+
+		// Track if we have items with no data for each category
+		let hasItemsWithNoBrand = false;
+		let hasItemsWithNoSeries = false;
+		let hasItemsWithNoGrade = false;
 
 		for (const item of validItems) {
 			// Use array-based IDs from the data package
@@ -127,14 +126,45 @@ export function useFilteredItems(
 			for (const categoryId of item.categoryIds) {
 				categories.add(categoryId);
 			}
+
+			// Check for items with no data
+			if (item.brandIds.length === 0) hasItemsWithNoBrand = true;
+			if (item.seriesIds.length === 0) hasItemsWithNoSeries = true;
+			if (Object.keys(item.grades).length === 0) hasItemsWithNoGrade = true;
 		}
 
+		// Add "Other" options if we have items with no data
+		if (hasItemsWithNoBrand) brands.add("Other");
+		if (hasItemsWithNoSeries) series.add("Other");
+		if (hasItemsWithNoGrade) grades.add("Other");
+
+		// Sort functions that place "Other" at the end
+		const sortWithOtherLast = (a: string, b: string) => {
+			if (a === "Other") return 1;
+			if (b === "Other") return -1;
+			return a.localeCompare(b);
+		};
+
+		const sortGradesWithOtherLast = (a: string, b: string) => {
+			if (a === "Other") return 1;
+			if (b === "Other") return -1;
+			return sortGradeIds([a, b])[0] === a ? -1 : 1;
+		};
+
+		const sortScalesWithOtherLast = (a: string, b: string) => {
+			if (a === "Other") return 1;
+			if (b === "Other") return -1;
+			const denomA = parseScaleDenominator(a);
+			const denomB = parseScaleDenominator(b);
+			return denomA - denomB;
+		};
+
 		return {
-			brands: [...brands].toSorted(),
-			grades: sortGradeIds([...grades]),
-			scales: sortScales([...scales]),
-			series: [...series].toSorted(),
-			categories: [...categories].toSorted(),
+			brands: [...brands].toSorted(sortWithOtherLast),
+			grades: sortGradeIds([...grades]).toSorted(sortGradesWithOtherLast),
+			scales: sortScales([...scales]).toSorted(sortScalesWithOtherLast),
+			series: [...series].toSorted(sortWithOtherLast),
+			categories: [...categories].toSorted(sortWithOtherLast),
 		};
 	}, [items]);
 
@@ -165,21 +195,29 @@ export function useFilteredItems(
 			});
 		}
 
-			// Apply brand filter
+		// Apply brand filter
 		if (filterState.brands.length > 0) {
-			result = result.filter(item =>
-				item.brandIds.some(brandId => filterState.brands.includes(brandId)),
-			);
+			result = result.filter(item => {
+				const hasOtherBrand = filterState.brands.includes("Other");
+				const hasNoBrands = item.brandIds.length === 0;
+				const hasMatchingBrand = item.brandIds.some(brandId => filterState.brands.includes(brandId));
+
+				return hasOtherBrand ? (hasNoBrands || hasMatchingBrand) : hasMatchingBrand;
+			});
 		}
 		// Grade filter: matches if any selected grade is a root key OR in any specific grades array
 		if (filterState.grades.length > 0) {
-			result = result.filter(item =>
-				filterState.grades.some(
+			result = result.filter(item => {
+				const hasOtherGrade = filterState.grades.includes("Other");
+				const hasNoGrades = Object.keys(item.grades).length === 0;
+				const hasMatchingGrade = filterState.grades.some(
 					(selectedGrade) =>
 						selectedGrade in item.grades ||
 						Object.values(item.grades).flat().includes(selectedGrade),
-				),
-			);
+				);
+
+				return hasOtherGrade ? (hasNoGrades || hasMatchingGrade) : hasMatchingGrade;
+			});
 		}
 		if (filterState.scales.length > 0) {
 			result = result.filter(item => item.scale != null && filterState.scales.includes(item.scale));
@@ -223,9 +261,13 @@ export function useFilteredItems(
 		}
 		// Apply series filter
 		if (filterState.series.length > 0) {
-			result = result.filter(item =>
-				item.seriesIds.some(seriesId => filterState.series.includes(seriesId)),
-			);
+			result = result.filter(item => {
+				const hasOtherSeries = filterState.series.includes("Other");
+				const hasNoSeries = item.seriesIds.length === 0;
+				const hasMatchingSeries = item.seriesIds.some(seriesId => filterState.series.includes(seriesId));
+
+				return hasOtherSeries ? (hasNoSeries || hasMatchingSeries) : hasMatchingSeries;
+			});
 		}
 		if (filterState.categories.length > 0) {
 			result = result.filter(item =>
@@ -345,7 +387,7 @@ export function useFilteredItems(
 
 	// Check if any filters are active
 	const hasActiveFilters = useMemo(() => {
-		const { sortField, sortDirection, search, scaleRange, dateRange, showNoDate, showNoBrand, showNoSeries, showNoGrade, ...arrayFilters } = filterState;
+		const { sortField, sortDirection, search, scaleRange, dateRange, showNoDate, ...arrayFilters } = filterState;
 		const defaultSortField = DEFAULT_FILTER_STATE.sortField;
 		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
 
@@ -354,17 +396,14 @@ export function useFilteredItems(
 		const hasNonDefaultSort = sortField !== defaultSortField || sortDirection !== defaultSortDirection;
 		const hasNonDefaultScaleRange = scaleRange !== null;
 		const hasDateRange = dateRange !== null;
-		const hasNoDateFilter = showNoDate !== false;
-		const hasNoBrandFilter = showNoBrand !== false;
-		const hasNoSeriesFilter = showNoSeries !== false;
-		const hasNoGradeFilter = showNoGrade !== false;
+		const hasNoDateFilter = showNoDate;
 
-		return hasSearch || hasArrayFilters || hasNonDefaultSort || hasNonDefaultScaleRange || hasDateRange || hasNoDateFilter || hasNoBrandFilter || hasNoSeriesFilter || hasNoGradeFilter;
+		return hasSearch || hasArrayFilters || hasNonDefaultSort || hasNonDefaultScaleRange || hasDateRange || hasNoDateFilter;
 	}, [filterState]);
 
 	// Count active filters
 	const activeFilterCount = useMemo(() => {
-		const { sortField, sortDirection, search, scaleRange, dateRange, showNoDate, showNoBrand, showNoSeries, showNoGrade, ...arrayFilters } = filterState;
+		const { sortField, sortDirection, search, scaleRange, dateRange, showNoDate, ...arrayFilters } = filterState;
 		const defaultSortField = DEFAULT_FILTER_STATE.sortField;
 		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
 
@@ -375,11 +414,8 @@ export function useFilteredItems(
 		const scaleRangeCount = scaleRange === null ? 0 : 1;
 		const dateRangeCount = dateRange === null ? 0 : 1;
 		const noDateCount = showNoDate ? 1 : 0;
-		const noBrandCount = showNoBrand ? 1 : 0;
-		const noSeriesCount = showNoSeries ? 1 : 0;
-		const noGradeCount = showNoGrade ? 1 : 0;
 
-		return searchCount + arrayFilterCount + sortCount + scaleRangeCount + dateRangeCount + noDateCount + noBrandCount + noSeriesCount + noGradeCount;
+		return searchCount + arrayFilterCount + sortCount + scaleRangeCount + dateRangeCount + noDateCount;
 	}, [filterState]);
 
 	return {
