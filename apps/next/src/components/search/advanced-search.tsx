@@ -149,10 +149,9 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 													/>
 												)}
 												<span>{option.label}</span>
-											);
-										}}
-										</Group>
-									)}
+											</Group>
+										);
+									}}
 								/>
 
 								{/* Category Filter */}
@@ -194,10 +193,9 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 													/>
 												)}
 												<span>{option.label}</span>
-											);
-										}}
-										</Group>
-									)}
+											</Group>
+										);
+									}}
 								/>
 
 								{/* Grade Filter */}

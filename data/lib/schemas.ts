@@ -257,6 +257,7 @@ export const GradeDataSchema = z.object({
 	itemIds: z.array(z.string()).default([]),
 	itemCount: z.number(),
 	sortOrder: z.number().default(DEFAULT_GRADE_SORT_ORDER),
+	image: z.string().optional(),
 });
 
 export type GradeData = z.infer<typeof GradeDataSchema>;

@@ -138,6 +138,10 @@ export function HierarchicalGradeFilter({
 			);
 		}
 
+		// For icon mode without images, show grade abbreviation in a more icon-like style
+		const gradeAbbr = gradeId.toUpperCase().replace("-", " ");
+		const iconText = displayMode === "icon" ? gradeAbbr : label;
+
 		return (
 			<Tooltip key={gradeId} label={label} position="top" withArrow={true}>
 				<UnstyledButton
@@ -151,8 +155,17 @@ export function HierarchicalGradeFilter({
 						fontStyle: options?.dashed ? "italic" : "normal",
 					}}
 				>
-					<Text size="xs" fw={500} lineClamp={2} ta="center">
-						{label}
+					<Text
+						size={displayMode === "icon" ? "sm" : "xs"}
+						fw={700}
+						lineClamp={displayMode === "icon" ? 1 : 2}
+						ta="center"
+						style={{
+							fontSize: displayMode === "icon" ? "14px" : "10px",
+							letterSpacing: displayMode === "icon" ? "0.5px" : "normal",
+						}}
+					>
+						{iconText}
 					</Text>
 				</UnstyledButton>
 			</Tooltip>
@@ -434,6 +447,9 @@ export function HierarchicalGradeFilter({
 					{selectedGrades.map((gradeId) => {
 						const grade = getGradeById(gradeId);
 						const imageSrc = grade?.image;
+						const gradeAbbr = gradeId.toUpperCase().replace("-", " ");
+						const iconText = displayMode === "icon" ? gradeAbbr : formatGradeName(gradeId);
+
 						if (displayMode === "icon" && imageSrc) {
 							return (
 								<Tooltip key={gradeId} label={formatGradeName(gradeId)} position="top" withArrow={true}>
@@ -456,6 +472,7 @@ export function HierarchicalGradeFilter({
 								</Tooltip>
 							);
 						}
+
 						return (
 							<Tooltip key={gradeId} label={formatGradeName(gradeId)} position="top" withArrow={true}>
 								<UnstyledButton
@@ -467,8 +484,17 @@ export function HierarchicalGradeFilter({
 										color: "white",
 									}}
 								>
-									<Text size="xs" fw={500} lineClamp={2} ta="center">
-										{formatGradeName(gradeId)}
+									<Text
+										size={displayMode === "icon" ? "sm" : "xs"}
+										fw={700}
+										lineClamp={displayMode === "icon" ? 1 : 2}
+										ta="center"
+										style={{
+											fontSize: displayMode === "icon" ? "14px" : "10px",
+											letterSpacing: displayMode === "icon" ? "0.5px" : "normal",
+										}}
+									>
+										{iconText}
 									</Text>
 								</UnstyledButton>
 							</Tooltip>
