@@ -33,7 +33,7 @@ export interface FilterState {
 	brands: string[];
 	grades: string[];
 	scales: string[];
-	scaleRange: [number, number];
+	scaleRange: [number, number] | null;
 	series: string[];
 	categories: string[];
 	dateRange: [string, string] | null;
@@ -74,7 +74,7 @@ const DEFAULT_FILTER_STATE: FilterState = {
 	brands: [],
 	grades: [],
 	scales: [],
-	scaleRange: [1, 100_000],
+	scaleRange: null,
 	series: [],
 	categories: [],
 	dateRange: null,
@@ -177,9 +177,9 @@ export function useFilteredItems(
 			result = result.filter(item => item.scale != null && filterState.scales.includes(item.scale));
 		}
 
-		// Apply scale range filter (if not at default range)
-		const [minDenom, maxDenom] = filterState.scaleRange;
-		if (minDenom !== 1 || maxDenom !== 100_000) {
+		// Apply scale range filter (if active)
+		if (filterState.scaleRange) {
+			const [minDenom, maxDenom] = filterState.scaleRange;
 			result = result.filter(item => {
 				if (!item.scale) return false;
 				const denom = parseScaleDenominator(item.scale);
@@ -322,12 +322,11 @@ export function useFilteredItems(
 		const { sortField, sortDirection, search, scaleRange, dateRange, ...arrayFilters } = filterState;
 		const defaultSortField = DEFAULT_FILTER_STATE.sortField;
 		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
-		const defaultScaleRange = DEFAULT_FILTER_STATE.scaleRange;
-
+		
 		const hasSearch = search !== "";
 		const hasArrayFilters = Object.values(arrayFilters).some(arr => arr.length > 0);
 		const hasNonDefaultSort = sortField !== defaultSortField || sortDirection !== defaultSortDirection;
-		const hasNonDefaultScaleRange = scaleRange[0] !== defaultScaleRange[0] || scaleRange[1] !== defaultScaleRange[1];
+		const hasNonDefaultScaleRange = scaleRange !== null;
 		const hasDateRange = dateRange !== null;
 
 		return hasSearch || hasArrayFilters || hasNonDefaultSort || hasNonDefaultScaleRange || hasDateRange;
@@ -338,14 +337,13 @@ export function useFilteredItems(
 		const { sortField, sortDirection, search, scaleRange, dateRange, ...arrayFilters } = filterState;
 		const defaultSortField = DEFAULT_FILTER_STATE.sortField;
 		const defaultSortDirection = DEFAULT_FILTER_STATE.sortDirection;
-		const defaultScaleRange = DEFAULT_FILTER_STATE.scaleRange;
-
+		
 		const searchCount = search === "" ? 0 : 1;
 		// Count total number of selected filter values across all arrays
 		const arrayFilterCount = Object.values(arrayFilters).reduce((sum, arr) => sum + arr.length, 0);
 		const sortCount = (sortField === defaultSortField ? 0 : 1) + (sortDirection === defaultSortDirection ? 0 : 1);
-		const scaleRangeCount = (scaleRange[0] !== defaultScaleRange[0] || scaleRange[1] !== defaultScaleRange[1]) ? 1 : 0;
-		const dateRangeCount = dateRange !== null ? 1 : 0;
+		const scaleRangeCount = scaleRange === null ? 0 : 1;
+		const dateRangeCount = dateRange === null ? 0 : 1;
 
 		return searchCount + arrayFilterCount + sortCount + scaleRangeCount + dateRangeCount;
 	}, [filterState]);

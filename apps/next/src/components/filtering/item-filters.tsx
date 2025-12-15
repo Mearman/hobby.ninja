@@ -41,9 +41,6 @@ import { HierarchicalGradeFilter } from "@/components/filtering/hierarchical-gra
 import { FilterState } from "@/hooks/use-filtered-items";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
 
-// Constants for scale range filtering
-const DEFAULT_SCALE_MIN = 1;
-const DEFAULT_SCALE_MAX = 100_000;
 
 // Helper functions to format entity IDs to display names
 function formatBrandName(id: string): string {
@@ -66,29 +63,78 @@ function formatGradeName(id: string): string {
 	return grade ? getNodeDisplayName(grade) : id;
 }
 
+// Constants for scale handling
+const FALLBACK_MAX_SCALE = 100_000;
+
 // Helper functions for scale range slider
-function getScaleMarks() {
-	return [
-		{ value: 1, label: "1/1" },
-		{ value: 12, label: "1/12" },
-		{ value: 20, label: "1/20" },
-		{ value: 35, label: "1/35" },
-		{ value: 48, label: "1/48" },
-		{ value: 60, label: "1/60" },
-		{ value: 72, label: "1/72" },
-		{ value: 100, label: "1/100" },
-		{ value: 144, label: "1/144" },
-		{ value: 220, label: "1/220" },
-		{ value: 500, label: "1/500" },
-		{ value: 1000, label: "1/1000" },
-		{ value: 5000, label: "1/5000" },
-		{ value: 100_000, label: "1/100000" },
-	].filter(mark => mark.value <= DEFAULT_SCALE_MAX);
+// Convert scale string (e.g., "1/144") to numeric denominator
+function scaleToNumber(scale: string): number {
+	const match = /1\/(\d+)/.exec(scale);
+	return match ? Number.parseInt(match[1], 10) : 1;
 }
 
-function formatScaleLabel(value: number): string {
-	if (value === 1) return "1/1";
-	return `1/${value.toLocaleString()}`;
+// Generate scale marks for logarithmic slider from available scale data
+function getScaleMarks(availableScales: string[]) {
+	const scaleNumbers = availableScales
+		.map(scale => scaleToNumber(scale))
+		.toSorted((a, b) => a - b);
+
+	if (scaleNumbers.length === 0) return [];
+
+	// Create marks at logarithmic intervals for better UX
+	const logMin = Math.log10(Math.min(...scaleNumbers));
+	const logMax = Math.log10(Math.max(...scaleNumbers));
+	const steps = 6; // Number of marks to show
+
+	const marks: Array<{ value: number; label: string }> = [];
+	for (let i = 0; i <= steps; i++) {
+		const logValue = logMin + (logMax - logMin) * (i / steps);
+		const denominator = Math.round(Math.pow(10, logValue));
+
+		// Find the closest actual scale in our data
+		let closestScale = scaleNumbers[0];
+		let minDistance = Math.abs(scaleNumbers[0] - denominator);
+
+		for (const scale of scaleNumbers) {
+			const distance = Math.abs(scale - denominator);
+			if (distance < minDistance) {
+				minDistance = distance;
+				closestScale = scale;
+			}
+		}
+
+		marks.push({
+			value: closestScale,
+			label: `1/${closestScale.toLocaleString()}`,
+		});
+	}
+
+	// Remove duplicates while preserving order
+	return marks.filter((mark, index, array) =>
+		array.findIndex(m => m.value === mark.value) === index,
+	);
+}
+
+// Snap value to nearest actual scale from data
+function snapToNearestScale(value: number, availableScales: string[]): number {
+	const scaleNumbers = availableScales
+		.map(scale => scaleToNumber(scale))
+		.toSorted((a, b) => a - b);
+
+	if (scaleNumbers.length === 0) return value;
+
+	let nearestScale = scaleNumbers[0];
+	let minDistance = Math.abs(scaleNumbers[0] - value);
+
+	for (const scale of scaleNumbers) {
+		const distance = Math.abs(scale - value);
+		if (distance < minDistance) {
+			minDistance = distance;
+			nearestScale = scale;
+		}
+	}
+
+	return nearestScale;
 }
 
 // Helper function to format date string from YYYYMMDD to YYYY/MM/DD
@@ -639,34 +685,55 @@ export function ItemFilters({
 							>
 
 								{/* Scale Range Slider - now inside the accordion */}
-								<Group justify="space-between" mb="xs">
-									<Text size="sm" fw={500}>Scale Range</Text>
-									{filterState.scaleRange[0] !== DEFAULT_SCALE_MIN || filterState.scaleRange[1] !== DEFAULT_SCALE_MAX ? (
-										<Button
-											size="compact-xs"
-											variant="subtle"
-											onClick={() => { onFilterChange({ scaleRange: [DEFAULT_SCALE_MIN, DEFAULT_SCALE_MAX] }); }}
-										>
-											Clear
-										</Button>
-									) : null}
-								</Group>
-								<RangeSlider
-									size="sm"
-									min={1}
-									max={DEFAULT_SCALE_MAX}
-									value={filterState.scaleRange}
-									onChange={(value) => { onFilterChange({ scaleRange: value as [number, number] }); }}
-									marks={getScaleMarks()}
-									label={(value) => formatScaleLabel(value)}
-									styles={{
-										label: { fontSize: "10px" },
-										markLabel: { fontSize: "9px" },
-									}}
-								/>
-								<Text size="xs" c="dimmed" mt="xs">
-									Showing scales from 1/{filterState.scaleRange[1]} to 1/{filterState.scaleRange[0]}
-								</Text>
+								{(() => {
+									// Calculate min/max from available scales
+									const scaleNumbers = availableOptions.scales.map(scale => scaleToNumber(scale));
+									const minScale = scaleNumbers.length > 0 ? Math.min(...scaleNumbers) : 1;
+									const maxScale = scaleNumbers.length > 0 ? Math.max(...scaleNumbers) : FALLBACK_MAX_SCALE;
+
+									// Use active range or default to full range
+									const currentRange = filterState.scaleRange ?? [minScale, maxScale];
+
+									return (
+										<>
+											<Group justify="space-between" mb="xs">
+												<Text size="sm" fw={500}>Scale Range</Text>
+												{filterState.scaleRange && (filterState.scaleRange[0] !== minScale || filterState.scaleRange[1] !== maxScale) ? (
+													<Button
+														size="compact-xs"
+														variant="subtle"
+														onClick={() => { onFilterChange({ scaleRange: null }); }}
+													>
+														Clear
+													</Button>
+												) : null}
+											</Group>
+											<RangeSlider
+												size="sm"
+												scale={(val) => Math.log10(val)} // Logarithmic scale
+												min={minScale}
+												max={maxScale}
+												value={currentRange}
+												onChange={(value) => {
+													const snappedRange = [
+														snapToNearestScale(value[0], availableOptions.scales),
+														snapToNearestScale(value[1], availableOptions.scales),
+													];
+													onFilterChange({ scaleRange: snappedRange as [number, number] });
+												}}
+												marks={getScaleMarks(availableOptions.scales)}
+												label={(value) => `1/${value.toLocaleString()}`}
+												styles={{
+													label: { fontSize: "10px" },
+													markLabel: { fontSize: "9px" },
+												}}
+											/>
+											<Text size="xs" c="dimmed" mt="xs">
+												Showing scales from 1/{currentRange[1].toLocaleString()} to 1/{currentRange[0].toLocaleString()}
+											</Text>
+										</>
+									);
+								})()}
 							</FilterSection>
 
 							<FilterSection
@@ -825,25 +892,32 @@ export function ItemFilters({
 							</Badge>
 						))}
 						{/* Scale Range Badge */}
-						{filterState.scaleRange[0] !== DEFAULT_SCALE_MIN || filterState.scaleRange[1] !== DEFAULT_SCALE_MAX ? (
-							<Badge
-								key="scale-range"
-								size="sm"
-								variant="light"
-								color="orange"
-								rightSection={
-									<ActionIcon
-										size="xs"
-										variant="transparent"
-										onClick={() => { onFilterChange({ scaleRange: [DEFAULT_SCALE_MIN, DEFAULT_SCALE_MAX] }); }}
-									>
-										<IconX size={10} />
-									</ActionIcon>
-								}
-							>
-								Range: 1/{filterState.scaleRange[1]} - 1/{filterState.scaleRange[0]}
-							</Badge>
-						) : null}
+						{filterState.scaleRange && (() => {
+							// Calculate min/max from available scales
+							const scaleNumbers = availableOptions.scales.map(scale => scaleToNumber(scale));
+							const minScale = scaleNumbers.length > 0 ? Math.min(...scaleNumbers) : 1;
+							const maxScale = scaleNumbers.length > 0 ? Math.max(...scaleNumbers) : FALLBACK_MAX_SCALE;
+
+							return filterState.scaleRange[0] !== minScale || filterState.scaleRange[1] !== maxScale ? (
+								<Badge
+									key="scale-range"
+									size="sm"
+									variant="light"
+									color="orange"
+									rightSection={
+										<ActionIcon
+											size="xs"
+											variant="transparent"
+											onClick={() => { onFilterChange({ scaleRange: null }); }}
+										>
+											<IconX size={10} />
+										</ActionIcon>
+									}
+								>
+									Range: 1/{filterState.scaleRange[1].toLocaleString()} - 1/{filterState.scaleRange[0].toLocaleString()}
+								</Badge>
+							) : null;
+						})()}
 						{/* Date Range Badge */}
 						{filterState.dateRange?.[0] && filterState.dateRange[1] ? (
 							<Badge
