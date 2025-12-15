@@ -15,6 +15,8 @@ import {
 import Link from "next/link";
 
 import type { ViewMode } from "@/components/lists/types";
+import { RelationshipBadge } from "@/components/ui/relationship-badge";
+import { manualHasProduct } from "@/lib/relationship-utils";
 
 interface ManualCardProps {
 	item: Manual;
@@ -58,6 +60,9 @@ export function ManualCard({ item: manual, viewMode }: ManualCardProps) {
 						<Box>
 							<IconFileText size={40} color="var(--mantine-color-blue-6)" />
 						</Box>
+						{manualHasProduct(manual) && (
+							<RelationshipBadge type="product" viewMode="list" />
+						)}
 						<Stack gap="xs" style={{ flex: 1, minWidth: 0 }}>
 							<Text size="md" fw={600} lineClamp={1}>
 								{displayName}
@@ -113,6 +118,9 @@ export function ManualCard({ item: manual, viewMode }: ManualCardProps) {
 						<Box>
 							<IconFileText size={48} color="var(--mantine-color-blue-6)" />
 						</Box>
+						{manualHasProduct(manual) && (
+							<RelationshipBadge type="product" viewMode="grid" />
+						)}
 						<Stack gap="xs" flex={1}>
 							<Text size="md" fw={600} lineClamp={2}>
 								{displayName}

@@ -14,9 +14,11 @@ import {
 import type { ViewMode } from "./types";
 
 import { CustomImage } from "@/components/ui/custom-image";
-import { ImageSlideshow } from "@/components/ui/image-slideshow";
 import { EntityList } from "@/components/ui/entity-list";
+import { ImageSlideshow } from "@/components/ui/image-slideshow";
+import { RelationshipBadge } from "@/components/ui/relationship-badge";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
+import { itemHasManual } from "@/lib/relationship-utils";
 import {
 	itemCard,
 	itemCardBadge,
@@ -58,7 +60,7 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 				className={itemCard}
 				withBorder={true}
 			>
-				<Box className={itemCardImage}>
+				<Box className={itemCardImage} style={{ position: "relative" }}>
 					<ImageSlideshow
 						images={images}
 						alt={getNodeDisplayName(item)}
@@ -66,6 +68,11 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 						placeholderSrc={placeholderSrc}
 						fallbackSrc={errorPlaceholderSrc}
 					/>
+					{itemHasManual(item) && (
+						<div style={{ position: "absolute", top: 8, right: 8, zIndex: 1 }}>
+							<RelationshipBadge type="manual" viewMode="grid" />
+						</div>
+					)}
 				</Box>
 				<Box className={itemCardContent}>
 					<Text className={itemCardTitle} lineClamp={2}>
@@ -145,6 +152,9 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 									{item.scale}
 								</Badge>
 							)}
+							{itemHasManual(item) && (
+								<RelationshipBadge type="manual" viewMode="list" />
+							)}
 							<EntityList ids={item.brandIds} entityType="brand" size="sm" clickable={false} />
 						</Group>
 					</Box>
@@ -176,6 +186,9 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 						<Text size="sm" fw={500}>
 							{getNodeDisplayName(item)}
 						</Text>
+						{itemHasManual(item) && (
+							<RelationshipBadge type="manual" viewMode="table" />
+						)}
 					</Group>
 				</Box>
 			</Table.Td>
