@@ -719,7 +719,7 @@ export function ItemFilters({
 															const dateValue = e.target.value;
 															if (dateValue) {
 																const formatted = parseDateInput(dateValue);
-																const currentRange = filterState.dateRange ?? ["", ""];
+																const currentRange = filterState.dateRange ?? [minDate, maxDate];
 																onFilterChange({ dateRange: [formatted, currentRange[1]] });
 															}
 														}}
@@ -737,7 +737,7 @@ export function ItemFilters({
 															const dateValue = e.target.value;
 															if (dateValue) {
 																const formatted = parseDateInput(dateValue);
-																const currentRange = filterState.dateRange ?? ["", ""];
+																const currentRange = filterState.dateRange ?? [minDate, maxDate];
 																onFilterChange({ dateRange: [currentRange[0], formatted] });
 															}
 														}}
