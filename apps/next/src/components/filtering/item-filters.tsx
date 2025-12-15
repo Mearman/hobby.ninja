@@ -88,6 +88,27 @@ function parseDateInput(dateStr: string): string {
 	return dateStr.replaceAll("-", "");
 }
 
+// Helper function to fix date for UI display
+function fixDateForUI(dateStr: string, isEndDate: boolean): string {
+	const year = dateStr.slice(0, 4);
+	const month = dateStr.slice(4, 6);
+	const day = dateStr.slice(6, 8);
+
+	if (day === "00") {
+		// If no day specified, use first day for start date, last day for end date
+		if (isEndDate) {
+			// Get last day of the month
+			const lastDay = new Date(Number.parseInt(year, 10), Number.parseInt(month, 10), 0).getDate();
+			return `${year}${month}${lastDay.toString().padStart(2, "0")}`;
+		} else {
+			// Use first day of month
+			return `${year}${month}01`;
+		}
+	}
+
+	return dateStr;
+}
+
 // Helper function to get date range from items
 function getDateRangeFromItems(items: Item[]): { minDate: string; maxDate: string } {
 	if (!items.length) {
@@ -124,7 +145,11 @@ function getDateRangeFromItems(items: Item[]): { minDate: string; maxDate: strin
 		if (date > maxDate) maxDate = date;
 	}
 
-	return { minDate, maxDate };
+	// Fix dates for UI display
+	const fixedMinDate = fixDateForUI(minDate, false); // Start date = first day
+	const fixedMaxDate = fixDateForUI(maxDate, true);  // End date = last day
+
+	return { minDate: fixedMinDate, maxDate: fixedMaxDate };
 }
 
 type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
