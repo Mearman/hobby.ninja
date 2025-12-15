@@ -88,26 +88,29 @@ function getScaleMarks(availableScales: string[]) {
 	}));
 }
 
-// Snap value to nearest actual scale from data
-function snapToNearestScale(value: number, availableScales: string[]): number {
+// Snap logarithmic value to nearest actual scale from data
+function snapToNearestScale(logValue: number, availableScales: string[]): number {
 	const scaleNumbers = availableScales
 		.map(scale => scaleToNumber(scale))
 		.toSorted((a, b) => a - b);
 
-	if (scaleNumbers.length === 0) return value;
+	if (scaleNumbers.length === 0) return logValue;
 
-	let nearestScale = scaleNumbers[0];
-	let minDistance = Math.abs(scaleNumbers[0] - value);
+	// Convert actual scales to logarithmic space for comparison
+	const logScales = scaleNumbers.map(scale => Math.log10(scale));
 
-	for (const scale of scaleNumbers) {
-		const distance = Math.abs(scale - value);
+	let nearestLogScale = logScales[0];
+	let minDistance = Math.abs(logScales[0] - logValue);
+
+	for (const logScale of logScales) {
+		const distance = Math.abs(logScale - logValue);
 		if (distance < minDistance) {
 			minDistance = distance;
-			nearestScale = scale;
+			nearestLogScale = logScale;
 		}
 	}
 
-	return nearestScale;
+	return nearestLogScale;
 }
 
 // Helper function to format date string from YYYYMMDD to YYYY/MM/DD
@@ -687,15 +690,15 @@ export function ItemFilters({
 												max={Math.log10(maxScale)}
 												value={currentRange.map(v => Math.log10(v)) as [number, number]}
 												onChange={(logValue) => {
+													const snappedLogRange = [
+														snapToNearestScale(logValue[0], availableOptions.scales),
+														snapToNearestScale(logValue[1], availableOptions.scales),
+													];
 													const actualRange = [
-														Math.round(Math.pow(10, logValue[0])),
-														Math.round(Math.pow(10, logValue[1])),
+														Math.round(Math.pow(10, snappedLogRange[0])),
+														Math.round(Math.pow(10, snappedLogRange[1])),
 													];
-													const snappedRange = [
-														snapToNearestScale(actualRange[0], availableOptions.scales),
-														snapToNearestScale(actualRange[1], availableOptions.scales),
-													];
-													onFilterChange({ scaleRange: snappedRange as [number, number] });
+													onFilterChange({ scaleRange: actualRange as [number, number] });
 												}}
 												marks={getScaleMarks(availableOptions.scales).map(mark => ({
 													value: Math.log10(mark.value),
