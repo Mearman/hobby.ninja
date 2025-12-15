@@ -461,11 +461,15 @@ function FilterSection({
 				}}>
 					<Text
 						size="xs"
-						fw={500}
+						fw={900}
+						letterSpacing={-0.5}
 						lineClamp={1}
 						ta="center"
 						style={{
 							color: isSelected ? "white" : UNSELECTED_TEXT_COLOR,
+							fontFamily: "Inter, system-ui, -apple-system, sans-serif",
+							fontVariantNumeric: "tabular-nums",
+							textTransform: "uppercase",
 						}}
 					>
 						{formatValue(value)}
