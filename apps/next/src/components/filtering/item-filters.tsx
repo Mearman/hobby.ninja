@@ -302,6 +302,9 @@ export function ItemFilters({
 
 	// Filter out brands that are actually grades to avoid duplication
 	const getFilteredBrands = () => {
+		if (!preferences.hideGradeBrands) {
+			return availableOptions.brands;
+		}
 		return availableOptions.brands.filter(brandId => {
 			const brand = getBrandById(brandId);
 			// Filter out if the brand is marked as a grade

@@ -9,6 +9,7 @@ export interface UserPreferences {
 	reducedAnimations: boolean;
 	hideFutureReleases: boolean;
 	filterDisplayMode: "icon" | "text";
+	hideGradeBrands: boolean;
 }
 
 const STORAGE_KEY = "hobby-ninja-preferences";
@@ -20,6 +21,7 @@ const defaultPreferences: UserPreferences = {
 	reducedAnimations: false,
 	hideFutureReleases: false,
 	filterDisplayMode: "icon",
+	hideGradeBrands: false,
 };
 
 export function useUserPreferences() {
