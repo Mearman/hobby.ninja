@@ -105,6 +105,45 @@ function generateYearMarks(minDate: string, maxDate: string): Array<{ value: num
 	return marks;
 }
 
+// Generate all year snap points for snapping functionality
+function generateYearSnapPoints(minDate: string, maxDate: string): number[] {
+	const snapPoints: number[] = [];
+
+	const startYear = parseInt(minDate.slice(0, 4));
+	const endYear = parseInt(maxDate.slice(0, 4));
+
+	// Add all years as snap points
+	for (let year = startYear; year <= endYear; year++) {
+		// Create a date for the middle of each year
+		const midYearDate = `${year}0615`; // June 15th of each year
+		snapPoints.push(dateToNumber(midYearDate));
+	}
+
+	return snapPoints;
+}
+
+// Snap value to nearest year within a threshold
+function snapToNearestYear(value: number, snapPoints: number[], thresholdMs: number = 45 * 24 * 60 * 60 * 1000): number {
+	// Find the nearest snap point
+	let nearestSnap = snapPoints[0];
+	let minDistance = Math.abs(value - nearestSnap);
+
+	for (const snapPoint of snapPoints) {
+		const distance = Math.abs(value - snapPoint);
+		if (distance < minDistance) {
+			minDistance = distance;
+			nearestSnap = snapPoint;
+		}
+	}
+
+	// Only snap if within threshold (45 days = ~1.5 months)
+	if (minDistance <= thresholdMs) {
+		return nearestSnap;
+	}
+
+	return value;
+}
+
 // Helper function to format YYYYMMDD to YYYY-MM-DD for date input
 function formatForDateInput(dateStr: string): string {
 	if (dateStr.length !== 8) return "";
@@ -764,36 +803,58 @@ export function ItemFilters({
 										// Set default values if no date range is currently selected
 										const defaultStartDate = filterState.dateRange?.[0] ?? minDate;
 										const defaultEndDate = filterState.dateRange?.[1] ?? maxDate;
+										const yearSnapPoints = generateYearSnapPoints(minDate, maxDate);
 
 										return (
 											<>
 												<RangeSlider
-													size="sm"
-													min={dateToNumber(minDate)}
-													max={dateToNumber(maxDate)}
-													step={86400000} // 1 day in milliseconds
-													value={sliderValue || [
-														filterState.dateRange?.[0] ? dateToNumber(filterState.dateRange[0]) : dateToNumber(defaultStartDate),
-														filterState.dateRange?.[1] ? dateToNumber(filterState.dateRange[1]) : dateToNumber(defaultEndDate),
-													]}
-													onChange={(values) => {
-														// Immediate visual feedback without filtering
-														setSliderValue(values);
-														// Update date input values in real-time
-														const [startTimestamp, endTimestamp] = values;
-														const startDate = numberToDate(startTimestamp);
-														const endDate = numberToDate(endTimestamp);
-														setDateInputValues([startDate, endDate]);
-													}}
-													onChangeEnd={(values) => {
-														// Clear local state and trigger actual filtering
-														setSliderValue(null);
-														setDateInputValues(null);
-														const [startTimestamp, endTimestamp] = values;
-														const startDate = numberToDate(startTimestamp);
-														const endDate = numberToDate(endTimestamp);
-														onFilterChange({ dateRange: [startDate, endDate] });
-													}}
+															size="sm"
+															min={dateToNumber(minDate)}
+															max={dateToNumber(maxDate)}
+															step={86400000} // 1 day in milliseconds
+															value={sliderValue || [
+																filterState.dateRange?.[0] ? dateToNumber(filterState.dateRange[0]) : dateToNumber(defaultStartDate),
+																filterState.dateRange?.[1] ? dateToNumber(filterState.dateRange[1]) : dateToNumber(defaultEndDate),
+															]}
+															onChange={(values) => {
+																// Apply snapping to both values
+																const snappedValues = [
+																	snapToNearestYear(values[0], yearSnapPoints),
+																	snapToNearestYear(values[1], yearSnapPoints)
+																];
+
+																// Only update if values actually changed to avoid infinite loops
+																if (snappedValues[0] !== values[0] || snappedValues[1] !== values[1]) {
+																	setSliderValue(snappedValues);
+																	// Update date input values in real-time
+																	const [startTimestamp, endTimestamp] = snappedValues;
+																	const startDate = numberToDate(startTimestamp);
+																	const endDate = numberToDate(endTimestamp);
+																	setDateInputValues([startDate, endDate]);
+																} else {
+																	// Still update local state and input values even without snapping
+																	setSliderValue(values);
+																	const [startTimestamp, endTimestamp] = values;
+																	const startDate = numberToDate(startTimestamp);
+																	const endDate = numberToDate(endTimestamp);
+																	setDateInputValues([startDate, endDate]);
+																}
+															}}
+															onChangeEnd={(values) => {
+																// Apply final snapping on release
+																const snappedValues = [
+																	snapToNearestYear(values[0], yearSnapPoints),
+																	snapToNearestYear(values[1], yearSnapPoints)
+																];
+
+																// Clear local state and trigger actual filtering
+																setSliderValue(null);
+																setDateInputValues(null);
+																const [startTimestamp, endTimestamp] = snappedValues;
+																const startDate = numberToDate(startTimestamp);
+																const endDate = numberToDate(endTimestamp);
+																onFilterChange({ dateRange: [startDate, endDate] });
+															}}
 													label={false}
 													showLabelOnHover={false}
 													tooltipProps={{
