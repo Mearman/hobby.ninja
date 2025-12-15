@@ -41,6 +41,10 @@ import { HierarchicalGradeFilter } from "@/components/filtering/hierarchical-gra
 import { FilterState } from "@/hooks/use-filtered-items";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
 
+// Constants for scale range filtering
+const DEFAULT_SCALE_MIN = 1;
+const DEFAULT_SCALE_MAX = 100_000;
+
 // Helper functions to format entity IDs to display names
 function formatBrandName(id: string): string {
 	const brand = getBrandById(id);
@@ -78,8 +82,8 @@ function getScaleMarks() {
 		{ value: 500, label: "1/500" },
 		{ value: 1000, label: "1/1000" },
 		{ value: 5000, label: "1/5000" },
-		{ value: 100000, label: "1/100000" },
-	].filter(mark => mark.value <= 100000);
+		{ value: 100_000, label: "1/100000" },
+	].filter(mark => mark.value <= DEFAULT_SCALE_MAX);
 }
 
 function formatScaleLabel(value: number): string {
@@ -90,10 +94,24 @@ function formatScaleLabel(value: number): string {
 // Helper function to format date string from YYYYMMDD to YYYY/MM/DD
 function formatDisplayDate(dateStr: string): string {
 	if (dateStr.length !== 8) return dateStr;
-	const year = dateStr.substring(0, 4);
-	const month = dateStr.substring(4, 6);
-	const day = dateStr.substring(6, 8);
+	const year = dateStr.slice(0, 4);
+	const month = dateStr.slice(4, 6);
+	const day = dateStr.slice(6, 8);
 	return `${year}/${month}/${day}`;
+}
+
+// Helper function to format YYYYMMDD to YYYY-MM-DD for date input
+function formatForDateInput(dateStr: string): string {
+	if (dateStr.length !== 8) return "";
+	const year = dateStr.slice(0, 4);
+	const month = dateStr.slice(4, 6);
+	const day = dateStr.slice(6, 8);
+	return `${year}-${month}-${day}`;
+}
+
+// Helper function to parse YYYY-MM-DD to YYYYMMDD
+function parseDateInput(dateStr: string): string {
+	return dateStr.replaceAll("-", "");
 }
 
 type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
@@ -151,31 +169,64 @@ interface ItemFiltersProps {
 
 interface FilterSectionProps {
 	label: string;
-	field: ArrayFilterField;
-	options: string[];
-	selectedValues: string[];
-	onToggle: (field: ArrayFilterField, value: string) => void;
+	field?: ArrayFilterField;
+	options?: string[];
+	selectedValues?: string[];
+	onToggle?: (field: ArrayFilterField, value: string) => void;
 	formatValue?: (value: string) => string;
 	getImage?: (value: string) => string | undefined;
 	color?: string;
-	displayMode: "icon" | "text";
+	displayMode?: "icon" | "text";
 	headerAction?: React.ReactNode;
+	children?: React.ReactNode;
 }
 
 function FilterSection({
 	label,
 	field,
-	options,
-	selectedValues,
+	options = [],
+	selectedValues = [],
 	onToggle,
 	formatValue = (v) => v,
 	getImage,
 	color = "blue",
 	displayMode,
 	headerAction,
+	children,
 }: FilterSectionProps) {
 	const [expanded, setExpanded] = useState(false);
 
+	// If children are provided, this is a custom filter section
+	if (children) {
+		return (
+			<Box>
+				{/* Accordion Header */}
+				<Group justify="space-between" mb={expanded ? "xs" : 0}>
+					<UnstyledButton
+						onClick={() => { setExpanded(!expanded); }}
+						style={{ flex: 1 }}
+					>
+						<Group gap="xs">
+							{expanded ? <IconChevronUp size={14} /> : <IconChevronDown size={14} />}
+							<Text size="sm" fw={500}>
+								{label}
+							</Text>
+						</Group>
+					</UnstyledButton>
+					{headerAction}
+				</Group>
+
+				{/* Custom Content */}
+				{expanded && (
+					<Box mt="xs">
+						{children}
+					</Box>
+				)}
+			</Box>
+		);
+	}
+
+	// Original filter logic for array-based filters
 	if (options.length === 0) return null;
 
 	// Check if a value has an image available
@@ -233,7 +284,7 @@ function FilterSection({
 							return (
 								<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
 									<UnstyledButton
-										onClick={() => { onToggle(field, value); }}
+										onClick={() => { if (onToggle && field) onToggle(field, value); }}
 										style={{
 											...FILTER_BUTTON_BASE_STYLE,
 											border: `2px solid var(--mantine-color-${color}-filled)`,
@@ -248,7 +299,7 @@ function FilterSection({
 						return (
 							<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
 								<UnstyledButton
-									onClick={() => { onToggle(field, value); }}
+									onClick={() => { if (onToggle && field) onToggle(field, value); }}
 									style={{
 										...FILTER_BUTTON_BASE_STYLE,
 										border: `2px solid var(--mantine-color-${color}-filled)`,
@@ -276,7 +327,7 @@ function FilterSection({
 							return (
 								<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
 									<UnstyledButton
-										onClick={() => { onToggle(field, value); }}
+										onClick={() => { if (onToggle && field) onToggle(field, value); }}
 										style={{
 											...FILTER_BUTTON_BASE_STYLE,
 											border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
@@ -292,7 +343,7 @@ function FilterSection({
 						return (
 							<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
 								<UnstyledButton
-									onClick={() => { onToggle(field, value); }}
+									onClick={() => { if (onToggle && field) onToggle(field, value); }}
 									style={{
 										...FILTER_BUTTON_BASE_STYLE,
 										border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
@@ -590,17 +641,16 @@ export function ItemFilters({
 									clearScales,
 									"orange",
 								)}
-							/>
+							>
 
-							{/* Scale Range Slider */}
-							<Card padding="sm" withBorder>
+								{/* Scale Range Slider - now inside the accordion */}
 								<Group justify="space-between" mb="xs">
 									<Text size="sm" fw={500}>Scale Range</Text>
-									{filterState.scaleRange[0] !== 1 || filterState.scaleRange[1] !== 100000 ? (
+									{filterState.scaleRange[0] !== DEFAULT_SCALE_MIN || filterState.scaleRange[1] !== DEFAULT_SCALE_MAX ? (
 										<Button
 											size="compact-xs"
 											variant="subtle"
-											onClick={() => { onFilterChange({ scaleRange: [1, 100000] }); }}
+											onClick={() => { onFilterChange({ scaleRange: [DEFAULT_SCALE_MIN, DEFAULT_SCALE_MAX] }); }}
 										>
 											Clear
 										</Button>
@@ -609,7 +659,7 @@ export function ItemFilters({
 								<RangeSlider
 									size="sm"
 									min={1}
-									max={100000}
+									max={DEFAULT_SCALE_MAX}
 									value={filterState.scaleRange}
 									onChange={(value) => { onFilterChange({ scaleRange: value as [number, number] }); }}
 									marks={getScaleMarks()}
@@ -622,64 +672,67 @@ export function ItemFilters({
 								<Text size="xs" c="dimmed" mt="xs">
 									Showing scales from 1/{filterState.scaleRange[1]} to 1/{filterState.scaleRange[0]}
 								</Text>
-							</Card>
+							</FilterSection>
 
-							{/* Date Range Filter */}
-							<Card padding="sm" withBorder>
-								<Group justify="space-between" mb="xs">
-									<Text size="sm" fw={500}>Date Range</Text>
-									{filterState.dateRange ? (
-										<Button
-											size="compact-xs"
-											variant="subtle"
-											onClick={() => { onFilterChange({ dateRange: null }); }}
-										>
-											Clear
-										</Button>
+							<FilterSection
+								label="Date Range"
+								color="blue"
+								headerAction={filterState.dateRange ? (
+									<Button
+										size="compact-xs"
+										variant="subtle"
+										onClick={() => { onFilterChange({ dateRange: null }); }}
+									>
+										Clear
+									</Button>
+								) : (
+									<Box />
+								)}
+							>
+								<Stack gap="sm">
+									<Group gap="sm">
+										<TextInput
+											size="xs"
+											type="date"
+											placeholder="Start date"
+											value={filterState.dateRange?.[0] ? formatForDateInput(filterState.dateRange[0]) : ""}
+											onChange={(e) => {
+												const dateValue = e.target.value;
+												if (dateValue) {
+													const formatted = parseDateInput(dateValue);
+													const currentRange = filterState.dateRange ?? ["", ""];
+													onFilterChange({ dateRange: [formatted, currentRange[1]] });
+												}
+											}}
+											style={{ flex: 1 }}
+											max={new Date().toISOString().split("T")[0]}
+										/>
+										<Text size="xs" c="dimmed">to</Text>
+										<TextInput
+											size="xs"
+											type="date"
+											placeholder="End date"
+											value={filterState.dateRange?.[1] ? formatForDateInput(filterState.dateRange[1]) : ""}
+											onChange={(e) => {
+												const dateValue = e.target.value;
+												if (dateValue) {
+													const formatted = parseDateInput(dateValue);
+													const currentRange = filterState.dateRange ?? ["", ""];
+													onFilterChange({ dateRange: [currentRange[0], formatted] });
+												}
+											}}
+											style={{ flex: 1 }}
+											max={new Date().toISOString().split("T")[0]}
+											min={filterState.dateRange?.[0] ? formatForDateInput(filterState.dateRange[0]) : undefined}
+										/>
+									</Group>
+									{filterState.dateRange?.[0] && filterState.dateRange[1] ? (
+										<Text size="xs" c="dimmed" mt="xs">
+											Showing items from {formatDisplayDate(filterState.dateRange[0])} to {formatDisplayDate(filterState.dateRange[1])}
+										</Text>
 									) : null}
-								</Group>
-								<Group gap="sm">
-									<TextInput
-										size="xs"
-										type="date"
-										placeholder="Start date"
-										value={filterState.dateRange ? `${filterState.dateRange[0].substring(0, 4)}-${filterState.dateRange[0].substring(4, 6)}-${filterState.dateRange[0].substring(6, 8)}` : ""}
-										onChange={(e) => {
-											const dateValue = e.target.value;
-											if (dateValue) {
-												const formatted = dateValue.replace(/-/g, "");
-												const currentRange = filterState.dateRange ?? ["", ""];
-												onFilterChange({ dateRange: [formatted, currentRange[1]] });
-											}
-										}}
-										style={{ flex: 1 }}
-										max={new Date().toISOString().split('T')[0]}
-									/>
-									<Text size="xs" c="dimmed">to</Text>
-									<TextInput
-										size="xs"
-										type="date"
-										placeholder="End date"
-										value={filterState.dateRange ? `${filterState.dateRange[1].substring(0, 4)}-${filterState.dateRange[1].substring(4, 6)}-${filterState.dateRange[1].substring(6, 8)}` : ""}
-										onChange={(e) => {
-											const dateValue = e.target.value;
-											if (dateValue) {
-												const formatted = dateValue.replace(/-/g, "");
-												const currentRange = filterState.dateRange ?? ["", ""];
-												onFilterChange({ dateRange: [currentRange[0], formatted] });
-											}
-										}}
-										style={{ flex: 1 }}
-										max={new Date().toISOString().split('T')[0]}
-										min={filterState.dateRange?.[0] ? `${filterState.dateRange[0].substring(0, 4)}-${filterState.dateRange[0].substring(4, 6)}-${filterState.dateRange[0].substring(6, 8)}` : undefined}
-									/>
-								</Group>
-								{filterState.dateRange?.[0] && filterState.dateRange?.[1] ? (
-									<Text size="xs" c="dimmed" mt="xs">
-										Showing items from {formatDisplayDate(filterState.dateRange[0])} to {formatDisplayDate(filterState.dateRange[1])}
-									</Text>
-								) : null}
-							</Card>
+								</Stack>
+							</FilterSection>
 						</Stack>
 					</Stack>
 				</Collapse>
@@ -777,7 +830,7 @@ export function ItemFilters({
 							</Badge>
 						))}
 						{/* Scale Range Badge */}
-						{filterState.scaleRange[0] !== 1 || filterState.scaleRange[1] !== 100000 ? (
+						{filterState.scaleRange[0] !== DEFAULT_SCALE_MIN || filterState.scaleRange[1] !== DEFAULT_SCALE_MAX ? (
 							<Badge
 								key="scale-range"
 								size="sm"
@@ -787,7 +840,7 @@ export function ItemFilters({
 									<ActionIcon
 										size="xs"
 										variant="transparent"
-										onClick={() => onFilterChange({ scaleRange: [1, 100000] })}
+										onClick={() => { onFilterChange({ scaleRange: [DEFAULT_SCALE_MIN, DEFAULT_SCALE_MAX] }); }}
 									>
 										<IconX size={10} />
 									</ActionIcon>
@@ -797,7 +850,7 @@ export function ItemFilters({
 							</Badge>
 						) : null}
 						{/* Date Range Badge */}
-						{filterState.dateRange?.[0] && filterState.dateRange?.[1] ? (
+						{filterState.dateRange?.[0] && filterState.dateRange[1] ? (
 							<Badge
 								key="date-range"
 								size="sm"
@@ -807,7 +860,7 @@ export function ItemFilters({
 									<ActionIcon
 										size="xs"
 										variant="transparent"
-										onClick={() => onFilterChange({ dateRange: null })}
+										onClick={() => { onFilterChange({ dateRange: null }); }}
 									>
 										<IconX size={10} />
 									</ActionIcon>
