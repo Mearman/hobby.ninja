@@ -83,33 +83,22 @@ function generateYearMarks(minDate: string, maxDate: string): Array<{ value: num
 	const startYear = parseInt(minDate.slice(0, 4));
 	const endYear = parseInt(maxDate.slice(0, 4));
 
-	// Always include min and max dates
-	marks.push({
-		value: dateToNumber(minDate),
-		label: formatDisplayDate(minDate)
-	});
-
-	// Add year marks every 5 years between the range
+	// Add 5-year interval marks between the range
 	for (let year = startYear; year <= endYear; year += 5) {
-		// Skip if this would duplicate the start year
+		// Skip start year - we don't want to show it as a mark
 		if (year === startYear) continue;
 
 		// Don't add marks beyond the end year
-		if (year >= endYear) break;
+		if (year > endYear) break;
+
+		// For the end year, only add if it's exactly on a 5-year interval
+		if (year === endYear && endYear % 5 !== 0) break;
 
 		// Create a date for the middle of each year to avoid edge cases
 		const midYearDate = `${year}0615`; // June 15th of each year
 		marks.push({
 			value: dateToNumber(midYearDate),
 			label: year.toString()
-		});
-	}
-
-	// Always include max date (unless it's already covered by a 5-year mark)
-	if (endYear % 5 !== 0) {
-		marks.push({
-			value: dateToNumber(maxDate),
-			label: formatDisplayDate(maxDate)
 		});
 	}
 
