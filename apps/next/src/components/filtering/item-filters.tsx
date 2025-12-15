@@ -5,6 +5,7 @@ import {
 	getCategoryById,
 	getGradeById,
 	getNodeDisplayName,
+	getNodeReleaseDateSortable,
 	getSeriesById,
 } from "@hobby-ninja/data";
 import {
@@ -16,7 +17,6 @@ import {
 	Collapse,
 	Divider,
 	Group,
-	RangeSlider,
 	Select,
 	Stack,
 	Text,
@@ -63,56 +63,7 @@ function formatGradeName(id: string): string {
 	return grade ? getNodeDisplayName(grade) : id;
 }
 
-// Constants for scale handling
-const FALLBACK_MAX_SCALE = 100_000;
 
-// Helper functions for scale range slider
-// Convert scale string (e.g., "1/144") to numeric denominator
-function scaleToNumber(scale: string): number {
-	const match = /1\/(\d+)/.exec(scale);
-	return match ? Number.parseInt(match[1], 10) : 1;
-}
-
-// Generate scale marks for slider using linear positions
-function getScaleMarks(availableScales: string[]) {
-	console.log('=== GENERATING MARKS ===');
-	console.log('Available scales:', availableScales);
-
-	const scaleNumbers = availableScales
-		.map(scale => scaleToNumber(scale))
-		.toSorted((a, b) => b - a); // Sort descending: [2400, 2200, ..., 1]
-
-	console.log('Scale numbers (descending):', scaleNumbers);
-
-	if (scaleNumbers.length === 0) return [];
-
-	// Show strategic marks to avoid overcrowding
-	const step = Math.max(1, Math.floor(scaleNumbers.length / 8)); // Show max 8 marks
-	console.log('Step for marks:', step);
-
-	const marks = scaleNumbers
-		.map((scaleNumber, index) => ({
-			value: index, // Use linear position (0, 1, 2, ...)
-			label: `1/${scaleNumber.toLocaleString()}`,
-		}))
-		.filter((_, index) => index % step === 0 || index === scaleNumbers.length - 1);
-
-	console.log('Generated marks:', marks);
-	return marks;
-}
-
-// Find the nearest scale number to a slider position
-function findNearestScale(position: number, scaleNumbers: number[]): number {
-	if (scaleNumbers.length === 0) return 1;
-
-	// Clamp position to valid range
-	const clampedPosition = Math.max(0, Math.min(scaleNumbers.length - 1, position));
-
-	// Find the closest index (round to nearest integer)
-	const nearestIndex = Math.round(clampedPosition);
-
-	return scaleNumbers[nearestIndex];
-}
 
 // Helper function to format date string from YYYYMMDD to YYYY/MM/DD
 function formatDisplayDate(dateStr: string): string {
@@ -135,6 +86,45 @@ function formatForDateInput(dateStr: string): string {
 // Helper function to parse YYYY-MM-DD to YYYYMMDD
 function parseDateInput(dateStr: string): string {
 	return dateStr.replaceAll("-", "");
+}
+
+// Helper function to get date range from items
+function getDateRangeFromItems(items: Item[]): { minDate: string; maxDate: string } {
+	if (!items.length) {
+		const today = new Date();
+		const todayStr = today.getFullYear().toString() +
+			(today.getMonth() + 1).toString().padStart(2, '0') +
+			today.getDate().toString().padStart(2, '0');
+		return { minDate: todayStr, maxDate: todayStr };
+	}
+
+	// Extract valid dates from items
+	const dates: string[] = [];
+	for (const item of items) {
+		const date = getNodeReleaseDateSortable(item);
+		if (date && date.length === 8) {
+			dates.push(date);
+		}
+	}
+
+	if (dates.length === 0) {
+		const today = new Date();
+		const todayStr = today.getFullYear().toString() +
+			(today.getMonth() + 1).toString().padStart(2, '0') +
+			today.getDate().toString().padStart(2, '0');
+		return { minDate: todayStr, maxDate: todayStr };
+	}
+
+	// Find min and max dates
+	let minDate = dates[0];
+	let maxDate = dates[0];
+
+	for (const date of dates) {
+		if (date < minDate) minDate = date;
+		if (date > maxDate) maxDate = date;
+	}
+
+	return { minDate, maxDate };
 }
 
 type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
@@ -179,6 +169,7 @@ interface ItemFiltersProps {
 		series: string[];
 		categories: string[];
 	};
+	items?: Item[];
 	onFilterChange: (updates: Partial<FilterState>) => void;
 	onSearchChange: (value: string) => void;
 	onToggleFilterValue: (field: ArrayFilterField, value: string) => void;
@@ -390,6 +381,7 @@ function FilterSection({
 export function ItemFilters({
 	filterState,
 	availableOptions,
+	items,
 	onFilterChange,
 	onSearchChange,
 	onToggleFilterValue,
@@ -665,145 +657,6 @@ export function ItemFilters({
 								)}
 							>
 
-								{/* Scale Range Slider - now inside the accordion */}
-								{(() => {
-									// Calculate min/max from available scales
-									const scaleNumbers = availableOptions.scales.map(scale => scaleToNumber(scale));
-									const minScale = scaleNumbers.length > 0 ? Math.min(...scaleNumbers) : 1;
-									const maxScale = scaleNumbers.length > 0 ? Math.max(...scaleNumbers) : FALLBACK_MAX_SCALE;
-
-									// Use active range, or derive from selected individual scales, or default to full range
-									let currentRange = filterState.scaleRange ?? [minScale, maxScale];
-
-									// If individual scales are selected but no range is set, sync the slider to show the selected range
-									if (!filterState.scaleRange && filterState.scales.length > 0) {
-										const selectedScaleNumbers = filterState.scales.map(scale => scaleToNumber(scale));
-										const selectedMin = Math.min(...selectedScaleNumbers);
-										const selectedMax = Math.max(...selectedScaleNumbers);
-										currentRange = [selectedMin, selectedMax];
-									}
-
-									return (
-										<>
-											<Group justify="space-between" mb="xs">
-												<Text size="sm" fw={500}>Scale Range</Text>
-												{filterState.scaleRange && (filterState.scaleRange[0] !== minScale || filterState.scaleRange[1] !== maxScale) ? (
-													<Button
-														size="compact-xs"
-														variant="subtle"
-														onClick={() => { onFilterChange({ scaleRange: null }); }}
-													>
-														Clear
-													</Button>
-												) : null}
-											</Group>
-											<RangeSlider
-												size="sm"
-												min={0}
-												max={availableOptions.scales.length - 1}
-												value={(() => {
-													console.log('=== SLIDER INITIALIZATION ===');
-													console.log('Available scales:', availableOptions.scales);
-
-													const scaleNumbers = availableOptions.scales
-														.map(scale => scaleToNumber(scale))
-														.toSorted((a, b) => b - a); // Sort descending: [2400, 2200, ..., 1]
-
-													console.log('Scale numbers (descending):', scaleNumbers);
-
-													if (!currentRange || currentRange.length !== 2) {
-														console.log('No current range, using full range');
-														return [0, scaleNumbers.length - 1]; // Full range
-													}
-
-													// Convert current scale range to positions
-													const minPosition = scaleNumbers.indexOf(currentRange[0]);
-													const maxPosition = scaleNumbers.indexOf(currentRange[1]);
-
-													console.log('Current range:', currentRange);
-													console.log('Scale positions:', [minPosition, maxPosition]);
-
-													// Ensure valid positions and order
-													const positions = [
-														minPosition !== -1 ? minPosition : 0,
-														maxPosition !== -1 ? maxPosition : scaleNumbers.length - 1
-													].sort((a, b) => a - b);
-
-													console.log('Slider positions:', positions);
-													return positions;
-												})()}
-												step={1} // Snap to integer positions
-												onChange={(positions) => {
-													console.log('=== ON CHANGE ===');
-													console.log('Raw positions:', positions);
-												}}
-												onChangeEnd={(positions) => {
-													console.log('=== ON CHANGE END ===');
-													console.log('Raw positions:', positions);
-
-													// Sort to ensure min <= max
-													const sortedPositions = [...positions].sort((a, b) => a - b);
-													const [minPosition, maxPosition] = sortedPositions;
-
-													console.log('Sorted positions:', [minPosition, maxPosition]);
-
-													// Convert positions back to scale numbers
-													const scaleNumbers = availableOptions.scales
-														.map(scale => scaleToNumber(scale))
-														.toSorted((a, b) => b - a); // Sort descending: [2400, 2200, ..., 1]
-
-													console.log('Scale numbers:', scaleNumbers);
-
-													// Clamp positions to valid range
-													const clampedMinPos = Math.max(0, Math.min(scaleNumbers.length - 1, minPosition));
-													const clampedMaxPos = Math.max(0, Math.min(scaleNumbers.length - 1, maxPosition));
-
-													console.log('Clamped positions:', [clampedMinPos, clampedMaxPos]);
-
-													const minScale = scaleNumbers[clampedMinPos];
-													const maxScale = scaleNumbers[clampedMaxPos];
-
-													console.log('Scales from positions:', {
-														minPosition: clampedMinPos,
-														minScale: minScale,
-														maxPosition: clampedMaxPos,
-														maxScale: maxScale
-													});
-
-													// Set the range (minScale is larger number = smaller scale value)
-													console.log('Final range for filter:', [minScale, maxScale], '=>', [`1/${minScale}`, `1/${maxScale}`]);
-													onFilterChange({ scaleRange: [minScale, maxScale] as [number, number] });
-												}}
-												marks={getScaleMarks(availableOptions.scales)}
-												label={(position) => {
-													console.log('=== LABEL FUNCTION ===');
-													console.log('Position for label:', position);
-
-													const scaleNumbers = availableOptions.scales
-														.map(scale => scaleToNumber(scale))
-														.toSorted((a, b) => b - a);
-
-													// Clamp position to valid range
-													const clampedPosition = Math.max(0, Math.min(scaleNumbers.length - 1, position));
-													const nearestIndex = Math.round(clampedPosition);
-													const scale = scaleNumbers[nearestIndex];
-
-													console.log('Position -> scale:', clampedPosition, '->', nearestIndex, '->', scale);
-													const label = `1/${scale.toLocaleString()}`;
-													console.log('Returning label:', label);
-													return label;
-												}}
-												styles={{
-													label: { fontSize: "10px" },
-													markLabel: { fontSize: "9px" },
-												}}
-											/>
-											<Text size="xs" c="dimmed" mt="xs">
-												Showing scales from 1/{currentRange[1].toLocaleString()} to 1/{currentRange[0].toLocaleString()}
-											</Text>
-										</>
-									);
-								})()}
 							</FilterSection>
 
 							<FilterSection
@@ -822,47 +675,63 @@ export function ItemFilters({
 								)}
 							>
 								<Stack gap="sm">
-									<Group gap="sm">
-										<TextInput
-											size="xs"
-											type="date"
-											placeholder="Start date"
-											value={filterState.dateRange?.[0] ? formatForDateInput(filterState.dateRange[0]) : ""}
-											onChange={(e) => {
-												const dateValue = e.target.value;
-												if (dateValue) {
-													const formatted = parseDateInput(dateValue);
-													const currentRange = filterState.dateRange ?? ["", ""];
-													onFilterChange({ dateRange: [formatted, currentRange[1]] });
-												}
-											}}
-											style={{ flex: 1 }}
-											max={new Date().toISOString().split("T")[0]}
-										/>
-										<Text size="xs" c="dimmed">to</Text>
-										<TextInput
-											size="xs"
-											type="date"
-											placeholder="End date"
-											value={filterState.dateRange?.[1] ? formatForDateInput(filterState.dateRange[1]) : ""}
-											onChange={(e) => {
-												const dateValue = e.target.value;
-												if (dateValue) {
-													const formatted = parseDateInput(dateValue);
-													const currentRange = filterState.dateRange ?? ["", ""];
-													onFilterChange({ dateRange: [currentRange[0], formatted] });
-												}
-											}}
-											style={{ flex: 1 }}
-											max={new Date().toISOString().split("T")[0]}
-											min={filterState.dateRange?.[0] ? formatForDateInput(filterState.dateRange[0]) : undefined}
-										/>
-									</Group>
-									{filterState.dateRange?.[0] && filterState.dateRange[1] ? (
-										<Text size="xs" c="dimmed" mt="xs">
-											Showing items from {formatDisplayDate(filterState.dateRange[0])} to {formatDisplayDate(filterState.dateRange[1])}
-										</Text>
-									) : null}
+									{(() => {
+										const { minDate, maxDate } = getDateRangeFromItems(items);
+
+										// Set default values if no date range is currently selected
+										const defaultStartDate = filterState.dateRange?.[0] ?? minDate;
+										const defaultEndDate = filterState.dateRange?.[1] ?? maxDate;
+
+										return (
+											<>
+												<Group gap="sm">
+													<TextInput
+														size="xs"
+														type="date"
+														placeholder="Start date"
+														value={formatForDateInput(defaultStartDate)}
+														onChange={(e) => {
+															const dateValue = e.target.value;
+															if (dateValue) {
+																const formatted = parseDateInput(dateValue);
+																const currentRange = filterState.dateRange ?? ["", ""];
+																onFilterChange({ dateRange: [formatted, currentRange[1]] });
+															}
+														}}
+														style={{ flex: 1 }}
+														min={formatForDateInput(minDate)}
+														max={formatForDateInput(maxDate)}
+													/>
+													<Text size="xs" c="dimmed">to</Text>
+													<TextInput
+														size="xs"
+														type="date"
+														placeholder="End date"
+														value={formatForDateInput(defaultEndDate)}
+														onChange={(e) => {
+															const dateValue = e.target.value;
+															if (dateValue) {
+																const formatted = parseDateInput(dateValue);
+																const currentRange = filterState.dateRange ?? ["", ""];
+																onFilterChange({ dateRange: [currentRange[0], formatted] });
+															}
+														}}
+														style={{ flex: 1 }}
+														min={formatForDateInput(defaultStartDate)}
+														max={formatForDateInput(maxDate)}
+													/>
+												</Group>
+												<Text size="xs" c="dimmed" mt="xs">
+													Range: {formatDisplayDate(minDate)} to {formatDisplayDate(maxDate)}
+												</Text>
+												{filterState.dateRange?.[0] && filterState.dateRange[1] ? (
+													<Text size="xs" c="blue" mt="xs" fw={500}>
+														Selected: {formatDisplayDate(filterState.dateRange[0])} to {formatDisplayDate(filterState.dateRange[1])}
+													</Text>
+												) : null}
+											</>
+										);
+									})()}
 								</Stack>
 							</FilterSection>
 						</Stack>
@@ -961,33 +830,6 @@ export function ItemFilters({
 								{scale}
 							</Badge>
 						))}
-						{/* Scale Range Badge */}
-						{filterState.scaleRange && (() => {
-							// Calculate min/max from available scales
-							const scaleNumbers = availableOptions.scales.map(scale => scaleToNumber(scale));
-							const minScale = scaleNumbers.length > 0 ? Math.min(...scaleNumbers) : 1;
-							const maxScale = scaleNumbers.length > 0 ? Math.max(...scaleNumbers) : FALLBACK_MAX_SCALE;
-
-							return filterState.scaleRange[0] !== minScale || filterState.scaleRange[1] !== maxScale ? (
-								<Badge
-									key="scale-range"
-									size="sm"
-									variant="light"
-									color="orange"
-									rightSection={
-										<ActionIcon
-											size="xs"
-											variant="transparent"
-											onClick={() => { onFilterChange({ scaleRange: null }); }}
-										>
-											<IconX size={10} />
-										</ActionIcon>
-									}
-								>
-									Range: 1/{filterState.scaleRange[1].toLocaleString()} - 1/{filterState.scaleRange[0].toLocaleString()}
-								</Badge>
-							) : null;
-						})()}
 						{/* Date Range Badge */}
 						{filterState.dateRange?.[0] && filterState.dateRange[1] ? (
 							<Badge
