@@ -99,12 +99,7 @@ function snapToNearestScale(logValue: number, availableScales: string[]): number
 	// Convert actual scales to logarithmic space for comparison
 	const logScales = scaleNumbers.map(scale => Math.log10(scale));
 
-	// Debug: log the available scales and their logarithmic values
-	// eslint-disable-next-line no-console
-	console.log("Available scales:", scaleNumbers.slice(0, 10), "log values:", logScales.slice(0, 10));
-	// eslint-disable-next-line no-console
-	console.log("Input logValue:", logValue);
-
+	
 	let nearestLogScale = logScales[0];
 	let minDistance = Math.abs(logScales[0] - logValue);
 
@@ -116,9 +111,7 @@ function snapToNearestScale(logValue: number, availableScales: string[]): number
 		}
 	}
 
-	// eslint-disable-next-line no-console
-	console.log("Nearest log scale:", nearestLogScale, "which corresponds to scale:", Math.round(Math.pow(10, nearestLogScale)));
-
+	
 	return nearestLogScale;
 }
 
@@ -255,6 +248,10 @@ function FilterSection({
 	const renderFilterOptions = () => {
 		if (!field || !onToggle || options.length === 0) return null;
 
+		// Store non-null assertions for use within this function
+		const safeField = field;
+		const safeOnToggle = onToggle;
+
 		return (
 			<>
 				{/* Show all options when expanded */}
@@ -266,7 +263,7 @@ function FilterSection({
 							return (
 								<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
 									<UnstyledButton
-										onClick={() => { onToggle(field, value); }}
+										onClick={() => { safeOnToggle(safeField, value); }}
 										style={{
 											...FILTER_BUTTON_BASE_STYLE,
 											border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
@@ -282,7 +279,7 @@ function FilterSection({
 						return (
 							<Tooltip key={value} label={formatValue(value)} position="top" withArrow={true}>
 								<UnstyledButton
-									onClick={() => { onToggle(field, value); }}
+									onClick={() => { safeOnToggle(safeField, value); }}
 									style={{
 										...FILTER_BUTTON_BASE_STYLE,
 										border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
@@ -332,7 +329,7 @@ function FilterSection({
 			</Group>
 
 			{/* Collapsed: Show selected values only */}
-			{!expanded && selectedValues.length > 0 && (
+			{!expanded && selectedValues.length > 0 && field && onToggle && (
 				<Group gap="xs" wrap="wrap" mt="xs">
 					{selectedValues.map((value) => {
 						if (hasImage(value)) {
@@ -699,25 +696,15 @@ export function ItemFilters({
 												max={Math.log10(maxScale)}
 												value={currentRange.map(v => Math.log10(v)) as [number, number]}
 												onChange={(logValue) => {
-													// Debug: log the input and snapped values
-													// eslint-disable-next-line no-console
-													console.log("Slider onChange - input logValue:", logValue);
-
 													const snappedLogRange = [
 														snapToNearestScale(logValue[0], availableOptions.scales),
 														snapToNearestScale(logValue[1], availableOptions.scales),
 													];
 
-													// eslint-disable-next-line no-console
-													console.log("Slider onChange - snappedLogRange:", snappedLogRange);
-
 													const actualRange = [
 														Math.round(Math.pow(10, snappedLogRange[0])),
 														Math.round(Math.pow(10, snappedLogRange[1])),
 													];
-
-													// eslint-disable-next-line no-console
-													console.log("Slider onChange - actualRange:", actualRange);
 
 													onFilterChange({ scaleRange: actualRange as [number, number] });
 												}}
