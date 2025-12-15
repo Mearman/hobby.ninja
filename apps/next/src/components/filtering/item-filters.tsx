@@ -442,6 +442,9 @@ export function ItemFilters({
 	subtitle,
 }: ItemFiltersProps) {
 	const [filtersExpanded, setFiltersExpanded] = useState(true);
+
+	// Local state for immediate slider visual feedback (debounced filtering)
+	const [sliderValue, setSliderValue] = useState<[number, number] | null>(null);
 	const { preferences, updatePreference } = useUserPreferences();
 	const displayMode = preferences.filterDisplayMode;
 
@@ -738,11 +741,17 @@ export function ItemFilters({
 													min={dateToNumber(minDate)}
 													max={dateToNumber(maxDate)}
 													step={86400000} // 1 day in milliseconds
-													value={[
+													value={sliderValue || [
 														filterState.dateRange?.[0] ? dateToNumber(filterState.dateRange[0]) : dateToNumber(defaultStartDate),
 														filterState.dateRange?.[1] ? dateToNumber(filterState.dateRange[1]) : dateToNumber(defaultEndDate),
 													]}
+													onChange={(values) => {
+														// Immediate visual feedback without filtering
+														setSliderValue(values);
+													}}
 													onChangeEnd={(values) => {
+														// Clear local state and trigger actual filtering
+														setSliderValue(null);
 														const [startTimestamp, endTimestamp] = values;
 														const startDate = numberToDate(startTimestamp);
 														const endDate = numberToDate(endTimestamp);
