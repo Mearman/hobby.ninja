@@ -195,18 +195,23 @@ export function useFilteredItems(
 				const itemDateStr = getNodeReleaseDateSortable(item);
 				const hasNoDate = !itemDateStr;
 
-				// If showing no-date items, include them
+				// If no date filter is active, include items without dates
 				if (hasNoDate && filterState.showNoDate) {
 					return true;
 				}
 
-				// If showing date range, filter items with dates
+				// If date range filter is active, check if item with date falls within range
 				if (filterState.dateRange && !hasNoDate) {
 					const [startDate, endDate] = filterState.dateRange;
 					return itemDateStr >= startDate && itemDateStr <= endDate;
 				}
 
-				// If neither filter is active or item doesn't match current filter, exclude it
+				// If date range is not active but we have a date, include it
+				if (!filterState.dateRange && !hasNoDate) {
+					return true;
+				}
+
+				// If neither condition is met, exclude the item
 				return false;
 			});
 		}
