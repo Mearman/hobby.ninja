@@ -725,7 +725,7 @@ export function ItemFilters({
 							>
 								<Stack gap="sm">
 									{(() => {
-										const { minDate, maxDate } = getDateRangeFromItems(items);
+										const { minDate, maxDate } = getDateRangeFromItems(items || []);
 
 										// Set default values if no date range is currently selected
 										const defaultStartDate = filterState.dateRange?.[0] ?? minDate;
@@ -742,12 +742,6 @@ export function ItemFilters({
 														filterState.dateRange?.[0] ? dateToNumber(filterState.dateRange[0]) : dateToNumber(defaultStartDate),
 														filterState.dateRange?.[1] ? dateToNumber(filterState.dateRange[1]) : dateToNumber(defaultEndDate),
 													]}
-													onChange={(values) => {
-														const [startTimestamp, endTimestamp] = values;
-														const startDate = numberToDate(startTimestamp);
-														const endDate = numberToDate(endTimestamp);
-														onFilterChange({ dateRange: [startDate, endDate] });
-													}}
 													onChangeEnd={(values) => {
 														const [startTimestamp, endTimestamp] = values;
 														const startDate = numberToDate(startTimestamp);
