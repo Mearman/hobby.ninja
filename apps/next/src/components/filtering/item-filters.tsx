@@ -15,7 +15,6 @@ import {
 	Box,
 	Button,
 	Card,
-	Checkbox,
 	Collapse,
 	Divider,
 	Group,
@@ -918,14 +917,26 @@ export function ItemFilters({
 													/>
 												</Group>
 												<Group gap="sm" mt="xs">
-													<Checkbox
-														size="xs"
-														checked={filterState.showNoDate}
-														onChange={(e) => {
-															onFilterChange({ showNoDate: e.target.checked });
+													<Badge
+														size="sm"
+														variant={filterState.showNoDate ? "filled" : "light"}
+														color="gray"
+														onClick={() => {
+															onFilterChange({ showNoDate: !filterState.showNoDate });
 														}}
-														label="Other (no date)"
-													/>
+														rightSection={
+															filterState.showNoDate ? (
+																<ActionIcon size="xs" variant="transparent" onClick={(e) => {
+																	e.stopPropagation();
+																	onFilterChange({ showNoDate: false });
+																}}>
+																	<IconX size={10} />
+																</ActionIcon>
+															) : null
+														}
+													>
+														Other (no date)
+													</Badge>
 												</Group>
 											</>
 										);
@@ -1046,6 +1057,26 @@ export function ItemFilters({
 								}
 							>
 								{formatDisplayDate(filterState.dateRange[0])} - {formatDisplayDate(filterState.dateRange[1])}
+							</Badge>
+						) : null}
+						{/* Other (no date) Badge */}
+						{filterState.showNoDate ? (
+							<Badge
+								key="no-date"
+								size="sm"
+								variant="light"
+								color="gray"
+								rightSection={
+									<ActionIcon
+										size="xs"
+										variant="transparent"
+										onClick={() => { onFilterChange({ showNoDate: false }); }}
+									>
+										<IconX size={10} />
+									</ActionIcon>
+								}
+							>
+								Other (no date)
 							</Badge>
 						) : null}
 						{filterState.series.map(s => {
