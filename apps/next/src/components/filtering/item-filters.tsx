@@ -794,7 +794,6 @@ export function ItemFilters({
 														const endDate = numberToDate(endTimestamp);
 														onFilterChange({ dateRange: [startDate, endDate] });
 													}}
-													label="Date Range"
 													marks={generateYearMarks(minDate, maxDate)}
 													styles={{
 														track: { height: 6 },
