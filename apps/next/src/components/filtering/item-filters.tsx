@@ -935,7 +935,7 @@ export function ItemFilters({
 															) : null
 														}
 													>
-														Other (no date)
+														{filterState.showNoDate ? "Hide Other" : "Show Other"}
 													</Badge>
 												</Group>
 											</>
@@ -1076,7 +1076,7 @@ export function ItemFilters({
 									</ActionIcon>
 								}
 							>
-								Other (no date)
+								Showing items with no date
 							</Badge>
 						) : null}
 						{filterState.series.map(s => {
