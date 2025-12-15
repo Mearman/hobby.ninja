@@ -802,6 +802,9 @@ export function ItemFilters({
 														bar: { height: 6 },
 														thumb: { borderWidth: 2, width: 20, height: 20 },
 														label: { transform: "translate(-50%, -10px)" },
+														dragged: { transform: "scale(1.05)" },
+														// Hide tooltips
+														valueLabel: { display: "none" },
 													}}
 												/>
 												<Group gap="sm" mt="md">
