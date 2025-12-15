@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
 
 # Run lint-staged to lint and fix staged files
 echo "🔧 Running pre-commit lint and fix..."
