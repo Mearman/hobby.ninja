@@ -76,7 +76,7 @@ function formatDisplayDate(dateStr: string): string {
 	return `${year}/${month}/${day}`;
 }
 
-// Generate year marks for the slider
+// Generate year marks for the slider (every 5 years)
 function generateYearMarks(minDate: string, maxDate: string): Array<{ value: number; label: string }> {
 	const marks: Array<{ value: number; label: string }> = [];
 
@@ -89,8 +89,14 @@ function generateYearMarks(minDate: string, maxDate: string): Array<{ value: num
 		label: formatDisplayDate(minDate)
 	});
 
-	// Add year marks between the range
-	for (let year = startYear + 1; year < endYear; year++) {
+	// Add year marks every 5 years between the range
+	for (let year = startYear; year <= endYear; year += 5) {
+		// Skip if this would duplicate the start year
+		if (year === startYear) continue;
+
+		// Don't add marks beyond the end year
+		if (year >= endYear) break;
+
 		// Create a date for the middle of each year to avoid edge cases
 		const midYearDate = `${year}0615`; // June 15th of each year
 		marks.push({
@@ -99,11 +105,13 @@ function generateYearMarks(minDate: string, maxDate: string): Array<{ value: num
 		});
 	}
 
-	// Always include max date
-	marks.push({
-		value: dateToNumber(maxDate),
-		label: formatDisplayDate(maxDate)
-	});
+	// Always include max date (unless it's already covered by a 5-year mark)
+	if (endYear % 5 !== 0) {
+		marks.push({
+			value: dateToNumber(maxDate),
+			label: formatDisplayDate(maxDate)
+		});
+	}
 
 	return marks;
 }
