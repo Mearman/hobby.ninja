@@ -280,10 +280,13 @@ const getFilterImageStyle = (src: string): React.CSSProperties => ({
 const FILTER_BUTTON_BG_UNSELECTED = "white";
 
 // Text colors for count displays
-const COUNT_PRIMARY_COLOR = "rgba(255,255,255,0.7)";
-const COUNT_PRIMARY_COLOR_DARK = "rgba(0,0,0,0.6)";
-const COUNT_SECONDARY_COLOR = "white";
-const COUNT_SECONDARY_COLOR_DARK = "black";
+const COUNT_PRIMARY_COLOR_SELECTED = "rgba(255,255,255,0.7)";
+const COUNT_PRIMARY_COLOR_UNSELECTED = "rgba(0,0,0,0.8)";
+const COUNT_SECONDARY_COLOR_SELECTED = "white";
+const COUNT_SECONDARY_COLOR_UNSELECTED = "black";
+
+// Common black color constant for unselected text
+const UNSELECTED_TEXT_COLOR = "black";
 
 // Base style for all filter button containers - using correct aspect ratio
 const FILTER_BUTTON_BASE_STYLE: React.CSSProperties = {
@@ -394,7 +397,7 @@ function FilterSection({
 					{/* Count display below chip */}
 					<div
 						style={{
-							background: isSelected ? "rgba(0,0,0,0.8)" : "rgba(255,255,255,0.9)",
+							background: isSelected ? COUNT_PRIMARY_COLOR_UNSELECTED : "rgba(255,255,255,0.9)",
 							borderRadius: 3,
 							padding: "1px 4px",
 							display: "flex",
@@ -404,7 +407,7 @@ function FilterSection({
 					>
 						<div
 							style={{
-								color: isSelected ? COUNT_SECONDARY_COLOR : COUNT_SECONDARY_COLOR_DARK,
+								color: isSelected ? COUNT_SECONDARY_COLOR_SELECTED : COUNT_SECONDARY_COLOR_UNSELECTED,
 								fontSize: "11px",
 								fontWeight: 600,
 								lineHeight: 1.2,
@@ -416,7 +419,7 @@ function FilterSection({
 						</div>
 						<div
 							style={{
-								color: isSelected ? COUNT_PRIMARY_COLOR : COUNT_PRIMARY_COLOR_DARK,
+								color: isSelected ? COUNT_PRIMARY_COLOR_SELECTED : COUNT_PRIMARY_COLOR_UNSELECTED,
 								fontSize: "11px",
 								fontWeight: 600,
 								lineHeight: 1.2,
@@ -427,7 +430,7 @@ function FilterSection({
 						</div>
 						<div
 							style={{
-								color: isSelected ? COUNT_PRIMARY_COLOR : COUNT_PRIMARY_COLOR_DARK,
+								color: isSelected ? COUNT_PRIMARY_COLOR_SELECTED : COUNT_PRIMARY_COLOR_UNSELECTED,
 								fontSize: "11px",
 								fontWeight: 600,
 								lineHeight: 1.2,
@@ -456,14 +459,22 @@ function FilterSection({
 					alignItems: "center",
 					justifyContent: "center",
 				}}>
-					<Text size="xs" fw={500} lineClamp={1} ta="center" c={isSelected ? COUNT_SECONDARY_COLOR : "inherit"}>
+					<Text
+						size="xs"
+						fw={500}
+						lineClamp={1}
+						ta="center"
+						style={{
+							color: isSelected ? "white" : UNSELECTED_TEXT_COLOR,
+						}}
+					>
 						{formatValue(value)}
 					</Text>
 				</div>
 				{/* Count display below chip */}
 				<div
 					style={{
-						background: isSelected ? "rgba(0,0,0,0.8)" : "rgba(255,255,255,0.9)",
+						background: isSelected ? COUNT_PRIMARY_COLOR_UNSELECTED : "rgba(255,255,255,0.9)",
 						borderRadius: 3,
 						padding: "1px 4px",
 						display: "flex",
@@ -473,7 +484,7 @@ function FilterSection({
 				>
 					<div
 						style={{
-							color: isSelected ? COUNT_SECONDARY_COLOR : COUNT_SECONDARY_COLOR_DARK,
+							color: isSelected ? COUNT_SECONDARY_COLOR_SELECTED : COUNT_SECONDARY_COLOR_UNSELECTED,
 							fontSize: "11px",
 							fontWeight: 600,
 							lineHeight: 1.2,
@@ -485,7 +496,7 @@ function FilterSection({
 					</div>
 					<div
 						style={{
-							color: isSelected ? COUNT_PRIMARY_COLOR : COUNT_PRIMARY_COLOR_DARK,
+							color: isSelected ? COUNT_PRIMARY_COLOR_SELECTED : COUNT_PRIMARY_COLOR_UNSELECTED,
 							fontSize: "11px",
 							fontWeight: 600,
 							lineHeight: 1.2,
@@ -496,7 +507,7 @@ function FilterSection({
 					</div>
 					<div
 						style={{
-							color: isSelected ? COUNT_PRIMARY_COLOR : COUNT_PRIMARY_COLOR_DARK,
+							color: isSelected ? COUNT_PRIMARY_COLOR_SELECTED : COUNT_PRIMARY_COLOR_UNSELECTED,
 							fontSize: "11px",
 							fontWeight: 600,
 							lineHeight: 1.2,
@@ -538,7 +549,7 @@ function FilterSection({
 											opacity: hasAnySelection && !isSelected ? 0.7 : 1,
 										}}
 									>
-										{renderChipContent(value, true)}
+										{renderChipContent(value, isSelected)}
 									</UnstyledButton>
 								</Tooltip>
 							);
@@ -551,11 +562,10 @@ function FilterSection({
 										...FILTER_BUTTON_BASE_STYLE,
 										border: `2px solid var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
 										background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
-										color: isSelected ? "white" : `var(--mantine-color-${color}-filled)`,
 										opacity: hasAnySelection && !isSelected ? 0.7 : 1,
 									}}
 								>
-									{renderChipContent(value, true)}
+									{renderChipContent(value, isSelected)}
 								</UnstyledButton>
 							</Tooltip>
 						);
