@@ -81,38 +81,11 @@ function getScaleMarks(availableScales: string[]) {
 
 	if (scaleNumbers.length === 0) return [];
 
-	// Create marks at logarithmic intervals for better UX
-	const logMin = Math.log10(Math.min(...scaleNumbers));
-	const logMax = Math.log10(Math.max(...scaleNumbers));
-	const steps = 6; // Number of marks to show
-
-	const marks: Array<{ value: number; label: string }> = [];
-	for (let i = 0; i <= steps; i++) {
-		const logValue = logMin + (logMax - logMin) * (i / steps);
-		const denominator = Math.round(Math.pow(10, logValue));
-
-		// Find the closest actual scale in our data
-		let closestScale = scaleNumbers[0];
-		let minDistance = Math.abs(scaleNumbers[0] - denominator);
-
-		for (const scale of scaleNumbers) {
-			const distance = Math.abs(scale - denominator);
-			if (distance < minDistance) {
-				minDistance = distance;
-				closestScale = scale;
-			}
-		}
-
-		marks.push({
-			value: closestScale,
-			label: `1/${closestScale.toLocaleString()}`,
-		});
-	}
-
-	// Remove duplicates while preserving order
-	return marks.filter((mark, index, array) =>
-		array.findIndex(m => m.value === mark.value) === index,
-	);
+	// Use the actual scale values for marks
+	return scaleNumbers.map(scale => ({
+		value: scale,
+		label: `1/${scale.toLocaleString()}`,
+	}));
 }
 
 // Snap value to nearest actual scale from data
@@ -710,19 +683,25 @@ export function ItemFilters({
 											</Group>
 											<RangeSlider
 												size="sm"
-												scale={(val) => Math.log10(val)} // Logarithmic scale
-												min={minScale}
-												max={maxScale}
-												value={currentRange}
-												onChange={(value) => {
+												min={Math.log10(minScale)}
+												max={Math.log10(maxScale)}
+												value={currentRange.map(v => Math.log10(v)) as [number, number]}
+												onChange={(logValue) => {
+													const actualRange = [
+														Math.round(Math.pow(10, logValue[0])),
+														Math.round(Math.pow(10, logValue[1])),
+													];
 													const snappedRange = [
-														snapToNearestScale(value[0], availableOptions.scales),
-														snapToNearestScale(value[1], availableOptions.scales),
+														snapToNearestScale(actualRange[0], availableOptions.scales),
+														snapToNearestScale(actualRange[1], availableOptions.scales),
 													];
 													onFilterChange({ scaleRange: snappedRange as [number, number] });
 												}}
-												marks={getScaleMarks(availableOptions.scales)}
-												label={(value) => `1/${value.toLocaleString()}`}
+												marks={getScaleMarks(availableOptions.scales).map(mark => ({
+													value: Math.log10(mark.value),
+													label: mark.label,
+												}))}
+												label={(logValue) => `1/${Math.round(Math.pow(10, logValue)).toLocaleString()}`}
 												styles={{
 													label: { fontSize: "10px" },
 													markLabel: { fontSize: "9px" },
