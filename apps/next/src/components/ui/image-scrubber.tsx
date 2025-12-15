@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState, useRef, useCallback, useEffect } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import { Box } from "@mantine/core";
 
 import { CustomImage } from "./custom-image";
 
-interface ImageSlideshowProps {
-	/** Array of image URLs to cycle through */
+interface ImageScrubberProps {
+	/** Array of image URLs to scrub through */
 	images: string[];
 	/** Alt text for the images */
 	alt: string;
@@ -16,75 +16,69 @@ interface ImageSlideshowProps {
 	placeholderSrc: string;
 	/** Fallback image when an image fails to load */
 	fallbackSrc: string;
-	/** Interval between image transitions in milliseconds */
-	interval?: number;
 	/** Image fit mode */
 	fit?: "contain" | "cover" | "fill" | "none" | "scale-down";
 }
 
 /**
- * Image component that cycles through multiple images on hover.
- * Shows the first image by default, then automatically transitions
- * through all images while hovered.
+ * Image component that displays different images based on cursor horizontal position.
+ * Shows the first image by default, then allows users to scrub through images
+ * by moving their cursor horizontally across the element while hovering.
  */
-export function ImageSlideshow({
+export function ImageScrubber({
 	images,
 	alt,
 	height,
 	placeholderSrc,
 	fallbackSrc,
-	interval = 1200,
 	fit = "cover",
-}: ImageSlideshowProps) {
+}: ImageScrubberProps) {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [isHovering, setIsHovering] = useState(false);
-	const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+	const containerRef = useRef<HTMLDivElement>(null);
 
 	const hasMultipleImages = images.length > 1;
 	const currentImage = images[currentIndex] ?? placeholderSrc;
 
-	const startSlideshow = useCallback(() => {
-		if (!hasMultipleImages) return;
+	const getImageIndexFromCursorX = useCallback((clientX: number) => {
+		if (!containerRef.current || !hasMultipleImages) return 0;
 
-		intervalRef.current = setInterval(() => {
-			setCurrentIndex((prev) => (prev + 1) % images.length);
-		}, interval);
-	}, [hasMultipleImages, images.length, interval]);
+		const rect = containerRef.current.getBoundingClientRect();
+		const relativeX = clientX - rect.left;
+		const percentage = Math.max(0, Math.min(1, relativeX / rect.width));
 
-	const stopSlideshow = useCallback(() => {
-		if (intervalRef.current) {
-			clearInterval(intervalRef.current);
-			intervalRef.current = null;
-		}
-		setCurrentIndex(0);
-	}, []);
+		// Map the percentage to an image index
+		const index = Math.floor(percentage * images.length);
+		return Math.min(index, images.length - 1);
+	}, [hasMultipleImages, images.length]);
 
 	const handleMouseEnter = useCallback(() => {
 		setIsHovering(true);
-		startSlideshow();
-	}, [startSlideshow]);
+	}, []);
 
 	const handleMouseLeave = useCallback(() => {
 		setIsHovering(false);
-		stopSlideshow();
-	}, [stopSlideshow]);
-
-	// Cleanup interval on unmount
-	useEffect(() => {
-		return () => {
-			if (intervalRef.current) {
-				clearInterval(intervalRef.current);
-			}
-		};
+		setCurrentIndex(0);
 	}, []);
 
-	
+	const handleMouseMove = useCallback((event: React.MouseEvent<HTMLDivElement>) => {
+		if (!hasMultipleImages) return;
+
+		const newIndex = getImageIndexFromCursorX(event.clientX);
+		setCurrentIndex(newIndex);
+	}, [hasMultipleImages, getImageIndexFromCursorX]);
+
 	return (
 		<Box
+			ref={containerRef}
 			pos="relative"
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
-			style={{ overflow: "hidden" }}
+			onMouseMove={handleMouseMove}
+			style={{
+				overflow: "hidden",
+				cursor: hasMultipleImages ? "ew-resize" : "default"
+			}}
 		>
 			<CustomImage
 				src={currentImage}
@@ -126,7 +120,7 @@ export function ImageSlideshow({
 				</Box>
 			)}
 
-			{/* Image count badge - show when multiple images and not hovering */}
+			{/* Image count badge - show when multiple images and not hovering to indicate interaction */}
 			{hasMultipleImages && !isHovering && (
 				<Box
 					pos="absolute"

@@ -15,7 +15,7 @@ import type { ViewMode } from "./types";
 
 import { CustomImage } from "@/components/ui/custom-image";
 import { EntityList } from "@/components/ui/entity-list";
-import { ImageSlideshow } from "@/components/ui/image-slideshow";
+import { ImageScrubber } from "@/components/ui/image-scrubber";
 import { RelationshipBadge } from "@/components/ui/relationship-badge";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import { itemHasManual } from "@/lib/relationship-utils";
@@ -61,7 +61,7 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 				withBorder={true}
 			>
 				<Box className={itemCardImage} style={{ position: "relative" }}>
-					<ImageSlideshow
+					<ImageScrubber
 						images={images}
 						alt={getNodeDisplayName(item)}
 						height={200}
