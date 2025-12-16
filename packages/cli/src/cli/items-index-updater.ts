@@ -4,16 +4,21 @@
  */
 
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 
 const ITEMS_INDEX_PATH = resolveWorkspacePath("data/src/items/index.json");
 
 interface SiteStatus {
 	hasPage: boolean;
-	checkedAt: string;
+	pageCheckedAt: string;    // When we verified the page exists (404 vs 200)
 	productName?: string;
 	error?: string;
+	arrayVerifiedAt?: string; // When we verified the image array completeness
+	arraySize?: number;       // Size of the image array when verified
+	downloadVerifiedAt?: string; // When we verified all images were downloaded
+	downloadCount?: number;     // Number of images downloaded when verified
+	pageScrapedAt?: string;   // When we last scraped the page for image content
 }
 
 interface SiteStats {
@@ -79,29 +84,25 @@ function calculateStats(items: Record<string, ItemIndexEntry>): ItemsIndex["stat
 /**
  * Utility class for updating the items index during scraping
  */
-export class ItemsIndexUpdater {
+export const ItemsIndexUpdater = {
 	/**
 	 * Load the items index from disk
 	 */
-	static load(): void {
+	load(): void {
 		if (itemsIndex) return;
 
 		try {
-			if (existsSync(ITEMS_INDEX_PATH)) {
-				itemsIndex = JSON.parse(readFileSync(ITEMS_INDEX_PATH, "utf-8")) as ItemsIndex;
-			} else {
-				itemsIndex = createEmptyIndex();
-			}
+			itemsIndex = existsSync(ITEMS_INDEX_PATH) ? JSON.parse(readFileSync(ITEMS_INDEX_PATH, "utf-8")) as ItemsIndex : createEmptyIndex();
 		} catch {
 			itemsIndex = createEmptyIndex();
 		}
 		isDirty = false;
-	}
+	},
 
 	/**
 	 * Record a valid item on the Japanese site
 	 */
-	static recordJpValid(itemId: string, productName?: string): void {
+	recordJpValid(itemId: string, productName?: string): void {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return;
 
@@ -113,17 +114,17 @@ export class ItemsIndexUpdater {
 		if (!itemsIndex.items[itemId].japaneseSite) {
 			itemsIndex.items[itemId].japaneseSite = {
 				hasPage: true,
-				checkedAt: new Date().toISOString(),
+				pageCheckedAt: new Date().toISOString(),
 				productName,
 			};
 			isDirty = true;
 		}
-	}
+	},
 
 	/**
 	 * Record an invalid (404) item on the Japanese site
 	 */
-	static recordJpInvalid(itemId: string, error?: string): void {
+	recordJpInvalid(itemId: string, error?: string): void {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return;
 
@@ -135,17 +136,17 @@ export class ItemsIndexUpdater {
 		if (!itemsIndex.items[itemId].japaneseSite) {
 			itemsIndex.items[itemId].japaneseSite = {
 				hasPage: false,
-				checkedAt: new Date().toISOString(),
+				pageCheckedAt: new Date().toISOString(),
 				error,
 			};
 			isDirty = true;
 		}
-	}
+	},
 
 	/**
 	 * Save the items index to disk if changed
 	 */
-	static save(): void {
+	save(): void {
 		if (!itemsIndex || !isDirty) return;
 
 		try {
@@ -156,20 +157,20 @@ export class ItemsIndexUpdater {
 		} catch (error) {
 			console.warn(`⚠️  Failed to save items index: ${error}`);
 		}
-	}
+	},
 
 	/**
 	 * Get current stats
 	 */
-	static getStats(): ItemsIndex["stats"] | null {
+	getStats(): ItemsIndex["stats"] | null {
 		if (!itemsIndex) this.load();
 		return itemsIndex?.stats ?? null;
-	}
+	},
 
 	/**
 	 * Check if an ID is already indexed and its status
 	 */
-	static isIndexed(itemId: string): { indexed: boolean; hasPage?: boolean; hasFile?: boolean; productName?: string } {
+	isIndexed(itemId: string): { indexed: boolean; hasPage?: boolean; hasFile?: boolean; productName?: string } {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return { indexed: false };
 
@@ -184,12 +185,12 @@ export class ItemsIndexUpdater {
 			hasFile: entry.hasFile,
 			productName: entry.japaneseSite.productName,
 		};
-	}
+	},
 
 	/**
 	 * Mark that a file has been created for an item
 	 */
-	static recordFileCreated(itemId: string, productName?: string): void {
+	recordFileCreated(itemId: string, productName?: string): void {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return;
 
@@ -201,7 +202,7 @@ export class ItemsIndexUpdater {
 		if (!itemsIndex.items[itemId].japaneseSite) {
 			itemsIndex.items[itemId].japaneseSite = {
 				hasPage: true,
-				checkedAt: new Date().toISOString(),
+				pageCheckedAt: new Date().toISOString(),
 				productName,
 			};
 		} else if (productName && !itemsIndex.items[itemId].japaneseSite?.productName) {
@@ -210,12 +211,12 @@ export class ItemsIndexUpdater {
 
 		itemsIndex.items[itemId].hasFile = true;
 		isDirty = true;
-	}
+	},
 
 	/**
 	 * Get IDs that need content download (has page but no file)
 	 */
-	static getIdsNeedingDownload(ranges: string[]): string[] {
+	getIdsNeedingDownload(ranges: string[]): string[] {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return ranges;
 
@@ -225,22 +226,22 @@ export class ItemsIndexUpdater {
 			if (!entry?.japaneseSite) return true;
 			return entry.japaneseSite.hasPage && !entry.hasFile;
 		});
-	}
+	},
 
 	/**
 	 * Get IDs not yet checked on Japanese site
 	 */
-	static getUncheckedIds(ranges: string[]): string[] {
+	getUncheckedIds(ranges: string[]): string[] {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return ranges;
 
 		return ranges.filter((id) => !itemsIndex?.items[id]?.japaneseSite);
-	}
+	},
 
 	/**
 	 * Get stats for display
 	 */
-	static getDisplayStats(): { valid: number; invalid: number; withFile: number; totalChecked: number } {
+	getDisplayStats(): { valid: number; invalid: number; withFile: number; totalChecked: number } {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return { valid: 0, invalid: 0, withFile: 0, totalChecked: 0 };
 
@@ -253,5 +254,185 @@ export class ItemsIndexUpdater {
 			withFile: entries.filter((e) => e.hasFile).length,
 			totalChecked: jpEntries.length,
 		};
-	}
-}
+	},
+
+	/**
+	 * Record that an item's image array has been verified for completeness
+	 */
+	recordArrayVerified(itemId: string, arraySize: number): void {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return;
+
+		if (!itemsIndex.items[itemId]) {
+			itemsIndex.items[itemId] = {};
+		}
+
+		if (!itemsIndex.items[itemId].japaneseSite) {
+			itemsIndex.items[itemId].japaneseSite = {
+				hasPage: false, // Assume no page if we're only verifying array
+				pageCheckedAt: new Date().toISOString(),
+			};
+		}
+
+		itemsIndex.items[itemId].japaneseSite.arrayVerifiedAt = new Date().toISOString();
+		itemsIndex.items[itemId].japaneseSite.arraySize = arraySize;
+		isDirty = true;
+	},
+
+	/**
+	 * Check if an item needs array verification (has been verified recently)
+	 */
+	needsArrayVerification(itemId: string, maxAgeHours = 24): boolean {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return true;
+
+		const entry = itemsIndex.items[itemId]?.japaneseSite;
+		if (!entry) return true;
+
+		// If never verified, needs verification
+		if (!entry.arrayVerifiedAt) return true;
+
+		// Check if verification is too old
+		const verificationTime = new Date(entry.arrayVerifiedAt).getTime();
+		const maxAge = maxAgeHours * 60 * 60 * 1000;
+		const now = Date.now();
+
+		return (now - verificationTime) > maxAge;
+	},
+
+	/**
+	 * Get array verification status for an item
+	 */
+	getArrayStatus(itemId: string): { verified: boolean; at?: string; size?: number } {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return { verified: false };
+
+		const entry = itemsIndex.items[itemId]?.japaneseSite;
+		if (!entry?.arrayVerifiedAt) return { verified: false };
+
+		return {
+			verified: true,
+			at: entry.arrayVerifiedAt,
+			size: entry.arraySize,
+		};
+	},
+
+	/**
+	 * Record that all images have been successfully downloaded for an item
+	 */
+	recordDownloadVerified(itemId: string, downloadCount: number): void {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return;
+
+		if (!itemsIndex.items[itemId]) {
+			itemsIndex.items[itemId] = {};
+		}
+
+		if (!itemsIndex.items[itemId].japaneseSite) {
+			itemsIndex.items[itemId].japaneseSite = {
+				hasPage: false, // Assume no page if we're only tracking downloads
+				pageCheckedAt: new Date().toISOString(),
+			};
+		}
+
+		itemsIndex.items[itemId].japaneseSite.downloadVerifiedAt = new Date().toISOString();
+		itemsIndex.items[itemId].japaneseSite.downloadCount = downloadCount;
+		isDirty = true;
+	},
+
+	/**
+	 * Check if an item needs download verification (all images downloaded recently)
+	 */
+	needsDownloadVerification(itemId: string, maxAgeHours = 24): boolean {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return true;
+
+		const entry = itemsIndex.items[itemId]?.japaneseSite;
+		if (!entry) return true;
+
+		// If never verified for downloads, needs verification
+		if (!entry.downloadVerifiedAt) return true;
+
+		// Check if verification is too old
+		const verificationTime = new Date(entry.downloadVerifiedAt).getTime();
+		const maxAge = maxAgeHours * 60 * 60 * 1000;
+		const now = Date.now();
+
+		return (now - verificationTime) > maxAge;
+	},
+
+	/**
+	 * Get download verification status for an item
+	 */
+	getDownloadStatus(itemId: string): { verified: boolean; at?: string; count?: number } {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return { verified: false };
+
+		const entry = itemsIndex.items[itemId]?.japaneseSite;
+		if (!entry?.downloadVerifiedAt) return { verified: false };
+
+		return {
+			verified: true,
+			at: entry.downloadVerifiedAt,
+			count: entry.downloadCount,
+		};
+	},
+
+	
+	/**
+	 * Get page check status for an item
+	 */
+	getPageStatus(itemId: string): { hasPage: boolean; checkedAt?: string; productName?: string } {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return { hasPage: false };
+
+		const entry = itemsIndex.items[itemId]?.japaneseSite;
+		if (!entry) return { hasPage: false };
+
+		return {
+			hasPage: entry.hasPage,
+			checkedAt: entry.pageCheckedAt,
+			productName: entry.productName,
+		};
+	},
+
+	/**
+	 * Record that the page was scraped for image content
+	 */
+	recordPageScraped(itemId: string): void {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return;
+
+		if (!itemsIndex.items[itemId]) {
+			itemsIndex.items[itemId] = {};
+		}
+
+		if (!itemsIndex.items[itemId].japaneseSite) {
+			itemsIndex.items[itemId].japaneseSite = {
+				hasPage: false,
+				pageCheckedAt: new Date().toISOString(),
+			};
+		}
+
+		itemsIndex.items[itemId].japaneseSite.pageScrapedAt = new Date().toISOString();
+		isDirty = true;
+	},
+
+	/**
+	 * Check if page content was recently scraped (within specified hours)
+	 */
+	wasPageRecentlyScraped(itemId: string, maxAgeHours = 168): boolean { // Default 7 days (168 hours)
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return false;
+
+		const entry = itemsIndex.items[itemId]?.japaneseSite;
+		if (!entry?.pageScrapedAt) return false;
+
+		// Check if page scraping is recent enough
+		const scrapeTime = new Date(entry.pageScrapedAt).getTime();
+		const maxAge = maxAgeHours * 60 * 60 * 1000;
+		const now = Date.now();
+
+		return (now - scrapeTime) <= maxAge;
+	},
+};
