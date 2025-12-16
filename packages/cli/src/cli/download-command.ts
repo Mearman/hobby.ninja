@@ -147,7 +147,12 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			for (const [index, element] of instructionElements.entries()) {
 				const img = element as HTMLImageElement;
 				// Check src first, then data-src
-				const src = img.src || img.dataset.src || "";
+				let src = img.src || img.dataset.src || "";
+
+				// Convert relative URLs to absolute URLs for instruction images
+				if (src && !src.startsWith("http")) {
+					src = new URL(src, window.location.href).href;
+				}
 
 				if (src && !seen.has(src)) {
 					seen.add(src);
