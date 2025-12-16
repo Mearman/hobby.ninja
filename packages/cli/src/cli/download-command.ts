@@ -8,7 +8,7 @@
  * CloudFront/Akamai signed URLs require Playwright browser context for authentication.
  */
 
-import { promises as fs, createWriteStream } from "node:fs";
+import { promises as fs, createWriteStream, accessSync } from "node:fs";
 import path from "node:path";
 
 import type { Browser, BrowserContext, Page } from "playwright";
@@ -166,7 +166,8 @@ async function downloadImagesInParallel(
 				// Use context.request API for:
 				// 1. Instruction images (CloudFront signed URLs)
 				// 2. Product images from akamaihd.net (CORS restrictions)
-				if (type === 'instruction' || url.includes('akamaihd.net')) {
+				// 3. Product images from cloudfront.net (signed URLs)
+				if (type === 'instruction' || url.includes('akamaihd.net') || url.includes('cloudfront.net')) {
 					const response = await playwrightPage!.context().request.get(url);
 					if (!response.ok()) {
 						throw new Error(`HTTP ${response.status()}`);
@@ -366,34 +367,43 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 			console.log("Looking for product images in correct order...");
 
-			// Get product images from the main content area, excluding instruction and related items sections
-			// Note: Bandai image URLs use their own internal IDs, not our catalog item IDs
-			// We select by DOM location rather than URL pattern
-			const productImageSelector = 'main img[src*="bandai-hobby.net/images"]:not([src*="common"]):not([src*="bnr"]), main img[src*="bandai-a.akamaihd.net"]:not([src*="related"]):not([src*="common"])';
-			const allProductImages = document.querySelectorAll(productImageSelector);
-			console.log(`Found ${allProductImages.length} total product image candidates`);
+			// Get product images from the product gallery swiper only
+			// The swiper may show the same image multiple times, so we'll deduplicate by URL
+			const productGallerySelector = '.pg-products__sliderMain img, .pg-products__sliderMainWrap img';
+			const galleryImages = document.querySelectorAll(productGallerySelector);
+			console.log(`Found ${galleryImages.length} images in product gallery`);
 
-			// Exclude images that are in the instruction section or related items section
-			const instructionContainer = document.querySelector('.pg-products__instruction');
-			const relatedItemsContainer = document.querySelector('#products > div.l-wrap > main > div > div > section:nth-child(5) > div.p-card__wrap.c-grid.-cols2-2');
-			const imageElements = Array.from(allProductImages).filter(img => {
-				// Exclude if this image is within the instruction or related items container
-				const inInstructions = instructionContainer && instructionContainer.contains(img);
-				const inRelatedItems = relatedItemsContainer && relatedItemsContainer.contains(img);
-				return !inInstructions && !inRelatedItems;
-			});
-			console.log(`After excluding instruction and related item images: ${imageElements.length} product images`);
+			// If no gallery images, fall back to old selector (for pages without swiper)
+			let imageElements = [];
+			if (galleryImages.length > 0) {
+				imageElements = Array.from(galleryImages);
+			} else {
+				console.log("No gallery images found, trying fallback selector...");
+				const fallbackSelector = 'main img[src*="bandai-hobby.net/images"]:not([src*="common"]):not([src*="bnr"]), main img[src*="bandai-a.akamaihd.net"]:not([src*="related"]):not([src*="common"])';
+				const allProductImages = document.querySelectorAll(fallbackSelector);
+				console.log(`Found ${allProductImages.length} total product image candidates`);
+
+				// Exclude images in instruction section
+				const instructionContainer = document.querySelector('.pg-products__instruction');
+				imageElements = Array.from(allProductImages).filter(img => {
+					const inInstructions = instructionContainer && instructionContainer.contains(img);
+					return !inInstructions;
+				});
+			}
+			console.log(`Product images to process: ${imageElements.length}`);
 
 			// Process images in DOM order to maintain consistency
+			// Deduplicate by base URL (without query params) to handle swiper duplicates
 			const processedSources = new Map(); // Track order by first appearance
 			imageElements.forEach(function(element, index) {
 				const img = element as HTMLImageElement;
 				const src = img.src || img.getAttribute('data-src') || "";
+				const baseUrl = src.split('?')[0]; // Remove query params for deduplication
 
-				if (src && !seen.has(src) && !processedSources.has(src)) {
-					seen.add(src);
-					processedSources.set(src, index);
-					urls.push(src);
+				if (src && baseUrl && !seen.has(baseUrl) && !processedSources.has(baseUrl)) {
+					seen.add(baseUrl);
+					processedSources.set(baseUrl, index);
+					urls.push(src); // Keep full URL for download (includes signed params)
 					console.log(`  Product Image ${urls.length - 1}: ${src.slice(0, 100)}...`);
 				}
 			});
@@ -501,7 +511,14 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 		// Generate file paths for product images
 		for (const [i, url] of imageUrls.entries()) {
-			const filename = extractFilenameFromUrl(url);
+			// Use sequential pattern for CloudFront URLs (random hashes)
+			// Use extracted filename for bandai-hobby.net and akamaihd.net (meaningful IDs)
+			let filename: string;
+			if (url.includes('cloudfront.net')) {
+				filename = `${itemId}_${i}.jpg`;
+			} else {
+				filename = extractFilenameFromUrl(url);
+			}
 			const localPath = path.join(itemOutputDir, filename);
 			productFilePaths.push({ url, filename, localPath, index: i });
 		}
@@ -1120,13 +1137,6 @@ async function downloadCatalogAssets(
 
 								const filename = imgPath.split('/').pop() || '';
 
-								// Remove old sequential product images (e.g., 01_1000_0.jpg, 01_1000_1.jpg)
-								// These will be replaced by extracted filenames
-								const oldProductPattern = new RegExp(`^${item.id}_\\d+\\.jpg$`);
-								if (oldProductPattern.test(filename)) {
-									return false;
-								}
-
 								// Remove CloudFront hash instruction images (not matching sequential pattern)
 								// Keep only: 01_1000_inst_0.jpg, 01_1000_inst_1.jpg, etc.
 								const instPattern = new RegExp(`^${item.id}_inst_\\d+\\.jpg$`);
@@ -1136,7 +1146,15 @@ async function downloadCatalogAssets(
 									return false;
 								}
 
-								return true;
+								// Verify file actually exists on disk
+								const diskPath = path.join(options.catalogImagesDir, imgPath.replace('/images/items/', ''));
+								try {
+									accessSync(diskPath);
+									return true;
+								} catch {
+									// File doesn't exist - remove from JSON
+									return false;
+								}
 							});
 
 						// Merge fresh images with cleaned existing images to create complete set
