@@ -168,6 +168,23 @@ async function downloadImagesInParallel(
 					buffer = Buffer.from(bufferArray);
 				}
 
+				// Validate downloaded instruction images are actually JPEGs, not error pages
+				if (type === 'instruction') {
+					const fileSize = buffer.length;
+					const minSize = 50000; // 50KB minimum for instruction images
+
+					if (fileSize < minSize) {
+						throw new Error(`Downloaded instruction image too small (${fileSize} bytes). Likely an error page or banner.`);
+					}
+
+					// Check JPEG magic bytes (FF D8 FF)
+					const isJPEG = buffer[0] === 0xFF && buffer[1] === 0xD8 && buffer[2] === 0xFF;
+					if (!isJPEG) {
+						const firstBytes = buffer.slice(0, 10).toString('hex');
+						throw new Error(`Downloaded instruction image is not a valid JPEG. First bytes: ${firstBytes}`);
+					}
+				}
+
 				// Use streaming write for better memory efficiency
 				await streamFileWrite(buffer, localPath);
 				return { success: true };
