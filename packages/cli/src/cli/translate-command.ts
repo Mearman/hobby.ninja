@@ -237,8 +237,7 @@ async function translateCatalogItems(options: CatalogTranslateOptions): Promise<
 	const cacheStats = translator.getCacheStats();
 	progressRenderer.complete(cacheStats.hits, cacheStats.misses);
 
-	// Small delay to ensure final render is visible before cleanup
-	await new Promise((resolve) => setTimeout(resolve, 100));
+	// Immediate cleanup - no artificial delay needed
 	progressRenderer.cleanup();
 
 	return { translated: progress.translated, fieldsTranslated: progress.fieldsTranslated };
@@ -403,8 +402,7 @@ async function translateManualFiles(options: ManualTranslateOptions): Promise<Tr
 	const cacheStats = translator.getCacheStats();
 	progressRenderer.complete(cacheStats.hits, cacheStats.misses);
 
-	// Small delay to ensure final render is visible before cleanup
-	await new Promise((resolve) => setTimeout(resolve, 100));
+	// Immediate cleanup - no artificial delay needed
 	progressRenderer.cleanup();
 
 	return { translated: progress.translated, fieldsTranslated: progress.fieldsTranslated };

@@ -51,11 +51,11 @@ export const DEFAULT_TIMEOUTS = {
 	SHORT: 1000,           // 1 second
 	MEDIUM: 5000,          // 5 seconds
 	LONG: 10_000,           // 10 seconds
-	DEFAULT_DELAY: 2000,   // 2 seconds default between requests
+	DEFAULT_DELAY: 0,      // No artificial delay between requests
 	MIN_DELAY: 0,           // Minimum allowed delay
 	MAX_DELAY: 60_000,      // Maximum allowed delay (1 minute)
 	REQUEST_TIMEOUT: 30_000, // 30 seconds for HTTP requests
-	CLEANUP_INTERVAL: 10_000, // 10 seconds for cleanup intervals
+	CLEANUP_INTERVAL: 1000,  // 1 second for cleanup intervals (reduced)
 } as const;
 
 // Retry and attempt constants
@@ -134,7 +134,7 @@ export const RATE_LIMITING = {
 export const LOGGING = {
 	DEFAULT_MAX_FILES: 5,
 	DEFAULT_MAX_FILE_SIZE: 10 * 1024 * 1024, // 10MB
-	FLUSH_DELAY: 100, // ms to wait when flushing logs
+	FLUSH_DELAY: 0, // No artificial delay when flushing logs
 	LOG_LEVEL_PRIORITIES: {
 		error: 0,
 		warn: 1,

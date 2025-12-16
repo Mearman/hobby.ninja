@@ -190,10 +190,7 @@ export class ScrapeCommand {
 				console.error(`  ✗ Error: ${errorMsg}`);
 			}
 
-			// Add delay between requests
-			if (i < urls.length - 1) {
-				await new Promise(resolve => setTimeout(resolve, 2000));
-			}
+			// No artificial delay between requests - retry logic handles rate limiting
 		}
 
 		// Save results to output directory
