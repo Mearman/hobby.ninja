@@ -17,6 +17,20 @@ import type { Browser, BrowserContext, Page } from "playwright";
 const MAX_RETRIES = 3;
 const BASE_RETRY_DELAY_MS = 1000; // 1 second base delay
 
+// Parallel download configuration
+const CONCURRENT_DOWNLOADS_PER_ITEM = 5; // Download up to 5 images simultaneously per item
+
+/**
+ * Split array into chunks of specified size
+ */
+function chunkArray<T>(array: T[], chunkSize: number): T[][] {
+	const chunks: T[][] = [];
+	for (let i = 0; i < array.length; i += chunkSize) {
+		chunks.push(array.slice(i, i + chunkSize));
+	}
+	return chunks;
+}
+
 /**
  * Batch check if files exist to reduce filesystem I/O overhead
  * Returns a Map of filepath -> exists boolean
@@ -100,6 +114,69 @@ async function streamFileWrite(buffer: Buffer, filePath: string): Promise<void> 
 
 		writeChunk();
 	});
+}
+
+/**
+ * Download multiple images in parallel
+ */
+async function downloadImagesInParallel(
+	imageData: Array<{ url: string; filename: string; localPath: string; type: 'product' | 'instruction' }>,
+	playwrightPage: Page,
+	outputDir: string
+): Promise<{ successful: string[], failed: Array<{ filename: string; error: string }> }> {
+	const successful: string[] = [];
+	const failed: Array<{ filename: string; error: string }> = [];
+
+	// Process images in chunks for controlled parallelism
+	const chunks = chunkArray(imageData, CONCURRENT_DOWNLOADS_PER_ITEM);
+
+	for (const chunk of chunks) {
+		console.log(`  Downloading ${chunk.length} images in parallel...`);
+
+		const downloadPromises = chunk.map(async ({ url, filename, localPath }) => {
+			// Use page.evaluate with fetch for image downloads (works with resource blocking)
+			const downloadResult = await retryWithBackoff(async () => {
+				const buffer = await playwrightPage!.evaluate(async (imageUrl: string) => {
+					const response = await fetch(imageUrl, {
+						method: 'GET',
+						headers: {
+							'User-Agent': navigator.userAgent,
+							'Referer': window.location.href,
+						},
+					});
+
+					if (!response.ok) {
+						throw new Error(`HTTP ${response.status}`);
+					}
+
+					const arrayBuffer = await response.arrayBuffer();
+					return [...new Uint8Array(arrayBuffer)];
+				}, url);
+
+				// Use streaming write for better memory efficiency
+				await streamFileWrite(Buffer.from(buffer), localPath);
+				return { success: true };
+			}, `Download ${filename}`);
+
+			if (downloadResult.success) {
+				successful.push(`/images/items/${filename}`);
+				return { filename, success: true };
+			} else {
+				failed.push({ filename, error: downloadResult.error || 'Unknown error' });
+				return { filename, success: false, error: downloadResult.error };
+			}
+		});
+
+		// Wait for this chunk to complete before starting the next
+		await Promise.all(downloadPromises);
+
+		// Report progress for this chunk
+		const chunkSuccessful = downloadPromises.filter(p => p.success).length;
+		const chunkFailed = downloadPromises.filter(p => !p.success).length;
+		console.log(`  ✓ Chunk complete: ${chunkSuccessful} successful, ${chunkFailed} failed`);
+	}
+
+	return { successful, failed };
 }
 
 export type DownloadSource = "all" | "manuals" | "catalog";
@@ -327,90 +404,51 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 		const allFilePaths = [...productFilePaths, ...instructionFilePaths];
 		const existenceMap = await batchCheckFileExists(allFilePaths.map(fp => fp.localPath));
 
-		// Download product images first (skip existing ones)
-		for (const { url, filename, localPath } of productFilePaths) {
+		// Filter out existing files and prepare download data
+		const productDownloads = productFilePaths.filter(({ localPath, filename }) => {
 			if (existenceMap.get(localPath)) {
 				console.log(`  Skipped (exists): ${filename}`);
 				localPaths.push(`/images/items/${filename}`);
-				continue;
+				return false;
 			}
+			return true;
+		});
 
-			// Download with retry logic
-			const downloadResult = await retryWithBackoff(async () => {
-				console.log(`  Downloading product image: ${filename}...`);
-
-				// Use page.evaluate with fetch for image downloads (works with resource blocking)
-				const buffer = await playwrightPage!.evaluate(async (imageUrl: string) => {
-					const response = await fetch(imageUrl, {
-						method: 'GET',
-						headers: {
-							'User-Agent': navigator.userAgent,
-							'Referer': window.location.href,
-						},
-					});
-
-					if (!response.ok) {
-						throw new Error(`HTTP ${response.status}`);
-					}
-
-					const arrayBuffer = await response.arrayBuffer();
-					return [...new Uint8Array(arrayBuffer)];
-				}, url);
-
-				// Use streaming write for better memory efficiency
-				await streamFileWrite(Buffer.from(buffer), localPath);
-				console.log(`  ✓ Downloaded: ${filename}`);
-				return { success: true };
-			}, `Download product image ${filename}`);
-
-			if (downloadResult.success) {
-				localPaths.push(`/images/items/${filename}`);
-			} else {
-				console.error(`  ✗ Failed to download ${filename}:`, downloadResult.error);
-			}
-		}
-
-		// Download instruction images after product images (skip existing ones)
-		for (const { url, filename, localPath } of instructionFilePaths) {
+		const instructionDownloads = instructionFilePaths.filter(({ localPath, filename }) => {
 			if (existenceMap.get(localPath)) {
 				console.log(`  Skipped (exists): ${filename}`);
 				localPaths.push(`/images/items/${filename}`);
-				continue;
+				return false;
+			}
+			return true;
+		});
+
+		// Combine all downloads with type information
+		const allDownloads = [
+			...productDownloads.map(({ url, filename, localPath }) => ({ url, filename, localPath, type: 'product' as const })),
+			...instructionDownloads.map(({ url, filename, localPath }) => ({ url, filename, localPath, type: 'instruction' as const }))
+		];
+
+		if (allDownloads.length > 0) {
+			console.log(`  Downloading ${allDownloads.length} images (${productDownloads.length} product, ${instructionDownloads.length} instruction) in parallel...`);
+
+			// Download images in parallel with controlled concurrency
+			const { successful, failed } = await downloadImagesInParallel(allDownloads, playwrightPage!, outputDir);
+
+			// Add successful downloads to localPaths
+			localPaths.push(...successful);
+
+			// Report failures
+			if (failed.length > 0) {
+				console.log(`  Failed downloads: ${failed.length}`);
+				for (const { filename, error } of failed) {
+					console.error(`    ✗ ${filename}: ${error}`);
+				}
 			}
 
-			// Download with retry logic
-			const downloadResult = await retryWithBackoff(async () => {
-				console.log(`  Downloading instruction image: ${filename}...`);
-
-				// Use page.evaluate with fetch for image downloads (works with resource blocking)
-				const buffer = await playwrightPage!.evaluate(async (imageUrl: string) => {
-					const response = await fetch(imageUrl, {
-						method: 'GET',
-						headers: {
-							'User-Agent': navigator.userAgent,
-							'Referer': window.location.href,
-						},
-					});
-
-					if (!response.ok) {
-						throw new Error(`HTTP ${response.status}`);
-					}
-
-					const arrayBuffer = await response.arrayBuffer();
-					return [...new Uint8Array(arrayBuffer)];
-				}, url);
-
-				// Use streaming write for better memory efficiency
-				await streamFileWrite(Buffer.from(buffer), localPath);
-				console.log(`  ✓ Downloaded: ${filename}`);
-				return { success: true };
-			}, `Download instruction image ${filename}`);
-
-			if (downloadResult.success) {
-				localPaths.push(`/images/items/${filename}`);
-			} else {
-				console.error(`  ✗ Failed to download ${filename}:`, downloadResult.error);
-			}
+			console.log(`  ✓ Parallel download complete: ${successful.length} successful, ${failed.length} failed`);
+		} else {
+			console.log(`  All images already exist for ${itemId}`);
 		}
 
 		// Increment counter for successful processing
