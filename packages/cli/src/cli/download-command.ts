@@ -14,7 +14,9 @@ import path from "node:path";
 import { load as cheerioLoad } from "cheerio";
 import type { Browser, BrowserContext, Page } from "playwright";
 
-const IMAGE_DELAY_MS = 50;
+// Retry configuration
+const MAX_RETRIES = 3;
+const BASE_RETRY_DELAY_MS = 1000; // 1 second base delay
 
 export type DownloadSource = "all" | "manuals" | "catalog";
 
@@ -43,7 +45,8 @@ let playwrightPage: Page | null = null;
 async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, outputDir: string): Promise<string[]> {
 	const localPaths: string[] = [];
 
-	try {
+	// Wrap the entire page visit in retry logic
+	const pageVisitResult = await retryWithBackoff(async () => {
 		// Initialize Playwright browser first to get fresh URLs from live page
 		if (!playwrightPage) {
 			await initPlaywright();
@@ -56,73 +59,127 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 		// Visit the page with cache-busting to get fresh URLs - only ONCE
 		await playwrightPage.goto(`${sourceUrl}?_=${Date.now()}`, {
-			waitUntil: "networkidle",
+			waitUntil: "domcontentloaded", // Faster than networkidle
 			timeout: 30_000,
 			extraHTTPHeaders: {
-				'Cache-Control': 'no-cache, no-store, must-revalidate',
-				'Pragma': 'no-cache',
-				'Expires': '0'
-			}
+				"Cache-Control": "no-cache, no-store, must-revalidate",
+				"Pragma": "no-cache",
+				"Expires": "0",
+			},
 		});
-		await playwrightPage.waitForTimeout(3000);
 
-		// Try to trigger any lazy loading or dynamic content
-		await playwrightPage.evaluate(() => {
-			// Scroll to bottom to trigger lazy loading
-			window.scrollTo(0, document.body.scrollHeight);
+		// Intelligent waiting - check if images are loaded before doing extra work
+		const imagesLoaded = await playwrightPage.evaluate(() => {
+			// Check if product images are already loaded
+			const productSelector = "#products > div.l-wrap > main > div > div > div.pg-pg-products__Wrap > div.pg-products__contentLeft > div.pg-products__sliderThumbnailWrap img";
+			const productImages = document.querySelectorAll(productSelector);
+
+			// If we have images with valid src, we can skip the lazy loading steps
+			if (productImages.length > 0) {
+				const hasValidSources = Array.from(productImages).some(img => {
+					const src = (img as HTMLImageElement).src || (img as HTMLImageElement).dataset.src || "";
+					return src && !src.includes("placeholder");
+				});
+				if (hasValidSources) {
+					return { loaded: true, count: productImages.length };
+				}
+			}
+			return { loaded: false, count: 0 };
 		});
-		await playwrightPage.waitForTimeout(2000);
-		await playwrightPage.evaluate(() => {
-			// Scroll back to top
-			window.scrollTo(0, 0);
-		});
-		await playwrightPage.waitForTimeout(1000);
+
+		if (!imagesLoaded.loaded) {
+			// Only do scrolling if images aren't loaded yet
+			await playwrightPage.evaluate(() => {
+				// Scroll to bottom to trigger lazy loading
+				window.scrollTo(0, document.body.scrollHeight);
+			});
+
+			// Wait for images to appear after scrolling (with timeout)
+			await playwrightPage.waitForFunction(() => {
+				const productSelector = "#products > div.l-wrap > main > div > div > div.pg-pg-products__Wrap > div.pg-products__contentLeft > div.pg-products__sliderThumbnailWrap img";
+				const productImages = document.querySelectorAll(productSelector);
+				return productImages.length > 0;
+			}, { timeout: 5000 });
+
+			await playwrightPage.evaluate(() => {
+				// Scroll back to top
+				window.scrollTo(0, 0);
+			});
+		}
+	}, `Page visit for ${itemId}`);
+
+	if (!pageVisitResult.success) {
+		throw new Error(pageVisitResult.error || "Failed to visit page after retries");
+	}
+
+	try {
 
 		// Get image URLs directly from the live browser page - only ONCE
-		const imageUrls = await playwrightPage.evaluate(() => {
+		const { imageUrls, instructionUrls } = await playwrightPage.evaluate(() => {
 			const urls = [];
+			const instructionUrls = [];
 			const seen = new Set();
 
 			console.log("Looking for product images in correct order...");
 
-			// Use the specific selector for product images in the correct order
-			const selector = '#products > div.l-wrap > main > div > div > div.pg-pg-products__Wrap > div.pg-products__contentLeft > div.pg-products__sliderThumbnailWrap img';
-			const images = document.querySelectorAll(selector);
-			console.log(`Found ${images.length} product images in slider`);
+			// Get product slider images
+			const productSelector = "#products > div.l-wrap > main > div > div > div.pg-pg-products__Wrap > div.pg-products__contentLeft > div.pg-products__sliderThumbnailWrap img";
+			const productImages = document.querySelectorAll(productSelector);
+			console.log(`Found ${productImages.length} product images in slider`);
 
-			images.forEach((element, index) => {
+			for (const [index, element] of productImages.entries()) {
 				const img = element as HTMLImageElement;
 				// Check src first, then data-src
-				const src = img.src || img.getAttribute('data-src') || "";
+				const src = img.src || img.dataset.src || "";
 
 				if (src && !seen.has(src)) {
 					seen.add(src);
 					urls.push(src);
-					console.log(`  Image ${index}: ${src.substring(0, 100)}...`);
+					console.log(`  Product Image ${index}: ${src.slice(0, 100)}...`);
 				}
-			});
+			}
 
-			return urls;
+			// Get instruction images if they exist
+			const instructionSelector = "#products > div.l-wrap > main > div > div > section:nth-child(4) > div.pg-products__instruction > div.pg-products__article img";
+			const instructionElements = document.querySelectorAll(instructionSelector);
+			console.log(`Found ${instructionElements.length} instruction images`);
+
+			for (const [index, element] of instructionElements.entries()) {
+				const img = element as HTMLImageElement;
+				// Check src first, then data-src
+				const src = img.src || img.dataset.src || "";
+
+				if (src && !seen.has(src)) {
+					seen.add(src);
+					instructionUrls.push(src);
+					console.log(`  Instruction Image ${index}: ${src.slice(0, 100)}...`);
+				}
+			}
+
+			return { imageUrls: urls, instructionUrls };
 		});
 
 		console.log(`  Found ${imageUrls.length} product images`);
+		console.log(`  Found ${instructionUrls.length} instruction images`);
 
 		// Debug: Print the first few URLs
-		imageUrls.slice(0, 3).forEach((url, i) => {
-			console.log(`  URL ${i}: ${url.substring(0, 120)}...`);
-		});
+		for (const [i, url] of imageUrls.slice(0, 3).entries()) {
+			console.log(`  Product URL ${i}: ${url.slice(0, 120)}...`);
+		}
+		for (const [i, url] of instructionUrls.slice(0, 3).entries()) {
+			console.log(`  Instruction URL ${i}: ${url.slice(0, 120)}...`);
+		}
 
-		if (imageUrls.length === 0) {
+		if (imageUrls.length === 0 && instructionUrls.length === 0) {
 			return [];
 		}
 
 		// Ensure output directory exists
 		await fs.mkdir(outputDir, { recursive: true });
 
-		// Download images using the URLs we already captured - NO REVISITS
-		for (let i = 0; i < imageUrls.length; i++) {
-			const url = imageUrls[i];
-			const ext = url.split('.').pop()?.split('?')[0] || 'jpg';
+		// Download product images first
+		for (const [i, url] of imageUrls.entries()) {
+			const ext = url.split(".").pop()?.split("?")[0] || "jpg";
 			const filename = `${itemId}_${i}.${ext}`;
 			const localPath = path.join(outputDir, filename);
 
@@ -136,11 +193,11 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 				// File doesn't exist, download it
 			}
 
-			try {
-				console.log(`  Downloading: ${filename}...`);
+			// Download with retry logic
+			const downloadResult = await retryWithBackoff(async () => {
+				console.log(`  Downloading product image: ${filename}...`);
 
-				// Use the URL we already captured
-				const response = await playwrightPage.goto(url, {
+				const response = await playwrightPage!.goto(url, {
 					waitUntil: "load",
 					timeout: 30_000,
 				});
@@ -149,17 +206,58 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 					const buffer = await response.body();
 					await fs.writeFile(localPath, buffer);
 					console.log(`  ✓ Downloaded: ${filename}`);
-					localPaths.push(`/images/items/${filename}`);
+					return { success: true };
 				} else {
-					throw new Error(`HTTP ${response?.status() || 'unknown'}`);
+					throw new Error(`HTTP ${response?.status() || "unknown"}`);
 				}
-			} catch (error) {
-				console.error(`  ✗ Failed to download ${filename}:`, error instanceof Error ? error.message : error);
+			}, `Download product image ${filename}`);
+
+			if (downloadResult.success) {
+				localPaths.push(`/images/items/${filename}`);
+			} else {
+				console.error(`  ✗ Failed to download ${filename}:`, downloadResult.error);
+			}
+		}
+
+		// Download instruction images after product images
+		for (const [i, url] of instructionUrls.entries()) {
+			const ext = url.split(".").pop()?.split("?")[0] || "jpg";
+			const filename = `${itemId}_inst_${i}.${ext}`; // Use itemId to avoid conflicts
+			const localPath = path.join(outputDir, filename);
+
+			// Skip if already exists
+			try {
+				await fs.access(localPath);
+				console.log(`  Skipped (exists): ${filename}`);
+				localPaths.push(`/images/items/${filename}`);
+				continue;
+			} catch {
+				// File doesn't exist, download it
 			}
 
-			// Small delay between downloads
-			if (i < imageUrls.length - 1) {
-				await sleep(100);
+			// Download with retry logic
+			const downloadResult = await retryWithBackoff(async () => {
+				console.log(`  Downloading instruction image: ${filename}...`);
+
+				const response = await playwrightPage!.goto(url, {
+					waitUntil: "load",
+					timeout: 30_000,
+				});
+
+				if (response && response.ok()) {
+					const buffer = await response.body();
+					await fs.writeFile(localPath, buffer);
+					console.log(`  ✓ Downloaded: ${filename}`);
+					return { success: true };
+				} else {
+					throw new Error(`HTTP ${response?.status() || "unknown"}`);
+				}
+			}, `Download instruction image ${filename}`);
+
+			if (downloadResult.success) {
+				localPaths.push(`/images/items/${filename}`);
+			} else {
+				console.error(`  ✗ Failed to download ${filename}:`, downloadResult.error);
 			}
 		}
 
@@ -220,7 +318,7 @@ async function initPlaywright(): Promise<void> {
 	const { chromium } = await import("playwright");
 	playwrightBrowser = await chromium.launch({
 		headless: false, // Bandai requires non-headless for signed URLs
-		slowMo: 100,
+		slowMo: 0, // No artificial delay - retry logic handles failures
 	});
 	playwrightContext = await playwrightBrowser.newContext({
 		userAgent: HEADERS["User-Agent"],
@@ -273,9 +371,10 @@ async function downloadFileWithPlaywright(
 		return { downloaded: false, error: "Playwright not initialized" };
 	}
 
-	try {
+	// Download with retry logic
+	const retryResult = await retryWithBackoff(async () => {
 		// Use page.evaluate to fetch with browser cookies
-		const buffer = await playwrightPage.evaluate(async (imageUrl: string) => {
+		const buffer = await playwrightPage!.evaluate(async (imageUrl: string) => {
 			const response = await fetch(imageUrl);
 			if (!response.ok) {
 				throw new Error(`HTTP ${response.status}`);
@@ -288,11 +387,13 @@ async function downloadFileWithPlaywright(
 		if (verbose) {
 			console.log(`  Downloaded (Playwright): ${path.basename(destPath)}`);
 		}
-		return { downloaded: true };
-	} catch (error) {
-		const message = error instanceof Error ? error.message : String(error);
-		return { downloaded: false, error: message };
-	}
+		return { success: true };
+	}, `Download (Playwright) ${path.basename(destPath)}`);
+
+	return {
+		downloaded: retryResult.success,
+		error: retryResult.error,
+	};
 }
 
 async function fileExists(path: string): Promise<boolean> {
@@ -322,10 +423,11 @@ async function downloadFile(
 		return downloadFileWithPlaywright(url, destPath, verbose);
 	}
 
-	try {
+	// Download with retry logic
+	const retryResult = await retryWithBackoff(async () => {
 		const response = await fetch(url, { headers: HEADERS });
 		if (!response.ok) {
-			return { downloaded: false, error: `HTTP ${response.status}` };
+			throw new Error(`HTTP ${response.status}`);
 		}
 
 		const buffer = Buffer.from(await response.arrayBuffer());
@@ -333,11 +435,13 @@ async function downloadFile(
 		if (verbose) {
 			console.log(`  Downloaded: ${path.basename(destPath)}`);
 		}
-		return { downloaded: true };
-	} catch (error) {
-		const message = error instanceof Error ? error.message : String(error);
-		return { downloaded: false, error: message };
-	}
+		return { success: true };
+	}, `Download ${path.basename(destPath)}`);
+
+	return {
+		downloaded: retryResult.success,
+		error: retryResult.error,
+	};
 }
 
 function getImageExtension(url: string): string {
@@ -355,6 +459,41 @@ function getImageExtension(url: string): string {
 
 function sleep(ms: number): Promise<void> {
 	return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/**
+ * Retry a function with exponential backoff
+ */
+async function retryWithBackoff<T>(
+	fn: () => Promise<T>,
+	operation: string,
+	maxRetries: number = MAX_RETRIES,
+): Promise<{ result: T; success: boolean; error?: string }> {
+	let lastError = "";
+
+	for (let attempt = 1; attempt <= maxRetries; attempt++) {
+		try {
+			const result = await fn();
+			return { result, success: true };
+		} catch (error) {
+			lastError = error instanceof Error ? error.message : String(error);
+
+			if (attempt === maxRetries) {
+				break; // Don't wait after final attempt
+			}
+
+			const delay = BASE_RETRY_DELAY_MS * Math.pow(2, attempt - 1); // 1s, 2s, 4s...
+			console.warn(`  ${operation} failed (attempt ${attempt}/${maxRetries}): ${lastError}`);
+			console.warn(`  Retrying in ${delay}ms...`);
+			await sleep(delay);
+		}
+	}
+
+	return {
+		result: null as unknown as T,
+		success: false,
+		error: `${operation} failed after ${maxRetries} attempts: ${lastError}`,
+	};
 }
 
 async function downloadManualAssets(
@@ -452,9 +591,9 @@ async function downloadCatalogAssets(
 		await fs.mkdir(options.catalogImagesDir, { recursive: true });
 
 		// Scrape and download images in one go
-		const localImagePaths = !options.dryRun
-			? await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir)
-			: [];
+		const localImagePaths = options.dryRun
+			? []
+			: await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir);
 
 		if (localImagePaths.length > 0) {
 			stats.downloaded = localImagePaths.length;
@@ -490,6 +629,86 @@ async function downloadCatalogAssets(
 		}
 
 		return stats;
+	}
+
+	// Handle case where images array exists but files might be missing
+	if (item.images && item.images.length > 0) {
+		// Verify that each image listed in the JSON actually exists
+		const missingImages: string[] = [];
+
+		for (const imagePath of item.images) {
+			// Convert JSON path to actual file system path
+			const filename = path.basename(imagePath);
+			const fullPath = path.join(options.catalogImagesDir, filename);
+
+			try {
+				await fs.access(fullPath);
+			} catch {
+				missingImages.push(imagePath);
+			}
+		}
+
+		if (missingImages.length > 0) {
+			if (options.verbose) {
+				console.log(`[${item.id}] Found ${missingImages.length} missing images out of ${item.images.length} - re-downloading...`);
+			}
+
+			if (!item.sourceUrl) {
+				if (options.verbose) {
+					console.log(`[${item.id}] Missing images but no sourceUrl - cannot re-download`);
+				}
+				stats.failed = missingImages.length;
+				return stats;
+			}
+
+			// Ensure output directory exists
+			await fs.mkdir(options.catalogImagesDir, { recursive: true });
+
+			// Scrape and download images in one go
+			const localImagePaths = options.dryRun
+				? []
+				: await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir);
+
+			if (localImagePaths.length > 0) {
+				stats.downloaded = localImagePaths.length;
+				if (options.verbose) {
+					console.log(`  ✓ Downloaded ${localImagePaths.length} images`);
+				}
+
+				// Update the JSON file with local paths
+				if (jsonPath && !options.dryRun) {
+					try {
+						// Read the original file to preserve other fields
+						const originalContent = await fs.readFile(jsonPath, "utf8");
+						const originalItem = JSON.parse(originalContent);
+
+						// Update only the images array
+						originalItem.images = localImagePaths;
+
+						// Write back to file
+						await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
+
+						if (options.verbose) {
+							console.log(`  ✓ Updated JSON with ${localImagePaths.length} local image paths`);
+						}
+					} catch (error) {
+						const msg = error instanceof Error ? error.message : String(error);
+						stats.errors.push(`${item.id}: Failed to update JSON file: ${msg}`);
+					}
+				}
+			} else {
+				stats.failed = missingImages.length;
+				if (options.verbose) {
+					console.log(`  ✗ Failed to download replacement images`);
+				}
+			}
+		} else {
+			// All images exist
+			stats.skipped = item.images.length;
+			if (options.verbose) {
+				console.log(`[${item.id}] All ${item.images.length} images already exist - skipping`);
+			}
+		}
 	}
 
 	return stats;
@@ -561,9 +780,7 @@ async function processManuals(options: DownloadOptions): Promise<DownloadResult>
 				);
 			}
 
-			if (!options.dryRun && options.delayMs > 0) {
-				await sleep(options.delayMs);
-			}
+			// Removed artificial delay - retry logic handles transient failures
 		}
 	} catch (error) {
 		const msg = error instanceof Error ? error.message : String(error);
@@ -589,8 +806,8 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 	try {
 		const entries = await fs.readdir(options.catalogDir, { withFileTypes: true });
 		let ids = entries
-			.filter((e) => e.isFile() && e.name.endsWith('.json'))
-			.map((e) => e.name.replace('.json', ''))
+			.filter((e) => e.isFile() && e.name.endsWith(".json"))
+			.map((e) => e.name.replace(".json", ""))
 			.toSorted();
 
 		// Filter by specific IDs if provided
@@ -640,9 +857,7 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 				);
 			}
 
-			if (!options.dryRun && options.delayMs > 0) {
-				await sleep(options.delayMs);
-			}
+			// Removed artificial delay - retry logic handles transient failures
 		}
 	} catch (error) {
 		const msg = error instanceof Error ? error.message : String(error);
