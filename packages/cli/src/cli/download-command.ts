@@ -13,6 +13,8 @@ import path from "node:path";
 
 import type { Browser, BrowserContext, Page } from "playwright";
 
+import { ItemsIndexUpdater } from "./items-index-updater.js";
+
 // Retry configuration
 const MAX_RETRIES = 3;
 const BASE_RETRY_DELAY_MS = 1000; // 1 second base delay
@@ -300,7 +302,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 	try {
 
 		// Get image URLs directly from the live browser page - only ONCE
-		const { imageUrls, instructionUrls } = await playwrightPage.evaluate(() => {
+		const { imageUrls, instructionUrls } = await playwrightPage.evaluate((currentItemId) => {
 			const urls = [];
 			const instructionUrls = [];
 			const seen = new Set();
@@ -309,24 +311,27 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 			// Get ALL unique product images on the page, not just thumbnails
 			// Find all images within the products section that match product image patterns
-			// Include both bandai-hobby.net images and bandai-a.akamaihd.net CDN images
-			const allProductImages = document.querySelectorAll('#products img[src*="bandai-hobby.net/images"]:not([src*="common"]):not([src*="bnr"]), #products img[src*="bandai-a.akamaihd.net"]');
+			// Include both bandai-hobby.net images and bandai-a.akamaihd.net CDN images, but exclude related items
+			const allProductImages = document.querySelectorAll('#products img[src*="bandai-hobby.net/images"]:not([src*="common"]):not([src*="bnr"]), #products img[src*="bandai-a.akamaihd.net"]:not([src*="related"]):not([src*="common"])');
 			console.log(`Found ${allProductImages.length} total product image elements`);
 
 			// Convert to array and process for consistent ordering
 			const imageElements = Array.from(allProductImages);
 			const processedSources = new Map(); // Track order by first appearance
 
+			// Create regex pattern for current item to ensure we only download this item's images
+			const currentItemPattern = new RegExp(`/${currentItemId}_\\d+\\.(jpg|png|webp)`);
+
 			// Process images in DOM order to maintain consistency
 			imageElements.forEach(function(element, index) {
 				const src = element.src || element.getAttribute('data-src') || "";
 
-				// Include product images from both sources:
-				// - bandai-hobby.net/images with product pattern
-				// - bandai-a.akamaihd.net CDN images (all are product images)
+				// Include only images that match the current item pattern, excluding related item images:
+				// - bandai-hobby.net/images with product pattern for current item
+				// - bandai-a.akamaihd.net CDN images that match current item pattern
 				if (src && (
-					(src.includes('bandai-hobby.net/images') && src.match(/\/images\/\d+_\d+_s_/)) ||
-					src.includes('bandai-a.akamaihd.net')
+					(src.includes('bandai-hobby.net/images') && src.match(new RegExp(`/${currentItemId}_\\d+_s_`))) ||
+					(src.includes('bandai-a.akamaihd.net') && src.match(currentItemPattern))
 				) && !seen.has(src) && !processedSources.has(src)) {
 					seen.add(src);
 					processedSources.set(src, index);
@@ -360,7 +365,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			});
 
 			return { imageUrls: urls, instructionUrls };
-		});
+		}, itemId);
 
 		console.log(`  Found ${imageUrls.length} product images`);
 		console.log(`  Found ${instructionUrls.length} instruction images`);
@@ -823,6 +828,11 @@ async function downloadCatalogAssets(
 			? []
 			: await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir);
 
+		// Record that we scraped the page for content (only if not dry run and we got images)
+		if (!options.dryRun && localImagePaths.length > 0) {
+			ItemsIndexUpdater.recordPageScraped(item.id);
+		}
+
 		if (localImagePaths.length > 0) {
 			stats.downloaded = localImagePaths.length;
 			if (options.verbose) {
@@ -842,8 +852,12 @@ async function downloadCatalogAssets(
 					// Write back to file
 					await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
 
+					// Record that this item's images have been successfully downloaded
+					ItemsIndexUpdater.recordDownloadVerified(item.id, localImagePaths.length);
+
 					if (options.verbose) {
 						console.log(`  ✓ Updated JSON with ${localImagePaths.length} local image paths`);
+						console.log(`  ✓ Recorded array verification for ${item.id} (${localImagePaths.length} images)`);
 					}
 				} catch (error) {
 					const msg = error instanceof Error ? error.message : String(error);
@@ -902,6 +916,11 @@ async function downloadCatalogAssets(
 				? []
 				: await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir);
 
+			// Record that we scraped the page for content (only if not dry run and we got images)
+			if (!options.dryRun && localImagePaths.length > 0) {
+				ItemsIndexUpdater.recordPageScraped(item.id);
+			}
+
 			if (localImagePaths.length > 0) {
 				stats.downloaded = localImagePaths.length;
 				if (options.verbose) {
@@ -920,6 +939,11 @@ async function downloadCatalogAssets(
 
 						// Write back to file
 						await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
+
+
+
+						// Record that this item's images have been successfully downloaded
+						ItemsIndexUpdater.recordDownloadVerified(item.id, localImagePaths.length);
 
 						if (options.verbose) {
 							console.log(`  ✓ Updated JSON with ${localImagePaths.length} local image paths`);
@@ -942,48 +966,73 @@ async function downloadCatalogAssets(
 				console.log(`[${item.id}] All ${item.images.length} images already exist - skipping`);
 			}
 
-			// Recheck mode: always scrape to verify image array is complete
+			// Record that this item's images have been verified as downloaded
+			ItemsIndexUpdater.recordDownloadVerified(item.id, item.images.length);
+
+			// Recheck mode: check if we need to verify image array completeness
 			if (options.recheck && item.sourceUrl) {
-				if (options.verbose) {
-					console.log(`[${item.id}] Rechecking for additional images...`);
-				}
+				// Check if page was recently scraped for content (within 7 days)
+				const pageRecentlyScraped = ItemsIndexUpdater.wasPageRecentlyScraped(item.id, 7 * 24); // 7 days
 
-				// Scrape fresh images to see if there are more than what's in the array
-				const freshImagePaths = !options.dryRun
-					? await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir)
-					: [];
-
-				if (freshImagePaths.length > item.images.length) {
+				if (pageRecentlyScraped) {
 					if (options.verbose) {
-						console.log(`  ✓ Found ${freshImagePaths.length - item.images.length} additional images`);
+						console.log(`[${item.id}] Skipping page scrape - scraped recently (within 7 days)`);
 					}
-
-					// Update the JSON file with the complete image array
-					if (jsonPath && !options.dryRun) {
-						try {
-							// Read the original file to preserve other fields
-							const originalContent = await fs.readFile(jsonPath, "utf8");
-							const originalItem = JSON.parse(originalContent);
-
-							// Update the images array with the complete set
-							originalItem.images = freshImagePaths;
-
-							// Write back to file
-							await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
-
-							if (options.verbose) {
-								console.log(`  ✓ Updated JSON with complete image array (${freshImagePaths.length} images)`);
-							}
-						} catch (error) {
-							const msg = error instanceof Error ? error.message : String(error);
-							stats.errors.push(`${item.id}: Failed to update JSON file: ${msg}`);
+				} else {
+					// Page not recently scraped, verify array completeness
+					if (ItemsIndexUpdater.needsArrayVerification(item.id)) {
+						if (options.verbose) {
+							console.log(`[${item.id}] Rechecking for additional images...`);
 						}
-					}
 
-					// Update stats to reflect newly downloaded images
-					stats.downloaded = freshImagePaths.length - item.images.length;
-				} else if (options.verbose) {
-					console.log(`  ✓ Image array is complete (${freshImagePaths.length} images)`);
+						// Scrape fresh images to see if there are more than what's in the array
+						const freshImagePaths = !options.dryRun
+							? await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir)
+							: [];
+
+						// Record that we scraped the page for content
+						ItemsIndexUpdater.recordPageScraped(item.id);
+
+						if (freshImagePaths.length > item.images.length) {
+							if (options.verbose) {
+								console.log(`  ✓ Found ${freshImagePaths.length - item.images.length} additional images`);
+							}
+
+							// Update the JSON file with the complete image array
+							if (jsonPath && !options.dryRun) {
+								try {
+									// Read the original file to preserve other fields
+									const originalContent = await fs.readFile(jsonPath, "utf8");
+									const originalItem = JSON.parse(originalContent);
+
+									// Update the images array with the complete set
+									originalItem.images = freshImagePaths;
+
+									// Write back to file
+									await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
+
+									if (options.verbose) {
+										console.log(`  ✓ Updated JSON with complete image array (${freshImagePaths.length} images)`);
+									}
+								} catch (error) {
+									const msg = error instanceof Error ? error.message : String(error);
+									stats.errors.push(`${item.id}: Failed to update JSON file: ${msg}`);
+								}
+							}
+
+							// Update stats to reflect newly downloaded images
+							stats.downloaded = freshImagePaths.length - item.images.length;
+						} else if (options.verbose) {
+							console.log(`  ✓ Image array is complete (${freshImagePaths.length} images)`);
+						}
+
+						// Record that this item's images have been successfully downloaded
+						ItemsIndexUpdater.recordDownloadVerified(item.id, freshImagePaths.length);
+					} else if (options.verbose) {
+						const arrayStatus = ItemsIndexUpdater.getArrayStatus(item.id);
+						const lastChecked = arrayStatus.at ? new Date(arrayStatus.at).toLocaleString() : 'never';
+						console.log(`[${item.id}] Skipping array recheck - verified ${lastChecked} (${arrayStatus.size || 0} images)`);
+					}
 				}
 			}
 		}
@@ -1178,6 +1227,9 @@ export async function downloadAssets(options: DownloadOptions): Promise<Download
 		combinedResult.skipped += catalogResult.skipped;
 		combinedResult.failed += catalogResult.failed;
 		combinedResult.errors.push(...catalogResult.errors);
+
+		// Save any array verification updates to the index
+		ItemsIndexUpdater.save();
 	}
 
 	// Clean up Playwright browser if it was used
