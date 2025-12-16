@@ -124,7 +124,8 @@ async function streamFileWrite(buffer: Buffer, filePath: string): Promise<void> 
 async function downloadImagesInParallel(
 	imageData: Array<{ url: string; filename: string; localPath: string; type: 'product' | 'instruction' }>,
 	playwrightPage: Page,
-	outputDir: string
+	outputDir: string,
+	itemId: string
 ): Promise<{ successful: string[], failed: Array<{ filename: string; error: string }> }> {
 	const successful: string[] = [];
 	const failed: Array<{ filename: string; error: string }> = [];
@@ -191,7 +192,7 @@ async function downloadImagesInParallel(
 			}, `Download ${filename}`);
 
 			if (downloadResult.success) {
-				successful.push(`/images/items/${filename}`);
+				successful.push(`/images/items/${itemId}/${filename}`);
 				return { filename, success: true };
 			} else {
 				failed.push({ filename, error: downloadResult.error || 'Unknown error' });
@@ -262,6 +263,10 @@ async function refreshPageIfNeeded(): Promise<void> {
  */
 async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, outputDir: string): Promise<string[]> {
 	const localPaths: string[] = [];
+
+	// Create item-specific directory
+	const itemOutputDir = path.join(outputDir, itemId);
+	await fs.mkdir(itemOutputDir, { recursive: true });
 
 	// Refresh page if needed to prevent memory buildup
 	await refreshPageIfNeeded();
@@ -468,9 +473,6 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			return [];
 		}
 
-		// Ensure output directory exists
-		await fs.mkdir(outputDir, { recursive: true });
-
 		// Prepare all potential file paths for batch checking
 		const productFilePaths: Array<{ url: string; filename: string; localPath: string; index: number }> = [];
 		const instructionFilePaths: Array<{ url: string; filename: string; localPath: string; index: number }> = [];
@@ -479,7 +481,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 		for (const [i, url] of imageUrls.entries()) {
 			const ext = url.split(".").pop()?.split("?")[0] || "jpg";
 			const filename = `${itemId}_${i}.${ext}`;
-			const localPath = path.join(outputDir, filename);
+			const localPath = path.join(itemOutputDir, filename);
 			productFilePaths.push({ url, filename, localPath, index: i });
 		}
 
@@ -487,7 +489,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 		for (const [i, url] of instructionUrls.entries()) {
 			const ext = url.split(".").pop()?.split("?")[0] || "jpg";
 			const filename = `${itemId}_inst_${i}.${ext}`;
-			const localPath = path.join(outputDir, filename);
+			const localPath = path.join(itemOutputDir, filename);
 			instructionFilePaths.push({ url, filename, localPath, index: i });
 		}
 
@@ -499,7 +501,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 		const productDownloads = productFilePaths.filter(({ localPath, filename }) => {
 			if (existenceMap.get(localPath)) {
 				console.log(`  Skipped (exists): ${filename}`);
-				localPaths.push(`/images/items/${filename}`);
+				localPaths.push(`/images/items/${itemId}/${filename}`);
 				return false;
 			}
 			return true;
@@ -508,7 +510,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 		const instructionDownloads = instructionFilePaths.filter(({ localPath, filename }) => {
 			if (existenceMap.get(localPath)) {
 				console.log(`  Skipped (exists): ${filename}`);
-				localPaths.push(`/images/items/${filename}`);
+				localPaths.push(`/images/items/${itemId}/${filename}`);
 				return false;
 			}
 			return true;
@@ -524,7 +526,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			console.log(`  Downloading ${allDownloads.length} images (${productDownloads.length} product, ${instructionDownloads.length} instruction) in parallel...`);
 
 			// Download images in parallel with controlled concurrency
-			const { successful, failed } = await downloadImagesInParallel(allDownloads, playwrightPage!, outputDir);
+			const { successful, failed } = await downloadImagesInParallel(allDownloads, playwrightPage!, outputDir, itemId);
 
 			// Add successful downloads to localPaths
 			localPaths.push(...successful);
@@ -973,8 +975,10 @@ async function downloadCatalogAssets(
 
 		// Prepare all file paths for batch checking
 		const filePaths = item.images.map(imagePath => {
-			const filename = path.basename(imagePath);
-			const fullPath = path.join(options.catalogImagesDir, filename);
+			// Extract relative path from /images/items/01_1000/01_1000_0.jpg
+			// Result: 01_1000/01_1000_0.jpg
+			const relativePath = imagePath.replace(/^\/images\/items\//, '');
+			const fullPath = path.join(options.catalogImagesDir, relativePath);
 			return { imagePath, fullPath };
 		});
 
