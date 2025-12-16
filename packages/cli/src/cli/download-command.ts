@@ -201,11 +201,11 @@ async function downloadImagesInParallel(
 		});
 
 		// Wait for this chunk to complete before starting the next
-		await Promise.all(downloadPromises);
+		const results = await Promise.all(downloadPromises);
 
 		// Report progress for this chunk
-		const chunkSuccessful = downloadPromises.filter(p => p.success).length;
-		const chunkFailed = downloadPromises.filter(p => !p.success).length;
+		const chunkSuccessful = results.filter(r => r.success).length;
+		const chunkFailed = results.filter(r => !r.success).length;
 		console.log(`  ✓ Chunk complete: ${chunkSuccessful} successful, ${chunkFailed} failed`);
 	}
 
