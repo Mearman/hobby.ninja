@@ -29,6 +29,7 @@ export interface DownloadOptions {
 	catalogIds?: string[]; // Specific catalog IDs to download
 	concurrency: number;
 	delayMs: number;
+	recheck: boolean; // Recheck items and download missing images to complete arrays
 	dryRun: boolean;
 	verbose: boolean;
 	usePlaywright?: boolean;
@@ -712,6 +713,51 @@ async function downloadCatalogAssets(
 			stats.skipped = item.images.length;
 			if (options.verbose) {
 				console.log(`[${item.id}] All ${item.images.length} images already exist - skipping`);
+			}
+
+			// Recheck mode: always scrape to verify image array is complete
+			if (options.recheck && item.sourceUrl) {
+				if (options.verbose) {
+					console.log(`[${item.id}] Rechecking for additional images...`);
+				}
+
+				// Scrape fresh images to see if there are more than what's in the array
+				const freshImagePaths = !options.dryRun
+					? await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir)
+					: [];
+
+				if (freshImagePaths.length > item.images.length) {
+					if (options.verbose) {
+						console.log(`  ✓ Found ${freshImagePaths.length - item.images.length} additional images`);
+					}
+
+					// Update the JSON file with the complete image array
+					if (jsonPath && !options.dryRun) {
+						try {
+							// Read the original file to preserve other fields
+							const originalContent = await fs.readFile(jsonPath, "utf8");
+							const originalItem = JSON.parse(originalContent);
+
+							// Update the images array with the complete set
+							originalItem.images = freshImagePaths;
+
+							// Write back to file
+							await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
+
+							if (options.verbose) {
+								console.log(`  ✓ Updated JSON with complete image array (${freshImagePaths.length} images)`);
+							}
+						} catch (error) {
+							const msg = error instanceof Error ? error.message : String(error);
+							stats.errors.push(`${item.id}: Failed to update JSON file: ${msg}`);
+						}
+					}
+
+					// Update stats to reflect newly downloaded images
+					stats.downloaded = freshImagePaths.length - item.images.length;
+				} else if (options.verbose) {
+					console.log(`  ✓ Image array is complete (${freshImagePaths.length} images)`);
+				}
 			}
 		}
 	}

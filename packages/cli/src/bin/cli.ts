@@ -207,9 +207,12 @@ program
 	.option(SOURCE_OPTION, "Data source (all, manuals, catalog)", ALL_SOURCES)
 	.option("--manuals-source-dir <dir>", "Source directory for manual JSON files", "./data/raw/bandai/manuals")
 	.option("--manuals-dir <dir>", "Output directory for manual assets", "./apps/next/public/manuals")
-	.option("--catalog-dir <dir>", "Catalog data directory", "./data/bandai/items")
-	.option("--concurrency <n>", "Number of concurrent downloads", "5")
+	.option("--catalog-dir <dir>", "Catalog data directory", "./data/src/items")
+	.option("--catalog-images-dir <dir>", "Output directory for catalog images", "./apps/next/public/images/items")
+	.option("--id <ids>", "Specific catalog IDs to download (comma-separated)", "")
+	.option("--concurrency <n>", "Number of concurrent downloads", "1")
 	.option("--delay <ms>", "Delay between batches in milliseconds", "0")
+	.option("--recheck", "Recheck items and download missing images to complete arrays", false)
 	.option(DRY_RUN_OPTION, "Show what would be downloaded without downloading", false)
 	.option(VERBOSE_OPTION, "Verbose output", false)
 	.action(async (options: unknown) => {
@@ -220,8 +223,11 @@ program
 				manualsSourceDir: string;
 				manualsDir: string;
 				catalogDir: string;
+				catalogImagesDir: string;
+				id: string;
 				concurrency: string;
 				delay: string;
+				recheck: boolean;
 				dryRun: boolean;
 				verbose: boolean;
 			};
@@ -231,8 +237,10 @@ program
 			console.log(`Manuals source: ${typedOptions.manualsSourceDir}`);
 			console.log(`Manuals output: ${typedOptions.manualsDir}`);
 			console.log(`Catalog directory: ${typedOptions.catalogDir}`);
+			console.log(`Catalog images output: ${typedOptions.catalogImagesDir}`);
 			console.log(`Concurrency: ${typedOptions.concurrency}`);
 			console.log(`Delay: ${typedOptions.delay}ms`);
+			console.log(`Recheck: ${String(typedOptions.recheck)}`);
 			console.log(`Dry run: ${String(typedOptions.dryRun)}`);
 			console.log("");
 
@@ -241,8 +249,11 @@ program
 				manualsSourceDir: typedOptions.manualsSourceDir,
 				manualsDir: typedOptions.manualsDir,
 				catalogDir: typedOptions.catalogDir,
+				catalogImagesDir: typedOptions.catalogImagesDir,
+				catalogIds: typedOptions.id ? typedOptions.id.split(',').map(id => id.trim()) : undefined,
 				concurrency: Number.parseInt(typedOptions.concurrency, 10),
 				delayMs: Number.parseInt(typedOptions.delay, 10),
+				recheck: typedOptions.recheck,
 				dryRun: typedOptions.dryRun,
 				verbose: typedOptions.verbose,
 			});
@@ -280,7 +291,9 @@ program
 	.description("Submit URLs to Internet Archive Wayback Machine")
 	.option(SOURCE_OPTION, "Data source (all, manuals, catalog)", ALL_SOURCES)
 	.option("--manuals-dir <dir>", "Manual data directory", "./data/bandai/manuals")
-	.option("--catalog-dir <dir>", "Catalog data directory", "./data/bandai/items")
+	.option("--catalog-dir <dir>", "Catalog data directory", "./data/src/items")
+	.option("--catalog-images-dir <dir>", "Output directory for catalog images", "./apps/next/public/images/items")
+	.option("--id <ids>", "Specific catalog IDs to download (comma-separated)", "")
 	.option(DRY_RUN_OPTION, "Show URLs without submitting", false)
 	.option("--resume", "Resume from checkpoint", true)
 	.option(VERBOSE_OPTION, "Verbose logging", false)
