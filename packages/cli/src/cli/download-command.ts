@@ -136,19 +136,21 @@ async function downloadImagesInParallel(
 		console.log(`  Downloading ${chunk.length} images in parallel...`);
 
 		const downloadPromises = chunk.map(async ({ url, filename, localPath, type }) => {
-			// Use different download methods for different image types
+			// Use different download methods for different image types and sources
 			const downloadResult = await retryWithBackoff(async () => {
 				let buffer: Buffer;
 
-				if (type === 'instruction') {
-					// CloudFront signed URLs need to use context.request API
+				// Use context.request API for:
+				// 1. Instruction images (CloudFront signed URLs)
+				// 2. Product images from akamaihd.net (CORS restrictions)
+				if (type === 'instruction' || url.includes('akamaihd.net')) {
 					const response = await playwrightPage!.context().request.get(url);
 					if (!response.ok()) {
 						throw new Error(`HTTP ${response.status()}`);
 					}
 					buffer = await response.body();
 				} else {
-					// Product images can use fetch within page context
+					// Other product images can use fetch within page context
 					const bufferArray = await playwrightPage!.evaluate(async (imageUrl: string) => {
 						const response = await fetch(imageUrl, {
 							method: 'GET',
