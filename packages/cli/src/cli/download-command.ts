@@ -203,22 +203,35 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 			console.log("Looking for product images in correct order...");
 
-			// Get product slider images
-			const productSelector = "#products > div.l-wrap > main > div > div > div.pg-pg-products__Wrap > div.pg-products__contentLeft > div.pg-products__sliderThumbnailWrap img";
-			const productImages = document.querySelectorAll(productSelector);
-			console.log(`Found ${productImages.length} product images in slider`);
+			// Get ALL unique product images on the page, not just thumbnails
+			// Find all images within the products section that match product image patterns
+			// Include both bandai-hobby.net images and bandai-a.akamaihd.net CDN images
+			const allProductImages = document.querySelectorAll('#products img[src*="bandai-hobby.net/images"]:not([src*="common"]):not([src*="bnr"]), #products img[src*="bandai-a.akamaihd.net"]');
+			console.log(`Found ${allProductImages.length} total product image elements`);
 
-			Array.from(productImages).forEach((element: Element, index: number) => {
-				const img = element as HTMLImageElement;
-				// Check src first, then data-src
-				const src = img.src || img.dataset.src || "";
+			// Convert to array and process for consistent ordering
+			const imageElements = Array.from(allProductImages);
+			const processedSources = new Map(); // Track order by first appearance
 
-				if (src && !seen.has(src)) {
+			// Process images in DOM order to maintain consistency
+			imageElements.forEach(function(element, index) {
+				const src = element.src || element.getAttribute('data-src') || "";
+
+				// Include product images from both sources:
+				// - bandai-hobby.net/images with product pattern
+				// - bandai-a.akamaihd.net CDN images (all are product images)
+				if (src && (
+					(src.includes('bandai-hobby.net/images') && src.match(/\/images\/\d+_\d+_s_/)) ||
+					src.includes('bandai-a.akamaihd.net')
+				) && !seen.has(src) && !processedSources.has(src)) {
 					seen.add(src);
+					processedSources.set(src, index);
 					urls.push(src);
-					console.log(`  Product Image ${index}: ${src.slice(0, 100)}...`);
+					console.log(`  Product Image ${urls.length - 1}: ${src.slice(0, 100)}...`);
 				}
 			});
+
+			console.log(`Found ${urls.length} unique product images after filtering`);
 
 			// Get instruction images if they exist
 			const instructionSelector = "#products > div.l-wrap > main > div > div > section:nth-child(4) > div.pg-products__instruction > div.pg-products__article img";
@@ -248,11 +261,11 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 		console.log(`  Found ${imageUrls.length} product images`);
 		console.log(`  Found ${instructionUrls.length} instruction images`);
 
-		// Debug: Print the first few URLs
-		for (const [i, url] of imageUrls.slice(0, 3).entries()) {
+		// Debug: Print all URLs (but limit display length for readability)
+		for (const [i, url] of imageUrls.entries()) {
 			console.log(`  Product URL ${i}: ${url.slice(0, 120)}...`);
 		}
-		for (const [i, url] of instructionUrls.slice(0, 3).entries()) {
+		for (const [i, url] of instructionUrls.entries()) {
 			console.log(`  Instruction URL ${i}: ${url.slice(0, 120)}...`);
 		}
 
