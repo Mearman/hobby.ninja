@@ -309,30 +309,31 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 			console.log("Looking for product images in correct order...");
 
-			// Get ALL unique product images on the page, not just thumbnails
-			// Find all images within the products section that match product image patterns
-			// Include both bandai-hobby.net images and bandai-a.akamaihd.net CDN images, but exclude related items
-			const allProductImages = document.querySelectorAll('#products img[src*="bandai-hobby.net/images"]:not([src*="common"]):not([src*="bnr"]), #products img[src*="bandai-a.akamaihd.net"]:not([src*="related"]):not([src*="common"])');
-			console.log(`Found ${allProductImages.length} total product image elements`);
+			// Get product images from the main content area, excluding instruction and related items sections
+			// Note: Bandai image URLs use their own internal IDs, not our catalog item IDs
+			// We select by DOM location rather than URL pattern
+			const productImageSelector = 'main img[src*="bandai-hobby.net/images"]:not([src*="common"]):not([src*="bnr"]), main img[src*="bandai-a.akamaihd.net"]:not([src*="related"]):not([src*="common"])';
+			const allProductImages = document.querySelectorAll(productImageSelector);
+			console.log(`Found ${allProductImages.length} total product image candidates`);
 
-			// Convert to array and process for consistent ordering
-			const imageElements = Array.from(allProductImages);
-			const processedSources = new Map(); // Track order by first appearance
-
-			// Create regex pattern for current item to ensure we only download this item's images
-			const currentItemPattern = new RegExp(`/${currentItemId}_\\d+\\.(jpg|png|webp)`);
+			// Exclude images that are in the instruction section or related items section
+			const instructionContainer = document.querySelector('.pg-products__instruction');
+			const relatedItemsContainer = document.querySelector('#products > div.l-wrap > main > div > div > section:nth-child(5) > div.p-card__wrap.c-grid.-cols2-2');
+			const imageElements = Array.from(allProductImages).filter(img => {
+				// Exclude if this image is within the instruction or related items container
+				const inInstructions = instructionContainer && instructionContainer.contains(img);
+				const inRelatedItems = relatedItemsContainer && relatedItemsContainer.contains(img);
+				return !inInstructions && !inRelatedItems;
+			});
+			console.log(`After excluding instruction and related item images: ${imageElements.length} product images`);
 
 			// Process images in DOM order to maintain consistency
+			const processedSources = new Map(); // Track order by first appearance
 			imageElements.forEach(function(element, index) {
-				const src = element.src || element.getAttribute('data-src') || "";
+				const img = element as HTMLImageElement;
+				const src = img.src || img.getAttribute('data-src') || "";
 
-				// Include only images that match the current item pattern, excluding related item images:
-				// - bandai-hobby.net/images with product pattern for current item
-				// - bandai-a.akamaihd.net CDN images that match current item pattern
-				if (src && (
-					(src.includes('bandai-hobby.net/images') && src.match(new RegExp(`/${currentItemId}_\\d+_s_`))) ||
-					(src.includes('bandai-a.akamaihd.net') && src.match(currentItemPattern))
-				) && !seen.has(src) && !processedSources.has(src)) {
+				if (src && !seen.has(src) && !processedSources.has(src)) {
 					seen.add(src);
 					processedSources.set(src, index);
 					urls.push(src);
@@ -340,7 +341,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 				}
 			});
 
-			console.log(`Found ${urls.length} unique product images after filtering`);
+			console.log(`Found ${urls.length} unique product images`);
 
 			// Get instruction images if they exist
 			const instructionSelector = "#products > div.l-wrap > main > div > div > section:nth-child(4) > div.pg-products__instruction > div.pg-products__article img";
@@ -846,18 +847,25 @@ async function downloadCatalogAssets(
 					const originalContent = await fs.readFile(jsonPath, "utf8");
 					const originalItem = JSON.parse(originalContent);
 
+					// Sort images: product images first, then instruction images
+					const productImages = localImagePaths.filter(path => !path.includes('_inst_'));
+					const instructionImages = localImagePaths.filter(path => path.includes('_inst_'));
+					productImages.sort();
+					instructionImages.sort();
+					const sortedImages = [...productImages, ...instructionImages];
+
 					// Update only the images array
-					originalItem.images = localImagePaths;
+					originalItem.images = sortedImages;
 
 					// Write back to file
 					await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
 
 					// Record that this item's images have been successfully downloaded
-					ItemsIndexUpdater.recordDownloadVerified(item.id, localImagePaths.length);
+					ItemsIndexUpdater.recordDownloadVerified(item.id, sortedImages.length);
 
 					if (options.verbose) {
-						console.log(`  ✓ Updated JSON with ${localImagePaths.length} local image paths`);
-						console.log(`  ✓ Recorded array verification for ${item.id} (${localImagePaths.length} images)`);
+						console.log(`  ✓ Updated JSON with ${sortedImages.length} local image paths (${productImages.length} product, ${instructionImages.length} instruction)`);
+						console.log(`  ✓ Recorded array verification for ${item.id} (${sortedImages.length} images)`);
 					}
 				} catch (error) {
 					const msg = error instanceof Error ? error.message : String(error);
@@ -934,8 +942,20 @@ async function downloadCatalogAssets(
 						const originalContent = await fs.readFile(jsonPath, "utf8");
 						const originalItem = JSON.parse(originalContent);
 
+						// Merge fresh images with existing images to create complete set
+						const existingImages = new Set(originalItem.images || []);
+						const allImages = new Set([...existingImages, ...localImagePaths]);
+						const completeImagePaths = Array.from(allImages);
+
+						// Sort images: product images first, then instruction images
+						const productImages = completeImagePaths.filter(path => !path.includes('_inst_'));
+						const instructionImages = completeImagePaths.filter(path => path.includes('_inst_'));
+						productImages.sort();
+						instructionImages.sort();
+						const sortedImages = [...productImages, ...instructionImages];
+
 						// Update only the images array
-						originalItem.images = localImagePaths;
+						originalItem.images = sortedImages;
 
 						// Write back to file
 						await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
@@ -943,10 +963,10 @@ async function downloadCatalogAssets(
 
 
 						// Record that this item's images have been successfully downloaded
-						ItemsIndexUpdater.recordDownloadVerified(item.id, localImagePaths.length);
+						ItemsIndexUpdater.recordDownloadVerified(item.id, sortedImages.length);
 
 						if (options.verbose) {
-							console.log(`  ✓ Updated JSON with ${localImagePaths.length} local image paths`);
+							console.log(`  ✓ Updated JSON with ${sortedImages.length} local image paths (${productImages.length} product, ${instructionImages.length} instruction)`);
 						}
 					} catch (error) {
 						const msg = error instanceof Error ? error.message : String(error);
@@ -993,9 +1013,24 @@ async function downloadCatalogAssets(
 						// Record that we scraped the page for content
 						ItemsIndexUpdater.recordPageScraped(item.id);
 
-						if (freshImagePaths.length > item.images.length) {
+						// Merge fresh images with existing images to create complete set
+						// Use a Set to deduplicate, then convert back to array
+						const existingImages = new Set(item.images || []);
+						const allImages = new Set([...existingImages, ...freshImagePaths]);
+						const completeImagePaths = Array.from(allImages);
+
+						// Separate product images from instruction images for sorting
+						const productImages = completeImagePaths.filter(path => !path.includes('_inst_'));
+						const instructionImages = completeImagePaths.filter(path => path.includes('_inst_'));
+
+						// Sort each category and combine
+						productImages.sort();
+						instructionImages.sort();
+						const sortedImagePaths = [...productImages, ...instructionImages];
+
+						if (sortedImagePaths.length > item.images.length) {
 							if (options.verbose) {
-								console.log(`  ✓ Found ${freshImagePaths.length - item.images.length} additional images`);
+								console.log(`  ✓ Found ${sortedImagePaths.length - item.images.length} additional images`);
 							}
 
 							// Update the JSON file with the complete image array
@@ -1006,13 +1041,13 @@ async function downloadCatalogAssets(
 									const originalItem = JSON.parse(originalContent);
 
 									// Update the images array with the complete set
-									originalItem.images = freshImagePaths;
+									originalItem.images = sortedImagePaths;
 
 									// Write back to file
 									await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
 
 									if (options.verbose) {
-										console.log(`  ✓ Updated JSON with complete image array (${freshImagePaths.length} images)`);
+										console.log(`  ✓ Updated JSON with complete image array (${sortedImagePaths.length} images)`);
 									}
 								} catch (error) {
 									const msg = error instanceof Error ? error.message : String(error);
@@ -1021,17 +1056,31 @@ async function downloadCatalogAssets(
 							}
 
 							// Update stats to reflect newly downloaded images
-							stats.downloaded = freshImagePaths.length - item.images.length;
+							stats.downloaded = sortedImagePaths.length - item.images.length;
 						} else if (options.verbose) {
-							console.log(`  ✓ Image array is complete (${freshImagePaths.length} images)`);
+							const newCount = sortedImagePaths.length;
+							const existingCount = item.images.length;
+							if (freshImagePaths.length === 0 && existingCount > 0) {
+								console.log(`  ✓ No new images found on page (item has ${existingCount} existing images)`);
+							} else {
+								console.log(`  ✓ Image array verified complete (${Math.max(newCount, existingCount)} images: ${productImages.length} product, ${instructionImages.length} instruction)`);
+							}
 						}
 
 						// Record that this item's images have been successfully downloaded
-						ItemsIndexUpdater.recordDownloadVerified(item.id, freshImagePaths.length);
+						ItemsIndexUpdater.recordDownloadVerified(item.id, sortedImagePaths.length);
+
+						// Also record that the array has been verified as complete
+						// Use the complete merged image count
+						ItemsIndexUpdater.recordArrayVerified(item.id, sortedImagePaths.length);
 					} else if (options.verbose) {
 						const arrayStatus = ItemsIndexUpdater.getArrayStatus(item.id);
 						const lastChecked = arrayStatus.at ? new Date(arrayStatus.at).toLocaleString() : 'never';
 						console.log(`[${item.id}] Skipping array recheck - verified ${lastChecked} (${arrayStatus.size || 0} images)`);
+
+						// Even if we skipped rechecking, the array is considered verified
+						// Use the current item's actual image count
+						ItemsIndexUpdater.recordArrayVerified(item.id, item.images.length);
 					}
 				}
 			}
