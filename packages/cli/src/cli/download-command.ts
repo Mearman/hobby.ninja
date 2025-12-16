@@ -61,7 +61,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 		// Visit the page with cache-busting to get fresh URLs - only ONCE
 		await playwrightPage.goto(`${sourceUrl}?_=${Date.now()}`, {
 			waitUntil: "domcontentloaded", // Faster than networkidle
-			timeout: 30_000,
+			timeout: 15_000, // Reduced timeout since we're blocking resources
 			extraHTTPHeaders: {
 				"Cache-Control": "no-cache, no-store, must-revalidate",
 				"Pragma": "no-cache",
@@ -100,7 +100,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 				const productSelector = "#products > div.l-wrap > main > div > div > div.pg-pg-products__Wrap > div.pg-products__contentLeft > div.pg-products__sliderThumbnailWrap img";
 				const productImages = document.querySelectorAll(productSelector);
 				return productImages.length > 0;
-			}, { timeout: 5000 });
+			}, { timeout: 3000 }); // Reduced timeout since page loads faster
 
 			await playwrightPage.evaluate(() => {
 				// Scroll back to top
@@ -203,19 +203,27 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			const downloadResult = await retryWithBackoff(async () => {
 				console.log(`  Downloading product image: ${filename}...`);
 
-				const response = await playwrightPage!.goto(url, {
-					waitUntil: "load",
-					timeout: 30_000,
-				});
+				// Use page.evaluate with fetch for image downloads (works with resource blocking)
+				const buffer = await playwrightPage!.evaluate(async (imageUrl: string) => {
+					const response = await fetch(imageUrl, {
+						method: 'GET',
+						headers: {
+							'User-Agent': navigator.userAgent,
+							'Referer': window.location.href,
+						},
+					});
 
-				if (response && response.ok()) {
-					const buffer = await response.body();
-					await fs.writeFile(localPath, buffer);
-					console.log(`  ✓ Downloaded: ${filename}`);
-					return { success: true };
-				} else {
-					throw new Error(`HTTP ${response?.status() || "unknown"}`);
-				}
+					if (!response.ok) {
+						throw new Error(`HTTP ${response.status}`);
+					}
+
+					const arrayBuffer = await response.arrayBuffer();
+					return [...new Uint8Array(arrayBuffer)];
+				}, url);
+
+				await fs.writeFile(localPath, Buffer.from(buffer));
+				console.log(`  ✓ Downloaded: ${filename}`);
+				return { success: true };
 			}, `Download product image ${filename}`);
 
 			if (downloadResult.success) {
@@ -245,19 +253,27 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			const downloadResult = await retryWithBackoff(async () => {
 				console.log(`  Downloading instruction image: ${filename}...`);
 
-				const response = await playwrightPage!.goto(url, {
-					waitUntil: "load",
-					timeout: 30_000,
-				});
+				// Use page.evaluate with fetch for image downloads (works with resource blocking)
+				const buffer = await playwrightPage!.evaluate(async (imageUrl: string) => {
+					const response = await fetch(imageUrl, {
+						method: 'GET',
+						headers: {
+							'User-Agent': navigator.userAgent,
+							'Referer': window.location.href,
+						},
+					});
 
-				if (response && response.ok()) {
-					const buffer = await response.body();
-					await fs.writeFile(localPath, buffer);
-					console.log(`  ✓ Downloaded: ${filename}`);
-					return { success: true };
-				} else {
-					throw new Error(`HTTP ${response?.status() || "unknown"}`);
-				}
+					if (!response.ok) {
+						throw new Error(`HTTP ${response.status}`);
+					}
+
+					const arrayBuffer = await response.arrayBuffer();
+					return [...new Uint8Array(arrayBuffer)];
+				}, url);
+
+				await fs.writeFile(localPath, Buffer.from(buffer));
+				console.log(`  ✓ Downloaded: ${filename}`);
+				return { success: true };
 			}, `Download instruction image ${filename}`);
 
 			if (downloadResult.success) {
@@ -330,6 +346,7 @@ async function initPlaywright(): Promise<void> {
 		userAgent: HEADERS["User-Agent"],
 		locale: "ja-JP",
 	});
+
 	playwrightPage = await playwrightContext.newPage();
 }
 
