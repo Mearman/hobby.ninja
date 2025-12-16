@@ -135,28 +135,39 @@ async function downloadImagesInParallel(
 	for (const chunk of chunks) {
 		console.log(`  Downloading ${chunk.length} images in parallel...`);
 
-		const downloadPromises = chunk.map(async ({ url, filename, localPath }) => {
-			// Use page.evaluate with fetch for image downloads (works with resource blocking)
+		const downloadPromises = chunk.map(async ({ url, filename, localPath, type }) => {
+			// Use different download methods for different image types
 			const downloadResult = await retryWithBackoff(async () => {
-				const buffer = await playwrightPage!.evaluate(async (imageUrl: string) => {
-					const response = await fetch(imageUrl, {
-						method: 'GET',
-						headers: {
-							'User-Agent': navigator.userAgent,
-							'Referer': window.location.href,
-						},
-					});
+				let buffer: Buffer;
 
-					if (!response.ok) {
-						throw new Error(`HTTP ${response.status}`);
+				if (type === 'instruction') {
+					// CloudFront signed URLs need to use context.request API
+					const response = await playwrightPage!.context().request.get(url);
+					if (!response.ok()) {
+						throw new Error(`HTTP ${response.status()}`);
 					}
+					buffer = await response.body();
+				} else {
+					// Product images can use fetch within page context
+					const bufferArray = await playwrightPage!.evaluate(async (imageUrl: string) => {
+						const response = await fetch(imageUrl, {
+							method: 'GET',
+							mode: 'cors',
+							credentials: 'include',
+						});
 
-					const arrayBuffer = await response.arrayBuffer();
-					return [...new Uint8Array(arrayBuffer)];
-				}, url);
+						if (!response.ok) {
+							throw new Error(`HTTP ${response.status}`);
+						}
+
+						const arrayBuffer = await response.arrayBuffer();
+						return [...new Uint8Array(arrayBuffer)];
+					}, url);
+					buffer = Buffer.from(bufferArray);
+				}
 
 				// Use streaming write for better memory efficiency
-				await streamFileWrite(Buffer.from(buffer), localPath);
+				await streamFileWrite(buffer, localPath);
 				return { success: true };
 			}, `Download ${filename}`);
 
@@ -302,7 +313,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 	try {
 
 		// Get image URLs directly from the live browser page - only ONCE
-		const { imageUrls, instructionUrls } = await playwrightPage.evaluate((currentItemId) => {
+		const { imageUrls, instructionUrls } = await playwrightPage.evaluate(async (currentItemId) => {
 			const urls = [];
 			const instructionUrls = [];
 			const seen = new Set();
@@ -348,14 +359,25 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			const instructionElements = document.querySelectorAll(instructionSelector);
 			console.log(`Found ${instructionElements.length} instruction images`);
 
+			// Scroll to instruction section to trigger lazy loading of CloudFront signed URLs
+			if (instructionElements.length > 0) {
+				const instructionSection = document.querySelector('.pg-products__instruction');
+				if (instructionSection) {
+					instructionSection.scrollIntoView({ behavior: 'instant' });
+					// Wait for lazy-loaded images to populate img.src with CloudFront signed URLs
+					await new Promise(resolve => setTimeout(resolve, 1000));
+				}
+			}
+
 			Array.from(instructionElements).forEach((element: Element, index: number) => {
 				const img = element as HTMLImageElement;
-				// Check src first, then data-src
-				let src = img.src || img.dataset.src || "";
+				// After lazy loading, img.src contains the CloudFront signed URL
+				// data-src contains the relative path which won't work
+				let src = img.src || "";
 
-				// Convert relative URLs to absolute URLs for instruction images
+				// Skip if we only have a relative URL - we need the CloudFront signed URL
 				if (src && !src.startsWith("http")) {
-					src = new URL(src, window.location.href).href;
+					return;
 				}
 
 				if (src && !seen.has(src)) {
