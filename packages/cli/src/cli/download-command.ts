@@ -23,6 +23,22 @@ const BASE_RETRY_DELAY_MS = 1000; // 1 second base delay
 const CONCURRENT_DOWNLOADS_PER_ITEM = 5; // Download up to 5 images simultaneously per item
 
 /**
+ * Extract clean filename from URL
+ * - bandai-hobby.net: strips _s_<hash> pattern (e.g., 192_5060_s_l2e51y4f0seymek7nui6wfkaml3w.jpg → 192_5060.jpg)
+ * - Other URLs: uses basename as-is (e.g., 1000171644_1.jpg → 1000171644_1.jpg)
+ */
+function extractFilenameFromUrl(url: string): string {
+	const basename = url.split("/").pop()?.split("?")[0] || "";
+
+	// For bandai-hobby.net URLs, strip the _s_<hash> pattern
+	if (url.includes("bandai-hobby.net")) {
+		return basename.replace(/_s_[a-z0-9]+\./, ".");
+	}
+
+	return basename;
+}
+
+/**
  * Split array into chunks of specified size
  */
 function chunkArray<T>(array: T[], chunkSize: number): T[][] {
@@ -479,16 +495,15 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 		// Generate file paths for product images
 		for (const [i, url] of imageUrls.entries()) {
-			const ext = url.split(".").pop()?.split("?")[0] || "jpg";
-			const filename = `${itemId}_${i}.${ext}`;
+			const filename = extractFilenameFromUrl(url);
 			const localPath = path.join(itemOutputDir, filename);
 			productFilePaths.push({ url, filename, localPath, index: i });
 		}
 
 		// Generate file paths for instruction images
+		// Use sequential pattern for instruction images since CloudFront uses random hashes
 		for (const [i, url] of instructionUrls.entries()) {
-			const ext = url.split(".").pop()?.split("?")[0] || "jpg";
-			const filename = `${itemId}_inst_${i}.${ext}`;
+			const filename = `${itemId}_inst_${i}.jpg`;
 			const localPath = path.join(itemOutputDir, filename);
 			instructionFilePaths.push({ url, filename, localPath, index: i });
 		}
@@ -934,9 +949,54 @@ async function downloadCatalogAssets(
 					const originalContent = await fs.readFile(jsonPath, "utf8");
 					const originalItem = JSON.parse(originalContent);
 
+					// Clean up old patterns from existing images array
+					const existingImages = Array.isArray(originalItem.images) ? originalItem.images : [];
+					const cleanedExistingImages = existingImages
+						.map((imgPath: string) => {
+							// Convert old flat path pattern to new folder structure
+							// Old: /images/items/01_1000_0.jpg
+							// New: /images/items/01_1000/01_1000_0.jpg
+							const flatPattern = /^\/images\/items\/(\d{2}_\d{4,5})_(.+)$/;
+							const match = imgPath.match(flatPattern);
+							if (match) {
+								const [, itemId, filename] = match;
+								return `/images/items/${itemId}/${itemId}_${filename}`;
+							}
+							return imgPath;
+						})
+						.filter((imgPath: string) => {
+							// Only keep images for this item
+							if (!imgPath.startsWith(`/images/items/${item.id}/`)) {
+								return false;
+							}
+
+							const filename = imgPath.split('/').pop() || '';
+
+							// Remove old sequential product images (e.g., 01_1000_0.jpg, 01_1000_1.jpg)
+							// These will be replaced by extracted filenames
+							const oldProductPattern = new RegExp(`^${item.id}_\\d+\\.jpg$`);
+							if (oldProductPattern.test(filename)) {
+								return false;
+							}
+
+							// Remove CloudFront hash instruction images (not matching sequential pattern)
+							// Keep only: 01_1000_inst_0.jpg, 01_1000_inst_1.jpg, etc.
+							const instPattern = new RegExp(`^${item.id}_inst_\\d+\\.jpg$`);
+							const isInstImage = filename.includes('_inst_');
+							if (isInstImage && !instPattern.test(filename)) {
+								// This is a CloudFront hash instruction image - remove it
+								return false;
+							}
+
+							return true;
+						});
+
 					// Sort images: product images first, then instruction images
-					const productImages = localImagePaths.filter(path => !path.includes('_inst_'));
-					const instructionImages = localImagePaths.filter(path => path.includes('_inst_'));
+					const allImages = [...cleanedExistingImages, ...localImagePaths];
+					// Deduplicate in case of overlaps
+					const uniqueImages = Array.from(new Set(allImages));
+					const productImages = uniqueImages.filter(path => !path.includes('_inst_'));
+					const instructionImages = uniqueImages.filter(path => path.includes('_inst_'));
 					productImages.sort();
 					instructionImages.sort();
 					const sortedImages = [...productImages, ...instructionImages];
@@ -1031,9 +1091,50 @@ async function downloadCatalogAssets(
 						const originalContent = await fs.readFile(jsonPath, "utf8");
 						const originalItem = JSON.parse(originalContent);
 
-						// Merge fresh images with existing images to create complete set
-						const existingImages = new Set(originalItem.images || []);
-						const allImages = new Set([...existingImages, ...localImagePaths]);
+						// Clean up old patterns from existing images array
+						const rawExistingImages = Array.isArray(originalItem.images) ? originalItem.images : [];
+						const cleanedExistingImages = rawExistingImages
+							.map((imgPath: string) => {
+								// Convert old flat path pattern to new folder structure
+								// Old: /images/items/01_1000_0.jpg
+								// New: /images/items/01_1000/01_1000_0.jpg
+								const flatPattern = /^\/images\/items\/(\d{2}_\d{4,5})_(.+)$/;
+								const match = imgPath.match(flatPattern);
+								if (match) {
+									const [, itemId, filename] = match;
+									return `/images/items/${itemId}/${itemId}_${filename}`;
+								}
+								return imgPath;
+							})
+							.filter((imgPath: string) => {
+								// Only keep images for this item
+								if (!imgPath.startsWith(`/images/items/${item.id}/`)) {
+									return false;
+								}
+
+								const filename = imgPath.split('/').pop() || '';
+
+								// Remove old sequential product images (e.g., 01_1000_0.jpg, 01_1000_1.jpg)
+								// These will be replaced by extracted filenames
+								const oldProductPattern = new RegExp(`^${item.id}_\\d+\\.jpg$`);
+								if (oldProductPattern.test(filename)) {
+									return false;
+								}
+
+								// Remove CloudFront hash instruction images (not matching sequential pattern)
+								// Keep only: 01_1000_inst_0.jpg, 01_1000_inst_1.jpg, etc.
+								const instPattern = new RegExp(`^${item.id}_inst_\\d+\\.jpg$`);
+								const isInstImage = filename.includes('_inst_');
+								if (isInstImage && !instPattern.test(filename)) {
+									// This is a CloudFront hash instruction image - remove it
+									return false;
+								}
+
+								return true;
+							});
+
+						// Merge fresh images with cleaned existing images to create complete set
+						const allImages = new Set([...cleanedExistingImages, ...localImagePaths]);
 						const completeImagePaths = Array.from(allImages);
 
 						// Sort images: product images first, then instruction images
