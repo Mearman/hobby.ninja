@@ -15,6 +15,8 @@
 		"build:prod": "nx run hobby-ninja:build:prod",
 		"check": "nx run hobby-ninja:check",
 		"clean": "nx reset && rm -rf dist coverage .nx/cache",
+		"clean-images": "npx tsx tools/image-cleaner.ts apps/next/public/images/items",
+		"clean-images:remove": "npx tsx tools/image-cleaner.ts apps/next/public/images/items --remove",
 		"copy-data": "tsx scripts/copy-database.ts",
 		"deps": "nx show project web --json | jq '.implicitDependencies'",
 		"dev": "pnpm --filter @hobby-ninja/webapp dev",
