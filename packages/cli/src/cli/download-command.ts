@@ -8,15 +8,99 @@
  * CloudFront/Akamai signed URLs require Playwright browser context for authentication.
  */
 
-import { promises as fs } from "node:fs";
+import { promises as fs, createWriteStream } from "node:fs";
 import path from "node:path";
 
-import { load as cheerioLoad } from "cheerio";
 import type { Browser, BrowserContext, Page } from "playwright";
 
 // Retry configuration
 const MAX_RETRIES = 3;
 const BASE_RETRY_DELAY_MS = 1000; // 1 second base delay
+
+/**
+ * Batch check if files exist to reduce filesystem I/O overhead
+ * Returns a Map of filepath -> exists boolean
+ */
+async function batchCheckFileExists(filePaths: string[]): Promise<Map<string, boolean>> {
+	const existenceMap = new Map<string, boolean>();
+
+	// Group files by directory to reduce context switching overhead
+	const filesByDir = new Map<string, string[]>();
+
+	for (const filePath of filePaths) {
+		const dir = path.dirname(filePath);
+		if (!filesByDir.has(dir)) {
+			filesByDir.set(dir, []);
+		}
+		filesByDir.get(dir)!.push(path.basename(filePath));
+	}
+
+	// Check files in batches per directory
+	for (const [dir, files] of filesByDir) {
+		try {
+			// Try to read directory contents first
+			const dirContents = await fs.readdir(dir, { withFileTypes: true });
+			const existingFiles = new Set(
+				dirContents
+					.filter(dirent => dirent.isFile())
+					.map(dirent => dirent.name)
+			);
+
+			// Mark files as existing or not
+			for (const file of files) {
+				const fullPath = path.join(dir, file);
+				existenceMap.set(fullPath, existingFiles.has(file));
+			}
+		} catch (error) {
+			// If directory doesn't exist or can't be read, assume no files exist
+			for (const file of files) {
+				const fullPath = path.join(dir, file);
+				existenceMap.set(fullPath, false);
+			}
+		}
+	}
+
+	return existenceMap;
+}
+
+/**
+ * Stream file write for better memory efficiency with large files
+ */
+async function streamFileWrite(buffer: Buffer, filePath: string): Promise<void> {
+	return new Promise((resolve, reject) => {
+		const writeStream = createWriteStream(filePath);
+
+		writeStream.on('error', reject);
+		writeStream.on('finish', resolve);
+
+		// Write buffer in chunks to avoid memory spikes
+		const chunkSize = 64 * 1024; // 64KB chunks
+		let offset = 0;
+
+		function writeChunk() {
+			if (offset >= buffer.length) {
+				writeStream.end();
+				return;
+			}
+
+			const chunk = buffer.subarray(offset, offset + chunkSize);
+			const canContinue = writeStream.write(chunk);
+
+			if (canContinue) {
+				offset += chunkSize;
+				// Use setImmediate to allow event loop processing between chunks
+				setImmediate(writeChunk);
+			} else {
+				writeStream.once('drain', () => {
+					offset += chunkSize;
+					writeChunk();
+				});
+			}
+		}
+
+		writeChunk();
+	});
+}
 
 export type DownloadSource = "all" | "manuals" | "catalog";
 
@@ -62,11 +146,6 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 		await playwrightPage.goto(`${sourceUrl}?_=${Date.now()}`, {
 			waitUntil: "domcontentloaded", // Faster than networkidle
 			timeout: 15_000, // Reduced timeout since we're blocking resources
-			extraHTTPHeaders: {
-				"Cache-Control": "no-cache, no-store, must-revalidate",
-				"Pragma": "no-cache",
-				"Expires": "0",
-			},
 		});
 
 		// Intelligent waiting - check if images are loaded before doing extra work
@@ -77,8 +156,9 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 			// If we have images with valid src, we can skip the lazy loading steps
 			if (productImages.length > 0) {
-				const hasValidSources = Array.from(productImages).some(img => {
-					const src = (img as HTMLImageElement).src || (img as HTMLImageElement).dataset.src || "";
+				const hasValidSources = Array.from(productImages).some((img: Element) => {
+					const imageEl = img as HTMLImageElement;
+					const src = imageEl.src || imageEl.dataset.src || "";
 					return src && !src.includes("placeholder");
 				});
 				if (hasValidSources) {
@@ -128,7 +208,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			const productImages = document.querySelectorAll(productSelector);
 			console.log(`Found ${productImages.length} product images in slider`);
 
-			for (const [index, element] of productImages.entries()) {
+			Array.from(productImages).forEach((element: Element, index: number) => {
 				const img = element as HTMLImageElement;
 				// Check src first, then data-src
 				const src = img.src || img.dataset.src || "";
@@ -138,14 +218,14 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 					urls.push(src);
 					console.log(`  Product Image ${index}: ${src.slice(0, 100)}...`);
 				}
-			}
+			});
 
 			// Get instruction images if they exist
 			const instructionSelector = "#products > div.l-wrap > main > div > div > section:nth-child(4) > div.pg-products__instruction > div.pg-products__article img";
 			const instructionElements = document.querySelectorAll(instructionSelector);
 			console.log(`Found ${instructionElements.length} instruction images`);
 
-			for (const [index, element] of instructionElements.entries()) {
+			Array.from(instructionElements).forEach((element: Element, index: number) => {
 				const img = element as HTMLImageElement;
 				// Check src first, then data-src
 				let src = img.src || img.dataset.src || "";
@@ -160,7 +240,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 					instructionUrls.push(src);
 					console.log(`  Instruction Image ${index}: ${src.slice(0, 100)}...`);
 				}
-			}
+			});
 
 			return { imageUrls: urls, instructionUrls };
 		});
@@ -183,20 +263,36 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 		// Ensure output directory exists
 		await fs.mkdir(outputDir, { recursive: true });
 
-		// Download product images first
+		// Prepare all potential file paths for batch checking
+		const productFilePaths: Array<{ url: string; filename: string; localPath: string; index: number }> = [];
+		const instructionFilePaths: Array<{ url: string; filename: string; localPath: string; index: number }> = [];
+
+		// Generate file paths for product images
 		for (const [i, url] of imageUrls.entries()) {
 			const ext = url.split(".").pop()?.split("?")[0] || "jpg";
 			const filename = `${itemId}_${i}.${ext}`;
 			const localPath = path.join(outputDir, filename);
+			productFilePaths.push({ url, filename, localPath, index: i });
+		}
 
-			// Skip if already exists
-			try {
-				await fs.access(localPath);
+		// Generate file paths for instruction images
+		for (const [i, url] of instructionUrls.entries()) {
+			const ext = url.split(".").pop()?.split("?")[0] || "jpg";
+			const filename = `${itemId}_inst_${i}.${ext}`;
+			const localPath = path.join(outputDir, filename);
+			instructionFilePaths.push({ url, filename, localPath, index: i });
+		}
+
+		// Batch check all file existence at once
+		const allFilePaths = [...productFilePaths, ...instructionFilePaths];
+		const existenceMap = await batchCheckFileExists(allFilePaths.map(fp => fp.localPath));
+
+		// Download product images first (skip existing ones)
+		for (const { url, filename, localPath } of productFilePaths) {
+			if (existenceMap.get(localPath)) {
 				console.log(`  Skipped (exists): ${filename}`);
 				localPaths.push(`/images/items/${filename}`);
 				continue;
-			} catch {
-				// File doesn't exist, download it
 			}
 
 			// Download with retry logic
@@ -221,7 +317,8 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 					return [...new Uint8Array(arrayBuffer)];
 				}, url);
 
-				await fs.writeFile(localPath, Buffer.from(buffer));
+				// Use streaming write for better memory efficiency
+				await streamFileWrite(Buffer.from(buffer), localPath);
 				console.log(`  ✓ Downloaded: ${filename}`);
 				return { success: true };
 			}, `Download product image ${filename}`);
@@ -233,20 +330,12 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			}
 		}
 
-		// Download instruction images after product images
-		for (const [i, url] of instructionUrls.entries()) {
-			const ext = url.split(".").pop()?.split("?")[0] || "jpg";
-			const filename = `${itemId}_inst_${i}.${ext}`; // Use itemId to avoid conflicts
-			const localPath = path.join(outputDir, filename);
-
-			// Skip if already exists
-			try {
-				await fs.access(localPath);
+		// Download instruction images after product images (skip existing ones)
+		for (const { url, filename, localPath } of instructionFilePaths) {
+			if (existenceMap.get(localPath)) {
 				console.log(`  Skipped (exists): ${filename}`);
 				localPaths.push(`/images/items/${filename}`);
 				continue;
-			} catch {
-				// File doesn't exist, download it
 			}
 
 			// Download with retry logic
@@ -271,7 +360,8 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 					return [...new Uint8Array(arrayBuffer)];
 				}, url);
 
-				await fs.writeFile(localPath, Buffer.from(buffer));
+				// Use streaming write for better memory efficiency
+				await streamFileWrite(Buffer.from(buffer), localPath);
 				console.log(`  ✓ Downloaded: ${filename}`);
 				return { success: true };
 			}, `Download instruction image ${filename}`);
@@ -362,18 +452,6 @@ async function closePlaywright(): Promise<void> {
 	}
 }
 
-/**
- * Visit a page to establish session cookies for signed URL downloads
- */
-async function visitPageForSession(sourceUrl: string): Promise<void> {
-	if (!playwrightPage) {
-		await initPlaywright();
-	}
-	if (!playwrightPage) throw new Error("Playwright page not initialized");
-
-	await playwrightPage.goto(sourceUrl, { waitUntil: "networkidle", timeout: 30_000 });
-	await playwrightPage.waitForTimeout(1000);
-}
 
 /**
  * Download a file using Playwright's browser context (for signed URLs)
@@ -420,12 +498,9 @@ async function downloadFileWithPlaywright(
 }
 
 async function fileExists(path: string): Promise<boolean> {
-	try {
-		await fs.access(path);
-		return true;
-	} catch {
-		return false;
-	}
+	// Use batchCheckFileExists for single file - more efficient than direct access
+	const existenceMap = await batchCheckFileExists([path]);
+	return existenceMap.get(path) || false;
 }
 
 async function downloadFile(
@@ -656,17 +731,22 @@ async function downloadCatalogAssets(
 
 	// Handle case where images array exists but files might be missing
 	if (item.images && item.images.length > 0) {
-		// Verify that each image listed in the JSON actually exists
+		// Batch verify that each image listed in the JSON actually exists
 		const missingImages: string[] = [];
 
-		for (const imagePath of item.images) {
-			// Convert JSON path to actual file system path
+		// Prepare all file paths for batch checking
+		const filePaths = item.images.map(imagePath => {
 			const filename = path.basename(imagePath);
 			const fullPath = path.join(options.catalogImagesDir, filename);
+			return { imagePath, fullPath };
+		});
 
-			try {
-				await fs.access(fullPath);
-			} catch {
+		// Batch check file existence
+		const existenceMap = await batchCheckFileExists(filePaths.map(fp => fp.fullPath));
+
+		// Identify missing images
+		for (const { imagePath, fullPath } of filePaths) {
+			if (!existenceMap.get(fullPath)) {
 				missingImages.push(imagePath);
 			}
 		}
