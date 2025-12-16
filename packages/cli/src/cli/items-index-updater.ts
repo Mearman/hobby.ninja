@@ -1,24 +1,34 @@
 /**
  * Helper to update the items index (data/src/items/index.json)
  * when the scraper discovers valid/invalid IDs on the Japanese site.
+ *
+ * Note: Timing fields (pageScrapedAt, arrayVerifiedAt, downloadVerifiedAt, etc.)
+ * are now stored in individual item JSON files instead of the centralized index.
  */
 
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { resolve } from "node:path";
 
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 
 const ITEMS_INDEX_PATH = resolveWorkspacePath("data/src/items/index.json");
+const ITEMS_DATA_DIR = resolveWorkspacePath("data/src/items");
 
+// Timing fields now stored in individual item files
+interface ItemTimingFields {
+	pageScrapedAt?: string;     // When we last scraped the page for image content
+	arrayVerifiedAt?: string;   // When we verified the image array completeness
+	arraySize?: number;         // Size of the image array when verified
+	downloadVerifiedAt?: string; // When we verified all images were downloaded
+	downloadCount?: number;     // Number of images downloaded when verified
+}
+
+// Minimal index interface - only essential tracking data
 interface SiteStatus {
 	hasPage: boolean;
 	pageCheckedAt: string;    // When we verified the page exists (404 vs 200)
 	productName?: string;
 	error?: string;
-	arrayVerifiedAt?: string; // When we verified the image array completeness
-	arraySize?: number;       // Size of the image array when verified
-	downloadVerifiedAt?: string; // When we verified all images were downloaded
-	downloadCount?: number;     // Number of images downloaded when verified
-	pageScrapedAt?: string;   // When we last scraped the page for image content
 }
 
 interface SiteStats {
@@ -79,6 +89,46 @@ function calculateStats(items: Record<string, ItemIndexEntry>): ItemsIndex["stat
 			errors: entries.filter((e) => e.globalSite?.error).length,
 		},
 	};
+}
+
+// Helper functions for individual item timing fields
+function getItemTimingFields(itemId: string): ItemTimingFields | null {
+	try {
+		const itemPath = resolve(ITEMS_DATA_DIR, `${itemId}.json`);
+		if (!existsSync(itemPath)) return null;
+
+		const itemData = JSON.parse(readFileSync(itemPath, "utf-8"));
+		return {
+			pageScrapedAt: itemData.pageScrapedAt,
+			arrayVerifiedAt: itemData.arrayVerifiedAt,
+			arraySize: itemData.arraySize,
+			downloadVerifiedAt: itemData.downloadVerifiedAt,
+			downloadCount: itemData.downloadCount,
+		};
+	} catch {
+		return null;
+	}
+}
+
+function setItemTimingFields(itemId: string, fields: Partial<ItemTimingFields>): boolean {
+	try {
+		const itemPath = resolve(ITEMS_DATA_DIR, `${itemId}.json`);
+		if (!existsSync(itemPath)) return false;
+
+		const itemData = JSON.parse(readFileSync(itemPath, "utf-8"));
+
+		// Update timing fields
+		if (fields.pageScrapedAt !== undefined) itemData.pageScrapedAt = fields.pageScrapedAt;
+		if (fields.arrayVerifiedAt !== undefined) itemData.arrayVerifiedAt = fields.arrayVerifiedAt;
+		if (fields.arraySize !== undefined) itemData.arraySize = fields.arraySize;
+		if (fields.downloadVerifiedAt !== undefined) itemData.downloadVerifiedAt = fields.downloadVerifiedAt;
+		if (fields.downloadCount !== undefined) itemData.downloadCount = fields.downloadCount;
+
+		writeFileSync(itemPath, JSON.stringify(itemData, null, "\t"));
+		return true;
+	} catch {
+		return false;
+	}
 }
 
 /**
@@ -400,39 +450,101 @@ export const ItemsIndexUpdater = {
 	 * Record that the page was scraped for image content
 	 */
 	recordPageScraped(itemId: string): void {
-		if (!itemsIndex) this.load();
-		if (!itemsIndex) return;
-
-		if (!itemsIndex.items[itemId]) {
-			itemsIndex.items[itemId] = {};
-		}
-
-		if (!itemsIndex.items[itemId].japaneseSite) {
-			itemsIndex.items[itemId].japaneseSite = {
-				hasPage: false,
-				pageCheckedAt: new Date().toISOString(),
-			};
-		}
-
-		itemsIndex.items[itemId].japaneseSite.pageScrapedAt = new Date().toISOString();
-		isDirty = true;
+		setItemTimingFields(itemId, {
+			pageScrapedAt: new Date().toISOString(),
+		});
 	},
 
 	/**
 	 * Check if page content was recently scraped (within specified hours)
 	 */
 	wasPageRecentlyScraped(itemId: string, maxAgeHours = 168): boolean { // Default 7 days (168 hours)
-		if (!itemsIndex) this.load();
-		if (!itemsIndex) return false;
-
-		const entry = itemsIndex.items[itemId]?.japaneseSite;
-		if (!entry?.pageScrapedAt) return false;
+		const timingFields = getItemTimingFields(itemId);
+		if (!timingFields?.pageScrapedAt) return false;
 
 		// Check if page scraping is recent enough
-		const scrapeTime = new Date(entry.pageScrapedAt).getTime();
+		const scrapeTime = new Date(timingFields.pageScrapedAt).getTime();
 		const maxAge = maxAgeHours * 60 * 60 * 1000;
 		const now = Date.now();
 
 		return (now - scrapeTime) <= maxAge;
+	},
+
+	/**
+	 * Record that an image array was verified as complete
+	 */
+	recordArrayVerified(itemId: string, arraySize: number): void {
+		setItemTimingFields(itemId, {
+			arrayVerifiedAt: new Date().toISOString(),
+			arraySize,
+		});
+	},
+
+	/**
+	 * Check if an item needs array verification (has been verified recently)
+	 */
+	needsArrayVerification(itemId: string, maxAgeHours = 24): boolean {
+		const timingFields = getItemTimingFields(itemId);
+		if (!timingFields?.arrayVerifiedAt) return true;
+
+		// Check if verification is too old
+		const verificationTime = new Date(timingFields.arrayVerifiedAt).getTime();
+		const maxAge = maxAgeHours * 60 * 60 * 1000;
+		const now = Date.now();
+
+		return (now - verificationTime) > maxAge;
+	},
+
+	/**
+	 * Get array verification status for an item
+	 */
+	getArrayStatus(itemId: string): { verified: boolean; at?: string; size?: number } {
+		const timingFields = getItemTimingFields(itemId);
+		if (!timingFields?.arrayVerifiedAt) return { verified: false };
+
+		return {
+			verified: true,
+			at: timingFields.arrayVerifiedAt,
+			size: timingFields.arraySize,
+		};
+	},
+
+	/**
+	 * Record that all images were verified as downloaded
+	 */
+	recordDownloadVerified(itemId: string, downloadCount: number): void {
+		setItemTimingFields(itemId, {
+			downloadVerifiedAt: new Date().toISOString(),
+			downloadCount,
+		});
+	},
+
+	/**
+	 * Check if an item needs download verification (all images downloaded recently)
+	 */
+	needsDownloadVerification(itemId: string, maxAgeHours = 24): boolean {
+		const timingFields = getItemTimingFields(itemId);
+		if (!timingFields?.downloadVerifiedAt) return true;
+
+		// Check if verification is too old
+		const verificationTime = new Date(timingFields.downloadVerifiedAt).getTime();
+		const maxAge = maxAgeHours * 60 * 60 * 1000;
+		const now = Date.now();
+
+		return (now - verificationTime) > maxAge;
+	},
+
+	/**
+	 * Get download verification status for an item
+	 */
+	getDownloadStatus(itemId: string): { verified: boolean; at?: string; count?: number } {
+		const timingFields = getItemTimingFields(itemId);
+		if (!timingFields?.downloadVerifiedAt) return { verified: false };
+
+		return {
+			verified: true,
+			at: timingFields.downloadVerifiedAt,
+			count: timingFields.downloadCount,
+		};
 	},
 };
