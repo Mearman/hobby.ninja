@@ -357,9 +357,28 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			console.log(`Found ${urls.length} unique product images`);
 
 			// Get instruction images if they exist
-			const instructionSelector = "#products > div.l-wrap > main > div > div > section:nth-child(4) > div.pg-products__instruction > div.pg-products__article img";
-			const instructionElements = document.querySelectorAll(instructionSelector);
-			console.log(`Found ${instructionElements.length} instruction images`);
+			// Use fallback selector strategies to handle different page layouts
+			const selectorStrategies = [
+				"div.pg-products__instruction img",  // Flexible class-based selector
+				"section[class*='instruction'] img", // Alternative instruction section pattern
+				"[class*='manual'] img",            // Manual/instruction pattern
+			];
+
+			let instructionElements: Element[] = [];
+			let usedSelector = "";
+			for (const selector of selectorStrategies) {
+				const elements = Array.from(document.querySelectorAll(selector));
+				if (elements.length > 0) {
+					instructionElements = elements;
+					usedSelector = selector;
+					console.log(`Found ${elements.length} instruction images using selector: ${selector}`);
+					break;
+				}
+			}
+
+			if (instructionElements.length === 0) {
+				console.warn(`No instruction images found using any selector strategy`);
+			}
 
 			// Scroll to instruction section to trigger lazy loading of CloudFront signed URLs
 			if (instructionElements.length > 0) {
@@ -367,7 +386,20 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 				if (instructionSection) {
 					instructionSection.scrollIntoView({ behavior: 'instant' });
 					// Wait for lazy-loaded images to populate img.src with CloudFront signed URLs
-					await new Promise(resolve => setTimeout(resolve, 1000));
+					// Increased timeout to ensure images have time to load
+					await new Promise(resolve => setTimeout(resolve, 2000));
+
+					// Verify images actually loaded
+					const loadedCount = instructionElements.filter(el => {
+						const img = el as HTMLImageElement;
+						return img.src && img.src.startsWith('http') && !img.src.includes('data:');
+					}).length;
+
+					if (loadedCount === 0) {
+						console.warn(`No instruction images loaded after scrolling (found ${instructionElements.length} elements)`);
+					} else {
+						console.log(`✓ Verified ${loadedCount}/${instructionElements.length} instruction images loaded`);
+					}
 				}
 			}
 
@@ -379,6 +411,18 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 				// Skip if we only have a relative URL - we need the CloudFront signed URL
 				if (src && !src.startsWith("http")) {
+					return;
+				}
+
+				// Filter out promotional banners and invalid URLs
+				if (src && (src.includes('/common/') || src.includes('/bnr/') || src.includes('banner'))) {
+					console.log(`  Skipping promotional banner: ${src.slice(0, 100)}...`);
+					return;
+				}
+
+				// Validate CloudFront domains for instruction images
+				if (src && !src.includes('cloudfront.net') && !src.includes('bandai-hobby.net/product/')) {
+					console.log(`  Skipping non-instruction image domain: ${src.slice(0, 100)}...`);
 					return;
 				}
 
