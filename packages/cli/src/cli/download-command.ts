@@ -24,15 +24,21 @@ const CONCURRENT_DOWNLOADS_PER_ITEM = 5; // Download up to 5 images simultaneous
 
 /**
  * Extract clean filename from URL
- * - bandai-hobby.net: strips _s_<hash> pattern (e.g., 192_5060_s_l2e51y4f0seymek7nui6wfkaml3w.jpg → 192_5060.jpg)
+ * - bandai-hobby.net: strips _[letter]_<hash> pattern (e.g., 192_5060_s_<hash>.jpg → 192_5060.jpg, 189_2027_o_<hash>.jpg → 189_2027.jpg)
+ * - bandai-hobby.net ecms: strips ecms_ prefix and hash (e.g., ecms_154_3389_o_<hash>.jpg → 154_3389.jpg)
  * - Other URLs: uses basename as-is (e.g., 1000171644_1.jpg → 1000171644_1.jpg)
  */
 function extractFilenameFromUrl(url: string): string {
 	const basename = url.split("/").pop()?.split("?")[0] || "";
 
-	// For bandai-hobby.net URLs, strip the _s_<hash> pattern
+	// For bandai-hobby.net URLs, strip patterns
 	if (url.includes("bandai-hobby.net")) {
-		return basename.replace(/_s_[a-z0-9]+\./, ".");
+		// Handle ecms_ prefix: ecms_154_3389_o_<hash>.jpg -> 154_3389.jpg
+		if (basename.startsWith("ecms_")) {
+			return basename.replace(/^ecms_(\d+_\d+)_[a-z]_[a-z0-9]+\./, "$1.");
+		}
+		// Handle standard pattern: 192_5060_s_<hash>.jpg -> 192_5060.jpg
+		return basename.replace(/_[a-z]_[a-z0-9]+\./, ".");
 	}
 
 	return basename;
