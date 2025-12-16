@@ -133,18 +133,18 @@ let itemsProcessedOnCurrentPage = 0;
  */
 async function refreshPageIfNeeded(): Promise<void> {
 	if (itemsProcessedOnCurrentPage >= MAX_ITEMS_PER_PAGE) {
-		console.log(`  Page recycling: processed ${itemsProcessedOnCurrentPage} items, creating fresh page...`);
+		console.log(`  Page recycling: processed ${itemsProcessedOnCurrentPage} items, creating fresh optimized page...`);
 
 		if (playwrightPage) {
 			await playwrightPage.close();
 		}
 
 		if (playwrightContext) {
-			playwrightPage = await playwrightContext.newPage();
+			playwrightPage = await createOptimizedPage(playwrightContext);
 		}
 
 		itemsProcessedOnCurrentPage = 0;
-		console.log(`  ✓ Page refreshed for optimal performance`);
+		console.log(`  ✓ Fresh optimized page ready for next batch`);
 	}
 }
 
@@ -413,6 +413,12 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			}
 		}
 
+		// Increment counter for successful processing
+		itemsProcessedOnCurrentPage++;
+		if (itemsProcessedOnCurrentPage % 10 === 0) {
+			console.log(`  Session progress: ${itemsProcessedOnCurrentPage}/${MAX_ITEMS_PER_PAGE} items processed on current page`);
+		}
+
 		return localPaths;
 	} catch (error) {
 		console.error(`Failed to scrape/download images from ${sourceUrl}:`, error instanceof Error ? error.message : error);
@@ -462,6 +468,38 @@ function requiresPlaywright(url: string): boolean {
 }
 
 /**
+ * Create an optimized page with aggressive resource blocking
+ */
+async function createOptimizedPage(context: BrowserContext): Promise<Page> {
+	const page = await context.newPage();
+
+	// Block unnecessary resources for faster page loads
+	await page.route('**/*.{css,woff,woff2,ttf,otf,eot}', route => route.abort());
+	await page.route('**/*.js', route => {
+		// Only allow essential JS, block tracking/analytics
+		const url = route.request().url();
+		if (url.includes('analytics') || url.includes('tracker') || url.includes('pixel')) {
+			return route.abort();
+		}
+		return route.continue();
+	});
+	await page.route('**/*.{png,gif,jpeg,jpg,webp,svg,ico}', route => {
+		// Only allow images from CloudFront/CDN that we need
+		const url = route.request().url();
+		if (!url.includes('cloudfront.net') && !url.includes('bandai-hobby.net')) {
+			return route.abort();
+		}
+		return route.continue();
+	});
+
+	// Optimize timeout settings
+	page.setDefaultTimeout(15000); // 15 seconds default
+	page.setDefaultNavigationTimeout(20000); // 20 seconds for navigation
+
+	return page;
+}
+
+/**
  * Initialize Playwright browser (lazy initialization)
  */
 async function initPlaywright(): Promise<void> {
@@ -471,13 +509,27 @@ async function initPlaywright(): Promise<void> {
 	playwrightBrowser = await chromium.launch({
 		headless: false, // Bandai requires non-headless for signed URLs
 		slowMo: 0, // No artificial delay - retry logic handles failures
+		args: [
+			'--no-sandbox',
+			'--disable-dev-shm-usage',
+			'--disable-gpu',
+			'--disable-background-timer-throttling',
+			'--disable-backgrounding-occluded-windows',
+			'--disable-renderer-backgrounding',
+			'--disable-features=TranslateUI',
+			'--disable-ipc-flooding-protection',
+			'--memory-pressure-off',
+		],
 	});
+
 	playwrightContext = await playwrightBrowser.newContext({
 		userAgent: HEADERS["User-Agent"],
 		locale: "ja-JP",
+		viewport: { width: 1920, height: 1080 }, // Consistent viewport
 	});
 
-	playwrightPage = await playwrightContext.newPage();
+	playwrightPage = await createOptimizedPage(playwrightContext);
+	itemsProcessedOnCurrentPage = 0;
 }
 
 /**
