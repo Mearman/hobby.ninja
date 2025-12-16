@@ -946,7 +946,7 @@ async function downloadCatalogAssets(
 					await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
 
 					// Record that this item's images have been successfully downloaded
-					ItemsIndexUpdater.recordDownloadVerified(item.id, sortedImages.length);
+					ItemsIndexUpdater.recordDownloadVerified(item.id);
 
 					if (options.verbose) {
 						console.log(`  ✓ Updated JSON with ${sortedImages.length} local image paths (${productImages.length} product, ${instructionImages.length} instruction)`);
@@ -1048,7 +1048,7 @@ async function downloadCatalogAssets(
 
 
 						// Record that this item's images have been successfully downloaded
-						ItemsIndexUpdater.recordDownloadVerified(item.id, sortedImages.length);
+						ItemsIndexUpdater.recordDownloadVerified(item.id);
 
 						if (options.verbose) {
 							console.log(`  ✓ Updated JSON with ${sortedImages.length} local image paths (${productImages.length} product, ${instructionImages.length} instruction)`);
@@ -1072,9 +1072,9 @@ async function downloadCatalogAssets(
 			}
 
 			// Record that this item's images have been verified as downloaded
-			ItemsIndexUpdater.recordDownloadVerified(item.id, item.images.length);
+			ItemsIndexUpdater.recordDownloadVerified(item.id);
 
-			// Recheck mode: check if we need to verify image array completeness
+			// Recheck mode: scrape page again to check for new images
 			if (options.recheck && item.sourceUrl) {
 				// Check if page was recently scraped for content (within 7 days)
 				const pageRecentlyScraped = ItemsIndexUpdater.wasPageRecentlyScraped(item.id, 7 * 24); // 7 days
@@ -1085,88 +1085,74 @@ async function downloadCatalogAssets(
 					}
 				} else {
 					// Page not recently scraped, verify array completeness
-					if (ItemsIndexUpdater.needsArrayVerification(item.id)) {
-						if (options.verbose) {
-							console.log(`[${item.id}] Rechecking for additional images...`);
-						}
+					if (options.verbose) {
+					console.log(`[${item.id}] Rechecking for additional images...`);
+				}
 
-						// Scrape fresh images to see if there are more than what's in the array
-						const freshImagePaths = !options.dryRun
-							? await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir)
-							: [];
+				// Scrape fresh images to see if there are more than what's in the array
+				const freshImagePaths = !options.dryRun
+					? await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir)
+					: [];
 
-						// Record that we scraped the page for content
-						ItemsIndexUpdater.recordPageScraped(item.id);
+				// Record that we scraped the page for content
+				ItemsIndexUpdater.recordPageScraped(item.id);
 
-						// Merge fresh images with existing images to create complete set
-						// Use a Set to deduplicate, then convert back to array
-						const existingImages = new Set(item.images || []);
-						const allImages = new Set([...existingImages, ...freshImagePaths]);
-						const completeImagePaths = Array.from(allImages);
+				// Merge fresh images with existing images to create complete set
+				// Use a Set to deduplicate, then convert back to array
+				const existingImages = new Set(item.images || []);
+				const allImages = new Set([...existingImages, ...freshImagePaths]);
+				const completeImagePaths = Array.from(allImages);
 
-						// Separate product images from instruction images for sorting
-						const productImages = completeImagePaths.filter(path => !path.includes('_inst_'));
-						const instructionImages = completeImagePaths.filter(path => path.includes('_inst_'));
+				// Separate product images from instruction images for sorting
+				const productImages = completeImagePaths.filter(path => !path.includes('_inst_'));
+				const instructionImages = completeImagePaths.filter(path => path.includes('_inst_'));
 
-						// Sort each category and combine
-						productImages.sort();
-						instructionImages.sort();
-						const sortedImagePaths = [...productImages, ...instructionImages];
+				// Sort each category and combine
+				productImages.sort();
+				instructionImages.sort();
+				const sortedImagePaths = [...productImages, ...instructionImages];
 
-						if (sortedImagePaths.length > item.images.length) {
-							if (options.verbose) {
-								console.log(`  ✓ Found ${sortedImagePaths.length - item.images.length} additional images`);
-							}
-
-							// Update the JSON file with the complete image array
-							if (jsonPath && !options.dryRun) {
-								try {
-									// Read the original file to preserve other fields
-									const originalContent = await fs.readFile(jsonPath, "utf8");
-									const originalItem = JSON.parse(originalContent);
-
-									// Update the images array with the complete set
-									originalItem.images = sortedImagePaths;
-
-									// Write back to file
-									await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
-
-									if (options.verbose) {
-										console.log(`  ✓ Updated JSON with complete image array (${sortedImagePaths.length} images)`);
-									}
-								} catch (error) {
-									const msg = error instanceof Error ? error.message : String(error);
-									stats.errors.push(`${item.id}: Failed to update JSON file: ${msg}`);
-								}
-							}
-
-							// Update stats to reflect newly downloaded images
-							stats.downloaded = sortedImagePaths.length - item.images.length;
-						} else if (options.verbose) {
-							const newCount = sortedImagePaths.length;
-							const existingCount = item.images.length;
-							if (freshImagePaths.length === 0 && existingCount > 0) {
-								console.log(`  ✓ No new images found on page (item has ${existingCount} existing images)`);
-							} else {
-								console.log(`  ✓ Image array verified complete (${Math.max(newCount, existingCount)} images: ${productImages.length} product, ${instructionImages.length} instruction)`);
-							}
-						}
-
-						// Record that this item's images have been successfully downloaded
-						ItemsIndexUpdater.recordDownloadVerified(item.id, sortedImagePaths.length);
-
-						// Also record that the array has been verified as complete
-						// Use the complete merged image count
-						ItemsIndexUpdater.recordArrayVerified(item.id, sortedImagePaths.length);
-					} else if (options.verbose) {
-						const arrayStatus = ItemsIndexUpdater.getArrayStatus(item.id);
-						const lastChecked = arrayStatus.at ? new Date(arrayStatus.at).toLocaleString() : 'never';
-						console.log(`[${item.id}] Skipping array recheck - verified ${lastChecked} (${arrayStatus.size || 0} images)`);
-
-						// Even if we skipped rechecking, the array is considered verified
-						// Use the current item's actual image count
-						ItemsIndexUpdater.recordArrayVerified(item.id, item.images.length);
+				if (sortedImagePaths.length > item.images.length) {
+					if (options.verbose) {
+						console.log(`  ✓ Found ${sortedImagePaths.length - item.images.length} additional images`);
 					}
+
+					// Update the JSON file with the complete image array
+					if (jsonPath && !options.dryRun) {
+						try {
+							// Read the original file to preserve other fields
+							const originalContent = await fs.readFile(jsonPath, "utf8");
+							const originalItem = JSON.parse(originalContent);
+
+							// Update the images array with the complete set
+							originalItem.images = sortedImagePaths;
+
+							// Write back to file
+							await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
+
+							if (options.verbose) {
+								console.log(`  ✓ Updated JSON with complete image array (${sortedImagePaths.length} images)`);
+							}
+						} catch (error) {
+							const msg = error instanceof Error ? error.message : String(error);
+							stats.errors.push(`${item.id}: Failed to update JSON file: ${msg}`);
+						}
+					}
+
+					// Update stats to reflect newly downloaded images
+					stats.downloaded = sortedImagePaths.length - item.images.length;
+				} else if (options.verbose) {
+					const newCount = sortedImagePaths.length;
+					const existingCount = item.images.length;
+					if (freshImagePaths.length === 0 && existingCount > 0) {
+						console.log(`  ✓ No new images found on page (item has ${existingCount} existing images)`);
+					} else {
+						console.log(`  ✓ Image array complete (${Math.max(newCount, existingCount)} images: ${productImages.length} product, ${instructionImages.length} instruction)`);
+					}
+				}
+
+				// Record that this item's images have been successfully downloaded
+				ItemsIndexUpdater.recordDownloadVerified(item.id);
 				}
 			}
 		}

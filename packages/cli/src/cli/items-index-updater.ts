@@ -17,10 +17,7 @@ const ITEMS_DATA_DIR = resolveWorkspacePath("data/src/items");
 // Timing fields now stored in individual item files
 interface ItemTimingFields {
 	pageScrapedAt?: string;     // When we last scraped the page for image content
-	arrayVerifiedAt?: string;   // When we verified the image array completeness
-	arraySize?: number;         // Size of the image array when verified
 	downloadVerifiedAt?: string; // When we verified all images were downloaded
-	downloadCount?: number;     // Number of images downloaded when verified
 }
 
 // Minimal index interface - only essential tracking data
@@ -100,10 +97,7 @@ function getItemTimingFields(itemId: string): ItemTimingFields | null {
 		const itemData = JSON.parse(readFileSync(itemPath, "utf-8"));
 		return {
 			pageScrapedAt: itemData.pageScrapedAt,
-			arrayVerifiedAt: itemData.arrayVerifiedAt,
-			arraySize: itemData.arraySize,
 			downloadVerifiedAt: itemData.downloadVerifiedAt,
-			downloadCount: itemData.downloadCount,
 		};
 	} catch {
 		return null;
@@ -119,10 +113,7 @@ function setItemTimingFields(itemId: string, fields: Partial<ItemTimingFields>):
 
 		// Update timing fields
 		if (fields.pageScrapedAt !== undefined) itemData.pageScrapedAt = fields.pageScrapedAt;
-		if (fields.arrayVerifiedAt !== undefined) itemData.arrayVerifiedAt = fields.arrayVerifiedAt;
-		if (fields.arraySize !== undefined) itemData.arraySize = fields.arraySize;
 		if (fields.downloadVerifiedAt !== undefined) itemData.downloadVerifiedAt = fields.downloadVerifiedAt;
-		if (fields.downloadCount !== undefined) itemData.downloadCount = fields.downloadCount;
 
 		writeFileSync(itemPath, JSON.stringify(itemData, null, "\t"));
 		return true;
@@ -307,70 +298,9 @@ export const ItemsIndexUpdater = {
 	},
 
 	/**
-	 * Record that an item's image array has been verified for completeness
-	 */
-	recordArrayVerified(itemId: string, arraySize: number): void {
-		if (!itemsIndex) this.load();
-		if (!itemsIndex) return;
-
-		if (!itemsIndex.items[itemId]) {
-			itemsIndex.items[itemId] = {};
-		}
-
-		if (!itemsIndex.items[itemId].japaneseSite) {
-			itemsIndex.items[itemId].japaneseSite = {
-				hasPage: false, // Assume no page if we're only verifying array
-				pageCheckedAt: new Date().toISOString(),
-			};
-		}
-
-		itemsIndex.items[itemId].japaneseSite.arrayVerifiedAt = new Date().toISOString();
-		itemsIndex.items[itemId].japaneseSite.arraySize = arraySize;
-		isDirty = true;
-	},
-
-	/**
-	 * Check if an item needs array verification (has been verified recently)
-	 */
-	needsArrayVerification(itemId: string, maxAgeHours = 24): boolean {
-		if (!itemsIndex) this.load();
-		if (!itemsIndex) return true;
-
-		const entry = itemsIndex.items[itemId]?.japaneseSite;
-		if (!entry) return true;
-
-		// If never verified, needs verification
-		if (!entry.arrayVerifiedAt) return true;
-
-		// Check if verification is too old
-		const verificationTime = new Date(entry.arrayVerifiedAt).getTime();
-		const maxAge = maxAgeHours * 60 * 60 * 1000;
-		const now = Date.now();
-
-		return (now - verificationTime) > maxAge;
-	},
-
-	/**
-	 * Get array verification status for an item
-	 */
-	getArrayStatus(itemId: string): { verified: boolean; at?: string; size?: number } {
-		if (!itemsIndex) this.load();
-		if (!itemsIndex) return { verified: false };
-
-		const entry = itemsIndex.items[itemId]?.japaneseSite;
-		if (!entry?.arrayVerifiedAt) return { verified: false };
-
-		return {
-			verified: true,
-			at: entry.arrayVerifiedAt,
-			size: entry.arraySize,
-		};
-	},
-
-	/**
 	 * Record that all images have been successfully downloaded for an item
 	 */
-	recordDownloadVerified(itemId: string, downloadCount: number): void {
+	recordDownloadVerified(itemId: string): void {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return;
 
@@ -386,7 +316,6 @@ export const ItemsIndexUpdater = {
 		}
 
 		itemsIndex.items[itemId].japaneseSite.downloadVerifiedAt = new Date().toISOString();
-		itemsIndex.items[itemId].japaneseSite.downloadCount = downloadCount;
 		isDirty = true;
 	},
 
@@ -414,7 +343,7 @@ export const ItemsIndexUpdater = {
 	/**
 	 * Get download verification status for an item
 	 */
-	getDownloadStatus(itemId: string): { verified: boolean; at?: string; count?: number } {
+	getDownloadStatus(itemId: string): { verified: boolean; at?: string } {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return { verified: false };
 
@@ -424,7 +353,6 @@ export const ItemsIndexUpdater = {
 		return {
 			verified: true,
 			at: entry.downloadVerifiedAt,
-			count: entry.downloadCount,
 		};
 	},
 
@@ -471,51 +399,11 @@ export const ItemsIndexUpdater = {
 	},
 
 	/**
-	 * Record that an image array was verified as complete
-	 */
-	recordArrayVerified(itemId: string, arraySize: number): void {
-		setItemTimingFields(itemId, {
-			arrayVerifiedAt: new Date().toISOString(),
-			arraySize,
-		});
-	},
-
-	/**
-	 * Check if an item needs array verification (has been verified recently)
-	 */
-	needsArrayVerification(itemId: string, maxAgeHours = 24): boolean {
-		const timingFields = getItemTimingFields(itemId);
-		if (!timingFields?.arrayVerifiedAt) return true;
-
-		// Check if verification is too old
-		const verificationTime = new Date(timingFields.arrayVerifiedAt).getTime();
-		const maxAge = maxAgeHours * 60 * 60 * 1000;
-		const now = Date.now();
-
-		return (now - verificationTime) > maxAge;
-	},
-
-	/**
-	 * Get array verification status for an item
-	 */
-	getArrayStatus(itemId: string): { verified: boolean; at?: string; size?: number } {
-		const timingFields = getItemTimingFields(itemId);
-		if (!timingFields?.arrayVerifiedAt) return { verified: false };
-
-		return {
-			verified: true,
-			at: timingFields.arrayVerifiedAt,
-			size: timingFields.arraySize,
-		};
-	},
-
-	/**
 	 * Record that all images were verified as downloaded
 	 */
-	recordDownloadVerified(itemId: string, downloadCount: number): void {
+	recordDownloadVerified(itemId: string): void {
 		setItemTimingFields(itemId, {
 			downloadVerifiedAt: new Date().toISOString(),
-			downloadCount,
 		});
 	},
 
@@ -537,14 +425,13 @@ export const ItemsIndexUpdater = {
 	/**
 	 * Get download verification status for an item
 	 */
-	getDownloadStatus(itemId: string): { verified: boolean; at?: string; count?: number } {
+	getDownloadStatus(itemId: string): { verified: boolean; at?: string } {
 		const timingFields = getItemTimingFields(itemId);
 		if (!timingFields?.downloadVerifiedAt) return { verified: false };
 
 		return {
 			verified: true,
 			at: timingFields.downloadVerifiedAt,
-			count: timingFields.downloadCount,
 		};
 	},
 };
