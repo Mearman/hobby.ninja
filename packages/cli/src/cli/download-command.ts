@@ -124,11 +124,38 @@ let playwrightBrowser: Browser | null = null;
 let playwrightContext: BrowserContext | null = null;
 let playwrightPage: Page | null = null;
 
+// Browser session recycling to prevent memory buildup
+const MAX_ITEMS_PER_PAGE = 50; // Recreate page every 50 items to prevent memory leaks
+let itemsProcessedOnCurrentPage = 0;
+
+/**
+ * Refresh page if needed to prevent memory buildup
+ */
+async function refreshPageIfNeeded(): Promise<void> {
+	if (itemsProcessedOnCurrentPage >= MAX_ITEMS_PER_PAGE) {
+		console.log(`  Page recycling: processed ${itemsProcessedOnCurrentPage} items, creating fresh page...`);
+
+		if (playwrightPage) {
+			await playwrightPage.close();
+		}
+
+		if (playwrightContext) {
+			playwrightPage = await playwrightContext.newPage();
+		}
+
+		itemsProcessedOnCurrentPage = 0;
+		console.log(`  ✓ Page refreshed for optimal performance`);
+	}
+}
+
 /**
  * Scrape and immediately download images using the shared Playwright instance
  */
 async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, outputDir: string): Promise<string[]> {
 	const localPaths: string[] = [];
+
+	// Refresh page if needed to prevent memory buildup
+	await refreshPageIfNeeded();
 
 	// Wrap the entire page visit in retry logic
 	const pageVisitResult = await retryWithBackoff(async () => {
@@ -992,6 +1019,8 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 						const content = await fs.readFile(jsonPath, "utf8");
 						const item = JSON.parse(content) as CatalogItemJson;
 
+						// Add visual separator between items
+						console.log(`\n--- Processing ${id} ---`);
 						if (options.verbose) {
 							console.log(`[${id}] Processing ${item.images?.length ?? 0} images...`);
 						}
