@@ -22,7 +22,7 @@
 		"check-orphaned-images": "npx tsx tools/check-orphaned-images.ts",
 		"copy-data": "tsx scripts/copy-database.ts",
 		"deps": "nx show project web --json | jq '.implicitDependencies'",
-		"dev": "pnpm --filter @hobby-ninja/webapp dev",
+		"dev": "pnpm next:dev",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
 		"graph": "nx graph",
