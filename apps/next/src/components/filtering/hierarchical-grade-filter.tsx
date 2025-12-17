@@ -48,6 +48,12 @@ const getFilterImageStyle = (src: string): React.CSSProperties => ({
 // Background color for filter buttons
 const FILTER_BUTTON_BG_UNSELECTED = "white";
 
+// Text colors for count displays
+const COUNT_PRIMARY_COLOR_SELECTED = "rgba(255,255,255,0.7)";
+const COUNT_PRIMARY_COLOR_UNSELECTED = "rgba(0,0,0,0.8)";
+const COUNT_SECONDARY_COLOR_SELECTED = "white";
+const COUNT_SECONDARY_COLOR_UNSELECTED = "black";
+
 // Base style for all filter button containers - consistent sizing with aspect ratio matching reference images
 const FILTER_BUTTON_BASE_STYLE: React.CSSProperties = {
 	height: FILTER_IMAGE_HEIGHT,
@@ -74,6 +80,8 @@ interface HierarchicalGradeFilterProps {
 	color?: string;
 	onSelectAll?: () => void;
 	onClearSection?: () => void;
+	filterCounts?: Record<string, number>;
+	totalCounts?: Record<string, number>;
 }
 
 export function HierarchicalGradeFilter({
@@ -86,6 +94,8 @@ export function HierarchicalGradeFilter({
 	color = "teal",
 	onSelectAll,
 	onClearSection,
+	filterCounts,
+	totalCounts,
 }: HierarchicalGradeFilterProps) {
 	const [expanded, setExpanded] = useState(false);
 	const [expandedFamilies, setExpandedFamilies] = useState<Set<string>>(new Set());
@@ -123,61 +133,116 @@ export function HierarchicalGradeFilter({
 		const label = options?.label ?? formatGradeName(gradeId);
 		const borderStyle = options?.dashed ? "dashed" : "solid";
 
-		if (displayMode === "icon" && imageSrc) {
-			return (
-				<Tooltip key={gradeId} label={label} position="top" withArrow={true}>
-					<UnstyledButton
-						onClick={() => { onToggle(gradeId); }}
-						style={{
-							...FILTER_BUTTON_BASE_STYLE,
-							border: `2px ${borderStyle} var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
-							background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
-							opacity: hasAnySelection && !isSelected ? 0.7 : 1,
-						}}
-					>
-						<Image
-							src={imageSrc}
-							alt={label}
-							width={120}
-							height={FILTER_IMAGE_HEIGHT}
-							style={getFilterImageStyle(imageSrc)}
-						/>
-					</UnstyledButton>
-				</Tooltip>
-			);
-		}
+		// Get counts for this grade
+		const currentCount = filterCounts?.[gradeId] ?? 0;
+		const totalCount = totalCounts?.[gradeId] ?? 0;
 
-		// For icon mode without images, show grade abbreviation in a more icon-like style
-		const gradeAbbr = gradeId.toUpperCase().replace("-", " ");
-		const iconText = displayMode === "icon" ? gradeAbbr : label;
-
-		return (
-			<Tooltip key={gradeId} label={label} position="top" withArrow={true}>
-				<UnstyledButton
-					onClick={() => { onToggle(gradeId); }}
+		const chipButton = displayMode === "icon" && imageSrc ? (
+			<UnstyledButton
+				onClick={() => { onToggle(gradeId); }}
+				style={{
+					...FILTER_BUTTON_BASE_STYLE,
+					border: `2px ${borderStyle} var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
+					background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
+					opacity: hasAnySelection && !isSelected ? 0.7 : 1,
+				}}
+			>
+				<Image
+					src={imageSrc}
+					alt={label}
+					width={120}
+					height={FILTER_IMAGE_HEIGHT}
+					style={getFilterImageStyle(imageSrc)}
+				/>
+			</UnstyledButton>
+		) : (
+			<UnstyledButton
+				onClick={() => { onToggle(gradeId); }}
+				style={{
+					...FILTER_BUTTON_BASE_STYLE,
+					border: `2px ${borderStyle} var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
+					background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
+					color: isSelected ? "white" : `var(--mantine-color-${color}-filled)`,
+					opacity: hasAnySelection && !isSelected ? 0.7 : 1,
+					fontStyle: options?.dashed ? "italic" : "normal",
+				}}
+			>
+				<Text
+					size={displayMode === "icon" ? "sm" : "xs"}
+					fw={700}
+					lineClamp={displayMode === "icon" ? 1 : 2}
+					ta="center"
 					style={{
-						...FILTER_BUTTON_BASE_STYLE,
-						border: `2px ${borderStyle} var(--mantine-color-${color}-${isSelected ? "filled" : "outline"})`,
-						background: isSelected ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
-						color: isSelected ? "white" : `var(--mantine-color-${color}-filled)`,
-						opacity: hasAnySelection && !isSelected ? 0.7 : 1,
-						fontStyle: options?.dashed ? "italic" : "normal",
+						fontSize: displayMode === "icon" ? "14px" : "10px",
+						letterSpacing: displayMode === "icon" ? "0.5px" : "normal",
 					}}
 				>
-					<Text
-						size={displayMode === "icon" ? "sm" : "xs"}
-						fw={700}
-						lineClamp={displayMode === "icon" ? 1 : 2}
-						ta="center"
+					{displayMode === "icon" ? gradeId.toUpperCase().replace("-", " ") : label}
+				</Text>
+			</UnstyledButton>
+		);
+
+		return (
+			<div
+				key={gradeId}
+				style={{
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "center",
+					gap: "2px",
+				}}
+			>
+				<Tooltip label={label} position="top" withArrow={true}>
+					{chipButton}
+				</Tooltip>
+				{/* Count display below chip */}
+				<div
+					style={{
+						background: isSelected ? COUNT_PRIMARY_COLOR_UNSELECTED : "rgba(255,255,255,0.9)",
+						borderRadius: 3,
+						padding: "1px 4px",
+						display: "flex",
+						alignItems: "center",
+						width: "100%",
+					}}
+				>
+					<div
 						style={{
-							fontSize: displayMode === "icon" ? "14px" : "10px",
-							letterSpacing: displayMode === "icon" ? "0.5px" : "normal",
+							color: isSelected ? COUNT_SECONDARY_COLOR_SELECTED : COUNT_SECONDARY_COLOR_UNSELECTED,
+							fontSize: "11px",
+							fontWeight: 600,
+							lineHeight: 1.2,
+							flex: 1,
+							textAlign: "center",
 						}}
 					>
-						{iconText}
-					</Text>
-				</UnstyledButton>
-			</Tooltip>
+						{currentCount}
+					</div>
+					<div
+						style={{
+							color: isSelected ? COUNT_PRIMARY_COLOR_SELECTED : COUNT_PRIMARY_COLOR_UNSELECTED,
+							fontSize: "11px",
+							fontWeight: 600,
+							lineHeight: 1.2,
+							flex: "none",
+						}}
+					>
+						/
+					</div>
+					<div
+						style={{
+							color: isSelected ? COUNT_PRIMARY_COLOR_SELECTED : COUNT_PRIMARY_COLOR_UNSELECTED,
+							fontSize: "11px",
+							fontWeight: 600,
+							lineHeight: 1.2,
+							flex: 1,
+							textAlign: "center",
+						}}
+					>
+						{totalCount}
+					</div>
+				</div>
+			</div>
 		);
 	};
 

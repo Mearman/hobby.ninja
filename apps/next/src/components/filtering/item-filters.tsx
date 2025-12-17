@@ -1037,6 +1037,8 @@ export function ItemFilters({
 								color="teal"
 								onSelectAll={selectAllGrades}
 								onClearSection={clearGrades}
+								filterCounts={filterCounts.grades}
+								totalCounts={totalCounts.grades}
 							/>
 
 							<FilterSection
