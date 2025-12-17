@@ -48,6 +48,12 @@ process_batch() {
 
     print_status "Processing batch $batch_num: IDs $batch_start-$batch_end"
 
+    # Clean staging area to avoid including unrelated staged changes
+    if ! git diff --cached --quiet; then
+        print_status "  - Cleaning staging area to avoid unrelated changes"
+        git reset 2>/dev/null || true
+    fi
+
     # Stage all changes using individual ID patterns
     local staged=false
     local deleted_files=0
@@ -59,13 +65,22 @@ process_batch() {
         local item_dir="01_${padded_id}"
         local json_file="data/src/items/01_${padded_id}.json"
 
-        # Skip this ID if there's no JSON file to update
+        # Skip this ID if there's no JSON file or if it hasn't been modified
         if [[ ! -f "$json_file" ]]; then
             print_status "  - Skipping ID $id: No JSON file found"
             continue
         fi
 
-        print_status "  - Processing ID $id: Found JSON file"
+        # Check if JSON file has unstaged changes
+        if ! git diff --quiet "$json_file" 2>/dev/null; then
+            print_status "  - Processing ID $id: Found modified JSON file"
+        elif git diff --cached --quiet "$json_file" 2>/dev/null; then
+            # JSON file exists but has no changes (neither staged nor unstaged)
+            print_status "  - Skipping ID $id: JSON file not modified"
+            continue
+        else
+            print_status "  - Processing ID $id: Found staged JSON file changes"
+        fi
 
         # Add JSON file first
         git add "$json_file" 2>/dev/null || true
