@@ -97,7 +97,10 @@ export function HierarchicalGradeFilter({
 		return familyIds.some((id) => availableGrades.includes(id));
 	});
 
-	if (availableHierarchy.length === 0) return null;
+	// Check if "Other" is available (items with no grade)
+	const hasOtherOption = availableGrades.includes("Other");
+
+	if (availableHierarchy.length === 0 && !hasOtherOption) return null;
 
 	const toggleFamilyExpand = (rootId: string) => {
 		setExpandedFamilies((prev) => {
@@ -485,6 +488,36 @@ export function HierarchicalGradeFilter({
 			{!expanded && selectedGrades.length > 0 && (
 				<Group gap="xs" wrap="wrap" mt="xs">
 					{selectedGrades.map((gradeId) => {
+						// Special handling for "Other" - it doesn't have a grade object
+						if (gradeId === "Other") {
+							return (
+								<Tooltip key={gradeId} label="Other (no grade)" position="top" withArrow={true}>
+									<UnstyledButton
+										onClick={() => { onToggle(gradeId); }}
+										style={{
+											...FILTER_BUTTON_BASE_STYLE,
+											border: `2px solid var(--mantine-color-${color}-filled)`,
+											background: `var(--mantine-color-${color}-filled)`,
+											color: "white",
+										}}
+									>
+										<Text
+											size={displayMode === "icon" ? "sm" : "xs"}
+											fw={700}
+											lineClamp={displayMode === "icon" ? 1 : 2}
+											ta="center"
+											style={{
+												fontSize: displayMode === "icon" ? "14px" : "10px",
+												letterSpacing: displayMode === "icon" ? "0.5px" : "normal",
+											}}
+										>
+											Other
+										</Text>
+									</UnstyledButton>
+								</Tooltip>
+							);
+						}
+
 						const grade = getGradeById(gradeId);
 						const imageSrc = grade?.image;
 						const gradeAbbr = gradeId.toUpperCase().replace("-", " ");
@@ -547,6 +580,7 @@ export function HierarchicalGradeFilter({
 			{expanded && (
 				<Group gap="xs" wrap="wrap" mt="xs" align="flex-start">
 					{availableHierarchy.map((entry) => renderRootGrade(entry))}
+					{hasOtherOption && renderGradeChip("Other")}
 				</Group>
 			)}
 		</Box>
