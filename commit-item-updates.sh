@@ -237,15 +237,46 @@ check_current_batch() {
     fi
 }
 
+# Function to find the earliest ID with changes in the specified range
+find_earliest_change() {
+    local search_start=$1
+    local search_end=$2
+
+    for ((id=search_start; id<=search_end; id++)); do
+        local padded_id=$(printf "%04d" $id)
+        local json_file="data/src/items/01_${padded_id}.json"
+
+        if [[ -f "$json_file" ]] && (! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null); then
+            echo $id
+            return 0
+        fi
+    done
+
+    echo -1  # No changes found
+    return 1
+}
+
 # Function to watch for changes and process complete batches
 watch_and_process() {
-    local current_id=$START_ID
     local processed_count=0
     local consecutive_empty_batches=0
     local MAX_EMPTY_BATCHES=5  # Stop after this many consecutive empty batches
 
     print_status "Watch mode: Monitoring for changes in IDs $START_ID-$END_ID"
-    print_status "Waiting for first batch with changes..."
+
+    # Find the earliest ID with changes to start from
+    local earliest_change=$(find_earliest_change $START_ID $END_ID)
+    if ((earliest_change == -1)); then
+        print_status "No unstaged changes found in range $START_ID-$END_ID"
+        print_status "Waiting for changes..."
+    else
+        # Calculate the batch start for the earliest change
+        local batch_for_change=$(( (earliest_change - START_ID) / BATCH_SIZE * BATCH_SIZE + START_ID ))
+        print_status "Found earliest change at ID $earliest_change, starting from batch $batch_for_change"
+        START_ID=$batch_for_change
+    fi
+
+    local current_id=$START_ID
 
     while true; do
         # Check if current batch has changes
@@ -276,11 +307,11 @@ watch_and_process() {
 
             # Check if we've processed all possible IDs in the specified range
             if ((current_id > END_ID)); then
-                print_status "Processed all IDs in the specified range ($START_ID-$END_ID)."
+                print_status "Processed all IDs in the specified range."
                 break
             fi
 
-            print_status "Waiting for next batch with changes in the remaining range..."
+            print_status "Waiting for next batch with changes..."
         else
             # No changes in current batch
             consecutive_empty_batches=$((consecutive_empty_batches + 1))
@@ -297,7 +328,7 @@ watch_and_process() {
 
             # Check if we've exceeded the range
             if ((current_id > END_ID)); then
-                print_status "Reached end of ID range ($START_ID-$END_ID) with no more changes."
+                print_status "Reached end of ID range with no more changes."
                 break
             fi
         fi
