@@ -256,94 +256,83 @@ find_earliest_change() {
     return 1
 }
 
+# Function to wait for changes in a specific batch range
+wait_for_batch_changes() {
+    local wait_start_id=$1
+    local wait_end_id=$2
+
+    print_status "Waiting for changes in batch $wait_start_id-$wait_end_id..."
+
+    while true; do
+        if check_for_changes $wait_start_id $wait_end_id; then
+            print_status "Changes detected in batch $wait_start_id-$wait_end_id"
+            return 0
+        fi
+
+        sleep 3  # Check every 3 seconds for changes
+    done
+}
+
 # Function to watch for changes and process complete batches
 watch_and_process() {
     local processed_count=0
-    local consecutive_empty_batches=0
-    local MAX_EMPTY_BATCHES=5  # Stop after this many consecutive empty batches
 
     print_status "Watch mode: Monitoring for changes in IDs $START_ID-$END_ID"
+    print_status "Watch mode will wait for changes to appear before processing each batch"
+    print_status "Press Ctrl+C to stop monitoring"
 
     # Find the earliest ID with changes to start from
     local earliest_change=$(find_earliest_change $START_ID $END_ID)
     if ((earliest_change == -1)); then
         print_status "No unstaged changes found in range $START_ID-$END_ID"
-        print_status "Waiting for changes..."
+        current_id=$START_ID
+        # Wait for first changes to appear
+        wait_for_batch_changes $current_id $((current_id + BATCH_SIZE - 1))
     else
         # Calculate the batch start for the earliest change
         local batch_for_change=$(( (earliest_change - START_ID) / BATCH_SIZE * BATCH_SIZE + START_ID ))
         print_status "Found earliest change at ID $earliest_change, starting from batch $batch_for_change"
-        START_ID=$batch_for_change
+        current_id=$batch_for_change
     fi
-
-    local current_id=$START_ID
 
     while true; do
-        # Check if current batch has changes
-        if check_current_batch $current_id; then
-            consecutive_empty_batches=0  # Reset empty batch counter
+        # Process the current batch (we know it has changes)
+        local batch_start=$current_id
+        local batch_end=$((current_id + BATCH_SIZE - 1))
+        if ((batch_end > END_ID)); then
+            batch_end=$END_ID
+        fi
 
-            # Process the current batch
-            local batch_start=$current_id
-            local batch_end=$((current_id + BATCH_SIZE - 1))
-            if ((batch_end > END_ID)); then
-                batch_end=$END_ID
-            fi
+        print_status "Processing batch $((processed_count + 1)): IDs $batch_start-$batch_end"
 
-            print_status "Processing batch $((processed_count + 1)): IDs $batch_start-$batch_end"
-
-            if process_batch $batch_start $batch_end $((processed_count + 1)); then
-                processed_count=$((processed_count + 1))
-                print_status "Pushing batch $processed_count to remote..."
-                if git push --no-verify; then
-                    print_success "Successfully pushed batch $processed_count"
-                else
-                    print_warning "Failed to push batch $processed_count"
-                fi
-            fi
-
-            # Move to the next batch
-            current_id=$((batch_end + 1))
-
-            # Check if we've processed all possible IDs in the specified range
-            if ((current_id > END_ID)); then
-                print_status "Processed all IDs in the specified range."
-                break
-            fi
-
-            print_status "Waiting for next batch with changes..."
-        else
-            # No changes in current batch
-            consecutive_empty_batches=$((consecutive_empty_batches + 1))
-            print_status "No changes found in batch starting at ID $current_id (empty batch count: $consecutive_empty_batches/$MAX_EMPTY_BATCHES)"
-
-            # If we've had too many consecutive empty batches, stop
-            if ((consecutive_empty_batches >= MAX_EMPTY_BATCHES)); then
-                print_status "No changes found in $MAX_EMPTY_BATCHES consecutive batches. Stopping watch mode."
-                break
-            fi
-
-            # Move to the next batch
-            current_id=$((current_id + BATCH_SIZE))
-
-            # Check if we've exceeded the range
-            if ((current_id > END_ID)); then
-                print_status "Reached end of ID range with no more changes."
-                break
+        if process_batch $batch_start $batch_end $((processed_count + 1)); then
+            processed_count=$((processed_count + 1))
+            print_status "Pushing batch $processed_count to remote..."
+            if git push --no-verify; then
+                print_success "Successfully pushed batch $processed_count"
+            else
+                print_warning "Failed to push batch $processed_count"
             fi
         fi
 
-        # Wait before checking again (unless we just processed a batch successfully)
-        if ((consecutive_empty_batches > 0)); then
-            sleep 5  # Wait 5 seconds before checking the next batch
+        # Move to the next batch
+        current_id=$((batch_end + 1))
+
+        # Check if we've processed all possible IDs in the specified range
+        if ((current_id > END_ID)); then
+            print_status "Reached end of ID range. Restarting from beginning to watch for new changes..."
+            current_id=$START_ID
         fi
+
+        # Wait for changes in the next batch before continuing
+        local next_batch_start=$current_id
+        local next_batch_end=$((current_id + BATCH_SIZE - 1))
+        if ((next_batch_end > END_ID)); then
+            next_batch_end=$END_ID
+        fi
+
+        wait_for_batch_changes $next_batch_start $next_batch_end
     done
-
-    if ((processed_count > 0)); then
-        print_success "Watch mode complete: Processed $processed_count batches"
-    else
-        print_status "Watch mode complete: No changes found"
-    fi
 }
 
 # Function to push all commits
