@@ -114,6 +114,7 @@ export function useFilteredItems(
 		let hasItemsWithNoBrand = false;
 		let hasItemsWithNoSeries = false;
 		let hasItemsWithNoGrade = false;
+		let hasItemsWithNoScale = false;
 
 		for (const item of validItems) {
 			// Use array-based IDs from the data package
@@ -141,12 +142,14 @@ export function useFilteredItems(
 			if (item.brandIds.length === 0) hasItemsWithNoBrand = true;
 			if (item.seriesIds.length === 0) hasItemsWithNoSeries = true;
 			if (Object.keys(item.grades).length === 0) hasItemsWithNoGrade = true;
+			if (!item.scale) hasItemsWithNoScale = true;
 		}
 
 		// Add "Other" options if we have items with no data
 		if (hasItemsWithNoBrand) brands.add("Other");
 		if (hasItemsWithNoSeries) series.add("Other");
 		if (hasItemsWithNoGrade) grades.add("Other");
+		if (hasItemsWithNoScale) scales.add("Other");
 
 		// Sort functions that place "Other" at the end
 		const sortWithOtherLast = (a: string, b: string) => {
@@ -282,8 +285,12 @@ export function useFilteredItems(
 						);
 						return hasOtherGrade ? (hasNoGrades || hasMatchingGrade) : hasMatchingGrade;
 					}
-					case "scales": {
-						return item.scale != null && selectedValues.includes(item.scale);
+					case "scales":
+					{
+						const hasOtherScale = selectedValues.includes("Other");
+						const hasNoScale = !item.scale;
+						const hasMatchingScale = item.scale && selectedValues.includes(item.scale);
+						return hasOtherScale ? (hasNoScale || hasMatchingScale) : hasMatchingScale;
 					}
 					case "series":
 					{
@@ -355,7 +362,11 @@ export function useFilteredItems(
 		}
 
 		for (const scale of availableOptions.scales) {
-			const itemsWithScale = validItems.filter(item => item.scale === scale);
+			const itemsWithScale = validItems.filter(item =>
+				scale === "Other"
+					? !item.scale
+					: item.scale === scale,
+			);
 			// Apply filters from different types only (scales don't affect other scale counts)
 			const visibleItemsWithScale = applyFiltersFromDifferentTypes(itemsWithScale, "scales");
 			scaleCounts[scale] = visibleItemsWithScale.length;
@@ -442,7 +453,13 @@ export function useFilteredItems(
 			});
 		}
 		if (filterState.scales.length > 0) {
-			result = result.filter(item => item.scale != null && filterState.scales.includes(item.scale));
+			result = result.filter(item => {
+				const hasOtherScale = filterState.scales.includes("Other");
+				const hasNoScale = !item.scale;
+				const hasMatchingScale = item.scale && filterState.scales.includes(item.scale);
+
+				return hasOtherScale ? (hasNoScale || hasMatchingScale) : hasMatchingScale;
+			});
 		}
 
 		// Apply scale range filter (if active)
