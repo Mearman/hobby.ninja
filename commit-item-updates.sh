@@ -48,69 +48,48 @@ process_batch() {
 
     print_status "Processing batch $batch_num: IDs $batch_start-$batch_end"
 
-    # Stage changes for this batch
+    # Stage all changes using individual ID patterns
     local staged=false
-    local added_files=0
     local deleted_files=0
+    local added_files=0
 
-    # Process each ID in the batch
+    # Process each ID with its own pattern
     for ((id=batch_start; id<=batch_end; id++)); do
-        # Pad ID with leading zeros
         local padded_id=$(printf "%04d" $id)
         local item_dir="01_${padded_id}"
 
-        # Stage deletion of old flat image files (01_1000_0.jpg, 01_1000_1.jpg, etc.)
-        for suffix in {0..20}; do
-            local old_image="apps/next/public/images/items/${item_dir}_${suffix}.jpg"
-
-            # Check if file exists and delete it
-            if [[ -f "$old_image" ]]; then
-                git rm "$old_image" 2>/dev/null || true
-                ((deleted_files++))
-                staged=true
-            # Check if file is already deleted but not staged
-            elif git ls-files --deleted 2>/dev/null | grep -q "$old_image"; then
-                git rm "$old_image" 2>/dev/null || true
-                ((deleted_files++))
-                staged=true
-            fi
-        done
-
-        # Stage addition of new directory structure (01_1000/ directory)
-        local new_dir="apps/next/public/images/items/${item_dir}"
-        if [[ -d "$new_dir" ]]; then
-            git add "$new_dir" 2>/dev/null || true
+        # Delete old flat files for this ID using pattern
+        local delete_pattern="apps/next/public/images/items/${item_dir}_*.jpg"
+        local deleted_count=$(git rm $delete_pattern 2>&1 | grep -c "rm '" || echo "0")
+        if ((deleted_count > 0)); then
+            deleted_files=$((deleted_files + deleted_count))
             staged=true
-
-            # Count files in directory for logging
-            local file_count=$(find "$new_dir" -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" 2>/dev/null | wc -l)
-            if ((file_count > 0)); then
-                ((added_files += file_count))
-                print_status "  - Added ${item_dir}/ with $file_count image files"
-            fi
         fi
 
-        # Check for JSON files in multiple possible locations
-        local json_locations=(
-            "data/src/items/01_${padded_id}.json"
-            "apps/next/src/data/items/01_${padded_id}.json"
-            "packages/data/src/data/items/01_${padded_id}.json"
-            "data/src/items/${padded_id}.json"
-        )
+        # Add new directory if it exists
+        local dir_path="apps/next/public/images/items/${item_dir}/"
+        if [[ -d "$dir_path" ]]; then
+            git add "$dir_path" 2>/dev/null || true
+            staged=true
+            # Count files in this directory for reporting
+            local file_count=$(find "$dir_path" -type f 2>/dev/null | wc -l)
+            added_files=$((added_files + file_count))
+        fi
 
-        for json_file in "${json_locations[@]}"; do
-            if [[ -f "$json_file" ]]; then
-                git add "$json_file" 2>/dev/null || true
-                staged=true
-                print_status "  - Added JSON data for ${padded_id} from $(dirname "$json_file")"
-                break
-            fi
-        done
+        # Add JSON file if it exists
+        local json_file="data/src/items/01_${padded_id}.json"
+        if [[ -f "$json_file" ]]; then
+            git add "$json_file" 2>/dev/null || true
+            staged=true
+        fi
     done
 
     # Log summary for this batch
     if ((deleted_files > 0)); then
         print_status "  - Deleted $deleted_files old image files in this batch"
+    fi
+    if ((added_files > 0)); then
+        print_status "  - Added $added_files new image files in this batch"
     fi
 
     # Commit if there are staged changes
