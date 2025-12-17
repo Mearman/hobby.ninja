@@ -156,24 +156,33 @@ main() {
 
         processed_batches=$((processed_batches + 1))
 
+        # Process the batch and capture result
+        local batch_success=false
         if process_batch $batch_start $batch_end $processed_batches; then
             successful_batches=$((successful_batches + 1))
+            batch_success=true
         fi
 
-        # Optional: Push every 5 batches to avoid large push at the end
-        if ((processed_batches % 5 == 0)); then
-            print_status "Pushing intermediate commits (batch $processed_batches)..."
-            git push --no-verify 2>/dev/null || print_warning "Intermediate push failed, will continue"
+        # Push after each successful batch
+        if $batch_success; then
+            print_status "Pushing batch $processed_batches to remote..."
+            if git push --no-verify; then
+                print_success "Successfully pushed batch $processed_batches"
+            else
+                print_warning "Failed to push batch $processed_batches, will continue with remaining batches"
+            fi
+        else
+            print_warning "Skipping push for batch $processed_batches (no changes committed)"
         fi
     done
 
     print_status "Processing complete: $successful_batches/$processed_batches batches committed"
 
-    # Push all changes at the end
+    # Final summary (batches already pushed individually)
     if ((successful_batches > 0)); then
-        push_changes
+        print_success "All $successful_batches successful batches have been pushed to remote"
     else
-        print_warning "No batches were committed, nothing to push"
+        print_warning "No batches were committed"
     fi
 
     print_success "Item update process completed successfully"
