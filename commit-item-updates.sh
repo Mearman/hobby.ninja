@@ -11,11 +11,83 @@ DEFAULT_START_ID=1000
 DEFAULT_END_ID=2000
 DEFAULT_BATCH_SIZE=100
 
-# Parse arguments
-START_ID=${1:-$DEFAULT_START_ID}
-END_ID=${2:-$DEFAULT_END_ID}
-BATCH_SIZE=${3:-$DEFAULT_BATCH_SIZE}
-WATCH_MODE=${4:-false}
+# Default values
+START_ID=$DEFAULT_START_ID
+END_ID=$DEFAULT_END_ID
+BATCH_SIZE=$DEFAULT_BATCH_SIZE
+WATCH_MODE=false
+
+# Parse named arguments
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --start-id)
+            START_ID="$2"
+            shift 2
+            ;;
+        --end-id)
+            END_ID="$2"
+            shift 2
+            ;;
+        --batch-size)
+            BATCH_SIZE="$2"
+            shift 2
+            ;;
+        --watch)
+            WATCH_MODE=true
+            shift
+            ;;
+        --no-watch)
+            WATCH_MODE=false
+            shift
+            ;;
+        -h|--help)
+            echo "Usage: $0 [OPTIONS]"
+            echo ""
+            echo "Options:"
+            echo "  --start-id ID     Starting item ID (default: $DEFAULT_START_ID)"
+            echo "  --end-id ID       Ending item ID (default: $DEFAULT_END_ID)"
+            echo "  --batch-size SIZE Number of IDs per batch (default: $DEFAULT_BATCH_SIZE)"
+            echo "  --watch           Enable watch mode (default: disabled)"
+            echo "  --no-watch        Disable watch mode (default: disabled)"
+            echo "  -h, --help        Show this help message"
+            echo ""
+            echo "Examples:"
+            echo "  $0                                            # Use defaults: 1000-2000 in batches of 100"
+            echo "  $0 --start-id 1000 --end-id 1500             # Process IDs 1000-1500 in batches of 100"
+            echo "  $0 --start-id 1000 --end-id 2000 --batch-size 50  # Process with batches of 50"
+            echo "  $0 --start-id 1000 --end-id 2000 --watch     # Watch mode: monitor for changes"
+            echo "  $0 --start-id 1000 --end-id 2000 --batch-size 20 --watch  # Watch mode with small batches"
+            echo ""
+            echo "Watch Mode:"
+            echo "  Continuously monitors for changes and processes complete batches"
+            echo "  Only processes batches where JSON files have been modified"
+            echo "  Automatically pushes each batch as it becomes complete"
+            echo "  Skips batches with no changes and continues monitoring"
+            exit 0
+            ;;
+        *)
+            echo "Unknown option: $1"
+            echo "Use --help for usage information"
+            exit 1
+            ;;
+    esac
+done
+
+# Validate arguments
+if ! [[ "$START_ID" =~ ^[0-9]+$ ]] || ! [[ "$END_ID" =~ ^[0-9]+$ ]] || ! [[ "$BATCH_SIZE" =~ ^[0-9]+$ ]]; then
+    print_error "Invalid arguments: start-id, end-id, and batch-size must be numbers"
+    exit 1
+fi
+
+if ((START_ID > END_ID)); then
+    print_error "Start ID cannot be greater than end ID"
+    exit 1
+fi
+
+if ((BATCH_SIZE < 1)); then
+    print_error "Batch size must be at least 1"
+    exit 1
+fi
 
 # Colors for output
 RED='\033[0;31m'
@@ -281,31 +353,6 @@ main() {
 
     print_success "Item update process completed successfully"
 }
-
-# Show usage if requested
-if [[ "$1" == "--help" || "$1" == "-h" ]]; then
-    echo "Usage: $0 [start_id] [end_id] [batch_size] [watch_mode]"
-    echo ""
-    echo "Arguments:"
-    echo "  start_id   Starting item ID (default: $DEFAULT_START_ID)"
-    echo "  end_id     Ending item ID (default: $DEFAULT_END_ID)"
-    echo "  batch_size Number of IDs per batch (default: $DEFAULT_BATCH_SIZE)"
-    echo "  watch_mode Set 'true' to enable watch mode (default: false)"
-    echo ""
-    echo "Examples:"
-    echo "  $0                    # Process all IDs 1000-2000 in batches of 100"
-    echo "  $0 1000 1500          # Process IDs 1000-1500 in batches of 100"
-    echo "  $0 1000 2000 50       # Process IDs 1000-2000 in batches of 50"
-    echo "  $0 1000 2000 100 true # Watch mode: Monitor IDs 1000-2000 for changes"
-    echo "  $0 1000 2000 20 true  # Watch mode with smaller batches of 20"
-    echo ""
-    echo "Watch Mode:"
-    echo "  Continuously monitors for changes and processes complete batches"
-    echo "  Only processes batches where JSON files have been modified"
-    echo "  Automatically pushes each batch as it becomes complete"
-    echo "  Skips batches with no changes and continues monitoring"
-    exit 0
-fi
 
 # Run main function
 main "$@"
