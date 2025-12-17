@@ -118,12 +118,7 @@ process_batch() {
 
     # Commit if there are staged changes
     if $staged; then
-        local commit_msg="feat: update items $batch_start-$batch_end
-
-- Add new images and JSON data
-- Remove old images for updated items
-- Batch $batch_num of $(( (END_ID - START_ID + BATCH_SIZE - 1) / BATCH_SIZE ))
-- Added $added_files new image files"
+        local commit_msg="feat: update items $batch_start-$batch_end"
 
         git commit --no-verify -m "$commit_msg"
         print_success "Committed batch $batch_num (IDs $batch_start-$batch_end)"
