@@ -770,6 +770,10 @@ export function ItemFilters({
 			if (item.scale && item.scale in scaleCounts) {
 				scaleCounts[item.scale]++;
 			}
+			// Handle "Other" scales
+			if (!item.scale && "Other" in scaleCounts) {
+				scaleCounts.Other++;
+			}
 
 			// Series counts
 			for (const seriesId of item.seriesIds) {
