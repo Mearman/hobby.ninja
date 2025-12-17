@@ -60,7 +60,8 @@ process_batch() {
 
         # Delete old flat files for this ID using pattern
         local delete_pattern="apps/next/public/images/items/${item_dir}_*.jpg"
-        local deleted_count=$(git rm $delete_pattern 2>&1 | grep -c "rm '" || echo "0")
+        local deleted_output=$(git rm $delete_pattern 2>&1)
+        local deleted_count=$(echo "$deleted_output" | grep -c "rm '" 2>/dev/null || echo "0")
         if ((deleted_count > 0)); then
             deleted_files=$((deleted_files + deleted_count))
             staged=true
