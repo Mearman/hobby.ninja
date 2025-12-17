@@ -57,6 +57,19 @@ process_batch() {
     for ((id=batch_start; id<=batch_end; id++)); do
         local padded_id=$(printf "%04d" $id)
         local item_dir="01_${padded_id}"
+        local json_file="data/src/items/01_${padded_id}.json"
+
+        # Skip this ID if there's no JSON file to update
+        if [[ ! -f "$json_file" ]]; then
+            print_status "  - Skipping ID $id: No JSON file found"
+            continue
+        fi
+
+        print_status "  - Processing ID $id: Found JSON file"
+
+        # Add JSON file first
+        git add "$json_file" 2>/dev/null || true
+        staged=true
 
         # Delete old flat files for this ID using pattern
         local delete_pattern="apps/next/public/images/items/${item_dir}_*.jpg"
@@ -66,24 +79,17 @@ process_batch() {
         deleted_count=$(echo "$deleted_count" | tr -d '[:space:]')
         if [[ "$deleted_count" =~ ^[0-9]+$ ]] && ((deleted_count > 0)); then
             deleted_files=$((deleted_files + deleted_count))
-            staged=true
+            print_status "  - ID $id: Deleted $deleted_count old image files"
         fi
 
         # Add new directory if it exists
         local dir_path="apps/next/public/images/items/${item_dir}/"
         if [[ -d "$dir_path" ]]; then
             git add "$dir_path" 2>/dev/null || true
-            staged=true
             # Count files in this directory for reporting
             local file_count=$(find "$dir_path" -type f 2>/dev/null | wc -l)
             added_files=$((added_files + file_count))
-        fi
-
-        # Add JSON file if it exists
-        local json_file="data/src/items/01_${padded_id}.json"
-        if [[ -f "$json_file" ]]; then
-            git add "$json_file" 2>/dev/null || true
-            staged=true
+            print_status "  - ID $id: Added $file_count new image files"
         fi
     done
 
