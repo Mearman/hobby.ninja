@@ -294,65 +294,222 @@ wait_for_batch_changes() {
     done
 }
 
-# Function to watch for changes and process complete batches
-watch_and_process() {
-    local processed_count=0
+# Function to wait for batch completion (no new changes for a period)
+wait_for_batch_completion() {
+    local wait_start_id=$1
+    local wait_end_id=$2
+    local stable_duration=10  # Wait 10 seconds of no new changes
+    local check_interval=2    # Check every 2 seconds
+    local stable_count=0
+    local required_checks=$((stable_duration / check_interval))
+    local previous_change_count=0
+    local current_change_count=0
 
-    print_status "Watch mode: Monitoring for changes in IDs $START_ID-$END_ID"
-    print_status "Watch mode will wait for changes to appear before processing each batch"
-    print_status "Press Ctrl+C to stop monitoring"
-
-    # Find the earliest ID with changes to start from
-    local earliest_change=$(find_earliest_change $START_ID $END_ID)
-    if ((earliest_change == -1)); then
-        print_status "No unstaged changes found in range $START_ID-$END_ID"
-        current_id=$START_ID
-        # Wait for first changes to appear
-        wait_for_batch_changes $current_id $((current_id + BATCH_SIZE - 1))
-    else
-        # Calculate the batch start for the earliest change
-        local batch_for_change=$(( (earliest_change - START_ID) / BATCH_SIZE * BATCH_SIZE + START_ID ))
-        print_status "Found earliest change at ID $earliest_change, starting from batch $batch_for_change"
-        current_id=$batch_for_change
-    fi
+    print_status "Waiting for batch $wait_start_id-$wait_end_id to complete (stable for ${stable_duration}s)..."
 
     while true; do
-        # Process the current batch (we know it has changes)
-        local batch_start=$current_id
-        local batch_end=$((current_id + BATCH_SIZE - 1))
-        if ((batch_end > END_ID)); then
-            batch_end=$END_ID
-        fi
+        local changed_ids=()
+        current_change_count=0
 
-        print_status "Processing batch $((processed_count + 1)): IDs $batch_start-$batch_end"
+        # Count current changes in this batch
+        for ((id=wait_start_id; id<=wait_end_id; id++)); do
+            local padded_id=$(printf "%04d" $id)
+            local json_file="data/src/items/01_${padded_id}.json"
 
-        if process_batch $batch_start $batch_end $((processed_count + 1)); then
-            processed_count=$((processed_count + 1))
-            print_status "Pushing batch $processed_count to remote..."
-            if git push --no-verify; then
-                print_success "Successfully pushed batch $processed_count"
-            else
-                print_warning "Failed to push batch $processed_count"
+            if [[ -f "$json_file" ]]; then
+                if ! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null; then
+                    changed_ids+=("$id")
+                    current_change_count=$((current_change_count + 1))
+                fi
             fi
+        done
+
+        # If change count increased, reset stability counter
+        if ((current_change_count > previous_change_count)); then
+            print_status "New changes detected (${#changed_ids[@]} IDs with changes). Resetting completion timer..."
+            previous_change_count=$current_change_count
+            stable_count=0
+        else
+            stable_count=$((stable_count + 1))
+            print_status "Batch $wait_start_id-$wait_end_id stable: ${stable_count}/${required_checks} checks (${#changed_ids[@]} IDs with changes)"
         fi
 
-        # Move to the next batch
-        current_id=$((batch_end + 1))
-
-        # Check if we've processed all possible IDs in the specified range
-        if ((current_id > END_ID)); then
-            print_status "Reached end of ID range. Restarting from beginning to watch for new changes..."
-            current_id=$START_ID
+        # If we've had enough stable checks, batch is complete
+        if ((stable_count >= required_checks)); then
+            print_status "Batch $wait_start_id-$wait_end_id completed (${#changed_ids[@]} IDs with changes)"
+            return 0
         fi
 
-        # Wait for changes in the next batch before continuing
-        local next_batch_start=$current_id
-        local next_batch_end=$((current_id + BATCH_SIZE - 1))
+        sleep $check_interval
+    done
+}
+
+# Function to find the highest and lowest IDs with changes
+find_change_boundaries() {
+    local search_start=$1
+    local search_end=$2
+    local lowest_id=-1
+    local highest_id=-1
+
+    for ((id=search_start; id<=search_end; id++)); do
+        local padded_id=$(printf "%04d" $id)
+        local json_file="data/src/items/01_${padded_id}.json"
+
+        if [[ -f "$json_file" ]] && (! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null); then
+            if ((lowest_id == -1)); then
+                lowest_id=$id
+            fi
+            highest_id=$id
+        fi
+    done
+
+    echo "$lowest_id:$highest_id"
+}
+
+# Function to find the first batch with changes by searching incrementally
+find_first_batch_with_changes() {
+    local search_start=$1
+    local search_end=$2
+    local batch_size=$3
+
+    # Search batch by batch
+    for ((batch_start=search_start; batch_start<=search_end; batch_start+=batch_size)); do
+        local batch_end=$((batch_start + batch_size - 1))
+        if ((batch_end > search_end)); then
+            batch_end=$search_end
+        fi
+
+        print_status "Checking batch $batch_start-$batch_end for changes..." >&2
+
+        # Check if this batch has any changes
+        local boundaries=$(find_change_boundaries $batch_start $batch_end)
+        local lowest_id=${boundaries%%:*}
+
+        if ((lowest_id != -1)); then
+            echo "$batch_start:$batch_end"
+            return 0
+        fi
+    done
+
+    echo "-1:-1"  # No changes found
+    return 1
+}
+
+# Function to watch for changes and process complete batches (pipeline approach)
+watch_and_process() {
+    local processed_count=0
+    local current_batch_start=$START_ID
+
+    print_status "Watch mode: Pipeline monitoring for changes in IDs $START_ID-$END_ID"
+    print_status "Each batch will be committed when the next batch starts getting changes"
+    print_status "Press Ctrl+C to stop monitoring"
+
+    # Check for any existing changes using incremental search
+    print_status "Searching for first batch with changes..."
+    local first_batch_result=$(find_first_batch_with_changes $START_ID $END_ID $BATCH_SIZE)
+    local first_batch_start=${first_batch_result%%:*}
+    local first_batch_end=${first_batch_result##*:}
+
+    if ((first_batch_start == -1)); then
+        print_status "No changes found in range $START_ID-$END_ID"
+        print_status "Waiting for first changes to appear..."
+
+        # Wait for first changes using incremental search
+        while true; do
+            first_batch_result=$(find_first_batch_with_changes $START_ID $END_ID $BATCH_SIZE)
+            first_batch_start=${first_batch_result%%:*}
+            if ((first_batch_start != -1)); then
+                first_batch_end=${first_batch_result##:*}
+                print_status "First changes detected in batch $first_batch_start-$first_batch_end"
+                break
+            fi
+            sleep 5  # Wait longer between full searches
+        done
+    else
+        print_status "Existing changes detected in batch $first_batch_start-$first_batch_end"
+    fi
+
+    # Find the actual range of changes within the first batch
+    local boundaries=$(find_change_boundaries $first_batch_start $first_batch_end)
+    local lowest_id=${boundaries%%:*}
+    local highest_id=${boundaries##*:}
+    print_status "Changes in ID range: $lowest_id-$highest_id"
+
+    # Start from the batch that has changes
+    current_batch_start=$first_batch_start
+
+    while true; do
+        # Calculate current and next batch boundaries
+        local current_batch_end=$((current_batch_start + BATCH_SIZE - 1))
+        if ((current_batch_end > END_ID)); then
+            current_batch_end=$END_ID
+        fi
+
+        local next_batch_start=$((current_batch_end + 1))
+        local next_batch_end=$((next_batch_start + BATCH_SIZE - 1))
         if ((next_batch_end > END_ID)); then
             next_batch_end=$END_ID
         fi
 
-        wait_for_batch_changes $next_batch_start $next_batch_end
+        print_status "Current batch: $current_batch_start-$current_batch_end, Next batch: $next_batch_start-$next_batch_end"
+
+        # Check if current batch has changes to process
+        local current_boundaries=$(find_change_boundaries $current_batch_start $current_batch_end)
+        local current_lowest=${current_boundaries%%:*}
+        local current_highest=${current_boundaries##*:}
+
+        # Wait for next batch to have changes before processing current batch
+        if ((current_lowest != -1)); then
+            print_status "Current batch has changes (IDs $current_lowest-$current_highest). Waiting for next batch to start..."
+
+            # Wait for changes to appear in next batch
+            while true; do
+                local next_boundaries=$(find_change_boundaries $next_batch_start $next_batch_end)
+                local next_lowest=${next_boundaries%%:*}
+                if ((next_lowest != -1)); then
+                    local next_highest=${next_boundaries##*:}
+                    print_status "Next batch started! Changes in $next_batch_start-$next_batch_end (IDs $next_lowest-$next_highest)"
+                    break
+                fi
+                sleep 3
+            done
+
+            # Process current batch now that next batch has started
+            print_status "Processing batch $((processed_count + 1)): IDs $current_batch_start-$current_batch_end (changes $current_lowest-$current_highest)"
+
+            if process_batch $current_batch_start $current_batch_end $((processed_count + 1)); then
+                processed_count=$((processed_count + 1))
+                print_status "Pushing batch $processed_count to remote..."
+                if git push --no-verify; then
+                    print_success "Successfully pushed batch $processed_count"
+                else
+                    print_warning "Failed to push batch $processed_count"
+                fi
+            fi
+        else
+            print_status "No changes in current batch $current_batch_start-$current_batch_end, moving to next batch"
+        fi
+
+        # Move to the next batch
+        current_batch_start=$next_batch_start
+
+        # Check if we've reached the end
+        if ((current_batch_start > END_ID)); then
+            print_status "Reached end of ID range. Restarting from beginning to watch for new changes..."
+            current_batch_start=$START_ID
+
+            # Wait for new changes before continuing using incremental search
+            while true; do
+                local restart_result=$(find_first_batch_with_changes $START_ID $END_ID $BATCH_SIZE)
+                local restart_batch_start=${restart_result%%:*}
+                if ((restart_batch_start != -1)); then
+                    print_status "New changes detected, restarting pipeline from batch $restart_batch_start-${restart_result##*:}"
+                    current_batch_start=$restart_batch_start
+                    break
+                fi
+                sleep 10  # Wait longer before checking for new cycles
+            done
+        fi
     done
 }
 
