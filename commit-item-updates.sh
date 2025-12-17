@@ -221,12 +221,9 @@ check_for_changes() {
     $has_changes
 }
 
-# Function to watch for changes and process complete batches
-watch_and_process() {
-    local current_id=$START_ID
-    local processed_count=0
-
-    print_status "Watch mode: Monitoring for changes in IDs $START_ID-$END_ID"
+# Function to wait for changes in the next batch
+wait_for_changes() {
+    local current_id=$1
 
     while ((current_id <= END_ID)); do
         local batch_start=$current_id
@@ -236,30 +233,71 @@ watch_and_process() {
         fi
 
         if check_for_changes $batch_start $batch_end; then
-            print_status "Changes detected for batch $((processed_count + 1)): IDs $batch_start-$batch_end"
-
-            # Process this batch
-            if process_batch $batch_start $batch_end $((processed_count + 1)); then
-                processed_count=$((processed_count + 1))
-                print_status "Pushing batch $processed_count to remote..."
-                if git push --no-verify; then
-                    print_success "Successfully pushed batch $processed_count"
-                else
-                    print_warning "Failed to push batch $processed_count"
-                fi
-            fi
-
-            current_id=$((batch_end + 1))
-        else
-            # No changes in this batch, check if we should continue monitoring
-            if ((current_id + BATCH_SIZE > END_ID)); then
-                print_status "No more changes in range. Monitoring complete."
-                break
-            fi
-
-            print_status "No changes in batch IDs $batch_start-$batch_end. Continuing search..."
-            current_id=$((current_id + BATCH_SIZE))
+            print_status "Changes detected for batch: IDs $batch_start-$batch_end"
+            return $batch_start
         fi
+
+        # No changes in this batch, wait before checking again
+        if ((current_id + BATCH_SIZE > END_ID)); then
+            print_status "Reached end of range. Monitoring complete."
+            return -1
+        fi
+
+        print_status "No changes in batch IDs $batch_start-$batch_end. Waiting for changes..."
+        sleep 5  # Wait 5 seconds before checking again
+        current_id=$((current_id + BATCH_SIZE))
+    done
+
+    return -1
+}
+
+# Function to watch for changes and process complete batches
+watch_and_process() {
+    local current_id=$START_ID
+    local processed_count=0
+
+    print_status "Watch mode: Monitoring for changes in IDs $START_ID-$END_ID"
+    print_status "Waiting for first batch with changes..."
+
+    while true; do
+        # Wait for changes in the next available batch
+        wait_for_changes $current_id
+        local next_batch=$?
+
+        if ((next_batch == -1)); then
+            # No more changes available
+            break
+        fi
+
+        # Process the batch that has changes
+        local batch_start=$next_batch
+        local batch_end=$((next_batch + BATCH_SIZE - 1))
+        if ((batch_end > END_ID)); then
+            batch_end=$END_ID
+        fi
+
+        print_status "Processing batch $((processed_count + 1)): IDs $batch_start-$batch_end"
+
+        if process_batch $batch_start $batch_end $((processed_count + 1)); then
+            processed_count=$((processed_count + 1))
+            print_status "Pushing batch $processed_count to remote..."
+            if git push --no-verify; then
+                print_success "Successfully pushed batch $processed_count"
+            else
+                print_warning "Failed to push batch $processed_count"
+            fi
+        fi
+
+        # Move to the next batch
+        current_id=$((batch_end + 1))
+
+        # Check if we've processed all possible IDs
+        if ((current_id > END_ID)); then
+            print_status "Processed all available IDs in range."
+            break
+        fi
+
+        print_status "Waiting for next batch with changes..."
     done
 
     if ((processed_count > 0)); then
