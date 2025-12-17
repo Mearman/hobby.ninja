@@ -331,6 +331,7 @@ interface ItemFiltersProps {
 	activeFilterCount?: number;
 	title?: string;
 	subtitle?: string;
+	hiddenFilters?: string[];
 }
 
 interface FilterSectionProps {
@@ -681,6 +682,7 @@ export function ItemFilters({
 	activeFilterCount = 0,
 	title = "Filters",
 	subtitle,
+	hiddenFilters = [],
 }: ItemFiltersProps) {
 	const [filtersExpanded, setFiltersExpanded] = useState(true);
 
@@ -957,25 +959,27 @@ export function ItemFilters({
 
 						{/* Filter Sections */}
 						<Stack gap="lg">
-							<FilterSection
-								label="Categories"
-								field="categories"
-								options={availableOptions.categories}
-								selectedValues={filterState.categories}
-								onToggle={onToggleFilterValue}
-								formatValue={formatCategoryName}
-								color="grape"
-								displayMode={displayMode}
-								filterCounts={filterCounts.categories}
-								totalCounts={totalCounts.categories}
-								headerAction={createFilterActions(
-									filterState.categories.length,
-									availableOptions.categories.length,
-									selectAllCategories,
-									clearCategories,
-									"grape",
-								)}
-							/>
+							{!hiddenFilters.includes("categories") && (
+								<FilterSection
+									label="Categories"
+									field="categories"
+									options={availableOptions.categories}
+									selectedValues={filterState.categories}
+									onToggle={onToggleFilterValue}
+									formatValue={formatCategoryName}
+									color="grape"
+									displayMode={displayMode}
+									filterCounts={filterCounts.categories}
+									totalCounts={totalCounts.categories}
+									headerAction={createFilterActions(
+										filterState.categories.length,
+										availableOptions.categories.length,
+										selectAllCategories,
+										clearCategories,
+										"grape",
+									)}
+								/>
+							)}
 
 							<FilterSection
 								label="Brands"
@@ -1361,7 +1365,7 @@ export function ItemFilters({
 								</Tooltip>
 							) : badge;
 						})}
-						{filterState.categories.map(cat => (
+						{!hiddenFilters.includes("categories") && filterState.categories.map(cat => (
 							<Badge
 								key={`category-${cat}`}
 								size="sm"

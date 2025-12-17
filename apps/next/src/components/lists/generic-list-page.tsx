@@ -31,6 +31,7 @@ export function GenericListPage<T, TFilterState = Record<string, unknown>, TAvai
 	breadcrumbs,
 	stats,
 	pageTitle,
+	hiddenFilters,
 }: GenericListPageProps<T, TFilterState, TAvailableOptions>) {
 	const { preferences } = useUserPreferences();
 	const { viewMode, setViewMode } = useViewMode();
@@ -83,6 +84,7 @@ export function GenericListPage<T, TFilterState = Record<string, unknown>, TAvai
 						filterCounts={filterCounts}
 						onFilterChange={handleFilterChange}
 						items={items}
+						hiddenFilters={hiddenFilters}
 					/>
 				</Card>
 

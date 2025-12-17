@@ -32,6 +32,7 @@ export interface FilterProps<T, TFilterState = Record<string, unknown>, TAvailab
 	onFilterChange: (updates: Partial<TFilterState>) => void;
 	items?: T[];
 	filterCounts?: TAvailableOptions;
+	hiddenFilters?: string[];
 }
 
 export interface FilterResult<T, TFilterState = Record<string, unknown>, TAvailableOptions = Record<string, unknown>> {
@@ -55,6 +56,7 @@ export interface GenericListPageProps<T, TFilterState = Record<string, unknown>,
 	breadcrumbs?: ReactNode;
 	stats?: ReactNode;
 	pageTitle: string;
+	hiddenFilters?: string[];
 }
 
 // Type guards for entity identification

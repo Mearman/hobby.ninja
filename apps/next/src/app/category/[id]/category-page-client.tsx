@@ -116,6 +116,7 @@ export function CategoryPageClient({
 			config={itemConfig}
 			pageTitle={getNodeDisplayName(initialCategory)}
 			subtitle={`${categoryStats.totalItems.toLocaleString()} items in this category`}
+			hiddenFilters={["categories"]}
 			breadcrumbs={
 				<Breadcrumbs>
 					<Anchor href="/" size="sm">

@@ -28,6 +28,7 @@ export function ItemFiltersWrapper({
 	onFilterChange,
 	items,
 	filterCounts,
+	hiddenFilters,
 }: FilterProps<Item, FilterState>) {
 	const currentFilterState = filterState;
 
@@ -141,6 +142,7 @@ export function ItemFiltersWrapper({
 			hasActiveFilters={hasActiveFilters}
 			activeFilterCount={activeFilterCount}
 			items={items}
+			hiddenFilters={hiddenFilters}
 		/>
 	);
 }
