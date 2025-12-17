@@ -284,7 +284,7 @@ async function refreshPageIfNeeded(): Promise<void> {
 /**
  * Scrape and immediately download images using the shared Playwright instance
  */
-async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, outputDir: string): Promise<string[]> {
+async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, outputDir: string, catalogDataDir: string): Promise<string[]> {
 	const localPaths: string[] = [];
 
 	// Create item-specific directory
@@ -314,25 +314,38 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 		// Intelligent waiting - check if images are loaded before doing extra work
 		const imagesLoaded = await playwrightPage.evaluate(() => {
-			// Check if product images are already loaded
-			const productSelector = "#products > div.l-wrap > main > div > div > div.pg-pg-products__Wrap > div.pg-products__contentLeft > div.pg-products__sliderThumbnailWrap img";
-			const productImages = document.querySelectorAll(productSelector);
+			// Check if product gallery images are already loaded
+			const productGallerySelector = '.pg-products__sliderMain img, .pg-products__sliderMainWrap img';
+			const galleryImages = document.querySelectorAll(productGallerySelector);
+
+			// Check if this is a blog (noimage placeholders)
+			const isBlogPage = galleryImages.length > 0 && Array.from(galleryImages).every((img: Element) => {
+				const imageEl = img as HTMLImageElement;
+				const src = imageEl.src || "";
+				return src.includes('noimage') || src.includes('img_noimage');
+			});
+
+			// If it's a blog page, we're done (don't wait for real images)
+			if (isBlogPage) {
+				return { loaded: true, count: galleryImages.length, isBlog: true };
+			}
 
 			// If we have images with valid src, we can skip the lazy loading steps
-			if (productImages.length > 0) {
-				const hasValidSources = Array.from(productImages).some((img: Element) => {
+			if (galleryImages.length > 0) {
+				const hasValidSources = Array.from(galleryImages).some((img: Element) => {
 					const imageEl = img as HTMLImageElement;
 					const src = imageEl.src || imageEl.dataset.src || "";
-					return src && !src.includes("placeholder");
+					return src && !src.includes("placeholder") && !src.includes("noimage");
 				});
 				if (hasValidSources) {
-					return { loaded: true, count: productImages.length };
+					return { loaded: true, count: galleryImages.length, isBlog: false };
 				}
 			}
-			return { loaded: false, count: 0 };
+			return { loaded: false, count: 0, isBlog: false };
 		});
 
-		if (!imagesLoaded.loaded) {
+		// Skip scrolling/waiting for blog pages
+		if (!imagesLoaded.loaded && !imagesLoaded.isBlog) {
 			// Only do scrolling if images aren't loaded yet
 			await playwrightPage.evaluate(() => {
 				// Scroll to bottom to trigger lazy loading
@@ -340,10 +353,11 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			});
 
 			// Wait for images to appear after scrolling (with timeout)
+			// Use gallery selector instead of old thumbnail selector
 			await playwrightPage.waitForFunction(() => {
-				const productSelector = "#products > div.l-wrap > main > div > div > div.pg-pg-products__Wrap > div.pg-products__contentLeft > div.pg-products__sliderThumbnailWrap img";
-				const productImages = document.querySelectorAll(productSelector);
-				return productImages.length > 0;
+				const productGallerySelector = '.pg-products__sliderMain img, .pg-products__sliderMainWrap img';
+				const galleryImages = document.querySelectorAll(productGallerySelector);
+				return galleryImages.length > 0;
 			}, { timeout: 3000 }); // Reduced timeout since page loads faster
 
 			await playwrightPage.evaluate(() => {
@@ -360,7 +374,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 	try {
 
 		// Get image URLs directly from the live browser page - only ONCE
-		const { imageUrls, instructionUrls } = await playwrightPage.evaluate(async (currentItemId) => {
+		const { imageUrls, instructionUrls, isBlog } = await playwrightPage.evaluate(async (currentItemId) => {
 			const urls = [];
 			const instructionUrls = [];
 			const seen = new Set();
@@ -372,6 +386,17 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			const productGallerySelector = '.pg-products__sliderMain img, .pg-products__sliderMainWrap img';
 			const galleryImages = document.querySelectorAll(productGallerySelector);
 			console.log(`Found ${galleryImages.length} images in product gallery`);
+
+			// Check if this is a blog post by detecting "noimage" placeholders
+			const allNoImage = galleryImages.length > 0 && Array.from(galleryImages).every(img => {
+				const src = (img as HTMLImageElement).src || '';
+				return src.includes('noimage') || src.includes('img_noimage');
+			});
+
+			if (allNoImage) {
+				console.log('⚠️  All images are "noimage" placeholders - this appears to be a blog post');
+				return { imageUrls: [], instructionUrls: [], isBlog: true };
+			}
 
 			// If no gallery images, fall back to old selector (for pages without swiper)
 			let imageElements = [];
@@ -487,8 +512,25 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 				}
 			});
 
-			return { imageUrls: urls, instructionUrls };
+			return { imageUrls: urls, instructionUrls, isBlog: false };
 		}, itemId);
+
+		// Handle blog posts
+		if (isBlog) {
+			console.log(`⚠️  Item ${itemId} is a blog post - marking as blog and skipping image downloads`);
+			ItemsIndexUpdater.recordBlog(itemId);
+
+			// Remove blog JSON file if it exists
+			const itemJsonPath = path.join(catalogDataDir, `${itemId}.json`);
+			try {
+				await fs.unlink(itemJsonPath);
+				console.log(`  Removed blog JSON file: ${itemId}.json`);
+			} catch (error) {
+				// File might not exist, which is fine
+			}
+
+			return [];
+		}
 
 		console.log(`  Found ${imageUrls.length} product images`);
 		console.log(`  Found ${instructionUrls.length} instruction images`);
@@ -952,7 +994,7 @@ async function downloadCatalogAssets(
 		// Scrape and download images in one go
 		const localImagePaths = options.dryRun
 			? []
-			: await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir);
+			: await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir, options.catalogDir);
 
 		// Record that we scraped the page for content (only if not dry run and we got images)
 		if (!options.dryRun && localImagePaths.length > 0) {
@@ -1094,7 +1136,7 @@ async function downloadCatalogAssets(
 			// Scrape and download images in one go
 			const localImagePaths = options.dryRun
 				? []
-				: await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir);
+				: await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir, options.catalogDir);
 
 			// Record that we scraped the page for content (only if not dry run and we got images)
 			if (!options.dryRun && localImagePaths.length > 0) {
@@ -1220,7 +1262,7 @@ async function downloadCatalogAssets(
 
 				// Scrape fresh images to see if there are more than what's in the array
 				const freshImagePaths = !options.dryRun
-					? await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir)
+					? await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir, options.catalogDir)
 					: [];
 
 				// Record that we scraped the page for content
@@ -1380,8 +1422,36 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 	const startTime = Date.now();
 
 	try {
+		// Proactively clean up blog JSON files before processing
+		console.log("Checking for blog posts to remove...");
 		const entries = await fs.readdir(options.catalogDir, { withFileTypes: true });
-		let ids = entries
+		const allIds = entries
+			.filter((e) => e.isFile() && e.name.endsWith(".json"))
+			.map((e) => e.name.replace(".json", ""));
+
+		let blogsRemoved = 0;
+		for (const id of allIds) {
+			if (ItemsIndexUpdater.isBlog(id)) {
+				const jsonPath = path.join(options.catalogDir, `${id}.json`);
+				try {
+					await fs.unlink(jsonPath);
+					blogsRemoved++;
+					console.log(`  Removed blog JSON: ${id}.json`);
+				} catch (error) {
+					// File might not exist, which is fine
+				}
+			}
+		}
+
+		if (blogsRemoved > 0) {
+			console.log(`✓ Removed ${blogsRemoved} blog JSON files`);
+		} else {
+			console.log("✓ No blog JSON files to remove");
+		}
+
+		// Get remaining IDs after cleanup
+		const remainingEntries = await fs.readdir(options.catalogDir, { withFileTypes: true });
+		let ids = remainingEntries
 			.filter((e) => e.isFile() && e.name.endsWith(".json"))
 			.map((e) => e.name.replace(".json", ""))
 			.toSorted();
@@ -1401,6 +1471,12 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 
 			const batchResults = await Promise.all(
 				batch.map(async (id) => {
+					// Skip items marked as blogs
+					if (ItemsIndexUpdater.isBlog(id)) {
+						console.log(`\n--- Skipping ${id} (blog post) ---`);
+						return { downloaded: 0, skipped: 1, failed: 0, errors: [] };
+					}
+
 					const jsonPath = path.join(options.catalogDir, `${id}.json`);
 
 					try {

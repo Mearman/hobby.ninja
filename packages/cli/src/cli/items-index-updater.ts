@@ -26,6 +26,7 @@ interface SiteStatus {
 	pageCheckedAt: string;    // When we verified the page exists (404 vs 200)
 	productName?: string;
 	error?: string;
+	isBlog?: boolean;         // Whether this is a blog post (no product data)
 }
 
 interface SiteStats {
@@ -182,6 +183,39 @@ export const ItemsIndexUpdater = {
 			};
 			isDirty = true;
 		}
+	},
+
+	/**
+	 * Mark an item as a blog post (no product data)
+	 */
+	recordBlog(itemId: string, productName?: string): void {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return;
+
+		if (!itemsIndex.items[itemId]) {
+			itemsIndex.items[itemId] = {};
+		}
+
+		if (!itemsIndex.items[itemId].japaneseSite) {
+			itemsIndex.items[itemId].japaneseSite = {
+				hasPage: true,
+				pageCheckedAt: new Date().toISOString(),
+				productName,
+			};
+		}
+
+		itemsIndex.items[itemId].japaneseSite.isBlog = true;
+		isDirty = true;
+	},
+
+	/**
+	 * Check if an item is marked as a blog post
+	 */
+	isBlog(itemId: string): boolean {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return false;
+
+		return itemsIndex.items[itemId]?.japaneseSite?.isBlog === true;
 	},
 
 	/**
