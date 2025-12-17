@@ -261,11 +261,32 @@ wait_for_batch_changes() {
     local wait_start_id=$1
     local wait_end_id=$2
 
-    print_status "Waiting for changes in batch $wait_start_id-$wait_end_id..."
+    print_status "Waiting for JSON file changes in batch $wait_start_id-$wait_end_id..."
 
     while true; do
-        if check_for_changes $wait_start_id $wait_end_id; then
-            print_status "Changes detected in batch $wait_start_id-$wait_end_id"
+        local has_changes=false
+        local changed_ids=()
+
+        # Check each ID in the batch for actual JSON file diffs
+        for ((id=wait_start_id; id<=wait_end_id; id++)); do
+            local padded_id=$(printf "%04d" $id)
+            local json_file="data/src/items/01_${padded_id}.json"
+
+            if [[ -f "$json_file" ]]; then
+                # Check for unstaged changes
+                if ! git diff --quiet "$json_file" 2>/dev/null; then
+                    changed_ids+=("$id(unstaged)")
+                    has_changes=true
+                # Check for staged changes
+                elif ! git diff --cached --quiet "$json_file" 2>/dev/null; then
+                    changed_ids+=("$id(staged)")
+                    has_changes=true
+                fi
+            fi
+        done
+
+        if $has_changes; then
+            print_status "JSON changes detected in batch $wait_start_id-$wait_end_id for IDs: ${changed_ids[*]}"
             return 0
         fi
 
