@@ -15,6 +15,7 @@ DEFAULT_BATCH_SIZE=100
 START_ID=${1:-$DEFAULT_START_ID}
 END_ID=${2:-$DEFAULT_END_ID}
 BATCH_SIZE=${3:-$DEFAULT_BATCH_SIZE}
+WATCH_MODE=${4:-false}
 
 # Colors for output
 RED='\033[0;31m'
@@ -129,6 +130,73 @@ process_batch() {
     fi
 }
 
+# Function to check if there are changes ready for processing
+check_for_changes() {
+    local batch_start=$1
+    local batch_end=$2
+    local has_changes=false
+
+    for ((id=batch_start; id<=batch_end; id++)); do
+        local padded_id=$(printf "%04d" $id)
+        local json_file="data/src/items/01_${padded_id}.json"
+
+        if [[ -f "$json_file" ]] && (! git diff --quiet "$json_file" 2>/dev/null || ! git diff --cached --quiet "$json_file" 2>/dev/null); then
+            has_changes=true
+            break
+        fi
+    done
+
+    $has_changes
+}
+
+# Function to watch for changes and process complete batches
+watch_and_process() {
+    local current_id=$START_ID
+    local processed_count=0
+
+    print_status "Watch mode: Monitoring for changes in IDs $START_ID-$END_ID"
+
+    while ((current_id <= END_ID)); do
+        local batch_start=$current_id
+        local batch_end=$((current_id + BATCH_SIZE - 1))
+        if ((batch_end > END_ID)); then
+            batch_end=$END_ID
+        fi
+
+        if check_for_changes $batch_start $batch_end; then
+            print_status "Changes detected for batch $((processed_count + 1)): IDs $batch_start-$batch_end"
+
+            # Process this batch
+            if process_batch $batch_start $batch_end $((processed_count + 1)); then
+                processed_count=$((processed_count + 1))
+                print_status "Pushing batch $processed_count to remote..."
+                if git push --no-verify; then
+                    print_success "Successfully pushed batch $processed_count"
+                else
+                    print_warning "Failed to push batch $processed_count"
+                fi
+            fi
+
+            current_id=$((batch_end + 1))
+        else
+            # No changes in this batch, check if we should continue monitoring
+            if ((current_id + BATCH_SIZE > END_ID)); then
+                print_status "No more changes in range. Monitoring complete."
+                break
+            fi
+
+            print_status "No changes in batch IDs $batch_start-$batch_end. Continuing search..."
+            current_id=$((current_id + BATCH_SIZE))
+        fi
+    done
+
+    if ((processed_count > 0)); then
+        print_success "Watch mode complete: Processed $processed_count batches"
+    else
+        print_status "Watch mode complete: No changes found"
+    fi
+}
+
 # Function to push all commits
 push_changes() {
     print_status "Pushing all commits to remote..."
@@ -144,13 +212,23 @@ push_changes() {
 # Main execution
 main() {
     print_status "Starting item update process"
-    print_status "Range: $START_ID to $END_ID (batch size: $BATCH_SIZE)"
 
     # Check if we're in a git repository
     if ! git rev-parse --git-head > /dev/null 2>&1; then
         print_error "Not in a git repository"
         exit 1
     fi
+
+    # Watch mode: continuously monitor and process complete batches
+    if [[ "$WATCH_MODE" == "true" ]]; then
+        print_status "Watch mode enabled"
+        print_status "Range: $START_ID to $END_ID (batch size: $BATCH_SIZE)"
+        watch_and_process
+        return
+    fi
+
+    # Normal mode: process all batches once
+    print_status "Range: $START_ID to $END_ID (batch size: $BATCH_SIZE)"
 
     # Check if working directory is clean
     if ! git diff --quiet || ! git diff --cached --quiet; then
@@ -206,18 +284,26 @@ main() {
 
 # Show usage if requested
 if [[ "$1" == "--help" || "$1" == "-h" ]]; then
-    echo "Usage: $0 [start_id] [end_id] [batch_size]"
+    echo "Usage: $0 [start_id] [end_id] [batch_size] [watch_mode]"
     echo ""
     echo "Arguments:"
     echo "  start_id   Starting item ID (default: $DEFAULT_START_ID)"
     echo "  end_id     Ending item ID (default: $DEFAULT_END_ID)"
     echo "  batch_size Number of IDs per batch (default: $DEFAULT_BATCH_SIZE)"
+    echo "  watch_mode Set 'true' to enable watch mode (default: false)"
     echo ""
     echo "Examples:"
-    echo "  $0                    # Use defaults: 1000-2000 in batches of 100"
+    echo "  $0                    # Process all IDs 1000-2000 in batches of 100"
     echo "  $0 1000 1500          # Process IDs 1000-1500 in batches of 100"
     echo "  $0 1000 2000 50       # Process IDs 1000-2000 in batches of 50"
-    echo "  $0 2000 2500 200      # Process IDs 2000-2500 in batches of 200"
+    echo "  $0 1000 2000 100 true # Watch mode: Monitor IDs 1000-2000 for changes"
+    echo "  $0 1000 2000 20 true  # Watch mode with smaller batches of 20"
+    echo ""
+    echo "Watch Mode:"
+    echo "  Continuously monitors for changes and processes complete batches"
+    echo "  Only processes batches where JSON files have been modified"
+    echo "  Automatically pushes each batch as it becomes complete"
+    echo "  Skips batches with no changes and continues monitoring"
     exit 0
 fi
 
