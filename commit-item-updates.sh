@@ -224,6 +224,7 @@ check_for_changes() {
 # Function to wait for changes in the next batch
 wait_for_changes() {
     local current_id=$1
+    local result=-1
 
     while ((current_id <= END_ID)); do
         local batch_start=$current_id
@@ -233,22 +234,25 @@ wait_for_changes() {
         fi
 
         if check_for_changes $batch_start $batch_end; then
-            print_status "Changes detected for batch: IDs $batch_start-$batch_end"
-            return $batch_start
+            print_status "Changes detected for batch: IDs $batch_start-$batch_end" >&2
+            result=$batch_start
+            break
         fi
 
         # No changes in this batch, wait before checking again
         if ((current_id + BATCH_SIZE > END_ID)); then
-            print_status "Reached end of range. Monitoring complete."
-            return -1
+            print_status "Reached end of range. Monitoring complete." >&2
+            result=-1
+            break
         fi
 
-        print_status "No changes in batch IDs $batch_start-$batch_end. Waiting for changes..."
+        print_status "No changes in batch IDs $batch_start-$batch_end. Waiting for changes..." >&2
         sleep 5  # Wait 5 seconds before checking again
         current_id=$((current_id + BATCH_SIZE))
     done
 
-    return -1
+    echo $result
+    return 0
 }
 
 # Function to watch for changes and process complete batches
@@ -261,8 +265,7 @@ watch_and_process() {
 
     while true; do
         # Wait for changes in the next available batch
-        wait_for_changes $current_id
-        local next_batch=$?
+        local next_batch=$(wait_for_changes $current_id)
 
         if ((next_batch == -1)); then
             # No more changes available
