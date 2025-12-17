@@ -8,7 +8,7 @@ set -e  # Exit on any error
 
 # Default values
 DEFAULT_START_ID=1000
-DEFAULT_END_ID=2000
+DEFAULT_END_ID=10000
 DEFAULT_BATCH_SIZE=100
 
 # Default values
