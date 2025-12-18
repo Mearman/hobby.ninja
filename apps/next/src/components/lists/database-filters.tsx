@@ -4,7 +4,7 @@ import type { Item, Manual } from "@hobby-ninja/data";
 import {
 	getBrandById,
 	getCategoryById,
-	getGradeById,
+	getGradeFamilyIds,
 	getNodeDisplayName,
 	getSeriesById,
 } from "@hobby-ninja/data";
@@ -37,6 +37,7 @@ import { useState } from "react";
 
 import type { FilterProps } from "./types";
 
+import { HierarchicalGradeFilter } from "@/components/filtering/hierarchical-grade-filter";
 import type { DatabaseFilterState } from "@/hooks/use-database-filter";
 
 // Helper functions to format entity IDs to display names
@@ -55,10 +56,11 @@ function formatCategoryName(id: string): string {
 	return category ? getNodeDisplayName(category) : id;
 }
 
-function formatGradeName(id: string): string {
-	const grade = getGradeById(id);
-	return grade ? getNodeDisplayName(grade) : id;
-}
+
+// Helper function for hierarchical grade filtering
+const getGradeFamily = (gradeId: string): string[] => {
+	return getGradeFamilyIds(gradeId);
+};
 
 type DatabaseArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories" | "languages";
 
@@ -188,6 +190,30 @@ export function DatabaseFilters({
 		onFilterChange({ [field]: newValues });
 	};
 
+	// Grade family toggle for hierarchical filtering
+	const handleToggleGradeFamily = (parentGradeId: string) => {
+		const familyGrades = getGradeFamily(parentGradeId);
+		const currentGrades = currentFilterState.grades;
+
+		// Check if all family grades are currently selected
+		const allFamilySelected = familyGrades.every(grade => currentGrades.includes(grade));
+
+		if (allFamilySelected) {
+			// Remove all family grades
+			const newGrades = currentGrades.filter(grade => !familyGrades.includes(grade));
+			onFilterChange({ grades: newGrades });
+		} else {
+			// Add all family grades
+			const newGrades = [...currentGrades];
+			for (const grade of familyGrades) {
+				if (!newGrades.includes(grade)) {
+					newGrades.push(grade);
+				}
+			}
+			onFilterChange({ grades: newGrades });
+		}
+	};
+
 	const clearAllFilters = () => {
 		onFilterChange({
 			search: "",
@@ -201,6 +227,15 @@ export function DatabaseFilters({
 			sortField: "name",
 			sortDirection: "asc",
 		});
+	};
+
+	// Helper functions for grade filter
+	const selectAllGrades = () => {
+		onFilterChange({ grades: formattedOptions.grades });
+	};
+
+	const clearGrades = () => {
+		onFilterChange({ grades: [] });
 	};
 
 	// Count active filters
@@ -378,14 +413,16 @@ export function DatabaseFilters({
 										color="violet"
 									/>
 
-									<FilterSection
-										label="Grades"
-										field="grades"
-										options={formattedOptions.grades}
-										selectedValues={currentFilterState.grades}
-										onToggle={handleToggleFilterValue}
-										formatValue={formatGradeName}
+									<HierarchicalGradeFilter
+										availableGrades={formattedOptions.grades}
+										selectedGrades={currentFilterState.grades}
+										onToggle={(gradeId) => { handleToggleFilterValue("grades", gradeId); }}
+										onToggleFamily={handleToggleGradeFamily}
+										displayMode="text" // Use text mode for database page
+										onDisplayModeToggle={undefined} // No display mode toggle in database
 										color="teal"
+										onSelectAll={selectAllGrades}
+										onClearSection={clearGrades}
 									/>
 
 									<FilterSection
