@@ -65,11 +65,16 @@ const COUNT_SECONDARY_COLOR_UNSELECTED = "black";
 
 // Shared styling constants to avoid duplication
 const COUNT_BG_UNSELECTED = "rgba(255,255,255,0.9)";
+const TEXT_WRAP_STYLE = {
+	wordBreak: "break-word" as const,
+	hyphens: "auto" as const,
+};
 const TEXT_STYLE_BASE = {
 	fontFamily: "Inter, system-ui, -apple-system, sans-serif",
 	fontVariantNumeric: "tabular-nums" as const,
 	textTransform: "uppercase" as const,
 	letterSpacing: -0.5,
+	...TEXT_WRAP_STYLE,
 };
 
 // Base style for all filter button containers - EXACT match with FilterSection
@@ -331,15 +336,15 @@ export function HierarchicalGradeFilter({
 						}}>
 							<div style={{
 								width: FILTER_CHIP_WIDTH,
-								height: FILTER_CHIP_HEIGHT,
+								minHeight: FILTER_CHIP_HEIGHT,
 								display: "flex",
 								alignItems: "center",
 								justifyContent: "center",
+								padding: "4px 2px",
 							}}>
 								<Text
 									size="xs"
 									fw={900}
-									lineClamp={1}
 									ta="center"
 									style={{
 										color: isSelected ? "white" : UNSELECTED_TEXT_COLOR,
@@ -559,15 +564,15 @@ export function HierarchicalGradeFilter({
 									{/* Text container exactly like FilterSection */}
 									<div style={{
 										width: FILTER_CHIP_WIDTH,
-										height: FILTER_CHIP_HEIGHT,
+										minHeight: FILTER_CHIP_HEIGHT,
 										display: "flex",
 										alignItems: "center",
 										justifyContent: "center",
+										padding: "4px 2px",
 									}}>
 										<Text
 											size="xs"
 											fw={900}
-											lineClamp={1}
 											ta="center"
 											style={{
 												color: selectedInFamily.length > 0 ? "white" : UNSELECTED_TEXT_COLOR,
@@ -800,22 +805,19 @@ export function HierarchicalGradeFilter({
 						{/* Text container exactly like FilterSection */}
 						<div style={{
 							width: FILTER_CHIP_WIDTH,
-							height: FILTER_CHIP_HEIGHT,
+							minHeight: FILTER_CHIP_HEIGHT,
 							display: "flex",
 							alignItems: "center",
 							justifyContent: "center",
+							padding: "4px 2px",
 						}}>
 							<Text
 								size="xs"
 								fw={900}
-								lineClamp={1}
 								ta="center"
 								style={{
 									color: selectedInFamily.length > 0 ? "white" : UNSELECTED_TEXT_COLOR,
-									fontFamily: "Inter, system-ui, -apple-system, sans-serif",
-									fontVariantNumeric: "tabular-nums",
-									textTransform: "uppercase",
-									letterSpacing: -0.5,
+									...TEXT_STYLE_BASE,
 								}}
 							>
 								{formatGradeName(root.id)}
@@ -975,11 +977,11 @@ export function HierarchicalGradeFilter({
 										<Text
 											size={displayMode === "icon" ? "sm" : "xs"}
 											fw={700}
-											lineClamp={displayMode === "icon" ? 1 : 2}
 											ta="center"
 											style={{
 												fontSize: displayMode === "icon" ? "14px" : "10px",
 												letterSpacing: displayMode === "icon" ? "0.5px" : "normal",
+												...TEXT_WRAP_STYLE,
 											}}
 										>
 											Other
@@ -1031,11 +1033,11 @@ export function HierarchicalGradeFilter({
 									<Text
 										size={displayMode === "icon" ? "sm" : "xs"}
 										fw={700}
-										lineClamp={displayMode === "icon" ? 1 : 2}
 										ta="center"
 										style={{
 											fontSize: displayMode === "icon" ? "14px" : "10px",
 											letterSpacing: displayMode === "icon" ? "0.5px" : "normal",
+											...TEXT_WRAP_STYLE,
 										}}
 									>
 										{iconText}

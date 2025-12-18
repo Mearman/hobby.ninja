@@ -457,15 +457,15 @@ function FilterSection({
 			}}>
 				<div style={{
 					width: FILTER_CHIP_WIDTH,
-					height: FILTER_CHIP_HEIGHT,
+					minHeight: FILTER_CHIP_HEIGHT,
 					display: "flex",
 					alignItems: "center",
 					justifyContent: "center",
+					padding: "4px 2px",
 				}}>
 					<Text
 						size="xs"
 						fw={900}
-						lineClamp={1}
 						ta="center"
 						style={{
 							color: isSelected ? "white" : UNSELECTED_TEXT_COLOR,
@@ -473,6 +473,8 @@ function FilterSection({
 							fontVariantNumeric: "tabular-nums",
 							textTransform: "uppercase",
 							letterSpacing: -0.5,
+							wordBreak: "break-word",
+							hyphens: "auto",
 						}}
 					>
 						{formatValue(value)}

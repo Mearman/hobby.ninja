@@ -59,7 +59,7 @@ export function ItemFiltersWrapper({
 		const availableFamilyIds = familyIds.filter(id => availableGrades.includes(id));
 
 		// IMPORTANT: Only include grades that actually have items (can be selected in the UI)
-		const gradeCounts: Record<string, number> = filterCounts?.grades ?? {};
+		const gradeCounts = (filterCounts?.grades ?? {}) as Record<string, number>;
 		const selectableFamilyIds = availableFamilyIds.filter(gradeId => {
 			const totalCount = gradeCounts[gradeId] ?? 0;
 			return totalCount > 0;
