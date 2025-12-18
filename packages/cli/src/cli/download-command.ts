@@ -81,7 +81,7 @@ async function batchCheckFileExists(filePaths: string[]): Promise<Map<string, bo
 			const existingFiles = new Set(
 				dirContents
 					.filter(dirent => dirent.isFile())
-					.map(dirent => dirent.name)
+					.map(dirent => dirent.name),
 			);
 
 			// Mark files as existing or not
@@ -89,7 +89,7 @@ async function batchCheckFileExists(filePaths: string[]): Promise<Map<string, bo
 				const fullPath = path.join(dir, file);
 				existenceMap.set(fullPath, existingFiles.has(file));
 			}
-		} catch (error) {
+		} catch {
 			// If directory doesn't exist or can't be read, assume no files exist
 			for (const file of files) {
 				const fullPath = path.join(dir, file);
@@ -108,8 +108,8 @@ async function streamFileWrite(buffer: Buffer, filePath: string): Promise<void> 
 	return new Promise((resolve, reject) => {
 		const writeStream = createWriteStream(filePath);
 
-		writeStream.on('error', reject);
-		writeStream.on('finish', resolve);
+		writeStream.on("error", reject);
+		writeStream.on("finish", resolve);
 
 		// Write buffer in chunks to avoid memory spikes
 		const chunkSize = 64 * 1024; // 64KB chunks
@@ -129,7 +129,7 @@ async function streamFileWrite(buffer: Buffer, filePath: string): Promise<void> 
 				// Use setImmediate to allow event loop processing between chunks
 				setImmediate(writeChunk);
 			} else {
-				writeStream.once('drain', () => {
+				writeStream.once("drain", () => {
 					offset += chunkSize;
 					writeChunk();
 				});
@@ -144,10 +144,10 @@ async function streamFileWrite(buffer: Buffer, filePath: string): Promise<void> 
  * Download multiple images in parallel
  */
 async function downloadImagesInParallel(
-	imageData: Array<{ url: string; filename: string; localPath: string; type: 'product' | 'instruction' }>,
+	imageData: Array<{ url: string; filename: string; localPath: string; type: "product" | "instruction" }>,
 	playwrightPage: Page,
 	outputDir: string,
-	itemId: string
+	itemId: string,
 ): Promise<{ successful: string[], failed: Array<{ filename: string; error: string }> }> {
 	const successful: string[] = [];
 	const failed: Array<{ filename: string; error: string }> = [];
@@ -167,19 +167,19 @@ async function downloadImagesInParallel(
 				// 1. Instruction images (CloudFront signed URLs)
 				// 2. Product images from akamaihd.net (CORS restrictions)
 				// 3. Product images from cloudfront.net (signed URLs)
-				if (type === 'instruction' || url.includes('akamaihd.net') || url.includes('cloudfront.net')) {
-					const response = await playwrightPage!.context().request.get(url);
+				if (type === "instruction" || url.includes("akamaihd.net") || url.includes("cloudfront.net")) {
+					const response = await playwrightPage.context().request.get(url);
 					if (!response.ok()) {
 						throw new Error(`HTTP ${response.status()}`);
 					}
 					buffer = await response.body();
 				} else {
 					// Other product images can use fetch within page context
-					const bufferArray = await playwrightPage!.evaluate(async (imageUrl: string) => {
+					const bufferArray = await playwrightPage.evaluate(async (imageUrl: string) => {
 						const response = await fetch(imageUrl, {
-							method: 'GET',
-							mode: 'cors',
-							credentials: 'include',
+							method: "GET",
+							mode: "cors",
+							credentials: "include",
 						});
 
 						if (!response.ok) {
@@ -193,9 +193,9 @@ async function downloadImagesInParallel(
 				}
 
 				// Validate downloaded instruction images are actually JPEGs, not error pages
-				if (type === 'instruction') {
+				if (type === "instruction") {
 					const fileSize = buffer.length;
-					const minSize = 50000; // 50KB minimum for instruction images
+					const minSize = 50_000; // 50KB minimum for instruction images
 
 					if (fileSize < minSize) {
 						throw new Error(`Downloaded instruction image too small (${fileSize} bytes). Likely an error page or banner.`);
@@ -204,7 +204,7 @@ async function downloadImagesInParallel(
 					// Check JPEG magic bytes (FF D8 FF)
 					const isJPEG = buffer[0] === 0xFF && buffer[1] === 0xD8 && buffer[2] === 0xFF;
 					if (!isJPEG) {
-						const firstBytes = buffer.slice(0, 10).toString('hex');
+						const firstBytes = buffer.slice(0, 10).toString("hex");
 						throw new Error(`Downloaded instruction image is not a valid JPEG. First bytes: ${firstBytes}`);
 					}
 				}
@@ -218,7 +218,7 @@ async function downloadImagesInParallel(
 				successful.push(`/images/items/${itemId}/${filename}`);
 				return { filename, success: true };
 			} else {
-				failed.push({ filename, error: downloadResult.error || 'Unknown error' });
+				failed.push({ filename, error: downloadResult.error || "Unknown error" });
 				return { filename, success: false, error: downloadResult.error };
 			}
 		});
@@ -315,14 +315,14 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 		// Intelligent waiting - check if images are loaded before doing extra work
 		const imagesLoaded = await playwrightPage.evaluate(() => {
 			// Check if product gallery images are already loaded
-			const productGallerySelector = '.pg-products__sliderMain img, .pg-products__sliderMainWrap img';
+			const productGallerySelector = ".pg-products__sliderMain img, .pg-products__sliderMainWrap img";
 			const galleryImages = document.querySelectorAll(productGallerySelector);
 
 			// Check if this is a blog (noimage placeholders)
-			const isBlogPage = galleryImages.length > 0 && Array.from(galleryImages).every((img: Element) => {
+			const isBlogPage = galleryImages.length > 0 && [...galleryImages].every((img: Element) => {
 				const imageEl = img as HTMLImageElement;
 				const src = imageEl.src || "";
-				return src.includes('noimage') || src.includes('img_noimage');
+				return src.includes("noimage") || src.includes("img_noimage");
 			});
 
 			// If it's a blog page, we're done (don't wait for real images)
@@ -332,7 +332,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 			// If we have images with valid src, we can skip the lazy loading steps
 			if (galleryImages.length > 0) {
-				const hasValidSources = Array.from(galleryImages).some((img: Element) => {
+				const hasValidSources = [...galleryImages].some((img: Element) => {
 					const imageEl = img as HTMLImageElement;
 					const src = imageEl.src || imageEl.dataset.src || "";
 					return src && !src.includes("placeholder") && !src.includes("noimage");
@@ -355,7 +355,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			// Wait for images to appear after scrolling (with timeout)
 			// Use gallery selector instead of old thumbnail selector
 			await playwrightPage.waitForFunction(() => {
-				const productGallerySelector = '.pg-products__sliderMain img, .pg-products__sliderMainWrap img';
+				const productGallerySelector = ".pg-products__sliderMain img, .pg-products__sliderMainWrap img";
 				const galleryImages = document.querySelectorAll(productGallerySelector);
 				return galleryImages.length > 0;
 			}, { timeout: 3000 }); // Reduced timeout since page loads faster
@@ -383,14 +383,14 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 			// Get product images from the product gallery swiper only
 			// The swiper may show the same image multiple times, so we'll deduplicate by URL
-			const productGallerySelector = '.pg-products__sliderMain img, .pg-products__sliderMainWrap img';
+			const productGallerySelector = ".pg-products__sliderMain img, .pg-products__sliderMainWrap img";
 			const galleryImages = document.querySelectorAll(productGallerySelector);
 			console.log(`Found ${galleryImages.length} images in product gallery`);
 
 			// Check if this is a blog post by detecting "noimage" placeholders
-			const allNoImage = galleryImages.length > 0 && Array.from(galleryImages).every(img => {
-				const src = (img as HTMLImageElement).src || '';
-				return src.includes('noimage') || src.includes('img_noimage');
+			const allNoImage = galleryImages.length > 0 && [...galleryImages].every(img => {
+				const src = (img as HTMLImageElement).src || "";
+				return src.includes("noimage") || src.includes("img_noimage");
 			});
 
 			if (allNoImage) {
@@ -401,7 +401,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			// If no gallery images, fall back to old selector (for pages without swiper)
 			let imageElements = [];
 			if (galleryImages.length > 0) {
-				imageElements = Array.from(galleryImages);
+				imageElements = [...galleryImages];
 			} else {
 				console.log("No gallery images found, trying fallback selector...");
 				const fallbackSelector = 'main img[src*="bandai-hobby.net/images"]:not([src*="common"]):not([src*="bnr"]), main img[src*="bandai-a.akamaihd.net"]:not([src*="related"]):not([src*="common"])';
@@ -409,8 +409,8 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 				console.log(`Found ${allProductImages.length} total product image candidates`);
 
 				// Exclude images in instruction section
-				const instructionContainer = document.querySelector('.pg-products__instruction');
-				imageElements = Array.from(allProductImages).filter(img => {
+				const instructionContainer = document.querySelector(".pg-products__instruction");
+				imageElements = [...allProductImages].filter(img => {
 					const inInstructions = instructionContainer && instructionContainer.contains(img);
 					return !inInstructions;
 				});
@@ -420,10 +420,10 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			// Process images in DOM order to maintain consistency
 			// Deduplicate by base URL (without query params) to handle swiper duplicates
 			const processedSources = new Map(); // Track order by first appearance
-			imageElements.forEach(function(element, index) {
+			for (const [index, element] of imageElements.entries()) {
 				const img = element as HTMLImageElement;
-				const src = img.src || img.getAttribute('data-src') || "";
-				const baseUrl = src.split('?')[0]; // Remove query params for deduplication
+				const src = img.src || img.dataset.src || "";
+				const baseUrl = src.split("?")[0]; // Remove query params for deduplication
 
 				if (src && baseUrl && !seen.has(baseUrl) && !processedSources.has(baseUrl)) {
 					seen.add(baseUrl);
@@ -431,7 +431,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 					urls.push(src); // Keep full URL for download (includes signed params)
 					console.log(`  Product Image ${urls.length - 1}: ${src.slice(0, 100)}...`);
 				}
-			});
+			}
 
 			console.log(`Found ${urls.length} unique product images`);
 
@@ -446,7 +446,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			let instructionElements: Element[] = [];
 			let usedSelector = "";
 			for (const selector of selectorStrategies) {
-				const elements = Array.from(document.querySelectorAll(selector));
+				const elements = [...document.querySelectorAll(selector)];
 				if (elements.length > 0) {
 					instructionElements = elements;
 					usedSelector = selector;
@@ -461,9 +461,9 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 			// Scroll to instruction section to trigger lazy loading of CloudFront signed URLs
 			if (instructionElements.length > 0) {
-				const instructionSection = document.querySelector('.pg-products__instruction');
+				const instructionSection = document.querySelector(".pg-products__instruction");
 				if (instructionSection) {
-					instructionSection.scrollIntoView({ behavior: 'instant' });
+					instructionSection.scrollIntoView({ behavior: "instant" });
 					// Wait for lazy-loaded images to populate img.src with CloudFront signed URLs
 					// Increased timeout to ensure images have time to load
 					await new Promise(resolve => setTimeout(resolve, 2000));
@@ -471,7 +471,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 					// Verify images actually loaded
 					const loadedCount = instructionElements.filter(el => {
 						const img = el as HTMLImageElement;
-						return img.src && img.src.startsWith('http') && !img.src.includes('data:');
+						return img.src && img.src.startsWith("http") && !img.src.includes("data:");
 					}).length;
 
 					if (loadedCount === 0) {
@@ -482,11 +482,11 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 				}
 			}
 
-			Array.from(instructionElements).forEach((element: Element, index: number) => {
+			[...instructionElements].forEach((element: Element, index: number) => {
 				const img = element as HTMLImageElement;
 				// After lazy loading, img.src contains the CloudFront signed URL
 				// data-src contains the relative path which won't work
-				let src = img.src || "";
+				const src = img.src || "";
 
 				// Skip if we only have a relative URL - we need the CloudFront signed URL
 				if (src && !src.startsWith("http")) {
@@ -494,13 +494,13 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 				}
 
 				// Filter out promotional banners and invalid URLs
-				if (src && (src.includes('/common/') || src.includes('/bnr/') || src.includes('banner'))) {
+				if (src && (src.includes("/common/") || src.includes("/bnr/") || src.includes("banner"))) {
 					console.log(`  Skipping promotional banner: ${src.slice(0, 100)}...`);
 					return;
 				}
 
 				// Validate CloudFront domains for instruction images
-				if (src && !src.includes('cloudfront.net') && !src.includes('bandai-hobby.net/product/')) {
+				if (src && !src.includes("cloudfront.net") && !src.includes("bandai-hobby.net/product/")) {
 					console.log(`  Skipping non-instruction image domain: ${src.slice(0, 100)}...`);
 					return;
 				}
@@ -525,7 +525,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			try {
 				await fs.unlink(itemJsonPath);
 				console.log(`  Removed blog JSON file: ${itemId}.json`);
-			} catch (error) {
+			} catch {
 				// File might not exist, which is fine
 			}
 
@@ -556,11 +556,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			// Use sequential pattern for CloudFront URLs (random hashes)
 			// Use extracted filename for bandai-hobby.net and akamaihd.net (meaningful IDs)
 			let filename: string;
-			if (url.includes('cloudfront.net')) {
-				filename = `${itemId}_${i}.jpg`;
-			} else {
-				filename = extractFilenameFromUrl(url);
-			}
+			filename = url.includes("cloudfront.net") ? `${itemId}_${i}.jpg` : extractFilenameFromUrl(url);
 			const localPath = path.join(itemOutputDir, filename);
 			productFilePaths.push({ url, filename, localPath, index: i });
 		}
@@ -598,8 +594,8 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 		// Combine all downloads with type information
 		const allDownloads = [
-			...productDownloads.map(({ url, filename, localPath }) => ({ url, filename, localPath, type: 'product' as const })),
-			...instructionDownloads.map(({ url, filename, localPath }) => ({ url, filename, localPath, type: 'instruction' as const }))
+			...productDownloads.map(({ url, filename, localPath }) => ({ url, filename, localPath, type: "product" as const })),
+			...instructionDownloads.map(({ url, filename, localPath }) => ({ url, filename, localPath, type: "instruction" as const })),
 		];
 
 		if (allDownloads.length > 0) {
@@ -685,27 +681,27 @@ async function createOptimizedPage(context: BrowserContext): Promise<Page> {
 	const page = await context.newPage();
 
 	// Block unnecessary resources for faster page loads
-	await page.route('**/*.{css,woff,woff2,ttf,otf,eot}', route => route.abort());
-	await page.route('**/*.js', route => {
+	await page.route("**/*.{css,woff,woff2,ttf,otf,eot}", route => route.abort());
+	await page.route("**/*.js", route => {
 		// Only allow essential JS, block tracking/analytics
 		const url = route.request().url();
-		if (url.includes('analytics') || url.includes('tracker') || url.includes('pixel')) {
+		if (url.includes("analytics") || url.includes("tracker") || url.includes("pixel")) {
 			return route.abort();
 		}
 		return route.continue();
 	});
-	await page.route('**/*.{png,gif,jpeg,jpg,webp,svg,ico}', route => {
+	await page.route("**/*.{png,gif,jpeg,jpg,webp,svg,ico}", route => {
 		// Only allow images from CloudFront/CDN that we need
 		const url = route.request().url();
-		if (!url.includes('cloudfront.net') && !url.includes('bandai-hobby.net')) {
+		if (!url.includes("cloudfront.net") && !url.includes("bandai-hobby.net")) {
 			return route.abort();
 		}
 		return route.continue();
 	});
 
 	// Optimize timeout settings
-	page.setDefaultTimeout(15000); // 15 seconds default
-	page.setDefaultNavigationTimeout(20000); // 20 seconds for navigation
+	page.setDefaultTimeout(15_000); // 15 seconds default
+	page.setDefaultNavigationTimeout(20_000); // 20 seconds for navigation
 
 	return page;
 }
@@ -721,15 +717,15 @@ async function initPlaywright(): Promise<void> {
 		headless: false, // Bandai requires non-headless for signed URLs
 		slowMo: 0, // No artificial delay - retry logic handles failures
 		args: [
-			'--no-sandbox',
-			'--disable-dev-shm-usage',
-			'--disable-gpu',
-			'--disable-background-timer-throttling',
-			'--disable-backgrounding-occluded-windows',
-			'--disable-renderer-backgrounding',
-			'--disable-features=TranslateUI',
-			'--disable-ipc-flooding-protection',
-			'--memory-pressure-off',
+			"--no-sandbox",
+			"--disable-dev-shm-usage",
+			"--disable-gpu",
+			"--disable-background-timer-throttling",
+			"--disable-backgrounding-occluded-windows",
+			"--disable-renderer-backgrounding",
+			"--disable-features=TranslateUI",
+			"--disable-ipc-flooding-protection",
+			"--memory-pressure-off",
 		],
 	});
 
@@ -1022,7 +1018,7 @@ async function downloadCatalogAssets(
 							// Old: /images/items/01_1000_0.jpg
 							// New: /images/items/01_1000/01_1000_0.jpg
 							const flatPattern = /^\/images\/items\/(\d{2}_\d{4,5})_(.+)$/;
-							const match = imgPath.match(flatPattern);
+							const match = flatPattern.exec(imgPath);
 							if (match) {
 								const [, itemId, filename] = match;
 								return `/images/items/${itemId}/${itemId}_${filename}`;
@@ -1035,19 +1031,19 @@ async function downloadCatalogAssets(
 								return false;
 							}
 
-							const filename = imgPath.split('/').pop() || '';
+							const filename = imgPath.split("/").pop() || "";
 
 							// Remove old sequential product images (e.g., 01_1000_0.jpg, 01_1000_1.jpg)
 							// These will be replaced by extracted filenames
-							const oldProductPattern = new RegExp(`^${item.id}_\\d+\\.jpg$`);
+							const oldProductPattern = new RegExp(String.raw`^${item.id}_\d+\.jpg$`);
 							if (oldProductPattern.test(filename)) {
 								return false;
 							}
 
 							// Remove CloudFront hash instruction images (not matching sequential pattern)
 							// Keep only: 01_1000_inst_0.jpg, 01_1000_inst_1.jpg, etc.
-							const instPattern = new RegExp(`^${item.id}_inst_\\d+\\.jpg$`);
-							const isInstImage = filename.includes('_inst_');
+							const instPattern = new RegExp(String.raw`^${item.id}_inst_\d+\.jpg$`);
+							const isInstImage = filename.includes("_inst_");
 							if (isInstImage && !instPattern.test(filename)) {
 								// This is a CloudFront hash instruction image - remove it
 								return false;
@@ -1059,9 +1055,9 @@ async function downloadCatalogAssets(
 					// Sort images: product images first, then instruction images
 					const allImages = [...cleanedExistingImages, ...localImagePaths];
 					// Deduplicate in case of overlaps
-					const uniqueImages = Array.from(new Set(allImages));
-					const productImages = uniqueImages.filter(path => !path.includes('_inst_'));
-					const instructionImages = uniqueImages.filter(path => path.includes('_inst_'));
+					const uniqueImages = [...new Set(allImages)];
+					const productImages = uniqueImages.filter(path => !path.includes("_inst_"));
+					const instructionImages = uniqueImages.filter(path => path.includes("_inst_"));
 					productImages.sort();
 					instructionImages.sort();
 					const sortedImages = [...productImages, ...instructionImages];
@@ -1102,7 +1098,7 @@ async function downloadCatalogAssets(
 		const filePaths = item.images.map(imagePath => {
 			// Extract relative path from /images/items/01_1000/01_1000_0.jpg
 			// Result: 01_1000/01_1000_0.jpg
-			const relativePath = imagePath.replace(/^\/images\/items\//, '');
+			const relativePath = imagePath.replace(/^\/images\/items\//, "");
 			const fullPath = path.join(options.catalogImagesDir, relativePath);
 			return { imagePath, fullPath };
 		});
@@ -1164,7 +1160,7 @@ async function downloadCatalogAssets(
 								// Old: /images/items/01_1000_0.jpg
 								// New: /images/items/01_1000/01_1000_0.jpg
 								const flatPattern = /^\/images\/items\/(\d{2}_\d{4,5})_(.+)$/;
-								const match = imgPath.match(flatPattern);
+								const match = flatPattern.exec(imgPath);
 								if (match) {
 									const [, itemId, filename] = match;
 									return `/images/items/${itemId}/${itemId}_${filename}`;
@@ -1177,19 +1173,19 @@ async function downloadCatalogAssets(
 									return false;
 								}
 
-								const filename = imgPath.split('/').pop() || '';
+								const filename = imgPath.split("/").pop() || "";
 
 								// Remove CloudFront hash instruction images (not matching sequential pattern)
 								// Keep only: 01_1000_inst_0.jpg, 01_1000_inst_1.jpg, etc.
-								const instPattern = new RegExp(`^${item.id}_inst_\\d+\\.jpg$`);
-								const isInstImage = filename.includes('_inst_');
+								const instPattern = new RegExp(String.raw`^${item.id}_inst_\d+\.jpg$`);
+								const isInstImage = filename.includes("_inst_");
 								if (isInstImage && !instPattern.test(filename)) {
 									// This is a CloudFront hash instruction image - remove it
 									return false;
 								}
 
 								// Verify file actually exists on disk
-								const diskPath = path.join(options.catalogImagesDir, imgPath.replace('/images/items/', ''));
+								const diskPath = path.join(options.catalogImagesDir, imgPath.replace("/images/items/", ""));
 								try {
 									accessSync(diskPath);
 									return true;
@@ -1201,11 +1197,11 @@ async function downloadCatalogAssets(
 
 						// Merge fresh images with cleaned existing images to create complete set
 						const allImages = new Set([...cleanedExistingImages, ...localImagePaths]);
-						const completeImagePaths = Array.from(allImages);
+						const completeImagePaths = [...allImages];
 
 						// Sort images: product images first, then instruction images
-						const productImages = completeImagePaths.filter(path => !path.includes('_inst_'));
-						const instructionImages = completeImagePaths.filter(path => path.includes('_inst_'));
+						const productImages = completeImagePaths.filter(path => !path.includes("_inst_"));
+						const instructionImages = completeImagePaths.filter(path => path.includes("_inst_"));
 						productImages.sort();
 						instructionImages.sort();
 						const sortedImages = [...productImages, ...instructionImages];
@@ -1236,11 +1232,91 @@ async function downloadCatalogAssets(
 				}
 			}
 		} else {
-			// All images exist
-			stats.skipped = item.images.length;
+			// All images exist - but we still need to clean up the JSON array
 			if (options.verbose) {
-				console.log(`[${item.id}] All ${item.images.length} images already exist - skipping`);
+				console.log(`[${item.id}] All ${item.images.length} images already exist - cleaning JSON array...`);
 			}
+
+			// Clean up existing images array to remove invalid patterns
+			if (jsonPath && !options.dryRun) {
+				try {
+					// Read the original file to preserve other fields
+					const originalContent = await fs.readFile(jsonPath, "utf8");
+					const originalItem = JSON.parse(originalContent);
+
+					// Clean up old patterns from existing images array
+					const rawExistingImages = Array.isArray(originalItem.images) ? originalItem.images : [];
+					const cleanedExistingImages = rawExistingImages
+						.map((imgPath: string) => {
+							// Convert old flat path pattern to new folder structure
+							// Old: /images/items/01_1000_0.jpg
+							// New: /images/items/01_1000/01_1000_0.jpg
+							const flatPattern = /^\/images\/items\/(\d{2}_\d{4,5})_(.+)$/;
+							const match = flatPattern.exec(imgPath);
+							if (match) {
+								const [, itemId, filename] = match;
+								return `/images/items/${itemId}/${itemId}_${filename}`;
+							}
+							return imgPath;
+						})
+						.filter((imgPath: string) => {
+							// Only keep images for this item
+							if (!imgPath.startsWith(`/images/items/${item.id}/`)) {
+								return false;
+							}
+
+							const filename = imgPath.split("/").pop() || "";
+
+							// Remove CloudFront hash instruction images (not matching sequential pattern)
+							// Keep only: 01_1000_inst_0.jpg, 01_1000_inst_1.jpg, etc.
+							const instPattern = new RegExp(String.raw`^${item.id}_inst_\d+\.jpg$`);
+							const isInstImage = filename.includes("_inst_");
+							if (isInstImage && !instPattern.test(filename)) {
+								// This is a CloudFront hash instruction image - remove it
+								return false;
+							}
+
+							// Verify file actually exists on disk
+							const diskPath = path.join(options.catalogImagesDir, imgPath.replace("/images/items/", ""));
+							try {
+								accessSync(diskPath);
+								return true;
+							} catch {
+								// File doesn't exist - remove from JSON
+								return false;
+							}
+						});
+
+					// Sort images: product images first, then instruction images
+					const productImages = cleanedExistingImages.filter(path => !path.includes("_inst_"));
+					const instructionImages = cleanedExistingImages.filter(path => path.includes("_inst_"));
+					productImages.sort();
+					instructionImages.sort();
+					const sortedImages = [...productImages, ...instructionImages];
+
+					// Only update if the array actually changed
+					if (sortedImages.length !== originalItem.images?.length ||
+						JSON.stringify(sortedImages) !== JSON.stringify(originalItem.images)) {
+						// Update only the images array
+						originalItem.images = sortedImages;
+
+						// Write back to file
+						await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
+
+						if (options.verbose) {
+							const removedCount = (originalItem.images?.length || 0) - sortedImages.length;
+							console.log(`  ✓ Cleaned JSON array: removed ${removedCount} invalid image paths, ${sortedImages.length} remain`);
+						}
+					} else if (options.verbose) {
+						console.log(`  ✓ JSON array already clean (${sortedImages.length} images)`);
+					}
+				} catch (error) {
+					const msg = error instanceof Error ? error.message : String(error);
+					stats.errors.push(`${item.id}: Failed to clean JSON array: ${msg}`);
+				}
+			}
+
+			stats.skipped = item.images.length;
 
 			// Record that this item's images have been verified as downloaded
 			ItemsIndexUpdater.recordDownloadVerified(item.id);
@@ -1257,73 +1333,73 @@ async function downloadCatalogAssets(
 				} else {
 					// Page not recently scraped, verify array completeness
 					if (options.verbose) {
-					console.log(`[${item.id}] Rechecking for additional images...`);
-				}
-
-				// Scrape fresh images to see if there are more than what's in the array
-				const freshImagePaths = !options.dryRun
-					? await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir, options.catalogDir)
-					: [];
-
-				// Record that we scraped the page for content
-				ItemsIndexUpdater.recordPageScraped(item.id);
-
-				// Merge fresh images with existing images to create complete set
-				// Use a Set to deduplicate, then convert back to array
-				const existingImages = new Set(item.images || []);
-				const allImages = new Set([...existingImages, ...freshImagePaths]);
-				const completeImagePaths = Array.from(allImages);
-
-				// Separate product images from instruction images for sorting
-				const productImages = completeImagePaths.filter(path => !path.includes('_inst_'));
-				const instructionImages = completeImagePaths.filter(path => path.includes('_inst_'));
-
-				// Sort each category and combine
-				productImages.sort();
-				instructionImages.sort();
-				const sortedImagePaths = [...productImages, ...instructionImages];
-
-				if (sortedImagePaths.length > item.images.length) {
-					if (options.verbose) {
-						console.log(`  ✓ Found ${sortedImagePaths.length - item.images.length} additional images`);
+						console.log(`[${item.id}] Rechecking for additional images...`);
 					}
 
-					// Update the JSON file with the complete image array
-					if (jsonPath && !options.dryRun) {
-						try {
+					// Scrape fresh images to see if there are more than what's in the array
+					const freshImagePaths = options.dryRun
+						? []
+						: await scrapeAndDownloadImages(item.sourceUrl, item.id, options.catalogImagesDir, options.catalogDir);
+
+					// Record that we scraped the page for content
+					ItemsIndexUpdater.recordPageScraped(item.id);
+
+					// Merge fresh images with existing images to create complete set
+					// Use a Set to deduplicate, then convert back to array
+					const existingImages = new Set(item.images || []);
+					const allImages = new Set([...existingImages, ...freshImagePaths]);
+					const completeImagePaths = [...allImages];
+
+					// Separate product images from instruction images for sorting
+					const productImages = completeImagePaths.filter(path => !path.includes("_inst_"));
+					const instructionImages = completeImagePaths.filter(path => path.includes("_inst_"));
+
+					// Sort each category and combine
+					productImages.sort();
+					instructionImages.sort();
+					const sortedImagePaths = [...productImages, ...instructionImages];
+
+					if (sortedImagePaths.length > item.images.length) {
+						if (options.verbose) {
+							console.log(`  ✓ Found ${sortedImagePaths.length - item.images.length} additional images`);
+						}
+
+						// Update the JSON file with the complete image array
+						if (jsonPath && !options.dryRun) {
+							try {
 							// Read the original file to preserve other fields
-							const originalContent = await fs.readFile(jsonPath, "utf8");
-							const originalItem = JSON.parse(originalContent);
+								const originalContent = await fs.readFile(jsonPath, "utf8");
+								const originalItem = JSON.parse(originalContent);
 
-							// Update the images array with the complete set
-							originalItem.images = sortedImagePaths;
+								// Update the images array with the complete set
+								originalItem.images = sortedImagePaths;
 
-							// Write back to file
-							await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
+								// Write back to file
+								await fs.writeFile(jsonPath, JSON.stringify(originalItem, null, "\t"), "utf8");
 
-							if (options.verbose) {
-								console.log(`  ✓ Updated JSON with complete image array (${sortedImagePaths.length} images)`);
+								if (options.verbose) {
+									console.log(`  ✓ Updated JSON with complete image array (${sortedImagePaths.length} images)`);
+								}
+							} catch (error) {
+								const msg = error instanceof Error ? error.message : String(error);
+								stats.errors.push(`${item.id}: Failed to update JSON file: ${msg}`);
 							}
-						} catch (error) {
-							const msg = error instanceof Error ? error.message : String(error);
-							stats.errors.push(`${item.id}: Failed to update JSON file: ${msg}`);
+						}
+
+						// Update stats to reflect newly downloaded images
+						stats.downloaded = sortedImagePaths.length - item.images.length;
+					} else if (options.verbose) {
+						const newCount = sortedImagePaths.length;
+						const existingCount = item.images.length;
+						if (freshImagePaths.length === 0 && existingCount > 0) {
+							console.log(`  ✓ No new images found on page (item has ${existingCount} existing images)`);
+						} else {
+							console.log(`  ✓ Image array complete (${Math.max(newCount, existingCount)} images: ${productImages.length} product, ${instructionImages.length} instruction)`);
 						}
 					}
 
-					// Update stats to reflect newly downloaded images
-					stats.downloaded = sortedImagePaths.length - item.images.length;
-				} else if (options.verbose) {
-					const newCount = sortedImagePaths.length;
-					const existingCount = item.images.length;
-					if (freshImagePaths.length === 0 && existingCount > 0) {
-						console.log(`  ✓ No new images found on page (item has ${existingCount} existing images)`);
-					} else {
-						console.log(`  ✓ Image array complete (${Math.max(newCount, existingCount)} images: ${productImages.length} product, ${instructionImages.length} instruction)`);
-					}
-				}
-
-				// Record that this item's images have been successfully downloaded
-				ItemsIndexUpdater.recordDownloadVerified(item.id);
+					// Record that this item's images have been successfully downloaded
+					ItemsIndexUpdater.recordDownloadVerified(item.id);
 				}
 			}
 		}
@@ -1437,7 +1513,7 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 					await fs.unlink(jsonPath);
 					blogsRemoved++;
 					console.log(`  Removed blog JSON: ${id}.json`);
-				} catch (error) {
+				} catch {
 					// File might not exist, which is fine
 				}
 			}
