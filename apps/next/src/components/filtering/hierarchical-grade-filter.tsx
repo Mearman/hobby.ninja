@@ -385,20 +385,22 @@ export function HierarchicalGradeFilter({
 					style={{
 						background: `var(--mantine-color-${color}-light)`,
 						borderRadius: 12,
+						overflow: "visible",
 					}}
 				>
-					<Group gap="0" wrap="wrap" align="stretch">
-						{/* Parent grade with toggle and counts - exactly like FilterSection */}
+									<Group gap="0" wrap="wrap" align="stretch" style={{ overflow: "visible" }}>
+						{/* Parent grade with integrated expand button - unified container */}
 						{displayMode === "icon" && imageSrc ? (
 							<Tooltip label={`${formatGradeName(root.id)} (select all)`} position="top" withArrow={true}>
 								<UnstyledButton
 									onClick={() => { onToggleFamily(root.id); }}
 									style={{
 										...FILTER_BUTTON_BASE_STYLE,
-										borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Flat right edge for seamless button attachment
+										borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Keep all corners rounded
 										border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
 										background: selectedInFamily.length === familyIds.length ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 										opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+										position: "relative", // Required for absolute positioning of child elements
 									}}
 								>
 									{/* Image container exactly like FilterSection */}
@@ -487,11 +489,12 @@ export function HierarchicalGradeFilter({
 									onClick={() => { onToggleFamily(root.id); }}
 									style={{
 										...FILTER_BUTTON_BASE_STYLE,
-										borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Flat right edge for seamless button attachment
+										borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Keep all corners rounded
 										border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
 										background: selectedInFamily.length === familyIds.length ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 										color: selectedInFamily.length > 0 ? "white" : `var(--mantine-color-${color}-filled)`,
 										opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+										position: "relative", // Required for absolute positioning of child elements
 									}}
 								>
 									{/* Text container exactly like FilterSection */}
@@ -577,26 +580,25 @@ export function HierarchicalGradeFilter({
 											{parentTotalCount}
 										</div>
 									</div>
-								</UnstyledButton>
+																</UnstyledButton>
 							</Tooltip>
 						)}
+						{/* Collapse button positioned next to parent chip */}
 						<ActionIcon
 							variant="filled"
 							size="sm"
-							color={color}
-							onClick={() => { toggleFamilyExpand(root.id); }}
+							onClick={(e) => { e.stopPropagation(); toggleFamilyExpand(root.id); }}
 							title="Collapse sub-grades"
 							style={{
-								alignSelf: "stretch",
-								height: "auto",
-								width: "28px",
-								flexShrink: 0,
-								marginLeft: "-4px",
-								zIndex: 1,
-								borderRadius: EXPAND_BUTTON_BORDER_RADIUS, // Square left side, rounded right side
+								alignSelf: "center",
+								width: "32px",
+								height: "32px",
+								background: "white",
+								color: color,
+								border: `2px solid ${color}`,
 							}}
 						>
-							<IconChevronDown size={14} />
+							<IconChevronDown size={16} />
 						</ActionIcon>
 
 						{/* Root-only option (if root is available as standalone) */}
@@ -629,10 +631,11 @@ export function HierarchicalGradeFilter({
 							onClick={() => { onToggleFamily(root.id); }}
 							style={{
 								...FILTER_BUTTON_BASE_STYLE,
-								borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Flat right edge for seamless button attachment
+								borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Keep all corners rounded
 								border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
 								background: selectedInFamily.length > 0 ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 								opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+								position: "relative", // Required for absolute positioning of child elements
 							}}
 						>
 							{/* Image container exactly like FilterSection */}
@@ -713,25 +716,29 @@ export function HierarchicalGradeFilter({
 									{parentTotalCount}
 								</div>
 							</div>
-						</UnstyledButton>
+						{/* Integrated expand/collapse button - vertically centered */}
+			<ActionIcon
+				variant="subtle"
+				size="sm"
+				onClick={(e) => { e.stopPropagation(); toggleFamilyExpand(root.id); }}
+				title="Expand sub-grades"
+				style={{
+					position: "absolute",
+					top: "50%",
+					right: 2,
+					transform: "translateY(-50%)",
+					width: "28px",
+					height: "28px",
+					zIndex: 20,
+					background: "white",
+					color: color,
+					border: `2px solid ${color}`,
+				}}
+			>
+				<IconChevronRight size={14} />
+			</ActionIcon>
+		</UnstyledButton>
 					</Tooltip>
-					<ActionIcon
-						variant="subtle"
-						size="sm"
-						onClick={() => { toggleFamilyExpand(root.id); }}
-						title="Expand sub-grades"
-						style={{
-							alignSelf: "stretch",
-							height: "auto",
-							width: "32px",
-							flexShrink: 0,
-							marginLeft: "-8px",
-							zIndex: 1,
-							borderRadius: EXPAND_BUTTON_BORDER_RADIUS, // Square left side, rounded right side
-						}}
-					>
-						<IconChevronRight size={14} />
-					</ActionIcon>
 				</div>
 			);
 		}
@@ -743,10 +750,11 @@ export function HierarchicalGradeFilter({
 						onClick={() => { onToggleFamily(root.id); }}
 						style={{
 							...FILTER_BUTTON_BASE_STYLE,
-							borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Flat right edge for seamless button attachment
+							borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Keep all corners rounded
 							border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
 							background: selectedInFamily.length > 0 ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 							opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+							position: "relative", // Required for absolute positioning of child elements
 						}}
 					>
 						{/* Text container exactly like FilterSection */}
@@ -834,25 +842,29 @@ export function HierarchicalGradeFilter({
 								{selectedInFamily.length}/{familyIds.length}
 							</Badge>
 						)}
-					</UnstyledButton>
+					{/* Integrated expand/collapse button - vertically centered */}
+			<ActionIcon
+				variant="subtle"
+				size="sm"
+				onClick={(e) => { e.stopPropagation(); toggleFamilyExpand(root.id); }}
+				title="Expand sub-grades"
+				style={{
+					position: "absolute",
+					top: "50%",
+					right: 2,
+					transform: "translateY(-50%)",
+					width: "28px",
+					height: "28px",
+					zIndex: 20,
+					background: "white",
+					color: color,
+					border: `2px solid ${color}`,
+				}}
+			>
+				<IconChevronRight size={14} />
+			</ActionIcon>
+		</UnstyledButton>
 				</Tooltip>
-				<ActionIcon
-					variant="subtle"
-					size="sm"
-					onClick={() => { toggleFamilyExpand(root.id); }}
-					title="Expand sub-grades"
-					style={{
-						alignSelf: "stretch",
-						height: "auto",
-						width: "28px",
-						flexShrink: 0,
-						marginLeft: "-4px",
-						zIndex: 1,
-						borderRadius: EXPAND_BUTTON_BORDER_RADIUS, // Square left side, rounded right side
-					}}
-				>
-					<IconChevronRight size={14} />
-				</ActionIcon>
 			</div>
 		);
 	};
