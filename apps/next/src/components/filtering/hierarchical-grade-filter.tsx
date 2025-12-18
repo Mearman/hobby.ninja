@@ -289,6 +289,8 @@ export function HierarchicalGradeFilter({
 								display: "flex",
 								alignItems: "center",
 								justifyContent: "center",
+								background: "white",
+								width: "100%",
 							}}>
 								<Image
 									src={imageSrc}
@@ -505,6 +507,8 @@ export function HierarchicalGradeFilter({
 											display: "flex",
 											alignItems: "center",
 											justifyContent: "center",
+											background: "white",
+											width: "100%",
 										}}>
 											<Image
 												src={imageSrc}
@@ -760,6 +764,8 @@ export function HierarchicalGradeFilter({
 									display: "flex",
 									alignItems: "center",
 									justifyContent: "center",
+									background: "white",
+									width: "100%",
 								}}>
 									<Image
 										src={imageSrc}
