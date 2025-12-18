@@ -39,7 +39,7 @@ const UNSELECTED_TEXT_COLOR = "black";
 const TRANSPARENT_IMAGE_FILTER = "drop-shadow(0 0 1px rgba(0,0,0,0.7)) drop-shadow(0 0 2px rgba(0,0,0,0.5))";
 
 // Button border radius constants
-const FILTER_BUTTON_BORDER_RADIUS = "8px 0 0 8px";
+const FILTER_BUTTON_BORDER_RADIUS = "8px"; // Keep all corners rounded
 const EXPAND_BUTTON_BORDER_RADIUS = "0 8px 8px 0";
 
 // Check if image might have transparency based on file extension
@@ -589,9 +589,9 @@ export function HierarchicalGradeFilter({
 							style={{
 								alignSelf: "stretch",
 								height: "auto",
-								width: "32px",
+								width: "28px",
 								flexShrink: 0,
-								marginLeft: "-8px",
+								marginLeft: "-4px",
 								zIndex: 1,
 								borderRadius: EXPAND_BUTTON_BORDER_RADIUS, // Square left side, rounded right side
 							}}
@@ -844,9 +844,9 @@ export function HierarchicalGradeFilter({
 					style={{
 						alignSelf: "stretch",
 						height: "auto",
-						width: "32px",
+						width: "28px",
 						flexShrink: 0,
-						marginLeft: "-8px",
+						marginLeft: "-4px",
 						zIndex: 1,
 						borderRadius: EXPAND_BUTTON_BORDER_RADIUS, // Square left side, rounded right side
 					}}
