@@ -281,6 +281,20 @@ export const ScaleDataSchema = z.object({
 export type ScaleData = z.infer<typeof ScaleDataSchema>;
 
 /**
+ * Tag aggregation data with item counts
+ * Tags are distribution channel indicators: Hobby Online, Event, Gundam Base, etc.
+ */
+export const TagDataSchema = z.object({
+	id: z.string(),
+	type: z.literal("tag"),
+	name: z.union([z.string(), LocalizedStringSchema]),
+	itemIds: z.array(z.string()).default([]),
+	itemCount: z.number(),
+});
+
+export type TagData = z.infer<typeof TagDataSchema>;
+
+/**
  * Search index record for efficient searching
  */
 export const SearchRecordSchema = z.object({
@@ -356,6 +370,10 @@ export const isScaleData = (data: unknown): data is ScaleData => {
 	return ScaleDataSchema.safeParse(data).success;
 };
 
+export const isTagData = (data: unknown): data is TagData => {
+	return TagDataSchema.safeParse(data).success;
+};
+
 export const isHomepageData = (data: unknown): data is HomepageData => {
 	return HomepageDataSchema.safeParse(data).success;
 };
@@ -371,7 +389,7 @@ export const isSearchRecord = (data: unknown): data is SearchRecord => {
 /**
  * Get display name from a node, preferring English translation if available
  */
-export const getNodeDisplayName = (node: Node | GradeData | ScaleData): string => {
+export const getNodeDisplayName = (node: Node | GradeData | ScaleData | TagData): string => {
 	if (typeof node.name === "string") return node.name;
 	return node.name.en ?? node.name.ja;
 };

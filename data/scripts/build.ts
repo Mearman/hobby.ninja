@@ -50,6 +50,8 @@ interface Item {
 	releaseDate?: { year?: number; month?: number; day?: number };
 	images?: unknown[];
 	displayImage?: string;
+	// Tag (localized) - e.g., "Hobby Online", "Event", "Gundam Base"
+	tag?: LocalizedString;
 	[key: string]: unknown;
 }
 
@@ -117,6 +119,14 @@ interface ScaleData {
 	id: string;
 	type: "scale";
 	name: string;
+	itemIds: string[];
+	itemCount: number;
+}
+
+interface TagData {
+	id: string;
+	type: "tag";
+	name: LocalizedString;
 	itemIds: string[];
 	itemCount: number;
 }
@@ -371,6 +381,41 @@ function buildScales(items: Map<string, Item>): Map<string, ScaleData> {
 	return scales;
 }
 
+// Normalize tag ID from English name (lowercase, hyphenated)
+function normalizeTagId(name: string): string {
+	return name.toLowerCase().replace(/\s+/g, "-");
+}
+
+// Build tags data from items
+function buildTags(items: Map<string, Item>): Map<string, TagData> {
+	const tagItemIds = new Map<string, { name: LocalizedString; itemIds: string[] }>();
+
+	// Extract tag from each item
+	for (const [itemId, item] of items) {
+		if (item.tag?.en) {
+			const tagId = normalizeTagId(item.tag.en);
+			if (!tagItemIds.has(tagId)) {
+				tagItemIds.set(tagId, { name: item.tag, itemIds: [] });
+			}
+			tagItemIds.get(tagId)!.itemIds.push(itemId);
+		}
+	}
+
+	// Build TagData objects
+	const tags = new Map<string, TagData>();
+	for (const [tagId, { name, itemIds }] of tagItemIds) {
+		tags.set(tagId, {
+			id: tagId,
+			type: "tag",
+			name,
+			itemIds,
+			itemCount: itemIds.length,
+		});
+	}
+
+	return tags;
+}
+
 // Build search records and Fuse index
 function buildSearchData(items: Map<string, Item>, brands: Map<string, Brand>, series: Map<string, Series>): {
 	records: SearchRecord[];
@@ -523,6 +568,9 @@ function main() {
 	const scales = buildScales(items);
 	console.log(`  Scales: ${scales.size}`);
 
+	const tags = buildTags(items);
+	console.log(`  Tags: ${tags.size}`);
+
 	const searchData = buildSearchData(items, brands, series);
 	console.log(`  Search records: ${searchData.records.length}`);
 
@@ -552,6 +600,9 @@ function main() {
 
 	writeJson(path.join(DIST_PATH, "scales.json"), Object.fromEntries(scales));
 	console.log("  scales.json");
+
+	writeJson(path.join(DIST_PATH, "tags.json"), Object.fromEntries(tags));
+	console.log("  tags.json");
 
 	writeJson(path.join(DIST_PATH, "search.json"), searchData);
 	console.log("  search.json");

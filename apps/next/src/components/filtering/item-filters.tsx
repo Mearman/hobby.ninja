@@ -7,6 +7,7 @@ import {
 	getNodeDisplayName,
 	getNodeReleaseDateSortable,
 	getSeriesById,
+	getTagById,
 	isItem,
 	Item,
 } from "@hobby-ninja/data";
@@ -65,6 +66,11 @@ function formatCategoryName(id: string): string {
 function formatGradeName(id: string): string {
 	const grade = getGradeById(id);
 	return grade ? getNodeDisplayName(grade) : id;
+}
+
+function formatTagName(id: string): string {
+	const tag = getTagById(id);
+	return tag ? getNodeDisplayName(tag) : id;
 }
 
 
@@ -252,7 +258,7 @@ function getDateRangeFromItems(items: Item[]): { minDate: string; maxDate: strin
 	return { minDate: fixedMinDate, maxDate: fixedMaxDate };
 }
 
-type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories";
+type ArrayFilterField = "brands" | "grades" | "scales" | "series" | "categories" | "tags";
 
 // Shared style for filter chips - using brand image aspect ratio (300x170)
 const FILTER_IMAGE_WIDTH = 300;
@@ -322,6 +328,7 @@ interface ItemFiltersProps {
 		scales: string[];
 		series: string[];
 		categories: string[];
+		tags: string[];
 	};
 	filterCounts?: {
 		brands?: Record<string, number>;
@@ -329,6 +336,7 @@ interface ItemFiltersProps {
 		scales?: Record<string, number>;
 		series?: Record<string, number>;
 		categories?: Record<string, number>;
+		tags?: Record<string, number>;
 	};
 	items?: Item[];
 	onFilterChange: (updates: Partial<FilterState>) => void;
@@ -745,6 +753,7 @@ export function ItemFilters({
 				scales: {},
 				series: {},
 				categories: {},
+				tags: {},
 			};
 		}
 
@@ -754,6 +763,7 @@ export function ItemFilters({
 		const scaleCounts: Record<string, number> = {};
 		const seriesCounts: Record<string, number> = {};
 		const categoryCounts: Record<string, number> = {};
+		const tagCounts: Record<string, number> = {};
 
 		// Initialize counts with available options
 		for (const brand of availableOptions.brands) { brandCounts[brand] = 0; }
@@ -761,6 +771,7 @@ export function ItemFilters({
 		for (const scale of availableOptions.scales) { scaleCounts[scale] = 0; }
 		for (const series of availableOptions.series) { seriesCounts[series] = 0; }
 		for (const category of availableOptions.categories) { categoryCounts[category] = 0; }
+		for (const tag of availableOptions.tags) { tagCounts[tag] = 0; }
 
 		// Count all items for each filter option
 		for (const item of validItems) {
@@ -819,6 +830,15 @@ export function ItemFilters({
 					categoryCounts[categoryId]++;
 				}
 			}
+
+			// Tag counts - extract tag from item
+			const itemTag = (item as Record<string, unknown>).tag as { ja: string; en?: string } | undefined;
+			if (itemTag?.en) {
+				const tagId = itemTag.en.toLowerCase().replace(/\s+/g, "-");
+				if (tagId in tagCounts) {
+					tagCounts[tagId]++;
+				}
+			}
 		}
 
 		return {
@@ -827,6 +847,7 @@ export function ItemFilters({
 			scales: scaleCounts,
 			series: seriesCounts,
 			categories: categoryCounts,
+			tags: tagCounts,
 		};
 	}, [items, availableOptions]);
 
@@ -872,6 +893,14 @@ export function ItemFilters({
 
 	const clearScales = () => {
 		onFilterChange({ scales: [] });
+	};
+
+	const selectAllTags = () => {
+		onFilterChange({ tags: availableOptions.tags });
+	};
+
+	const clearTags = () => {
+		onFilterChange({ tags: [] });
 	};
 
 	// Helper function to create select all and clear buttons for filter sections
@@ -1086,6 +1115,28 @@ export function ItemFilters({
 									"orange",
 								)}
 							 />
+
+							{!hiddenFilters.includes("tags") && availableOptions.tags.length > 0 && (
+								<FilterSection
+									label="Tags"
+									field="tags"
+									options={availableOptions.tags}
+									selectedValues={filterState.tags}
+									onToggle={onToggleFilterValue}
+									formatValue={formatTagName}
+									color="pink"
+									displayMode={displayMode}
+									filterCounts={filterCounts.tags}
+									totalCounts={totalCounts.tags}
+									headerAction={createFilterActions(
+										filterState.tags.length,
+										availableOptions.tags.length,
+										selectAllTags,
+										clearTags,
+										"pink",
+									)}
+								/>
+							)}
 
 							<FilterSection
 								label="Date Range"
@@ -1411,6 +1462,21 @@ export function ItemFilters({
 								}
 							>
 								{formatCategoryName(cat)}
+							</Badge>
+						))}
+						{!hiddenFilters.includes("tags") && filterState.tags.map(tag => (
+							<Badge
+								key={`tag-${tag}`}
+								size="sm"
+								variant="light"
+								color="pink"
+								rightSection={
+									<ActionIcon size="xs" variant="transparent" onClick={() => { onToggleFilterValue("tags", tag); }}>
+										<IconX size={10} />
+									</ActionIcon>
+								}
+							>
+								{formatTagName(tag)}
 							</Badge>
 						))}
 					</Group>

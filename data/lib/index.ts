@@ -9,5 +9,6 @@ export * from "./categories.js";
 export * from "./manuals.js";
 export * from "./grades.js";
 export * from "./scales.js";
+export * from "./tags.js";
 export * from "./homepage.js";
 export * from "./search.js";

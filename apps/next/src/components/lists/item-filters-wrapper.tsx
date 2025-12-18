@@ -42,7 +42,7 @@ export function ItemFiltersWrapper({
 	};
 
 	const handleToggleFilterValue = (
-		field: "brands" | "grades" | "scales" | "series" | "categories",
+		field: "brands" | "grades" | "scales" | "series" | "categories" | "tags",
 		value: string,
 	) => {
 		const currentValues = currentFilterState[field];
@@ -93,6 +93,7 @@ export function ItemFiltersWrapper({
 			scales: [],
 			series: [],
 			categories: [],
+			tags: [],
 			sortField: "date",
 			sortDirection: "desc",
 		});
@@ -106,6 +107,7 @@ export function ItemFiltersWrapper({
 		currentFilterState.scales.length > 0 ||
 		currentFilterState.series.length > 0 ||
 		currentFilterState.categories.length > 0 ||
+		currentFilterState.tags.length > 0 ||
 		currentFilterState.sortField !== "date" ||
 		currentFilterState.sortDirection !== "desc",
 	);
@@ -117,6 +119,7 @@ export function ItemFiltersWrapper({
 		currentFilterState.scales.length +
 		currentFilterState.series.length +
 		currentFilterState.categories.length +
+		currentFilterState.tags.length +
 		(currentFilterState.sortField === "date" ? 0 : 1) +
 		(currentFilterState.sortDirection === "desc" ? 0 : 1);
 
@@ -136,6 +139,9 @@ export function ItemFiltersWrapper({
 	const getCategoriesArray = (): string[] => {
 		return isStringArray(availableOptions.categories) ? availableOptions.categories : [];
 	};
+	const getTagsArray = (): string[] => {
+		return isStringArray(availableOptions.tags) ? availableOptions.tags : [];
+	};
 
 	const formattedAvailableOptions = {
 		brands: getBrandsArray(),
@@ -143,6 +149,7 @@ export function ItemFiltersWrapper({
 		scales: getScalesArray(),
 		series: getSeriesArray(),
 		categories: getCategoriesArray(),
+		tags: getTagsArray(),
 	};
 
 	return (

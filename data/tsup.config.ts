@@ -10,6 +10,7 @@ export default defineConfig({
 		manuals: "lib/manuals.ts",
 		grades: "lib/grades.ts",
 		scales: "lib/scales.ts",
+		tags: "lib/tags.ts",
 		homepage: "lib/homepage.ts",
 		search: "lib/search.ts",
 		schemas: "lib/schemas.ts",

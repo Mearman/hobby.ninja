@@ -36,6 +36,7 @@ export interface FilterState {
 	scaleRange: [number, number] | null;
 	series: string[];
 	categories: string[];
+	tags: string[];
 	dateRange: [string, string] | null;
 	showNoDate: boolean;
 	sortField: string;
@@ -48,6 +49,7 @@ export interface FilterOptions {
 	availableScales?: string[];
 	availableSeries?: string[];
 	availableCategories?: string[];
+	availableTags?: string[];
 	defaultSort?: string;
 }
 
@@ -57,6 +59,7 @@ export interface FilterCounts {
 	scales: Record<string, number>;
 	series: Record<string, number>;
 	categories: Record<string, number>;
+	tags: Record<string, number>;
 	[key: string]: Record<string, number>;
 }
 
@@ -65,7 +68,7 @@ export interface UseFilteredItemsReturn {
 	filterState: FilterState;
 	updateFilter: (updates: Partial<FilterState>) => void;
 	updateSearch: (value: string) => void;
-	toggleFilterValue: (field: keyof Pick<FilterState, "brands" | "grades" | "scales" | "series" | "categories">, value: string) => void;
+	toggleFilterValue: (field: keyof Pick<FilterState, "brands" | "grades" | "scales" | "series" | "categories" | "tags">, value: string) => void;
 	toggleGradeFamily: (rootGradeId: string) => void;
 	clearFilters: () => void;
 	hasActiveFilters: boolean;
@@ -76,6 +79,7 @@ export interface UseFilteredItemsReturn {
 		scales: string[];
 		series: string[];
 		categories: string[];
+		tags: string[];
 	};
 	filterCounts: FilterCounts;
 }
@@ -88,6 +92,7 @@ const DEFAULT_FILTER_STATE: FilterState = {
 	scaleRange: null,
 	series: [],
 	categories: [],
+	tags: [],
 	dateRange: null,
 	showNoDate: false,
 	sortField: "date",
@@ -107,6 +112,7 @@ export function useFilteredItems(
 		const scales = new Set<string>();
 		const series = new Set<string>();
 		const categories = new Set<string>();
+		const tags = new Set<string>();
 
 		const validItems: Item[] = items.filter((item): item is Item => isItem(item));
 
@@ -136,6 +142,12 @@ export function useFilteredItems(
 			}
 			for (const categoryId of item.categoryIds) {
 				categories.add(categoryId);
+			}
+			// Collect tag (distribution channel) - use normalized ID (lowercase, hyphenated)
+			const itemTag = (item as Record<string, unknown>).tag as { ja: string; en?: string } | undefined;
+			if (itemTag?.en) {
+				const tagId = itemTag.en.toLowerCase().replace(/\s+/g, "-");
+				tags.add(tagId);
 			}
 
 			// Check for items with no data
@@ -178,6 +190,7 @@ export function useFilteredItems(
 			scales: sortScales([...scales]).toSorted(sortScalesWithOtherLast),
 			series: [...series].toSorted(sortWithOtherLast),
 			categories: [...categories].toSorted(sortWithOtherLast),
+			tags: [...tags].toSorted((a, b) => a.localeCompare(b)),
 		};
 	}, [items]);
 
@@ -190,6 +203,7 @@ export function useFilteredItems(
 		const scaleCounts: Record<string, number> = {};
 		const seriesCounts: Record<string, number> = {};
 		const categoryCounts: Record<string, number> = {};
+		const tagCounts: Record<string, number> = {};
 
 		// Initialize counts with available options
 		for (const brand of availableOptions.brands) { brandCounts[brand] = 0; }
@@ -197,6 +211,7 @@ export function useFilteredItems(
 		for (const scale of availableOptions.scales) { scaleCounts[scale] = 0; }
 		for (const series of availableOptions.series) { seriesCounts[series] = 0; }
 		for (const category of availableOptions.categories) { categoryCounts[category] = 0; }
+		for (const tag of availableOptions.tags) { tagCounts[tag] = 0; }
 
 		// Helper function to apply global filters (search, date range, scale range)
 		const applyGlobalFilters = (items: Item[]): Item[] => {
@@ -260,7 +275,7 @@ export function useFilteredItems(
 		};
 
 		// Helper function to apply filters from the same type (within-type intersection)
-		const applyFiltersWithinType = (items: Item[], filterType: "brands" | "grades" | "scales" | "series" | "categories", selectedValues: string[]): Item[] => {
+		const applyFiltersWithinType = (items: Item[], filterType: "brands" | "grades" | "scales" | "series" | "categories" | "tags", selectedValues: string[]): Item[] => {
 			if (selectedValues.length === 0) {
 				return items;
 			}
@@ -302,6 +317,12 @@ export function useFilteredItems(
 					case "categories": {
 						return item.categoryIds.some(categoryId => selectedValues.includes(categoryId));
 					}
+					case "tags": {
+						const itemTag = (item as Record<string, unknown>).tag as { ja: string; en?: string } | undefined;
+						if (!itemTag?.en) return false;
+						const tagId = itemTag.en.toLowerCase().replace(/\s+/g, "-");
+						return selectedValues.includes(tagId);
+					}
 					default: {
 						return true;
 					}
@@ -311,7 +332,7 @@ export function useFilteredItems(
 
 		// Helper function to apply filters from DIFFERENT types only (ignoring same-type filters)
 		// This creates the most intuitive behavior: brands don't affect other brands, but affect grades, etc.
-		const applyFiltersFromDifferentTypes = (items: Item[], excludeFilterType: "brands" | "grades" | "scales" | "series" | "categories"): Item[] => {
+		const applyFiltersFromDifferentTypes = (items: Item[], excludeFilterType: "brands" | "grades" | "scales" | "series" | "categories" | "tags"): Item[] => {
 			let result = applyGlobalFilters(items);
 
 			// Apply filters from different types only (cross-type intersection)
@@ -333,6 +354,10 @@ export function useFilteredItems(
 
 			if (excludeFilterType !== "categories" && filterState.categories.length > 0) {
 				result = applyFiltersWithinType(result, "categories", filterState.categories);
+			}
+
+			if (excludeFilterType !== "tags" && filterState.tags.length > 0) {
+				result = applyFiltersWithinType(result, "tags", filterState.tags);
 			}
 
 			return result;
@@ -392,12 +417,25 @@ export function useFilteredItems(
 			categoryCounts[category] = visibleItemsWithCategory.length;
 		}
 
+		for (const tag of availableOptions.tags) {
+			const itemsWithTag = validItems.filter(item => {
+				const itemTag = (item as Record<string, unknown>).tag as { ja: string; en?: string } | undefined;
+				if (!itemTag?.en) return false;
+				const tagId = itemTag.en.toLowerCase().replace(/\s+/g, "-");
+				return tagId === tag;
+			});
+			// Apply filters from different types only (tags don't affect other tag counts)
+			const visibleItemsWithTag = applyFiltersFromDifferentTypes(itemsWithTag, "tags");
+			tagCounts[tag] = visibleItemsWithTag.length;
+		}
+
 		return {
 			brands: brandCounts,
 			grades: gradeCounts,
 			scales: scaleCounts,
 			series: seriesCounts,
 			categories: categoryCounts,
+			tags: tagCounts,
 		};
 	}, [items, filterState, availableOptions]);
 
@@ -514,6 +552,16 @@ export function useFilteredItems(
 			);
 		}
 
+		// Apply tags filter
+		if (filterState.tags.length > 0) {
+			result = result.filter(item => {
+				const itemTag = (item as Record<string, unknown>).tag as { ja: string; en?: string } | undefined;
+				if (!itemTag?.en) return false;
+				const tagId = itemTag.en.toLowerCase().replace(/\s+/g, "-");
+				return filterState.tags.includes(tagId);
+			});
+		}
+
 		// Apply sorting
 		const sortField = filterState.sortField;
 		const sortDirection = filterState.sortDirection;
@@ -588,7 +636,7 @@ export function useFilteredItems(
 
 	// Toggle a single value in an array filter field
 	const toggleFilterValue = useCallback((
-		field: keyof Pick<FilterState, "brands" | "grades" | "scales" | "series" | "categories">,
+		field: keyof Pick<FilterState, "brands" | "grades" | "scales" | "series" | "categories" | "tags">,
 		value: string,
 	) => {
 		setFilterState(prev => {
