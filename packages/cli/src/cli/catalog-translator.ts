@@ -139,23 +139,50 @@ export class CatalogTranslator {
 				}
 			}
 
-			// Translate brands array
-			fieldsTranslated += await this.translateBrands(item.brands);
+			// Skip translating releaseDate (should remain in Japanese format)
 
-			// Translate categories array
-			fieldsTranslated += await this.translateCategories(item.categories);
+			
+			// Translate brands array (if it exists) - handle both formats
+			if (item.brands && Array.isArray(item.brands)) {
+				fieldsTranslated += await this.translateBrands(item.brands);
+			}
 
-			// Translate description array (LocalizedText[])
-			fieldsTranslated += await this.translateLocalizedTextArray(item.description);
+			// Translate categories array (if it exists) - handle both formats
+			if (item.categories && Array.isArray(item.categories)) {
+				fieldsTranslated += await this.translateCategories(item.categories);
+			}
 
-			// Translate accessories array (LocalizedText[])
-			fieldsTranslated += await this.translateLocalizedTextArray(item.accessories);
+			// Translate description (object with ja/en arrays)
+			if (item.description?.ja && !item.description.en) {
+				const result = await this.translateTextArray(item.description.ja);
+				if (result) {
+					item.description.en = result;
+					fieldsTranslated++;
+				}
+			}
 
-			// Translate contents array (LocalizedText[])
-			fieldsTranslated += await this.translateLocalizedTextArray(item.contents);
+			// Translate accessories (object with ja/en arrays)
+			if (item.accessories?.ja && !item.accessories.en) {
+				const result = await this.translateTextArray(item.accessories.ja);
+				if (result) {
+					item.accessories.en = result;
+					fieldsTranslated++;
+				}
+			}
 
-			// Translate relatedProducts names
-			fieldsTranslated += await this.translateRelatedProducts(item.relatedProducts);
+			// Translate contents (object with ja/en arrays)
+			if (item.contents?.ja && !item.contents.en) {
+				const result = await this.translateTextArray(item.contents.ja);
+				if (result) {
+					item.contents.en = result;
+					fieldsTranslated++;
+				}
+			}
+
+			// Translate relatedProducts names (if they exist)
+			if (item.relatedProducts && Array.isArray(item.relatedProducts)) {
+				fieldsTranslated += await this.translateRelatedProducts(item.relatedProducts);
+			}
 
 			return {
 				translated: fieldsTranslated > 0,
@@ -265,9 +292,49 @@ export class CatalogTranslator {
 		return count;
 	}
 
-	private async translateLocalizedTextArray(items: LocalizedText[]): Promise<number> {
+	private async translateTextArray(texts: string[]): Promise<string[]> {
+		if (!Array.isArray(texts)) {
+			return [];
+		}
+
+		const results: string[] = [];
+		for (const text of texts) {
+			if (text?.trim()) {
+				const result = await this.translateText(text);
+				if (result) {
+					results.push(result);
+				} else {
+					results.push(text); // fallback to original
+				}
+			} else {
+				results.push(text); // keep empty or whitespace-only strings
+			}
+		}
+		return results;
+	}
+
+	private async translateLocalizedTextArray(items: LocalizedText[] | { ja?: string[], en?: string[] }): Promise<number> {
 		let count = 0;
-		for (const item of items) {
+
+		// Handle different possible structures
+		let itemsArray: LocalizedText[] = [];
+		if (Array.isArray(items)) {
+			itemsArray = items;
+		} else if (items && typeof items === "object") {
+			// Convert object with ja/en arrays to LocalizedText array format
+			const obj = items as { ja?: string[], en?: string[] };
+			const maxLength = Math.max(obj.ja?.length ?? 0, obj.en?.length ?? 0);
+			for (let i = 0; i < maxLength; i++) {
+				itemsArray.push({
+					ja: obj.ja?.[i],
+					en: obj.en?.[i],
+				});
+			}
+		} else {
+			return 0; // Not iterable, skip
+		}
+
+		for (const item of itemsArray) {
 			if (item.ja && !item.en) {
 				const result = await this.translateText(item.ja);
 				if (result) {
