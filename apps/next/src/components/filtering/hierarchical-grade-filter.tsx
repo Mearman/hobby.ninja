@@ -94,6 +94,15 @@ const FILTER_BUTTON_BASE_STYLE: React.CSSProperties = {
 	overflow: "hidden",
 };
 
+// Grid container for filter chips - ensures equal height per row
+const FILTER_CHIP_GRID_STYLE: React.CSSProperties = {
+	display: "grid",
+	gridTemplateColumns: `repeat(auto-fill, ${FILTER_CHIP_WIDTH}px)`,
+	gap: "var(--mantine-spacing-xs)",
+	alignItems: "stretch",
+	marginTop: "var(--mantine-spacing-xs)",
+};
+
 function formatGradeName(id: string): string {
 	const grade = getGradeById(id);
 	return grade ? getNodeDisplayName(grade) : id;
@@ -959,7 +968,7 @@ export function HierarchicalGradeFilter({
 
 			{/* Collapsed: Show selected values only */}
 			{!expanded && selectedGrades.length > 0 && (
-				<Group gap="xs" wrap="wrap" mt="xs">
+				<Box style={FILTER_CHIP_GRID_STYLE}>
 					{selectedGrades.map((gradeId) => {
 						// Special handling for "Other" - it doesn't have a grade object
 						if (gradeId === "Other") {
@@ -1046,15 +1055,15 @@ export function HierarchicalGradeFilter({
 							</Tooltip>
 						);
 					})}
-				</Group>
+				</Box>
 			)}
 
 			{/* Expanded: Show all grades in horizontal flow */}
 			{expanded && (
-				<Group gap="xs" wrap="wrap" mt="xs" align="flex-start">
+				<Box style={FILTER_CHIP_GRID_STYLE}>
 					{availableHierarchy.map((entry) => renderRootGrade(entry))}
 					{hasOtherOption && renderGradeChip("Other")}
-				</Group>
+				</Box>
 			)}
 		</Box>
 	);

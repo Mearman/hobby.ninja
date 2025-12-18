@@ -305,6 +305,15 @@ const FILTER_BUTTON_BASE_STYLE: React.CSSProperties = {
 	overflow: "hidden",
 };
 
+// Grid container for filter chips - ensures equal height per row
+const FILTER_CHIP_GRID_STYLE: React.CSSProperties = {
+	display: "grid",
+	gridTemplateColumns: `repeat(auto-fill, ${FILTER_CHIP_WIDTH}px)`,
+	gap: "var(--mantine-spacing-xs)",
+	alignItems: "stretch",
+	marginTop: "var(--mantine-spacing-xs)",
+};
+
 interface ItemFiltersProps {
 	filterState: FilterState;
 	availableOptions: {
@@ -542,7 +551,7 @@ function FilterSection({
 		return (
 			<>
 				{/* Show all options when expanded */}
-				<Group gap="xs" wrap="wrap" mt="xs">
+				<Box style={FILTER_CHIP_GRID_STYLE}>
 					{options.map((value) => {
 						const isSelected = selectedValues.includes(value);
 						const hasAnySelection = selectedValues.length > 0;
@@ -579,7 +588,7 @@ function FilterSection({
 							</Tooltip>
 						);
 					})}
-				</Group>
+				</Box>
 			</>
 		);
 	};
@@ -614,7 +623,7 @@ function FilterSection({
 
 			{/* Collapsed: Show selected values only */}
 			{!expanded && selectedValues.length > 0 && field && onToggle && (
-				<Group gap="xs" wrap="wrap" mt="xs">
+				<Box style={FILTER_CHIP_GRID_STYLE}>
 					{selectedValues.map((value) => {
 						if (hasImage(value)) {
 							return (
@@ -648,7 +657,7 @@ function FilterSection({
 							</Tooltip>
 						);
 					})}
-				</Group>
+				</Box>
 			)}
 
 			{/* Content when expanded */}
