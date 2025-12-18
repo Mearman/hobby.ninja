@@ -74,8 +74,8 @@ export async function translateCatalogData(options: TranslateOptions): Promise<v
 		verbose = false,
 	} = options;
 
-	const validSources: TranslateSource[] = ["all", "bandai-catalog", "bandai-manuals"];
-	if (!validSources.includes(source)) {
+	const VALID_SOURCES: TranslateSource[] = ["all", "bandai-catalog", "bandai-manuals"];
+	if (!VALID_SOURCES.includes(source)) {
 		console.error(`Unknown source: ${source}`);
 		console.error("Supported sources: all, bandai-catalog, bandai-manuals");
 		process.exit(1);
@@ -170,26 +170,52 @@ async function translateCatalogItems(options: CatalogTranslateOptions): Promise<
 		return { translated: 0, fieldsTranslated: 0 };
 	}
 
-	// Find all item directories
-	let entries: string[];
+	// Detect file structure and get items to translate
+	let itemPaths: string[];
+	let isFlatStructure = false;
+
 	try {
 		const dirEntries = await fs.readdir(inputDir, { withFileTypes: true });
-		entries = dirEntries
+
+		// Check for flat file structure (JSON files directly in the directory)
+		const jsonFiles = dirEntries
+			.filter((e) => e.isFile() && e.name.endsWith(".json"))
+			.map((e) => e.name);
+
+		// Check for directory structure (subdirectories containing JSON files)
+		const subDirs = dirEntries
 			.filter((e) => e.isDirectory())
-			.map((e) => e.name)
-			.sort();
+			.map((e) => e.name);
+
+		if (jsonFiles.length > 0 && subDirs.length === 0) {
+			// Flat file structure: JSON files directly in inputDir
+			isFlatStructure = true;
+			itemPaths = jsonFiles
+				.sort()
+				.map(file => path.join(inputDir, file));
+			console.log(`Detected flat file structure: ${jsonFiles.length} JSON files`);
+		} else if (subDirs.length > 0) {
+			// Directory structure: subdirectories with JSON files
+			itemPaths = subDirs
+				.sort()
+				.map(id => path.join(inputDir, id, `${id}.json`));
+			console.log(`Detected directory structure: ${subDirs.length} subdirectories`);
+		} else {
+			console.log("No catalog items found to translate.");
+			return { translated: 0, fieldsTranslated: 0 };
+		}
 	} catch (error) {
 		console.error(`Failed to read input directory: ${inputDir}`, error);
 		return { translated: 0, fieldsTranslated: 0 };
 	}
 
-	if (entries.length === 0) {
+	if (itemPaths.length === 0) {
 		console.log("No catalog items found to translate.");
 		return { translated: 0, fieldsTranslated: 0 };
 	}
 
 	// Initialize Ink progress renderer
-	const progressRenderer = new TranslationProgressRenderer("Catalog", entries.length);
+	const progressRenderer = new TranslationProgressRenderer("Catalog", itemPaths.length);
 	progressRenderer.start();
 
 	const progress: TranslationProgress = {
@@ -201,13 +227,12 @@ async function translateCatalogItems(options: CatalogTranslateOptions): Promise<
 	};
 
 	// Process in batches
-	for (let i = 0; i < entries.length; i += BATCH_SIZE) {
-		const batch = entries.slice(i, i + BATCH_SIZE);
+	for (let i = 0; i < itemPaths.length; i += BATCH_SIZE) {
+		const batch = itemPaths.slice(i, i + BATCH_SIZE);
 
 		const results = await Promise.all(
-			batch.map(async (id) => {
-				const itemPath = path.join(inputDir, id, `${id}.json`);
-				return translateCatalogItem(itemPath, translator, dryRun, verbose);
+			batch.map(async (itemPath) => {
+				return translateCatalogItem(itemPath, translator, dryRun, verbose, isFlatStructure);
 			}),
 		);
 
@@ -254,6 +279,7 @@ async function translateCatalogItem(
 	translator: CatalogTranslator,
 	dryRun: boolean,
 	verbose: boolean,
+	_isFlatStructure = false,
 ): Promise<TranslateItemResult> {
 	try {
 		const content = await fs.readFile(itemPath, "utf8");
@@ -273,7 +299,7 @@ async function translateCatalogItem(
 		}
 
 		if (result.translated && !dryRun) {
-			await fs.writeFile(itemPath, JSON.stringify(item, null, 2), "utf-8");
+			await fs.writeFile(itemPath, JSON.stringify(item, null, "\t"), "utf8");
 		}
 
 		if (verbose && result.translated) {
@@ -335,26 +361,52 @@ async function translateManualFiles(options: ManualTranslateOptions): Promise<Tr
 	});
 	const translator = new TranslationService({}, undefined, store);
 
-	// Find all manual directories
-	let entries: string[];
+	// Detect file structure and get manual files to translate
+	let itemPaths: string[];
+	let isFlatStructure = false;
+
 	try {
 		const dirEntries = await fs.readdir(inputDir, { withFileTypes: true });
-		entries = dirEntries
+
+		// Check for flat file structure (JSON files directly in the directory)
+		const jsonFiles = dirEntries
+			.filter((e) => e.isFile() && e.name.endsWith(".json"))
+			.map((e) => e.name);
+
+		// Check for directory structure (subdirectories containing JSON files)
+		const subDirs = dirEntries
 			.filter((e) => e.isDirectory())
-			.map((e) => e.name)
-			.sort();
+			.map((e) => e.name);
+
+		if (jsonFiles.length > 0 && subDirs.length === 0) {
+			// Flat file structure: JSON files directly in inputDir
+			isFlatStructure = true;
+			itemPaths = jsonFiles
+				.sort()
+				.map(file => path.join(inputDir, file));
+			console.log(`Detected flat file structure: ${jsonFiles.length} JSON files`);
+		} else if (subDirs.length > 0) {
+			// Directory structure: subdirectories with JSON files
+			itemPaths = subDirs
+				.sort()
+				.map(id => path.join(inputDir, id, `${id}.json`));
+			console.log(`Detected directory structure: ${subDirs.length} subdirectories`);
+		} else {
+			console.log("No manual files found to translate.");
+			return { translated: 0, fieldsTranslated: 0 };
+		}
 	} catch (error) {
 		console.error(`Failed to read input directory: ${inputDir}`, error);
 		return { translated: 0, fieldsTranslated: 0 };
 	}
 
-	if (entries.length === 0) {
+	if (itemPaths.length === 0) {
 		console.log("No manual files found to translate.");
 		return { translated: 0, fieldsTranslated: 0 };
 	}
 
 	// Initialize Ink progress renderer
-	const progressRenderer = new TranslationProgressRenderer("Manuals", entries.length);
+	const progressRenderer = new TranslationProgressRenderer("Manuals", itemPaths.length);
 	progressRenderer.start();
 
 	const progress: TranslationProgress = {
@@ -366,13 +418,12 @@ async function translateManualFiles(options: ManualTranslateOptions): Promise<Tr
 	};
 
 	// Process in batches
-	for (let i = 0; i < entries.length; i += BATCH_SIZE) {
-		const batch = entries.slice(i, i + BATCH_SIZE);
+	for (let i = 0; i < itemPaths.length; i += BATCH_SIZE) {
+		const batch = itemPaths.slice(i, i + BATCH_SIZE);
 
 		const results = await Promise.all(
-			batch.map(async (id) => {
-				const manualPath = path.join(inputDir, id, `${id}.json`);
-				return translateManualItem(manualPath, translator, dryRun, verbose);
+			batch.map(async (itemPath) => {
+				return translateManualItem(itemPath, translator, dryRun, verbose, isFlatStructure);
 			}),
 		);
 
@@ -413,6 +464,7 @@ async function translateManualItem(
 	translator: TranslationService,
 	dryRun: boolean,
 	verbose: boolean,
+	_isFlatStructure = false,
 ): Promise<TranslateItemResult> {
 	try {
 		const content = await fs.readFile(manualPath, "utf8");
@@ -464,7 +516,7 @@ async function translateManualItem(
 		}
 
 		if (fieldsTranslated > 0 && !dryRun) {
-			await fs.writeFile(manualPath, JSON.stringify(manual, null, 2), "utf-8");
+			await fs.writeFile(manualPath, JSON.stringify(manual, null, "\t"), "utf8");
 		}
 
 		if (verbose && fieldsTranslated > 0) {
