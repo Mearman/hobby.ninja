@@ -291,12 +291,12 @@ const UNSELECTED_TEXT_COLOR = "black";
 // Base style for all filter button containers - using correct aspect ratio
 const FILTER_BUTTON_BASE_STYLE: React.CSSProperties = {
 	width: FILTER_CHIP_WIDTH,
-	height: "auto",
+	height: "100%", // Fill grid cell height for equal-height rows
 	borderRadius: 8,
 	display: "flex",
 	flexDirection: "column",
 	alignItems: "center",
-	justifyContent: "center",
+	justifyContent: "flex-start", // Content wrapper handles centering
 	position: "relative",
 	cursor: "pointer",
 	padding: 0,
@@ -397,15 +397,25 @@ function FilterSection({
 					display: "flex",
 					flexDirection: "column",
 					alignItems: "center",
-					gap: "2px",
+					flex: 1,
+					width: "100%",
+					height: "100%",
 				}}>
-					<Image
-						src={imageSrc}
-						alt={formatValue(value)}
-						width={FILTER_CHIP_WIDTH}
-						height={FILTER_CHIP_HEIGHT}
-						style={getFilterImageStyle(imageSrc)}
-					/>
+					{/* Image container - centers image in remaining space */}
+					<div style={{
+						flex: 1,
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+					}}>
+						<Image
+							src={imageSrc}
+							alt={formatValue(value)}
+							width={FILTER_CHIP_WIDTH}
+							height={FILTER_CHIP_HEIGHT}
+							style={getFilterImageStyle(imageSrc)}
+						/>
+					</div>
 					{/* Count display below chip */}
 					<div
 						style={{
@@ -462,9 +472,13 @@ function FilterSection({
 				display: "flex",
 				flexDirection: "column",
 				alignItems: "center",
-				gap: "2px",
+				flex: 1,
+				width: "100%",
+				height: "100%",
 			}}>
+				{/* Text container - centers text in remaining space */}
 				<div style={{
+					flex: 1,
 					width: FILTER_CHIP_WIDTH,
 					minHeight: FILTER_CHIP_HEIGHT,
 					display: "flex",
