@@ -38,6 +38,10 @@ const UNSELECTED_TEXT_COLOR = "black";
 // Drop shadow for images that may have transparency (PNG/SVG) - makes white logos visible on white background
 const TRANSPARENT_IMAGE_FILTER = "drop-shadow(0 0 1px rgba(0,0,0,0.7)) drop-shadow(0 0 2px rgba(0,0,0,0.5))";
 
+// Button border radius constants
+const FILTER_BUTTON_BORDER_RADIUS = "8px 0 0 8px";
+const EXPAND_BUTTON_BORDER_RADIUS = "0 8px 8px 0";
+
 // Check if image might have transparency based on file extension
 const mightHaveTransparency = (src: string) => /\.(png|svg)$/i.test(src);
 
@@ -391,6 +395,7 @@ export function HierarchicalGradeFilter({
 									onClick={() => { onToggleFamily(root.id); }}
 									style={{
 										...FILTER_BUTTON_BASE_STYLE,
+										borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Flat right edge for seamless button attachment
 										border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
 										background: selectedInFamily.length === familyIds.length ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 										opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
@@ -482,6 +487,7 @@ export function HierarchicalGradeFilter({
 									onClick={() => { onToggleFamily(root.id); }}
 									style={{
 										...FILTER_BUTTON_BASE_STYLE,
+										borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Flat right edge for seamless button attachment
 										border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
 										background: selectedInFamily.length === familyIds.length ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 										color: selectedInFamily.length > 0 ? "white" : `var(--mantine-color-${color}-filled)`,
@@ -585,8 +591,9 @@ export function HierarchicalGradeFilter({
 								height: "auto",
 								width: "32px",
 								flexShrink: 0,
-								marginLeft: "-2px",
+								marginLeft: "-8px",
 								zIndex: 1,
+								borderRadius: EXPAND_BUTTON_BORDER_RADIUS, // Square left side, rounded right side
 							}}
 						>
 							<IconChevronDown size={14} />
@@ -622,6 +629,7 @@ export function HierarchicalGradeFilter({
 							onClick={() => { onToggleFamily(root.id); }}
 							style={{
 								...FILTER_BUTTON_BASE_STYLE,
+								borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Flat right edge for seamless button attachment
 								border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
 								background: selectedInFamily.length > 0 ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 								opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
@@ -717,8 +725,9 @@ export function HierarchicalGradeFilter({
 							height: "auto",
 							width: "32px",
 							flexShrink: 0,
-							marginLeft: "-2px",
+							marginLeft: "-8px",
 							zIndex: 1,
+							borderRadius: EXPAND_BUTTON_BORDER_RADIUS, // Square left side, rounded right side
 						}}
 					>
 						<IconChevronRight size={14} />
@@ -734,6 +743,7 @@ export function HierarchicalGradeFilter({
 						onClick={() => { onToggleFamily(root.id); }}
 						style={{
 							...FILTER_BUTTON_BASE_STYLE,
+							borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Flat right edge for seamless button attachment
 							border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
 							background: selectedInFamily.length > 0 ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
 							opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
@@ -836,8 +846,9 @@ export function HierarchicalGradeFilter({
 						height: "auto",
 						width: "32px",
 						flexShrink: 0,
-						marginLeft: "-2px",
+						marginLeft: "-8px",
 						zIndex: 1,
+						borderRadius: EXPAND_BUTTON_BORDER_RADIUS, // Square left side, rounded right side
 					}}
 				>
 					<IconChevronRight size={14} />
