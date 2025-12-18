@@ -7,6 +7,7 @@ import {
 	getNodeDisplayName,
 	type GradeHierarchyEntry,
 } from "@hobby-ninja/data";
+import { useMemo } from "react";
 import {
 	ActionIcon,
 	Badge,
@@ -68,6 +69,26 @@ const FILTER_BUTTON_BASE_STYLE: React.CSSProperties = {
 function formatGradeName(id: string): string {
 	const grade = getGradeById(id);
 	return grade ? getNodeDisplayName(grade) : id;
+}
+
+// Calculate aggregated counts for a grade (sum of counts from all grades in the hierarchy)
+function calculateAggregatedCounts(
+	gradeId: string,
+	filterCounts: Record<string, number> | undefined,
+	totalCounts: Record<string, number> | undefined,
+): { currentCount: number; totalCount: number } {
+	if (!filterCounts || !totalCounts) {
+		return { currentCount: 0, totalCount: 0 };
+	}
+
+	// Get all grades in this grade's family hierarchy
+	const familyIds = getGradeFamilyIds(gradeId);
+
+	// Sum counts from all grades in the family
+	const currentCount = familyIds.reduce((sum, id) => sum + (filterCounts[id] ?? 0), 0);
+	const totalCount = familyIds.reduce((sum, id) => sum + (totalCounts[id] ?? 0), 0);
+
+	return { currentCount, totalCount };
 }
 
 interface HierarchicalGradeFilterProps {
@@ -273,6 +294,14 @@ export function HierarchicalGradeFilter({
 		// Grade with children - render with expand toggle
 		// When expanded, wrap in a background container
 		if (isExpanded) {
+			// Calculate aggregated counts for the parent grade
+			const { currentCount: parentCurrentCount, totalCount: parentTotalCount } = calculateAggregatedCounts(
+				root.id,
+				filterCounts,
+				totalCounts,
+			);
+			const isParentSelected = selectedInFamily.length > 0;
+
 			return (
 				<Box
 					key={root.id}
@@ -281,98 +310,137 @@ export function HierarchicalGradeFilter({
 						borderRadius: 12,
 					}}
 				>
-					<Group gap="xs" wrap="wrap" align="center">
-						{/* Parent grade with toggle */}
-						{displayMode === "icon" && imageSrc ? (
-							<Group gap={4} wrap="nowrap">
-								<Tooltip label={`${formatGradeName(root.id)} (select all)`} position="top" withArrow={true}>
-									<UnstyledButton
-										onClick={() => { onToggleFamily(root.id); }}
+					<Group gap="xs" wrap="wrap" align="flex-start">
+						{/* Parent grade with toggle and counts */}
+						<div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+							{/* Parent grade with counts - unified container like other filters */}
+							<div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2px" }}>
+								{displayMode === "icon" && imageSrc ? (
+									<Tooltip label={`${formatGradeName(root.id)} (select all)`} position="top" withArrow={true}>
+										<UnstyledButton
+											onClick={() => { onToggleFamily(root.id); }}
+											style={{
+												...FILTER_BUTTON_BASE_STYLE,
+												position: "relative",
+												border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
+												background: selectedInFamily.length === familyIds.length ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
+												opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+											}}
+										>
+											<Image
+												src={imageSrc}
+												alt={formatGradeName(root.id)}
+												width={120}
+												height={FILTER_IMAGE_HEIGHT}
+												style={getFilterImageStyle(imageSrc)}
+											/>
+											{selectedInFamily.length > 0 && (
+												<Badge
+													size="xs"
+													variant="filled"
+													color={color}
+													style={{
+														position: "absolute",
+														top: 2,
+														right: 2,
+													}}
+												>
+													{selectedInFamily.length}/{familyIds.length}
+												</Badge>
+											)}
+										</UnstyledButton>
+									</Tooltip>
+								) : (
+									<Tooltip label={`${formatGradeName(root.id)} (select all)`} position="top" withArrow={true}>
+										<UnstyledButton
+											onClick={() => { onToggleFamily(root.id); }}
+											style={{
+												...FILTER_BUTTON_BASE_STYLE,
+												position: "relative",
+												border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
+												background: selectedInFamily.length === familyIds.length ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
+												color: selectedInFamily.length > 0 ? "white" : `var(--mantine-color-${color}-filled)`,
+												opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+											}}
+										>
+											<Text size="xs" fw={500} lineClamp={2} ta="center">
+												{formatGradeName(root.id)}
+											</Text>
+											{selectedInFamily.length > 0 && (
+												<Badge
+													size="xs"
+													variant="filled"
+													color={color}
+													style={{
+														position: "absolute",
+														top: 2,
+														right: 2,
+													}}
+												>
+													{selectedInFamily.length}/{familyIds.length}
+												</Badge>
+											)}
+										</UnstyledButton>
+									</Tooltip>
+								)}
+								{/* Count display below parent grade - part of same container */}
+								<div
+									style={{
+										background: isParentSelected ? COUNT_PRIMARY_COLOR_UNSELECTED : "rgba(255,255,255,0.9)",
+										borderRadius: 3,
+										padding: "1px 4px",
+										display: "flex",
+										alignItems: "center",
+										width: "100%",
+									}}
+								>
+									<div
 										style={{
-											...FILTER_BUTTON_BASE_STYLE,
-											position: "relative",
-											border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
-											background: selectedInFamily.length === familyIds.length ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
-											opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+											color: isParentSelected ? COUNT_SECONDARY_COLOR_SELECTED : COUNT_SECONDARY_COLOR_UNSELECTED,
+											fontSize: "11px",
+											fontWeight: 600,
+											lineHeight: 1.2,
+											flex: 1,
+											textAlign: "center",
 										}}
 									>
-										<Image
-											src={imageSrc}
-											alt={formatGradeName(root.id)}
-											width={120}
-											height={FILTER_IMAGE_HEIGHT}
-											style={getFilterImageStyle(imageSrc)}
-										/>
-										{selectedInFamily.length > 0 && (
-											<Badge
-												size="xs"
-												variant="filled"
-												color={color}
-												style={{
-													position: "absolute",
-													top: 2,
-													right: 2,
-												}}
-											>
-												{selectedInFamily.length}/{familyIds.length}
-											</Badge>
-										)}
-									</UnstyledButton>
-								</Tooltip>
-								<ActionIcon
-									variant="filled"
-									size="sm"
-									color={color}
-									onClick={() => { toggleFamilyExpand(root.id); }}
-									title="Collapse sub-grades"
-								>
-									<IconChevronDown size={14} />
-								</ActionIcon>
-							</Group>
-						) : (
-							<Group gap={4} wrap="nowrap">
-								<Tooltip label={`${formatGradeName(root.id)} (select all)`} position="top" withArrow={true}>
-									<UnstyledButton
-										onClick={() => { onToggleFamily(root.id); }}
+										{parentCurrentCount}
+									</div>
+									<div
 										style={{
-											...FILTER_BUTTON_BASE_STYLE,
-											position: "relative",
-											border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
-											background: selectedInFamily.length === familyIds.length ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
-											color: selectedInFamily.length > 0 ? "white" : `var(--mantine-color-${color}-filled)`,
-											opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+											color: isParentSelected ? COUNT_PRIMARY_COLOR_SELECTED : COUNT_PRIMARY_COLOR_UNSELECTED,
+											fontSize: "11px",
+											fontWeight: 600,
+											lineHeight: 1.2,
+											flex: "none",
 										}}
 									>
-										<Text size="xs" fw={500} lineClamp={2} ta="center">
-											{formatGradeName(root.id)}
-										</Text>
-										{selectedInFamily.length > 0 && (
-											<Badge
-												size="xs"
-												variant="filled"
-												color={color}
-												style={{
-													position: "absolute",
-													top: 2,
-													right: 2,
-												}}
-											>
-												{selectedInFamily.length}/{familyIds.length}
-											</Badge>
-										)}
-									</UnstyledButton>
-								</Tooltip>
-								<ActionIcon
-									variant="filled"
-									size="sm"
-									color={color}
-									onClick={() => { toggleFamilyExpand(root.id); }}
-									title="Collapse sub-grades"
-								>
-									<IconChevronDown size={14} />
-								</ActionIcon>
-							</Group>
-						)}
+										/
+									</div>
+									<div
+										style={{
+											color: isParentSelected ? COUNT_PRIMARY_COLOR_SELECTED : COUNT_PRIMARY_COLOR_UNSELECTED,
+											fontSize: "11px",
+											fontWeight: 600,
+											lineHeight: 1.2,
+											flex: 1,
+											textAlign: "center",
+										}}
+									>
+										{parentTotalCount}
+									</div>
+								</div>
+							</div>
+							<ActionIcon
+								variant="filled"
+								size="sm"
+								color={color}
+								onClick={() => { toggleFamilyExpand(root.id); }}
+								title="Collapse sub-grades"
+							>
+								<IconChevronDown size={14} />
+							</ActionIcon>
+						</div>
 
 						{/* Root-only option (if root is available as standalone) */}
 						{isRootAvailable && renderGradeChip(root.id, {
@@ -387,10 +455,118 @@ export function HierarchicalGradeFilter({
 			);
 		}
 
-		// Collapsed state - just show parent with expand button
+		// Collapsed state - just show parent with expand button and counts
+		// Calculate aggregated counts for the parent grade
+		const { currentCount: parentCurrentCount, totalCount: parentTotalCount } = calculateAggregatedCounts(
+			root.id,
+			filterCounts,
+			totalCounts,
+		);
+		const isParentSelected = selectedInFamily.length > 0;
+
 		if (displayMode === "icon" && imageSrc) {
 			return (
-				<Group key={root.id} gap={4} wrap="nowrap">
+				<div key={root.id} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+					{/* Parent grade with counts - unified container like other filters */}
+					<div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2px" }}>
+						<Tooltip label={formatGradeName(root.id)} position="top" withArrow={true}>
+							<UnstyledButton
+								onClick={() => { onToggleFamily(root.id); }}
+								style={{
+									...FILTER_BUTTON_BASE_STYLE,
+									position: "relative",
+									border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
+									background: selectedInFamily.length > 0 ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
+									opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+								}}
+							>
+								<Image
+									src={imageSrc}
+									alt={formatGradeName(root.id)}
+									width={120}
+									height={FILTER_IMAGE_HEIGHT}
+									style={getFilterImageStyle(imageSrc)}
+								/>
+								{selectedInFamily.length > 0 && (
+									<Badge
+										size="xs"
+										variant="filled"
+										color={color}
+										style={{
+											position: "absolute",
+											top: 2,
+											right: 2,
+										}}
+									>
+										{selectedInFamily.length}/{familyIds.length}
+									</Badge>
+								)}
+							</UnstyledButton>
+						</Tooltip>
+						{/* Count display below parent grade - part of same container */}
+						<div
+							style={{
+								background: isParentSelected ? COUNT_PRIMARY_COLOR_UNSELECTED : "rgba(255,255,255,0.9)",
+								borderRadius: 3,
+								padding: "1px 4px",
+								display: "flex",
+								alignItems: "center",
+								width: "100%",
+							}}
+						>
+							<div
+								style={{
+									color: isParentSelected ? COUNT_SECONDARY_COLOR_SELECTED : COUNT_SECONDARY_COLOR_UNSELECTED,
+									fontSize: "11px",
+									fontWeight: 600,
+									lineHeight: 1.2,
+									flex: 1,
+									textAlign: "center",
+								}}
+							>
+								{parentCurrentCount}
+							</div>
+							<div
+								style={{
+									color: isParentSelected ? COUNT_PRIMARY_COLOR_SELECTED : COUNT_PRIMARY_COLOR_UNSELECTED,
+									fontSize: "11px",
+									fontWeight: 600,
+									lineHeight: 1.2,
+									flex: "none",
+								}}
+							>
+								/
+							</div>
+							<div
+								style={{
+									color: isParentSelected ? COUNT_PRIMARY_COLOR_SELECTED : COUNT_PRIMARY_COLOR_UNSELECTED,
+									fontSize: "11px",
+									fontWeight: 600,
+									lineHeight: 1.2,
+									flex: 1,
+									textAlign: "center",
+								}}
+							>
+								{parentTotalCount}
+							</div>
+						</div>
+					</div>
+					<ActionIcon
+						variant="subtle"
+						size="sm"
+						onClick={() => { toggleFamilyExpand(root.id); }}
+						title="Expand sub-grades"
+					>
+						<IconChevronRight size={14} />
+					</ActionIcon>
+				</div>
+			);
+		}
+
+		return (
+			<div key={root.id} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+				{/* Parent grade with counts - unified container like other filters */}
+				<div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2px" }}>
 					<Tooltip label={formatGradeName(root.id)} position="top" withArrow={true}>
 						<UnstyledButton
 							onClick={() => { onToggleFamily(root.id); }}
@@ -399,16 +575,13 @@ export function HierarchicalGradeFilter({
 								position: "relative",
 								border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
 								background: selectedInFamily.length > 0 ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
+								color: selectedInFamily.length > 0 ? "white" : `var(--mantine-color-${color}-filled)`,
 								opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
 							}}
 						>
-							<Image
-								src={imageSrc}
-								alt={formatGradeName(root.id)}
-								width={120}
-								height={FILTER_IMAGE_HEIGHT}
-								style={getFilterImageStyle(imageSrc)}
-							/>
+							<Text size="xs" fw={500} lineClamp={2} ta="center">
+								{formatGradeName(root.id)}
+							</Text>
 							{selectedInFamily.length > 0 && (
 								<Badge
 									size="xs"
@@ -425,51 +598,54 @@ export function HierarchicalGradeFilter({
 							)}
 						</UnstyledButton>
 					</Tooltip>
-					<ActionIcon
-						variant="subtle"
-						size="sm"
-						onClick={() => { toggleFamilyExpand(root.id); }}
-						title="Expand sub-grades"
-					>
-						<IconChevronRight size={14} />
-					</ActionIcon>
-				</Group>
-			);
-		}
-
-		return (
-			<Group key={root.id} gap={4} wrap="nowrap">
-				<Tooltip label={formatGradeName(root.id)} position="top" withArrow={true}>
-					<UnstyledButton
-						onClick={() => { onToggleFamily(root.id); }}
+					{/* Count display below parent grade - part of same container */}
+					<div
 						style={{
-							...FILTER_BUTTON_BASE_STYLE,
-							position: "relative",
-							border: `2px solid var(--mantine-color-${color}-${selectedInFamily.length > 0 ? "filled" : "outline"})`,
-							background: selectedInFamily.length > 0 ? `var(--mantine-color-${color}-filled)` : FILTER_BUTTON_BG_UNSELECTED,
-							color: selectedInFamily.length > 0 ? "white" : `var(--mantine-color-${color}-filled)`,
-							opacity: hasAnySelection && selectedInFamily.length === 0 ? 0.7 : 1,
+							background: isParentSelected ? COUNT_PRIMARY_COLOR_UNSELECTED : "rgba(255,255,255,0.9)",
+							borderRadius: 3,
+							padding: "1px 4px",
+							display: "flex",
+							alignItems: "center",
+							width: "100%",
 						}}
 					>
-						<Text size="xs" fw={500} lineClamp={2} ta="center">
-							{formatGradeName(root.id)}
-						</Text>
-						{selectedInFamily.length > 0 && (
-							<Badge
-								size="xs"
-								variant="filled"
-								color={color}
-								style={{
-									position: "absolute",
-									top: 2,
-									right: 2,
-								}}
-							>
-								{selectedInFamily.length}/{familyIds.length}
-							</Badge>
-						)}
-					</UnstyledButton>
-				</Tooltip>
+						<div
+							style={{
+								color: isParentSelected ? COUNT_SECONDARY_COLOR_SELECTED : COUNT_SECONDARY_COLOR_UNSELECTED,
+								fontSize: "11px",
+								fontWeight: 600,
+								lineHeight: 1.2,
+								flex: 1,
+								textAlign: "center",
+							}}
+						>
+							{parentCurrentCount}
+						</div>
+						<div
+							style={{
+								color: isParentSelected ? COUNT_PRIMARY_COLOR_SELECTED : COUNT_PRIMARY_COLOR_UNSELECTED,
+								fontSize: "11px",
+								fontWeight: 600,
+								lineHeight: 1.2,
+								flex: "none",
+							}}
+						>
+							/
+						</div>
+						<div
+							style={{
+								color: isParentSelected ? COUNT_PRIMARY_COLOR_SELECTED : COUNT_PRIMARY_COLOR_UNSELECTED,
+								fontSize: "11px",
+								fontWeight: 600,
+								lineHeight: 1.2,
+								flex: 1,
+								textAlign: "center",
+							}}
+						>
+							{parentTotalCount}
+						</div>
+					</div>
+				</div>
 				<ActionIcon
 					variant="subtle"
 					size="sm"
@@ -478,7 +654,7 @@ export function HierarchicalGradeFilter({
 				>
 					<IconChevronRight size={14} />
 				</ActionIcon>
-			</Group>
+			</div>
 		);
 	};
 
