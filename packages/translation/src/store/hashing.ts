@@ -14,6 +14,7 @@
  */
 
 import { createHash } from "node:crypto";
+
 import { SupportedLanguage } from "../types";
 
 /**
@@ -36,13 +37,13 @@ export interface HashingOptions {
 	 * The hash algorithm to use (currently only SHA-256 is supported)
 	 * @default 'sha256'
 	 */
-	readonly algorithm?: 'sha256';
+	readonly algorithm?: "sha256";
 
 	/**
 	 * The output encoding format
 	 * @default 'base64'
 	 */
-	readonly encoding?: 'base64' | 'hex';
+	readonly encoding?: "base64" | "hex";
 }
 
 /**
@@ -69,14 +70,14 @@ export interface KeyComponents {
  * Default hashing configuration
  */
 const DEFAULT_OPTIONS: Required<HashingOptions> = {
-	algorithm: 'sha256',
-	encoding: 'hex',
+	algorithm: "sha256",
+	encoding: "hex",
 } as const;
 
 /**
  * Key format separator
  */
-const KEY_SEPARATOR = ':';
+const KEY_SEPARATOR = ":";
 
 /**
  * Regular expression for validating key format
@@ -113,13 +114,13 @@ export function generateTextHash(text: string, options: HashingOptions = {}): st
 
 	try {
 		// Input validation
-		if (typeof text !== 'string') {
-			throw new HashingError('Input text must be a string');
+		if (typeof text !== "string") {
+			throw new HashingError("Input text must be a string");
 		}
 
 		// Generate SHA-256 hash
 		const hash = createHash(config.algorithm)
-			.update(text, 'utf8')
+			.update(text, "utf8")
 			.digest(config.encoding);
 
 		return hash;
@@ -127,7 +128,7 @@ export function generateTextHash(text: string, options: HashingOptions = {}): st
 		if (error instanceof HashingError) {
 			throw error;
 		}
-		throw new HashingError('Failed to generate text hash', error as Error);
+		throw new HashingError("Failed to generate text hash", error as Error);
 	}
 }
 
@@ -155,20 +156,20 @@ export function generateKey(
 	sourceLang: SupportedLanguage,
 	targetLang: SupportedLanguage,
 	originalText: string,
-	options: HashingOptions = {}
+	options: HashingOptions = {},
 ): string {
 	try {
 		// Input validation
-		if (!sourceLang || typeof sourceLang !== 'string') {
-			throw new HashingError('Source language must be a non-empty string');
+		if (!sourceLang) {
+			throw new HashingError("Source language must be a non-empty string");
 		}
 
-		if (!targetLang || typeof targetLang !== 'string') {
-			throw new HashingError('Target language must be a non-empty string');
+		if (!targetLang) {
+			throw new HashingError("Target language must be a non-empty string");
 		}
 
-		if (typeof originalText !== 'string') {
-			throw new HashingError('Original text must be a string');
+		if (typeof originalText !== "string") {
+			throw new HashingError("Original text must be a string");
 		}
 
 		// Generate content hash
@@ -180,7 +181,7 @@ export function generateKey(
 		if (error instanceof HashingError) {
 			throw error;
 		}
-		throw new HashingError('Failed to generate translation key', error as Error);
+		throw new HashingError("Failed to generate translation key", error as Error);
 	}
 }
 
@@ -200,7 +201,7 @@ export function generateKey(
  * ```
  */
 export function validateKey(key: string): boolean {
-	if (typeof key !== 'string' || !key.trim()) {
+	if (typeof key !== "string" || !key.trim()) {
 		return false;
 	}
 
@@ -209,8 +210,8 @@ export function validateKey(key: string): boolean {
 		return false;
 	}
 
-	// Validate Base64 hash component
-	const hashComponent = match[3];
+	// Validate hex hash component
+	const hashComponent = match[5];
 	return hashComponent ? HEX_REGEX.test(hashComponent) : false;
 }
 
@@ -231,8 +232,8 @@ export function validateKey(key: string): boolean {
  * ```
  */
 export function extractKeyComponents(key: string): KeyComponents {
-	if (typeof key !== 'string' || !key.trim()) {
-		throw new HashingError('Key must be a non-empty string');
+	if (typeof key !== "string" || !key.trim()) {
+		throw new HashingError("Key must be a non-empty string");
 	}
 
 	const match = KEY_FORMAT_REGEX.exec(key);
@@ -241,7 +242,7 @@ export function extractKeyComponents(key: string): KeyComponents {
 	}
 
 	const [fullMatch, sourceLang, , targetLang] = match;
-	const hash = sourceLang && targetLang && fullMatch ? fullMatch.split(':').pop() : '';
+	const hash = sourceLang && targetLang && fullMatch ? fullMatch.split(":").pop() : "";
 
 	// Additional validation of hash component
 	if (!hash || !HEX_REGEX.test(hash)) {
@@ -274,27 +275,27 @@ export function extractKeyComponents(key: string): KeyComponents {
 export function validateHash(
 	text: string,
 	expectedHash: string,
-	options: HashingOptions = {}
+	options: HashingOptions = {},
 ): boolean {
 	try {
-		if (typeof text !== 'string') {
+		if (typeof text !== "string") {
 			return false;
 		}
 
-		if (typeof expectedHash !== 'string' || !expectedHash.trim()) {
+		if (typeof expectedHash !== "string" || !expectedHash.trim()) {
 			return false;
 		}
 
 		// Validate Base64 format of expected hash
 		const config = { ...DEFAULT_OPTIONS, ...options };
-		if (config.encoding === 'base64' && !HEX_REGEX.test(expectedHash)) {
+		if (config.encoding === "base64" && !HEX_REGEX.test(expectedHash)) {
 			return false;
 		}
 
 		// Generate hash of the text and compare
 		const actualHash = generateTextHash(text, options);
 		return actualHash === expectedHash;
-	} catch (error) {
+	} catch {
 		// Any error during validation means the hash doesn't match
 		return false;
 	}
@@ -311,8 +312,8 @@ export function validateHash(
  * @throws {HashingError} When language code is invalid or unsupported
  */
 export function normalizeLanguageCode(lang: string): SupportedLanguage {
-	if (typeof lang !== 'string' || !lang.trim()) {
-		throw new HashingError('Language code must be a non-empty string');
+	if (typeof lang !== "string" || !lang.trim()) {
+		throw new HashingError("Language code must be a non-empty string");
 	}
 
 	const normalized = lang.toLowerCase().trim();
@@ -355,7 +356,7 @@ export function areKeysEquivalent(key1: string, key2: string): boolean {
 			components1.targetLang === components2.targetLang &&
 			components1.hash === components2.hash
 		);
-	} catch (error) {
+	} catch {
 		// Any error during comparison means keys are not equivalent
 		return false;
 	}
@@ -375,23 +376,22 @@ export function areKeysEquivalent(key1: string, key2: string): boolean {
  */
 export function generateBatchHash(texts: readonly string[], options: HashingOptions = {}): string {
 	if (!Array.isArray(texts)) {
-		throw new HashingError('Texts must be an array');
+		throw new HashingError("Texts must be an array");
 	}
 
 	if (texts.length === 0) {
-		throw new HashingError('Texts array cannot be empty');
+		throw new HashingError("Texts array cannot be empty");
 	}
 
 	// Validate all texts are strings
-	for (let i = 0; i < texts.length; i++) {
-		const text = texts[i];
-		if (typeof text !== 'string') {
+	for (const [i, text] of texts.entries()) {
+		if (typeof text !== "string") {
 			throw new HashingError(`Text at index ${i} must be a string`);
 		}
 	}
 
 	// Combine all texts with a delimiter that won't appear in normal text
-	const delimiter = '\x00'; // Null byte as delimiter
+	const delimiter = "\u0000"; // Null byte as delimiter
 	const combinedText = texts.join(delimiter);
 
 	return generateTextHash(combinedText, options);
