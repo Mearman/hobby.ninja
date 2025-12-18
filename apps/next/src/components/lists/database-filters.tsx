@@ -419,7 +419,7 @@ export function DatabaseFilters({
 										onToggle={(gradeId) => { handleToggleFilterValue("grades", gradeId); }}
 										onToggleFamily={handleToggleGradeFamily}
 										displayMode="text" // Use text mode for database page
-										onDisplayModeToggle={undefined} // No display mode toggle in database
+										onDisplayModeToggle={() => { /* No display mode toggle in database */ }}  
 										color="teal"
 										onSelectAll={selectAllGrades}
 										onClearSection={clearGrades}

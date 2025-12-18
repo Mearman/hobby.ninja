@@ -383,7 +383,7 @@ export function HierarchicalGradeFilter({
 						borderRadius: 12,
 					}}
 				>
-					<Group gap="xs" wrap="wrap" align="flex-start">
+					<Group gap="0" wrap="wrap" align="stretch">
 						{/* Parent grade with toggle and counts - exactly like FilterSection */}
 						{displayMode === "icon" && imageSrc ? (
 							<Tooltip label={`${formatGradeName(root.id)} (select all)`} position="top" withArrow={true}>
@@ -580,6 +580,14 @@ export function HierarchicalGradeFilter({
 							color={color}
 							onClick={() => { toggleFamilyExpand(root.id); }}
 							title="Collapse sub-grades"
+							style={{
+								alignSelf: "stretch",
+								height: "auto",
+								width: "32px",
+								flexShrink: 0,
+								marginLeft: "-2px",
+								zIndex: 1,
+							}}
 						>
 							<IconChevronDown size={14} />
 						</ActionIcon>
@@ -608,7 +616,7 @@ export function HierarchicalGradeFilter({
 
 		if (displayMode === "icon" && imageSrc) {
 			return (
-				<div key={root.id} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+				<div key={root.id} style={{ display: "flex", alignItems: "stretch", gap: "0px" }}>
 					<Tooltip label={formatGradeName(root.id)} position="top" withArrow={true}>
 						<UnstyledButton
 							onClick={() => { onToggleFamily(root.id); }}
@@ -704,6 +712,14 @@ export function HierarchicalGradeFilter({
 						size="sm"
 						onClick={() => { toggleFamilyExpand(root.id); }}
 						title="Expand sub-grades"
+						style={{
+							alignSelf: "stretch",
+							height: "auto",
+							width: "32px",
+							flexShrink: 0,
+							marginLeft: "-2px",
+							zIndex: 1,
+						}}
 					>
 						<IconChevronRight size={14} />
 					</ActionIcon>
@@ -712,7 +728,7 @@ export function HierarchicalGradeFilter({
 		}
 
 		return (
-			<div key={root.id} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+			<div key={root.id} style={{ display: "flex", alignItems: "stretch", gap: "0px" }}>
 				<Tooltip label={formatGradeName(root.id)} position="top" withArrow={true}>
 					<UnstyledButton
 						onClick={() => { onToggleFamily(root.id); }}
@@ -815,6 +831,14 @@ export function HierarchicalGradeFilter({
 					size="sm"
 					onClick={() => { toggleFamilyExpand(root.id); }}
 					title="Expand sub-grades"
+					style={{
+						alignSelf: "stretch",
+						height: "auto",
+						width: "32px",
+						flexShrink: 0,
+						marginLeft: "-2px",
+						zIndex: 1,
+					}}
 				>
 					<IconChevronRight size={14} />
 				</ActionIcon>
