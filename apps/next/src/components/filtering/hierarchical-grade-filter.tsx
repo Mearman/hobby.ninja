@@ -25,7 +25,7 @@ import {
 	IconX,
 } from "@tabler/icons-react";
 import Image from "next/image";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 
 // Shared style for filter chips - using brand image aspect ratio (300x170) - EXACT match with FilterSection
@@ -40,7 +40,6 @@ const TRANSPARENT_IMAGE_FILTER = "drop-shadow(0 0 1px rgba(0,0,0,0.7)) drop-shad
 
 // Button border radius constants
 const FILTER_BUTTON_BORDER_RADIUS = "8px"; // Keep all corners rounded
-const EXPAND_BUTTON_BORDER_RADIUS = "0 8px 8px 0";
 
 // Check if image might have transparency based on file extension
 const mightHaveTransparency = (src: string) => /\.(png|svg)$/i.test(src);
@@ -155,7 +154,67 @@ export function HierarchicalGradeFilter({
 	// Check if "Other" is available (items with no grade)
 	const hasOtherOption = availableGrades.includes("Other");
 
+	// Compute families that should be auto-collapsed (all children deselected)
+	// This is a derived value, not state mutation in useEffect
+	const familiesToCollapse = new Set<string>();
+	for (const rootId of expandedFamilies) {
+		const familyIds = getGradeFamilyIds(rootId).filter((id) => availableGrades.includes(id));
+		// Only check selectable grades (those with items)
+		const selectableFamilyIds = familyIds.filter(gradeId => (totalCounts?.[gradeId] ?? 0) > 0);
+		const selectedFamilyCount = selectableFamilyIds.filter((grade) => selectedGrades.includes(grade)).length;
+		if (selectedFamilyCount === 0) {
+			familiesToCollapse.add(rootId);
+		}
+	}
+
+	// Auto-collapse effect: triggered once when familiesToCollapse changes
+	// Using a separate effect with a ref to avoid cascading renders
+	useEffect(() => {
+		if (familiesToCollapse.size > 0) {
+			setExpandedFamilies((prev) => {
+				const next = new Set(prev);
+				for (const rootId of familiesToCollapse) next.delete(rootId);
+				return next;
+			});
+		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps -- familiesToCollapse is derived from deps
+	}, [selectedGrades, availableGrades, totalCounts]);
+
 	if (availableHierarchy.length === 0 && !hasOtherOption) return null;
+
+	// Smart parent click handler with enhanced state management
+	const handleParentClick = (rootId: string) => {
+		const familyIds = getGradeFamilyIds(rootId).filter((id) => availableGrades.includes(id));
+		// IMPORTANT: Only include grades that actually have items (can be selected in the UI)
+		const selectableFamilyIds = familyIds.filter(gradeId => (totalCounts?.[gradeId] ?? 0) > 0);
+		const currentGrades = selectedGrades;
+
+		// Check how many family grades are currently selected (only selectable ones)
+		const selectedFamilyCount = selectableFamilyIds.filter(grade => currentGrades.includes(grade)).length;
+
+		// Delegate grade selection to parent via onToggleFamily
+		// This ensures all grades are updated in a SINGLE state update, avoiding React batching issues
+		onToggleFamily(rootId);
+
+		// Handle expansion state locally (UI-only concern)
+		// Match the selection logic: selectedFamilyCount === 0 → selecting → expand
+		//                            selectedFamilyCount > 0 → deselecting → collapse
+		if (selectedFamilyCount === 0) {
+			// onToggleFamily will select all → expand the family to show children
+			setExpandedFamilies((prev) => {
+				const next = new Set(prev);
+				next.add(rootId);
+				return next;
+			});
+		} else {
+			// onToggleFamily will deselect all → collapse the family
+			setExpandedFamilies((prev) => {
+				const next = new Set(prev);
+				next.delete(rootId);
+				return next;
+			});
+		}
+	};
 
 	const toggleFamilyExpand = (rootId: string) => {
 		setExpandedFamilies((prev) => {
@@ -388,12 +447,12 @@ export function HierarchicalGradeFilter({
 						overflow: "visible",
 					}}
 				>
-									<Group gap="0" wrap="wrap" align="stretch" style={{ overflow: "visible" }}>
+					<Group gap="0" wrap="wrap" align="stretch" style={{ overflow: "visible" }}>
 						{/* Parent grade with integrated expand button - unified container */}
 						{displayMode === "icon" && imageSrc ? (
 							<Tooltip label={`${formatGradeName(root.id)} (select all)`} position="top" withArrow={true}>
 								<UnstyledButton
-									onClick={() => { onToggleFamily(root.id); }}
+									onClick={() => { handleParentClick(root.id); }}
 									style={{
 										...FILTER_BUTTON_BASE_STYLE,
 										borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Keep all corners rounded
@@ -486,7 +545,7 @@ export function HierarchicalGradeFilter({
 						) : (
 							<Tooltip label={`${formatGradeName(root.id)} (select all)`} position="top" withArrow={true}>
 								<UnstyledButton
-									onClick={() => { onToggleFamily(root.id); }}
+									onClick={() => { handleParentClick(root.id); }}
 									style={{
 										...FILTER_BUTTON_BASE_STYLE,
 										borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Keep all corners rounded
@@ -580,27 +639,29 @@ export function HierarchicalGradeFilter({
 											{parentTotalCount}
 										</div>
 									</div>
-																</UnstyledButton>
+									{/* Expand/collapse button in bottom right corner */}
+									<ActionIcon
+										variant="filled"
+										size="sm"
+										onClick={(e) => { e.stopPropagation(); toggleFamilyExpand(root.id); }}
+										title="Collapse sub-grades"
+										style={{
+											position: "absolute",
+											bottom: 4,
+											right: 4,
+											width: "24px",
+											height: "24px",
+											background: "white",
+											color: color,
+											border: `1px solid ${color}`,
+											zIndex: 30,
+										}}
+									>
+										<IconChevronDown size={12} />
+									</ActionIcon>
+								</UnstyledButton>
 							</Tooltip>
 						)}
-						{/* Collapse button positioned next to parent chip */}
-						<ActionIcon
-							variant="filled"
-							size="sm"
-							onClick={(e) => { e.stopPropagation(); toggleFamilyExpand(root.id); }}
-							title="Collapse sub-grades"
-							style={{
-								alignSelf: "center",
-								width: "32px",
-								height: "32px",
-								background: "white",
-								color: color,
-								border: `2px solid ${color}`,
-							}}
-						>
-							<IconChevronDown size={16} />
-						</ActionIcon>
-
 						{/* Root-only option (if root is available as standalone) */}
 						{isRootAvailable && renderGradeChip(root.id, {
 							dashed: true,
@@ -628,7 +689,7 @@ export function HierarchicalGradeFilter({
 				<div key={root.id} style={{ display: "flex", alignItems: "stretch", gap: "0px" }}>
 					<Tooltip label={formatGradeName(root.id)} position="top" withArrow={true}>
 						<UnstyledButton
-							onClick={() => { onToggleFamily(root.id); }}
+							onClick={() => { handleParentClick(root.id); }}
 							style={{
 								...FILTER_BUTTON_BASE_STYLE,
 								borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Keep all corners rounded
@@ -716,28 +777,7 @@ export function HierarchicalGradeFilter({
 									{parentTotalCount}
 								</div>
 							</div>
-						{/* Integrated expand/collapse button - vertically centered */}
-			<ActionIcon
-				variant="subtle"
-				size="sm"
-				onClick={(e) => { e.stopPropagation(); toggleFamilyExpand(root.id); }}
-				title="Expand sub-grades"
-				style={{
-					position: "absolute",
-					top: "50%",
-					right: 2,
-					transform: "translateY(-50%)",
-					width: "28px",
-					height: "28px",
-					zIndex: 20,
-					background: "white",
-					color: color,
-					border: `2px solid ${color}`,
-				}}
-			>
-				<IconChevronRight size={14} />
-			</ActionIcon>
-		</UnstyledButton>
+						</UnstyledButton>
 					</Tooltip>
 				</div>
 			);
@@ -747,7 +787,7 @@ export function HierarchicalGradeFilter({
 			<div key={root.id} style={{ display: "flex", alignItems: "stretch", gap: "0px" }}>
 				<Tooltip label={formatGradeName(root.id)} position="top" withArrow={true}>
 					<UnstyledButton
-						onClick={() => { onToggleFamily(root.id); }}
+						onClick={() => { handleParentClick(root.id); }}
 						style={{
 							...FILTER_BUTTON_BASE_STYLE,
 							borderRadius: FILTER_BUTTON_BORDER_RADIUS, // Keep all corners rounded
@@ -842,28 +882,7 @@ export function HierarchicalGradeFilter({
 								{selectedInFamily.length}/{familyIds.length}
 							</Badge>
 						)}
-					{/* Integrated expand/collapse button - vertically centered */}
-			<ActionIcon
-				variant="subtle"
-				size="sm"
-				onClick={(e) => { e.stopPropagation(); toggleFamilyExpand(root.id); }}
-				title="Expand sub-grades"
-				style={{
-					position: "absolute",
-					top: "50%",
-					right: 2,
-					transform: "translateY(-50%)",
-					width: "28px",
-					height: "28px",
-					zIndex: 20,
-					background: "white",
-					color: color,
-					border: `2px solid ${color}`,
-				}}
-			>
-				<IconChevronRight size={14} />
-			</ActionIcon>
-		</UnstyledButton>
+					</UnstyledButton>
 				</Tooltip>
 			</div>
 		);

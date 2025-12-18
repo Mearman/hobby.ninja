@@ -58,15 +58,31 @@ export function ItemFiltersWrapper({
 		const availableGrades = isStringArray(availableOptions.grades) ? availableOptions.grades : [];
 		const availableFamilyIds = familyIds.filter(id => availableGrades.includes(id));
 
+		// IMPORTANT: Only include grades that actually have items (can be selected in the UI)
+		const gradeCounts: Record<string, number> = filterCounts?.grades ?? {};
+		const selectableFamilyIds = availableFamilyIds.filter(gradeId => {
+			const totalCount = gradeCounts[gradeId] ?? 0;
+			return totalCount > 0;
+		});
+
 		const currentGrades = currentFilterState.grades;
-		const selectedInFamily = availableFamilyIds.filter(id => currentGrades.includes(id));
+		// Check how many family grades are currently selected (only selectable ones)
+		const selectedFamilyCount = selectableFamilyIds.filter(grade => currentGrades.includes(grade)).length;
 
-		// If any in family are selected, deselect all; otherwise select all
-		const newGrades = selectedInFamily.length > 0
-			? currentGrades.filter(id => !availableFamilyIds.includes(id))
-			: [...currentGrades, ...availableFamilyIds.filter(id => !currentGrades.includes(id))];
-
-		onFilterChange({ grades: newGrades });
+		if (selectedFamilyCount === 0) {
+			// Initial click: select all SELECTABLE family members
+			const newGrades = [...currentGrades];
+			for (const grade of selectableFamilyIds) {
+				if (!newGrades.includes(grade)) {
+					newGrades.push(grade);
+				}
+			}
+			onFilterChange({ grades: newGrades });
+		} else {
+			// Subsequent click: deselect all family members
+			const newGrades = currentGrades.filter(grade => !selectableFamilyIds.includes(grade));
+			onFilterChange({ grades: newGrades });
+		}
 	};
 
 	const handleClearFilters = () => {
