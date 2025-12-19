@@ -44,6 +44,9 @@ export default [
 			".syncpackrc.json",
 			"**/*.json",
 			"**/*.md",
+			"scripts/**/*.cjs",
+			"scripts/**/*.mjs",
+			"**/*.config.{js,mjs,cjs}",
 		],
 	},
 
