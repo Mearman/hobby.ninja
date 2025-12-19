@@ -641,17 +641,17 @@ export default function CollectionPage() {
 		}
 	};
 
-	const openEditModal = (collection: Collection) => {
-		setSelectedCollection(collection);
+	const openEditModal = (collection: CollectionCardType) => {
+		setSelectedCollection({ id: collection.id, name: collection.name } as Collection);
 		setFormData({
 			name: collection.name,
-			description: collection.description,
+			description: collection.description ?? "",
 		});
 		setEditModalOpen(true);
 	};
 
-	const openDeleteModal = (collection: Collection) => {
-		setSelectedCollection(collection);
+	const openDeleteModal = (collection: CollectionCardType) => {
+		setSelectedCollection({ id: collection.id, name: collection.name } as Collection);
 		setDeleteModalOpen(true);
 	};
 
@@ -824,8 +824,11 @@ export default function CollectionPage() {
 								})}
 							>
 								{visibleCollections.map((collection, index) => {
-									const collectionData = {
-										...collection,
+									const collectionData: CollectionCardType = {
+										id: collection.id,
+										name: collection.name,
+										description: collection.description,
+										totalValue: collection.totalValue,
 										lastModified: collection.modifiedAt.toISOString(),
 									};
 

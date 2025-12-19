@@ -196,7 +196,7 @@ export class CollectionDatabase extends Dexie {
 		return Promise.resolve();
 	}
 
-	restoreAllData(_data: Record<string, never>): Promise<void> {
+	restoreAllData(_data: Record<string, unknown>): Promise<void> {
 		// Placeholder
 		return Promise.resolve();
 	}

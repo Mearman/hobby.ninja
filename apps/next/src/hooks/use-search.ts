@@ -40,7 +40,7 @@ interface UseSearchReturn {
 
   // Popular searches and random items
   popularSearches: string[];
-  getRandomItems: (category?: string, count?: number) => Promise<SearchResult[]>;
+  getRandomItems: (category?: string, count?: number) => SearchResult[];
 }
 
 const DEFAULT_FILTERS: ShareableFilters = {

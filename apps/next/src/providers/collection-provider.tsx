@@ -64,6 +64,7 @@ interface CollectionContextType {
 
 const CollectionContext = createContext<CollectionContextType | undefined>(undefined);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useCollection() {
 	const context = useContext(CollectionContext);
 	if (!context) {
@@ -85,6 +86,18 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
 	const [selectedItems, setSelectedItems] = useState<string[]>([]);
 	const [itemStats, setItemStats] = useState<CollectionContextType["itemStats"]>(null);
 	const [preferences, setPreferences] = useState<UserPreferences | null>(null);
+
+	// Define refreshCollections early so it can be used in initial useEffect
+	const refreshCollections = useCallback(async () => {
+		try {
+			const allCollections = await db.getAllCollections();
+			setCollections(allCollections);
+		} catch (error_) {
+			// eslint-disable-next-line no-console
+			console.error("Failed to refresh collections:", error_);
+			throw error_;
+		}
+	}, []);
 
 	// Initialize database and load initial data
 	useEffect(() => {
@@ -139,6 +152,7 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
 			// Clear selected items when collection changes
 			setSelectedItems([]);
 		} catch (error_) {
+			// eslint-disable-next-line no-console
 			console.error("Failed to load collection items:", error_);
 			setCollectionItems([]);
 			setItemStats(null);
@@ -167,7 +181,7 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
 			});
 			throw error_;
 		}
-	}, []);
+	}, [refreshCollections]);
 
 	const updateCollection = useCallback(async (id: string, updates: Partial<Collection>) => {
 		try {
@@ -194,7 +208,7 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
 			});
 			throw error_;
 		}
-	}, [currentCollection]);
+	}, [currentCollection, refreshCollections]);
 
 	const deleteCollection = useCallback(async (id: string) => {
 		try {
@@ -220,17 +234,7 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
 			});
 			throw error_;
 		}
-	}, [currentCollection]);
-
-	const refreshCollections = useCallback(async () => {
-		try {
-			const allCollections = await db.getAllCollections();
-			setCollections(allCollections);
-		} catch (error_) {
-			console.error("Failed to refresh collections:", error_);
-			throw error_;
-		}
-	}, []);
+	}, [currentCollection, refreshCollections]);
 
 	const refreshItems = useCallback(async () => {
 		if (currentCollection?.id) {
@@ -458,6 +462,7 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
 		try {
 			return await db.searchItems(query, category);
 		} catch (error_) {
+			// eslint-disable-next-line no-console
 			console.error("Search failed:", error_);
 			return [];
 		}

@@ -1,4 +1,4 @@
-import { getNodeDisplayName, homepage, type Item } from "@hobby-ninja/data";
+import { getNodeDisplayName, getNodePrimaryGrade, homepage, type Item } from "@hobby-ninja/data";
 import {
 	ActionIcon,
 	Avatar,
@@ -104,26 +104,10 @@ function ItemCard({ item, showGrade = true, showPrice = true }: {
 							{getNodeDisplayName(item)}
 						</Text>
 
-						{item.series && (
-							<Text size="xs" c="dimmed" lineClamp={1}>
-								{item.series}
-							</Text>
-						)}
-
 						<Group gap="xs" wrap="wrap">
-							{showGrade && item.grade && (
+							{showGrade && (
 								<Badge size="xs" variant="light" color="blue">
-									{item.grade}
-								</Badge>
-							)}
-							{item.scale && (
-								<Badge size="xs" variant="outline">
-									{item.scale}
-								</Badge>
-							)}
-							{item.brand && (
-								<Badge size="xs" variant="outline" color="gray">
-									{item.brand}
+									{getNodePrimaryGrade(item) ?? "N/A"}
 								</Badge>
 							)}
 						</Group>
@@ -146,7 +130,9 @@ interface CategoryCardProps {
 	itemCount?: number;
 }
 
-function CategoryCard({ category, itemCount = 0 }: CategoryCardProps) {
+function CategoryCard({ category, itemCount = 0 }: CategoryCardProps): React.ReactElement {
+	const displayName = typeof category.name === "string" ? category.name : (category.name?.en ?? category.name?.ja ?? "Category");
+
 	return (
 		<Link href={`/category/${category.id}`} style={STYLE_NO_DECORATION_INHERIT}>
 			<Card
@@ -162,7 +148,7 @@ function CategoryCard({ category, itemCount = 0 }: CategoryCardProps) {
 						<IconDatabase size={30} />
 					</ThemeIcon>
 					<Title order={4} ta="center" size="h6" fw={600}>
-						{getNodeDisplayName(category)}
+						{displayName}
 					</Title>
 					<Text size="sm" c="dimmed" ta="center">
 						{itemCount.toLocaleString()} items
@@ -179,7 +165,10 @@ interface BrandCardProps {
 	itemCount?: number;
 }
 
-function BrandCard({ brand, itemCount = 0 }: BrandCardProps) {
+function BrandCard({ brand, itemCount = 0 }: BrandCardProps): React.ReactElement {
+	const displayName = typeof brand.name === "string" ? brand.name : (brand.name?.en ?? brand.name?.ja ?? "Brand");
+	const firstChar = displayName.charAt(0).toUpperCase();
+
 	return (
 		<Link href={`/brands/${brand.id}`} style={STYLE_NO_DECORATION_INHERIT}>
 			<Card
@@ -192,11 +181,11 @@ function BrandCard({ brand, itemCount = 0 }: BrandCardProps) {
 			>
 				<Group align="center" gap="md">
 					<Avatar size={UI.BRAND_LOGO_SIZE} radius="md">
-						{getNodeDisplayName(brand).charAt(0).toUpperCase()}
+						{firstChar}
 					</Avatar>
 					<Box flex={1}>
 						<Text size="sm" fw={600} lineClamp={1}>
-							{getNodeDisplayName(brand)}
+							{displayName}
 						</Text>
 						<Text size="xs" c="dimmed">
 							{itemCount.toLocaleString()} items
