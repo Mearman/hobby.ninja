@@ -19,7 +19,8 @@
 				"{projectRoot}/scripts/build.ts",
 				"{projectRoot}/tsup.config.ts"
 			],
-			"cache": true
+			"cache": true,
+			"dependsOn": ["^build"]
 		},
 		"typecheck": {
 			"executor": "nx:run-commands",
