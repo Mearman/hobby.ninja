@@ -27,7 +27,8 @@
 			"options": {
 				"cwd": "data",
 				"command": "tsc --noEmit"
-			}
+			},
+			"dependsOn": ["build"]
 		},
 		"validate": {
 			"executor": "nx:run-commands",
