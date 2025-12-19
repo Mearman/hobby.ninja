@@ -20,18 +20,27 @@ interface PdfAccordionProps {
 function useFullWidthPreference() {
 	const [state, setState] = useState<{ fullWidth: boolean; isHydrated: boolean }>(() => {
 		// Lazy initializer: only runs once during mount
-		// Safe to access localStorage here - component is client-side only
-		const stored = localStorage.getItem(STORAGE_KEY);
+		// Check if we're on the client side before accessing localStorage
+		if (typeof window !== "undefined") {
+			const stored = localStorage.getItem(STORAGE_KEY);
+			return {
+				fullWidth: stored === "true",
+				isHydrated: true,
+			};
+		}
 		return {
-			fullWidth: stored === "true",
-			isHydrated: true,
+			fullWidth: false,
+			isHydrated: false,
 		};
 	});
 
 	const toggleFullWidth = useCallback(() => {
 		setState((prev) => {
 			const newValue = !prev.fullWidth;
-			localStorage.setItem(STORAGE_KEY, String(newValue));
+			// Only access localStorage on client side
+			if (typeof window !== "undefined") {
+				localStorage.setItem(STORAGE_KEY, String(newValue));
+			}
 			return { ...prev, fullWidth: newValue };
 		});
 	}, []);
