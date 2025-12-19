@@ -77,14 +77,11 @@ export default defineConfig({
     hookTimeout: 10000, // 10 seconds for hooks
     isolate: true, // Isolate tests from each other
     passWithNoTests: false, // Fail if no tests found
-    allowOnly: process.env.CI === 'true' ? false : true, // Disallow only in CI
+    allowOnly: process.env['CI'] === 'true' ? false : true, // Disallow only in CI
     watch: false, // Disable watch mode by default
     reporters: ['default', 'junit'],
     outputFile: {
       junit: './coverage/junit.xml',
-    },
-    seq: {
-      concurrent: true, // Run tests in parallel
     },
     pool: 'threads', // Use thread pool for better performance
     poolOptions: {
@@ -100,6 +97,7 @@ export default defineConfig({
       if (type === 'stderr' && log.includes('Warning:')) {
         return false; // Suppress React warnings in test output
       }
+      return true; // Allow other output
     },
     chaiConfig: {
       includeStack: true,

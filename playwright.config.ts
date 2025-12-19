@@ -143,20 +143,4 @@ export default defineConfig({
     'Test Suite': 'E2E Tests',
     'Browser Coverage': 'Cross-browser',
   },
-
-  // Custom configurations for specific test patterns
-  testConfig: {
-    '**/accessibility/**': {
-      retries: 3,
-      timeout: 45000,
-    },
-    '**/visual/**': {
-      retries: 1,
-      timeout: 60000,
-    },
-    '**/performance/**': {
-      retries: 1,
-      timeout: 120000,
-    },
-  },
 });
