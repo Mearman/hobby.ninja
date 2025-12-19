@@ -45,6 +45,8 @@ export default [
 			"**/*.json",
 			"**/*.md",
 			"scripts/**",
+			"*.mjs",
+			"*.cjs",
 			"**/*.config.{js,mjs,cjs,ts}",
 		],
 	},
