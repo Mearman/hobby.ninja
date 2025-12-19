@@ -15,7 +15,7 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { TIMING, UI } from "@/lib/constants";
@@ -33,7 +33,7 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 	const [debouncedSearchQuery] = useDebouncedValue(searchQuery, TIMING.DEBOUNCE_DEFAULT);
 	const { colorScheme, cycleTheme } = useThemeContext();
 
-	const getThemeIcon = () => {
+	const getThemeIcon = (): React.ReactNode => {
 		switch (colorScheme) {
 			case "light": {
 				return <IconSun style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
@@ -47,7 +47,7 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 		}
 	};
 
-	const getThemeLabel = () => {
+	const getThemeLabel = (): string => {
 		switch (colorScheme) {
 			case "light": {
 				return "Switch to dark mode";
