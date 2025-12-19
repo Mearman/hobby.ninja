@@ -59,7 +59,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build data package
-        run: pnpm nx build data
+        run: pnpm -C data build
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
 
