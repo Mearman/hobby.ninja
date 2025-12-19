@@ -1,6 +1,5 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 
 import {
 	TextInput,
@@ -24,7 +23,10 @@ import {
 } from "@tabler/icons-react";
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 
+import { Badge } from "@/components/ui/badge";
 import { useSearch, type SearchResult, type SearchOptions } from "@/lib/fuse-search";
+
+const RECENT_SEARCHES_STORAGE_KEY = "recent-searches";
 
 interface FuseSearchProps {
   onResultClick?: (result: SearchResult) => void;
@@ -51,6 +53,10 @@ export function FuseSearch({
 
 	const { isInitialized, search, getSuggestions, getStats } = useSearch();
 
+	const MATCH_THRESHOLD = 0.3;
+	const DEFAULT_HOVER_COLOR = "var(--mantine-color-default-hover)";
+	const TRANSPARENT_COLOR = "transparent";
+
 	// Debounce search input
 	useEffect(() => {
 		const timer = setTimeout(() => {
@@ -62,7 +68,7 @@ export function FuseSearch({
 
 	// Load recent searches from localStorage
 	useEffect(() => {
-		const saved = localStorage.getItem("recent-searches");
+		const saved = localStorage.getItem(RECENT_SEARCHES_STORAGE_KEY);
 		if (saved) {
 			try {
 				const parsed = JSON.parse(saved) as string[];
@@ -70,8 +76,8 @@ export function FuseSearch({
 					setRecentSearches(parsed);
 				}
 			} catch (error: unknown) {
-				const errorMessage = error instanceof Error ? error.message : String(error);
-				console.error("Failed to parse recent searches:", errorMessage);
+				// Silent fail for localStorage errors
+				void error;
 			}
 		}
 	}, []);
@@ -80,7 +86,7 @@ export function FuseSearch({
 	const saveRecentSearch = useCallback((searchQuery: string) => {
 		const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 20);
 		setRecentSearches(updated);
-		localStorage.setItem("recent-searches", JSON.stringify(updated));
+		localStorage.setItem(RECENT_SEARCHES_STORAGE_KEY, JSON.stringify(updated));
 	}, [recentSearches]);
 
 	// Perform search when debounced query changes
@@ -93,26 +99,22 @@ export function FuseSearch({
 
 		setIsLoading(true);
 
-		const performSearch = async () => {
-			try {
-				const options: SearchOptions = { limit: maxResults * 2 };
-				const searchResults = search(debouncedQuery, options);
-				const searchSuggestions = getSuggestions(debouncedQuery, 20);
+		try {
+			const options: SearchOptions = { limit: maxResults * 2 };
+			const searchResults = search(debouncedQuery, options);
+			const searchSuggestions = getSuggestions(debouncedQuery, 20);
 
-				setResults(searchResults);
-				setSuggestions(searchSuggestions);
-			} catch (error: unknown) {
-				const errorMessage = error instanceof Error ? error.message : String(error);
-				console.error("Search error:", errorMessage);
-				setResults([]);
-				setSuggestions([]);
-			} finally {
-				setIsLoading(false);
-			}
-		};
-
-		performSearch();
-	}, [debouncedQuery, isInitialized, maxResults]); // Remove search and getSuggestions from deps
+			setResults(searchResults);
+			setSuggestions(searchSuggestions);
+		} catch (error: unknown) {
+			// Silent fail for search errors
+			void error;
+			setResults([]);
+			setSuggestions([]);
+		} finally {
+			setIsLoading(false);
+		}
+	}, [debouncedQuery, isInitialized, maxResults, search, getSuggestions]);
 
 	// Handle search input
 	const handleInputChange = useCallback((value: string) => {
@@ -154,12 +156,6 @@ export function FuseSearch({
 		setShowSuggestions(false);
 	}, []);
 
-	// Format price for display
-	const formatPrice = useCallback((price: { amount: number; currency?: string } | undefined): string => {
-		if (!price) return "";
-		const symbol = price.currency === "JPY" || !price.currency ? "¥" : price.currency;
-		return `${symbol}${price.amount.toLocaleString()}`;
-	}, []);
 
 	// Get search stats for display
 	const searchStats = useMemo(() => {
@@ -246,10 +242,10 @@ export function FuseSearch({
 										style={{ cursor: "pointer" }}
 										onClick={() => { handleResultClick(result); }}
 										onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
-											e.currentTarget.style.backgroundColor = "var(--mantine-color-default-hover)";
+											e.currentTarget.style.backgroundColor = DEFAULT_HOVER_COLOR;
 										}}
 										onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => {
-											e.currentTarget.style.backgroundColor = "transparent";
+											e.currentTarget.style.backgroundColor = TRANSPARENT_COLOR;
 										}}
 									>
 										<Stack gap="xs">
@@ -284,7 +280,7 @@ export function FuseSearch({
 												<Text size="xs" c="dimmed">
 													{Math.round((1 - result.score) * 100)}% match
 												</Text>
-												{result.score < 0.3 && (
+												{result.score < MATCH_THRESHOLD && (
 													<Badge size="xs" color="green" variant="light">
                             Excellent match
 													</Badge>
@@ -313,10 +309,10 @@ export function FuseSearch({
 								style={{ cursor: "pointer" }}
 								onClick={() => { handleSuggestionClick(suggestion); }}
 								onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
-									e.currentTarget.style.backgroundColor = "var(--mantine-color-default-hover)";
+									e.currentTarget.style.backgroundColor = DEFAULT_HOVER_COLOR;
 								}}
 								onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => {
-									e.currentTarget.style.backgroundColor = "transparent";
+									e.currentTarget.style.backgroundColor = TRANSPARENT_COLOR;
 								}}
 							>
 								<Text size="sm">{suggestion}</Text>
@@ -339,7 +335,7 @@ export function FuseSearch({
 									variant="subtle"
 									onClick={() => {
 										setRecentSearches([]);
-										localStorage.removeItem("recent-searches");
+										localStorage.removeItem(RECENT_SEARCHES_STORAGE_KEY);
 									}}
 								>
 									<IconX size={10} />
@@ -355,10 +351,10 @@ export function FuseSearch({
 								style={{ cursor: "pointer" }}
 								onClick={() => { handleRecentSearchClick(recentQuery); }}
 								onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
-									e.currentTarget.style.backgroundColor = "var(--mantine-color-default-hover)";
+									e.currentTarget.style.backgroundColor = DEFAULT_HOVER_COLOR;
 								}}
 								onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => {
-									e.currentTarget.style.backgroundColor = "transparent";
+									e.currentTarget.style.backgroundColor = TRANSPARENT_COLOR;
 								}}
 							>
 								<Group gap="xs">

@@ -4,16 +4,10 @@ import { useDebouncedValue, useDebouncedState } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 
-import { PAGINATION, TIMING, FILTER } from "@/lib/constants";
-import type { SearchOptions, SearchResult, SearchableItem } from "@/lib/search-index";
+import { PAGINATION, TIMING } from "@/lib/constants";
+import type { SearchOptions, SearchResult } from "@/lib/search-index";
 // Dynamic import for code-splitting - search-index module loaded on demand
 import { ShareableFilters } from "@/lib/url-compression";
-
-// Additional constants for search functionality
-const MIN_SUGGESTION_INPUT_LENGTH = 2;
-const DEFAULT_RANDOM_ITEMS_COUNT = 12;
-const DEFAULT_SEARCH_THRESHOLD = 0.4;
-const DEFAULT_POPULAR_ITEMS_LIMIT = 5;
 
 interface UseSearchOptions extends SearchOptions {
   enableSuggestions?: boolean;
@@ -36,9 +30,9 @@ interface UseSearchReturn {
   resetFilters: () => void;
 
   // Actions
-  search: (options?: Partial<SearchOptions>) => Promise<void>;
+  search: (options?: Partial<SearchOptions>) => void;
   clearSearch: () => void;
-  getSuggestions: (input: string) => Promise<string[]>;
+  getSuggestions: (input: string) => string[];
 
   // Stats
   totalResults: number;
@@ -97,7 +91,7 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 				// Dynamic import for code-splitting
 				const { getSearchIndex, initializeSearchIndex } = await import("@/lib/search-index");
 				searchIndexRef.current = getSearchIndex();
-				await initializeSearchIndex();
+				initializeSearchIndex();
 				setIsInitialized(true);
 				setError(null);
 			} catch (error_) {
@@ -115,11 +109,11 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 			}
 		};
 
-		init();
+		void init();
 	}, [showNotifications]);
 
 	// Search function
-	const search = useCallback(async (searchOptionsOverride?: Partial<SearchOptions>) => {
+	const search = useCallback((searchOptionsOverride?: Partial<SearchOptions>): void => {
 		if (!isInitialized || !searchIndexRef.current) return;
 
 		setIsLoading(true);
@@ -150,7 +144,7 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 			// Update URL if there's a query or filters
 			if (options.query || Object.keys(filters).some(key =>
 				Array.isArray(filters[key as keyof ShareableFilters])
-					? (filters[key as keyof ShareableFilters] as any[]).length > 0
+					? (filters[key as keyof ShareableFilters] as unknown[]).length > 0
 					: filters[key as keyof ShareableFilters],
 			)) {
 				const url = new URL(globalThis.location.href);
@@ -165,8 +159,10 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 				for (const [key, value] of Object.entries(filters)) {
 					if (Array.isArray(value) && value.length > 0) {
 						url.searchParams.set(key, value.join(","));
-					} else if (value && typeof value !== "object") {
+					} else if (typeof value === "string" || typeof value === "number") {
 						url.searchParams.set(key, String(value));
+					} else if (value && typeof value === "object") {
+						url.searchParams.set(key, JSON.stringify(value));
 					}
 				}
 
@@ -187,7 +183,7 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 		} finally {
 			setIsLoading(false);
 		}
-	}, [debouncedQuery, filters, isInitialized, showNotifications]);
+	}, [debouncedQuery, filters, isInitialized, searchOptions, showNotifications]);
 
 	// Auto-search when query or filters change
 	useEffect(() => {
@@ -197,18 +193,17 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 	}, [debouncedQuery, filters, search, isInitialized]);
 
 	// Get suggestions
-	const getSuggestions = useCallback(async (input: string): Promise<string[]> => {
+	const getSuggestions = useCallback((input: string): string[] => {
 		if (!enableSuggestions || !isInitialized || !searchIndexRef.current || input.length < 2) {
 			return [];
 		}
 
 		try {
-			const limit = suggestionLimit ?? PAGINATION.DEFAULT_SUGGESTION_LIMIT;
+			const limit = suggestionLimit;
 			const searchSuggestions = searchIndexRef.current.getSuggestions(input, limit);
 			setSuggestions(searchSuggestions);
 			return searchSuggestions;
-		} catch (error_) {
-			console.error("Failed to get suggestions:", error_);
+		} catch {
 			return [];
 		}
 	}, [enableSuggestions, isInitialized, suggestionLimit]);
@@ -229,7 +224,7 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 		setSuggestions([]);
 		setFilters(DEFAULT_FILTERS);
 		setError(null);
-	}, []);
+	}, [setFilters]);
 
 	// Update filters
 	const updateFilters = useCallback((newFilters: Partial<ShareableFilters>) => {
@@ -248,7 +243,7 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 	}, [isInitialized]);
 
 	// Get random items
-	const getRandomItems = useCallback(async (category?: string, count?: number) => {
+	const getRandomItems = useCallback((category?: string, count?: number) => {
 		if (!isInitialized || !searchIndexRef.current) return [];
 		const actualCount = count ?? PAGINATION.RANDOM_ITEMS_COUNT;
 		return searchIndexRef.current.getRandomItems(actualCount, category);
@@ -318,13 +313,13 @@ export function useQuickSearch(initialQuery = "") {
 			try {
 				const { getSearchIndex, initializeSearchIndex } = await import("@/lib/search-index");
 				searchIndexRef.current = getSearchIndex();
-				await initializeSearchIndex();
+				initializeSearchIndex();
 				setIsInitialized(true);
-			} catch (error) {
-				console.error("Failed to initialize search index:", error);
+			} catch {
+				// Initialization failed - isInitialized remains false
 			}
 		};
-		init();
+		void init();
 	}, []);
 
 	// Search
@@ -343,8 +338,7 @@ export function useQuickSearch(initialQuery = "") {
 				threshold: 0.4,
 			});
 			setResults(searchResults);
-		} catch (error) {
-			console.error("Quick search failed:", error);
+		} catch {
 			setResults([]);
 		} finally {
 			setIsLoading(false);
@@ -363,5 +357,3 @@ export function useQuickSearch(initialQuery = "") {
 		},
 	};
 }
-
-export default useSearch;

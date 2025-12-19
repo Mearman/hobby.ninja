@@ -13,14 +13,15 @@ export function useMaxYear(): { maxYear: number; isLoading: boolean } {
 	useEffect(() => {
 		let cancelled = false;
 
-		const loadMaxYear = async () => {
+		const loadMaxYear = () => {
 			try {
 				setIsLoading(true);
-				const year = await getMaxYear();
+				const year = getMaxYear();
 				if (!cancelled) {
 					setMaxYear(year);
 				}
 			} catch (error) {
+				// eslint-disable-next-line no-console
 				console.warn("Failed to load max year, using fallback:", error);
 				if (!cancelled) {
 					setMaxYear(LEGACY_MAX_YEAR);
@@ -41,5 +42,3 @@ export function useMaxYear(): { maxYear: number; isLoading: boolean } {
 
 	return { maxYear, isLoading };
 }
-
-export default useMaxYear;

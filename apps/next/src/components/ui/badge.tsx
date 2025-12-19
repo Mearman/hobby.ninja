@@ -29,13 +29,13 @@ export function Badge({ children, variant = "light", size = "sm", color = "blue"
 		backgroundColor: variant === "light"
 			? `var(--mantine-color-${mantineColor}-0)`
 			: variant === "filled"
-			? `var(--mantine-color-${mantineColor}-5)`
-			: "transparent",
+				? `var(--mantine-color-${mantineColor}-5)`
+				: "transparent",
 		color: variant === "light"
 			? `var(--mantine-color-${mantineColor}-9)`
 			: variant === "filled"
-			? "var(--mantine-color-white)"
-			: `var(--mantine-color-${mantineColor}-5)`,
+				? "var(--mantine-color-white)"
+				: `var(--mantine-color-${mantineColor}-5)`,
 		border: variant === "outline" ? `1px solid var(--mantine-color-${mantineColor}-5)` : "none",
 	};
 

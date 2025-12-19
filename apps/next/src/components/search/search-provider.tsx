@@ -17,9 +17,6 @@ const SearchContext = createContext<SearchContextType>({
 
 export function useSearchProvider(): SearchContextType {
 	const context = useContext(SearchContext);
-	if (!context) {
-		throw new Error("useSearchProvider must be used within a SearchProvider");
-	}
 	return context;
 }
 
@@ -33,15 +30,16 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
 				setError(null);
 				// Dynamic import for code-splitting - fuse-search module loads on demand
 				const { searchService } = await import("@/lib/fuse-search");
-				await searchService.initialize();
+				searchService.initialize();
 				setIsInitialized(true);
 			} catch (error_) {
+				// eslint-disable-next-line no-console
 				console.error("Failed to initialize search:", error_);
 				setError(error_ instanceof Error ? error_.message : "Failed to initialize search");
 			}
 		};
 
-		initializeSearch();
+		void initializeSearch();
 	}, []);
 
 	return (

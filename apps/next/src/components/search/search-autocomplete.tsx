@@ -1,9 +1,10 @@
 "use client";
 
-import { useSearch } from "@/lib/fuse-search";
-import { Badge, Box, Group, Text, TextInput, Combobox, useCombobox } from "@mantine/core";
+import { Badge, Group, Text, TextInput, Combobox, useCombobox } from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
 import { useState, useEffect, useMemo } from "react";
+
+import { useSearch } from "@/lib/fuse-search";
 
 interface SearchAutocompleteProps {
   value: string;
@@ -15,107 +16,108 @@ interface SearchAutocompleteProps {
 }
 
 export function SearchAutocomplete({
-  value,
-  onChange,
-  placeholder = "Search items...",
-  disabled = false,
-  size = "md",
-  onSearch
+	value,
+	onChange,
+	placeholder = "Search items...",
+	disabled = false,
+	size = "md",
+	onSearch,
 }: SearchAutocompleteProps) {
-  const [debouncedValue, setDebouncedValue] = useState(value);
-  const combobox = useCombobox();
-  const { search } = useSearch();
+	const [debouncedValue, setDebouncedValue] = useState(value);
+	const combobox = useCombobox();
+	const { search } = useSearch();
 
-  // Debounce search input
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setDebouncedValue(value);
-    }, 300);
+	// Debounce search input
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setDebouncedValue(value);
+		}, 300);
 
-    return () => clearTimeout(timer);
-  }, [value]);
+		return () => { clearTimeout(timer); };
+	}, [value]);
 
-  // Get search suggestions
-  const suggestions = useMemo(() => {
-    if (!debouncedValue || debouncedValue.length < 2) return [];
+	// Get search suggestions
+	const suggestions = useMemo(() => {
+		if (!debouncedValue || debouncedValue.length < 2) return [];
 
-    try {
-      const results = search(debouncedValue, { limit: 8 });
-      return results.slice(0, 5).map(result => ({
-        value: result.item.name,
-        item: result.item,
-        score: result.score
-      }));
-    } catch (error) {
-      console.error('Search error:', error);
-      return [];
-    }
-  }, [debouncedValue, search]);
+		try {
+			const results = search(debouncedValue, { limit: 8 });
+			return results.slice(0, 5).map(result => ({
+				value: result.item.name,
+				item: result.item,
+				score: result.score,
+			}));
+		} catch (error: unknown) {
+			// Log search error for debugging
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			throw new Error(`Search failed: ${errorMessage}`);
+		}
+	}, [debouncedValue, search]);
 
-  const options = suggestions.map((suggestion, index) => (
-    <Combobox.Option value={suggestion.value} key={`${suggestion.value}-${index}`}>
-      <Group justify="space-between">
-        <Text size="sm">{suggestion.value}</Text>
-        {suggestion.item.series && (
-          <Badge size="xs" variant="light">{suggestion.item.series}</Badge>
-        )}
-      </Group>
-    </Combobox.Option>
-  ));
+	const options = suggestions.map((suggestion, index) => (
+		<Combobox.Option value={suggestion.value} key={`${suggestion.value}-${index}`}>
+			<Group justify="space-between">
+				<Text size="sm">{suggestion.value}</Text>
+				{suggestion.item.series && (
+					<Badge size="xs" variant="light">{suggestion.item.series}</Badge>
+				)}
+			</Group>
+		</Combobox.Option>
+	));
 
-  const handleOptionSubmit = (optionValue: string) => {
-    onChange(optionValue);
-    onSearch?.(optionValue);
-    combobox.closeDropdown();
-  };
+	const handleOptionSubmit = (optionValue: string) => {
+		onChange(optionValue);
+		onSearch?.(optionValue);
+		combobox.closeDropdown();
+	};
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter') {
-      onSearch?.(value);
-      combobox.closeDropdown();
-    }
-  };
+	const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+		if (event.key === "Enter") {
+			onSearch?.(value);
+			combobox.closeDropdown();
+		}
+	};
 
-  return (
-    <Combobox
-      store={combobox}
-      onOptionSubmit={handleOptionSubmit}
-      withinPortal={false}
-    >
-      <Combobox.Target>
-        <TextInput
-          leftSection={<IconSearch size={16} />}
-          placeholder={placeholder}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          onKeyDown={handleKeyDown}
-          disabled={disabled}
-          size={size}
-          onClick={() => combobox.openDropdown()}
-          onFocus={() => combobox.openDropdown()}
-          onBlur={() => combobox.closeDropdown()}
-        />
-      </Combobox.Target>
+	return (
+		<Combobox
+			store={combobox}
+			onOptionSubmit={handleOptionSubmit}
+			withinPortal={false}
+		>
+			<Combobox.Target>
+				<TextInput
+					leftSection={<IconSearch size={16} />}
+					placeholder={placeholder}
+					value={value}
+					onChange={(e) => { onChange(e.target.value); }}
+					onKeyDown={handleKeyDown}
+					disabled={disabled}
+					size={size}
+					onClick={() => { combobox.openDropdown(); }}
+					onFocus={() => { combobox.openDropdown(); }}
+					onBlur={() => { combobox.closeDropdown(); }}
+				/>
+			</Combobox.Target>
 
-      <Combobox.Dropdown>
-        <Combobox.Options mah={200} style={{ overflowY: 'auto' }}>
-          {options.length > 0 ? (
-            options
-          ) : debouncedValue && debouncedValue.length >= 2 ? (
-            <Combobox.Empty>
-              <Text size="sm" c="dimmed" ta="center" py="sm">
+			<Combobox.Dropdown>
+				<Combobox.Options mah={200} style={{ overflowY: "auto" }}>
+					{options.length > 0 ? (
+						options
+					) : debouncedValue && debouncedValue.length >= 2 ? (
+						<Combobox.Empty>
+							<Text size="sm" c="dimmed" ta="center" py="sm">
                 No suggestions found
-              </Text>
-            </Combobox.Empty>
-          ) : (
-            <Combobox.Empty>
-              <Text size="sm" c="dimmed" ta="center" py="sm">
+							</Text>
+						</Combobox.Empty>
+					) : (
+						<Combobox.Empty>
+							<Text size="sm" c="dimmed" ta="center" py="sm">
                 Type at least 2 characters for suggestions
-              </Text>
-            </Combobox.Empty>
-          )}
-        </Combobox.Options>
-      </Combobox.Dropdown>
-    </Combobox>
-  );
+							</Text>
+						</Combobox.Empty>
+					)}
+				</Combobox.Options>
+			</Combobox.Dropdown>
+		</Combobox>
+	);
 }

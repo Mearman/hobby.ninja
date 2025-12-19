@@ -146,7 +146,7 @@ export function useFilteredItems(
 			// Collect tag (distribution channel) - use normalized ID (lowercase, hyphenated)
 			const itemTag = (item as Record<string, unknown>).tag as { ja: string; en?: string } | undefined;
 			if (itemTag?.en) {
-				const tagId = itemTag.en.toLowerCase().replace(/\s+/g, "-");
+				const tagId = itemTag.en.toLowerCase().replaceAll(/\s+/g, "-");
 				tags.add(tagId);
 			}
 
@@ -320,7 +320,7 @@ export function useFilteredItems(
 					case "tags": {
 						const itemTag = (item as Record<string, unknown>).tag as { ja: string; en?: string } | undefined;
 						if (!itemTag?.en) return false;
-						const tagId = itemTag.en.toLowerCase().replace(/\s+/g, "-");
+						const tagId = itemTag.en.toLowerCase().replaceAll(/\s+/g, "-");
 						return selectedValues.includes(tagId);
 					}
 					default: {
@@ -421,7 +421,7 @@ export function useFilteredItems(
 			const itemsWithTag = validItems.filter(item => {
 				const itemTag = (item as Record<string, unknown>).tag as { ja: string; en?: string } | undefined;
 				if (!itemTag?.en) return false;
-				const tagId = itemTag.en.toLowerCase().replace(/\s+/g, "-");
+				const tagId = itemTag.en.toLowerCase().replaceAll(/\s+/g, "-");
 				return tagId === tag;
 			});
 			// Apply filters from different types only (tags don't affect other tag counts)
@@ -557,7 +557,7 @@ export function useFilteredItems(
 			result = result.filter(item => {
 				const itemTag = (item as Record<string, unknown>).tag as { ja: string; en?: string } | undefined;
 				if (!itemTag?.en) return false;
-				const tagId = itemTag.en.toLowerCase().replace(/\s+/g, "-");
+				const tagId = itemTag.en.toLowerCase().replaceAll(/\s+/g, "-");
 				return filterState.tags.includes(tagId);
 			});
 		}

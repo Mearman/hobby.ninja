@@ -1,6 +1,7 @@
 "use client";
 
 import { Skeleton, SimpleGrid, Table, Group, Box } from "@mantine/core";
+
 import { UI } from "@/lib/constants";
 
 export interface LoadingSkeletonGridProps {
@@ -35,29 +36,27 @@ export function LoadingSkeletonGrid({
 	}
 
 	// Table view skeleton
-	if (viewMode === "table") {
-		return (
-			<Table striped highlightOnHover>
-				<Table.Thead>
-					<Table.Tr>
-						<Table.Th>Image</Table.Th>
-						<Table.Th>Name</Table.Th>
-						<Table.Th>Brand</Table.Th>
-						<Table.Th>Grade</Table.Th>
-						<Table.Th>Scale</Table.Th>
-						<Table.Th>Price</Table.Th>
-					</Table.Tr>
-				</Table.Thead>
-				<Table.Tbody>
-					{Array.from({ length: count }).map((_, index) => (
-						<SkeletonTableRow key={index} />
-					))}
-				</Table.Tbody>
-			</Table>
-		);
-	}
-
-	return null;
+	// Note: viewMode is already validated to be "grid" | "list" | "table"
+	// This condition is always true here but required for TypeScript exhaustiveness
+	return (
+		<Table striped={true} highlightOnHover={true}>
+			<Table.Thead>
+				<Table.Tr>
+					<Table.Th>Image</Table.Th>
+					<Table.Th>Name</Table.Th>
+					<Table.Th>Brand</Table.Th>
+					<Table.Th>Grade</Table.Th>
+					<Table.Th>Scale</Table.Th>
+					<Table.Th>Price</Table.Th>
+				</Table.Tr>
+			</Table.Thead>
+			<Table.Tbody>
+				{Array.from({ length: count }).map((_, index) => (
+					<SkeletonTableRow key={index} />
+				))}
+			</Table.Tbody>
+		</Table>
+	);
 }
 
 // Skeleton card component for grid view

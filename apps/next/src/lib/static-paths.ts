@@ -1,4 +1,4 @@
-export async function generateStaticPaths() {
+export function generateStaticPaths() {
 	try {
 		// Basic static paths for Next.js static export
 		// In a real deployment, these would be generated from the actual data files
@@ -12,17 +12,19 @@ export async function generateStaticPaths() {
 			"/collection/gunpla",
 		];
 
+		// eslint-disable-next-line no-console
 		console.log(`Generated ${paths.length} basic static paths (no dynamic data in static export mode)`);
 		return paths;
 
 	} catch (error) {
+		// eslint-disable-next-line no-console
 		console.error("Error generating static paths:", error);
 		return [];
 	}
 }
 
-export async function getStaticPathsCount() {
-	const paths = await generateStaticPaths();
+export function getStaticPathsCount() {
+	const paths = generateStaticPaths();
 	return {
 		total: paths.length,
 		items: paths.filter(p => p.startsWith("/item/")).length,

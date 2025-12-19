@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useRef, useCallback, useEffect } from "react";
 import { Box } from "@mantine/core";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 
 import { CustomImage } from "./custom-image";
 

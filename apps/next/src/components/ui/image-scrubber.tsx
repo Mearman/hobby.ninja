@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useRef, useCallback } from "react";
 import { Box } from "@mantine/core";
+import React, { useState, useRef, useCallback } from "react";
 
 import { CustomImage } from "./custom-image";
 
@@ -77,7 +77,7 @@ export function ImageScrubber({
 			onMouseMove={handleMouseMove}
 			style={{
 				overflow: "hidden",
-				cursor: hasMultipleImages ? "ew-resize" : "default"
+				cursor: hasMultipleImages ? "ew-resize" : "default",
 			}}
 		>
 			<CustomImage

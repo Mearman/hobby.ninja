@@ -1,9 +1,12 @@
+import { getNodeDisplayName } from "@hobby-ninja/data";
+import { getItemById, getItemIds } from "@hobby-ninja/data/items";
 import pako from "pako";
 
-import { getItemById, getItemIds } from "@hobby-ninja/data/items";
-import { getNodeDisplayName } from "@hobby-ninja/data";
 
 import type { CollectionItem } from "./collection-storage";
+
+// Magic number for random ID generation
+const RANDOM_ID_RANGE = 1_000_000;
 
 // Check if item ID exists in the database
 function isValidItemId(id: string): boolean {
@@ -29,7 +32,7 @@ export interface ExportData {
   };
 }
 
-export const exportCollection = async (collectionId: string, includeHidden = false): Promise<string> => {
+export const exportCollection = (collectionId: string, _includeHidden = false): string => {
 	try {
 		// Get collection items (this would use the actual collection storage)
 		// For now, we'll simulate with a placeholder implementation
@@ -56,21 +59,22 @@ export const exportCollection = async (collectionId: string, includeHidden = fal
 		// Compress the data
 		const jsonString = JSON.stringify(exportData, null, 2);
 		const compressed = pako.deflate(jsonString);
-		const base64 = btoa(Reflect.apply(String.fromCharCode, null, [...compressed]));
+		const base64 = btoa(String.fromCodePoint(...compressed));
 
 		return base64;
 	} catch (error) {
+		// eslint-disable-next-line no-console
 		console.error("Failed to export collection:", error);
 		throw new Error("Failed to export collection");
 	}
 };
 
 // Import collection data
-export const importCollection = async (
+export const importCollection = (
 	base64Data: string,
 	collectionId: string,
-	collectionName?: string,
-): Promise<{
+	_collectionName?: string,
+): {
   items: CollectionItem[];
   stats: {
     total: number;
@@ -78,21 +82,22 @@ export const importCollection = async (
     invalid: number;
     duplicates: number;
   };
-}> => {
+} => {
 	try {
 		// Decompress and parse the data
 		const binaryString = atob(base64Data);
 		const compressed = new Uint8Array(binaryString.length);
 		for (let i = 0; i < binaryString.length; i++) {
-			compressed[i] = binaryString.charCodeAt(i);
+			const codePoint = binaryString.codePointAt(i);
+			compressed[i] = codePoint ?? 0;
 		}
 		const decompressed = pako.inflate(compressed);
 		const jsonString = new TextDecoder().decode(decompressed);
 		const exportData = JSON.parse(jsonString) as ExportData;
 
 		// Validate the import data
-		if (!exportData.items || !Array.isArray(exportData.items)) {
-			throw new Error("Invalid export data format");
+		if (!Array.isArray(exportData.items)) {
+			throw new TypeError("Invalid export data format");
 		}
 
 		// Process items
@@ -124,10 +129,10 @@ export const importCollection = async (
 
 			processedItems.push({
 				...item,
-				id: item.id || `item-${Date.now()}-${Math.floor(Math.random() * 1_000_000)}`,
+				id: item.id,
 				collectionId: collectionId,
-				categories: item.categories ?? [],
-				added: item.added ?? new Date(),
+				categories: item.categories,
+				added: item.added,
 				modified: new Date(),
 			});
 			validCount++;
@@ -143,35 +148,37 @@ export const importCollection = async (
 			},
 		};
 	} catch (error) {
+		// eslint-disable-next-line no-console
 		console.error("Failed to import collection:", error);
 		throw new Error("Failed to import collection: " + (error as Error).message);
 	}
 };
 
 // Generate shareable URL for collection
-export const generateCollectionShareUrl = async (collectionId: string, includeHidden = false): Promise<string> => {
+export const generateCollectionShareUrl = (collectionId: string, includeHidden = false): string => {
 	try {
-		const base64Data = await exportCollection(collectionId, includeHidden);
+		const base64Data = exportCollection(collectionId, includeHidden);
 		const compressed = pako.deflate(base64Data);
-		const urlSafeBase64 = btoa(Reflect.apply(String.fromCharCode, null, [...compressed]))
+		const urlSafeBase64 = btoa(String.fromCodePoint(...compressed))
 			.replaceAll("+", "-")
 			.replaceAll("/", "_")
 			.replaceAll("=", "");
 
 		// Generate URL with share parameter
-		const url = `${globalThis.window === undefined ? "" : globalThis.location.origin}/collection/${collectionId}?share=${urlSafeBase64}`;
+		const url = `${globalThis.location.origin}/collection/${collectionId}?share=${urlSafeBase64}`;
 		return url;
 	} catch (error) {
+		// eslint-disable-next-line no-console
 		console.error("Failed to generate share URL:", error);
 		return "";
 	}
 };
 
 // Parse shared collection from URL
-export const parseSharedCollection = async (
+export const parseSharedCollection = (
 	shareData: string,
 	collectionId: string,
-): Promise<{
+): {
   items: CollectionItem[];
   stats: {
     total: number;
@@ -180,7 +187,7 @@ export const parseSharedCollection = async (
     duplicates: number;
   };
   collectionName?: string;
-}> => {
+} => {
 	try {
 		const urlSafeBase64 = shareData
 			.replaceAll("-", "+")
@@ -190,30 +197,33 @@ export const parseSharedCollection = async (
 		const binaryString = atob(urlSafeBase64);
 		const compressed = new Uint8Array(binaryString.length);
 		for (let i = 0; i < binaryString.length; i++) {
-			compressed[i] = binaryString.charCodeAt(i);
+			const codePoint = binaryString.codePointAt(i);
+			compressed[i] = codePoint ?? 0;
 		}
 		const decompressed = pako.inflate(compressed);
 		const base64Data = new TextDecoder().decode(decompressed);
 
-		return await importCollection(base64Data, collectionId);
+		return importCollection(base64Data, collectionId);
 	} catch (error) {
+		// eslint-disable-next-line no-console
 		console.error("Failed to parse shared collection:", error);
 		throw new Error("Failed to parse shared collection");
 	}
 };
 
 // Export collection as CSV
-export const exportCollectionCSV = async (collectionId: string, includeHidden = false): Promise<string> => {
+export const exportCollectionCSV = (collectionId: string, includeHidden = false): string => {
 	try {
-		const base64Data = await exportCollection(collectionId, includeHidden);
+		const base64Data = exportCollection(collectionId, includeHidden);
 		const binaryString = atob(base64Data);
 		const compressed = new Uint8Array(binaryString.length);
 		for (let i = 0; i < binaryString.length; i++) {
-			compressed[i] = binaryString.charCodeAt(i);
+			const codePoint = binaryString.codePointAt(i);
+			compressed[i] = codePoint ?? 0;
 		}
 		const decompressed = pako.inflate(compressed);
 		const jsonString = new TextDecoder().decode(decompressed);
-		const exportData: ExportData = JSON.parse(jsonString);
+		const exportData = JSON.parse(jsonString) as ExportData;
 
 		const headers = [
 			"ID",
@@ -235,14 +245,14 @@ export const exportCollectionCSV = async (collectionId: string, includeHidden = 
 			const dbItem = getItemById(item.itemId);
 
 			const row = [
-				`"${item.id ?? ""}"`,
+				`"${item.id}"`,
 				`"${item.itemId}"`,
 				`"${(dbItem ? getNodeDisplayName(dbItem) : "Unknown Item")}"`,
-				`"${item.status ?? ""}"`,
-				`"${item.condition ?? ""}"`,
+				`"${item.status}"`,
+				`"${item.condition}"`,
 				`"${item.rating ?? 0}"`,
-				`"${(item.tags ?? []).join("; ")}"`,
-				`"${(item.notes ?? "").replaceAll('"', '""')}"`,
+				`"${item.tags.join("; ")}"`,
+				`"${item.notes.replaceAll('"', '""')}"`,
 				`"${new Date(item.added).toLocaleString()}"`,
 				`"${new Date(item.modified).toLocaleString()}"`,
 			];
@@ -252,6 +262,7 @@ export const exportCollectionCSV = async (collectionId: string, includeHidden = 
 
 		return csvRows.join("\n");
 	} catch (error) {
+		// eslint-disable-next-line no-console
 		console.error("Failed to export CSV:", error);
 		throw new Error("Failed to export collection as CSV");
 	}
@@ -268,7 +279,7 @@ export const importFromDatabase = (
 		const dbItem = getItemById(itemId);
 		if (dbItem) {
 			items.push({
-				id: `item-${Date.now()}-${Math.floor(Math.random() * 1_000_000)}`,
+				id: `item-${Date.now()}-${Math.floor(Math.random() * RANDOM_ID_RANGE)}`,
 				collectionId: "default",
 				itemId: dbItem.id,
 				categories: dbItem.categoryIds,

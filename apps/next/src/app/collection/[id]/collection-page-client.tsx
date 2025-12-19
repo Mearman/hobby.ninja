@@ -1,5 +1,6 @@
 "use client";
 
+import { getItemById, type Item } from "@hobby-ninja/data/items";
 import {
 	Text,
 	Container,
@@ -13,8 +14,8 @@ import { IconHome } from "@tabler/icons-react";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { CollectionDetailClient } from "./CollectionDetailClient";
-import { getItemById, type Item } from "@hobby-ninja/data/items";
+import { CollectionDetailClient } from "./collection-detail-client";
+
 import { useCollection } from "@/contexts/collection-context";
 
 // Fully client-side page for collection details
@@ -40,7 +41,7 @@ export function CollectionPageClient() {
 				for (const id of itemIds) {
 					const item = getItemById(id);
 					if (item) {
-						itemsMap.set(id, item as Item);
+						itemsMap.set(id, item);
 					}
 				}
 				setDbItemsMap(itemsMap);

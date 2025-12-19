@@ -1,7 +1,6 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-
+import { getNodeDisplayName, getNodePrimaryGrade, type Item } from "@hobby-ninja/data";
 import {
 	Title,
 	Text,
@@ -37,10 +36,11 @@ import {
 } from "@tabler/icons-react";
 import React from "react";
 
+import { Badge } from "@/components/ui/badge";
+import { EntityList } from "@/components/ui/entity-list";
 import { useCollection } from "@/contexts/collection-context";
 import type { CollectionItem, CollectionStats } from "@/lib/collection-storage";
-import { EntityList } from "@/components/ui/entity-list";
-import { getNodeDisplayName, getNodePrimaryGrade, type Item } from "@hobby-ninja/data";
+import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import {
 	itemCard,
 	itemCardImage,
@@ -55,10 +55,10 @@ import {
 	progressBar,
 	progressFill,
 } from "@/styles/components.css";
-import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 
 // Constants for magic numbers
 const PLACEHOLDER_IMAGE_HEIGHT = 200;
+const PLACEHOLDER_IMAGE_WIDTH = 280;
 const ICON_SIZE_SMALL = 14;
 const ICON_SIZE_MEDIUM = 16;
 const MENU_WIDTH = 200;
@@ -66,6 +66,7 @@ const NUMBER_INPUT_STEP = 100;
 const LOADING_GRID_ITEMS_COUNT = 8;
 const LOADING_LIST_ITEMS_COUNT = 6;
 const TEXTAREA_MIN_ROWS = 3;
+const AVATAR_SIZE_LARGE = 60;
 
 // Props for the client component
 interface CollectionDetailClientProps {
@@ -112,11 +113,11 @@ function CollectionItemCard({
 				<>
 					<Box className={itemCardImage}>
 						<Image
-							src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : item.itemId).slice(0, 20), 280, 200)}
+							src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : item.itemId).slice(0, 20), PLACEHOLDER_IMAGE_WIDTH, PLACEHOLDER_IMAGE_HEIGHT)}
 							alt={dbItem ? getNodeDisplayName(dbItem) : item.itemId}
 							fit="cover"
 							height={PLACEHOLDER_IMAGE_HEIGHT}
-							fallbackSrc={createErrorPlaceholderSvg(280, 200)}
+							fallbackSrc={createErrorPlaceholderSvg(PLACEHOLDER_IMAGE_WIDTH, PLACEHOLDER_IMAGE_HEIGHT)}
 						/>
 					</Box>
 					<Box className={itemCardContent}>
@@ -187,7 +188,7 @@ function CollectionItemCard({
 
 					<Group>
 						<Box>
-							<Text fw={500}>¥{item.purchaseInfo?.price?.toLocaleString() ?? 0}</Text>
+							<Text fw={500}>¥{item.purchaseInfo?.price ? item.purchaseInfo.price.toLocaleString() : 0}</Text>
 							<Text size="sm" c="dimmed">
                 Added: {new Date(item.added).toLocaleDateString()}
 							</Text>
@@ -254,10 +255,10 @@ function ItemFormModal({
 	React.useEffect(() => {
 		if (item) {
 			setFormData({
-				status: item.status ?? "wanted",
-				notes: item.notes ?? "",
+				status: item.status,
+				notes: item.notes,
 				price: item.purchaseInfo?.price ?? 0,
-				condition: item.condition ?? "new",
+				condition: item.condition,
 				rating: item.rating ?? 0,
 			});
 		}
@@ -265,7 +266,7 @@ function ItemFormModal({
 
 	const handleSave = () => {
 		const updatedData: Partial<CollectionItem> = {
-			status: formData.status as CollectionItem["status"],
+			status: formData.status,
 			notes: formData.notes,
 			condition: formData.condition,
 			rating: formData.rating,
@@ -294,7 +295,7 @@ function ItemFormModal({
 						<Group>
 							<Avatar
 								size="lg"
-								src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : item.itemId)[0], 60, 60)}
+								src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : item.itemId)[0], AVATAR_SIZE_LARGE, AVATAR_SIZE_LARGE)}
 								alt={dbItem ? getNodeDisplayName(dbItem) : item.itemId}
 							/>
 							<Box>
@@ -337,7 +338,7 @@ function ItemFormModal({
 				<NumberInput
 					label="Price (¥)"
 					value={formData.price}
-					onChange={(value) => { setFormData({ ...formData, price: Number(value) ?? 0 }); }}
+					onChange={(value) => { setFormData({ ...formData, price: typeof value === "number" ? value : 0 }); }}
 					min={0}
 					step={NUMBER_INPUT_STEP}
 				/>
@@ -353,7 +354,7 @@ function ItemFormModal({
 						{ value: "5", label: "5 Stars" },
 					]}
 					value={formData.rating.toString()}
-					onChange={(value) => { setFormData({ ...formData, rating: Number(value) ?? 0 }); }}
+					onChange={(value) => { setFormData({ ...formData, rating: value ? Number(value) : 0 }); }}
 				/>
 
 				<Textarea
@@ -378,7 +379,7 @@ function ItemFormModal({
 }
 
 // Stats component
-function CollectionStats({ stats }: { stats: CollectionStats }) {
+function CollectionStatsDisplay({ stats }: { stats: CollectionStats }) {
 	return (
 		<Card p="lg" radius="md" withBorder={true}>
 			<Title order={3} mb="md">
@@ -505,7 +506,7 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 	const [selectedItem, setSelectedItem] = React.useState<CollectionItem | null>(null);
 
 	React.useEffect(() => {
-		actions.loadCollection(collectionId);
+		void actions.loadCollection(collectionId);
 	}, [collectionId, actions]);
 
 	// Filter and sort items
@@ -543,7 +544,6 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 				case "price": {
 					return (b.purchaseInfo?.price ?? 0) - (a.purchaseInfo?.price ?? 0);
 				}
-				case "dateAdded":
 				default: {
 					return new Date(b.added).getTime() - new Date(a.added).getTime();
 				}
@@ -560,18 +560,18 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 
 	const handleDeleteItem = (item: CollectionItem) => {
 		const dbItem = dbItemsMap.get(item.itemId);
-		if (confirm(`Remove "${dbItem ? getNodeDisplayName(dbItem) : item.itemId}" from this collection?`)) {
-			void actions.removeItem(String(item.id));
+		if (globalThis.confirm(`Remove "${dbItem ? getNodeDisplayName(dbItem) : item.itemId}" from this collection?`)) {
+			void actions.removeItem(item.id);
 		}
 	};
 
 	const handleToggleVisibility = (item: CollectionItem) => {
-		void actions.updateItem(String(item.id), { hidden: !item.hidden });
+		void actions.updateItem(item.id, { hidden: !item.hidden });
 	};
 
 	const handleSaveItem = (itemData: Partial<CollectionItem>) => {
 		if (selectedItem?.id != null) {
-			void actions.updateItem(String(selectedItem.id), itemData);
+			void actions.updateItem(selectedItem.id, itemData);
 		}
 		setSelectedItem(null);
 	};
@@ -611,7 +611,7 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 			</Box>
 
 			{/* Stats */}
-			{!state.loading && state.stats && <CollectionStats stats={state.stats} />}
+			{!state.loading && state.stats && <CollectionStatsDisplay stats={state.stats} />}
 
 			{/* Filters and Controls */}
 			<Card p="lg" radius="md" withBorder={true}>
@@ -691,7 +691,7 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 								const dbItem = dbItemsMap.get(item.itemId);
 								return (
 									<CollectionItemCard
-										key={item.id ? `${item.id}` : `${item.itemId}-${index}`}
+										key={item.id || `${item.itemId}-${index}`}
 										item={item}
 										dbItem={dbItem}
 										onEdit={handleEditItem}
@@ -708,7 +708,7 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 								const dbItem = dbItemsMap.get(item.itemId);
 								return (
 									<CollectionItemCard
-										key={item.id ? `${item.id}` : `${item.itemId}-${index}`}
+										key={item.id || `${item.itemId}-${index}`}
 										item={item}
 										dbItem={dbItem}
 										onEdit={handleEditItem}

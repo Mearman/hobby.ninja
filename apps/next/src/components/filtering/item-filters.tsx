@@ -834,7 +834,7 @@ export function ItemFilters({
 			// Tag counts - extract tag from item
 			const itemTag = (item as Record<string, unknown>).tag as { ja: string; en?: string } | undefined;
 			if (itemTag?.en) {
-				const tagId = itemTag.en.toLowerCase().replace(/\s+/g, "-");
+				const tagId = itemTag.en.toLowerCase().replaceAll(/\s+/g, "-");
 				if (tagId in tagCounts) {
 					tagCounts[tagId]++;
 				}

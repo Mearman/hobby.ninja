@@ -34,9 +34,7 @@ import {
 	IconEdit,
 	IconFilter,
 	IconFolder,
-	IconGrid3x3,
 	IconHome,
-	IconList,
 	IconPlus,
 	IconSearch,
 	IconSortAscending,
@@ -47,9 +45,11 @@ import Link from "next/link";
 import React, { useMemo } from "react";
 
 import { InfiniteScrollLoader } from "@/components/ui/infinite-scroll-loader";
+import type { CollectionState } from "@/contexts/collection-context";
 import { useCollection } from "@/contexts/collection-context";
 import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
+import type { Collection } from "@/lib/collection-storage";
 import { CSS, TYPOGRAPHY, UI } from "@/lib/constants";
 import {
 	collectionCard,
@@ -164,19 +164,19 @@ function CollectionCardGrid({ collection, onEdit, onDelete }: {
 			<Box className={collectionContent}>
 				<div className={statsGrid}>
 					<div className={statCard}>
-						<Text className={statValue}>{collection.itemCount || 0}</Text>
+						<Text className={statValue}>{collection.itemCount ?? 0}</Text>
 						<Text className={statLabel}>Items</Text>
 					</div>
 					<div className={statCard}>
-						<Text className={statValue}>{collection.completedCount || 0}</Text>
+						<Text className={statValue}>{collection.completedCount ?? 0}</Text>
 						<Text className={statLabel}>Completed</Text>
 					</div>
 					<div className={statCard}>
-						<Text className={statValue}>{collection.wantedCount || 0}</Text>
+						<Text className={statValue}>{collection.wantedCount ?? 0}</Text>
 						<Text className={statLabel}>Wanted</Text>
 					</div>
 					<div className={statCard}>
-						<Text className={statValue}>¥{(collection.totalValue || 0).toLocaleString()}</Text>
+						<Text className={statValue}>¥{(collection.totalValue ?? 0).toLocaleString()}</Text>
 						<Text className={statLabel}>Value</Text>
 					</div>
 				</div>
@@ -185,14 +185,14 @@ function CollectionCardGrid({ collection, onEdit, onDelete }: {
 					<Group justify="space-between" mb="xs">
 						<Text size="sm" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>Completion Progress</Text>
 						<Badge variant="light" size="sm" color={collectionColor}>
-							{collection.completionPercentage || 0}%
+							{collection.completionPercentage ?? 0}%
 						</Badge>
 					</Group>
 					<div className={progressBar}>
 						<div
 							className={progressFill}
 							style={{
-								width: `${collection.completionPercentage || 0}%`,
+								width: `${collection.completionPercentage ?? 0}%`,
 								backgroundColor: `var(--mantine-color-${collectionColor}-6)`,
 							}}
 						/>
@@ -200,14 +200,14 @@ function CollectionCardGrid({ collection, onEdit, onDelete }: {
 							<div
 								className={progressSegment}
 								style={{
-									width: `${(collection.completedCount || 0) / (collection.itemCount || 1) * 100}%`,
+									width: `${(collection.completedCount ?? 0) / (collection.itemCount ?? 1) * 100}%`,
 									backgroundColor: "var(--mantine-color-green-6)",
 								}}
 							/>
 							<div
 								className={progressSegment}
 								style={{
-									width: `${(collection.inProgressCount || 0) / (collection.itemCount || 1) * 100}%`,
+									width: `${(collection.inProgressCount ?? 0) / (collection.itemCount ?? 1) * 100}%`,
 									backgroundColor: "var(--mantine-color-orange-6)",
 								}}
 							/>
@@ -275,17 +275,17 @@ function CollectionCardList({ collection, onEdit, onDelete }: {
 
 				<Group align="center" gap="xl">
 					<div style={{ textAlign: "center", minWidth: "80px" }}>
-						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>{collection.itemCount || 0}</Text>
+						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>{collection.itemCount ?? 0}</Text>
 						<Text size="xs" c="dimmed">Items</Text>
 					</div>
 
 					<div style={{ textAlign: "center", minWidth: "100px" }}>
-						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>{collection.completedCount || 0}</Text>
+						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>{collection.completedCount ?? 0}</Text>
 						<Text size="xs" c="dimmed">Completed</Text>
 					</div>
 
 					<div style={{ textAlign: "center", minWidth: "100px" }}>
-						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>¥{(collection.totalValue || 0).toLocaleString()}</Text>
+						<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>¥{(collection.totalValue ?? 0).toLocaleString()}</Text>
 						<Text size="xs" c="dimmed">Value</Text>
 					</div>
 
@@ -295,13 +295,13 @@ function CollectionCardList({ collection, onEdit, onDelete }: {
 								<div
 									className={progressFill}
 									style={{
-										width: `${collection.completionPercentage || 0}%`,
+										width: `${collection.completionPercentage ?? 0}%`,
 										backgroundColor: `var(--mantine-color-${collectionColor}-6)`,
 									}}
 								/>
 							</div>
 							<Badge variant="light" size="sm" color={collectionColor}>
-								{collection.completionPercentage || 0}%
+								{collection.completionPercentage ?? 0}%
 							</Badge>
 						</Group>
 						<Text size="xs" c="dimmed" mt="xs">
@@ -351,7 +351,7 @@ function CollectionCardList({ collection, onEdit, onDelete }: {
 }
 
 // Quick stats component
-function QuickStats({ state }: { state: any }) {
+function QuickStats({ state }: { state: CollectionState }) {
 	return (
 		<Card p="lg" radius="md" withBorder={true}>
 			<Title order={3} mb="md">
@@ -367,7 +367,7 @@ function QuickStats({ state }: { state: any }) {
 							<IconFolder size={UI.ICON_SIZE_LG} />
 						</div>
 						<div>
-							<Text size="xs" color="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
+							<Text size="xs" c="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
                 Total Collections
 							</Text>
 							<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
@@ -383,11 +383,11 @@ function QuickStats({ state }: { state: any }) {
 							<IconBox size={UI.ICON_SIZE_LG} />
 						</div>
 						<div>
-							<Text size="xs" color="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
+							<Text size="xs" c="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
                 Total Items
 							</Text>
 							<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
-								{state.stats?.totalItems || 0}
+								{state.stats?.totalItems ?? 0}
 							</Text>
 						</div>
 					</Group>
@@ -399,11 +399,11 @@ function QuickStats({ state }: { state: any }) {
 							<IconTrendingUp size={UI.ICON_SIZE_LG} />
 						</div>
 						<div>
-							<Text size="xs" color="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
+							<Text size="xs" c="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
                 Completed
 							</Text>
 							<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
-								{state.stats?.statusBreakdown?.completed || 0}
+								{state.stats?.statusBreakdown.completed ?? 0}
 							</Text>
 						</div>
 					</Group>
@@ -415,11 +415,11 @@ function QuickStats({ state }: { state: any }) {
 							<IconChartBar size={UI.ICON_SIZE_LG} />
 						</div>
 						<div>
-							<Text size="xs" color="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
+							<Text size="xs" c="dimmed" tt="uppercase" fw={TYPOGRAPHY.FONT_WEIGHT_BOLD}>
                 Total Value
 							</Text>
 							<Text size="lg" fw={TYPOGRAPHY.FONT_WEIGHT_NORMAL}>
-                ¥{(state.stats?.totalValue || 0).toLocaleString()}
+                ¥{(state.stats?.totalValue ?? 0).toLocaleString()}
 							</Text>
 						</div>
 					</Group>
@@ -580,7 +580,7 @@ export default function CollectionPage() {
 	const [createModalOpen, setCreateModalOpen] = React.useState(false);
 	const [editModalOpen, setEditModalOpen] = React.useState(false);
 	const [filterDrawerOpen, setFilterDrawerOpen] = React.useState(false);
-	const [selectedCollection, setSelectedCollection] = React.useState<any>(null);
+	const [selectedCollection, setSelectedCollection] = React.useState<Collection | null>(null);
 	const [deleteModalOpen, setDeleteModalOpen] = React.useState(false);
 	const [searchQuery, setSearchQuery] = React.useState("");
 	const [viewMode, setViewMode] = React.useState<"grid" | "list">("grid");
@@ -591,9 +591,14 @@ export default function CollectionPage() {
 		description: "",
 	});
 
+	const handleSortChange = (newSortBy: string, newSortOrder: "asc" | "desc") => {
+		setSortBy(newSortBy);
+		setSortOrder(newSortOrder);
+	};
+
 	React.useEffect(() => {
-		actions.loadCollections();
-	}, []);
+		void actions.loadCollections();
+	}, [actions]);
 
 	const handleCreateCollection = async () => {
 		try {
@@ -602,7 +607,8 @@ export default function CollectionPage() {
 			setFormData({ name: "", description: "" });
 		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
-			console.error("Failed to create collection:", errorMessage);
+			// Rethrow to allow error boundary to handle
+			throw new Error(`Failed to create collection: ${errorMessage}`);
 		}
 	};
 
@@ -616,7 +622,8 @@ export default function CollectionPage() {
 			setFormData({ name: "", description: "" });
 		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
-			console.error("Failed to update collection:", errorMessage);
+			// Rethrow to allow error boundary to handle
+			throw new Error(`Failed to update collection: ${errorMessage}`);
 		}
 	};
 
@@ -629,20 +636,21 @@ export default function CollectionPage() {
 			setSelectedCollection(null);
 		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
-			console.error("Failed to delete collection:", errorMessage);
+			// Rethrow to allow error boundary to handle
+			throw new Error(`Failed to delete collection: ${errorMessage}`);
 		}
 	};
 
-	const openEditModal = (collection: any) => {
+	const openEditModal = (collection: Collection) => {
 		setSelectedCollection(collection);
 		setFormData({
 			name: collection.name,
-			description: collection.description || "",
+			description: collection.description,
 		});
 		setEditModalOpen(true);
 	};
 
-	const openDeleteModal = (collection: any) => {
+	const openDeleteModal = (collection: Collection) => {
 		setSelectedCollection(collection);
 		setDeleteModalOpen(true);
 	};
@@ -655,14 +663,14 @@ export default function CollectionPage() {
 		if (searchQuery.trim()) {
 			filtered = filtered.filter(collection =>
 				collection.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-				(collection.description?.toLowerCase().includes(searchQuery.toLowerCase())),
+				collection.description.toLowerCase().includes(searchQuery.toLowerCase()),
 			);
 		}
 
 		// Apply sorting
-		return filtered.sort((a, b) => {
-			let aValue: any;
-			let bValue: any;
+		return filtered.toSorted((a, b) => {
+			let aValue: string | number | Date;
+			let bValue: string | number | Date;
 
 			switch (sortBy) {
 				case "name": {
@@ -671,18 +679,18 @@ export default function CollectionPage() {
 					break;
 				}
 				case "dateAdded": {
-					aValue = new Date(a.modifiedAt || a.createdAt);
-					bValue = new Date(b.modifiedAt || b.createdAt);
+					aValue = new Date(a.modifiedAt);
+					bValue = new Date(b.modifiedAt);
 					break;
 				}
 				case "itemCount": {
-					aValue = a.itemCount || 0;
-					bValue = b.itemCount || 0;
+					aValue = a.itemCount;
+					bValue = b.itemCount;
 					break;
 				}
 				case "totalValue": {
-					aValue = a.totalValue || 0;
-					bValue = b.totalValue || 0;
+					aValue = a.totalValue;
+					bValue = b.totalValue;
 					break;
 				}
 				default: {
@@ -761,7 +769,7 @@ export default function CollectionPage() {
 					onViewModeChange={setViewMode}
 					sortBy={sortBy}
 					sortOrder={sortOrder}
-					onSortChange={setSortBy}
+					onSortChange={handleSortChange}
 				/>
 
 				{/* Collections Display */}
@@ -818,7 +826,7 @@ export default function CollectionPage() {
 								{visibleCollections.map((collection, index) => {
 									const collectionData = {
 										...collection,
-										lastModified: collection.modifiedAt?.toISOString() || new Date().toISOString(),
+										lastModified: collection.modifiedAt.toISOString(),
 									};
 
 									const isLastItem = index === visibleCollections.length - 1;
@@ -861,7 +869,7 @@ export default function CollectionPage() {
 										No Collections Found
 									</Title>
 									<Text size="lg" c="dimmed" mb="md">
-										No collections match your search for "{searchQuery}"
+										No collections match your search for &quot;{searchQuery}&quot;
 									</Text>
 									<Text size="sm" c="dimmed" mb="xl">
 										Try adjusting your search terms or browse all collections
@@ -907,7 +915,7 @@ export default function CollectionPage() {
                 Cancel
 							</Button>
 							<Button
-								onClick={handleCreateCollection}
+								onClick={() => { void handleCreateCollection(); }}
 								disabled={!formData.name.trim()}
 							>
                 Create Collection
@@ -943,7 +951,7 @@ export default function CollectionPage() {
                 Cancel
 							</Button>
 							<Button
-								onClick={handleUpdateCollection}
+								onClick={() => { void handleUpdateCollection(); }}
 								disabled={!formData.name.trim()}
 							>
                 Update Collection
@@ -961,16 +969,16 @@ export default function CollectionPage() {
 				>
 					<Stack gap="md">
 						<Text>
-							Are you sure you want to delete "{selectedCollection?.name}"? This action cannot be undone.
+							Are you sure you want to delete &quot;{selectedCollection?.name}&quot;? This action cannot be undone.
 						</Text>
 						<Text size="sm" c="dimmed">
-							{selectedCollection?.itemCount || 0} items will be permanently removed from this collection.
+							{selectedCollection?.itemCount ?? 0} items will be permanently removed from this collection.
 						</Text>
 						<Group justify="flex-end" gap="sm">
 							<Button variant="light" onClick={() => { setDeleteModalOpen(false); }}>
 								Cancel
 							</Button>
-							<Button color="red" onClick={handleDeleteCollection}>
+							<Button color="red" onClick={() => { void handleDeleteCollection(); }}>
 								Delete Collection
 							</Button>
 						</Group>

@@ -4,15 +4,15 @@ const utf8ToBase64 = (str: string): string => {
 		// Use TextEncoder for proper UTF-8 encoding
 		const encoder = new TextEncoder();
 		const uint8Array = encoder.encode(str);
-		// Convert binary string to base64
-		let binary = '';
-		for (let i = 0; i < uint8Array.length; i++) {
-			binary += String.fromCharCode(uint8Array[i]);
+		// Convert binary string to base64 using fromCodePoint for modern approach
+		let binary = "";
+		for (const element of uint8Array) {
+			binary += String.fromCodePoint(element);
 		}
 		return btoa(binary);
-	} catch (error) {
-		// Fallback to URL-encoding for problematic characters
-		return btoa(unescape(encodeURIComponent(str)));
+	} catch {
+		// Fallback for browser compatibility
+		return btoa(encodeURIComponent(str));
 	}
 };
 
@@ -20,14 +20,17 @@ const utf8ToBase64 = (str: string): string => {
 const escapeSvgText = (text: string): string => {
 	return text
 		.slice(0, 20) // Limit text length
-		.replace(/&/g, '&amp;')
-		.replace(/</g, '&lt;')
-		.replace(/>/g, '&gt;')
-		.replace(/"/g, '&quot;')
-		.replace(/'/g, '&#39;');
+		.replaceAll("&", "&amp;")
+		.replaceAll("<", "&lt;")
+		.replaceAll(">", "&gt;")
+		.replaceAll('"', "&quot;")
+		.replaceAll("'", "&#39;");
 };
 
-export const createPlaceholderSvg = (text: string, width = 280, height = 200): string => {
+const DEFAULT_WIDTH = 280;
+const DEFAULT_HEIGHT = 200;
+
+export const createPlaceholderSvg = (text: string, width = DEFAULT_WIDTH, height = DEFAULT_HEIGHT): string => {
 	const escapedText = escapeSvgText(text);
 	const svg = `
     <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
@@ -42,6 +45,6 @@ export const createPlaceholderSvg = (text: string, width = 280, height = 200): s
 	return `data:image/svg+xml;base64,${utf8ToBase64(svg)}`;
 };
 
-export const createErrorPlaceholderSvg = (width = 280, height = 200): string => {
+export const createErrorPlaceholderSvg = (width = DEFAULT_WIDTH, height = DEFAULT_HEIGHT): string => {
 	return createPlaceholderSvg("Image Not Available", width, height);
 };

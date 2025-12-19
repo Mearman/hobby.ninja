@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
+import React from "react";
 
 // Custom image loader that adds proper headers for bandai-hobby.net images
 const customImageLoader = ({ src, width, quality }: { src: string; width: number; quality?: number }) => {
@@ -18,7 +18,8 @@ const customImageLoader = ({ src, width, quality }: { src: string; width: number
 	}
 
 	// For other images, use default Next.js loader behavior
-	return `${src}?w=${width}&q=${quality || 75}`;
+	const DEFAULT_QUALITY = 75;
+	return `${src}?w=${width}&q=${quality ?? DEFAULT_QUALITY}`;
 };
 
 interface CustomImageProps {
@@ -80,13 +81,16 @@ export function CustomImage({
 
 	const objectFit = fit === "contain" ? "contain" : fit === "cover" ? "cover" : "none";
 
+	const DEFAULT_IMAGE_WIDTH = 280;
+	const DEFAULT_IMAGE_HEIGHT = 200;
+
 	return (
 		<Image
 			{...props}
 			src={imgSrc}
 			alt={alt}
-			width={width || 280} // Default width to prevent Next.js errors
-			height={height || 200} // Default height to prevent Next.js errors
+			width={width ?? DEFAULT_IMAGE_WIDTH} // Default width to prevent Next.js errors
+			height={height ?? DEFAULT_IMAGE_HEIGHT} // Default height to prevent Next.js errors
 			loader={customImageLoader}
 			className={className}
 			priority={priority}

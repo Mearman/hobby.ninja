@@ -3,7 +3,11 @@
 import { notifications } from "@mantine/notifications";
 import React, { createContext, useContext, useEffect, useState, useCallback } from "react";
 
-import db, { type Collection, type CollectionItem, type UserPreferences } from "@/lib/collection-storage";
+import { db, type Collection, type CollectionItem, type UserPreferences } from "@/lib/collection-storage";
+
+// Export/Import data type
+type ExportData = Record<string, unknown>;
+type ImportData = Record<string, unknown>;
 
 interface CollectionContextType {
   // Collections
@@ -45,10 +49,10 @@ interface CollectionContextType {
   bulkRemoveItems: (itemIds: string[]) => Promise<void>;
 
   // Import/Export
-  exportCollection: (collectionId: string) => Promise<any>;
-  importCollection: (data: any) => Promise<void>;
-  exportAllData: () => Promise<any>;
-  importAllData: (data: any) => Promise<void>;
+  exportCollection: (collectionId: string) => Promise<ExportData>;
+  importCollection: (data: ImportData) => Promise<void>;
+  exportAllData: () => Promise<ExportData>;
+  importAllData: (data: ImportData) => Promise<void>;
 
   // Search within collections
   searchItems: (query: string, category?: string) => Promise<CollectionItem[]>;
@@ -110,13 +114,13 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
 			}
 		};
 
-		initialize();
-	}, []);
+		void initialize();
+	}, [refreshCollections]);
 
 	// Load collection items when current collection changes
 	useEffect(() => {
 		if (currentCollection?.id) {
-			loadCollectionItems(currentCollection.id.toString());
+			void loadCollectionItems(currentCollection.id);
 		} else {
 			setCollectionItems([]);
 			setItemStats(null);
@@ -173,7 +177,7 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
 			// Update current collection if it's the one being updated
 			if (currentCollection?.id === id) {
 				const updated = await db.getCollection(id);
-				setCurrentCollection(updated || null);
+				setCurrentCollection(updated ?? null);
 			}
 
 			notifications.show({
@@ -230,7 +234,7 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
 
 	const refreshItems = useCallback(async () => {
 		if (currentCollection?.id) {
-			await loadCollectionItems(currentCollection.id.toString());
+			await loadCollectionItems(currentCollection.id);
 		}
 	}, [currentCollection]);
 
@@ -392,9 +396,9 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
 		}
 	}, []);
 
-	const importCollection = useCallback(async (data: any) => {
+	const importCollection = useCallback(async (data: ImportData) => {
 		try {
-			await db.importCollection(data);
+			await db.importCollection(data as Record<string, unknown>);
 			await refreshCollections();
 
 			notifications.show({
@@ -427,9 +431,9 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
 		}
 	}, []);
 
-	const importAllData = useCallback(async (data: any) => {
+	const importAllData = useCallback(async (data: ImportData) => {
 		try {
-			await db.restoreAllData(data);
+			await db.restoreAllData(data as Record<string, unknown>);
 			await refreshCollections();
 			await refreshItems();
 
@@ -513,5 +517,3 @@ export function CollectionProvider({ children }: CollectionProviderProps) {
 		</CollectionContext.Provider>
 	);
 }
-
-export default CollectionProvider;

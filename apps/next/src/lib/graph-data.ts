@@ -6,39 +6,34 @@ import "server-only";
 // For client-side data access, use client-data.ts instead
 
 import {
-	items as itemsData,
-	itemsList,
-	getItemIds,
-	type Item,
-} from "@hobby-ninja/data/items";
-import {
 	brands as brandsData,
 	brandsList,
-	getBrandIds,
 	type Brand,
 } from "@hobby-ninja/data/brands";
 import {
-	series as seriesData,
-	seriesList,
-	getSeriesIds,
-	type Series,
-} from "@hobby-ninja/data/series";
-import {
 	categories as categoriesData,
 	categoriesList,
-	getCategoryIds,
 	type Category,
 } from "@hobby-ninja/data/categories";
 import {
+	items as itemsData,
+	itemsList,
+	type Item,
+} from "@hobby-ninja/data/items";
+import {
 	manuals as manualsData,
 	manualsList,
-	getManualIds,
 	type Manual,
 } from "@hobby-ninja/data/manuals";
 import { getNodeDisplayName } from "@hobby-ninja/data/schemas";
+import {
+	series as seriesData,
+	seriesList,
+	type Series,
+} from "@hobby-ninja/data/series";
 
 // Re-export types for convenience
-export type { Item, Brand, Series, Category, Manual };
+
 
 // Type aliases for backward compatibility
 export type ItemNode = Item;
@@ -85,17 +80,17 @@ export type EnrichedItem = Item & {
 
 // Helper function to get node name by ID
 function getBrandNameById(brandId: string): string {
-	const brand = brandsData[brandId];
+	const brand = brandsData[brandId] as Brand | undefined;
 	return brand ? getNodeDisplayName(brand) : "";
 }
 
 function getSeriesNameById(seriesId: string): string {
-	const series = seriesData[seriesId];
+	const series = seriesData[seriesId] as Series | undefined;
 	return series ? getNodeDisplayName(series) : "";
 }
 
 function getCategoryNameById(categoryId: string): string {
-	const category = categoriesData[categoryId];
+	const category = categoriesData[categoryId] as Category | undefined;
 	return category ? getNodeDisplayName(category) : "";
 }
 
@@ -125,7 +120,7 @@ function extractGradeFromItem(item: Item): string {
 	}
 
 	// Check brand for grade information
-	for (const brandId of item.brandIds || []) {
+	for (const brandId of item.brandIds) {
 		const brandName = getBrandNameById(brandId).toLowerCase();
 		if (brandName.includes("pg") || brandName.includes("perfect grade")) return "PG";
 		if (brandName.includes("mg") || brandName.includes("master grade")) return "MG";
@@ -143,19 +138,19 @@ function enrichItemWithRelationships(item: Item): EnrichedItem {
 	const enrichedItem: EnrichedItem = { ...item };
 
 	// Resolve series (use first one)
-	if (item.seriesIds && item.seriesIds.length > 0) {
+	if (item.seriesIds.length > 0) {
 		enrichedItem.seriesId = item.seriesIds[0];
 		enrichedItem.series = getSeriesNameById(item.seriesIds[0]);
 	}
 
 	// Resolve brand (use first one)
-	if (item.brandIds && item.brandIds.length > 0) {
+	if (item.brandIds.length > 0) {
 		enrichedItem.brandId = item.brandIds[0];
 		enrichedItem.brand = getBrandNameById(item.brandIds[0]);
 	}
 
 	// Resolve category (use first one)
-	if (item.categoryIds && item.categoryIds.length > 0) {
+	if (item.categoryIds.length > 0) {
 		enrichedItem.categoryId = item.categoryIds[0];
 		enrichedItem.category = getCategoryNameById(item.categoryIds[0]);
 	}
@@ -176,43 +171,33 @@ function enrichItemWithRelationships(item: Item): EnrichedItem {
 
 // Export synchronous functions that return pre-validated data with enriched properties
 export function getAllItems(): EnrichedItem[] {
-	if (_allItemsCache === null) {
-		_allItemsCache = itemsList.map((item) => enrichItemWithRelationships(item)).sort(sortByName);
-	}
+	_allItemsCache ??= itemsList.map((item) => enrichItemWithRelationships(item)).toSorted(sortByName);
 	return _allItemsCache;
 }
 
 export function getAllBrands(): Brand[] {
-	if (_allBrandsCache === null) {
-		_allBrandsCache = [...brandsList].sort(sortByName);
-	}
+	_allBrandsCache ??= brandsList.toSorted(sortByName);
 	return _allBrandsCache;
 }
 
 export function getAllCategories(): Category[] {
-	if (_allCategoriesCache === null) {
-		_allCategoriesCache = [...categoriesList].sort(sortByName);
-	}
+	_allCategoriesCache ??= categoriesList.toSorted(sortByName);
 	return _allCategoriesCache;
 }
 
 export function getAllSeries(): Series[] {
-	if (_allSeriesCache === null) {
-		_allSeriesCache = [...seriesList].sort(sortByName);
-	}
+	_allSeriesCache ??= seriesList.toSorted(sortByName);
 	return _allSeriesCache;
 }
 
 export function getAllManuals(): Manual[] {
-	if (_allManualsCache === null) {
-		_allManualsCache = [...manualsList].sort(sortByName);
-	}
+	_allManualsCache ??= manualsList.toSorted(sortByName);
 	return _allManualsCache;
 }
 
 // Get specific node by ID
 export function getItemById(id: string): EnrichedItem | null {
-	const item = itemsData[id];
+	const item = itemsData[id] as Item | undefined;
 	return item ? enrichItemWithRelationships(item) : null;
 }
 
@@ -234,38 +219,38 @@ export function getManualById(id: string): Manual | null {
 
 // Get items by category (using itemIds array on category)
 export function getItemsByCategory(categoryId: string): EnrichedItem[] {
-	const category = categoriesData[categoryId];
-	if (!category || !category.itemIds) return [];
+	const category = categoriesData[categoryId] as Category | undefined;
+	if (!category) return [];
 
 	return category.itemIds
-		.map((itemId) => itemsData[itemId])
+		.map((itemId) => itemsData[itemId] as Item | undefined)
 		.filter((item): item is Item => item !== undefined)
 		.map((item) => enrichItemWithRelationships(item))
-		.sort(sortByName);
+		.toSorted(sortByName);
 }
 
 // Get items by brand (using itemIds array on brand)
 export function getItemsByBrand(brandId: string): EnrichedItem[] {
-	const brand = brandsData[brandId];
-	if (!brand || !brand.itemIds) return [];
+	const brand = brandsData[brandId] as Brand | undefined;
+	if (!brand) return [];
 
 	return brand.itemIds
-		.map((itemId) => itemsData[itemId])
+		.map((itemId) => itemsData[itemId] as Item | undefined)
 		.filter((item): item is Item => item !== undefined)
 		.map((item) => enrichItemWithRelationships(item))
-		.sort(sortByName);
+		.toSorted(sortByName);
 }
 
 // Get items by series (using itemIds array on series)
 export function getItemsBySeries(seriesId: string): EnrichedItem[] {
-	const series = seriesData[seriesId];
-	if (!series || !series.itemIds) return [];
+	const series = seriesData[seriesId] as Series | undefined;
+	if (!series) return [];
 
 	return series.itemIds
-		.map((itemId) => itemsData[itemId])
+		.map((itemId) => itemsData[itemId] as Item | undefined)
 		.filter((item): item is Item => item !== undefined)
 		.map((item) => enrichItemWithRelationships(item))
-		.sort(sortByName);
+		.toSorted(sortByName);
 }
 
 // Get all unique grades from items
@@ -279,7 +264,7 @@ export function getAllGrades(): string[] {
 		}
 	}
 
-	return Array.from(grades).sort((a, b) => a.localeCompare(b));
+	return [...grades].toSorted((a, b) => a.localeCompare(b));
 }
 
 // Get all nodes combined
@@ -288,8 +273,12 @@ export function getAllNodes(): GraphNode[] {
 }
 
 // Get node by any type
-export function getNodeByIdAny(id: string): GraphNode | null {
-	return itemsData[id] ?? brandsData[id] ?? categoriesData[id] ?? seriesData[id] ?? manualsData[id] ?? null;
+export function getNodeByIdAny(id: string): GraphNode | undefined {
+	return (itemsData[id] as GraphNode | undefined)
+		?? (brandsData[id] as GraphNode | undefined)
+		?? (categoriesData[id] as GraphNode | undefined)
+		?? (seriesData[id] as GraphNode | undefined)
+		?? (manualsData[id] as GraphNode | undefined);
 }
 
 // Validate that required data is available
@@ -357,3 +346,9 @@ export interface GradesIndex {
 	}>;
 	hierarchy: Record<string, { parent: string | null; children: string[] }>;
 }
+
+export {type Item} from "@hobby-ninja/data/items";
+export {type Brand} from "@hobby-ninja/data/brands";
+export {type Series} from "@hobby-ninja/data/series";
+export {type Category} from "@hobby-ninja/data/categories";
+export {type Manual} from "@hobby-ninja/data/manuals";

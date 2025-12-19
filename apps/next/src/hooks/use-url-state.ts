@@ -5,7 +5,7 @@ import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { useEffect, useState, useCallback } from "react";
 
 import { TIMING } from "@/lib/constants";
-import UrlCompression, { type ShareableFilters } from "@/lib/url-compression";
+import { UrlCompression, type ShareableFilters } from "@/lib/url-compression";
 
 interface UrlStateOptions {
   debounceMs?: number;
@@ -49,35 +49,52 @@ export function useUrlState<T extends Record<string, unknown>>(
 			if (pathnameMatch) {
 				try {
 					return UrlCompression.decompress<ShareableFilters>(pathnameMatch[1]) as unknown as T;
-				} catch (error) {
-					console.warn("Failed to decompress URL state:", error);
+				} catch {
+					// Failed to decompress URL state
 				}
 			}
 
 			// Parse regular URL parameters
-			for (const [key, value] of searchParams.entries()) {
+			const hasUrlParams = searchParams.toString().length > 0;
+			if (hasUrlParams) {
+				for (const [key, value] of searchParams.entries()) {
+					try {
+						// Try to parse as JSON first (for arrays/objects)
+						const parsed = JSON.parse(decodeURIComponent(value)) as T[keyof T];
+						urlState[key as keyof T] = parsed;
+					} catch {
+						// Fallback to string value
+						urlState[key as keyof T] = decodeURIComponent(value) as T[keyof T];
+					}
+				}
+				// Merge with default state
+				return { ...defaultState, ...urlState };
+			}
+
+			// If no URL params and persistence is enabled, try localStorage
+			if (persistAcrossSessions) {
 				try {
-					// Try to parse as JSON first (for arrays/objects)
-					const parsed = JSON.parse(decodeURIComponent(value));
-					urlState[key as keyof T] = parsed;
+					const persisted = localStorage.getItem(`url-state-${pathname}`);
+					if (persisted) {
+						const parsedState = JSON.parse(persisted) as Partial<T>;
+						return { ...defaultState, ...parsedState } as T;
+					}
 				} catch {
-					// Fallback to string value
-					urlState[key as keyof T] = decodeURIComponent(value) as any;
+					// Failed to load persisted state
 				}
 			}
 
-			// Merge with default state
-			return { ...defaultState, ...urlState };
-		} catch (error) {
-			console.error("Error parsing URL state:", error);
+			return defaultState;
+		} catch {
+			// Error parsing URL state
 			return defaultState;
 		}
 	});
 
 	// Create debounced function to update URL
-	const updateUrl = useCallback(
-		debounce((newState: T) => {
-			if (!syncToUrl) return;
+	const [debouncedUpdate] = useState(() =>
+		debounce((newState: T, urlSyncEnabled: boolean, shouldPersist: boolean, path: string, routerRef: ReturnType<typeof useRouter>) => {
+			if (!urlSyncEnabled) return;
 
 			try {
 				const params = new URLSearchParams();
@@ -89,27 +106,35 @@ export function useUrlState<T extends Record<string, unknown>>(
 					if (typeof value === "object") {
 						params.set(key, encodeURIComponent(JSON.stringify(value)));
 					} else {
-						params.set(key, encodeURIComponent(String(value)));
+						const stringValue = typeof value === "string"
+							? value
+							: typeof value === "number" || typeof value === "boolean"
+								? String(value)
+								: JSON.stringify(value);
+						params.set(key, encodeURIComponent(stringValue));
 					}
 				}
 
 				// Build new URL
 				const queryString = params.toString();
-				const newUrl = queryString ? `${pathname}?${queryString}` : pathname;
+				const newUrl = queryString ? `${path}?${queryString}` : path;
 
 				// Update URL without triggering navigation
-				router.replace(newUrl, { scroll: false });
+				routerRef.replace(newUrl, { scroll: false });
 
 				// Persist to localStorage if enabled
-				if (persistAcrossSessions) {
-					localStorage.setItem(`url-state-${pathname}`, JSON.stringify(newState));
+				if (shouldPersist) {
+					localStorage.setItem(`url-state-${path}`, JSON.stringify(newState));
 				}
-			} catch (error) {
-				console.error("Error updating URL state:", error);
+			} catch {
+				// Error updating URL state
 			}
 		}, debounceMs),
-		[pathname, router, syncToUrl, persistAcrossSessions, debounceMs],
 	);
+
+	const updateUrl = useCallback((newState: T) => {
+		debouncedUpdate(newState, syncToUrl, persistAcrossSessions, pathname, router);
+	}, [debouncedUpdate, syncToUrl, persistAcrossSessions, pathname, router]);
 
 	// Update state and sync to URL
 	const setState = useCallback((newState: T | ((prev: T) => T)) => {
@@ -132,16 +157,20 @@ export function useUrlState<T extends Record<string, unknown>>(
 	const shareUrl = useCallback(() => {
 		try {
 			return UrlCompression.createFiltersUrl(state as ShareableFilters);
-		} catch (error) {
-			console.error("Error creating share URL:", error);
-			// Fallback to regular URL with parameters
+		} catch {
+			// Error creating share URL - fallback to regular URL with parameters
 			const params = new URLSearchParams();
 			for (const [key, value] of Object.entries(state)) {
 				if (value !== undefined && value !== null) {
 					if (typeof value === "object") {
 						params.set(key, JSON.stringify(value));
 					} else {
-						params.set(key, String(value));
+						const stringValue = typeof value === "string"
+							? value
+							: typeof value === "number" || typeof value === "boolean"
+								? String(value)
+								: JSON.stringify(value);
+						params.set(key, stringValue);
 					}
 				}
 			}
@@ -155,7 +184,7 @@ export function useUrlState<T extends Record<string, unknown>>(
 			const pathnameMatch = /\/database\/share\/(.+)$/.exec(pathname);
 			if (pathnameMatch) {
 				// Test if we can decompress the data
-				UrlCompression.decompress<ShareableFilters>(pathnameMatch[1]);
+				void UrlCompression.decompress<ShareableFilters>(pathnameMatch[1]);
 				return true;
 			}
 			return true; // Regular URLs are always valid
@@ -164,27 +193,12 @@ export function useUrlState<T extends Record<string, unknown>>(
 		}
 	}, [pathname]);
 
-	// Load persisted state from localStorage
-	useEffect(() => {
-		if (persistAcrossSessions && !searchParams.toString()) {
-			try {
-				const persisted = localStorage.getItem(`url-state-${pathname}`);
-				if (persisted) {
-					const parsedState = JSON.parse(persisted);
-					setState({ ...defaultState, ...parsedState });
-				}
-			} catch (error) {
-				console.warn("Failed to load persisted state:", error);
-			}
-		}
-	}, [persistAcrossSessions, pathname, searchParams, setState, defaultState]);
-
 	// Cleanup on unmount
 	useEffect(() => {
 		return () => {
-			updateUrl.cancel();
+			debouncedUpdate.cancel();
 		};
-	}, [updateUrl]);
+	}, [debouncedUpdate]);
 
 	return {
 		state,
@@ -241,7 +255,7 @@ export function useSearchState(defaultQuery = "") {
  */
 export function useMultiSelectFilter(
 	name: string,
-	options: string[] = [],
+	_options: string[] = [],
 	defaultValue: string[] = [],
 ) {
 	const { state, setState } = useUrlState<Record<string, string[]>>(
@@ -249,7 +263,7 @@ export function useMultiSelectFilter(
 		{ debounceMs: TIMING.DEBOUNCE_MEDIUM },
 	);
 
-	const selected = state[name] || defaultValue;
+	const selected = state[name] ?? defaultValue;
 	const isSelected = (value: string) => selected.includes(value);
 
 	const toggle = (value: string) => {
@@ -284,5 +298,3 @@ export function useMultiSelectFilter(
 		count: selected.length,
 	};
 }
-
-export default useUrlState;

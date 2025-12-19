@@ -1,6 +1,5 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 
 import {
 	Drawer,
@@ -21,9 +20,7 @@ import {
 	IconDatabase,
 	IconFolder,
 	IconSearch,
-	IconAdjustmentsHorizontal,
 	IconHeart,
-	IconShoppingCart,
 	IconSettings,
 	IconInfoCircle,
 	IconShare,
@@ -35,9 +32,10 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import { fadeIn, mobileOnly } from "@/styles/components.css";
+import { Badge } from "@/components/ui/badge";
+import { fadeIn } from "@/styles/components.css";
 
 interface NavigationProps {
   opened: boolean;
@@ -47,11 +45,31 @@ interface NavigationProps {
 interface NavigationItem {
   label: string;
   href?: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<{ size?: number }>;
   badge?: string;
   children?: NavigationItem[];
   external?: boolean;
 }
+
+const ARIA_LABELS = {
+	CLOSE_MENU: "Close menu",
+	SHARE: "Share",
+	DOWNLOAD: "Download",
+	SETTINGS: "Settings",
+} as const;
+
+const NAVIGATION_ITEM_BASE_STYLES = {
+	display: "flex",
+	alignItems: "center",
+	justifyContent: "space-between",
+	borderRadius: "var(--mantine-radius-default)",
+} as const;
+
+const MANTINE_COLORS = {
+	BLUE_0: "var(--mantine-color-blue-0)",
+	BLUE_6: "var(--mantine-color-blue-6)",
+	GRAY_7: "var(--mantine-color-gray-7)",
+} as const;
 
 export function Navigation({ opened, onClose }: NavigationProps) {
 	const pathname = usePathname();
@@ -150,12 +168,9 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 						p="md"
 						onClick={() => { toggleSection(item.label); }}
 						style={{
-							display: "flex",
-							alignItems: "center",
-							justifyContent: "space-between",
-							borderRadius: "var(--mantine-radius-default)",
-							backgroundColor: active ? "var(--mantine-color-blue-0)" : "transparent",
-							color: active ? "var(--mantine-color-blue-6)" : "var(--mantine-color-gray-7)",
+							...NAVIGATION_ITEM_BASE_STYLES,
+							backgroundColor: active ? MANTINE_COLORS.BLUE_0 : "transparent",
+							color: active ? MANTINE_COLORS.BLUE_6 : MANTINE_COLORS.GRAY_7,
 							fontWeight: active ? 600 : 400,
 						}}
 					>
@@ -179,7 +194,7 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 
 					<Collapse in={isSectionOpen}>
 						<Stack gap="xs" pl={level + 2}>
-							{item.children!.map((child) => renderNavigationItem(child, level + 1))}
+							{item.children?.map((child) => renderNavigationItem(child, level + 1))}
 						</Stack>
 					</Collapse>
 				</div>
@@ -213,12 +228,9 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 					target={item.external ? "_blank" : undefined}
 					rel={item.external ? "noopener noreferrer" : undefined}
 					style={{
-						display: "flex",
-						alignItems: "center",
-						justifyContent: "space-between",
-						borderRadius: "var(--mantine-radius-default)",
-						backgroundColor: active ? "var(--mantine-color-blue-0)" : "transparent",
-						color: active ? "var(--mantine-color-blue-6)" : "var(--mantine-color-gray-7)",
+						...NAVIGATION_ITEM_BASE_STYLES,
+						backgroundColor: active ? MANTINE_COLORS.BLUE_0 : "transparent",
+						color: active ? MANTINE_COLORS.BLUE_6 : MANTINE_COLORS.GRAY_7,
 						fontWeight: active ? 600 : 400,
 					}}
 				>
@@ -233,11 +245,8 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 				w="100%"
 				p="md"
 				style={{
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "space-between",
-					borderRadius: "var(--mantine-radius-default)",
-					color: "var(--mantine-color-gray-7)",
+					...NAVIGATION_ITEM_BASE_STYLES,
+					color: MANTINE_COLORS.GRAY_7,
 				}}
 			>
 				{content}
@@ -268,7 +277,7 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 			<Stack p="md" gap="xs">
 				<Group justify="space-between" align="center">
 					<Title order={3}>Menu</Title>
-					<ActionIcon variant="subtle" onClick={onClose} aria-label="Close menu">
+					<ActionIcon variant="subtle" onClick={onClose} aria-label={ARIA_LABELS.CLOSE_MENU}>
             ×
 					</ActionIcon>
 				</Group>
@@ -285,7 +294,7 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 				<Divider my="md" mx="md" />
 
 				<Stack p="md" gap="xs">
-					<Text size="xs" color="dimmed" tt="uppercase" fw={600} mb="xs">
+					<Text size="xs" c="dimmed" tt="uppercase" fw={600} mb="xs">
             More
 					</Text>
 					{secondaryItems.map((item) => renderNavigationItem(item))}
@@ -295,7 +304,7 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 
 				{/* Stats/Info */}
 				<Stack p="md" gap="sm">
-					<Text size="xs" color="dimmed" tt="uppercase" fw={600}>
+					<Text size="xs" c="dimmed" tt="uppercase" fw={600}>
             Database Stats
 					</Text>
 					<Group gap="xs" wrap="nowrap">
@@ -313,17 +322,17 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 
 				{/* Quick Actions */}
 				<Stack p="md" gap="sm">
-					<Text size="xs" color="dimmed" tt="uppercase" fw={600}>
+					<Text size="xs" c="dimmed" tt="uppercase" fw={600}>
             Quick Actions
 					</Text>
 					<Group gap="xs">
-						<ActionIcon size="sm" variant="light" aria-label="Share">
+						<ActionIcon size="sm" variant="light" aria-label={ARIA_LABELS.SHARE}>
 							<IconShare size={14} />
 						</ActionIcon>
-						<ActionIcon size="sm" variant="light" aria-label="Download">
+						<ActionIcon size="sm" variant="light" aria-label={ARIA_LABELS.DOWNLOAD}>
 							<IconDownload size={14} />
 						</ActionIcon>
-						<ActionIcon size="sm" variant="light" aria-label="Settings">
+						<ActionIcon size="sm" variant="light" aria-label={ARIA_LABELS.SETTINGS}>
 							<IconSettings size={14} />
 						</ActionIcon>
 					</Group>
@@ -332,5 +341,3 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 		</Drawer>
 	);
 }
-
-export default Navigation;

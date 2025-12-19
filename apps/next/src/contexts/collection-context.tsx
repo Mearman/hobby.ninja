@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useReducer, useEffect, ReactNode } from "react";
+import React, { createContext, useContext, useReducer, useEffect, ReactNode, useCallback } from "react";
 
 import type { CollectionItem, CollectionStats, Collection, CollectionListResponse } from "@/lib/collection-storage";
 import {
@@ -148,7 +148,7 @@ function collectionReducer(state: CollectionState, action: CollectionAction): Co
 				...state,
 				items: state.items.map(item => {
 					const updatedItem = action.payload.find(updated => updated.id === item.id);
-					return updatedItem ? updatedItem : item;
+					return updatedItem ?? item;
 				}),
 			};
 		}
@@ -214,17 +214,33 @@ interface CollectionProviderProps {
 export function CollectionProvider({ children, defaultCollectionId }: CollectionProviderProps) {
 	const [state, dispatch] = useReducer(collectionReducer, initialState);
 
-	// Load collections on mount
-	useEffect(() => {
-		loadCollections();
-
-		if (defaultCollectionId) {
-			loadCollection(defaultCollectionId);
-		}
-	}, [defaultCollectionId]);
-
 	// Action implementations
-	const loadCollections = async () => {
+	const loadItems = useCallback(async (collectionId?: string) => {
+		try {
+			const targetCollectionId = collectionId ?? state.currentCollection?.id;
+			if (!targetCollectionId) return;
+
+			dispatch({ type: "SET_LOADING", payload: true });
+			const items = await getCollectionItems(targetCollectionId);
+			dispatch({ type: "SET_ITEMS", payload: items });
+		} catch (error) {
+			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to load items" });
+		}
+	}, [state.currentCollection]);
+
+	const loadStats = useCallback(async (collectionId?: string) => {
+		try {
+			const targetCollectionId = collectionId ?? state.currentCollection?.id;
+			if (!targetCollectionId) return;
+
+			const stats = await getStats(targetCollectionId);
+			dispatch({ type: "SET_STATS", payload: stats });
+		} catch (error) {
+			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to load stats" });
+		}
+	}, [state.currentCollection]);
+
+	const loadCollections = useCallback(async () => {
 		try {
 			dispatch({ type: "SET_LOADING", payload: true });
 			const result = await getCollections();
@@ -232,25 +248,34 @@ export function CollectionProvider({ children, defaultCollectionId }: Collection
 		} catch (error) {
 			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to load collections" });
 		}
-	};
+	}, []);
 
-	const loadCollection = async (collectionId: string) => {
+	const loadCollection = useCallback(async (collectionId: string) => {
 		try {
 			dispatch({ type: "SET_LOADING", payload: true });
 			const collection = await getCollection(collectionId);
-			dispatch({ type: "SET_CURRENT_COLLECTION", payload: collection || null });
+			dispatch({ type: "SET_CURRENT_COLLECTION", payload: collection ?? null });
 			await loadItems(collectionId);
 			await loadStats(collectionId);
 		} catch (error) {
 			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to load collection" });
 		}
-	};
+	}, [loadItems, loadStats]);
+
+	// Load collections on mount
+	useEffect(() => {
+		void loadCollections();
+
+		if (defaultCollectionId) {
+			void loadCollection(defaultCollectionId);
+		}
+	}, [defaultCollectionId, loadCollections, loadCollection]);
 
 	const createCollectionAction = async (name: string, description?: string): Promise<Collection> => {
 		try {
 			const collectionData: Omit<Collection, "id"> = {
 				name,
-				description: description || "",
+				description: description ?? "",
 				category: "general",
 				isPublic: false,
 				itemCount: 0,
@@ -308,19 +333,6 @@ export function CollectionProvider({ children, defaultCollectionId }: Collection
 			}
 		} catch (error) {
 			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to delete collection" });
-		}
-	};
-
-	const loadItems = async (collectionId?: string) => {
-		try {
-			const targetCollectionId = collectionId || state.currentCollection?.id;
-			if (!targetCollectionId) return;
-
-			dispatch({ type: "SET_LOADING", payload: true });
-			const items = await getCollectionItems(targetCollectionId);
-			dispatch({ type: "SET_ITEMS", payload: items });
-		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to load items" });
 		}
 	};
 
@@ -412,18 +424,6 @@ export function CollectionProvider({ children, defaultCollectionId }: Collection
 			}
 		} catch (error) {
 			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to remove items" });
-		}
-	};
-
-	const loadStats = async (collectionId?: string) => {
-		try {
-			const targetCollectionId = collectionId || state.currentCollection?.id;
-			if (!targetCollectionId) return;
-
-			const stats = await getStats(targetCollectionId);
-			dispatch({ type: "SET_STATS", payload: stats });
-		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to load stats" });
 		}
 	};
 

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 // Next.js requires default export for layout files
-// eslint-disable-next-line import/no-default-export
+ 
 export default function ItemLayout({
 	children,
 }: {
