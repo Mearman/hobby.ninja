@@ -58,6 +58,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build data package
+        run: pnpm nx build data
+        env:
+          NODE_OPTIONS: "--max-old-space-size=4096"
+
       - name: Type check
         run: pnpm nx typecheck next
 
