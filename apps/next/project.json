@@ -80,7 +80,8 @@
 					"apps/next/**/*.{ts,tsx,js,jsx}",
 					"!apps/next/.next/**",
 					"!apps/next/out/**",
-					"!apps/next/.output/**"
+					"!apps/next/.output/**",
+					"!.claude/**"
 				]
 			}
 		},
