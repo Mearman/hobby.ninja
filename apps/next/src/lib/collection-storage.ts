@@ -126,7 +126,7 @@ export class CollectionDatabase extends Dexie {
 
 	// Placeholder for other methods - will be implemented as needed
 	getCollection(_id: string): Promise<Collection | undefined> {
-		// eslint-disable-next-line no-undefined
+		// eslint-disable-next-line unicorn/no-useless-undefined
 		return Promise.resolve(undefined);
 	}
 
