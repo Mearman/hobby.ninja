@@ -8,28 +8,13 @@ import { z } from "zod";
 
 
 // Constants for magic numbers
-const ZERO = ZERO;
-const ONE = ONE;
-const TWO = TWO;
-const THREE = THREE;
-const FOUR = FOUR;
-const FIVE = FIVE;
-const SIX = SIX;
-const SEVEN = SEVEN;
-const EIGHT = EIGHT;
-const NINE = NINE;
-const TEN = TEN;
-const HUNDRED = HUNDRED;
-const THOUSAND = THOUSAND;
-const JSON_INDENTATION = TWO;
-const PERCENTAGE_MULTIPLIER = HUNDRED;
-const ARRAY_FIRST_INDEX = ZERO;
-const ARRAY_SECOND_INDEX = ONE;
-const ARRAY_THIRD_INDEX = TWO;
+const ZERO = 0;
+const ONE = 1;
 
 // Core value types that can be stored in graph properties
 // Workaround for Zod FOUR.x _zod property regression using wrapper function
 const createGraphValue = () => {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const GraphValue: z.ZodType<any> = z.lazy(() =>
 		z.union([
 			z.string(),
@@ -131,8 +116,10 @@ export const SchemaNode = z.object({
 
 	metadata: z.object({
 		version: z.string().optional(),
-		createdAt: z.string().datetime().optional(),
-		updatedAt: z.string().datetime().optional(),
+		// eslint-disable-next-line @typescript-eslint/no-deprecated
+		createdAt: z.string().datetime({ offset: true }).optional(),
+		// eslint-disable-next-line @typescript-eslint/no-deprecated
+		updatedAt: z.string().datetime({ offset: true }).optional(),
 	}).optional(),
 });
 
@@ -148,8 +135,10 @@ export const DataNode = z.object({
 
 	// Runtime metadata
 	metadata: z.object({
-		createdAt: z.string().datetime(),
-		updatedAt: z.string().datetime(),
+		// eslint-disable-next-line @typescript-eslint/no-deprecated
+		createdAt: z.string().datetime({ offset: true }),
+		// eslint-disable-next-line @typescript-eslint/no-deprecated
+		updatedAt: z.string().datetime({ offset: true }),
 		version: z.string().optional(),
 		source: z.string().optional(), // Data source origin
 		confidence: z.number().min(ZERO).max(ONE).optional(),
@@ -168,8 +157,10 @@ export const Relationship = z.object({
 	properties: z.record(z.string(), GraphValue).optional(),
 
 	metadata: z.object({
-		createdAt: z.string().datetime(),
-		updatedAt: z.string().datetime(),
+		// eslint-disable-next-line @typescript-eslint/no-deprecated
+		createdAt: z.string().datetime({ offset: true }),
+		// eslint-disable-next-line @typescript-eslint/no-deprecated
+		updatedAt: z.string().datetime({ offset: true }),
 		strength: z.number().min(ZERO).max(ONE).optional(), // Edge weight
 		confidence: z.number().min(ZERO).max(ONE).optional(),
 	}).optional(),
@@ -185,8 +176,10 @@ export const ArbitraryGraph = z.object({
 
 	metadata: z.object({
 		version: z.string().default("ONE.ZERO.ZERO"),
-		createdAt: z.string().datetime(),
-		updatedAt: z.string().datetime(),
+		// eslint-disable-next-line @typescript-eslint/no-deprecated
+		createdAt: z.string().datetime({ offset: true }),
+		// eslint-disable-next-line @typescript-eslint/no-deprecated
+		updatedAt: z.string().datetime({ offset: true }),
 		description: z.string().optional(),
 		totalNodes: z.number(),
 		totalRelationships: z.number(),
@@ -217,15 +210,15 @@ export class ArbitraryGraphManager {
 
 	// Get nodes by category
 	getSchemaNodes(): SchemaNodeUnion[] {
-		return this.graph.nodes.filter(isSchemaNode);
+		return this.graph.nodes.filter((node): node is SchemaNodeUnion => isSchemaNode(node));
 	}
 
 	getDataNodes(): DataNodeUnion[] {
-		return this.graph.nodes.filter(isDataNode);
+		return this.graph.nodes.filter((node): node is DataNodeUnion => isDataNode(node));
 	}
 
 	getRelationships(): RelationshipUnion[] {
-		return this.graph.nodes.filter(isRelationship);
+		return this.graph.nodes.filter((node): node is RelationshipUnion => isRelationship(node));
 	}
 
 	// Get nodes by type
@@ -240,7 +233,7 @@ export class ArbitraryGraphManager {
 	// Get schema for a data node
 	getSchemaForDataNode(dataNode: DataNodeUnion): SchemaNodeUnion | null {
 		const schemaNode = this.getSchemaNodes().find(schema => schema.id === dataNode.schemaId);
-		return schemaNode || null;
+		return schemaNode ?? null;
 	}
 
 	// Validate data node against its schema
@@ -321,28 +314,34 @@ export class ArbitraryGraphManager {
 		const dataNodes = this.getDataNodes();
 		const relationships = this.getRelationships();
 
+		const schemaNodesByType: Record<string, number> = {};
+		for (const node of schemaNodes) {
+			schemaNodesByType[node.type] = (schemaNodesByType[node.type] ?? ZERO) + ONE;
+		}
+
+		const dataNodesByType: Record<string, number> = {};
+		for (const node of dataNodes) {
+			dataNodesByType[node.type] = (dataNodesByType[node.type] ?? ZERO) + ONE;
+		}
+
+		const relationshipsByType: Record<string, number> = {};
+		for (const rel of relationships) {
+			relationshipsByType[rel.type] = (relationshipsByType[rel.type] ?? ZERO) + ONE;
+		}
+
 		return {
 			totalNodes: this.graph.nodes.length,
 			schemaNodes: {
 				total: schemaNodes.length,
-				byType: schemaNodes.reduce<Record<string, number>>((acc, node) => {
-					acc[node.type] = (acc[node.type] || ZERO) + ONE;
-					return acc;
-				}, {}),
+				byType: schemaNodesByType,
 			},
 			dataNodes: {
 				total: dataNodes.length,
-				byType: dataNodes.reduce<Record<string, number>>((acc, node) => {
-					acc[node.type] = (acc[node.type] || ZERO) + ONE;
-					return acc;
-				}, {}),
+				byType: dataNodesByType,
 			},
 			relationships: {
 				total: relationships.length,
-				byType: relationships.reduce<Record<string, number>>((acc, rel) => {
-					acc[rel.type] = (acc[rel.type] || ZERO) + ONE;
-					return acc;
-				}, {}),
+				byType: relationshipsByType,
 			},
 		};
 	}
