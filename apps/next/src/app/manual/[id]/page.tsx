@@ -1,13 +1,10 @@
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { getManualById, getManualIds, getNodeDisplayName, type Manual } from "@hobby-ninja/data";
 import {
 	Badge,
-	Box,
 	Button,
 	Card,
 	Container,
 	Group,
-	Image,
 	Stack,
 	Text,
 	Title,
@@ -19,10 +16,10 @@ import {
 	IconLanguage,
 	IconPhoto,
 } from "@tabler/icons-react";
+import { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
-import { getManualById, getManualIds, getNodeDisplayName, type Manual } from "@hobby-ninja/data";
-import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 
 interface ManualPageProps {
 	params: Promise<{ id: string }>;
@@ -197,8 +194,8 @@ export default async function ManualDetailPage({ params }: ManualPageProps) {
 									<Text fw={500} c="blue">
 										{typeof itemName === "string"
 											? itemName
-											: typeof itemName === "object" && itemName
-												? (itemName.en || itemName.ja)
+											: typeof itemName === "object"
+												? (itemName.en ?? itemName.ja)
 												: "View Product"}
 									</Text>
 								</Link>

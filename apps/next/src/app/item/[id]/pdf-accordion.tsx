@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
 import { Accordion, Box, Skeleton, ActionIcon, Group, Tooltip, Switch, Card, Stack } from "@mantine/core";
 import { IconDownload, IconExternalLink, IconFileTypePdf, IconArrowsHorizontal } from "@tabler/icons-react";
+import { useCallback, useState, useRef } from "react";
 
 const STORAGE_KEY = "pdf-full-width-preference";
 
@@ -18,28 +18,33 @@ interface PdfAccordionProps {
 }
 
 function useFullWidthPreference() {
-	const [fullWidth, setFullWidth] = useState(false);
-	const [isHydrated, setIsHydrated] = useState(false);
-
-	useEffect(() => {
+	const [state, setState] = useState<{ fullWidth: boolean; isHydrated: boolean }>(() => {
+		// Lazy initializer: only runs once during mount
+		// Safe to access localStorage here - component is client-side only
 		const stored = localStorage.getItem(STORAGE_KEY);
-		if (stored !== null) {
-			setFullWidth(stored === "true");
-		}
-		setIsHydrated(true);
+		return {
+			fullWidth: stored === "true",
+			isHydrated: true,
+		};
+	});
+
+	const toggleFullWidth = useCallback(() => {
+		setState((prev) => {
+			const newValue = !prev.fullWidth;
+			localStorage.setItem(STORAGE_KEY, String(newValue));
+			return { ...prev, fullWidth: newValue };
+		});
 	}, []);
 
-	const toggleFullWidth = () => {
-		const newValue = !fullWidth;
-		setFullWidth(newValue);
-		localStorage.setItem(STORAGE_KEY, String(newValue));
-	};
-
-	return { fullWidth, toggleFullWidth, isHydrated };
+	return { fullWidth: state.fullWidth, toggleFullWidth, isHydrated: state.isHydrated };
 }
 
 // Height for PDF viewer: full viewport minus space for accordion header and some padding
 const PDF_HEIGHT = "calc(100vh - 120px)";
+// Delay for scroll-to-accordion timing in milliseconds
+const SCROLL_DELAY_MS = 250;
+// Top padding offset for scroll position
+const SCROLL_TOP_OFFSET = 16;
 
 export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 	const [expandedItems, setExpandedItems] = useState<string[]>([]);
@@ -66,8 +71,8 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 					el = el.offsetParent as HTMLElement | null;
 				}
 				setTimeout(() => {
-					window.scrollTo({ top: top - 16, behavior: "smooth" });
-				}, 250);
+					window.scrollTo({ top: top - SCROLL_TOP_OFFSET, behavior: "smooth" });
+				}, SCROLL_DELAY_MS);
 			}
 		}
 	};
@@ -82,20 +87,20 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 
 	const fullWidthStyles = shouldExpand
 		? {
-				marginLeft: "calc(-50vw + 50%)",
-				marginRight: "calc(-50vw + 50%)",
-				width: "100vw",
-				paddingLeft: "1rem",
-				paddingRight: "1rem",
-				transition: "margin 0.2s ease-out, width 0.2s ease-out, padding 0.2s ease-out",
-			}
+			marginLeft: "calc(-50vw + 50%)",
+			marginRight: "calc(-50vw + 50%)",
+			width: "100vw",
+			paddingLeft: "1rem",
+			paddingRight: "1rem",
+			transition: "margin 0.2s ease-out, width 0.2s ease-out, padding 0.2s ease-out",
+		}
 		: {
-				transition: "margin 0.2s ease-out, width 0.2s ease-out, padding 0.2s ease-out",
-			};
+			transition: "margin 0.2s ease-out, width 0.2s ease-out, padding 0.2s ease-out",
+		};
 
 	return (
 		<Box style={fullWidthStyles}>
-			<Card withBorder p="lg">
+			<Card withBorder={true} p="lg">
 				<Stack gap="md">
 					{/* Header content passed from parent */}
 					{header}
@@ -118,7 +123,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 
 					{/* PDF Accordion */}
 					<Accordion
-						multiple
+						multiple={true}
 						value={expandedItems}
 						onChange={handleChange}
 						variant="separated"
@@ -141,11 +146,11 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 									<Accordion.Control icon={<IconFileTypePdf size={20} />}>
 										<Group justify="space-between" wrap="nowrap" pr="md">
 											<span>{pdf.name}</span>
-											<Group gap="xs" onClick={(e) => e.stopPropagation()}>
+											<Group gap="xs" onClick={(e) => { e.stopPropagation(); }}>
 												<ActionIcon
 													component="a"
 													href={pdf.src}
-													download
+													download={true}
 													variant="subtle"
 													color="gray"
 													size="sm"
@@ -184,7 +189,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 												<iframe
 													src={pdf.src}
 													title={pdf.title}
-													onLoad={() => handleLoad(itemId)}
+													onLoad={() => { handleLoad(itemId); }}
 													style={{
 														width: "100%",
 														height: PDF_HEIGHT,

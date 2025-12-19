@@ -1,7 +1,10 @@
-import { Badge } from "@/components/ui/badge";
+import { getNodeDisplayName } from "@hobby-ninja/data";
+import {
+	categoriesList,
+	type Category,
+} from "@hobby-ninja/data/categories";
 import {
 	Anchor,
-	Avatar,
 	Box,
 	Breadcrumbs,
 	Card,
@@ -25,11 +28,7 @@ import {
 import Link from "next/link";
 import React from "react";
 
-import {
-	categoriesList,
-	type Category,
-} from "@hobby-ninja/data/categories";
-import { getNodeDisplayName } from "@hobby-ninja/data";
+import { Badge } from "@/components/ui/badge";
 import { categoryCard, categoryIcon } from "@/styles/components.css";
 
 interface CategoryWithCount extends Category {
@@ -68,7 +67,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 	default: "#748ffc",
 };
 
-const FEATURED_CATEGORIES = ["gunpla", "character-plastic-model", "30-minutes-label"];
+const FEATURED_CATEGORIES = new Set(["gunpla", "character-plastic-model", "30-minutes-label"]);
 
 // Enhanced Category Card Component
 function EnhancedCategoryCard({
@@ -81,51 +80,51 @@ function EnhancedCategoryCard({
 
 	return (
 		<Link href={`/category/${category.id}`} style={{ textDecoration: "none", color: "inherit" }}>
-		<Card
-			p="lg"
-			radius="md"
-			className={categoryCard}
-			withBorder={true}
-			h="100%"
-			pos="relative"
-		>
-			{category.featured && (
-				<Box pos="absolute" top={10} right={10}>
-					<Badge color="yellow" variant="filled" size="xs">
-						<IconStar size={10} style={{ marginRight: 4 }} />
+			<Card
+				p="lg"
+				radius="md"
+				className={categoryCard}
+				withBorder={true}
+				h="100%"
+				pos="relative"
+			>
+				{category.featured && (
+					<Box pos="absolute" top={10} right={10}>
+						<Badge color="yellow" variant="filled" size="xs">
+							<IconStar size={10} style={{ marginRight: 4 }} />
 						Featured
-					</Badge>
-				</Box>
-			)}
+						</Badge>
+					</Box>
+				)}
 
-			<Stack align="center" gap="md">
-				<div
-					className={categoryIcon}
-					style={{
-						backgroundColor: `${color}20`,
-						borderColor: color,
-						color: color
-					}}
-				>
-					{icon}
-				</div>
+				<Stack align="center" gap="md">
+					<div
+						className={categoryIcon}
+						style={{
+							backgroundColor: `${color}20`,
+							borderColor: color,
+							color: color,
+						}}
+					>
+						{icon}
+					</div>
 
-				<Stack align="center" gap={4}>
-					<Text size="lg" fw={600} ta="center" lineClamp={2}>
-						{getNodeDisplayName(category)}
-					</Text>
-					{category.description && (
-						<Text size="sm" c="dimmed" ta="center" lineClamp={2}>
-							{category.description}
+					<Stack align="center" gap={4}>
+						<Text size="lg" fw={600} ta="center" lineClamp={2}>
+							{getNodeDisplayName(category)}
 						</Text>
-					)}
-				</Stack>
+						{category.description && (
+							<Text size="sm" c="dimmed" ta="center" lineClamp={2}>
+								{category.description}
+							</Text>
+						)}
+					</Stack>
 
-				<Badge variant="light" size="sm" color={color}>
-					{category.itemCount} items
-				</Badge>
-			</Stack>
-		</Card>
+					<Badge variant="light" size="sm" color={color}>
+						{category.itemCount} items
+					</Badge>
+				</Stack>
+			</Card>
 		</Link>
 	);
 }
@@ -141,41 +140,41 @@ function FeaturedCategories({ categories }: {
 	return (
 		<Box mb="xl">
 			<Title order={2} mb="md">
-				<IconFlame size={24} style={{ marginRight: 8, color: 'var(--mantine-color-yellow-6)' }} />
+				<IconFlame size={24} style={{ marginRight: 8, color: "var(--mantine-color-yellow-6)" }} />
 				Featured Categories
 			</Title>
 			<SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="md">
 				{featured.map((category) => (
 					<Link key={category.id} href={`/category/${category.id}`} style={{ textDecoration: "none", color: "inherit" }}>
-					<Card
-						p="lg"
-						radius="md"
-						withBorder={true}
-						style={{
-							background: `linear-gradient(135deg, ${CATEGORY_COLORS[category.id] ?? CATEGORY_COLORS.default}10 0%, transparent 100%)`,
-							borderColor: CATEGORY_COLORS[category.id] ?? CATEGORY_COLORS.default,
-						}}
-					>
-						<Group gap="md">
-							<div
-								className={categoryIcon}
-								style={{
-									backgroundColor: `${CATEGORY_COLORS[category.id] ?? CATEGORY_COLORS.default}20`,
-									borderColor: CATEGORY_COLORS[category.id] ?? CATEGORY_COLORS.default,
-								}}
-							>
-								{CATEGORY_ICONS[category.id] ?? CATEGORY_ICONS.default}
-							</div>
-							<Box style={{ flex: 1 }}>
-								<Text fw={600} mb="xs">
-									{getNodeDisplayName(category)}
-								</Text>
-								<Badge variant="light" size="sm" color={CATEGORY_COLORS[category.id]}>
-									{category.itemCount} items
-								</Badge>
-							</Box>
-						</Group>
-					</Card>
+						<Card
+							p="lg"
+							radius="md"
+							withBorder={true}
+							style={{
+								background: `linear-gradient(135deg, ${CATEGORY_COLORS[category.id] ?? CATEGORY_COLORS.default}10 0%, transparent 100%)`,
+								borderColor: CATEGORY_COLORS[category.id] ?? CATEGORY_COLORS.default,
+							}}
+						>
+							<Group gap="md">
+								<div
+									className={categoryIcon}
+									style={{
+										backgroundColor: `${CATEGORY_COLORS[category.id] ?? CATEGORY_COLORS.default}20`,
+										borderColor: CATEGORY_COLORS[category.id] ?? CATEGORY_COLORS.default,
+									}}
+								>
+									{CATEGORY_ICONS[category.id] ?? CATEGORY_ICONS.default}
+								</div>
+								<Box style={{ flex: 1 }}>
+									<Text fw={600} mb="xs">
+										{getNodeDisplayName(category)}
+									</Text>
+									<Badge variant="light" size="sm" color={CATEGORY_COLORS[category.id]}>
+										{category.itemCount} items
+									</Badge>
+								</Box>
+							</Group>
+						</Card>
 					</Link>
 				))}
 			</SimpleGrid>
@@ -187,7 +186,7 @@ function FeaturedCategories({ categories }: {
 function RecentlyUpdatedCategories({ categories }: { categories: CategoryWithCount[] }) {
 	const recentlyUpdated = categories
 		.filter(cat => cat.lastUpdated)
-		.sort((a, b) => (b.lastUpdated?.getTime() ?? 0) - (a.lastUpdated?.getTime() ?? 0))
+		.toSorted((a, b) => (b.lastUpdated?.getTime() ?? 0) - (a.lastUpdated?.getTime() ?? 0))
 		.slice(0, 5);
 
 	if (recentlyUpdated.length === 0) return null;
@@ -247,7 +246,7 @@ function CategoryStatistics({ stats }: { stats: CategoryStats }) {
 					<Text size="sm" c="dimmed">Avg Items/Category</Text>
 				</Box>
 				<Box ta="center">
-					<Text size="xl" fw={600} c="grape" truncate>
+					<Text size="xl" fw={600} c="grape" truncate={true}>
 						{getNodeDisplayName(stats.mostPopular)}
 					</Text>
 					<Text size="sm" c="dimmed">Most Popular</Text>
@@ -267,7 +266,7 @@ function getCategoryDescription(categoryId: string): string {
 		"product-list": "Complete catalog of all available products and models",
 	};
 
-	return descriptions[categoryId] ?? `Browse items in the ${categoryId.replace(/-/g, ' ')} category`;
+	return descriptions[categoryId] ?? `Browse items in the ${categoryId.replaceAll("-", " ")} category`;
 }
 
 // Server Component - Data loaded at build time
@@ -288,13 +287,13 @@ export default function CategoriesPage() {
 			popularity: Math.max(10, Math.min(100, (itemCount / Math.max(1, totalCount * 0.1)) * 100)),
 			description: getCategoryDescription(category.id),
 			lastUpdated: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000), // Random date within last 30 days
-			featured: FEATURED_CATEGORIES.includes(category.id),
+			featured: FEATURED_CATEGORIES.has(category.id),
 		};
 	});
 
 	// Sort categories by name
-	const categories = categoriesWithCounts.sort((a, b) =>
-		getNodeDisplayName(a).localeCompare(getNodeDisplayName(b))
+	const categories = categoriesWithCounts.toSorted((a, b) =>
+		getNodeDisplayName(a).localeCompare(getNodeDisplayName(b)),
 	);
 
 	// Calculate statistics
@@ -304,7 +303,7 @@ export default function CategoriesPage() {
 		cat.itemCount > max.itemCount ? cat : max, categories[0] ?? {} as CategoryWithCount);
 	const recentlyUpdated = [...categories]
 		.filter(cat => cat.lastUpdated)
-		.sort((a, b) => (b.lastUpdated?.getTime() ?? 0) - (a.lastUpdated?.getTime() ?? 0))
+		.toSorted((a, b) => (b.lastUpdated?.getTime() ?? 0) - (a.lastUpdated?.getTime() ?? 0))
 		.slice(0, 5);
 
 	const stats: CategoryStats = {
@@ -339,7 +338,7 @@ export default function CategoriesPage() {
 				{/* Header */}
 				<Box>
 					<Title order={1} mb="sm">
-						<IconApps size={36} style={{ marginRight: 12, verticalAlign: 'middle' }} />
+						<IconApps size={36} style={{ marginRight: 12, verticalAlign: "middle" }} />
 						Category Explorer
 					</Title>
 					<Text size="lg" c="dimmed">

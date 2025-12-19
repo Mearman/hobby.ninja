@@ -1,15 +1,13 @@
-import { CategoryPageClient } from "./category-page-client";
-
 import {
-	getCategoryIds,
 	getCategoryById,
+	getCategoryIds,
 	getItemById,
-	getNodeDisplayName,
-	type Category,
 } from "@hobby-ninja/data";
-import { Container, Title, Text, Group, Button } from "@mantine/core";
+import { Button, Container, Group, Text, Title } from "@mantine/core";
 import { IconArrowLeft, IconFolderOff } from "@tabler/icons-react";
 import Link from "next/link";
+
+import { CategoryPageClient } from "./category-page-client";
 
 // Server component for static generation
 export default async function CategoryPage({ params }: { params: Promise<{ id: string }> }) {
@@ -43,7 +41,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
 						Category Not Found
 					</Title>
 					<Text ta="center" c="dimmed" size="lg" mb="xl">
-						The category you're looking for doesn't exist or has been moved.
+						The category you&rsquo;re looking for doesn&rsquo;t exist or has been moved.
 					</Text>
 					<Group justify="center">
 						<Link href="/categories" style={{ textDecoration: "none" }}>

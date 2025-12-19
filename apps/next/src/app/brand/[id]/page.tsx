@@ -30,7 +30,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-// Import lightweight static params for generateStaticParams
 import { BrandItemsClient } from "./brand-items-client";
 
 

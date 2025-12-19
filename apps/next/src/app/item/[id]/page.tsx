@@ -1,31 +1,31 @@
 import {
-	getItemIds,
-	getItemById,
 	getBrandById,
-	getSeriesById,
 	getCategoryById,
+	getItemById,
+	getItemIds,
 	getManualById,
-	type Item,
-	getNodeDisplayName,
-	getNodePrimaryGrade,
-	getNodePrice,
-	getNodeReleaseDate,
-	getNodeImages,
 	getNodeAccessories,
+	getNodeDisplayName,
+	getNodeImages,
+	getNodePrice,
+	getNodePrimaryGrade,
+	getNodeReleaseDate,
+	getSeriesById,
 	isItem,
 	resolveImageUrl,
 	resolveManualUrl,
+	type Item,
 } from "@hobby-ninja/data";
 import {
-	Container,
-	Card,
+	Anchor,
 	Badge,
+	Card,
+	Container,
 	Group,
+	SimpleGrid,
 	Stack,
 	Text,
 	Title,
-	SimpleGrid,
-	Anchor,
 } from "@mantine/core";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -33,8 +33,6 @@ import { notFound } from "next/navigation";
 
 import { ItemImageGallery } from "./item-image-gallery";
 import { PdfAccordion } from "./pdf-accordion";
-
-// Import from canonical data package
 
 interface ItemPageProps {
 	params: Promise<{ id: string }>;
