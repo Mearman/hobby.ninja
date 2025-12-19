@@ -84,14 +84,6 @@ export default defineConfig({
       junit: './coverage/junit.xml',
     },
     pool: 'threads', // Use thread pool for better performance
-    poolOptions: {
-      threads: {
-        singleThread: false,
-        maxThreads: 4,
-        minThreads: 1,
-        useAtomics: true,
-      },
-    },
     onConsoleLog: (log, type) => {
       // Control console output during tests
       if (type === 'stderr' && log.includes('Warning:')) {

@@ -28,13 +28,10 @@
 	"exclude": ["dist", "node_modules"],
 	"references": [
 		{
-			"path": "../translation"
-		},
-		{
-			"path": "../utils"
-		},
-		{
 			"path": "../types"
+		},
+		{
+			"path": "../translation"
 		}
 	]
 }

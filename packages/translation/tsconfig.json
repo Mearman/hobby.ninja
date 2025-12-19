@@ -16,9 +16,5 @@
 	},
 	"include": ["src/**/*.ts"],
 	"exclude": ["**/*.test.ts", "**/*.spec.ts", "src/examples.ts"],
-	"references": [
-		{
-			"path": "../utils"
-		}
-	]
+	"references": []
 }
