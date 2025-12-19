@@ -13,6 +13,8 @@ import {
 	getNodeImages,
 	getNodeAccessories,
 	isItem,
+	resolveImageUrl,
+	resolveManualUrl,
 } from "@hobby-ninja/data";
 import {
 	Container,
@@ -223,7 +225,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 							const suffix = index === 0 ? "" : `_${index + 1}`;
 							return {
 								name: pdf.name.en ?? pdf.name.ja,
-								src: `/manuals/${manual.id}/${manual.id}${suffix}.pdf`,
+								src: resolveManualUrl(`manuals/${manual.id}/${manual.id}${suffix}.pdf`),
 								title: `${getNodeDisplayName(manual)} - ${pdf.name.en ?? pdf.name.ja}`,
 							};
 						})}
@@ -232,7 +234,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 								<Group gap="md" align="flex-start">
 									{manual.thumbnailImage && (
 										<img
-											src={manual.thumbnailImage}
+											src={resolveImageUrl(manual.thumbnailImage)}
 											alt={getNodeDisplayName(manual)}
 											style={{
 												width: 80,
@@ -285,7 +287,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 									</Anchor>
 									{manual.pdfs.map((pdf, index) => {
 										const suffix = index === 0 ? "" : `_${index + 1}`;
-										const pdfPath = `/manuals/${manual.id}/${manual.id}${suffix}.pdf`;
+										const pdfPath = resolveManualUrl(`manuals/${manual.id}/${manual.id}${suffix}.pdf`);
 										const pdfName = pdf.name.en ?? pdf.name.ja;
 										return (
 											<Anchor

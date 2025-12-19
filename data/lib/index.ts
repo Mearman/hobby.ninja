@@ -12,3 +12,6 @@ export * from "./scales.js";
 export * from "./tags.js";
 export * from "./homepage.js";
 export * from "./search.js";
+
+// Re-export CDN utilities
+export * from "./cdn.js";

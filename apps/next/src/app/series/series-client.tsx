@@ -1,6 +1,6 @@
 "use client";
 
-import { getNodeDisplayName, type Series } from "@hobby-ninja/data";
+import { getNodeDisplayName, type Series, resolveImageUrl } from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -60,7 +60,7 @@ function SeriesCard({ series }: { series: SeriesWithStats }) {
 				<Stack gap="md">
 					<Box h={120} className={seriesImage}>
 						<Image
-							src={coverImage ?? createPlaceholderSvg(getNodeDisplayName(series).slice(0, 20), 200, 120)}
+							src={coverImage ? resolveImageUrl(coverImage) : createPlaceholderSvg(getNodeDisplayName(series).slice(0, 20), 200, 120)}
 							alt={getNodeDisplayName(series)}
 							fit="cover"
 							radius="sm"

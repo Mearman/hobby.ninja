@@ -18,6 +18,7 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { resolveImageUrl } from "@hobby-ninja/data";
 
 import { InfiniteScrollLoader } from "@/components/ui/infinite-scroll-loader";
 import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
@@ -81,7 +82,7 @@ function BrandCard({ brand }: { brand: BrandWithStats }) {
 						<Group gap="sm">
 							<Box w={80} h={80}>
 								<Image
-									src={brand.image ?? createPlaceholderSvg(getDisplayName(brand).slice(0, 3), 80, 80)}
+									src={brand.image ? resolveImageUrl(brand.image) : createPlaceholderSvg(getDisplayName(brand).slice(0, 3), 80, 80)}
 									alt={getDisplayName(brand)}
 									fit="contain"
 									radius="sm"

@@ -101,6 +101,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/images/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        port: '',
+        pathname: '/Mearman/hobby.ninja/main/assets/**',
+      },
     ],
   },
 
