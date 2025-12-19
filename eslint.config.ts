@@ -43,6 +43,7 @@ export default [
 			".prettierrc.json",
 			".syncpackrc.json",
 			"**/*.json",
+			"**/*.md",
 		],
 	},
 
