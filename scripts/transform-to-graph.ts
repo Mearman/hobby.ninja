@@ -328,12 +328,12 @@ class DataTransformer {
         properties: {
           name: field.name,
           fieldType: field.fieldType,
-          required: field.required || false,
-          searchable: field.searchable || false,
-          filterable: field.filterable || false,
-          displayInList: field.displayInList !== false,
+          required: (field as any).required || false,
+          searchable: (field as any).searchable || false,
+          filterable: (field as any).filterable || false,
+          displayInList: (field as any).displayInList !== false,
           displayInDetail: true,
-          order: field.order || (10 + index),
+          order: (field as any).order || (10 + index),
           description: `${field.name} field for ${hobbyType.name}`,
         },
       });
@@ -522,7 +522,7 @@ class DataTransformer {
       z.number(),
       z.boolean(),
       z.array(z.unknown()),
-      z.record(z.unknown()),
+      z.record(z.string(), z.unknown()),
       z.date(),
       z.null(),
     ]);
@@ -542,7 +542,7 @@ class DataTransformer {
     const nodeSchema = z.object({
       id: z.string(),
       type: z.enum(['hobby_type', 'brand', 'scale', 'category', 'field', 'attribute', 'value']),
-      properties: z.record(PropertyValueSchema).optional(),
+      properties: z.record(z.string(), PropertyValueSchema).optional(),
       metadata: z.object({
         createdAt: z.string().datetime().optional(),
         updatedAt: z.string().datetime().optional(),
@@ -558,7 +558,7 @@ class DataTransformer {
       fromNode: z.string(),
       toNode: z.string(),
       directed: z.boolean().optional(),
-      properties: z.record(PropertyValueSchema).optional(),
+      properties: z.record(z.string(), PropertyValueSchema).optional(),
       metadata: z.object({
         createdAt: z.string().datetime().optional(),
         updatedAt: z.string().datetime().optional(),
@@ -654,16 +654,14 @@ class DataTransformer {
 
     // Add hobby-specific fields
     if (hobbyType.brands?.length) {
-      const brandRef = z.ref(`brands#/properties/name`);
       itemSchema = itemSchema.extend({
-        brand: brandRef.optional(),
+        brand: z.string().optional(),
       });
     }
 
     if (hobbyType.scales?.length) {
-      const scaleRef = z.ref(`scales#/properties/name`);
       itemSchema = itemSchema.extend({
-        scale: scaleRef.optional(),
+        scale: z.string().optional(),
       });
     }
 
