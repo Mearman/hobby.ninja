@@ -126,7 +126,8 @@ export class CollectionDatabase extends Dexie {
 
 	// Placeholder for other methods - will be implemented as needed
 	getCollection(_id: string): Promise<Collection | undefined> {
-		return Promise.resolve();
+		// eslint-disable-next-line no-undefined
+		return Promise.resolve(undefined);
 	}
 
 	updateCollection(id: string, _updates: Partial<Collection>): Promise<string> {
