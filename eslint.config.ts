@@ -39,8 +39,10 @@ export default [
 		ignores: [
 			".claude/**",
 			".nx/**",
+			".vscode/**",
 			".prettierrc.json",
 			".syncpackrc.json",
+			"**/*.json",
 		],
 	},
 
