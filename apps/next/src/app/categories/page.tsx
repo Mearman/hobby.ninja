@@ -273,20 +273,22 @@ function getCategoryDescription(categoryId: string): string {
 export default function CategoriesPage() {
 	// Load data synchronously at build time
 	const categoriesData = categoriesList;
+	// Threshold for popularity calculation (10% of total categories)
+	const POPULARITY_THRESHOLD = 0.1;
 
 	// Attach item counts and additional metadata to categories
 	const categoriesWithCounts = categoriesData.map(category => {
 		// Count items using the itemIds array on each category
-		const itemCount = category.itemIds?.length ?? 0;
+		const itemCount = category.itemIds.length;
 		const totalCount = categoriesData.length;
 
 		// Generate additional metadata
 		return {
 			...category,
 			itemCount,
-			popularity: Math.max(10, Math.min(100, (itemCount / Math.max(1, totalCount * 0.1)) * 100)),
+			popularity: Math.max(10, Math.min(100, (itemCount / Math.max(1, totalCount * POPULARITY_THRESHOLD)) * 100)),
 			description: getCategoryDescription(category.id),
-			lastUpdated: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000), // Random date within last 30 days
+			lastUpdated: undefined,
 			featured: FEATURED_CATEGORIES.has(category.id),
 		};
 	});
@@ -297,14 +299,21 @@ export default function CategoriesPage() {
 	);
 
 	// Calculate statistics
-	const totalItems = categories.reduce((sum, cat) => sum + cat.itemCount, 0);
+	let totalItems = 0;
+	for (const cat of categories) {
+		totalItems += cat.itemCount;
+	}
+
 	const avgItemsPerCategory = categories.length > 0 ? totalItems / categories.length : 0;
-	const mostPopular = categories.reduce((max, cat) =>
-		cat.itemCount > max.itemCount ? cat : max, categories[0] ?? {} as CategoryWithCount);
-	const recentlyUpdated = [...categories]
-		.filter(cat => cat.lastUpdated)
-		.toSorted((a, b) => (b.lastUpdated?.getTime() ?? 0) - (a.lastUpdated?.getTime() ?? 0))
-		.slice(0, 5);
+	let mostPopular = categories[0] ?? ({} as CategoryWithCount);
+	for (const cat of categories) {
+		if (cat.itemCount > mostPopular.itemCount) {
+			mostPopular = cat;
+		}
+	}
+
+	// Empty recentlyUpdated since we don't have real lastUpdated data
+	const recentlyUpdated: CategoryWithCount[] = [];
 
 	const stats: CategoryStats = {
 		totalItems,
