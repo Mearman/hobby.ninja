@@ -34,16 +34,16 @@ export default defineConfig({
   fullyParallel: true,
 
   // Fail the build on CI if you accidentally left test.only in the source code
-  forbidOnly: !!process.env.CI,
+  forbidOnly: !!process.env['CI'],
 
   // Retry on CI only
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env['CI'] ? 2 : 0,
 
   // Worker configuration
-  workers: process.env.CI ? 2 : 4,
+  workers: process.env['CI'] ? 2 : 4,
 
   // Maximum test failures
-  maxFailures: process.env.CI ? 10 : undefined,
+  maxFailures: process.env['CI'] ? 10 : undefined,
 
   // Shared settings for all projects
   use: {
@@ -65,9 +65,6 @@ export default defineConfig({
 
     // Color scheme testing
     colorScheme: 'light',
-
-    // Reduced motion for accessibility testing
-    reducedMotion: 'reduce',
 
     // Ignore HTTPS errors for local testing
     ignoreHTTPSErrors: true,
@@ -114,7 +111,7 @@ export default defineConfig({
   webServer: {
     command: 'pnpm nx serve-static web',
     url: 'http://localhost:4200/hobby-ninja',
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: !process.env['CI'],
     timeout: 120 * 1000, // 2 minutes
     stdout: 'pipe',
     stderr: 'pipe',
@@ -124,13 +121,6 @@ export default defineConfig({
   reportSlowTests: {
     max: 5,
     threshold: 15000,
-  },
-
-  // Global environment variables
-  env: {
-    NODE_ENV: 'production',
-    TEST_ENV: 'production',
-    CI: process.env.CI || 'false',
   },
 
   // Metadata

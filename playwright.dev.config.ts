@@ -33,10 +33,10 @@ export default defineConfig({
   fullyParallel: true,
 
   // Retry on CI only
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env['CI'] ? 2 : 0,
 
   // Worker configuration
-  workers: process.env.CI ? 2 : 4,
+  workers: process.env['CI'] ? 2 : 4,
 
   // Shared settings for all projects
   use: {
@@ -58,9 +58,6 @@ export default defineConfig({
 
     // Color scheme testing
     colorScheme: 'light',
-
-    // Reduced motion for accessibility testing
-    reducedMotion: 'reduce',
 
     // Ignore HTTPS errors for local development
     ignoreHTTPSErrors: true,
@@ -105,13 +102,6 @@ export default defineConfig({
   reportSlowTests: {
     max: 5,
     threshold: 15000,
-  },
-
-  // Global environment variables
-  env: {
-    NODE_ENV: 'development',
-    TEST_ENV: 'development',
-    CI: process.env.CI || 'false',
   },
 
   // Metadata

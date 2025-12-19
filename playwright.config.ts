@@ -52,19 +52,19 @@ export default defineConfig({
   fullyParallel: true,
 
   // Fail the build on CI if you accidentally left test.only in the source code
-  forbidOnly: !!process.env.CI,
+  forbidOnly: !!process.env['CI'],
 
   // Retry on CI only
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env['CI'] ? 2 : 0,
 
   // Worker configuration - more workers for better performance
-  workers: process.env.CI ? 2 : 4,
+  workers: process.env['CI'] ? 2 : 4,
 
   // Maximum test failures
-  maxFailures: process.env.CI ? 10 : undefined,
+  maxFailures: process.env['CI'] ? 10 : undefined,
 
   // Update snapshots
-  updateSnapshots: process.env.CI ? 'missing' : 'all',
+  updateSnapshots: process.env['CI'] ? 'missing' : 'all',
 
   // Snapshot directory
   snapshotDir: './snapshots',
@@ -89,9 +89,6 @@ export default defineConfig({
 
     // Color scheme testing
     colorScheme: 'light',
-
-    // Reduced motion for accessibility testing
-    reducedMotion: 'reduce',
 
     // Ignore HTTPS errors for local development
     ignoreHTTPSErrors: true,
@@ -140,16 +137,9 @@ export default defineConfig({
     threshold: 15000, // 15 seconds
   },
 
-  // Global environment variables
-  env: {
-    NODE_ENV: 'test',
-    CI: process.env.CI || 'false',
-    DEBUG: process.env.DEBUG || 'false',
-  },
-
   // Advanced configuration
   metadata: {
-    'Test Environment': process.env.NODE_ENV || 'test',
+    'Test Environment': process.env['NODE_ENV'] || 'test',
     'Test Suite': 'E2E Tests',
     'Browser Coverage': 'Cross-browser',
   },

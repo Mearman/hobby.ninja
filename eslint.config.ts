@@ -7,10 +7,13 @@ import typescript from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
 import type { ESLint } from "eslint";
 import prettier from "eslint-config-prettier";
+// @ts-expect-error - no types available
 import barrelFiles from "eslint-plugin-barrel-files";
 import importPlugin from "eslint-plugin-import";
 import jsonc from "eslint-plugin-jsonc";
+// @ts-expect-error - no types available
 import jsxA11y from "eslint-plugin-jsx-a11y";
+// @ts-expect-error - no types available
 import markdown from "eslint-plugin-markdown";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -307,7 +310,7 @@ export default [
 			],
 
 			// React rules for React 19 (enhanced from Nx flat/react-jsx)
-			...react.configs.flat.recommended.rules,
+			...react.configs.flat['recommended'].rules,
 			"react/react-in-jsx-scope": "off", // Not needed in React 19+
 			"react/jsx-uses-react": "off", // Not needed in React 19+
 			"react/prop-types": "off", // Using TypeScript for prop validation

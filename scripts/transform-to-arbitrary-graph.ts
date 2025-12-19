@@ -686,6 +686,7 @@ class ArbitraryGraphTransformer {
           color: hobbyNode.properties.color || 'blue',
           fields: hobbyNode.properties.fields || [],
           settings: hobbyNode.properties.settings || {},
+          isActive: hobbyNode.properties.isActive !== false,
         };
       }
 
@@ -834,6 +835,8 @@ class ArbitraryGraphTransformer {
             confidence: product.sources?.catalog?.confidence || 1.0,
           },
           metadata: {
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
             strength: 0.9,
             confidence: product.sources?.catalog?.confidence || 1.0,
           },
@@ -863,9 +866,10 @@ class ArbitraryGraphTransformer {
         process.exit(1);
       }
     } catch (error) {
-      if (error.message.includes('_zod')) {
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      if (errorMessage.includes('_zod')) {
         console.log('⚠️  Zod _zod regression still present in 4.1.13 - validation disabled');
-        console.log('Error:', error.message);
+        console.log('Error:', errorMessage);
       } else {
         console.error('❌ Unexpected validation error:', error);
         process.exit(1);
