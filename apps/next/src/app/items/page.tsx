@@ -8,13 +8,12 @@ import {
 	Text,
 	Title,
 } from "@mantine/core";
-import {
-	IconHome,
-} from "@tabler/icons-react";
+import { IconHome } from "@tabler/icons-react";
+
+import { ItemsClient } from "./items-client";
 
 import { getAllItems } from "@/lib/graph-data";
 
-import { ItemsClient } from "./items-client";
 
 // Server Component - loads all items and passes to client for infinite scroll
 export default function ItemsPage() {

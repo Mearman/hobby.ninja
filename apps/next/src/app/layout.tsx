@@ -1,8 +1,8 @@
+import { ColorSchemeScript } from "@mantine/core";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import { ColorSchemeScript } from "@mantine/core";
-import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
+import "@mantine/core/styles.css";
 
 import { LayoutClient } from "@/components/layout/layout-client";
 
@@ -13,6 +13,9 @@ const inter = Inter({
 	display: "swap",
 });
 
+// Constants
+const APP_TITLE = "Hobby Ninja";
+
 export const metadata: Metadata = {
 	title: "hobby.ninja - Static Collection Management",
 	description: "Comprehensive hobby collection management with 8,485+ items, search, and tracking features",
@@ -21,7 +24,7 @@ export const metadata: Metadata = {
 	manifest: "/manifest.json",
 	appleWebApp: {
 		capable: true,
-		title: "Hobby Ninja",
+		title: APP_TITLE,
 		statusBarStyle: "default",
 	},
 	formatDetection: {
@@ -29,13 +32,13 @@ export const metadata: Metadata = {
 	},
 	openGraph: {
 		type: "website",
-		siteName: "Hobby Ninja",
-		title: "Hobby Ninja - Collection Manager",
+		siteName: APP_TITLE,
+		title: `${APP_TITLE} - Collection Manager`,
 		description: "Manage your hobby collections with advanced search and tracking features",
 	},
 	twitter: {
 		card: "summary",
-		title: "Hobby Ninja",
+		title: APP_TITLE,
 		description: "Progressive web app for hobby collection management",
 	},
 	icons: {
@@ -62,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" className={inter.variable} suppressHydrationWarning>
+		<html lang="en" className={inter.variable} suppressHydrationWarning={true}>
 			<head>
 				<ColorSchemeScript defaultColorScheme="light" />
 			</head>

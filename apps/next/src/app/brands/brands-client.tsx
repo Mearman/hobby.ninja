@@ -1,5 +1,6 @@
 "use client";
 
+import { resolveImageUrl } from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -18,12 +19,11 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { resolveImageUrl } from "@hobby-ninja/data";
 
 import { InfiniteScrollLoader } from "@/components/ui/infinite-scroll-loader";
 import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
 import { useUserPreferences } from "@/hooks/use-user-preferences";
-import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
+import { createErrorPlaceholderSvg, createPlaceholderSvg } from "@/lib/image-placeholders";
 import { categoryCard } from "@/styles/components.css";
 
 interface BrandWithStats {
