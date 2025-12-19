@@ -2,8 +2,11 @@ export default {
   // TypeScript and JavaScript files - use ESLint directly for faster performance
   // (Nx project graph building is slow with large data directories)
   '*.{ts,tsx,js,jsx}': (filenames) => {
-    // Filter out the lint-staged config file to prevent circular linting
-    const filteredFiles = filenames.filter(file => !file.includes('lint-staged.config.js'));
+    // Filter out configuration files to prevent circular linting
+    const filteredFiles = filenames.filter(file =>
+      !file.includes('lint-staged.config.js') &&
+      !file.includes('eslint.config.ts')
+    );
 
     if (filteredFiles.length === 0) {
       return [];

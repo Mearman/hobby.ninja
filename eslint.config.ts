@@ -34,6 +34,11 @@ const JSON_DATA_FILE_PATTERNS = [
 ];
 
 export default [
+	// Ignores must be first in the flat config array per ESLint 9 specification
+	{
+		ignores: [".claude/**"],
+	},
+
 	// Base configurations
 	js.configs.recommended,
 	prettier,
