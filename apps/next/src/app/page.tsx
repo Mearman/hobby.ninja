@@ -1,75 +1,74 @@
-import { Badge } from "@/components/ui/badge";
-
+import { getNodeDisplayName, homepage, type Item } from "@hobby-ninja/data";
 import {
-	Title,
-	Text,
-	Container,
-	Card,
-	Stack,
-	Group,
-	Button,
-	// Badge removed,
-	SimpleGrid,
-	Box,
-	rem,
-	ThemeIcon,
-	ScrollArea,
-	Avatar,
-	Divider,
-	Grid,
-	Flex,
 	ActionIcon,
+	Avatar,
+	Box,
+	Button,
+	Card,
+	Container,
+	Divider,
+	Flex,
+	Group,
+	rem,
+	SimpleGrid,
+	Stack,
+	Text,
+	ThemeIcon,
+	Title,
 	Tooltip,
 } from "@mantine/core";
 import {
-	IconSearch,
-	IconDatabase,
-	IconHeart,
-	IconDownload,
-	IconShield,
-	IconDeviceMobile,
-	IconStar,
-	IconTrendingUp,
-	IconClock,
-	IconArrowRight,
-	IconSparkles,
-	IconUsers,
-	IconBolt,
-	IconAward,
 	IconArrowNarrowRight,
-	IconCheck,
+	IconAward,
 	IconBrandGithub,
 	IconBrandTwitter,
+	IconCheck,
+	IconClock,
+	IconDatabase,
+	IconDeviceMobile,
+	IconDownload,
+	IconHeart,
+	IconSearch,
+	IconShield,
+	IconSparkles,
+	IconStar,
+	IconTrendingUp,
 } from "@tabler/icons-react";
 import Link from "next/link";
 
+import { Badge } from "@/components/ui/badge";
 import { UI } from "@/lib/constants";
-// Import pre-computed homepage data from @hobby-ninja/data
-import { homepage, getNodeDisplayName } from "@hobby-ninja/data";
+
+// Constants
+const STYLE_NO_DECORATION_INHERIT = { textDecoration: "none", color: "inherit" };
+const STYLE_CURSOR_POINTER = { cursor: "pointer" };
+const WHITE_OVERLAY_BG = "rgba(255,255,255,0.9)";
+
+// Helper function for price formatting
+function formatPrice(price?: { amount: number; currency: string }): string {
+	if (!price) return "";
+	return new Intl.NumberFormat("ja-JP", {
+		style: "currency",
+		currency: price.currency || "JPY",
+	}).format(price.amount);
+}
 
 // Item Card Component
 function ItemCard({ item, showGrade = true, showPrice = true }: {
-	item: any;
+	item: Item;
 	showGrade?: boolean;
 	showPrice?: boolean;
-}) {
-	const formatPrice = (price?: { amount: number; currency: string }) => {
-		if (!price) return "";
-		return new Intl.NumberFormat("ja-JP", {
-			style: "currency",
-			currency: price.currency || "JPY",
-		}).format(price.amount);
-	};
+}): React.ReactElement {
 
 	return (
-		<Link href={`/item/${item.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+		<Link href={`/item/${item.id}`} style={STYLE_NO_DECORATION_INHERIT}>
 			<Card
 				shadow="sm"
 				padding="md"
 				radius="md"
-				withBorder
+				withBorder={true}
 				h="100%"
-				style={{ cursor: 'pointer' }}
+				style={{ cursor: "pointer" }}
 				className="item-card-hover"
 			>
 				<Stack gap="xs">
@@ -78,19 +77,19 @@ function ItemCard({ item, showGrade = true, showPrice = true }: {
 						h={UI.THUMBNAIL_HEIGHT}
 						bg="gray.0"
 						style={{
-							borderRadius: 'var(--mantine-radius-sm)',
-							background: 'linear-gradient(135deg, var(--mantine-color-gray-0) 0%, var(--mantine-color-gray-1) 100%)'
+							borderRadius: "var(--mantine-radius-sm)",
+							background: "linear-gradient(135deg, var(--mantine-color-gray-0) 0%, var(--mantine-color-gray-1) 100%)",
 						}}
 					>
 						{item.images && item.images.length > 0 ? (
 							<img
-								src={typeof item.images[0] === 'string' ? item.images[0] : item.images[0].url}
+								src={typeof item.images[0] === "string" ? item.images[0] : item.images[0].url}
 								alt={getNodeDisplayName(item)}
 								style={{
-									width: '100%',
-									height: '100%',
-									objectFit: 'cover',
-									borderRadius: 'var(--mantine-radius-sm)'
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+									borderRadius: "var(--mantine-radius-sm)",
 								}}
 							/>
 						) : (
@@ -142,16 +141,21 @@ function ItemCard({ item, showGrade = true, showPrice = true }: {
 }
 
 // Category Card Component
-function CategoryCard({ category, itemCount = 0 }: { category: any; itemCount?: number }) {
+interface CategoryCardProps {
+	category: { id: string; name?: string | { ja: string; en?: string } };
+	itemCount?: number;
+}
+
+function CategoryCard({ category, itemCount = 0 }: CategoryCardProps) {
 	return (
-		<Link href={`/category/${category.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+		<Link href={`/category/${category.id}`} style={STYLE_NO_DECORATION_INHERIT}>
 			<Card
 				shadow="sm"
 				padding="lg"
 				radius="md"
-				withBorder
+				withBorder={true}
 				h="100%"
-				style={{ cursor: 'pointer' }}
+				style={STYLE_CURSOR_POINTER}
 			>
 				<Stack align="center" gap="md">
 					<ThemeIcon size={60} radius="xl" variant="light" color="blue">
@@ -170,16 +174,21 @@ function CategoryCard({ category, itemCount = 0 }: { category: any; itemCount?: 
 }
 
 // Brand Card Component
-function BrandCard({ brand, itemCount = 0 }: { brand: any; itemCount?: number }) {
+interface BrandCardProps {
+	brand: { id: string; name?: string | { ja: string; en?: string } };
+	itemCount?: number;
+}
+
+function BrandCard({ brand, itemCount = 0 }: BrandCardProps) {
 	return (
-		<Link href={`/brands/${brand.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+		<Link href={`/brands/${brand.id}`} style={STYLE_NO_DECORATION_INHERIT}>
 			<Card
 				shadow="sm"
 				padding="md"
 				radius="md"
-				withBorder
+				withBorder={true}
 				h="100%"
-				style={{ cursor: 'pointer' }}
+				style={STYLE_CURSOR_POINTER}
 			>
 				<Group align="center" gap="md">
 					<Avatar size={UI.BRAND_LOGO_SIZE} radius="md">
@@ -200,12 +209,21 @@ function BrandCard({ brand, itemCount = 0 }: { brand: any; itemCount?: number })
 }
 
 // Testimonial Card Component
-function TestimonialCard({ testimonial }: { testimonial: any }) {
+interface TestimonialCardProps {
+	testimonial: {
+		rating: number;
+		content: string;
+		author: string;
+		role: string;
+	};
+}
+
+function TestimonialCard({ testimonial }: TestimonialCardProps) {
 	return (
-		<Card padding="xl" radius="md" withBorder h="100%">
+		<Card padding="xl" radius="md" withBorder={true} h="100%">
 			<Stack gap="md">
 				<Group gap="xs">
-					{[...Array(5)].map((_, i) => (
+					{Array.from({length: 5}).map((_, i) => (
 						<IconStar
 							key={i}
 							size={16}
@@ -215,7 +233,7 @@ function TestimonialCard({ testimonial }: { testimonial: any }) {
 					))}
 				</Group>
 				<Text size="sm" c="dimmed" fs="italic" lineClamp={3}>
-					"{testimonial.content}"
+					&ldquo;{testimonial.content}&rdquo;
 				</Text>
 				<Divider />
 				<Group>
@@ -240,12 +258,12 @@ function TestimonialCard({ testimonial }: { testimonial: any }) {
 function StaticSearchPrompt() {
 	return (
 		<Box maw={600} mx="auto" w="100%">
-			<Link href="/search" style={{ textDecoration: 'none', color: 'inherit' }}>
+			<Link href="/search" style={{ textDecoration: "none", color: "inherit" }}>
 				<Card
-					withBorder
+					withBorder={true}
 					p="md"
 					radius="md"
-					style={{ cursor: 'pointer' }}
+					style={{ cursor: "pointer" }}
 				>
 					<Group>
 						<IconSearch size={UI.BUTTON_ICON_SIZE} color="var(--mantine-color-gray-5)" />
@@ -265,20 +283,20 @@ const sampleTestimonials = [
 		rating: 5,
 		content: "Finally, a comprehensive Gundam database that works offline! The search functionality is incredibly fast and the collection management features are exactly what I needed.",
 		author: "Alex Chen",
-		role: "Hobby Collector"
+		role: "Hobby Collector",
 	},
 	{
 		rating: 5,
 		content: "As a long-time Gundam fan, this app has revolutionized how I track my collection. The detailed information and smart filtering make it easy to find exactly what I'm looking for.",
 		author: "Sarah Mitchell",
-		role: "Model Builder"
+		role: "Model Builder",
 	},
 	{
 		rating: 4,
 		content: "The user interface is clean and intuitive. I especially love the offline capability - I can manage my collection anywhere without worrying about internet connection.",
 		author: "David Park",
-		role: "Gunpla Enthusiast"
-	}
+		role: "Gunpla Enthusiast",
+	},
 ];
 
 export default function HomePage() {
@@ -288,53 +306,6 @@ export default function HomePage() {
 
 	// Recent items not available in pre-computed data, use featured items as fallback
 	const recentItems = featuredItems.slice(0, 8);
-
-	
-	const features = [
-		{
-			icon: IconSearch,
-			title: "Advanced Search",
-			description: `Search through ${stats.totalItems.toLocaleString()}+ items with instant results and smart filtering`,
-			color: "blue",
-		},
-		{
-			icon: IconHeart,
-			title: "Collection Management",
-			description: "Track your collection with wishlist, status updates, and progress tracking",
-			color: "red",
-		},
-		{
-			icon: IconDatabase,
-			title: "Comprehensive Database",
-			description: "Detailed information about Gundam models, grades, series, and pricing",
-			color: "green",
-		},
-		{
-			icon: IconDeviceMobile,
-			title: "PWA Ready",
-			description: "Install as native app with full offline support and mobile-optimized design",
-			color: "orange",
-		},
-		{
-			icon: IconShield,
-			title: "Privacy First",
-			description: "Client-side storage means your data stays private and secure",
-			color: "violet",
-		},
-		{
-			icon: IconDownload,
-			title: "Data Export",
-			description: "Export your collection data in multiple formats for backup or sharing",
-			color: "cyan",
-		},
-	];
-
-	const displayStats = [
-		{ label: "Items", value: stats.totalItems.toLocaleString() },
-		{ label: "Brands", value: stats.totalBrands.toLocaleString() },
-		{ label: "Categories", value: stats.totalCategories.toLocaleString() },
-		{ label: "Series", value: stats.totalSeries.toLocaleString() },
-	];
 
 	return (
 		<>
@@ -370,17 +341,17 @@ export default function HomePage() {
 
 					{/* Quick Actions */}
 					<Group gap="md" mt="lg">
-						<Link href="/database" style={{ textDecoration: 'none' }}>
+						<Link href="/database" style={{ textDecoration: "none" }}>
 							<Button
 								size="lg"
 								radius="md"
 								leftSection={<IconDatabase size={20} />}
-								style={{ backgroundColor: 'var(--mantine-color-blue-5)' }}
+								style={{ backgroundColor: "var(--mantine-color-blue-5)" }}
 							>
 								Browse Database
 							</Button>
 						</Link>
-						<Link href="/search" style={{ textDecoration: 'none' }}>
+						<Link href="/search" style={{ textDecoration: "none" }}>
 							<Button
 								size="lg"
 								radius="md"
@@ -390,7 +361,7 @@ export default function HomePage() {
 								Advanced Search
 							</Button>
 						</Link>
-						<Link href="/collection" style={{ textDecoration: 'none' }}>
+						<Link href="/collection" style={{ textDecoration: "none" }}>
 							<Button
 								size="lg"
 								radius="md"
@@ -426,7 +397,7 @@ export default function HomePage() {
 								{ label: "Categories", value: stats.totalCategories.toLocaleString(), icon: IconSparkles, color: "green" },
 								{ label: "Series", value: stats.totalSeries.toLocaleString(), icon: IconTrendingUp, color: "violet" },
 							].map((stat, index) => (
-								<Card key={index} p="lg" radius="md" withBorder shadow="sm">
+								<Card key={index} p="lg" radius="md" withBorder={true} shadow="sm">
 									<Stack align="center" gap="xs">
 										<ThemeIcon color={stat.color} size={40} radius="xl" variant="light">
 											<stat.icon size={20} />
@@ -452,7 +423,7 @@ export default function HomePage() {
 						<Title order={2} size="h2" fw={600}>
 							Featured Models
 						</Title>
-						<Link href="/database" style={{ textDecoration: 'none' }}>
+						<Link href="/database" style={{ textDecoration: "none" }}>
 							<Group gap="xs" c="blue">
 								<Text size="sm" fw={600}>View all</Text>
 								<IconArrowNarrowRight size={16} />
@@ -468,8 +439,8 @@ export default function HomePage() {
 						</SimpleGrid>
 					) : (
 						<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="lg">
-							{[...Array(8)].map((_, i) => (
-								<Card key={i} p="md" radius="md" withBorder h="100%">
+							{Array.from({length: 8}).map((_, i) => (
+								<Card key={i} p="md" radius="md" withBorder={true} h="100%">
 									<Box h={UI.THUMBNAIL_HEIGHT} bg="gray.0" />
 								</Card>
 							))}
@@ -496,14 +467,14 @@ export default function HomePage() {
 							{ title: "Series", description: `${stats.totalSeries}+ series`, icon: IconTrendingUp, href: "/series", color: "cyan" },
 							{ title: "Manuals", description: "Building instructions", icon: IconDownload, href: "/manuals", color: "grape" },
 						].map((item, index) => (
-							<Link key={index} href={item.href} style={{ textDecoration: 'none', color: 'inherit' }}>
+							<Link key={index} href={item.href} style={{ textDecoration: "none", color: "inherit" }}>
 								<Card
 									shadow="sm"
 									padding="lg"
 									radius="md"
-									withBorder
+									withBorder={true}
 									h="100%"
-									style={{ cursor: 'pointer' }}
+									style={{ cursor: "pointer" }}
 								>
 									<Stack align="center" gap="md">
 										<ThemeIcon color={item.color} size={50} radius="xl" variant="light">
@@ -535,7 +506,7 @@ export default function HomePage() {
 										Recently Updated
 									</Title>
 								</Group>
-								<Link href="/database?sort=updated" style={{ textDecoration: 'none' }}>
+								<Link href="/database?sort=updated" style={{ textDecoration: "none" }}>
 									<Group gap="xs" c="blue">
 										<Text size="sm" fw={600}>View all</Text>
 										<IconArrowNarrowRight size={16} />
@@ -643,7 +614,7 @@ export default function HomePage() {
 									color: "cyan",
 								},
 							].map((feature, index) => (
-								<Card key={index} p="xl" radius="md" withBorder shadow="sm" h="100%">
+								<Card key={index} p="xl" radius="md" withBorder={true} shadow="sm" h="100%">
 									<Stack gap="md" align="flex-start">
 										<ThemeIcon
 											color={feature.color}
@@ -713,24 +684,24 @@ export default function HomePage() {
 						</Text>
 
 						<Group gap="md">
-							<Link href="/collection" style={{ textDecoration: 'none' }}>
+							<Link href="/collection" style={{ textDecoration: "none" }}>
 								<Button
 									size="lg"
 									radius="md"
 									leftSection={<IconHeart size={20} />}
 									variant="white"
-									style={{ backgroundColor: 'rgba(255,255,255,0.9)' }}
+									style={{ backgroundColor: WHITE_OVERLAY_BG }}
 								>
 									Start Building Collection
 								</Button>
 							</Link>
-							<Link href="/database" style={{ textDecoration: 'none' }}>
+							<Link href="/database" style={{ textDecoration: "none" }}>
 								<Button
 									size="lg"
 									radius="md"
 									variant="outline"
 									leftSection={<IconDatabase size={20} />}
-									style={{ borderColor: 'white', color: 'white' }}
+									style={{ borderColor: "white", color: "white" }}
 								>
 									Explore Database
 								</Button>
@@ -745,8 +716,8 @@ export default function HomePage() {
 								{ icon: IconCheck, text: "Privacy First" },
 							].map((item, index) => (
 								<Group key={index} gap="xs" c="white">
-									<item.icon size={16} style={{ color: 'rgba(255,255,255,0.9)' }} />
-									<Text size="sm" style={{ color: 'rgba(255,255,255,0.9)' }}>
+									<item.icon size={16} style={{ color: WHITE_OVERLAY_BG }} />
+									<Text size="sm" style={{ color: WHITE_OVERLAY_BG }}>
 										{item.text}
 									</Text>
 								</Group>
