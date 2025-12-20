@@ -1,14 +1,16 @@
 "use client";
 
+import { getManualCdnUrls, type CdnUrls } from "@hobby-ninja/data";
 import { Accordion, Box, Skeleton, ActionIcon, Group, Tooltip, Switch, Card, Stack } from "@mantine/core";
 import { IconDownload, IconExternalLink, IconFileTypePdf, IconArrowsHorizontal } from "@tabler/icons-react";
-import { useCallback, useState, useRef } from "react";
+import { useCallback, useState, useRef, useMemo } from "react";
 
 const STORAGE_KEY = "pdf-full-width-preference";
 
 interface PdfItem {
 	name: string;
-	src: string;
+	/** Relative path to the PDF (e.g., "manuals/123/123.pdf") */
+	path: string;
 	title: string;
 }
 
@@ -58,8 +60,34 @@ const SCROLL_TOP_OFFSET = 16;
 export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 	const [expandedItems, setExpandedItems] = useState<string[]>([]);
 	const [loadedItems, setLoadedItems] = useState<Set<string>>(new Set());
+	const [fallbackItems, setFallbackItems] = useState<Set<string>>(new Set());
 	const { fullWidth, toggleFullWidth, isHydrated } = useFullWidthPreference();
 	const itemRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+
+	// Pre-compute CDN URLs for all PDFs
+	const pdfUrls = useMemo<CdnUrls[]>(() => pdfs.map((pdf) => getManualCdnUrls(pdf.path)), [pdfs]);
+
+	// Get current URL for a PDF (primary or fallback based on state)
+	const getPdfUrl = useCallback(
+		(index: number): string => {
+			const urls = pdfUrls[index];
+			const itemId = `pdf-${index}`;
+			return fallbackItems.has(itemId) ? urls.fallback : urls.primary;
+		},
+		[pdfUrls, fallbackItems],
+	);
+
+	// Handle iframe error - switch to fallback URL
+	const handlePdfError = useCallback(
+		(index: number) => {
+			const itemId = `pdf-${index}`;
+			const urls = pdfUrls[index];
+			if (urls.hasFallback && !fallbackItems.has(itemId)) {
+				setFallbackItems((prev) => new Set(prev).add(itemId));
+			}
+		},
+		[pdfUrls, fallbackItems],
+	);
 
 	const handleChange = (values: string[]) => {
 		// Find newly expanded items
@@ -142,6 +170,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 							const itemId = `pdf-${index}`;
 							const isExpanded = expandedItems.includes(itemId);
 							const isLoaded = loadedItems.has(itemId);
+							const currentUrl = getPdfUrl(index);
 
 							return (
 								<Accordion.Item
@@ -158,7 +187,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 											<Group gap="xs" onClick={(e) => { e.stopPropagation(); }}>
 												<ActionIcon
 													component="a"
-													href={pdf.src}
+													href={currentUrl}
 													download={true}
 													variant="subtle"
 													color="gray"
@@ -169,7 +198,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 												</ActionIcon>
 												<ActionIcon
 													component="a"
-													href={pdf.src}
+													href={currentUrl}
 													target="_blank"
 													rel="noopener noreferrer"
 													variant="subtle"
@@ -196,9 +225,10 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 													/>
 												)}
 												<iframe
-													src={pdf.src}
+													src={currentUrl}
 													title={pdf.title}
 													onLoad={() => { handleLoad(itemId); }}
+													onError={() => { handlePdfError(index); }}
 													style={{
 														width: "100%",
 														height: PDF_HEIGHT,

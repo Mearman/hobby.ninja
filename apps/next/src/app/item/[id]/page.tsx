@@ -4,6 +4,7 @@ import {
 	getItemById,
 	getItemIds,
 	getManualById,
+	getManualCdnUrls,
 	getNodeAccessories,
 	getNodeDisplayName,
 	getNodeImages,
@@ -14,7 +15,6 @@ import {
 	isItem,
 	resolveCdnUrl,
 	resolveImageUrl,
-	resolveManualUrl,
 	type Item,
 } from "@hobby-ninja/data";
 import {
@@ -225,7 +225,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 							const suffix = index === 0 ? "" : `_${index + 1}`;
 							return {
 								name: pdf.name.en ?? pdf.name.ja,
-								src: resolveManualUrl(`manuals/${manual.id}/${manual.id}${suffix}.pdf`),
+								path: `manuals/${manual.id}/${manual.id}${suffix}.pdf`,
 								title: `${getNodeDisplayName(manual)} - ${pdf.name.en ?? pdf.name.ja}`,
 							};
 						})}
@@ -287,12 +287,12 @@ export default async function ItemPage({ params }: ItemPageProps) {
 									</Anchor>
 									{manual.pdfs.map((pdf, index) => {
 										const suffix = index === 0 ? "" : `_${index + 1}`;
-										const pdfPath = resolveManualUrl(`manuals/${manual.id}/${manual.id}${suffix}.pdf`);
+										const pdfUrls = getManualCdnUrls(`manuals/${manual.id}/${manual.id}${suffix}.pdf`);
 										const pdfName = pdf.name.en ?? pdf.name.ja;
 										return (
 											<Anchor
 												key={index}
-												href={pdfPath}
+												href={pdfUrls.primary}
 												target="_blank"
 												size="sm"
 												fw={500}
