@@ -48,7 +48,7 @@ const MAX_RECENT_SEARCHES = 10;
 
 const loadSavedSearches = (): SavedSearch[] => {
 	try {
-		if (typeof window === "undefined") return [];
+		if (typeof globalThis !== "object" || !globalThis.window) return [];
 		const saved = localStorage.getItem(STORAGE_KEY);
 		return saved ? (JSON.parse(saved) as SavedSearch[]) : [];
 	} catch {
@@ -58,7 +58,7 @@ const loadSavedSearches = (): SavedSearch[] => {
 
 const loadRecentSearches = (): SavedSearch[] => {
 	try {
-		if (typeof window === "undefined") return [];
+		if (typeof globalThis !== "object" || !globalThis.window) return [];
 		const recent = localStorage.getItem(RECENT_SEARCHES_KEY);
 		return recent ? (JSON.parse(recent) as SavedSearch[]) : [];
 	} catch {
@@ -94,7 +94,7 @@ export function SavedSearches({ currentSearch, onLoadSearch }: SavedSearchesProp
 			const updated = [newRecentSearch, ...filtered].slice(0, MAX_RECENT_SEARCHES);
 
 			try {
-				if (typeof window !== "undefined") {
+				if (typeof globalThis === "object" && globalThis.window) {
 					localStorage.setItem(RECENT_SEARCHES_KEY, JSON.stringify(updated));
 				}
 			} catch (error) {
@@ -121,7 +121,7 @@ export function SavedSearches({ currentSearch, onLoadSearch }: SavedSearchesProp
 			const updated = [newSavedSearch, ...prev];
 
 			try {
-				if (typeof window !== "undefined") {
+				if (typeof globalThis === "object" && globalThis.window) {
 					localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
 				}
 			} catch (error) {
@@ -142,7 +142,7 @@ export function SavedSearches({ currentSearch, onLoadSearch }: SavedSearchesProp
 			const updated = prev.filter(s => s.id !== id);
 
 			try {
-				if (typeof window !== "undefined") {
+				if (typeof globalThis === "object" && globalThis.window) {
 					localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
 				}
 			} catch (error) {

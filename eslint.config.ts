@@ -66,6 +66,8 @@ export default [
 			"test-results/**",
 			"**/__tests__/e2e/**",
 			"**/*.e2e.test.*",
+			"apps/web/**",
+			"apps/web-app/**",
 		],
 	},
 
@@ -135,7 +137,6 @@ export default [
 					path.resolve(__dirname, "packages/utils/tsconfig.test.json"),
 					path.resolve(__dirname, "packages/translation/tsconfig.json"),
 					path.resolve(__dirname, "packages/cli/tsconfig.json"),
-					path.resolve(__dirname, "apps/web/tsconfig.json"),
 					path.resolve(__dirname, "apps/next/tsconfig.json"),
 					path.resolve(__dirname, "data/tsconfig.json"),
 					path.resolve(__dirname, "tsconfig.json"),
@@ -650,6 +651,14 @@ export default [
 		files: ["**/pdf-accordion.tsx"],
 		rules: {
 			"unicorn/prefer-global-this": "off",
+		},
+	},
+	{
+		// Search components need localStorage access with window checks
+		files: ["**/saved-searches.tsx"],
+		rules: {
+			"unicorn/prefer-global-this": "off",
+			"@typescript-eslint/no-unnecessary-condition": "off",
 		},
 	},
 	{
