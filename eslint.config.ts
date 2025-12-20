@@ -51,6 +51,19 @@ export default [
 			"*.mjs",
 			"*.cjs",
 			"**/*.config.{js,mjs,cjs,ts}",
+			// Build outputs and cache directories
+			"dist/**",
+			"build/**",
+			"node_modules/**",
+			"coverage/**",
+			"tmp/**",
+			".nx/cache/**",
+			".next/**",
+			"out/**",
+			".output/**",
+			"!.syncpackrc.json",
+			"playwright-report/**",
+			"test-results/**",
 		],
 	},
 
@@ -781,23 +794,4 @@ export default [
 			"no-irregular-whitespace": "off",
 		},
 	},
-	{
-		ignores: [
-			"dist/**",
-			"build/**",
-			"node_modules/**",
-			"coverage/**",
-			"tmp/**",
-			".nx/cache/**",
-			".next/**",
-			"out/**",
-			".output/**",
-			"!.syncpackrc.json",
-			"playwright-report/**",
-			"test-results/**",
-			"**/*.config.js",
-			"**/*.config.mjs",
-			// Note: JSON data files are no longer ignored - they are linted for minification
-		],
-	},
-];
+	];
