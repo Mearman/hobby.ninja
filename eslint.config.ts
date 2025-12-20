@@ -22,7 +22,7 @@ import sonarjs from "eslint-plugin-sonarjs";
 import unicorn from "eslint-plugin-unicorn";
 import tseslint from "typescript-eslint";
 
-import { eslintPluginNoEmoji } from "./eslint-plugins/eslintPluginNoEmoji";
+import { eslintPluginNoEmoji } from "./eslint-plugins/eslint-plugin-no-emoji";
 
 
 const __filename = fileURLToPath(import.meta.url);
