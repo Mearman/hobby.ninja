@@ -11,7 +11,7 @@ const __dirname = dirname(__filename);
 
 // Configuration
 const BUCKET_NAME = 'hobby-ninja';
-const DATA_DIR = './data';
+const DATA_DIR = './assets';
 const BATCH_SIZE = 25; // Smaller batches for better reliability
 const DRY_RUN = process.argv.includes('--dry-run');
 const RESUME = process.argv.includes('--resume');
