@@ -1,6 +1,6 @@
 "use client";
 
-import { type Item, getNodeDisplayName, getNodePrimaryGrade } from "@hobby-ninja/data";
+import { type Item, getNodeDisplayName, getNodePrimaryGrade, resolveCdnUrl } from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -66,7 +66,7 @@ function ComparisonModal({ items, opened, onClose }: ComparisonModalProps) {
 									<Table.Th key={item.id} ta="center">
 										<Stack gap="xs" align="center" miw={120}>
 											<CustomImage
-												src={item.displayImage ?? createPlaceholderSvg(getNodeDisplayName(item))}
+												src={item.displayImage ? resolveCdnUrl(item.displayImage) : createPlaceholderSvg(getNodeDisplayName(item))}
 												alt={getNodeDisplayName(item)}
 												width={60}
 												height={60}
@@ -280,7 +280,7 @@ export function SelectableItemCard({
 	onToggleSelection,
 	viewMode,
 }: SelectableItemCardProps) {
-	const primaryImage = item.displayImage ?? null;
+	const primaryImage = item.displayImage ? resolveCdnUrl(item.displayImage) : null;
 	const placeholderSrc = createPlaceholderSvg(getNodeDisplayName(item));
 
 	if (viewMode === "table") {

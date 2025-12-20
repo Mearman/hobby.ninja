@@ -1,6 +1,6 @@
 "use client";
 
-import { type Item, getNodeDisplayName, getNodeImages, getNodePrimaryGrade, getNodeReleaseDate, isItem } from "@hobby-ninja/data";
+import { type Item, getNodeDisplayName, getNodeImages, getNodePrimaryGrade, getNodeReleaseDate, isItem, resolveCdnUrl } from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -41,8 +41,8 @@ interface ItemCardProps {
 export function ItemCard({ item, viewMode }: ItemCardProps) {
 	if (!isItem(item)) return null;
 
-	const primaryImage = item.displayImage ?? null;
-	const allImages = getNodeImages(item);
+	const primaryImage = item.displayImage ? resolveCdnUrl(item.displayImage) : null;
+	const allImages = getNodeImages(item).map(img => resolveCdnUrl(img));
 	// Use all images if available, otherwise fall back to displayImage
 	const images = allImages.length > 0 ? allImages : (primaryImage ? [primaryImage] : []);
 	const placeholderSrc = createPlaceholderSvg(getNodeDisplayName(item));

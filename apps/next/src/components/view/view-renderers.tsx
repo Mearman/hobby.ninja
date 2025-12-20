@@ -1,6 +1,6 @@
 "use client";
 
-import { type Item, getNodeDisplayName, getNodePrimaryGrade, getNodeReleaseDate, isItem } from "@hobby-ninja/data";
+import { type Item, getNodeDisplayName, getNodePrimaryGrade, getNodeReleaseDate, isItem, resolveCdnUrl } from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -36,7 +36,7 @@ const PRIORITY_ITEM_COUNT = 8;
 function ItemCard({ item, priority = false }: { item: Item; priority?: boolean }) {
 	if (!isItem(item)) return null;
 
-	const primaryImage = item.displayImage ?? null;
+	const primaryImage = item.displayImage ? resolveCdnUrl(item.displayImage) : null;
 	const placeholderSrc = createPlaceholderSvg(getNodeDisplayName(item));
 	const errorPlaceholderSrc = createErrorPlaceholderSvg();
 	const releaseDate = getNodeReleaseDate(item);
@@ -136,7 +136,7 @@ export function ListView({ items }: { items: Item[] }) {
 						<Group gap="md" align="flex-start">
 							<Box w={80} style={{ flexShrink: 0 }}>
 								<CustomImage
-									src={item.displayImage ?? createPlaceholderSvg(getNodeDisplayName(item))}
+									src={item.displayImage ? resolveCdnUrl(item.displayImage) : createPlaceholderSvg(getNodeDisplayName(item))}
 									alt={getNodeDisplayName(item)}
 									fit="cover"
 									height={80}
@@ -201,7 +201,7 @@ export function TableView({ items }: { items: Item[] }) {
 						<Group gap="sm" align="center">
 							<Box w={40} h={40}>
 								<CustomImage
-									src={item.displayImage ?? createPlaceholderSvg(getNodeDisplayName(item))}
+									src={item.displayImage ? resolveCdnUrl(item.displayImage) : createPlaceholderSvg(getNodeDisplayName(item))}
 									alt={getNodeDisplayName(item)}
 									fit="cover"
 									height={40}
