@@ -1,13 +1,11 @@
-import { getNodeDisplayName, getNodePrimaryGrade, homepage, resolveCdnUrl, type Item } from "@hobby-ninja/data";
+import { homepage } from "@hobby-ninja/data";
 import {
-	ActionIcon,
 	Avatar,
 	Box,
 	Button,
 	Card,
 	Container,
 	Divider,
-	Flex,
 	Group,
 	rem,
 	SimpleGrid,
@@ -15,15 +13,11 @@ import {
 	Text,
 	ThemeIcon,
 	Title,
-	Tooltip,
 } from "@mantine/core";
 import {
 	IconArrowNarrowRight,
 	IconAward,
-	IconBrandGithub,
-	IconBrandTwitter,
 	IconCheck,
-	IconClock,
 	IconDatabase,
 	IconDeviceMobile,
 	IconDownload,
@@ -36,93 +30,13 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 
-import { Badge } from "@/components/ui/badge";
+import { FeaturedItemsGrid } from "@/components/featured-items-grid";
 import { UI } from "@/lib/constants";
 
 // Constants
 const STYLE_NO_DECORATION_INHERIT = { textDecoration: "none", color: "inherit" };
 const STYLE_CURSOR_POINTER = { cursor: "pointer" };
 const WHITE_OVERLAY_BG = "rgba(255,255,255,0.9)";
-
-// Helper function for price formatting
-function formatPrice(price?: { amount: number; currency: string }): string {
-	if (!price) return "";
-	return new Intl.NumberFormat("ja-JP", {
-		style: "currency",
-		currency: price.currency || "JPY",
-	}).format(price.amount);
-}
-
-// Item Card Component
-function ItemCard({ item, showGrade = true, showPrice = true }: {
-	item: Item;
-	showGrade?: boolean;
-	showPrice?: boolean;
-}): React.ReactElement {
-
-	return (
-		<Link href={`/item/${item.id}`} style={STYLE_NO_DECORATION_INHERIT}>
-			<Card
-				shadow="sm"
-				padding="md"
-				radius="md"
-				withBorder={true}
-				h="100%"
-				style={{ cursor: "pointer" }}
-				className="item-card-hover"
-			>
-				<Stack gap="xs">
-					{/* Image placeholder */}
-					<Box
-						h={UI.THUMBNAIL_HEIGHT}
-						bg="gray.0"
-						style={{
-							borderRadius: "var(--mantine-radius-sm)",
-							background: "linear-gradient(135deg, var(--mantine-color-gray-0) 0%, var(--mantine-color-gray-1) 100%)",
-						}}
-					>
-						{item.images && item.images.length > 0 ? (
-							<img
-								src={resolveCdnUrl(typeof item.images[0] === "string" ? item.images[0] : item.images[0].url)}
-								alt={getNodeDisplayName(item)}
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "cover",
-									borderRadius: "var(--mantine-radius-sm)",
-								}}
-							/>
-						) : (
-							<Flex justify="center" align="center" h="100%">
-								<IconDatabase size={40} color="var(--mantine-color-gray-4)" />
-							</Flex>
-						)}
-					</Box>
-
-					<Stack gap={4}>
-						<Text size="sm" fw={600} lineClamp={2} c="var(--mantine-color-gray-8)">
-							{getNodeDisplayName(item)}
-						</Text>
-
-						<Group gap="xs" wrap="wrap">
-							{showGrade && (
-								<Badge size="xs" variant="light" color="blue">
-									{getNodePrimaryGrade(item) ?? "N/A"}
-								</Badge>
-							)}
-						</Group>
-
-						{showPrice && item.price && (
-							<Text size="sm" fw={700} c="blue.6">
-								{formatPrice(item.price)}
-							</Text>
-						)}
-					</Stack>
-				</Stack>
-			</Card>
-		</Link>
-	);
-}
 
 // Category Card Component
 interface CategoryCardProps {
@@ -197,51 +111,6 @@ function BrandCard({ brand, itemCount = 0 }: BrandCardProps): React.ReactElement
 	);
 }
 
-// Testimonial Card Component
-interface TestimonialCardProps {
-	testimonial: {
-		rating: number;
-		content: string;
-		author: string;
-		role: string;
-	};
-}
-
-function TestimonialCard({ testimonial }: TestimonialCardProps) {
-	return (
-		<Card padding="xl" radius="md" withBorder={true} h="100%">
-			<Stack gap="md">
-				<Group gap="xs">
-					{Array.from({length: 5}).map((_, i) => (
-						<IconStar
-							key={i}
-							size={16}
-							color={i < testimonial.rating ? "var(--mantine-color-yellow-5)" : "var(--mantine-color-gray-3)"}
-							fill={i < testimonial.rating ? "currentColor" : "none"}
-						/>
-					))}
-				</Group>
-				<Text size="sm" c="dimmed" fs="italic" lineClamp={3}>
-					&ldquo;{testimonial.content}&rdquo;
-				</Text>
-				<Divider />
-				<Group>
-					<Avatar size={40} radius="xl">
-						{testimonial.author.charAt(0)}
-					</Avatar>
-					<Box>
-						<Text size="sm" fw={600}>
-							{testimonial.author}
-						</Text>
-						<Text size="xs" c="dimmed">
-							{testimonial.role}
-						</Text>
-					</Box>
-				</Group>
-			</Stack>
-		</Card>
-	);
-}
 
 // Static Search Link Component (replaces interactive SearchBar)
 function StaticSearchPrompt() {
@@ -266,35 +135,11 @@ function StaticSearchPrompt() {
 	);
 }
 
-// Sample data for homepage
-const sampleTestimonials = [
-	{
-		rating: 5,
-		content: "Finally, a comprehensive Gundam database that works offline! The search functionality is incredibly fast and the collection management features are exactly what I needed.",
-		author: "Alex Chen",
-		role: "Hobby Collector",
-	},
-	{
-		rating: 5,
-		content: "As a long-time Gundam fan, this app has revolutionized how I track my collection. The detailed information and smart filtering make it easy to find exactly what I'm looking for.",
-		author: "Sarah Mitchell",
-		role: "Model Builder",
-	},
-	{
-		rating: 4,
-		content: "The user interface is clean and intuitive. I especially love the offline capability - I can manage my collection anywhere without worrying about internet connection.",
-		author: "David Park",
-		role: "Gunpla Enthusiast",
-	},
-];
 
 export default function HomePage() {
 	// Use pre-computed homepage data (8KB instead of 19MB)
 	// This avoids loading all 6000+ items just for the homepage
 	const { stats, featuredItems, popularBrands, categories } = homepage;
-
-	// Recent items not available in pre-computed data, use featured items as fallback
-	const recentItems = featuredItems.slice(0, 8);
 
 	return (
 		<>
@@ -321,8 +166,8 @@ export default function HomePage() {
 						mx="auto"
 						lh={1.6}
 					>
-						Discover, track, and manage your Gundam collection with our comprehensive database.
-						Powerful search, detailed information, and full offline capability.
+						Discover, track, and manage your Gundam collection. Powerful search,
+						detailed information, and full offline capability.
 					</Text>
 
 					{/* Integrated Search Prompt */}
@@ -369,10 +214,10 @@ export default function HomePage() {
 				<Container size="xl">
 					<Stack gap="lg" ta="center">
 						<Title order={2} size="h2" fw={600}>
-							Comprehensive Database
+							Database Overview
 						</Title>
 						<Text size="lg" c="dimmed" maw={600} mx="auto">
-							The most complete collection of Gundam models, grades, and series available anywhere
+							Browse items across multiple brands, grades, and series
 						</Text>
 
 						<SimpleGrid
@@ -420,21 +265,7 @@ export default function HomePage() {
 						</Link>
 					</Group>
 
-					{featuredItems.length > 0 ? (
-						<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="lg">
-							{featuredItems.slice(0, 8).map((item) => (
-								<ItemCard key={item.id} item={item} />
-							))}
-						</SimpleGrid>
-					) : (
-						<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="lg">
-							{Array.from({length: 8}).map((_, i) => (
-								<Card key={i} p="md" radius="md" withBorder={true} h="100%">
-									<Box h={UI.THUMBNAIL_HEIGHT} bg="gray.0" />
-								</Card>
-							))}
-						</SimpleGrid>
-					)}
+					<FeaturedItemsGrid items={featuredItems} count={8} />
 				</Stack>
 			</Container>
 
@@ -483,35 +314,6 @@ export default function HomePage() {
 				</Stack>
 			</Container>
 
-			{/* Recently Added Items */}
-			{recentItems.length > 0 && (
-				<Box py="xl" bg="gray.0">
-					<Container size="xl">
-						<Stack gap="xl">
-							<Group justify="space-between" align="center">
-								<Group gap="md">
-									<IconClock size={24} color="var(--mantine-color-blue-6)" />
-									<Title order={2} size="h2" fw={600}>
-										Recently Updated
-									</Title>
-								</Group>
-								<Link href="/database?sort=updated" style={{ textDecoration: "none" }}>
-									<Group gap="xs" c="blue">
-										<Text size="sm" fw={600}>View all</Text>
-										<IconArrowNarrowRight size={16} />
-									</Group>
-								</Link>
-							</Group>
-
-							<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="lg">
-								{recentItems.map((item) => (
-									<ItemCard key={item.id} item={item} />
-								))}
-							</SimpleGrid>
-						</Stack>
-					</Container>
-				</Box>
-			)}
 
 			{/* Popular Categories & Brands */}
 			<Container size="xl" py="xl">
@@ -581,7 +383,7 @@ export default function HomePage() {
 								{
 									icon: IconDatabase,
 									title: "Detailed Database",
-									description: "Comprehensive information about models, grades, series, and pricing",
+									description: "Detailed information about models, grades, series, and pricing",
 									color: "green",
 								},
 								{
@@ -629,31 +431,7 @@ export default function HomePage() {
 				</Container>
 			</Box>
 
-			{/* Testimonials Section */}
-			<Container size="xl" py="xl">
-				<Stack gap="xl">
-					<Title order={2} size="h2" ta="center" fw={600}>
-						What Collectors Say
-					</Title>
-
-					<Text
-						size="lg"
-						c="dimmed"
-						ta="center"
-						maw={600}
-						mx="auto"
-					>
-						Join thousands of Gundam enthusiasts using hobby.ninja to manage their collections
-					</Text>
-
-					<SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt="xl">
-						{sampleTestimonials.map((testimonial, index) => (
-							<TestimonialCard key={index} testimonial={testimonial} />
-						))}
-					</SimpleGrid>
-				</Stack>
-			</Container>
-
+	
 			{/* Newsletter/CTA Section */}
 			<Box
 				py="xl"
@@ -668,7 +446,7 @@ export default function HomePage() {
 						</Title>
 
 						<Text size="lg" c="white" lh={1.6} maw={600}>
-							Join thousands of Gundam enthusiasts managing their collections with the most comprehensive database available.
+							Browse {stats.totalItems.toLocaleString()}+ items and manage your collection.
 							No registration required, works completely offline.
 						</Text>
 
@@ -716,39 +494,6 @@ export default function HomePage() {
 				</Container>
 			</Box>
 
-			{/* Social Proof/Final CTA */}
-			<Container size="lg" py="xl">
-				<Stack align="center" gap="lg">
-					<Title order={3} size="h3" fw={600}>
-						Built with Modern Technologies
-					</Title>
-
-					<Group gap="md">
-						<Badge variant="light" color="blue" size="lg">React 19</Badge>
-						<Badge variant="light" color="green" size="lg">Next.js 15</Badge>
-						<Badge variant="light" color="orange" size="lg">TypeScript</Badge>
-						<Badge variant="light" color="violet" size="lg">Mantine v7</Badge>
-						<Badge variant="light" color="cyan" size="lg">PWA</Badge>
-					</Group>
-
-					<Text c="dimmed" size="sm" ta="center">
-						Optimized for performance, accessibility, and the best user experience
-					</Text>
-
-					<Group gap="md" mt="md">
-						<Tooltip label="View on GitHub">
-							<ActionIcon variant="subtle" size="lg">
-								<IconBrandGithub size={20} />
-							</ActionIcon>
-						</Tooltip>
-						<Tooltip label="Follow on Twitter">
-							<ActionIcon variant="subtle" size="lg">
-								<IconBrandTwitter size={20} />
-							</ActionIcon>
-						</Tooltip>
-					</Group>
-				</Stack>
-			</Container>
 		</>
 	);
 }
