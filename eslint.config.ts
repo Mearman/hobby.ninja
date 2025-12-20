@@ -68,6 +68,7 @@ export default [
 			"**/*.e2e.test.*",
 			"apps/web/**",
 			"apps/web-app/**",
+			"**/*.d.ts",
 		],
 	},
 
