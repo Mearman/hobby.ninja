@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env npx tsx
 
 import { execFile } from 'child_process';
 import { promisify } from 'util';
@@ -12,16 +12,33 @@ const execFileAsync = promisify(execFile);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// Types
+interface FileInfo {
+  localPath: string;
+  remotePath: string;
+  size: number;
+  checksum: string;
+}
+
+interface UploadState {
+  uploaded: string[];
+  failed: Array<{
+    file: string;
+    error: string;
+    checksum: string;
+  }>;
+}
+
 // Configuration
 const BUCKET_NAME = 'hobby-ninja';
 const DATA_DIR = './assets';
 const BATCH_SIZE = 25; // Smaller batches for better reliability
 const DRY_RUN = process.argv.includes('--dry-run');
-const RESUME = process.argv.includes('--resume');
+const RESUME = !process.argv.includes('--force'); // Resume by default, --force to upload all
 const STATE_FILE = './upload-state.json';
 
 // Utility functions
-async function execCommand(command, args, options = {}) {
+async function execCommand(command: string, args: string[], options: Record<string, unknown> = {}): Promise<string> {
   try {
     const { stdout, stderr } = await execFileAsync(command, args, {
       timeout: 120000, // 2 minute timeout
@@ -44,10 +61,10 @@ async function execCommand(command, args, options = {}) {
   }
 }
 
-function getAllFiles(dir, extensions = ['.jpg', '.jpeg', '.pdf']) {
-  const files = [];
+function getAllFiles(dir: string, extensions: string[] = ['.jpg', '.jpeg', '.pdf']): FileInfo[] {
+  const files: FileInfo[] = [];
 
-  function traverse(currentDir) {
+  function traverse(currentDir: string): void {
     try {
       const items = readdirSync(currentDir);
 
@@ -68,7 +85,7 @@ function getAllFiles(dir, extensions = ['.jpg', '.jpeg', '.pdf']) {
         }
       }
     } catch (error) {
-      console.error(`Error reading directory ${currentDir}:`, error.message);
+      console.error(`Error reading directory ${currentDir}:`, (error as Error).message);
     }
   }
 
@@ -76,14 +93,14 @@ function getAllFiles(dir, extensions = ['.jpg', '.jpeg', '.pdf']) {
   return files.sort((a, b) => a.remotePath.localeCompare(b.remotePath));
 }
 
-function formatBytes(bytes) {
+function formatBytes(bytes: number): string {
   const sizes = ['Bytes', 'KB', 'MB', 'GB'];
   if (bytes === 0) return '0 Bytes';
   const i = Math.floor(Math.log(bytes) / Math.log(1024));
   return Math.round(bytes / Math.pow(1024, i) * 100) / 100 + ' ' + sizes[i];
 }
 
-function formatDuration(seconds) {
+function formatDuration(seconds: number): string {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   const secs = Math.floor(seconds % 60);
@@ -97,24 +114,24 @@ function formatDuration(seconds) {
   }
 }
 
-function loadState() {
+function loadState(): UploadState {
   try {
-    return JSON.parse(readFileSync(STATE_FILE, 'utf8'));
+    return JSON.parse(readFileSync(STATE_FILE, 'utf8')) as UploadState;
   } catch {
     return { uploaded: [], failed: [] };
   }
 }
 
-function saveState(state) {
+function saveState(state: UploadState): void {
   try {
     writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
   } catch (error) {
-    console.error('Error saving state:', error.message);
+    console.error('Error saving state:', (error as Error).message);
   }
 }
 
 // Main upload function
-async function uploadFiles() {
+async function uploadFiles(): Promise<void> {
   console.log('🚀 Starting R2 upload to hobby-ninja bucket...');
   console.log(`📁 Source directory: ${DATA_DIR}`);
   console.log(`🗑️  Target bucket: ${BUCKET_NAME}`);
@@ -127,7 +144,11 @@ async function uploadFiles() {
   }
 
   if (RESUME) {
-    console.log('🔄 RESUME MODE - Will skip already uploaded files');
+    console.log('🔄 RESUME MODE (default) - Will skip already uploaded files');
+    console.log('   Use --force to upload all files from scratch');
+    console.log('');
+  } else {
+    console.log('🔄 FORCE MODE - Will upload all files from scratch');
     console.log('');
   }
 
@@ -152,18 +173,20 @@ async function uploadFiles() {
 
   if (DRY_RUN) {
     console.log('🧪 Dry run complete. To upload files, run without --dry-run flag');
+    console.log('📝 By default, upload will resume from where it left off');
+    console.log('   Use --force to upload all files from scratch');
     console.log('');
     console.log('Example commands that would be executed:');
-    console.log(`wrangler r2 object put "${BUCKET_NAME}/path/to/file.jpg" --file="./data/path/to/file.jpg"`);
+    console.log(`wrangler r2 object put "${BUCKET_NAME}/path/to/file.jpg" --file="./assets/path/to/file.jpg"`);
     return;
   }
 
   // Handle resume state
-  let state = RESUME ? loadState() : { uploaded: [], failed: [] };
+  let state: UploadState = RESUME ? loadState() : { uploaded: [], failed: [] };
   const uploadedChecksums = new Set(state.uploaded);
 
   // Filter out already uploaded files
-  const filesToUpload = RESUME
+  const filesToUpload: FileInfo[] = RESUME
     ? allFiles.filter(f => !uploadedChecksums.has(f.checksum))
     : allFiles;
 
@@ -222,11 +245,11 @@ async function uploadFiles() {
         failed++;
         state.failed.push({
           file: file.remotePath,
-          error: error.message,
+          error: (error as Error).message,
           checksum: file.checksum
         });
         console.error(`\n❌ Failed to upload: ${file.remotePath}`);
-        console.error(`   Error: ${error.message}`);
+        console.error(`   Error: ${(error as Error).message}`);
       }
     }
 
@@ -244,7 +267,7 @@ async function uploadFiles() {
   if (failed > 0) {
     console.log(`❌ Failed uploads: ${failed} files`);
     console.log(`💾 Failed files saved to state file for retry`);
-    console.log(`🔄 To retry failed files: node scripts/upload-to-r2.js --resume`);
+    console.log(`🔄 To retry failed files: ./scripts/upload-to-r2.ts`);
   }
   console.log(`⏱️  Total time: ${formatDuration(totalTime)}`);
   if (uploaded > 0) {
@@ -289,7 +312,7 @@ process.on('unhandledRejection', (reason, promise) => {
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   console.log('\n\n⚠️  Upload interrupted by user');
-  console.log('💾 Use --resume flag to continue later');
+  console.log('💾 Run script again to continue (resume is enabled by default)');
   process.exit(0);
 });
 
