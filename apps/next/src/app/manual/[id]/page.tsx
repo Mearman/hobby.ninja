@@ -1,4 +1,4 @@
-import { getManualById, getManualIds, getNodeDisplayName, type Manual } from "@hobby-ninja/data";
+import { getManualById, getManualIds, getNodeDisplayName, resolveManualUrl, type Manual } from "@hobby-ninja/data";
 import {
 	Badge,
 	Button,
@@ -99,7 +99,8 @@ export default async function ManualDetailPage({ params }: ManualPageProps) {
 	}
 
 	const displayName = getNodeDisplayName(manual);
-	const manualUrl = manual.url;
+	// Use local PDF from assets/manuals/{id}/{id}.pdf via CDN
+	const manualUrl = resolveManualUrl(`manuals/${manual.id}/${manual.id}.pdf`);
 	const manualPages = manual.pages;
 	const manualLanguage = manual.language;
 	const manualSize = manual.size;
