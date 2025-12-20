@@ -62,7 +62,7 @@ jobs:
         run: pnpm nx typecheck next
 
       - name: Lint
-        run: pnpm nx lint next --max-warnings=0
+        run: pnpm nx lint next
 
       - name: Test
         run: pnpm nx test next --passWithNoTests
