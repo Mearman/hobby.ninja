@@ -27,6 +27,9 @@
 	"exclude": ["node_modules", "src/data/**/*.json", "public/data/**/*.json", "public/data/**"],
 	"references": [
 		{
+			"path": "../../packages/utils"
+		},
+		{
 			"path": "../../packages/types"
 		}
 	]
