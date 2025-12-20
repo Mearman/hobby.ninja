@@ -53,6 +53,7 @@ export default [
 			"**/*.config.{js,mjs,cjs,ts}",
 			// Build outputs and cache directories
 			"dist/**",
+			"data/dist/**",
 			"build/**",
 			"node_modules/**",
 			"coverage/**",
