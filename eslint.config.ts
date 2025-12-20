@@ -117,6 +117,7 @@ export default [
 				project: [
 					path.resolve(__dirname, "packages/types/tsconfig.json"),
 					path.resolve(__dirname, "packages/utils/tsconfig.json"),
+					path.resolve(__dirname, "packages/utils/tsconfig.test.json"),
 					path.resolve(__dirname, "packages/translation/tsconfig.json"),
 					path.resolve(__dirname, "packages/cli/tsconfig.json"),
 					path.resolve(__dirname, "apps/web/tsconfig.json"),
