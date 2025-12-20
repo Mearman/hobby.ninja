@@ -206,6 +206,7 @@ async function uploadFiles(): Promise<void> {
   const startTime = Date.now();
   let uploaded = 0;
   let failed = 0;
+  const alreadyProcessed = RESUME ? (allFiles.length - filesToUpload.length) : 0;
 
   for (let i = 0; i < filesToUpload.length; i += BATCH_SIZE) {
     const batch = filesToUpload.slice(i, i + BATCH_SIZE);
@@ -232,9 +233,10 @@ async function uploadFiles(): Promise<void> {
           const elapsed = (Date.now() - startTime) / 1000;
           const avgTime = elapsed / uploaded;
           const remaining = (filesToUpload.length - uploaded) * avgTime;
-          const progress = ((uploaded / filesToUpload.length) * 100).toFixed(1);
+          const totalProcessed = alreadyProcessed + uploaded;
+          const overallProgress = ((totalProcessed / allFiles.length) * 100).toFixed(1);
 
-          process.stdout.write(`\r⏳ Progress: ${progress}% (${uploaded}/${filesToUpload.length}) - ETA: ${formatDuration(remaining)}`);
+          process.stdout.write(`\r⏳ Progress: ${overallProgress}% (${totalProcessed}/${allFiles.length}) [↑${uploaded} ↓${failed} ⏭️${alreadyProcessed}] - ETA: ${formatDuration(remaining)}`);
         }
 
         // Save state periodically
@@ -261,17 +263,28 @@ async function uploadFiles(): Promise<void> {
 
   // Final report
   const totalTime = (Date.now() - startTime) / 1000;
+  const totalProcessed = alreadyProcessed + uploaded + failed;
   console.log('');
-  console.log('🎉 Upload complete!');
-  console.log(`✅ Successfully uploaded: ${uploaded} files`);
+  console.log('🎉 Upload session complete!');
+
+  // Summary breakdown
+  console.log(`📊 Session Summary:`);
+  if (alreadyProcessed > 0) {
+    console.log(`   ⏭️  Previously uploaded: ${alreadyProcessed} files`);
+  }
+  console.log(`   ✅ Successfully uploaded: ${uploaded} files`);
   if (failed > 0) {
-    console.log(`❌ Failed uploads: ${failed} files`);
+    console.log(`   ❌ Failed uploads: ${failed} files`);
+  }
+  console.log(`   📁 Total processed: ${totalProcessed}/${allFiles.length} files (${((totalProcessed / allFiles.length) * 100).toFixed(1)}%)`);
+
+  if (failed > 0) {
     console.log(`💾 Failed files saved to state file for retry`);
     console.log(`🔄 To retry failed files: ./scripts/upload-to-r2.ts`);
   }
-  console.log(`⏱️  Total time: ${formatDuration(totalTime)}`);
+  console.log(`⏱️  Session time: ${formatDuration(totalTime)}`);
   if (uploaded > 0) {
-    console.log(`📊 Average speed: ${formatBytes(filesToUpload.reduce((sum, f) => sum + f.size, 0) / totalTime)}/s`);
+    console.log(`📊 Upload speed: ${formatBytes(filesToUpload.reduce((sum, f) => sum + f.size, 0) / totalTime)}/s`);
   }
 
   if (!RESUME && failed === 0) {
