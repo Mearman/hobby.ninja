@@ -27,7 +27,7 @@ A modern progressive web application for managing hobby collections. Built with 
 Node.js >= 20.0.0
 pnpm 10.0.0+
 
-# Install
+# Install (see "Cloning the Repository" below for large repo options)
 git clone <repo-url>
 cd hobby-ninja
 pnpm install
@@ -39,6 +39,69 @@ pnpm nx serve webapp
 pnpm nx build webapp
 ```
 
+## Cloning the Repository
+
+This repository contains a large `./assets/` directory. Contributors can use partial or incremental cloning to avoid downloading all assets upfront.
+
+### Partial Clone (Recommended)
+
+Clone without downloading blob content until needed. Blobs are fetched on-demand when you access files:
+
+```bash
+git clone --filter=blob:none <repo-url>
+```
+
+### Partial Clone with Size Limit
+
+Skip blobs larger than 1MB during initial clone:
+
+```bash
+git clone --filter=blob:limit=1m <repo-url>
+```
+
+### Sparse Checkout (Exclude assets entirely)
+
+Clone structure only, then exclude the assets directory:
+
+```bash
+git clone --filter=blob:none --sparse <repo-url>
+cd hobby-ninja
+git sparse-checkout set '/*' '!assets/'
+```
+
+### Shallow Clone + Incremental Deepening
+
+Start with only the latest commit, then fetch more history as needed:
+
+```bash
+# Initial clone - only latest commit
+git clone --depth 1 <repo-url>
+
+# Later, fetch more history incrementally
+git fetch --deepen=10    # Add 10 more commits
+git fetch --unshallow    # Eventually get full history
+```
+
+### How Partial Clones Work
+
+When using `--filter=blob:none`, Git downloads commit and tree objects (the structure) but marks blobs as "promisor objects" - placeholders that the remote delivers on demand.
+
+Any operation that needs file content triggers automatic fetching:
+
+```bash
+git checkout <branch>     # Fetches needed blobs
+git diff                  # Fetches needed blobs
+git show <file>           # Fetches needed blobs
+```
+
+To see fetches in action:
+
+```bash
+GIT_TRACE=1 git show HEAD:assets/large-file.png
+```
+
+**Requirements**: Git 2.22+ on both client and server.
+
 ## PWA Features
 
 - Installable as native app
@@ -49,6 +112,7 @@ pnpm nx build webapp
 ## Accessibility
 
 WCAG 2.1 AA compliant with:
+
 - Full keyboard navigation
 - Screen reader support
 - High contrast mode
@@ -57,6 +121,7 @@ WCAG 2.1 AA compliant with:
 ## Security
 
 Built-in security measures:
+
 - Content Security Policy (CSP)
 - XSS protection via React
 - Client-side data encryption
@@ -96,6 +161,7 @@ eslint-plugins/        # Custom ESLint plugins
 ## Deployment
 
 Builds to static files suitable for:
+
 - Vercel, Netlify, GitHub Pages
 - Docker containers
 - CDN hosting
@@ -112,4 +178,3 @@ pnpm nx build webapp
 3. Follow code standards (ESLint + Prettier)
 4. Add tests for new features
 5. Submit pull request
-
