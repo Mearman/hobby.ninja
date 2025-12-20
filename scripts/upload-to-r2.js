@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
+import { execFile } from 'child_process';
+import { promisify } from 'util';
 import { readdirSync, statSync, readFileSync, writeFileSync } from 'fs';
 import { join, relative, extname, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { createHash } from 'crypto';
+
+const execFileAsync = promisify(execFile);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -18,19 +21,25 @@ const RESUME = process.argv.includes('--resume');
 const STATE_FILE = './upload-state.json';
 
 // Utility functions
-function execCommand(command, args, options = {}) {
+async function execCommand(command, args, options = {}) {
   try {
-    const fullCommand = `${command} ${args.map(arg => `"${arg.replace(/"/g, '\\"')}"`).join(' ')}`;
-    const result = execSync(fullCommand, {
-      encoding: 'utf8',
+    const { stdout, stderr } = await execFileAsync(command, args, {
       timeout: 120000, // 2 minute timeout
-      stdio: 'pipe',
       ...options
     });
-    return result;
+    return stdout;
   } catch (error) {
+    // Check for SIGINT (Ctrl+C) and exit gracefully
+    if (error.signal === 'SIGINT') {
+      console.log('\n\n⚠️  Upload interrupted by user (Ctrl+C)');
+      console.log('💾 Use --resume flag to continue later');
+      process.exit(0);
+    }
     console.error(`Error executing: ${command} ${args.join(' ')}`);
     console.error(error.message);
+    if (stderr) {
+      console.error(`stderr: ${stderr}`);
+    }
     throw error;
   }
 }
