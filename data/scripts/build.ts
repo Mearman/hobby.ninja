@@ -471,18 +471,17 @@ function buildHomepageData(
 		totalSeries: series.size,
 	};
 
-	// Get featured items (items with most images and price info)
-	const itemsArray = [...items.values()];
-	const scoredItems = itemsArray.map(item => {
-		let score = 0;
-		if (item.images && item.images.length > 0) score += item.images.length;
-		if (item.price) score += 2;
-		if (item.releaseDate?.year && item.releaseDate.year > 2020) score += 3;
-		if (item.name.en) score += 1;
-		return { item, score };
-	});
-	scoredItems.sort((a, b) => b.score - a.score);
-	const featuredItems = scoredItems.slice(0, 12).map(({ item }) => item);
+	// Get featured items candidates
+	// Criteria: has image, gunpla category, released after 2010
+	const FEATURED_MAX_CANDIDATES = 200;
+
+	const featuredItems = [...items.values()]
+		.filter(item =>
+			item.images && item.images.length > 0 &&
+			item.categoryIds?.includes("gunpla") &&
+			item.releaseDate?.year && item.releaseDate.year > 2010
+		)
+		.slice(0, FEATURED_MAX_CANDIDATES);
 
 	// Get popular brands (by item count)
 	const brandsArray = [...brands.values()];
