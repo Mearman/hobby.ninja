@@ -64,6 +64,8 @@ export default [
 			"!.syncpackrc.json",
 			"playwright-report/**",
 			"test-results/**",
+			"**/__tests__/e2e/**",
+			"**/*.e2e.test.*",
 		],
 	},
 
