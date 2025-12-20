@@ -28,6 +28,9 @@
 	"exclude": ["dist", "node_modules"],
 	"references": [
 		{
+			"path": "../utils"
+		},
+		{
 			"path": "../types"
 		},
 		{
