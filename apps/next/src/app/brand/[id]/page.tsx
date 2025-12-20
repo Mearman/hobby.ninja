@@ -4,6 +4,7 @@ import {
 	getItemById,
 	getNodeDisplayName,
 	getNodePrimaryGrade,
+	resolveCdnUrl,
 	type Brand,
 	type Item,
 } from "@hobby-ninja/data";
@@ -160,7 +161,7 @@ export default async function BrandDetailPage({ params }: BrandPageProps) {
 	const brandCountry = brand.country;
 	const brandFounded = brand.founded;
 	const brandWebsite = brand.website;
-	const coverImage = brand.image;
+	const coverImage = brand.image ? resolveCdnUrl(brand.image) : undefined;
 
 	return (
 		<Container size="xl" py="xl">

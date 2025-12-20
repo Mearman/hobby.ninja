@@ -1,6 +1,6 @@
 "use client";
 
-import { getBrandById, getGradeById, getNodeDisplayName, getSeriesById } from "@hobby-ninja/data";
+import { getBrandById, getGradeById, getNodeDisplayName, getSeriesById, resolveCdnUrl } from "@hobby-ninja/data";
 import {
 	TextInput,
 	MultiSelect,
@@ -143,7 +143,7 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 											<Group gap="xs">
 												{brand?.image && (
 													<img
-														src={brand.image}
+														src={resolveCdnUrl(brand.image)}
 														alt=""
 														style={{ width: 16, height: 16, objectFit: "contain" }}
 													/>
@@ -187,7 +187,7 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 											<Group gap="xs">
 												{series?.image && (
 													<img
-														src={series.image}
+														src={resolveCdnUrl(series.image)}
 														alt=""
 														style={{ width: 16, height: 16, objectFit: "contain" }}
 													/>
@@ -301,7 +301,7 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 						)}
 						{filters.brands?.map(brand => {
 							const brandData = getBrandById(brand);
-							const brandImage = brandData?.image;
+							const brandImage = brandData?.image ? resolveCdnUrl(brandData.image) : undefined;
 							return (
 								<Badge key={brand} size={brandImage ? "lg" : "sm"} variant="light" title={brand}
 									styles={brandImage ? { root: { paddingLeft: 4, paddingRight: 4 } } : undefined}
@@ -321,7 +321,7 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 						))}
 						{filters.series?.map(serie => {
 							const seriesData = getSeriesById(serie);
-							const seriesImage = seriesData?.image;
+							const seriesImage = seriesData?.image ? resolveCdnUrl(seriesData.image) : undefined;
 							return (
 								<Badge key={serie} size={seriesImage ? "lg" : "sm"} variant="light" color="orange" title={serie}
 									styles={seriesImage ? { root: { paddingLeft: 4, paddingRight: 4 } } : undefined}
@@ -336,7 +336,7 @@ export function AdvancedSearch({ onSearch, loading }: AdvancedSearchProps) {
 						})}
 						{filters.grades?.map(grade => {
 							const gradeData = getGradeById(grade);
-							const gradeImage = gradeData?.image;
+							const gradeImage = gradeData?.image ? resolveCdnUrl(gradeData.image) : undefined;
 							return (
 								<Badge key={grade} size={gradeImage ? "lg" : "sm"} variant="light" color="purple" title={formatGradeName(grade)}
 									styles={gradeImage ? { root: { paddingLeft: 4, paddingRight: 4 } } : undefined}

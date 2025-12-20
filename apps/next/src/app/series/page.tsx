@@ -3,6 +3,7 @@ import {
 	getItemById,
 	getNodeDisplayName,
 	getNodePrimaryGrade,
+	resolveCdnUrl,
 	type Series,
 	type Item,
 } from "@hobby-ninja/data";
@@ -46,7 +47,7 @@ interface SeriesWithStats extends Series {
 
 // Featured series card component (for featured section)
 function FeaturedSeriesCard({ series }: { series: SeriesWithStats }) {
-	const coverImage = series.image;
+	const coverImage = series.image ? resolveCdnUrl(series.image) : undefined;
 	const yearSpan = series.firstYear && series.lastYear
 		? series.firstYear === series.lastYear
 			? series.firstYear.toString()

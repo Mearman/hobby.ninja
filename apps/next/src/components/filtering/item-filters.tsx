@@ -10,6 +10,7 @@ import {
 	getTagById,
 	isItem,
 	Item,
+	resolveCdnUrl,
 } from "@hobby-ninja/data";
 import {
 	ActionIcon,
@@ -1048,7 +1049,7 @@ export function ItemFilters({
 								selectedValues={filterState.brands}
 								onToggle={onToggleFilterValue}
 								formatValue={formatBrandName}
-								getImage={(id) => getBrandById(id)?.image}
+								getImage={(id) => { const img = getBrandById(id)?.image; return img ? resolveCdnUrl(img) : undefined; }}
 								color="blue"
 								displayMode={displayMode}
 								filterCounts={filterCounts.brands}
@@ -1069,7 +1070,7 @@ export function ItemFilters({
 								selectedValues={filterState.series}
 								onToggle={onToggleFilterValue}
 								formatValue={formatSeriesName}
-								getImage={(id) => getSeriesById(id)?.image}
+								getImage={(id) => { const img = getSeriesById(id)?.image; return img ? resolveCdnUrl(img) : undefined; }}
 								color="violet"
 								displayMode={displayMode}
 								filterCounts={filterCounts.series}
@@ -1306,7 +1307,7 @@ export function ItemFilters({
 						)}
 						{filterState.brands.map(brand => {
 							const brandData = getBrandById(brand);
-							const brandImage = brandData?.image;
+							const brandImage = brandData?.image ? resolveCdnUrl(brandData.image) : undefined;
 							const badge = (
 								<Badge
 									key={`brand-${brand}`}
@@ -1336,7 +1337,7 @@ export function ItemFilters({
 						})}
 						{filterState.grades.map(grade => {
 							const gradeData = getGradeById(grade);
-							const gradeImage = gradeData?.image;
+							const gradeImage = gradeData?.image ? resolveCdnUrl(gradeData.image) : undefined;
 							const badge = (
 								<Badge
 									key={`grade-${grade}`}
@@ -1421,7 +1422,7 @@ export function ItemFilters({
 						) : null}
 						{filterState.series.map(s => {
 							const seriesData = getSeriesById(s);
-							const seriesImage = seriesData?.image;
+							const seriesImage = seriesData?.image ? resolveCdnUrl(seriesData.image) : undefined;
 							const badge = (
 								<Badge
 									key={`series-${s}`}

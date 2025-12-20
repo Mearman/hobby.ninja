@@ -5,6 +5,7 @@ import {
 	getGradeFamilyIds,
 	getGradesHierarchy,
 	getNodeDisplayName,
+	resolveCdnUrl,
 	type GradeHierarchyEntry,
 } from "@hobby-ninja/data";
 import {
@@ -246,7 +247,7 @@ export function HierarchicalGradeFilter({
 	const renderGradeChip = (gradeId: string, options?: { dashed?: boolean; label?: string }) => {
 		const isSelected = selectedGrades.includes(gradeId);
 		const grade = getGradeById(gradeId);
-		const imageSrc = grade?.image;
+		const imageSrc = grade?.image ? resolveCdnUrl(grade.image) : undefined;
 		const hasAnySelection = selectedGrades.length > 0;
 		const label = options?.label ?? formatGradeName(gradeId);
 		const borderStyle = options?.dashed ? "dashed" : "solid";
@@ -449,7 +450,7 @@ export function HierarchicalGradeFilter({
 		const familyIds = getGradeFamilyIds(root.id).filter((id) => availableGrades.includes(id));
 		const selectedInFamily = familyIds.filter((id) => selectedGrades.includes(id));
 		const grade = getGradeById(root.id);
-		const imageSrc = grade?.image;
+		const imageSrc = grade?.image ? resolveCdnUrl(grade.image) : undefined;
 		const hasAnySelection = selectedGrades.length > 0;
 
 		// Simple grade without children - render as regular chip
@@ -1058,7 +1059,7 @@ export function HierarchicalGradeFilter({
 						}
 
 						const grade = getGradeById(gradeId);
-						const imageSrc = grade?.image;
+						const imageSrc = grade?.image ? resolveCdnUrl(grade.image) : undefined;
 						const gradeAbbr = gradeId.toUpperCase().replace("-", " ");
 						const iconText = displayMode === "icon" ? gradeAbbr : formatGradeName(gradeId);
 

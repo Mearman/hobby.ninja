@@ -5,6 +5,7 @@ import {
 	getCategoryById,
 	getNodeDisplayName,
 	getSeriesById,
+	resolveCdnUrl,
 } from "@hobby-ninja/data";
 import { Anchor, Badge, Group, Text } from "@mantine/core";
 import Link from "next/link";
@@ -106,7 +107,7 @@ export function EntityList({
 				const displayName = getDisplayName(id, entityType);
 				const entity = entityType === "brand" ? getBrandById(id) :
 							   entityType === "series" ? getSeriesById(id) : null;
-				const entityImage = entity?.image;
+				const entityImage = entity?.image ? resolveCdnUrl(entity.image) : undefined;
 				const leftSection = entityImage ? (
 					<img
 						src={entityImage}

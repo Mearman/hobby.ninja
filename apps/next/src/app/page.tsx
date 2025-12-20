@@ -1,4 +1,4 @@
-import { getNodeDisplayName, getNodePrimaryGrade, homepage, type Item } from "@hobby-ninja/data";
+import { getNodeDisplayName, getNodePrimaryGrade, homepage, resolveCdnUrl, type Item } from "@hobby-ninja/data";
 import {
 	ActionIcon,
 	Avatar,
@@ -83,7 +83,7 @@ function ItemCard({ item, showGrade = true, showPrice = true }: {
 					>
 						{item.images && item.images.length > 0 ? (
 							<img
-								src={typeof item.images[0] === "string" ? item.images[0] : item.images[0].url}
+								src={resolveCdnUrl(typeof item.images[0] === "string" ? item.images[0] : item.images[0].url)}
 								alt={getNodeDisplayName(item)}
 								style={{
 									width: "100%",

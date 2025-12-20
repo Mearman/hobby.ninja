@@ -12,6 +12,7 @@ import {
 	getNodeReleaseDate,
 	getSeriesById,
 	isItem,
+	resolveCdnUrl,
 	resolveImageUrl,
 	resolveManualUrl,
 	type Item,
@@ -94,9 +95,10 @@ export default async function ItemPage({ params }: ItemPageProps) {
 	const manual = item.manualId ? getManualById(item.manualId) : undefined;
 
 	// Get item images, falling back to displayImage (which may come from manual)
-	let images = getNodeImages(item);
+	// Resolve all image URLs to CDN URLs
+	let images = getNodeImages(item).map(img => resolveCdnUrl(img));
 	if (images.length === 0 && item.displayImage) {
-		images = [item.displayImage];
+		images = [resolveCdnUrl(item.displayImage)];
 	}
 
 	return (

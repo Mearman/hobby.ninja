@@ -1,3 +1,4 @@
+import { resolveCdnUrl } from "@hobby-ninja/data";
 import {
 	Anchor,
 	Badge,
@@ -198,7 +199,7 @@ function BrandCard({ brand }: { brand: BrandWithStats }) {
 						<Group gap="sm">
 							<Box w={80} h={80}>
 								<Image
-									src={brand.image ?? createPlaceholderSvg(getDisplayName(brand).slice(0, 3), 80, 80)}
+									src={brand.image ? resolveCdnUrl(brand.image) : createPlaceholderSvg(getDisplayName(brand).slice(0, 3), 80, 80)}
 									alt={getDisplayName(brand)}
 									fit="contain"
 									radius="sm"

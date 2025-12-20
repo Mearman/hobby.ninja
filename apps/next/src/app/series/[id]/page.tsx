@@ -2,6 +2,7 @@ import { getNodeDisplayName, getNodePrimaryGrade, type Node ,
 	getSeriesById,
 	getSeriesIds,
 	getItemById,
+	resolveCdnUrl,
 	type Series,
 	type Item,
 } from "@hobby-ninja/data";
@@ -155,7 +156,7 @@ export default async function SeriesDetailPage({ params }: SeriesPageProps) {
 	const displayName = getNodeDisplayName(series);
 	const seriesDescription = series.description;
 	const seriesFranchise = series.franchise;
-	const coverImage = series.image;
+	const coverImage = series.image ? resolveCdnUrl(series.image) : undefined;
 
 	return (
 		<Container size="xl" py="xl">
