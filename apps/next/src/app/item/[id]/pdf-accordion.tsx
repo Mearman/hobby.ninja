@@ -80,7 +80,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 					el = el.offsetParent as HTMLElement | null;
 				}
 				setTimeout(() => {
-					window.scrollTo({ top: top - SCROLL_TOP_OFFSET, behavior: "smooth" });
+					globalThis.window.scrollTo({ top: top - SCROLL_TOP_OFFSET, behavior: "smooth" });
 				}, SCROLL_DELAY_MS);
 			}
 		}

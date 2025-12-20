@@ -631,6 +631,13 @@ export default [
 		},
 	},
 	{
+		// PDF accordion component needs window access
+		files: ["**/pdf-accordion.tsx"],
+		rules: {
+			"unicorn/prefer-global-this": "off",
+		},
+	},
+	{
 		// Constants files contain intentional magic numbers for configuration
 		files: ["**/constants.ts"],
 		rules: {
