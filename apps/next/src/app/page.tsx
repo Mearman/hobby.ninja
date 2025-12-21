@@ -1,4 +1,4 @@
-import { homepage } from "@hobby-ninja/data";
+import { brands, homepage, series } from "@hobby-ninja/data";
 import {
 	Avatar,
 	Box,
@@ -7,7 +7,6 @@ import {
 	Container,
 	Divider,
 	Group,
-	rem,
 	SimpleGrid,
 	Stack,
 	Text,
@@ -16,17 +15,9 @@ import {
 } from "@mantine/core";
 import {
 	IconArrowNarrowRight,
-	IconAward,
-	IconCheck,
 	IconDatabase,
-	IconDeviceMobile,
-	IconDownload,
 	IconHeart,
 	IconSearch,
-	IconShield,
-	IconSparkles,
-	IconStar,
-	IconTrendingUp,
 } from "@tabler/icons-react";
 import Link from "next/link";
 
@@ -36,7 +27,6 @@ import { UI } from "@/lib/constants";
 // Constants
 const STYLE_NO_DECORATION_INHERIT = { textDecoration: "none", color: "inherit" };
 const STYLE_CURSOR_POINTER = { cursor: "pointer" };
-const WHITE_OVERLAY_BG = "rgba(255,255,255,0.9)";
 
 // Category Card Component
 interface CategoryCardProps {
@@ -112,6 +102,44 @@ function BrandCard({ brand, itemCount = 0 }: BrandCardProps): React.ReactElement
 }
 
 
+// Series Card Component
+interface SeriesCardProps {
+	seriesItem: { id: string; name?: string | { ja: string; en?: string }; itemIds?: string[] };
+}
+
+function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
+	const displayName = typeof seriesItem.name === "string" ? seriesItem.name : (seriesItem.name?.en ?? seriesItem.name?.ja ?? "Series");
+	const firstChar = displayName.charAt(0).toUpperCase();
+	const itemCount = seriesItem.itemIds?.length ?? 0;
+
+	return (
+		<Link href={`/series/${seriesItem.id}`} style={STYLE_NO_DECORATION_INHERIT}>
+			<Card
+				shadow="sm"
+				padding="md"
+				radius="md"
+				withBorder={true}
+				h="100%"
+				style={STYLE_CURSOR_POINTER}
+			>
+				<Group align="center" gap="md">
+					<Avatar size={UI.BRAND_LOGO_SIZE} radius="md" color="violet">
+						{firstChar}
+					</Avatar>
+					<Box flex={1}>
+						<Text size="sm" fw={600} lineClamp={1}>
+							{displayName}
+						</Text>
+						<Text size="xs" c="dimmed">
+							{itemCount.toLocaleString()} items
+						</Text>
+					</Box>
+				</Group>
+			</Card>
+		</Link>
+	);
+}
+
 // Static Search Link Component (replaces interactive SearchBar)
 function StaticSearchPrompt() {
 	return (
@@ -139,7 +167,17 @@ function StaticSearchPrompt() {
 export default function HomePage() {
 	// Use pre-computed homepage data (8KB instead of 19MB)
 	// This avoids loading all 6000+ items just for the homepage
-	const { stats, featuredItems, popularBrands, categories } = homepage;
+	const { featuredItems, categories } = homepage;
+
+	// Get all series sorted by item count
+	const allSeries = Object.values(series)
+		.filter((s) => s.itemIds.length > 0)
+		.toSorted((a, b) => b.itemIds.length - a.itemIds.length);
+
+	// Get all brands sorted by item count
+	const allBrands = Object.values(brands)
+		.filter((b) => b.itemIds.length > 0)
+		.toSorted((a, b) => b.itemIds.length - a.itemIds.length);
 
 	return (
 		<>
@@ -209,53 +247,12 @@ export default function HomePage() {
 				</Stack>
 			</Container>
 
-			{/* Statistics Dashboard */}
-			<Box py="xl" bg="gray.0">
-				<Container size="xl">
-					<Stack gap="lg" ta="center">
-						<Title order={2} size="h2" fw={600}>
-							Database Overview
-						</Title>
-						<Text size="lg" c="dimmed" maw={600} mx="auto">
-							Browse items across multiple brands, grades, and series
-						</Text>
-
-						<SimpleGrid
-							cols={{ base: 2, sm: 4 }}
-							spacing="lg"
-							mt="xl"
-						>
-							{[
-								{ label: "Items", value: stats.totalItems.toLocaleString(), icon: IconDatabase, color: "blue" },
-								{ label: "Brands", value: stats.totalBrands.toLocaleString(), icon: IconAward, color: "orange" },
-								{ label: "Categories", value: stats.totalCategories.toLocaleString(), icon: IconSparkles, color: "green" },
-								{ label: "Series", value: stats.totalSeries.toLocaleString(), icon: IconTrendingUp, color: "violet" },
-							].map((stat, index) => (
-								<Card key={index} p="lg" radius="md" withBorder={true} shadow="sm">
-									<Stack align="center" gap="xs">
-										<ThemeIcon color={stat.color} size={40} radius="xl" variant="light">
-											<stat.icon size={20} />
-										</ThemeIcon>
-										<Title order={1} size="h2" c={`${stat.color}.6`} fw={800}>
-											{stat.value}
-										</Title>
-										<Text size="sm" c="dimmed" fw={500}>
-											{stat.label}
-										</Text>
-									</Stack>
-								</Card>
-							))}
-						</SimpleGrid>
-					</Stack>
-				</Container>
-			</Box>
-
-			{/* Featured Items Carousel */}
+			{/* Models */}
 			<Container size="xl" py="xl">
 				<Stack gap="xl">
 					<Group justify="space-between" align="center">
 						<Title order={2} size="h2" fw={600}>
-							Featured Models
+							Models
 						</Title>
 						<Link href="/database" style={{ textDecoration: "none" }}>
 							<Group gap="xs" c="blue">
@@ -269,63 +266,31 @@ export default function HomePage() {
 				</Stack>
 			</Container>
 
-			{/* Quick Navigation Cards */}
-			<Container size="xl" py="xl">
-				<Stack gap="xl">
-					<Title order={2} size="h2" ta="center" fw={600}>
-						Explore Collections
-					</Title>
-
-					<SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="lg">
-						{[
-							{ title: "All Items", description: `${stats.totalItems.toLocaleString()}+ models`, icon: IconDatabase, href: "/database", color: "blue" },
-							{ title: "My Collection", description: "Track your personal collection", icon: IconHeart, href: "/collection", color: "red" },
-							{ title: "Wishlist", description: "Save items you want to buy", icon: IconStar, href: "/wishlist", color: "yellow" },
-							{ title: "Search", description: "Find specific models easily", icon: IconSearch, href: "/search", color: "green" },
-							{ title: "Brands", description: `${stats.totalBrands}+ manufacturers`, icon: IconAward, href: "/brands", color: "orange" },
-							{ title: "Categories", description: `${stats.totalCategories}+ types`, icon: IconSparkles, href: "/categories", color: "violet" },
-							{ title: "Series", description: `${stats.totalSeries}+ series`, icon: IconTrendingUp, href: "/series", color: "cyan" },
-							{ title: "Manuals", description: "Building instructions", icon: IconDownload, href: "/manuals", color: "grape" },
-						].map((item, index) => (
-							<Link key={index} href={item.href} style={{ textDecoration: "none", color: "inherit" }}>
-								<Card
-									shadow="sm"
-									padding="lg"
-									radius="md"
-									withBorder={true}
-									h="100%"
-									style={{ cursor: "pointer" }}
-								>
-									<Stack align="center" gap="md">
-										<ThemeIcon color={item.color} size={50} radius="xl" variant="light">
-											<item.icon size={25} />
-										</ThemeIcon>
-										<Title order={4} ta="center" size="h6" fw={600}>
-											{item.title}
-										</Title>
-										<Text size="sm" c="dimmed" ta="center">
-											{item.description}
-										</Text>
-									</Stack>
-								</Card>
-							</Link>
-						))}
-					</SimpleGrid>
-				</Stack>
-			</Container>
-
-
-			{/* Popular Categories & Brands */}
+			{/* Categories, Series & Brands */}
 			<Container size="xl" py="xl">
 				<Stack gap="xl">
 					{/* Categories Section */}
 					<Stack gap="lg">
 						<Title order={2} size="h2" fw={600}>
-							Popular Categories
+							Categories
 						</Title>
 						<SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 5 }} spacing="lg">
-							{categories.slice(0, 10).map((category) => (
+							{categories.map((category) => (
 								<CategoryCard key={category.id} category={category} />
+							))}
+						</SimpleGrid>
+					</Stack>
+
+					<Divider />
+
+					{/* Series Section */}
+					<Stack gap="lg">
+						<Title order={2} size="h2" fw={600}>
+							Series
+						</Title>
+						<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="md">
+							{allSeries.map((s) => (
+								<SeriesCard key={s.id} seriesItem={s} />
 							))}
 						</SimpleGrid>
 					</Stack>
@@ -335,164 +300,16 @@ export default function HomePage() {
 					{/* Brands Section */}
 					<Stack gap="lg">
 						<Title order={2} size="h2" fw={600}>
-							Top Brands
+							Brands
 						</Title>
 						<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="md">
-							{popularBrands.map((brand) => (
+							{allBrands.map((brand) => (
 								<BrandCard key={brand.id} brand={brand} />
 							))}
 						</SimpleGrid>
 					</Stack>
 				</Stack>
 			</Container>
-
-			{/* Features Section */}
-			<Box py="xl" bg="blue.0">
-				<Container size="xl">
-					<Stack gap="xl">
-						<Title order={2} size="h2" ta="center" fw={600}>
-							Powerful Features for Collectors
-						</Title>
-
-						<Text
-							size="lg"
-							c="dimmed"
-							ta="center"
-							maw={800}
-							mx="auto"
-							lh={1.6}
-						>
-							Everything you need to manage your Gundam collection efficiently,
-							from advanced search to offline capability.
-						</Text>
-
-						<SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="xl" mt="xl">
-							{[
-								{
-									icon: IconSearch,
-									title: "Smart Search",
-									description: `Search through ${stats.totalItems.toLocaleString()}+ items with instant results and intelligent filtering`,
-									color: "blue",
-								},
-								{
-									icon: IconHeart,
-									title: "Collection Tracking",
-									description: "Track your collection with wishlist, status updates, and progress monitoring",
-									color: "red",
-								},
-								{
-									icon: IconDatabase,
-									title: "Detailed Database",
-									description: "Detailed information about models, grades, series, and pricing",
-									color: "green",
-								},
-								{
-									icon: IconDeviceMobile,
-									title: "PWA Ready",
-									description: "Install as native app with full offline support and mobile optimization",
-									color: "orange",
-								},
-								{
-									icon: IconShield,
-									title: "Privacy First",
-									description: "Client-side storage keeps your data private and secure on your device",
-									color: "violet",
-								},
-								{
-									icon: IconDownload,
-									title: "Data Export",
-									description: "Export your collection data in multiple formats for backup or sharing",
-									color: "cyan",
-								},
-							].map((feature, index) => (
-								<Card key={index} p="xl" radius="md" withBorder={true} shadow="sm" h="100%">
-									<Stack gap="md" align="flex-start">
-										<ThemeIcon
-											color={feature.color}
-											size={UI.FEATURE_ICON_SIZE}
-											radius="xl"
-											variant="light"
-										>
-											<feature.icon
-												style={{ width: rem(UI.FEATURE_ICON_INNER_SIZE), height: rem(UI.FEATURE_ICON_INNER_SIZE) }}
-											/>
-										</ThemeIcon>
-										<Title order={3} size="h4" fw={600}>
-											{feature.title}
-										</Title>
-										<Text size="sm" c="dimmed" lh={1.5}>
-											{feature.description}
-										</Text>
-									</Stack>
-								</Card>
-							))}
-						</SimpleGrid>
-					</Stack>
-				</Container>
-			</Box>
-
-	
-			{/* Newsletter/CTA Section */}
-			<Box
-				py="xl"
-				style={{
-					background: "linear-gradient(135deg, var(--mantine-color-blue-6), var(--mantine-color-cyan-6))",
-				}}
-			>
-				<Container size="lg">
-					<Stack align="center" gap="xl" ta="center">
-						<Title order={2} size="h2" c="white" fw={700}>
-							Start Your Collection Journey Today
-						</Title>
-
-						<Text size="lg" c="white" lh={1.6} maw={600}>
-							Browse {stats.totalItems.toLocaleString()}+ items and manage your collection.
-							No registration required, works completely offline.
-						</Text>
-
-						<Group gap="md">
-							<Link href="/collection" style={{ textDecoration: "none" }}>
-								<Button
-									size="lg"
-									radius="md"
-									leftSection={<IconHeart size={20} />}
-									variant="white"
-									style={{ backgroundColor: WHITE_OVERLAY_BG }}
-								>
-									Start Building Collection
-								</Button>
-							</Link>
-							<Link href="/database" style={{ textDecoration: "none" }}>
-								<Button
-									size="lg"
-									radius="md"
-									variant="outline"
-									leftSection={<IconDatabase size={20} />}
-									style={{ borderColor: "white", color: "white" }}
-								>
-									Explore Database
-								</Button>
-							</Link>
-						</Group>
-
-						<Group gap="lg" mt="lg">
-							{[
-								{ icon: IconCheck, text: "100% Free" },
-								{ icon: IconCheck, text: "No Registration" },
-								{ icon: IconCheck, text: "Works Offline" },
-								{ icon: IconCheck, text: "Privacy First" },
-							].map((item, index) => (
-								<Group key={index} gap="xs" c="white">
-									<item.icon size={16} style={{ color: WHITE_OVERLAY_BG }} />
-									<Text size="sm" style={{ color: WHITE_OVERLAY_BG }}>
-										{item.text}
-									</Text>
-								</Group>
-							))}
-						</Group>
-					</Stack>
-				</Container>
-			</Box>
 
 		</>
 	);
