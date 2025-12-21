@@ -14,7 +14,6 @@ import {
 	getSeriesById,
 	isItem,
 	resolveCdnUrl,
-	resolveImageUrl,
 	type Item,
 } from "@hobby-ninja/data";
 import {
@@ -232,19 +231,17 @@ export default async function ItemPage({ params }: ItemPageProps) {
 						header={
 							<Group justify="space-between" align="flex-start" wrap="wrap">
 								<Group gap="md" align="flex-start">
-									{manual.thumbnailImage && (
-										<img
-											src={resolveImageUrl(manual.thumbnailImage)}
-											alt={getNodeDisplayName(manual)}
-											style={{
-												width: 80,
-												height: 80,
-												objectFit: "cover",
-												borderRadius: 4,
-												border: "1px solid var(--mantine-color-gray-3)",
-											}}
-										/>
-									)}
+									<img
+										src={resolveCdnUrl(`manuals/${manual.id}/${manual.id}.jpg`)}
+										alt={getNodeDisplayName(manual)}
+										style={{
+											width: 80,
+											height: 80,
+											objectFit: "cover",
+											borderRadius: 4,
+											border: "1px solid var(--mantine-color-gray-3)",
+										}}
+									/>
 									<Stack gap={4}>
 										<Title order={3} size="h4">Assembly Manual</Title>
 										<Text fw={500}>{getNodeDisplayName(manual)}</Text>
