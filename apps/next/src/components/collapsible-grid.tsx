@@ -32,10 +32,18 @@ export function CollapsibleGrid({
 			</SimpleGrid>
 
 			{hasMore && (
-				<Accordion variant="default" chevronPosition="left">
-					<Accordion.Item value="more" style={{ border: "none" }}>
+				<Accordion
+					variant="default"
+					chevronPosition="left"
+					styles={{
+						item: { border: "none" },
+						panel: { padding: 0 },
+						content: { padding: 0 },
+					}}
+				>
+					<Accordion.Item value="more">
 						<Accordion.Control>
-							Show all {totalCount} {title.toLowerCase()}
+							{`Show all ${totalCount} ${title.toLowerCase()}`}
 						</Accordion.Control>
 						<Accordion.Panel>
 							<SimpleGrid cols={cols} spacing="md">
