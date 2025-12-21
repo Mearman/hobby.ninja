@@ -1,9 +1,9 @@
 "use client";
 
-import { getManualCdnUrls, getNextFallbackUrl, getInitialUrl, type CdnUrls } from "@hobby-ninja/data";
-import { Accordion, Box, Skeleton, ActionIcon, Group, Tooltip, Switch, Card, Stack } from "@mantine/core";
+import { getManualCdnUrls, getInitialUrl, type CdnUrls } from "@hobby-ninja/data";
+import { Accordion, Anchor, Box, ActionIcon, Group, Skeleton, Text, Tooltip, Switch, Card, Stack } from "@mantine/core";
 import { IconDownload, IconExternalLink, IconFileTypePdf, IconArrowsHorizontal } from "@tabler/icons-react";
-import { useCallback, useState, useRef, useMemo } from "react";
+import { useCallback, useState, useRef, useMemo, useEffect } from "react";
 
 const STORAGE_KEY = "pdf-full-width-preference";
 
@@ -59,49 +59,45 @@ const SCROLL_DELAY_MS = 250;
 // Top padding offset for scroll position
 const SCROLL_TOP_OFFSET = 16;
 
+// Delay before showing PDF (allows browser to start rendering)
+const PDF_LOAD_DELAY_MS = 500;
+
 export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 	const [expandedItems, setExpandedItems] = useState<string[]>([]);
 	const [loadedItems, setLoadedItems] = useState<Set<string>>(new Set());
-	// Track current URL for each PDF (for fallback chain)
-	const [currentUrls, setCurrentUrls] = useState<Map<string, string>>(new Map());
 	const { fullWidth, toggleFullWidth, isHydrated } = useFullWidthPreference();
 	const itemRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
-	// Pre-compute CDN URLs for all PDFs (includes external fallback if provided)
+	// Pre-compute CDN URLs for all PDFs (includes external URL if provided)
 	const pdfUrls = useMemo<CdnUrls[]>(
 		() => pdfs.map((pdf) => getManualCdnUrls(pdf.path, pdf.externalUrl)),
 		[pdfs],
 	);
 
-	// Get current URL for a PDF (uses fallback chain state)
+	// Get URL for a PDF (external if available, otherwise primary CDN)
 	const getPdfUrl = useCallback(
-		(index: number): string => {
-			const itemId = `pdf-${index}`;
-			const currentUrl = currentUrls.get(itemId);
-			// Return current URL if set, otherwise initial (external if available, else primary)
-			return currentUrl ?? getInitialUrl(pdfUrls[index]);
-		},
-		[pdfUrls, currentUrls],
+		(index: number): string => getInitialUrl(pdfUrls[index]),
+		[pdfUrls],
 	);
 
-	// Handle iframe error - try next URL in fallback chain
-	const handlePdfError = useCallback(
-		(index: number) => {
-			const itemId = `pdf-${index}`;
-			const urls = pdfUrls[index];
-			const currentUrl = currentUrls.get(itemId) ?? getInitialUrl(urls);
-
-			// Get the next URL in the fallback chain
-			const nextUrl = getNextFallbackUrl(urls, currentUrl);
-			if (nextUrl) {
-				console.log(`[PDF ${index}] Fallback: ${currentUrl.slice(0, 50)}... → ${nextUrl.slice(0, 50)}...`);
-				setCurrentUrls((prev) => new Map(prev).set(itemId, nextUrl));
-			} else {
-				console.warn(`[PDF ${index}] All fallbacks exhausted for ${pdfs[index].name}`);
+	// Mark PDFs as loaded after a short delay when expanded
+	// (object/embed don't reliably fire onLoad, so we use a timeout)
+	useEffect(() => {
+		const timers: Array<ReturnType<typeof setTimeout>> = [];
+		for (const itemId of expandedItems) {
+			if (!loadedItems.has(itemId)) {
+				const timer = setTimeout(() => {
+					setLoadedItems((prev) => new Set(prev).add(itemId));
+				}, PDF_LOAD_DELAY_MS);
+				timers.push(timer);
 			}
-		},
-		[pdfUrls, currentUrls, pdfs],
-	);
+		}
+		return () => {
+			for (const timer of timers) {
+				clearTimeout(timer);
+			}
+		};
+	}, [expandedItems, loadedItems]);
 
 	const handleChange = (values: string[]) => {
 		// Find newly expanded items
@@ -126,10 +122,6 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 				}, SCROLL_DELAY_MS);
 			}
 		}
-	};
-
-	const handleLoad = (id: string) => {
-		setLoadedItems((prev) => new Set(prev).add(id));
 	};
 
 	// Full width container styles - only apply when toggle is on AND accordion is expanded
@@ -238,11 +230,11 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 														right={0}
 													/>
 												)}
-												<iframe
-													src={currentUrl}
+												{/* Nested object > embed > download link for maximum browser compatibility */}
+												<object
+													data={currentUrl}
+													type="application/pdf"
 													title={pdf.title}
-													onLoad={() => { handleLoad(itemId); }}
-													onError={() => { handlePdfError(index); }}
 													style={{
 														width: "100%",
 														height: PDF_HEIGHT,
@@ -251,7 +243,26 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 														opacity: isLoaded ? 1 : 0,
 														transition: "opacity 0.2s ease-in-out",
 													}}
-												/>
+												>
+													{/* Fallback 1: Try embed if object fails */}
+													<embed
+														src={currentUrl}
+														type="application/pdf"
+														style={{
+															width: "100%",
+															height: PDF_HEIGHT,
+														}}
+													/>
+													{/* Fallback 2: Download link if both fail */}
+													<Box p="xl" ta="center">
+														<Text c="dimmed" mb="sm">
+															Your browser cannot display this PDF.
+														</Text>
+														<Anchor href={currentUrl} target="_blank">
+															Open PDF in new tab
+														</Anchor>
+													</Box>
+												</object>
 											</Box>
 										)}
 									</Accordion.Panel>
