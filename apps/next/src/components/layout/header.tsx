@@ -17,7 +17,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-import { Badge } from "@/components/ui/badge";
 import { TIMING, UI } from "@/lib/constants";
 import { useThemeContext } from "@/providers/mantine-provider";
 import { desktopOnly, header, headerContent, logo, mobileOnly, nav, navLink } from "@/styles/components.css";
@@ -182,12 +181,6 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 						</ActionIcon>
 					</Tooltip>
 
-					{/* Mobile menu badge (for new items/updates) */}
-					<div className={mobileOnly}>
-						<Badge size="sm" color="blue" variant="light">
-              New
-						</Badge>
-					</div>
 				</Group>
 			</div>
 		</header>

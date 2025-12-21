@@ -250,38 +250,40 @@ export default function HomePage() {
 					<StaticSearchPrompt />
 
 					{/* Quick Actions */}
-					<Group gap="md" mt="lg">
-						<Link href="/database" style={{ textDecoration: "none" }}>
-							<Button
-								size="lg"
-								radius="md"
-								leftSection={<IconDatabase size={20} />}
-								style={{ backgroundColor: "var(--mantine-color-blue-5)" }}
-							>
-								Browse Database
-							</Button>
-						</Link>
-						<Link href="/search" style={{ textDecoration: "none" }}>
-							<Button
-								size="lg"
-								radius="md"
-								variant="outline"
-								leftSection={<IconSearch size={20} />}
-							>
-								Advanced Search
-							</Button>
-						</Link>
-						<Link href="/collection" style={{ textDecoration: "none" }}>
-							<Button
-								size="lg"
-								radius="md"
-								variant="subtle"
-								leftSection={<IconHeart size={20} />}
-							>
-								My Collection
-							</Button>
-						</Link>
-					</Group>
+					<Stack gap="md" mt="lg" align="center" w="100%">
+						<Group gap="md" justify="center" wrap="wrap">
+							<Link href="/database" style={{ textDecoration: "none" }}>
+								<Button
+									size="lg"
+									radius="md"
+									leftSection={<IconDatabase size={20} />}
+									style={{ backgroundColor: "var(--mantine-color-blue-5)" }}
+								>
+									Browse Database
+								</Button>
+							</Link>
+							<Link href="/search" style={{ textDecoration: "none" }}>
+								<Button
+									size="lg"
+									radius="md"
+									variant="outline"
+									leftSection={<IconSearch size={20} />}
+								>
+									Advanced Search
+								</Button>
+							</Link>
+							<Link href="/collection" style={{ textDecoration: "none" }}>
+								<Button
+									size="lg"
+									radius="md"
+									variant="subtle"
+									leftSection={<IconHeart size={20} />}
+								>
+									My Collection
+								</Button>
+							</Link>
+						</Group>
+					</Stack>
 				</Stack>
 			</Container>
 
