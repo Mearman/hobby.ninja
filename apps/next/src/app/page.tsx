@@ -88,7 +88,7 @@ function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 					<img
 						src={resolveCdnUrl(brand.image)}
 						alt={displayName}
-						style={{ width: "100%", height: "auto", display: "block", borderRadius: STYLE_BORDER_RADIUS_TOP }}
+						style={{ width: "100%", height: "auto", display: "block", borderRadius: STYLE_BORDER_RADIUS_TOP, backgroundColor: "white" }}
 					/>
 				) : (
 					<Box p="xl" bg="gray.1" style={{ borderRadius: STYLE_BORDER_RADIUS_TOP }}>
@@ -135,7 +135,7 @@ function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 					<img
 						src={resolveCdnUrl(seriesItem.image)}
 						alt={displayName}
-						style={{ width: "100%", height: "auto", display: "block", borderRadius: STYLE_BORDER_RADIUS_TOP }}
+						style={{ width: "100%", height: "auto", display: "block", borderRadius: STYLE_BORDER_RADIUS_TOP, backgroundColor: "white" }}
 					/>
 				) : (
 					<Box p="xl" bg="violet.0" style={{ borderRadius: STYLE_BORDER_RADIUS_TOP }}>
