@@ -131,15 +131,22 @@ export function resolveManualUrl(manualPath: string): string {
 }
 
 /**
- * CDN URL pair for fallback support
+ * CDN URL set with fallback support
+ *
+ * Fallback chain: external (original source) → primary (R2/local) → fallback (GitHub)
+ * External is tried first as the authoritative source; CDN serves as backup.
  */
 export interface CdnUrls {
-	/** Primary CDN URL (R2 if configured, otherwise GitHub) */
+	/** Primary CDN URL (R2 if configured, local in dev, otherwise GitHub) */
 	primary: string;
 	/** Fallback CDN URL (always GitHub raw) */
 	fallback: string;
+	/** External source URL (original URL from data, e.g., Bandai) - tried first if available */
+	external?: string;
 	/** Whether primary and fallback are different (fallback is useful) */
 	hasFallback: boolean;
+	/** Whether an external source is available (tried first) */
+	hasExternal: boolean;
 }
 
 /**
@@ -147,11 +154,12 @@ export interface CdnUrls {
  * Used by components that need to implement fallback behavior
  *
  * @param assetPath - Relative path like "images/brands/gundam.jpg"
- * @returns Object with primary and fallback URLs
+ * @param externalUrl - Optional external source URL as final fallback
+ * @returns Object with primary, fallback, and optional external URLs
  */
-export function getCdnUrls(assetPath: string): CdnUrls {
+export function getCdnUrls(assetPath: string, externalUrl?: string): CdnUrls {
 	if (!assetPath) {
-		return { primary: '', fallback: '', hasFallback: false };
+		return { primary: '', fallback: '', hasFallback: false, hasExternal: false };
 	}
 
 	const normalizedPath = assetPath.startsWith('/') ? assetPath.slice(1) : assetPath;
@@ -164,30 +172,62 @@ export function getCdnUrls(assetPath: string): CdnUrls {
 	return {
 		primary,
 		fallback,
+		external: externalUrl,
 		hasFallback: primary !== fallback,
+		hasExternal: Boolean(externalUrl),
 	};
 }
 
 /**
  * Get CDN URLs for an image path
  * @param imagePath - Image path relative to assets/images/
+ * @param externalUrl - Optional external source URL as final fallback
  */
-export function getImageCdnUrls(imagePath: string): CdnUrls {
+export function getImageCdnUrls(imagePath: string, externalUrl?: string): CdnUrls {
 	if (!imagePath) {
-		return { primary: '', fallback: '', hasFallback: false };
+		return { primary: '', fallback: '', hasFallback: false, hasExternal: false };
 	}
 	const normalizedPath = imagePath.startsWith('images/') ? imagePath : `images/${imagePath}`;
-	return getCdnUrls(normalizedPath);
+	return getCdnUrls(normalizedPath, externalUrl);
 }
 
 /**
  * Get CDN URLs for a manual/PDF path
  * @param manualPath - Manual path relative to assets/manuals/
+ * @param externalUrl - Optional external source URL as final fallback
  */
-export function getManualCdnUrls(manualPath: string): CdnUrls {
+export function getManualCdnUrls(manualPath: string, externalUrl?: string): CdnUrls {
 	if (!manualPath) {
-		return { primary: '', fallback: '', hasFallback: false };
+		return { primary: '', fallback: '', hasFallback: false, hasExternal: false };
 	}
 	const normalizedPath = manualPath.startsWith('manuals/') ? manualPath : `manuals/${manualPath}`;
-	return getCdnUrls(normalizedPath);
+	return getCdnUrls(normalizedPath, externalUrl);
+}
+
+/**
+ * Get the next URL in the fallback chain
+ * Chain order: external → primary → fallback
+ *
+ * @param urls - CdnUrls object
+ * @param currentUrl - The URL that failed
+ * @returns The next URL to try, or undefined if no more fallbacks
+ */
+export function getNextFallbackUrl(urls: CdnUrls, currentUrl: string): string | undefined {
+	// external → primary
+	if (urls.external && currentUrl === urls.external) {
+		return urls.primary;
+	}
+	// primary → fallback
+	if (currentUrl === urls.primary && urls.hasFallback) {
+		return urls.fallback;
+	}
+	return undefined;
+}
+
+/**
+ * Get the first URL to try in the fallback chain
+ * Returns external if available, otherwise primary
+ */
+export function getInitialUrl(urls: CdnUrls): string {
+	return urls.external ?? urls.primary;
 }
