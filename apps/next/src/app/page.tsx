@@ -167,9 +167,21 @@ function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 	);
 }
 
+// Convert release date to comparable number (YYYYMMDD)
+function releaseDateToNumber(releaseDate?: { year?: number; month?: number; day?: number }): number {
+	if (!releaseDate?.year) return 0;
+	const year = releaseDate.year;
+	const month = releaseDate.month ?? 1;
+	const day = releaseDate.day ?? 1;
+	return year * 10_000 + month * 100 + day;
+}
+
 export default function HomePage() {
-	// Use pre-computed homepage data for featured items
+	// Use pre-computed homepage data for featured items, sorted by release date (newest first)
 	const { featuredItems } = homepage;
+	const sortedFeaturedItems = [...featuredItems].toSorted(
+		(a, b) => releaseDateToNumber(b.releaseDate) - releaseDateToNumber(a.releaseDate),
+	);
 
 	// Get all categories sorted by item count
 	const allCategories = Object.values(allCategoriesData)
@@ -188,25 +200,6 @@ export default function HomePage() {
 
 	return (
 		<>
-			{/* Models */}
-			<Container size="xl" py="xl" w="100%">
-				<Stack gap="xl">
-					<Group justify="space-between" align="center">
-						<Title order={2} size="h2" fw={600}>
-							Models
-						</Title>
-						<Link href="/database" style={{ textDecoration: "none" }}>
-							<Group gap="xs" c="blue">
-								<Text size="sm" fw={600}>View all</Text>
-								<IconArrowNarrowRight size={16} />
-							</Group>
-						</Link>
-					</Group>
-
-					<FeaturedItemsGrid items={featuredItems} count={8} />
-				</Stack>
-			</Container>
-
 			{/* Categories, Series & Brands */}
 			<Container size="xl" py="xl" w="100%">
 				<Stack gap="xl">
@@ -252,6 +245,24 @@ export default function HomePage() {
 				</Stack>
 			</Container>
 
+			{/* Explore */}
+			<Container size="xl" py="xl" w="100%">
+				<Stack gap="xl">
+					<Group justify="space-between" align="center">
+						<Title order={2} size="h2" fw={600}>
+							Explore
+						</Title>
+						<Link href="/database" style={{ textDecoration: "none" }}>
+							<Group gap="xs" c="blue">
+								<Text size="sm" fw={600}>View all</Text>
+								<IconArrowNarrowRight size={16} />
+							</Group>
+						</Link>
+					</Group>
+
+					<FeaturedItemsGrid items={sortedFeaturedItems} count={8} />
+				</Stack>
+			</Container>
 		</>
 	);
 }
