@@ -20,6 +20,7 @@ import {
 import Link from "next/link";
 
 import { FeaturedItemsGrid } from "@/components/featured-items-grid";
+import { ImageWithFallback } from "@/components/image-with-fallback";
 import { UI } from "@/lib/constants";
 
 // Constants
@@ -34,12 +35,7 @@ const STYLE_IMAGE_CONTAINER = {
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
-} as const;
-const STYLE_IMAGE = {
-	width: "100%",
-	height: "100%",
-	objectFit: "contain",
-	display: "block",
+	position: "relative", // Required for next/image fill mode
 } as const;
 
 // Category Card Component
@@ -63,10 +59,10 @@ function CategoryCard({ category }: CategoryCardProps): React.ReactElement {
 			>
 				<div style={STYLE_IMAGE_CONTAINER}>
 					{category.image ? (
-						<img
+						<ImageWithFallback
 							src={resolveCdnUrl(category.image)}
 							alt={displayName}
-							style={STYLE_IMAGE}
+							fallbackText={displayName}
 						/>
 					) : (
 						<Text size="xl" fw={600} c="dimmed" ta="center" p="md">
@@ -108,10 +104,10 @@ function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 			>
 				<div style={STYLE_IMAGE_CONTAINER}>
 					{brand.image ? (
-						<img
+						<ImageWithFallback
 							src={resolveCdnUrl(brand.image)}
 							alt={displayName}
-							style={STYLE_IMAGE}
+							fallbackText={displayName}
 						/>
 					) : (
 						<Text size="xl" fw={600} c="dimmed" ta="center" p="md">
@@ -154,10 +150,10 @@ function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 			>
 				<div style={STYLE_IMAGE_CONTAINER}>
 					{seriesItem.image ? (
-						<img
+						<ImageWithFallback
 							src={resolveCdnUrl(seriesItem.image)}
 							alt={displayName}
-							style={STYLE_IMAGE}
+							fallbackText={displayName}
 						/>
 					) : (
 						<Text size="xl" fw={600} c="dimmed" ta="center" p="md">
