@@ -1,4 +1,4 @@
-import { brands, homepage, series } from "@hobby-ninja/data";
+import { brands, categories as allCategoriesData, homepage, series } from "@hobby-ninja/data";
 import {
 	Avatar,
 	Box,
@@ -30,12 +30,12 @@ const STYLE_CURSOR_POINTER = { cursor: "pointer" };
 
 // Category Card Component
 interface CategoryCardProps {
-	category: { id: string; name?: string | { ja: string; en?: string } };
-	itemCount?: number;
+	category: { id: string; name?: string | { ja: string; en?: string }; itemIds?: string[] };
 }
 
-function CategoryCard({ category, itemCount = 0 }: CategoryCardProps): React.ReactElement {
+function CategoryCard({ category }: CategoryCardProps): React.ReactElement {
 	const displayName = typeof category.name === "string" ? category.name : (category.name?.en ?? category.name?.ja ?? "Category");
+	const itemCount = category.itemIds?.length ?? 0;
 
 	return (
 		<Link href={`/category/${category.id}`} style={STYLE_NO_DECORATION_INHERIT}>
@@ -65,13 +65,13 @@ function CategoryCard({ category, itemCount = 0 }: CategoryCardProps): React.Rea
 
 // Brand Card Component
 interface BrandCardProps {
-	brand: { id: string; name?: string | { ja: string; en?: string } };
-	itemCount?: number;
+	brand: { id: string; name?: string | { ja: string; en?: string }; itemIds?: string[] };
 }
 
-function BrandCard({ brand, itemCount = 0 }: BrandCardProps): React.ReactElement {
+function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 	const displayName = typeof brand.name === "string" ? brand.name : (brand.name?.en ?? brand.name?.ja ?? "Brand");
 	const firstChar = displayName.charAt(0).toUpperCase();
+	const itemCount = brand.itemIds?.length ?? 0;
 
 	return (
 		<Link href={`/brands/${brand.id}`} style={STYLE_NO_DECORATION_INHERIT}>
@@ -165,9 +165,13 @@ function StaticSearchPrompt() {
 
 
 export default function HomePage() {
-	// Use pre-computed homepage data (8KB instead of 19MB)
-	// This avoids loading all 6000+ items just for the homepage
-	const { featuredItems, categories } = homepage;
+	// Use pre-computed homepage data for featured items
+	const { featuredItems } = homepage;
+
+	// Get all categories sorted by item count
+	const allCategories = Object.values(allCategoriesData)
+		.filter((c) => c.itemIds.length > 0)
+		.toSorted((a, b) => b.itemIds.length - a.itemIds.length);
 
 	// Get all series sorted by item count
 	const allSeries = Object.values(series)
@@ -275,7 +279,7 @@ export default function HomePage() {
 							Categories
 						</Title>
 						<SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 5 }} spacing="lg">
-							{categories.map((category) => (
+							{allCategories.map((category) => (
 								<CategoryCard key={category.id} category={category} />
 							))}
 						</SimpleGrid>
