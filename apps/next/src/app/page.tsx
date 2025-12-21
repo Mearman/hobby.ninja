@@ -1,7 +1,6 @@
 import { brands, categories as allCategoriesData, homepage, resolveCdnUrl, series } from "@hobby-ninja/data";
 import {
 	Box,
-	Button,
 	Card,
 	Container,
 	Divider,
@@ -10,18 +9,12 @@ import {
 	Text,
 	Title,
 } from "@mantine/core";
-import {
-	IconArrowNarrowRight,
-	IconDatabase,
-	IconHeart,
-	IconSearch,
-} from "@tabler/icons-react";
+import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 
 import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { FeaturedItemsGrid } from "@/components/featured-items-grid";
 import { ImageWithFallback } from "@/components/image-with-fallback";
-import { UI } from "@/lib/constants";
 
 // Constants
 const STYLE_NO_DECORATION_INHERIT = { textDecoration: "none", color: "inherit" };
@@ -174,30 +167,6 @@ function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 	);
 }
 
-// Static Search Link Component (replaces interactive SearchBar)
-function StaticSearchPrompt() {
-	return (
-		<Box maw={600} mx="auto" w="100%">
-			<Link href="/search" style={{ textDecoration: "none", color: "inherit" }}>
-				<Card
-					withBorder={true}
-					p="md"
-					radius="md"
-					style={{ cursor: "pointer" }}
-				>
-					<Group>
-						<IconSearch size={UI.BUTTON_ICON_SIZE} color="var(--mantine-color-gray-5)" />
-						<Text c="dimmed" style={{ flex: 1 }}>
-							Search for Gundam models, brands, series...
-						</Text>
-					</Group>
-				</Card>
-			</Link>
-		</Box>
-	);
-}
-
-
 export default function HomePage() {
 	// Use pre-computed homepage data for featured items
 	const { featuredItems } = homepage;
@@ -219,74 +188,6 @@ export default function HomePage() {
 
 	return (
 		<>
-			{/* Hero Section */}
-			<Container size="xl" py="xl">
-				<Stack align="center" gap="xl" ta="center">
-					<Title order={1} size="h1" c="blue.6" fw={800}>
-						hobby.ninja
-					</Title>
-
-					<Title
-						order={2}
-						size="h2"
-						c="dimmed"
-						fw={400}
-					>
-						Complete Gundam Collection Management
-					</Title>
-
-					<Text
-						size="lg"
-						c="dimmed"
-						maw={700}
-						mx="auto"
-						lh={1.6}
-					>
-						Discover, track, and manage your Gundam collection. Powerful search,
-						detailed information, and full offline capability.
-					</Text>
-
-					{/* Integrated Search Prompt */}
-					<StaticSearchPrompt />
-
-					{/* Quick Actions */}
-					<Stack gap="md" mt="lg" align="center" w="100%">
-						<Group gap="md" justify="center" wrap="wrap">
-							<Link href="/database" style={{ textDecoration: "none" }}>
-								<Button
-									size="lg"
-									radius="md"
-									leftSection={<IconDatabase size={20} />}
-									style={{ backgroundColor: "var(--mantine-color-blue-5)" }}
-								>
-									Browse Database
-								</Button>
-							</Link>
-							<Link href="/search" style={{ textDecoration: "none" }}>
-								<Button
-									size="lg"
-									radius="md"
-									variant="outline"
-									leftSection={<IconSearch size={20} />}
-								>
-									Advanced Search
-								</Button>
-							</Link>
-							<Link href="/collection" style={{ textDecoration: "none" }}>
-								<Button
-									size="lg"
-									radius="md"
-									variant="subtle"
-									leftSection={<IconHeart size={20} />}
-								>
-									My Collection
-								</Button>
-							</Link>
-						</Group>
-					</Stack>
-				</Stack>
-			</Container>
-
 			{/* Models */}
 			<Container size="xl" py="xl" w="100%">
 				<Stack gap="xl">
