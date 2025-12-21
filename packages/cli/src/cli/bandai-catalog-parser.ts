@@ -39,9 +39,12 @@ export interface LocalizedTextArray {
 	en?: string[];
 }
 
-/** Image with source URL */
+/** Image with source URL and optional local path */
 export interface ItemImage {
+	/** Original source URL from Bandai */
 	src: string;
+	/** Local path after download (e.g., /images/items/01_1000/153_1937.jpg) */
+	path?: string;
 }
 
 /** Related item with ID and source URL */

@@ -90,8 +90,17 @@ async function upsertEntities(entities: EntityData[], dataDir: string, verbose?:
 // ============================================================================
 
 /**
+ * Extract image ID from URL or path (e.g., "153_1937" from various URL formats)
+ */
+function extractImageId(urlOrPath: string): string | null {
+	// Match patterns like "153_1937" from URLs/paths
+	const match = /(\d+_\d+)(?:_s_[a-z0-9]+)?\.jpg/i.exec(urlOrPath);
+	return match?.[1] ?? null;
+}
+
+/**
  * Merge scraped item data with existing curated data
- * Preserves: English translations, manualId, downloadVerifiedAt, and other curated fields
+ * Preserves: English translations, manualId, downloadVerifiedAt, image paths, and other curated fields
  * Updates: Japanese data from fresh scrape, adds new fields
  */
 function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
@@ -120,6 +129,31 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 	// Preserve download verification timestamp
 	if (existing.downloadVerifiedAt) {
 		(merged as Record<string, unknown>).downloadVerifiedAt = existing.downloadVerifiedAt;
+	}
+
+	// Merge images: preserve local paths from existing, update source URLs from scrape
+	if (scraped.images && existing.images && Array.isArray(existing.images)) {
+		// Build map of existing image paths by image ID
+		const existingPathMap = new Map<string, string>();
+		for (const img of existing.images) {
+			// Handle old format (string) or new format (object with path)
+			const imgPath = typeof img === "string" ? img : (img as { path?: string }).path;
+			if (imgPath) {
+				const imgId = extractImageId(imgPath);
+				if (imgId) existingPathMap.set(imgId, imgPath);
+			}
+		}
+
+		// Merge paths into scraped images
+		if (existingPathMap.size > 0) {
+			merged.images = scraped.images.map(img => {
+				const imgId = extractImageId(img.src);
+				if (imgId && existingPathMap.has(imgId)) {
+					return { ...img, path: existingPathMap.get(imgId) };
+				}
+				return img;
+			});
+		}
 	}
 
 	return merged;
