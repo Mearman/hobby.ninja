@@ -21,7 +21,6 @@ import Link from "next/link";
 
 import { FeaturedItemsGrid } from "@/components/featured-items-grid";
 import { UI } from "@/lib/constants";
-import { createGradientPlaceholderSvg } from "@/lib/image-placeholders";
 
 // Constants
 const STYLE_NO_DECORATION_INHERIT = { textDecoration: "none", color: "inherit" };
@@ -29,15 +28,16 @@ const STYLE_CURSOR_POINTER = { cursor: "pointer" };
 const STYLE_BORDER_RADIUS_TOP = "var(--mantine-radius-md) var(--mantine-radius-md) 0 0";
 const STYLE_IMAGE_CONTAINER = {
 	aspectRatio: "300 / 170",
-	backgroundColor: "white",
 	borderRadius: STYLE_BORDER_RADIUS_TOP,
+	overflow: "hidden",
+	backgroundColor: "white",
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
 } as const;
 const STYLE_IMAGE = {
-	maxWidth: "100%",
-	maxHeight: "100%",
+	width: "100%",
+	height: "100%",
 	objectFit: "contain",
 	display: "block",
 } as const;
@@ -62,11 +62,9 @@ function CategoryCard({ category }: CategoryCardProps): React.ReactElement {
 				style={STYLE_CURSOR_POINTER}
 			>
 				<div style={STYLE_IMAGE_CONTAINER}>
-					<img
-						src={createGradientPlaceholderSvg(displayName)}
-						alt={displayName}
-						style={STYLE_IMAGE}
-					/>
+					<Text size="xl" fw={600} c="dimmed" ta="center" p="md">
+						{displayName}
+					</Text>
 				</div>
 				<Box p="sm">
 					<Text size="sm" fw={600} lineClamp={1}>
@@ -89,7 +87,6 @@ interface BrandCardProps {
 function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 	const displayName = typeof brand.name === "string" ? brand.name : (brand.name?.en ?? brand.name?.ja ?? "Brand");
 	const itemCount = brand.itemIds?.length ?? 0;
-	const imageSrc = brand.image ? resolveCdnUrl(brand.image) : createGradientPlaceholderSvg(displayName);
 
 	return (
 		<Link href={`/brands/${brand.id}`} style={STYLE_NO_DECORATION_INHERIT}>
@@ -102,11 +99,17 @@ function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 				style={STYLE_CURSOR_POINTER}
 			>
 				<div style={STYLE_IMAGE_CONTAINER}>
-					<img
-						src={imageSrc}
-						alt={displayName}
-						style={STYLE_IMAGE}
-					/>
+					{brand.image ? (
+						<img
+							src={resolveCdnUrl(brand.image)}
+							alt={displayName}
+							style={STYLE_IMAGE}
+						/>
+					) : (
+						<Text size="xl" fw={600} c="dimmed" ta="center" p="md">
+							{displayName}
+						</Text>
+					)}
 				</div>
 				<Box p="sm">
 					<Text size="sm" fw={600} lineClamp={1}>
@@ -130,7 +133,6 @@ interface SeriesCardProps {
 function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 	const displayName = typeof seriesItem.name === "string" ? seriesItem.name : (seriesItem.name?.en ?? seriesItem.name?.ja ?? "Series");
 	const itemCount = seriesItem.itemIds?.length ?? 0;
-	const imageSrc = seriesItem.image ? resolveCdnUrl(seriesItem.image) : createGradientPlaceholderSvg(displayName);
 
 	return (
 		<Link href={`/series/${seriesItem.id}`} style={STYLE_NO_DECORATION_INHERIT}>
@@ -143,11 +145,17 @@ function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 				style={STYLE_CURSOR_POINTER}
 			>
 				<div style={STYLE_IMAGE_CONTAINER}>
-					<img
-						src={imageSrc}
-						alt={displayName}
-						style={STYLE_IMAGE}
-					/>
+					{seriesItem.image ? (
+						<img
+							src={resolveCdnUrl(seriesItem.image)}
+							alt={displayName}
+							style={STYLE_IMAGE}
+						/>
+					) : (
+						<Text size="xl" fw={600} c="dimmed" ta="center" p="md">
+							{displayName}
+						</Text>
+					)}
 				</div>
 				<Box p="sm">
 					<Text size="sm" fw={600} lineClamp={1}>
@@ -300,7 +308,7 @@ export default function HomePage() {
 						<Title order={2} size="h2" fw={600}>
 							Categories
 						</Title>
-						<SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 5 }} spacing="lg">
+						<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="md">
 							{allCategories.map((category) => (
 								<CategoryCard key={category.id} category={category} />
 							))}
