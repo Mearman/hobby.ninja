@@ -37,7 +37,13 @@ function padItemId(id: string): string {
  * Only creates new entities, preserves existing ones (they may have curated data)
  */
 async function upsertEntity(entity: EntityData, dataDir: string, verbose?: boolean): Promise<boolean> {
-	const entityDir = entity.type === "category" ? "categories" : `${entity.type}s`;
+	// Map entity type to directory name (handle pluralization correctly)
+	const entityDirMap: Record<string, string> = {
+		brand: "brands",
+		series: "series", // series is already plural
+		category: "categories",
+	};
+	const entityDir = entityDirMap[entity.type] ?? `${entity.type}s`;
 	const filePath = join(dataDir, entityDir, `${entity.id}.json`);
 
 	// Check if entity already exists
