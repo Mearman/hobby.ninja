@@ -47,6 +47,14 @@ export interface ItemImage {
 	path?: string;
 }
 
+/** Images grouped by type */
+export interface ItemImages {
+	/** Product gallery images */
+	product: ItemImage[];
+	/** Instruction/manual images */
+	instructions: ItemImage[];
+}
+
 /** Related item with ID and source URL */
 export interface RelatedItem {
 	id: string;
@@ -70,7 +78,7 @@ export interface Item {
 	description?: LocalizedTextArray;
 	accessories?: LocalizedTextArray;
 	contents?: LocalizedTextArray;
-	images?: ItemImage[];
+	images?: ItemImages;
 	sourceUrl?: string;
 	extractedAt?: string;
 	pageScrapedAt?: string;
@@ -461,16 +469,26 @@ export class BandaiCatalogParser {
 		return items.length > 0 ? { ja: items } : undefined;
 	}
 
-	private extractImages($: CheerioAPI): ItemImage[] {
-		const images: ItemImage[] = [];
+	private extractImages($: CheerioAPI): ItemImages {
+		const product: ItemImage[] = [];
+		const instructions: ItemImage[] = [];
 		const seen = new Set<string>();
+
+		// Helper to check if URL is an instruction image
+		const isInstructionImage = (src: string): boolean => {
+			return /_inst_\d+\./.test(src) || /instruction/i.test(src);
+		};
 
 		// Product images from the slider
 		$('.pg-products__sliderMain .swiper-slide a[data-fancybox="images"] img').each((_, el) => {
 			const src = $(el).attr("src");
 			if (src && !seen.has(src) && !src.includes("common/")) {
 				seen.add(src);
-				images.push({ src });
+				if (isInstructionImage(src)) {
+					instructions.push({ src });
+				} else {
+					product.push({ src });
+				}
 			}
 		});
 
@@ -479,11 +497,15 @@ export class BandaiCatalogParser {
 			const src = $(el).attr("src");
 			if (src && !seen.has(src) && !src.includes("common/")) {
 				seen.add(src);
-				images.push({ src });
+				if (isInstructionImage(src)) {
+					instructions.push({ src });
+				} else {
+					product.push({ src });
+				}
 			}
 		});
 
-		return images;
+		return { product, instructions };
 	}
 
 	/** Extract related products with ID and URL */
