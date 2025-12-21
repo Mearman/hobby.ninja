@@ -187,7 +187,7 @@ function processBrandsWithStats(brandsData: Brand[], itemsData: Item[]): BrandWi
 // Brand Card Component
 function BrandCard({ brand }: { brand: BrandWithStats }) {
 	return (
-		<Link href={`/brand/${encodeURIComponent(brand.id)}`} style={{ textDecoration: "none", color: "inherit" }}>
+		<Link href={`/brands/${encodeURIComponent(brand.id)}`} style={{ textDecoration: "none", color: "inherit" }}>
 			<Card
 				p="md"
 				radius="md"

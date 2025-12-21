@@ -28,7 +28,7 @@ function TagCard({ tag }: { tag: TagData }) {
 
 	return (
 		<Link
-			href={`/tag/${encodeURIComponent(tag.id)}`}
+			href={`/tags/${encodeURIComponent(tag.id)}`}
 			style={{ textDecoration: "none", color: "inherit" }}
 		>
 			<Card p="md" radius="md" className={categoryCard} withBorder={true}>

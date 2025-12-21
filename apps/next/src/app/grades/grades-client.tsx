@@ -38,7 +38,7 @@ interface GradesClientProps {
 function GradeCard({ grade, subGrades }: { grade: GradeData; subGrades: GradeData[] }) {
 	return (
 		<Link
-			href={`/grade/${encodeURIComponent(grade.id)}`}
+			href={`/grades/${encodeURIComponent(grade.id)}`}
 			style={{ textDecoration: "none", color: "inherit" }}
 		>
 			<Card p="md" radius="md" className={categoryCard} withBorder={true}>

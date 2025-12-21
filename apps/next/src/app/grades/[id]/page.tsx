@@ -169,7 +169,7 @@ export default async function GradeDetailPage({ params }: GradePageProps) {
 						{parentGrade && (
 							<Group gap="xs">
 								<Text size="sm" c="dimmed">Parent Grade:</Text>
-								<Link href={`/grade/${parentGrade.id}`} style={{ textDecoration: "none" }}>
+								<Link href={`/grades/${parentGrade.id}`} style={{ textDecoration: "none" }}>
 									<Badge variant="light" size="md">
 										{getNodeDisplayName(parentGrade)}
 									</Badge>
@@ -183,7 +183,7 @@ export default async function GradeDetailPage({ params }: GradePageProps) {
 								<Text size="sm" c="dimmed" mb="xs">Sub-Grades:</Text>
 								<Group gap="xs">
 									{childGrades.map((child) => (
-										<Link key={child.id} href={`/grade/${child.id}`} style={{ textDecoration: "none" }}>
+										<Link key={child.id} href={`/grades/${child.id}`} style={{ textDecoration: "none" }}>
 											<Badge variant="light" color="violet" size="md">
 												{getNodeDisplayName(child)} ({child.itemCount})
 											</Badge>

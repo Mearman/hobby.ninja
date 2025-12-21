@@ -19,7 +19,7 @@ function formatPrice(price?: { amount: number; currency: string }): string {
 
 function ItemCard({ item }: { item: Item }): React.ReactElement {
 	return (
-		<Link href={`/item/${item.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+		<Link href={`/items/${item.id}`} style={{ textDecoration: "none", color: "inherit" }}>
 			<Card
 				shadow="sm"
 				padding="md"

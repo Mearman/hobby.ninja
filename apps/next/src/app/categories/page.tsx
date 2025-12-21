@@ -79,7 +79,7 @@ function EnhancedCategoryCard({
 	const icon = CATEGORY_ICONS[category.id] ?? CATEGORY_ICONS.default;
 
 	return (
-		<Link href={`/category/${category.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+		<Link href={`/categories/${category.id}`} style={{ textDecoration: "none", color: "inherit" }}>
 			<Card
 				p="lg"
 				radius="md"
@@ -145,7 +145,7 @@ function FeaturedCategories({ categories }: {
 			</Title>
 			<SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="md">
 				{featured.map((category) => (
-					<Link key={category.id} href={`/category/${category.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+					<Link key={category.id} href={`/categories/${category.id}`} style={{ textDecoration: "none", color: "inherit" }}>
 						<Card
 							p="lg"
 							radius="md"
@@ -200,7 +200,7 @@ function RecentlyUpdatedCategories({ categories }: { categories: CategoryWithCou
 			<Stack gap="xs">
 				{recentlyUpdated.map((category) => (
 					<Group key={category.id} justify="space-between">
-						<Anchor href={`/category/${category.id}`} size="sm">
+						<Anchor href={`/categories/${category.id}`} size="sm">
 							{getNodeDisplayName(category)}
 						</Anchor>
 						<Group gap="sm">

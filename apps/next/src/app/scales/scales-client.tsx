@@ -34,7 +34,7 @@ function isCommonScale(scaleName: string): boolean {
 function ScaleCard({ scale }: { scale: ScaleData }) {
 	return (
 		<Link
-			href={`/scale/${encodeURIComponent(scale.id)}`}
+			href={`/scales/${encodeURIComponent(scale.id)}`}
 			style={{ textDecoration: "none", color: "inherit" }}
 		>
 			<Card p="md" radius="md" className={categoryCard} withBorder={true}>

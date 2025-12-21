@@ -296,7 +296,7 @@ export function SelectableItemCard({
 				<Table.Td>
 					<Box
 						component="a"
-						href={`/item/${item.id}`}
+						href={`/items/${item.id}`}
 						style={{ textDecoration: "none", color: "inherit", display: "block" }}
 						onClick={(e) => { e.stopPropagation(); }}
 					>
@@ -328,7 +328,7 @@ export function SelectableItemCard({
 	return (
 		<Card
 			component="a"
-			href={`/item/${item.id}`}
+			href={`/items/${item.id}`}
 			p={0}
 			radius="md"
 			withBorder={true}

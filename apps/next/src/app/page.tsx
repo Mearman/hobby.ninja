@@ -48,7 +48,7 @@ function CategoryCard({ category }: CategoryCardProps): React.ReactElement {
 	const itemCount = category.itemIds?.length ?? 0;
 
 	return (
-		<Link href={`/category/${category.id}`} style={STYLE_NO_DECORATION_INHERIT}>
+		<Link href={`/categories/${category.id}`} style={STYLE_NO_DECORATION_INHERIT}>
 			<Card
 				shadow="sm"
 				padding={0}

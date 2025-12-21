@@ -41,7 +41,7 @@ export function ManualCard({ item: manual, viewMode }: ManualCardProps) {
 
 	if (viewMode === "list") {
 		return (
-			<Link href={`/manual/${encodeURIComponent(manual.id)}`} style={{ textDecoration: "none", color: "inherit" }}>
+			<Link href={`/manuals/${encodeURIComponent(manual.id)}`} style={{ textDecoration: "none", color: "inherit" }}>
 				<Card
 					p="md"
 					radius="md"
@@ -98,7 +98,7 @@ export function ManualCard({ item: manual, viewMode }: ManualCardProps) {
 
 	// Grid view (default)
 	return (
-		<Link href={`/manual/${encodeURIComponent(manual.id)}`} style={{ textDecoration: "none", color: "inherit" }}>
+		<Link href={`/manuals/${encodeURIComponent(manual.id)}`} style={{ textDecoration: "none", color: "inherit" }}>
 			<Card
 				p="md"
 				radius="md"

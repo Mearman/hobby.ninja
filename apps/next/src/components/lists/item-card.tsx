@@ -54,7 +54,7 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 		return (
 			<Card
 				component="a"
-				href={`/item/${item.id}`}
+				href={`/items/${item.id}`}
 				p={0}
 				radius="md"
 				className={itemCard}
@@ -111,7 +111,7 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 		return (
 			<Card
 				component="a"
-				href={`/item/${item.id}`}
+				href={`/items/${item.id}`}
 				p="md"
 				radius="md"
 				withBorder={true}
@@ -170,7 +170,7 @@ export function ItemCard({ item, viewMode }: ItemCardProps) {
 			<Table.Td>
 				<Box
 					component="a"
-					href={`/item/${item.id}`}
+					href={`/items/${item.id}`}
 					style={{ textDecoration: "none", color: "inherit", display: "block" }}
 				>
 					<Group gap="sm" align="center">

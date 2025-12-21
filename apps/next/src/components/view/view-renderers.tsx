@@ -44,7 +44,7 @@ function ItemCard({ item, priority = false }: { item: Item; priority?: boolean }
 	return (
 		<Card
 			component="a"
-			href={`/item/${item.id}`}
+			href={`/items/${item.id}`}
 			p={0}
 			radius="md"
 			className={itemCard}
@@ -127,7 +127,7 @@ export function ListView({ items }: { items: Item[] }) {
 					<Card
 						key={item.id}
 						component="a"
-						href={`/item/${item.id}`}
+						href={`/items/${item.id}`}
 						p="md"
 						radius="md"
 						withBorder={true}
@@ -195,7 +195,7 @@ export function TableView({ items }: { items: Item[] }) {
 				<Table.Td>
 					<Box
 						component="a"
-						href={`/item/${item.id}`}
+						href={`/items/${item.id}`}
 						style={{ textDecoration: "none", color: "inherit", display: "block" }}
 					>
 						<Group gap="sm" align="center">

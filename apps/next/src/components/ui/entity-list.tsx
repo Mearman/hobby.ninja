@@ -27,8 +27,8 @@ interface EntityListProps {
 
 const routeMap: Record<EntityType, (id: string) => string> = {
 	series: (id) => `/series/${id}`,
-	brand: (id) => `/brand/${id}`,
-	category: (id) => `/category/${id}`,
+	brand: (id) => `/brands/${id}`,
+	category: (id) => `/categories/${id}`,
 };
 
 const colorMap: Record<EntityType, string> = {

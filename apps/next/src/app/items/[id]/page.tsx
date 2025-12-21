@@ -129,14 +129,14 @@ export default async function ItemPage({ params }: ItemPageProps) {
 								{/* Metadata Badges - Clickable links to related entities */}
 								<Group gap="xs">
 									{categories.map(category => (
-										<Link key={category.id} href={`/category/${category.id}`} style={{ textDecoration: "none" }}>
+										<Link key={category.id} href={`/categories/${category.id}`} style={{ textDecoration: "none" }}>
 											<Badge color="gray" variant="light" style={{ cursor: "pointer" }}>
 												{getNodeDisplayName(category)}
 											</Badge>
 										</Link>
 									))}
 									{brands.map(brand => (
-										<Link key={brand.id} href={`/brand/${brand.id}`} style={{ textDecoration: "none" }}>
+										<Link key={brand.id} href={`/brands/${brand.id}`} style={{ textDecoration: "none" }}>
 											<Badge color="blue" variant="light" style={{ cursor: "pointer" }}>
 												{getNodeDisplayName(brand)}
 											</Badge>

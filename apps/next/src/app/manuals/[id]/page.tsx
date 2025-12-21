@@ -191,7 +191,7 @@ export default async function ManualDetailPage({ params }: ManualPageProps) {
 						<Group>
 							<IconPhoto size={20} />
 							<div>
-								<Link href={`/item/${itemId}`} style={{ textDecoration: "none" }}>
+								<Link href={`/items/${itemId}`} style={{ textDecoration: "none" }}>
 									<Text fw={500} c="blue">
 										{typeof itemName === "string"
 											? itemName

@@ -131,7 +131,7 @@ export function CategoryPageClient({
 					<Anchor href="/categories" size="sm">
 						Categories
 					</Anchor>
-					<Anchor href={`/category/${categoryId}`} size="sm" fw={500}>
+					<Anchor href={`/categories/${categoryId}`} size="sm" fw={500}>
 						{getNodeDisplayName(initialCategory)}
 					</Anchor>
 				</Breadcrumbs>
