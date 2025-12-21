@@ -16,8 +16,39 @@ const __dirname = dirname(__filename);
 interface FileInfo {
   localPath: string;
   remotePath: string;
+  originalRemotePath: string; // Before normalization (for cleanup)
   size: number;
   checksum: string;
+}
+
+function normalizeExtension(filePath: string): string {
+  // Normalize all extensions to lowercase, and .jpeg to .jpg
+  return filePath.replace(/\.[^.]+$/, ext =>
+    ext.toLowerCase().replace('.jpeg', '.jpg')
+  );
+}
+
+function getExtensionVariants(normalizedPath: string): string[] {
+  // Return uppercase/alternate variants that might exist in R2
+  const match = normalizedPath.match(/\.([^.]+)$/);
+  if (!match) return [];
+
+  const ext = match[1]; // e.g., 'jpg', 'png', 'pdf'
+  const basePath = normalizedPath.slice(0, -ext.length - 1);
+
+  const variants: string[] = [];
+
+  // Add uppercase variant
+  variants.push(`${basePath}.${ext.toUpperCase()}`);
+
+  // For jpg, also add jpeg variants
+  if (ext === 'jpg') {
+    variants.push(`${basePath}.jpeg`);
+    variants.push(`${basePath}.JPEG`);
+    variants.push(`${basePath}.Jpeg`);
+  }
+
+  return variants;
 }
 
 interface UploadState {
@@ -61,8 +92,9 @@ async function execCommand(command: string, args: string[], options: Record<stri
   }
 }
 
-function getAllFiles(dir: string, extensions: string[] = ['.jpg', '.jpeg', '.pdf']): FileInfo[] {
+function getAllFiles(dir: string, extensions: string[] = ['.jpg', '.jpeg', '.png', '.svg', '.pdf']): FileInfo[] {
   const files: FileInfo[] = [];
+  const normalizedExtensions = extensions.map(ext => ext.toLowerCase());
 
   function traverse(currentDir: string): void {
     try {
@@ -74,13 +106,16 @@ function getAllFiles(dir: string, extensions: string[] = ['.jpg', '.jpeg', '.pdf
 
         if (stat.isDirectory()) {
           traverse(fullPath);
-        } else if (extensions.includes(extname(item).toLowerCase())) {
-          const relativePath = relative(dir, fullPath);
+        } else if (normalizedExtensions.includes(extname(item).toLowerCase())) {
+          const relativePath = relative(dir, fullPath).replace(/\\/g, '/'); // Convert Windows paths to Unix
+          const normalizedPath = normalizeExtension(relativePath);
           files.push({
             localPath: fullPath,
-            remotePath: relativePath.replace(/\\/g, '/'), // Convert Windows paths to Unix
+            remotePath: normalizedPath,
+            originalRemotePath: relativePath,
             size: stat.size,
-            checksum: createHash('md5').update(relativePath).digest('hex')
+            // Use normalized path for checksum so variants don't get re-uploaded
+            checksum: createHash('md5').update(normalizedPath).digest('hex')
           });
         }
       }
@@ -130,12 +165,40 @@ function saveState(state: UploadState): void {
   }
 }
 
+async function deleteR2Object(key: string): Promise<boolean> {
+  try {
+    await execCommand('wrangler', [
+      'r2', 'object', 'delete',
+      `${BUCKET_NAME}/${key}`,
+      '--remote'
+    ]);
+    return true;
+  } catch {
+    // Object might not exist, which is fine
+    return false;
+  }
+}
+
+async function cleanupVariants(normalizedPath: string): Promise<number> {
+  const variants = getExtensionVariants(normalizedPath);
+  let deleted = 0;
+
+  for (const variant of variants) {
+    if (await deleteR2Object(variant)) {
+      deleted++;
+    }
+  }
+
+  return deleted;
+}
+
 // Main upload function
 async function uploadFiles(): Promise<void> {
   console.log('🚀 Starting R2 upload to hobby-ninja bucket...');
   console.log(`📁 Source directory: ${DATA_DIR}`);
   console.log(`🗑️  Target bucket: ${BUCKET_NAME}`);
-  console.log(`🔍 File types: .jpg, .jpeg, .pdf`);
+  console.log(`🔍 File types: .jpg, .jpeg, .png, .svg, .pdf`);
+  console.log(`🔄 Normalizing: all extensions to lowercase, .jpeg → .jpg (old variants auto-deleted)`);
   console.log('');
 
   if (DRY_RUN) {
@@ -160,15 +223,29 @@ async function uploadFiles(): Promise<void> {
   const jpgFiles = allFiles.filter(f =>
     ['.jpg', '.jpeg'].includes(extname(f.remotePath).toLowerCase())
   );
+  const pngFiles = allFiles.filter(f =>
+    extname(f.remotePath).toLowerCase() === '.png'
+  );
+  const svgFiles = allFiles.filter(f =>
+    extname(f.remotePath).toLowerCase() === '.svg'
+  );
   const pdfFiles = allFiles.filter(f =>
     extname(f.remotePath).toLowerCase() === '.pdf'
   );
 
+  // Count files that will be normalized
+  const filesToNormalize = allFiles.filter(f => f.remotePath !== f.originalRemotePath);
+
   // Report summary
   console.log(`📊 Found ${allFiles.length} files:`);
-  console.log(`   🖼️  Images: ${jpgFiles.length} files (${formatBytes(jpgFiles.reduce((sum, f) => sum + f.size, 0))})`);
-  console.log(`   📄 PDFs: ${pdfFiles.length} files (${formatBytes(pdfFiles.reduce((sum, f) => sum + f.size, 0))})`);
+  console.log(`   🖼️  JPG/JPEG: ${jpgFiles.length} files (${formatBytes(jpgFiles.reduce((sum, f) => sum + f.size, 0))})`);
+  console.log(`   🖼️  PNG: ${pngFiles.length} files (${formatBytes(pngFiles.reduce((sum, f) => sum + f.size, 0))})`);
+  console.log(`   🎨 SVG: ${svgFiles.length} files (${formatBytes(svgFiles.reduce((sum, f) => sum + f.size, 0))})`);
+  console.log(`   📄 PDF: ${pdfFiles.length} files (${formatBytes(pdfFiles.reduce((sum, f) => sum + f.size, 0))})`);
   console.log(`   💾 Total: ${formatBytes(allFiles.reduce((sum, f) => sum + f.size, 0))}`);
+  if (filesToNormalize.length > 0) {
+    console.log(`   🔄 Extensions to normalize: ${filesToNormalize.length} files`);
+  }
   console.log('');
 
   if (DRY_RUN) {
@@ -206,6 +283,7 @@ async function uploadFiles(): Promise<void> {
   const startTime = Date.now();
   let uploaded = 0;
   let failed = 0;
+  let variantsCleaned = 0;
   const alreadyProcessed = RESUME ? (allFiles.length - filesToUpload.length) : 0;
 
   for (let i = 0; i < filesToUpload.length; i += BATCH_SIZE) {
@@ -227,6 +305,10 @@ async function uploadFiles(): Promise<void> {
 
         uploaded++;
         state.uploaded.push(file.checksum);
+
+        // Clean up any old extension variants (e.g., .JPG, .jpeg when we uploaded .jpg)
+        const cleaned = await cleanupVariants(file.remotePath);
+        variantsCleaned += cleaned;
 
         // Progress indicator
         if (uploaded % 5 === 0) {
@@ -273,6 +355,9 @@ async function uploadFiles(): Promise<void> {
     console.log(`   ⏭️  Previously uploaded: ${alreadyProcessed} files`);
   }
   console.log(`   ✅ Successfully uploaded: ${uploaded} files`);
+  if (variantsCleaned > 0) {
+    console.log(`   🧹 Old variants cleaned: ${variantsCleaned} files`);
+  }
   if (failed > 0) {
     console.log(`   ❌ Failed uploads: ${failed} files`);
   }
