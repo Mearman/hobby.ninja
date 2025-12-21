@@ -31,6 +31,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { FallbackImage } from "./fallback-image";
 import { ItemImageGallery } from "./item-image-gallery";
 import { PdfAccordion } from "./pdf-accordion";
 
@@ -226,13 +227,14 @@ export default async function ItemPage({ params }: ItemPageProps) {
 								name: pdf.name.en ?? pdf.name.ja,
 								path: `manuals/${manual.id}/${manual.id}${suffix}.pdf`,
 								title: `${getNodeDisplayName(manual)} - ${pdf.name.en ?? pdf.name.ja}`,
+								externalUrl: pdf.url, // Original Bandai URL as final fallback
 							};
 						})}
 						header={
 							<Group justify="space-between" align="flex-start" wrap="wrap">
 								<Group gap="md" align="flex-start">
-									<img
-										src={resolveCdnUrl(`manuals/${manual.id}/${manual.id}.jpg`)}
+									<FallbackImage
+										urls={getManualCdnUrls(`${manual.id}/${manual.id}.jpg`, manual.thumbnailImage)}
 										alt={getNodeDisplayName(manual)}
 										style={{
 											width: 80,
