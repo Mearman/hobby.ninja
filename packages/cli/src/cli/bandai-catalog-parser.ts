@@ -93,6 +93,14 @@ export interface ManualRef {
 	url: string;
 }
 
+/** Global site URLs (checked for existence during scrape) */
+export interface GlobalSiteUrls {
+	/** English (USA) site URL if page exists */
+	enUs?: string;
+	/** English (Other Areas) site URL if page exists */
+	enOthers?: string;
+}
+
 /** Normalized item matching data/lib/schemas.ts ItemSchema */
 export interface Item {
 	id: string;
@@ -111,6 +119,7 @@ export interface Item {
 	accessories?: LocalizedTextArray;
 	contents?: LocalizedTextArray;
 	images?: ItemImages;
+	globalSiteUrls?: GlobalSiteUrls;
 	sourceUrl?: string;
 	extractedAt?: string;
 	pageScrapedAt?: string;

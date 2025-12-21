@@ -4,7 +4,7 @@ import { join, dirname } from "node:path";
 
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 
-import { BandaiCatalogParser, type EntityData, type Item } from "./bandai-catalog-parser";
+import { BandaiCatalogParser, type EntityData, type GlobalSiteUrls, type Item } from "./bandai-catalog-parser";
 import { CatalogTranslator } from "./catalog-translator";
 import { SimpleCatalogScraper, type SimpleCatalogResult } from "./simple-catalog-scraper";
 import type { CatalogDiscoveryOptions, CatalogDiscoveryResult, CatalogRangeStats } from "./types/catalog-discovery";
@@ -199,6 +199,20 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 		(merged as Record<string, unknown>).downloadVerifiedAt = existing.downloadVerifiedAt;
 	}
 
+	// Preserve existing globalSiteUrls if scrape didn't find any (or merge them)
+	if (existing.globalSiteUrls && typeof existing.globalSiteUrls === "object") {
+		if (!scraped.globalSiteUrls) {
+			// Preserve existing if no new ones found
+			merged.globalSiteUrls = existing.globalSiteUrls as typeof merged.globalSiteUrls;
+		} else {
+			// Merge: new takes precedence, but keep existing ones not in new
+			merged.globalSiteUrls = {
+				...existing.globalSiteUrls as typeof merged.globalSiteUrls,
+				...scraped.globalSiteUrls,
+			};
+		}
+	}
+
 	// Merge images: preserve local paths from existing, update source URLs from scrape
 	if (scraped.images && existing.images) {
 		// Build map of existing image paths by image ID
@@ -348,6 +362,38 @@ async function quickCheckUrl(url: string): Promise<{ isValid: boolean; title?: s
 		// Network error - treat as invalid
 		return { isValid: false };
 	}
+}
+
+/**
+ * Check if global site pages exist for an item
+ * Uses the same partial-read technique as quickCheckUrl
+ * Checks en-us and en-others variants
+ */
+async function checkGlobalSiteUrls(itemId: string): Promise<GlobalSiteUrls | undefined> {
+	const variants = [
+		{ key: "enUs" as const, url: `https://global.bandai-hobby.net/en-us/item/${itemId}/` },
+		{ key: "enOthers" as const, url: `https://global.bandai-hobby.net/en-others/item/${itemId}/` },
+	];
+
+	const result: GlobalSiteUrls = {};
+
+	// Check both in parallel
+	const checks = await Promise.all(
+		variants.map(async ({ key, url }) => {
+			const check = await quickCheckUrl(url);
+			// Valid if we got a response and title doesn't contain "404"
+			return { key, url, exists: check.isValid };
+		})
+	);
+
+	for (const { key, url, exists } of checks) {
+		if (exists) {
+			result[key] = url;
+		}
+	}
+
+	// Return undefined if no global pages exist
+	return Object.keys(result).length > 0 ? result : undefined;
 }
 
 /**
@@ -712,6 +758,23 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 								if (options.verbose) {
 									console.warn(`    ⚠️ Translation failed: ${translateError}`);
 								}
+							}
+						}
+
+						// Check for global site pages (en-us, en-others)
+						try {
+							const globalUrls = await checkGlobalSiteUrls(range);
+							if (globalUrls) {
+								catalogResult.data.globalSiteUrls = globalUrls;
+								if (options.verbose) {
+									const sites = Object.keys(globalUrls).join(", ");
+									console.log(`    🌍 Global pages found: ${sites}`);
+								}
+							}
+						} catch (globalError) {
+							// Log error but don't fail the scrape
+							if (options.verbose) {
+								console.warn(`    ⚠️ Global site check failed: ${globalError}`);
 							}
 						}
 
