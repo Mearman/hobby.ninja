@@ -219,7 +219,6 @@ export function useSearch() {
 	}), [search, getSuggestions, advancedSearch, getStats]);
 }
 
-// Re-export for compatibility
+// Re-export searchRecords for compatibility (already imported above)
 
-
-export {searchRecords, getSearchInstance} from "@hobby-ninja/data/search";
+export {searchRecords} from "@hobby-ninja/data/search";
