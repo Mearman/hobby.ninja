@@ -1,4 +1,4 @@
-import { brands, categories as allCategoriesData, homepage, series } from "@hobby-ninja/data";
+import { brands, categories as allCategoriesData, homepage, resolveCdnUrl, series } from "@hobby-ninja/data";
 import {
 	Avatar,
 	Box,
@@ -65,7 +65,7 @@ function CategoryCard({ category }: CategoryCardProps): React.ReactElement {
 
 // Brand Card Component
 interface BrandCardProps {
-	brand: { id: string; name?: string | { ja: string; en?: string }; itemIds?: string[] };
+	brand: { id: string; name?: string | { ja: string; en?: string }; itemIds?: string[]; image?: string };
 }
 
 function BrandCard({ brand }: BrandCardProps): React.ReactElement {
@@ -84,9 +84,19 @@ function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 				style={STYLE_CURSOR_POINTER}
 			>
 				<Group align="center" gap="md">
-					<Avatar size={UI.BRAND_LOGO_SIZE} radius="md">
-						{firstChar}
-					</Avatar>
+					{brand.image ? (
+						<Box w={UI.BRAND_LOGO_SIZE} h={UI.BRAND_LOGO_SIZE} style={{ borderRadius: "var(--mantine-radius-md)", overflow: "hidden" }}>
+							<img
+								src={resolveCdnUrl(brand.image)}
+								alt={displayName}
+								style={{ width: "100%", height: "100%", objectFit: "cover" }}
+							/>
+						</Box>
+					) : (
+						<Avatar size={UI.BRAND_LOGO_SIZE} radius="md">
+							{firstChar}
+						</Avatar>
+					)}
 					<Box flex={1}>
 						<Text size="sm" fw={600} lineClamp={1}>
 							{displayName}
@@ -104,7 +114,7 @@ function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 
 // Series Card Component
 interface SeriesCardProps {
-	seriesItem: { id: string; name?: string | { ja: string; en?: string }; itemIds?: string[] };
+	seriesItem: { id: string; name?: string | { ja: string; en?: string }; itemIds?: string[]; image?: string };
 }
 
 function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
@@ -123,9 +133,19 @@ function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 				style={STYLE_CURSOR_POINTER}
 			>
 				<Group align="center" gap="md">
-					<Avatar size={UI.BRAND_LOGO_SIZE} radius="md" color="violet">
-						{firstChar}
-					</Avatar>
+					{seriesItem.image ? (
+						<Box w={UI.BRAND_LOGO_SIZE} h={UI.BRAND_LOGO_SIZE} style={{ borderRadius: "var(--mantine-radius-md)", overflow: "hidden" }}>
+							<img
+								src={resolveCdnUrl(seriesItem.image)}
+								alt={displayName}
+								style={{ width: "100%", height: "100%", objectFit: "cover" }}
+							/>
+						</Box>
+					) : (
+						<Avatar size={UI.BRAND_LOGO_SIZE} radius="md" color="violet">
+							{firstChar}
+						</Avatar>
+					)}
 					<Box flex={1}>
 						<Text size="sm" fw={600} lineClamp={1}>
 							{displayName}
