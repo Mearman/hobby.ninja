@@ -83,13 +83,13 @@ function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 				h="100%"
 				style={STYLE_CURSOR_POINTER}
 			>
-				<Group align="center" gap="md">
+				<Group align="center" gap="md" wrap="nowrap">
 					{brand.image ? (
-						<Box w={UI.BRAND_LOGO_SIZE} h={UI.BRAND_LOGO_SIZE} style={{ borderRadius: "var(--mantine-radius-md)", overflow: "hidden" }}>
+						<Box w={80} style={{ borderRadius: "var(--mantine-radius-md)", overflow: "hidden", flexShrink: 0 }}>
 							<img
 								src={resolveCdnUrl(brand.image)}
 								alt={displayName}
-								style={{ width: "100%", height: "100%", objectFit: "cover" }}
+								style={{ width: "100%", height: "auto", display: "block" }}
 							/>
 						</Box>
 					) : (
@@ -97,7 +97,7 @@ function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 							{firstChar}
 						</Avatar>
 					)}
-					<Box flex={1}>
+					<Box flex={1} miw={0}>
 						<Text size="sm" fw={600} lineClamp={1}>
 							{displayName}
 						</Text>
@@ -132,13 +132,13 @@ function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 				h="100%"
 				style={STYLE_CURSOR_POINTER}
 			>
-				<Group align="center" gap="md">
+				<Group align="center" gap="md" wrap="nowrap">
 					{seriesItem.image ? (
-						<Box w={UI.BRAND_LOGO_SIZE} h={UI.BRAND_LOGO_SIZE} style={{ borderRadius: "var(--mantine-radius-md)", overflow: "hidden" }}>
+						<Box w={80} style={{ borderRadius: "var(--mantine-radius-md)", overflow: "hidden", flexShrink: 0 }}>
 							<img
 								src={resolveCdnUrl(seriesItem.image)}
 								alt={displayName}
-								style={{ width: "100%", height: "100%", objectFit: "cover" }}
+								style={{ width: "100%", height: "auto", display: "block" }}
 							/>
 						</Box>
 					) : (
@@ -146,7 +146,7 @@ function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 							{firstChar}
 						</Avatar>
 					)}
-					<Box flex={1}>
+					<Box flex={1} miw={0}>
 						<Text size="sm" fw={600} lineClamp={1}>
 							{displayName}
 						</Text>
