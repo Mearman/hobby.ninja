@@ -288,7 +288,7 @@ export default function HomePage() {
 			</Container>
 
 			{/* Models */}
-			<Container size="xl" py="xl">
+			<Container size="xl" py="xl" w="100%">
 				<Stack gap="xl">
 					<Group justify="space-between" align="center">
 						<Title order={2} size="h2" fw={600}>
@@ -307,7 +307,7 @@ export default function HomePage() {
 			</Container>
 
 			{/* Categories, Series & Brands */}
-			<Container size="xl" py="xl">
+			<Container size="xl" py="xl" w="100%">
 				<Stack gap="xl">
 					<CollapsibleGrid
 						title="Categories"
