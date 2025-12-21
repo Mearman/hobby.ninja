@@ -298,17 +298,6 @@ async function uploadFiles(): Promise<void> {
     }
   }
 
-  // Check bucket contents
-  console.log('');
-  console.log('🔍 Checking bucket contents...');
-  try {
-    const listResult = await execCommand('wrangler', ['r2', 'object', 'list', BUCKET_NAME]);
-    const lines = listResult.trim().split('\n');
-    const objectCount = lines.length > 0 && lines[0] ? lines.length - 1 : 0; // Subtract header
-    console.log(`📦 Bucket now contains approximately ${objectCount} objects`);
-  } catch (error) {
-    console.log('⚠️  Could not verify bucket contents');
-  }
 }
 
 // Handle uncaught errors
