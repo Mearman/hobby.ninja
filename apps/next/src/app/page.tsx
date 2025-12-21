@@ -44,7 +44,7 @@ const STYLE_IMAGE = {
 
 // Category Card Component
 interface CategoryCardProps {
-	category: { id: string; name?: string | { ja: string; en?: string }; itemIds?: string[] };
+	category: { id: string; name?: string | { ja: string; en?: string }; itemIds?: string[]; image?: string };
 }
 
 function CategoryCard({ category }: CategoryCardProps): React.ReactElement {
@@ -62,9 +62,17 @@ function CategoryCard({ category }: CategoryCardProps): React.ReactElement {
 				style={STYLE_CURSOR_POINTER}
 			>
 				<div style={STYLE_IMAGE_CONTAINER}>
-					<Text size="xl" fw={600} c="dimmed" ta="center" p="md">
-						{displayName}
-					</Text>
+					{category.image ? (
+						<img
+							src={resolveCdnUrl(category.image)}
+							alt={displayName}
+							style={STYLE_IMAGE}
+						/>
+					) : (
+						<Text size="xl" fw={600} c="dimmed" ta="center" p="md">
+							{displayName}
+						</Text>
+					)}
 				</div>
 				<Box p="sm">
 					<Text size="sm" fw={600} lineClamp={1}>
