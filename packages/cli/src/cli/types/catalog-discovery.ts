@@ -26,6 +26,9 @@ export interface CatalogDiscoveryOptions {
 
 	/** Enable translation of Japanese text to English */
 	translate?: boolean;
+
+	/** Force re-scrape even if items already have files (preserves curated data via merge) */
+	forceRescrape?: boolean;
 }
 
 /**

@@ -59,6 +59,7 @@ program
 	.option("-d, --delay <ms>", "Delay between requests in ms", String(NETWORK.DEFAULT_DELAY))
 	.option("--start-id <id>", "Starting ID for catalog discovery (e.g., 01_1, 01_778)", "01_1")
 	.option("--count <number>", "Number of IDs to process", "10")
+	.option("--force-rescrape", "Force re-scrape even if files exist (preserves curated data)", false)
 	.action(async (options: unknown) => {
 		try {
 			const { scrapeData } = await import("../cli/scrape-command.js");

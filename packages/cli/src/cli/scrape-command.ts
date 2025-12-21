@@ -15,6 +15,7 @@ export interface ScrapeOptions {
 	delayMs?: number;
 	startId?: string;
 	count?: number;
+	forceRescrape?: boolean;
 }
 
 export async function scrapeData(options: ScrapeOptions): Promise<void> {
@@ -79,6 +80,7 @@ async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 		verbose,
 		delayMs,
 		translate: options.translate ?? false,
+		forceRescrape: options.forceRescrape ?? false,
 	};
 
 	// Execute catalog discovery

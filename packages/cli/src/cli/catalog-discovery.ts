@@ -502,7 +502,10 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 	result.failedRanges = discovery.invalidIds.length;
 
 	// Filter to only IDs that need content download (valid but not yet downloaded)
-	const idsNeedingDownload = ItemsIndexUpdater.getIdsNeedingDownload(discovery.validIds);
+	// When forceRescrape is true, re-scrape all valid IDs (merge preserves curated data)
+	const idsNeedingDownload = options.forceRescrape
+		? discovery.validIds
+		: ItemsIndexUpdater.getIdsNeedingDownload(discovery.validIds);
 
 	if (idsNeedingDownload.length === 0) {
 		console.log(`\n✅ All product pages already scraped.`);
