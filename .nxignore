@@ -1,3 +1,9 @@
+# Ignore build artifacts that change frequently during development
+# These would otherwise trigger unnecessary rebuilds via nx watch
+.next/
+out/
+dist/
+
 # Ignore large data files to prevent Nx plugin timeouts
 # These JSON files are data assets, not source code
 

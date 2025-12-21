@@ -36,7 +36,7 @@
 			"executor": "nx:run-commands",
 			"dependsOn": ["data:build"],
 			"options": {
-				"command": "concurrently --names \"DATA,NEXT\" --prefix-colors \"cyan,green\" \"nx watch --projects=data --includeDependentProjects --verbose -- 'nx run data:watch:build'\" \"BUILD_DATA_STRATEGY=webpack next dev\"",
+				"command": "concurrently --names \"DATA,NEXT\" --prefix-colors \"cyan,green\" \"nx watch --projects=data --verbose -- 'nx run data:watch:build'\" \"BUILD_DATA_STRATEGY=webpack next dev\"",
 				"cwd": "{projectRoot}"
 			},
 			"configurations": {},
