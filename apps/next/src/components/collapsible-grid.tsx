@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Group, SimpleGrid, Stack, Title } from "@mantine/core";
+import { Button, Collapse, Group, SimpleGrid, Stack, Title } from "@mantine/core";
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 import { useState } from "react";
 
@@ -9,7 +9,6 @@ interface CollapsibleGridProps {
 	children: React.ReactNode;
 	collapsedChildren: React.ReactNode;
 	totalCount: number;
-	initialCount?: number;
 	cols?: { base: number; sm: number; md: number; lg: number };
 }
 
@@ -44,8 +43,15 @@ export function CollapsibleGrid({
 
 			<SimpleGrid cols={cols} spacing="md">
 				{children}
-				{expanded && collapsedChildren}
 			</SimpleGrid>
+
+			{hasMore && (
+				<Collapse in={expanded}>
+					<SimpleGrid cols={cols} spacing="md">
+						{collapsedChildren}
+					</SimpleGrid>
+				</Collapse>
+			)}
 		</Stack>
 	);
 }
