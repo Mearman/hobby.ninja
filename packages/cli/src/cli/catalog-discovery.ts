@@ -4,7 +4,7 @@ import { join, dirname } from "node:path";
 
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 
-import { BandaiCatalogParser, type EntityData } from "./bandai-catalog-parser";
+import { BandaiCatalogParser, type EntityData, type Item } from "./bandai-catalog-parser";
 import { CatalogTranslator } from "./catalog-translator";
 import { SimpleCatalogScraper, type SimpleCatalogResult } from "./simple-catalog-scraper";
 import type { CatalogDiscoveryOptions, CatalogDiscoveryResult, CatalogRangeStats } from "./types/catalog-discovery";
@@ -84,6 +84,63 @@ async function upsertEntities(entities: EntityData[], dataDir: string, verbose?:
 	}
 	return created;
 }
+
+// ============================================================================
+// Item Merge Logic
+// ============================================================================
+
+/**
+ * Merge scraped item data with existing curated data
+ * Preserves: English translations, manualId, downloadVerifiedAt, and other curated fields
+ * Updates: Japanese data from fresh scrape, adds new fields
+ */
+function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
+	const merged = { ...scraped };
+
+	// Preserve English name if it exists
+	if (existing.name && typeof existing.name === "object" && "en" in existing.name) {
+		merged.name = { ...scraped.name, en: (existing.name as { en?: string }).en };
+	}
+
+	// Preserve English translations in localized text arrays
+	const localizedFields = ["description", "accessories", "contents"] as const;
+	for (const field of localizedFields) {
+		const existingField = existing[field];
+		const scrapedField = scraped[field];
+		if (existingField && typeof existingField === "object" && "en" in existingField && scrapedField) {
+			(merged[field] as { ja: string[]; en?: string[] }).en = (existingField as { en?: string[] }).en;
+		}
+	}
+
+	// Preserve manualId if existing has it and scraped doesn't
+	if (existing.manualId && !scraped.manualId) {
+		merged.manualId = existing.manualId as string;
+	}
+
+	// Preserve download verification timestamp
+	if (existing.downloadVerifiedAt) {
+		(merged as Record<string, unknown>).downloadVerifiedAt = existing.downloadVerifiedAt;
+	}
+
+	return merged;
+}
+
+/**
+ * Read existing item file if it exists
+ */
+async function readExistingItem(filePath: string): Promise<Record<string, unknown> | null> {
+	try {
+		if (!existsSync(filePath)) return null;
+		const content = await readFile(filePath, "utf8");
+		return JSON.parse(content) as Record<string, unknown>;
+	} catch {
+		return null;
+	}
+}
+
+// ============================================================================
+// URL Checking
+// ============================================================================
 
 // Fast HTTP client for discovery phase
 const USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
@@ -522,8 +579,15 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 							}
 						}
 
+						// Merge with existing data to preserve curated fields (EN translations, manualId, etc.)
+						const itemPath = join(options.outputDir, `${paddedRange}.json`);
+						const existingItem = await readExistingItem(itemPath);
+						const finalItem = existingItem
+							? mergeItemData(catalogResult.data, existingItem)
+							: catalogResult.data;
+
 						writePromises.push(
-							writeFile(join(options.outputDir, `${paddedRange}.json`), JSON.stringify(catalogResult.data, null, "\t"), "utf8"),
+							writeFile(itemPath, JSON.stringify(finalItem, null, "\t"), "utf8"),
 						);
 					}
 
