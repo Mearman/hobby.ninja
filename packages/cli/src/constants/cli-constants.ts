@@ -165,12 +165,11 @@ export const VALIDATION_LIMITS = {
 } as const;
 
 // Catalog discovery constants
+// Note: Bandai uses variable-length IDs (e.g., 01_1, 01_778, 01_1000)
 export const CATALOG_DISCOVERY = {
-	DEFAULT_START_ID: "00_0000",
+	DEFAULT_START_ID: "01_1",
 	DEFAULT_COUNT: 10,
 	ID_PREFIX_LENGTH: 2,
-	ID_SUFFIX_LENGTH: 4,
-	ID_PAD_LENGTH: 4,
 	MAX_RANGES_TO_DISPLAY: 5,
 } as const;
 

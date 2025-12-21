@@ -57,7 +57,7 @@ program
 	.option(VERBOSE_OPTION, MESSAGES.VERBOSE_OUTPUT, false)
 	.option("-t, --translate", "Translate Japanese text to English", false)
 	.option("-d, --delay <ms>", "Delay between requests in ms", String(NETWORK.DEFAULT_DELAY))
-	.option("--start-id <id>", "Starting ID for catalog discovery", "00_0000")
+	.option("--start-id <id>", "Starting ID for catalog discovery (e.g., 01_1, 01_778)", "01_1")
 	.option("--count <number>", "Number of IDs to process", "10")
 	.action(async (options: unknown) => {
 		try {

@@ -58,12 +58,12 @@ async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 	console.log("🔍 Starting Bandai catalog discovery...");
 
 	// Generate ranges starting from startId
+	// Bandai uses variable-length IDs (e.g., 01_1, 01_778, 01_1000)
 	const [prefix, suffix] = startId.split("_");
 	const startIndex = Number.parseInt(suffix || "0");
 	const ranges = generateCatalogRanges(count).map((_, index) => {
 		const id = startIndex + index;
-		const formattedId = id.toString().padStart(4, "0");
-		return `${prefix}_${formattedId}`;
+		return `${prefix}_${id}`;
 	});
 
 	if (verbose) {
