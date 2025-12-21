@@ -6,7 +6,6 @@ import {
 	Container,
 	Divider,
 	Group,
-	SimpleGrid,
 	Stack,
 	Text,
 	Title,
@@ -19,6 +18,7 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 
+import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { FeaturedItemsGrid } from "@/components/featured-items-grid";
 import { ImageWithFallback } from "@/components/image-with-fallback";
 import { UI } from "@/lib/constants";
@@ -309,45 +309,45 @@ export default function HomePage() {
 			{/* Categories, Series & Brands */}
 			<Container size="xl" py="xl">
 				<Stack gap="xl">
-					{/* Categories Section */}
-					<Stack gap="lg">
-						<Title order={2} size="h2" fw={600}>
-							Categories
-						</Title>
-						<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="md">
-							{allCategories.map((category) => (
-								<CategoryCard key={category.id} category={category} />
-							))}
-						</SimpleGrid>
-					</Stack>
+					<CollapsibleGrid
+						title="Categories"
+						totalCount={allCategories.length}
+						collapsedChildren={allCategories.slice(4).map((category) => (
+							<CategoryCard key={category.id} category={category} />
+						))}
+					>
+						{allCategories.slice(0, 4).map((category) => (
+							<CategoryCard key={category.id} category={category} />
+						))}
+					</CollapsibleGrid>
 
 					<Divider />
 
-					{/* Series Section */}
-					<Stack gap="lg">
-						<Title order={2} size="h2" fw={600}>
-							Series
-						</Title>
-						<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="md">
-							{allSeries.map((s) => (
-								<SeriesCard key={s.id} seriesItem={s} />
-							))}
-						</SimpleGrid>
-					</Stack>
+					<CollapsibleGrid
+						title="Series"
+						totalCount={allSeries.length}
+						collapsedChildren={allSeries.slice(4).map((s) => (
+							<SeriesCard key={s.id} seriesItem={s} />
+						))}
+					>
+						{allSeries.slice(0, 4).map((s) => (
+							<SeriesCard key={s.id} seriesItem={s} />
+						))}
+					</CollapsibleGrid>
 
 					<Divider />
 
-					{/* Brands Section */}
-					<Stack gap="lg">
-						<Title order={2} size="h2" fw={600}>
-							Brands
-						</Title>
-						<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="md">
-							{allBrands.map((brand) => (
-								<BrandCard key={brand.id} brand={brand} />
-							))}
-						</SimpleGrid>
-					</Stack>
+					<CollapsibleGrid
+						title="Brands"
+						totalCount={allBrands.length}
+						collapsedChildren={allBrands.slice(4).map((brand) => (
+							<BrandCard key={brand.id} brand={brand} />
+						))}
+					>
+						{allBrands.slice(0, 4).map((brand) => (
+							<BrandCard key={brand.id} brand={brand} />
+						))}
+					</CollapsibleGrid>
 				</Stack>
 			</Container>
 
