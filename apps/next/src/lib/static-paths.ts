@@ -27,11 +27,11 @@ export function getStaticPathsCount() {
 	const paths = generateStaticPaths();
 	return {
 		total: paths.length,
-		items: paths.filter(p => p.startsWith("/item/")).length,
-		brands: paths.filter(p => p.startsWith("/brand/")).length,
-		categories: paths.filter(p => p.startsWith("/category/")).length,
+		items: paths.filter(p => p.startsWith("/items/")).length,
+		brands: paths.filter(p => p.startsWith("/brands/")).length,
+		categories: paths.filter(p => p.startsWith("/categories/")).length,
 		series: paths.filter(p => p.startsWith("/series/")).length,
-		manuals: paths.filter(p => p.startsWith("/manual/")).length,
-		static: paths.filter(p => !/^\/(item|brand|category|series|manual)\//.test(p)).length,
+		manuals: paths.filter(p => p.startsWith("/manuals/")).length,
+		static: paths.filter(p => !/^\/(items|brands|categories|series|manuals)\//.test(p)).length,
 	};
 }
