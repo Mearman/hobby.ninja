@@ -12,6 +12,18 @@ import { resolve } from "node:path";
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 
 const ITEMS_INDEX_PATH = resolveWorkspacePath("data/src/items/index.json");
+
+/**
+ * Pad the numeric suffix of an item ID to 4 digits for consistent indexing
+ * 01_1 -> 01_0001, 01_778 -> 01_0778, 01_1000 -> 01_1000 (unchanged)
+ */
+function padItemId(id: string): string {
+	const parts = id.split("_");
+	if (parts.length !== 2) return id;
+	const [prefix, suffix] = parts;
+	if (!/^\d+$/.test(prefix) || !/^\d+$/.test(suffix)) return id;
+	return `${prefix}_${suffix.padStart(4, "0")}`;
+}
 const ITEMS_DATA_DIR = resolveWorkspacePath("data/src/items");
 
 // Timing fields now stored in individual item files
@@ -92,7 +104,8 @@ function calculateStats(items: Record<string, ItemIndexEntry>): ItemsIndex["stat
 // Helper functions for individual item timing fields
 function getItemTimingFields(itemId: string): ItemTimingFields | null {
 	try {
-		const itemPath = resolve(ITEMS_DATA_DIR, `${itemId}.json`);
+		const paddedId = padItemId(itemId);
+		const itemPath = resolve(ITEMS_DATA_DIR, `${paddedId}.json`);
 		if (!existsSync(itemPath)) return null;
 
 		const itemData = JSON.parse(readFileSync(itemPath, "utf-8"));
@@ -107,7 +120,8 @@ function getItemTimingFields(itemId: string): ItemTimingFields | null {
 
 function setItemTimingFields(itemId: string, fields: Partial<ItemTimingFields>): boolean {
 	try {
-		const itemPath = resolve(ITEMS_DATA_DIR, `${itemId}.json`);
+		const paddedId = padItemId(itemId);
+		const itemPath = resolve(ITEMS_DATA_DIR, `${paddedId}.json`);
 		if (!existsSync(itemPath)) return false;
 
 		const itemData = JSON.parse(readFileSync(itemPath, "utf-8"));
@@ -148,13 +162,14 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return;
 
-		if (!itemsIndex.items[itemId]) {
-			itemsIndex.items[itemId] = {};
+		const paddedId = padItemId(itemId);
+		if (!itemsIndex.items[paddedId]) {
+			itemsIndex.items[paddedId] = {};
 		}
 
 		// Only update if not already checked or if this is new info
-		if (!itemsIndex.items[itemId].japaneseSite) {
-			itemsIndex.items[itemId].japaneseSite = {
+		if (!itemsIndex.items[paddedId].japaneseSite) {
+			itemsIndex.items[paddedId].japaneseSite = {
 				hasPage: true,
 				pageCheckedAt: new Date().toISOString(),
 				productName,
@@ -170,13 +185,14 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return;
 
-		if (!itemsIndex.items[itemId]) {
-			itemsIndex.items[itemId] = {};
+		const paddedId = padItemId(itemId);
+		if (!itemsIndex.items[paddedId]) {
+			itemsIndex.items[paddedId] = {};
 		}
 
 		// Only update if not already checked
-		if (!itemsIndex.items[itemId].japaneseSite) {
-			itemsIndex.items[itemId].japaneseSite = {
+		if (!itemsIndex.items[paddedId].japaneseSite) {
+			itemsIndex.items[paddedId].japaneseSite = {
 				hasPage: false,
 				pageCheckedAt: new Date().toISOString(),
 				error,
@@ -192,19 +208,20 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return;
 
-		if (!itemsIndex.items[itemId]) {
-			itemsIndex.items[itemId] = {};
+		const paddedId = padItemId(itemId);
+		if (!itemsIndex.items[paddedId]) {
+			itemsIndex.items[paddedId] = {};
 		}
 
-		if (!itemsIndex.items[itemId].japaneseSite) {
-			itemsIndex.items[itemId].japaneseSite = {
+		if (!itemsIndex.items[paddedId].japaneseSite) {
+			itemsIndex.items[paddedId].japaneseSite = {
 				hasPage: true,
 				pageCheckedAt: new Date().toISOString(),
 				productName,
 			};
 		}
 
-		itemsIndex.items[itemId].japaneseSite.isBlog = true;
+		itemsIndex.items[paddedId].japaneseSite.isBlog = true;
 		isDirty = true;
 	},
 
@@ -215,7 +232,8 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return false;
 
-		return itemsIndex.items[itemId]?.japaneseSite?.isBlog === true;
+		const paddedId = padItemId(itemId);
+		return itemsIndex.items[paddedId]?.japaneseSite?.isBlog === true;
 	},
 
 	/**
@@ -249,7 +267,8 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return { indexed: false };
 
-		const entry = itemsIndex.items[itemId];
+		const paddedId = padItemId(itemId);
+		const entry = itemsIndex.items[paddedId];
 		if (!entry?.japaneseSite) {
 			return { indexed: false };
 		}
@@ -269,22 +288,23 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return;
 
-		if (!itemsIndex.items[itemId]) {
-			itemsIndex.items[itemId] = {};
+		const paddedId = padItemId(itemId);
+		if (!itemsIndex.items[paddedId]) {
+			itemsIndex.items[paddedId] = {};
 		}
 
 		// Update Japanese site status if not set
-		if (!itemsIndex.items[itemId].japaneseSite) {
-			itemsIndex.items[itemId].japaneseSite = {
+		if (!itemsIndex.items[paddedId].japaneseSite) {
+			itemsIndex.items[paddedId].japaneseSite = {
 				hasPage: true,
 				pageCheckedAt: new Date().toISOString(),
 				productName,
 			};
-		} else if (productName && !itemsIndex.items[itemId].japaneseSite?.productName) {
-			itemsIndex.items[itemId].japaneseSite.productName = productName;
+		} else if (productName && !itemsIndex.items[paddedId].japaneseSite?.productName) {
+			itemsIndex.items[paddedId].japaneseSite.productName = productName;
 		}
 
-		itemsIndex.items[itemId].hasFile = true;
+		itemsIndex.items[paddedId].hasFile = true;
 		isDirty = true;
 	},
 
@@ -296,7 +316,8 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) return ranges;
 
 		return ranges.filter((id) => {
-			const entry = itemsIndex?.items[id];
+			const paddedId = padItemId(id);
+			const entry = itemsIndex?.items[paddedId];
 			// Need download if: not indexed, or indexed with page but no file
 			if (!entry?.japaneseSite) return true;
 			return entry.japaneseSite.hasPage && !entry.hasFile;
@@ -310,7 +331,10 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return ranges;
 
-		return ranges.filter((id) => !itemsIndex?.items[id]?.japaneseSite);
+		return ranges.filter((id) => {
+			const paddedId = padItemId(id);
+			return !itemsIndex?.items[paddedId]?.japaneseSite;
+		});
 	},
 
 	/**
@@ -338,18 +362,19 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return;
 
-		if (!itemsIndex.items[itemId]) {
-			itemsIndex.items[itemId] = {};
+		const paddedId = padItemId(itemId);
+		if (!itemsIndex.items[paddedId]) {
+			itemsIndex.items[paddedId] = {};
 		}
 
-		if (!itemsIndex.items[itemId].japaneseSite) {
-			itemsIndex.items[itemId].japaneseSite = {
+		if (!itemsIndex.items[paddedId].japaneseSite) {
+			itemsIndex.items[paddedId].japaneseSite = {
 				hasPage: false, // Assume no page if we're only tracking downloads
 				pageCheckedAt: new Date().toISOString(),
 			};
 		}
 
-		itemsIndex.items[itemId].japaneseSite.downloadVerifiedAt = new Date().toISOString();
+		itemsIndex.items[paddedId].japaneseSite.downloadVerifiedAt = new Date().toISOString();
 		isDirty = true;
 	},
 
@@ -360,7 +385,8 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return true;
 
-		const entry = itemsIndex.items[itemId]?.japaneseSite;
+		const paddedId = padItemId(itemId);
+		const entry = itemsIndex.items[paddedId]?.japaneseSite;
 		if (!entry) return true;
 
 		// If never verified for downloads, needs verification
@@ -381,7 +407,8 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return { verified: false };
 
-		const entry = itemsIndex.items[itemId]?.japaneseSite;
+		const paddedId = padItemId(itemId);
+		const entry = itemsIndex.items[paddedId]?.japaneseSite;
 		if (!entry?.downloadVerifiedAt) return { verified: false };
 
 		return {
@@ -390,7 +417,7 @@ export const ItemsIndexUpdater = {
 		};
 	},
 
-	
+
 	/**
 	 * Get page check status for an item
 	 */
@@ -398,7 +425,8 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) this.load();
 		if (!itemsIndex) return { hasPage: false };
 
-		const entry = itemsIndex.items[itemId]?.japaneseSite;
+		const paddedId = padItemId(itemId);
+		const entry = itemsIndex.items[paddedId]?.japaneseSite;
 		if (!entry) return { hasPage: false };
 
 		return {
