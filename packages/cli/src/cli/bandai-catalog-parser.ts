@@ -61,16 +61,46 @@ export interface RelatedItem {
 	url: string;
 }
 
+/** Brand reference with ID, URL, and localized name */
+export interface BrandRef {
+	id: string;
+	url: string;
+	ja: string;
+	en?: string;
+}
+
+/** Series reference with ID, URL, and localized name */
+export interface SeriesRef {
+	id: string;
+	url: string;
+	ja: string;
+	en?: string;
+}
+
+/** Category reference with ID, URL, and localized name */
+export interface CategoryRef {
+	id: string;
+	url: string;
+	ja: string;
+	en?: string;
+}
+
+/** Manual reference with ID and URL */
+export interface ManualRef {
+	id: string;
+	url: string;
+}
+
 /** Normalized item matching data/lib/schemas.ts ItemSchema */
 export interface Item {
 	id: string;
 	type: "item";
 	name: { ja: string; en?: string };
-	brandIds: string[];
-	seriesIds: string[];
-	categoryIds: string[];
+	brands: BrandRef[];
+	series: SeriesRef[];
+	categories: CategoryRef[];
 	relatedItems: RelatedItem[];
-	manualId?: string;
+	manual?: ManualRef;
 	scale?: string;
 	price?: ItemPrice;
 	releaseDate?: ItemReleaseDate;
@@ -115,22 +145,45 @@ export class BandaiCatalogParser {
 			const seriesRaw = this.extractSeriesRaw($);
 			const categoriesRaw = this.extractCategoriesRaw($);
 			const relatedRaw = this.extractRelatedProductsRaw($);
+			const manualId = this.extractManualId($);
 
-			// Extract IDs from URLs
-			const brandIds = brandsRaw.map(b => this.extractIdFromUrl(b.url, "brand")).filter(Boolean);
-			const seriesIds = seriesRaw ? [this.extractIdFromUrl(seriesRaw.url, "series")].filter(Boolean) : [];
-			const categoryIds = categoriesRaw.map(c => this.extractIdFromUrl(c.url, "category")).filter(Boolean);
+			// Build ref objects with id, url, ja
+			const brands: BrandRef[] = brandsRaw
+				.map(b => {
+					const brandId = this.extractIdFromUrl(b.url, "brand");
+					return brandId && b.url ? { id: brandId, url: b.url, ja: b.ja } : null;
+				})
+				.filter((b): b is BrandRef => b !== null);
+
+			const series: SeriesRef[] = seriesRaw?.url
+				? [{
+					id: this.extractIdFromUrl(seriesRaw.url, "series"),
+					url: seriesRaw.url,
+					ja: seriesRaw.ja,
+				}].filter(s => s.id)
+				: [];
+
+			const categories: CategoryRef[] = categoriesRaw
+				.map(c => {
+					const catId = this.extractIdFromUrl(c.url, "category");
+					return catId && c.url ? { id: catId, url: c.url, ja: c.ja } : null;
+				})
+				.filter((c): c is CategoryRef => c !== null);
+
+			const manual: ManualRef | undefined = manualId
+				? { id: manualId, url: `https://manual.bandai-hobby.net/menus/detail/${manualId}` }
+				: undefined;
 
 			// Build normalized item
 			const item: Item = {
 				id,
 				type: "item",
 				name: { ja: name },
-				brandIds,
-				seriesIds,
-				categoryIds,
+				brands,
+				series,
+				categories,
 				relatedItems: relatedRaw,
-				manualId: this.extractManualId($),
+				manual,
 				scale: this.extractScale(name),
 				price: this.extractPrice($),
 				releaseDate: this.extractReleaseDate($),

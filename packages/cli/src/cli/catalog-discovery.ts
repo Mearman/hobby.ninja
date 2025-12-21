@@ -100,7 +100,7 @@ function extractImageId(urlOrPath: string): string | null {
 
 /**
  * Merge scraped item data with existing curated data
- * Preserves: English translations, manualId, downloadVerifiedAt, image paths, and other curated fields
+ * Preserves: English translations, downloadVerifiedAt, image paths, and other curated fields
  * Updates: Japanese data from fresh scrape, adds new fields
  */
 function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
@@ -121,9 +121,62 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 		}
 	}
 
-	// Preserve manualId if existing has it and scraped doesn't
-	if (existing.manualId && !scraped.manualId) {
-		merged.manualId = existing.manualId as string;
+	// Preserve English translations in entity refs (brands, series, categories)
+	// Build maps of existing English translations by ID
+	const existingBrandsEn = new Map<string, string>();
+	const existingSeriesEn = new Map<string, string>();
+	const existingCategoriesEn = new Map<string, string>();
+
+	if (Array.isArray(existing.brands)) {
+		for (const b of existing.brands) {
+			if (typeof b === "object" && b && "id" in b && "en" in b) {
+				existingBrandsEn.set(b.id as string, b.en as string);
+			}
+		}
+	}
+	if (Array.isArray(existing.series)) {
+		for (const s of existing.series) {
+			if (typeof s === "object" && s && "id" in s && "en" in s) {
+				existingSeriesEn.set(s.id as string, s.en as string);
+			}
+		}
+	}
+	if (Array.isArray(existing.categories)) {
+		for (const c of existing.categories) {
+			if (typeof c === "object" && c && "id" in c && "en" in c) {
+				existingCategoriesEn.set(c.id as string, c.en as string);
+			}
+		}
+	}
+
+	// Merge English translations into scraped refs
+	if (existingBrandsEn.size > 0) {
+		merged.brands = scraped.brands.map(b =>
+			existingBrandsEn.has(b.id) ? { ...b, en: existingBrandsEn.get(b.id) } : b
+		);
+	}
+	if (existingSeriesEn.size > 0) {
+		merged.series = scraped.series.map(s =>
+			existingSeriesEn.has(s.id) ? { ...s, en: existingSeriesEn.get(s.id) } : s
+		);
+	}
+	if (existingCategoriesEn.size > 0) {
+		merged.categories = scraped.categories.map(c =>
+			existingCategoriesEn.has(c.id) ? { ...c, en: existingCategoriesEn.get(c.id) } : c
+		);
+	}
+
+	// Preserve manual info: handle old manualId format and preserve if scrape didn't find it
+	if (!scraped.manual && existing.manualId) {
+		// Convert old manualId string to new ManualRef format
+		const oldManualId = existing.manualId as string;
+		merged.manual = {
+			id: oldManualId,
+			url: `https://manual.bandai-hobby.net/menus/detail/${oldManualId}`,
+		};
+	} else if (!scraped.manual && existing.manual && typeof existing.manual === "object") {
+		// Preserve existing manual ref if scrape didn't find one
+		merged.manual = existing.manual as typeof merged.manual;
 	}
 
 	// Preserve download verification timestamp
