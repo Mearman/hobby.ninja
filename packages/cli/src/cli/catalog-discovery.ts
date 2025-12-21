@@ -1,14 +1,83 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { writeFile, mkdir } from "node:fs/promises";
-import { join } from "node:path";
+import { writeFile, mkdir, readFile } from "node:fs/promises";
+import { join, dirname } from "node:path";
 
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 
-import { BandaiCatalogParser } from "./bandai-catalog-parser";
+import { BandaiCatalogParser, type EntityData } from "./bandai-catalog-parser";
 import { CatalogTranslator } from "./catalog-translator";
 import { SimpleCatalogScraper, type SimpleCatalogResult } from "./simple-catalog-scraper";
 import type { CatalogDiscoveryOptions, CatalogDiscoveryResult, CatalogRangeStats } from "./types/catalog-discovery";
 import { ItemsIndexUpdater } from "./items-index-updater";
+
+// ============================================================================
+// Filename Padding
+// ============================================================================
+
+/**
+ * Pad the numeric suffix of an item ID to 4 digits for consistent filename sorting
+ * 01_1 -> 01_0001, 01_778 -> 01_0778, 01_1000 -> 01_1000 (unchanged)
+ * Note: This only affects the filename, not the id field in the JSON data
+ */
+function padItemId(id: string): string {
+	const parts = id.split("_");
+	if (parts.length !== 2) return id;
+	const [prefix, suffix] = parts;
+	// Validate both parts are numeric
+	if (!/^\d+$/.test(prefix) || !/^\d+$/.test(suffix)) return id;
+	return `${prefix}_${suffix.padStart(4, "0")}`;
+}
+
+// ============================================================================
+// Entity Upsert Logic
+// ============================================================================
+
+/**
+ * Upsert entity data to the appropriate directory
+ * Only creates new entities, preserves existing ones (they may have curated data)
+ */
+async function upsertEntity(entity: EntityData, dataDir: string, verbose?: boolean): Promise<boolean> {
+	const entityDir = entity.type === "category" ? "categories" : `${entity.type}s`;
+	const filePath = join(dataDir, entityDir, `${entity.id}.json`);
+
+	// Check if entity already exists
+	if (existsSync(filePath)) {
+		// Entity exists - don't overwrite (preserves curated EN translations, images, etc.)
+		return false;
+	}
+
+	// Create new entity file
+	const entityData = {
+		id: entity.id,
+		type: entity.type,
+		name: entity.name,
+		url: entity.url,
+	};
+
+	// Ensure directory exists
+	const dir = dirname(filePath);
+	await mkdir(dir, { recursive: true });
+
+	await writeFile(filePath, JSON.stringify(entityData, null, "\t"), "utf8");
+
+	if (verbose) {
+		console.log(`    📁 Created ${entity.type}: ${entity.id}`);
+	}
+
+	return true;
+}
+
+/**
+ * Upsert multiple entities, returns count of newly created
+ */
+async function upsertEntities(entities: EntityData[], dataDir: string, verbose?: boolean): Promise<number> {
+	let created = 0;
+	for (const entity of entities) {
+		const wasCreated = await upsertEntity(entity, dataDir, verbose);
+		if (wasCreated) created++;
+	}
+	return created;
+}
 
 // Fast HTTP client for discovery phase
 const USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
@@ -181,11 +250,10 @@ export function generateCatalogRanges(count: number): string[] {
 	const ranges: string[] = [];
 
 	for (let i = 0; i < count; i++) {
-		// Generate IDs in format 00_0000, 00_0001, 00_0002, etc.
-		// This follows the pattern observed on bandai-hobby.net
+		// Generate IDs in format 00_0, 00_1, 00_2, etc.
+		// Bandai uses variable-length IDs (e.g., 01_1, 01_778, 01_1000)
 		const id = 0 + i;
-		const formattedId = id.toString().padStart(4, "0");
-		ranges.push(`00_${formattedId}`);
+		ranges.push(`00_${id}`);
 	}
 
 	return ranges;
@@ -418,13 +486,21 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 					result.discoveredUrls++;
 					result.processedUrls++;
 
-					// Save files asynchronously (flat structure: outputDir/{id}.json)
+					// Save files asynchronously (flat structure: outputDir/{paddedId}.json)
 					// Write HTML and JSON in parallel
+					const paddedRange = padItemId(range);
 					const writePromises: Array<Promise<void>> = [
-						writeFile(join(options.outputDir, `${range}.html`), processResult.data.html, "utf8"),
+						writeFile(join(options.outputDir, `${paddedRange}.html`), processResult.data.html, "utf8"),
 					];
 
 					if (catalogResult.success && catalogResult.data) {
+						// Upsert entities (brands, series, categories) to data/src/
+						// outputDir is typically data/src/items, so parent is data/src/
+						if (catalogResult.entities && catalogResult.entities.length > 0) {
+							const dataDir = dirname(options.outputDir);
+							await upsertEntities(catalogResult.entities, dataDir, options.verbose);
+						}
+
 						// Translate if translation is enabled
 						if (catalogTranslator) {
 							try {
@@ -441,7 +517,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 						}
 
 						writePromises.push(
-							writeFile(join(options.outputDir, `${range}.json`), JSON.stringify(catalogResult.data, null, 2), "utf8"),
+							writeFile(join(options.outputDir, `${paddedRange}.json`), JSON.stringify(catalogResult.data, null, "\t"), "utf8"),
 						);
 					}
 
