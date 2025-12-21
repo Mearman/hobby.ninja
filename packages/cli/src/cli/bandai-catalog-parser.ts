@@ -39,6 +39,17 @@ export interface LocalizedTextArray {
 	en?: string[];
 }
 
+/** Image with source URL */
+export interface ItemImage {
+	src: string;
+}
+
+/** Related item with ID and source URL */
+export interface RelatedItem {
+	id: string;
+	url: string;
+}
+
 /** Normalized item matching data/lib/schemas.ts ItemSchema */
 export interface Item {
 	id: string;
@@ -47,7 +58,7 @@ export interface Item {
 	brandIds: string[];
 	seriesIds: string[];
 	categoryIds: string[];
-	relatedItemIds: string[];
+	relatedItems: RelatedItem[];
 	manualId?: string;
 	scale?: string;
 	price?: ItemPrice;
@@ -56,7 +67,7 @@ export interface Item {
 	description?: LocalizedTextArray;
 	accessories?: LocalizedTextArray;
 	contents?: LocalizedTextArray;
-	images?: string[];
+	images?: ItemImage[];
 	sourceUrl?: string;
 	extractedAt?: string;
 	pageScrapedAt?: string;
@@ -98,7 +109,6 @@ export class BandaiCatalogParser {
 			const brandIds = brandsRaw.map(b => this.extractIdFromUrl(b.url, "brand")).filter(Boolean);
 			const seriesIds = seriesRaw ? [this.extractIdFromUrl(seriesRaw.url, "series")].filter(Boolean) : [];
 			const categoryIds = categoriesRaw.map(c => this.extractIdFromUrl(c.url, "category")).filter(Boolean);
-			const relatedItemIds = relatedRaw.map(r => r.id);
 
 			// Build normalized item
 			const item: Item = {
@@ -108,7 +118,7 @@ export class BandaiCatalogParser {
 				brandIds,
 				seriesIds,
 				categoryIds,
-				relatedItemIds,
+				relatedItems: relatedRaw,
 				manualId: this.extractManualId($),
 				scale: this.extractScale(name),
 				price: this.extractPrice($),
@@ -448,8 +458,8 @@ export class BandaiCatalogParser {
 		return items.length > 0 ? { ja: items } : undefined;
 	}
 
-	private extractImages($: CheerioAPI): string[] {
-		const images: string[] = [];
+	private extractImages($: CheerioAPI): ItemImage[] {
+		const images: ItemImage[] = [];
 		const seen = new Set<string>();
 
 		// Product images from the slider
@@ -457,7 +467,7 @@ export class BandaiCatalogParser {
 			const src = $(el).attr("src");
 			if (src && !seen.has(src) && !src.includes("common/")) {
 				seen.add(src);
-				images.push(src);
+				images.push({ src });
 			}
 		});
 
@@ -466,16 +476,17 @@ export class BandaiCatalogParser {
 			const src = $(el).attr("src");
 			if (src && !seen.has(src) && !src.includes("common/")) {
 				seen.add(src);
-				images.push(src);
+				images.push({ src });
 			}
 		});
 
 		return images;
 	}
 
-	/** Extract related product IDs only */
-	private extractRelatedProductsRaw($: CheerioAPI): Array<{ id: string }> {
-		const related: Array<{ id: string }> = [];
+	/** Extract related products with ID and URL */
+	private extractRelatedProductsRaw($: CheerioAPI): RelatedItem[] {
+		const related: RelatedItem[] = [];
+		const seen = new Set<string>();
 
 		// Related products are in p-card__wrap following h2:contains("関連商品")
 		// Find the section containing "関連商品" and then its card links
@@ -488,8 +499,13 @@ export class BandaiCatalogParser {
 			if (!idMatch) return;
 
 			const id = idMatch[1];
-			if (id) {
-				related.push({ id });
+			if (id && !seen.has(id)) {
+				seen.add(id);
+				// Build full URL
+				const url = href.startsWith("http")
+					? href
+					: `https://bandai-hobby.net${href.startsWith("/") ? "" : "/"}${href}`;
+				related.push({ id, url });
 			}
 		});
 
