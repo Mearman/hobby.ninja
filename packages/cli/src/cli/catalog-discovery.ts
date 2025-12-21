@@ -166,6 +166,21 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 		);
 	}
 
+	// Preserve English translations for related items
+	const existingRelatedEn = new Map<string, string>();
+	if (Array.isArray(existing.relatedItems)) {
+		for (const r of existing.relatedItems) {
+			if (typeof r === "object" && r && "id" in r && "en" in r) {
+				existingRelatedEn.set(r.id as string, r.en as string);
+			}
+		}
+	}
+	if (existingRelatedEn.size > 0) {
+		merged.relatedItems = scraped.relatedItems.map(r =>
+			existingRelatedEn.has(r.id) ? { ...r, en: existingRelatedEn.get(r.id) } : r
+		);
+	}
+
 	// Preserve manual info: handle old manualId format and preserve if scrape didn't find it
 	if (!scraped.manual && existing.manualId) {
 		// Convert old manualId string to new ManualRef format

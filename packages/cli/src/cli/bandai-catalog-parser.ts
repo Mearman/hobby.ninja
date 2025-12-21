@@ -55,10 +55,12 @@ export interface ItemImages {
 	instructions: ItemImage[];
 }
 
-/** Related item with ID and source URL */
+/** Related item with ID, URL, and name */
 export interface RelatedItem {
 	id: string;
 	url: string;
+	ja: string;
+	en?: string;
 }
 
 /** Brand reference with ID, URL, and localized name */
@@ -561,7 +563,7 @@ export class BandaiCatalogParser {
 		return { product, instructions };
 	}
 
-	/** Extract related products with ID and URL */
+	/** Extract related products with ID, URL, and name */
 	private extractRelatedProductsRaw($: CheerioAPI): RelatedItem[] {
 		const related: RelatedItem[] = [];
 		const seen = new Set<string>();
@@ -583,7 +585,9 @@ export class BandaiCatalogParser {
 				const url = href.startsWith("http")
 					? href
 					: `https://bandai-hobby.net${href.startsWith("/") ? "" : "/"}${href}`;
-				related.push({ id, url });
+				// Extract product name from card title or img alt
+				const ja = $el.find(".p-card__tit").text().trim() || $el.find("img").attr("alt") || "";
+				related.push({ id, url, ja });
 			}
 		});
 
