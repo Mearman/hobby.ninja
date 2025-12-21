@@ -675,10 +675,8 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 				console.log(`  [${completedCount}/${total}] ❌ ${range} - Error: ${errorMessage}`);
 			}
 
-			// Save index periodically (every 10 completions)
-			if (completedCount % 10 === 0) {
-				ItemsIndexUpdater.save();
-			}
+			// Save index after each item (resilient to interruptions)
+			ItemsIndexUpdater.save();
 		};
 
 		// Worker function that keeps processing until queue is empty
