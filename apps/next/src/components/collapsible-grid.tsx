@@ -1,8 +1,6 @@
 "use client";
 
-import { Button, Collapse, Group, SimpleGrid, Stack, Title } from "@mantine/core";
-import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
-import { useState } from "react";
+import { Accordion, Group, SimpleGrid, Stack, Title } from "@mantine/core";
 
 interface CollapsibleGridProps {
 	title: string;
@@ -19,8 +17,6 @@ export function CollapsibleGrid({
 	totalCount,
 	cols = { base: 1, sm: 2, md: 3, lg: 4 },
 }: CollapsibleGridProps): React.ReactElement {
-	const [expanded, setExpanded] = useState(false);
-
 	const hasMore = totalCount > 4;
 
 	return (
@@ -29,16 +25,6 @@ export function CollapsibleGrid({
 				<Title order={2} size="h2" fw={600}>
 					{title}
 				</Title>
-				{hasMore && (
-					<Button
-						variant="subtle"
-						size="sm"
-						rightSection={expanded ? <IconChevronUp size={16} /> : <IconChevronDown size={16} />}
-						onClick={() => { setExpanded(!expanded); }}
-					>
-						{expanded ? "Show less" : `Show all ${totalCount}`}
-					</Button>
-				)}
 			</Group>
 
 			<SimpleGrid cols={cols} spacing="md">
@@ -46,11 +32,18 @@ export function CollapsibleGrid({
 			</SimpleGrid>
 
 			{hasMore && (
-				<Collapse in={expanded}>
-					<SimpleGrid cols={cols} spacing="md">
-						{collapsedChildren}
-					</SimpleGrid>
-				</Collapse>
+				<Accordion variant="default" chevronPosition="left">
+					<Accordion.Item value="more" style={{ border: "none" }}>
+						<Accordion.Control>
+							Show all {totalCount} {title.toLowerCase()}
+						</Accordion.Control>
+						<Accordion.Panel>
+							<SimpleGrid cols={cols} spacing="md">
+								{collapsedChildren}
+							</SimpleGrid>
+						</Accordion.Panel>
+					</Accordion.Item>
+				</Accordion>
 			)}
 		</Stack>
 	);
