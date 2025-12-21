@@ -27,6 +27,7 @@ import { UI } from "@/lib/constants";
 // Constants
 const STYLE_NO_DECORATION_INHERIT = { textDecoration: "none", color: "inherit" };
 const STYLE_CURSOR_POINTER = { cursor: "pointer" };
+const STYLE_BORDER_RADIUS_TOP = "var(--mantine-radius-md) var(--mantine-radius-md) 0 0";
 
 // Category Card Component
 interface CategoryCardProps {
@@ -77,35 +78,33 @@ function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 		<Link href={`/brands/${brand.id}`} style={STYLE_NO_DECORATION_INHERIT}>
 			<Card
 				shadow="sm"
-				padding="md"
+				padding={0}
 				radius="md"
 				withBorder={true}
 				h="100%"
 				style={STYLE_CURSOR_POINTER}
 			>
-				<Group align="center" gap="md" wrap="nowrap">
-					{brand.image ? (
-						<Box w={80} style={{ borderRadius: "var(--mantine-radius-md)", overflow: "hidden", flexShrink: 0 }}>
-							<img
-								src={resolveCdnUrl(brand.image)}
-								alt={displayName}
-								style={{ width: "100%", height: "auto", display: "block" }}
-							/>
-						</Box>
-					) : (
-						<Avatar size={UI.BRAND_LOGO_SIZE} radius="md">
+				{brand.image ? (
+					<img
+						src={resolveCdnUrl(brand.image)}
+						alt={displayName}
+						style={{ width: "100%", height: "auto", display: "block", borderRadius: STYLE_BORDER_RADIUS_TOP }}
+					/>
+				) : (
+					<Box p="xl" bg="gray.1" style={{ borderRadius: STYLE_BORDER_RADIUS_TOP }}>
+						<Avatar size={60} radius="md" mx="auto">
 							{firstChar}
 						</Avatar>
-					)}
-					<Box flex={1} miw={0}>
-						<Text size="sm" fw={600} lineClamp={1}>
-							{displayName}
-						</Text>
-						<Text size="xs" c="dimmed">
-							{itemCount.toLocaleString()} items
-						</Text>
 					</Box>
-				</Group>
+				)}
+				<Box p="sm">
+					<Text size="sm" fw={600} lineClamp={1}>
+						{displayName}
+					</Text>
+					<Text size="xs" c="dimmed">
+						{itemCount.toLocaleString()} items
+					</Text>
+				</Box>
 			</Card>
 		</Link>
 	);
@@ -126,35 +125,33 @@ function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 		<Link href={`/series/${seriesItem.id}`} style={STYLE_NO_DECORATION_INHERIT}>
 			<Card
 				shadow="sm"
-				padding="md"
+				padding={0}
 				radius="md"
 				withBorder={true}
 				h="100%"
 				style={STYLE_CURSOR_POINTER}
 			>
-				<Group align="center" gap="md" wrap="nowrap">
-					{seriesItem.image ? (
-						<Box w={80} style={{ borderRadius: "var(--mantine-radius-md)", overflow: "hidden", flexShrink: 0 }}>
-							<img
-								src={resolveCdnUrl(seriesItem.image)}
-								alt={displayName}
-								style={{ width: "100%", height: "auto", display: "block" }}
-							/>
-						</Box>
-					) : (
-						<Avatar size={UI.BRAND_LOGO_SIZE} radius="md" color="violet">
+				{seriesItem.image ? (
+					<img
+						src={resolveCdnUrl(seriesItem.image)}
+						alt={displayName}
+						style={{ width: "100%", height: "auto", display: "block", borderRadius: STYLE_BORDER_RADIUS_TOP }}
+					/>
+				) : (
+					<Box p="xl" bg="violet.0" style={{ borderRadius: STYLE_BORDER_RADIUS_TOP }}>
+						<Avatar size={60} radius="md" color="violet" mx="auto">
 							{firstChar}
 						</Avatar>
-					)}
-					<Box flex={1} miw={0}>
-						<Text size="sm" fw={600} lineClamp={1}>
-							{displayName}
-						</Text>
-						<Text size="xs" c="dimmed">
-							{itemCount.toLocaleString()} items
-						</Text>
 					</Box>
-				</Group>
+				)}
+				<Box p="sm">
+					<Text size="sm" fw={600} lineClamp={1}>
+						{displayName}
+					</Text>
+					<Text size="xs" c="dimmed">
+						{itemCount.toLocaleString()} items
+					</Text>
+				</Box>
 			</Card>
 		</Link>
 	);
