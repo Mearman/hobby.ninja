@@ -2,6 +2,39 @@
  * Constants for the CLI package
  */
 
+import { existsSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+/**
+ * Find the monorepo root by looking for pnpm-workspace.yaml or .git
+ * Starts from current file location and walks up
+ */
+function findRepoRoot(): string {
+	let dir = __dirname;
+	const markers = ["pnpm-workspace.yaml", ".git"];
+
+	// Walk up the directory tree
+	for (let i = 0; i < 10; i++) {
+		for (const marker of markers) {
+			if (existsSync(path.join(dir, marker))) {
+				return dir;
+			}
+		}
+		const parent = path.dirname(dir);
+		if (parent === dir) break; // Reached filesystem root
+		dir = parent;
+	}
+
+	// Fallback: assume we're in packages/cli/src/constants
+	return path.join(__dirname, "..", "..", "..", "..");
+}
+
+export const REPO_ROOT = findRepoRoot();
+
 // CLI command strings
 export const CLI_COMMANDS = {
 	SCRAPE: "scrape",
@@ -52,11 +85,11 @@ export const MESSAGES = {
 // File and directory strings
 export const FILES = {
 	CACHE_DIR: ".cache",
-	OUTPUT_DIR: "output",
+	OUTPUT_DIR: path.join(REPO_ROOT, "data", "src", "items"),
 	CONFIG_FILE: "config.json",
 	PROFILES_DIR: "profiles",
 	TEMP_DIR: "temp",
-} as const;
+};
 
 // HTTP and network constants
 export const NETWORK = {

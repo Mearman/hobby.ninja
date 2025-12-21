@@ -1,14 +1,12 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync } from "node:fs";
 import { writeFile, mkdir, readFile } from "node:fs/promises";
-import { join, dirname } from "node:path";
-
-import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
+import path from "node:path";
 
 import { BandaiCatalogParser, type EntityData, type GlobalSiteUrls, type Item } from "./bandai-catalog-parser";
 import { CatalogTranslator } from "./catalog-translator";
+import { ItemsIndexUpdater } from "./items-index-updater";
 import { SimpleCatalogScraper, type SimpleCatalogResult } from "./simple-catalog-scraper";
 import type { CatalogDiscoveryOptions, CatalogDiscoveryResult, CatalogRangeStats } from "./types/catalog-discovery";
-import { ItemsIndexUpdater } from "./items-index-updater";
 
 // ============================================================================
 // Filename Padding
@@ -22,7 +20,9 @@ import { ItemsIndexUpdater } from "./items-index-updater";
 function padItemId(id: string): string {
 	const parts = id.split("_");
 	if (parts.length !== 2) return id;
-	const [prefix, suffix] = parts;
+	const prefix = parts[0];
+	const suffix = parts[1];
+	if (!prefix || !suffix) return id;
 	// Validate both parts are numeric
 	if (!/^\d+$/.test(prefix) || !/^\d+$/.test(suffix)) return id;
 	return `${prefix}_${suffix.padStart(4, "0")}`;
@@ -44,7 +44,7 @@ async function upsertEntity(entity: EntityData, dataDir: string, verbose?: boole
 		category: "categories",
 	};
 	const entityDir = entityDirMap[entity.type] ?? `${entity.type}s`;
-	const filePath = join(dataDir, entityDir, `${entity.id}.json`);
+	const filePath = path.join(dataDir, entityDir, `${entity.id}.json`);
 
 	// Check if entity already exists
 	if (existsSync(filePath)) {
@@ -61,7 +61,7 @@ async function upsertEntity(entity: EntityData, dataDir: string, verbose?: boole
 	};
 
 	// Ensure directory exists
-	const dir = dirname(filePath);
+	const dir = path.dirname(filePath);
 	await mkdir(dir, { recursive: true });
 
 	await writeFile(filePath, JSON.stringify(entityData, null, "\t"), "utf8");
@@ -106,17 +106,19 @@ function extractImageId(urlOrPath: string): string | null {
 function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 	const merged = { ...scraped };
 
-	// Preserve English name if it exists
-	if (existing.name && typeof existing.name === "object" && "en" in existing.name) {
+	// Preserve English name only if scraped doesn't have one (global site content takes precedence)
+	if (!scraped.name.en && existing.name && typeof existing.name === "object" && "en" in existing.name) {
 		merged.name = { ...scraped.name, en: (existing.name as { en?: string }).en };
 	}
 
-	// Preserve English translations in localized text arrays
+	// Preserve English translations in localized text arrays only if scraped doesn't have them
 	const localizedFields = ["description", "accessories", "contents"] as const;
 	for (const field of localizedFields) {
 		const existingField = existing[field];
 		const scrapedField = scraped[field];
-		if (existingField && typeof existingField === "object" && "en" in existingField && scrapedField) {
+		const scrapedHasEn = scrapedField && typeof scrapedField === "object" && "en" in scrapedField;
+		// Only use existing EN if scraped doesn't already have EN (from global site)
+		if (!scrapedHasEn && existingField && typeof existingField === "object" && "en" in existingField && scrapedField) {
 			(merged[field] as { ja: string[]; en?: string[] }).en = (existingField as { en?: string[] }).en;
 		}
 	}
@@ -127,57 +129,50 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 	const existingSeriesEn = new Map<string, string>();
 	const existingCategoriesEn = new Map<string, string>();
 
+	interface EntityWithEn { id: string; en?: string }
 	if (Array.isArray(existing.brands)) {
-		for (const b of existing.brands) {
-			if (typeof b === "object" && b && "id" in b && "en" in b) {
-				existingBrandsEn.set(b.id as string, b.en as string);
-			}
+		for (const b of existing.brands as EntityWithEn[]) {
+			if (b.en) existingBrandsEn.set(b.id, b.en);
 		}
 	}
 	if (Array.isArray(existing.series)) {
-		for (const s of existing.series) {
-			if (typeof s === "object" && s && "id" in s && "en" in s) {
-				existingSeriesEn.set(s.id as string, s.en as string);
-			}
+		for (const s of existing.series as EntityWithEn[]) {
+			if (s.en) existingSeriesEn.set(s.id, s.en);
 		}
 	}
 	if (Array.isArray(existing.categories)) {
-		for (const c of existing.categories) {
-			if (typeof c === "object" && c && "id" in c && "en" in c) {
-				existingCategoriesEn.set(c.id as string, c.en as string);
-			}
+		for (const c of existing.categories as EntityWithEn[]) {
+			if (c.en) existingCategoriesEn.set(c.id, c.en);
 		}
 	}
 
 	// Merge English translations into scraped refs
 	if (existingBrandsEn.size > 0) {
 		merged.brands = scraped.brands.map(b =>
-			existingBrandsEn.has(b.id) ? { ...b, en: existingBrandsEn.get(b.id) } : b
+			existingBrandsEn.has(b.id) ? { ...b, en: existingBrandsEn.get(b.id) } : b,
 		);
 	}
 	if (existingSeriesEn.size > 0) {
 		merged.series = scraped.series.map(s =>
-			existingSeriesEn.has(s.id) ? { ...s, en: existingSeriesEn.get(s.id) } : s
+			existingSeriesEn.has(s.id) ? { ...s, en: existingSeriesEn.get(s.id) } : s,
 		);
 	}
 	if (existingCategoriesEn.size > 0) {
 		merged.categories = scraped.categories.map(c =>
-			existingCategoriesEn.has(c.id) ? { ...c, en: existingCategoriesEn.get(c.id) } : c
+			existingCategoriesEn.has(c.id) ? { ...c, en: existingCategoriesEn.get(c.id) } : c,
 		);
 	}
 
 	// Preserve English translations for related items
 	const existingRelatedEn = new Map<string, string>();
 	if (Array.isArray(existing.relatedItems)) {
-		for (const r of existing.relatedItems) {
-			if (typeof r === "object" && r && "id" in r && "en" in r) {
-				existingRelatedEn.set(r.id as string, r.en as string);
-			}
+		for (const r of existing.relatedItems as EntityWithEn[]) {
+			if (r.en) existingRelatedEn.set(r.id, r.en);
 		}
 	}
 	if (existingRelatedEn.size > 0) {
 		merged.relatedItems = scraped.relatedItems.map(r =>
-			existingRelatedEn.has(r.id) ? { ...r, en: existingRelatedEn.get(r.id) } : r
+			existingRelatedEn.has(r.id) ? { ...r, en: existingRelatedEn.get(r.id) } : r,
 		);
 	}
 
@@ -201,16 +196,9 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 
 	// Preserve existing globalSiteUrls if scrape didn't find any (or merge them)
 	if (existing.globalSiteUrls && typeof existing.globalSiteUrls === "object") {
-		if (!scraped.globalSiteUrls) {
-			// Preserve existing if no new ones found
-			merged.globalSiteUrls = existing.globalSiteUrls as typeof merged.globalSiteUrls;
-		} else {
-			// Merge: new takes precedence, but keep existing ones not in new
-			merged.globalSiteUrls = {
-				...existing.globalSiteUrls as typeof merged.globalSiteUrls,
-				...scraped.globalSiteUrls,
-			};
-		}
+		merged.globalSiteUrls = scraped.globalSiteUrls
+			? { ...(existing.globalSiteUrls as typeof merged.globalSiteUrls), ...scraped.globalSiteUrls }
+			: (existing.globalSiteUrls as typeof merged.globalSiteUrls);
 	}
 
 	// Merge images: preserve local paths from existing, update source URLs from scrape
@@ -347,7 +335,7 @@ async function quickCheckUrl(url: string): Promise<{ isValid: boolean; title?: s
 
 		// Check for title in what we read
 		const titleMatch = /<title>([^<]+)<\/title>/i.exec(html);
-		const title = titleMatch?.[1] || "";
+		const title = titleMatch?.[1] ?? "";
 
 		if (title.includes("404")) {
 			return { isValid: false, title };
@@ -364,36 +352,74 @@ async function quickCheckUrl(url: string): Promise<{ isValid: boolean; title?: s
 	}
 }
 
+/** Content extracted from global (English) site */
+interface GlobalSiteContent {
+	urls: GlobalSiteUrls;
+	/** English name from the US site */
+	enName?: string;
+	/** English description lines from the US site */
+	enDescription?: string[];
+	/** English accessories from the US site */
+	enAccessories?: string[];
+}
+
 /**
- * Check if global site pages exist for an item
- * Uses the same partial-read technique as quickCheckUrl
- * Checks en-us and en-others variants
+ * Fetch and parse English content from the global US site
+ * Returns name, description, and accessories if the page exists
  */
-async function checkGlobalSiteUrls(itemId: string): Promise<GlobalSiteUrls | undefined> {
-	const variants = [
-		{ key: "enUs" as const, url: `https://global.bandai-hobby.net/en-us/item/${itemId}/` },
-		{ key: "enOthers" as const, url: `https://global.bandai-hobby.net/en-others/item/${itemId}/` },
-	];
+async function fetchGlobalSiteContent(itemId: string, parser: BandaiCatalogParser): Promise<GlobalSiteContent | undefined> {
+	const enUsUrl = `https://global.bandai-hobby.net/en-us/item/${itemId}/`;
+	const enOthersUrl = `https://global.bandai-hobby.net/en-others/item/${itemId}/`;
 
-	const result: GlobalSiteUrls = {};
-
-	// Check both in parallel
-	const checks = await Promise.all(
-		variants.map(async ({ key, url }) => {
-			const check = await quickCheckUrl(url);
-			// Valid if we got a response and title doesn't contain "404"
-			return { key, url, exists: check.isValid };
-		})
-	);
-
-	for (const { key, url, exists } of checks) {
-		if (exists) {
-			result[key] = url;
+	// First check if US page exists
+	const usCheck = await quickCheckUrl(enUsUrl);
+	if (!usCheck.isValid) {
+		// Check en-others as fallback (just for URL, no content)
+		const othersCheck = await quickCheckUrl(enOthersUrl);
+		if (othersCheck.isValid) {
+			return { urls: { enOthers: enOthersUrl } };
 		}
+		return undefined;
 	}
 
-	// Return undefined if no global pages exist
-	return Object.keys(result).length > 0 ? result : undefined;
+	// US page exists - fetch full content
+	try {
+		const response = await fetch(enUsUrl, {
+			headers: { "User-Agent": USER_AGENT },
+		});
+
+		if (!response.ok) {
+			return { urls: { enUs: enUsUrl } };
+		}
+
+		const html = await response.text();
+
+		// Use the parser to extract content (it will get Japanese fields, but we just want structure)
+		const parseResult = parser.parse(html, itemId, enUsUrl);
+
+		if (!parseResult.success || !parseResult.data) {
+			return { urls: { enUs: enUsUrl } };
+		}
+
+		// Also check en-others in parallel
+		const othersCheck = await quickCheckUrl(enOthersUrl);
+
+		const result: GlobalSiteContent = {
+			urls: {
+				enUs: enUsUrl,
+				...(othersCheck.isValid ? { enOthers: enOthersUrl } : {}),
+			},
+			// The parser extracts to .ja fields, but for EN site they contain English
+			enName: parseResult.data.name.ja,
+			enDescription: parseResult.data.description?.ja,
+			enAccessories: parseResult.data.accessories?.ja,
+		};
+
+		return result;
+	} catch {
+		// Network error - return just the URL
+		return { urls: { enUs: enUsUrl } };
+	}
 }
 
 /**
@@ -598,7 +624,7 @@ export async function processCatalogRanges(ranges: string[], options: CatalogDis
 				completedRanges++;
 				urls.push(buildCatalogUrl(range));
 			} else {
-				errors.push(result.error || `${range}: Unknown error`);
+				errors.push(result.error ?? `${range}: Unknown error`);
 			}
 
 			// Add delay between requests to respect rate limiting
@@ -649,7 +675,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 	let catalogTranslator: CatalogTranslator | undefined;
 	if (options.translate) {
 		console.log(`🌐 Translation enabled - initializing translation service...`);
-		const translationCacheDir = join(options.outputDir, "..", "translations");
+		const translationCacheDir = path.join(options.outputDir, "..", "translations");
 		catalogTranslator = new CatalogTranslator({
 			storeDir: translationCacheDir,
 			verbose: options.verbose,
@@ -722,7 +748,7 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 						buildCatalogUrl(range),
 					);
 
-					const productName = catalogResult.success && catalogResult.data?.name?.ja
+					const productName = catalogResult.success && catalogResult.data?.name.ja
 						? catalogResult.data.name.ja
 						: processResult.data.title;
 
@@ -735,14 +761,14 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 					// Write HTML and JSON in parallel
 					const paddedRange = padItemId(range);
 					const writePromises: Array<Promise<void>> = [
-						writeFile(join(options.outputDir, `${paddedRange}.html`), processResult.data.html, "utf8"),
+						writeFile(path.join(options.outputDir, `${paddedRange}.html`), processResult.data.html, "utf8"),
 					];
 
 					if (catalogResult.success && catalogResult.data) {
 						// Upsert entities (brands, series, categories) to data/src/
 						// outputDir is typically data/src/items, so parent is data/src/
 						if (catalogResult.entities && catalogResult.entities.length > 0) {
-							const dataDir = dirname(options.outputDir);
+							const dataDir = path.dirname(options.outputDir);
 							await upsertEntities(catalogResult.entities, dataDir, options.verbose);
 						}
 
@@ -753,33 +779,48 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 								if (translateResult.translated && options.verbose) {
 									console.log(`    🌐 Translated ${translateResult.fieldsTranslated} fields`);
 								}
-							} catch (translateError) {
+							} catch (translateError: unknown) {
 								// Log translation error but don't fail the scrape
 								if (options.verbose) {
-									console.warn(`    ⚠️ Translation failed: ${translateError}`);
+									console.warn(`    ⚠️ Translation failed: ${String(translateError)}`);
 								}
 							}
 						}
 
-						// Check for global site pages (en-us, en-others)
+						// Check for global site pages and fetch English content
 						try {
-							const globalUrls = await checkGlobalSiteUrls(range);
-							if (globalUrls) {
-								catalogResult.data.globalSiteUrls = globalUrls;
+							const globalContent = await fetchGlobalSiteContent(range, catalogParser);
+							if (globalContent) {
+								catalogResult.data.globalSiteUrls = globalContent.urls;
+
+								// Apply official English content from global site
+								if (globalContent.enName) {
+									catalogResult.data.name.en = globalContent.enName;
+								}
+								if (globalContent.enDescription) {
+									catalogResult.data.description ??= { ja: [] };
+									catalogResult.data.description.en = globalContent.enDescription;
+								}
+								if (globalContent.enAccessories) {
+									catalogResult.data.accessories ??= { ja: [] };
+									catalogResult.data.accessories.en = globalContent.enAccessories;
+								}
+
 								if (options.verbose) {
-									const sites = Object.keys(globalUrls).join(", ");
-									console.log(`    🌍 Global pages found: ${sites}`);
+									const sites = Object.keys(globalContent.urls).join(", ");
+									const hasContent = globalContent.enName ? " + EN content" : "";
+									console.log(`    🌍 Global pages: ${sites}${hasContent}`);
 								}
 							}
-						} catch (globalError) {
+						} catch (globalError: unknown) {
 							// Log error but don't fail the scrape
 							if (options.verbose) {
-								console.warn(`    ⚠️ Global site check failed: ${globalError}`);
+								console.warn(`    ⚠️ Global site check failed: ${String(globalError)}`);
 							}
 						}
 
 						// Merge with existing data to preserve curated fields (EN translations, manualId, etc.)
-						const itemPath = join(options.outputDir, `${paddedRange}.json`);
+						const itemPath = path.join(options.outputDir, `${paddedRange}.json`);
 						const existingItem = await readExistingItem(itemPath);
 						const finalItem = existingItem
 							? mergeItemData(catalogResult.data, existingItem)
@@ -795,9 +836,10 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 					completedCount++;
 					console.log(`  [${completedCount}/${total}] ✅ ${range} - ${productName}`);
 				} else {
-					result.errors.push(processResult.error || `${range}: Download failed`);
+					const errorMsg = processResult.error ?? `${range}: Download failed`;
+					result.errors.push(errorMsg);
 					completedCount++;
-					console.log(`  [${completedCount}/${total}] ❌ ${range} - Failed: ${processResult.error}`);
+					console.log(`  [${completedCount}/${total}] ❌ ${range} - Failed: ${errorMsg}`);
 				}
 			} catch (error) {
 				const errorMessage = error instanceof Error ? error.message : String(error);
