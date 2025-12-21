@@ -1,7 +1,7 @@
 "use client";
 
 import { getManualCdnUrls, getInitialUrl, type CdnUrls } from "@hobby-ninja/data";
-import { Accordion, Anchor, Box, ActionIcon, Group, Skeleton, Text, Tooltip, Switch, Card, Stack } from "@mantine/core";
+import { Accordion, Box, ActionIcon, Group, Skeleton, Tooltip, Switch, Card, Stack } from "@mantine/core";
 import { IconDownload, IconExternalLink, IconFileTypePdf, IconArrowsHorizontal } from "@tabler/icons-react";
 import { useCallback, useState, useRef, useMemo, useEffect } from "react";
 
@@ -68,14 +68,26 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 	const { fullWidth, toggleFullWidth, isHydrated } = useFullWidthPreference();
 	const itemRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
-	// Pre-compute CDN URLs for all PDFs (includes external URL if provided)
+	// Pre-compute CDN URLs for all PDFs
 	const pdfUrls = useMemo<CdnUrls[]>(
 		() => pdfs.map((pdf) => getManualCdnUrls(pdf.path, pdf.externalUrl)),
 		[pdfs],
 	);
 
-	// Get URL for a PDF (external if available, otherwise primary CDN)
-	const getPdfUrl = useCallback(
+	// Get Google Docs Viewer URL for embedding (bypasses X-Frame-Options)
+	// Falls back to local CDN if no external URL available
+	const getViewerUrl = useCallback(
+		(index: number): string => {
+			const urls = pdfUrls[index];
+			const pdfUrl = urls.external ?? urls.primary;
+			// Google Docs Viewer can display any public PDF
+			return `https://docs.google.com/gview?url=${encodeURIComponent(pdfUrl)}&embedded=true`;
+		},
+		[pdfUrls],
+	);
+
+	// Get direct download URL (prefer external source for freshest version)
+	const getDownloadUrl = useCallback(
 		(index: number): string => getInitialUrl(pdfUrls[index]),
 		[pdfUrls],
 	);
@@ -176,7 +188,8 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 							const itemId = `pdf-${index}`;
 							const isExpanded = expandedItems.includes(itemId);
 							const isLoaded = loadedItems.has(itemId);
-							const currentUrl = getPdfUrl(index);
+							const viewerUrl = getViewerUrl(index);
+							const downloadUrl = getDownloadUrl(index);
 
 							return (
 								<Accordion.Item
@@ -193,7 +206,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 											<Group gap="xs" onClick={(e) => { e.stopPropagation(); }}>
 												<ActionIcon
 													component="a"
-													href={currentUrl}
+													href={downloadUrl}
 													download={true}
 													variant="subtle"
 													color="gray"
@@ -204,7 +217,7 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 												</ActionIcon>
 												<ActionIcon
 													component="a"
-													href={currentUrl}
+													href={downloadUrl}
 													target="_blank"
 													rel="noopener noreferrer"
 													variant="subtle"
@@ -230,10 +243,9 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 														right={0}
 													/>
 												)}
-												{/* Nested object > embed > download link for maximum browser compatibility */}
-												<object
-													data={currentUrl}
-													type="application/pdf"
+												{/* Google Docs Viewer iframe - bypasses X-Frame-Options */}
+												<iframe
+													src={viewerUrl}
 													title={pdf.title}
 													style={{
 														width: "100%",
@@ -243,26 +255,8 @@ export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 														opacity: isLoaded ? 1 : 0,
 														transition: "opacity 0.2s ease-in-out",
 													}}
-												>
-													{/* Fallback 1: Try embed if object fails */}
-													<embed
-														src={currentUrl}
-														type="application/pdf"
-														style={{
-															width: "100%",
-															height: PDF_HEIGHT,
-														}}
-													/>
-													{/* Fallback 2: Download link if both fail */}
-													<Box p="xl" ta="center">
-														<Text c="dimmed" mb="sm">
-															Your browser cannot display this PDF.
-														</Text>
-														<Anchor href={currentUrl} target="_blank">
-															Open PDF in new tab
-														</Anchor>
-													</Box>
-												</object>
+													allowFullScreen={true}
+												/>
 											</Box>
 										)}
 									</Accordion.Panel>
