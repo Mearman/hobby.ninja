@@ -1,6 +1,8 @@
 "use client";
 
-import { Accordion, Group, SimpleGrid, Stack, Title } from "@mantine/core";
+import { Collapse, Group, SimpleGrid, Stack, Text, Title, UnstyledButton } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 
 interface CollapsibleGridProps {
 	title: string;
@@ -17,41 +19,37 @@ export function CollapsibleGrid({
 	totalCount,
 	cols = { base: 1, sm: 2, md: 3, lg: 4 },
 }: CollapsibleGridProps): React.ReactElement {
+	const [opened, { toggle }] = useDisclosure(false);
 	const hasMore = totalCount > 4;
 
 	return (
 		<Stack gap="lg">
-			<Group justify="space-between" align="center">
-				<Title order={2} size="h2" fw={600}>
-					{title}
-				</Title>
-			</Group>
+			<UnstyledButton onClick={hasMore ? toggle : undefined} style={{ cursor: hasMore ? "pointer" : "default" }}>
+				<Group justify="space-between" align="center">
+					<Title order={2} size="h2" fw={600}>
+						{title}
+					</Title>
+					{hasMore && (
+						<Group gap="xs" c="blue">
+							<Text size="sm" fw={500}>
+								{opened ? "Show less" : `Show all ${totalCount}`}
+							</Text>
+							{opened ? <IconChevronUp size={16} /> : <IconChevronDown size={16} />}
+						</Group>
+					)}
+				</Group>
+			</UnstyledButton>
 
 			<SimpleGrid cols={cols} spacing="md">
 				{children}
 			</SimpleGrid>
 
 			{hasMore && (
-				<Accordion
-					variant="default"
-					chevronPosition="left"
-					styles={{
-						item: { border: "none" },
-						panel: { padding: 0 },
-						content: { padding: 0 },
-					}}
-				>
-					<Accordion.Item value="more">
-						<Accordion.Control>
-							{`Show all ${totalCount} ${title.toLowerCase()}`}
-						</Accordion.Control>
-						<Accordion.Panel>
-							<SimpleGrid cols={cols} spacing="md">
-								{collapsedChildren}
-							</SimpleGrid>
-						</Accordion.Panel>
-					</Accordion.Item>
-				</Accordion>
+				<Collapse in={opened}>
+					<SimpleGrid cols={cols} spacing="md">
+						{collapsedChildren}
+					</SimpleGrid>
+				</Collapse>
 			)}
 		</Stack>
 	);
