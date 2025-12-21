@@ -52,9 +52,23 @@ function getLegacyCdnUrl(): string | undefined {
 }
 
 /**
+ * Check if running in development mode
+ */
+function isDevelopment(): boolean {
+	if (typeof process !== 'undefined' && process.env['NODE_ENV'] === 'development') {
+		return true;
+	}
+	return false;
+}
+
+/**
  * Get the primary CDN base URL (R2 > Legacy > GitHub)
+ * In development, returns empty string to serve assets locally
  */
 export function getCdnBaseUrl(): string {
+	if (isDevelopment()) {
+		return '';
+	}
 	return getR2CdnUrl() ?? getLegacyCdnUrl() ?? GITHUB_RAW_URL;
 }
 
