@@ -1,6 +1,6 @@
 "use client";
 
-import { getManualCdnUrls, type CdnUrls } from "@hobby-ninja/data";
+import { getManualCdnUrls, getNextFallbackUrl, getInitialUrl, type CdnUrls } from "@hobby-ninja/data";
 import { Accordion, Box, Skeleton, ActionIcon, Group, Tooltip, Switch, Card, Stack } from "@mantine/core";
 import { IconDownload, IconExternalLink, IconFileTypePdf, IconArrowsHorizontal } from "@tabler/icons-react";
 import { useCallback, useState, useRef, useMemo } from "react";
@@ -12,6 +12,8 @@ interface PdfItem {
 	/** Relative path to the PDF (e.g., "manuals/123/123.pdf") */
 	path: string;
 	title: string;
+	/** Optional external URL as final fallback (e.g., original Bandai URL) */
+	externalUrl?: string;
 }
 
 interface PdfAccordionProps {
@@ -60,33 +62,45 @@ const SCROLL_TOP_OFFSET = 16;
 export function PdfAccordion({ pdfs, header }: PdfAccordionProps) {
 	const [expandedItems, setExpandedItems] = useState<string[]>([]);
 	const [loadedItems, setLoadedItems] = useState<Set<string>>(new Set());
-	const [fallbackItems, setFallbackItems] = useState<Set<string>>(new Set());
+	// Track current URL for each PDF (for fallback chain)
+	const [currentUrls, setCurrentUrls] = useState<Map<string, string>>(new Map());
 	const { fullWidth, toggleFullWidth, isHydrated } = useFullWidthPreference();
 	const itemRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
-	// Pre-compute CDN URLs for all PDFs
-	const pdfUrls = useMemo<CdnUrls[]>(() => pdfs.map((pdf) => getManualCdnUrls(pdf.path)), [pdfs]);
-
-	// Get current URL for a PDF (primary or fallback based on state)
-	const getPdfUrl = useCallback(
-		(index: number): string => {
-			const urls = pdfUrls[index];
-			const itemId = `pdf-${index}`;
-			return fallbackItems.has(itemId) ? urls.fallback : urls.primary;
-		},
-		[pdfUrls, fallbackItems],
+	// Pre-compute CDN URLs for all PDFs (includes external fallback if provided)
+	const pdfUrls = useMemo<CdnUrls[]>(
+		() => pdfs.map((pdf) => getManualCdnUrls(pdf.path, pdf.externalUrl)),
+		[pdfs],
 	);
 
-	// Handle iframe error - switch to fallback URL
+	// Get current URL for a PDF (uses fallback chain state)
+	const getPdfUrl = useCallback(
+		(index: number): string => {
+			const itemId = `pdf-${index}`;
+			const currentUrl = currentUrls.get(itemId);
+			// Return current URL if set, otherwise initial (external if available, else primary)
+			return currentUrl ?? getInitialUrl(pdfUrls[index]);
+		},
+		[pdfUrls, currentUrls],
+	);
+
+	// Handle iframe error - try next URL in fallback chain
 	const handlePdfError = useCallback(
 		(index: number) => {
 			const itemId = `pdf-${index}`;
 			const urls = pdfUrls[index];
-			if (urls.hasFallback && !fallbackItems.has(itemId)) {
-				setFallbackItems((prev) => new Set(prev).add(itemId));
+			const currentUrl = currentUrls.get(itemId) ?? getInitialUrl(urls);
+
+			// Get the next URL in the fallback chain
+			const nextUrl = getNextFallbackUrl(urls, currentUrl);
+			if (nextUrl) {
+				console.log(`[PDF ${index}] Fallback: ${currentUrl.slice(0, 50)}... → ${nextUrl.slice(0, 50)}...`);
+				setCurrentUrls((prev) => new Map(prev).set(itemId, nextUrl));
+			} else {
+				console.warn(`[PDF ${index}] All fallbacks exhausted for ${pdfs[index].name}`);
 			}
 		},
-		[pdfUrls, fallbackItems],
+		[pdfUrls, currentUrls, pdfs],
 	);
 
 	const handleChange = (values: string[]) => {
