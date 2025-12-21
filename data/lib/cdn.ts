@@ -81,11 +81,16 @@ export function getFallbackCdnBaseUrl(): string {
 
 /**
  * Resolve a relative asset path to full CDN URL
- * @param assetPath - Relative path like "images/brands/gundam.jpg" or "manuals/0001/0001.pdf"
- * @returns Full CDN URL
+ * @param assetPath - Relative path like "images/brands/gundam.jpg" or "manuals/0001/0001.pdf", or a full URL
+ * @returns Full CDN URL, or the original URL if already absolute
  */
 export function resolveCdnUrl(assetPath: string): string {
 	if (!assetPath) return '';
+
+	// Pass through full URLs (http://, https://, data:, etc.)
+	if (assetPath.startsWith('http://') || assetPath.startsWith('https://') || assetPath.startsWith('data:')) {
+		return assetPath;
+	}
 
 	// Remove leading slash if present
 	const normalizedPath = assetPath.startsWith('/') ? assetPath.slice(1) : assetPath;
@@ -98,11 +103,16 @@ export function resolveCdnUrl(assetPath: string): string {
 
 /**
  * Resolve an image URL
- * @param imagePath - Image path relative to assets/images/
- * @returns Full CDN URL for the image
+ * @param imagePath - Image path relative to assets/images/, or a full URL
+ * @returns Full CDN URL for the image, or the original URL if already absolute
  */
 export function resolveImageUrl(imagePath: string): string {
 	if (!imagePath) return '';
+
+	// Pass through full URLs (http://, https://, data:, etc.)
+	if (imagePath.startsWith('http://') || imagePath.startsWith('https://') || imagePath.startsWith('data:')) {
+		return imagePath;
+	}
 
 	const normalizedPath = imagePath.startsWith('images/') ? imagePath : `images/${imagePath}`;
 	return resolveCdnUrl(normalizedPath);
