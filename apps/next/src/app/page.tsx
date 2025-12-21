@@ -1,6 +1,5 @@
 import { brands, categories as allCategoriesData, homepage, resolveCdnUrl, series } from "@hobby-ninja/data";
 import {
-	Avatar,
 	Box,
 	Button,
 	Card,
@@ -10,7 +9,6 @@ import {
 	SimpleGrid,
 	Stack,
 	Text,
-	ThemeIcon,
 	Title,
 } from "@mantine/core";
 import {
@@ -23,6 +21,7 @@ import Link from "next/link";
 
 import { FeaturedItemsGrid } from "@/components/featured-items-grid";
 import { UI } from "@/lib/constants";
+import { createGradientPlaceholderSvg } from "@/lib/image-placeholders";
 
 // Constants
 const STYLE_NO_DECORATION_INHERIT = { textDecoration: "none", color: "inherit" };
@@ -56,23 +55,27 @@ function CategoryCard({ category }: CategoryCardProps): React.ReactElement {
 		<Link href={`/category/${category.id}`} style={STYLE_NO_DECORATION_INHERIT}>
 			<Card
 				shadow="sm"
-				padding="lg"
+				padding={0}
 				radius="md"
 				withBorder={true}
 				h="100%"
 				style={STYLE_CURSOR_POINTER}
 			>
-				<Stack align="center" gap="md">
-					<ThemeIcon size={60} radius="xl" variant="light" color="blue">
-						<IconDatabase size={30} />
-					</ThemeIcon>
-					<Title order={4} ta="center" size="h6" fw={600}>
+				<div style={STYLE_IMAGE_CONTAINER}>
+					<img
+						src={createGradientPlaceholderSvg(displayName)}
+						alt={displayName}
+						style={STYLE_IMAGE}
+					/>
+				</div>
+				<Box p="sm">
+					<Text size="sm" fw={600} lineClamp={1}>
 						{displayName}
-					</Title>
-					<Text size="sm" c="dimmed" ta="center">
+					</Text>
+					<Text size="xs" c="dimmed">
 						{itemCount.toLocaleString()} items
 					</Text>
-				</Stack>
+				</Box>
 			</Card>
 		</Link>
 	);
@@ -85,8 +88,8 @@ interface BrandCardProps {
 
 function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 	const displayName = typeof brand.name === "string" ? brand.name : (brand.name?.en ?? brand.name?.ja ?? "Brand");
-	const firstChar = displayName.charAt(0).toUpperCase();
 	const itemCount = brand.itemIds?.length ?? 0;
+	const imageSrc = brand.image ? resolveCdnUrl(brand.image) : createGradientPlaceholderSvg(displayName);
 
 	return (
 		<Link href={`/brands/${brand.id}`} style={STYLE_NO_DECORATION_INHERIT}>
@@ -98,21 +101,13 @@ function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 				h="100%"
 				style={STYLE_CURSOR_POINTER}
 			>
-				{brand.image ? (
-					<div style={STYLE_IMAGE_CONTAINER}>
-						<img
-							src={resolveCdnUrl(brand.image)}
-							alt={displayName}
-							style={STYLE_IMAGE}
-						/>
-					</div>
-				) : (
-					<Box style={STYLE_IMAGE_CONTAINER} bg="gray.1">
-						<Avatar size={60} radius="md">
-							{firstChar}
-						</Avatar>
-					</Box>
-				)}
+				<div style={STYLE_IMAGE_CONTAINER}>
+					<img
+						src={imageSrc}
+						alt={displayName}
+						style={STYLE_IMAGE}
+					/>
+				</div>
 				<Box p="sm">
 					<Text size="sm" fw={600} lineClamp={1}>
 						{displayName}
@@ -134,8 +129,8 @@ interface SeriesCardProps {
 
 function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 	const displayName = typeof seriesItem.name === "string" ? seriesItem.name : (seriesItem.name?.en ?? seriesItem.name?.ja ?? "Series");
-	const firstChar = displayName.charAt(0).toUpperCase();
 	const itemCount = seriesItem.itemIds?.length ?? 0;
+	const imageSrc = seriesItem.image ? resolveCdnUrl(seriesItem.image) : createGradientPlaceholderSvg(displayName);
 
 	return (
 		<Link href={`/series/${seriesItem.id}`} style={STYLE_NO_DECORATION_INHERIT}>
@@ -147,21 +142,13 @@ function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 				h="100%"
 				style={STYLE_CURSOR_POINTER}
 			>
-				{seriesItem.image ? (
-					<div style={STYLE_IMAGE_CONTAINER}>
-						<img
-							src={resolveCdnUrl(seriesItem.image)}
-							alt={displayName}
-							style={STYLE_IMAGE}
-						/>
-					</div>
-				) : (
-					<Box style={STYLE_IMAGE_CONTAINER} bg="violet.0">
-						<Avatar size={60} radius="md" color="violet">
-							{firstChar}
-						</Avatar>
-					</Box>
-				)}
+				<div style={STYLE_IMAGE_CONTAINER}>
+					<img
+						src={imageSrc}
+						alt={displayName}
+						style={STYLE_IMAGE}
+					/>
+				</div>
 				<Box p="sm">
 					<Text size="sm" fw={600} lineClamp={1}>
 						{displayName}

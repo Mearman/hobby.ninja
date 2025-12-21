@@ -48,3 +48,48 @@ export const createPlaceholderSvg = (text: string, width = DEFAULT_WIDTH, height
 export const createErrorPlaceholderSvg = (width = DEFAULT_WIDTH, height = DEFAULT_HEIGHT): string => {
 	return createPlaceholderSvg("Image Not Available", width, height);
 };
+
+// Gradient placeholder constants
+const GRADIENT_WIDTH = 300;
+const GRADIENT_HEIGHT = 170;
+const HUE_RANGE = 360;
+const HUE_OFFSET = 30;
+
+// Generate consistent hue from string hash
+const stringToHue = (str: string): number => {
+	let hash = 0;
+	for (const char of str) {
+		hash = (char.codePointAt(0) ?? 0) + ((hash << 5) - hash);
+	}
+	return Math.abs(hash) % HUE_RANGE;
+};
+
+export const createGradientPlaceholderSvg = (
+	name: string,
+	width = GRADIENT_WIDTH,
+	height = GRADIENT_HEIGHT,
+): string => {
+	const hue = stringToHue(name);
+	const color1 = `hsl(${hue}, 65%, 55%)`;
+	const color2 = `hsl(${(hue + HUE_OFFSET) % HUE_RANGE}, 65%, 45%)`;
+	const escapedText = escapeSvgText(name);
+
+	const svg = `
+    <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:${color1}"/>
+          <stop offset="100%" style="stop-color:${color2}"/>
+        </linearGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grad)"/>
+      <text x="50%" y="50%" font-family="system-ui, sans-serif" font-size="16"
+            font-weight="600" text-anchor="middle" dominant-baseline="middle"
+            fill="white" opacity="0.95">
+        ${escapedText}
+      </text>
+    </svg>
+  `.trim();
+
+	return `data:image/svg+xml;base64,${utf8ToBase64(svg)}`;
+};
