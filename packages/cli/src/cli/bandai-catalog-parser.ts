@@ -1,17 +1,9 @@
 /**
  * Bandai Catalog HTML Parser using Cheerio
  * Extracts structured product data from Bandai Hobby catalog pages
+ * Outputs normalized Item format with ID references
  */
 
-import type {
-	CatalogItem,
-	CatalogPrice,
-	CatalogReleaseDate,
-	CatalogBrand,
-	CatalogSeries,
-	CatalogCategory,
-	CatalogRelatedProduct,
-} from "@hobby-ninja/types/catalog";
 import { load, type CheerioAPI } from "cheerio";
 
 // Constants for repeated selectors
@@ -21,9 +13,68 @@ const DESCRIPTION_SELECTOR_LEGACY = ".pg-products__instructionTxt p";
 // New format: description in article with PlaygroundEditorTheme paragraphs
 const DESCRIPTION_SELECTOR_ARTICLE = ".pg-products__article";
 
+// ============================================================================
+// Types
+// ============================================================================
+
+/** Price information */
+export interface ItemPrice {
+	amount: number;
+	currency: "JPY";
+	taxIncluded: boolean;
+	taxRate: number;
+}
+
+/** Release date with Japanese format and parsed components */
+export interface ItemReleaseDate {
+	ja: string;
+	year: number;
+	month: number;
+	day?: number;
+}
+
+/** Localized text array (bilingual) */
+export interface LocalizedTextArray {
+	ja: string[];
+	en?: string[];
+}
+
+/** Normalized item matching data/lib/schemas.ts ItemSchema */
+export interface Item {
+	id: string;
+	type: "item";
+	name: { ja: string; en?: string };
+	brandIds: string[];
+	seriesIds: string[];
+	categoryIds: string[];
+	relatedItemIds: string[];
+	manualId?: string;
+	scale?: string;
+	price?: ItemPrice;
+	releaseDate?: ItemReleaseDate;
+	targetAge?: number;
+	description?: LocalizedTextArray;
+	accessories?: LocalizedTextArray;
+	contents?: LocalizedTextArray;
+	images?: string[];
+	sourceUrl?: string;
+	extractedAt?: string;
+	pageScrapedAt?: string;
+}
+
+/** Entity data for upserting to data/src/{type}s/ */
+export interface EntityData {
+	id: string;
+	type: "brand" | "series" | "category";
+	name: { ja: string };
+	url: string;
+}
+
+/** Parse result with item and entities to upsert */
 export interface ParseResult {
 	success: boolean;
-	data?: CatalogItem;
+	data?: Item;
+	entities?: EntityData[];
 	error?: string;
 }
 
@@ -37,29 +88,63 @@ export class BandaiCatalogParser {
 				return { success: false, error: "Could not extract product name" };
 			}
 
-			const price = this.extractPrice($);
-			const item: CatalogItem = {
+			// Extract raw entity data (with URLs)
+			const brandsRaw = this.extractBrandsRaw($);
+			const seriesRaw = this.extractSeriesRaw($);
+			const categoriesRaw = this.extractCategoriesRaw($);
+			const relatedRaw = this.extractRelatedProductsRaw($);
+
+			// Extract IDs from URLs
+			const brandIds = brandsRaw.map(b => this.extractIdFromUrl(b.url, "brand")).filter(Boolean);
+			const seriesIds = seriesRaw ? [this.extractIdFromUrl(seriesRaw.url, "series")].filter(Boolean) : [];
+			const categoryIds = categoriesRaw.map(c => this.extractIdFromUrl(c.url, "category")).filter(Boolean);
+			const relatedItemIds = relatedRaw.map(r => r.id);
+
+			// Build normalized item
+			const item: Item = {
 				id,
-				itemType: price ? "product" : "blog",
+				type: "item",
 				name: { ja: name },
-				price,
+				brandIds,
+				seriesIds,
+				categoryIds,
+				relatedItemIds,
+				manualId: this.extractManualId($),
+				scale: this.extractScale(name),
+				price: this.extractPrice($),
 				releaseDate: this.extractReleaseDate($),
 				targetAge: this.extractTargetAge($),
-				series: this.extractSeries($),
-				brands: this.extractBrands($),
-				categories: this.extractCategories($),
-				scale: this.extractScale(name),
-				description: this.extractDescription($),
-				accessories: this.extractAccessories($),
-				contents: this.extractContents($),
+				description: this.extractDescriptionNormalized($),
+				accessories: this.extractAccessoriesNormalized($),
+				contents: this.extractContentsNormalized($),
 				images: this.extractImages($),
-				relatedProducts: this.extractRelatedProducts($),
-				manualId: this.extractManualId($),
 				sourceUrl,
 				extractedAt: new Date().toISOString(),
+				pageScrapedAt: new Date().toISOString(),
 			};
 
-			return { success: true, data: item };
+			// Build entities for upsert
+			const entities: EntityData[] = [];
+			for (const brand of brandsRaw) {
+				const brandId = this.extractIdFromUrl(brand.url, "brand");
+				if (brandId && brand.url) {
+					entities.push({ id: brandId, type: "brand", name: { ja: brand.ja }, url: brand.url });
+				}
+			}
+			if (seriesRaw?.url) {
+				const seriesId = this.extractIdFromUrl(seriesRaw.url, "series");
+				if (seriesId) {
+					entities.push({ id: seriesId, type: "series", name: { ja: seriesRaw.ja }, url: seriesRaw.url });
+				}
+			}
+			for (const cat of categoriesRaw) {
+				const catId = this.extractIdFromUrl(cat.url, "category");
+				if (catId && cat.url) {
+					entities.push({ id: catId, type: "category", name: { ja: cat.ja }, url: cat.url });
+				}
+			}
+
+			return { success: true, data: item, entities };
 		} catch (error) {
 			return {
 				success: false,
@@ -68,11 +153,32 @@ export class BandaiCatalogParser {
 		}
 	}
 
+	/**
+	 * Extract ID from Bandai URL
+	 * Examples: /brand/hg/ -> "hg", /series/z-gundam/ -> "z-gundam"
+	 */
+	private extractIdFromUrl(url: string | undefined, type: "brand" | "series" | "category"): string {
+		if (!url) return "";
+
+		// Handle different URL patterns
+		if (type === "brand") {
+			const match = /\/brand\/([^/]+)\/?/.exec(url);
+			return match?.[1] ?? "";
+		}
+		if (type === "series") {
+			const match = /\/series\/([^/]+)\/?/.exec(url);
+			return match?.[1] ?? "";
+		}
+		// Categories: /gunpla/, /characterplastic/, etc.
+		const match = /\/([^/]+)\/?$/.exec(url);
+		return match?.[1] ?? "";
+	}
+
 	private extractName($: CheerioAPI): string | undefined {
 		return $("h1.p-heading__h1-product").first().text().trim() || undefined;
 	}
 
-	private extractPrice($: CheerioAPI): CatalogPrice | undefined {
+	private extractPrice($: CheerioAPI): ItemPrice | undefined {
 		const priceLabel = $('dt.pg-products__label:contains("価格")');
 		const priceText = priceLabel.next(LABEL_VALUE_SELECTOR).text().trim();
 
@@ -97,7 +203,7 @@ export class BandaiCatalogParser {
 		};
 	}
 
-	private extractReleaseDate($: CheerioAPI): CatalogReleaseDate | undefined {
+	private extractReleaseDate($: CheerioAPI): ItemReleaseDate | undefined {
 		const dateLabel = $('dt.pg-products__label:contains("発売日")');
 		const dateText = dateLabel.next(LABEL_VALUE_SELECTOR).text().trim();
 
@@ -140,7 +246,7 @@ export class BandaiCatalogParser {
 		return ageStr ? Number.parseInt(ageStr, 10) : undefined;
 	}
 
-	private extractSeries($: CheerioAPI): CatalogSeries | undefined {
+	private extractSeriesRaw($: CheerioAPI): { ja: string; url?: string } | undefined {
 		// Series is in breadcrumbs - look for links to /series/
 		const seriesLink = $('ul.p-breadcrumb a[href*="/series/"]').first();
 		if (seriesLink.length === 0) return undefined;
@@ -151,8 +257,8 @@ export class BandaiCatalogParser {
 		};
 	}
 
-	private extractBrands($: CheerioAPI): CatalogBrand[] {
-		const brands: CatalogBrand[] = [];
+	private extractBrandsRaw($: CheerioAPI): Array<{ ja: string; url?: string }> {
+		const brands: Array<{ ja: string; url?: string }> = [];
 
 		// Brands are in breadcrumbs - look for links to /brand/
 		$('ul.p-breadcrumb a[href*="/brand/"]').each((_, el) => {
@@ -175,8 +281,8 @@ export class BandaiCatalogParser {
 		return brands;
 	}
 
-	private extractCategories($: CheerioAPI): CatalogCategory[] {
-		const categories: CatalogCategory[] = [];
+	private extractCategoriesRaw($: CheerioAPI): Array<{ ja: string; url?: string }> {
+		const categories: Array<{ ja: string; url?: string }> = [];
 
 		// Categories are typically the second item in breadcrumbs (after TOP)
 		// Look for gunpla, characterplastic, etc.
@@ -267,84 +373,79 @@ export class BandaiCatalogParser {
 		return articleText;
 	}
 
-	private extractDescription($: CheerioAPI): Array<{ ja: string }> {
+	/** Returns normalized description: { ja: string[] } */
+	private extractDescriptionNormalized($: CheerioAPI): LocalizedTextArray | undefined {
 		const text = this.getFullDescriptionText($);
 
-		if (!text) return [];
+		if (!text) return undefined;
 
 		// Clean up the description - remove accessories/contents sections
 		const parts = text.split(/【付属品】|【商品内容】/);
 		const firstPart = parts[0] ?? "";
 		const cleanText = firstPart.trim();
 
-		if (!cleanText) return [];
+		if (!cleanText) return undefined;
 
-		// Split by newline and return as array of localized strings
-		return cleanText
+		// Split by newline and return as normalized structure
+		const lines = cleanText
 			.split("\n")
 			.map(line => line.trim())
-			.filter(line => line.length > 0)
-			.map(line => ({ ja: line }));
+			.filter(line => line.length > 0);
+
+		return lines.length > 0 ? { ja: lines } : undefined;
 	}
 
-	private extractAccessories($: CheerioAPI): Array<{ ja: string }> {
-		const accessories: Array<{ ja: string }> = [];
+	/** Returns normalized accessories: { ja: string[] } */
+	private extractAccessoriesNormalized($: CheerioAPI): LocalizedTextArray | undefined {
 		const descText = this.getFullDescriptionText($);
+		const items: string[] = [];
 
 		// Try formal section format: 【付属品】
 		const accessoriesMatch = /【付属品】([\s\S]*?)(?:【商品内容】|$)/.exec(descText);
 		const accessoriesText = accessoriesMatch?.[1];
 		if (accessoriesText) {
 			// Split on newlines or ■, keep items intact
-			const items = accessoriesText
+			const extracted = accessoriesText
 				.split(/\n|■/)
 				.map(s => s.replace(/^■/, "").trim())
 				.filter(s => s.length > 0);
-
-			for (const item of items) {
-				accessories.push({ ja: item });
-			}
+			items.push(...extracted);
 		}
 
 		// Also try inline format: "付属武装：" (common in newer article format)
-		if (accessories.length === 0) {
+		if (items.length === 0) {
 			const inlineMatch = /付属武装[：:]\s*(.+)/.exec(descText);
 			if (inlineMatch?.[1]) {
 				// Split on common separators: / or ／ or 、
-				const items = inlineMatch[1]
+				const extracted = inlineMatch[1]
 					.split(/[/／、]/)
 					.map(s => s.trim())
 					.filter(s => s.length > 0);
-
-				for (const item of items) {
-					accessories.push({ ja: item });
-				}
+				items.push(...extracted);
 			}
 		}
 
-		return accessories;
+		return items.length > 0 ? { ja: items } : undefined;
 	}
 
-	private extractContents($: CheerioAPI): Array<{ ja: string }> {
-		const contents: Array<{ ja: string }> = [];
+	/** Returns normalized contents: { ja: string[] } */
+	private extractContentsNormalized($: CheerioAPI): LocalizedTextArray | undefined {
 		const descText = this.getFullDescriptionText($);
+		const items: string[] = [];
 
 		// Find text after 【商品内容】
 		const contentsMatch = /【商品内容】([\s\S]*?)$/.exec(descText);
 		const contentsText = contentsMatch?.[1];
 		if (contentsText) {
 			// Split on newlines or ■, keep items intact
-			const items = contentsText
+			const extracted = contentsText
 				.split(/\n|■/)
 				.map(s => s.replace(/^■/, "").trim())
 				.filter(s => s.length > 0);
-
-			for (const item of items) {
-				contents.push({ ja: item });
-			}
+			items.push(...extracted);
 		}
 
-		return contents;
+		return items.length > 0 ? { ja: items } : undefined;
 	}
 
 	private extractImages($: CheerioAPI): string[] {
@@ -372,8 +473,9 @@ export class BandaiCatalogParser {
 		return images;
 	}
 
-	private extractRelatedProducts($: CheerioAPI): CatalogRelatedProduct[] {
-		const related: CatalogRelatedProduct[] = [];
+	/** Extract related product IDs only */
+	private extractRelatedProductsRaw($: CheerioAPI): Array<{ id: string }> {
+		const related: Array<{ id: string }> = [];
 
 		// Related products are in p-card__wrap following h2:contains("関連商品")
 		// Find the section containing "関連商品" and then its card links
@@ -386,17 +488,8 @@ export class BandaiCatalogParser {
 			if (!idMatch) return;
 
 			const id = idMatch[1];
-			if (!id) return;
-			const name = $el.find(".p-card__tit").text().trim();
-			const imageUrl = $el.find(".p-card__img img").attr("src");
-
-			if (name) {
-				related.push({
-					id,
-					name: { ja: name },
-					url: href,
-					imageUrl,
-				});
+			if (id) {
+				related.push({ id });
 			}
 		});
 
