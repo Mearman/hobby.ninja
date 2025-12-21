@@ -200,6 +200,7 @@ export const CategorySchema = z.object({
 
 	// Category metadata
 	description: z.string().optional(),
+	image: z.string().optional(),
 	itemCount: z.number().optional(),
 	parentId: z.string().optional(),
 
