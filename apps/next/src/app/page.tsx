@@ -28,6 +28,20 @@ import { UI } from "@/lib/constants";
 const STYLE_NO_DECORATION_INHERIT = { textDecoration: "none", color: "inherit" };
 const STYLE_CURSOR_POINTER = { cursor: "pointer" };
 const STYLE_BORDER_RADIUS_TOP = "var(--mantine-radius-md) var(--mantine-radius-md) 0 0";
+const STYLE_IMAGE_CONTAINER = {
+	aspectRatio: "300 / 170",
+	backgroundColor: "white",
+	borderRadius: STYLE_BORDER_RADIUS_TOP,
+	display: "flex",
+	alignItems: "center",
+	justifyContent: "center",
+} as const;
+const STYLE_IMAGE = {
+	maxWidth: "100%",
+	maxHeight: "100%",
+	objectFit: "contain",
+	display: "block",
+} as const;
 
 // Category Card Component
 interface CategoryCardProps {
@@ -85,14 +99,16 @@ function BrandCard({ brand }: BrandCardProps): React.ReactElement {
 				style={STYLE_CURSOR_POINTER}
 			>
 				{brand.image ? (
-					<img
-						src={resolveCdnUrl(brand.image)}
-						alt={displayName}
-						style={{ width: "100%", height: "auto", display: "block", borderRadius: STYLE_BORDER_RADIUS_TOP, backgroundColor: "white" }}
-					/>
+					<div style={STYLE_IMAGE_CONTAINER}>
+						<img
+							src={resolveCdnUrl(brand.image)}
+							alt={displayName}
+							style={STYLE_IMAGE}
+						/>
+					</div>
 				) : (
-					<Box p="xl" bg="gray.1" style={{ borderRadius: STYLE_BORDER_RADIUS_TOP }}>
-						<Avatar size={60} radius="md" mx="auto">
+					<Box style={STYLE_IMAGE_CONTAINER} bg="gray.1">
+						<Avatar size={60} radius="md">
 							{firstChar}
 						</Avatar>
 					</Box>
@@ -132,14 +148,16 @@ function SeriesCard({ seriesItem }: SeriesCardProps): React.ReactElement {
 				style={STYLE_CURSOR_POINTER}
 			>
 				{seriesItem.image ? (
-					<img
-						src={resolveCdnUrl(seriesItem.image)}
-						alt={displayName}
-						style={{ width: "100%", height: "auto", display: "block", borderRadius: STYLE_BORDER_RADIUS_TOP, backgroundColor: "white" }}
-					/>
+					<div style={STYLE_IMAGE_CONTAINER}>
+						<img
+							src={resolveCdnUrl(seriesItem.image)}
+							alt={displayName}
+							style={STYLE_IMAGE}
+						/>
+					</div>
 				) : (
-					<Box p="xl" bg="violet.0" style={{ borderRadius: STYLE_BORDER_RADIUS_TOP }}>
-						<Avatar size={60} radius="md" color="violet" mx="auto">
+					<Box style={STYLE_IMAGE_CONTAINER} bg="violet.0">
+						<Avatar size={60} radius="md" color="violet">
 							{firstChar}
 						</Avatar>
 					</Box>
