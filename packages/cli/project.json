@@ -1,66 +1,66 @@
 {
-  "name": "cli",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/cli/src",
-  "projectType": "library",
-  "targets": {
-    "build": {
-      "executor": "@nx/vite:build",
-      "outputs": ["{options.outputPath}"],
-      "cache": true,
-      "options": {
-        "outputPath": "packages/cli/dist",
-        "configFile": "packages/cli/vite.config.ts"
-      },
-      "dependsOn": ["types:build", "utils:build", "translation:build", "scrapers:build"]
-    },
-    "test": {
-      "executor": "@nx/vitest:test",
-      "outputs": ["{workspaceRoot}/coverage/cli"],
-      "cache": true,
-      "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "{workspaceRoot}/coverage/cli"
-      },
-      "dependsOn": ["types:build", "utils:build"]
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "cache": true,
-      "options": {
-        "lintFilePatterns": ["packages/cli/src/**/*.ts"]
-      },
-      "dependsOn": ["types:build", "utils:build"]
-    },
-    "typecheck": {
-      "executor": "@nx/js:tsc",
-      "options": {
-        "tsConfig": "packages/cli/tsconfig.json",
-        "main": "packages/cli/src/index.ts",
-        "outputPath": "dist/packages/cli",
-        "noEmit": true
-      },
-      "cache": true,
-      "dependsOn": ["types:build", "utils:build"]
-    },
-    "cli": {
-      "executor": "@nx/js:node",
-      "options": {
-        "buildTarget": "cli:build"
-      }
-    },
-    "scrape": {
-      "executor": "@nx/js:node",
-      "options": {
-        "buildTarget": "cli:build",
-        "args": ["scrape"]
-      }
-    },
-    "check": {
-      "dependsOn": ["typecheck", "lint", "test", "build"],
-      "cache": true
-    }
-  },
-  "tags": ["scope:cli", "type:tool", "context:scraping"]
+	"name": "cli",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "packages/cli/src",
+	"projectType": "library",
+	"targets": {
+		"build": {
+			"executor": "@nx/vite:build",
+			"outputs": ["{options.outputPath}"],
+			"cache": true,
+			"options": {
+				"outputPath": "packages/cli/dist",
+				"configFile": "packages/cli/vite.config.ts"
+			},
+			"dependsOn": ["types:build", "utils:build", "translation:build", "scrapers:build"]
+		},
+		"test": {
+			"executor": "@nx/vitest:test",
+			"outputs": ["{workspaceRoot}/coverage/cli"],
+			"cache": true,
+			"options": {
+				"passWithNoTests": true,
+				"reportsDirectory": "{workspaceRoot}/coverage/cli"
+			},
+			"dependsOn": ["types:build", "utils:build"]
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint",
+			"outputs": ["{options.outputFile}"],
+			"cache": true,
+			"options": {
+				"lintFilePatterns": ["packages/cli/src/**/*.ts"]
+			},
+			"dependsOn": ["types:build", "utils:build"]
+		},
+		"typecheck": {
+			"executor": "@nx/js:tsc",
+			"options": {
+				"tsConfig": "packages/cli/tsconfig.json",
+				"main": "packages/cli/src/index.ts",
+				"outputPath": "dist/packages/cli",
+				"noEmit": true
+			},
+			"cache": true,
+			"dependsOn": ["types:build", "utils:build"]
+		},
+		"cli": {
+			"executor": "@nx/js:node",
+			"options": {
+				"buildTarget": "cli:build"
+			}
+		},
+		"scrape": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "npx tsx packages/cli/src/bin/cli.ts scrape",
+				"cwd": "{workspaceRoot}"
+			}
+		},
+		"check": {
+			"dependsOn": ["typecheck", "lint", "test", "build"],
+			"cache": true
+		}
+	},
+	"tags": ["scope:cli", "type:tool", "context:scraping"]
 }
