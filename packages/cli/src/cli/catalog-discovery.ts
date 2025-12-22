@@ -4,8 +4,9 @@ import path from "node:path";
 
 import { normalizeText } from "@hobby-ninja/translation";
 
-import { BandaiCatalogParser, type EntityData, type GlobalSiteUrls, type Item } from "./bandai-catalog-parser";
+import { BandaiCatalogParser, type EntityData, type GlobalSiteUrls, type Item, type ParsedAccessoryItem } from "./bandai-catalog-parser";
 import { CatalogTranslator } from "./catalog-translator";
+import { parseCountedItems } from "./count-parser";
 import { ItemsIndexUpdater } from "./items-index-updater";
 import { SimpleCatalogScraper, type SimpleCatalogResult } from "./simple-catalog-scraper";
 import type { CatalogDiscoveryOptions, CatalogDiscoveryResult, CatalogRangeStats } from "./types/catalog-discovery";
@@ -100,19 +101,61 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 	const merged = { ...scraped };
 
 	// Preserve English name only if scraped doesn't have one (global site content takes precedence)
-	if (!scraped.name.en && existing.name && typeof existing.name === "object" && "en" in existing.name) {
-		merged.name = { ...scraped.name, en: (existing.name as { en?: string }).en };
+	const existingName = existing["name"];
+	if (!scraped.name.en && existingName && typeof existingName === "object" && "en" in existingName) {
+		merged.name = { ...scraped.name, en: (existingName as { en?: string }).en };
 	}
 
-	// Preserve English translations in localized text arrays only if scraped doesn't have them
-	const localizedFields = ["description", "accessories", "contents"] as const;
-	for (const field of localizedFields) {
-		const existingField = existing[field];
-		const scrapedField = scraped[field];
-		const scrapedHasEn = scrapedField && typeof scrapedField === "object" && "en" in scrapedField;
-		// Only use existing EN if scraped doesn't already have EN (from global site)
-		if (!scrapedHasEn && existingField && typeof existingField === "object" && "en" in existingField && scrapedField) {
-			(merged[field] as { ja: string[]; en?: string[] }).en = (existingField as { en?: string[] }).en;
+	// Preserve English translations in description (still uses LocalizedTextArray format)
+	const existingDesc = existing["description"];
+	const scrapedDesc = scraped.description;
+	const scrapedDescHasEn = scrapedDesc && typeof scrapedDesc === "object" && "en" in scrapedDesc;
+	if (!scrapedDescHasEn && existingDesc && typeof existingDesc === "object" && "en" in existingDesc && scrapedDesc) {
+		(merged.description as { ja: string[]; en?: string[] }).en = (existingDesc as { en?: string[] }).en;
+	}
+
+	// Preserve English names and units in accessories/contents arrays (ParsedAccessoryItem[] format)
+	interface ExistingAccessoryItem { name: { ja: string; en?: string }; count?: number; unit?: { ja: string; en?: string } }
+	const existingAccessoriesArr = existing["accessories"];
+	if (scraped.accessories && Array.isArray(existingAccessoriesArr)) {
+		const existingAccessories = existingAccessoriesArr as ExistingAccessoryItem[];
+		// Check if scraped already has EN in any item
+		const scrapedHasEn = scraped.accessories.some(item => item.name.en);
+		if (!scrapedHasEn) {
+			// Merge existing EN names and units by position
+			merged.accessories = scraped.accessories.map((item, index) => {
+				const existingItem = existingAccessories[index];
+				const existingNameEn = existingItem?.name.en;
+				const existingUnitEn = existingItem?.unit?.en;
+				if (existingNameEn || existingUnitEn) {
+					return {
+						...item,
+						name: existingNameEn ? { ...item.name, en: existingNameEn } : item.name,
+						unit: existingUnitEn && item.unit ? { ...item.unit, en: existingUnitEn } : item.unit,
+					};
+				}
+				return item;
+			});
+		}
+	}
+	const existingContentsArr = existing["contents"];
+	if (scraped.contents && Array.isArray(existingContentsArr)) {
+		const existingContents = existingContentsArr as ExistingAccessoryItem[];
+		const scrapedHasEn = scraped.contents.some(item => item.name.en);
+		if (!scrapedHasEn) {
+			merged.contents = scraped.contents.map((item, index) => {
+				const existingItem = existingContents[index];
+				const existingNameEn = existingItem?.name.en;
+				const existingUnitEn = existingItem?.unit?.en;
+				if (existingNameEn || existingUnitEn) {
+					return {
+						...item,
+						name: existingNameEn ? { ...item.name, en: existingNameEn } : item.name,
+						unit: existingUnitEn && item.unit ? { ...item.unit, en: existingUnitEn } : item.unit,
+					};
+				}
+				return item;
+			});
 		}
 	}
 
@@ -467,6 +510,41 @@ function splitGlobalSiteContent(lines: string[]): {
 	}
 
 	return { description, accessories, contents };
+}
+
+/**
+ * Merge parsed EN items into existing JA parsed items by position.
+ * Adds the EN name and unit to each item's localized fields.
+ */
+function mergeEnIntoAccessories(
+	jaItems: ParsedAccessoryItem[],
+	enStrings: string[],
+): ParsedAccessoryItem[] {
+	// Parse EN strings to extract names and counts
+	const enParsed = parseCountedItems(enStrings);
+
+	// Merge by position
+	return jaItems.map((jaItem, index) => {
+		const enItem = enParsed[index];
+		if (enItem) {
+			const merged: ParsedAccessoryItem = {
+				...jaItem,
+				name: {
+					ja: jaItem.name.ja,
+					en: normalizeText(enItem.name),
+				},
+			};
+			// Merge EN unit if present
+			if (enItem.unit) {
+				merged.unit = {
+					ja: jaItem.unit?.ja ?? enItem.unit,  // Fallback to EN if JA missing
+					en: enItem.unit,
+				};
+			}
+			return merged;
+		}
+		return jaItem;
+	});
 }
 
 /**
@@ -902,13 +980,18 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 									catalogResult.data.description ??= { ja: [] };
 									catalogResult.data.description.en = globalContent.enDescription.map((line) => normalizeText(line));
 								}
-								if (globalContent.enAccessories) {
-									catalogResult.data.accessories ??= { ja: [] };
-									catalogResult.data.accessories.en = globalContent.enAccessories.map((line) => normalizeText(line));
+								// Merge EN accessories/contents into parsed items
+								if (globalContent.enAccessories && catalogResult.data.accessories) {
+									catalogResult.data.accessories = mergeEnIntoAccessories(
+										catalogResult.data.accessories,
+										globalContent.enAccessories,
+									);
 								}
-								if (globalContent.enContents) {
-									catalogResult.data.contents ??= { ja: [] };
-									catalogResult.data.contents.en = globalContent.enContents.map((line) => normalizeText(line));
+								if (globalContent.enContents && catalogResult.data.contents) {
+									catalogResult.data.contents = mergeEnIntoAccessories(
+										catalogResult.data.contents,
+										globalContent.enContents,
+									);
 								}
 
 								if (options.verbose) {
@@ -931,8 +1014,18 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 						if (catalogResult.data.description?.ja) {
 							catalogResult.data.description.ja = catalogResult.data.description.ja.map((line) => normalizeText(line));
 						}
-						if (catalogResult.data.accessories?.ja) {
-							catalogResult.data.accessories.ja = catalogResult.data.accessories.ja.map((line) => normalizeText(line));
+						// Normalize JA names in accessories/contents arrays
+						if (catalogResult.data.accessories) {
+							catalogResult.data.accessories = catalogResult.data.accessories.map((item) => ({
+								...item,
+								name: { ...item.name, ja: normalizeText(item.name.ja) },
+							}));
+						}
+						if (catalogResult.data.contents) {
+							catalogResult.data.contents = catalogResult.data.contents.map((item) => ({
+								...item,
+								name: { ...item.name, ja: normalizeText(item.name.ja) },
+							}));
 						}
 
 						// Merge with existing data to preserve curated fields (EN translations, manualId, etc.)
