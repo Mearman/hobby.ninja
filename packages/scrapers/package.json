@@ -2,6 +2,7 @@
 	"name": "@hobby-ninja/scrapers",
 	"description": "Web scrapers for Gundam and Gunpla data sources",
 	"version": "1.0.0",
+	"type": "module",
 	"scripts": {
 		"build": "vite build",
 		"clean": "rm -rf dist",
@@ -26,6 +27,10 @@
 		"vite-plugin-dts": "4.5.4"
 	},
 	"exports": {
+		".": {
+			"types": "./dist/registry.d.ts",
+			"import": "./dist/registry.js"
+		},
 		"./registry": {
 			"types": "./dist/registry.d.ts",
 			"import": "./dist/registry.js"
@@ -33,10 +38,6 @@
 		"./base": {
 			"types": "./dist/base-scraper.d.ts",
 			"import": "./dist/base-scraper.js"
-		},
-		"./bandai": {
-			"types": "./dist/bandai-hobby.d.ts",
-			"import": "./dist/bandai-hobby.js"
 		},
 		"./gundam-info": {
 			"types": "./dist/gundam-info.d.ts",

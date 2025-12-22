@@ -1,13 +1,16 @@
 /**
  * Scraper registry for managing all available data sources
+ *
+ * Note: BandaiHobbyScraper has been deprecated and replaced by:
+ * - BandaiCatalogParser (packages/cli) for JP site parsing
+ * - GlobalSiteLookup (packages/cli) for English translations
  */
 
-import { BandaiHobbyScraper } from "./bandai-hobby";
 import type { BaseScraper } from "./base-scraper";
 import { GundamInfoScraper } from "./gundam-info";
 import { HobbyLinkScraper } from "./hobbylink";
 
-export type ScraperType = "bandai-hobby" | "gundam-info" | "hobbylink";
+export type ScraperType = "gundam-info" | "hobbylink";
 
 export interface ScraperInfo {
   type: ScraperType;
@@ -27,22 +30,11 @@ type ScraperConstructor = new (...args: unknown[]) => BaseScraper;
  */
 export class ScraperRegistry {
 	private static scrapers = new Map<ScraperType, ScraperConstructor>([
-		["bandai-hobby", BandaiHobbyScraper as unknown as ScraperConstructor],
 		["gundam-info", GundamInfoScraper as unknown as ScraperConstructor],
 		["hobbylink", HobbyLinkScraper as unknown as ScraperConstructor],
 	]);
 
 	private static scraperInfo = new Map<ScraperType, ScraperInfo>([
-		["bandai-hobby", {
-			type: "bandai-hobby",
-			name: "Bandai Hobby Official Site",
-			description: "Official Bandai hobby site with comprehensive product information and high-quality images",
-			baseUrl: "https://bandai-hobby.net",
-			supportedLanguages: ["ja", "en"],
-			defaultDelayMs: 3000,
-			requiresAuth: false,
-			specialties: ["gunpla", "product-catalog", "official-specs", "release-dates"],
-		}],
 		["gundam-info", {
 			type: "gundam-info",
 			name: "Gundam.Info",
@@ -118,19 +110,20 @@ export class ScraperRegistry {
 
 	/**
    * Get recommended scrapers for specific data needs
+   * Note: Bandai Hobby scraping is now handled by packages/cli (BandaiCatalogParser + GlobalSiteLookup)
    */
 	static getRecommendedFor(dataNeed: "pricing" | "specifications" | "images" | "availability" | "general"): ScraperInfo[] {
 		switch (dataNeed) {
 			case "pricing": {
-				return [this.getScraperInfo("hobbylink"), this.getScraperInfo("bandai-hobby")].filter((info): info is ScraperInfo => info !== undefined);
+				return [this.getScraperInfo("hobbylink")].filter((info): info is ScraperInfo => info !== undefined);
 			}
 
 			case "specifications": {
-				return [this.getScraperInfo("bandai-hobby"), this.getScraperInfo("gundam-info")].filter((info): info is ScraperInfo => info !== undefined);
+				return [this.getScraperInfo("gundam-info")].filter((info): info is ScraperInfo => info !== undefined);
 			}
 
 			case "images": {
-				return [this.getScraperInfo("bandai-hobby"), this.getScraperInfo("hobbylink")].filter((info): info is ScraperInfo => info !== undefined);
+				return [this.getScraperInfo("hobbylink")].filter((info): info is ScraperInfo => info !== undefined);
 			}
 
 			case "availability": {
@@ -138,7 +131,7 @@ export class ScraperRegistry {
 			}
 
 			default: {
-				return [this.getScraperInfo("bandai-hobby"), this.getScraperInfo("gundam-info"), this.getScraperInfo("hobbylink")].filter((info): info is ScraperInfo => info !== undefined);
+				return [this.getScraperInfo("gundam-info"), this.getScraperInfo("hobbylink")].filter((info): info is ScraperInfo => info !== undefined);
 			}
 		}
 	}
@@ -152,11 +145,12 @@ export class ScraperRegistry {
 
 	/**
    * Get default scraper for general use
+   * Note: For Bandai Hobby data, use packages/cli (BandaiCatalogParser + GlobalSiteLookup)
    */
 	static getDefaultScraper(): ScraperInfo {
-		const scraper = this.getScraperInfo("bandai-hobby");
+		const scraper = this.getScraperInfo("gundam-info");
 		if (!scraper) {
-			throw new Error("Default scraper 'bandai-hobby' not found in registry");
+			throw new Error("Default scraper 'gundam-info' not found in registry");
 		}
 		return scraper;
 	}
@@ -167,9 +161,9 @@ export class ScraperRegistry {
 	static getQualityRanking(): ScraperInfo[] {
 		const scrapers = [...this.scraperInfo.values()];
 		return scrapers.sort((a, b) => {
-			// Prioritize official sources
-			if (a.baseUrl.includes("bandai") && !b.baseUrl.includes("bandai")) return -1;
-			if (!a.baseUrl.includes("bandai") && b.baseUrl.includes("bandai")) return 1;
+			// Prioritize official sources (gundam.info is official)
+			if (a.baseUrl.includes("gundam.info") && !b.baseUrl.includes("gundam.info")) return -1;
+			if (!a.baseUrl.includes("gundam.info") && b.baseUrl.includes("gundam.info")) return 1;
 
 			// Then by language support
 			if (a.supportedLanguages.length > b.supportedLanguages.length) return -1;

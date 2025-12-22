@@ -14,7 +14,6 @@ export default defineConfig({
 			entry: {
 				registry: resolve(__dirname, "src/registry.ts"),
 				"base-scraper": resolve(__dirname, "src/base-scraper.ts"),
-				"bandai-hobby": resolve(__dirname, "src/bandai-hobby.ts"),
 				"gundam-info": resolve(__dirname, "src/gundam-info.ts"),
 				hobbylink: resolve(__dirname, "src/hobbylink.ts"),
 				"url-scanner/scanner": resolve(__dirname, "src/url-scanner/scanner.ts"),
