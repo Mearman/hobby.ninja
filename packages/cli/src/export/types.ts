@@ -12,7 +12,7 @@ export interface ExportOptions {
   includeCategories?: boolean;
   prettyPrint?: boolean;
   compression?: boolean;
-  encoding?: "utf-8" | "shift-jis";
+  encoding?: "utf8" | "shift-jis";
   language?: "ja" | "en" | "all";
   filters?: ExportFilters;
 }

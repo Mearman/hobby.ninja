@@ -66,8 +66,8 @@ export const EXPORT_CONSTANTS = {
 
 // Encoding constants
 export const ENCODING_CONSTANTS = {
-	SUPPORTED_ENCODINGS: ["utf-8", "shift-jis"] as const,
-	DEFAULT_ENCODING: "utf-8" as const,
+	SUPPORTED_ENCODINGS: ["utf8", "shift-jis"] as const,
+	DEFAULT_ENCODING: "utf8" as const,
 } as const;
 
 // Format constants
