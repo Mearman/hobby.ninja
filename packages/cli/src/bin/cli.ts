@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { readFileSync } from "node:fs";
-import path, { resolve } from "node:path";
+import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { TRANSLATION_STORE_DIR } from "@hobby-ninja/translation";
@@ -9,10 +9,15 @@ import { Command } from "commander";
 import { config } from "dotenv";
 
 
+// CLI-internal imports (not cross-package, so relative imports are appropriate)
+// eslint-disable-next-line no-restricted-imports
 import type { DownloadSource } from "../cli/download-command.js";
+// eslint-disable-next-line no-restricted-imports
 import type { NormalizeOptions } from "../cli/normalize-command.js";
+// eslint-disable-next-line no-restricted-imports
 import type { TranslateOptions, TranslateSource } from "../cli/translate-command.js";
 import { CLI_COMMANDS, MESSAGES, FILES } from "../constants/index.js";
+// eslint-disable-next-line no-restricted-imports
 import type { WaybackSource } from "../types/wayback.js";
 
 // Type guards for CLI options
@@ -68,6 +73,7 @@ const __dirname = path.dirname(__filename);
 // Constants for repeated strings
 const COMMAND_NOT_IMPLEMENTED = "🚧 %s command is not yet implemented";
 const VERBOSE_OPTION = "-v, --verbose";
+const VERBOSE_OUTPUT_DESC = "Verbose output";
 const DRY_RUN_OPTION = "--dry-run";
 const SOURCE_OPTION = "--source <source>";
 const OUTPUT_DIR_OPTION = "--output <dir>";
@@ -82,6 +88,10 @@ const VERBOSE_STRING = "verbose";
 const AUTHENTICATION_STRING = "Authentication: ";
 const API_KEYS_PROVIDED_STRING = "API keys provided";
 const NO_AUTHENTICATION_STRING = "No authentication";
+
+// Time constants
+const SECONDS_PER_MINUTE = 60;
+const DISPLAY_LIMIT = 50;
 
 // Load .env from repo root (packages/cli/src/bin -> repo root is 4 levels up)
 config({ path: path.resolve(__dirname, "../../../../.env") });
@@ -110,8 +120,10 @@ program
 			const { ScrapeCommand } = await import("../cli/scrape.js");
 			const rawOptions = options as Record<string, unknown>;
 
+			const maxAgeValue = rawOptions["maxAge"];
+			const maxAgeStr = typeof maxAgeValue === "string" ? maxAgeValue : "7";
 			console.log("Starting Unified Scraper...");
-			console.log(`Max age: ${rawOptions["maxAge"] === "0" ? "disabled (process all)" : `${rawOptions["maxAge"]} days`}`);
+			console.log(`Max age: ${maxAgeStr === "0" ? "disabled (process all)" : `${maxAgeStr} days`}`);
 			console.log(`Cache: ${rawOptions["cache"] ? "enabled" : "disabled"}`);
 			console.log(`Dry run: ${String(rawOptions["dryRun"])}`);
 			console.log("");
@@ -179,7 +191,7 @@ program
 	.option(INPUT_DIR_OPTION, "Override input directory for the specified source")
 	.option("-c, --cache-dir <dir>", "Directory for translation cache", TRANSLATION_STORE_DIR)
 	.option(DRY_RUN_OPTION, PREVIEW_CHANGES, false)
-	.option(VERBOSE_OPTION, "Verbose output", false)
+	.option(VERBOSE_OPTION, VERBOSE_OUTPUT_DESC, false)
 	.action(async (options: unknown) => {
 		const parsedOptions = parseTranslateOptions(options);
 		try {
@@ -246,7 +258,7 @@ program
 	.option(SOURCE_OPTION, "Data source (all, bandai-catalog, bandai-manuals)", ALL_SOURCES)
 	.option(INPUT_DIR_OPTION, "Override input directory for the specified source")
 	.option(DRY_RUN_OPTION, PREVIEW_CHANGES, false)
-	.option(VERBOSE_OPTION, "Verbose output", false)
+	.option(VERBOSE_OPTION, VERBOSE_OUTPUT_DESC, false)
 	.action(async (options: unknown) => {
 		const parsedOptions = parseNormalizeOptions(options);
 		try {
@@ -311,7 +323,7 @@ program
 	.option("--delay <ms>", "Delay between batches in milliseconds", "0")
 	.option("--recheck", "Recheck items and download missing images to complete arrays", false)
 	.option(DRY_RUN_OPTION, "Show what would be downloaded without downloading", false)
-	.option(VERBOSE_OPTION, "Verbose output", false)
+	.option(VERBOSE_OPTION, VERBOSE_OUTPUT_DESC, false)
 	.action(async (options: unknown) => {
 		try {
 			const { downloadAssets } = await import("../cli/download-command.js");
@@ -474,14 +486,12 @@ program
 			console.log(`Successful: ${result.successful}`);
 			console.log(`Failed: ${result.failed}`);
 			console.log(`Skipped: ${result.skipped}`);
-			console.log(`Duration: ${(result.duration / 1000 / 60).toFixed(1)} minutes`);
+			console.log(`Duration: ${(result.duration / 1000 / SECONDS_PER_MINUTE).toFixed(1)} minutes`);
 
-			if (result.ageStats) {
-				console.log("\nArchive Age Analysis:");
-				console.log(`Too recent (skipped): ${result.ageStats.tooNew}`);
-				console.log(`Needs update: ${result.ageStats.needsUpdate}`);
-				console.log(`Not archived: ${result.ageStats.notArchived}`);
-			}
+			console.log("\nArchive Age Analysis:");
+			console.log(`Too recent (skipped): ${result.ageStats.tooNew}`);
+			console.log(`Needs update: ${result.ageStats.needsUpdate}`);
+			console.log(`Not archived: ${result.ageStats.notArchived}`);
 
 			if (result.errors.length > 0 && result.errors.length <= 10) {
 				console.log("\nErrors:");
@@ -520,7 +530,7 @@ program
 				limit: string;
 				exportFailed?: string;
 			};
-			const checkpointPath: string = resolve(process.cwd(), typedOptions.checkpoint);
+			const checkpointPath: string = path.resolve(process.cwd(), typedOptions.checkpoint);
 			const content: string = readFileSync(checkpointPath, "utf8");
 			const checkpoint = JSON.parse(content) as {
 				lastUpdated: string;
@@ -547,7 +557,7 @@ program
 			};
 
 			console.log("Wayback Checkpoint Status");
-			console.log("=".repeat(50));
+			console.log("=".repeat(DISPLAY_LIMIT));
 			console.log(`Checkpoint file: ${checkpointPath}`);
 			console.log(`Last updated: ${new Date(checkpoint.lastUpdated).toLocaleString()}`);
 			console.log(`Source: ${checkpoint.source ?? "unknown"}`);
@@ -591,7 +601,7 @@ program
 				const limit = Number.parseInt(typedOptions.limit, 10);
 				console.log(`Failed URLs (showing ${Math.min(limit, checkpoint.failedSubmissions.length)} of ${checkpoint.failedSubmissions.length}):`);
 				for (const sub of checkpoint.failedSubmissions.slice(0, limit)) {
-					console.log(`  [${sub.sourceType ?? "manual"}:${sub.itemId ?? sub.manualId}] ${sub.field}: ${sub.url}`);
+					console.log(`  [${sub.sourceType ?? "manual"}:${sub.itemId ?? sub.manualId ?? "unknown"}] ${sub.field}: ${sub.url}`);
 					if (sub.error) {
 						console.log(`    Error: ${sub.error}`);
 					}
@@ -604,7 +614,7 @@ program
 				const limit = Number.parseInt(typedOptions.limit, 10);
 				console.log(`Successful URLs (showing ${Math.min(limit, checkpoint.successfulSubmissions.length)} of ${checkpoint.successfulSubmissions.length}):`);
 				for (const sub of checkpoint.successfulSubmissions.slice(0, limit)) {
-					console.log(`  [${sub.sourceType ?? "manual"}:${sub.itemId ?? sub.manualId}] ${sub.field}: ${sub.url}`);
+					console.log(`  [${sub.sourceType ?? "manual"}:${sub.itemId ?? sub.manualId ?? "unknown"}] ${sub.field}: ${sub.url}`);
 					if (sub.archiveUrl) {
 						console.log(`    Archive: ${sub.archiveUrl}`);
 					}
@@ -614,14 +624,15 @@ program
 
 			// Export failed URLs to file if requested
 			if (typedOptions.exportFailed && checkpoint.failedSubmissions && checkpoint.failedSubmissions.length > 0) {
-				const exportPath: string = resolve(process.cwd(), typedOptions.exportFailed);
+				const exportPath: string = path.resolve(process.cwd(), typedOptions.exportFailed);
 				const failedUrls = checkpoint.failedSubmissions.map((sub) => sub.url);
 				const { writeFileSync } = await import("node:fs");
 				writeFileSync(exportPath, failedUrls.join("\n"), "utf8");
 				console.log(`Exported ${failedUrls.length} failed URLs to ${exportPath}`);
 			}
 		} catch (error: unknown) {
-			if (error instanceof Error && (error as NodeJS.ErrnoException).code === "ENOENT") {
+			const isEnoent = error instanceof Error && "code" in error && error.code === "ENOENT";
+			if (isEnoent) {
 				console.error("No checkpoint file found. Run `wayback` command first to create one.");
 			} else {
 				console.error("Error reading checkpoint:", error instanceof Error ? error.message : String(error));
@@ -639,7 +650,7 @@ program
 	.option("--min-confidence <n>", "Minimum confidence for auto-match (0.0-1.0)", "0.70")
 	.option("--review-threshold <n>", "Below this goes to orphans, above to review queue (0.0-1.0)", "0.50")
 	.option(DRY_RUN_OPTION, "Preview without writing files", false)
-	.option(VERBOSE_OPTION, "Verbose output", false)
+	.option(VERBOSE_OPTION, VERBOSE_OUTPUT_DESC, false)
 	.action(async (options: unknown) => {
 		try {
 			const { runUnification, printStats } = await import("../unify/unifier.js");
@@ -652,8 +663,8 @@ program
 				verbose: boolean;
 			};
 
-			const dataDir: string = resolve(process.cwd(), typedOptions.dataDir);
-			const outputDir: string = resolve(process.cwd(), typedOptions.output);
+			const dataDir: string = path.resolve(process.cwd(), typedOptions.dataDir);
+			const outputDir: string = path.resolve(process.cwd(), typedOptions.output);
 
 			console.log("Building unified product database...");
 			console.log(`Data directory: ${dataDir}`);
