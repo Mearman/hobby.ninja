@@ -6,6 +6,8 @@
 
 import { load, type CheerioAPI } from "cheerio";
 
+import { parseCountedItems } from "./count-parser";
+
 // Constants for repeated selectors
 const LABEL_VALUE_SELECTOR = "dd.pg-products__labelTxt";
 // Legacy format: description in instructionTxt paragraph
@@ -37,6 +39,13 @@ export interface ItemReleaseDate {
 export interface LocalizedTextArray {
 	ja: string[];
 	en?: string[];
+}
+
+/** Parsed accessory/content item with localized name and count */
+export interface ParsedAccessoryItem {
+	name: { ja: string; en?: string };
+	count?: number;
+	unit?: { ja: string; en?: string };
 }
 
 /** Image with source URL and optional local path */
@@ -114,8 +123,8 @@ export interface Item {
 	releaseDate?: ItemReleaseDate;
 	targetAge?: number;
 	description?: LocalizedTextArray;
-	accessories?: LocalizedTextArray;
-	contents?: LocalizedTextArray;
+	accessories?: ParsedAccessoryItem[];
+	contents?: ParsedAccessoryItem[];
 	images?: ItemImages;
 	globalSiteUrls?: GlobalSiteUrls;
 	sourceUrl?: string;
@@ -483,8 +492,8 @@ export class BandaiCatalogParser {
 		return lines.length > 0 ? { ja: lines } : undefined;
 	}
 
-	/** Returns normalized accessories: { ja: string[] } */
-	private extractAccessoriesNormalized($: CheerioAPI): LocalizedTextArray | undefined {
+	/** Extract raw accessory strings from HTML */
+	private extractAccessoryStrings($: CheerioAPI): string[] {
 		const descText = this.getFullDescriptionText($);
 		const items: string[] = [];
 
@@ -513,11 +522,27 @@ export class BandaiCatalogParser {
 			}
 		}
 
-		return items.length > 0 ? { ja: items } : undefined;
+		return items;
 	}
 
-	/** Returns normalized contents: { ja: string[] } */
-	private extractContentsNormalized($: CheerioAPI): LocalizedTextArray | undefined {
+	/** Returns parsed accessories with counts extracted */
+	private extractAccessoriesNormalized($: CheerioAPI): ParsedAccessoryItem[] | undefined {
+		const rawStrings = this.extractAccessoryStrings($);
+		if (rawStrings.length === 0) return undefined;
+
+		// Parse each string to extract name, count, and unit
+		const parsed = parseCountedItems(rawStrings);
+
+		// Convert to ParsedAccessoryItem format (JA only at this stage)
+		return parsed.map(item => ({
+			name: { ja: item.name },
+			...(item.count !== undefined && { count: item.count }),
+			...(item.unit && { unit: { ja: item.unit } }),
+		}));
+	}
+
+	/** Extract raw content strings from HTML */
+	private extractContentStrings($: CheerioAPI): string[] {
 		const descText = this.getFullDescriptionText($);
 		const items: string[] = [];
 
@@ -533,7 +558,23 @@ export class BandaiCatalogParser {
 			items.push(...extracted);
 		}
 
-		return items.length > 0 ? { ja: items } : undefined;
+		return items;
+	}
+
+	/** Returns parsed contents with counts extracted */
+	private extractContentsNormalized($: CheerioAPI): ParsedAccessoryItem[] | undefined {
+		const rawStrings = this.extractContentStrings($);
+		if (rawStrings.length === 0) return undefined;
+
+		// Parse each string to extract name, count, and unit
+		const parsed = parseCountedItems(rawStrings);
+
+		// Convert to ParsedAccessoryItem format (JA only at this stage)
+		return parsed.map(item => ({
+			name: { ja: item.name },
+			...(item.count !== undefined && { count: item.count }),
+			...(item.unit && { unit: { ja: item.unit } }),
+		}));
 	}
 
 	private extractImages($: CheerioAPI): ItemImages {
