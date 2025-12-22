@@ -29,6 +29,11 @@ const BATCH_SIZE = 50;
 const DEFAULT_CATALOG_DIR = resolveWorkspacePath("data/bandai/items");
 const DEFAULT_MANUALS_DIR = resolveWorkspacePath("data/bandai/manuals");
 
+// Constants for source types
+const SOURCE_ALL = "all" as const;
+const SOURCE_BANDAI_CATALOG = "bandai-catalog" as const;
+const SOURCE_BANDAI_MANUALS = "bandai-manuals" as const;
+
 export type TranslateSource = "all" | "bandai-catalog" | "bandai-manuals";
 
 export interface TranslateOptions {
@@ -75,24 +80,24 @@ export async function translateCatalogData(options: TranslateOptions): Promise<v
 		verbose = false,
 	} = options;
 
-	const VALID_SOURCES: TranslateSource[] = ["all", "bandai-catalog", "bandai-manuals"];
+	const VALID_SOURCES: TranslateSource[] = [SOURCE_ALL, SOURCE_BANDAI_CATALOG, SOURCE_BANDAI_MANUALS];
 	if (!VALID_SOURCES.includes(source)) {
 		console.error(`Unknown source: ${source}`);
-		console.error("Supported sources: all, bandai-catalog, bandai-manuals");
+		console.error(`Supported sources: ${SOURCE_ALL}, ${SOURCE_BANDAI_CATALOG}, ${SOURCE_BANDAI_MANUALS}`);
 		process.exit(1);
 	}
 
 	console.log("Translation Configuration:");
 	console.log(`  Source: ${source}`);
 	console.log(`  Cache directory: ${cacheDir}`);
-	console.log(`  Dry run: ${dryRun}`);
+	console.log(`  Dry run: ${String(dryRun)}`);
 	console.log("");
 
 	let totalTranslated = 0;
 
 	// Translate catalog items
-	if (source === "all" || source === "bandai-catalog") {
-		const catalogDir = options.input && source === "bandai-catalog" ? options.input : DEFAULT_CATALOG_DIR;
+	if (source === SOURCE_ALL || source === SOURCE_BANDAI_CATALOG) {
+		const catalogDir = options.input && source === SOURCE_BANDAI_CATALOG ? options.input : DEFAULT_CATALOG_DIR;
 		const result = await translateCatalogItems({
 			inputDir: catalogDir,
 			cacheDir,
@@ -103,8 +108,8 @@ export async function translateCatalogData(options: TranslateOptions): Promise<v
 	}
 
 	// Translate manual files
-	if (source === "all" || source === "bandai-manuals") {
-		const manualsDir = options.input && source === "bandai-manuals" ? options.input : DEFAULT_MANUALS_DIR;
+	if (source === SOURCE_ALL || source === SOURCE_BANDAI_MANUALS) {
+		const manualsDir = options.input && source === SOURCE_BANDAI_MANUALS ? options.input : DEFAULT_MANUALS_DIR;
 		const result = await translateManualFiles({
 			inputDir: manualsDir,
 			cacheDir,
@@ -192,13 +197,13 @@ async function translateCatalogItems(options: CatalogTranslateOptions): Promise<
 			// Flat file structure: JSON files directly in inputDir
 			isFlatStructure = true;
 			itemPaths = jsonFiles
-				.sort()
+				.toSorted()
 				.map(file => path.join(inputDir, file));
 			console.log(`Detected flat file structure: ${jsonFiles.length} JSON files`);
 		} else if (subDirs.length > 0) {
 			// Directory structure: subdirectories with JSON files
 			itemPaths = subDirs
-				.sort()
+				.toSorted()
 				.map(id => path.join(inputDir, id, `${id}.json`));
 			console.log(`Detected directory structure: ${subDirs.length} subdirectories`);
 		} else {
@@ -384,13 +389,13 @@ async function translateManualFiles(options: ManualTranslateOptions): Promise<Tr
 			// Flat file structure: JSON files directly in inputDir
 			isFlatStructure = true;
 			itemPaths = jsonFiles
-				.sort()
+				.toSorted()
 				.map(file => path.join(inputDir, file));
 			console.log(`Detected flat file structure: ${jsonFiles.length} JSON files`);
 		} else if (subDirs.length > 0) {
 			// Directory structure: subdirectories with JSON files
 			itemPaths = subDirs
-				.sort()
+				.toSorted()
 				.map(id => path.join(inputDir, id, `${id}.json`));
 			console.log(`Detected directory structure: ${subDirs.length} subdirectories`);
 		} else {
@@ -470,7 +475,7 @@ async function translateManualItem(
 ): Promise<TranslateItemResult> {
 	try {
 		const content = await fs.readFile(manualPath, "utf8");
-		const manual: FilteredManualData = JSON.parse(content);
+		const manual = JSON.parse(content) as FilteredManualData;
 
 		let fieldsTranslated = 0;
 

@@ -1,9 +1,12 @@
 import { promises as fs } from "node:fs";
-import * as path from "node:path";
+import path from "node:path";
 
 import { EXIT_CODES, DIRECTORIES, FILE_PATTERNS, PROGRESS_PERCENTAGES } from "../constants/cli-constants.js";
 import { validateProductDataBatch } from "../schemas/validation.js";
 import type { ProductData } from "../types/product-data.js";
+
+// Constants for error messages
+const UNKNOWN_ERROR = "Unknown error";
 
 export interface ValidateCommandOptions {
   source?: string;
@@ -57,7 +60,7 @@ export class ValidateCommand {
 				process.exit(EXIT_CODES.VALIDATION_ERROR);
 			}
 		} catch (error) {
-			console.error("❌ Validation failed:", error instanceof Error ? error.message : "Unknown error");
+			console.error("❌ Validation failed:", error instanceof Error ? error.message : UNKNOWN_ERROR);
 			process.exit(EXIT_CODES.GENERAL_ERROR);
 		}
 	}
@@ -74,18 +77,18 @@ export class ValidateCommand {
 				// NDJSON format
 				parsedData = data.split("\n")
 					.filter(line => line.trim())
-					.map(line => JSON.parse(line));
+					.map(line => JSON.parse(line) as unknown);
 			} else {
 				// Regular JSON format
-				parsedData = JSON.parse(data);
+				parsedData = JSON.parse(data) as unknown[];
 				if (!Array.isArray(parsedData)) {
 					parsedData = [parsedData];
 				}
 			}
 
-			return this.validateData(parsedData, filePath, fix);
+			return await this.validateData(parsedData, filePath, fix);
 		} catch (error) {
-			throw new Error(`Failed to read or parse file: ${error instanceof Error ? error.message : "Unknown error"}`);
+			throw new Error(`Failed to read or parse file: ${error instanceof Error ? error.message : UNKNOWN_ERROR}`);
 		}
 	}
 
@@ -127,7 +130,7 @@ export class ValidateCommand {
 
 			return totalResult;
 		} catch (error) {
-			throw new Error(`Failed to validate source output: ${error instanceof Error ? error.message : "Unknown error"}`);
+			throw new Error(`Failed to validate source output: ${error instanceof Error ? error.message : UNKNOWN_ERROR}`);
 		}
 	}
 
@@ -159,12 +162,12 @@ export class ValidateCommand {
 				// Fix type issues
 				if (typeof fixedItem["price"] === "string") {
 					try {
-						const price = Number.parseFloat(String(fixedItem["price"]).replaceAll(/[^0-9.]/g, ""));
-						if (!isNaN(price)) {
+						const price = Number.parseFloat(fixedItem["price"].replaceAll(/[^0-9.]/g, ""));
+						if (!Number.isNaN(price)) {
 							fixedItem["price"] = {
 								amount: price,
 								currency: "USD",
-								originalText: String(fixedItem["price"]),
+								originalText: fixedItem["price"],
 							};
 							wasFixed = true;
 						}

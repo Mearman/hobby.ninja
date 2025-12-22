@@ -100,7 +100,7 @@ export const ConfigValidator = {
 		const errors: ValidationError[] = result.error.issues.map((issue) => ({
 			field: issue.path.join("."),
 			message: issue.message,
-			value: (issue as { received?: unknown }).received || issue.code,
+			value: (issue as { received?: unknown }).received ?? issue.code,
 		}));
 
 		return { success: false, errors };
@@ -116,7 +116,7 @@ export const ConfigValidator = {
 		const errors: ValidationError[] = result.error.issues.map((issue) => ({
 			field: issue.path.join("."),
 			message: issue.message,
-			value: (issue as { received?: unknown }).received || issue.code,
+			value: (issue as { received?: unknown }).received ?? issue.code,
 		}));
 
 		return { success: false, errors };

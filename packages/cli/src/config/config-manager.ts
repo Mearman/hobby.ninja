@@ -1,6 +1,6 @@
 import { promises as fs } from "node:fs";
 import { homedir } from "node:os";
-import * as path from "node:path";
+import path from "node:path";
 
 import { ScraperRegistry, type ScraperType } from "@hobby-ninja/scrapers";
 
@@ -22,16 +22,12 @@ export interface ConfigLoadResult {
 }
 
 export class ConfigManager {
-	private static instance: ConfigManager;
+	private static instance: ConfigManager | undefined;
 	private config: ValidatedConfig | null = null;
 	private configFilePath: string | null = null;
 
-	private constructor() {}
-
 	static getInstance(): ConfigManager {
-		if (!ConfigManager.instance) {
-			ConfigManager.instance = new ConfigManager();
-		}
+		ConfigManager.instance ??= new ConfigManager();
 		return ConfigManager.instance;
 	}
 
@@ -81,12 +77,12 @@ export class ConfigManager {
 		}
 
 		this.config = config;
-		this.configFilePath = configFilePath || null;
+		this.configFilePath = configFilePath ?? null;
 
 		const result: ConfigLoadResult = {
 			config,
 			source,
-			filePath: configFilePath || undefined,
+			filePath: configFilePath ?? undefined,
 			warnings,
 		};
 
@@ -119,7 +115,7 @@ export class ConfigManager {
 		for (const filePath of searchPaths) {
 			try {
 				const fileContent = await fs.readFile(filePath, "utf8");
-				const fileConfig = JSON.parse(fileContent);
+				const fileConfig = JSON.parse(fileContent) as Record<string, unknown>;
 
 				// Validate the file config structure
 				const validation = ConfigValidator.validatePartial(fileConfig);
@@ -188,7 +184,7 @@ export class ConfigManager {
 					if (value && ScraperRegistry.isValidType(value as string)) {
 						envConfig.source = value as ScraperType;
 					} else if (value) {
-						console.warn(`Warning: Invalid scraper type '${value}' for ${envKey}. Available types: ${ScraperRegistry.getAvailableTypes().join(", ")}`);
+						console.warn(`Warning: Invalid scraper type '${JSON.stringify(value)}' for ${envKey}. Available types: ${ScraperRegistry.getAvailableTypes().join(", ")}`);
 					}
 				} else {
 					// Use type assertion to safely assign dynamic property
@@ -278,10 +274,10 @@ export class ConfigManager {
    * Save current configuration to file
    */
 	async saveConfig(filePath?: string): Promise<void> {
-		const targetPath = filePath || path.join(process.cwd(), ".gundam-scraper.config.json");
+		const targetPath = filePath ?? path.join(process.cwd(), ".gundam-scraper.config.json");
 		const configData = JSON.stringify(this.config, null, 2);
 
-		await fs.writeFile(targetPath, configData, "utf-8");
+		await fs.writeFile(targetPath, configData, "utf8");
 		this.configFilePath = targetPath;
 	}
 

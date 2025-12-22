@@ -86,19 +86,6 @@ export class SingleUrlCommand {
 			}
 			const scrapedData = await scraper.extractFromPage(html, url);
 
-			if (!scrapedData) {
-				const result: SingleUrlResult = {
-					url,
-					success: true,
-					language: languageDetection,
-					skus: [],
-				};
-				if (verbose) {
-					console.log("⚠️  No data extracted from this page");
-				}
-				return result;
-			}
-
 			// Extract SKUs from the scraped data
 			const identifiedSKUs = this.extractSKUsFromData(scrapedData);
 
@@ -106,11 +93,11 @@ export class SingleUrlCommand {
 			if (verbose) {
 				console.log("\n📋 Scraping Results:");
 				console.log(`   ✅ Name: ${scrapedData.name}`);
-				console.log(`   ✅ Brand: ${scrapedData.brand}`);
+				console.log(`   ✅ Brand: ${scrapedData.brand ?? "N/A"}`);
 				console.log(`   ✅ Source: ${scrapedData.source}`);
 				console.log(`   ✅ Language: ${languageDetection.language}`);
 
-				if (scrapedData.images && scrapedData.images.length > 0) {
+				if (scrapedData.images.length > 0) {
 					console.log(`   ✅ Images: ${scrapedData.images.length} found`);
 				}
 
@@ -153,7 +140,9 @@ export class SingleUrlCommand {
 		if (data.name) {
 			const nameSKUs = data.name.match(/(HG|MG|PG|RG|SD|RE\/?[0-9]*|MB|EG|MGEX)[^\s]*/gi);
 			if (nameSKUs) {
-				nameSKUs.forEach((sku: string) => skus.add(sku.trim()));
+				for (const sku of nameSKUs) {
+					skus.add(sku.trim());
+				}
 			}
 		}
 
@@ -161,7 +150,9 @@ export class SingleUrlCommand {
 		if (data.url) {
 			const urlSKUs = /\/(hg|mg|pg|rg|sd|re|mb|eg|mgex)[^\/]*\/?$/i.exec(data.url);
 			if (urlSKUs) {
-				urlSKUs.forEach((sku: string) => skus.add(sku.toUpperCase()));
+				for (const sku of urlSKUs) {
+					skus.add(sku.toUpperCase());
+				}
 			}
 		}
 
@@ -178,7 +169,8 @@ export class SingleUrlCommand {
 		const urlFilename = this.cleanUrlForFilename(url);
 
 		// Create base directory with timestamp
-		const timestampedOutputDir = `${outputDir}-${new Date().toISOString().split("T")[0]}`;
+		const dateStr = new Date().toISOString().split("T")[0] ?? "unknown";
+		const timestampedOutputDir = `${outputDir}-${dateStr}`;
 		await fs.mkdir(timestampedOutputDir, { recursive: true });
 
 		// Save the main scraped data

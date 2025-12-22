@@ -6,7 +6,7 @@
  */
 
 import { promises as fs } from "node:fs";
-import { join } from "node:path";
+import path from "node:path";
 
 import { normalizeText } from "@hobby-ninja/translation/text-normalizer";
 
@@ -38,7 +38,7 @@ export async function normalizeData(options: NormalizeOptions): Promise<void> {
 
 	console.log("Text Normalization Configuration:");
 	console.log(`  Source: ${source}`);
-	console.log(`  Dry run: ${dryRun}`);
+	console.log(`  Dry run: ${String(dryRun)}`);
 	console.log("");
 
 	const totalProgress: NormalizeProgress = {
@@ -123,7 +123,7 @@ async function normalizeCatalogItems(
 		entries = dirEntries
 			.filter((e) => e.isDirectory())
 			.map((e) => e.name)
-			.sort();
+			.toSorted();
 	} catch (error) {
 		console.error(`Failed to read input directory: ${inputDir}`, error);
 		return progress;
@@ -137,11 +137,11 @@ async function normalizeCatalogItems(
 	console.log(`Found ${entries.length} items to process\n`);
 
 	for (const dirName of entries) {
-		const jsonPath = join(inputDir, dirName, `${dirName}.json`);
+		const jsonPath = path.join(inputDir, dirName, `${dirName}.json`);
 
 		try {
 			const content = await fs.readFile(jsonPath, "utf8");
-			const data = JSON.parse(content);
+			const data = JSON.parse(content) as Record<string, unknown>;
 
 			const { modified, fieldsChanged } = normalizeObject(data);
 
@@ -211,7 +211,7 @@ async function normalizeManualFiles(
 		entries = dirEntries
 			.filter((e) => e.isDirectory())
 			.map((e) => e.name)
-			.sort();
+			.toSorted();
 	} catch (error) {
 		console.error(`Failed to read input directory: ${inputDir}`, error);
 		return progress;
@@ -225,11 +225,11 @@ async function normalizeManualFiles(
 	console.log(`Found ${entries.length} manuals to process\n`);
 
 	for (const dirName of entries) {
-		const jsonPath = join(inputDir, dirName, `${dirName}.json`);
+		const jsonPath = path.join(inputDir, dirName, `${dirName}.json`);
 
 		try {
 			const content = await fs.readFile(jsonPath, "utf8");
-			const data = JSON.parse(content);
+			const data = JSON.parse(content) as Record<string, unknown>;
 
 			const { modified, fieldsChanged } = normalizeObject(data);
 
@@ -282,7 +282,7 @@ function normalizeObject(obj: unknown): NormalizeResult {
 	if (Array.isArray(obj)) {
 		for (let i = 0; i < obj.length; i++) {
 			if (typeof obj[i] === "string") {
-				const normalized = normalizeText(obj[i]);
+				const normalized = normalizeText(obj[i] as string);
 				if (normalized !== obj[i]) {
 					obj[i] = normalized;
 					modified = true;
