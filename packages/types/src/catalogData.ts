@@ -43,6 +43,15 @@ export interface CatalogRelatedProduct {
 
 export type CatalogItemType = "product" | "blog";
 
+/** Individual accessory or content item with parsed count */
+export interface CountedItem {
+	name: LocalizedText;
+	/** Quantity if specified in source (e.g., "×2") */
+	count?: number;
+	/** Unit if specified (e.g., "set", "式") - localized */
+	unit?: LocalizedText;
+}
+
 export interface CatalogItem {
 	id: string;
 	itemType: CatalogItemType;
