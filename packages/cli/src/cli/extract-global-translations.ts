@@ -63,8 +63,9 @@ async function extractBrandSeries(page: Page, itemId: string): Promise<{
 			const href = $(el).attr("href") ?? "";
 			const text = $(el).text().trim();
 			const match = /\/brand\/([^/]+)\//.exec(href);
-			if (match && text) {
-				brand = { slug: match[1], name: text };
+			const slug = match?.[1];
+			if (slug && text) {
+				brand = { slug, name: text };
 			}
 		});
 
@@ -73,8 +74,9 @@ async function extractBrandSeries(page: Page, itemId: string): Promise<{
 			const href = $(el).attr("href") ?? "";
 			const text = $(el).text().trim();
 			const match = /\/series\/([^/]+)\//.exec(href);
-			if (match && text) {
-				series = { slug: match[1], name: text };
+			const slug = match?.[1];
+			if (slug && text) {
+				series = { slug, name: text };
 			}
 		});
 
@@ -190,7 +192,9 @@ export async function runExtractGlobalTranslations(options: {
 // CLI entry point
 const DEFAULT_LIMIT = 200;
 const args = process.argv.slice(2);
-const limit = args.includes("--limit") ? Number.parseInt(args[args.indexOf("--limit") + 1], 10) : DEFAULT_LIMIT;
+const limitIndex = args.indexOf("--limit");
+const limitArg = limitIndex >= 0 ? args[limitIndex + 1] : undefined;
+const limit = limitArg ? Number.parseInt(limitArg, 10) : DEFAULT_LIMIT;
 const verbose = args.includes("--verbose");
 
 await runExtractGlobalTranslations({ limit, verbose });

@@ -20,6 +20,7 @@ import {
 import type { CatalogItem } from "@hobby-ninja/types/catalog";
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 
+import type { Item } from "./bandai-catalog-parser";
 import { CatalogTranslator } from "./catalog-translator";
 import { TranslationProgressRenderer } from "./ui/TranslationProgress";
 
@@ -283,9 +284,10 @@ async function translateCatalogItem(
 ): Promise<TranslateItemResult> {
 	try {
 		const content = await fs.readFile(itemPath, "utf8");
-		const item: CatalogItem = JSON.parse(content);
+		const item = JSON.parse(content) as CatalogItem;
 
-		const result = await translator.translateItem(item);
+		// Cast to Item type for translator (catalog files have compatible structure)
+		const result = await translator.translateItem(item as unknown as Item);
 
 		if (result.error) {
 			if (verbose) {

@@ -146,7 +146,7 @@ async function streamFileWrite(buffer: Buffer, filePath: string): Promise<void> 
 async function downloadImagesInParallel(
 	imageData: Array<{ url: string; filename: string; localPath: string; type: "product" | "instruction" }>,
 	playwrightPage: Page,
-	outputDir: string,
+	_outputDir: string,
 	itemId: string,
 ): Promise<{ successful: string[], failed: Array<{ filename: string; error: string }> }> {
 	const successful: string[] = [];
@@ -319,7 +319,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			const galleryImages = document.querySelectorAll(productGallerySelector);
 
 			// Check if this is a blog (noimage placeholders)
-			const isBlogPage = galleryImages.length > 0 && [...galleryImages].every((img: Element) => {
+			const isBlogPage = galleryImages.length > 0 && Array.from(galleryImages).every((img: Element) => {
 				const imageEl = img as HTMLImageElement;
 				const src = imageEl.src || "";
 				return src.includes("noimage") || src.includes("img_noimage");
@@ -332,9 +332,9 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 			// If we have images with valid src, we can skip the lazy loading steps
 			if (galleryImages.length > 0) {
-				const hasValidSources = [...galleryImages].some((img: Element) => {
+				const hasValidSources = Array.from(galleryImages).some((img: Element) => {
 					const imageEl = img as HTMLImageElement;
-					const src = imageEl.src || imageEl.dataset.src || "";
+					const src = imageEl.src || (img as HTMLImageElement).dataset["src"] || "";
 					return src && !src.includes("placeholder") && !src.includes("noimage");
 				});
 				if (hasValidSources) {
@@ -372,12 +372,15 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 	}
 
 	try {
+		if (!playwrightPage) {
+			throw new Error("Playwright page is not available");
+		}
 
 		// Get image URLs directly from the live browser page - only ONCE
-		const { imageUrls, instructionUrls, isBlog } = await playwrightPage.evaluate(async (currentItemId) => {
-			const urls = [];
-			const instructionUrls = [];
-			const seen = new Set();
+		const { imageUrls, instructionUrls, isBlog } = await playwrightPage.evaluate(async (_currentItemId) => {
+			const urls: string[] = [];
+			const instructionUrls: string[] = [];
+			const seen = new Set<string>();
 
 			console.log("Looking for product images in correct order...");
 
@@ -388,7 +391,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			console.log(`Found ${galleryImages.length} images in product gallery`);
 
 			// Check if this is a blog post by detecting "noimage" placeholders
-			const allNoImage = galleryImages.length > 0 && [...galleryImages].every(img => {
+			const allNoImage = galleryImages.length > 0 && Array.from(galleryImages).every(img => {
 				const src = (img as HTMLImageElement).src || "";
 				return src.includes("noimage") || src.includes("img_noimage");
 			});
@@ -399,9 +402,9 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			}
 
 			// If no gallery images, fall back to old selector (for pages without swiper)
-			let imageElements = [];
+			let imageElements: Element[] = [];
 			if (galleryImages.length > 0) {
-				imageElements = [...galleryImages];
+				imageElements = Array.from(galleryImages);
 			} else {
 				console.log("No gallery images found, trying fallback selector...");
 				const fallbackSelector = 'main img[src*="bandai-hobby.net/images"]:not([src*="common"]):not([src*="bnr"]), main img[src*="bandai-a.akamaihd.net"]:not([src*="related"]):not([src*="common"])';
@@ -410,7 +413,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 				// Exclude images in instruction section
 				const instructionContainer = document.querySelector(".pg-products__instruction");
-				imageElements = [...allProductImages].filter(img => {
+				imageElements = Array.from(allProductImages).filter(img => {
 					const inInstructions = instructionContainer && instructionContainer.contains(img);
 					return !inInstructions;
 				});
@@ -419,10 +422,10 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 			// Process images in DOM order to maintain consistency
 			// Deduplicate by base URL (without query params) to handle swiper duplicates
-			const processedSources = new Map(); // Track order by first appearance
+			const processedSources = new Map<string, number>(); // Track order by first appearance
 			for (const [index, element] of imageElements.entries()) {
 				const img = element as HTMLImageElement;
-				const src = img.src || img.dataset.src || "";
+				const src = img.src || img.dataset["src"] || "";
 				const baseUrl = src.split("?")[0]; // Remove query params for deduplication
 
 				if (src && baseUrl && !seen.has(baseUrl) && !processedSources.has(baseUrl)) {
@@ -444,12 +447,10 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			];
 
 			let instructionElements: Element[] = [];
-			let usedSelector = "";
 			for (const selector of selectorStrategies) {
-				const elements = [...document.querySelectorAll(selector)];
+				const elements = Array.from(document.querySelectorAll(selector));
 				if (elements.length > 0) {
 					instructionElements = elements;
-					usedSelector = selector;
 					console.log(`Found ${elements.length} instruction images using selector: ${selector}`);
 					break;
 				}
@@ -930,8 +931,7 @@ async function downloadManualAssets(
 
 	// Download PDFs from the pdfs array
 	if (manual.pdfs && manual.pdfs.length > 0) {
-		for (let i = 0; i < manual.pdfs.length; i++) {
-			const pdf = manual.pdfs[i];
+		for (const [i, pdf] of manual.pdfs.entries()) {
 			// Use padded ID for filename: 0001.pdf, 0001_2.pdf, etc.
 			const suffix = i === 0 ? "" : `_${i + 1}`;
 			const filename = `${manual.id}${suffix}.pdf`;
@@ -1288,8 +1288,8 @@ async function downloadCatalogAssets(
 						});
 
 					// Sort images: product images first, then instruction images
-					const productImages = cleanedExistingImages.filter(path => !path.includes("_inst_"));
-					const instructionImages = cleanedExistingImages.filter(path => path.includes("_inst_"));
+					const productImages = cleanedExistingImages.filter((p: string) => !p.includes("_inst_"));
+					const instructionImages = cleanedExistingImages.filter((p: string) => p.includes("_inst_"));
 					productImages.sort();
 					instructionImages.sort();
 					const sortedImages = [...productImages, ...instructionImages];
@@ -1533,8 +1533,9 @@ async function processCatalog(options: DownloadOptions): Promise<DownloadResult>
 			.toSorted();
 
 		// Filter by specific IDs if provided
-		if (options.catalogIds && options.catalogIds.length > 0) {
-			ids = ids.filter(id => options.catalogIds.includes(id));
+		const catalogIds = options.catalogIds;
+		if (catalogIds && catalogIds.length > 0) {
+			ids = ids.filter(id => catalogIds.includes(id));
 		}
 
 		result.totalItems = ids.length;

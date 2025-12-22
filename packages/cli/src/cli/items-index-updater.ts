@@ -20,8 +20,9 @@ const ITEMS_INDEX_PATH = resolveWorkspacePath("data/src/items/index.json");
 function padItemId(id: string): string {
 	const parts = id.split("_");
 	if (parts.length !== 2) return id;
-	const [prefix, suffix] = parts;
-	if (!/^\d+$/.test(prefix) || !/^\d+$/.test(suffix)) return id;
+	const prefix = parts[0];
+	const suffix = parts[1];
+	if (!prefix || !suffix || !/^\d+$/.test(prefix) || !/^\d+$/.test(suffix)) return id;
 	return `${prefix}_${suffix.padStart(4, "0")}`;
 }
 const ITEMS_DATA_DIR = resolveWorkspacePath("data/src/items");
@@ -354,69 +355,6 @@ export const ItemsIndexUpdater = {
 			totalChecked: jpEntries.length,
 		};
 	},
-
-	/**
-	 * Record that all images have been successfully downloaded for an item
-	 */
-	recordDownloadVerified(itemId: string): void {
-		if (!itemsIndex) this.load();
-		if (!itemsIndex) return;
-
-		const paddedId = padItemId(itemId);
-		if (!itemsIndex.items[paddedId]) {
-			itemsIndex.items[paddedId] = {};
-		}
-
-		if (!itemsIndex.items[paddedId].japaneseSite) {
-			itemsIndex.items[paddedId].japaneseSite = {
-				hasPage: false, // Assume no page if we're only tracking downloads
-				pageCheckedAt: new Date().toISOString(),
-			};
-		}
-
-		itemsIndex.items[paddedId].japaneseSite.downloadVerifiedAt = new Date().toISOString();
-		isDirty = true;
-	},
-
-	/**
-	 * Check if an item needs download verification (all images downloaded recently)
-	 */
-	needsDownloadVerification(itemId: string, maxAgeHours = 24): boolean {
-		if (!itemsIndex) this.load();
-		if (!itemsIndex) return true;
-
-		const paddedId = padItemId(itemId);
-		const entry = itemsIndex.items[paddedId]?.japaneseSite;
-		if (!entry) return true;
-
-		// If never verified for downloads, needs verification
-		if (!entry.downloadVerifiedAt) return true;
-
-		// Check if verification is too old
-		const verificationTime = new Date(entry.downloadVerifiedAt).getTime();
-		const maxAge = maxAgeHours * 60 * 60 * 1000;
-		const now = Date.now();
-
-		return (now - verificationTime) > maxAge;
-	},
-
-	/**
-	 * Get download verification status for an item
-	 */
-	getDownloadStatus(itemId: string): { verified: boolean; at?: string } {
-		if (!itemsIndex) this.load();
-		if (!itemsIndex) return { verified: false };
-
-		const paddedId = padItemId(itemId);
-		const entry = itemsIndex.items[paddedId]?.japaneseSite;
-		if (!entry?.downloadVerifiedAt) return { verified: false };
-
-		return {
-			verified: true,
-			at: entry.downloadVerifiedAt,
-		};
-	},
-
 
 	/**
 	 * Get page check status for an item
