@@ -382,6 +382,91 @@ interface GlobalSiteContent {
 	enDescription?: string[];
 	/** English accessories from the US site */
 	enAccessories?: string[];
+	/** English contents from the US site */
+	enContents?: string[];
+}
+
+/** Section markers used in global site content */
+const ACCESSORIES_MARKERS = ["[accessories]"];
+const CONTENTS_MARKERS = ["【product details】"];
+
+/**
+ * Split global site content into description, accessories, and contents sections.
+ * Handles markers that appear either on their own line or at the end of a line.
+ */
+function splitGlobalSiteContent(lines: string[]): {
+	description: string[];
+	accessories: string[];
+	contents: string[];
+} {
+	const description: string[] = [];
+	const accessories: string[] = [];
+	const contents: string[] = [];
+
+	let currentSection: "description" | "accessories" | "contents" = "description";
+
+	for (const line of lines) {
+		const lineLower = line.toLowerCase();
+
+		// Check if line contains a section marker
+		let accessoriesPos = -1;
+		let contentsPos = -1;
+
+		for (const marker of ACCESSORIES_MARKERS) {
+			const pos = lineLower.indexOf(marker);
+			if (pos !== -1 && (accessoriesPos === -1 || pos < accessoriesPos)) {
+				accessoriesPos = pos;
+			}
+		}
+
+		for (const marker of CONTENTS_MARKERS) {
+			const pos = lineLower.indexOf(marker);
+			if (pos !== -1 && (contentsPos === -1 || pos < contentsPos)) {
+				contentsPos = pos;
+			}
+		}
+
+		// If line has markers, split it
+		if (accessoriesPos !== -1 || contentsPos !== -1) {
+			// Determine order of markers
+			const markers: Array<{ type: "accessories" | "contents"; pos: number }> = [];
+			if (accessoriesPos !== -1) markers.push({ type: "accessories", pos: accessoriesPos });
+			if (contentsPos !== -1) markers.push({ type: "contents", pos: contentsPos });
+			markers.sort((a, b) => a.pos - b.pos);
+
+			let lastPos = 0;
+			for (const marker of markers) {
+				// Text before marker goes to current section
+				const textBefore = line.slice(lastPos, marker.pos).trim();
+				if (textBefore) {
+					if (currentSection === "description") description.push(textBefore);
+					else if (currentSection === "accessories") accessories.push(textBefore);
+					else contents.push(textBefore);
+				}
+
+				// Find end of marker
+				const markerText = marker.type === "accessories"
+					? ACCESSORIES_MARKERS.find(m => lineLower.indexOf(m, marker.pos) === marker.pos)
+					: CONTENTS_MARKERS.find(m => lineLower.indexOf(m, marker.pos) === marker.pos);
+				lastPos = marker.pos + (markerText?.length ?? 0);
+				currentSection = marker.type;
+			}
+
+			// Text after last marker goes to that section
+			const textAfter = line.slice(lastPos).trim();
+			if (textAfter) {
+				if (currentSection === "accessories") accessories.push(textAfter);
+				else if (currentSection === "contents") contents.push(textAfter);
+			}
+		} else {
+			// No markers, add to current section
+			if (currentSection === "description") description.push(line);
+			else if (currentSection === "accessories") accessories.push(line);
+			else contents.push(line);
+		}
+	}
+
+	return { description, accessories, contents };
 }
 
 /**
@@ -417,29 +502,18 @@ async function fetchGlobalSiteContent(itemId: string, parser: BandaiCatalogParse
 		}
 
 		// The parser extracts to .ja fields, but for EN site they contain English
-		// Global site often embeds accessories in description with "[Accessories]" header
-		let enDescription = parseResult.data.description?.ja;
-		let enAccessories = parseResult.data.accessories?.ja;
+		// Global site embeds accessories/contents in description with section markers
+		const rawDescription = parseResult.data.description?.ja ?? [];
 
-		// Split description at "[Accessories]" header if present
-		if (enDescription && enDescription.length > 0) {
-			const accessoriesIndex = enDescription.findIndex(
-				(line) => line.trim().toLowerCase() === "[accessories]",
-			);
-
-			if (accessoriesIndex !== -1) {
-				// Everything after "[Accessories]" goes to accessories
-				enAccessories = enDescription.slice(accessoriesIndex + 1);
-				// Everything before "[Accessories]" stays as description
-				enDescription = enDescription.slice(0, accessoriesIndex);
-			}
-		}
+		// Split into sections based on markers like [Accessories], [Product details], etc.
+		const sections = splitGlobalSiteContent(rawDescription);
 
 		const result: GlobalSiteContent = {
 			urls: { enUs: enUsUrl },
 			enName: parseResult.data.name.ja,
-			enDescription,
-			enAccessories,
+			enDescription: sections.description.length > 0 ? sections.description : undefined,
+			enAccessories: sections.accessories.length > 0 ? sections.accessories : undefined,
+			enContents: sections.contents.length > 0 ? sections.contents : undefined,
 		};
 
 		return result;
@@ -831,6 +905,10 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 								if (globalContent.enAccessories) {
 									catalogResult.data.accessories ??= { ja: [] };
 									catalogResult.data.accessories.en = globalContent.enAccessories.map((line) => normalizeText(line));
+								}
+								if (globalContent.enContents) {
+									catalogResult.data.contents ??= { ja: [] };
+									catalogResult.data.contents.en = globalContent.enContents.map((line) => normalizeText(line));
 								}
 
 								if (options.verbose) {
