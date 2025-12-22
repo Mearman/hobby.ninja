@@ -5,6 +5,19 @@
 
 import { ErrorCode, ErrorCategory, ErrorRegistry } from "./error-codes.js";
 
+// Constants for retry logic
+const DEFAULT_MAX_RETRY_COUNT = 3;
+const BASE_RETRY_DELAY_MS = 1000; // 1 second
+const EXPONENTIAL_BACKOFF_BASE = 2;
+const MAX_RETRY_DELAY_MS = 30_000; // 30 seconds
+const JITTER_PERCENTAGE = 0.1;
+
+// HTTP status code constants
+const HTTP_STATUS_NOT_FOUND = 404;
+const HTTP_STATUS_FORBIDDEN = 403;
+const HTTP_STATUS_RATE_LIMITED = 429;
+const HTTP_STATUS_SERVER_ERROR_MIN = 500;
+
 export interface ErrorContext {
   url?: string;
   statusCode?: number;
@@ -50,7 +63,7 @@ export class ScraperError extends Error {
 			throw new Error(`Unknown error code: ${code}`);
 		}
 
-		const message = customMessage || errorInfo.message;
+		const message = customMessage ?? errorInfo.message;
 		super(message);
 
 		this.name = "ScraperError";
@@ -64,8 +77,8 @@ export class ScraperError extends Error {
 
 		this.metadata = {
 			timestamp: new Date().toISOString(),
-			...(this.stack && { stackTrace: this.stack }),
-			...(originalError && { originalError }),
+			...(this.stack ? { stackTrace: this.stack } : {}),
+			...(originalError ? { originalError } : {}),
 		};
 
 		// Maintains proper prototype chain for instanceof checks
@@ -107,7 +120,7 @@ export class ScraperError extends Error {
 	static filesystem(code: ErrorCode, filePath: string, operation?: string, originalError?: Error): ScraperError {
 		return new ScraperError(code, {
 			filePath,
-			operation: operation || "file_operation",
+			operation: operation ?? "file_operation",
 		}, originalError);
 	}
 
@@ -155,15 +168,15 @@ export class ScraperError extends Error {
 			`Message: ${this.message}`,
 			`Category: ${this.category}`,
 			`Severity: ${this.severity}`,
-			`Retryable: ${this.retryable}`,
+			`Retryable: ${String(this.retryable)}`,
 			`Timestamp: ${this.metadata.timestamp}`,
 			"",
 		];
 
-		if (this.context && Object.keys(this.context).length > 0) {
+		if (Object.keys(this.context).length > 0) {
 			lines.push("Context:");
 			for (const [key, value] of Object.entries(this.context)) {
-				lines.push(`  ${key}: ${value}`);
+				lines.push(`  ${key}: ${value !== null && typeof value === "object" ? JSON.stringify(value) : String(value)}`);
 			}
 			lines.push("");
 		}
@@ -202,11 +215,11 @@ export class ScraperError extends Error {
 			}
 		}
 
-		if (this.context?.url) {
+		if (this.context.url) {
 			lines.push(`\nURL: ${this.context.url}`);
 		}
 
-		if (this.context?.statusCode) {
+		if (this.context.statusCode) {
 			lines.push(`Status Code: ${this.context.statusCode}`);
 		}
 
@@ -242,21 +255,20 @@ export class ScraperError extends Error {
    * Check if this error should trigger a retry
    */
 	shouldRetry(): boolean {
-		return this.retryable && (this.context.retryCount || 0) < 3;
+		return this.retryable && (this.context.retryCount ?? 0) < DEFAULT_MAX_RETRY_COUNT;
 	}
 
 	/**
    * Get recommended delay before retry (in milliseconds)
    */
 	getRetryDelay(): number {
-		const retryCount = this.context.retryCount || 0;
+		const retryCount = this.context.retryCount ?? 0;
 
 		// Exponential backoff with jitter
-		const baseDelay = 1000; // 1 second
-		const exponentialDelay = baseDelay * Math.pow(2, retryCount);
-		const jitter = Math.random() * 0.1 * exponentialDelay;
+		const exponentialDelay = BASE_RETRY_DELAY_MS * Math.pow(EXPONENTIAL_BACKOFF_BASE, retryCount);
+		const jitter = Math.random() * JITTER_PERCENTAGE * exponentialDelay;
 
-		return Math.min(exponentialDelay + jitter, 30_000); // Max 30 seconds
+		return Math.min(exponentialDelay + jitter, MAX_RETRY_DELAY_MS);
 	}
 
 	/**
@@ -314,10 +326,10 @@ export class ScraperError extends Error {
 		// HTTP status codes
 		if ("status" in error) {
 			const status = (error as { status?: number }).status;
-			if (status === 404) return ErrorCode.SCRAPE_PAGE_NOT_FOUND;
-			if (status === 403) return ErrorCode.SCRAPE_ACCESS_DENIED;
-			if (status === 429) return ErrorCode.SCRAPE_RATE_LIMITED;
-			if (status && status >= 500) return ErrorCode.NETWORK_CONNECTION_FAILED;
+			if (status === HTTP_STATUS_NOT_FOUND) return ErrorCode.SCRAPE_PAGE_NOT_FOUND;
+			if (status === HTTP_STATUS_FORBIDDEN) return ErrorCode.SCRAPE_ACCESS_DENIED;
+			if (status === HTTP_STATUS_RATE_LIMITED) return ErrorCode.SCRAPE_RATE_LIMITED;
+			if (status && status >= HTTP_STATUS_SERVER_ERROR_MIN) return ErrorCode.NETWORK_CONNECTION_FAILED;
 		}
 
 		// Configuration errors

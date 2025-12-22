@@ -3,7 +3,8 @@
  * Provides error processing, reporting, and recovery strategies
  */
 
-import Logger from "../utils/logger.js";
+ 
+import { Logger } from "../utils/logger.js";
 
 import { ErrorCode, ErrorCategory } from "./error-codes.js";
 import { ScraperError, ErrorContext } from "./scraper-error.js";
@@ -153,13 +154,17 @@ export class ErrorHandler {
 		}
 
 		// All attempts failed, handle the final error
-		const result = await this.handleError(lastError!, context);
-
-		if (!result.shouldContinue) {
-			throw lastError!;
+		if (!lastError) {
+			throw new ScraperError("Operation failed without error details", context);
 		}
 
-		throw lastError!;
+		const result = await this.handleError(lastError, context);
+
+		if (!result.shouldContinue) {
+			throw lastError;
+		}
+
+		throw lastError;
 	}
 
 	/**
@@ -210,10 +215,10 @@ export class ErrorHandler {
 		}
 	}
 
-	private async handleConfigurationError(error: ScraperError): Promise<{
+	private handleConfigurationError(error: ScraperError): {
     handled: boolean;
     shouldContinue: boolean;
-  }> {
+  } {
 		this.logger.error("Configuration error detected", error);
 
 		// Log user-friendly message with suggestions
@@ -241,9 +246,9 @@ export class ErrorHandler {
 			retryAttempted = true;
 			const delay = error.getRetryDelay();
 
-			this.logger.info(`Retrying network operation after ${delay}ms`, {
+			this.logger.info(`Retrying network operation after ${String(delay)}ms`, {
 				url: error.context.url,
-				retryCount: (error.context.retryCount || 0) + 1,
+				retryCount: (error.context.retryCount ?? 0) + 1,
 			});
 
 			await this.sleep(delay);
@@ -286,10 +291,10 @@ export class ErrorHandler {
 		};
 	}
 
-	private async handleFilesystemError(error: ScraperError): Promise<{
+	private handleFilesystemError(error: ScraperError): {
     handled: boolean;
     shouldContinue: boolean;
-  }> {
+  } {
 		if (error.code === ErrorCode.FS_DISK_FULL) {
 			this.logger.error("Disk space exhausted - cannot continue", error);
 			return {
@@ -312,10 +317,10 @@ export class ErrorHandler {
 		};
 	}
 
-	private async handleDataError(error: ScraperError): Promise<{
+	private handleDataError(error: ScraperError): {
     handled: boolean;
     shouldContinue: boolean;
-  }> {
+  } {
 		this.logger.warn("Data processing error", { error: { code: error.code, message: error.message, category: error.category } });
 
 		// Log user-friendly message
@@ -327,15 +332,16 @@ export class ErrorHandler {
 		};
 	}
 
-	private async handleValidationError(error: ScraperError): Promise<{
+	private handleValidationError(error: ScraperError): {
     handled: boolean;
     shouldContinue: boolean;
-  }> {
+  } {
 		this.logger.warn("Validation error", { error: { code: error.code, message: error.message, category: error.category } });
 
 		// Log specific validation issues
-		if (error.context["fieldName"]) {
-			this.logger.error(`Validation failed for field: ${error.context["fieldName"]}`);
+		const fieldName = error.context["fieldName"];
+		if (fieldName !== undefined) {
+			this.logger.error(`Validation failed for field: ${typeof fieldName === "string" ? fieldName : JSON.stringify(fieldName)}`);
 		}
 
 		return {
@@ -359,10 +365,10 @@ export class ErrorHandler {
 		};
 	}
 
-	private async handleSystemError(error: ScraperError): Promise<{
+	private handleSystemError(error: ScraperError): {
     handled: boolean;
     shouldContinue: boolean;
-  }> {
+  } {
 		this.logger.error("System error detected", error);
 
 		if (error.severity === "critical") {
@@ -379,10 +385,10 @@ export class ErrorHandler {
 		};
 	}
 
-	private async handleGenericError(error: ScraperError): Promise<{
+	private handleGenericError(error: ScraperError): {
     handled: boolean;
     shouldContinue: boolean;
-  }> {
+  } {
 		this.logger.error("Unhandled error type", error);
 
 		return {
@@ -502,7 +508,7 @@ export class ErrorHandler {
 		};
 
 		const fs = await import("node:fs/promises");
-		await fs.writeFile(filePath, JSON.stringify(data, null, 2), "utf-8");
+		await fs.writeFile(filePath, JSON.stringify(data, null, 2), "utf8");
 
 		this.logger.info(`Error history exported to ${filePath}`, {
 			errorCount: this.errorHistory.length,

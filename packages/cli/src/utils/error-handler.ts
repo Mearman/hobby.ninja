@@ -1,4 +1,4 @@
-import * as fs from "node:fs/promises";
+import { writeFile } from "node:fs/promises";
 
 export enum ErrorSeverity {
   LOW = "low",
@@ -49,8 +49,8 @@ export class ErrorHandler {
 	private logFilePath?: string;
 
 	constructor(options: { maxErrors?: number; logToFile?: boolean; logFilePath?: string } = {}) {
-		this.maxErrors = options.maxErrors || 1000;
-		this.logToFile = options.logToFile || false;
+		this.maxErrors = options.maxErrors ?? 1000;
+		this.logToFile = options.logToFile ?? false;
 		if (options.logFilePath) {
 			this.logFilePath = options.logFilePath;
 		}
@@ -109,7 +109,9 @@ export class ErrorHandler {
 
 		// Log to file if enabled
 		if (this.logToFile) {
-			this.logErrorToFile(error);
+			this.logErrorToFile(error).catch((logError: unknown) => {
+				console.warn("Failed to log error to file:", logError);
+			});
 		}
 	}
 
@@ -272,7 +274,7 @@ export class ErrorHandler {
 			};
 
 			const logLine = JSON.stringify(logEntry) + "\n";
-			await fs.appendFile(this.logFilePath, logLine);
+			await writeFile(this.logFilePath, logLine, { flag: "a" });
 		} catch (logError) {
 			console.warn("Failed to write error to log file:", logError);
 		}
@@ -367,7 +369,7 @@ export class ErrorHandler {
 		baseDelay = 1000,
 		context?: string,
 	): Promise<T> {
-		let lastError: Error;
+		let lastError: Error | undefined;
 
 		for (let attempt = 0; attempt <= maxRetries; attempt++) {
 			try {
@@ -380,13 +382,17 @@ export class ErrorHandler {
 				}
 
 				const delay = baseDelay * Math.pow(2, attempt);
-				console.warn(`${context || "Operation"} failed (attempt ${attempt + 1}/${maxRetries + 1}), retrying in ${delay}ms...`);
+				console.warn(`${context ?? "Operation"} failed (attempt ${attempt + 1}/${maxRetries + 1}), retrying in ${String(delay)}ms...`);
 
 				await new Promise(resolve => setTimeout(resolve, delay));
 			}
 		}
 
-		throw lastError!;
+		if (!lastError) {
+			throw new Error("Operation failed without error details");
+		}
+
+		throw lastError;
 	}
 }
 
