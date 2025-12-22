@@ -352,7 +352,7 @@ export async function runUnification(
 			directMatches.push({
 				catalogId,
 				manualId: item.manualId,
-				confidence: 1.0, // Direct link = perfect confidence
+				confidence: 1, // Direct link = perfect confidence
 				stage: 0, // Stage 0 = direct link
 				matchedFields: {}, // Direct link - no fuzzy field matching needed
 			});
