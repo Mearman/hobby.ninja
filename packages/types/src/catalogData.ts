@@ -88,6 +88,8 @@ export interface SiteStatus {
 	productName?: string;
 	/** Network error message (not 404 - those are just hasPage: false) */
 	error?: string;
+	/** ISO timestamp when downloads were verified complete */
+	downloadVerifiedAt?: string;
 }
 
 /** Stats for a single site */
