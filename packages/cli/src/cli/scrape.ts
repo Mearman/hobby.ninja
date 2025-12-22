@@ -8,6 +8,8 @@ import { validateProductData } from "../schemas/validation.js";
 import type { ProductData } from "../types/product-data.js";
 import { CacheManager } from "../utils/cache-manager.js";
 import { BandaiRateLimiter } from "../utils/rate-limiter.js";
+import { ItemsIndexUpdater } from "./items-index-updater.js";
+import { ManualsIndexUpdater } from "./manuals-index-updater.js";
 
 
 export interface ScrapeOptions {
@@ -18,6 +20,7 @@ export interface ScrapeOptions {
   resume: boolean;
   verbose: boolean;
   dryRun: boolean;
+  maxAgeDays: number;
 }
 
 export interface ScrapeResult {
@@ -34,13 +37,11 @@ export class ScrapeCommand {
 	private cacheManager: CacheManager;
 	private rateLimiter: BandaiRateLimiter;
 	private scraper: BaseScraper;
-	private checkpointFile: string;
 
 	constructor() {
 		this.cacheManager = new CacheManager();
 		this.rateLimiter = new BandaiRateLimiter();
 		this.scraper = getScraper("bandai-hobby");
-		this.checkpointFile = path.join(process.cwd(), ".gundam-scraper-checkpoint.json");
 	}
 
 	async execute(options: ScrapeOptions): Promise<ScrapeResult> {
@@ -52,24 +53,22 @@ export class ScrapeCommand {
 				await this.cacheManager.initialize();
 			}
 
-			// Load checkpoint if resuming
-			let urls: string[] = [];
-			if (options.resume) {
-				urls = await this.loadCheckpoint();
-				if (urls.length === 0) {
-					console.log("No checkpoint found. Starting fresh.");
-					urls = await this.getUrlsToScrape(options.source);
-				}
-			} else {
-				urls = await this.getUrlsToScrape(options.source);
-			}
+			// Load index and get items to scrape based on max age
+			const maxAgeHours = options.maxAgeDays * 24;
+			const itemsToScrape = this.getItemsToScrape(options.source, maxAgeHours);
 
-			console.log(`Starting scrape: ${urls.length} URLs to process`);
+			console.log(`Starting scrape: ${itemsToScrape.length} items to process`);
+			if (options.maxAgeDays > 0) {
+				console.log(`(Skipping items checked within last ${options.maxAgeDays} days)`);
+			}
 
 			if (options.dryRun) {
 				console.log("DRY RUN MODE - No actual scraping will be performed");
+				if (options.verbose && itemsToScrape.length > 0) {
+					console.log("Items to scrape:", itemsToScrape.slice(0, 10).join(", "), itemsToScrape.length > 10 ? `... and ${itemsToScrape.length - 10} more` : "");
+				}
 				return {
-					totalProcessed: urls.length,
+					totalProcessed: itemsToScrape.length,
 					successful: 0,
 					failed: 0,
 					cached: 0,
@@ -79,14 +78,12 @@ export class ScrapeCommand {
 				};
 			}
 
-			// Process URLs
-			const result = await this.processUrls(urls, options);
+			// Process items
+			const result = await this.processItems(itemsToScrape, options);
 			result.duration = Date.now() - startTime;
 
-			// Save checkpoint
-			if (options.cache) {
-				await this.saveCheckpoint(urls.filter(url => !result.errors.some(error => error.includes(url))));
-			}
+			// Save index (progress already saved incrementally)
+			this.saveIndex(options.source);
 
 			return result;
 		} catch (error) {
@@ -102,37 +99,97 @@ export class ScrapeCommand {
 		}
 	}
 
-	private async getUrlsToScrape(source: string): Promise<string[]> {
-		// This would normally fetch URLs from the source
-		// For now, return example URLs
-		const urls: string[] = [];
+	/**
+	 * Get items to scrape based on source and max age filtering
+	 */
+	private getItemsToScrape(source: string, maxAgeHours: number): string[] {
+		if (source === "bandai-hobby" || source === "bandai-catalog") {
+			// Load items index and filter by age
+			ItemsIndexUpdater.load();
+			const stats = ItemsIndexUpdater.getDisplayStats();
+			console.log(`Index loaded: ${stats.totalChecked} items tracked, ${stats.valid} with pages`);
 
-		if (source === "bandai-hobby") {
-			// Example Bandai Hobby URLs
-			urls.push(
-				"https://bandai-hobby.net/site/hg-1-144-gundam-aerial/",
-				"https://bandai-hobby.net/site/hg-1-144-gundam-requiem/",
-				"https://bandai-hobby.net/site/rg-1-144-gundam-exia/",
-			);
+			// Get all item IDs that have pages (we want to scrape content from valid pages)
+			const allItemIds = this.getAllItemIds();
+
+			if (maxAgeHours === 0) {
+				// No filtering - scrape all items with pages
+				return allItemIds;
+			}
+
+			// Filter to items not recently scraped
+			return allItemIds.filter((id) => !ItemsIndexUpdater.wasPageRecentlyScraped(id, maxAgeHours));
 		}
 
-		return urls;
+		if (source === "bandai-manual") {
+			// Load manuals index and filter by age
+			ManualsIndexUpdater.load();
+			const stats = ManualsIndexUpdater.getDisplayStats();
+			console.log(`Index loaded: ${stats.totalChecked} manuals tracked, ${stats.valid} with pages`);
+
+			// Get all manual IDs that have pages
+			const allManualIds = ManualsIndexUpdater.getIdsWithPages();
+
+			if (maxAgeHours === 0) {
+				// No filtering - scrape all manuals with pages
+				return allManualIds;
+			}
+
+			// Filter to manuals not recently checked
+			return ManualsIndexUpdater.getStaleIds(allManualIds, maxAgeHours);
+		}
+
+		console.warn(`Unknown source: ${source}`);
+		return [];
 	}
 
-	private async processUrls(urls: string[], options: ScrapeOptions): Promise<ScrapeResult> {
+	/**
+	 * Get all item IDs that have pages in the index
+	 */
+	private getAllItemIds(): string[] {
+		ItemsIndexUpdater.load();
+		// Get IDs by checking which ones are indexed with hasPage = true
+		// We need to iterate through the index - for now, return items that need download
+		// This is a simplified approach - in production, we'd want a dedicated method
+		const testIds: string[] = [];
+		for (let i = 1; i <= 9999; i++) {
+			const id = `01_${i.toString().padStart(4, "0")}`;
+			const status = ItemsIndexUpdater.isIndexed(id);
+			if (status.indexed && status.hasPage) {
+				testIds.push(id);
+			}
+		}
+		return testIds;
+	}
+
+	/**
+	 * Save the appropriate index based on source
+	 */
+	private saveIndex(source: string): void {
+		if (source === "bandai-hobby" || source === "bandai-catalog") {
+			ItemsIndexUpdater.save();
+		} else if (source === "bandai-manual") {
+			ManualsIndexUpdater.save();
+		}
+	}
+
+	private async processItems(itemIds: string[], options: ScrapeOptions): Promise<ScrapeResult> {
 		const results: ProductData[] = [];
 		const errors: string[] = [];
 		let cached = 0;
 		let newItems = 0;
 
-		for (let i = 0; i < urls.length; i++) {
-			const url = urls[i];
-			if (!url) {
-				continue; // Skip undefined URLs
+		for (let i = 0; i < itemIds.length; i++) {
+			const itemId = itemIds[i];
+			if (!itemId) {
+				continue; // Skip undefined item IDs
 			}
 
+			// Build URL from item ID based on source
+			const url = this.buildUrlFromItemId(itemId, options.source);
+
 			try {
-				console.log(`Processing ${i + 1}/${urls.length}: ${url}`);
+				console.log(`Processing ${i + 1}/${itemIds.length}: ${itemId}`);
 
 				// Check cache first
 				let productData = null;
@@ -156,7 +213,7 @@ export class ScrapeCommand {
 
 					// Cache the result
 					if (options.cache && productData) {
-						await this.cacheManager.setByUrl(url, JSON.stringify(productData), "bandai-hobby");
+						await this.cacheManager.setByUrl(url, JSON.stringify(productData), options.source);
 					}
 					newItems++;
 
@@ -174,18 +231,22 @@ export class ScrapeCommand {
 							console.log(`  ✓ Data validated successfully`);
 						}
 					} else {
-						errors.push(`${url}: ${validation.errors.join(", ")}`);
+						errors.push(`${itemId}: ${validation.errors.join(", ")}`);
 						if (options.verbose) {
 							console.log(`  ⚠ Validation failed: ${validation.errors.join(", ")}`);
 						}
 					}
 				}
 
-				// Save progress
-				await this.saveCheckpoint(urls.slice(i + 1));
+				// Record progress in index (incremental save for crash recovery)
+				this.recordItemScraped(itemId, options.source);
+				if (i % 10 === 0) {
+					// Save index every 10 items for crash recovery
+					this.saveIndex(options.source);
+				}
 
 			} catch (error) {
-				const errorMsg = `${url}: ${error instanceof Error ? error.message : "Unknown error"}`;
+				const errorMsg = `${itemId}: ${error instanceof Error ? error.message : "Unknown error"}`;
 				errors.push(errorMsg);
 				console.error(`  ✗ Error: ${errorMsg}`);
 			}
@@ -199,7 +260,7 @@ export class ScrapeCommand {
 		}
 
 		return {
-			totalProcessed: urls.length,
+			totalProcessed: itemIds.length,
 			successful: results.length,
 			failed: errors.length,
 			cached,
@@ -207,6 +268,35 @@ export class ScrapeCommand {
 			errors,
 			duration: 0, // Will be set by caller
 		};
+	}
+
+	/**
+	 * Build URL from item ID based on source type
+	 */
+	private buildUrlFromItemId(itemId: string, source: string): string {
+		if (source === "bandai-hobby" || source === "bandai-catalog") {
+			// Format: 01_0001 -> https://bandai-hobby.net/item/0001/
+			const numericPart = itemId.split("_")[1];
+			return `https://bandai-hobby.net/item/${numericPart}/`;
+		}
+
+		if (source === "bandai-manual") {
+			// Format: 1000 -> https://manual.bandai-hobby.net/1000/
+			return `https://manual.bandai-hobby.net/${itemId}/`;
+		}
+
+		return itemId; // Fallback - assume it's already a URL
+	}
+
+	/**
+	 * Record that an item was scraped in the appropriate index
+	 */
+	private recordItemScraped(itemId: string, source: string): void {
+		if (source === "bandai-hobby" || source === "bandai-catalog") {
+			ItemsIndexUpdater.recordPageScraped(itemId);
+		} else if (source === "bandai-manual") {
+			ManualsIndexUpdater.recordChecked(itemId);
+		}
 	}
 
 	private async fetchPage(url: string): Promise<string> {
@@ -246,25 +336,4 @@ export class ScrapeCommand {
 		}
 	}
 
-	private async loadCheckpoint(): Promise<string[]> {
-		try {
-			const data = await fs.readFile(this.checkpointFile, "utf8");
-			const checkpoint = JSON.parse(data);
-			return checkpoint.remainingUrls || [];
-		} catch {
-			return [];
-		}
-	}
-
-	private async saveCheckpoint(remainingUrls: string[]): Promise<void> {
-		try {
-			const checkpoint = {
-				timestamp: Date.now(),
-				remainingUrls,
-			};
-			await fs.writeFile(this.checkpointFile, JSON.stringify(checkpoint, null, 2));
-		} catch (error) {
-			console.error(`Failed to save checkpoint: ${error}`);
-		}
-	}
 }
