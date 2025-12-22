@@ -41,8 +41,8 @@ export interface LocalizedTextArray {
 
 /** Image with source URL and optional local path */
 export interface ItemImage {
-	/** Original source URL from Bandai */
-	src: string;
+	/** Original source URL from Bandai (stripped for ephemeral CDN URLs) */
+	src?: string;
 	/** Local path after download (e.g., /images/items/01_1000/153_1937.jpg) */
 	path?: string;
 }

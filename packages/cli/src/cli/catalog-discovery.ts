@@ -248,6 +248,38 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 }
 
 /**
+ * Check if a URL is ephemeral (will expire and shouldn't be persisted)
+ */
+function isEphemeralUrl(url: string): boolean {
+	return url.includes("cloudfront.net") || url.includes("akamaized.net");
+}
+
+/**
+ * Strip ephemeral src from an image object
+ */
+function stripEphemeralSrc(img: { src?: string; path?: string }): { src?: string; path?: string } {
+	if (img.src && isEphemeralUrl(img.src)) {
+		return img.path ? { path: img.path } : {};
+	}
+	return img;
+}
+
+/**
+ * Strip ephemeral URLs from images before persisting
+ * Keeps only the local path, removes src for CDN URLs that will expire
+ */
+function stripEphemeralImageUrls(item: Item): Item {
+	if (!item.images) return item;
+
+	const cleanImages = {
+		product: item.images.product.map((img) => stripEphemeralSrc(img)),
+		instructions: item.images.instructions.map((img) => stripEphemeralSrc(img)),
+	};
+
+	return { ...item, images: cleanImages };
+}
+
+/**
  * Read existing item file if it exists
  */
 async function readExistingItem(filePath: string): Promise<Record<string, unknown> | null> {
@@ -797,9 +829,12 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 						// Merge with existing data to preserve curated fields (EN translations, manualId, etc.)
 						const itemPath = path.join(options.outputDir, `${paddedRange}.json`);
 						const existingItem = await readExistingItem(itemPath);
-						const finalItem = existingItem
+						const mergedItem = existingItem
 							? mergeItemData(catalogResult.data, existingItem)
 							: catalogResult.data;
+
+						// Strip ephemeral CDN URLs before persisting
+						const finalItem = stripEphemeralImageUrls(mergedItem);
 
 						writePromises.push(
 							writeFile(itemPath, JSON.stringify(finalItem, null, "\t"), "utf8"),
