@@ -193,7 +193,7 @@ export async function runExtractGlobalTranslations(options: {
 const DEFAULT_LIMIT = 200;
 const args = process.argv.slice(2);
 const limitIndex = args.indexOf("--limit");
-const limitArg = limitIndex >= 0 ? args[limitIndex + 1] : undefined;
+const limitArg = limitIndex === -1 ? undefined : args[limitIndex + 1];
 const limit = limitArg ? Number.parseInt(limitArg, 10) : DEFAULT_LIMIT;
 const verbose = args.includes("--verbose");
 

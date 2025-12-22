@@ -319,7 +319,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			const galleryImages = document.querySelectorAll(productGallerySelector);
 
 			// Check if this is a blog (noimage placeholders)
-			const isBlogPage = galleryImages.length > 0 && Array.from(galleryImages).every((img: Element) => {
+			const isBlogPage = galleryImages.length > 0 && [...galleryImages].every((img: Element) => {
 				const imageEl = img as HTMLImageElement;
 				const src = imageEl.src || "";
 				return src.includes("noimage") || src.includes("img_noimage");
@@ -332,7 +332,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 			// If we have images with valid src, we can skip the lazy loading steps
 			if (galleryImages.length > 0) {
-				const hasValidSources = Array.from(galleryImages).some((img: Element) => {
+				const hasValidSources = [...galleryImages].some((img: Element) => {
 					const imageEl = img as HTMLImageElement;
 					const src = imageEl.src || (img as HTMLImageElement).dataset["src"] || "";
 					return src && !src.includes("placeholder") && !src.includes("noimage");
@@ -391,7 +391,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			console.log(`Found ${galleryImages.length} images in product gallery`);
 
 			// Check if this is a blog post by detecting "noimage" placeholders
-			const allNoImage = galleryImages.length > 0 && Array.from(galleryImages).every(img => {
+			const allNoImage = galleryImages.length > 0 && [...galleryImages].every(img => {
 				const src = (img as HTMLImageElement).src || "";
 				return src.includes("noimage") || src.includes("img_noimage");
 			});
@@ -404,7 +404,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			// If no gallery images, fall back to old selector (for pages without swiper)
 			let imageElements: Element[] = [];
 			if (galleryImages.length > 0) {
-				imageElements = Array.from(galleryImages);
+				imageElements = [...galleryImages];
 			} else {
 				console.log("No gallery images found, trying fallback selector...");
 				const fallbackSelector = 'main img[src*="bandai-hobby.net/images"]:not([src*="common"]):not([src*="bnr"]), main img[src*="bandai-a.akamaihd.net"]:not([src*="related"]):not([src*="common"])';
@@ -413,7 +413,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 				// Exclude images in instruction section
 				const instructionContainer = document.querySelector(".pg-products__instruction");
-				imageElements = Array.from(allProductImages).filter(img => {
+				imageElements = [...allProductImages].filter(img => {
 					const inInstructions = instructionContainer && instructionContainer.contains(img);
 					return !inInstructions;
 				});
@@ -448,7 +448,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 
 			let instructionElements: Element[] = [];
 			for (const selector of selectorStrategies) {
-				const elements = Array.from(document.querySelectorAll(selector));
+				const elements = [...document.querySelectorAll(selector)];
 				if (elements.length > 0) {
 					instructionElements = elements;
 					console.log(`Found ${elements.length} instruction images using selector: ${selector}`);
@@ -603,7 +603,7 @@ async function scrapeAndDownloadImages(sourceUrl: string, itemId: string, output
 			console.log(`  Downloading ${allDownloads.length} images (${productDownloads.length} product, ${instructionDownloads.length} instruction) in parallel...`);
 
 			// Download images in parallel with controlled concurrency
-			const { successful, failed } = await downloadImagesInParallel(allDownloads, playwrightPage!, outputDir, itemId);
+			const { successful, failed } = await downloadImagesInParallel(allDownloads, playwrightPage, outputDir, itemId);
 
 			// Add successful downloads to localPaths
 			localPaths.push(...successful);
