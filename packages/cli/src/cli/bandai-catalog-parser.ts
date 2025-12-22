@@ -97,8 +97,6 @@ export interface ManualRef {
 export interface GlobalSiteUrls {
 	/** English (USA) site URL if page exists */
 	enUs?: string;
-	/** English (Other Areas) site URL if page exists */
-	enOthers?: string;
 }
 
 /** Normalized item matching data/lib/schemas.ts ItemSchema */
@@ -139,6 +137,11 @@ export interface ParseResult {
 	data?: Item;
 	entities?: EntityData[];
 	error?: string;
+}
+
+/** Check if URL is an instruction image */
+function isInstructionImage(src: string): boolean {
+	return /_inst_\d+\./.test(src) || /instruction/i.test(src);
 }
 
 export class BandaiCatalogParser {
@@ -538,11 +541,6 @@ export class BandaiCatalogParser {
 		const instructions: ItemImage[] = [];
 		const seen = new Set<string>();
 
-		// Helper to check if URL is an instruction image
-		const isInstructionImage = (src: string): boolean => {
-			return /_inst_\d+\./.test(src) || /instruction/i.test(src);
-		};
-
 		// Product images from the slider
 		$('.pg-products__sliderMain .swiper-slide a[data-fancybox="images"] img').each((_, el) => {
 			const src = $(el).attr("src");
@@ -595,7 +593,7 @@ export class BandaiCatalogParser {
 					? href
 					: `https://bandai-hobby.net${href.startsWith("/") ? "" : "/"}${href}`;
 				// Extract product name from card title or img alt
-				const ja = $el.find(".p-card__tit").text().trim() || $el.find("img").attr("alt") || "";
+				const ja = $el.find(".p-card__tit").text().trim() || $el.find("img").attr("alt") ?? "";
 				related.push({ id, url, ja });
 			}
 		});

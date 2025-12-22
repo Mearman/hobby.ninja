@@ -369,16 +369,10 @@ interface GlobalSiteContent {
  */
 async function fetchGlobalSiteContent(itemId: string, parser: BandaiCatalogParser): Promise<GlobalSiteContent | undefined> {
 	const enUsUrl = `https://global.bandai-hobby.net/en-us/item/${itemId}/`;
-	const enOthersUrl = `https://global.bandai-hobby.net/en-others/item/${itemId}/`;
 
-	// First check if US page exists
+	// Check if US page exists
 	const usCheck = await quickCheckUrl(enUsUrl);
 	if (!usCheck.isValid) {
-		// Check en-others as fallback (just for URL, no content)
-		const othersCheck = await quickCheckUrl(enOthersUrl);
-		if (othersCheck.isValid) {
-			return { urls: { enOthers: enOthersUrl } };
-		}
 		return undefined;
 	}
 
@@ -401,14 +395,8 @@ async function fetchGlobalSiteContent(itemId: string, parser: BandaiCatalogParse
 			return { urls: { enUs: enUsUrl } };
 		}
 
-		// Also check en-others in parallel
-		const othersCheck = await quickCheckUrl(enOthersUrl);
-
 		const result: GlobalSiteContent = {
-			urls: {
-				enUs: enUsUrl,
-				...(othersCheck.isValid ? { enOthers: enOthersUrl } : {}),
-			},
+			urls: { enUs: enUsUrl },
 			// The parser extracts to .ja fields, but for EN site they contain English
 			enName: parseResult.data.name.ja,
 			enDescription: parseResult.data.description?.ja,
