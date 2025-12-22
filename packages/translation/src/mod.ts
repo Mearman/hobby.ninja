@@ -131,6 +131,8 @@ export {
 	getPatterns,
 	clearDictionaryCache,
 	addPhrase,
+	addPhraseSync,
+	getCanonicalPhraseCount,
 } from "./dictionary";
 
 export type {
