@@ -296,26 +296,30 @@ export class ExportManager {
 		// Sample size estimation
 		const sampleSize = Math.min(data.length, EXPORT_CONSTANTS.SIZE_ESTIMATION_SAMPLE_SIZE);
 		const sample = data.slice(0, sampleSize);
+		const firstRecord = sample[0];
+
+		// Should always have first record since we checked data.length > 0
+		if (!firstRecord) return EXPORT_CONSTANTS.CONSERVATIVE_BYTES_PER_RECORD * data.length;
 
 		let bytesPerRecord = 0;
 
 		switch (format) {
 			case "json":
 			case "ndjson": {
-				const jsonString = JSON.stringify(sample[0]);
+				const jsonString = JSON.stringify(firstRecord);
 				bytesPerRecord = jsonString.length + EXPORT_CONSTANTS.CSV_NEWLINE_BYTES;
 				break;
 			}
 
 			case "csv": {
-				const csvString = Object.values(sample[0]).join(",") + "\n";
+				const csvString = Object.values(firstRecord).join(",") + "\n";
 				bytesPerRecord = csvString.length;
 				break;
 			}
 
 			case "excel": {
 				// Rough estimation: Excel is more memory intensive
-				bytesPerRecord = JSON.stringify(sample[0]).length * EXPORT_CONSTANTS.EXCEL_SIZE_MULTIPLIER;
+				bytesPerRecord = JSON.stringify(firstRecord).length * EXPORT_CONSTANTS.EXCEL_SIZE_MULTIPLIER;
 				break;
 			}
 

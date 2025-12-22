@@ -271,7 +271,7 @@ export class CsvExporter extends BaseExporter {
    * Export multiple CSV files by category
    */
 	protected async exportByCategories(data: TransformedData[]): Promise<string> {
-		const categories = [...new Set(data.map(item => item.category).filter(Boolean))];
+		const categories = [...new Set(data.map(item => item.category).filter((c): c is string => c !== undefined))];
 		const baseDir = path.dirname(this.options.outputPath);
 		const baseName = path.basename(this.options.outputPath, ".csv");
 
@@ -294,7 +294,8 @@ export class CsvExporter extends BaseExporter {
 		await this.createSummaryCsv(categories, data.length, summaryPath);
 		exportPaths.push(summaryPath);
 
-		return exportPaths[0]; // Return the first file as primary
+		// Return summary path as primary if no category paths (unlikely)
+		return exportPaths[0] ?? summaryPath;
 	}
 
 	/**

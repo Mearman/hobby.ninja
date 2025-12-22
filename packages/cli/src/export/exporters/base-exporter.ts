@@ -13,6 +13,7 @@ import type { GundamData } from "../../types/product-data.js";
 import { DataTransformer } from "../data-transformer.js";
 import type {
 	ExportOptions,
+	ExportProgress,
 	ExportResult,
 	ProgressCallback,
 	TransformedData,
