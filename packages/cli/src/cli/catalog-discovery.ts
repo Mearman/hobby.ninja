@@ -166,18 +166,21 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 	const existingCategoriesEn = new Map<string, string>();
 
 	interface EntityWithEn { id: string; en?: string }
-	if (Array.isArray(existing.brands)) {
-		for (const b of existing.brands as EntityWithEn[]) {
+	const existingBrands = existing["brands"];
+	if (Array.isArray(existingBrands)) {
+		for (const b of existingBrands as EntityWithEn[]) {
 			if (b.en) existingBrandsEn.set(b.id, b.en);
 		}
 	}
-	if (Array.isArray(existing.series)) {
-		for (const s of existing.series as EntityWithEn[]) {
+	const existingSeries = existing["series"];
+	if (Array.isArray(existingSeries)) {
+		for (const s of existingSeries as EntityWithEn[]) {
 			if (s.en) existingSeriesEn.set(s.id, s.en);
 		}
 	}
-	if (Array.isArray(existing.categories)) {
-		for (const c of existing.categories as EntityWithEn[]) {
+	const existingCategories = existing["categories"];
+	if (Array.isArray(existingCategories)) {
+		for (const c of existingCategories as EntityWithEn[]) {
 			if (c.en) existingCategoriesEn.set(c.id, c.en);
 		}
 	}
@@ -201,8 +204,9 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 
 	// Preserve English translations for related items
 	const existingRelatedEn = new Map<string, string>();
-	if (Array.isArray(existing.relatedItems)) {
-		for (const r of existing.relatedItems as EntityWithEn[]) {
+	const existingRelatedItems = existing["relatedItems"];
+	if (Array.isArray(existingRelatedItems)) {
+		for (const r of existingRelatedItems as EntityWithEn[]) {
 			if (r.en) existingRelatedEn.set(r.id, r.en);
 		}
 	}
@@ -213,33 +217,37 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 	}
 
 	// Preserve manual info: handle old manualId format and preserve if scrape didn't find it
-	if (!scraped.manual && existing.manualId) {
+	const existingManualId = existing["manualId"];
+	const existingManual = existing["manual"];
+	if (!scraped.manual && existingManualId) {
 		// Convert old manualId string to new ManualRef format
-		const oldManualId = existing.manualId as string;
+		const oldManualId = existingManualId as string;
 		merged.manual = {
 			id: oldManualId,
 			url: `https://manual.bandai-hobby.net/menus/detail/${oldManualId}`,
 		};
-	} else if (!scraped.manual && existing.manual && typeof existing.manual === "object") {
+	} else if (!scraped.manual && existingManual && typeof existingManual === "object") {
 		// Preserve existing manual ref if scrape didn't find one
-		merged.manual = existing.manual as typeof merged.manual;
+		merged.manual = existingManual as typeof merged.manual;
 	}
 
 	// Preserve download verification timestamp
-	if (existing.downloadVerifiedAt) {
-		(merged as Record<string, unknown>).downloadVerifiedAt = existing.downloadVerifiedAt;
+	const existingDownloadVerifiedAt = existing["downloadVerifiedAt"];
+	if (existingDownloadVerifiedAt) {
+		(merged as Record<string, unknown>)["downloadVerifiedAt"] = existingDownloadVerifiedAt;
 	}
 
 	// Preserve existing globalSiteUrls if scrape didn't find any (or merge them)
-	if (existing.globalSiteUrls && typeof existing.globalSiteUrls === "object") {
+	const existingGlobalSiteUrls = existing["globalSiteUrls"];
+	if (existingGlobalSiteUrls && typeof existingGlobalSiteUrls === "object") {
 		merged.globalSiteUrls = scraped.globalSiteUrls
-			? { ...(existing.globalSiteUrls as typeof merged.globalSiteUrls), ...scraped.globalSiteUrls }
-			: (existing.globalSiteUrls as typeof merged.globalSiteUrls);
+			? { ...(existingGlobalSiteUrls as typeof merged.globalSiteUrls), ...scraped.globalSiteUrls }
+			: (existingGlobalSiteUrls as typeof merged.globalSiteUrls);
 	}
 
 	// Merge images: preserve local paths from existing, update source URLs from scrape
-	if (scraped.images && existing.images) {
-		const existingImages = existing.images;
+	const existingImages = existing["images"];
+	if (scraped.images && existingImages) {
 
 		// Collect existing local paths (strings starting with /images/)
 		const existingLocalPaths: string[] = [];

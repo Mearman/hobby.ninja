@@ -634,7 +634,7 @@ export class BandaiCatalogParser {
 					? href
 					: `https://bandai-hobby.net${href.startsWith("/") ? "" : "/"}${href}`;
 				// Extract product name from card title or img alt
-				const ja = $el.find(".p-card__tit").text().trim() || $el.find("img").attr("alt") ?? "";
+				const ja = $el.find(".p-card__tit").text().trim() || ($el.find("img").attr("alt") ?? "");
 				related.push({ id, url, ja });
 			}
 		});

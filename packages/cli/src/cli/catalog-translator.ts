@@ -21,12 +21,11 @@ import {
 } from "@hobby-ninja/translation";
 import type { TranslationStore } from "@hobby-ninja/translation";
 import type {
-	CatalogItem,
 	CatalogBrand,
 	CatalogCategory,
-	CatalogRelatedProduct,
 } from "@hobby-ninja/types/catalog";
-import type { LocalizedText } from "@hobby-ninja/types/manual";
+
+import type { Item } from "./bandai-catalog-parser";
 
 export interface CatalogTranslatorOptions {
 	/** Directory for persistent translation cache (default: data/translations) */
@@ -50,6 +49,9 @@ interface CacheStats {
 	hits: number;
 	misses: number;
 }
+
+/** Maximum characters to show in error log preview */
+const ERROR_LOG_PREVIEW_LENGTH = 50;
 
 /**
  * Translates Bandai catalog items from Japanese to English
@@ -109,7 +111,7 @@ export class CatalogTranslator {
 	 * Translate all text fields in a catalog item
 	 * Skips fields that already have .en values
 	 */
-	async translateItem(item: CatalogItem): Promise<TranslateItemResult> {
+	async translateItem(item: Item): Promise<TranslateItemResult> {
 		if (!this.initialized || !this.translator) {
 			return {
 				translated: false,
@@ -130,58 +132,62 @@ export class CatalogTranslator {
 				}
 			}
 
-			// Translate series (CatalogSeries)
-			if (item.series?.ja && !item.series.en) {
-				const result = await this.translateText(item.series.ja);
-				if (result) {
-					item.series.en = result;
-					fieldsTranslated++;
+			// Translate series array
+			for (const series of item.series) {
+				if (series.ja && !series.en) {
+					const result = await this.translateText(series.ja);
+					if (result) {
+						series.en = result;
+						fieldsTranslated++;
+					}
 				}
 			}
 
 			// Skip translating releaseDate (should remain in Japanese format)
 
-			
-			// Translate brands array (if it exists) - handle both formats
-			if (item.brands && Array.isArray(item.brands)) {
-				fieldsTranslated += await this.translateBrands(item.brands);
-			}
+			// Translate brands array
+			fieldsTranslated += await this.translateBrands(item.brands);
 
-			// Translate categories array (if it exists) - handle both formats
-			if (item.categories && Array.isArray(item.categories)) {
-				fieldsTranslated += await this.translateCategories(item.categories);
-			}
+			// Translate categories array
+			fieldsTranslated += await this.translateCategories(item.categories);
 
 			// Translate description (object with ja/en arrays)
 			if (item.description?.ja && !item.description.en) {
-				const result = await this.translateTextArray(item.description.ja);
-				if (result) {
-					item.description.en = result;
-					fieldsTranslated++;
+				item.description.en = await this.translateTextArray(item.description.ja);
+				fieldsTranslated++;
+			}
+
+			// Translate accessories (ParsedAccessoryItem[] format)
+			for (const accessory of item.accessories ?? []) {
+				if (accessory.name.ja && !accessory.name.en) {
+					const result = await this.translateText(accessory.name.ja);
+					if (result) {
+						accessory.name.en = result;
+						fieldsTranslated++;
+					}
 				}
 			}
 
-			// Translate accessories (object with ja/en arrays)
-			if (item.accessories?.ja && !item.accessories.en) {
-				const result = await this.translateTextArray(item.accessories.ja);
-				if (result) {
-					item.accessories.en = result;
-					fieldsTranslated++;
+			// Translate contents (ParsedAccessoryItem[] format)
+			for (const content of item.contents ?? []) {
+				if (content.name.ja && !content.name.en) {
+					const result = await this.translateText(content.name.ja);
+					if (result) {
+						content.name.en = result;
+						fieldsTranslated++;
+					}
 				}
 			}
 
-			// Translate contents (object with ja/en arrays)
-			if (item.contents?.ja && !item.contents.en) {
-				const result = await this.translateTextArray(item.contents.ja);
-				if (result) {
-					item.contents.en = result;
-					fieldsTranslated++;
+			// Translate relatedItems names
+			for (const related of item.relatedItems) {
+				if (related.ja && !related.en) {
+					const result = await this.translateText(related.ja);
+					if (result) {
+						related.en = result;
+						fieldsTranslated++;
+					}
 				}
-			}
-
-			// Translate relatedProducts names (if they exist)
-			if (item.relatedProducts && Array.isArray(item.relatedProducts)) {
-				fieldsTranslated += await this.translateRelatedProducts(item.relatedProducts);
 			}
 
 			return {
@@ -258,7 +264,7 @@ export class CatalogTranslator {
 			return normalizeText(result.translated);
 		} catch (error) {
 			if (this.verbose) {
-				console.error(`[CatalogTranslator] Failed to translate: "${text.slice(0, 50)}..."`, error);
+				console.error(`[CatalogTranslator] Failed to translate: "${text.slice(0, ERROR_LOG_PREVIEW_LENGTH)}..."`, error);
 			}
 			return undefined;
 		}
@@ -293,13 +299,9 @@ export class CatalogTranslator {
 	}
 
 	private async translateTextArray(texts: string[]): Promise<string[]> {
-		if (!Array.isArray(texts)) {
-			return [];
-		}
-
 		const results: string[] = [];
 		for (const text of texts) {
-			if (text?.trim()) {
+			if (text.trim()) {
 				const result = await this.translateText(text);
 				if (result) {
 					results.push(result);
@@ -313,50 +315,4 @@ export class CatalogTranslator {
 		return results;
 	}
 
-	private async translateLocalizedTextArray(items: LocalizedText[] | { ja?: string[], en?: string[] }): Promise<number> {
-		let count = 0;
-
-		// Handle different possible structures
-		let itemsArray: LocalizedText[] = [];
-		if (Array.isArray(items)) {
-			itemsArray = items;
-		} else if (items && typeof items === "object") {
-			// Convert object with ja/en arrays to LocalizedText array format
-			const obj = items as { ja?: string[], en?: string[] };
-			const maxLength = Math.max(obj.ja?.length ?? 0, obj.en?.length ?? 0);
-			for (let i = 0; i < maxLength; i++) {
-				itemsArray.push({
-					ja: obj.ja?.[i],
-					en: obj.en?.[i],
-				});
-			}
-		} else {
-			return 0; // Not iterable, skip
-		}
-
-		for (const item of itemsArray) {
-			if (item.ja && !item.en) {
-				const result = await this.translateText(item.ja);
-				if (result) {
-					item.en = result;
-					count++;
-				}
-			}
-		}
-		return count;
-	}
-
-	private async translateRelatedProducts(products: CatalogRelatedProduct[]): Promise<number> {
-		let count = 0;
-		for (const product of products) {
-			if (product.name.ja && !product.name.en) {
-				const result = await this.translateText(product.name.ja);
-				if (result) {
-					product.name.en = result;
-					count++;
-				}
-			}
-		}
-		return count;
-	}
 }
