@@ -16,15 +16,6 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
-import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
-import { chromium, type Browser, type BrowserContext, type Route } from "playwright";
-
-import { BandaiCatalogParser, type EntityData, type Item, type ItemImage } from "./bandai-catalog-parser.js";
-import { GlobalSiteLookup, type GlobalSiteData } from "./global-site-lookup.js";
-import { ManualParser, type ManualData } from "./manual-parser.js";
-import { BandaiRateLimiter } from "../utils/rate-limiter.js";
-import { ItemsIndexUpdater } from "./items-index-updater.js";
-import { ManualsIndexUpdater } from "./manuals-index-updater.js";
 import {
 	TranslationService,
 	loadDictionary,
@@ -32,6 +23,17 @@ import {
 	lookupPhrase,
 	rebuildAndReloadDictionary,
 } from "@hobby-ninja/translation";
+import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
+import { chromium, type Browser, type BrowserContext, type Route } from "playwright";
+
+// eslint-disable-next-line no-restricted-imports -- CLI-internal utility
+import { BandaiRateLimiter } from "../utils/rate-limiter.js";
+
+import { BandaiCatalogParser, type EntityData, type Item, type ItemImage } from "./bandai-catalog-parser.js";
+import { GlobalSiteLookup, type GlobalSiteData } from "./global-site-lookup.js";
+import { ItemsIndexUpdater } from "./items-index-updater.js";
+import { ManualParser, type ManualData } from "./manual-parser.js";
+import { ManualsIndexUpdater } from "./manuals-index-updater.js";
 
 
 export interface ScrapeOptions {
@@ -66,6 +68,11 @@ export interface ScrapeResult {
 	translationsUpdated: number;
 }
 
+// Constants
+const UNKNOWN_ERROR = "Unknown error";
+const MAX_ITEM_ID = 9999;
+const DEFAULT_USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36";
+
 // Data directories
 const ITEMS_DATA_DIR = resolveWorkspacePath("data/src/items");
 const MANUALS_DATA_DIR = resolveWorkspacePath("data/src/manuals");
@@ -82,7 +89,7 @@ export class ScrapeCommand {
 	private globalLookup: GlobalSiteLookup;
 	private translator: TranslationService;
 	/** Manual IDs discovered during item scraping (linked to items) */
-	private discoveredManualIds: Set<string> = new Set();
+	private discoveredManualIds = new Set<string>();
 	/** Playwright browser instance */
 	private browser: Browser | null = null;
 	private browserContext: BrowserContext | null = null;
@@ -189,7 +196,10 @@ export class ScrapeCommand {
 			// Initialize browser for scraping (site requires JS rendering)
 			console.log("Initializing browser...");
 			await this.initializeBrowser();
-			this.globalLookup.setBrowserContext(this.browserContext!);
+			if (!this.browserContext) {
+				throw new Error("Browser context failed to initialize");
+			}
+			this.globalLookup.setBrowserContext(this.browserContext);
 
 			// Phase 1: Process each item - scrape if needed, then ensure translations
 			for (let i = 0; i < allItemIds.length; i++) {
@@ -225,7 +235,7 @@ export class ScrapeCommand {
 					} catch (error) {
 						result.failed++;
 						result.totalProcessed++;
-						const errorMsg = error instanceof Error ? error.message : "Unknown error";
+						const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 						result.errors.push(`${itemId}: ${errorMsg}`);
 						console.error(`  ✗ Error: ${errorMsg}`);
 					}
@@ -286,7 +296,7 @@ export class ScrapeCommand {
 						}
 					} catch (error) {
 						result.orphanManuals.failed++;
-						const errorMsg = error instanceof Error ? error.message : "Unknown error";
+						const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 						result.errors.push(`manual-${manualId}: ${errorMsg}`);
 						console.error(`  ✗ Error: ${errorMsg}`);
 					}
@@ -306,7 +316,7 @@ export class ScrapeCommand {
 					await rebuildAndReloadDictionary();
 					console.log("Dictionary rebuilt successfully");
 				} catch (error) {
-					const msg = error instanceof Error ? error.message : "Unknown error";
+					const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 					console.log(`Dictionary rebuild failed: ${msg}`);
 				}
 			}
@@ -314,7 +324,7 @@ export class ScrapeCommand {
 			result.duration = Date.now() - startTime;
 			return result;
 		} catch (error) {
-			result.errors.push(error instanceof Error ? error.message : "Unknown error");
+			result.errors.push(error instanceof Error ? error.message : UNKNOWN_ERROR);
 			result.duration = Date.now() - startTime;
 			return result;
 		} finally {
@@ -341,7 +351,7 @@ export class ScrapeCommand {
 	 */
 	private getAllItemIds(): string[] {
 		const itemIds: string[] = [];
-		for (let i = 1; i <= 9999; i++) {
+		for (let i = 1; i <= MAX_ITEM_ID; i++) {
 			const id = `01_${i.toString().padStart(4, "0")}`;
 			const status = ItemsIndexUpdater.isIndexed(id);
 			if (status.indexed && status.hasPage) {
@@ -468,7 +478,7 @@ export class ScrapeCommand {
 		} catch (error) {
 			// Don't fail the item for English lookup failures
 			if (options.verbose) {
-				const msg = error instanceof Error ? error.message : "Unknown error";
+				const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 				console.log(`  ⚠ English lookup failed: ${msg}`);
 			}
 		}
@@ -482,7 +492,7 @@ export class ScrapeCommand {
 				}
 			} catch (error) {
 				if (options.verbose) {
-					const msg = error instanceof Error ? error.message : "Unknown error";
+					const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 					console.log(`  ⚠ Fallback translation failed: ${msg}`);
 				}
 			}
@@ -512,7 +522,7 @@ export class ScrapeCommand {
 				await this.processManualComplete(manualId, options);
 				ManualsIndexUpdater.recordValid(manualId, itemData.name.ja);
 			} catch (error) {
-				const errorMsg = error instanceof Error ? error.message : "Unknown error";
+				const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 				console.error(`  ⚠ Manual processing failed: ${errorMsg}`);
 				// Don't fail the whole item for manual failure
 			}
@@ -526,7 +536,7 @@ export class ScrapeCommand {
 					console.log(`  ✓ Images: ${downloadResult.downloaded} downloaded, ${downloadResult.skipped} skipped`);
 				}
 			} catch (error) {
-				const errorMsg = error instanceof Error ? error.message : "Unknown error";
+				const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 				console.error(`  ⚠ Image download failed: ${errorMsg}`);
 			}
 		}
@@ -553,7 +563,7 @@ export class ScrapeCommand {
 				return this.fetchManualPage(url);
 			});
 		} catch (error) {
-			const errorMsg = error instanceof Error ? error.message : "Unknown error";
+			const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 			ManualsIndexUpdater.recordChecked(manualId);
 			return { success: false, error: `Fetch failed: ${errorMsg}` };
 		}
@@ -595,7 +605,7 @@ export class ScrapeCommand {
 	private async fetchManualPage(url: string): Promise<string> {
 		const response = await fetch(url, {
 			headers: {
-				"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+				"User-Agent": DEFAULT_USER_AGENT,
 				"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 				"Accept-Language": "ja,en-US,en;q=0.9",
 			},
@@ -652,7 +662,7 @@ export class ScrapeCommand {
 					console.log(`    Downloaded: ${filename}`);
 				}
 			} catch (error) {
-				const msg = error instanceof Error ? error.message : "Unknown error";
+				const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 				if (verbose) {
 					console.log(`    Failed: ${filename} - ${msg}`);
 				}
@@ -668,7 +678,7 @@ export class ScrapeCommand {
 	private async downloadPdf(url: string): Promise<Buffer> {
 		const response = await fetch(url, {
 			headers: {
-				"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+				"User-Agent": DEFAULT_USER_AGENT,
 				"Accept": "application/pdf,*/*;q=0.8",
 				"Referer": "https://manual.bandai-hobby.net/",
 			},
@@ -760,12 +770,15 @@ export class ScrapeCommand {
 	 */
 	private getEntityDir(type: "brand" | "series" | "category"): string {
 		switch (type) {
-			case "brand":
+			case "brand": {
 				return BRANDS_DATA_DIR;
-			case "series":
+			}
+			case "series": {
 				return SERIES_DATA_DIR;
-			case "category":
+			}
+			case "category": {
 				return CATEGORIES_DATA_DIR;
+			}
 		}
 	}
 
@@ -833,7 +846,7 @@ export class ScrapeCommand {
 					console.log(`    Downloaded: ${filename}`);
 				}
 			} catch (error) {
-				const msg = error instanceof Error ? error.message : "Unknown error";
+				const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
 				if (verbose) {
 					console.log(`    Failed: ${filename} - ${msg}`);
 				}
@@ -856,7 +869,7 @@ export class ScrapeCommand {
 		try {
 			const response = await fetch(url, {
 				headers: {
-					"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+					"User-Agent": DEFAULT_USER_AGENT,
 					"Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
 					"Referer": "https://bandai-hobby.net/",
 				},
@@ -876,9 +889,12 @@ export class ScrapeCommand {
 
 		const page = await this.browserContext.newPage();
 		try {
-			const response = await page.goto(url, { waitUntil: "load", timeout: 30000 });
-			if (!response?.ok()) {
-				throw new Error(`HTTP ${response?.status()}`);
+			const response = await page.goto(url, { waitUntil: "load", timeout: 30_000 });
+			if (!response) {
+				throw new Error("No response received");
+			}
+			if (!response.ok()) {
+				throw new Error(`HTTP ${String(response.status())}`);
 			}
 			return await response.body();
 		} finally {
@@ -1034,7 +1050,7 @@ export class ScrapeCommand {
 
 		// Check if translations are missing
 		const missingName = itemData.name.ja && !itemData.name.en;
-		const missingDescription = itemData.description?.ja && !itemData.description?.en;
+		const missingDescription = itemData.description?.ja && !itemData.description.en;
 
 		if (!missingName && !missingDescription) {
 			return false; // Nothing to update
@@ -1079,7 +1095,7 @@ export class ScrapeCommand {
 
 		// Fallback translation for remaining missing translations
 		const stillMissingName = itemData.name.ja && !itemData.name.en;
-		const stillMissingDescription = itemData.description?.ja && !itemData.description?.en;
+		const stillMissingDescription = itemData.description?.ja && !itemData.description.en;
 
 		if (stillMissingName || stillMissingDescription) {
 			try {
@@ -1106,7 +1122,7 @@ export class ScrapeCommand {
 		try {
 			const response = await fetch(url, {
 				headers: {
-					"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+					"User-Agent": DEFAULT_USER_AGENT,
 					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 					"Accept-Language": "ja,en-US,en;q=0.9",
 				},
@@ -1136,7 +1152,7 @@ export class ScrapeCommand {
 
 		const page = await this.browserContext.newPage();
 		try {
-			await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+			await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30_000 });
 
 			// Check for 404 page
 			const title = await page.title();
