@@ -50,6 +50,13 @@
         "buildTarget": "cli:build"
       }
     },
+    "scrape": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "cli:build",
+        "args": ["scrape"]
+      }
+    },
     "check": {
       "dependsOn": ["typecheck", "lint", "test", "build"],
       "cache": true

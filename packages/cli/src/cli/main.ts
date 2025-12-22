@@ -28,6 +28,7 @@ program
 	.option("--resume", "Resume from last checkpoint", false)
 	.option("--verbose", "Enable verbose logging", false)
 	.option("--dry-run", "Perform dry run without actual scraping", false)
+	.option("--max-age <days>", "Skip items checked within this many days (0 = no filtering)", "7")
 	.action(async (options) => {
 		const scrapeCommand = new ScrapeCommand();
 		const scrapeOptions: ScrapeOptions = {
@@ -38,6 +39,7 @@ program
 			resume: options.resume,
 			verbose: options.verbose,
 			dryRun: options.dryRun,
+			maxAgeDays: Number.parseInt(options.maxAge, 10),
 		};
 
 		try {
@@ -46,6 +48,7 @@ program
 			console.log(`Language: ${scrapeOptions.language}`);
 			console.log(`Output: ${scrapeOptions.output}`);
 			console.log(`Cache: ${scrapeOptions.cache ? "enabled" : "disabled"}`);
+			console.log(`Max age: ${scrapeOptions.maxAgeDays === 0 ? "disabled (scrape all)" : `${scrapeOptions.maxAgeDays} days`}`);
 			console.log("");
 
 			const result = await scrapeCommand.execute(scrapeOptions);
