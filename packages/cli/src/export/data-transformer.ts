@@ -2,17 +2,162 @@
  * Data transformation utilities for export functionality
  */
 
+ 
 import { DEFAULT_VALUES, LANGUAGE_CODES } from "../constants/cli-constants.js";
 import { EXPORT_CONSTANTS } from "../constants/export-constants.js";
 import type { GundamData } from "../types/product-data.js";
 
+ 
 import type { TransformedData, ExportFilters, ValidationResult, ValidationError, ValidationWarning } from "./types.js";
 
-export class DataTransformer {
+/**
+ * Get localized name based on language preference
+ */
+function getLocalizedName(name: GundamData["name"], _language: string): string {
+	if (!name) return DEFAULT_VALUES.UNKNOWN;
+
+	// GundamData.name is always a string according to the interface
+	return name;
+}
+
+/**
+ * Extract series information
+ */
+function extractSeries(_item: GundamData): string | undefined {
+	// GundamData doesn't have series property according to interface, so return undefined
+	return undefined;
+}
+
+/**
+ * Extract category information
+ */
+function extractCategory(item: GundamData): string | undefined {
+	// Return category if it exists on GundamData
+	if (item.category) {
+		return typeof item.category === "string" ? item.category : item.category;
+	}
+	return undefined;
+}
+
+/**
+ * Extract price information
+ */
+function extractPrice(item: GundamData): number | undefined {
+	const price = item.price;
+	if (typeof price === "number") {
+		return price;
+	}
+	// GundamData interface shows price as number | undefined, so string case shouldn't happen
+	return undefined;
+}
+
+/**
+ * Transform images array
+ */
+function transformImages(images: GundamData["images"]): TransformedData["images"] {
+	if (!Array.isArray(images)) {
+		return [];
+	}
+
+	return images.map(img => {
+		const transformed: TransformedData["images"][0] = {
+			type: img.type,
+			url: img.url,
+			alt: img.alt,
+		};
+		return transformed;
+	});
+}
+
+/**
+ * Generate ID from item data if not provided
+ */
+function generateId(item: GundamData): string {
+	const name = typeof item.name === "string" ? item.name : DEFAULT_VALUES.UNKNOWN_BRAND;
+	const brand = item.brand ?? DEFAULT_VALUES.UNKNOWN_BRAND;
+	const idSource = `${brand}-${name}-${item.source}`;
+	const hash = Buffer.from(idSource).toString("base64");
+	return hash.replaceAll(/[^a-zA-Z0-9]/g, "").slice(0, Math.max(0, EXPORT_CONSTANTS.HASH_SUBSTRING_LENGTH));
+}
+
+/**
+ * Validate URL format
+ */
+function isValidUrl(url: string): boolean {
+	try {
+		new URL(url);
+		return true;
+	} catch {
+		return false;
+	}
+}
+
+/**
+ * Transform a single GundamData item
+ */
+function transformSingleItem(
+	item: GundamData,
+	options: {
+    includeImages?: boolean;
+    includeSpecifications?: boolean;
+    language?: "ja" | "en" | "all";
+  } = {},
+): TransformedData {
+	const transformed: TransformedData = {
+		id: item.id,
+		name: getLocalizedName(item.name, options.language ?? DEFAULT_VALUES.ALL),
+		brand: item.brand ?? DEFAULT_VALUES.UNKNOWN,
+		language: item.language,
+		source: item.source,
+		scrapedAt: item.scrapedAt,
+		images: options.includeImages ? transformImages(item.images) : [],
+	};
+
+	// Add optional fields if they exist
+	const series = extractSeries(item);
+	if (series !== undefined) transformed.series = series;
+
+	const category = extractCategory(item);
+	if (category !== undefined) transformed.category = category;
+
+	const price = extractPrice(item);
+	if (price !== undefined) transformed.price = price;
+
+	if (item.currency !== undefined) transformed.currency = item.currency;
+	if (item.releaseDate !== undefined) transformed.releaseDate = item.releaseDate;
+	if (item.url !== undefined) transformed.url = item.url;
+
+	// Extract specifications if requested
+	if (options.includeSpecifications && item.specifications) {
+		transformed.specifications = item.specifications;
+
+		// Extract commonly used spec fields as top-level properties
+		const specs = item.specifications;
+		const scaleValue = specs["scale"];
+		if (scaleValue !== undefined) {
+			transformed.scale = typeof scaleValue === "string" ? scaleValue : JSON.stringify(scaleValue);
+		}
+		const gradeValue = specs["grade"];
+		if (gradeValue !== undefined) {
+			transformed.grade = typeof gradeValue === "string" ? gradeValue : JSON.stringify(gradeValue);
+		}
+	}
+
+	// Add description
+	if (item.description) {
+		transformed.description = typeof item.description === "string"
+			? item.description
+			: JSON.stringify(item.description);
+	}
+
+	return transformed;
+}
+
+export const DataTransformer = {
 	/**
    * Transform raw GundamData to exportable format
    */
-	static transformData(
+	transformData(
 		data: GundamData[],
 		options: {
       includeImages?: boolean;
@@ -20,68 +165,13 @@ export class DataTransformer {
       language?: "ja" | "en" | "all";
     } = {},
 	): TransformedData[] {
-		return data.map(item => this.transformSingleItem(item, options));
-	}
-
-	/**
-   * Transform a single GundamData item
-   */
-	static transformSingleItem(
-		item: GundamData,
-		options: {
-      includeImages?: boolean;
-      includeSpecifications?: boolean;
-      language?: "ja" | "en" | "all";
-    } = {},
-	): TransformedData {
-		const transformed: TransformedData = {
-			id: item.id ?? this.generateId(item),
-			name: this.getLocalizedName(item.name, options.language ?? DEFAULT_VALUES.ALL),
-			brand: item.brand ?? DEFAULT_VALUES.UNKNOWN,
-			language: item.language,
-			source: item.source ?? DEFAULT_VALUES.UNKNOWN_SOURCE,
-			scrapedAt: item.scrapedAt ?? new Date().toISOString(),
-			images: options.includeImages ? this.transformImages(item.images ?? []) : [],
-		};
-
-		// Add optional fields if they exist
-		const series = this.extractSeries(item);
-		if (series !== undefined) transformed.series = series;
-
-		const category = this.extractCategory(item);
-		if (category !== undefined) transformed.category = category;
-
-		const price = this.extractPrice(item);
-		if (price !== undefined) transformed.price = price;
-
-		if (item.currency !== undefined) transformed.currency = item.currency;
-		if (item.releaseDate !== undefined) transformed.releaseDate = item.releaseDate;
-		if (item.url !== undefined) transformed.url = item.url;
-
-		// Extract specifications if requested
-		if (options.includeSpecifications && item.specifications) {
-			transformed.specifications = item.specifications;
-
-			// Extract commonly used spec fields as top-level properties
-			const specs = item.specifications;
-			if (specs["scale"]) transformed.scale = String(specs["scale"]);
-			if (specs["grade"]) transformed.grade = String(specs["grade"]);
-		}
-
-		// Add description
-		if (item.description) {
-			transformed.description = typeof item.description === "string"
-				? item.description
-				: JSON.stringify(item.description);
-		}
-
-		return transformed;
-	}
+		return data.map(item => transformSingleItem(item, options));
+	},
 
 	/**
    * Filter data based on provided criteria
    */
-	static filterData(data: TransformedData[], filters: ExportFilters): TransformedData[] {
+	filterData(data: TransformedData[], filters: ExportFilters): TransformedData[] {
 		return data.filter(item => {
 			// Category filter
 			if (filters.categories && filters.categories.length > 0 && (!item.category || !filters.categories.includes(item.category))) {
@@ -121,12 +211,12 @@ export class DataTransformer {
 
 			return true;
 		});
-	}
+	},
 
 	/**
    * Validate transformed data
    */
-	static validateData(data: TransformedData[]): ValidationResult {
+	validateData(data: TransformedData[]): ValidationResult {
 		const errors: ValidationError[] = [];
 		const warnings: ValidationWarning[] = [];
 
@@ -175,12 +265,15 @@ export class DataTransformer {
 			}
 
 			// URL validation
-			if (item.url && !this.isValidUrl(item.url)) {
-				warnings.push({
-					field: "url",
-					message: "Invalid URL format",
-					value: item.url,
-				});
+			if (item.url) {
+				const urlIsValid = isValidUrl(item.url);
+				if (!urlIsValid) {
+					warnings.push({
+						field: "url",
+						message: "Invalid URL format",
+						value: item.url,
+					});
+				}
 			}
 		}
 
@@ -189,98 +282,12 @@ export class DataTransformer {
 			errors,
 			warnings,
 		};
-	}
-
-	/**
-   * Get localized name based on language preference
-   */
-	private static getLocalizedName(name: GundamData["name"], _language: string): string {
-		if (!name) return DEFAULT_VALUES.UNKNOWN;
-
-		// GundamData.name is always a string according to the interface
-		if (typeof name === "string") {
-			return name;
-		}
-
-		// Fallback for any non-string data (shouldn't happen with proper typing)
-		return String(name);
-	}
-
-	/**
-   * Extract series information
-   */
-	private static extractSeries(_item: GundamData): string | undefined {
-		// GundamData doesn't have series property according to interface, so return undefined
-		return undefined;
-	}
-
-	/**
-   * Extract category information
-   */
-	private static extractCategory(item: GundamData): string | undefined {
-		// Return category if it exists on GundamData
-		if (item.category) {
-			return typeof item.category === "string" ? item.category : String(item.category);
-		}
-		return undefined;
-	}
-
-	/**
-   * Extract price information
-   */
-	private static extractPrice(item: GundamData): number | undefined {
-		const price = item.price;
-		if (typeof price === "number") {
-			return price;
-		}
-		// GundamData interface shows price as number | undefined, so string case shouldn't happen
-		return undefined;
-	}
-
-	/**
-   * Transform images array
-   */
-	private static transformImages(images: GundamData["images"]): TransformedData["images"] {
-		if (!images || !Array.isArray(images)) {
-			return [];
-		}
-
-		return images.map(img => {
-			const transformed: TransformedData["images"][0] = {
-				type: img.type ?? "unknown",
-				url: img.url ?? "",
-				alt: img.alt,
-			};
-			return transformed;
-		});
-	}
-
-	/**
-   * Generate ID from item data if not provided
-   */
-	private static generateId(item: GundamData): string {
-		const name = typeof item.name === "string" ? item.name : DEFAULT_VALUES.UNKNOWN_BRAND;
-		const brand = item.brand ?? DEFAULT_VALUES.UNKNOWN_BRAND;
-		const hash = Buffer.from(`${brand}-${name}-${item.source ?? DEFAULT_VALUES.UNKNOWN_BRAND}`).toString("base64");
-		return hash.replaceAll(/[^a-zA-Z0-9]/g, "").slice(0, Math.max(0, EXPORT_CONSTANTS.HASH_SUBSTRING_LENGTH));
-	}
-
-	/**
-   * Validate URL format
-   */
-	private static isValidUrl(url: string): boolean {
-		try {
-			new URL(url);
-			return true;
-		} catch {
-			return false;
-		}
-	}
+	},
 
 	/**
    * Get summary statistics for data
    */
-	static getDataSummary(data: TransformedData[]): {
+	getDataSummary(data: TransformedData[]): {
     totalItems: number;
     itemsWithImages: number;
     itemsWithSpecifications: number;
@@ -301,7 +308,7 @@ export class DataTransformer {
 
 		for (const item of data) {
 			// Images
-			if (item.images && item.images.length > 0) {
+			if (item.images.length > 0) {
 				summary.itemsWithImages++;
 			}
 
@@ -335,5 +342,5 @@ export class DataTransformer {
 		}
 
 		return summary;
-	}
-}
+	},
+};

@@ -2,18 +2,25 @@
  * Excel exporter implementation using XLSX library
  */
 
-import * as path from "node:path";
+import path from "node:path";
 
-import type { TransformedData, ExporterConfig, ExportOptions, ExcelColumn } from "../types.js";
+import type { TransformedData, ExcelColumn } from "../types.js";
 import type { WorkBook, WorkSheet, XLSXLibrary } from "../xlsx-types.js";
 
 import { BaseExporter } from "./base-exporter.js";
 
-export class ExcelExporter extends BaseExporter {
-	constructor(options: ExportOptions, config: ExporterConfig) {
-		super(options, config);
-	}
+// Constants
+const DEFAULT_COLUMN_WIDTH = 15;
+const TOP_BRANDS_LIMIT = 10;
+const ALTERNATE_ROW_INTERVAL = 2;
+const HEADER_ROW_INDEX = 0;
+const FIRST_DATA_ROW = 1;
+const SPEC_PREFIX = "spec_";
+const SPEC_PREFIX_LENGTH = 5;
+const XLSX_ERROR_MESSAGE = "Excel export requires the xlsx package. Please install it with: npm install xlsx";
+const PRICE_JPY_HEADER = "Price (JPY)";
 
+export class ExcelExporter extends BaseExporter {
 	/**
    * Export data to Excel format
    */
@@ -22,11 +29,10 @@ export class ExcelExporter extends BaseExporter {
 			// Dynamically import xlsx library to avoid build issues
 			let XLSX: XLSXLibrary;
 			try {
-				// @ts-ignore - xlsx is an optional dependency
-				const xlsxModule = await import("xlsx");
-				XLSX = xlsxModule as XLSXLibrary;
+				// @ts-expect-error - xlsx is an optional dependency
+				XLSX = await import("xlsx") as XLSXLibrary;
 			} catch {
-				throw new Error("Excel export requires the xlsx package. Please install it with: npm install xlsx");
+				throw new Error(XLSX_ERROR_MESSAGE);
 			}
 
 			const outputPath = this.generateOutputPath();
@@ -65,7 +71,8 @@ export class ExcelExporter extends BaseExporter {
 			return outputPath;
 
 		} catch (error) {
-			throw new Error(`Excel export failed: ${error instanceof Error ? error.message : String(error)}`);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			throw new Error(`Excel export failed: ${errorMessage}`);
 		}
 	}
 
@@ -110,15 +117,15 @@ export class ExcelExporter extends BaseExporter {
 		const worksheet = XLSX.utils.aoa_to_sheet(wsData);
 
 		// Apply styling
-		const range = XLSX.utils.decode_range(worksheet["!ref"] || "A1:B1");
+		const range = XLSX.utils.decode_range(worksheet["!ref"] ?? "A1:B1");
 		for (let row = range.s.r; row <= range.e.r; row++) {
 			for (let col = range.s.c; col <= range.e.c; col++) {
 				const cellAddress = XLSX.utils.encode_cell({ r: row, c: col });
 				const cell = worksheet[cellAddress];
-				if (cell && typeof cell === 'object' && 'v' in cell) {
+				if (cell && typeof cell === "object" && "v" in cell) {
 					cell.s = {
-						Font: { Bold: row === 0 },
-						Fill: row === 0 ? { FgColor: "E3F2FD" } : undefined,
+						Font: { Bold: row === HEADER_ROW_INDEX },
+						Fill: row === HEADER_ROW_INDEX ? { FgColor: "E3F2FD" } : undefined,
 						Alignment: { Vertical: "center", Horizontal: "left" },
 					};
 				}
@@ -186,29 +193,29 @@ export class ExcelExporter extends BaseExporter {
 			case "real grade": {
 				return [
 					...baseColumns,
-					{ key: "spec_scale", header: "Scale", width: 15 },
-					{ key: "spec_grade", header: "Grade", width: 15 },
-					{ key: "spec_price", header: "Price (JPY)", width: 15 },
+					{ key: "spec_scale", header: "Scale", width: DEFAULT_COLUMN_WIDTH },
+					{ key: "spec_grade", header: "Grade", width: DEFAULT_COLUMN_WIDTH },
+					{ key: "spec_price", header: PRICE_JPY_HEADER, width: DEFAULT_COLUMN_WIDTH },
 				];
 			}
 
 			case "mg": {
 				return [
 					...baseColumns,
-					{ key: "spec_scale", header: "Scale", width: 15 },
-					{ key: "spec_grade", header: "Grade", width: 15 },
-					{ key: "spec_price", header: "Price (JPY)", width: 15 },
-					{ key: "spec_release", header: "Release Date", width: 15 },
+					{ key: "spec_scale", header: "Scale", width: DEFAULT_COLUMN_WIDTH },
+					{ key: "spec_grade", header: "Grade", width: DEFAULT_COLUMN_WIDTH },
+					{ key: "spec_price", header: PRICE_JPY_HEADER, width: DEFAULT_COLUMN_WIDTH },
+					{ key: "spec_release", header: "Release Date", width: DEFAULT_COLUMN_WIDTH },
 				];
 			}
 
 			case "pg": {
 				return [
 					...baseColumns,
-					{ key: "spec_scale", header: "Scale", width: 15 },
-					{ key: "spec_grade", header: "Grade", width: 15 },
-					{ key: "spec_price", header: "Price (JPY)", width: 15 },
-					{ key: "spec_lights", header: "LED Lights", width: 15 },
+					{ key: "spec_scale", header: "Scale", width: DEFAULT_COLUMN_WIDTH },
+					{ key: "spec_grade", header: "Grade", width: DEFAULT_COLUMN_WIDTH },
+					{ key: "spec_price", header: PRICE_JPY_HEADER, width: DEFAULT_COLUMN_WIDTH },
+					{ key: "spec_lights", header: "LED Lights", width: DEFAULT_COLUMN_WIDTH },
 				];
 			}
 
@@ -239,13 +246,17 @@ export class ExcelExporter extends BaseExporter {
 	private extractExcelValue(item: TransformedData, key: string): string | number | boolean | null | undefined {
 		try {
 			// Handle specification keys
-			if (key.startsWith("spec_")) {
-				const specKey = key.slice(5);
-				if (item.specifications?.[specKey]) {
-					const specValue = item.specifications[specKey];
-					return typeof specValue === 'string' || typeof specValue === 'number' || typeof specValue === 'boolean' ? specValue : String(specValue);
+			if (key.startsWith(SPEC_PREFIX)) {
+				const specKey = key.slice(SPEC_PREFIX_LENGTH);
+				const specValue = item.specifications?.[specKey];
+				if (specValue === undefined || specValue === null) {
+					return null;
 				}
-				return null;
+				if (typeof specValue === "string" || typeof specValue === "number" || typeof specValue === "boolean") {
+					return specValue;
+				}
+				// Stringify objects and arrays
+				return JSON.stringify(specValue);
 			}
 
 			// Handle language object
@@ -270,10 +281,11 @@ export class ExcelExporter extends BaseExporter {
 			if (value === null || value === undefined) {
 				return value;
 			}
-			if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+			if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") {
 				return value;
 			}
-			return String(value);
+			// Stringify objects and arrays
+			return JSON.stringify(value);
 		} catch (error) {
 			console.warn(`Error extracting Excel value for key ${key}:`, error);
 			return null;
@@ -286,15 +298,22 @@ export class ExcelExporter extends BaseExporter {
 	private applyColumnFormatting(worksheet: WorkSheet, columns: ExcelColumn[], XLSX: XLSXLibrary): void {
 		// Set column widths
 		worksheet["!cols"] = columns.map(col => ({
-			width: col.width || 15,
+			width: col.width ?? DEFAULT_COLUMN_WIDTH,
 		}));
 
 		// Apply header styling
-		const range = XLSX.utils.decode_range(worksheet["!ref"] || "A1:A1") as unknown as { s: { r: number; c: number }; e: { r: number; c: number } };
+		const range = XLSX.utils.decode_range(worksheet["!ref"] ?? "A1:A1") as unknown as { s: { r: number; c: number }; e: { r: number; c: number } };
 		for (let col = range.s.c; col <= Math.min(range.e.c, columns.length - 1); col++) {
-			const cellAddress = XLSX.utils.encode_cell({ r: 0, c: col });
-			if (worksheet[cellAddress] && typeof worksheet[cellAddress] === 'object' && 's' in worksheet[cellAddress]) {
-				(worksheet[cellAddress] as any).s = {
+			const cellAddress = XLSX.utils.encode_cell({ r: HEADER_ROW_INDEX, c: col });
+			if (worksheet[cellAddress] && typeof worksheet[cellAddress] === "object" && "s" in worksheet[cellAddress]) {
+				interface CellWithStyle {
+					s: {
+						Font: { Bold: boolean };
+						Fill: { FgColor: string };
+						Alignment: { Vertical: string; Horizontal: string };
+					};
+				}
+				(worksheet[cellAddress] as CellWithStyle).s = {
 					Font: { Bold: true },
 					Fill: { FgColor: "E3F2FD" },
 					Alignment: { Vertical: "center", Horizontal: "center" },
@@ -314,8 +333,8 @@ export class ExcelExporter extends BaseExporter {
 		const summary: Array<Array<string | number>> = [
 			["", ""], // Spacing
 			["Data Quality", ""],
-			["Items with Images", data.filter(item => item.images && item.images.length > 0).length],
-			["Items with Specifications", data.filter(item => item.specifications && Object.keys(item.specifications).length > 0).length],
+			["Items with Images", data.filter(item => item.images.length > 0).length],
+			["Items with Specifications", data.filter(item => Object.keys(item.specifications).length > 0).length],
 			["Items with URLs", data.filter(item => item.url).length],
 			["", ""], // Spacing
 			["Categories", ""],
@@ -334,7 +353,7 @@ export class ExcelExporter extends BaseExporter {
 		}
 
 		summary.push(["", ""], ["Top Brands", ""]);
-		for (const brand of brands.slice(0, 10)) {
+		for (const brand of brands.slice(0, TOP_BRANDS_LIMIT)) {
 			const count = data.filter(item => item.brand === brand).length;
 			summary.push([brand, count]);
 		}
@@ -361,7 +380,7 @@ export class ExcelExporter extends BaseExporter {
    * Get unique categories from data
    */
 	private getCategories(data: TransformedData[]): string[] {
-		return [...new Set(data.map(item => item.category).filter((cat): cat is string => Boolean(cat)))];
+		return [...new Set(data.map(item => item.category).filter((cat: string | undefined): cat is string => Boolean(cat)))];
 	}
 
 	/**
@@ -378,11 +397,11 @@ export class ExcelExporter extends BaseExporter {
 		const brandCounts = new Map<string, number>();
 		for (const item of data) {
 			if (item.brand) {
-				brandCounts.set(item.brand, (brandCounts.get(item.brand) || 0) + 1);
+				brandCounts.set(item.brand, (brandCounts.get(item.brand) ?? 0) + 1);
 			}
 		}
 		return [...brandCounts.entries()]
-			.sort((a, b) => b[1] - a[1])
+			.toSorted((a, b) => b[1] - a[1])
 			.map(([brand]) => brand);
 	}
 
@@ -390,13 +409,9 @@ export class ExcelExporter extends BaseExporter {
    * Generate output path for Excel file
    */
 	private generateOutputPath(): string {
-		if (path.extname(this.options.outputPath)) {
-			// If path already has extension, ensure it's .xlsx
-			return this.options.outputPath.replace(/\.[^.]+$/, ".xlsx");
-		} else {
-			// Add .xlsx extension
-			return `${this.options.outputPath}.xlsx`;
-		}
+		return path.extname(this.options.outputPath)
+			? this.options.outputPath.replace(/\.[^.]+$/, ".xlsx")
+			: `${this.options.outputPath}.xlsx`;
 	}
 
 	/**
@@ -406,11 +421,11 @@ export class ExcelExporter extends BaseExporter {
 		try {
 			let XLSX: XLSXLibrary;
 			try {
-				// @ts-ignore - xlsx is an optional dependency
-				const xlsxModule = await import("xlsx");
-				XLSX = xlsxModule as XLSXLibrary;
+				// @ts-expect-error - xlsx is an optional dependency
+				const xlsxModule = await import("xlsx") as XLSXLibrary;
+				XLSX = xlsxModule;
 			} catch {
-				throw new Error("Excel export requires the xlsx package. Please install it with: npm install xlsx");
+				throw new Error(XLSX_ERROR_MESSAGE);
 			}
 			const workbook = XLSX.utils.book_new();
 
@@ -440,23 +455,34 @@ export class ExcelExporter extends BaseExporter {
 	/**
    * Apply advanced Excel styling
    */
-	private applyAdvancedStyling(worksheet: WorkSheet, headerStyle: any, alternateRowStyle: any, XLSX: XLSXLibrary): void {
-		const range = XLSX.utils.decode_range(worksheet["!ref"] || "A1:A1") as unknown as { s: { r: number; c: number }; e: { r: number; c: number } };
+	private applyAdvancedStyling(
+		worksheet: WorkSheet,
+		headerStyle: { Font: { Bold: boolean; Color: string }; Fill: { FgColor: string }; Alignment: { Vertical: string; Horizontal: string } },
+		alternateRowStyle: { Fill: { FgColor: string } },
+		XLSX: XLSXLibrary,
+	): void {
+		const range = XLSX.utils.decode_range(worksheet["!ref"] ?? "A1:A1") as unknown as { s: { r: number; c: number }; e: { r: number; c: number } };
 
 		// Apply header style
 		for (let col = range.s.c; col <= range.e.c; col++) {
-			const cellAddress = XLSX.utils.encode_cell({ r: 0, c: col });
-			if (worksheet[cellAddress] && typeof worksheet[cellAddress] === 'object' && 's' in worksheet[cellAddress]) {
-				(worksheet[cellAddress] as any).s = headerStyle;
+			const cellAddress = XLSX.utils.encode_cell({ r: HEADER_ROW_INDEX, c: col });
+			if (worksheet[cellAddress] && typeof worksheet[cellAddress] === "object" && "s" in worksheet[cellAddress]) {
+				interface CellWithStyle {
+					s: typeof headerStyle;
+				}
+				(worksheet[cellAddress] as CellWithStyle).s = headerStyle;
 			}
 		}
 
 		// Apply alternate row style
-		for (let row = range.s.r + 1; row <= range.e.r; row += 2) {
+		for (let row = range.s.r + FIRST_DATA_ROW; row <= range.e.r; row += ALTERNATE_ROW_INTERVAL) {
 			for (let col = range.s.c; col <= range.e.c; col++) {
 				const cellAddress = XLSX.utils.encode_cell({ r: row, c: col });
-				if (worksheet[cellAddress] && typeof worksheet[cellAddress] === 'object' && 's' in worksheet[cellAddress]) {
-					(worksheet[cellAddress] as any).s = alternateRowStyle;
+				if (worksheet[cellAddress] && typeof worksheet[cellAddress] === "object" && "s" in worksheet[cellAddress]) {
+					interface CellWithStyle {
+						s: typeof alternateRowStyle;
+					}
+					(worksheet[cellAddress] as CellWithStyle).s = alternateRowStyle;
 				}
 			}
 		}

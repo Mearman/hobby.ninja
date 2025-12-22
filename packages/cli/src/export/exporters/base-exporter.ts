@@ -3,7 +3,7 @@
  */
 
 import { promises as fs } from "node:fs";
-import * as path from "node:path";
+import path from "node:path";
 import { pipeline } from "node:stream";
 import { promisify } from "node:util";
 import { createGzip } from "node:zlib";
@@ -182,13 +182,8 @@ export abstract class BaseExporter {
   	const timestamp = new Date().toISOString().replaceAll(/[:.]/g, "-");
   	const parsedPath = path.parse(basePath);
 
-  	if (parsedPath.ext) {
-  		// If path already has extension, replace it
-  		return path.join(parsedPath.dir, `${parsedPath.name}-${timestamp}${extension}`);
-  	} else {
-  		// If no extension, add one
-  		return path.join(parsedPath.dir, `${parsedPath.name}-${timestamp}${extension}`);
-  	}
+  	// Return same result regardless of whether path has extension
+  	return path.join(parsedPath.dir, `${parsedPath.name}-${timestamp}${extension}`);
   }
 
   /**
@@ -231,7 +226,7 @@ export abstract class BaseExporter {
   		unitIndex++;
   	}
 
-  	return `${size.toFixed(2)} ${units[unitIndex]}`;
+  	return `${size.toFixed(2)} ${String(units[unitIndex])}`;
   }
 
   /**

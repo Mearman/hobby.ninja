@@ -3,16 +3,14 @@
  */
 
 import { promises as fs } from "node:fs";
-import * as path from "node:path";
+import path from "node:path";
 
 import type { TransformedData, ExporterConfig, ExportOptions } from "../types.js";
 
 import { BaseExporter } from "./base-exporter.js";
 
 export class JsonExporter extends BaseExporter {
-	constructor(options: ExportOptions, config: ExporterConfig) {
-		super(options, config);
-	}
+	// Constructor intentionally empty - calls parent constructor only
 
 	/**
    * Export data to JSON format
@@ -75,13 +73,10 @@ export class JsonExporter extends BaseExporter {
 	private generateOutputPath(): string {
 		const extension = this.options.format === "ndjson" ? ".ndjson" : ".json";
 
-		if (path.extname(this.options.outputPath)) {
-			// If path already has extension, use it
-			return this.options.outputPath;
-		} else {
-			// Add extension
-			return `${this.options.outputPath}${extension}`;
-		}
+		// If path already has extension, use it, otherwise add extension
+		return path.extname(this.options.outputPath)
+			? this.options.outputPath
+			: `${this.options.outputPath}${extension}`;
 	}
 
 	/**
@@ -187,7 +182,8 @@ export class JsonExporter extends BaseExporter {
 
 		for (const category of categories) {
 			const categoryData = data.filter(item => item.category === category);
-			const categoryPath = path.join(baseDir, `${baseName}-${category}.json`);
+			const sanitizedCategory = String(category);
+			const categoryPath = path.join(baseDir, `${baseName}-${sanitizedCategory}.json`);
 
 			const categoryExportData = {
 				category,

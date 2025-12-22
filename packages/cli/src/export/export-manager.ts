@@ -3,8 +3,8 @@
  */
 
 import { promises as fs } from "node:fs";
-import * as os from "node:os";
-import * as path from "node:path";
+import { tmpdir } from "node:os";
+import path from "node:path";
 
 import {
 	EXPORT_CONSTANTS,
@@ -35,7 +35,7 @@ export class ExportManager {
 		this.config = {
 			batchSize: EXPORT_CONSTANTS.DEFAULT_BATCH_SIZE,
 			maxMemoryUsage: EXPORT_CONSTANTS.MAX_MEMORY_USAGE_BYTES,
-			tempDir: os.tmpdir(),
+			tempDir: tmpdir(),
 			...config,
 		};
 	}
@@ -92,7 +92,7 @@ export class ExportManager {
 		const totalFormats = formats.length;
 
 		for (const [i, formatItem] of formats.entries()) {
-			if (!formatItem) continue;
+			
 			const { format, outputPath } = formatItem;
 
 			const options: ExportOptions = {
@@ -128,21 +128,21 @@ export class ExportManager {
 	/**
    * Preview export results without actually writing files
    */
-	async preview(
+	preview(
 		data: GundamData[],
 		options: ExportOptions,
 		maxRecords: number = EXPORT_CONSTANTS.DEFAULT_PREVIEW_RECORDS,
-	): Promise<{
+	): {
     transformedData: TransformedData[];
     summary: Record<string, unknown>;
     estimatedFileSize: number;
     validation: ValidationResult;
-  }> {
+  } {
 		// Transform and filter limited data
 		const transformOptions: Parameters<typeof DataTransformer.transformData>[1] = {};
 		if (options.includeImages !== undefined) transformOptions.includeImages = options.includeImages;
 		if (options.includeSpecifications !== undefined) transformOptions.includeSpecifications = options.includeSpecifications;
-		transformOptions.language = options.language === undefined ? "all" : options.language;
+		transformOptions.language = options.language ?? "all";
 
 		const transformed = DataTransformer.transformData(data.slice(0, maxRecords), transformOptions);
 
@@ -191,9 +191,7 @@ export class ExportManager {
 
 		const formatBreakdown: Record<string, { count: number; size: number }> = {};
 		for (const result of successful) {
-			if (!formatBreakdown[result.format]) {
-				formatBreakdown[result.format] = { count: 0, size: 0 };
-			}
+			formatBreakdown[result.format] ??= { count: 0, size: 0 };
 			const breakdown = formatBreakdown[result.format];
 			if (breakdown) {
 				breakdown.count++;
@@ -282,7 +280,7 @@ export class ExportManager {
 			}
 
 			default: {
-				throw new Error(`Unsupported format: ${options.format}`);
+				throw new Error(`Unsupported format: ${String(options.format)}`);
 			}
 		}
 	}
@@ -399,7 +397,7 @@ export class ExportManager {
     alternatives: Array<{ format: string; reason: string }>;
   } {
 		const recordCount = data.length;
-		const hasImages = data.some(item => item.images && item.images.length > 0);
+		const hasImages = data.some(item => item.images.length > 0);
 		const hasSpecifications = data.some(item => item.specifications && Object.keys(item.specifications).length > 0);
 		const hasMultipleLanguages = new Set(data.map(item => item.language.language)).size > 1;
 

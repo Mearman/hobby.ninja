@@ -3,7 +3,7 @@
  */
 
 import { promises as fs } from "node:fs";
-import * as path from "node:path";
+import path from "node:path";
 
 import { EXPORT_CONSTANTS, DATA_PROCESSING_CONSTANTS } from "../../constants/export-constants.js";
 import type { TransformedData, ExporterConfig, ExportOptions, CSVOptions } from "../types.js";
@@ -33,7 +33,7 @@ export class CsvExporter extends BaseExporter {
 		await this.ensureOutputDirectory(outputPath);
 
 		// Generate CSV content
-		const csvContent = await this.generateCsv(data);
+		const csvContent = this.generateCsv(data);
 
 		// Handle encoding if needed
 		const content = await this.handleEncoding(csvContent);
@@ -47,7 +47,7 @@ export class CsvExporter extends BaseExporter {
 	/**
    * Generate CSV content from data
    */
-	private async generateCsv(data: TransformedData[]): Promise<string> {
+	private generateCsv(data: TransformedData[]): string {
 		if (data.length === 0) {
 			return "";
 		}
@@ -146,17 +146,17 @@ export class CsvExporter extends BaseExporter {
 		try {
 			// Handle special keys
 			if (key === "imageCount") {
-				return String(item.images ? item.images.length : 0);
+				return String(item.images.length);
 			}
 
 			if (key === "primaryImageUrl") {
-				const primary = item.images?.find(img => img.type === "main" || img.type === "primary");
+				const primary = item.images.find(img => img.type === "main" || img.type === "primary");
 				return primary?.url ?? "";
 			}
 
 			if (key === "galleryImageUrls") {
-				const gallery = item.images?.filter(img => img.type === "gallery");
-				return gallery?.map(img => img.url).join("; ") ?? "";
+				const gallery = item.images.filter(img => img.type === "gallery");
+				return gallery.map(img => img.url).join("; ");
 			}
 
 			// Handle specification keys
@@ -232,7 +232,7 @@ export class CsvExporter extends BaseExporter {
    * Escape CSV value according to RFC 4180
    */
 	private escapeCsvValue(value: string): string {
-		const stringValue = String(value);
+		const stringValue = value;
 
 		// Check if value needs quoting
 		const needsQuoting = stringValue.includes(this.csvOptions.delimiter) ||
@@ -258,13 +258,10 @@ export class CsvExporter extends BaseExporter {
    * Generate output path for CSV file
    */
 	private generateOutputPath(): string {
-		if (path.extname(this.options.outputPath)) {
-			// If path already has extension, ensure it's .csv
-			return this.options.outputPath.replace(/\.[^.]+$/, ".csv");
-		} else {
-			// Add .csv extension
-			return `${this.options.outputPath}.csv`;
-		}
+		// If path already has extension, ensure it's .csv, otherwise add .csv extension
+		return path.extname(this.options.outputPath)
+			? this.options.outputPath.replace(/\.[^.]+$/, ".csv")
+			: `${this.options.outputPath}.csv`;
 	}
 
 	/**
@@ -282,7 +279,7 @@ export class CsvExporter extends BaseExporter {
 			const categoryPath = path.join(baseDir, `${baseName}-${category}.csv`);
 
 			// Generate CSV for this category
-			const csvContent = await this.generateCsv(categoryData);
+			const csvContent = this.generateCsv(categoryData);
 			const content = await this.handleEncoding(csvContent);
 			await fs.writeFile(categoryPath, content, this.getEncodingOptions());
 
