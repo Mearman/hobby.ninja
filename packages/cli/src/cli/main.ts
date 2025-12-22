@@ -32,7 +32,6 @@ program
 	.action(async (options) => {
 		const scrapeCommand = new ScrapeCommand();
 		const scrapeOptions: ScrapeOptions = {
-			source: options.source,
 			language: options.language,
 			output: options.output,
 			cache: options.cache,
@@ -43,8 +42,7 @@ program
 		};
 
 		try {
-			console.log("🚀 Starting Gundam Data Scraper...");
-			console.log(`Source: ${scrapeOptions.source}`);
+			console.log("Starting Gundam Data Scraper...");
 			console.log(`Language: ${scrapeOptions.language}`);
 			console.log(`Output: ${scrapeOptions.output}`);
 			console.log(`Cache: ${scrapeOptions.cache ? "enabled" : "disabled"}`);

@@ -12,7 +12,7 @@ import { config } from "dotenv";
 import type { DownloadSource } from "../cli/download-command.js";
 import type { NormalizeOptions } from "../cli/normalize-command.js";
 import type { TranslateOptions, TranslateSource } from "../cli/translate-command.js";
-import { CLI_COMMANDS, MESSAGES, FILES, NETWORK } from "../constants/index.js";
+import { CLI_COMMANDS, MESSAGES, FILES } from "../constants/index.js";
 import type { WaybackSource } from "../types/wayback.js";
 
 // Type guards for CLI options
@@ -77,7 +77,6 @@ const PREVIEW_CHANGES = "Preview changes without writing";
 
 // Error handling constants
 const ERROR_PREFIX = "❌ Error in %s command: ";
-const ERROR_OCCURRED_PREFIX = "❌ " + MESSAGES.ERROR_OCCURRED + " in %s command: ";
 const GENERIC_ERROR_PREFIX = "❌ %s failed: ";
 const VERBOSE_STRING = "verbose";
 const AUTHENTICATION_STRING = "Authentication: ";
@@ -97,29 +96,73 @@ program
 	.description("CLI tool for scraping Gundam/Gunpla data from various sources (Placeholder)")
 	.version(version);
 
-// Scrape command implementation
+// Scrape command - unified workflow: items → linked manuals → assets → orphan manuals
 program
 	.command(CLI_COMMANDS.SCRAPE)
-	.description("Scrape data from various sources")
-	.option("-s, --source <source>", "Data source to scrape (manuals, bandai-catalog)")
+	.description("Unified scrape: process items with linked manuals and download assets")
+	.option("--max-age <days>", "Skip items checked within this many days (0 = process all)", "7")
 	.option("-o, --output <dir>", "Output directory", FILES.OUTPUT_DIR)
 	.option("-c, --cache", "Enable caching", true)
-	.option("-r, --resume", "Resume from previous run", false)
+	.option(DRY_RUN_OPTION, "Show what would be processed without actual scraping", false)
 	.option(VERBOSE_OPTION, MESSAGES.VERBOSE_OUTPUT, false)
-	.option("-t, --translate", "Translate Japanese text to English", false)
-	.option("-d, --delay <ms>", "Delay between requests in ms", String(NETWORK.DEFAULT_DELAY))
-	.option("--start-id <id>", "Starting ID for catalog discovery (e.g., 01_1, 01_778)", "01_1")
-	.option("--count <number>", "Number of IDs to process", "10")
-	.option("--force-rescrape", "Force re-scrape even if files exist (preserves curated data)", false)
 	.action(async (options: unknown) => {
 		try {
-			const { scrapeData } = await import("../cli/scrape-command.js");
-			type ScrapeOptions = import("../cli/scrape-command.js").ScrapeOptions;
-			const scrapeOptions = options as ScrapeOptions;
-			await scrapeData(scrapeOptions);
+			const { ScrapeCommand } = await import("../cli/scrape.js");
+			const rawOptions = options as Record<string, unknown>;
+
+			console.log("Starting Unified Scraper...");
+			console.log(`Max age: ${rawOptions["maxAge"] === "0" ? "disabled (process all)" : `${rawOptions["maxAge"]} days`}`);
+			console.log(`Cache: ${rawOptions["cache"] ? "enabled" : "disabled"}`);
+			console.log(`Dry run: ${String(rawOptions["dryRun"])}`);
+			console.log("");
+
+			const scrapeCommand = new ScrapeCommand();
+			const result = await scrapeCommand.execute({
+				language: "all",
+				output: rawOptions["output"] as string,
+				cache: rawOptions["cache"] === true,
+				resume: false,
+				verbose: rawOptions["verbose"] === true,
+				dryRun: rawOptions["dryRun"] === true,
+				maxAgeDays: Number.parseInt(rawOptions["maxAge"] as string, 10),
+			});
+
+			console.log("\n=== Scrape Results ===");
+			console.log(`\nItems:`);
+			console.log(`  Total processed: ${result.totalProcessed}`);
+			console.log(`  Successful: ${result.successful}`);
+			console.log(`  Failed: ${result.failed}`);
+			console.log(`  Cached: ${result.cached}`);
+			console.log(`  New: ${result.new}`);
+
+			console.log(`\nManuals:`);
+			console.log(`  Discovered via items: ${result.discoveredManuals}`);
+			console.log(`  Orphan manuals found: ${result.orphanManuals.total}`);
+			console.log(`  Orphan manuals processed: ${result.orphanManuals.processed}`);
+			console.log(`  Orphan manuals failed: ${result.orphanManuals.failed}`);
+
+			console.log(`\nDuration: ${(result.duration / 1000).toFixed(2)}s`);
+
+			if (result.errors.length > 0) {
+				console.log("\nErrors:");
+				const maxErrors = 10;
+				for (const error of result.errors.slice(0, maxErrors)) { console.log(`  - ${error}`); }
+				if (result.errors.length > maxErrors) {
+					console.log(`  ... and ${result.errors.length - maxErrors} more errors`);
+				}
+			}
+
+			const totalFailed = result.failed + result.orphanManuals.failed;
+			if (totalFailed === 0) {
+				console.log("\nScrape completed successfully!");
+				process.exit(0);
+			} else {
+				console.log("\nScrape completed with errors");
+				process.exit(1);
+			}
 		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
-			console.error(ERROR_OCCURRED_PREFIX.replace("%s", "scrape"), errorMessage);
+			console.error(GENERIC_ERROR_PREFIX.replace("%s", "Scrape"), errorMessage);
 			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
 				const errorStack = error instanceof Error ? error.stack : String(error);
 				console.error(errorStack);

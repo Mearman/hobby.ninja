@@ -483,10 +483,10 @@ export class BandaiCatalogParser {
 
 		if (!cleanText) return undefined;
 
-		// Split by newline and return as normalized structure
+		// Split by newline, normalize bullet markers (■ → • ), and return as normalized structure
 		const lines = cleanText
 			.split("\n")
-			.map(line => line.trim())
+			.map(line => line.trim().replace(/^■\s*/, "• "))
 			.filter(line => line.length > 0);
 
 		return lines.length > 0 ? { ja: lines } : undefined;

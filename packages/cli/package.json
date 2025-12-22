@@ -9,7 +9,7 @@
 		"clear-cache": "node ./dist/bin/cli.js cache clear",
 		"dev": "tsx src/bin/cli.ts",
 		"lint": "eslint src/**/*.ts --fix",
-		"scrape": "node ./dist/bin/cli.js scrape",
+		"scrape": "tsx src/bin/cli.ts scrape",
 		"scrape:bandai": "node ./dist/bin/cli.js scrape --scrapers bandai",
 		"scrape:dalong": "node ./dist/bin/cli.js scrape --scrapers dalong",
 		"scrape:gundam-info": "node ./dist/bin/cli.js scrape --scrapers gundam-info",

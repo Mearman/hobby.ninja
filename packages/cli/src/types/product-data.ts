@@ -67,6 +67,9 @@ export interface ProductData {
     validationErrors: string[];
     lastValidated: number;
   };
+
+  /** Manual ID for linked instruction manual (extracted from bandai-hobby item pages) */
+  manualId?: string;
 }
 
 // Gundam-specific data interface for scraped data
@@ -86,5 +89,7 @@ export interface GundamData {
   url?: string;
   source: string;
   scrapedAt: string;
+  /** Manual ID for linked instruction manual (extracted from bandai-hobby item pages) */
+  manualId?: string;
 }
 export {LanguageDetection} from "./language-detection.js";
