@@ -416,12 +416,30 @@ async function fetchGlobalSiteContent(itemId: string, parser: BandaiCatalogParse
 			return { urls: { enUs: enUsUrl } };
 		}
 
+		// The parser extracts to .ja fields, but for EN site they contain English
+		// Global site often embeds accessories in description with "[Accessories]" header
+		let enDescription = parseResult.data.description?.ja;
+		let enAccessories = parseResult.data.accessories?.ja;
+
+		// Split description at "[Accessories]" header if present
+		if (enDescription && enDescription.length > 0) {
+			const accessoriesIndex = enDescription.findIndex(
+				(line) => line.trim().toLowerCase() === "[accessories]",
+			);
+
+			if (accessoriesIndex !== -1) {
+				// Everything after "[Accessories]" goes to accessories
+				enAccessories = enDescription.slice(accessoriesIndex + 1);
+				// Everything before "[Accessories]" stays as description
+				enDescription = enDescription.slice(0, accessoriesIndex);
+			}
+		}
+
 		const result: GlobalSiteContent = {
 			urls: { enUs: enUsUrl },
-			// The parser extracts to .ja fields, but for EN site they contain English
 			enName: parseResult.data.name.ja,
-			enDescription: parseResult.data.description?.ja,
-			enAccessories: parseResult.data.accessories?.ja,
+			enDescription,
+			enAccessories,
 		};
 
 		return result;
