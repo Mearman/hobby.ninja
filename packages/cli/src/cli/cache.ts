@@ -25,7 +25,7 @@ export class CacheCommand {
 			} else if (options.cleanup) {
 				await this.cleanupCache();
 			} else {
-				await this.showDefaultInfo();
+				this.showDefaultInfo();
 			}
 		} catch (error) {
 			console.error("❌ Cache command failed:", error instanceof Error ? error.message : "Unknown error");
@@ -57,7 +57,7 @@ export class CacheCommand {
 		console.log("✅ Cache cleanup completed");
 	}
 
-	private async showDefaultInfo(): Promise<void> {
+	private showDefaultInfo(): void {
 		console.log("💾 Cache Information:");
 		console.log("Use --stats to view cache statistics");
 		console.log("Use --clear to clear all cached data");

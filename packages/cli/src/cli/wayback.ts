@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs";
-import * as path from "node:path";
+import path from "node:path";
 
+ 
 import {
 	WaybackOptions,
 	WaybackResult,
@@ -23,6 +24,44 @@ const CHECKPOINT_FILE = ".wayback-checkpoint.json";
 const ARCHIVE_CACHE_FILE = ".wayback-archive-cache.json";
 const WAYBACK_SAVE_URL = "https://web.archive.org/save";
 const WAYBACK_AVAILABLE_URL = "https://archive.org/wayback/available";
+
+// Constants for time conversions
+const HOURS_IN_DAY = 24;
+const MINUTES_IN_HOUR = 60;
+const SECONDS_IN_MINUTE = 60;
+const MS_IN_SECOND = 1000;
+const DAYS_IN_MONTH_APPROX = 30;
+const DAYS_IN_YEAR_APPROX = 365;
+const MS_IN_DAY = HOURS_IN_DAY * MINUTES_IN_HOUR * SECONDS_IN_MINUTE * MS_IN_SECOND;
+
+// Constants for retry behavior
+const MAX_RETRIES_UNLIMITED_MODE = 3;
+const MAX_BACKOFF_DELAY_MS = 60_000;
+const MAX_SAMPLE_URLS = 20;
+const CACHE_TTL_HOURS = 24;
+const CACHE_VERSION = 1;
+const FINAL_RENDER_DELAY_MS = 100;
+
+// Constants for Wayback timestamp parsing
+const WAYBACK_TIMESTAMP_LENGTH = 14;
+
+// Constants for file operations
+const UTF8_ENCODING = "utf8";
+const JSON_INDENT = 2;
+
+// HTTP status codes
+const HTTP_STATUS_TOO_MANY_REQUESTS = 429;
+const HTTP_STATUS_FORBIDDEN = 403;
+const HTTP_STATUS_NOT_FOUND = 404;
+const HTTP_STATUS_LOCKED = 423;
+const HTTP_STATUS_SERVICE_UNAVAILABLE = 503;
+const HTTP_STATUS_SERVER_ERROR_MIN = 500;
+const HTTP_STATUS_CLIENT_ERROR_MIN = 400;
+
+// String literals used multiple times
+const ERROR_UNKNOWN = "Unknown error";
+const CONTENT_TYPE_HTML = "text/html";
+const TIMESTAMP_ID_SUFFIX = "id_";
 
 /**
  * Cache entry for archive status
@@ -58,7 +97,7 @@ export class WaybackCommand {
 	private archiveCache: ArchiveCache | null = null;
 	private archiveCachePath = "";
 	/** How long to consider a cache entry valid (default: 24 hours) */
-	private cacheTtlMs: number = 24 * 60 * 60 * 1000;
+	private cacheTtlMs: number = CACHE_TTL_HOURS * MINUTES_IN_HOUR * SECONDS_IN_MINUTE * MS_IN_SECOND;
 	/** Track if cache is dirty and needs saving */
 	private archiveCacheDirty = false;
 	/** Track cache hits/misses for UI display */
@@ -69,10 +108,6 @@ export class WaybackCommand {
 	private secretKey?: string;
 	/** Callback for when auth fallback is triggered */
 	private onAuthFallback?: (url: string, authError: string) => void;
-
-	constructor() {
-		// Constructor - no debug output needed
-	}
 
 	async execute(options: WaybackOptions): Promise<WaybackResult> {
 		const startTime = Date.now();
@@ -141,11 +176,11 @@ export class WaybackCommand {
 				console.log("\nDry run - URLs that would be submitted:");
 				console.log(`Age thresholds: min=${this.formatDuration(this.minAgeMs)}, max=${this.formatDuration(this.maxAgeMs)}`);
 
-				for (const sub of submissions.slice(0, 20)) {
+				for (const sub of submissions.slice(0, MAX_SAMPLE_URLS)) {
 					console.log(`  [${sub.sourceType}:${sub.itemId}] ${sub.field}: ${sub.url}`);
 				}
-				if (submissions.length > 20) {
-					console.log(`  ... and ${submissions.length - 20} more`);
+				if (submissions.length > MAX_SAMPLE_URLS) {
+					console.log(`  ... and ${submissions.length - MAX_SAMPLE_URLS} more`);
 				}
 				result.duration = Date.now() - startTime;
 				return result;
@@ -153,25 +188,26 @@ export class WaybackCommand {
 
 			// Filter out already processed URLs if resuming
 			const pendingSubmissions = this.checkpoint
-				? submissions.filter((s) => !this.checkpoint!.processedUrls.includes(s.url))
+				? submissions.filter((s) => {
+					if (!this.checkpoint) return true;
+					return !this.checkpoint.processedUrls.includes(s.url);
+				})
 				: submissions;
 
 			console.log(`${pendingSubmissions.length} URLs pending submission\n`);
 
 			// Initialize checkpoint if not resuming
-			if (!this.checkpoint) {
-				this.checkpoint = {
-					processedUrls: [],
-					failedSubmissions: [],
-					successfulSubmissions: [],
-					lastUpdated: Date.now(),
-					totalUrls: submissions.length,
-					fields: options.fields,
-					source: options.source,
-					manualsDir: options.manualsDir,
-					catalogDir: options.catalogDir,
-				};
-			}
+			this.checkpoint ??= {
+				processedUrls: [],
+				failedSubmissions: [],
+				successfulSubmissions: [],
+				lastUpdated: Date.now(),
+				totalUrls: submissions.length,
+				fields: options.fields,
+				source: options.source,
+				manualsDir: options.manualsDir,
+				catalogDir: options.catalogDir,
+			};
 
 			// Initialize Ink progress renderer
 			const progressRenderer = new WaybackProgressRenderer(pendingSubmissions.length);
@@ -194,9 +230,11 @@ export class WaybackCommand {
 
 			// Process submissions using queue
 			while (queue.length > 0) {
-				const submission = queue.shift()!;
+				const submission = queue.shift();
+				if (!submission) break;
 
 				// Update progress UI with current item
+				const currentCacheSize = Object.keys(this.archiveCache.entries).length;
 				progressRenderer.update({
 					processed: processedCount,
 					total: totalToProcess,
@@ -208,33 +246,39 @@ export class WaybackCommand {
 					cacheStats: {
 						hits: this.cacheHits,
 						misses: this.cacheMisses,
-						size: Object.keys(this.archiveCache?.entries || {}).length,
+						size: currentCacheSize,
 					},
 				});
 
-				const processedSubmission = await this.submitWithAgeCheck(
-					submission,
-					options.retries,
-					options.verbose,
-					(attempt, error, delayMs) => {
+				// Create a closure that captures immutable values for retry callback
+				const createRetryCallback = (currentProcessed: number, currentTotal: number, currentUrl: string) => {
+					return (attempt: number, error: string, delayMs: number) => {
 						// Show retry in progress log
 						progressRenderer.log({
-							url: submission.url,
+							url: currentUrl,
 							status: "retrying",
 							message: error,
 							retryCount: attempt,
 							retryDelayMs: delayMs,
 						});
+						const cacheSizeAtRetry = this.archiveCache ? Object.keys(this.archiveCache.entries).length : 0;
 						progressRenderer.update({
-							processed: processedCount,
-							total: totalToProcess,
+							processed: currentProcessed,
+							total: currentTotal,
 							cacheStats: {
 								hits: this.cacheHits,
 								misses: this.cacheMisses,
-								size: Object.keys(this.archiveCache?.entries || {}).length,
+								size: cacheSizeAtRetry,
 							},
 						});
-					},
+					};
+				};
+
+				const processedSubmission = await this.submitWithAgeCheck(
+					submission,
+					options.retries,
+					options.verbose,
+					createRetryCallback(processedCount, totalToProcess, submission.url),
 				);
 				result.submitted++;
 
@@ -275,7 +319,7 @@ export class WaybackCommand {
 					}
 					case "failed": {
 					// Check if we should requeue this submission
-						const currentRequeueCount = submission.requeueCount || 0;
+						const currentRequeueCount = submission.requeueCount ?? 0;
 
 						if (currentRequeueCount < maxRequeues) {
 						// Requeue: push to back of queue with incremented requeueCount
@@ -299,7 +343,8 @@ export class WaybackCommand {
 						} else {
 						// Max requeues reached - mark as permanently failed
 							result.failed++;
-							result.errors.push(`${submission.url}: ${processedSubmission.error || "Unknown error"} (after ${currentRequeueCount} requeues)`);
+							const errorMessage = processedSubmission.error ?? ERROR_UNKNOWN;
+							result.errors.push(`${submission.url}: ${errorMessage} (after ${currentRequeueCount} requeues)`);
 							this.checkpoint.failedSubmissions.push({
 								...processedSubmission,
 								requeueCount: currentRequeueCount,
@@ -307,15 +352,16 @@ export class WaybackCommand {
 							processedCount++;
 
 							// Log final failure
+							const finalErrorMessage = processedSubmission.error ? `${processedSubmission.error} (exhausted ${maxRequeues} requeues)` : `${ERROR_UNKNOWN} (exhausted ${maxRequeues} requeues)`;
 							progressRenderer.log({
 								url: submission.url,
 								status: "failed",
-								message: `${processedSubmission.error} (exhausted ${maxRequeues} requeues)`,
+								message: finalErrorMessage,
 								retryCount: processedSubmission.retryCount,
 								requeueCount: currentRequeueCount,
 							});
 						}
-				
+
 						break;
 					}
 					case "skipped": {
@@ -339,6 +385,7 @@ export class WaybackCommand {
 				}
 
 				// Update progress UI with latest stats
+				const updatedCacheSize = Object.keys(this.archiveCache.entries).length;
 				progressRenderer.update({
 					processed: processedCount,
 					total: totalToProcess,
@@ -349,12 +396,12 @@ export class WaybackCommand {
 					cacheStats: {
 						hits: this.cacheHits,
 						misses: this.cacheMisses,
-						size: Object.keys(this.archiveCache?.entries || {}).length,
+						size: updatedCacheSize,
 					},
 				});
 
 				// Update checkpoint (only for completed URLs, not requeued ones)
-				if (processedSubmission.status !== "failed" || (submission.requeueCount || 0) >= maxRequeues) {
+				if (processedSubmission.status !== "failed" || (submission.requeueCount ?? 0) >= maxRequeues) {
 					this.checkpoint.processedUrls.push(submission.url);
 				}
 				this.checkpoint.lastUpdated = Date.now();
@@ -368,7 +415,7 @@ export class WaybackCommand {
 			progressRenderer.complete();
 
 			// Small delay to ensure final render is visible before cleanup
-			await this.sleep(100);
+			await this.sleep(FINAL_RENDER_DELAY_MS);
 			progressRenderer.cleanup();
 
 			// Final checkpoint and cache save
@@ -404,15 +451,16 @@ export class WaybackCommand {
 		const dirs = entries
 			.filter((e) => e.isDirectory())
 			.map((e) => e.name)
-			.sort();
+			.toSorted();
 
 		// Pre-load all manuals to avoid repeated file reads
 		const manuals = new Map<string, ManualJson>();
 		for (const dir of dirs) {
 			const jsonPath = path.join(absoluteDataDir, dir, `${dir}.json`);
 			try {
-				const content = await fs.readFile(jsonPath, "utf8");
-				manuals.set(dir, JSON.parse(content));
+				const content = await fs.readFile(jsonPath, UTF8_ENCODING);
+				const parsed: unknown = JSON.parse(content);
+				manuals.set(dir, parsed as ManualJson);
 			} catch {
 				// Skip unreadable files
 			}
@@ -460,15 +508,16 @@ export class WaybackCommand {
 		const dirs = entries
 			.filter((e) => e.isDirectory())
 			.map((e) => e.name)
-			.sort();
+			.toSorted();
 
 		// Pre-load all catalog items to avoid repeated file reads
 		const items = new Map<string, CatalogItemJson>();
 		for (const dir of dirs) {
 			const jsonPath = path.join(absoluteDataDir, dir, `${dir}.json`);
 			try {
-				const content = await fs.readFile(jsonPath, "utf8");
-				items.set(dir, JSON.parse(content));
+				const content = await fs.readFile(jsonPath, UTF8_ENCODING);
+				const parsed: unknown = JSON.parse(content);
+				items.set(dir, parsed as CatalogItemJson);
 			} catch {
 				// Skip unreadable files
 			}
@@ -519,7 +568,7 @@ export class WaybackCommand {
 		let lastError = "";
 		const unlimitedRetries = maxRetries < 0;
 		// Hard cap at 3 retries even in "unlimited" mode - failed items get requeued
-		const effectiveMaxRetries = unlimitedRetries ? 3 : maxRetries;
+		const effectiveMaxRetries = unlimitedRetries ? MAX_RETRIES_UNLIMITED_MODE : maxRetries;
 
 		for (let attempt = 0; attempt <= effectiveMaxRetries; attempt++) {
 			try {
@@ -536,7 +585,7 @@ export class WaybackCommand {
 					}
 					return successSubmission;
 				} else {
-					lastError = result.error || `SubmitUrl returned no error message (success: ${result.success})`;
+					lastError = result.error ?? `SubmitUrl returned no error message (success: ${String(result.success)})`;
 					if (verbose && result.error) {
 						console.log(`  SubmitUrl failed with: ${result.error}`);
 					}
@@ -548,7 +597,7 @@ export class WaybackCommand {
 
 					// Exponential backoff for retryable errors
 					if (attempt < effectiveMaxRetries) {
-						const delay = Math.min(Math.pow(2, attempt) * 1000, 60_000); // Cap at 60s
+						const delay = Math.min(Math.pow(2, attempt) * MS_IN_SECOND, MAX_BACKOFF_DELAY_MS);
 						if (onRetry) {
 							onRetry(attempt + 1, lastError, delay);
 						}
@@ -562,7 +611,7 @@ export class WaybackCommand {
 				lastError = error instanceof Error ? error.message : "Network error";
 
 				if (attempt < effectiveMaxRetries) {
-					const delay = Math.min(Math.pow(2, attempt) * 1000, 60_000); // Cap at 60s
+					const delay = Math.min(Math.pow(2, attempt) * MS_IN_SECOND, MAX_BACKOFF_DELAY_MS);
 					if (onRetry) {
 						onRetry(attempt + 1, lastError, delay);
 					}
@@ -593,7 +642,7 @@ export class WaybackCommand {
 			if (!authResult.permanent) {
 				// Log the fallback to UI
 				if (this.onAuthFallback) {
-					this.onAuthFallback(url, authResult.error || "Auth failed");
+					this.onAuthFallback(url, authResult.error ?? "Auth failed");
 				}
 				const noAuthResult = await this.submitUrlWithAuth(url, false);
 				// If both auth and no-auth failed, mark as permanent to avoid retries
@@ -632,7 +681,7 @@ export class WaybackCommand {
 				const location = response.headers.get("location");
 				if (location) {
 					// Ensure the location includes id_ suffix in the timestamp
-					const correctedUrl = location.replace(/\/web\/(\d{14})\//, "/web/$1id_/");
+					const correctedUrl = location.replace(/\/web\/(\d{14})\//, `/web/$1${TIMESTAMP_ID_SUFFIX}/`);
 					return { success: true, archiveUrl: correctedUrl };
 				}
 
@@ -642,13 +691,13 @@ export class WaybackCommand {
 					// Ensure the content-location includes id_ suffix in the timestamp
 					const archiveUrl = contentLocation.startsWith("http") ? contentLocation : `https://web.archive.org${contentLocation}`;
 					// If the content-location doesn't have id_ after the timestamp, add it
-					const correctedUrl = archiveUrl.replace(/\/web\/(\d{14})\//, "/web/$1id_/");
+					const correctedUrl = archiveUrl.replace(/\/web\/(\d{14})\//, `/web/$1${TIMESTAMP_ID_SUFFIX}/`);
 					return { success: true, archiveUrl: correctedUrl };
 				}
 
 				// If no location headers, check if we got an HTML response (indicates error/confirmation page)
 				const contentType = response.headers.get("content-type");
-				if (contentType && contentType.includes("text/html")) {
+				if (contentType?.includes(CONTENT_TYPE_HTML)) {
 					// This is likely an HTML page (donation prompt, error page, etc.)
 					// Try to read the response to understand what happened
 					let responseText = "";
@@ -688,25 +737,25 @@ export class WaybackCommand {
 
 			// Handle specific error responses
 			switch (response.status) {
-				case 429: {
+				case HTTP_STATUS_TOO_MANY_REQUESTS: {
 					return { success: false, error: "Rate limited (429)", permanent: false };
 				}
-				case 403: {
+				case HTTP_STATUS_FORBIDDEN: {
 					return { success: false, error: `Forbidden (403) - ${responseText || "URL may be blocked"}`, permanent: true };
 				}
-				case 404: {
+				case HTTP_STATUS_NOT_FOUND: {
 					return { success: false, error: `Original URL not found (404) - ${responseText || "URL may not exist"}`, permanent: true };
 				}
-				case 423: {
+				case HTTP_STATUS_LOCKED: {
 					return { success: false, error: `Locked (423) - ${responseText || "Resource is locked"}`, permanent: false };
 				}
-				case 503: {
+				case HTTP_STATUS_SERVICE_UNAVAILABLE: {
 					return { success: false, error: `Service unavailable (503) - ${responseText || "Wayback Machine temporarily unavailable"}`, permanent: false };
 				}
 				default: {
-					if (response.status >= 500) {
+					if (response.status >= HTTP_STATUS_SERVER_ERROR_MIN) {
 						return { success: false, error: `Server error (${response.status}) - ${responseText || "Server-side issue"}`, permanent: false };
-					} else if (response.status >= 400) {
+					} else if (response.status >= HTTP_STATUS_CLIENT_ERROR_MIN) {
 						return { success: false, error: `Client error (${response.status}) - ${responseText || "Request issue"}`, permanent: true };
 					} else {
 						// This shouldn't happen since response.ok is false, but handle it anyway
@@ -733,7 +782,7 @@ export class WaybackCommand {
 	private async loadCheckpoint(): Promise<WaybackCheckpoint | null> {
 		try {
 			const content = await fs.readFile(this.checkpointPath, "utf8");
-			return JSON.parse(content);
+			return JSON.parse(content) as WaybackCheckpoint;
 		} catch {
 			return null;
 		}
@@ -743,7 +792,7 @@ export class WaybackCommand {
 		if (!this.checkpoint) return;
 
 		const tempPath = `${this.checkpointPath}.tmp`;
-		await fs.writeFile(tempPath, JSON.stringify(this.checkpoint, null, 2), "utf-8");
+		await fs.writeFile(tempPath, JSON.stringify(this.checkpoint, null, JSON_INDENT), UTF8_ENCODING);
 		await fs.rename(tempPath, this.checkpointPath);
 	}
 
@@ -752,11 +801,11 @@ export class WaybackCommand {
 		await fs.mkdir(absoluteOutputDir, { recursive: true });
 
 		const resultsPath = path.join(absoluteOutputDir, "wayback-results.json");
-		await fs.writeFile(resultsPath, JSON.stringify(result, null, 2), "utf-8");
+		await fs.writeFile(resultsPath, JSON.stringify(result, null, JSON_INDENT), UTF8_ENCODING);
 
 		if (this.checkpoint) {
 			const checkpointCopyPath = path.join(absoluteOutputDir, "wayback-checkpoint.json");
-			await fs.writeFile(checkpointCopyPath, JSON.stringify(this.checkpoint, null, 2), "utf-8");
+			await fs.writeFile(checkpointCopyPath, JSON.stringify(this.checkpoint, null, JSON_INDENT), UTF8_ENCODING);
 		}
 
 		console.log(`Results saved to ${resultsPath}`);
@@ -783,8 +832,8 @@ export class WaybackCommand {
 
 		// If archive is too new, skip submission
 		if (ageCheck.result === "too_new") {
-			if (verbose) {
-				console.log(`  Archive exists and is too recent (${this.formatDuration(ageCheck.archive!.age)} old)`);
+			if (verbose && ageCheck.archive) {
+				console.log(`  Archive exists and is too recent (${this.formatDuration(ageCheck.archive.age)} old)`);
 			}
 			processedSubmission.status = "skipped";
 			return processedSubmission;
@@ -866,9 +915,9 @@ export class WaybackCommand {
 				return { result: "not_archived" };
 			}
 
-			const data: WaybackAvailableResponse = await response.json();
+			const data = await response.json() as WaybackAvailableResponse;
 
-			if (!data.archived_snapshots?.closest?.available) {
+			if (!data.archived_snapshots.closest.available) {
 				return { result: "not_archived" };
 			}
 
@@ -896,19 +945,19 @@ export class WaybackCommand {
 	 */
 	private async loadArchiveCache(): Promise<ArchiveCache> {
 		try {
-			const content = await fs.readFile(this.archiveCachePath, "utf8");
+			const content = await fs.readFile(this.archiveCachePath, UTF8_ENCODING);
 			const cache = JSON.parse(content) as ArchiveCache;
 
 			// Validate cache version
-			if (cache.version !== 1) {
+			if (cache.version !== CACHE_VERSION) {
 				console.log("Archive cache version mismatch, starting fresh");
-				return { version: 1, entries: {} };
+				return { version: CACHE_VERSION, entries: {} };
 			}
 
 			return cache;
 		} catch {
 			// No cache file or invalid JSON, start fresh
-			return { version: 1, entries: {} };
+			return { version: CACHE_VERSION, entries: {} };
 		}
 	}
 
@@ -919,7 +968,7 @@ export class WaybackCommand {
 		if (!this.archiveCacheDirty || !this.archiveCache) return;
 
 		const tempPath = `${this.archiveCachePath}.tmp`;
-		await fs.writeFile(tempPath, JSON.stringify(this.archiveCache, null, 2), "utf-8");
+		await fs.writeFile(tempPath, JSON.stringify(this.archiveCache, null, JSON_INDENT), UTF8_ENCODING);
 		await fs.rename(tempPath, this.archiveCachePath);
 		this.archiveCacheDirty = false;
 	}
@@ -935,11 +984,11 @@ export class WaybackCommand {
 		const value = Number.parseInt(num, 10);
 
 		switch (unit) {
-			case "d": { return value * 24 * 60 * 60 * 1000;
+			case "d": { return value * HOURS_IN_DAY * MINUTES_IN_HOUR * SECONDS_IN_MINUTE * MS_IN_SECOND;
 			} // days to ms
-			case "m": { return value * 30 * 24 * 60 * 60 * 1000;
+			case "m": { return value * DAYS_IN_MONTH_APPROX * HOURS_IN_DAY * MINUTES_IN_HOUR * SECONDS_IN_MINUTE * MS_IN_SECOND;
 			} // months to ms (approximate)
-			case "y": { return value * 365 * 24 * 60 * 60 * 1000;
+			case "y": { return value * DAYS_IN_YEAR_APPROX * HOURS_IN_DAY * MINUTES_IN_HOUR * SECONDS_IN_MINUTE * MS_IN_SECOND;
 			} // years to ms (approximate)
 			default: {
 				throw new Error(`Invalid duration unit: ${unit}. Use d, m, or y`);
@@ -948,7 +997,7 @@ export class WaybackCommand {
 	}
 
 	private parseWaybackTimestamp(timestamp: string): Date {
-		if (timestamp.length !== 14) {
+		if (timestamp.length !== WAYBACK_TIMESTAMP_LENGTH) {
 			throw new Error(`Invalid Wayback timestamp format: ${timestamp}`);
 		}
 
@@ -957,17 +1006,17 @@ export class WaybackCommand {
 		const day = Number.parseInt(timestamp.slice(6, 8), 10);
 		const hour = Number.parseInt(timestamp.slice(8, 10), 10);
 		const minute = Number.parseInt(timestamp.slice(10, 12), 10);
-		const second = Number.parseInt(timestamp.slice(12, 14), 10);
+		const second = Number.parseInt(timestamp.slice(12, WAYBACK_TIMESTAMP_LENGTH), 10);
 
 		return new Date(Date.UTC(year, month, day, hour, minute, second));
 	}
 
 	private formatDuration(ms: number): string {
-		const days = Math.floor(ms / (24 * 60 * 60 * 1000));
-		const remainingMs = ms % (24 * 60 * 60 * 1000);
-		const hours = Math.floor(remainingMs / (60 * 60 * 1000));
-		const remainingMinutesMs = remainingMs % (60 * 60 * 1000);
-		const minutes = Math.floor(remainingMinutesMs / (60 * 1000));
+		const days = Math.floor(ms / MS_IN_DAY);
+		const remainingMs = ms % MS_IN_DAY;
+		const hours = Math.floor(remainingMs / (MINUTES_IN_HOUR * SECONDS_IN_MINUTE * MS_IN_SECOND));
+		const remainingMinutesMs = remainingMs % (MINUTES_IN_HOUR * SECONDS_IN_MINUTE * MS_IN_SECOND);
+		const minutes = Math.floor(remainingMinutesMs / (SECONDS_IN_MINUTE * MS_IN_SECOND));
 
 		if (days > 0) {
 			return `${days}d ${hours}h`;

@@ -1,5 +1,5 @@
 import { promises as fs } from "node:fs";
-import * as path from "node:path";
+import path from "node:path";
 
 import { DEFAULT_VALUES } from "../constants/cli-constants.js";
 import type { CheckpointData, CheckpointMetadata } from "../types/profile-types.js";
@@ -9,14 +9,21 @@ export interface CheckpointOptions {
   maxRetries?: number;
 }
 
+const DEFAULT_CHECKPOINT_FILE = ".gundam-scraper-checkpoint.json";
+const DEFAULT_MAX_RETRIES = 3;
+const DEFAULT_CLEANUP_AGE_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+const DEFAULT_MAX_AGE_MS = 24 * 60 * 60 * 1000; // 24 hours
+const DEFAULT_CLEANUP_INTERVAL_MS = 60 * 60 * 1000; // 1 hour
+const UNKNOWN_ERROR_MESSAGE = "Unknown error";
+
 export class CheckpointManager {
 	private checkpointFile: string;
 	private maxRetries: number;
 
 	constructor(options: CheckpointOptions = {}) {
-		this.checkpointFile = options.checkpointFile ||
-      path.join(process.cwd(), ".gundam-scraper-checkpoint.json");
-		this.maxRetries = options.maxRetries || 3;
+		this.checkpointFile = options.checkpointFile ??
+      path.join(process.cwd(), DEFAULT_CHECKPOINT_FILE);
+		this.maxRetries = options.maxRetries ?? DEFAULT_MAX_RETRIES;
 	}
 
 	async saveCheckpoint(data: CheckpointData): Promise<void> {
@@ -29,20 +36,20 @@ export class CheckpointManager {
 			};
 
 			const tempFile = `${this.checkpointFile}.tmp`;
-			await fs.writeFile(tempFile, JSON.stringify(checkpoint, null, 2), "utf-8");
+			await fs.writeFile(tempFile, JSON.stringify(checkpoint, null, 2), "utf8");
 			await fs.rename(tempFile, this.checkpointFile);
 		} catch (error) {
-			throw new Error(`Failed to save checkpoint: ${error instanceof Error ? error.message : "Unknown error"}`);
+			throw new Error(`Failed to save checkpoint: ${error instanceof Error ? error.message : UNKNOWN_ERROR_MESSAGE}`);
 		}
 	}
 
 	async loadCheckpoint(): Promise<CheckpointData | null> {
 		try {
 			const data = await fs.readFile(this.checkpointFile, "utf8");
-			const checkpoint = JSON.parse(data);
+			const checkpoint: unknown = JSON.parse(data);
 
 			// Validate checkpoint structure
-			if (!checkpoint.data || !checkpoint.timestamp || !checkpoint.version) {
+			if (!this.isValidCheckpoint(checkpoint)) {
 				throw new Error("Invalid checkpoint format");
 			}
 
@@ -52,9 +59,19 @@ export class CheckpointManager {
 				// File doesn't exist - that's okay
 				return null;
 			}
-			console.warn(`Failed to load checkpoint: ${error instanceof Error ? error.message : "Unknown error"}`);
+			console.warn(`Failed to load checkpoint: ${error instanceof Error ? error.message : UNKNOWN_ERROR_MESSAGE}`);
 			return null;
 		}
+	}
+
+	private isValidCheckpoint(checkpoint: unknown): checkpoint is { data: unknown; timestamp: number; version: string } {
+		return (
+			typeof checkpoint === "object" &&
+			checkpoint !== null &&
+			"data" in checkpoint &&
+			"timestamp" in checkpoint &&
+			"version" in checkpoint
+		);
 	}
 
 	async updateCheckpoint(updateFn: (data: CheckpointData | null) => CheckpointData): Promise<CheckpointData> {
@@ -72,7 +89,7 @@ export class CheckpointManager {
 				// File doesn't exist - that's okay
 				return;
 			}
-			throw new Error(`Failed to delete checkpoint: ${error instanceof Error ? error.message : "Unknown error"}`);
+			throw new Error(`Failed to delete checkpoint: ${error instanceof Error ? error.message : UNKNOWN_ERROR_MESSAGE}`);
 		}
 	}
 
@@ -88,9 +105,9 @@ export class CheckpointManager {
 	async getCheckpointAge(): Promise<number | null> {
 		try {
 			const data = await fs.readFile(this.checkpointFile, "utf8");
-			const checkpoint = JSON.parse(data);
+			const checkpoint: unknown = JSON.parse(data);
 
-			if (!checkpoint.timestamp) {
+			if (!this.isValidCheckpoint(checkpoint)) {
 				return null;
 			}
 
@@ -100,7 +117,7 @@ export class CheckpointManager {
 		}
 	}
 
-	async isCheckpointExpired(maxAge: number = 24 * 60 * 60 * 1000): Promise<boolean> {
+	async isCheckpointExpired(maxAge: number = DEFAULT_MAX_AGE_MS): Promise<boolean> {
 		const age = await this.getCheckpointAge();
 		return age !== null && age > maxAge;
 	}
@@ -144,7 +161,7 @@ export class CheckpointManager {
 			timestamp: now,
 			remainingUrls,
 			completedUrls,
-			metadata: metadata || {},
+			metadata: metadata ?? {},
 			status: "in_progress",
 			createdAt: now,
 			lastUpdated: now,
@@ -167,13 +184,13 @@ export class CheckpointManager {
 		}
 
 		return {
-			source: (data.source) || "",
-			remainingUrls: (data["remainingUrls"] as string[]) || [],
-			completedUrls: (data["completedUrls"] as string[]) || [],
-			metadata: (data["metadata"] as CheckpointMetadata) || {},
-			status: (data["status"] as string) || DEFAULT_VALUES.UNKNOWN_STATUS,
-			createdAt: (data["createdAt"] as number) || Date.now(),
-			lastUpdated: (data["lastUpdated"] as number) || Date.now(),
+			source: typeof data.source === "string" ? data.source : "",
+			remainingUrls: Array.isArray(data["remainingUrls"]) ? (data["remainingUrls"] as string[]) : [],
+			completedUrls: Array.isArray(data["completedUrls"]) ? (data["completedUrls"] as string[]) : [],
+			metadata: (typeof data["metadata"] === "object" && data["metadata"] !== null) ? (data["metadata"] as CheckpointMetadata) : {},
+			status: typeof data["status"] === "string" ? data["status"] : DEFAULT_VALUES.UNKNOWN_STATUS,
+			createdAt: typeof data["createdAt"] === "number" ? data["createdAt"] : Date.now(),
+			lastUpdated: typeof data["lastUpdated"] === "number" ? data["lastUpdated"] : Date.now(),
 		};
 	}
 
@@ -215,16 +232,20 @@ export class AutoCleanupCheckpointManager extends CheckpointManager {
 
 	constructor(options: CheckpointOptions & { cleanupAge?: number } = {}) {
 		super(options);
-		this.cleanupAge = options.cleanupAge || 7 * 24 * 60 * 60 * 1000; // 7 days default
+		this.cleanupAge = options.cleanupAge ?? DEFAULT_CLEANUP_AGE_MS;
 	}
 
-	startAutoCleanup(intervalMs: number = 60 * 60 * 1000): void {
-		this.cleanupInterval = setInterval(async () => {
-			if (await this.isCheckpointExpired(this.cleanupAge)) {
-				console.log("🧹 Cleaning up expired checkpoint...");
-				await this.deleteCheckpoint();
-			}
+	startAutoCleanup(intervalMs: number = DEFAULT_CLEANUP_INTERVAL_MS): void {
+		this.cleanupInterval = setInterval(() => {
+			void this.cleanupExpiredCheckpoint();
 		}, intervalMs);
+	}
+
+	private async cleanupExpiredCheckpoint(): Promise<void> {
+		if (await this.isCheckpointExpired(this.cleanupAge)) {
+			console.log("🧹 Cleaning up expired checkpoint...");
+			await this.deleteCheckpoint();
+		}
 	}
 
 	stopAutoCleanup(): void {
