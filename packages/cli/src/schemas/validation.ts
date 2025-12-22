@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 import type { LanguageDetection } from "../types/language-detection.js";
-import type { ProductData, GundamData } from "../types/product-data.js";
+import type { ProductData } from "../types/product-data.js";
 
 export const PriceInfoSchema = z.object({
 	amount: z.number().positive(),
@@ -38,7 +38,7 @@ export const ProductDataSchema = z.object({
 	price: PriceInfoSchema.optional(),
 	description: z.string().max(2000).optional(),
 	specifications: z.record(z.string(), SpecificationValueSchema),
-	detectedLanguage: z.custom<LanguageDetection>(), // Will be validated separately
+	detectedLanguage: z.custom<LanguageDetection>((val): val is LanguageDetection => typeof val === "object" && val !== null),
 	source: DataSourceInfoSchema,
 	url: z.string().url(),
 	extractedAt: z.number().int().positive(),

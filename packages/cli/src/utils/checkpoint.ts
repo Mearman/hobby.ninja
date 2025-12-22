@@ -2,7 +2,7 @@ import { promises as fs } from "node:fs";
 import * as path from "node:path";
 
 import { DEFAULT_VALUES } from "../constants/cli-constants.js";
-import { CheckpointData, CheckpointMetadata, ScrapeMetadata } from "../types/profile-types.js";
+import type { CheckpointData, CheckpointMetadata } from "../types/profile-types.js";
 
 export interface CheckpointOptions {
   checkpointFile?: string;
@@ -112,9 +112,10 @@ export class CheckpointManager {
 			}
 
 			const currentRetries = (data["retries"] as number) || 0;
-			data["retries"] = currentRetries + 1;
+			const newRetries = currentRetries + 1;
+			data["retries"] = newRetries;
 
-			if (data["retries"] > this.maxRetries) {
+			if (newRetries > this.maxRetries) {
 				throw new Error(`Maximum retries exceeded (${this.maxRetries})`);
 			}
 
@@ -136,15 +137,17 @@ export class CheckpointManager {
 
 	// Utility methods for managing different checkpoint types
 	async saveScrapeProgress(source: string, remainingUrls: string[], completedUrls: string[], metadata?: CheckpointMetadata): Promise<void> {
+		const now = Date.now();
 		await this.saveCheckpoint({
 			type: "scrape",
 			source,
+			timestamp: now,
 			remainingUrls,
 			completedUrls,
 			metadata: metadata || {},
 			status: "in_progress",
-			createdAt: Date.now(),
-			lastUpdated: Date.now(),
+			createdAt: now,
+			lastUpdated: now,
 		});
 	}
 

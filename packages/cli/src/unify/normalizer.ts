@@ -184,7 +184,7 @@ export function jaroWinklerSimilarity(s1: string, s2: string): number {
 	let transpositions = 0;
 
 	// Find matches
-	for (const [i, element] of s1.entries()) {
+	for (const [i, element] of [...s1].entries()) {
 		const start = Math.max(0, i - matchDistance);
 		const end = Math.min(i + matchDistance + 1, s2.length);
 
@@ -201,7 +201,7 @@ export function jaroWinklerSimilarity(s1: string, s2: string): number {
 
 	// Count transpositions
 	let k = 0;
-	for (const [i, element] of s1.entries()) {
+	for (const [i, element] of [...s1].entries()) {
 		if (!s1Matches[i]) continue;
 		while (!s2Matches[k]) k++;
 		if (element !== s2[k]) transpositions++;
