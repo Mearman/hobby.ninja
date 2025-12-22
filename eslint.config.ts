@@ -140,6 +140,7 @@ export default [
 					path.resolve(__dirname, "packages/utils/tsconfig.test.json"),
 					path.resolve(__dirname, "packages/translation/tsconfig.json"),
 					path.resolve(__dirname, "packages/cli/tsconfig.json"),
+					path.resolve(__dirname, "packages/cli/tsconfig.test.json"),
 					path.resolve(__dirname, "apps/next/tsconfig.json"),
 					path.resolve(__dirname, "data/tsconfig.json"),
 					path.resolve(__dirname, "tsconfig.json"),
@@ -777,6 +778,9 @@ export default [
 			"no-emoji/no-emoji": "off",
 			"unicorn/no-process-exit": "off",
 			"unicorn/prefer-module": "off", // Allow require.main === module pattern
+			// CLI and scrapers have internal types/utils - relative imports within same package are valid
+			// The global no-restricted-imports rule is for cross-package imports only
+			"no-restricted-imports": "off",
 		},
 	},
 	// JSON data files must be minified (single line) - use eslint-plugin-jsonc
