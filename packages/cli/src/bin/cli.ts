@@ -9,7 +9,58 @@ import { Command } from "commander";
 import { config } from "dotenv";
 
 
+import type { DownloadSource } from "../cli/download-command.js";
+import type { NormalizeOptions } from "../cli/normalize-command.js";
+import type { TranslateOptions, TranslateSource } from "../cli/translate-command.js";
 import { CLI_COMMANDS, MESSAGES, FILES, NETWORK } from "../constants/index.js";
+import type { WaybackSource } from "../types/wayback.js";
+
+// Type guards for CLI options
+const TRANSLATE_SOURCES: readonly TranslateSource[] = ["all", "bandai-catalog", "bandai-manuals"];
+const NORMALIZE_SOURCES = ["all", "bandai-catalog", "bandai-manuals"] as const;
+const DOWNLOAD_SOURCES: readonly DownloadSource[] = ["all", "manuals", "catalog"];
+const WAYBACK_SOURCES: readonly WaybackSource[] = ["all", "manuals", "catalog"];
+
+function isTranslateSource(value: unknown): value is TranslateSource {
+	return typeof value === "string" && TRANSLATE_SOURCES.includes(value as TranslateSource);
+}
+
+function isDownloadSource(value: unknown): value is DownloadSource {
+	return typeof value === "string" && DOWNLOAD_SOURCES.includes(value as DownloadSource);
+}
+
+function isWaybackSource(value: unknown): value is WaybackSource {
+	return typeof value === "string" && WAYBACK_SOURCES.includes(value as WaybackSource);
+}
+
+function parseTranslateOptions(options: unknown): TranslateOptions {
+	const opts = options as Record<string, unknown>;
+	const source = opts["source"];
+	if (!isTranslateSource(source)) {
+		throw new Error(`Invalid source: ${String(source)}. Must be one of: ${TRANSLATE_SOURCES.join(", ")}`);
+	}
+	return {
+		source,
+		input: typeof opts["input"] === "string" ? opts["input"] : undefined,
+		cacheDir: typeof opts["cacheDir"] === "string" ? opts["cacheDir"] : undefined,
+		dryRun: opts["dryRun"] === true,
+		verbose: opts["verbose"] === true,
+	};
+}
+
+function parseNormalizeOptions(options: unknown): NormalizeOptions {
+	const opts = options as Record<string, unknown>;
+	const source = opts["source"];
+	if (typeof source !== "string" || !NORMALIZE_SOURCES.includes(source as typeof NORMALIZE_SOURCES[number])) {
+		throw new Error(`Invalid source: ${String(source)}. Must be one of: ${NORMALIZE_SOURCES.join(", ")}`);
+	}
+	return {
+		source: source as NormalizeOptions["source"],
+		input: typeof opts["input"] === "string" ? opts["input"] : undefined,
+		dryRun: opts["dryRun"] === true,
+		verbose: opts["verbose"] === true,
+	};
+}
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -87,13 +138,14 @@ program
 	.option(DRY_RUN_OPTION, PREVIEW_CHANGES, false)
 	.option(VERBOSE_OPTION, "Verbose output", false)
 	.action(async (options: unknown) => {
+		const parsedOptions = parseTranslateOptions(options);
 		try {
 			const { translateCatalogData } = await import("../cli/translate-command.js");
-			await translateCatalogData(options);
+			await translateCatalogData(parsedOptions);
 		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
 			console.error(ERROR_PREFIX.replace("%s", "translate"), errorMessage);
-			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
+			if (parsedOptions.verbose) {
 				const errorStack = error instanceof Error ? error.stack : String(error);
 				console.error(errorStack);
 			}
@@ -153,14 +205,15 @@ program
 	.option(DRY_RUN_OPTION, PREVIEW_CHANGES, false)
 	.option(VERBOSE_OPTION, "Verbose output", false)
 	.action(async (options: unknown) => {
+		const parsedOptions = parseNormalizeOptions(options);
 		try {
 			const { normalizeData } = await import("../cli/normalize-command.js");
-			await normalizeData(options);
+			await normalizeData(parsedOptions);
 			process.exit(0);
 		} catch (error: unknown) {
 			const errorMessage = error instanceof Error ? error.message : String(error);
 			console.error(ERROR_PREFIX.replace("%s", "normalize").replace("❌ ", ""), errorMessage);
-			if ((options as Record<string, unknown>)[VERBOSE_STRING]) {
+			if (parsedOptions.verbose) {
 				const errorStack = error instanceof Error ? error.stack : String(error);
 				console.error(errorStack);
 			}
@@ -219,18 +272,23 @@ program
 	.action(async (options: unknown) => {
 		try {
 			const { downloadAssets } = await import("../cli/download-command.js");
-			const typedOptions = options as {
-				source: string;
-				manualsSourceDir: string;
-				manualsDir: string;
-				catalogDir: string;
-				catalogImagesDir: string;
-				id: string;
-				concurrency: string;
-				delay: string;
-				recheck: boolean;
-				dryRun: boolean;
-				verbose: boolean;
+			const rawOptions = options as Record<string, unknown>;
+			const source = rawOptions["source"];
+			if (!isDownloadSource(source)) {
+				throw new Error(`Invalid source: ${String(source)}. Must be one of: ${DOWNLOAD_SOURCES.join(", ")}`);
+			}
+			const typedOptions = {
+				source,
+				manualsSourceDir: rawOptions["manualsSourceDir"] as string,
+				manualsDir: rawOptions["manualsDir"] as string,
+				catalogDir: rawOptions["catalogDir"] as string,
+				catalogImagesDir: rawOptions["catalogImagesDir"] as string,
+				id: rawOptions["id"] as string,
+				concurrency: rawOptions["concurrency"] as string,
+				delay: rawOptions["delay"] as string,
+				recheck: rawOptions["recheck"] === true,
+				dryRun: rawOptions["dryRun"] === true,
+				verbose: rawOptions["verbose"] === true,
 			};
 
 			console.log("Downloading assets from scraped data...");
@@ -251,7 +309,7 @@ program
 				manualsDir: typedOptions.manualsDir,
 				catalogDir: typedOptions.catalogDir,
 				catalogImagesDir: typedOptions.catalogImagesDir,
-				catalogIds: typedOptions.id ? typedOptions.id.split(',').map(id => id.trim()) : undefined,
+				catalogIds: typedOptions.id ? typedOptions.id.split(",").map(id => id.trim()) : undefined,
 				concurrency: Number.parseInt(typedOptions.concurrency, 10),
 				delayMs: Number.parseInt(typedOptions.delay, 10),
 				recheck: typedOptions.recheck,
@@ -310,21 +368,26 @@ program
 		try {
 			const { WaybackCommand } = await import("../cli/wayback.js");
 			const waybackCommand = new WaybackCommand();
-			const typedOptions = options as {
-				source: string;
-				manualsDir: string;
-				catalogDir: string;
-				delay: string;
-				rateLimitDelay: string;
-				retries: string;
-				accessKey?: string;
-				secretKey?: string;
-				output: string;
-				minArchiveAge: string;
-				maxArchiveAge: string;
-				resume: boolean;
-				dryRun: boolean;
-				verbose: boolean;
+			const rawOptions = options as Record<string, unknown>;
+			const source = rawOptions["source"];
+			if (!isWaybackSource(source)) {
+				throw new Error(`Invalid source: ${String(source)}. Must be one of: ${WAYBACK_SOURCES.join(", ")}`);
+			}
+			const typedOptions = {
+				source,
+				manualsDir: rawOptions["manualsDir"] as string,
+				catalogDir: rawOptions["catalogDir"] as string,
+				delay: rawOptions["delay"] as string,
+				rateLimitDelay: rawOptions["rateLimitDelay"] as string,
+				retries: rawOptions["retries"] as string,
+				accessKey: rawOptions["accessKey"] as string | undefined,
+				secretKey: rawOptions["secretKey"] as string | undefined,
+				output: rawOptions["output"] as string,
+				minArchiveAge: rawOptions["minArchiveAge"] as string,
+				maxArchiveAge: rawOptions["maxArchiveAge"] as string,
+				resume: rawOptions["resume"] === true,
+				dryRun: rawOptions["dryRun"] === true,
+				verbose: rawOptions["verbose"] === true,
 			};
 
 			// Parse API keys from options or environment
