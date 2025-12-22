@@ -7,11 +7,17 @@
  */
 
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { resolve } from "node:path";
+import path from "node:path";
 
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 
 const ITEMS_INDEX_PATH = resolveWorkspacePath("data/src/items/index.json");
+const SECONDS_PER_MINUTE = 60;
+const MINUTES_PER_HOUR = 60;
+const MILLISECONDS_PER_SECOND = 1000;
+const MILLISECONDS_PER_HOUR = SECONDS_PER_MINUTE * MINUTES_PER_HOUR * MILLISECONDS_PER_SECOND;
+const DEFAULT_PAGE_SCRAPE_MAX_AGE_HOURS = 168; // 7 days
+const DEFAULT_DOWNLOAD_VERIFICATION_MAX_AGE_HOURS = 24;
 
 /**
  * Pad the numeric suffix of an item ID to 4 digits for consistent indexing
@@ -22,8 +28,10 @@ function padItemId(id: string): string {
 	if (parts.length !== 2) return id;
 	const prefix = parts[0];
 	const suffix = parts[1];
+	const ZERO_PADDING_LENGTH = 4;
+	const ZERO_CHAR = "0";
 	if (!prefix || !suffix || !/^\d+$/.test(prefix) || !/^\d+$/.test(suffix)) return id;
-	return `${prefix}_${suffix.padStart(4, "0")}`;
+	return `${prefix}_${suffix.padStart(ZERO_PADDING_LENGTH, ZERO_CHAR)}`;
 }
 const ITEMS_DATA_DIR = resolveWorkspacePath("data/src/items");
 
@@ -106,10 +114,13 @@ function calculateStats(items: Record<string, ItemIndexEntry>): ItemsIndex["stat
 function getItemTimingFields(itemId: string): ItemTimingFields | null {
 	try {
 		const paddedId = padItemId(itemId);
-		const itemPath = resolve(ITEMS_DATA_DIR, `${paddedId}.json`);
+		const itemPath = path.resolve(ITEMS_DATA_DIR, `${paddedId}.json`);
 		if (!existsSync(itemPath)) return null;
 
-		const itemData = JSON.parse(readFileSync(itemPath, "utf-8"));
+		const itemData = JSON.parse(readFileSync(itemPath, "utf8")) as {
+			pageScrapedAt?: string;
+			downloadVerifiedAt?: string;
+		};
 		return {
 			pageScrapedAt: itemData.pageScrapedAt,
 			downloadVerifiedAt: itemData.downloadVerifiedAt,
@@ -122,14 +133,21 @@ function getItemTimingFields(itemId: string): ItemTimingFields | null {
 function setItemTimingFields(itemId: string, fields: Partial<ItemTimingFields>): boolean {
 	try {
 		const paddedId = padItemId(itemId);
-		const itemPath = resolve(ITEMS_DATA_DIR, `${paddedId}.json`);
+		const itemPath = path.resolve(ITEMS_DATA_DIR, `${paddedId}.json`);
 		if (!existsSync(itemPath)) return false;
 
-		const itemData = JSON.parse(readFileSync(itemPath, "utf-8"));
+		const itemData = JSON.parse(readFileSync(itemPath, "utf8")) as {
+			pageScrapedAt?: string;
+			downloadVerifiedAt?: string;
+		};
 
 		// Update timing fields
-		if (fields.pageScrapedAt !== undefined) itemData.pageScrapedAt = fields.pageScrapedAt;
-		if (fields.downloadVerifiedAt !== undefined) itemData.downloadVerifiedAt = fields.downloadVerifiedAt;
+		if (fields.pageScrapedAt !== undefined) {
+			itemData.pageScrapedAt = fields.pageScrapedAt;
+		}
+		if (fields.downloadVerifiedAt !== undefined) {
+			itemData.downloadVerifiedAt = fields.downloadVerifiedAt;
+		}
 
 		writeFileSync(itemPath, JSON.stringify(itemData, null, "\t"));
 		return true;
@@ -149,7 +167,7 @@ export const ItemsIndexUpdater = {
 		if (itemsIndex) return;
 
 		try {
-			itemsIndex = existsSync(ITEMS_INDEX_PATH) ? JSON.parse(readFileSync(ITEMS_INDEX_PATH, "utf-8")) as ItemsIndex : createEmptyIndex();
+			itemsIndex = existsSync(ITEMS_INDEX_PATH) ? JSON.parse(readFileSync(ITEMS_INDEX_PATH, "utf8")) as ItemsIndex : createEmptyIndex();
 		} catch {
 			itemsIndex = createEmptyIndex();
 		}
@@ -164,9 +182,7 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) return;
 
 		const paddedId = padItemId(itemId);
-		if (!itemsIndex.items[paddedId]) {
-			itemsIndex.items[paddedId] = {};
-		}
+		itemsIndex.items[paddedId] ??= {};
 
 		// Only update if not already checked or if this is new info
 		if (!itemsIndex.items[paddedId].japaneseSite) {
@@ -187,9 +203,7 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) return;
 
 		const paddedId = padItemId(itemId);
-		if (!itemsIndex.items[paddedId]) {
-			itemsIndex.items[paddedId] = {};
-		}
+		itemsIndex.items[paddedId] ??= {};
 
 		// Only update if not already checked
 		if (!itemsIndex.items[paddedId].japaneseSite) {
@@ -210,17 +224,13 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) return;
 
 		const paddedId = padItemId(itemId);
-		if (!itemsIndex.items[paddedId]) {
-			itemsIndex.items[paddedId] = {};
-		}
+		itemsIndex.items[paddedId] ??= {};
 
-		if (!itemsIndex.items[paddedId].japaneseSite) {
-			itemsIndex.items[paddedId].japaneseSite = {
-				hasPage: true,
-				pageCheckedAt: new Date().toISOString(),
-				productName,
-			};
-		}
+		itemsIndex.items[paddedId].japaneseSite ??= {
+			hasPage: true,
+			pageCheckedAt: new Date().toISOString(),
+			productName,
+		};
 
 		itemsIndex.items[paddedId].japaneseSite.isBlog = true;
 		isDirty = true;
@@ -238,6 +248,18 @@ export const ItemsIndexUpdater = {
 	},
 
 	/**
+	 * Get all item IDs marked as blog posts
+	 */
+	getBlogItemIds(): string[] {
+		if (!itemsIndex) this.load();
+		if (!itemsIndex) return [];
+
+		return Object.entries(itemsIndex.items)
+			.filter(([, entry]) => entry.japaneseSite?.isBlog === true)
+			.map(([id]) => id);
+	},
+
+	/**
 	 * Save the items index to disk if changed
 	 */
 	save(): void {
@@ -249,7 +271,8 @@ export const ItemsIndexUpdater = {
 			writeFileSync(ITEMS_INDEX_PATH, JSON.stringify(itemsIndex, null, "\t"));
 			isDirty = false;
 		} catch (error) {
-			console.warn(`⚠️  Failed to save items index: ${error}`);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			console.warn(`⚠️  Failed to save items index: ${errorMessage}`);
 		}
 	},
 
@@ -290,9 +313,7 @@ export const ItemsIndexUpdater = {
 		if (!itemsIndex) return;
 
 		const paddedId = padItemId(itemId);
-		if (!itemsIndex.items[paddedId]) {
-			itemsIndex.items[paddedId] = {};
-		}
+		itemsIndex.items[paddedId] ??= {};
 
 		// Update Japanese site status if not set
 		if (!itemsIndex.items[paddedId].japaneseSite) {
@@ -301,7 +322,7 @@ export const ItemsIndexUpdater = {
 				pageCheckedAt: new Date().toISOString(),
 				productName,
 			};
-		} else if (productName && !itemsIndex.items[paddedId].japaneseSite?.productName) {
+		} else if (productName && !itemsIndex.items[paddedId].japaneseSite.productName) {
 			itemsIndex.items[paddedId].japaneseSite.productName = productName;
 		}
 
@@ -386,13 +407,13 @@ export const ItemsIndexUpdater = {
 	/**
 	 * Check if page content was recently scraped (within specified hours)
 	 */
-	wasPageRecentlyScraped(itemId: string, maxAgeHours = 168): boolean { // Default 7 days (168 hours)
+	wasPageRecentlyScraped(itemId: string, maxAgeHours = DEFAULT_PAGE_SCRAPE_MAX_AGE_HOURS): boolean {
 		const timingFields = getItemTimingFields(itemId);
 		if (!timingFields?.pageScrapedAt) return false;
 
 		// Check if page scraping is recent enough
 		const scrapeTime = new Date(timingFields.pageScrapedAt).getTime();
-		const maxAge = maxAgeHours * 60 * 60 * 1000;
+		const maxAge = maxAgeHours * MILLISECONDS_PER_HOUR;
 		const now = Date.now();
 
 		return (now - scrapeTime) <= maxAge;
@@ -410,13 +431,13 @@ export const ItemsIndexUpdater = {
 	/**
 	 * Check if an item needs download verification (all images downloaded recently)
 	 */
-	needsDownloadVerification(itemId: string, maxAgeHours = 24): boolean {
+	needsDownloadVerification(itemId: string, maxAgeHours = DEFAULT_DOWNLOAD_VERIFICATION_MAX_AGE_HOURS): boolean {
 		const timingFields = getItemTimingFields(itemId);
 		if (!timingFields?.downloadVerifiedAt) return true;
 
 		// Check if verification is too old
 		const verificationTime = new Date(timingFields.downloadVerifiedAt).getTime();
-		const maxAge = maxAgeHours * 60 * 60 * 1000;
+		const maxAge = maxAgeHours * MILLISECONDS_PER_HOUR;
 		const now = Date.now();
 
 		return (now - verificationTime) > maxAge;

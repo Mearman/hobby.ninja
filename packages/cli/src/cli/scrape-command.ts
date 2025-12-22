@@ -54,17 +54,17 @@ async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 	const delayMs = options.delayMs ?? options.delay ?? DEFAULT_TIMEOUTS.SHORT;
 	const startId = options.startId ?? CATALOG_DISCOVERY.DEFAULT_START_ID;
 	const count = options.count ?? CATALOG_DISCOVERY.DEFAULT_COUNT;
-	const verbose = options.verbose ?? false;
+	const verbose = options.verbose;
 
 	console.log("🔍 Starting Bandai catalog discovery...");
 
 	// Generate ranges starting from startId
 	// Bandai uses variable-length IDs (e.g., 01_1, 01_778, 01_1000)
 	const [prefix, suffix] = startId.split("_");
-	const startIndex = Number.parseInt(suffix || "0");
+	const startIndex = Number.parseInt(suffix ?? "0");
 	const ranges = generateCatalogRanges(count).map((_, index) => {
 		const id = startIndex + index;
-		return `${prefix}_${id}`;
+		return `${String(prefix)}_${String(id)}`;
 	});
 
 	if (verbose) {
@@ -75,8 +75,8 @@ async function scrapeBandaiCatalog(options: ScrapeOptions): Promise<void> {
 	const catalogOptions = {
 		ranges,
 		outputDir: output,
-		cache: options.cache ?? true,
-		resume: options.resume ?? false,
+		cache: options.cache,
+		resume: options.resume,
 		verbose,
 		delayMs,
 		translate: options.translate ?? false,

@@ -11,6 +11,9 @@ import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 
 const MANUALS_INDEX_PATH = resolveWorkspacePath("data/src/manuals/index.json");
 
+// Helper function to get current ISO timestamp
+const getCurrentTimestamp = (): string => getCurrentTimestamp();
+
 interface ManualIndexEntry {
 	hasPage: boolean;
 	checkedAt: string;
@@ -36,7 +39,7 @@ let isDirty = false;
 function createEmptyIndex(): ManualsIndex {
 	return {
 		version: "1.0.0",
-		updatedAt: new Date().toISOString(),
+		updatedAt: getCurrentTimestamp(),
 		stats: {
 			totalChecked: 0,
 			withPage: 0,
@@ -69,7 +72,7 @@ export const ManualsIndexUpdater = {
 
 		try {
 			manualsIndex = existsSync(MANUALS_INDEX_PATH)
-				? JSON.parse(readFileSync(MANUALS_INDEX_PATH, "utf-8")) as ManualsIndex
+				? JSON.parse(readFileSync(MANUALS_INDEX_PATH, "utf8")) as ManualsIndex
 				: createEmptyIndex();
 		} catch {
 			manualsIndex = createEmptyIndex();
@@ -88,7 +91,7 @@ export const ManualsIndexUpdater = {
 		if (!entry) {
 			manualsIndex.manuals[manualId] = {
 				hasPage: true,
-				checkedAt: new Date().toISOString(),
+				checkedAt: getCurrentTimestamp(),
 				name,
 			};
 			isDirty = true;
@@ -106,7 +109,7 @@ export const ManualsIndexUpdater = {
 		if (!entry) {
 			manualsIndex.manuals[manualId] = {
 				hasPage: false,
-				checkedAt: new Date().toISOString(),
+				checkedAt: getCurrentTimestamp(),
 				error,
 			};
 			isDirty = true;
@@ -122,14 +125,14 @@ export const ManualsIndexUpdater = {
 
 		const entry = manualsIndex.manuals[manualId];
 		if (entry) {
-			entry.checkedAt = new Date().toISOString();
+			entry.checkedAt = getCurrentTimestamp();
 			if (name) entry.name = name;
 			isDirty = true;
 		} else {
 			// New entry - assume valid if being checked
 			manualsIndex.manuals[manualId] = {
 				hasPage: true,
-				checkedAt: new Date().toISOString(),
+				checkedAt: getCurrentTimestamp(),
 				name,
 			};
 			isDirty = true;
@@ -144,11 +147,11 @@ export const ManualsIndexUpdater = {
 
 		try {
 			manualsIndex.stats = calculateStats(manualsIndex.manuals);
-			manualsIndex.updatedAt = new Date().toISOString();
+			manualsIndex.updatedAt = getCurrentTimestamp();
 			writeFileSync(MANUALS_INDEX_PATH, JSON.stringify(manualsIndex, null, "\t"));
 			isDirty = false;
 		} catch (error) {
-			console.warn(`⚠️  Failed to save manuals index: ${error}`);
+			console.warn(`⚠️  Failed to save manuals index: ${error instanceof Error ? error.message : String(error)}`);
 		}
 	},
 

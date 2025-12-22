@@ -26,7 +26,7 @@ import {
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
 import { chromium, type Browser, type BrowserContext, type Route } from "playwright";
 
-// eslint-disable-next-line no-restricted-imports -- CLI-internal utility
+ 
 import { BandaiRateLimiter } from "../utils/rate-limiter.js";
 
 import { BandaiCatalogParser, type EntityData, type Item, type ItemImage } from "./bandai-catalog-parser.js";
@@ -206,6 +206,15 @@ export class ScrapeCommand {
 				const itemId = allItemIds[i];
 				if (!itemId) continue;
 
+				// Check if item is a blog post - cleanup and skip
+				if (ItemsIndexUpdater.isBlog(itemId)) {
+					const removed = await this.cleanupBlogItem(itemId);
+					if (removed) {
+						console.log(`\n--- [${i + 1}/${allItemIds.length}] Removed blog item ${itemId} ---`);
+					}
+					continue;
+				}
+
 				const needsScrape = itemsNeedingScrape.has(itemId);
 
 				// If item needs scraping, do full processing
@@ -362,6 +371,47 @@ export class ScrapeCommand {
 	}
 
 	/**
+	 * Remove JSON/HTML files for a blog post item
+	 * @returns true if any files were removed
+	 */
+	private async cleanupBlogItem(id: string): Promise<boolean> {
+		const jsonPath = path.join(ITEMS_DATA_DIR, `${id}.json`);
+		const htmlPath = path.join(ITEMS_DATA_DIR, `${id}.html`);
+		const enHtmlPath = path.join(ITEMS_DATA_DIR, `${id}.en.html`);
+		const assetsPath = path.join(ASSETS_DIR, id);
+		let removed = false;
+
+		// Remove JSON file
+		try {
+			await fs.unlink(jsonPath);
+			removed = true;
+		} catch {
+			// File doesn't exist, skip
+		}
+
+		// Remove HTML cache files
+		try {
+			await fs.unlink(htmlPath);
+		} catch {
+			// File doesn't exist, skip
+		}
+		try {
+			await fs.unlink(enHtmlPath);
+		} catch {
+			// File doesn't exist, skip
+		}
+
+		// Remove assets directory if it exists
+		try {
+			await fs.rm(assetsPath, { recursive: true, force: true });
+		} catch {
+			// Directory doesn't exist, skip
+		}
+
+		return removed;
+	}
+
+	/**
 	 * Get manual IDs that weren't discovered via items (orphans)
 	 */
 	private getOrphanManualIds(maxAgeHours: number): string[] {
@@ -462,7 +512,7 @@ export class ScrapeCommand {
 				hasGlobalTranslation = true;
 
 				// Store canonical translations in dictionary (persisted immediately)
-				await this.storeCanonicalTranslations(itemData, globalData);
+				this.storeCanonicalTranslations(itemData, globalData);
 
 				if (options.verbose) {
 					console.log(`  ✓ English translation found: ${globalData.name ?? "(name)"}`);
@@ -973,22 +1023,22 @@ export class ScrapeCommand {
 	 * These are official Bandai translations and should be preferred
 	 * Persists immediately to disk for crash safety
 	 */
-	private async storeCanonicalTranslations(item: Item, globalData: GlobalSiteData): Promise<void> {
+	private storeCanonicalTranslations(item: Item, globalData: GlobalSiteData): void {
 		// Store product name translation
 		if (globalData.name && item.name.ja) {
-			await addPhrase(item.name.ja, globalData.name, "product-name");
+			addPhrase(item.name.ja, globalData.name, "product-name");
 			this.translationsAdded = true;
 		}
 
 		// Store brand translation
 		if (globalData.brand && item.brands[0]?.ja) {
-			await addPhrase(item.brands[0].ja, globalData.brand, "brand");
+			addPhrase(item.brands[0].ja, globalData.brand, "brand");
 			this.translationsAdded = true;
 		}
 
 		// Store series translation
 		if (globalData.series && item.series[0]?.ja) {
-			await addPhrase(item.series[0].ja, globalData.series, "series");
+			addPhrase(item.series[0].ja, globalData.series, "series");
 			this.translationsAdded = true;
 		}
 	}
@@ -1077,7 +1127,7 @@ export class ScrapeCommand {
 				}
 
 				// Store canonical translations (persisted immediately)
-				await this.storeCanonicalTranslations(itemData, globalData);
+				this.storeCanonicalTranslations(itemData, globalData);
 
 				// Update globalSiteUrls if not set
 				if (!itemData.globalSiteUrls && globalData.url) {
