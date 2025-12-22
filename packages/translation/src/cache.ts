@@ -13,8 +13,8 @@ type TimerId = ReturnType<typeof setInterval>;
  * Uses LRU (Least Recently Used) eviction strategy
  */
 export class TranslationCache {
-	private cache: Map<string, CacheEntry> = new Map();
-	private accessOrder: Map<string, number> = new Map();
+	private cache = new Map<string, CacheEntry>();
+	private accessOrder = new Map<string, number>();
 	private accessCounter = 0;
 	private cleanupInterval: TimerId | null = null;
 	private hits = 0;
@@ -23,7 +23,7 @@ export class TranslationCache {
 	constructor(
     private maxSize: number = MAX_CACHE_SIZE,
     private defaultTtl: number = DEFAULT_CACHE_TTL,
-    private enablePeriodicCleanup: boolean = true,
+    private enablePeriodicCleanup = true,
 	) {
 		if (this.enablePeriodicCleanup) {
 			this.startPeriodicCleanup();
@@ -82,7 +82,7 @@ export class TranslationCache {
 		customTtl?: number,
 	): void {
 		const key = this.generateKey(text, sourceLanguage, targetLanguage);
-		const ttl = customTtl || this.defaultTtl;
+		const ttl = customTtl ?? this.defaultTtl;
 		const timestamp = Date.now();
 
 		// Evict oldest entries if cache is full
@@ -220,9 +220,15 @@ export class TranslationCache {
    * Start periodic cleanup of expired entries
    */
 	private startPeriodicCleanup(): void {
+		const CLEANUP_INTERVAL_MS = 60_000;
 		this.cleanupInterval = setInterval(() => {
 			this.evictExpired();
-		}, 60_000); // Clean up every minute
+		}, CLEANUP_INTERVAL_MS);
+
+		// Don't keep the process alive just for cache cleanup
+		if (typeof this.cleanupInterval.unref === "function") {
+			this.cleanupInterval.unref();
+		}
 	}
 
 	/**
