@@ -90,15 +90,6 @@ async function upsertEntities(entities: EntityData[], dataDir: string, verbose?:
 // ============================================================================
 
 /**
- * Extract image ID from URL or path (e.g., "153_1937" from various URL formats)
- */
-function extractImageId(urlOrPath: string): string | null {
-	// Match patterns like "153_1937" from URLs/paths
-	const match = /(\d+_\d+)(?:_s_[a-z0-9]+)?\.jpg/i.exec(urlOrPath);
-	return match?.[1] ?? null;
-}
-
-/**
  * Merge scraped item data with existing curated data
  * Preserves: English translations, downloadVerifiedAt, image paths, and other curated fields
  * Updates: Japanese data from fresh scrape, adds new fields
@@ -203,53 +194,49 @@ function mergeItemData(scraped: Item, existing: Record<string, unknown>): Item {
 
 	// Merge images: preserve local paths from existing, update source URLs from scrape
 	if (scraped.images && existing.images) {
-		// Build map of existing image paths by image ID
-		const existingPathMap = new Map<string, string>();
-
-		// Handle old format (flat array) or new format (object with product/instructions)
 		const existingImages = existing.images;
+
+		// Collect existing local paths (strings starting with /images/)
+		const existingLocalPaths: string[] = [];
+
 		if (Array.isArray(existingImages)) {
-			// Old format: flat array of strings or objects
+			// Old format: flat array of strings like "/images/items/01_7017/01_7017_0.jpg"
 			for (const img of existingImages) {
 				const imgPath = typeof img === "string" ? img : (img as { path?: string }).path;
-				if (imgPath) {
-					const imgId = extractImageId(imgPath);
-					if (imgId) existingPathMap.set(imgId, imgPath);
+				if (imgPath?.startsWith("/images/")) {
+					existingLocalPaths.push(imgPath);
 				}
 			}
 		} else if (typeof existingImages === "object") {
-			// New format: { product: [], instructions: [] }
+			// New format: { product: [{src, path?}], instructions: [{src, path?}] }
 			const imgObj = existingImages as { product?: unknown[]; instructions?: unknown[] };
 			for (const img of imgObj.product ?? []) {
 				const imgPath = typeof img === "string" ? img : (img as { path?: string }).path;
-				if (imgPath) {
-					const imgId = extractImageId(imgPath);
-					if (imgId) existingPathMap.set(imgId, imgPath);
+				if (imgPath?.startsWith("/images/")) {
+					existingLocalPaths.push(imgPath);
 				}
 			}
 			for (const img of imgObj.instructions ?? []) {
 				const imgPath = typeof img === "string" ? img : (img as { path?: string }).path;
-				if (imgPath) {
-					const imgId = extractImageId(imgPath);
-					if (imgId) existingPathMap.set(imgId, imgPath);
+				if (imgPath?.startsWith("/images/")) {
+					existingLocalPaths.push(imgPath);
 				}
 			}
 		}
 
-		// Merge paths into scraped images
-		if (existingPathMap.size > 0) {
+		// Merge local paths into scraped images by position
+		if (existingLocalPaths.length > 0) {
+			let pathIndex = 0;
 			merged.images = {
 				product: scraped.images.product.map(img => {
-					const imgId = extractImageId(img.src);
-					if (imgId && existingPathMap.has(imgId)) {
-						return { ...img, path: existingPathMap.get(imgId) };
+					if (pathIndex < existingLocalPaths.length) {
+						return { ...img, path: existingLocalPaths[pathIndex++] };
 					}
 					return img;
 				}),
 				instructions: scraped.images.instructions.map(img => {
-					const imgId = extractImageId(img.src);
-					if (imgId && existingPathMap.has(imgId)) {
-						return { ...img, path: existingPathMap.get(imgId) };
+					if (pathIndex < existingLocalPaths.length) {
+						return { ...img, path: existingLocalPaths[pathIndex++] };
 					}
 					return img;
 				}),
