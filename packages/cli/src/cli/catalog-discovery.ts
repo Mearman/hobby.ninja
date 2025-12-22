@@ -2,6 +2,8 @@ import { existsSync, mkdirSync } from "node:fs";
 import { writeFile, mkdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
+import { normalizeText } from "@hobby-ninja/translation";
+
 import { BandaiCatalogParser, type EntityData, type GlobalSiteUrls, type Item } from "./bandai-catalog-parser";
 import { CatalogTranslator } from "./catalog-translator";
 import { ItemsIndexUpdater } from "./items-index-updater";
@@ -800,17 +802,17 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 							if (globalContent) {
 								catalogResult.data.globalSiteUrls = globalContent.urls;
 
-								// Apply official English content from global site
+								// Apply official English content from global site (normalized)
 								if (globalContent.enName) {
-									catalogResult.data.name.en = globalContent.enName;
+									catalogResult.data.name.en = normalizeText(globalContent.enName);
 								}
 								if (globalContent.enDescription) {
 									catalogResult.data.description ??= { ja: [] };
-									catalogResult.data.description.en = globalContent.enDescription;
+									catalogResult.data.description.en = globalContent.enDescription.map((line) => normalizeText(line));
 								}
 								if (globalContent.enAccessories) {
 									catalogResult.data.accessories ??= { ja: [] };
-									catalogResult.data.accessories.en = globalContent.enAccessories;
+									catalogResult.data.accessories.en = globalContent.enAccessories.map((line) => normalizeText(line));
 								}
 
 								if (options.verbose) {
@@ -824,6 +826,17 @@ export async function discoverCatalogItems(options: CatalogDiscoveryOptions): Pr
 							if (options.verbose) {
 								console.warn(`    ⚠️ Global site check failed: ${String(globalError)}`);
 							}
+						}
+
+						// Normalize JA content (fix bullet characters, etc.)
+						if (catalogResult.data.name.ja) {
+							catalogResult.data.name.ja = normalizeText(catalogResult.data.name.ja);
+						}
+						if (catalogResult.data.description?.ja) {
+							catalogResult.data.description.ja = catalogResult.data.description.ja.map((line) => normalizeText(line));
+						}
+						if (catalogResult.data.accessories?.ja) {
+							catalogResult.data.accessories.ja = catalogResult.data.accessories.ja.map((line) => normalizeText(line));
 						}
 
 						// Merge with existing data to preserve curated fields (EN translations, manualId, etc.)
