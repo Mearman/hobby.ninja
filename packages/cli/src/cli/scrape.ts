@@ -592,7 +592,8 @@ export class ScrapeCommand {
 					await fs.writeFile(enHtmlPath, globalData.html, "utf8");
 				}
 			} else if (options.verbose) {
-				console.log(`  - No global site page found`);
+				const reason = globalData.error ? `: ${globalData.error}` : "";
+				console.log(`  - No global site page found${reason}`);
 			}
 		} catch (error) {
 			// Don't fail the item for English lookup failures
@@ -854,6 +855,11 @@ export class ScrapeCommand {
 			// Merge image paths from existing data
 			if (existingItem.images && newData.images) {
 				newData.images = this.mergeImagePaths(newData.images, existingItem.images);
+			}
+
+			// Preserve globalSiteUrls if global lookup failed but existing data has it
+			if (existingItem.globalSiteUrls && !newData.globalSiteUrls) {
+				newData.globalSiteUrls = existingItem.globalSiteUrls;
 			}
 
 			return newData;
