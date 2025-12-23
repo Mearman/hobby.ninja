@@ -681,20 +681,49 @@ export class ScrapeCommand {
 		options: ScrapeOptions,
 	): Promise<{ success: boolean; error?: string }> {
 		const url = `https://manual.bandai-hobby.net/menus/detail/${manualId}/`;
+		const htmlPath = path.join(MANUALS_DATA_DIR, `${manualId}.html`);
 		const jsonPath = path.join(MANUALS_DATA_DIR, `${manualId}.json`);
 
 		console.log(`  Scraping manual at ${url}`);
 
-		// Step 1: Fetch HTML
-		let html: string;
-		try {
-			html = await this.rateLimiter.executeWithLimit(async () => {
-				return this.fetchManualPage(url);
-			});
-		} catch (error) {
-			const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
-			ManualsIndexUpdater.recordChecked(manualId);
-			return { success: false, error: `Fetch failed: ${errorMsg}` };
+		// Step 1: Get HTML (from saved file or fetch fresh)
+		let html: string | null = null;
+
+		// Check for existing HTML file (use as cache)
+		if (options.cache) {
+			try {
+				const htmlStat = await fs.stat(htmlPath);
+				const ageMs = Date.now() - htmlStat.mtimeMs;
+				const maxAgeMs = options.maxAgeDays * ScrapeCommand.HOURS_PER_DAY * ScrapeCommand.MINUTES_PER_HOUR * ScrapeCommand.SECONDS_PER_MINUTE * ScrapeCommand.MS_PER_SECOND;
+				const ageMinutes = Math.round(ageMs / ScrapeCommand.MS_PER_SECOND / ScrapeCommand.SECONDS_PER_MINUTE);
+				const ageHours = Math.round(ageMs / ScrapeCommand.MS_PER_SECOND / ScrapeCommand.SECONDS_PER_MINUTE / ScrapeCommand.MINUTES_PER_HOUR);
+
+				if (maxAgeMs === 0 || ageMs < maxAgeMs) {
+					html = await fs.readFile(htmlPath, "utf8");
+					console.log(`  Using cached HTML (${ageMinutes} min old)`);
+				} else {
+					console.log(`  HTML too old (${ageHours} hours), re-fetching`);
+				}
+			} catch {
+				// File doesn't exist, will fetch
+			}
+		}
+
+		// Fetch fresh HTML if needed
+		if (!html) {
+			try {
+				html = await this.rateLimiter.executeWithLimit(async () => {
+					return this.fetchManualPage(url);
+				});
+
+				// Save HTML file
+				await fs.mkdir(path.dirname(htmlPath), { recursive: true });
+				await fs.writeFile(htmlPath, html, "utf8");
+			} catch (error) {
+				const errorMsg = error instanceof Error ? error.message : UNKNOWN_ERROR;
+				ManualsIndexUpdater.recordChecked(manualId);
+				return { success: false, error: `Fetch failed: ${errorMsg}` };
+			}
 		}
 
 		// Step 2: Parse with ManualParser
