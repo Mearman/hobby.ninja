@@ -10,14 +10,11 @@ import { config } from "dotenv";
 
 
 // CLI-internal imports (not cross-package, so relative imports are appropriate)
-// eslint-disable-next-line no-restricted-imports
+ 
 import type { DownloadSource } from "../cli/download-command.js";
-// eslint-disable-next-line no-restricted-imports
 import type { NormalizeOptions } from "../cli/normalize-command.js";
-// eslint-disable-next-line no-restricted-imports
 import type { TranslateOptions, TranslateSource } from "../cli/translate-command.js";
 import { CLI_COMMANDS, MESSAGES, FILES } from "../constants/index.js";
-// eslint-disable-next-line no-restricted-imports
 import type { WaybackSource } from "../types/wayback.js";
 
 // Type guards for CLI options
@@ -674,7 +671,7 @@ program
 			console.log(`Dry run: ${String(typedOptions.dryRun)}`);
 			console.log("");
 
-			const stats = await runUnification(dataDir, {
+			const stats = runUnification(dataDir, {
 				thresholds: {
 					autoAccept: Number.parseFloat(typedOptions.minConfidence),
 					reviewCutoff: Number.parseFloat(typedOptions.reviewThreshold),
