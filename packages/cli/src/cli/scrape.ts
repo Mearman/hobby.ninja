@@ -607,16 +607,14 @@ export class ScrapeCommand {
 		}
 
 		let itemData = parseResult.data;
-		if (options.verbose) {
-			console.log(`  ✓ Data extracted: ${itemData.name.ja}`);
-		}
+		console.log(`  ✓ Data extracted: ${itemData.name.ja}`);
 
 		// Step 2b: Look up English translations from global site
 		let hasGlobalTranslation = false;
 		const enHtmlPath = path.join(ITEMS_DATA_DIR, `${itemId}.en.html`);
 		try {
 			let globalData: GlobalSiteData | null = null;
-			let usedCache = false;
+			let usedEnCache = false;
 
 			// Check for cached English HTML first
 			if (options.cache) {
@@ -628,7 +626,7 @@ export class ScrapeCommand {
 					if (maxAgeMs === 0 || ageMs < maxAgeMs) {
 						const enHtml = await time("en-cache-read", () => fs.readFile(enHtmlPath, "utf8"));
 						globalData = time("en-parse", () => this.globalLookup.parseFromHtml(enHtml));
-						usedCache = true;
+						usedEnCache = true;
 					}
 				} catch {
 					// Cache doesn't exist, will fetch
@@ -652,34 +650,28 @@ export class ScrapeCommand {
 				// Store canonical translations in dictionary (persisted immediately)
 				this.storeCanonicalTranslations(itemData, globalData);
 
-				if (options.verbose) {
-					const source = usedCache ? "cached" : "fetched";
-					console.log(`  ✓ English translation found (${source}): ${globalData.name ?? "(name)"}`);
-				}
-			} else if (options.verbose) {
+				const source = usedEnCache ? "cached" : "fetched";
+				console.log(`  ✓ English translation (${source}): ${globalData.name ?? "(name)"}`);
+			} else {
 				const reason = globalData.error ? `: ${globalData.error}` : "";
-				console.log(`  - No global site page found${reason}`);
+				console.log(`  - No English page${reason}`);
 			}
 		} catch (error) {
 			// Don't fail the item for English lookup failures
-			if (options.verbose) {
-				const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
-				console.log(`  ⚠ English lookup failed: ${msg}`);
-			}
+			const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
+			console.log(`  ⚠ English lookup failed: ${msg}`);
 		}
 
 		// Step 2c: Fallback translation for items without global page
 		if (!hasGlobalTranslation && !itemData.name.en) {
 			try {
 				itemData = await time("fallback-translate", () => this.translateItemFallback(itemData));
-				if (options.verbose && itemData.name.en) {
+				if (itemData.name.en) {
 					console.log(`  ✓ Fallback translation: ${itemData.name.en}`);
 				}
 			} catch (error) {
-				if (options.verbose) {
-					const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
-					console.log(`  ⚠ Fallback translation failed: ${msg}`);
-				}
+				const msg = error instanceof Error ? error.message : UNKNOWN_ERROR;
+				console.log(`  ⚠ Fallback translation failed: ${msg}`);
 			}
 		}
 
@@ -687,13 +679,15 @@ export class ScrapeCommand {
 		const itemWritten = await time("save-json", () => this.saveItemJson(jsonPath, itemData));
 		if (itemWritten) {
 			console.log(`  ✓ Item JSON saved`);
+		} else {
+			console.log(`  - Item unchanged`);
 		}
 
 		// Step 3b: Upsert discovered entities (brands, series, categories)
 		const entities = parseResult.entities;
 		if (entities && entities.length > 0) {
 			const newEntities = await time("upsert-entities", () => this.upsertEntities(entities));
-			if (newEntities > 0 && options.verbose) {
+			if (newEntities > 0) {
 				console.log(`  ✓ ${newEntities} new entities added`);
 			}
 		}
@@ -712,7 +706,7 @@ export class ScrapeCommand {
 		// Step 4: Process linked manual if exists
 		const manualId = itemData.manual?.id;
 		if (manualId) {
-			console.log(`  Found manual link: ${manualId}`);
+			console.log(`  ✓ Manual link: ${manualId}`);
 			try {
 				await time("process-manual", () => this.processManualComplete(manualId, options));
 				ManualsIndexUpdater.recordValid(manualId, itemData.name.ja);
@@ -729,7 +723,7 @@ export class ScrapeCommand {
 				const downloadResult = await time("download-images", () =>
 					this.downloadItemImages(itemId, itemData, jsonPath, options.verbose),
 				);
-				if (downloadResult.downloaded > 0 || options.verbose) {
+				if (downloadResult.downloaded > 0) {
 					console.log(`  ✓ Images: ${downloadResult.downloaded} downloaded, ${downloadResult.skipped} skipped`);
 				}
 			} catch (error) {
